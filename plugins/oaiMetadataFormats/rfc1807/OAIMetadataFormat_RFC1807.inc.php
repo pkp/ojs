@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormat_RFC1807.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_RFC1807
@@ -41,7 +41,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		$creators = array();
 		$authors = $article->getAuthors();
 		for ($i = 0, $num = count($authors); $i < $num; $i++) {
-			$authorName = $authors[$i]->getFullName(true);
+			$authorName = $authors[$i]->getFullName(false, true);
 			$affiliation = $authors[$i]->getLocalizedAffiliation();
 			if (!empty($affiliation)) {
 				$authorName .= '; ' . $affiliation;
@@ -73,7 +73,6 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('title', $article->getLocalizedTitle()) .
 			$this->formatElement('type', $section->getLocalizedIdentifyType()) .
 
-			$this->formatElement('type', $relation) .
 			$this->formatElement('author', $creators) .
 			($article->getDatePublished()?$this->formatElement('date', $article->getDatePublished()):'') .
 			$this->formatElement('copyright', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .
@@ -106,4 +105,4 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 	}
 }
 
-?>
+

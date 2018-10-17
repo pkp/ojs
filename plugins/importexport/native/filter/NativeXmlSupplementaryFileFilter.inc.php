@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlSupplementaryFileFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlSupplementaryFileFilter
@@ -75,13 +75,13 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 			$setterFunction = $localizedSetterMappings[$node->tagName];
 			list($locale, $value) = $this->parseLocalizedContent($node);
 			if (empty($locale)) $locale = $submission->getLocale();
-			$submissionFiles[count($submissionFiles)-1]->$setterFunction($value, $locale);
+			if (count($submissionFiles) > 0) $submissionFiles[count($submissionFiles)-1]->$setterFunction($value, $locale);
 		} else switch ($node->tagName) {
 			case 'date_created':
-				$submissionFiles[count($submissionFiles)-1]->setDateCreated(strtotime($node->textContent));
+				if (count($submissionFiles) > 0) $submissionFiles[count($submissionFiles)-1]->setDateCreated(strtotime($node->textContent));
 				break;
 			case 'language':
-				$submissionFiles[count($submissionFiles)-1]->setLanguage($node->textContent);
+				if (count($submissionFiles) > 0) $submissionFiles[count($submissionFiles)-1]->setLanguage($node->textContent);
 				break;
 			default:
 				parent::handleChildElement($node, $stageId, $fileId, $submissionFiles);
@@ -107,4 +107,4 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 	}
 }
 
-?>
+

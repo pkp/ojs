@@ -4,16 +4,15 @@
 <!--
   * plugins/reports/articles/locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the sv_SE (Svenska) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
   -->
 
 <locale name="sv_SE" full_name="Svenska">
-	<message key="plugins.reports.articles.displayName">Artikelrapport.  (Högerklicka, välj 'Spara som...', starta Excel 2003, välj 'Öppna fil' el. Excel 2007, välj 'Data', 'Externa data', 'Textfil')</message>
-	<message key="plugins.reports.articles.description">Det här tillägssprogrammet skapar en kommaseparerad lista för import till Excel..</message>
+	<message key="plugins.reports.articles.displayName">Artikelrapport</message>
+	<message key="plugins.reports.articles.description">Ett plugin som skapar en CSV-rapport med en lista av artiklar och information om dem.</message>
 	<message key="plugins.reports.articles.nodecision">Inget beslut</message>
 </locale>

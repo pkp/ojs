@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Italian_(it_IT)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Questo plugin visualizza nella barra laterale informazioni sugli abbonamenti.</message>
 	<message key="plugins.block.subscription.blockTitle">Abbonamento</message>
 	<message key="plugins.block.subscription.expires">Scadenza</message>
-	<message key="plugins.block.subscription.providedBy">Ente abbonato</message>
-	<message key="plugins.block.subscription.comingFromIP">IP</message>
+	<message key="plugins.block.subscription.providedBy">Ente abbonato {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">IP {$ip}</message>
 	<message key="plugins.block.subscription.about">Abbonamenti</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Entra per verificare l'abbonamento</message>
 </locale>

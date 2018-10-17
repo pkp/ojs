@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/filter/DataciteXmlFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
@@ -247,7 +247,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				$authors = $article->getAuthors();
 				assert(!empty($authors));
 				foreach ($authors as $author) { /* @var $author Author */
-					$creators[] = $author->getFullName(true);
+					$creators[] = $author->getFullName(false, true);
 				}
 				break;
 			case isset($issue):
@@ -349,8 +349,14 @@ class DataciteXmlFilter extends NativeExportFilter {
 				$submittedDate = $article->getDateSubmitted();
 				if (!empty($submittedDate)) {
 					$dates[DATACITE_DATE_SUBMITTED] = $submittedDate;
-					// Default accepted date: submitted date.
-					$dates[DATACITE_DATE_ACCEPTED] = $submittedDate;
+				}
+				// Accepted date: the last editor accept decision date
+				$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
+				$editDecisions = $editDecisionDao->getEditorDecisions($article->getId());
+				foreach (array_reverse($editDecisions) as $editDecision) {
+					if ($editDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
+						$dates[DATACITE_DATE_ACCEPTED] = $editDecision['dateDecided'];
+					}
 				}
 				// Last modified date (for articles): last$lastModifiede.
 				$lastModified = $article->getLastModified();
@@ -391,8 +397,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * @param $article PublishedArticle
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
-	 * @return DOMElement|null Can be null if a size
-	 *  cannot be identified for the given object.
+	 * @return DOMElement.
 	 */
 	function createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile) {
 		$deployment = $this->getDeployment();
@@ -422,6 +427,10 @@ class DataciteXmlFilter extends NativeExportFilter {
 			// Create the resourceType element.
 			$resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType', $resourceType);
 			$resourceTypeNode->setAttribute('resourceTypeGeneral', 'Text');
+		} else {
+			// It is a supplementary file
+			$resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
+			$resourceTypeNode->setAttribute('resourceTypeGeneral', 'Dataset');
 		}
 		return $resourceTypeNode;
 	}
@@ -800,4 +809,4 @@ class DataciteXmlFilter extends NativeExportFilter {
 	}
 }
 
-?>
+

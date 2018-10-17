@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Indonesian_(id_ID)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Plugin ini menyediakan informasi langganan.</message>
 	<message key="plugins.block.subscription.blockTitle">Langganan</message>
 	<message key="plugins.block.subscription.expires">Kadaluwarsa</message>
-	<message key="plugins.block.subscription.providedBy">Akses disediakan oleh</message>
-	<message key="plugins.block.subscription.comingFromIP">Dari</message>
+	<message key="plugins.block.subscription.providedBy">Akses disediakan oleh {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Dari {$ip}</message>
 	<message key="plugins.block.subscription.about">Langganan</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Login untuk memverifikasi langganan</message>
 </locale>

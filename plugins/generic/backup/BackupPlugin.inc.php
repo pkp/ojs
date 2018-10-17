@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/backup/BackupPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BackupPlugin
@@ -17,16 +17,12 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class BackupPlugin extends GenericPlugin {
 	/**
-	 * Register the plugin, if enabled; note that this plugin
-	 * runs under both Conference and Site contexts.
-	 * @param $category string
-	 * @param $path string
-	 * @return boolean
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
-			if ($this->getEnabled() && Validation::isSiteAdmin()) {
+			if ($this->getEnabled($mainContextId) && Validation::isSiteAdmin()) {
 				HookRegistry::register('Templates::Admin::Index::AdminFunctions',array($this, 'addLink'));
 				HookRegistry::register ('LoadHandler', array($this, 'handleRequest'));
 			}
@@ -52,7 +48,7 @@ class BackupPlugin extends GenericPlugin {
 		$params =& $args[0];
 		$smarty =& $args[1];
 		$output =& $args[2];
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 		$output .= '<li><a href="' . $request->url(null, 'backup') . '">' . __('plugins.generic.backup.link') . '</a></li>';
 		return false;
 	}
@@ -67,7 +63,7 @@ class BackupPlugin extends GenericPlugin {
 		$page =& $args[0];
 		$op =& $args[1];
 		$sourceFile =& $args[2];
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 
 		if ($page !== 'backup') return false;
 		// We've already verified that this is a site admin through
@@ -80,7 +76,7 @@ class BackupPlugin extends GenericPlugin {
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('isDumpConfigured', Config::getVar('cli', 'dump')!='');
 				$templateMgr->assign('isTarConfigured', Config::getVar('cli', 'tar')!='');
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				exit();
 			case 'db':
 				$dumpTool = Config::getVar('cli', 'dump');
@@ -152,4 +148,4 @@ class BackupPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

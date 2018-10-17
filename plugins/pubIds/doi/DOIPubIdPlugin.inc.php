@@ -3,8 +3,8 @@
 /**
  * @file plugins/pubIds/doi/DOIPubIdPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdPlugin
@@ -17,6 +17,27 @@
 import('classes.plugins.PubIdPlugin');
 
 class DOIPubIdPlugin extends PubIdPlugin {
+
+	/**
+	 * @copydoc Plugin::register()
+	 */
+	public function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if ($success && $this->getEnabled($mainContextId)) {
+			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
+			HookRegistry::register('Submission::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Submission::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Issue::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Issue::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Submission::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+		}
+		return $success;
+	}
 
 	//
 	// Implement template methods from Plugin.
@@ -33,13 +54,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.pubIds.doi.description');
-	}
-
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 
@@ -85,14 +99,14 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getPubIdMetadataFile()
 	 */
 	function getPubIdMetadataFile() {
-		return $this->getTemplatePath().'doiSuffixEdit.tpl';
+		return $this->getTemplateResource('doiSuffixEdit.tpl');
 	}
 
 	/**
 	 * @copydoc PKPPubIdPlugin::getPubIdAssignFile()
 	 */
 	function getPubIdAssignFile() {
-		return $this->getTemplatePath().'doiAssign.tpl';
+		return $this->getTemplateResource('doiAssign.tpl');
 	}
 
 	/**
@@ -137,8 +151,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	function getLinkActions($pubObject) {
 		$linkActions = array();
 		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		$userVars = $request->getUserVars();
 		$userVars['pubIdPlugIn'] = get_class($this);
 		// Clear object pub id
@@ -215,6 +228,36 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return preg_match('/^\d+(.\d+)+\//', $pubId);
 	}
 
+	/*
+	 * Public methods
+	 */
+	/**
+	 * Add DOI to citation data used by the CitationStyleLanguage plugin
+	 *
+	 * @see CitationStyleLanguagePlugin::getCitation()
+	 * @param $hookname string
+	 * @param $args array
+	 * @return false
+	 */
+	public function getCitationData($hookname, $args) {
+		$citationData = $args[0];
+		$article = $args[2];
+		$issue = $args[3];
+		$journal = $args[4];
+
+		if ($issue && $issue->getPublished()) {
+			$pubId = $article->getStoredPubId($this->getPubIdType());
+		} else {
+			$pubId = $this->getPubId($article);
+		}
+
+		if (!$pubId) {
+			return;
+		}
+
+		$citationData->DOI = $pubId;
+	}
+
 
 	/*
 	 * Private methods
@@ -231,6 +274,53 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return $pubId;
 	}
 
+	/**
+	 * Add DOI to submission, issue or galley properties
+	 *
+	 * @param $hookName string <Object>::getProperties::summaryProperties or
+	 *  <Object>::getProperties::fullProperties
+	 * @param $args array [
+	 * 		@option $props array Existing properties
+	 * 		@option $object Submission|Issue|Galley
+	 * 		@option $args array Request args
+	 * ]
+	 *
+	 * @return array
+	 */
+	public function modifyObjectProperties($hookName, $args) {
+		$props =& $args[0];
+
+		$props[] = 'doi';
+	}
+
+	/**
+	 * Add DOI submission, issue or galley values
+	 *
+	 * @param $hookName string <Object>::getProperties::values
+	 * @param $args array [
+	 * 		@option $values array Key/value store of property values
+	 * 		@option $object Submission|Issue|Galley
+	 * 		@option $props array Requested properties
+	 * 		@option $args array Request args
+	 * ]
+	 *
+	 * @return array
+	 */
+	public function modifyObjectPropertyValues($hookName, $args) {
+		$values =& $args[0];
+		$object = $args[1];
+		$props = $args[2];
+
+		// DOIs are not supported for IssueGalleys
+		if (get_class($object) === 'IssueGalley') {
+			return;
+		}
+
+		if (in_array('doi', $props)) {
+			$pubId = $this->getPubId($object);
+			$values['doi'] = $pubId ? $pubId : null;
+		}
+	}
 }
 
-?>
+

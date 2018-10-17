@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/admin/siteSetup/form/AppSiteSetupForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AppSiteSetupForm
@@ -21,7 +21,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	 * @copydoc SiteSetupForm::fetch()
 	 */
 	function fetch($request, $params = null) {
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('availableMetricTypes', $application->getMetricTypes(true));
 
@@ -31,9 +31,10 @@ class AppSiteSetupForm extends SiteSetupForm {
 	/**
 	 * @copydoc SiteSetupForm::initData()
 	 */
-	function initData($request) {
-		parent::initData($request);
+	function initData() {
+		parent::initData();
 
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$this->setData('defaultMetricType', $site->getSetting('defaultMetricType'));
 
@@ -67,4 +68,4 @@ class AppSiteSetupForm extends SiteSetupForm {
 	}
 }
 
-?>
+

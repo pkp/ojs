@@ -4,8 +4,8 @@
 <!--
   * locale/cz_CZ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localized email templates XML file.
@@ -245,7 +245,7 @@ V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte.<br />
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Mohu zpracovat recenzi</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editoři:<br />
 <br />
 Mohu a jsem ochotný zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili. Plánuji dokončit zpracování recenze ve stanoveném termínu {$reviewDueDate}, případně dříve.<br />
 <br />
@@ -254,7 +254,7 @@ Mohu a jsem ochotný zpracovat recenzi příspěvku &quot;{$submissionTitle}&quo
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Nemohu zpracovat recenzi</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editoři:<br />
 <br />
 Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili a neváhejte mě jindy opět kontaktovat.<br />
 <br />
@@ -988,7 +988,7 @@ Pokud máte nějaké dotazy, kontaktujte mne, prosím. Děkujeme vám za využí
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Nahrána opravená verze příspěvku</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editoři:<br />
 <br />
 Opravená verze příspěvku &quot;{$submissionTitle}&quot; byla nahrána autorem {$authorName}.<br />
 <br />
@@ -1089,5 +1089,25 @@ Děkujeme mnohokrát za spolupráci.<br />
 <br />
 {$submissionAbstract}]]></body>
 		<description><![CDATA[Tento e-mail od editoru sekce k recenzentovi požaduje, aby recenzent přijal nebo odmítl úlohu přezkoumání příspěvku pro druhé nebo větší kolo recenzí. Poskytuje informace o podání, jako je název a abstrakt, datum splatnosti kontroly a přístup k samotnému podání. Tato zpráva se používá v případě, že je ve Správci> Nastavení> Pracovní postup> Kontrola vybrán proces Standardní kontrola a je povolen přístup jednoho recenzenta k recenzím.]]></description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Rozhodnutí redaktora</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Dosáhli jsme rozhodnutí ohledně vašeho příspěvku pro {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Naše rozhodnutí je: Odmítnout příspěvek <br />
+<br />
+{$editorialContactSignature} <br />]]></body>
+		<description>Tento e-mail se pošle autorovi, pokud redaktor odmítne příspěvek již před recenzním řízením</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Doporučení redaktora</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Doporučení k příspěvku {$contextName}, &quot;{$submissionTitle}&quot; je: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Tento e-mail je od redaktora nebo redaktora sekce pro odpovědného redaktora nebo pro redaktory sekcí - informuje o konečném doporučení ohledně příspěvku.</description>
 	</email_text>
 </email_texts>

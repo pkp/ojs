@@ -1,8 +1,8 @@
 {**
  * controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display a submission's issue entry form.
@@ -58,7 +58,7 @@
 	{if !$formParams.hideSubmit || !$formParams.anonymous}
 		{* generate a unique ID for the form *}
 		{assign var="authorsGridContainer" value="authorsGridContainer-"|uniqid|escape}
-		{url|assign:authorGridUrl router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId stageId=$stageId escape=false}
+		{capture assign=authorGridUrl}{url router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId stageId=$stageId escape=false}{/capture}
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
 
@@ -96,7 +96,7 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{include file="submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly}
+	{include file="submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly  metadataModal=true}
 
 	{if !$formParams.hideSubmit}
 		{fbvFormButtons id="submissionMetadataFormSubmit" submitText="common.save"}

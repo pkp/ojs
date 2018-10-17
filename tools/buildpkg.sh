@@ -3,8 +3,8 @@
 #
 # tools/buildpkg.sh
 #
-# Copyright (c) 2014-2017 Simon Fraser University
-# Copyright (c) 2003-2017 John Willinsky
+# Copyright (c) 2014-2018 Simon Fraser University
+# Copyright (c) 2003-2018 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an OJS package for distribution.
@@ -26,77 +26,90 @@ PREFIX=ojs
 BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 
-EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
-dbscripts/xml/data/sample.xml					\
-docs/dev							\
-tests								\
-tools/buildpkg.sh						\
-tools/genLocaleReport.sh					\
-tools/genTestLocale.php						\
-tools/test							\
-lib/pkp/tools/travis						\
-lib/pkp/plugins/*/*/tests					\
-plugins/*/*/tests						\
-plugins/auth/ldap						\
-plugins/generic/announcementFeed				\
-plugins/generic/backup						\
-plugins/generic/browse						\
-plugins/generic/coins						\
-plugins/generic/cookiesAlert					\
-plugins/generic/counter						\
-plugins/generic/customLocale					\
-plugins/generic/driver						\
-plugins/generic/externalFeed					\
-plugins/generic/lucene						\
-plugins/generic/openAIRE					\
-plugins/generic/phpMyVisites					\
-plugins/generic/recommendBySimilarity				\
-plugins/generic/translator					\
-plugins/importexport/sample					\
-plugins/importexport/duracloud					\
-plugins/reports/subscriptions					\
-plugins/blocks/relatedItems					\
-tests								\
-lib/pkp/tests							\
-.git								\
-.openshift							\
-.scrutinizer.yml						\
-.travis.yml							\
-lib/pkp/.git							\
-lib/pkp/lib/components/*.js					\
-lib/pkp/lib/components/*.css					\
-lib/pkp/lib/vendor/components					\
-lib/pkp/lib/vendor/composer					\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/art			\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/benchmarks		\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/configdog		\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/docs			\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/extras			\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/maintenance		\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests		\
-lib/pkp/lib/vendor/ezyang/htmlpurifier/tests			\
-lib/pkp/lib/vendor/kriswallsmith				\
-lib/pkp/lib/vendor/leafo/lessphp/tests				\
-lib/pkp/lib/vendor/leafo/lessphp/docs				\
-lib/pkp/lib/vendor/moxiecode/plupload/examples			\
-lib/pkp/lib/vendor/phpmailer/phpmailer/docs			\
-lib/pkp/lib/vendor/phpmailer/phpmailer/examples			\
-lib/pkp/lib/vendor/phpmailer/phpmailer/test			\
-lib/pkp/lib/vendor/robloach					\
-lib/pkp/lib/vendor/smarty/smarty/demo				\
-lib/pkp/lib/vendor/symfony					\
-lib/pkp/lib/vendor/phpunit					\
-lib/pkp/lib/vendor/phpspec					\
-lib/pkp/lib/vendor/phpdocumentor				\
-lib/pkp/lib/vendor/doctrine					\
-lib/pkp/js/lib/pnotify/build-tools				\
-lib/pkp/lib/vendor/sebastian					\
-lib/pkp/lib/vendor/oyejorge/less.php/test			\
-lib/pkp/lib/vendor/webmozart					\
-lib/pkp/tools/travis						\
-lib/pkp/lib/swordappv2/.git					\
-lib/pkp/lib/swordappv2/.git					\
-lib/pkp/lib/swordappv2/test"
+EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml					\
+dbscripts/xml/data/sample.xml								\
+docs/dev										\
+tests											\
+tools/buildpkg.sh									\
+tools/genLocaleReport.sh								\
+tools/genTestLocale.php									\
+tools/test										\
+lib/pkp/tools/travis									\
+lib/pkp/plugins/*/*/tests								\
+plugins/*/*/tests									\
+plugins/auth/ldap									\
+plugins/generic/announcementFeed							\
+plugins/generic/backup									\
+plugins/generic/browse									\
+plugins/generic/coins									\
+plugins/generic/cookiesAlert								\
+plugins/generic/counter									\
+plugins/generic/customLocale								\
+plugins/generic/externalFeed								\
+plugins/generic/lucene									\
+plugins/generic/phpMyVisites								\
+plugins/generic/recommendBySimilarity							\
+plugins/generic/translator								\
+plugins/importexport/sample								\
+plugins/importexport/duracloud								\
+plugins/reports/subscriptions								\
+plugins/blocks/relatedItems								\
+tests											\
+lib/pkp/tests										\
+.git											\
+.openshift										\
+.scrutinizer.yml									\
+.travis.yml										\
+lib/pkp/.git										\
+lib/pkp/lib/components/*.js								\
+lib/pkp/lib/components/*.css								\
+lib/pkp/lib/vendor/smarty/smarty/demo							\
+lib/pkp/lib/vendor/alex198710/pnotify/.git						\
+lib/pkp/lib/vendor/sebastian								\
+lib/pkp/lib/vendor/oyejorge/less.php/test						\
+lib/pkp/tools/travis									\
+lib/pkp/lib/swordappv2/.git								\
+lib/pkp/lib/swordappv2/.git								\
+lib/pkp/lib/swordappv2/test								\
+plugins/paymethod/paypal/vendor/omnipay/common/tests/					\
+plugins/paymethod/paypal/vendor/omnipay/paypal/tests/					\
+plugins/paymethod/paypal/vendor/guzzle/guzzle/docs/					\
+plugins/paymethod/paypal/vendor/guzzle/guzzle/tests/					\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/debug/				\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/console/Tests/			\
+plugins/paymethod/paypal/vendor/symfony/http-foundation/Tests/				\
+plugins/paymethod/paypal/vendor/symfony/event-dispatcher/				\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/filesystem/Tests/		\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/stopwatch/Tests/		\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/event-dispatcher/Tests/	\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/config/Tests/			\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/yaml/Tests/			\
+plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/Guzzle/Tests/	\
+plugins/generic/citationStyleLanguage/lib/vendor/symfony/config/Tests/			\
+plugins/generic/citationStyleLanguage/lib/vendor/citation-style-language/locales/.git	\
+lib/pkp/lib/vendor/symfony/translation/Tests/						\
+lib/pkp/lib/vendor/symfony/process/Tests/						\
+lib/pkp/lib/vendor/pimple/pimple/src/Pimple/Tests/					\
+lib/pkp/lib/vendor/robloach/component-installer/tests/ComponentInstaller/Test/		\
+plugins/generic/citationStyleLanguage/lib/vendor/satooshi/php-coveralls/tests/		\
+plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/			\
+plugins/generic/citationStyleLanguage/lib/vendor/seboettg/collection/tests/		\
+plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/tests/		\
+lib/pkp/lib/vendor/nikic/fast-route/test/						\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/tests/						\
+lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests/					\
+lib/pkp/lib/vendor/pimple/pimple/ext/pimple/tests/					\
+lib/pkp/lib/vendor/robloach/component-installer/tests/					\
+lib/pkp/lib/vendor/phpmailer/phpmailer/test/						\
+node_modules										\
+.babelrc										\
+.editorconfig										\
+.eslintignore										\
+.eslintrc.js										\
+.postcssrc.js										\
+package.json										\
+webpack.config.js									\
+lib/ui-library"
 
 
 cd $TMPDIR
@@ -113,18 +126,22 @@ echo "Done"
 
 echo "Installing composer dependencies:"
 echo -n " - lib/pkp ... "
-cd lib/pkp
-composer.phar update
-cd ../..
+composer.phar --working-dir=lib/pkp install --no-dev
 echo "Done"
 
 echo -n " - plugins/paymethod/paypal ... "
-cd plugins/paymethod/paypal
-composer.phar install
-cd ../../..
+composer.phar --working-dir=plugins/paymethod/paypal install --no-dev
 echo "Done"
 
-echo -n "Run webpack build process"
+echo -n " - plugins/generic/citationStyleLanguage ... "
+composer.phar --working-dir=plugins/generic/citationStyleLanguage install --no-dev
+echo "Done"
+
+echo -n "Installing node dependencies... "
+npm install
+echo "Done"
+
+echo -n "Running webpack build process... "
 npm run build
 echo "Done"
 

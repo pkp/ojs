@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleGalleyDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyDAO
@@ -375,7 +375,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::pubIdExists()
 	 */
-	function pubIdExists($pubIdType, $pubId, $galleyId, $journalId) {
+	function pubIdExists($pubIdType, $pubId, $excludePubObjectId, $contextId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
 			FROM submission_galley_settings sgs
@@ -385,8 +385,8 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
-				(int) $galleyId,
-				(int) $journalId
+				(int) $excludePubObjectId,
+				(int) $contextId
 			)
 		);
 		$returner = $result->fields[0] ? true : false;
@@ -397,12 +397,12 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::changePubId()
 	 */
-	function changePubId($galleyId, $pubIdType, $pubId) {
+	function changePubId($pubObjectId, $pubIdType, $pubId) {
 		$idFields = array(
 			'galley_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
-			'galley_id' => $galleyId,
+			'galley_id' => (int) $pubObjectId,
 			'locale' => '',
 			'setting_name' => 'pub-id::'.$pubIdType,
 			'setting_type' => 'string',
@@ -414,13 +414,13 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::deletePubId()
 	 */
-	function deletePubId($galleyId, $pubIdType) {
+	function deletePubId($pubObjectId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
 		$this->update(
 			'DELETE FROM submission_galley_settings WHERE setting_name = ? AND galley_id = ?',
 			array(
 				$settingName,
-				(int)$galleyId
+				(int)$pubObjectId
 			)
 		);
 		$this->flushCache();
@@ -429,11 +429,10 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::deleteAllPubIds()
 	 */
-	function deleteAllPubIds($journalId, $pubIdType) {
-		$journalId = (int) $journalId;
+	function deleteAllPubIds($contextId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
 
-		$galleys = $this->getByContextId($journalId);
+		$galleys = $this->getByContextId($contextId);
 		while ($galley = $galleys->next()) {
 			$this->update(
 				'DELETE FROM submission_galley_settings WHERE setting_name = ? AND galley_id = ?',
@@ -470,10 +469,9 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 		}
 		if ($title) {
 			$params[] = 'title';
-			$params[] = AppLocale::getLocale();
 			$params[] = '%' . $title . '%';
 		}
-		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery, $authorQuery);
+		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery);
 		if ($issueId) {
 			$params[] = (int) $issueId;
 		}
@@ -482,6 +480,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			$params[] = $pubIdSettingValue;
 		}
 
+		import('classes.article.Article'); // STATUS_DECLINED constant
 		$result = $this->retrieveRange(
 				'SELECT	sf.*, g.*
 			FROM	submission_galleys g
@@ -492,13 +491,16 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
 				' . ($pubIdType != null?' LEFT JOIN submission_galley_settings gs ON (g.galley_id = gs.galley_id)':'')
 				. ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
-				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
+				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)
+						LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \''.IDENTITY_SETTING_GIVENNAME.'\')
+						LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \''.IDENTITY_SETTING_FAMILYNAME.'\')
+					':'')
 				. ($pubIdSettingName != null?' LEFT JOIN submission_galley_settings gss ON (g.galley_id = gss.galley_id AND gss.setting_name = ?)':'') .'
 			WHERE
 				i.published = 1 AND s.context_id = ?
 				' . ($pubIdType != null?' AND gs.setting_name = ? AND gs.setting_value IS NOT NULL':'')
-				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
-				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
+				. ($title != null?' AND (sst.setting_name = ? AND sst.setting_value LIKE ?)':'')
+				. ($author != null?' AND (asgs.setting_value LIKE ? OR asfs.setting_value LIKE ?)':'')
 				. ($issueId != null?' AND ps.issue_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value = ?':'')
@@ -513,4 +515,4 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 }
 
-?>
+

@@ -3,8 +3,8 @@
 /**
  * @file classes/issue/IssueDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueDAO
@@ -281,7 +281,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $row array
 	 * @return Issue object
 	 */
-	function _returnIssueFromRow($row) {
+	function _fromRow($row) {
 		$issue = $this->newDataObject();
 		$issue->setId($row['issue_id']);
 		$issue->setJournalId($row['journal_id']);
@@ -302,8 +302,18 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
-		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
+		HookRegistry::call('IssueDAO::_fromRow', array(&$issue, &$row));
 
+		return $issue;
+	}
+
+	/**
+	 * @copydoc self::_fromRow()
+	 * @deprecated 2018-01-05
+	 */
+	function _returnIssueFromRow($row) {
+		$issue = self::_fromRow($row);
+		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
 		return $issue;
 	}
 
@@ -782,7 +792,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::pubIdExists()
 	 */
-	function pubIdExists($pubIdType, $pubId, $issueId, $journalId) {
+	function pubIdExists($pubIdType, $pubId, $excludePubObjectId, $contextId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
 			FROM issue_settings ist
@@ -791,8 +801,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
-				(int) $issueId,
-				(int) $journalId
+				(int) $excludePubObjectId,
+				(int) $contextId
 			)
 		);
 		$returner = $result->fields[0] ? true : false;
@@ -803,12 +813,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::changePubId()
 	 */
-	function changePubId($issueId, $pubIdType, $pubId) {
+	function changePubId($pubObjectId, $pubIdType, $pubId) {
 		$idFields = array(
 			'issue_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
-			'issue_id' => (int) $issueId,
+			'issue_id' => (int) $pubObjectId,
 			'locale' => '',
 			'setting_name' => 'pub-id::'.$pubIdType,
 			'setting_type' => 'string',
@@ -821,13 +831,13 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::deletePubId()
 	 */
-	function deletePubId($issueId, $pubIdType) {
+	function deletePubId($pubObjectId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
 		$this->update(
 			'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
 			array(
 				$settingName,
-				(int)$issueId
+				(int)$pubObjectId
 			)
 		);
 		$this->flushCache();
@@ -836,12 +846,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::deleteAllPubIds()
 	 */
-	function deleteAllPubIds($journalId, $pubIdType) {
-		$journalId = (int) $journalId;
+	function deleteAllPubIds($contextId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
 
 		// issues
-		$issues = $this->getIssues($journalId);
+		$issues = $this->getIssues($contextId);
 		while ($issue = $issues->next()) {
 			$this->update(
 				'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
@@ -863,4 +872,4 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 }
 
-?>
+

@@ -8,8 +8,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -156,7 +156,7 @@ class IssueGridHandler extends GridHandler {
 
 		import('controllers.grid.issues.form.IssueForm');
 		$issueForm = new IssueForm($issue);
-		$issueForm->initData($request);
+		$issueForm->initData();
 		return new JSONMessage(true, $issueForm->fetch($request));
 	}
 
@@ -235,8 +235,8 @@ class IssueGridHandler extends GridHandler {
 		$issueForm = new IssueForm($issue);
 		$issueForm->readInputData();
 
-		if ($issueForm->validate($request)) {
-			$issueForm->execute($request);
+		if ($issueForm->validate()) {
+			$issueForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId());
 			return DAO::getDataChangedEvent();
@@ -256,7 +256,7 @@ class IssueGridHandler extends GridHandler {
 
 		import('controllers.grid.issues.form.IssueAccessForm');
 		$issueAccessForm = new IssueAccessForm($issue);
-		$issueAccessForm->initData($request);
+		$issueAccessForm->initData();
 		return new JSONMessage(true, $issueAccessForm->fetch($request));
 	}
 
@@ -273,8 +273,8 @@ class IssueGridHandler extends GridHandler {
 		$issueAccessForm = new IssueAccessForm($issue);
 		$issueAccessForm->readInputData();
 
-		if ($issueAccessForm->validate($request)) {
-			$issueAccessForm->execute($request);
+		if ($issueAccessForm->validate()) {
+			$issueAccessForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId());
 			return DAO::getDataChangedEvent();
@@ -336,7 +336,7 @@ class IssueGridHandler extends GridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 
@@ -351,8 +351,8 @@ class IssueGridHandler extends GridHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
 		$form->readInputData();
-		if ($form->validate($request)) {
-			$form->execute($request);
+		if ($form->validate()) {
+			$form->execute();
 			return DAO::getDataChangedEvent($issue->getId());
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
@@ -442,17 +442,17 @@ class IssueGridHandler extends GridHandler {
 			$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
 			if (!$request->getUserVar('confirmed')) {
 				// Display assign pub ids modal
-				$assignPublicIdentifiersForm->initData($args, $request);
+				$assignPublicIdentifiersForm->initData();
 				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
 			}
 			// Asign pub ids
 			$assignPublicIdentifiersForm->readInputData();
-			$assignPublicIdentifiersForm->execute($request);
+			$assignPublicIdentifiersForm->execute();
 
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
 			foreach ($publishedArticles as $publishedArticle) {
 				$article = $articleDao->getById($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
@@ -499,8 +499,8 @@ class IssueGridHandler extends GridHandler {
 
 		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
-		// Send a notification to associated users if journal is publishing content online with OJS
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
+		// Send a notification to associated users if selected and journal is publishing content online with OJS
+		if ($request->getUserVar('sendIssueNotification') && $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = array();
@@ -515,12 +515,6 @@ class IssueGridHandler extends GridHandler {
 					$journalId
 				);
 			}
-			$notificationManager->sendToMailingList($request,
-				$notificationManager->createNotification(
-					$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-					$journalId
-				)
-			);
 		}
 
 		$json = DAO::getDataChangedEvent();
@@ -552,9 +546,13 @@ class IssueGridHandler extends GridHandler {
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		foreach ($publishedArticles as $article) {
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
+			$article->setStatus(STATUS_QUEUED);
+			$article->stampStatusModified();
+			$articleDao->updateObject($article);
 		}
 
 		$dispatcher = $request->getDispatcher();
@@ -595,4 +593,4 @@ class IssueGridHandler extends GridHandler {
 	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -22,6 +22,7 @@
 	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
 	<message key="submission.submit.newSubmissionSingle">New Submission</message>
 	<message key="grid.action.workflow">Submission Workflow</message>
+	<message key="submission.abstract.wordCount.description">The abstract must be {$wordCount} words or less.</message>
 
 	<message key="submission.issueEntry">Metadata</message>
 	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
@@ -70,6 +71,7 @@
 	<message key="submission.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="submission.submit.form.titleRequired">Please enter the title of your article.</message>
 	<message key="submission.submit.form.abstractRequired">Please enter your article's abstract.</message>
+	<message key="submission.submit.form.wordCountAlert">Your abstract is too long. Please shorten it to below the word limit indicated for this section.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
 
 	<message key="submission.citationFormat.notFound">The requested citation format could not be retrieved.</message>

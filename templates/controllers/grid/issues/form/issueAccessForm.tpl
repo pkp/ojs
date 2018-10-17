@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/issues/form/issueData.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for creation and modification of an issue
@@ -20,18 +20,13 @@
 	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueAccessNotification"}
 
-	{fbvFormArea id="datePublishedArea" title="editor.issues.accessDate"}
-		{fbvFormSection}
-			{fbvElement type="text" id="openAccessDate" value=$openAccessDate|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
-
-		{/fbvFormSection}
-	{/fbvFormArea}
-
-	{fbvFormArea id="issueAccessArea" title="editor.issues.accessStatus"}
-		{fbvFormSection}
+	{fbvFormArea id="issueAccessArea"}
+		{fbvFormSection title="editor.issues.accessStatus"}
 			{fbvElement required="true" type="select" id="accessStatus" from=$accessOptions selected=$accessStatus}
 		{/fbvFormSection}
-
-	{fbvFormButtons submitText="common.save"}
+		{fbvFormSection title="editor.issues.accessDate"}
+			{fbvElement type="text" id="openAccessDate" value=$openAccessDate|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
+		{/fbvFormSection}
 	{/fbvFormArea}
+	{fbvFormButtons submitText="common.save"}
 </form>

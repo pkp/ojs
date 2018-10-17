@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExportableIssuesListGridHandler
@@ -16,17 +16,6 @@
 import('classes.controllers.grid.issues.IssueGridHandler');
 
 class ExportableIssuesListGridHandler extends IssueGridHandler {
-
-	//
-	// Implement template methods from PKPHandler
-	//
-	/**
-	 * @copydoc PKPHandler::initialize()
-	 */
-	function initialize($request, $args) {
-		parent::initialize($request, $args);
-	}
-
 
 	//
 	// Implemented methods from GridHandler.
@@ -72,4 +61,4 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	}
 }
 
-?>
+

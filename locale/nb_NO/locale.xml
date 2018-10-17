@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -164,7 +164,7 @@
 	<!-- Roles -->
 	<message key="user.role.manager">Redaksjonsleder</message>
 	<message key="user.role.editor">Ansvarlig redaktør</message>
-	<message key="user.role.sectionEditor">Seksjonsredaktør</message>
+	<message key="user.role.subEditor">Seksjonsredaktør</message>
 	<message key="user.role.layoutEditor">Layoutredaktør</message>
 	<message key="user.role.copyeditor">Manusredaktør</message>
 	<message key="user.role.proofreader">Korrekturleser</message>
@@ -348,12 +348,6 @@ Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Navnelenker til fagkonsulentprofil.<br/>
-Rangeres på en skala fra 1 til 5, hvor 5 er best.<br/>
-Uker viser til gjennomsnittlig tid det tar å ferdigstille et vurderingsoppdrag.<br/>
-Siste er dato for siste aksepterte vurderingsoppdrag.<br/>
-Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller under arbeid.]]></message>
 
 
 
@@ -410,10 +404,10 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<message key="reviewer.article.uploadedFile">Opplastete filer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versjon lastet opp av fagkonsulent</message>
  	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Hvis du vil skrive merknader til redaktøren direkte i manuskriptfilen, må du først lagre den på din egen maskin, og deretter bruke Finn/Last opp.)</message>
-        <message key="reviewer.article.schedule.request">Redaktørens bestilling</message>
-        <message key="reviewer.article.schedule.response">Ditt svar</message>
-        <message key="reviewer.article.schedule.submitted">Fagvurdering: innsendt</message>
-        <message key="reviewer.article.schedule.due">Fagvurdering: ventet-dato</message>
+	<message key="reviewer.article.schedule.request">Redaktørens bestilling</message>
+	<message key="reviewer.article.schedule.response">Ditt svar</message>
+	<message key="reviewer.article.schedule.submitted">Fagvurdering: innsendt</message>
+	<message key="reviewer.article.schedule.due">Fagvurdering: ventet-dato</message>
 	<message key="reviewer.article.decision.accept">aksepteres</message>
  	<message key="reviewer.article.decision.pendingRevisions">aksepteres, med forbehold om omarbeiding</message>
 	<message key="reviewer.article.decision.resubmitHere">send inn på nytt for ny fagvurdering</message>
@@ -421,18 +415,16 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<message key="reviewer.article.decision.decline">avvises</message>
 	<message key="reviewer.article.decision.seeComments">annet: se kommentarer</message>
 	<message key="reviewer.article.schedule">Arbeidsplan</message>
-        <message key="reviewer.article.submissionToBeReviewed">Manuskriptet som skal vurderes</message>
+	<message key="reviewer.article.submissionToBeReviewed">Manuskriptet som skal vurderes</message>
  	<message key="reviewer.article.reviewSchedule">Arbeidsplan for fagvurderingen</message>
-        <message key="reviewer.article.reviewSteps">Fagvurdering steg for steg</message>
-        <message key="reviewer.article.reviewerGuidelines">Instruks for fagkonsulenter</message>
+	<message key="reviewer.article.reviewSteps">Fagvurdering steg for steg</message>
+	<message key="reviewer.article.reviewerGuidelines">Instruks for fagkonsulenter</message>
 	<message key="reviewer.article.mustSelectDecision">Ingen anbefaling er valgt. Du må velge en anbefaling å sende inn.</message>
  	<message key="reviewer.article.confirmDecision">Så snart du har registrert beslutningen, kan du ikke lenger endre den. Er du sikker på at du vil fortsette?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sikre anonym fagvurdering</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til MR</message>
 	<message key="copyeditor.article.copyeditorFile">Fil til manusredaktør</message>
-	<message key="copyeditor.article.uploadedFile">Opplastet fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktør fil</message>
 
 	<!-- Proofreader -->
@@ -628,7 +620,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="installer.ojsUpgrade">OJS oppgradering</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 
-<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README">README</a> filen som følger med denne programvare. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README.md">README</a> filen som følger med denne programvare. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 
 <h4>Oppgradering</h4>
 
@@ -670,7 +662,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 <p>Velg <strong>Manuell installering</strong> for å vise SQL-setninger  som trengs for å opprette OJS databaseskjema og første data, slik at databaseinstallasjonen kan utføres manuelt. Denne valgmuligheten er nyttig for debugging av installasjonsproblemer, særlig på platformer systemet ikke har støtte for. Merk at denne installasjonsmåten verken vil lage databasen eller tabeller, selv om konfigurasjonsfilen likevel kommer til å bli skrevet med de medfølgende databaseinnstillingene.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 
-<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README">README</a>- og <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>-filene som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller besøk PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README.md">README</a>- og <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>-filene som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller besøk PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av database din, filmappen, og OJS installasjonsmappe før du går videre.</p>
 <p>Hvis du kjører installasjonen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vennligst forsikre deg om at max_execution_time directive i din php.ini konfigurasjonsfil er satt til en høy grense. Hvis denne eller en annen tidsbegrensning (for eks. Apache's "Timeout" direktiv) blir overskredet og oppgraderingsprosessen dermed blir avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>]]></message>
 	<message key="installer.localeInstructions">Primærspråket som skal brukes i dette systemet. Vennligst slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her.</message>
@@ -722,7 +714,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="log.editor.archived">Manuskriptet {$submissionId} er arkivert.</message>
 	<message key="log.editor.restored">Manuskriptet {$submissionId} er hentet tilbake til arbeidsplanen.</message>
 	<message key="log.editor.editorAssigned">{$editorName} er oppnevnt som redaktør for manuskriptet {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} har sendt inn {$submissionId} for planlegging.</message>
@@ -789,7 +780,7 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	 *
 	-->
 	<message key="reviewer.article.enterReviewForm">Klikk på ikonet for å fylle ut vurderingsskjemaet.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalinger</message>
 	<message key="common.confirmComplete">Er du sikker på at du vil registrere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere.</message>
@@ -826,7 +817,6 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 		<li>OJS greier ikke å modifisere registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</li>
 	</ul>
 <p>Pakkene med oversatte lokalfiler kan lastes ned manuelt fra <a href="http://pkp.sfu.ca">PKP-nettstedet</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Siteringsformat-programutvidelser gir brukerne forskjellige formater for referanse til artiklene.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
 <h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>
 Authors who publish with this journal agree to the following terms:
@@ -929,7 +919,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="subscriptionManager.institutionalSubscriptions">Institusjonelle abonnementer</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementstyper</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Redaktørene sender fagfellevurderere forespørsel om å være fagfellevurderer med det innsendte manuskriptet vedlagt e-posten. Fagfellevurdererne sender sin aksept eller avslag til redaktørene på e-post, og sine kommentarer og anbefalinger. Redaktørene legger inn fagfellevurderernes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen.</message>
-	<message key="manager.setup.citations.enable">Gjør det mulig for forfattere å legge inn en separat formattert liste med referanser som en del av innleveringen.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Merkede elementer indikerer at noe avventer handling fra redaktøren.</li>
 	<li>"Forventet" fylles ut når fagfellevurdereren aksepterer oppdraget; det viser antall uker frem til forfallsdato for vurderingen eller (-) antall uker siden vuderingen skulle vært ferdig.</li>
@@ -975,8 +964,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.subscription.purchase">Kjøp abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
-	<message key="notification.mailListDescription">Oppgi e-postadresse for å få umiddelbar varsling når viktig nytt innhold legges til i tidsskriftet.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Denne siden viser viktige oppdateringer som har med dette tidsskriftet å gjøre, som nye nummer eller kunngjøringer. Du kan abonnere på disse varslingene via RSS-tjenesten (ved å klikke på symbolene til høyre) eller <a href="{$emailUrl}">via e-post.</a>]]></message>
 	<message key="notification.type.articleSubmitted">En ny artikkel, "{$title}", har blitt innlevert.</message>
 	<message key="notification.type.editing">Redigeringshendelser</message>
 	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$title}" har blitt kommentert.</message>
@@ -1011,4 +998,7 @@ Authors who publish with this journal agree to the following terms:
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Utgaver</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}.</message>
 </locale>

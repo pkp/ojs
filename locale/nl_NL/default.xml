@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -151,14 +151,7 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Artikelpublicatie</message>
-	<message key="default.journalSettings.publicationFeeDescription">Als dit artikel geaccepteerd wordt voor publicatie, vragen we u om een bijdrage om de publicatiekosten te helpen dekken.</message>
-	<message key="default.journalSettings.waiverPolicy">Als u niet de middelen heeft om dit bedrag te betalen, kunt u om kwijtschelding krijgen. We willen niet dat de kosten publicatie van geschikt werk in de weg staan.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Koop artikel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">De betaling van dit bedrag stelt u in staat om dit artikel te bekijken, downloaden en af te drukken.</message>
 	<message key="default.journalSettings.membershipFee">Lidmaatschap van de organisatie</message>
-	<message key="default.journalSettings.membershipFeeDescription">De betaling van dit bedrag maakt u voor één jaar lid van deze organisatie en geeft u vrije toegang tot het tijdschrift.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Koop issue</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Door deze kosten te betalen kunt u dit issue bekijken, downloaden en afdrukken.</message>
-	<message key="default.journalSettings.emailHeader">Dit bericht wordt u toegezonden namens {$journalName}.
-________________________________________________________________________</message>
 </locale>

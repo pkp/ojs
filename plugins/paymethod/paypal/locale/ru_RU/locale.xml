@@ -4,8 +4,8 @@
 <!--
   * plugins/paymethod/paypal/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -18,4 +18,7 @@
 	<message key="plugins.paymethod.paypal.settings">Настройки платежей через Paypal</message>
 	<message key="plugins.paymethod.paypal.settings.testMode">Тестовый режим</message>
 	<message key="plugins.paymethod.paypal.settings.accountName">Имя учетной записи</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID клиента</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Секретный код</message>
+	<message key="plugins.paymethod.paypal.error">Произошла ошибка транзакции. Пожалуйста, свяжитесь с менеджером журнала для получения более подробной информации.</message>
 </locale>

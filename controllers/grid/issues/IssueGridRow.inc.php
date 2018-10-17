@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/IssueGridRow.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridRow
@@ -21,11 +21,10 @@ class IssueGridRow extends GridRow {
 	// Overridden template methods
 	//
 	/*
-	 * Configure the grid row
-	 * @param $request PKPRequest
+	 * @copydoc GridRow::initialize
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $template = null) {
+		parent::initialize($request, $template);
 
 		// Is this a new row or an existing row?
 		$issueId = $this->getId();
@@ -129,4 +128,4 @@ class IssueGridRow extends GridRow {
 	}
 }
 
-?>
+

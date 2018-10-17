@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -40,7 +40,7 @@
 	<!-- Permissions -->
 
 	<message key="reviewer.article.enterReviewForm">Clicca sull'icona e compila il modulo per la revisione.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Compila i campi richiesti.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Compila i campi richiesti.</message>
 
 	<!-- review forms end -->
 
@@ -206,7 +206,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Journal Manager</message>
-	<message key="user.role.sectionEditor">Section Editor</message>
+	<message key="user.role.subEditor">Section Editor</message>
 	<message key="user.role.subscriptionManager">Gestore degli abbonamenti</message>
 	<message key="user.role.managers">Journal Manager</message>
 	<message key="user.role.subscriptionManagers">Gestori degli abbonamenti</message>
@@ -339,7 +339,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">I plugin di autorizzazione permettono a OJS di delegare l'attività di autenticazione degli utenti ad altri sistemi, come server LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">I plugin per i formati citazionali forniscono agli utenti vari formati per la citazione degli articolo.</message>
 	<message key="plugins.categories.generic.description">I plugin generici sono utilizzati per estendere OJS in varie modalità.</message>
 
 	<!-- Files Browser -->
@@ -457,11 +456,6 @@ Seleziona un modello per gestire questi aspetti del processo editoriale. (Per de
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Il nome porta al profilo del revisore.<br/>
-Il giudizio arriva fino a 5 (Eccellente).<br/>
-Settimane si riferisce al tempo medi di completamente di una revisione.<br/>
-Ultima è la data della revisione accettata più recente.<br/>
-Attive indica quante revisioni sono attualmente in corso.]]></message>
 
 
 
@@ -544,14 +538,12 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
         <message key="reviewer.article.selectRecommendation">Seleziona un parere conclusivo e invialo all'editor per completare questa fase. Devi inserire un commento o caricare un file prima di poter scegliere il parere.</message>
 	<message key="reviewer.article.mustSelectDecision">Non è stato selezionato alcun parere. Devi scegliere un parere da inviare.</message>
 	<message key="reviewer.article.confirmDecision">Una volta che la tua decisione è stata registrata non sarai più in grado in modificarla. Sei sicuro di continuare?</message>
-	<message key="reviewer.article.ensuringBlindReview">Come assicurare una revisione cieca</message>
 
 
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File al Copyeditor</message>
 	<message key="copyeditor.article.copyeditorFile">File del Copyeditor</message>
-	<message key="copyeditor.article.uploadedFile">File caricato</message>
 	<message key="copyeditor.article.copyeditorFinalFile">File del Copyeditor</message>
 
 	<!-- Proofreader -->
@@ -831,7 +823,7 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="installer.ojsUpgrade">Aggiornamento di OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>versione di OJS{$version}</h4>
 
-<p>Grazie per aver scaricato <strong>Open Journal Systems</strong> del  Public Knowledge Project's. Prima di continuare, leggere attentamente il file <a href="{$baseUrl}/docs/README">README</a> incluso in questo software. Per altre informazioni sul Public Knowledge Project e sui suoi progetti, visita il <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Se vuoi segnalare un bug o hai bisogno di supporto su Open Journal Systems, visita il <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> o il sistema online di <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">segnalazione dei bug</a>. Sebbene il forum sia la modalità di contatto preferita, puoi scrivere al team anche all'indirizzo <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Grazie per aver scaricato <strong>Open Journal Systems</strong> del  Public Knowledge Project's. Prima di continuare, leggere attentamente il file <a href="{$baseUrl}/docs/README.md">README</a> incluso in questo software. Per altre informazioni sul Public Knowledge Project e sui suoi progetti, visita il <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Se vuoi segnalare un bug o hai bisogno di supporto su Open Journal Systems, visita il <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> o il sistema online di <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">segnalazione dei bug</a>. Sebbene il forum sia la modalità di contatto preferita, puoi scrivere al team anche all'indirizzo <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Aggiornamento</h4>
 
@@ -870,7 +862,7 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versione {$version}</h4>
 
-<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README">README</a> e <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> i  files inclusi in questo programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare il <a href="http://pkp.sfu.ca/" target="_blank">sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://forum.pkp.sfu.ca">forum di supporto</a> o visita online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Grazie per aver scaricato il Public Knowledge Project <strong>Open Journal Systems</strong>. Prima di procedere, si prega di leggere <a href="{$baseUrl}/docs/README.md">README</a> e <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> i  files inclusi in questo programma. Per ulteriori informazioni sul Public Knowledge Project e i suoi progetti, si prega di visitare il <a href="http://pkp.sfu.ca/" target="_blank">sito web PKP</a>. Se hai dei bug da segnalare o richieste di supporto tecnico su Open Journal Systems, vedi il <a href="http://forum.pkp.sfu.ca">forum di supporto</a> o visita online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">il sistema di segnalazione dei bug</a> di PKP. Nonostante il forum di supporto sarebbe il metodo preferito per il contatto, puoi inoltre mandare una email al team a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Nota che è <strong>fortemente raccomandato</strong> fare un backup del tuo database,directory dei files , e directory di installazione di OJS   prima di procedere.</p>
 <p>Se stai operando in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, si prega di assicurarsi che  the max_execution_time directive nel tuo file di configurazione php.ini  sia impostato a un limite alto. Se questo o qualche altro tempo limite (e.g.  il "Timeout" directive di apache) viene raggiunto e l'aggiornamento viene interrotto, sarà richiesto un intervento manuale.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Per un supporto completo di Unicode (UTF-8), selezionate UTF-8 per tutti i set di caratteri. Da notare che questo supporto richiede dei server di database MySQL >= 4.1.1 o PostgreSQL >= 7.1, e PHP >= 4.3.0 compilato con il supporto per la libreria <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (presente di default nelle installazioni più recenti di PHP). Se il vostro server non ha questi requisiti potreste avere dei problemi nell'utilizzo di set di caratteri estesi.
@@ -997,8 +989,6 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 
 	<!-- Notification Types -->
 
-	<message key="notification.mailListDescription">Inserisci il tuo indirizzo email per ricevere notifiche delle novità della rivista.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Questa pagina mostra aggiornamenti importanti alla rivista, come avvisi o nuovi fascicoli. Puoi ricevere queste notifiche anche attraverso feed RSS (cliccando sulle immagini a destra o <a href="{$emailUrl}">viae mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">&#200; stato proposto un nuovo articolo, "{$title}"></message>
 	<message key="notification.type.editing">Eventi modificati</message>
 	<message key="notification.type.editorDecisionComment">La decisione dell'editor su  "{$title}" &#232; stata commentata.</message>

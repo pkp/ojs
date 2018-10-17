@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -16,7 +16,6 @@
 	<message key="section.default.title">Artikkelit</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="section.default.policy"></message>
-
 	<message key="default.genres.article">Artikkelin teksti</message>
 
 	<!--
@@ -139,15 +138,9 @@ Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoituk
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Artikkelin julkaiseminen</message>
-	<message key="default.journalSettings.publicationFeeDescription">Jos tämä artikkeli hyväksytään julkaistavaksi, sinua pyydetään maksamaan artikkelin julkaisumaksu, jolla katetaan julkaisemisesta aiheutuneita kustannuksia.</message>
-	<message key="default.journalSettings.waiverPolicy">Mikäli et pysty maksamaan tällaisia maksuja, sinulla on mahdollisuus saada vapautus jokaisesta maksusta. Emme halua, että maksut estävät arvokkaan työn julkaisemisen.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Osta artikkeli</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Kun maksat tämän maksun, voit katsella tätä artikkelia sekä ladata ja tulostaa sen.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Osta numero</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Kun maksat tämän maksun, voit katsella tätä numeroa sekä ladata ja tulostaa sen.</message>
 	<message key="default.journalSettings.membershipFee">Yhdistyksen jäsenyys</message>
-	<message key="default.journalSettings.membershipFeeDescription">Kun maksat tämän maksun, sinut lisätään tämän yhdistyksen jäseneksi yhden vuoden ajaksi. Jäsenyys antaa sinulle vapaan pääsyn tähän julkaisuun.</message>
-
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Julkaisun hallinnoija</message>
 	<message key="default.groups.plural.manager">Julkaisun hallinnoijat</message>

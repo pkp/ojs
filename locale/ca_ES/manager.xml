@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -54,7 +54,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Compra l'article</message>
 	<message key="manager.payment.options.purchaseIssueFee">Compra el número</message>
 	<message key="manager.payment.options.text">Descripció del mètode de pagament</message>
-	<message key="manager.payment.options.waiverPolicy">Política d’exempció de pagament</message>
 	<message key="manager.payment.paymentId">Id. del pagament</message>
 	<message key="manager.payment.paymentMethod">Mètode de pagament</message>
 	<message key="manager.payment.paymentMethod.description">Des d’aquesta pantalla podeu configurar qualsevol dels mòduls de mètodes de pagament següents.</message>
@@ -261,7 +260,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> La invitació per correu electrònic als revisors/ores conté un URL especial que dirigeix directament els revisors/ores convidats a la pàgina de revisió de la tramesa (amb accés a qualsevol altra pàgina que requereixi identificació). Per motius de seguretat, els editors/ores no poden modificar les adreces de correu electrònic ni afegir-ne als camps CC o CCO abans d’enviar les invitacions als revisors/ores.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Valoració dels revisors/ores</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Recordatoris per a la revisió</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Inclou un enllaç a la secció <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assegurar una avaluació anònima</a> a totes les pàgines en què els autors/ores i els revisors/ores carreguin fitxers.]]></message>
 	<message key="manager.setup.reviewPolicy">Política de revisió</message>
 	<message key="manager.setup.searchEngineIndexing">Indexació per als motors de cerca</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Per ajudar els usuaris/àries dels motors de cerca a trobar aquesta revista, indiqueu-ne una breu descripció i les paraules clau més importants (separades per punt i coma).</message>
@@ -508,4 +506,81 @@
 	<message key="plugins.importexport.common.action.register">Registra</message>
 	<message key="plugins.importexport.common.register.error.mdsError">El registre no es correcte! El servidor de registre del DOI ha retornat un error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registre correcte!</message>
+	<message key="manager.website.archiving">Arxivant</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Encara no hi ha editors/es de secció. Dóna aquest rol a un usuari/ària com a mínim a través de Gestió > Configuració > Users &amp; Roles first.]]></message>
+	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="manager.setup.masthead">Capçalera</message>
+	<message key="manager.setup.editorialTeam">Equip editorial</message>
+	<message key="manager.setup.editorialTeam.description">Llista els editors/es, els directors/es de gestió i les altres persones associades amb la revista.</message>
+	<message key="manager.setup.homepageContent">Contingut de la pàgina d'inici de la revista</message>
+	<message key="manager.setup.homepageContentDescription">La pàgina d'inici de la revista consta dels enllaços de navegació per defecte. S'hi pot afegir contingut addicional mitjançant una o totes les opcions següents, que apareixeran en l'ordre mostrat.</message>
+	<message key="manager.setup.layout">Disseny de la revista</message>
+	<message key="manager.setup.useStyleSheet">Full d'estil de la revista</message>
+	<message key="manager.setup.contextName">Nom de la revista</message>
+	<message key="manager.setup.pageHeader">Capçalera de la revista</message>
+	<message key="manager.setup.focusAndScope.description">Descriure a autors/es, lectors/es i bibliotecaris/àries la gamma d'articles i altres elements que publicarà la revista.</message>
+	<message key="manager.setup.form.issnInvalid">El ISSN especificat no és vàlid.</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Falta el prefix DOI per a la revista amb la ruta {$path}.</message>
+	<message key="plugins.importexport.common.error.unknownJournal">La ruta de revista especificada, "{$journalPath}", no existeix.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Els objectes especificats no es poden trobar.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Enviar una còpia al contacte principal especificat en la configuració de la revista.</message>
+	<message key="plugins.importexport.common.filter.issue">Qualsevol número</message>
+	<message key="plugins.importexport.common.status.any">Qualsevol estat</message>
+	<message key="plugins.importexport.common.status.notDeposited">No dipositat</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Marcar com a registrat</message>
+	<message key="plugins.importexport.common.status.registered">Registrat</message>
+	<message key="plugins.importexport.common.action">Acció</message>
+	<message key="plugins.importexport.common.action.export">Exportar</message>
+	<message key="plugins.importexport.common.action.markRegistered">Marcar com a registrats</message>
+	<message key="plugins.importexport.common.validation">Validar el XML abans de l'exportació i el registre.</message>
+	<message key="plugins.importexport.common.error.noObjectsSelected">Cap objecte seleccionat.</message>
+	<message key="plugins.importexport.common.error.validation">Els objectes seleccionats no es poden convertir.</message>
+	<message key="plugins.importexport.common.invalidXML">XML invàlid:</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">L'arxiu de sortida {$param} no és editable.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">L'arxiu d'entrada {$param} no es pot llegir.</message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssLicenseLabel">Descripció de la llicència CLOCKSS</message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.Issn">ISSN</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar els subscriptors/es per correu electrònic</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mes(os) després del venciment de la subscripció</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar els subscriptors/es per correu electrònic</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mes(os) abans del venciment de la subscripció</message>
+	<message key="manager.distribution.access">Accés</message>
+	<message key="grid.category.path">Ruta</message>
+	<message key="grid.action.addSection">Afegir secció</message>
+	<message key="manager.setup.journalThumbnail.altText">Text alternatiu per a la miniatura</message>
+	<message key="manager.setup.enableArchive">Activa l'emmagatzematge</message>
+	<message key="manager.setup.lockssLicenseLabel">Descripció de llicència LOCKSS</message>
+	<message key="manager.publication.library">Biblioteca de l'editor/a</message>
+	<message key="grid.genres.title.short">Components</message>
+	<message key="grid.genres.title">Components de l'article</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">Configuració del mòdul DOI</message>
+	<message key="plugins.importexport.common.export.articles">Articles</message>
+	<message key="plugins.importexport.common.export.issues">Números</message>
+	<message key="plugins.importexport.common.export.representations">Galerades</message>
+	<message key="manager.setup.includeCreativeCommons">Les revistes que ofereixen accés obert immediat o retardat han d'incloure una llicència Creative Commons en el moment adequat amb tot el treball publicat.</message>
+	<message key="manager.setup.journalSummary">Índex de la revista</message>
+	<message key="manager.setup.journalSummary.description">Una breu descripció de la revista per mostrar-se en el llistat de revistes.</message>
+	<message key="manager.setup.journalAbout">Sobre la revista</message>
+	<message key="manager.setup.journalAbout.description">Inclogui qualsevol informació sobre la revista que pugui ser d'interès per a lectors/es, autors/es o revisors/es, com per exemple: política d'accés obert, focus i àmbit de la revista, avís de drets d'autor, divulgació del patrocini, història de la revista, declaració de privacitat o si està inclosa en algun sistema d'arxius LOCKSS o CLOCKSS.</message>
+	<message key="manager.setup.favicon">Icona web de la revista</message>
+	<message key="manager.setup.faviconDescription">Afegeixi una icona web per a aquesta revista que es mostrarà al costat de la barra de navegació quan els usuaris/àries visitin aquest lloc.</message>
+	<message key="manager.setup.faviconInvalid">Format d'icona web no vàlid. Els formats acceptats són .ico, .png i .gif.</message>
+	<message key="manager.setup.journalThumbnail.description">Un petit logotip o representació de la revista que es pot usar en el llistat de revistes.</message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Apareixerà una llicència LOCKSS en l'apartat "Sobre la revista" sota "Emmagatzematge": <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">llicència LOCKSS</a>]]></message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Permetre que CLOCKSS emmagatzemi i distribueixi el contingut de la revista entre les biblioteques participants a través d'una pàgina CLOCKSS de <a href="{$clockssUrl}" target="_blank">manifest editorial</a>.]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[Una llicència CLOCKSS apareixerà en l'apartat "Sobre la revista" sota "Emmagatzematge": <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
+	<message key="manager.setup.clockssRegister"><![CDATA[Registreu-vos en el servei CLOCKSS visitant la <a href="http://clockss.org/" target="_blank">pàgina web de CLOCKSS</a>.]]></message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visualitzacions de la taula de continguts del número</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Utilitzeu la casella de verificació proporcionada, si us plau.</message>
+	<message key="manager.setup.section.description">Els articles inclosos en números ja publicats d'una revista s'organitzen en seccions, normalment per temes o per tipus de contingut (p. ex.: articles de revisió, de recerca, etc.).</message>
+	<message key="manager.setup.copyrightYearBasis.article">Article: l'any per defecte provindrà de la data de publicació de l'article, com en el cas dels articles "en premsa".</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Número: l'any per defecte provindrà de la data de publicació del número.</message>
+	<message key="manager.setup.resetPermissions.confirm">Segur que voleu restablir les dades sobre permisos ja vinculades als articles?</message>
+	<message key="plugins.importexport.common.missingRequirements">No es compleixen els requisits del mòdul</message>
+	<message key="grid.genres.description">Aquests components s'utilitzen per anomenar els arxius i es presenten en un menú desplegable en els arxius carregats. Els gèneres designats ## permeten a l'usuari/ària associar l'arxiu tant amb la tramesa completa 99Z com amb un component particular per número (p. ex.: 02)</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">No hi ha cap element publicable seleccionat per assignar-li DOI en el mòdul d'identificador públic DOI, per la qual cosa no hi ha possibilitat de dipositar o d'exportar en aquest mòdul.</message>
+	<message key="settings.roles.gridDescription">Els rols són grups d'usuaris/àries de la revista que tenen accés a diferents nivells de permisos i fluxos de treball associats dins la revista. Hi ha cinc nivells de permisos diferents: 1) els administradors/es de la revista tenen accés total a la revista (tot el contingut i la configuració); 2) els editors/es de secció tenen accés complet al contingut que se'ls assigni; 3) els assistents/es de la revista tenen accés limitat a totes les trameses que un editor/a els hagi assignat explícitament; 4) els revisors/es poden veure i actuar sobre les trameses que tinguin assignades per revisar; i 5) els autors/es poden veure i interactuar amb una quantitat limitada d'informació de les seves trameses. Addicionalment, hi ha cinc fases diferents a les quals els rols poden tenir accés: tramesa, revisió interna, revisió, edició i producció.</message>
+	<message key="manager.setup.copyrightYearBasis">Establir l'any dels drets d'autor de l'article a</message>
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/form/SectionForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionForm
@@ -38,10 +38,9 @@ class SectionForm extends PKPSectionForm {
 
 	/**
 	 * Initialize form data from current settings.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 */
-	function initData($args, $request) {
+	function initData() {
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -51,7 +50,7 @@ class SectionForm extends PKPSectionForm {
 		}
 
 		if (isset($section) ) {
-			$this->_data = array(
+			$this->setData(array(
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
 				'reviewFormId' => $section->getReviewFormId(),
@@ -63,9 +62,12 @@ class SectionForm extends PKPSectionForm {
 				'hideTitle' => $section->getHideTitle(),
 				'hideAuthor' => $section->getHideAuthor(),
 				'policy' => $section->getPolicy(null), // Localized
-				'wordCount' => $section->getAbstractWordCount()
-			);
+				'wordCount' => $section->getAbstractWordCount(),
+				'subEditors' => $this->_getAssignedSubEditorIds($sectionId, $journal->getId()),
+			));
 		}
+
+		parent::initData();
 	}
 
 	/**
@@ -78,9 +80,6 @@ class SectionForm extends PKPSectionForm {
 		$templateMgr->assign('sectionId', $this->getSectionId());
 
 		$journal = $request->getJournal();
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-		$sectionEditorCount = $userGroupDao->getContextUsersCount($journal->getId(), null, ROLE_ID_SUB_EDITOR);
-		$templateMgr->assign('sectionEditorCount', $sectionEditorCount);
 
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
@@ -89,6 +88,13 @@ class SectionForm extends PKPSectionForm {
 			$reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
 		}
 		$templateMgr->assign('reviewFormOptions', $reviewFormOptions);
+
+		// Series Editors
+		$sectionEditorsListData = $this->_getSubEditorsListPanelData($journal->getId(), $request);
+		$templateMgr->assign(array(
+			'hasSubEditors' => !empty($sectionEditorsListData['items']),
+			'subEditorsListData' => json_encode($sectionEditorsListData),
+		));
 
 		return parent::fetch($request);
 	}
@@ -112,12 +118,11 @@ class SectionForm extends PKPSectionForm {
 
 	/**
 	 * Save section.
-	 * @param $args array
-	 * @param $request PKPRequest
+	 * @return mixed
 	 */
-	function execute($args, $request) {
+	function execute() {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$journal = $request->getJournal();
+		$journal = Application::getRequest()->getJournal();
 
 		// Get or create the section object
 		if ($this->getSectionId()) {
@@ -144,8 +149,6 @@ class SectionForm extends PKPSectionForm {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		HookRegistry::call('sectionform::execute', array($this, $section));
-
 		// Insert or update the section in the DB
 		if ($this->getSectionId()) {
 			$sectionDao->updateObject($section);
@@ -155,18 +158,11 @@ class SectionForm extends PKPSectionForm {
 			$sectionDao->resequenceSections($journal->getId());
 		}
 
-		import('lib.pkp.classes.controllers.listbuilder.ListbuilderHandler');
-		// Save the section editor associations.
-		ListbuilderHandler::unpack(
-			$request,
-			$this->getData('subEditors'),
-			array($this, 'deleteSubEditorEntry'),
-			array($this, 'insertSubEditorEntry'),
-			array($this, 'updateSubEditorEntry')
-		);
+		// Update section editors
+		$this->_saveSubEditors($journal->getId());
 
-		return true;
+		return parent::execute();
 	}
 }
 
-?>
+

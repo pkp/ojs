@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
@@ -19,15 +19,13 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	/**
 	 * @see Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
-				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'), HOOK_SEQUENCE_LATE);
-				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
-			}
-			return true;
+	function register($category, $path, $mainContextId = null) {
+		if (!parent::register($category, $path, $mainContextId)) return false;
+		if ($this->getEnabled($mainContextId)) {
+			HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'), HOOK_SEQUENCE_LATE);
+			HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
 		}
-		return false;
+		return true;
 	}
 
 	/**
@@ -71,7 +69,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'article' => $article,
 				'galley' => $galley,
 			));
-			$templateMgr->display($this->getTemplatePath() . '/display.tpl');
+			$templateMgr->display($this->getTemplateResource('display.tpl'));
 
 			return true;
 		}
@@ -92,7 +90,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
 			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
-				echo $this->_getHtmlContents($request, $galley);
+				echo $this->_getHTMLContents($request, $galley);
 				$returner = true;
 				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
 			}
@@ -134,7 +132,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				$referredArticle = $articleDao->getById($galley->getSubmissionId());
 			}
 			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
-			$pattern = preg_quote($embeddableFile->getOriginalFileName());
+			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
 
 			$contents = preg_replace(
 				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
@@ -259,4 +257,4 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

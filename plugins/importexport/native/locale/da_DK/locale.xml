@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.importexport.native.displayName">Native XML-plug-in</message>
+	<message key="plugins.importexport.native.description">Importer og eksporter artikler og numre i OJS' eget XML-format.</message>
+	<message key="plugins.importexport.native.import">Importer</message>
+	<message key="plugins.importexport.native.import.instructions">Upload XML-fil til import</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Udvælg artikler til eksport</message>
+	<message key="plugins.importexport.native.exportSubmissions">Eksporter artikler</message>
+	<message key="plugins.importexport.native.exportIssues">Eksporter numre</message>
+	<message key="plugins.importexport.native.results">Resultater</message>
+	<message key="plugins.inportexport.native.uploadFile">For at fortsætte skal du uploade en fil under "Import".</message>
+	<message key="plugins.importexport.native.importComplete">Importen blev gennemført. Følgende numre blev importeret:</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Anvendelse: {$scriptName} {$pluginName} [command] ...
+Kommandoer:
+importer [xmlFileName] [journal_path] [user_name] ...
+eksporter [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...
+eksporter [xmlFileName] [journal_path] artikel [articleId]
+eksporter [xmlFileName] [journal_path] numre [issueId1] [issueId2] ...
+eksporter [xmlFileName] [journal_path] nummer [issueId]
+
+Yderligere parametre er nødvendige for at importere data som følger, afhængigt
+af rodelement i XML-dokumentet.
+
+Hvis rodelementet er <article> eller <articles>, kræves yderligere parametre.
+Følgende formater accepteres:
+
+{$ scriptName} {$ pluginName} importere [xmlFileName] [journal_path] [user_name]
+issue_id [issueId] section_id [sectionId]
+
+{$ scriptName} {$ pluginName} importere [xmlFileName] [journal_path] [user_name]
+issue_id [issueId] section_name [name]
+
+{$ scriptName} {$ pluginName} importere [xmlFileName] [journal_path]
+issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">Ukendt sektion {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">Den angivne bruger, "{$userName}", eksisterer ikke.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Sektionstitlen "{$section1Title}" og sektionstitlen "{$section2Title}" i "{$issueTitle}" nummer matchede de forskellige eksisterende tidsskriftssektioner</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Sektionstitlen "{$sectionTitle}" i "{$issueTitle}" nummer matchede en eksisterende tidsskriftssektion, men en anden titel i denne sektion stemmer ikke overens med en anden titel i det eksisterende tidsskrift.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Sektionsforkortelsen "{$section1Abbrev}" og sektionsforkortelsen "{$section2Abbrev}" fra "{$issueTitle}" nummer matchede de forskellige eksisterende tidsskriftssektioner.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Sektionsforkortelsen "{$sectionAbbrev}" i "{$issueTitle}" nummer matchede en eksisterende tidsskriftssektion, men en anden forkortelse af denne sektion stemmer ikke overens med en anden forkortelse af den eksisterende tidsskriftssektion.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Intet eller flere end et nummer matchede den givne nummer-identifikation "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Eksisterende nummer med id {$issueId} matcher den givne nummer-identifikation "{$issueIdentification}". Dette nummer vil ikke blive ændret, men artikler vil blive tilføjet.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Artiklen "{$articleTitle}" mangler nummer-identifikation..</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Artiklen "{$articleTitle}" er indeholdt i et nummer, men har ingen publiceringsdato.</message>
+</locale>

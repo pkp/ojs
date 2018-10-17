@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/lucene/locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS solr/lucene search plugin localization strings
@@ -51,7 +51,7 @@
 		<h4>تلميحات البحث:</h4><ul>
 			<li>عبارات البحث حساسة للحروف الصغيرة والكبيرة</li>
 			<li>يتم تجاهل الكلمات الشائعة</li>
-			<li>بشكل إفتراضي، المقالات التي تتضمن <em>أي</em> من عبارات الحرف ستظهر في النتائج (أي: <em>OR</em> هي المطبقة)</li>
+			<li>بشكل إفتراضي، المقالات التي تتضمن <em>أي</em> من عبارات البحث ستظهر في النتائج (أي: <em>OR</em> هي المطبقة)</li>
 			<li>لضمان وجود الكلمة في المقالة، إجعلها مسبقة بعلامة <strong>+</strong>؛ مثل: <em>+journal +access scholarly academic</em></li>
 			<li>إجمع عدة كلمات بواسطة <em>AND</em> للعثور على المقالات التي تضمها جميعاً، مثل: <em>education AND research</em></li>
 			<li>استثن كلمة ما عبر سبقها بعلامة <strong>-</strong> أو <em>NOT</em>؛ مثل: <em>online -politics</em> أو <em>online NOT politics</em></li>

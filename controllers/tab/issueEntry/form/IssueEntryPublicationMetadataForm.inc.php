@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/form/IssueEntryPublicationMetadataForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryPublicationMetadataForm
@@ -90,14 +90,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 		}
 
 		// include payment information
-		// Set up required Payment Related Information
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($context);
 		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
 		if ($publicationFeeEnabled) {
-			$templateMgr->assign('publicationPayment', $completedPaymentDao->getPublicationCompletedPayment($context->getId(), $this->getSubmission()->getId()));
+			$templateMgr->assign('publicationPayment', $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $this->getSubmission()->getId()));
 		}
 
 		$templateMgr->assign('submission', $this->getSubmission());
@@ -214,9 +212,10 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Save the metadata and store the catalog data for this published
 	 * monograph.
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 
+		$request = Application::getRequest();
 		$submission = $this->getSubmission();
 		$context = $request->getContext();
 
@@ -224,8 +223,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		if ($waivePublicationFee) {
 
 			$markAsPaid = $request->getUserVar('markAsPaid');
-			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager = new OJSPaymentManager($request);
+			$paymentManager = Application::getPaymentManager($context);
 
 			$user = $request->getUser();
 
@@ -236,8 +234,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$submitterAssignment = $submitterAssignments->next();
 			assert(isset($submitterAssignment)); // At least one author should be assigned
 
-			$queuedPayment =& $paymentManager->createQueuedPayment(
-				$context->getId(),
+			$queuedPayment = $paymentManager->createQueuedPayment(
+				$request,
 				PAYMENT_TYPE_PUBLICATION,
 				$markAsPaid ? $submitterAssignment->getUserId() : $user->getId(),
 				$submission->getId(),
@@ -286,8 +284,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 				// Schedule against an issue.
 				if ($publishedArticle) {
+					if ($issueId != $publishedArticle->getIssueId()) $publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setDatePublished($this->getData('datePublished'));
 					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
@@ -361,4 +359,4 @@ class IssueEntryPublicationMetadataForm extends Form {
 	}
 }
 
-?>
+

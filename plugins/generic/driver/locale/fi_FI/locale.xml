@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<message key="plugins.generic.driver.displayName">DRIVER</message>
+	<message key="plugins.generic.driver.description">DRIVER-lisäosa laajentaa OAI-PMH-rajapintaa DRIVER Guidelines 2.0 mukaisesti.</message>
+</locale>

@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/JournalDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalDAO
@@ -89,7 +89,7 @@ class JournalDAO extends ContextDAO {
 		$subscriptionDao->deleteByJournalId($journalId);
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
+		$subscriptionTypeDao->deleteByJournal($journalId);
 
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$announcementDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
@@ -210,4 +210,4 @@ class JournalDAO extends ContextDAO {
 	}
 }
 
-?>
+

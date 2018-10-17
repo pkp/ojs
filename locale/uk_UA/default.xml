@@ -4,38 +4,38 @@
 <!--
   * locale/uk_UA/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings.
   -->
 
 <locale name="uk_UA" full_name="Українська">
-       <!-- Section default -->
-       <message key="section.default.title">Статті</message>
-       <message key="section.default.abbrev">СТАТ</message>
-       <message key="section.default.policy"></message>
+	<!-- Section default -->
+	<message key="section.default.title">Статті</message>
+	<message key="section.default.abbrev">СТАТ</message>
+	<message key="section.default.policy"></message>
 
-       <message key="default.genres.article">Текст статті</message>
+	<message key="default.genres.article">Текст статті</message>
 
-       <!--
-        *
-        * DEFAULT - Default settings for setup items.
-        *
-       -->
-       <message key="default.journalSettings.checklist.notPreviouslyPublished">Це подання раніше не було опубліковане і не надсилалося на розгляд до редакцій інших журналів (або вкажіть пояснення у коментарях для редактора).</message>
-       <message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</message>
-       <message key="default.journalSettings.checklist.addressesLinked">Веб-посилання у тексті супроводжуються повними коректними адресами URL.</message>
-       <message key="default.journalSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
-       <message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам щодо стилістики та бібліографії, викладеним у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>
-       <message key="default.journalSettings.privacyStatement">Імена та електронні адреси, вказані користувачами на сайті цього журналу, будуть використані виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
-       <message key="default.journalSettings.openAccessPolicy">Цей журнал підтримує політику миттєвого відкритого доступу до опублікованого контенту, слідуючи принципам вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</message>
-       <message key="default.journalSettings.authorSelfArchivePolicy">Редакція журналу дозволяє і заохочує авторів депонувати подані матеріали на особистих веб-сайтах або у електронних сховищах установ, як до їх публікації, так і після. При цьому, ми просимо, за можливості, оформляти відповідні посилання на оригінали публікацій на цьому сайті.</message>
-       <message key="default.journalSettings.copyeditInstructions"><![CDATA[Стадія літературного редагування необхідна для покращення стилю, зрозумілості, граматики та орфографії статті. Це остання можливість для авторів внести суттєві зміни до тексту, оскільки на наступному етапі можливі зміни, пов'язані виключно з виправленням огріхів та помилок форматування.
-       На етап літературного редагування файл потрапляє у форматі .doc або .rtf, завдяки чому він може бути легко відредагований за допомогою текстового редактора. Представлений тут набір інструкцій пропонує два підходи до літературного редагування.
-       Перший базується на використанні функціональності режиму відстеження редакторських правок Microsoft Word. Цей підхід вимагає, щоб Літературний редактор, Відповідальний редактор та Автор використовували програмний пакет Microsoft Word.
-       Інший підхід не залежить від програмного забезпечення, з дозволу видання Harvard Educational Review він був запозичений з досвіду їх роботи. Редактор журналу має можливість редагувати ці інструкції та відкритий до пропозицій щодо застосування у цьому журналі найкращих зразків організації редакційного процесу.
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">Це подання раніше не було опубліковане і не надсилалося на розгляд до редакцій інших журналів (або вкажіть пояснення у коментарях для редактора).</message>
+	<message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Веб-посилання у тексті супроводжуються повними коректними адресами URL.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам щодо стилістики та бібліографії, викладеним у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>
+	<message key="default.journalSettings.privacyStatement">Імена та електронні адреси, вказані користувачами на сайті цього журналу, будуть використані виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
+	<message key="default.journalSettings.openAccessPolicy">Цей журнал підтримує політику миттєвого відкритого доступу до опублікованого контенту, слідуючи принципам вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Редакція журналу дозволяє і заохочує авторів депонувати подані матеріали на особистих веб-сайтах або у електронних сховищах установ, як до їх публікації, так і після. При цьому, ми просимо, за можливості, оформляти відповідні посилання на оригінали публікацій на цьому сайті.</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Стадія літературного редагування необхідна для покращення стилю, зрозумілості, граматики та орфографії статті. Це остання можливість для авторів внести суттєві зміни до тексту, оскільки на наступному етапі можливі зміни, пов'язані виключно з виправленням огріхів та помилок форматування.
+	На етап літературного редагування файл потрапляє у форматі .doc або .rtf, завдяки чому він може бути легко відредагований за допомогою текстового редактора. Представлений тут набір інструкцій пропонує два підходи до літературного редагування.
+	Перший базується на використанні функціональності режиму відстеження редакторських правок Microsoft Word. Цей підхід вимагає, щоб Літературний редактор, Відповідальний редактор та Автор використовували програмний пакет Microsoft Word.
+	Інший підхід не залежить від програмного забезпечення, з дозволу видання Harvard Educational Review він був запозичений з досвіду їх роботи. Редактор журналу має можливість редагувати ці інструкції та відкритий до пропозицій щодо застосування у цьому журналі найкращих зразків організації редакційного процесу.
 
 <h4>Підходи до літературного редагування</h4>
 
@@ -96,28 +96,28 @@
 &bull; Речення додане у відповідь на ЗА. Жирним шрифтом позначений новий текст
 &bull; фраза [видалене слово] вставлена замість видаленого слова "остаточно"
 &bull; У коментарі міститься відповідь редактору на ЗА]]></message>
-       <message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Щодо налаштування активних гіперпосилань у просесі верстки</h4>
-       <p>Під час перетворення рукопису у формат HTML або PDF переконайтеся, що всі гіперпосилання у тексті активні.</p>
-       <h4>A. Коли автор подає адресу гіперпосилання всередині тексту бібліографічного посилання</h4>
-       <ol>
-       <li>На етапі, коли подання ще у текстовому форматі (наприклад, Word), додайте у кінець бібліографічного посилання, що містить адресу URL, фразу ПЕРЕГЛЯНУТИ.</li>
-       <li>За допомогою інструменту Word "Вставити гіперпосилання" (Insert Hyperlink) перетворіть цю фразу на гіперпосилання на відповідну адресу URL.</li>
-       </ol>
-       <h4>B. Включення функціональності пошуку цитат за допомогою Google Scholar</h4>
-       <ol>
-       <li>На етапі, коли подання ще у текстовому форматі (наприклад, Word), скопіюйте назву роботи, процитованої у списку пристатейної бібліографії (якщо назва занадто загальна, наприклад, "Світ", в такому разі копіюйте ім'я автора та назву).</li>
-       <li>Вставте скопійовану назву у адресу запиту між роздільниками %22, поєднуючи слова символами +: http://scholar.google.com/scholar?q=%22ВСТАВТЕ+НАЗВУ+СЮДИ%22&hl=en&lr=&btnG=Search</li>
-       <li>Додайте фразу ПОШУК GS у кінець кожного бібліографічного посилання списку пристатейної бібліографії подання.</li>
-       <li>За допомогою інструменту Word "Вставити гіперпосилання" (Insert Hyperlink) перетворіть цю фразу на гіперпосилання на адресу URL, підготовану на кроці #2.</li>
-       </ol>
-       <h4>C. Включення функціональності пошуку цитат за допомогою DOI</h4>
-       <ol>
-       <li>На етапі, коли подання ще у текстовому форматі (наприклад, Word), скопіюйте список пристатейної бібліографії у пошукове поле CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-       <li>Вставте ідентифікатор DOI кожного розпізнаного джерела у наступну адресу URL (між символами = та &): http://www.cmaj.ca/cgi/external_ref?access_num=ВСТАВТЕ DOI СЮДИ&link_type=DOI</li>
-       <li>Додайте фразу CrossRef у кінець кожного бібліографічного посилання списку пристатейної бібліографії подання.</li>
-       <li>За допомогою інструменту Word "Вставити гіперпосилання" (Insert Hyperlink) перетворіть цю фразу на гіперпосилання на адресу URL, підготовану на кроці #2.</li>
-       </ol>]]></message>
-       <message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Стадія коректури необхідна для пошуку у гранках дрібних помилок орфографії, граматики та форматування. Більш серйозні зміни можуть вноситись на цьому етапі лише за умови їх попереднього погодження з редактором розділу. Для того, щоб побачити гранку статті у HTML, PDF або іншому форматі, натисніть посилання "Переглянути верстку" в розділі "Верстка".</p>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Щодо налаштування активних гіперпосилань у просесі верстки</h4>
+	<p>Під час перетворення рукопису у формат HTML або PDF переконайтеся, що всі гіперпосилання у тексті активні.</p>
+	<h4>A. Коли автор подає адресу гіперпосилання всередині тексту бібліографічного посилання</h4>
+	<ol>
+	<li>На етапі, коли подання ще у текстовому форматі (наприклад, Word), додайте у кінець бібліографічного посилання, що містить адресу URL, фразу ПЕРЕГЛЯНУТИ.</li>
+	<li>За допомогою інструменту Word "Вставити гіперпосилання" (Insert Hyperlink) перетворіть цю фразу на гіперпосилання на відповідну адресу URL.</li>
+	</ol>
+	<h4>B. Включення функціональності пошуку цитат за допомогою Google Scholar</h4>
+	<ol>
+	<li>На етапі, коли подання ще у текстовому форматі (наприклад, Word), скопіюйте назву роботи, процитованої у списку пристатейної бібліографії (якщо назва занадто загальна, наприклад, "Світ", в такому разі копіюйте ім'я автора та назву).</li>
+	<li>Вставте скопійовану назву у адресу запиту між роздільниками %22, поєднуючи слова символами +: http://scholar.google.com/scholar?q=%22ВСТАВТЕ+НАЗВУ+СЮДИ%22&hl=en&lr=&btnG=Search</li>
+	<li>Додайте фразу ПОШУК GS у кінець кожного бібліографічного посилання списку пристатейної бібліографії подання.</li>
+	<li>За допомогою інструменту Word "Вставити гіперпосилання" (Insert Hyperlink) перетворіть цю фразу на гіперпосилання на адресу URL, підготовану на кроці #2.</li>
+	</ol>
+	<h4>C. Включення функціональності пошуку цитат за допомогою DOI</h4>
+	<ol>
+	<li>На етапі, коли подання ще у текстовому форматі (наприклад, Word), скопіюйте список пристатейної бібліографії у пошукове поле CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+	<li>Вставте ідентифікатор DOI кожного розпізнаного джерела у наступну адресу URL (між символами = та &): http://www.cmaj.ca/cgi/external_ref?access_num=ВСТАВТЕ DOI СЮДИ&link_type=DOI</li>
+	<li>Додайте фразу CrossRef у кінець кожного бібліографічного посилання списку пристатейної бібліографії подання.</li>
+	<li>За допомогою інструменту Word "Вставити гіперпосилання" (Insert Hyperlink) перетворіть цю фразу на гіперпосилання на адресу URL, підготовану на кроці #2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Стадія коректури необхідна для пошуку у гранках дрібних помилок орфографії, граматики та форматування. Більш серйозні зміни можуть вноситись на цьому етапі лише за умови їх попереднього погодження з редактором розділу. Для того, щоб побачити гранку статті у HTML, PDF або іншому форматі, натисніть посилання "Переглянути верстку" в розділі "Верстка".</p>
 <h4>Щодо помилок орфографії та граматики</h4>
 
 <p>Скопіюйте проблемне слово або словосполучення та вставте його у форму "Виправлення коректора" з вказівкою "Змінити на..." для редактора. Наприклад:</p>
@@ -142,58 +142,53 @@
 <br />
 <pre>4. Форматування
 Перед абзацом, що починається словами "Ця остання тема..." немає відступу.</pre>]]></message>
-       <message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}
 ]]></message>
-       <message key="default.journalSettings.forReaders"><![CDATA[Ми пропонуємо авторам реєструватися на сайті, щоб скористатись службою повідомлень цього журналу. Для реєстрації використайте посилання <a href="{$indexUrl}/{$journalPath}/user/register">Зареєструватися</a> у верхньому меню домашньої сторінки сайту журналу. У Вас буде можливість оперативно отримувати поштою сторінки змісту нових опублікованих випусків нашого видання та дозволите редакції відстежувати читацькі пріоритети та інтереси. Будь ласка, ознайомтеся з нашим <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Положенням про конфіденційність</a>, у якому йдеться про те, що журнал гарантує нерозповсюдження імен та електронних адрес своїх читачів стороннім особам.]]></message>
-       <message key="default.journalSettings.forAuthors"><![CDATA[Бажаєте опублікувати свою статтю у цьому журналі? Рекомендуємо ознайомитись з нашою редакційною політикою на сторінці <a href="{$indexUrl}/{$journalPath}/about">Про журнал</a> та переглянути <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Керівництво для авторів</a>. Для того, щоб мати можливість подавати рукописи до нашого видання, автори повинні <a href="{$indexUrl}/{$journalPath}/user/register">зареєструватися</a> на сайті журналу. Якщо Ви вже зареєстровані, просто <a href="{$indexUrl}/index/login">увійдіть на сайт</a> та пройдіть 5 кроків подання рукопису на розгляд.]]></message>
-       <message key="default.journalSettings.forLibrarians"><![CDATA[Ми пропонуємо науковим бібліотекам включити цей журнал до списків своїх електронних колекцій. Додатково, в цій видавничій системі передбачено засоби інтеграції з бібліотечним програмним забезпеченням, що дозволяє бібліотекам забезпечувати архівне збереження електронного контенту журналу та/або безпосередньо брати участь у видавничому процесі. Більш детально про ці можливості див. на сайті <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-       <message key="default.journalSettings.lockssLicense"><![CDATA[Цей журнал використовує систему LOCKSS (Lots of Copies Keep Stuff Safe) для захищеного та надійного розподіленого архівування опублікованого контенту журналу в численних бібліотеках та інформаційних центрах. Бібліотеки-учасниці проекту LOCKSS гарантують довготермінове зберігання повнотекстових архівів журналу та автоматичне відновлення пошкодженої інформації. <a href="http://www.lockss.org/">Детальніше...</a>]]></message>
-       <message key="default.journalSettings.clockssLicense"><![CDATA[Цей журнал використовує систему CLOCKSS (Controled LOCKSS) для розподіленого архівного зберігання опублікованого контенту журналу в численних бібліотеках та дозволяє цим бібліотекам створювати архіви журналів з метою довготермінового зберігання та відновлення пошкодженої інформації. <a href="http://clockss.org/">Детальніше...</a>]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Ми пропонуємо авторам реєструватися на сайті, щоб скористатись службою повідомлень цього журналу. Для реєстрації використайте посилання <a href="{$indexUrl}/{$journalPath}/user/register">Зареєструватися</a> у верхньому меню домашньої сторінки сайту журналу. У Вас буде можливість оперативно отримувати поштою сторінки змісту нових опублікованих випусків нашого видання та дозволите редакції відстежувати читацькі пріоритети та інтереси. Будь ласка, ознайомтеся з нашим <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Положенням про конфіденційність</a>, у якому йдеться про те, що журнал гарантує нерозповсюдження імен та електронних адрес своїх читачів стороннім особам.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Бажаєте опублікувати свою статтю у цьому журналі? Рекомендуємо ознайомитись з нашою редакційною політикою на сторінці <a href="{$indexUrl}/{$journalPath}/about">Про журнал</a> та переглянути <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Керівництво для авторів</a>. Для того, щоб мати можливість подавати рукописи до нашого видання, автори повинні <a href="{$indexUrl}/{$journalPath}/user/register">зареєструватися</a> на сайті журналу. Якщо Ви вже зареєстровані, просто <a href="{$indexUrl}/index/login">увійдіть на сайт</a> та пройдіть 5 кроків подання рукопису на розгляд.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Ми пропонуємо науковим бібліотекам включити цей журнал до списків своїх електронних колекцій. Додатково, в цій видавничій системі передбачено засоби інтеграції з бібліотечним програмним забезпеченням, що дозволяє бібліотекам забезпечувати архівне збереження електронного контенту журналу та/або безпосередньо брати участь у видавничому процесі. Більш детально про ці можливості див. на сайті <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Цей журнал використовує систему LOCKSS (Lots of Copies Keep Stuff Safe) для захищеного та надійного розподіленого архівування опублікованого контенту журналу в численних бібліотеках та інформаційних центрах. Бібліотеки-учасниці проекту LOCKSS гарантують довготермінове зберігання повнотекстових архівів журналу та автоматичне відновлення пошкодженої інформації. <a href="http://www.lockss.org/">Детальніше...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Цей журнал використовує систему CLOCKSS (Controled LOCKSS) для розподіленого архівного зберігання опублікованого контенту журналу в численних бібліотеках та дозволяє цим бібліотекам створювати архіви журналів з метою довготермінового зберігання та відновлення пошкодженої інформації. <a href="http://clockss.org/">Детальніше...</a>]]></message>
 
 
-       <!-- Default settings for payment items. -->
-       <message key="default.journalSettings.publicationFee">Публікація статті</message>
-       <message key="default.journalSettings.publicationFeeDescription">Якщо робота буде прийнята до публікації, Вам буде необхідно перерахувати журналу оплату за публікацію статті для компенсування витрат на видання.</message>
-       <message key="default.journalSettings.waiverPolicy">Якщо Ви не маєте коштів на оплату публікації, Ви можете звернутися з проханням про виняток у сплаті. Ми не хочемо, щоб оплата ставала перешкодою для публікації якісних наукових робіт.</message>
-       <message key="default.journalSettings.purchaseArticleFee">Купити статтю</message>
-       <message key="default.journalSettings.purchaseArticleFeeDescription">Платники мають змогу переглядати, завантажувати та роздруковувати цю статтю.</message>
-       <message key="default.journalSettings.membershipFee">Членство у асоціації</message>
-       <message key="default.journalSettings.membershipFeeDescription">Сплата цього платежу дозволить Вам на один рік стати членом цієї асоціації та отримати повний  доступ до цього журналу.</message>
+	<!-- Default settings for payment items. -->
+	<message key="default.journalSettings.publicationFee">Публікація статті</message>
+	<message key="default.journalSettings.purchaseArticleFee">Купити статтю</message>
+	<message key="default.journalSettings.membershipFee">Членство у асоціації</message>
 	<message key="default.journalSettings.purchaseIssueFee">Купити випуск</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Сплата цього платежу дозволить Вам переглядати, завантажувати та роздруковувати статті цього випуску.</message>
 
-       <!-- Group defaults -->
-       <message key="default.groups.name.manager">Менеджер журналу</message>
-       <message key="default.groups.plural.manager">Менеджери журналу</message>
-       <message key="default.groups.abbrev.manager">МенЖ</message>
-       <message key="default.groups.name.editor">Редактор журналу</message>
-       <message key="default.groups.plural.editor">Редактори журналу</message>
-       <message key="default.groups.abbrev.editor">РедЖ</message>
-       <message key="default.groups.name.guestEditor">Запрошений редактор</message>
-       <message key="default.groups.plural.guestEditor">Запрошені редактори</message>
-       <message key="default.groups.abbrev.guestEditor">ЗапрРед</message>
-       <message key="default.groups.name.sectionEditor">Редактор розділу</message>
-       <message key="default.groups.plural.sectionEditor">Редактори розділів</message>
-       <message key="default.groups.abbrev.sectionEditor">РедРозд</message>
-       <message key="default.groups.name.subscriptionManager">Менеджер передплати</message>
-       <message key="default.groups.plural.subscriptionManager">Менеджери передплати</message>
-       <message key="default.groups.abbrev.subscriptionManager">МенП</message>
+	<!-- Group defaults -->
+	<message key="default.groups.name.manager">Менеджер журналу</message>
+	<message key="default.groups.plural.manager">Менеджери журналу</message>
+	<message key="default.groups.abbrev.manager">МенЖ</message>
+	<message key="default.groups.name.editor">Редактор журналу</message>
+	<message key="default.groups.plural.editor">Редактори журналу</message>
+	<message key="default.groups.abbrev.editor">РедЖ</message>
+	<message key="default.groups.name.guestEditor">Запрошений редактор</message>
+	<message key="default.groups.plural.guestEditor">Запрошені редактори</message>
+	<message key="default.groups.abbrev.guestEditor">ЗапрРед</message>
+	<message key="default.groups.name.sectionEditor">Редактор розділу</message>
+	<message key="default.groups.plural.sectionEditor">Редактори розділів</message>
+	<message key="default.groups.abbrev.sectionEditor">РедРозд</message>
+	<message key="default.groups.name.subscriptionManager">Менеджер передплати</message>
+	<message key="default.groups.plural.subscriptionManager">Менеджери передплати</message>
+	<message key="default.groups.abbrev.subscriptionManager">МенП</message>
 
-       <!-- Genre Defaults -->
-       <message key="default.genres.researchInstrument">Інструментарій дослідження</message>
-       <message key="default.genres.researchMaterials">Матеріали дослідження</message>
-       <message key="default.genres.researchResults">Результати дослідження</message>
-       <message key="default.genres.transcripts">Стенограми</message>
-       <message key="default.genres.dataAnalysis">Аналіз даних</message>
-       <message key="default.genres.dataSet">Набір даних</message>
-       <message key="default.genres.sourceTexts">Тексти першоджерел</message>
+	<!-- Genre Defaults -->
+	<message key="default.genres.researchInstrument">Інструментарій дослідження</message>
+	<message key="default.genres.researchMaterials">Матеріали дослідження</message>
+	<message key="default.genres.researchResults">Результати дослідження</message>
+	<message key="default.genres.transcripts">Стенограми</message>
+	<message key="default.genres.dataAnalysis">Аналіз даних</message>
+	<message key="default.genres.dataSet">Набір даних</message>
+	<message key="default.genres.sourceTexts">Тексти першоджерел</message>
 
-       <message key="default.groups.name.externalReviewer">Рецензент</message>
-       <message key="default.groups.plural.externalReviewer">Рецензенти</message>
-       <message key="default.groups.abbrev.externalReviewer">Рец</message>
-       <message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.groups.name.externalReviewer">Рецензент</message>
+	<message key="default.groups.plural.externalReviewer">Рецензенти</message>
+	<message key="default.groups.abbrev.externalReviewer">Рец</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>

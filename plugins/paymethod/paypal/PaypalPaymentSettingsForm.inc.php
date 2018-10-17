@@ -3,8 +3,8 @@
 /**
  * @file plugins/payment/paypal/PaypalPaymentSettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaypalPaymentSettingsForm
@@ -32,9 +32,17 @@ class PaypalPaymentSettingsForm extends Form {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
+	}
+
+	/**
+	 * Get the setting names for this form.
+	 * @return array
+	 */
+	private function _getSettingNames() {
+		return array('testMode', 'accountName', 'clientId', 'secret');
 	}
 
 	/**
@@ -44,7 +52,7 @@ class PaypalPaymentSettingsForm extends Form {
 		$contextId = $this->_contextId;
 		$plugin = $this->_plugin;
 
-		foreach (array('testMode', 'accountName') as $settingName) {
+		foreach ($this->_getSettingNames() as $settingName) {
 			$this->setData($settingName, $plugin->getSetting($contextId, $settingName));
 		}
 	}
@@ -53,7 +61,7 @@ class PaypalPaymentSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('testMode', 'accountName'));
+		$this->readUserVars($this->_getSettingNames());
 	}
 
 	/**
@@ -62,10 +70,8 @@ class PaypalPaymentSettingsForm extends Form {
 	function execute() {
 		$plugin = $this->_plugin;
 		$contextId = $this->_contextId;
-		foreach (array('testMode', 'accountName') as $settingName) {
+		foreach ($this->_getSettingNames() as $settingName) {
 			$plugin->updateSetting($contextId, $settingName, $this->getData($settingName));
 		}
 	}
 }
-
-?>

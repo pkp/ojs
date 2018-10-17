@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -105,7 +105,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			$articleNode->appendChild($doc->createElement('Language', AppLocale::get3LetterFrom2LetterIsoLanguage(substr($submission->getLocale(), 0, 2))));
 
 			$authorListNode = $doc->createElement('AuthorList');
-			foreach ($submission->getAuthors() as $index => $author) {
+			foreach ($submission->getAuthors() as $authorIndex => $author) {
 				$authorListNode->appendChild($this->generateAuthorNode($doc, $journal, $issue, $submission, $author, $authorIndex));
 			}
 			$articleNode->appendChild($authorListNode);
@@ -194,10 +194,14 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	function generateAuthorNode($doc, $journal, $issue, $submission, $author, $authorIndex) {
 		$authorElement = $doc->createElement('Author');
 
-		$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getFirstName())));
-		if ($author->getMiddleName() != '') $authorElement->appendChild($doc->createElement('MiddleName', ucfirst($author->getMiddleName())));
-		$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLastName())));
-
+		if (empty($author->getLocalizedFamilyName())) {
+			$authorElement->appendChild($node = $doc->createElement('FirstName'));
+			$node->setAttribute('EmptyYN', 'Y');
+			$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedGivenName())));
+		} else {
+			$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getLocalizedGivenName())));
+			$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedFamilyName())));
+		}
 		if ($authorIndex == 0) {
 			// See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7774
 			$authorElement->appendChild($doc->createElement('Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
@@ -225,4 +229,4 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	}
 }
 
-?>
+

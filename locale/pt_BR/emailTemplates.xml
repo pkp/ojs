@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localized email templates XML file.
@@ -200,20 +200,6 @@ Em caso de dúvidas, entre em contato. Agradecemos por considerar nossa editora 
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Quando habilitada, esta mensagem é enviada automaticamente aos coautores informados durante o processo de submissão, que não estão cadastrados no OMP.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Submissão inadequada</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-Uma avaliação inicial de &quot;{$submissionTitle}&quot; demonstrou que a submissão não se encaixa no escopo e foco de nossa revista {$contextName}.<br />
-Recomendo que consulte a descrição na página Sobre, bem como seu conteúdo, para saber mais sobre o tipo de trabalho que é publicado.<br />
-Seu trabalho pode ser submetido a outra revista cujo escopo e foco se encaixe melhor com seu trabalho.<br />
-<br />
-Agradecemos considerar nossa revista como meio de compartilhar seu trabalho e esperamos que sua próxima submissão esteja de acordo com nosso foco e escopo.<br />
-<br />
-Agradecendo desde já a atenção dispensada,<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem notifica o autor que sua submissão não é adequada para a revista, por não estar dentro do seu escopo. Sugere que o autor altere o trabalho para atender às exigências da revista, ou submeter para outra onde se enquadre melhor.</description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentário sobre a submissão</subject>
@@ -698,31 +684,6 @@ Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Esta mensagem é enviada a usuários cadastrados que escolheram habilitar este tipo de notificação via email.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nova notificação de {$siteTitle}</subject>
-		<body><![CDATA[Você possui uma nova notificação de {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Caso não deseje receber mais notificações via e-mail, acesse {$unsubscribeLink} e informe seu e-mail e senha.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Esta mensagem é enviada a usuários não cadastrados que pertencem à lista de correio.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bem-vino à lista de correio de {$siteTitle}!</subject>
-		<body><![CDATA[Você assinou a lista de notificações de {$siteTitle}.<br />
-<br />
-Clique no link a seguir para confirmar sua solicitação e incluir seu e-mail na lista de correio: {$confirmLink}<br />
-<br />
-Caso não deseje mais receber as notificações, acesse {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Esta mensagem é enviada a usuários não cadastrados que acabaram de se registrar no serviço de notificações via lista de correio.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisão editorial</subject>

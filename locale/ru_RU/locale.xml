@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Щелкните на значке, чтобы заполнить форму рецензии.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста, заполните обязательные поля.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Пожалуйста, заполните обязательные поля.</message>
 
 	<!-- формы рецензии (конец) -->
 
@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Зарегистрировать для других журналов</message>
 	<message key="user.reviewerPrompt">Хотите ли вы рецензировать материалы для этого журнала?</message>
 	<message key="user.reviewerPrompt.userGroup">Да, запросить роль «{$userGroup}».</message>
+	<message key="user.reviewerPrompt.optin">Да, Я хочу, чтобы ко мне обращались с запросами на рецензирование материалов для этого журнала.</message>
 	<message key="user.register.contextsPrompt">В каких журналах на этом сайте вы хотите зарегистрироваться?</message>
 	<message key="user.register.otherContextRoles">Запросить следующие роли.</message>
 	<message key="user.register.noContextReviewerInterests">Если вы запрашиваете роль рецензента в каком-то журнале, пожалуйста, введите темы, которые интересуют Вас как рецензента.</message>
@@ -211,7 +212,7 @@
 
 	<!-- Роли -->
 	<message key="user.role.manager">Управляющий журнала</message>
-	<message key="user.role.sectionEditor">Редактор раздела</message>
+	<message key="user.role.subEditor">Редактор раздела</message>
 	<message key="user.role.subscriptionManager">Менеджер по подписке</message>
 	<message key="user.role.managers">Управляющие журналом</message>
 	<message key="user.role.subEditors">Редакторы разделов</message>
@@ -257,6 +258,7 @@
 	<message key="subscriptions.status.needsApproval">Требуется подтверждение</message>
 	<message key="subscriptions.status.awaitingManualPayment">Ожидание оплаты вручную</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Ожидание онлайн-оплаты</message>
+	<message key="subscriptions.status.noSubscription">У вас нет активной подписки.</message>
 	<message key="subscriptions.status.other">Другое, смотрите примечания</message>
 	<message key="subscriptions.individualDescription">Идивидуальные подписки требуют входа на сайт для доступа к контенту, предоставляемому по подписке.</message>
 	<message key="subscriptions.institutionalDescription">Подписки на организацию не требуют входа пользователей на сайт. Для доступа к контенту, предоставляемому по подписке, используется домен пользователя и/или IP-адрес.</message>
@@ -317,6 +319,7 @@
 	<message key="reader.openAccess">Открытый доступ</message>
 	<message key="reader.subscriptionAccess">Требуется подписка</message>
 	<message key="reader.subscriptionOrFeeAccess">Требуется подписка или оплата</message>
+	<message key="reader.purchasePrice">({$price} {$currency})</message>
 
 	<!-- Комментарии читателей -->
 	<message key="comments.commentsOnArticle">Комментарии к этой статье</message>
@@ -366,16 +369,15 @@
 	<message key="plugins.categories.viewableFiles">Модули гранок статей</message>
 	<message key="plugins.categories.viewableFiles.description">Модули гранок статей добавляют поддержку отображения документов различных типов в качестве гранок статьи.</message>
 	<message key="plugins.categories.auth.description">Модули авторизации позволяют Open Journal Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
-	<message key="plugins.categories.citationFormats.description">Модули форматов ссылок предоставляют пользователям различные форматы, с помощью которых можно получить доступ к библиографическим ссылкам статей.</message>
 	<message key="plugins.categories.generic.description">Общие модули используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями модулей.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. LOCKSS — открытое (open source) программное обеспечение, разработанное в библиотеке Стэнфордского университета, которое позволяет библиотекам сохранять выбранные веб-журналы регулярно проверяя веб-сайты зарегистрированных журналов на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек, и если контент оказывается поврежденным или утраченным, для его восстановления используются другие кэши или сам журнал.
-<br /><br />
-Настраивать поддержку LOCKSS для Open Journal Systems нужно только после того как журнал будет полностью опубликован, для этого нужно выполнить следующие два шага:]]></message>
+	<message key="manager.setup.lockssDescription">
+	<![CDATA[Open Journal Systems поддерживает систему LOCKSS (Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для контента журнала. Если ваш журнал принят для архивирования контента в глобальную сеть LOCKSS или участвует в частной сети LOCKSS помимо PKP PN, включите здесь необходимые настройки:
+]]></message>
 
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems также поддерживает систему <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. CLOCKSS основана на открытом (open source) программном обеспечении LOCKSS, разработанном в библиотеке Стэнфордского университета, которое позволяет библиотекам сохранять выбранные веб-журналы регулярно проверяя веб-сайты зарегистрированных журналов на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек, и если контент оказывается поврежденным или утраченным, для его восстановления используются другие кэши или сам журнал.
-<br /><br />
-Настраивать поддержку CLOCKSS support для Open Journal Systems нужно только после того как журнал будет полностью опубликован.]]></message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems также поддерживает систему CLOCKSS (Controlled Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. Если ваш журнал подписал контракт с архивом CLOCKSS, включите здесь необходимые настройки:]]></message>
+
+	<message key="manager.setup.porticoDescription"><![CDATA[Portico — это некоммерческий сервис, предназначенный для сохранения цифровых публикаций, в том числе электронных журналов, книг и оцифрованных исторических коллекций. Если ваш журнал подписал контракт с Portico, включите здесь необходимые настройки:]]></message>
 
 	<!-- Настройка (Шаг 3) -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
@@ -394,7 +396,6 @@
 	<li>Авторы сохраняют право заключать отдельные, дополнительные контрактные соглашения на неэксклюзивное распространение версии работы, опубликованной этим журналом (например, разместить ее в университетском хранилище или опубликовать ее в книге), со ссылкой на оригинальную публикацию в этом журнале.</li>
 	<li>Авторам разрешается размещать их работу в сети Интернет (например, в университетском хранилище или на их персональном веб-сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению, а также к большему количеству ссылок на данную опубликованную работу (Смотрите <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Включить Помощник разметки библиографических ссылок</message>
 
 	<!-- Настройка (Шаг 4) -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Шаги: Очередь материалов &gt; Реценизрование материала &gt; Редактирование материала &gt; Содержание выпуска.<br /><br />
@@ -480,11 +481,6 @@
 	<!-- Меню навигации боковой панели -->
 
 	<!-- Используются редактором в процессе рецензирования / редактирования материала -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Имя является ссылкой на профиль рецензента.<br />
-Высшая оценка в рейтинге — 5 (Отлично).<br />
-Недель — показывает средний срок выполнения рецензии рецензентом.<br />
-Последняя — дата последней принятой рецензии от данного рецензента,<br />
-Активны — количество рецензий, запросы на которые сейчас рассматривает или выполняет рецензент.]]></message>
 
 
 
@@ -574,12 +570,10 @@
 	<message key="reviewer.article.selectRecommendation.byEditor">Задать или изменить рекомендацию рецензента.</message>
 	<message key="reviewer.article.mustSelectDecision">Рекомендация не была выбрана. Вы должны выбрать рекомендацию для отправки.</message>
 	<message key="reviewer.article.confirmDecision">Как только Вы запишите свое решение, Вы больше не сможете вносить изменения в эту рецензию. Вы уверены, что хотите продолжить?</message>
-	<message key="reviewer.article.ensuringBlindReview">Обеспечение слепого рецензирования</message>
 
 	<!-- Используются в редактировании материала -->
 	<message key="copyeditor.article.fileToCopyedit">Файл для литературного редактирования</message>
 	<message key="copyeditor.article.copyeditorFile">Файл литературного редактора</message>
-	<message key="copyeditor.article.uploadedFile">Загруженный файл</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Файл литературного редактора</message>
 
 	<!-- Корректор -->
@@ -681,6 +675,10 @@
 	<message key="user.register.reviewerDescriptionNoInterests">Согласен участвовать в рецензировании материалов для этого журнала.</message>
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании материалов для этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите Ваши интересы как рецензента (основная тематика, методы исследования):</message>
+	<message key="user.register.form.emailConsentAllContexts">Да, я хочу, чтобы меня уведомляли о новых публикациях и объявлениях во всех журналах, в которых я зарегистрирован.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Да, я даю согласие на сбор и хранение моих данных в рамках <a href="{$privacyUrl}" target="_blank">политики конфиденциальности</a> этого журнала.]]></message>
+	<message key="user.register.form.missingContextConsent">Вы должны согласиться с политикой конфиденциальности любого журнала, в котором вы регистрируетесь.</message>
+	<message key="user.register.form.missingSiteConsent">Вы должны согласиться с политикой конфиденциальности этого сайта.</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>
@@ -699,8 +697,8 @@
 	<message key="user.subscriptions.purchaseNewSubscription">Приобрести новую подписку</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Приобрести индивидуальную подписку</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Приобрести подписку на организацию</message>
-	<message key="user.subscriptions.expires">Заканчивается</message>
-	<message key="user.subscriptions.expired">Закончилась</message>
+	<message key="user.subscriptions.expires">Заканчивается: {$date}</message>
+	<message key="user.subscriptions.expired">Закончилась: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Показать доступные типы подписки</message>
 	<message key="user.subscriptions.form.typeId">Тип подписки</message>
 	<message key="user.subscriptions.form.membership">Членство</message>
@@ -870,7 +868,7 @@
 	<message key="installer.ojsUpgrade">Обновление OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README.md">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Обновление</h4>
 
@@ -910,7 +908,7 @@
 <p>2. Каталог для хранения загруженных файлов должен быть создан и сделан доступным для записи (смотри «Настройки файлов» ниже).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README.md">README</a> и <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Перед продолжением <strong>настоятельно рекомендуется</strong> создать резервную копию базы данных, каталога с файлами и каталога с установленной системой OJS.</p>
 <p>Если PHP запущен у вас в режиме <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, пожалуйста, убедитесь, что значение max_execution_time в файле конфигурации php.ini задано достаточно большим. Если это или какое-либо другое ограничение по времени (например, значение Timeout для Apache) будет достигнуто и процес обновления будет прерван, потребуется ручное вмешательство в процесс обновления.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Для полной поддержки Unicode (UTF-8), выберите UTF-8 для всех настроек кодировки символов. Пожалуйста, обратите внимание, что полная поддержка Unicode требует PHP, откомпилированного с поддержкой библиотеки <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (включена по умолчанию в большинстве современных инсталляций PHP). У Вас могут возникнуть проблемы с расширенными кодировками, если сервер не соответствует этим требованиям.
@@ -960,6 +958,7 @@
 	<message key="log.review.reviewFileByProxy">Редактор {$userName} загрузил файл рецензии на {$round}-м раунде рецензирования материала {$submissionId} по поручению рецензента {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Файл рецензента был загружен на сайт.</message>
 	<message key="log.editor.decision">Решение редакции ({$decision}) по статье {$submissionId} было введено редактором ({$editorName}).</message>
+	<message key="log.editor.recommendation">Рекомендация редактора ({$decision}) по статье {$submissionId} была введена редактором {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Литературное редактирование материала {$submissionId} было начато литературным редактором ({$copyeditorName}).</message>
@@ -1039,8 +1038,6 @@
 
 
 	<!-- Типы уведомлений -->
-	<message key="notification.mailListDescription">Введите ваш адрес электронной почты, чтобы моментально получать уведомления о добавлении нового контента в журнал.</message>
-	<message key="notification.notificationsPublicDescription">На этой странице показан список важных обновлений, связанных с этим журналом, таких как выход новых выпусков или объявления. Вы можете подписаться на эти уведомления через ленты RSS (щелкнув на значках справа) или <![CDATA[  <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editing">События редактирования</message>
@@ -1055,10 +1052,12 @@
 	<message key="notification.type.submissionComment">Редактор оставил комментарий к «{$title}».</message>
 	<message key="notification.type.submissions">События процесса отправки</message>
 	<message key="notification.type.userComment">Читатель добавил комментарий к «{$title}»</message>
+	<message key="notification.type.public">Публичные объявления</message>
 	<message key="notification.savedIssueMetadata">Сохранены метаданные публикации выпуска.</message>
 	<message key="notification.type.editorAssignmentTask">Была отправлена новая статья, которой нужно назначить редактора.</message>
 	<message key="notification.type.assignProductionUser">Назначить пользователя для создания гранок с помощью ссылки «Назначить» в списке «Участники».</message>
 	<message key="notification.type.awaitingRepresentations">Ожидающие гранок.</message>
+	<message key="notification.type.publicationScheduled">Этот материал запланирован для публикации.</message>
 
 	<!--
 	 *
@@ -1102,4 +1101,7 @@
 	<message key="editor.issues.backIssues">Прошлые выпуски</message>
 	<message key="editor.issues.futureIssues">Будущие выпуски</message>
 	<message key="navigation.subscriptions">Подписки</message>
+
+	<!-- устаревшие строки из OJS 2 для систем, которые были обновлены с OJS 2 -->
+	<message key="log.editor.submissionExpedited">Редактор {$editorName} взялся за процесс редактирования по статье {$submissionId}.</message>
 </locale>

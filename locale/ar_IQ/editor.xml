@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">طلب النشر هذا سيُؤرشف بعد إرسال إشعار للمؤلف عبر البريد الالكتروني أو عندما يتم اختيار الزر الخاص بتخطي إرسال ذلك الإشعار</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">قبل إرسال طلب النشر إلى المحكمين، إستعمل رابط (إشعار المؤلف) لإبلاغه واختر النسخة التي تريد إرسالها</message>
 	<message key="editor.notifyUsers">أعلم المستخدمين</message>
-	<message key="editor.notifyUsers.allUsers">جميع المستخدمين المرتبطين بهذه المجلة والبالغ عددهم ({$count} مستخدم)</message>
 	<message key="editor.notifyUsers.allReaders">جميع القراء والبالغ عددهم ({$count} قارئ)</message>
 	<message key="editor.notifyUsers.allAuthors">جميع المؤلفين والبالغ عددهم ({$count} مؤلف)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">جميع المشتركين المنفردين والبالغ عددهم ({$count} مشترك)</message>
@@ -109,7 +108,6 @@
 	<message key="editor.issues.galleyLocaleRequired">لا بد من إختيار لغة ما لتنضيد العدد</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">المعرف العام لتنضيد العدد موجود سلفاً</message>
 	<message key="editor.issues.backToIssueGalleys">العودة إلى تنضيدات العدد</message>
-	<message key="editor.issues.viewingGalley">معاينة تنضيد العدد</message>
 	<message key="editor.issues.confirmDeleteGalley">هل أنت متأكد من رغبتك في حذف هذا التنضيد؟</message>
 	<message key="editor.issues.identifiers">المعرفات</message>
 	<message key="editor.navigation.futureIssues">الأعداد القادمة</message>
@@ -122,72 +120,7 @@
 	<message key="grid.action.setCurrentIssue">إجعله العدد الحالي</message>
 	<message key="editor.navigation.issueArchive">الأعداد السابقة</message>
 	<message key="editor.article.designateReviewVersion">إعتبر الملف الأصلي بمثابة النسخة المنقحة أو المحكمة</message>
-	<message key="editor.article.uploadReviewVersion">إرفع نسخة معدة للتحكيم</message>
-	<message key="editor.article.showSuppFile">قدم الملف للمحكمين</message>
-	<message key="editor.article.layoutAndProof">التصميم والدليل</message>
-	<message key="editor.article.clear">إزالة</message>
-	<message key="editor.article.clearReviewer">إزالة المحكم</message>
-	<message key="editor.article.changeSection">تعديل القسم</message>
-	<message key="editor.article.setDueDate">حدد تاريخ التسليم</message>
-	<message key="editor.article.addReviewer">أضف محكم</message>
-	<message key="editor.article.toReviewer">إلى المحكم</message>
-	<message key="editor.article.notifyReviewer">أشعر المحكم</message>
-	<message key="editor.article.initiateReview">إشرع بالتحكيم</message>
-	<message key="editor.article.cancelReview">ألغ التحكيم</message>
-	<message key="editor.article.clearReview">أزل المحكم</message>
-	<message key="editor.article.enterRecommendation">أدخل التوصية</message>
-	<message key="editor.article.enterReviewerRecommendation">أدخل توصية المحكم</message>
-	<message key="editor.article.recommendation">التوصية</message>
-	<message key="editor.article.selectReviewer">إختر محكماً</message>
-	<message key="editor.article.replaceReviewer">استبدل المحكم</message>
-	<message key="editor.article.editorToEnter">المحرر له أن يدخل توصية أو تعليقاً إلى المحكم</message>
-	<message key="editor.article.uploadReviewForReviewer">إرفع التحكيم</message>
-	<message key="editor.article.peerReviewOptions">خيارات التحكيم المقابل</message>
 	<message key="editor.article.decision">القرار</message>
-	<message key="editor.article.noEditorSelected">لم يتم إختيار المحرر بعد</message>
-	<message key="editor.article.recordDecision">سجل القرار</message>
-	<message key="editor.article.cannotRecord">محرر القسم لم يسجل بعد أو أن ملف التحكيم لم يقدم بعد</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">يمكن للمحكمين الاطلاع على نسخة المؤلف</message>
-	<message key="editor.article.designateDueDate">عين تاريخ الوجوب</message>
-	<message key="editor.article.designateDueDateDescription">أدخل تاريخ الوجوب الجديد أو عدد الأسابيع</message>
-	<message key="editor.article.todaysDate">تاريخ اليوم</message>
-	<message key="editor.article.requestedByDate">يطالب به بتاريخ</message>
-	<message key="editor.article.dueDateFormat">النسق: YYYY-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">عدد الأسابيع</message>
-	<message key="editor.article.selectCopyeditor">عين محكماً</message>
-	<message key="editor.article.replaceCopyeditor">استبدل المحكم</message>
-	<message key="editor.article.editorsCopyedit">نسخة المحرر</message>
-	<message key="editor.article.showAuthor">إسمح للمؤلف بالاطلاع على الملف</message>
-	<message key="editor.article.showCopyeditor">أظهر النسخة للمحكم</message>
-	<message key="editor.article.rateReviewer">تقييم المحكم</message>
-	<message key="editor.article.reviewerRating.veryGood">5 عالٍ</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 واطئ</message>
-	<message key="editor.article.comments">تعليقات</message>
-	<message key="editor.article.commentsRequired">حقل التعليقات مطلوب حتماً</message>
-	<message key="editor.article.saveRating">إحفظ التقييم</message>
-	<message key="editor.article.noneSelected">لم يتم إختيار أيٍّ منها</message>
-	<message key="editor.article.authorProofing">حجة المؤلف</message>
-	<message key="editor.article.archiveSubmission">أرفض وإحفظ طلب التقديم</message>
-	<message key="editor.article.restoreToQueue">استعده إلى القائمة الفعالة</message>
-	<message key="editor.article.assignSectionEditor">أضف محرراً للقسم</message>
-	<message key="editor.article.assignEditor">أضف محرراً</message>
-	<message key="editor.article.selectEditor">إختر {$roleName}</message>
-	<message key="editor.article.selectDecision">إختر قراراً</message>
-	<message key="editor.article.selectLayoutEditor">إختر محرر التصميم</message>
-	<message key="editor.article.replaceLayoutEditor">استبدل محرر التصميم</message>
-	<message key="editor.article.reviewSubmission">تنقيح طلب التقديم</message>
-	<message key="editor.article.resubmitForReview">أعد تقديم الملف للتحكيم</message>
-	<message key="editor.article.resubmitFileForPeerReview">أعد تقديم الملف المختار للتحكيم المقابل</message>
-	<message key="editor.article.sendToCopyedit">أرسل الملف للتحكيم</message>
-	<message key="editor.article.selectProofreader">عين المدقق اللغوي</message>
-	<message key="editor.article.replaceProofreader">استبدل المدقق اللغوي</message>
-	<message key="editor.article.authorComments">تعليقات المؤلف</message>
-	<message key="editor.article.proofreaderComments">تعليقات المدقق اللغوي</message>
-	<message key="editor.article.layoutEditorFinal">المحرر النهائي للتصميم</message>
-	<message key="editor.article.noDate">(التاريخ)</message>
 	<message key="editor.submissions.showBy">أظهر بواسطة</message>
 	<message key="editor.submissions.submitMMDD">قدم MM-DD</message>
 	<message key="editor.submissions.activeAssignments">التعيينات الفعالة</message>
@@ -203,16 +136,7 @@
 	<message key="editor.article.scheduleForPublication">جدوله للنشر في</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">ليتم تعيينه</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">لم يتم دفع رسم النشر. لجدولة الفقرة لغرض النشر، أشعر المؤلف بدفع الرسم أو أخصمه له</message>
-	<message key="editor.article.display">عرض</message>
-	<message key="editor.article.hideTocAuthorDescription">أسقط أسماء المؤلفين من جدول محتويات العدد</message>
-	<message key="editor.article.hideTocAuthorDefault">الإفتراضي</message>
-	<message key="editor.article.hideTocAuthorHide">أسقط</message>
-	<message key="editor.article.hideTocAuthorShow">إعرض</message>
-	<message key="editor.article.cover">الغلاف</message>
-	<message key="editor.article.coverImage">صورة الغلاف</message>
 	<message key="editor.article.removeCoverImageFileNotFound">تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة.</message>
-	<message key="editor.article.uploaded">مرفوعة إلى الموقع</message>
-	<message key="editor.article.removeCoverPage">أتريد إزالة صورة الغلاف؟</message>
 	<message key="grid.action.removeArticle">إزالة المقالة من هذا العدد</message>
 	<message key="editor.article.remove">أزلها</message>
 	<message key="editor.article.remove.confirm">هل أنت متأكد من رغبتك في إزالة هذه المقالة من العدد؟ ستكون المقالة متاحة للجدولة في عدد آخر.</message>
@@ -223,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[الملفات المسودة النهائية ضمن هذه القائمة يتم تحويلها من قبل المدقق إلى نسخ مدققة، يتم رفعها أدناه ضمن باب <span class="pkp_help_title">التدقيق</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">أي ملفات سبق رفعها إلى أي مرحلة من مراحل طلب النشر يمكن إضافتها إلى قائمة القراءة التصحيحية عبر تأشير خانة تضمين الملفات أدناه ومن ثم النقر على زر البحث. كل الملفات المتاحة سيتم عرضها وستكون جاهزة لهذا الغرض.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">المعرف العام '{$publicIdentifier}' موجود سلفاً لمكون آخر من نفس النوع. لطفاً، إختر معرفات فريدة للمكونات التي من نفس النوع ضمن مجلتك.</message>
+	<message key="editor.article.coverImage">صورة الغلاف</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -558,38 +558,13 @@ Link: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail er blevet sendt til registrerede brugere, som har valgt at få tilsendt denne type meddelelser.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ny meddelelse fra {$siteTitle}</subject>
-		<body><![CDATA[Du har modtaget en ny meddelelse fra {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Denne e-mail er blevet sendt til uregistrerede brugere på meddelelses-mailinglisten.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Velkommen til {$siteTitle}-mailinglisten!</subject>
-		<body><![CDATA[Du har bedt om at modtage meddelelser fra {$siteTitle}.<br />
-			<br />
-Klik på dette link for at bekræfte din anmodning og tilføje din e-mail-adresse til mailinglisten: {$confirmLink}<br />
-<br />
-Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Denne e-mail er blevet sendt til en uregistreret bruger, som har tilmeldt sig meddelelses-mailinglisten.</description>
-	</email_text>
-		<email_text key="EDITOR_DECISION_ACCEPT">
+	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet at: Godkende indsendelsen<br />
+Vi har besluttet at: Acceptere manuskript<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
@@ -611,7 +586,7 @@ Vi har besluttet følgende: Rettelser er påkrævet<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet følgende: Genindsendes til bedømmelse<br />
+Vi har besluttet følgende: Fremsend igen til bedømmelse<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
@@ -622,7 +597,7 @@ Vi har besluttet følgende: Genindsendes til bedømmelse<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet at: Afvise indsendelsen<br />
+Vi har besluttet at: Afvise manuskript<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
@@ -731,7 +706,7 @@ På forhånd tak!<br />
 <br />
 {$userFirstName}<br />
 Manuskriptredaktør, {$contextName}]]></body>
-		<description>Denne e-mail gør manuskriptredaktører i stand til at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
+		<description>Denne e-mail tillader manuskriptredaktører at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Redaktørbeslutning</subject>
@@ -880,7 +855,7 @@ Tak for din overvejelse af denne forespørgsel.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revideret udgave uploadet</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Redaktører:<br />
 <br />
 En revideret udgave af &quot;{$submissionTitle}&quot; er blevet uploadet af forfatter {$authorName}.<br />
 <br />
@@ -888,5 +863,36 @@ Manuskriptets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail bliver automatisk sendt til udvalgte redaktør når forfatteren uploader en revideret udgave a en artikel.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Redaktørbeslutning</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vi har besluttet at: Afvise manuskriptet<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Denne e-mail sendes til forfatteren, hvis redaktøren afviser manuskriptet i indledningsfasen, før bedømmelsestrinnet</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Redaktøranbefaling</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Anbefalingen med hensyn til {$contextName}, &quot;{$submissionTitle}&quot; er: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Indsendelsesbekræftelse</subject>
+		<body><![CDATA[Hej<br />
+<br />
+{$submitterName} har indsendt manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. <br />
+<br />
+Hvis du har spørgsmål, er du velkommen til at kontakte mig. Tak fordi du har valgt at publicere din artikel i dette tidsskrift.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
 	</email_text>
 </email_texts>

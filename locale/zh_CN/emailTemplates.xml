@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -23,31 +23,6 @@
 <br />
 {$principalContactSignature}]]></body>
 		<description>这封电子邮件是发送给需要这种类型通知的注册用户。</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>来自{$siteTitle}的新信息</subject>
-		<body><![CDATA[您有一条来自{$siteTitle}的新信息:<br />
---<br />
-{$notificationContents}<br />
-<br />
-链接: {$url}<br />
---<br />
-<br />
-如果您想停止接收电子邮件通知,前往{$unsubscribeLink}输入您的邮件地址和密码。<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>这封电子邮件是发送给通知邮件列表中的未注册用户。</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>欢迎来到{$siteTitle}邮件列表!</subject>
-		<body><![CDATA[您已签署接收来自{$siteTitle}的通知。<br />
-<br />
-请点击链接确认您的请求并把你的邮件地址添加到邮件列表:{$confirmLink}<br />
-<br />
-如果您想停止接收邮件通知，请前往{$unsubscribeLink}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>这封电子邮件是发送给刚刚从通知邮件列表中注册的未注册用户.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>密码重置确认</subject>
@@ -164,14 +139,6 @@
 <br />
 {$editorialContactSignature}]]></body>
 		<description>这封电子邮件，一旦启用，就会在作者完成投稿一份稿件到期刊的流程之后，会自动地寄发给作者。邮件中提供了有关追踪稿件编辑进度的信息，以及感谢作者的投稿。</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>不适合的稿件</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-我们针对〈{$submissionTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$contextName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>稿件评论</subject>

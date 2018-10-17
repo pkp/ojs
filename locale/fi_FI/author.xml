@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/author.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -31,7 +31,6 @@
 	<message key="author.submit.supplementaryFiles">Lataa liitetiedostot</message>
 	<message key="author.submit.confirmation">Vahvistus</message>
 	<message key="author.submit.nextSteps">Seuraavat vaiheet</message>
-	<message key="author.submit.cancelSubmission">Voit viimeistellä tämän lähetyksen myöhemmin valitsemalla Aktiiviset käsikirjoitukset Kirjoittajan etusivulta.</message>
 	<message key="author.submit.notAccepting">Tämä julkaisu ei juuri nyt ota vastaan käsikirjoituksia.</message>
 	<message key="author.submit.requestWaiver">Pyydä kirjoittajamaksusta luopumista</message>
 	<message key="author.submit.qualifyForWaiver">Pyydän harkitsemaan artikkelin lähetysmaksusta luopumista tämän artikkelin kohdalla</message>
@@ -48,8 +47,6 @@
 	<message key="author.submissions.noSubmissions">Ei käsikirjoituksia.</message>
 	<message key="author.submit.journalSection">Julkaisun osasto</message>
 	<message key="author.submit.journalSectionDescription">Artikkelit on lähetettävä yhteen julkaisun osastoista.</message>
-	<message key="author.submit.submissionLocale">Käsikirjoituksen kieli</message>
-	<message key="author.submit.submissionLocaleDescription">Tämä julkaisu hyväksyy käsikirjoituksia useilla kielillä. Valitse käsikirjoituksen pääasiallinen kieli alla olevasta vetovalikosta.</message>
 	<message key="author.submit.verifyChecklist">Varmista, että kaikki käsikirjoituksen tarkistuslistan kohdat täyttyvät ennen jatkamista.</message>
 	<message key="author.submit.copyrightNoticeAgree">Kirjoittajat hyväksyvät tämän tekijänoikeushuomautuksen ehdot, joita sovelletaan tähän käsikirjoitukseen, jos ja kun se julkaistaan tämän julkaisun toimesta (kommentteja toimittajalle voidaan lisätä alla).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sinun on hyväksyttävä tekijänoikeushuomautuksen ehdot, ennen kuin voit jatkaa.</message>
@@ -117,4 +114,6 @@
 	<message key="author.article.copyeditedFile">Teknisesti toimitettu tiedosto</message>
 	<message key="author.article.authorRevisedFile">Kirjoittajan tiedosto</message>
 	<message key="author.submit.authorSubmitLoginMessage">Käsikirjoituksen lähettäminen tähän julkaisuun vaatii käyttäjätilin. Näin toimittajamme voivat seurata käsikirjoituksiasi ja ottaa sinuun yhteyttä käsikirjoituksen tilan muuttuessa tai jos sinulta tarvitaan lisätietoja.</message>
+	<message key="submission.submit.cancelSubmission">Voit viimeistellä tämän lähetyksen myöhemmin valitsemalla välilehden Kaikki aktiiviset Kirjoittajan etusivulta.</message>
+	<message key=""><![CDATA[]]></message>
 </locale>

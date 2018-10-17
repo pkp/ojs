@@ -3,19 +3,19 @@
 /**
  * @file classes/payment/ojs/OJSPaymentManager.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSPaymentManager
  * @ingroup payment
- * @see OJSQueuedPayment
+ * @see QueuedPayment
  *
  * @brief Provides payment management functions.
  *
  */
 
-import('classes.payment.ojs.OJSQueuedPayment');
+import('lib.pkp.classes.payment.QueuedPayment');
 import('lib.pkp.classes.payment.PaymentManager');
 
 define('PAYMENT_TYPE_MEMBERSHIP',		0x000000001);
@@ -30,25 +30,16 @@ define('PAYMENT_TYPE_PURCHASE_ISSUE',		0x000000009);
 
 class OJSPaymentManager extends PaymentManager {
 	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 */
-	function __construct($request) {
-		parent::__construct($request);
-	}
-
-	/**
 	 * Determine whether the payment system is configured.
 	 * @return boolean true iff configured
 	 */
 	function isConfigured() {
-		$journal = $this->request->getJournal();
-		return parent::isConfigured() && $journal->getSetting('journalPaymentsEnabled');
+		return parent::isConfigured() && $this->_context->getSetting('paymentsEnabled');
 	}
 
 	/**
 	 * Create a queued payment.
-	 * @param $journalId int ID of journal payment applies under
+	 * @param $request PKPRequest
 	 * @param $type int PAYMENT_TYPE_...
 	 * @param $userId int ID of user responsible for payment
 	 * @param $assocId int ID of associated entity
@@ -56,45 +47,43 @@ class OJSPaymentManager extends PaymentManager {
 	 * @param $currencyCode string optional ISO 4217 currency code
 	 * @return QueuedPayment
 	 */
-	function createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
+	function createQueuedPayment($request, $type, $userId, $assocId, $amount, $currencyCode = null) {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
-		$payment = new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
-		$payment->setJournalId($journalId);
+		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($this->_context->getId(), 'currency');
+		$payment = new QueuedPayment($amount, $currencyCode, $userId, $assocId);
+		$payment->setContextId($this->_context->getId());
 		$payment->setType($type);
-		$router = $this->request->getRouter();
+		$router = $request->getRouter();
 		$dispatcher = $router->getDispatcher();
 
 		switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'article', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'article', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
-				break;
-			case PAYMENT_TYPE_MEMBERSHIP:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user'));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current'));
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user', 'subscriptions'));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
-			case PAYMENT_TYPE_DONATION:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'donations', 'thankYou'));
-				break;
-			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
-			case PAYMENT_TYPE_SUBMISSION:
 				$submissionDao = Application::getSubmissionDAO();
 				$submission = $submissionDao->getById($assocId);
 				if ($submission->getSubmissionProgress()!=0) {
-					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
+					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
 				} else {
-					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'author'));
+					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
 				}
 				break;
+			case PAYMENT_TYPE_MEMBERSHIP: // Deprecated
+			case PAYMENT_TYPE_DONATION: // Deprecated
+			case PAYMENT_TYPE_FASTTRACK: // Deprecated
+			case PAYMENT_TYPE_SUBMISSION: // Deprecated
 			default:
 				// Invalid payment type
+				error_log('Invalid payment type "' . $type . '"');
 				assert(false);
 				break;
 		}
@@ -106,16 +95,20 @@ class OJSPaymentManager extends PaymentManager {
 	 * Create a completed payment from a queued payment.
 	 * @param $queuedPayment QueuedPayment Payment to complete.
 	 * @param $payMethod string Name of payment plugin used.
+	 * @param $userId int User ID to attribute payment to (if unspecified, will be taken from queued payment)
 	 * @return CompletedPayment
 	 */
-	function createCompletedPayment($queuedPayment, $payMethod) {
+	function createCompletedPayment($queuedPayment, $payMethod, $userId = null) {
 		import('lib.pkp.classes.payment.CompletedPayment');
 		$payment = new CompletedPayment();
-		$payment->setContextId($queuedPayment->getJournalId());
+		$payment->setContextId($queuedPayment->getContextId());
 		$payment->setType($queuedPayment->getType());
 		$payment->setAmount($queuedPayment->getAmount());
 		$payment->setCurrencyCode($queuedPayment->getCurrencyCode());
-		$payment->setUserId($queuedPayment->getUserId());
+
+		if ($userId) $payment->setUserId($userId);
+		else $payment->setUserId($queuedPayment->getUserId());
+
 		$payment->setAssocId($queuedPayment->getAssocId());
 		$payment->setPayMethodPluginName($payMethod);
 
@@ -127,8 +120,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function publicationEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('publicationFeeEnabled') && $journal->getSetting('publicationFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('publicationFee') > 0;
 	}
 
 	/**
@@ -136,8 +128,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function membershipEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('membershipFee') > 0;
 	}
 
 	/**
@@ -145,8 +136,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseArticleEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('purchaseArticleFeeEnabled') && $journal->getSetting('purchaseArticleFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('purchaseArticleFee') > 0;
 	}
 
 	/**
@@ -154,8 +144,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseIssueEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('purchaseIssueFeeEnabled') && $journal->getSetting('purchaseIssueFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('purchaseIssueFee') > 0;
 	}
 
 	/**
@@ -163,17 +152,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function onlyPdfEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');
-	}
-
-	/**
-	 * Determine whether subscription fees are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function acceptSubscriptionPayments() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('acceptSubscriptionPayments');
+		return $this->isConfigured() && $this->_context->getSetting('restrictOnlyPdf');
 	}
 
 	/**
@@ -181,8 +160,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return PaymentPlugin
 	 */
 	function getPaymentPlugin() {
-		$journal = $this->request->getJournal();
-		$paymentMethodPluginName = $journal->getSetting('paymentMethodPluginName');
+		$paymentMethodPluginName = $this->_context->getSetting('paymentPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
 			$plugins = PluginRegistry::loadCategory('paymethod');
@@ -203,7 +181,7 @@ class OJSPaymentManager extends PaymentManager {
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$userDao = DAORegistry::getDAO('UserDAO');
-				$user = $userDao->getById($queuedPayment->getuserId());
+				$user = $userDao->getById($queuedPayment->getUserId());
 				$userDao->renewMembership($user);
 				$returner = true;
 				break;
@@ -218,7 +196,7 @@ class OJSPaymentManager extends PaymentManager {
 					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
-				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
+				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
 					fatalError('Subscription integrity checks fail!');
 					return false;
 				}
@@ -267,7 +245,7 @@ class OJSPaymentManager extends PaymentManager {
 					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
-				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
+				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
 					// FIXME: Is this supposed to be here?
 					error_log(print_r($subscription, true));
 					return false;
@@ -293,9 +271,12 @@ class OJSPaymentManager extends PaymentManager {
 				}
 				$returner = true;
 				break;
+			case PAYMENT_TYPE_DONATION:
+				assert(false); // Deprecated
+				$returner = true;
+				break;
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-			case PAYMENT_TYPE_DONATION:
 			case PAYMENT_TYPE_SUBMISSION:
 			case PAYMENT_TYPE_PUBLICATION:
 				$returner = true;
@@ -305,14 +286,59 @@ class OJSPaymentManager extends PaymentManager {
 				assert(false);
 		}
 		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName);
+		$completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName, $request->getUser()->getId());
 		$completedPaymentDao->insertObject($completedPayment);
 
 		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
-		$queuedPaymentDao->deleteQueuedPayment($queuedPayment->getId());
+		$queuedPaymentDao->deleteById($queuedPayment->getId());
 
 		return $returner;
 	}
+
+	/**
+	 * Fetch the name of the description.
+	 * @return string
+	 */
+	function getPaymentName($payment) {
+		switch ($payment->getType()) {
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+
+				if ($institutionalSubscriptionDao->subscriptionExists($payment->getAssocId())) {
+					$subscription = $institutionalSubscriptionDao->getById($payment->getAssocId());
+				} else {
+					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+					$subscription = $individualSubscriptionDao->getById($payment->getAssocId());
+				}
+				if (!$subscription) return __('payment.type.subscription');
+
+				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
+
+				return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';
+			case PAYMENT_TYPE_DONATION:
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.donation');
+			case PAYMENT_TYPE_MEMBERSHIP:
+				return __('payment.type.membership');
+			case PAYMENT_TYPE_PURCHASE_ARTICLE:
+				return __('payment.type.purchaseArticle');
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
+				return __('payment.type.purchaseIssue');
+			case PAYMENT_TYPE_SUBMISSION:
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.submission');
+			case PAYMENT_TYPE_FASTTRACK:
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.fastTrack');
+			case PAYMENT_TYPE_PUBLICATION:
+				return __('payment.type.publication');
+			default:
+				// Invalid payment type
+				assert(false);
+		}
+	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * 3.1.0_update.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 3.1.0.0 general updates.
@@ -18,7 +18,7 @@
 		<query>UPDATE review_assignments SET date_response_due = date_due WHERE date_response_due IS NULL</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#2310: Move plugins to unified sidebar upon upgrade -->
-		<query>UPDATE plugin_settings SET setting_value=1 WHERE setting_name='context' AND plugin_name LIKE '%BlockPlugin'</query><!-- 1 is BLOCK_CONTEXT_SIDEBAR -->
+		<query>UPDATE plugin_settings SET setting_value=1 WHERE setting_name='context' AND LOWER(plugin_name) LIKE '%blockplugin'</query><!-- 1 is BLOCK_CONTEXT_SIDEBAR -->
 	</sql>
 	<sql><!-- pkp/pkp-lib#2151: set viewable = 1 for submission files (migrated from 2.4.x) -->
 		<query>UPDATE submission_files SET viewable = 1 WHERE file_stage = 2 AND viewable = 0</query><!-- 2 is SUBMISSION_FILE_SUBMISSION -->
@@ -82,5 +82,23 @@
 		<!-- Then change the old setting names -->
 		<query>UPDATE submission_settings SET setting_name = 'crossref::status' WHERE setting_name = 'crossref::depositStatus' </query>
 		<query>UPDATE submission_settings SET setting_name = 'crossref::statusUrl' WHERE setting_name = 'crossref::depositStatusUrl' </query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#1791 -->
+		<!-- fix assoc_type for supp files, above all for those already migrated: -->
+		<!-- update the ASSOC_TYPE_SUBMISSION_FILE = 515 constant to ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531 defined in PKPApplication -->
+		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 515 AND assoc_id IN (SELECT file_id FROM submission_supplementary_files)</query>
+		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 515 AND assoc_id IN (SELECT file_id FROM submission_artwork_files)</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#2832 -->
+		<!-- remove citationFormats plugins -->
+		<query>DELETE FROM versions WHERE product_type = 'plugins.citationFormats'</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#2859 -->
+		<!-- remove citationFormats plugins -->
+		<query>DELETE FROM versions WHERE product_type = 'plugins.citationOutput'</query>
+		<query>DELETE FROM journal_settings WHERE setting_name = 'metaCitationOutputFilterId'</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#2873 -->
+		<query>UPDATE filter_groups SET output_type = 'xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)' WHERE output_type = 'xml::schema(http://schema.datacite.org/meta/kernel-3/metadata.xsd)'</query>
 	</sql>
 </data>

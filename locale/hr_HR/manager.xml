@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -48,7 +48,6 @@
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupovina članka</message>
 	<message key="manager.payment.options.text">Opis metode plaćanja</message>
-	<message key="manager.payment.options.waiverPolicy">Mogućnost izuzeća</message>
 	<message key="manager.payment.paymentId">Identifikator naplate</message>
 	<message key="manager.payment.paymentMethod">Način uplate</message>
 	<message key="manager.payment.paymentMethod.description">Sa ovog ekrana možete podesiti funkcionalne dodatke namijenjenih plaćanju:</message>
@@ -239,7 +238,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Napomena:</strong> Pozivnica e-pošte za recenzente sadržavat će poseban URL koji vodi recenzente izravno na stranicu za recenziju prijava (za pristup bilo kojoj drugoj stranici potrebno je prijaviti se u sustav). Iz sigurnosnih razloga pri korištenju ove opcije urednici neće moći modificirati adrese primatelja e-pošte ili poslati kopiju poruke "na znanje" drugim primateljima pri slanju pozivnica recenzentima.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ocjena rada recenzenata</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Podsjetnici za recenzente</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Objavi poveznicu na <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Kako osigurati anonimnost recenzije</a> na stranicama gdje autori i recenzenti prilažu svoje datoteke.]]></message>
 	<message key="manager.setup.reviewPolicy">Recenzijska politika</message>
 	<message key="manager.setup.searchEngineIndexing">Indeksiranje časopisa za tražilice</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Kako bi olakšali pronalaženje ovog časopisa pomoću mrežnih tražilica, priložite kratak opis časopisa i relevantnih ključnih riječi (odvojenih točka-zarezima).</message>

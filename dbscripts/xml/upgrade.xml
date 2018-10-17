@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
 <!--
-  * upgrade.xml
+  * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
   *
   -->
 
-<install version="3.0.2.0">
+<install version="3.2.0.0">
+	<code function="checkPhpVersion" />
+
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- OJS < 2.4.0 to 3.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
@@ -26,14 +28,13 @@
 		<code function="syncSeriesAssocType" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->columnExists('article_galleys', 'views');" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics2.xml" condition="return $installer->columnExists('issue_galleys', 'views');" />
+		<code function="removeReviewEntries" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptTimedViews.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptReferrals.xml" condition="return $installer->tableExists('referrals');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptBooksForReview.xml" condition="return $installer->tableExists('books_for_review');" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
-		<code function="concatenateIntoAbout" />
-		<code function="concatenateIntoMasthead" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
@@ -44,6 +45,14 @@
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_review_assignments.xml" condition="return $installer->columnExists('review_assignments', 'cancelled');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_notes.xml" condition="return $installer->columnExists('notes', 'file_id');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_payments.xml" condition="return $installer->columnExists('completed_payments', 'journal_id');" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.0.9">
+		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -59,13 +68,13 @@
 	<schema file="lib/pkp/xml/schema/submissions.xml" />
 	<schema file="lib/pkp/xml/schema/submissionFiles.xml" />
 	<schema file="lib/pkp/xml/schema/notes.xml" />
-	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/genres.xml" />
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
 	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
 	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
+	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -73,7 +82,22 @@
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
 
+	<!-- Install default NavigationMenus -->
+	<code function="installDefaultNavigationMenus" />
+	<code function="migrateStaticPagesToNavigationMenuItems" />
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<code function="migrateSRLocale" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<!-- migrateUserAndAuthorNames should be after migrateSRLocale -->
+		<code function="migrateUserAndAuthorNames" condition="return $installer->tableExists('users_tmp');" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
+		<code function="concatenateIntoAbout" />
+		<code function="concatenateIntoMasthead" />
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
 		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
@@ -104,6 +128,7 @@
 		<code function="convertQueries" />
 		<code function="migrateFiles" />
 		<code function="convertSupplementaryFiles" />
+		<code function="provideSupplementaryFilesForReview" />
 		<code function="setFileUploader" />
 		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
@@ -153,6 +178,7 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
 		<code function="installEmailTemplate" key="PASSWORD_RESET" locales="ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,eu_ES,fi_FI,fr_CA,hr_HR,id_ID,it_IT,nb_NO,nl_NL,pt_BR,pt_PT,ru_RU,sv_SE,tr_TR,uk_UA,zh_CN" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update_a.xml" />
+		<code function="fixGenreIdInFileNames" />
 		<code function="repairKeywordsAndSubjects" />
 		<code function="enabledSitePlugins" />
 		<code function="moveCSSFiles" />
@@ -169,9 +195,26 @@
 		<data file="dbscripts/xml/upgrade/3.1.0_galley_settings.xml" condition="return $installer->tableExists('article_galley_settings');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
 		<code function="repairImageAssociations" condition="return $installer->tableExists('submission_html_galley_images');" />
-		<note file="docs/release-notes/README-3.1.0" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_INITIAL_DECLINE" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_RECOMMENDATION" locales="en_US" />
+		<note file="docs/release-notes/README-3.1.0" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.0.9">
+		<data file="dbscripts/xml/upgrade/3.1.1_update.xml" />
+		<code function="updateSuppFileMetrics" />
+		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="ar_IQ,da_DK,en_US,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,id_ID,pt_PT,ru_RU,sv_SE" />
+		<code function="clearDataCache" />
+	</upgrade>
+
+	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
+		<code function="repairSuppFilesFilestage" />
+		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
+		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

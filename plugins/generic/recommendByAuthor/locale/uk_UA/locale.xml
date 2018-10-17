@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendByAuthor/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings for the uk_UA (Українська) locale.
+  -->
+ 
+<locale name="uk_UA" full_name="Українська">
+	<message key="plugins.generic.recommendByAuthor.displayName">Модуль "Рекомендовані статті автора"</message>
+	<message key="plugins.generic.recommendByAuthor.description">Вставляє список статей цього ж автора на сторінку анотації статті.</message>
+    
+    <message key="plugins.generic.recommendByAuthor.heading">Статті цього автора (авторів), які найбільше читають</message>
+    <message key="plugins.generic.recommendByAuthor.noMetric">Особливість: Цей модуль вимагає, щоб був увікнений хоча б один модуль статистики/звітів. Якщо ваші модулі статистики повертають більше однієї метрики, то, будь ласка, також оберіть головну метрику на сторінці налаштування сайту адміністратором та/або на сторінках налаштування менеджера журналу.</message>
+</locale>

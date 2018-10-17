@@ -3,8 +3,8 @@
 /**
  * @file classes/services/QueryBuilders/SubmissionListQueryBuilder.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionListQueryBuilder
@@ -30,9 +30,6 @@ class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissi
 	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
 	 */
 	public function filterBySections($sectionIds) {
-		if (!is_null($sectionIds) && !is_array($sectionIds)) {
-			$sectionIds = array($sectionIds);
-		}
 		$this->sectionIds = $sectionIds;
 		return $this;
 	}
@@ -44,6 +41,38 @@ class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissi
 	 * @return object Query object
 	 */
 	public function appGet($q) {
+		$primaryLocale = \AppLocale::getPrimaryLocale();
+		$locale = \AppLocale::getLocale();
+
+		$this->columns[] = Capsule::raw('COALESCE(stl.setting_value, stpl.setting_value) AS section_title');
+		$this->columns[] = Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev');
+
+		$q->groupBy(Capsule::raw('COALESCE(stl.setting_value, stpl.setting_value)'));
+		$q->groupBy(Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value)'));
+
+		$q->leftJoin('section_settings as stpl', function($join) use($primaryLocale) {
+			$join->on('s.section_id', '=', Capsule::raw('stpl.section_id'));
+			$join->on('stpl.setting_name', '=', Capsule::raw("'section_title'"));
+			$join->on('stpl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
+		});
+
+		$q->leftJoin('section_settings as stl', function($join) use($locale) {
+			$join->on('s.section_id', '=', Capsule::raw('stl.section_id'));
+			$join->on('stl.setting_name', '=', Capsule::raw("'section_title'"));
+			$join->on('stl.locale', '=', Capsule::raw("'{$locale}'"));
+		});
+
+		$q->leftJoin('section_settings as sapl', function($join) use($primaryLocale) {
+			$join->on('s.section_id', '=', Capsule::raw('sapl.section_id'));
+			$join->on('sapl.setting_name', '=', Capsule::raw("'section_abbrev'"));
+			$join->on('sapl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
+		});
+
+		$q->leftJoin('section_settings as sal', function($join) use($locale) {
+			$join->on('s.section_id', '=', Capsule::raw('sal.section_id'));
+			$join->on('sal.setting_name', '=', Capsule::raw("'section_abbrev'"));
+			$join->on('sal.locale', '=', Capsule::raw("'{$locale}'"));
+		});
 
 		if (!empty($this->sectionIds)) {
 			$q->whereIn('s.section_id', $this->sectionIds);

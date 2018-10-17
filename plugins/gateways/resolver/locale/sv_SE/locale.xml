@@ -4,20 +4,16 @@
 <!--
   * plugins/gateways/resolver/locale/sv_SE/locale.xml
   *
-  * Translated to sv_SE per@funke.com 2010-03-15
-  *
-  *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the sv_SE (Svenska) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
   -->
  
 <locale name="sv_SE" full_name="Svenska">
-	<message key="plugins.gateways.resolver.displayName">Resolver tillägg</message>
-	<message key="plugins.gateways.resolver.description">Detta tillägg kopplar till artikel eller publikation baserat på citeringsinformation</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Kan inte koppla till sökt dokument m. h. a. given citeringsinformation. Vänligen kontrollera att citeringsinformationen är komplett och att den refererar till ett objekt som återfinns i denna OJS installation.</message>
+	<message key="plugins.gateways.resolver.displayName">Resolver-plugin</message>
+	<message key="plugins.gateways.resolver.description">Pluginet slår upp nummer och artiklar baserat på citeringsinformation.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Kan inte slå upp ett enskilt objekt med hjälp av den angivna citeringsinformationen. Kontrollera att citeringsinformationen är fullständig och hänvisar till ett objekt som finns på den här OJS-servern.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exportera beståndsposter</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * controllers/modals/submissionMetadata/form/issueEntryTabs.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display a submission's issue entry form.
@@ -30,4 +30,9 @@
 		<li>
 			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.identifiers"}</a>
 		</li>
+		{if $citationsEnabled}
+			<li>
+				<a name="citations" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="citations" op="citations" submissionId=$submissionId stageId=$stageId tabPos="2"}">{translate key="submission.citations"}</a>
+			</li>
+		{/if}
 </ul>

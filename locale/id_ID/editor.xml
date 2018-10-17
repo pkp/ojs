@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Apakah Anda ingin merekam keputusan ini?</message>
 	<message key="editor.submissionReview.emailWillArchive">Penyerahan naskah ini akan diarsipkan setelah email Beritahu Penulis telah dikirimkan atau tombol Lewati Email ditekan.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Sebelum mengirimkan naskah ke Copyediting, gunakan tautan Beritahu Penulis untuk memberitahukan keputusan kepada penulis dan pilih versi yang akan dikirim.</message>
-	<message key="editor.notifyUsers.allUsers">Semua pengguna terkait dengan konferensi ini ({$count} pengguna)</message>
 	<message key="editor.notifyUsers.allReaders">Semua Pembaca ({$count} pembaca)</message>
 	<message key="editor.notifyUsers.allAuthors">Semua penulis yang telah terbit naskahnya ({$count} penulis)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Semua pelanggan individu ({$count} pelanggan)</message>
@@ -119,72 +118,7 @@
 	<message key="grid.action.addIssueGalley">Buat Galley Terbitan</message>
 	<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
 	<message key="editor.article.designateReviewVersion">Jadikan file asli sebagai file Versi Review</message>
-	<message key="editor.article.uploadReviewVersion">Unggah Versi Review yang sudah direvisi</message>
-	<message key="editor.article.showSuppFile">Tampilkan file kepada reviewer</message>
-	<message key="editor.article.layoutAndProof">Layout &amp; Persetujuan</message>
-	<message key="editor.article.clear">Bersihkan</message>
-	<message key="editor.article.clearReviewer">Hapus Reviewer</message>
-	<message key="editor.article.changeSection">Ubah Bagian</message>
-	<message key="editor.article.setDueDate">Atur Tenggat Waktu</message>
-	<message key="editor.article.addReviewer">Tambah Reviewer</message>
-	<message key="editor.article.toReviewer">Untuk Reviewer</message>
-	<message key="editor.article.notifyReviewer">Beritahu Reviewer</message>
-	<message key="editor.article.initiateReview">Mulai Review</message>
-	<message key="editor.article.cancelReview">Batalkan Permohonan</message>
-	<message key="editor.article.clearReview">Hapus Reviewer</message>
-	<message key="editor.article.enterRecommendation">Masukkan Rekomendasi</message>
-	<message key="editor.article.enterReviewerRecommendation">Masukkan Rekomendasi Reviewer</message>
-	<message key="editor.article.recommendation">Rekomendasi</message>
-	<message key="editor.article.selectReviewer">Pilih Reviewer</message>
-	<message key="editor.article.replaceReviewer">Ganti Reviewer</message>
-	<message key="editor.article.editorToEnter">Editor untuk memasukkan rekomendasi/komentar untuk Reviewer</message>
-	<message key="editor.article.uploadReviewForReviewer">Unggah Review</message>
-	<message key="editor.article.peerReviewOptions">Pilihan Peer Review</message>
 	<message key="editor.article.decision">Keputusan</message>
-	<message key="editor.article.noEditorSelected">Tidak ada editor yang dipilih.</message>
-	<message key="editor.article.recordDecision">Rekam Keputusan</message>
-	<message key="editor.article.cannotRecord">Editor bagian belum direkam atau file review belum ada.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewer melihat versi penulis</message>
-	<message key="editor.article.designateDueDate">Menentukan Tenggat Waktu</message>
-	<message key="editor.article.designateDueDateDescription">Masukkan tanggal atau jumlah minggu untuk tenggat waktu yang baru.</message>
-	<message key="editor.article.todaysDate">Tanggal Hari Ini</message>
-	<message key="editor.article.requestedByDate">Permintaan Berdasarkan Tanggal</message>
-	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Jumlah Minggu</message>
-	<message key="editor.article.selectCopyeditor">Penugasan Copyeditor</message>
-	<message key="editor.article.replaceCopyeditor">Ganti Copyeditor</message>
-	<message key="editor.article.editorsCopyedit">Hasil Copyedit Editor</message>
-	<message key="editor.article.showAuthor">Izinkan penulis melihat file</message>
-	<message key="editor.article.showCopyeditor">Tampilkan versi kepada copyeditor</message>
-	<message key="editor.article.rateReviewer">Penilaian Reviewer</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Tinggi</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Rendah</message>
-	<message key="editor.article.comments">Komentar</message>
-	<message key="editor.article.commentsRequired">Dibutuhkan komentar.</message>
-	<message key="editor.article.saveRating">Simpan Nilai</message>
-	<message key="editor.article.noneSelected">Tidak Ada yang Dipilih</message>
-	<message key="editor.article.authorProofing">Proof Versi Penulis</message>
-	<message key="editor.article.archiveSubmission">Tolak dan Arsipkan Naskah</message>
-	<message key="editor.article.restoreToQueue">Kembalikan ke Daftar Aktif</message>
-	<message key="editor.article.assignSectionEditor">Tambah Editor Bagian</message>
-	<message key="editor.article.assignEditor">Tambah Editor</message>
-	<message key="editor.article.selectEditor">Pilih {$roleName}</message>
-	<message key="editor.article.selectDecision">Pilih Keputusan</message>
-	<message key="editor.article.selectLayoutEditor">Pilih Layout Editor</message>
-	<message key="editor.article.replaceLayoutEditor">Ganti Layout Editor</message>
-	<message key="editor.article.reviewSubmission">Review Penyerahan</message>
-	<message key="editor.article.resubmitForReview">Kirim ulang file untuk Review</message>
-	<message key="editor.article.resubmitFileForPeerReview">Kirim ulang file yang dipilih untuk peer review</message>
-	<message key="editor.article.sendToCopyedit">Kirim File untuk Copyediting</message>
-	<message key="editor.article.selectProofreader">Tugaskan Proofreader</message>
-	<message key="editor.article.replaceProofreader">Ganti Proofreader</message>
-	<message key="editor.article.authorComments">Komentar Penulis</message>
-	<message key="editor.article.proofreaderComments">Komentar Proofreader</message>
-	<message key="editor.article.layoutEditorFinal">Versi Final Layout Editor</message>
-	<message key="editor.article.noDate">(tanggal)</message>
 	<message key="editor.submissions.showBy">Tunjukkan berdasar</message>
 	<message key="editor.submissions.submitMMDD">Submit MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Tugas Aktif</message>
@@ -200,16 +134,7 @@
 	<message key="editor.article.scheduleForPublication">Jadwalkan untuk publikasi di</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Untuk Ditugaskan</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Biaya publikasi tidak dibayar. Untuk menjadwalkan item untuk dipublikasi beritahu penulis untuk membayar biaya atau mengajukan dispensasi.</message>
-	<message key="editor.article.display">Tampilkan</message>
-	<message key="editor.article.hideTocAuthorDescription">Hilangkan nama penulis dari daftar isi</message>
-	<message key="editor.article.hideTocAuthorDefault">Default</message>
-	<message key="editor.article.hideTocAuthorHide">Hapus</message>
-	<message key="editor.article.hideTocAuthorShow">Tampilkan</message>
-	<message key="editor.article.cover">Sampul</message>
-	<message key="editor.article.coverImage">Gambar sampul</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin telah dihapus. Coba muat ulang halaman.</message>
-	<message key="editor.article.uploaded">Sudah diunggah</message>
-	<message key="editor.article.removeCoverPage">Hapus gambar sampul?</message>
 	<message key="grid.action.removeArticle">Hapus Naskah dari Terbitan</message>
 	<message key="editor.article.remove">Hapus</message>
 	<message key="editor.article.remove.confirm">Anda yakin hendak menghapus naskah ini dari terbitan? Naskah akan dapat dijadwalkan di edisi terbitan lain.</message>
@@ -219,4 +144,5 @@
 	<message key="editor.submission.selectGalleyFiles">Pilih File Galley</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[File draft final di daftar ini telah diubah oleh Copyeditor menjadi versi pasca-copyedit, telah diunggah berikut ini di bawah <span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahkan ke daftar Proofreading dengan menandai check box Include berikut dan klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk diikutsertakan.</message>
+	<message key="editor.article.coverImage">Gambar sampul</message>
 </locale>

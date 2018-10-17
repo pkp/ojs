@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -100,14 +100,6 @@ Ta kontakt med meg, hvis det er noe mer du vil vite. Takk for at du velger tidss
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Når denne funksjonen er slått på, sendes denne e-posten automatisk til forfattere, så snart de har fullført prosedyren for innsending av manuskript til tidsskriftet. E-posten gir informasjon om å følge manuskriptet gjennom den redaksjonelle prosessen, og takker forfatteren for bidraget.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Uegnet manuskript</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ved den redaksjonelle gjennomgangen av ditt manuskript &quot;{$submissionTitle}&quot;, har vi dessverre funnet at dette bidraget ikke passer med det faglige hovedfokuset og spennvidden for {$contextName}. For at du skal bli bedre kjent med vår faglige profil, vil jeg anbefale deg å se nærmere både på beskrivelsen av tidsskriftet vårt (under Om), og på våre tidligere utgaver. Du bør også vurdere om du kjenner til andre tidsskrift som egner seg bedre for publisering av dette bidraget.<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Kommentar til manuskript</subject>
@@ -561,31 +553,6 @@ På forhånd takk,<br />
 {$notificationContents}<br />
 <br />
 Lenke: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ny melding fra {$siteTitle}</subject>
-		<body><![CDATA[Du har en ny melding fra {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Lenke: {$url}<br />
---<br />
-<br />
-Om du ikke lenger ønsker å motte slike meldinger per e-post, gå til  {$unsubscribeLink} og oppgi din e-postadresse og passord.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Velkommen til e-postlisten til {$siteTitle}!</subject>
-		<body><![CDATA[Du har bedt om å få meldinger fra {$siteTitle}.<br />
-<br />
-Vennligst klikke på denne lenken for å bekrefte ditt ønske og legge din e-postadresse til e-postlisten: {$confirmLink}<br />
-<br />
-Om du ikke lenger ønsker å få meldinger via e-post, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.<br />
-<br />
-Ditt passord for å slå av e-postmeldinger er: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>

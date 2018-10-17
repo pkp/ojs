@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -139,14 +139,9 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Veröffentlichung des Beitrags</message>
-	<message key="default.journalSettings.publicationFeeDescription">Sollte dieser Beitrag zur Veröffentlichung kommen, ist eine Veröffentlichungsgebühr zu zahlen, um die Kosten der Veröffentlichung zu decken.</message>
-	<message key="default.journalSettings.waiverPolicy">Sollten Ihnen die nötigen Mittel für die Bezahlung solcher Gebühren nicht zur Verfügung stehen, haben Sie die Möglichkeit, jede dieser Gebühren erlassen zu bekommen. Wir wollen vermeiden, dass Gebühren der Veröffentlichung wertvoller Beiträge im Weg stehen.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Artikel erwerben</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, diesen Artikel anzuzeigen, herunterzuladen und auszudrucken.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Ausgabe erwerben</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, die Ausgabe anzuzeigen, herunterzuladen und auszudrucken.</message>
 	<message key="default.journalSettings.membershipFee">Mitgliedschaft</message>
-	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Zeitschriftenverwalter/in</message>

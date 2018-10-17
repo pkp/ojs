@@ -3,8 +3,8 @@
 /**
  * @file classes/workflow/EditorDecisionActionsManager.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EditorDecisionActionsManager
@@ -38,13 +38,15 @@ class EditorDecisionActionsManager {
 
 	/**
 	 * Get decision actions labels.
-	 * @param $decisions
+	 * @param $context Context
+	 * @param $stageId int
+	 * @param $decisions array
 	 * @return array
 	 */
-	static function getActionLabels($decisions) {
+	static function getActionLabels($context, $stageId, $decisions) {
 		$allDecisionsData =
-			self::_submissionStageDecisions() +
-			self::_externalReviewStageDecisions() +
+			self::_submissionStageDecisions($stageId) +
+			self::_externalReviewStageDecisions($context) +
 			self::_editorialStageDecisions();
 
 		$actionLabels = array();
@@ -65,12 +67,12 @@ class EditorDecisionActionsManager {
 	 * @param $decisions array
 	 * @return boolean
 	 */
-	static function getEditorTakenActionInReviewRound($reviewRound, $decisions = array()) {
+	static function getEditorTakenActionInReviewRound($context, $reviewRound, $decisions = array()) {
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		$editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
 		if (empty($decisions)) {
-			$decisions = array_keys(self::_externalReviewStageDecisions());
+			$decisions = array_keys(self::_externalReviewStageDecisions($context));
 		}
 		$takenDecision = false;
 		foreach ($editorDecisions as $decision) {
@@ -84,17 +86,20 @@ class EditorDecisionActionsManager {
 	}
 
 	/**
-	 * Get the available decisions by stage ID.
+	 * Get the available decisions by stage ID and user making decision permissions,
+	 * if the user can make decisions or if it is recommendOnly user.
+	 * @param $context Context
 	 * @param $stageId int WORKFLOW_STAGE_ID_...
+	 * @param $makeDecision boolean If the user can make decisions
 	 */
-	static function getStageDecisions($stageId) {
+	static function getStageDecisions($context, $stageId, $makeDecision = true) {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
-				return self::_submissionStageDecisions();
+				return self::_submissionStageDecisions($stageId, $makeDecision);
 			case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-				return self::_externalReviewStageDecisions();
+				return self::_externalReviewStageDecisions($context, $makeDecision);
 			case WORKFLOW_STAGE_ID_EDITING:
-				return self::_editorialStageDecisions();
+				return self::_editorialStageDecisions($makeDecision);
 			default:
 				assert(false);
 		}
@@ -106,7 +111,7 @@ class EditorDecisionActionsManager {
 	 * @param $stageId integer
 	 * @return array recommendation => localeString
 	 */
-	function getRecommendationOptions($stageId) {
+	static function getRecommendationOptions($stageId) {
 		static $recommendationOptions = array(
 			'' => 'common.chooseOne',
 			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => 'editor.submission.decision.requestRevisions',
@@ -122,96 +127,104 @@ class EditorDecisionActionsManager {
 	//
 	/**
 	 * Define and return editor decisions for the submission stage.
+	 * If the user cannot make decisions i.e. if it is a recommendOnly user,
+	 * the user can only send the submission to the review stage, and neither
+	 * acept nor decline the submission.
+	 * @param $stageId int WORKFLOW_STAGE_ID_...
+	 * @param $makeDecision boolean If the user can make decisions
 	 * @return array
 	 */
-	static function _submissionStageDecisions() {
-		static $decisions = array(
+	static function _submissionStageDecisions($stageId, $makeDecision = true) {
+		$decisions = array(
 			SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW => array(
 				'operation' => 'externalReview',
 				'name' => 'externalReview',
 				'title' => 'editor.submission.decision.sendExternalReview',
-				'image' => 'advance',
-				'titleIcon' => 'modal_review',
-			),
-			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
-				'name' => 'accept',
-				'operation' => 'promote',
-				'title' => 'editor.submission.decision.skipReview',
-				'image' => 'promote',
-				'help' => 'editor.review.NotifyAuthorAccept',
-				'titleIcon' => 'accept_submission',
-			),
-			SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => array(
-				'name' => 'decline',
-				'operation' => 'sendReviews',
-				'title' => 'editor.submission.decision.decline',
-				'image' => 'decline',
-				'help' => 'editor.review.NotifyAuthorDecline',
-				'titleIcon' => 'decline_submission',
-			),
+				'toStage' => 'editor.review',
+			)
 		);
+		if ($makeDecision) {
+			if ($stageId == WORKFLOW_STAGE_ID_SUBMISSION) {
+				$decisions = $decisions + array(
+					SUBMISSION_EDITOR_DECISION_ACCEPT => array(
+						'name' => 'accept',
+						'operation' => 'promote',
+						'title' => 'editor.submission.decision.skipReview',
+						'toStage' => 'submission.copyediting',
+					),
+				);
+			}
 
+			$decisions = $decisions + array(
+				SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => array(
+					'name' => 'decline',
+					'operation' => 'sendReviews',
+					'title' => 'editor.submission.decision.decline',
+				),
+			);
+		}
 		return $decisions;
 	}
 
 	/**
 	 * Define and return editor decisions for the review stage.
+	 * If the user cannot make decisions i.e. if it is a recommendOnly user,
+	 * there will be no decisions options in the review stage.
+	 * @param $context Context
+	 * @param $makeDecision boolean If the user can make decisions
 	 * @return array
 	 */
-	static function _externalReviewStageDecisions() {
-		static $decisions = array(
-			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
-				'operation' => 'sendReviewsInReview',
-				'name' => 'requestRevisions',
-				'title' => 'editor.submission.decision.requestRevisions',
-				'image' => 'revisions',
-				'help' => 'editor.review.NotifyAuthorRevisions',
-				'titleIcon' => 'revisions_required',
-			),
-			SUBMISSION_EDITOR_DECISION_RESUBMIT => array(
-				'operation' => 'sendReviewsInReview',
-				'name' => 'resubmit',
-				'title' => 'editor.submission.decision.resubmit',
-				'image' => 'resubmit',
-				'help' => 'editor.review.NotifyAuthorResubmit',
-				'titleIcon' => 'please_resubmit',
-			),
-			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
-				'operation' => 'promoteInReview',
-				'name' => 'accept',
-				'title' => 'editor.submission.decision.accept',
-				'image' => 'promote',
-				'help' => 'editor.review.NotifyAuthorAccept',
-				'titleIcon' => 'accept_submission',
-			),
-			SUBMISSION_EDITOR_DECISION_DECLINE => array(
-				'operation' => 'sendReviewsInReview',
-				'name' => 'decline',
-				'title' => 'editor.submission.decision.decline',
-				'image' => 'decline',
-				'help' => 'editor.review.NotifyAuthorDecline',
-				'titleIcon' => 'decline_submission',
-			),
-		);
-
+	static function _externalReviewStageDecisions($context, $makeDecision = true) {
+		$paymentManager = Application::getPaymentManager($context);
+		$decisions = array();
+		if ($makeDecision) {
+			$decisions = array(
+				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
+					'operation' => 'sendReviewsInReview',
+					'name' => 'requestRevisions',
+					'title' => 'editor.submission.decision.requestRevisions',
+				),
+				SUBMISSION_EDITOR_DECISION_RESUBMIT => array(
+					'name' => 'resubmit',
+					'title' => 'editor.submission.decision.resubmit',
+				),
+				SUBMISSION_EDITOR_DECISION_ACCEPT => array(
+					'operation' => 'promoteInReview',
+					'name' => 'accept',
+					'title' => 'editor.submission.decision.accept',
+					'toStage' => 'submission.copyediting',
+					'paymentType' => $paymentManager->publicationEnabled()?PAYMENT_TYPE_PUBLICATION:null,
+					'paymentAmount' => $context->getSetting('publicationFee'),
+					'paymentCurrency' => $context->getSetting('currency'),
+					'requestPaymentText' => __('payment.requestPublicationFee', array('feeAmount' => $context->getSetting('publicationFee') . ' ' . $context->getSetting('currency'))),
+					'waivePaymentText' => __('payment.waive'),
+				),
+				SUBMISSION_EDITOR_DECISION_DECLINE => array(
+					'operation' => 'sendReviewsInReview',
+					'name' => 'decline',
+					'title' => 'editor.submission.decision.decline',
+				),
+			);
+		}
 		return $decisions;
 	}
 
 	/**
 	 * Define and return editor decisions for the editorial stage.
+	 * Currently it does not matter if the user cannot make decisions
+	 * i.e. if it is a recommendOnly user for this stage.
+	 * @param $makeDecision boolean If the user cannot make decisions
 	 * @return array
 	 */
-	static function _editorialStageDecisions() {
+	static function _editorialStageDecisions($makeDecision = true) {
 		static $decisions = array(
 			SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION => array(
 				'operation' => 'promote',
 				'name' => 'sendToProduction',
 				'title' => 'editor.submission.decision.sendToProduction',
-				'image' => 'send_production',
-				'titleIcon' => 'modal_send_to_production',
+				'toStage' => 'submission.production',
 			),
 		);
-
 		return $decisions;
 	}
 
@@ -230,4 +243,4 @@ class EditorDecisionActionsManager {
 	}
 }
 
-?>
+

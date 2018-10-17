@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">أنقر الإيقونة لملء نموذج التحكيم</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
 
 	<!-- review forms end -->
 
@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">سجِّل في مجلات أُخر</message>
 	<message key="user.reviewerPrompt">هل تود تحكيم طلبات النشر المقدمة إلى هذه المجلة؟</message>
 	<message key="user.reviewerPrompt.userGroup">نعم، أطلب دور {$userGroup}.</message>
+	<message key="user.reviewerPrompt.optin">نعم، أود مراسلتي بشأن تحكيم طلبات النشر المقدمة إلى هذه المجلة.</message>
 	<message key="user.register.contextsPrompt">في أي من مجلات هذا الموقع ترغب بالتسجيل؟</message>
 	<message key="user.register.otherContextRoles">أطلب الأدوار الآتية:</message>
 	<message key="user.register.noContextReviewerInterests">إذا طلبت أن تكون محكماً في أي مجلة، لطفاً، أذكر مجالات اهتمامك.</message>
@@ -211,7 +212,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">رئيس التحرير</message>
-	<message key="user.role.sectionEditor">محرر القسم</message>
+	<message key="user.role.subEditor">محرر القسم</message>
 	<message key="user.role.subscriptionManager">مدير الاشتراكات</message>
 	<message key="user.role.managers">المدراء</message>
 	<message key="user.role.subEditors">محررو الأقسام</message>
@@ -257,6 +258,7 @@
 	<message key="subscriptions.status.needsApproval">يتطلب المصادقة</message>
 	<message key="subscriptions.status.awaitingManualPayment">بانتظار الدفع السنوي</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">بانتظار الدفع عبر الإنترنت</message>
+	<message key="subscriptions.status.noSubscription">ليس لديك حالياً اشتراك فعال.</message>
 	<message key="subscriptions.status.other">غير ذلك، أنظر الملاحظات</message>
 	<message key="subscriptions.individualDescription">الاشتراك المنفرد يتطلب التسجيل في الموقع للوصول إلى المحتوى المطلوب</message>
 	<message key="subscriptions.institutionalDescription">الاشتراك المؤسساتي لا يتطلب التسجيل، النطاق وعنوان IP للمستخدم يستعملان للتحكم بالوصول إلى المحتوى المطلوب</message>
@@ -317,6 +319,7 @@
 	<message key="reader.openAccess">وصول مفتوح</message>
 	<message key="reader.subscriptionAccess">الوصول عبر الاشتراك</message>
 	<message key="reader.subscriptionOrFeeAccess">الوصول عبر الاشتراك أو تسديد الرسوم</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">التعليقات عن هذا المؤلَّف</message>
@@ -366,7 +369,6 @@
 	<message key="plugins.categories.viewableFiles">البرامج الإضافية للوح الطباعي</message>
 	<message key="plugins.categories.viewableFiles.description">البرامج الإضافية للوح الطباعي تقدم الدعم اللازم لعرض أنواع مختلفة من الملفات التي يمكن لها أن تكون ألواحاً طباعية للمؤلفات.</message>
 	<message key="plugins.categories.auth.description">إضافات المصادقة تسمح لنظام المجلات المفتوحة بتفويض مهام المصادقة إلى أنظمة أخرى، مثل: ملقمات LDAP</message>
-	<message key="plugins.categories.citationFormats.description">إضافات تنسيق الإقتباس تتيح للمستخدمين أنماطاً متعددة من الوصول إلى اقتباسات المؤلَّفات العلمية</message>
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم شبكات <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة LOCKSS هي برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
@@ -394,7 +396,6 @@
 	<li>للمؤلفين حق الدخول في اتفاقيات إضافية منفصلة بشأن نسخ المجلة المتضمنة للمؤلَّف المنشور ذات التوزيع غير الحصري (على سبيل المثال، إظهاره في مخزونات المؤسسات أو نشره في كتاب)، مع التعريف بنشره أولاً في هذه المجلة.</li>
 	<li>يُسمح للمؤلفين بإظهار أعمالهم على الإنترنت، بل ويحثون على ذلك (على سبيل المثال، في مخزونات المؤسسات أو على مواقعهم الشخصية) قبل وخلال عملية النشر، إذ أن ذلك يساعد على التبادل البناء، فضلاً عن تمكين الاقتباس الأفضل والأبكر من العمل المنشور (أنظر <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تداعيات الوصول المفتوح</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">تمكين مساعد معلمات الاقتباسات</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[الخطوات: طابور طلبات النشر &gt; تحكيم طلب النشر &gt; تحرير طلب النشر &gt; جدول المحتويات.<br /><br />
@@ -479,12 +480,6 @@
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[الاسم يرتبط بالملف التعريفي للمحكم.<br />
-التقييم من 5 نقط (ممتاز).<br />
-عدد الأسابيع يشير على معدل فترة إكمال التحكيم.<br />
-الأخير هو تاريخ قبول التحكيم الأخير.<br />
-نشط يؤشر عدد التحكيمات التي هي قيد النظر أو في طريقها لذلك.]]></message>
 
 
 
@@ -546,40 +541,38 @@
 	<message key="reviewer.article.uploadedFile">الملفات المرفوعة</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">النسخة المرفوعة من قبل المحكم</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(لو رغبت في تأشير الملف للمحرر، إحفظ الملف في حاسبتك واستعمل تصفح/رفع)</message>
-        <message key="reviewer.article.schedule.request">طلب المحرر</message>
-        <message key="reviewer.article.schedule.response">إجابتك</message>
-        <message key="reviewer.article.schedule.submitted">التحكيم قُدِّم</message>
-        <message key="reviewer.article.schedule.due">التحكيم استوجب</message>
+	<message key="reviewer.article.schedule.request">طلب المحرر</message>
+	<message key="reviewer.article.schedule.response">إجابتك</message>
+	<message key="reviewer.article.schedule.submitted">التحكيم قُدِّم</message>
+	<message key="reviewer.article.schedule.due">التحكيم استوجب</message>
 	<message key="reviewer.article.decision.accept">إقبل التقديم</message>
 	<message key="reviewer.article.decision.pendingRevisions">التنقيحات مطلوبة</message>
 	<message key="reviewer.article.decision.resubmitHere">أعد التقديم للتحكيم</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">أعد التقديم في مكان آخر</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">أعد التقديم في مكان آخر</message>
 	<message key="reviewer.article.decision.decline">أرفض طلب النشر</message>
 	<message key="reviewer.article.decision.seeComments">أنظر الملاحظات</message>
 	<message key="reviewer.article.schedule">جدوِل</message>
-        <message key="reviewer.article.submissionToBeReviewed">طلب النشر ليُحكَّم</message>
-        <message key="reviewer.article.reviewSchedule">جدولة التحكيم</message>
-        <message key="reviewer.article.reviewSteps">خطوات التحكيم</message>
-        <message key="reviewer.article.reviewerGuidelines">إرشادات المحكم</message>
+	<message key="reviewer.article.submissionToBeReviewed">طلب النشر ليُحكَّم</message>
+	<message key="reviewer.article.reviewSchedule">جدولة التحكيم</message>
+	<message key="reviewer.article.reviewSteps">خطوات التحكيم</message>
+	<message key="reviewer.article.reviewerGuidelines">إرشادات المحكم</message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[إن إرشادات المحكم ستقدم للمحكمين معايير الحكم على مناسبة المؤلَّف للنشر في المجلة من عدمها، كما يمكنها أن تتضمن أي تعليمات خاصة لتحضير تقييم مؤثر ومفيد. عند إجراء التقييم، يعرض الموقع للمحكمين مربعي نص، الأول "للمؤلف والمحرر" والثاني "للمحرر". بدلاً من ذلك، يمكن لرئيس تحرير المجلة إنشاء نموذج التحكيم المناظر عبر (نماذج التحكيم). وفي جميع الحالات، سيكون للمحررين خيار تضمين التقييمات المتعلقة بالمؤلف.]]></message>
-        <message key="reviewer.article.notifyEditorA">أعلم محرر طلب النشر</message>
-        <message key="reviewer.article.notifyEditorB">فيما لو أنك ستتولى مهمة التحكيم</message>
-        <message key="reviewer.article.consultGuidelines">إن كنت ستقوم بالتحكيم، راجع إرشادات المحكمين أدناه</message>
-        <message key="reviewer.article.downloadSubmission">أنقر أسماء الملفات لتنزيلها وتقييمها (على الشاشة أو عبر طباعتها)</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[أعلن فيما لو كانت لديك مصالح تنافسية بالنسبة لهذا البحث (أنظر <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;السياسة</a>).]]></message>
+	<message key="reviewer.article.notifyEditorA">أعلم محرر طلب النشر</message>
+	<message key="reviewer.article.notifyEditorB">فيما لو أنك ستتولى مهمة التحكيم</message>
+	<message key="reviewer.article.consultGuidelines">إن كنت ستقوم بالتحكيم، راجع إرشادات المحكمين أدناه</message>
+	<message key="reviewer.article.downloadSubmission">أنقر أسماء الملفات لتنزيلها وتقييمها (على الشاشة أو عبر طباعتها)</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[أعلن فيما لو كانت لديك مصالح تنافسية بالنسبة لهذا البحث (أنظر <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;السياسة</a>).]]></message>
 	<message key="reviewer.competingInterests">مصالح تنافسية</message>
-        <message key="reviewer.article.enterReviewA">أنقر الإيقونة للدخول (أو إلصق) تقييمك لطلب النشر هذا</message>
-        <message key="reviewer.article.uploadFile">فضلاً، بإمكانك رفع الملفات إلى المحرر و/أو المؤلف للمشاورة</message>
-        <message key="reviewer.article.selectRecommendation">إختر التوصية وقدم التحكيم لإكمال العملية. عليك أن تُدخل تحكيماً أو أن ترفع ملفاً قبل اختيار التوصية</message>
+	<message key="reviewer.article.enterReviewA">أنقر الإيقونة للدخول (أو إلصق) تقييمك لطلب النشر هذا</message>
+	<message key="reviewer.article.uploadFile">فضلاً، بإمكانك رفع الملفات إلى المحرر و/أو المؤلف للمشاورة</message>
+	<message key="reviewer.article.selectRecommendation">إختر التوصية وقدم التحكيم لإكمال العملية. عليك أن تُدخل تحكيماً أو أن ترفع ملفاً قبل اختيار التوصية</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">إختر أو عدّل توصية المحكم.</message>
 	<message key="reviewer.article.mustSelectDecision">لم يتم اختيار التوصية. عليك أن تختار توصية تقدمها</message>
 	<message key="reviewer.article.confirmDecision">بمجرد تسجيلك لقرار ما، لن يكون باستطاعتك مستقبلاً تعديل هذا التحكيم. هل أنت متأكد من رغبتك في المتابعة؟</message>
-	<message key="reviewer.article.ensuringBlindReview">ضمان التحكيم السري</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">الملف لتدقيقه</message>
 	<message key="copyeditor.article.copyeditorFile">ملف المدقق</message>
-	<message key="copyeditor.article.uploadedFile">الملف المرفوع</message>
 	<message key="copyeditor.article.copyeditorFinalFile">ملف المدقق</message>
 
 	<!-- Proofreader -->
@@ -671,7 +664,7 @@
 
 	<!-- Registration -->
 	<message key="user.register.selectContext">إختر أحد مجلات الموقع لتسجل فيها:</message>
-        <message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
+	<message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
 	<message key="user.register.privacyStatement">بيان الخصوصية</message>
 	<message key="user.register.registrationDisabled">هذه المجلة لا تتيح حالياً التسجيل فيها.</message>
 	<message key="user.register.form.passwordLengthTooShort">كلمة المرور التي أدخلتها ليست طويلة بما يكفي.</message>
@@ -681,6 +674,10 @@
 	<message key="user.register.reviewerDescriptionNoInterests">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة.</message>
 	<message key="user.register.reviewerDescription">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع.</message>
 	<message key="user.register.reviewerInterests">عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):</message>
+	<message key="user.register.form.emailConsentAllContexts">نعم، أود الحصول على إشعارات بشأن الإصدارات الجديدة والإعلانات من جميع المجلات التي سجلت فيها.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[نعم، أوافق على جمع بياناتي وخزنها وفق ما ورد في <a href="{$privacyUrl}" target="_blank">بيان الخصوصية</a> لهذه المجلة.]]></message>
+	<message key="user.register.form.missingContextConsent">عليك الموافقة على فقرات بيان الخصوصية لكل مجلة تقوم بالتسجيل فيها.</message>
+	<message key="user.register.form.missingSiteConsent">عليك الموافقة على فقرات بيان الخصوصية في هذا الموقع.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">اشتراكاتي</message>
@@ -810,7 +807,7 @@
 	<message key="about.subscriptionTypes.duration">المدة</message>
 	<message key="about.subscriptionTypes.cost">الكلفة</message>
 	<message key="about.availableSubscriptionTypes">أنواع الاشتراكات</message>
-        <message key="about.memberships">العضوية</message>
+	<message key="about.memberships">العضوية</message>
 	<message key="about.aboutThisPublishingSystem">عن نظام النشر هذا</message>
 	<message key="about.aboutThisPublishingSystem.altText">عملية التحرير والنشر لنظام المجلات المفتوحة</message>
 	<message key="about.aboutOJSJournal"><![CDATA[هذه المجلة تستعمل نظام المجلات المفتوحة {$ojsVersion}، والذي هو نظام مفتوح المصدر لإدارة النشر مطور ومدعوم وموزع مجاناً عبر الرابط <a href="http://pkp.sfu.ca/">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License.]]></message>
@@ -844,12 +841,15 @@
 	<message key="payment.authorFees">رسوم المؤلف</message>
 	<message key="payment.type.submission">رسوم طلب النشر</message>
 	<message key="payment.type.publication">رسوم النشر</message>
+	<message key="payment.type.publication.required">رسوم النشر قد استوجبت الدفع.</message>
 	<message key="payment.type.fastTrack">رسوم مسار التحكيم السريع</message>
 	<message key="payment.type.membership">رسوم العضوية الشخصية</message>
 	<message key="payment.type.purchaseArticle">رسوم شراء مقالة</message>
 	<message key="payment.type.purchaseIssue">رسوم شراء إصدار (عدد من المجلة)</message>
 	<message key="payment.type.subscription">رسوم الاشتراك</message>
 	<message key="payment.type.donation">الهبات</message>
+	<message key="payment.requestPublicationFee">رسوم طلب النشر ({$feeAmount})</message>
+	<message key="payment.notFound">لقد تم التماس تسديد الرسوم، غير أن الالتماس قد انتهت صلاحيته. راسل رئيس تحرير المجلة للمزيد من التفاصيل.</message>
 
 	<message key="payment.donation.makeDonation">قدِّم هبة</message>
 
@@ -870,7 +870,7 @@
 	<message key="installer.ojsUpgrade">ترقية نظام المجلات المفتوحة</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>نسخة نظام المجلات المفتوحة {$version}</h4>
 
-<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README">ملف إقرأني</a> المضمن في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://forum.pkp.sfu.ca" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README.md">ملف إقرأني</a> المضمن في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://forum.pkp.sfu.ca" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>الترقية</h4>
 
@@ -910,7 +910,7 @@
 <p>2. حافظة ملفات لتخزين الملفات المرفوعة إلى الموقع ينبغي إنشاؤها وجعلها قابلة للتعديل (أنظر "إعدادات الملفات" أدناه).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>نسخة نظام المجلات المفتوحة {$version}</h4>
 
-<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README">ملف إقرأني</a> و <a href="{$baseUrl}/docs/UPGRADE">ملف الترقية</a>المضمنين في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://forum.pkp.sfu.ca" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>شكراً لقيامك بتنزيل <strong>نظام المجلات المفتوحة</strong> لمشروع المعرفة العامة. قبل المتابعة، لطفاً إقرأ <a href="{$baseUrl}/docs/README.md">ملف إقرأني</a> و <a href="{$baseUrl}/docs/UPGRADE.md">ملف الترقية</a>المضمنين في هذا البرنامج. للمزيد من المعلومات عن مشروع المعرفة العامة وبرامجياته، لطفاً اتبع الرابط <a href="http://pkp.sfu.ca/" target="_blank">موقع PKP</a>. إن كانت لديك إخباريات عن أخطاء برمجية، أو استفسارات فنية عن نظام المجلات المفتوحة، أنظر <a href="http://forum.pkp.sfu.ca" target="_blank">منتدى الدعم</a> أو زر موقع PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">نظام التبليغ عن الأخطاء</a>. رغم كون منتدى الدعم هو المكان الأمثل للحصول على المساعدة، إلا أنه بإمكانك أيضاً مراسلة فريق العمل على <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>إنه من <strong>الموصى به بشدة</strong> أن تقوم بالخزن الإحتياطي لقاعدة بيانات النظام وحافظة ملفات التحميل وحافظة ملفات تنصيب النظام قبل المتابعة بعملية الترقية.</p>
 <p>إن كنت تقوم بالتشغيل عبر <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>، لطفاً، تأكد من أن max_execution_time directive المتوضع في الملف التعريفي php.ini مضبوط على high limit. إن كان الأمر غير ذلك (فإن مؤشرApache's "Timeout") سيصل حده الأقصى، وعملية الترقية ستتم مقاطعتها، ولذلك ستتطلب التدخل اليدوي.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[للحصول على دعم كامل لترميز Unicode (UTF-8)، إختر UTF-8 لجميع إعدادات ترميز الحروف. لاحظ أن هذا الدعم يتطلب حالياً أن تكون قواعد البيانات بخوادم MySQL >= 4.1.1 أو PostgreSQL >= 7.1 . فضلاً عن كون الدعم الكامل لترميز Unicode يتطلب PHP >= 4.3.0 مجتمعاً مع دعم مكتبة <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (ممكنة إفتراضياً في معظم تنصيبات PHP الحالية). قد تواجه صعوبات عند استعمال مجموعات الحروف الإضافية فيما لو كان الملقم الذي تستعمله لا يلبي تلك المتطلبات.
@@ -939,8 +939,8 @@
 <p>إن لم يسبق لك التسجيل وترغب في الحصول على الأخبار والتحديثات <strong>لطفاً، سجل في <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href="http://forum.pkp.sfu.ca" target="_new">منتدى الدعم</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
-	<message key="site.upgradeAvailable.admin"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion}  منه. النسخة ذات الإصدار الأحدث هي  OJS {$latestVersion}. لطفاً، قم بزيارة <a href="http://pkp.sfu.ca/ojs_download" target="_new">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية.]]></message>
-	<message key="site.upgradeAvailable.manager"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion}منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، إتصل بمدير الموقع ({$siteAdminName}، <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) لإبلاغه عن هذا الإصدار الأخير. للمزيد من المعلومات أنظر <a href="http://pkp.sfu.ca/ojs_download" target="_new">هنا</a>.]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، قم بزيارة <a href="http://pkp.sfu.ca/ojs_download" target="_new">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، إتصل بمدير الموقع ({$siteAdminName}، <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) لإبلاغه عن هذا الإصدار الأخير. للمزيد من المعلومات أنظر <a href="http://pkp.sfu.ca/ojs_download" target="_new">هنا</a>.]]></message>
 
 	<!-- Article Logs -->
 	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$submissionId}. رمز الملف الجديد ID {$fileId}.</message>
@@ -960,6 +960,7 @@
 	<message key="log.review.reviewFileByProxy">المحرر {$userName}، قام برفع ملف للتحكيم للجولة {$round} للمؤلَّف {$submissionId} نيابة عن المحكم {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">تم رفع ملف أحد المحكمين.</message>
 	<message key="log.editor.decision">تم تسجيل قرار المحرر الآتي: ({$decision}) للمؤلَّف {$submissionId} من قبل {$editorName}.</message>
+	<message key="log.editor.recommendation">توصية المحرر: ({$decision}) للمؤلَّف {$submissionId} تم تسجيلها من قبل {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">تم الشروع بتدقيق المؤلَّف {$submissionId} من قبل {$copyeditorName}.</message>
@@ -1039,8 +1040,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">أدخل عنوان بريدك الالكتروني لتتلقى إشعارات آنية عن المحتويات الهامة الجديدة المضافة إلى المجلة.</message>
-	<message key="notification.notificationsPublicDescription">هذه الصفحة تظهر التحديثات الهامة المتعلقة بهذه المجلة، مثل الإصدارات والإعلانات الجديدة. بإمكانك الاشتراك للحصول على تلك الاشعارات عبر مغذي RSS (عبر النقر على الصورة يساراً)، أو <![CDATA[  <a href="{$emailUrl}">عبر البريد الالكتروني.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">تم تقديم مؤلَّف جديد بعنوان "{$title}".</message>
 	<message key="notification.type.editing">أحداث التحرير</message>
@@ -1055,10 +1054,12 @@
 	<message key="notification.type.submissionComment">وضع المحرر تعليقاً عن المؤلَّف "{$title}".</message>
 	<message key="notification.type.submissions">أحداث طلب النشر</message>
 	<message key="notification.type.userComment">وضع قارئ تعليقاً عن المؤلَّف "{$title}"</message>
+	<message key="notification.type.public">إعلانات عامة</message>
 	<message key="notification.savedIssueMetadata">البيانات الوصفية لنشر العدد قد تم حفظها.</message>
 	<message key="notification.type.editorAssignmentTask">مؤلَّف جديد تم تقديمه وهو بحاجة إلى تعيينه لمحرر.</message>
-	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط الإضافة في قائمة المشاركين.</message>
-	<message key="notification.type.awaitingRepresentations">الأللواح الطباعية قيد الانتظار.</message>
+	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط التعيين في قائمة المشاركين.</message>
+	<message key="notification.type.awaitingRepresentations">الألواح الطباعية قيد الانتظار.</message>
+	<message key="notification.type.publicationScheduled">هذا الطلب قد تمت جدولته للنشر.</message>
 
 	<!--
 	 *
@@ -1101,4 +1102,8 @@
 
 	<message key="editor.issues.backIssues">الأعداد السابقة</message>
 	<message key="editor.issues.futureIssues">الأعداد المستقبلية</message>
+	<message key="navigation.subscriptions">الاشتراكات</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} قد تولى مهمة تحرير المؤلَّف {$submissionId}.</message>
 </locale>

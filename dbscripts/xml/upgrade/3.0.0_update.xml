@@ -4,8 +4,8 @@
 <!--
   * 3.0.0_update.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 3.0.0.0 general updates.
@@ -93,13 +93,13 @@
 	<sql>
 		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s, article_galleys_migration agm SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
 		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s, article_galleys_migration agm SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
-		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s, article_galleys_migration agm WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id AND sf.file_id = agm.style_file_id</query>
+		<query driver="postgres7">UPDATE submission_files sf SET genre_id = g.genre_id FROM genres g, submissions s, article_galleys_migration agm WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
 	</sql>
 	<!-- issue #2758: set assoc_type = 515 (ASSOC_TYPE_SUBMISSION_FILE) and the appropriate assoc_id for HTML galley CSS files -->
 	<sql>
 		<query driver="mysql">UPDATE submission_files sf, article_galleys_migration agm SET sf.assoc_type = 515, sf.assoc_id = agm.file_id WHERE sf.file_id = agm.style_file_id</query>
 		<query driver="mysqli">UPDATE submission_files sf, article_galleys_migration agm SET sf.assoc_type = 515, sf.assoc_id = agm.file_id WHERE sf.file_id = agm.style_file_id</query>
-		<query driver="postgres7">UPDATE submission_files SET assoc_type = 515, assoc_id = agm.file_id FROM article_galleys_migration agm WHERE sf.file_id = agm.style_file_id</query>
+		<query driver="postgres7">UPDATE submission_files sf SET assoc_type = 515, assoc_id = agm.file_id FROM article_galleys_migration agm WHERE sf.file_id = agm.style_file_id</query>
 	</sql>
 	<!-- Bug #7745: Change no_NO to nb_NO -->
 	<sql>
@@ -219,5 +219,8 @@
 	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
+	</sql>
+	<sql><!-- remove filter_groups -->
+		<query>DELETE FROM filter_groups WHERE symbolic IN ('citation=>nlm30', 'isbn=>nlm30-element-citation', 'nlm30-article-xml=>nlm23-article-xml', 'nlm30-element-citation=>isbn', 'nlm30-element-citation=>nlm30-element-citation', 'nlm30-element-citation=>nlm30-xml', 'nlm30-element-citation=>plaintext', 'nlm30=>citation', 'plaintext=>nlm30-element-citation', 'submission=>nlm23-article-xml', 'submission=>nlm30-article-xml', 'submission=>reference-list')</query>
 	</sql>
 </data>

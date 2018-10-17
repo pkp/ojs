@@ -3,8 +3,8 @@
 /**
  * @file plugins/pubIds/doi/classes/form/DOISettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOISettingsForm
@@ -56,20 +56,31 @@ class DOISettingsForm extends Form {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
-		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableSubmissionDoi\') || $form->getData(\'enableRepresentationDoi\');'), array($this)));
+		$form = $this;
+		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', function($enableIssueDoi) use ($form) {
+			return $form->getData('enableIssueDoi') || $form->getData('enableSubmissionDoi') || $form->getData('enableRepresentationDoi');
+		}));
 		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));
-		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', create_function('$doiIssueSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableIssueDoi\')) return $doiIssueSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'doiSubmissionSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired', create_function('$doiSubmissionSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableSubmissionDoi\')) return $doiSubmissionSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'doiRepresentationSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired', create_function('$doiRepresentationSuffixPattern,$form', 'if ($form->getData(\'doiSuffix\') == \'pattern\' && $form->getData(\'enableRepresentationDoi\')) return $doiRepresentationSuffixPattern != \'\';return true;'), array($this)));
+		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', function($doiIssueSuffixPattern) use ($form) {
+			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enableIssueDoi')) return $doiIssueSuffixPattern != '';
+			return true;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'doiSubmissionSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired', function($doiSubmissionSuffixPattern) use ($form) {
+			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enableSubmissionDoi')) return $doiSubmissionSuffixPattern != '';
+			return true;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'doiRepresentationSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired', function($doiRepresentationSuffixPattern) use ($form) {
+			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enableRepresentationDoi')) return $doiRepresentationSuffixPattern != '';
+			return true;
+		}));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 
 		// for DOI reset requests
 		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		$this->setData('clearPubIdsLinkAction', new LinkAction(
 			'reassignDOIs',
 			new RemoteActionConfirmationModal(
@@ -148,4 +159,4 @@ class DOISettingsForm extends Form {
 	}
 }
 
-?>
+

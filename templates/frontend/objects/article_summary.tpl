@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_summary.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article summary which is shown within a list of articles.
@@ -11,6 +11,7 @@
  * @uses $hasAccess bool Can this user access galleys for this context? The
  *       context may be an issue or an article
  * @uses $showDatePublished bool Show the date this article was published?
+ * @uses $hideGalleys bool Hide the article galleys for this article?
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
 {assign var=articlePath value=$article->getBestArticleId()}
@@ -31,6 +32,11 @@
 	<div class="title">
 		<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
 			{$article->getLocalizedTitle()|strip_unsafe_html}
+			{if $article->getLocalizedSubtitle()}
+				<span class="subtitle">
+					{$article->getLocalizedSubtitle()|escape}
+				</span>
+			{/if}
 		</a>
 	</div>
 
@@ -58,13 +64,13 @@
 	</div>
 	{/if}
 
-	{if $hasAccess}
+	{if !$hideGalleys}
 		<ul class="galleys_links">
 			{foreach from=$article->getGalleys() item=galley}
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
-					{if !$file || !in_array($file->getGenreId(), $primaryGenreIds)}
-						{php}continue;{/php}
+					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
+						{continue}
 					{/if}
 				{/if}
 				<li>
@@ -72,7 +78,7 @@
 					{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
-					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess}
+					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 				</li>
 			{/foreach}
 		</ul>

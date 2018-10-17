@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/reviewer/ReviewerSubmission.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewerSubmission
@@ -259,7 +259,7 @@ class ReviewerSubmission extends Article {
 
 	/**
 	 * Get quality.
-	 * @return int
+	 * @return int|null
 	 */
 	function getQuality() {
 		return $this->getData('quality');
@@ -267,7 +267,7 @@ class ReviewerSubmission extends Article {
 
 	/**
 	 * Set quality.
-	 * @param $quality int
+	 * @param $quality int|null
 	 */
 	function setQuality($quality) {
 		return $this->setData('quality', $quality);
@@ -358,4 +358,4 @@ class ReviewerSubmission extends Article {
 	}
 }
 
-?>
+

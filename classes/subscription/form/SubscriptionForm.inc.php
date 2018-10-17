@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionForm
@@ -53,7 +53,10 @@ class SubscriptionForm extends Form {
 
 		// User is provided and valid
 		$this->addCheck(new FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', create_function('$userId', '$userDao = DAORegistry::getDAO(\'UserDAO\'); return $userDao->userExistsById($userId);')));
+		$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function($userId) {
+			$userDao = DAORegistry::getDAO('UserDAO');
+			return $userDao->userExistsById($userId);
+		}));
 
 		// Subscription status is provided and valid
 		$this->addCheck(new FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));
@@ -123,20 +126,47 @@ class SubscriptionForm extends Form {
 		if (!$nonExpiring) {
 			// Start date is provided and is valid
 			$this->addCheck(new FormValidator($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartRequired'));
-			$this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', create_function('$dateStart', '$dateStartYear = strftime(\'%Y\', strtotime($dateStart)); $minYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_PAST; $maxYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_FUTURE; return ($dateStartYear >= $minYear && $dateStartYear <= $maxYear) ? true : false;')));
-			$this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', create_function('$dateStart', '$dateStartMonth = strftime(\'%m\', strtotime($dateStart)); return ($dateStartMonth >= 1 && $dateStartMonth <= 12) ? true : false;')));
-			$this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', create_function('$dateStart', '$dateStartDay = strftime(\'%d\', strtotime($dateStart)); return ($dateStartDay >= 1 && $dateStartDay <= 31) ? true : false;')));
+			$this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function($dateStart) {
+				$dateStartYear = strftime('%Y', strtotime($dateStart));
+				$minYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_PAST;
+				$maxYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_FUTURE;
+				return ($dateStartYear >= $minYear && $dateStartYear <= $maxYear);
+			}));
+			$this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function($dateStart) {
+				$dateStartMonth = strftime('%m', strtotime($dateStart));
+				return ($dateStartMonth >= 1 && $dateStartMonth <= 12);
+			}));
+			$this->addCheck(new FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function($dateStart) {
+				$dateStartDay = strftime('%d', strtotime($dateStart));
+				return ($dateStartDay >= 1 && $dateStartDay <= 31);
+			}));
 
 			// End date is provided and is valid
 			$this->addCheck(new FormValidator($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndRequired'));
-			$this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', create_function('$dateEnd', '$dateEndYear = strftime(\'%Y\', strtotime($dateEnd)); $minYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_PAST; $maxYear = date(\'Y\') + SUBSCRIPTION_YEAR_OFFSET_FUTURE; return ($dateEndYear >= $minYear && $dateEndYear <= $maxYear) ? true : false;')));
-			$this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', create_function('$dateEnd', '$dateEndMonth = strftime(\'%m\', strtotime($dateEnd)); return ($dateEndMonth >= 1 && $dateEndMonth <= 12) ? true : false;')));
-			$this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', create_function('$dateEnd', '$dateEndDay = strftime(\'%d\', strtotime($dateEnd)); return ($dateEndDay >= 1 && $dateEndDay <= 31) ? true : false;')));
+			$this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function($dateEnd) {
+				$dateEndYear = strftime('%Y', strtotime($dateEnd)); $minYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_PAST;
+				$maxYear = date('Y') + SUBSCRIPTION_YEAR_OFFSET_FUTURE;
+				return ($dateEndYear >= $minYear && $dateEndYear <= $maxYear);
+			}));
+			$this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function($dateEnd) {
+				$dateEndMonth = strftime('%m', strtotime($dateEnd));
+				return ($dateEndMonth >= 1 && $dateEndMonth <= 12);
+			}));
+			$this->addCheck(new FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function($dateEnd) {
+				$dateEndDay = strftime('%d', strtotime($dateEnd));
+				return ($dateEndDay >= 1 && $dateEndDay <= 31);
+			}));
 		}
 
 		// If notify email is requested, ensure subscription contact name and email exist.
 		if ($this->_data['notifyEmail'] == 1) {
-			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', create_function('', '$journal = Request::getJournal(); $journalSettingsDao = DAORegistry::getDAO(\'JournalSettingsDAO\'); $subscriptionName = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionName\'); $subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), \'subscriptionEmail\'); return $subscriptionName != \'\' && $subscriptionEmail != \'\' ? true : false;'), array()));
+			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function() {
+				$journal = Request::getJournal();
+				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+				$subscriptionName = $journalSettingsDao->getSetting($journal->getId(), 'subscriptionName');
+				$subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), 'subscriptionEmail');
+				return $subscriptionName != '' && $subscriptionEmail != '';
+			}));
 		}
 	}
 
@@ -213,4 +243,4 @@ class SubscriptionForm extends Form {
 	}
 }
 
-?>
+

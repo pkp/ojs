@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localization strings.
@@ -89,10 +89,7 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à soumettre à cette revue? Nous vous recommandons de consulter les politiques de rubrique de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">À propos de la revue</a> ainsi que les <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">S'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/{$journalPath}/login">ouvrir une session</a> et accéder au tableau de bord pour commencer les 5 étapes du processus]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothécaires à lister cette revue dans leur fonds de revues numériques. Aussi, il peut être pertinent de mentionner que ce système de publication en accès libre est conçu pour être hébergé par les bibliothèques de recherche pour que les membres de leurs facultés l'utilisent avec les revues dans lesquelles ils sont impliqués (voir <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et afin de permettre à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.org/">En savoir plus...</a>]]></message>
-	<message key="default.journalSettings.checklist.addressesLinked">Lorsque possible, les URLs des références ont été fournies.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Les auteurs doivent payer les Frais de soumission d'article pour couvrir les frais d'évaluation.</message>
-	<message key="default.journalSettings.waiverPolicy">Si vous n'êtes pas en mesure de payer de tels frais, vous aurez l'occasion de déroger aux frais. Nous ne voulons pas que les frais empêchent la publication de travaux de grande valeur.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Le paiement des frais vous inscrira en tant que membre de cette association pendant un an et vous accordera un accès gratuit à cette revue.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Lorsque possible, les URL des références ont été fournies.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Pour ajouter des liens de références au processus de mise en page</h4>
 	<p>Quand vous convertissez une soumission en format HTML ou PDF, assurez-vous que tous les hyperliens dans les soumissions sont actifs.</p>
 	<h4>A. Quand l'auteur fournit un lien avec la référence</h4>
@@ -139,7 +136,6 @@ Les chiffres dans le Tableau 3 ne sont pas alignés dans la troisième colonne.<
 <br />
 <pre>4. FORMATAGE
 Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</pre>]]></message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Le paiement de ces frais vous permettra d'afficher, de télécharger, et d'imprimer cet article.</message>
 	<message key="section.default.title">Articles</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.publicationFee">Publication d'article</message>
@@ -147,7 +143,6 @@ Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</
 	<message key="default.journalSettings.membershipFee">Adhésion à l'association</message>
 	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.purchaseIssueFee">Acheter un numéro</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Le règlement du montant dû vous permettra de voir, de télécharger et d'imprimer ce numéro.</message>
 	<message key="default.journalSettings.emailHeader">Le message suivant est délivré au nom de {$journalName}.
 ________________________________________________________________________</message>
 	<message key="default.genres.article">Texte de l'article</message>

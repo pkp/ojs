@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/pubIds/form/PublicIdentifiersForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublicIdentifiersForm
@@ -29,10 +29,9 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 
 	/**
 	 * Store objects with pub ids.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 		$pubObject = $this->getPubObject();
 		if (is_a($pubObject, 'Issue')) {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -56,7 +55,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	}
 
 	/**
-	 * @copydoc PKPPublicIdentifiersForm::execute()
+	 * @copydoc PKPPublicIdentifiersForm::getAssocType()
 	 */
 	function getAssocType($pubObject) {
 		if (is_a($pubObject, 'Issue')) {
@@ -67,4 +66,4 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 
 }
 
-?>
+

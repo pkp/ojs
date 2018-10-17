@@ -3,8 +3,8 @@
 /**
  * @file plugins/metadata/mods34/schema/Mods34Schema.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Mods34Schema
@@ -26,4 +26,4 @@ class Mods34Schema extends PKPMods34Schema {
 		parent::__construct(ASSOC_TYPE_ARTICLE);
 	}
 }
-?>
+

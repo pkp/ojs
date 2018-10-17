@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/el_GR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Greek_(el_GR)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Το πρόσθετο αυτό παρέχει πληροφορίες συνδρομών στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.subscription.blockTitle">Συνδρομή</message>
 	<message key="plugins.block.subscription.expires">Λήγει</message>
-	<message key="plugins.block.subscription.providedBy">Η πρόσβαση παρέχετε από:</message>
-	<message key="plugins.block.subscription.comingFromIP">Από το</message>
+	<message key="plugins.block.subscription.providedBy">Η πρόσβαση παρέχετε από: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Από το {$ip}</message>
 	<message key="plugins.block.subscription.about">Συνδρομές</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Συνδεθείτε για να επιβεβαιώσετε τη συνδρομή</message>
 </locale>

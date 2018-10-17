@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/RbaiyewuSubmissionTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RbaiyewuSubmissionTest
@@ -22,8 +22,8 @@ class RbaiyewuSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'rbaiyewu',
-			'firstName' => 'Rana',
-			'lastName' => 'Baiyewu',
+			'givenName' => 'Rana',
+			'familyName' => 'Baiyewu',
 			'affiliation' => 'University of Nairobi',
 			'country' => 'Kenya',
 		));
@@ -38,8 +38,8 @@ class RbaiyewuSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('phudson', 'Paul Hudson');
-		$this->assignReviewer('amccrae', 'Aisla McCrae');
+		$this->assignReviewer('Paul Hudson');
+		$this->assignReviewer('Aisla McCrae');
 		$this->recordEditorialDecision('Accept Submission');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');

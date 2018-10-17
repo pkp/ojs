@@ -4,14 +4,14 @@
 <!--
   * locale/sr_RS@latin/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@latin (Srpski) locale.
   -->
 
-<locale name="sr_RS@latin" full_name="(Srpski)">
+<locale name="sr_RS@latin" full_name="Srpski">
 	<message key="manager.emails.confirmResetAll">Da li ste sigurni da želite da resetujete sve imejl šablone? Izgubićete sva podešavanja koja ste uradili.</message>
 	<message key="manager.files.note">Napomena: pregledač fajlova je dodatak koji omogućuje direktno upravljanje svi fajlovima i direktorijima koji su vezani za časopis.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Kupi izdanje</message>
@@ -48,7 +48,8 @@
 	<message key="manager.website.archiving">Arhiviranje</message>
 	<message key="manager.setup">Podešavanja časopisa</message>
 	<message key="manager.setup.masthead">Uprava</message>
-	<message key="manager.setup.masthead.description">Navedite urednike, direktore sekretare i ostale ljude koji su uključeni u rad časopisa.</message>
+	<message key="manager.setup.editorialTeam">Časopis uređuju</message>
+	<message key="manager.setup.editorialTeam.description">Navedite urednike, direktore sekretare i ostale ljude koji su uključeni u rad časopisa.</message>
 	<message key="manager.setup.homepageContent">Sadržaj početne strane časopisa</message>
 	<message key="manager.setup.layout">Izgled časopisa</message>
 	<message key="manager.setup.useStyleSheet">Style sheet časopisa</message>
@@ -150,7 +151,6 @@
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupi članak</message>
 	<message key="manager.payment.options.text">Opis metoda plaćanja</message>
-	<message key="manager.payment.options.waiverPolicy">Politika izuzeća od plaćanja</message>
 	<message key="manager.payment.paymentId">ID plaćanja</message>
 	<message key="manager.payment.paymentMethod">Metod plaćanja</message>
 	<message key="manager.payment.paymentMethod.description">Možete konfigurisati bilo koji od Dodataka za metod plaćanja na ovom ekranu.</message>
@@ -491,7 +491,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Uključi pristup recenzenta jednim klikom.</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Rangiranja recenzenta</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Podsetnici za recenzente</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Поставите везу за  <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Obezbeđujemo slepu recenziju</a> na stranama gde autori i recenzenti postavljaju na server svoje fajlove..]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Obaveštenja o onlajn plaćanjima</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Obavesti Upravnika za pretplatu emajlom o kupovini institucionalne pretplate (preporučeno).</message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Mogućnosti otvorenog pristupa za pretplatu na časopise</message>

@@ -4,8 +4,8 @@
 <!--
   * registry/genres.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Default genres XML file.
@@ -16,16 +16,16 @@
   * These are defined in lib/pkp/classes/submission/Genre.inc.php.
   -->
 <genres>
-	<genre key="SUBMISSION" sortable="0" category="1" dependent="0" supplementary="0" localeKey="default.genres.article" />
-	<genre key="RESEARCHINSTRUMENT" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchInstrument" />
-	<genre key="RESEARCHMATERIALS" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchMaterials" />
-	<genre key="RESEARCHRESULTS" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchResults" />
-	<genre key="TRANSCRIPTS" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.transcripts" />
-	<genre key="DATAANALYSIS" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.dataAnalysis" />
-	<genre key="DATASET" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.dataSet" />
-	<genre key="SOURCETEXTS" sortable="0" category="3" dependent="0" supplementary="1" localeKey="default.genres.sourceTexts" />
-	<genre key="MULTIMEDIA" sortable="0" category="1" dependent="1" supplementary="1" localeKey="default.genres.multimedia" />
-	<genre key="IMAGE" sortable="0" category="2" dependent="1" supplementary="0" localeKey="default.genres.image" />
-	<genre key="STYLE" sortable="0" category="1" dependent="1" supplementary="0" localeKey="default.genres.styleSheet" />
-	<genre key="OTHER" sortable="1" category="3" dependent="0" supplementary="1" localeKey="default.genres.other" />
+	<genre key="SUBMISSION" category="1" dependent="0" supplementary="0" localeKey="default.genres.article" />
+	<genre key="RESEARCHINSTRUMENT" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchInstrument" />
+	<genre key="RESEARCHMATERIALS" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchMaterials" />
+	<genre key="RESEARCHRESULTS" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchResults" />
+	<genre key="TRANSCRIPTS" category="3" dependent="0" supplementary="1" localeKey="default.genres.transcripts" />
+	<genre key="DATAANALYSIS" category="3" dependent="0" supplementary="1" localeKey="default.genres.dataAnalysis" />
+	<genre key="DATASET" category="3" dependent="0" supplementary="1" localeKey="default.genres.dataSet" />
+	<genre key="SOURCETEXTS" category="3" dependent="0" supplementary="1" localeKey="default.genres.sourceTexts" />
+	<genre key="MULTIMEDIA" category="1" dependent="1" supplementary="1" localeKey="default.genres.multimedia" />
+	<genre key="IMAGE" category="2" dependent="1" supplementary="0" localeKey="default.genres.image" />
+	<genre key="STYLE" category="1" dependent="1" supplementary="0" localeKey="default.genres.styleSheet" />
+	<genre key="OTHER" category="3" dependent="0" supplementary="1" localeKey="default.genres.other" />
 </genres>

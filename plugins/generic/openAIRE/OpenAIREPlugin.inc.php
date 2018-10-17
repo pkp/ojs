@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/openAIRE/OpenAIREPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OpenAIREPlugin
@@ -17,16 +17,12 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 
 class OpenAIREPlugin extends GenericPlugin {
-
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success && $this->getEnabled()) {
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
+		if ($success && $this->getEnabled($mainContextId)) {
 			$this->import('OpenAIREDAO');
 			$openAIREDao = new OpenAIREDAO();
 			DAORegistry::registerDAO('OpenAIREDAO', $openAIREDao);
@@ -37,18 +33,22 @@ class OpenAIREPlugin extends GenericPlugin {
 			// Hook for initData in two forms -- init the new field
 			HookRegistry::register('submissionsubmitstep3form::initdata', array($this, 'metadataInitData'));
 			HookRegistry::register('issueentrysubmissionreviewform::initdata', array($this, 'metadataInitData'));
+			HookRegistry::register('quicksubmitform::initdata', array($this, 'metadataInitData'));
 
 			// Hook for readUserVars in two forms -- consider the new field entry
 			HookRegistry::register('submissionsubmitstep3form::readuservars', array($this, 'metadataReadUserVars'));
 			HookRegistry::register('issueentrysubmissionreviewform::readuservars', array($this, 'metadataReadUserVars'));
+			HookRegistry::register('quicksubmitform::readuservars', array($this, 'metadataReadUserVars'));
 
 			// Hook for execute in two forms -- consider the new field in the article settings
 			HookRegistry::register('submissionsubmitstep3form::execute', array($this, 'metadataExecute'));
 			HookRegistry::register('issueentrysubmissionreviewform::execute', array($this, 'metadataExecute'));
+			HookRegistry::register('quicksubmitform::execute', array($this, 'metadataExecute'));
 
 			// Hook for save in two forms -- add validation for the new field
 			HookRegistry::register('submissionsubmitstep3form::Constructor', array($this, 'addCheck'));
 			HookRegistry::register('issueentrysubmissionreviewform::Constructor', array($this, 'addCheck'));
+			HookRegistry::register('quicksubmitform::Constructor', array($this, 'addCheck'));
 
 			// Consider the new field for ArticleDAO for storage
 			HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
@@ -96,7 +96,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
-		$output .= $smarty->fetch($this->getTemplatePath() . 'projectIDEdit.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('projectIDEdit.tpl'));
 		return false;
 	}
 
@@ -118,6 +118,8 @@ class OpenAIREPlugin extends GenericPlugin {
 			$article =& $params[1];
 		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
 			$article = $form->getSubmission();
+		} elseif (get_class($form) == 'QuickSubmitForm') {
+			$article = $form->submission;
 		}
 		$formProjectID = $form->getData('projectID');
 		$article->setData('projectID', $formProjectID);
@@ -129,7 +131,9 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function addCheck($hookName, $params) {
 		$form =& $params[0];
-		if (get_class($form) == 'SubmissionSubmitStep3Form' || get_class($form) == 'IssueEntrySubmissionReviewForm' ) {
+		if (get_class($form) == 'SubmissionSubmitStep3Form' ||
+			get_class($form) == 'IssueEntrySubmissionReviewForm' ||
+			get_class($form) == 'QuickSubmitForm' ) {
 			$form->addCheck(new FormValidatorRegExp($form, 'projectID', 'optional', 'plugins.generic.openAIRE.projectIDValid', '/^\d{6}$/'));
 		}
 		return false;
@@ -144,6 +148,8 @@ class OpenAIREPlugin extends GenericPlugin {
 			$article = $form->submission;
 		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
 			$article = $form->getSubmission();
+		} elseif (get_class($form) == 'QuickSubmitForm') {
+			$article = $form->submission;
 		}
 		$articleProjectID = $article->getData('projectID');
 		$form->setData('projectID', $articleProjectID);
@@ -318,4 +324,4 @@ class OpenAIREPlugin extends GenericPlugin {
 
 
 }
-?>
+

@@ -4,8 +4,8 @@
 <!-- 
   * locale/hr_HR/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -140,17 +140,10 @@ Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 	<li>Dodajte frazu CrossRef na kraj svake čestice u popisu literature.</li>
 	<li>Pretvorite tu frazu u hipervezu tako što je osvjetlite i primjenite Wordov alat Insert Hyperlink i URL adresu pripremljenu pod #2.</li>
 	</ol>]]></message>
-	<message key="default.journalSettings.publicationFeeDescription">Ukoliko je članak prihvaćen za objavljivanje, od vas će se tražiti da uplatite naknadu za objavljivanje članka, u svrhu pokrivanja troškova izdavanja časopisa.</message>
-	<message key="default.journalSettings.waiverPolicy">Ukoliko nemate sredstava za uplatu ovih naknada, možete tražiti izuzeće. Ne bismo željeli da naknade spriječe objavljivanje vrijednih radova.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Plaćanjem ove naknade postat ćete član ove organizacije na godinu dana, što će vam omogućiti besplatan pristup ovom časopisu.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ove naknade omogućit će vam neograničen pristup, preuzimanje i štampanje ovog članka.</message>
 	<message key="section.default.title">Članci</message>
-	<message key="default.journalSettings.emailHeader">SLijedeća poruka se šalje u ime {$journalName}.
-________________________________________________________________________</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.publicationFee">Objavljivanje članka</message>
 	<message key="default.journalSettings.purchaseArticleFee">Kupi članak</message>
 	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ove cijene će vam omogućiti pregled, preuzimanje i tiskanje ovog izdanja.</message>
 	<message key="default.journalSettings.membershipFee">Članstvo u asocijaciji</message>
 </locale>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.htmlArticleGalley.displayName">Mise en page pour HTML</message>
+	<message key="plugins.generic.htmlArticleGalley.description">Ce plugiciel permet l'édition sous format HTML de la mise en page d'article.</message>
+</locale>

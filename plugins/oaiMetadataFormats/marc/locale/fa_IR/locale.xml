@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/oaiMetadataFormats/marc/locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.OAIMetadata.marc.displayName">فرمت فراداده MARC</message>
+	<message key="plugins.OAIMetadata.marc.description">ساختار فراداده باید با فرمت MARC سازگار باشد</message>
+</locale>

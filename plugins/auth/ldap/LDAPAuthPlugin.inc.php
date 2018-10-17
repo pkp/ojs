@@ -3,8 +3,8 @@
 /**
  * @file plugins/auth/ldap/LDAPAuthPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LDAPAuthPlugin
@@ -17,13 +17,10 @@ import('lib.pkp.classes.plugins.AuthPlugin');
 
 class LDAPAuthPlugin extends AuthPlugin {
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		$this->addLocaleData();
 		return $success;
 	}
@@ -285,13 +282,14 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $uattr array
 	 */
 	function userFromAttr(&$user, &$uattr) {
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+
 		$attr = array_change_key_case($uattr, CASE_LOWER); // Note:  array_change_key_case requires PHP >= 4.2.0
-		$firstName = @$attr['givenname'][0];
-		$middleName = null;
-		$initials = null;
-		$lastName = @$attr['sn'][0];
-		if (!isset($lastName))
-			$lastName = @$attr['surname'][0];
+		$givenName = @$attr['givenname'][0];
+		$familyName = @$attr['sn'][0];
+		if (!isset($familyName))
+			$familyName = @$attr['surname'][0];
 		$affiliation = @$attr['o'][0];
 		if (!isset($affiliation))
 			$affiliation = @$attr['organizationname'][0];
@@ -306,14 +304,10 @@ class LDAPAuthPlugin extends AuthPlugin {
 		$interests = null;
 
 		// Only update fields that exist
-		if (isset($firstName))
-			$user->setFirstName($firstName);
-		if (isset($middleName))
-			$user->setMiddleName($middleName);
-		if (isset($initials))
-			$user->setInitials($initials);
-		if (isset($lastName))
-			$user->setLastName($lastName);
+		if (isset($givenName))
+			$user->setGivenName($givenName, AppLocale::getLocale());
+		if (isset($familyName))
+			$user->setFamilyName($familyName, AppLocale::getLocale());
 		if (isset($affiliation))
 			$user->setAffiliation($affiliation, AppLocale::getLocale());
 		if (isset($email))
@@ -335,15 +329,17 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $attr array
 	 */
 	function userToAttr(&$user, &$attr) {
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
 		// FIXME empty strings for unset fields?
 		if ($user->getFullName())
 			$attr['cn'] = $user->getFullName();
-		if ($user->getFirstName())
-			$attr['givenName'] = $user->getFirstName();
-		if ($user->getLastName())
-			$attr['sn'] = $user->getLastName();
-		if ($user->getAffiliation())
-			$attr['organizationName'] = $user->getAffiliation(AppLocale::getLocale());
+		if ($user->getLocalizedGivenName())
+			$attr['givenName'] = $user->getLocalizedGivenName();
+		if ($user->getLocalizedFamilyName())
+			$attr['sn'] = $user->getLocalizedFamilyName();
+		if ($user->getLocalizedAffiliation())
+			$attr['organizationName'] = $user->getLocalizedAffiliation();
 		if ($user->getEmail())
 			$attr['mail'] = $user->getEmail();
 		if ($user->getPhone())
@@ -378,4 +374,4 @@ class LDAPAuthPlugin extends AuthPlugin {
 	}
 }
 
-?>
+

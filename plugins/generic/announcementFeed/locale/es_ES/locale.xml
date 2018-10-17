@@ -4,16 +4,16 @@
 <!--
   * plugins/generic/announcementFeed/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.announcementfeed.displayName">Plugin de Canal de Anuncios</message>
-	<message key="plugins.generic.announcementfeed.description">Este plugin produce canales RSS/Atom para anuncios de la revista.</message>
+	<message key="plugins.generic.announcementfeed.displayName">Módulo del Canal de Anuncios</message>
+	<message key="plugins.generic.announcementfeed.description">Este módulo activa canales RSS/Atom para anuncios de la revista.</message>
 
 	<message key="plugins.generic.announcementfeed.settings">Opciones</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Mostrar enlaces de los canales en todas las páginas de la revista.</message>

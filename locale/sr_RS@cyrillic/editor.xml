@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@cyrillic/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University 
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
@@ -120,82 +120,17 @@
 	<message key="grid.action.previewIssue">Прикажи</message>
 	<message key="grid.action.addIssueGalley">Направи фајл приказа броја</message>
 	<message key="editor.navigation.issueArchive">Претходни бројеви</message>
-	<message key="editor.article.showSuppFile">Представи фајл рецензентима</message>
-	<message key="editor.article.layoutAndProof">Изглед и тест копија</message>
-	<message key="editor.article.clear">Очисти</message>
-	<message key="editor.article.clearReviewer">Очисти рецезнзента</message>
-	<message key="editor.article.changeSection">Промени секцију</message>
-	<message key="editor.article.setDueDate">Подеси рок</message>
-	<message key="editor.article.addReviewer">Додај рецензента</message>
-	<message key="editor.article.toReviewer">За рецензента</message>
-	<message key="editor.article.notifyReviewer">Обавести рецензента</message>
-	<message key="editor.article.initiateReview">Започни рецензирање</message>
-	<message key="editor.article.cancelReview">Поништи захтев</message>
-	<message key="editor.article.clearReview">Очисти рецензента</message>
-	<message key="editor.article.enterRecommendation">Унеси препоруке</message>
-	<message key="editor.article.enterReviewerRecommendation">Унеси препоруке рецензента</message>
-	<message key="editor.article.recommendation">Препоруке</message>
-	<message key="editor.article.selectReviewer">Одабери рецензента</message>
-	<message key="editor.article.replaceReviewer">Замени рецензента</message>
-	<message key="editor.article.uploadReviewForReviewer">Достави рецензију</message>
 	<message key="editor.issues.removeCoverImageFileNameMismatch">Слика насловне стране коју сте хтели да обришете се не слаже са насловном страном овог броја. Поново учитајте страну и покушајте поново.</message>
 	<message key="editor.issues.removeCoverImageFileNotFound">Слика нсловне стране коју сте хтели да обришете се не може пронаћи. Можда је већ обрисана. Покушајте да поново учитате страну.</message>
 	<message key="editor.issues.confirmIssueDelete">Сви чланци ће бити враћени у ред редакцију и сви додатни фајлови ће бити обрисани. Да ли сте сигурни да желите обрисати овај број?</message>
 	<message key="editor.issues.resetIssueOrder"><![CDATA[Овај часопис има посебан начин бројања бројева.<a href="{$url}" class="action">Врати на почетно</a>]]></message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Овај број има посебан начин поретка секција/рубрика.<a href="{$url}" class="action">Врати на почетно</a>]]></message>
 	<message key="editor.article.designateReviewVersion">Одредите изворни фајл као рецензентску верзију</message>
-	<message key="editor.article.uploadReviewVersion">Поставите на сервер ревидирану рецензентску верзију</message>
-	<message key="editor.article.editorToEnter">Уредник да унесе препоруку/коментар за рецензента</message>
-	<message key="editor.article.peerReviewOptions">Опције за стручну рецензију</message>
 	<message key="editor.article.decision">Одлука</message>
-	<message key="editor.article.noEditorSelected">Није одабран уредник.</message>
-	<message key="editor.article.recordDecision">Забележи одлуку</message>
-	<message key="editor.article.cannotRecord">Уредник секције/рубрике није забележио или ниеј присутна рецензија.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Рецензенти који виде ауторову верзију</message>
-	<message key="editor.article.designateDueDate">Одреди крајњи рок</message>
-	<message key="editor.article.designateDueDateDescription">Упишите датум или број недеља за нови рок.</message>
-	<message key="editor.article.todaysDate">Данашњи датум</message>
-	<message key="editor.article.requestedByDate">Урадити до датума</message>
-	<message key="editor.article.dueDateFormat">Формат: ГГГГ-ММ-ДД</message>
-	<message key="editor.article.numberOfWeeks">Број недеља</message>
-	<message key="editor.article.selectCopyeditor">Додели коректора</message>
-	<message key="editor.article.replaceCopyeditor">Замени коректора</message>
-	<message key="editor.article.editorsCopyedit">Уредникова пробна копија</message>
-	<message key="editor.article.showAuthor">Дозвољено да аутор види фајл</message>
-	<message key="editor.article.showCopyeditor">Покажи верзију коректору</message>
-	<message key="editor.article.rateReviewer">Рангирање рецензента</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Високо</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Ниско</message>
-	<message key="editor.article.comments">Коментари</message>
-	<message key="editor.article.commentsRequired">Неопходно испунити поље за коментаре.</message>
-	<message key="editor.article.saveRating">Сашувај рангирање</message>
-	<message key="editor.article.noneSelected">Нема одабраних</message>
-	<message key="editor.article.authorProofing">Ауторова провера копије</message>
-	<message key="editor.article.archiveSubmission">Одбиј и архивирај пријављен чланак</message>
-	<message key="editor.article.restoreToQueue">Врати на Активну листу</message>
-	<message key="editor.article.assignSectionEditor">Додај уредника секције/рубрике</message>
-	<message key="editor.article.assignEditor">Додај уредника</message>
-	<message key="editor.article.selectEditor">Одабери {$roleName}</message>
-	<message key="editor.article.selectDecision">Одабери одлуку</message>
 	<message key="editor.article.decision.accept">Прихвати пријављен чланак</message>
 	<message key="editor.article.decision.pendingRevisions">Потребна ревизија</message>
 	<message key="editor.article.decision.resubmit">Поново пријави за рецензију</message>
 	<message key="editor.article.decision.decline">Не прихватити пријављен чланак</message>
-	<message key="editor.article.selectLayoutEditor">Одабери графичког уредника</message>
-	<message key="editor.article.replaceLayoutEditor">Замени графичког уредника</message>
-	<message key="editor.article.reviewSubmission">Рецензија пријављеног чланка</message>
-	<message key="editor.article.resubmitForReview">Поново пријави чланак за рецензију</message>
-	<message key="editor.article.resubmitFileForPeerReview">Поново пријави одабрани фајл за стручну рецензију</message>
-	<message key="editor.article.sendToCopyedit">Пошаљи фајл на коректуру</message>
-	<message key="editor.article.selectProofreader">Додели коректора</message>
-	<message key="editor.article.replaceProofreader">Замени коректора</message>
-	<message key="editor.article.authorComments">Ауторови коментари</message>
-	<message key="editor.article.proofreaderComments">Коментари коректора</message>
-	<message key="editor.article.layoutEditorFinal">Завршни графички уредник</message>
-	<message key="editor.article.noDate">(датум)</message>
 	<message key="editor.submissions.showBy">Покажи до</message>
 	<message key="editor.submissions.submitMMDD">Пријави чланак ММ-ДД</message>
 	<message key="editor.submissions.activeAssignments">Активне пријаве</message>
@@ -211,16 +146,7 @@
 	<message key="editor.article.scheduleForPublication">Додели за објављивање у</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Биће додељен</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Накнада за објављивање није плаћена. Да би се рад објавио обавестите аутора да плати накнаду или да тражи изузеће од плаћања.</message>
-	<message key="editor.article.display">Прикажи</message>
-	<message key="editor.article.hideTocAuthorDescription">Изостави имена аутора из табеле садржаја</message>
-	<message key="editor.article.hideTocAuthorDefault">Почетно</message>
-	<message key="editor.article.hideTocAuthorHide">Изостави</message>
-	<message key="editor.article.hideTocAuthorShow">Покажи</message>
-	<message key="editor.article.cover">Насловна страна</message>
-	<message key="editor.article.coverImage">Слика насловне стране</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Слиак насловне стране коју сте хтели да обришете није нађена. Можда је већ обрисана. покушајте да поново учитате страну.</message>
-	<message key="editor.article.uploaded">Постављено на сервер</message>
-	<message key="editor.article.removeCoverPage">Уклони насловну страну?</message>
 	<message key="grid.action.removeArticle">Уклони чланак из броја</message>
 	<message key="editor.article.remove">Уклони</message>
 	<message key="editor.article.remove.confirm">Да ли сте сигурни да желите да уклоните чланак из овог броја? Чланак ће бити доступан за доделу следећем броју.</message>
@@ -230,4 +156,5 @@
 	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Графички уредник ће припремити ове фајлове за сваку завршну копију и поставити их на сервер у одговарајуће <span class="pkp_help_title">Одобрене копије</span> за коначну проверу.]]></message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Финални пробни фајлови на овој листи су претворени од стране коректора у кориговане верзије и постављене на сервер у <span class="pkp_help_title">Коректура</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Било који фајл који је већ био постављен на сервер у било којој фази пријаве чланка може бити додат на лситу за Коректуру означавањем Укључи кутије испод и кликом на Претрага: сви доступни фајлови ће бити излистани и одабрани за укључење.</message>
+	<message key="editor.article.coverImage">Слика насловне стране</message>
 </locale>

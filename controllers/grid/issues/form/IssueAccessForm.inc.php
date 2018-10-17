@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueAccessForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueAccessForm
@@ -51,7 +51,7 @@ class IssueAccessForm extends Form {
 	 * Initialize form data from current issue.
 	 * @param $request PKPRequest
 	 */
-	function initData($request) {
+	function initData() {
 		$this->_data = array(
 			'accessStatus' => $this->_issue->getAccessStatus(),
 			'openAccessDate' => $this->_issue->getOpenAccessDate(),
@@ -71,11 +71,10 @@ class IssueAccessForm extends Form {
 
 	/**
 	 * Save issue settings.
-	 * @param $request PKPRequest
 	 * @return int Issue ID for created/updated issue
 	 */
-	function execute($request) {
-		$journal = $request->getJournal();
+	function execute() {
+		$journal = Application::getRequest()->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN);
@@ -87,4 +86,4 @@ class IssueAccessForm extends Form {
 	}
 }
 
-?>
+

@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/IssueEntryTabHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryTabHandler
@@ -23,7 +23,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	function __construct() {
 		parent::__construct();
 		$this->addRoleAssignment(
-			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
+			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER, ROLE_ID_ASSISTANT),
 			array(
 				'publicationMetadata', 'savePublicationMetadataForm',
 				'identifiers', 'clearPubId', 'updateIdentifiers',
@@ -120,8 +120,10 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
 		$form = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
 		$form->readInputData();
-		if($form->validate($request)) {
-			$form->execute($request);
+		if($form->validate()) {
+			$form->execute();
+			// submission changed, so get it again
+			$submission = $form->getSubmission();
 			// Log the event
 			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry'); // Log consts
@@ -130,13 +132,22 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			$notificationManager = new NotificationManager();
 			$notificationKey = 'notification.savedIssueMetadata';
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __($notificationKey)));
+			$notificationManager->updateNotification(
+				$request,
+				array(NOTIFICATION_TYPE_PUBLICATION_SCHEDULED),
+				null,
+				ASSOC_TYPE_SUBMISSION,
+				$submission->getId()
+			);
 			// Display assign public identifiers form
 			$assignPubIds = false;
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-			foreach ($pubIdPlugins as $pubIdPlugin) {
-				if ($pubIdPlugin->isObjectTypeEnabled('Submission', $submission->getContextId())) {
-					$assignPubIds = true;
-					break;
+			if (is_array($pubIdPlugins)) {
+				foreach ($pubIdPlugins as $pubIdPlugin) {
+					if ($pubIdPlugin->isObjectTypeEnabled('Submission', $submission->getContextId())) {
+						$assignPubIds = true;
+						break;
+					}
 				}
 			}
 			if ($assignPubIds) {
@@ -144,14 +155,16 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 				$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
 				$formParams = array('stageId' => $stageId);
 				$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
-				$assignPublicIdentifiersForm->initData($args, $request);
-				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+				$assignPublicIdentifiersForm->initData();
+				$json = new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
 			} else {
-				return new JSONMessage();
+				$json = new JSONMessage();
 			}
+			$json->setEvent('dataChanged');
 		} else {
-			return new JSONMessage(true, $form->fetch($request));
+			$json = new JSONMessage(true, $form->fetch($request));
 		}
+		return $json;
 	}
 
 	/**
@@ -167,9 +180,9 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
 		$formParams = array('stageId' => $stageId);
 		$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
-		// Asign pub ids
+		// Assign pub ids
 		$assignPublicIdentifiersForm->readInputData();
-		$assignPublicIdentifiersForm->execute($request, true);
+		$assignPublicIdentifiersForm->execute(true);
 		return new JSONMessage();
 	}
 
@@ -232,8 +245,8 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$stageId = $this->getStageId();
 		$form = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
 		$form->readInputData();
-		if ($form->validate($request)) {
-			$form->execute($request);
+		if ($form->validate()) {
+			$form->execute();
 			$json = new JSONMessage();
 			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry'); // Log consts
@@ -280,4 +293,4 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	}
 }
 
-?>
+

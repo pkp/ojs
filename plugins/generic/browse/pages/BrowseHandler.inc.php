@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BrowseHandler
@@ -50,7 +50,7 @@ class BrowseHandler extends Handler {
 					'sectionId' => $sectionId,
 					'enableBrowseBySections' => $enableBrowseBySections,
 				));
-				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');
+				$templateMgr->display($browsePlugin->getTemplateResource('searchDetails.tpl'));
 			} else {
 				$excludedSections = $browsePlugin->getSetting($journal->getId(), 'excludedSections');
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -71,7 +71,7 @@ class BrowseHandler extends Handler {
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->assign('enableBrowseBySections', $enableBrowseBySections);
-				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchIndex.tpl');
+				$templateMgr->display($browsePlugin->getTemplateResource('searchIndex.tpl'));
 			}
 		} else {
 			$request->redirect(null, 'index');
@@ -118,7 +118,7 @@ class BrowseHandler extends Handler {
 					'title' => $identifyType,
 					'enableBrowseByIdentifyTypes' => $enableBrowseByIdentifyTypes,
 				));
-				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');
+				$templateMgr->display($browsePlugin->getTemplateResource('searchDetails.tpl'));
 			} else {
 				$excludedIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'excludedIdentifyTypes');
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -139,7 +139,7 @@ class BrowseHandler extends Handler {
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('results', $results);
 				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);
-				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchIndex.tpl');
+				$templateMgr->display($browsePlugin->getTemplateResource('searchIndex.tpl'));
 			}
 		} else {
 			$request->redirect(null, 'index');
@@ -179,4 +179,4 @@ class BrowseHandler extends Handler {
 	}
 }
 
-?>
+

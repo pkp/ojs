@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionAction.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionAction
@@ -48,16 +48,6 @@ class SubscriptionAction {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
 
-		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$role = $roleDao->newDataObject();
-		if ($roleDao->getJournalUsersRoleCount($journal->getId(), ROLE_ID_SUBSCRIPTION_MANAGER) > 0) {
-			$role->setId(ROLE_ID_SUBSCRIPTION_MANAGER);
-			$rolePath = $role->getPath();
-		} else {
-			$role->setId(ROLE_ID_MANAGER);
-			$rolePath = $role->getPath();
-		}
-
 		$paramArray = array(
 			'subscriptionType' => $subscriptionType->getSummaryString(),
 			'userDetails' => $user->getContactSignature(),
@@ -67,11 +57,11 @@ class SubscriptionAction {
 		switch($mailTemplateKey) {
 			case 'SUBSCRIPTION_PURCHASE_INDL':
 			case 'SUBSCRIPTION_RENEW_INDL':
-				$paramArray['subscriptionUrl'] = $request->url($journal->getPath(), $rolePath, 'editSubscription', 'individual', array($subscription->getId()));
+				$paramArray['subscriptionUrl'] = $request->url($journal->getPath(), 'payments', null, null, null, 'individual');
 				break;
 			case 'SUBSCRIPTION_PURCHASE_INSTL':
 			case 'SUBSCRIPTION_RENEW_INSTL':
-				$paramArray['subscriptionUrl'] = $request->url($journal->getPath(), $rolePath, 'editSubscription', 'institutional', array($subscription->getId()));
+				$paramArray['subscriptionUrl'] = $request->url($journal->getPath(), 'payments', null, null, null, 'institutional');
 				$paramArray['institutionName'] = $subscription->getInstitutionName();
 				$paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
 				$paramArray['domain'] = $subscription->getDomain();
@@ -90,4 +80,4 @@ class SubscriptionAction {
 	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/no_NO/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Norwegian_(no_NO)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Denne programutvidelsen oppretter abonnementsinformasjon i sidespalten.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Utløper</message>
-	<message key="plugins.block.subscription.providedBy">Tilgangen gis av:</message>
-	<message key="plugins.block.subscription.comingFromIP">Kommer fra IP:</message>
+	<message key="plugins.block.subscription.providedBy">Tilgangen gis av: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Kommer fra IP: {$ip}</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Logg inn for å bekrefte abonnementet</message>
 	<message key="plugins.block.subscription.about">Abonnementer</message>
 </locale>

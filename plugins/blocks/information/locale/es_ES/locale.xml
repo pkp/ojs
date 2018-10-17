@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/information/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -13,6 +13,6 @@
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.information.displayName">Bloque de información</message>
-	<message key="plugins.block.information.description">Este Complemento proporciona un vínculo de "Información" en la barra lateral.</message>
+	<message key="plugins.block.information.description">Este módulo proporciona un bloque de "Información" en la barra lateral.</message>
 	<message key="plugins.block.information.link">Información</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -22,6 +22,7 @@
 	<message key="submission.submit.newSubmissionMultiple">Начать отправку нового материала в</message>
 	<message key="submission.submit.newSubmissionSingle">Новый материал</message>
 	<message key="grid.action.workflow">Процесс отправки</message>
+	<message key="submission.abstract.wordCount.description">Аннотация должна содержать не более {$wordCount} слов.</message>
 
 	<message key="submission.issueEntry">Метаданные</message>
 	<message key="submission.submit.whatNext.description">Журнал был уведомлен об отправке Вами материала, подтверждение записи были направлено на Вашу электронную почту. Как только редактор просмотрит ваш материал, мы свяжемся с вами.</message>
@@ -70,6 +71,7 @@
 	<message key="submission.submit.form.authorRequiredFields">Для каждого автора необходимо указать имя, фамилию и адрес электронной почты.</message>
 	<message key="submission.submit.form.titleRequired">Пожалуйста, введите название Вашей статьи.</message>
 	<message key="submission.submit.form.abstractRequired">Пожалуйста, введите аннотацию Вашей статьи.</message>
+	<message key="submission.submit.form.wordCountAlert">Ваша аннотация слишком длинная. Пожалуйста, сократите ее до количества слов, заданного для этого раздела.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Пожалуйста, выберите роль отправителя.</message>
 
 	<message key="submission.citationFormat.notFound">Запрошенный формат оформления библиографических ссылок не удается получить.</message>

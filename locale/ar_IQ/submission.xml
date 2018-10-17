@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ar_IQ (العربية) locale.
@@ -22,6 +22,7 @@
 	<message key="submission.submit.newSubmissionMultiple">إبدأ طلباً جديداً في</message>
 	<message key="submission.submit.newSubmissionSingle">طلب جديد</message>
 	<message key="grid.action.workflow">المخطط الانسيابي للطلب</message>
+	<message key="submission.abstract.wordCount.description">الملخص لا بد أن يكون من {$wordCount} كلمة أو أقل.</message>
 
 	<message key="submission.issueEntry">البيانات الوصفية</message>
 	<message key="submission.submit.whatNext.description">لقد تم إشعار المجلة بشأن طلبك هذا، وقد تمت مراسلتك لتأكيد بياناتك. بمجرد أن يراجع المحرر طلبك، سيقوم بالاتصال بك.</message>
@@ -70,6 +71,7 @@
 	<message key="submission.submit.form.authorRequiredFields">الاسم الأول، الاسم الأخير وعنوان البريد الالكتروني لكل مؤلف معلومات مطلوبة حتماً.</message>
 	<message key="submission.submit.form.titleRequired">لطفاً، أذكر عنوان مؤلَّفك هذا.</message>
 	<message key="submission.submit.form.abstractRequired">لطفاً، أعطنا ملخصاً عن المؤلَّف.</message>
+	<message key="submission.submit.form.wordCountAlert">إن ملخصك طويل جداً. لطفاً، حاول إختزاله ليصير ضمن محدد عدد الكلمات الخاص بهذا القسم.</message>
 	<message key="submission.submit.form.contributorRoleRequired">لطفاً، إختر دور المساهم.</message>
 
 	<message key="submission.citationFormat.notFound">تعذر استرجاع صيغة الاقتباس التي تم طلبها.</message>

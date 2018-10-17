@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/default.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -121,12 +121,8 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 
 	<message key="section.default.title">Artikler</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.membershipFeeDescription">Betaling av denne avgiften gir deg medlemsskap i foreningen for ett år og gir deg gratis tilgang til dette tidsskriftet.</message>
 	<message key="default.journalSettings.publicationFee">Artikkelpublisering</message>
-	<message key="default.journalSettings.publicationFeeDescription">Om denne artikkelen blir akseptert for publisering, vil du bli bedt om å betale en publiseringsavgift for å finansiere publiseringskostnadene.</message>
-	<message key="default.journalSettings.waiverPolicy">Om du ikke har midler til å betale slike avgifter, har du mulighet til å slippe avgiften. Vi ønsker ikke at avgifter skal hindre publisering av kvalifiserte arbeider.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Kjøp artikkel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Betaling av denne avgiften gir deg mulighet til å se, laste ned og skrive ut denne artikkelen.</message>
 	<message key="default.journalSettings.membershipFee">Foreningsmedlemskap</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Å legge til lenker til referanser som del av layoutprosessen</h4>
 	<p>Når et manus gjøres om til HTML eller PDF, må du sørge for at alle hyperlenker i manuset er aktive.</p>
@@ -150,5 +146,4 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 	<li>Gjør den teksten om til en hyperlenke ved å merke den og bruk Words verktøy for innsetting av hyperlenke, og den aktuelle URLen som ble laget under pkt 2.</li>
 	</ol>]]></message>
 	<message key="default.journalSettings.purchaseIssueFee">Kjøp dette nummeret</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Betaling av dette beløpet vil gjøre det mulig for det å lese, laste ned og skrive ut dette nummeret.</message>
 </locale>

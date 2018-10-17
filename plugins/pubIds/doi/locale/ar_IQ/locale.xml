@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
@@ -27,7 +27,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">الألواح الطباعية</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">بادئة DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.Description"><![CDATA[إن بادئة DOI يتم تعيينها من قبل وكالات التسجيل (مثل: <a href="http://www.crossref.org" target="_new">CrossRef</a>) وهي بصيغة 10.xxxx (مثل: 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.Description"><![CDATA[إن بادئة DOI يتم تعيينها من قبل وكالات التسجيل (مثل: <a href="http://www.crossref.org" target="_new">Crossref</a>) وهي بصيغة 10.xxxx (مثل: 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">إن بادئة DOI هي إجبارية وينبغي أن تكون بصيغة 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">لاحقة DOI</message>

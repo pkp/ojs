@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
@@ -68,9 +68,9 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					// different hook.
 					if ($op == 'view' && count($args) > 1) break;
 
-					$journal = $templateMgr->get_template_vars('currentContext');
-					$issue = $templateMgr->get_template_vars('issue');
-					$publishedArticle = $templateMgr->get_template_vars('article');
+					$journal = $templateMgr->getTemplateVars('currentContext');
+					$issue = $templateMgr->getTemplateVars('issue');
+					$publishedArticle = $templateMgr->getTemplateVars('article');
 
 					// No published objects, no usage event.
 					if (!$journal && !$issue && !$publishedArticle) break;
@@ -156,4 +156,4 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 }
 
-?>
+

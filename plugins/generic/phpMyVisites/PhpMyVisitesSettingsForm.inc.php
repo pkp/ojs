@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/phpMyVisites/PhpMyVisitesSettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PhpMyVisitesSettingsForm
@@ -32,7 +32,7 @@ class PhpMyVisitesSettingsForm extends Form {
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
 
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		$this->addCheck(new FormValidatorUrl($this, 'phpmvUrl', 'required', 'plugins.generic.phpmv.manager.settings.phpmvUrlRequired'));
 		$this->addCheck(new FormValidator($this, 'phpmvSiteId', 'required', 'plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired'));
@@ -70,4 +70,4 @@ class PhpMyVisitesSettingsForm extends Form {
 	}
 }
 
-?>
+

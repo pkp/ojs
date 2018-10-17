@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -22,31 +22,6 @@ Tautan: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email ini dikirimkan ke pengguna terdaftar yang memilih untuk memperoleh jenis notifikasi ini dikirimkan melalui email.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Notifikasi baru dari {$siteTitle}</subject>
-		<body><![CDATA[Anda memperoleh satu notifikasi baru dari {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Tautan: {$url}<br />
---<br />
-<br />
-Jika Anda ingin berhenti menerima email notifikasi, silakan klik {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Email ini dikirimkan ke pengguna tidak terdaftar pada mailing list notifikasi.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Selamat datang di mailing list {$siteTitle}!</subject>
-		<body><![CDATA[Anda telah mendaftar untuk menerima notifikasi dari {$siteTitle}.<br />
-<br />
-Silakan klik tautan berikut untuk mengkonfirmasi dan menambahkan alamat email Anda ke mailing list: {$confirmLink}<br />
-<br />
-Jika Anda ingin berhenti menerima email notifikasi, silakan klik {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Email ini dikirimkan ke pengguna tidak terdaftar yang baru saja mendaftarkan diri ke mailing list.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Konfirmasi Reset Sandi</subject>
@@ -174,14 +149,6 @@ Jika ada pertanyaan, silakan hubungi kami. Terimakasih telah mempercayakan publi
 {$editorialContactSignature}]]></body>
 		<description>Email ini, jika diaktifkan, secara otomatis dikirimkan ke penulis saat menyelesaikan proses penyerahan naskah ke jurnal. Email ini memberikan informasi mengenai pemantauan kemajuan proses editorial dan mengucapkan terimakasih atas naskah yang dikirimkan.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Naskah Tidak Sesuai</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Review awal dari &quot;{$submissionTitle}&quot; menunjukkan bahwa naskah ini tidak sesuai dengan lingkup dan fokus dari {$contextName}. Kami merekomendasikan Anda untuk mempelajari deskripsi jurnal ini di menu Tentang Jurnal, beserta isi terbitan, untuk mengetahui lebih jauh karya yang kami terbitkan. Anda juga dapat mempertimbangkan untuk mengirimkan naskah ini ke jurnal lain yang lebih sesuai.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Penugasan Editorial</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -266,7 +233,7 @@ Terimakasih atas perhatiannya.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Permohonan Review Artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami berharap telah menerima respon Anda pada {$responseDueDate}, dan email ini dikirim secara otomatis seiring terlewatinya tanggal tersebut. 
+Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami berharap telah menerima respon Anda pada {$responseDueDate}, dan email ini dikirim secara otomatis seiring terlewatinya tanggal tersebut.
 <br />
 Kami memandang bahwa Anda merupakan reviewer yang tepat untuk naskah tersebut. Abstrak naskah tersebut disertakan di bawah ini, dan kami berharap Anda berkenan melakukannya.<br />
 <br />
@@ -786,7 +753,7 @@ Copy-Editor, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versi Revisi telah Diunggah</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editor:<br />
 <br />
 Versi revisi dari &quot;{$submissionTitle}&quot; telah diunggah oleh penulis {$authorName}.<br />
 <br />

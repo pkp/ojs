@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/webFeed/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -24,5 +24,5 @@
 	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
+	<message key="plugins.generic.webfeed.settings.recent">itens mais recentes.</message>
 </locale>
-

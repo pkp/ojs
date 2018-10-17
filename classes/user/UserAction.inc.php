@@ -3,8 +3,8 @@
 /**
  * @file classes/user/UserAction.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserAction
@@ -79,7 +79,7 @@ class UserAction {
 			$oldUserValidSubscription = $individualSubscriptionDao->isValidIndividualSubscription($oldUserId, $subscriptionJournalId);
 			if ($oldUserValidSubscription) {
 				// Check if new user has a valid subscription for current journal
-				$newUserSubscription = $individualSubscriptionDao->getByUserId($newUserId, $subscriptionJournalId);
+				$newUserSubscription = $individualSubscriptionDao->getByUserIdForJournal($newUserId, $subscriptionJournalId);
 				if (!$newUserSubscription) {
 					// New user does not have this subscription, transfer old user's
 					$oldUserSubscription->setUserId($newUserId);
@@ -110,7 +110,7 @@ class UserAction {
 		// Transfer completed payments.
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$paymentFactory = $paymentDao->getByUserId($oldUserId);
-		while ($payment = $paymentFactory->next()) {
+		while ($payment = next($paymentFactory)) {
 			$payment->setUserId($newUserId);
 			$paymentDao->updateObject($payment);
 		}
@@ -158,4 +158,4 @@ class UserAction {
 	}
 }
 
-?>
+

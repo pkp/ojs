@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
@@ -46,9 +46,14 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			$authors = $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				$author = $authors[$i];
-				array_push($authorText, $author->getFirstName());
-				array_push($authorText, $author->getMiddleName());
-				array_push($authorText, $author->getLastName());
+				$givenNames = $author->getGivenName(null);
+				if (is_array($givenNames)) foreach ($givenNames as $givenName) { // Localized
+					array_push($authorText, $givenName);
+				}
+				$familyNames = $author->getFamilyName(null);
+				if (is_array($familyNames)) foreach ($familyNames as $familyName) { // Localized
+					array_push($authorText, $familyName);
+				}
 				$affiliations = $author->getAffiliation(null);
 				if (is_array($affiliations)) foreach ($affiliations as $affiliation) { // Localized
 					array_push($authorText, $affiliation);
@@ -270,7 +275,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				$articles = $articleDao->getByContextId($journal->getId());
 				while ($article = $articles->next()) {
-					if ($article->getDateSubmitted()) {
+					if ($article->getSubmissionProgress() == 0) { // Not incomplete
 						self::articleMetadataChanged($article);
 						self::submissionFilesChanged($article);
 						$numIndexed++;
@@ -317,4 +322,4 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	}
 }
 
-?>
+

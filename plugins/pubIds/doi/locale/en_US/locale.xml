@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/en_US/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -72,4 +72,4 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">The DOI cannot be assigned because the custom suffix is missing.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">The DOI {$pubId} cannot be assigned because it contains an unresolved pattern.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">The DOI {$pubId} has been assigned.</message>
- </locale>
+</locale>

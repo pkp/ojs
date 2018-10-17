@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -23,31 +23,6 @@
 {$principalContactSignature}]]></body>
 		<description>رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>إشعار جديد من {$siteTitle}</subject>
-		<body><![CDATA[لديك إشعار جديد من {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-الرابط: {$url}<br />
---<br />
-<br />
-لو أردت إيقاف الإشعارات عبر البريد الالكتروني، لطفاً أنقر الرابط {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين في قائمة الإشعار البريدي.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>مرحباً بك في قائمة المراسلة للموقع {$siteTitle} !</subject>
-		<body><![CDATA[لقد سجلت دخولك لتحصل على إشعارات من {$siteTitle}.<br />
-<br />
-لطفاً، أنقر هذا الرابط لتأكيد طلبك ولتضيف عنوان بريدك الالكتروني إلى قائمة المراسلة: {$confirmLink}<br />
-<br />
-لو أردت إيقاف الإشعارات عبر البريد الالكتروني، لطفاً أنقر الرابط {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين الذين سجلوا تواً في قائمة الإشعار البريدي.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>تأكيد إعادة تعيين كلمة المرور</subject>
 		<body><![CDATA[لقد تلقينا طلباً لإعادة تعيين كلمة مرورك في الموقع {$siteTitle}.<br />
@@ -64,6 +39,7 @@
 		<body><![CDATA[كلمة مرورك أُعيد تعيينها بنجاح لتتمكن من الولوج إلى موقع {$siteTitle}. لطفاً، إحتفظ باسم الدخول وكلمة المرور المبينين أدناه كونهما ضروريان لمتابعة كل أعمالك في موقع المجلة.<br />
 <br />
 اسم الدخول: {$username}<br />
+كلمة المرور: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>هذه الرسالة معنونة إلى المستخدمين المسجلين الذي تمكنوا من إعادة تعيين كلمات مرورهم بنجاح متبعين الخطوات الموضحة في رسالة إعادة تعيين كلمة المرور.</description>
@@ -164,24 +140,14 @@
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
 		<subject>إشعار طلب التقديم</subject>
-		<body>
-			<![CDATA[مرحباً، <br />
+		<body><![CDATA[مرحباً، <br />
 <br />
 إن {$submitterName} قد تقدم بطلب لنشر المؤلَّف &quot;{$submissionTitle}&quot; إلى {$contextName}. <br />
 <br />
 إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />
 <br />
-{$editorialContactSignature}]]>
-		</body>
-		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>طلب نشر غير متوافق مع المجلة</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-إن التحكيم الأولي للمؤلَّف الموسوم &quot;{$submissionTitle}&quot; أظهر جلياً أنه لا يتناسب مع محاور التخصصات العلمية في {$contextName}. أوصيك بمراجعة توصيف هذه المجلة المبين في صفحة (عن المجلة)، فضلاً عن الاطلاع على محتوياتها لتتعرف أكثر على نوعية الأعمال التي ننشرها. إذ عندها، قد تأخذ في الحسبان تقديم طلبك للنشر في مجلة علمية أخرى مناسبة أكثر.<br />
-<br />
 {$editorialContactSignature}]]></body>
+		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>تعيين المحرر</subject>
@@ -544,6 +510,16 @@
 ]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (رفض الطلب).</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>توصيات المحرر</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+إن التوصيات المتعلقة بطلب النشر في {$contextName}، &quot;{$submissionTitle}&quot; هي: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>هذه الرسالة يعنونها المحرر المشارك في تقديم التوصيات أو محرر القسم إلى جهة التحرير المعنية باتخاذ القرار لإشعارها بالتوصية النهائية الخاصة بطلب نشر مقدم إلى المجلة.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>إلتماس نسخة التدقيق</subject>
 		<body><![CDATA[{$participantName}:<br />
@@ -787,7 +763,7 @@
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>تم رفع نسخة منقحة</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[أعزائي المحررون:<br />
 <br />
 لقد تم رفع نسخة منقحة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; من قبل المؤلف {$authorName}.<br />
 <br />
@@ -800,5 +776,17 @@
 		<subject>رسالة تتعلق بالمجلة {$contextName}</subject>
 		<body><![CDATA[لطفاً أكتب رسالتك هنا.]]></body>
 		<description>هذه الرسالة الإفتراضية (الخالية) التي يستعملها منشئ الرسائل في مركز إشعارات النظام.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>قرار المحرر</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+لقد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}، &quot;{$submissionTitle}&quot;.<br />
+<br />
+إن قرارنا هو: رفض النشر<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>هذه الرسالة تعنون إلى المؤلف إذا رفض المحرر طلبه بشكل مبدئي قبل الدخول في مرحلة التحكيم</description>
 	</email_text>
 </email_texts>

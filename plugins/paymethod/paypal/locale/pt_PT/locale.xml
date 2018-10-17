@@ -4,8 +4,8 @@
 <!--
   * plugins/paymethod/paypal/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -17,4 +17,10 @@
 	<message key="plugins.paymethod.paypal.settings">Configurações do PayPal</message>
 
 	<message key="plugins.paymethod.paypal">Pagamento via PayPal</message>
+	<message key="plugins.paymethod.paypal.description">Pagamentos processados através do serviço PayPal.</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Modo de Teste</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Nome da Conta</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID do Cliente</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Senha</message>
+	<message key="plugins.paymethod.paypal.error">Ocorreu um erro de transação. Contacte o gestor da revista para detalhes.</message>
 </locale>

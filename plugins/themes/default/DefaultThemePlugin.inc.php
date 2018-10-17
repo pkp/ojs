@@ -3,8 +3,8 @@
 /**
  * @file plugins/themes/default/DefaultThemePlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DefaultThemePlugin
@@ -132,9 +132,22 @@ class DefaultThemePlugin extends ThemePlugin {
 			$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
 		}
 
+		$request = Application::getRequest();
+
+		// Load icon font FontAwesome - http://fontawesome.io/
+		if (Config::getVar('general', 'enable_cdn')) {
+			$url = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css';
+		} else {
+			$url = $request->getBaseUrl() . '/lib/pkp/styles/fontawesome/fontawesome.css';
+		}
+		$this->addStyle(
+			'fontAwesome',
+			$url,
+			array('baseUrl' => '')
+		);
+
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
 		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';
-		$request = Application::getRequest();
 		if (Config::getVar('general', 'enable_cdn')) {
 			$jquery = '//ajax.googleapis.com/ajax/libs/jquery/' . CDN_JQUERY_VERSION . '/jquery' . $min . '.js';
 			$jqueryUI = '//ajax.googleapis.com/ajax/libs/jqueryui/' . CDN_JQUERY_UI_VERSION . '/jquery-ui' . $min . '.js';
@@ -156,6 +169,9 @@ class DefaultThemePlugin extends ThemePlugin {
 
 		// Load custom JavaScript for this theme
 		$this->addScript('default', 'js/main.js');
+
+		// Add navigation menu areas for this theme
+		$this->addMenuArea(array('primary', 'user'));
 	}
 
 	/**
@@ -193,4 +209,4 @@ class DefaultThemePlugin extends ThemePlugin {
 	}
 }
 
-?>
+

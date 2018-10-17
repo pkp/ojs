@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings
@@ -23,4 +23,5 @@
 	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">O OJS depositará artigos automaticamente junto do DOAJ. Por favor, note que esta acção pode demorar a ser processada. Pode verificar se há todos os artigos não registados.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Use a API de teste DOAJ (ambiente de teste) para o registo. Não se esqueça de remover esta opção para a produção.</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">O depósito não foi bem sucedido! A API DOAJ devolveu um erro: '{$param}'.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Tarefa de registo automático no DOAJ</message>
 </locale>

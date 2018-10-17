@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/subscriptions/PaymentsGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaymentsGridHandler
@@ -15,7 +15,6 @@
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
 
-import('controllers.grid.subscriptions.PaymentsGridRow');
 import('controllers.grid.subscriptions.PaymentsGridCellProvider');
 
 class PaymentsGridHandler extends GridHandler {
@@ -63,7 +62,7 @@ class PaymentsGridHandler extends GridHandler {
 		//
 		// Grid columns.
 		//
-		$cellProvider = new PaymentsGridCellProvider();
+		$cellProvider = new PaymentsGridCellProvider($request);
 
 		$this->addColumn(
 			new GridColumn(
@@ -78,6 +77,15 @@ class PaymentsGridHandler extends GridHandler {
 			new GridColumn(
 				'type',
 				'manager.payment.paymentType',
+				null,
+				null,
+				$cellProvider
+			)
+		);
+		$this->addColumn(
+			new GridColumn(
+				'amount',
+				'manager.payment.amount',
 				null,
 				null,
 				$cellProvider
@@ -103,19 +111,9 @@ class PaymentsGridHandler extends GridHandler {
 		return array(new PagingFeature());
 	}
 
-	/**
-	 * @copydoc GridHandler::getRowInstance()
-	 * @return PaymentsGridRow
-	 */
-	protected function getRowInstance() {
-		return new PaymentsGridRow();
-	}
-
 
 	/**
 	 * @copydoc GridHandler::loadData()
-	 * @param $request PKPRequest
-	 * @return array Grid data.
 	 */
 	protected function loadData($request, $filter) {
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');

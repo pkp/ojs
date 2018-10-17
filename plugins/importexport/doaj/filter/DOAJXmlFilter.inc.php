@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJXmlFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJXmlFilter
@@ -204,7 +204,7 @@ class DOAJXmlFilter extends NativeExportFilter {
 	function createAuthorNode($doc, $article, $author, $affilList) {
 		$deployment = $this->getDeployment();
 		$authorNode = $doc->createElement('author');
-		$authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(), ENT_COMPAT, 'UTF-8')));
+		$authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(false), ENT_COMPAT, 'UTF-8')));
 		$email = $author->getEmail();
 		if (!empty($email)) $authorNode->appendChild($node = $doc->createElement('email', htmlspecialchars($email, ENT_COMPAT, 'UTF-8')));
 		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
@@ -241,4 +241,4 @@ class DOAJXmlFilter extends NativeExportFilter {
 
 }
 
-?>
+

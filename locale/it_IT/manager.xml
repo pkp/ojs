@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2000-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -51,7 +51,6 @@
 	<message key="manager.payment.options.publicationFee">Pubblicazione di un articolo accettato</message>
 	<message key="manager.payment.options.purchaseArticleFee">Compra l'articolo</message>
 	<message key="manager.payment.options.text">Descrizione del metodo di pagamento</message>
-	<message key="manager.payment.options.waiverPolicy">Politica di esenzione</message>
 	<message key="manager.payment.paymentId">ID del pagamento</message>
 	<message key="manager.payment.paymentMethod">Modalità di pagamento</message>
 	<message key="manager.payment.paymentMethod.description">Puoi configurare da qui le seguenti modalità di pagamento.</message>
@@ -254,7 +253,6 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Voto ai revisori</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Promemoria per i revisori</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Aggiungi il link a <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Come assicurare una revisione cieca</a> alle pagine dove gli autori e i revisori caricano i file.]]></message>
 	<message key="manager.setup.reviewPolicy">Politiche di revisione</message>
 	<message key="manager.setup.searchEngineIndexing">SEO (Ottimizzazione per i motori di ricerca)</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Per aumentare la visibilità della rivista nei motori di ricerca, inserisci una breve descrizione e le relative keyword (separate da virgola).</message>
@@ -517,7 +515,8 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="plugins.importexport.common.register.success">Registrazione conclusa con successo!</message>
 	<message key="manager.website.archiving">Archiviazione</message>
 	<message key="manager.setup.masthead">Testata</message>
-	<message key="manager.setup.masthead.description">Informazioni sulla redazione</message>
+	<message key="manager.setup.editorialTeam">Editorial Team</message>
+	<message key="manager.setup.editorialTeam.description">Informazioni sulla redazione</message>
 	<message key="manager.setup.useStyleSheet">Foglio di stile</message>
 	<message key="manager.setup.contextName">Nome della rivista</message>
 	<message key="manager.setup.journalSummary">Presentazione della rivista</message>

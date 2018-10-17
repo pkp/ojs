@@ -4,12 +4,11 @@
 <!--
   * locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localization strings.
-  *
   -->
 
 <locale name="sv_SE" full_name="Svenska">
@@ -26,47 +25,34 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
+	<!-- common -->
+	<message key="context.current">Aktuell tidskrift:</message>
+	<message key="context.select">Växla till annan tidskrift:</message>
+
+	<!-- Categories -->
+	<message key="navigation.categories">Kategorier</message>
+	<message key="navigation.categories.browse">Bläddra</message>
+
+
+
+	<message key="reviewer.article.enterReviewForm">Klicka på ikonen för att fylla i granskningsformuläret.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vänligen fyll i obligatoriska fält.</message>
+
+	<!-- review forms end -->
+
 	<!--
 	 *
 	 * COMMON - This section contains the most frequently-used words
 	 *
 	-->
 
-        <!-- Missing Messages -->
-	<message key="common.ccLicense">CC-licens</message>
-	<message key="journal.issn">Tidskriftens ISSN</message>
-	<message key="manager.setup.doiSuffix">DOI-suffix</message>
-	<message key="manager.setup.doiSuffixPattern">Till exempel, vol 3, häfte 2, sidor 2-30 kan skapa en DOI som 10.1234/vol3iss2pp230</message>
-	<message key="manager.setup.doiSuffixPattern.example">Exempel</message>
-	<message key="manager.setup.doiSuffixDefault">Använd standardformat</message>
-	<message key="manager.setup.doiSuffixPublisherId">Använd DOI-suffix för publicerat material (måste vara aktiverat i Steg 4).</message>
-	<message key="manager.setup.doiSuffixDescription">Ett DOI-suffix kan ha vilken form som helst men måste vara unikt för varje publicerad enhet.</message>
-	<message key="manager.setup.publisherNoteDescription">Texten kommer återfinnas nedanför rubriken 'Utgivare' och ovanför utgivarens namn/url under 'Sponsorer' på sidan Om.</message>
-	<message key="manager.setup.sponsorNoteDescription">Texten kommer återfinnas nedanför rubriken "Sponsorer" och ovanför  listan över sponsorers namn och URL:er under 'Sponsorer' på sidan Om.</message>
-	<message key="manager.setup.contributorNoteDescription">Texen kommer återfinnas nedanför rubriken 'Sponsorer' och ovanför listan med namn och URL:er för organisationer som stöttar tidskriften under 'Sponsorer' på sidan Om.</message>
-	<message key="plugins.generic.staticPages.displayName">Statiska sidor</message>
-	<message key="plugins.generic.staticPages.description">Denna Plugin tillåter statisk innehållshantering</message>
-	<message key="plugins.generic.staticPages.editAddContent">Redigera/lägg till innehåll</message>
-	<message key="plugins.generic.staticPages.settingInstructions">Nedan finner du alla statiska sidor som har skapats. Du kan redigera eller ta bort sidorna genom att använda länkarna på högra sidan.</message>
-	<message key="plugins.generic.staticPages.viewInstructions">Sidorna kommer man sedan åt via http://journals.sfu.ca/smt/index.php/smt/about/sidor/%sökväg%, där du själv väljer %sökväg%.  Obs! Två sidor kan inte ha samma sökväg.</message>
-	<message key="plugins.generic.staticPages.path">Sökväg</message>
-	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
-	<message key="plugins.generic.staticPages.addNewPage">Lägg till sida</message>
-	<message key="plugins.generic.staticPages.editStaticPage">Redigera statiska sidor</message>
-	<message key="plugins.generic.staticPages.editInstructions">Använd formuläret nedan för att lägga till eller redigera innehåll</message>
-	<message key="plugins.generic.staticPages.content">Innehåll</message>
-	<message key="reviewer.article.enter.ReviewForm">Klicka på ikonen för att komma till Granskningsformuläret</message>
-
-	<message key="article.fontSize">Fontstorlek</message>
-	<message key="editor.article.ShowCoverPage">Skapa ett omslag för den här artikeln med följande element</message>
-
-
-
 	<!-- Common Messages -->
 	<message key="common.openJournalSystems">Open Journal Systems</message>
-	<message key="common.confirmComplete"> Är du säker på att du vill markera händelsen som avslutad? Du kommer inte att kunna ändra i efterhand.</message>
+	<message key="common.confirmComplete"> Är du säker på att du vill markera händelsen som avslutad? Ändringar i efterhand kan vara spärrade.</message>
 	<message key="common.payment">Betalning</message>
 	<message key="common.payments">Betalningar</message>
+	<message key="common.homePageHeader.altText">Sidhuvud förstasida</message>
+	<message key="common.journalHomepageImage.altText">Förstasidesbild tidskrift</message>
 
 	<!-- Common Form Messages -->
 
@@ -84,20 +70,20 @@
 	<message key="navigation.browseByAuthor">Per författare</message>
 	<message key="navigation.infoForAuthors">För författare</message>
 	<message key="navigation.infoForLibrarians">För bibliotekarier</message>
-	<message key="navigation.competingInterestGuidelines">Riktlinjer för Intressekonflikter</message>
+	<message key="navigation.competingInterestGuidelines">Riktlinjer gällande intressekonflikter</message>
 	<message key="navigation.infoForAuthors.long">Information för författare</message>
 	<message key="navigation.infoForLibrarians.long">Information för bibliotekarier</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Ej tilldelat</message>
 	<message key="common.queue.short.submissionsUnassigned">Ej tilldelat</message>
-	<message key="common.queue.long.submissionsInEditing">Manuskript redigeras</message>
+	<message key="common.queue.long.submissionsInEditing">Bidrag under redigering</message>
 	<message key="common.queue.short.submissionsInEditing">Redigeras</message>
-	<message key="common.queue.long.submissionsInReview">Manuskript granskas</message>
-	<message key="common.queue.short.submissionsInReview">granskning</message>
+	<message key="common.queue.long.submissionsInReview">Bidrag under granskning</message>
+	<message key="common.queue.short.submissionsInReview">Granskas</message>
 	<message key="common.queue.long.submissionsArchives">Arkiv</message>
 	<message key="common.queue.short.submissionsArchives">Arkiv</message>
-	<message key="common.queue.long.active">Aktiva manuskript</message>
+	<message key="common.queue.long.active">Aktiva bidrag</message>
 	<message key="common.queue.short.active">Aktiv</message>
 	<message key="common.queue.long.completed">Arkiv</message>
 	<message key="common.queue.short.completed">Arkiv</message>
@@ -111,17 +97,15 @@
 
 	<!-- Common Section Terms -->
 	<message key="section.section">Sektion</message>
-	<message key="section.sections">Tidskriftssektioner</message>
+	<message key="section.sections">Sektioner</message>
 	<message key="section.title">Sektionsnamn</message>
 	<message key="section.abbreviation">Förkortning</message>
-	<message key="section.abbreviation.example">(Till exempel, Artiklar=ART)</message>
-	<message key="section.default.title">Artiklar</message>
-	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy"></message>
+	<message key="section.abbreviation.example">(Till exempel Artiklar=ART)</message>
 
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artiklar</message>
-	<message key="article.submissionId">Manuskript ID</message>
+	<message key="article.submissionId">Bidragets ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Författare</message>
 	<message key="article.indexingInformation">Information om indexering</message>
@@ -129,61 +113,71 @@
 	<message key="article.journalSection">Tidskriftssektion</message>
 	<message key="article.file">Fil</message>
 	<message key="article.suppFile">Tilläggsfil</message>
-	<message key="article.suppFiles">Tilläggsfil (er)</message>
-	<message key="article.suppFilesAbbrev">Tilläggsfil (er)</message>
-	<message key="article.discipline">Ämnen och underdicipliner</message>
+	<message key="article.suppFiles">Tilläggsfil(er)</message>
+	<message key="article.suppFilesAbbrev">Tilläggsfil(er)</message>
+	<message key="article.discipline">Ämnesområde och underämnen</message>
 	<message key="article.subject">Nyckelord</message>
 	<message key="article.coverage">Täckning</message>
 	<message key="article.type">Typ, metod eller infallsvinkel</message>
 	<message key="article.language">Språk</message>
 	<message key="article.sectionEditor">Sektionsredaktör</message>
 	<message key="article.commentsToEditor">Författarkommentarer</message>
-	<message key="article.submission">Manuskript</message>
-	<message key="article.submissions">Manuskript</message>
-	<message key="article.abstract">Sammanfattning</message>
+	<message key="article.submission">Bidrag</message>
+	<message key="article.submissions">Bidrag</message>
 	<message key="article.details">Detaljer</message>
+	<message key="article.abstract">Abstract</message>
+	<message key="article.coverPage.altText">Framsida</message>
+	<message key="article.accessLogoOpen.altText">Open access</message>
+	<message key="article.accessLogoRestricted.altText">Begränsad åtkomst</message>
+	<message key="article.comments.sectionDefault">Default</message>
+	<message key="article.comments.disable">Avaktivera</message>
+	<message key="article.comments.enable">Aktivera</message>
+	<message key="article.fontSize">Typsnittsstorlek</message>
+	<message key="article.fontSize.small.altText">Liten</message>
+	<message key="article.fontSize.medium.altText">Mellan</message>
+	<message key="article.fontSize.large.altText">Stor</message>
+	<message key="article.return">Gå tillbaka till artikeldetaljer</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Manuskriptredigering</message>
 	<message key="submission.changeSection">Ändra till</message>
 	<message key="submission.sent">Skickat</message>
-	<message key="submission.editorDecision">Redaktörsbesked</message>
+	<message key="submission.editorDecision">Redaktörsbeslut</message>
 	<message key="submission.round">Omgång&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Redaktörens granskning</message>
 	<message key="submission.notifyAuthor">Meddela författare</message>
 	<message key="submission.notifyEditor">Meddela redaktör</message>
-	<message key="submission.editorAuthorRecord">Redaktörens/Författarens E-post</message>
-	<message key="submission.reviewersVersion">Granskarens filversion</message>
+	<message key="submission.editorAuthorRecord">Redaktörs/Författares e-post</message>
+	<message key="submission.reviewersVersion">Granskares filversion med kommentarer</message>
 	<message key="submission.postReviewVersion">Filversion efter granskning</message>
-	<message key="submission.editorVersion">Redaktörens version</message>
-	<message key="submission.authorsRevisedVersion">Författarens omarbetade version av filen</message>
-	<message key="submission.authorVersion">Författarens version</message>
+	<message key="submission.editorVersion">Redaktörsversion</message>
+	<message key="submission.authorsRevisedVersion">Författares omarbetade filversion</message>
+	<message key="submission.authorVersion">Författarversion</message>
 	<message key="submission.copyediting">Manusredigering</message>
 	<message key="submission.copyedit">Manusredigera</message>
 	<message key="submission.proofreading">Korrekturläsning</message>
-	<message key="submission.scheduling">Planera</message>
-	<message key="submission.scheduledIn">Planerad för publicering i {$issueName}.</message>
+	<message key="submission.scheduling">Planläggning</message>
+	<message key="submission.scheduledIn">Planlagd för publicering i {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
-
 	<message key="submissions.sec">Sektion</message>
 	<message key="submissions.step1">Steg 1</message>
 	<message key="submissions.step3">Steg 3</message>
-	<message key="submissions.queuedReview">Avvaktar granskning</message>
-	<message key="submissions.scheduled">Planerad</message>
+	<message key="submissions.queuedReview">Under granskning</message>
+	<message key="submissions.scheduled">Planlagd</message>
 	<message key="submissions.published">Publicerad</message>
 	<message key="submissions.initial">Första</message>
 	<message key="submissions.proofread">Korrekturläsa</message>
 	<message key="submissions.initialProof">Första korrekturet</message>
-	<message key="submissions.postAuthor">Post-Författare</message>
+	<message key="submissions.postAuthor">Post författare</message>
 	<message key="submissions.reviewRound">Granskningsomgång</message>
 	<message key="submissions.proof">Korrektur</message>
-	<message key="submissions.editorDecision">Redaktörens beslut</message>
-	<message key="submissions.editorRuling">Redaktörens utslag</message>
+	<message key="submissions.editorDecision">Redaktörsbeslut</message>
+	<message key="submissions.editorRuling">Redaktörsutslag</message>
 	<message key="submission.eventLog">Händelselogg</message>
 
 	<!-- Submission list search engine -->
-	<message key="submissions.copyeditComplete">Manuskriptet redigerat</message>
-	<message key="submissions.layoutComplete">Layouten redigerad</message>
+	<message key="submissions.copyeditComplete">Manusredigering klar</message>
+	<message key="submissions.layoutComplete">Layout klar</message>
 	<message key="submissions.proofreadingComplete">Korrekturläst</message>
 
 	<!-- Submission Notes -->
@@ -193,18 +187,38 @@
 	<message key="journal.journals">Tidskrifter</message>
 	<message key="journal.path">Sökväg</message>
 	<message key="context.context">Tidskrift</message>
+	<message key="journal.issn">ISSN</message>
+	<message key="journal.viewAllIssues">Visa alla nummer</message>
 
 	<!-- User -->
+	<message key="user.noRoles.selectUsersWithoutRoles">Inkludera användare utan roll i tidskriften.</message>
+	<message key="user.profile.profileImage">Profilbild</message>
 	<message key="user.showAllJournals">Visa mina tidskrifter</message>
-	<message key="user.registerForOtherJournals">Registrera för Andra tidskrifter</message>
+	<message key="user.registerForOtherJournals">Registrera för andra tidskrifter</message>
+	<message key="user.reviewerPrompt">Skulle du kunna tänka dig att granska bidrag till den här tidskriften?</message>
+	<message key="user.reviewerPrompt.userGroup">Ja, begär {$userGroup}-rollen.</message>
+	<message key="user.reviewerPrompt.optin">Ja, jag vill bli kontaktad med förfrågningar gällande granskningsuppdrag för den här tidskriften.</message>
+	<message key="user.register.contextsPrompt">Vilka av tidskrifterna på den här webbplatsen vill du registrera dig hos?</message>
+	<message key="user.register.otherContextRoles">Begär följande roller.</message>
+	<message key="user.register.noContextReviewerInterests">Om du anmälde dig som granskare, vänligen fyll i dina intresseområden.</message>
 	<message key="user.myJournals">Mina tidskrifter</message>
+	<message key="user.manageMySubscriptions">Hantera mina prenumerationer</message>
+	<message key="user.noRoles.chooseJournal">För tillfället är ditt konto inte kopplat till några tidskrifter. Välj en tidskrift:</message>
+	<message key="user.noRoles.noRolesForJournal">För tillfället saknar ditt konto en roll hos den här tidskriften. Välj åtgärd nedan:</message>
+	<message key="user.noRoles.submitArticle">Skicka in ett bidrag</message>
+	<message key="user.noRoles.submitArticleRegClosed">Skicka in en artikel: Författarregistrering är inte aktiverat i nuläget.</message>
+	<message key="user.noRoles.regReviewer">Registrera dig som granskare</message>
+	<message key="user.noRoles.regReviewerClosed">Registrera dig som granskare: Granskarregistrering är inte aktiverat i nuläget.</message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">Tidskriftsansvarig</message>
-	<message key="user.role.sectionEditor">Sektionsredaktör</message>
-	<message key="user.role.subscriptionManager">Abonnemangsansvarig</message>
+	<message key="user.role.subEditor">Sektionsredaktör</message>
+	<message key="user.role.subscriptionManager">Prenumerationsansvarig</message>
 	<message key="user.role.managers">Tidskriftsansvariga</message>
-	<message key="user.role.subscriptionManagers">Abonnemangsansvariga</message>
+	<message key="user.role.subEditors">Sektionsredaktörer</message>
+	<message key="user.role.subscriptionManagers">Prenumerationsansvariga</message>
+	<message key="user.role.journalAssistant">Redaktionssekreterare</message>
+	<message key="user.role.journalAssistants">Redaktionssekreterare</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Nummer</message>
@@ -217,55 +231,81 @@
 	<message key="issue.year">År</message>
 	<message key="issue.noIssues">Inga nummer</message>
 	<message key="issue.toc">Innehållsförteckning</message>
-	<message key="issue.abstract">Sammanfattning</message>
+	<message key="issue.abstract">Abstract</message>
+	<message key="issue.coverPage.altText">Framsida</message>
+	<message key="issue.fullIssue">Helt nummer</message>
+	<message key="issue.nonpdf.title">Ladda ned nummer</message>
+	<message key="issue.viewIssue">Visa nummer</message>
+	<message key="issue.return">Gå tillbaka till nummerdetaljer</message>
+
+	<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">Valuta</message>
+	<message key="subscriptionTypes.year">år</message>
+	<message key="subscriptionTypes.years">år</message>
+	<message key="subscriptionTypes.month">månad</message>
+	<message key="subscriptionTypes.months">månader</message>
+	<message key="subscriptionTypes.nonExpiring">Utan utgångsdatum</message>
+	<message key="subscriptionTypes.format">Format</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Tryckt</message>
+	<message key="subscriptionTypes.format.printOnline">Tryckt och online</message>
+
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">Inaktiv</message>
+	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status.active">Aktiv</message>
+	<message key="subscriptions.status.needsInformation">Behöver information</message>
+	<message key="subscriptions.status.needsApproval">Behöver godkännas</message>
+	<message key="subscriptions.status.awaitingManualPayment">Väntar på manuell betalning</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Väntar på online-betalning</message>
+	<message key="subscriptions.status.noSubscription">Du har inte någon aktiv prenumeration.</message>
+	<message key="subscriptions.status.other">Annat, se anteckningar</message>
+	<message key="subscriptions.individualDescription">Enskilda prenumerationer kräver inloggning för att få tillgång till prenumerationsmaterial.</message>
+	<message key="subscriptions.institutionalDescription">Institutionsprenumerationer kräver inte inloggning. Användarens domän och/eller IP-adress används för att ge tillgång till prenumerationsmaterial.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Observera:</strong> Institutionsprenumerationer som beställs online kräver godkännande av domän och IP-omfång innan prenumerationen aktiveras.]]></message>
 
 	<!--
 	 *
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.logLevel">Nivå</message>
-	<message key="submission.event.logLevel.info">Info</message>
-	<message key="submission.event.logLevel.notice">Meddelande</message>
-	<message key="submission.event.logLevel.warning">Varning</message>
-	<message key="submission.event.logLevel.error">Fel</message>
-
-	<message key="submission.event.general.defaultEvent">Manuskriptstatus</message>
-	<message key="submission.event.general.issueScheduled">Manuskript placerad i kö för kommande nummer</message>
-	<message key="submission.event.general.issueAssigned">Manuskript planerat för nummer</message>
+	<message key="submission.event.general.defaultEvent">Status för bidrag</message>
+	<message key="submission.event.submissionSubmitted">Bidrag inskickat</message>
+	<message key="submission.event.general.issueScheduled">Bidrag placerat i kö för kommande nummer</message>
+	<message key="submission.event.general.issueAssigned">Bidrag planerat för nummer</message>
 	<message key="submission.event.general.articlePublished">Artikel publicerad</message>
 
-	<message key="submission.event.author.authorRevision">Författarändringar inskickade</message>
+	<message key="submission.event.author.authorRevision">Författares revideringar inskickade</message>
 
 	<message key="submission.event.general.authorRevision">Författarreviderad fil uppdaterad</message>
 
-	<message key="submission.event.editor.editorAssigned">Redaktör utsedd för manuskriptet</message>
-	<message key="submission.event.editor.editorUnassigned">Redaktör avaktiverad från manuskriptet</message>
-	<message key="submission.event.editor.editorDecision">Redaktörens beslut inskickat</message>
-	<message key="submission.event.editor.editorFile">Redaktörens fil uppdaterad</message>
-	<message key="submission.event.editor.submissionArchived">Manuskript skickat till arkivet</message>
-	<message key="submission.event.editor.submissionRestored">Manuskript hämtat från arkivet</message>
+	<message key="submission.event.editor.editorAssigned">Redaktör utsedd för bidrag</message>
+	<message key="submission.event.editor.editorUnassigned">Redaktör avsagd bidrag</message>
+	<message key="submission.event.editor.editorDecision">Redaktörsbeslut inskickat</message>
+	<message key="submission.event.editor.editorFile">Redaktörsfil uppdaterad</message>
+	<message key="submission.event.editor.submissionArchived">Bidrag arkiverat</message>
+	<message key="submission.event.editor.submissionRestored">Bidrag återställt från arkivet</message>
 
 
-	<message key="submission.event.copyedit.copyeditorAssigned">Manusredaktör tilldelad manuskript</message>
-	<message key="submission.event.copyedit.copyeditorUnassigned">Manusredaktör avaktiverad från manuskript</message>
-	<message key="submission.event.copyedit.copyeditInitiated">Manusredigering inlett</message>
-	<message key="submission.event.copyedit.copyeditRevision">Manusredaktörens reviderade fil uppdaterad</message>
-	<message key="submission.event.copyedit.copyeditInitialCompleted">Inledande manusredigiering avslutad</message>
-	<message key="submission.event.copyedit.copyeditFinalCompleted">Avslutande manusredigering avslutad</message>
-	<message key="submission.event.copyedit.copyeditSetFile">Manusredaktörens fil uppdaterad</message>
+	<message key="submission.event.copyedit.copyeditorAssigned">Manusredaktör utsedd för bidrag</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Manusredaktör avsagd bidrag</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Manusredigering påbörjad</message>
+	<message key="submission.event.copyedit.copyeditRevision">Manusredaktörs reviderade fil uppdaterad</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Första manusredigering slutförd</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Slutlig manusredigering slutförd</message>
+	<message key="submission.event.copyedit.copyeditSetFile">Manusredigeringsfil uppdaterad</message>
 
-	<message key="submission.event.proofread.proofreaderAssigned">Korrekturläsare tilldelad manuskript</message>
-	<message key="submission.event.proofread.proofreaderUnassigned">Korrekturläsare avaktiverad från manuskriptet</message>
-	<message key="submission.event.proofread.proofreadInitiated">Korrekturläsning inlett</message>
-	<message key="submission.event.proofread.proofreadRevision">Korrekturläsarens reviderade fil uppdaterad</message>
-	<message key="submission.event.proofread.proofreadCompleted">Korrekturläsning avslutad</message>
+	<message key="submission.event.proofread.proofreaderAssigned">Korrekturläsare utsedd för bidrag</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Korrekturläsare avsagd bidrag</message>
+	<message key="submission.event.proofread.proofreadInitiated">Korrekturläsning påbörjad</message>
+	<message key="submission.event.proofread.proofreadRevision">Korrekturläsares reviderade fil uppdaterad</message>
+	<message key="submission.event.proofread.proofreadCompleted">Korrekturläsning slutförd</message>
 
-	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktör tilldelad manuskript</message>
-	<message key="submission.event.layout.layoutEditorUnassigned">Layoutredaktör avaktiverad från manuskriptet</message>
+	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktör utsedd för bidrag</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Layoutredaktör avsagd bidrag</message>
 	<message key="submission.event.layout.layoutInitiated">Layoutarbete påbörjat</message>
-	<message key="submission.event.layout.layoutGalleyCreated">Layoutkorrekturversion uppdaterad</message>
-	<message key="submission.event.layout.layoutComplete">Layoutarbete avslutat</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Layoutfil uppdaterad</message>
+	<message key="submission.event.layout.layoutComplete">Layoutarbete slutfört</message>
 	<!--
 	 *
 	 * INTERFACE - Contains phrases organized by the section of the
@@ -274,148 +314,104 @@
 	-->
 
 	<!-- Reader article view -->
-	<message key="reader.subscribersOnly">Endast för abonnenter</message>
-	<message key="reader.subscriptionRequiredLoginText">Abonnemang krävs för att få tillgång till informationen, vänligen logga in.</message>
-	<message key="reader.openAccess">Open Access</message>
-	<message key="reader.subscriptionAccess">Åtkomst endast för abonnenter</message>
-	<message key="reader.subscriptionOrFeeAccess">Åtkomst endast för betalande eller för abonnenter</message>
+	<message key="reader.subscribersOnly">Endast för prenumeranter</message>
+	<message key="reader.subscriptionRequiredLoginText">Prenumeration krävs för att få tillgång till materialet, vänligen logga in.</message>
+	<message key="reader.openAccess">Open access</message>
+	<message key="reader.subscriptionAccess">Kräver prenumeration</message>
+	<message key="reader.subscriptionOrFeeAccess">Kräver prenumeration eller betalning</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
-	<message key="comments.commentsOnArticle">Kommentarer på artikeln</message>
-	<message key="comments.authenticated">{$userName}</message>
+	<message key="comments.commentsOnArticle">Kommentarer till artikeln</message>
+	<message key="comments.authenticated"><![CDATA[av <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Nedladdning av språkfiler från Public Knowledge Project web server är inte tillgängligt för tillfället:</p>
-	<ul>
-		<li>Din server stöder inte GNU "tar" applikationen</li>
-		<li>OJS kan inte modifiera språkregistreringsfiler, ex. "registry/locales.xml".</li>
-	</ul>
-<p>Språkfiler kan laddas ner manuellt från:<a href="http://pkp.sfu.ca">PKP hemsida</a>.</p>]]></message>
+	<!-- Search -->
+	<message key="search.results.orderBy">Sortera resultat efter</message>
+	<message key="search.results.orderBy.article">Artikeltitel</message>
+	<message key="search.results.orderBy.author">Författare</message>
+	<message key="search.results.orderBy.date">Publiceringsdatum</message>
+	<message key="search.results.orderBy.issue">Nummer</message>
+	<message key="search.results.orderBy.journal">Tidskriftstitel</message>
+	<message key="search.results.orderBy.popularityAll">Popularitet (hittills)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularitet (senaste månaden)</message>
+	<message key="search.results.orderBy.relevance">Relevans</message>
+	<message key="search.results.orderDir.asc">Stigande</message>
+	<message key="search.results.orderDir.desc">Fallande</message>
+	<message key="search.results.similarDocuments">liknande dokument</message>
 
-	<message key="admin.auth.defaultSourceDescription">
-		<![CDATA[<p>Att välja en annan förvald valideringskälla än OJS får följande effekter:</p>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Att använda en annan förvald valideringskälla än OJS medför att:</p>
 <ul>
-	<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns på valideringskällan (Men alltså inte i OJS-databasen), så kommer registreringen bara godkännas om det valda lösenordet överensstämmer med det aktuella användarkontot.</li>
+	<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns hos valideringskällan (men inte i OJS-databasen) så kommer registreringen bara godkännas om lösenordet överensstämmer med det aktuella användarkontot.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
-	<message key="admin.editSystemConfigInstructions"><![CDATA[Använd det här formuläret för att ändra dina systeminställningar (the <tt>config.inc.php</tt> file). Klicka Spara för att spara
-ändringarna, eller "Display" för att visa ändringarna utan att ta bort aktuella inställningar.
-<br /><br />
-<span class="formError">Varning: Om du ändrar de här inställningarna kan sidan bli oåtkomlig (i så fall måste konfigureringsfilerna repareras manuellt.). Ändra ingenting om du inte vet exakt vad
- du gör.</span>]]></message>
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>OBSERVERA!</h4>
-<p>Systemet kunde inte automatiskt skriva över konfiguationsfilen. För att spara dina ändringar, öppna <tt>config.inc.php</tt> i ett lämpligt textredigeringsprogram och ersätt innehållet med informationen i textfältet nedan.</p>]]></message>
+<p>Systemet lyckades inte skriva över konfigurationsfilen automatiskt. För att spara dina ändringar, öppna <tt>config.inc.php</tt> i en lämplig textredigerare och ersätt innehållet med informationen i textfältet nedan.</p>]]></message>
 
 
 	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
-	<message key="subscriptionManager.subscriptionManagement">Abonnemangsadministration</message>
+	<message key="subscriptionManager.subscriptionManagement">Prenumerationsadministration</message>
+	<message key="subscriptionManager.individualSubscriptions">Enskilda prenumerationer</message>
+	<message key="subscriptionManager.institutionalSubscriptions">Institutionsprenumerationer</message>
+	<message key="subscriptionManager.subscriptionTypes">Prenumerationstyper</message>
 
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
-	<message key="manager.statistics.reports.dateFrom">Från datum</message>
-	<message key="manager.statistics.reports.dateTo">Till datum</message>
-	<message key="manager.statistics.reports.reportType">Typ av rapport</message>
-	<message key="manager.statistics.reports.type.journal">Tidskriftsrapport</message>
-	<message key="manager.statistics.reports.type.editor">Redaktörsrapport</message>
-	<message key="manager.statistics.reports.type.reviewer">Granskarens rapport</message>
-	<message key="manager.statistics.reports.type.section">Sektionsrapport</message>
-	<message key="manager.statistics.reports.generate">Skapa rapport</message>
-	<message key="manager.statistics.reports.status">Status (Accepterad, nekad, annat)</message>
-	<message key="manager.statistics.reports.dateDecided">Datum för beslut</message>
-	<message key="manager.statistics.reports.author">Författare #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Tillhörighet #{$num}</message>
-	<message key="manager.statistics.reports.country">Land #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Granskare #{$num}</message>
-	<message key="manager.statistics.reports.editor">Redaktör #{$num}</message>
-	<message key="manager.statistics.reports.score">Bedömning/poäng #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Bedömning/poäng</message>
-	<message key="manager.statistics.reports.recommendation">Rekomendation #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Dagar till beslut</message>
-	<message key="manager.statistics.reports.daysToPublication">Dagar till publicering</message>
-
 	<!-- Plugin Management -->
 
 	<!-- Payment Management -->
-	<message key="manager.payment.options.payPerViewFee">Pay-Per-View artikel</message>
-
-
-
-
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Generiska Plugins används för utveckling av Open Journal Systems på de områden som inte stöds av andra Plugin-kategorier.</message>
-	<message key="plugins.categories.auth.description">Validerings-Plugins tillåter Open Journal Systems att delegera användaridentiteter till andra system, t.ex. LDAP servers.</message>
+	<message key="plugins.categories.viewableFiles">Plugins för artiklars publiceringsversioner</message>
+	<message key="plugins.categories.viewableFiles.description">Plugins för artiklars publiceringsversioner möjliggör visning av artiklars publiceringsversioner i olika filformat.</message>
+	<message key="plugins.categories.auth.description">Plugins för autentisering tillåter Open Journal Systems att autentisera användare via andra system, t.ex. LDAP-servrar.</message>
+	<message key="plugins.categories.generic.description">Allmänna plugins förstärker Open Journal Systems med funktioner som inte ryms inom de andra kategorierna av plugins.</message>
 
-
-
-	<message key="plugins.categories.citationFormats.description">Citering-Plugins förser användaren med olika format som stöder artikelcitering.</message>
-
-
-
-
-	<!-- Files Browser -->
-
-	<!-- Journal Setup -->
-
-	<!-- Setup Step 1 -->
-
-	<!-- Setup Step 2 -->
-
-
-
-
-	<message key="manager.setup.lockssDescription">
-		<![CDATA[Open Journal Systems stöder <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)för att säkra permanent arkivering för tidskriften. LOCKSS är en Open Source-programvara utvecklad vid Stanford University Library. Programvaran möjliggör för bibliotek att bevara tidskriftshemsidor genom att göra automatiska sökningar i andra registrerade tidskrifter efter nyligen inlagt material, för att sedan hämta hem materialet för arkivering. Varje arkiv valideras kontinuerligt mot andra biblioteks cacher, och om innehållet visar sig innehålla felaktigheter kan andras cacher eller tidskrifter reparera felen.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems stöder <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) för att säkra permanent arkivering av tidskriften. LOCKSS är en fri och öppen programvara som utvecklats vid Stanford University Library. Programvaran skapar förutsättningar för bibliotek att bevara utvalda elektroniska tidskrifter genom att med regelbunden automatik söka igenom tidskrifternas webbsidor efter nyligen inlagt material och arkivera det. Varje arkiv synkas regelbundet mot speglingar hos andra bibliotek, och i händelse av förlorade eller skadade filer kan man återställa material från dessa speglingar.
 <br /><br />
-Du behöver inte installera LOCKSS förrän publiceringen är i full gång. Installationen sker enligt följande två steg:]]></message>
+Du behöver inte aktivera LOCKSS i Open Journal Systems förrän publiceringen är i full gång. Installationen sker i följande två steg:]]></message>
+
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems stöder också <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe)-systemet för att säkra permanent arkivering av tidskriften. CLOCKSS är baserat på den fria och öppna programvaran LOCKSS som utvecklats vid Stanford University Library. Programvaran skapar förutsättningar för bibliotek att bevara utvalda elektroniska tidskrifter genom att med regelbunden automatik söka igenom tidskrifternas webbsidor efter nyligen inlagt material och arkivera det. Varje arkiv synkas regelbundet mot speglingar hos andra bibliotek, och i händelse av förlorade eller skadade filer kan man återställa material från dessa speglingar.
+<br /><br />
+Du behöver inte aktivera CLOCKSS-stöd i Open Journal Systems förrän publiceringen är i full gång.]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Föreslagna Creative Commons Copyright-policies</h3>
-<h4>1. Förslag på policy för tidskrifter som erbjuder Open Access</h4>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Föreslagna upphovsrättsdeklarationer baserade på Creative Commons</h3>
+<h4>1. Förslag på deklaration för tidskrifter som erbjuder open access</h4>
 Författare som publicerar i den här tidskriften accepterar följande villkor:
 <ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+	<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, som sker under licensvillkoren för en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>
+	<li>Författare kan ingå separata överenskommelser och avtal om icke-exklusiv spridning av tidskriftens publicerade version av verket (t.ex. att lägga upp det i ett institutionellt arkiv eller publicera det i en bok) så länge det inkluderar en deklaration om ursprunglig publicering i den här tidskriften.</li>
+	<li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>.)</li>
 </ol>
 
-<h4>Förslag på policy för tidskrifter som erbjuder 'försenad' Open Access</h4>
+<h4>Förslag på deklaration för tidskrifter som erbjuder fördröjd open access</h4>
 Författare som publicerar i den här tidskriften accepterar följande villkor:
 <ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+	<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, och att verket [SPECIFICERA EMBARGOTID] efter publicering också blir tillgängligt under licensvillkoren för en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>
+	 <li>Författare kan ingå separata överenskommelser och avtal om icke-exklusiv spridning av tidskriftens publicerade version av verket (t.ex. att lägga upp det i ett institutionellt arkiv eller publicera det i en bok) så länge det inkluderar en deklaration om ursprunglig publicering i den här tidskriften.</li>
+	 <li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>.)</li>
 </ol>]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription">
-		<![CDATA[För att innehållet i den här tidskriften ska indexeras och tillgängliggöras globalt via forskningsdatabaser <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrera</a> din tidskrifts url hos the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" Det här verktyget samlar metadata från varje indexerad del av tidskriften och distribuerar innehållet till forskningsdatabaser som stöds av <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-OBS! Om huvudaministratören redan har registrerat tidskriften hos PKP Harvester så kommer tidskriften automatiskt att indexeras och du behöver då inte registrera tidskriften.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klicka här</a> och lägg till <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, och <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
 
 	<!-- Setup Step 4 -->
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steg: Manuskriptprocess &gt; Manuskriptgranskning &gt; Behandling av manuskript &gt; Innehållsförteckning.<br /><br />
-Välj en modell för hantering av den redaktionella processen. (För att ange Redaktionsledare eller Avdelningsedaktör, gå till Redaktörer under "Hantera tidskriften".)]]></message>
-	<message key="manager.setup.referenceLinkingDescription">
-		<![CDATA[<p>För att göra det möjligt för läsare att hitta onlineversioner av de citerade arbetena finns följande alternativ att tillgå:</p>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steg: Aktuella bidrag &gt; Granskning av bidrag &gt; Redigering av bidrag &gt; Innehållsförteckning.<br /><br />
+Välj modell för hantering av den redaktionella processen. (För att ange huvudredaktör eller sektionsredaktörer, gå till "Redaktörer" under "Hantera tidskriften".)]]></message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>För att hjälpa läsare att hitta onlineversioner av material som författaren citerar finns följande alternativ:</p>
 
 <ol>
-	<li><strong>Lägg till Läsverktyg</strong><p>Tidskriftsanvarig kan lägga till ”Hitta referenser” till de Läsverktyg som finns vid respektive publicerad artikel. Läsaren kan där söka efter referenser i förvalda forskningsdatabaser.</p></li>
-	<li><strong>Inbäddade referenser</strong><p>För att länka till onlinereferenser (gäller layoutredaktör) se följande instruktioner:</p></li>
+	<li><strong>Lägg till Läsverktyg</strong><p>Tidskriftsansvariga kan lägga till "Sök efter referenser" till de läsverktyg som finns i anslutning till publicerade artiklar. Läsaren kan där söka efter referenser i förvalda forskningsdatabaser.</p></li>
+	<li><strong>Inbäddade referenser</strong><p>För att bädda in länkar till referenser online (gäller layoutredaktör), se följande instruktioner:</p></li>
 </ol>]]></message>
 
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
 
-
 	<!-- Section Management -->
-	<message key="manager.sections.abstractsDisabled">Inte obligatoriskt att bifoga abstract eller sammanfattning</message>
 
 	<!-- Import/Export -->
 
@@ -424,15 +420,15 @@ Välj en modell för hantering av den redaktionella processen. (För att ange Re
 
 
 	<!-- People Management -->
-	<message key="manager.people.confirmDisable">Vill du avaktivera den här användaren? Användaren kommer inte längre att kunna logga in i systemet.
+	<message key="manager.people.confirmDisable">Vill du spärra den här användaren? Hen kommer inte längre att kunna logga in i systemet.
 
-Du kan välja att ge användaren en förklaring till varför kontot har upphört.</message>
-	<message key="manager.people.noAdministrativeRights"><![CDATA[Tyvärr, Du har inte administrativa rättigheter för den här användaren. Detta kan bero på att användaren är:
+Du kan välja att ge användaren en förklaring till varför kontot har spärrats.</message>
+	<message key="manager.people.noAdministrativeRights"><![CDATA[Tyvärr, du har inte administrativa rättigheter för den här användaren. Detta kan bero på att användaren är:
 		<ul>
-			<li>Tidskriftens huvudaministratör</li>
-			<li>Användaren är aktiverad på tidskrifter som inte du har tillgång till</li>
+			<li>Huvudaministratör för webbplatsen</li>
+			<li>Aktiv inom tidskrifter som inte du har tillgång till</li>
 		</ul>
-	Endast huvudaministratören har möjlighet att ändra.
+	Endast huvudaministratör för webbplatsen har möjlighet att ändra detta.
 	]]></message>
 
 
@@ -450,9 +446,28 @@ Du kan välja att ge användaren en förklaring till varför kontot har upphört
 	<!-- Announcements Management -->
 
 	<!-- Editor -->
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-	<li>Markering innebär att Redaktören måste vidta åtgärd.</li>
-	<li>"Sista datum" fylls i när Granskaren accepterar att granska ett manuskript: Den indikerar antal veckor till granskningens sista datum eller (-) veckor sedan datumet passerades.</li>
+	<message key="editor.submissionReview.notes">
+	<![CDATA[<ol>
+	<li>Markerade element indikerar att de kräver åtgärd från en redaktör enligt följande:
+		<ul>
+			<li class="highlightReviewerNotNotified">En granskare har blivit utsedd men inte meddelad via e-post</li>
+			<li class="highlightNoDecision">All granskare har inkommit med sina kommentarer, men inget beslut är registrerat</li>
+			<li class="highlightRevisedCopyUploaded">Författaren har laddat upp ett omarbetat manuskript</li>
+			<li class="highlightReviewerConfirmationOverdue">Granskaren är försenad med svar på inbjudan att granska</li>
+			<li class="highlightReviewerCompletionOverdue">Granskaren är försenad med sin granskning</li>
+		</ul>
+	</li>
+	<li>"Deadline" fylls i när granskaren har accepterat att genomföra granskningen; fältet visar antalet veckor till deadline för granskningen, alternativt (-) antal veckor som granskningen är försenad.</li>
+</ol>]]></message>
+	<message key="editor.submissionEditing.notes">
+	<![CDATA[<ol>
+	<li>Markerade element indikerar att de kräver åtgärd från en redaktör enligt följande:
+		<ul>
+			<li class="highlightCopyediting">Åtgärd krävs i manusredigerings-steget</li>
+			<li class="highlightLayoutEditing">Åtgärd krävs i layoutredigerings-steget</li>
+			<li class="higlightProofreading">Åtgärd krävs i korrekturläsnings-steget</li>
+		</ul>
+	</li>
 </ol>]]></message>
 
 	<!-- Editor Index Page -->
@@ -465,12 +480,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har upphört
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Namnlänkar till granskarprofilen.<br />
-Granskning sker på en skala från 1-5 där 5 är högsta betyg.<br />
-Veckor visar på den genomsnittliga tiden det tar att granska ett manus.<br />
-Senast visar datumet för den senast accepterade granskningen.<br />
-Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></message>
+
 
 
 
@@ -479,93 +489,94 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktiva redaktionella uppdrag</message>
 	<message key="sectionEditor.completedEditorialAssignments">Avslutade redaktionella uppdrag</message>
-	<message key="sectionEditor.noneAssigned">Inga tilldelade manuskript.</message>
-	<message key="sectionEditor.copyedit.confirmRenotify">Om du meddelar manusredaktören igen så kommer deras arbete återaktiveras. Är du säker på att du vill göra det?</message>
-	<message key="sectionEditor.author.confirmRenotify">Om du meddelar författaren igen så kommer arbetet återaktiveras. Är du säker på att du vill göra det?</message>
-	<message key="sectionEditor.layout.confirmRenotify">Om du meddelar Layoutredaktören igen så kommer arbetet återaktiveras. Är du säker på att du vill göra det?</message>
-	<message key="sectionEditor.proofreader.confirmRenotify">Om du meddelar korrekturläsaren så kommer arbetet återaktiveras. Är du säker på att du vill göra det?</message>
+	<message key="sectionEditor.noneAssigned">Inga tilldelade bidrag.</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">Om du meddelar manusredaktören igen kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?</message>
+	<message key="sectionEditor.author.confirmRenotify">Om du meddelar författaren igen kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?</message>
+	<message key="sectionEditor.layout.confirmRenotify">Om du meddelar layoutredaktören igen kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?</message>
+	<message key="sectionEditor.proofreader.confirmRenotify">Om du meddelar korrekturläsaren kommer hens uppdrag återaktiveras. Är du säker på att du vill göra det?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Avslag</message>
-	<message key="sectionEditor.regrets.title">#{$submissionId} Avslag från granskare, Avbrott &amp; Tidigare granskningsomgångar</message>
+	<message key="sectionEditor.regrets.title">#{$submissionId} Granskares avslag, återbud &amp; tidigare granskningsomgångar</message>
 	<message key="sectionEditor.regrets">Avslag</message>
-	<message key="sectionEditor.regrets.link">Visa avslag och Tidigare granskningomgångar</message>
-	<message key="sectionEditor.regrets.reviewRound">Granskning, Granskningsomgång {$round}</message>
-	<message key="sectionEditor.regrets.decisionRound">Redaktörens beslut, Granskningsomgång {$round}</message>
-	<message key="sectionEditor.regrets.regretsAndCancels">Redaktörens avslag &amp; Avbrott</message>
+	<message key="sectionEditor.regrets.link">Visa avslag, återbud och tidigare granskningomgångar</message>
+	<message key="sectionEditor.regrets.reviewRound">Granskning, granskningsomgång {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Redaktörsbeslut, granskningsomgång {$round}</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Granskares avslag &amp; återbud</message>
 	<message key="sectionEditor.regrets.regret">Avslag</message>
 	<message key="sectionEditor.regrets.result">Resultat</message>
-	<message key="sectionEditor.review.enrollReviewer">Aktivera en registrerad användare som Granskare</message>
-	<message key="sectionEditor.review.createReviewer">Skapa ny Granskare</message>
+	<message key="sectionEditor.review.enrollReviewer">Aktivera en registrerad användare som granskare</message>
+	<message key="sectionEditor.review.createReviewer">Skapa ny granskare</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.activeEditorialAssignments">Aktiva redaktörsuppdrag</message>
 	<message key="layoutEditor.completedEditorialAssignments">Avslutade redaktörsuppdrag</message>
 	<message key="layoutEditor.noActiveAssignments">Inga aktiva redaktörsuppdrag.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layoutredigeringsuppdrag</message>
-	<message key="layoutEditor.galley.uploadGalleyFormat">Ladda upp korrekturversionsformat</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Ladda upp publiceringsversion</message>
 	<message key="layoutEditor.galley.replaceGalley">Ersätt fil</message>
-	<message key="layoutEditor.galley.uploadSuppFile">Ladda upp komplementerande fil</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Ladda upp tilläggsfil</message>
 	<message key="submission.layout.imageInvalid">Ogiltigt bildformat. Giltiga format är: .gif, .jpg, och .png.</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Den här publiceringsversionen kommer att vara tillgänglig på en extern webbplats.</message>
+	<message key="submission.layout.galley.remoteURL">Extern URL</message>
 
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artiklar som väntar på granskning</message>
 	<message key="reviewer.completedReviews">Färdig</message>
-	<message key="reviewer.averageQuality">Bedömning/betyg</message>
+	<message key="reviewer.averageQuality">Bedömning/poäng</message>
 
 	<!-- Used in submission review -->
-	<message key="reviewer.article.fileToBeReviewed">File som ska granskas</message>
-	<message key="reviewer.article.notifyTheEditor">Meddela redaktören</message>
+	<message key="reviewer.article.fileToBeReviewed">Fil som ska granskas</message>
+	<message key="reviewer.article.notifyTheEditor">Meddela redaktör</message>
 	<message key="reviewer.article.canDoReview">Kommer att utföra granskningsuppdraget</message>
-	<message key="reviewer.article.cannotDoReview">Kommer inte att utföra granskningsuppdraget</message>
-	<message key="reviewer.article.restrictedFileAccess">Manuskriptet kommer att bli tillängligt, om och när en Granskare åtar sig att granska manuskriptet</message>
-	<message key="reviewer.article.submissionEditor">Manusredaktör</message>
+	<message key="reviewer.article.cannotDoReview">Har inte möjlighet att utföra granskningsuppdraget</message>
+	<message key="reviewer.article.restrictedFileAccess">Bidraget blir tillgängligt om/när granskare åtar sig granskningsuppdraget</message>
+	<message key="reviewer.article.submissionEditor">Redaktör för bidraget</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Skriv eller klistra in granskarens kommentarer här</message>
-	<message key="reviewer.article.editorToEnter">Redaktören för in</message>
+	<message key="reviewer.article.editorToEnter">Redaktör fyller i</message>
 	<message key="reviewer.article.sendReminder">Skicka påminnelse</message>
 	<message key="reviewer.article.automatic">(Auto)</message>
-	<message key="reviewer.article.selectRecommendation">Välj rekommendation</message>
 	<message key="reviewer.article.recommendation">Rekommendation</message>
-	<message key="reviewer.article.submitReview">Skicka granskning till redaktören</message>
+	<message key="reviewer.article.submitReview">Skicka in granskning till redaktör</message>
 	<message key="reviewer.article.reviewerComments">Kommentarer</message>
 	<message key="reviewer.article.uploadedFile">Uppladdade filer</message>
-	<message key="reviewer.article.reviewersAnnotatedVersion">Versionen uppladdad av granskaren</message>
-	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Om du vill göra kommentarer till granskaren i filen, spara först ned filen på din hårddisk och ladda sedan upp den igen (Browse/Ladda upp.)</message>
+	<message key="reviewer.article.reviewersAnnotatedVersion">Version uppladdad av granskaren</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Om du vill skriva kommentarer till redaktören i filen, spara först ned filen på din hårddisk och ladda sedan upp den igen (Bläddra/Ladda upp.)</message>
         <message key="reviewer.article.schedule.request">Redaktörens begäran</message>
         <message key="reviewer.article.schedule.response">Ditt svar</message>
         <message key="reviewer.article.schedule.submitted">Granskning har skickats in</message>
-        <message key="reviewer.article.schedule.due">Datum för granskning</message>
-	<message key="reviewer.article.decision.accept">Acceptera manuskriptet</message>
+        <message key="reviewer.article.schedule.due">Deadline för granskning</message>
+	<message key="reviewer.article.decision.accept">Acceptera bidraget</message>
 	<message key="reviewer.article.decision.pendingRevisions">Ändringar krävs</message>
 	<message key="reviewer.article.decision.resubmitHere">Återsänd för granskning</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Skicka in till annan tidskrift</message>
-	<message key="reviewer.article.decision.decline">Avvisa manuskript</message>
+        <message key="reviewer.article.decision.resubmitElsewhere">Skicka in till annan publikation</message>
+	<message key="reviewer.article.decision.decline">Refusera bidraget</message>
 	<message key="reviewer.article.decision.seeComments">Se kommentarer</message>
 	<message key="reviewer.article.schedule">Schema</message>
-        <message key="reviewer.article.submissionToBeReviewed">Manuskript som ska granskas</message>
+        <message key="reviewer.article.submissionToBeReviewed">Bidrag som ska granskas</message>
         <message key="reviewer.article.reviewSchedule">Schema för granskningsuppdrag</message>
         <message key="reviewer.article.reviewSteps">Steg för granskning</message>
         <message key="reviewer.article.reviewerGuidelines">Riktlinjer för granskare</message>
-        <message key="reviewer.article.notifyEditorA">Meddela manuskriptets granskare</message>
-        <message key="reviewer.article.notifyEditorB">om du vill uppdra åt dig att göra en granskning.</message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[Riktlinjerna för granskare förser granskare med de kriterier som används för att bedöma hur väl ett bidrag passar för publicering i tidskriften och kan innehålla övriga särskilda instruktioner som granskaren ska använda för att genomföra en effektiv och användbar granskning. När granskare arbetar med sina granskningar har de två fritext-fält till sitt förfogande, den första "för författare och redaktör" och den andra "för redaktör". Alternativt kan tidskriftsansvarig skapa ett granskningsformulär under Granskningsformulär. I båda fallen kan redaktörer välja att inkludera granskningen i sin korrespondens med författaren.]]></message>
+        <message key="reviewer.article.notifyEditorA">Meddela bidragets redaktör</message>
+        <message key="reviewer.article.notifyEditorB">om du vill åta dig att göra granskningen.</message>
         <message key="reviewer.article.consultGuidelines">Om du ska göra en granskning, se Riktlinjer för granskare nedan.</message>
-        <message key="reviewer.article.downloadSubmission">Klicka på filnamnen för att ladda ned och granska filerna,(antingen direkt på skärmen eller efter du har skrivit ut dokumentet), som hör till manuskriptet.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Ange om du har en intressekonflikt avseende forskningen (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
-	<message key="reviewer.competingInterests">Intressekonflikt</message>
-        <message key="reviewer.article.enterReviewA">Klicka på ikonen för att skriva eller klistra in din granskning av manuskriptet.</message>
-        <message key="reviewer.article.uploadFile">Du kan dessutom ladda upp filer för redaktören och/eller till författaren för rådgivning.</message>
-        <message key="reviewer.article.selectRecommendation">För att avsluta granskningsprocessen, välj en rekommendation och skicka granskningen. (Du måste skriva in en bedömning eller ladda upp en fil innan du kan välja rekommendation).</message>
-	<message key="reviewer.article.mustSelectDecision">Ingen rekommendation har gjorts. Du måste välja rekommendation innan du kan gå vidare.</message>
-	<message key="reviewer.article.confirmDecision">När du har registrerat ditt beslut har du inte längre möjlighet att ändra bedömningen. Är du säker på att du vill fortsätta?</message>
-	<message key="reviewer.article.ensuringBlindReview">Försäkrar anonym granskningsbedömning</message>
+        <message key="reviewer.article.downloadSubmission">Klicka på filnamnen för att ladda ned och granska filerna (antingen direkt på skärmen eller för utskrift) som hör till bidraget.</message>
+        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Ange om du har en intressekonflikt avseende den här forskningen (se <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.competingInterests">Intressekonflikter</message>
+        <message key="reviewer.article.enterReviewA">Klicka på ikonen för att skriva eller klistra in din granskning av bidraget.</message>
+        <message key="reviewer.article.uploadFile">Du kan dessutom ladda upp filer för redaktören och/eller författaren att titta på.</message>
+        <message key="reviewer.article.selectRecommendation">Välj en rekommendation och skicka in granskningen. Du måste skriva in en bedömning eller ladda upp en fil innan du kan välja rekommendation.</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Fastställ eller justera granskarens rekommendation.</message>
+	<message key="reviewer.article.mustSelectDecision">Ingen rekommendation har gjorts. Du måste välja rekommendation för att skicka in.</message>
+	<message key="reviewer.article.confirmDecision">När du har registrerat ett val har du inte längre möjlighet att ändra bedömningen i den här granskningen. Är du säker på att du vill fortsätta?</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil till Manusredaktören</message>
 	<message key="copyeditor.article.copyeditorFile">Manusredaktörens fil</message>
-	<message key="copyeditor.article.uploadedFile">Uppladdad fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktörens fil</message>
 
 	<!-- Proofreader -->
-	<message key="proofreader.noProofreadingAssignments">Inga uppdrag för korrekturläsning</message>
+	<message key="proofreader.noProofreadingAssignments">Inga korrekturläsningsuppdrag</message>
 
 	<!-- Author -->
 
@@ -577,13 +588,13 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-<p>För att ladda upp ett manuskript till den här tidskriften, fullfölj följande steg.</p>
+<p>För att ladda upp ett manuskript till den här tidskriften, gå igenom följande steg.</p>
 <ol>
-<li>På den här sidan, klicka Bläddra (eller Välj Fil). Ett fönster öppnas där du kan hämta filen från din hårddisk.</li>
-<li>Leta upp filen du vill skicka in och markera den.</li>
-<li>Klicka Öppna i Välj Fil-fönstret, detta innebär att filen laddas upp på tidskriftens hemsida.</li>
-<li>Klicka Ladda upp på den här sidan, filen laddas upp från datorn till tidskriftens hemsida och namnet på filen ändras efter tidskriftens standarder.</li>
-<li>När manuskriptet har laddats upp, klicka på Spara och Fortsätt längst ner på sidan.</li>
+<li>Klicka på Bläddra (eller Välj fil) på den här sidan. Ett fönster öppnas där du kan söka efter filen på din dators hårddisk.</li>
+<li>Lokalisera filen du vill skicka in och markera den.</li>
+<li>Klicka på Öppna i Välj fil-fönstret, vilket innebär att filnamnet skrivs ut här på sidan.</li>
+<li>Klicka på Ladda upp på den här sidan. Då laddas filen upp från datorn till tidskriftens webbplatsen och döps om enligt tidskriftens standarder.</li>
+<li>När bidraget har laddats upp, klicka på Spara och fortsätt längst ner på sidan.</li>
 </ol>]]></message>
 
 	<!-- Article Submission Step 4 -->
@@ -593,15 +604,15 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
-	<message key="submission.review.mustUploadFileForReview">Begäran kan inte skickas förrän ett manuskript har laddats upp för granskning.</message>
+	<message key="submission.review.mustUploadFileForReview">E-post med förfrågan kan inte skickas förrän en granskningsversion är på plats.</message>
 
 	<!-- Submission Tracking - Copyedit Specific -->
-	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">Begäran kan inte skickas förrän filen har skickats till manusredigering under Redaktörsbesked på Granskningssidan  .</message>
-	<message key="submission.copyedit.mustUploadFileForCopyedit">Begäran kan inte skickas förrän en fil hara laddats upp för manusredigering.</message>
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">E-post med förfrågan kan inte skickas förrän filen har valts ut för manusredigering under Redaktörsbeslut på sidan Granskning.</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit">E-post med förfrågan kan inte skickas förrän en fil har laddats upp för manusredigering.</message>
 	<message key="submission.copyedit.initialCopyedit">Första manusredigering</message>
 	<message key="submission.copyedit.editorsCopyedit">Redaktörens manusredigering</message>
 	<message key="submission.copyedit.editorAuthorReview">Författarens manusredigering</message>
-	<message key="submission.copyedit.finalCopyedit">Slutlig manusredigering</message>
+	<message key="submission.copyedit.finalCopyedit">Slutgiltig manusredigering</message>
 	<message key="submission.copyedit.copyeditVersion">Manusredaktörens version</message>
 	<message key="submission.copyedit.selectCopyeditor">Lägg till manusredaktör</message>
 	<message key="submission.copyedit.useFile">Använd fil</message>
@@ -609,8 +620,10 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="submission.copyedit.instructions">Instruktioner för manusredigering</message>
 
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.layout.noLayoutFile">Begäran kan inte skickas förrän Layoutversionen är på plats)</message>
-	<message key="submission.layout.assignLayoutEditor">Lägg till Layoutredaktör</message>
+	<message key="submission.layout.noLayoutFile">Saknas (Ladda upp slutgiltig manusredigerings-version som Layoutversion innan du skickar förfrågan)</message>
+	<message key="submission.layout.publicGalleyId">Publik identifikator för publiceringsversion</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Publik identifikator för publiceringsversion finns redan.</message>
+	<message key="submission.layout.assignLayoutEditor">Tilldela layoutredaktör</message>
 	<message key="submission.layout.replaceLayoutEditor">Ersätt Layoutredaktör</message>
 	<message key="submission.layout.layoutComments">Layoutkommentarer</message>
 	<message key="submission.layout.instructions">Layoutinstruktioner</message>
@@ -619,8 +632,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Kommentarer från korrekturläsning</message>
-	<message key="submission.archiveSubmission">Arkivera manuskript</message>
-	<message key="submission.proofread.corrections">Rättelser från korrekturläsning</message>
+	<message key="submission.proofread.corrections">Rättelser efter korrekturläsning</message>
 	<message key="submission.proofread.instructions">Instruktioner för korrekturläsning</message>
 
 	<!-- Submission History -->
@@ -638,68 +650,107 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<!-- Submission Email Log -->
 
 	<!-- Submission Comments -->
-	<message key="submission.comments.editorAuthorCorrespondence">Redaktör/Författarkorrespondens</message>
+	<message key="submission.comments.editorAuthorCorrespondence">Redaktör/Författar-korrespondens</message>
 	<message key="submission.comments.copyeditComments">Manusredigeringskommentarer</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[De här kommentarerna kan delas med författaren.<br />
-(Efter Spara kan du lägga till fler kommentarer.)]]></message>
-	<message key="submission.comments.canShareWithAuthor">För Författare och Redaktör</message>
-	<message key="submission.comments.cannotShareWithAuthor">För Redaktör</message>
-	<message key="submission.comments.blindCcReviewers">När du har skickat, visa en redigerbar bcc (anonym) version som kan skickas till granskare.</message>
-	<message key="submission.comments.forAuthorEditor">För författare och Redaktör</message>
-	<message key="submission.comments.forEditor">För Redaktör</message>
-	<message key="submission.comments.saveAndEmailAuthor">Spara, och E-post till Författare</message>
-	<message key="submission.comments.saveAndEmailEditor">Spara, och E-post till Redaktör</message>
-
-	<!-- Login -->
-
-	<!-- Profile -->
+(Efter du har sparat kan du lägga till fler kommentarer.)]]></message>
+	<message key="submission.comments.canShareWithAuthor">För författare och redaktör</message>
+	<message key="submission.comments.cannotShareWithAuthor">För redaktör</message>
+	<message key="submission.comments.blindCcReviewers">När du har skickat, visa en redigerbar BCC-version (anonym) som kan skickas till granskare.</message>
+	<message key="submission.comments.forAuthorEditor">För författare och redaktör</message>
+	<message key="submission.comments.forEditor">För redaktör</message>
+	<message key="submission.comments.saveAndEmailAuthor">Spara och skicka e-post till författare</message>
+	<message key="submission.comments.saveAndEmailEditor">Spara och skicka e-post till redaktör</message>
 
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Upprepa lösenord</message>
-	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här sidan.</message>
-	<message key="user.register.privacyStatement">Sekretesspolicy</message>
-	<message key="user.register.loginToRegister">Ange ditt aktuella användarnamn och lösenord för att registrera dig hos den här tidskriften.</message>
-	<message key="user.register.registrationDisabled">Den här tidskriften accepterar för tillfället inga registreringar.</message>
-	<message key="user.register.form.passwordLengthTooShort">Angett lösenord innehåller inte tillräckligt många tecken.</message>
-	<message key="user.register.readerDescription">Meddelad med E-post när nytt nummer av tidskriften publiceras.</message>
-	<message key="user.register.openAccessNotificationDescription">Meddelad med E-post när ett nytt nummer av tidskriften utkommit Open Access.</message>
+	<message key="user.register.selectContext">Välj en tidskrift att registrera dig hos:</message>
+	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här webbplatsen.</message>
+	<message key="user.register.privacyStatement">Integritetspolicy</message>
+	<message key="user.register.registrationDisabled">Den här tidskriften tar för tillfället inte emot några registreringar.</message>
+	<message key="user.register.form.passwordLengthTooShort">Det lösenord du angivit är för kort.</message>
+	<message key="user.register.readerDescription">Meddelas via e-post när nytt nummer av tidskriften publiceras.</message>
+	<message key="user.register.openAccessNotificationDescription">Meddelas via e-post när ett nytt nummer av tidskriften blivit tillgänggligt som open access.</message>
 	<message key="user.register.authorDescription">Kan skicka in material till tidskriften.</message>
-	<message key="user.register.reviewerDescriptionNoInterests">Kan utföra granskning av inskickade manuskript för tidskriften.</message>
-	<message key="user.register.reviewerDescription">Kan utföra granskning av inskickade manuskript till tidskriften. Uppge intresseområden för att utföra granskning (Huvudämnen och forskningsmetod).</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Kan sakkunniggranska insända bidrag för tidskriften.</message>
+	<message key="user.register.reviewerDescription">Kan sakkunniggranska bidrag för tidskrifter på webbplatsen.</message>
+	<message key="user.register.reviewerInterests">Uppge intresseområden för granskning (huvudsakliga ämnesområden och forskningsmetoder).</message>
+	<message key="user.register.form.emailConsentAllContexts">Ja, jag vill bli kontaktad med information om nya publiceringar och meddelanden för alla tidskrifter jag är registrerad hos.</message>
 
+	<!-- Subscriptions -->
+	<message key="user.subscriptions.mySubscriptions">Mina prenumerationer</message>
+	<message key="user.subscriptions.subscriptionStatus">Prenumerationsstatus</message>
+	<message key="user.subscriptions.statusInformation">Aktiva och förfallna prenumerationer visas nedan, tillsammans med förfallodatum. Dessutom kan följande statusinformation inkluderas för varje prenumeration.</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.statusDescription">Beskrivning</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Det behövs ytterligare information innan prenumerationen kan aktiveras.</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Prenumerationen måste granskas innan den kan aktiveras.</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betalning har valts men ännu inte inkommit.</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Betalning online har valts men blev avbruten eller ej slutförd.</message>
+	<message key="user.subscriptions.individualSubscriptions">Enskild prenumeration</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Institutionsprenumerationer</message>
+	<message key="user.subscriptions.renew">Förnya</message>
+	<message key="user.subscriptions.purchase">Beställ</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Beställ ny prenumeration</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Beställ enskild prenumeration</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Beställ institutionsprenumeration</message>
+	<message key="user.subscriptions.expires">Förfallodatum</message>
+	<message key="user.subscriptions.expired">Förfallen</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Visa tillgängliga prenumerationsformer</message>
+	<message key="user.subscriptions.form.typeId">Prenumerationsform</message>
+	<message key="user.subscriptions.form.membership">Medlemsskap</message>
+	<message key="user.subscriptions.form.membershipRequired">Vald prenumerationstyp kräver information om medlemskap.</message>
+	<message key="user.subscriptions.form.typeIdValid">Välj en giltig prenumerationstyp.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Det här användarkontot har redan en enskild prenumeration.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Information om medlemskap om det krävs för vald prenumerationstyp.</message>
+	<message key="user.subscriptions.form.institutionName">Institutionens namn</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Ett namn på institutionen krävs.</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Postadress</message>
+	<message key="user.subscriptions.form.domain">Domän</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Om du skriver in en domän här är kan IP-omfång uteslutas.<br />Giltiga värden är domännamn (t.ex. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Vald prenumerationstyp kräver att domän och/eller IP-omfång för att autentisera prenumeranter.</message>
+	<message key="user.subscriptions.form.domainValid">Skriv in en giltig domän.</message>
+	<message key="user.subscriptions.form.ipRange">IP-omfång</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[Om IP-omfång anges här är uppgift om domän frivilligt.<br />Giltiga värden är IP-adresser (t.ex. 142.58.103.1), IP-omfång (t.ex. 142.58.103.1 - 142.58.103.4), IP-omfång med wildcard:et '*' (t.ex. 142.58.*.*), samt IP-omfång med CIDR (t.ex. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Skriv in ett giltigt IP-omfång.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Ta bort</message>
+	<message key="user.subscriptions.form.addIpRange">Lägg till</message>
 
 
 	<!-- Search -->
-	<message key="search.browseAuthorIndex">Bläddra Författarregister</message>
-	<message key="search.searchFor">Sök artiklar för</message>
+	<message key="search.browseAuthorIndex">Bläddra i författarregister</message>
+	<message key="search.searchFor">Sök i artiklar efter</message>
 	<message key="search.withinJournal">Inom</message>
 	<message key="search.allJournals">Alla tidskrifter</message>
-	<message key="search.authorIndex">Bläddra Författarregister</message>
+	<message key="search.authorIndex">Bläddra i författarregister</message>
 	<message key="search.authorDetails">Författardetaljer</message>
 	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
 <li>Söktermer skiljer inte på versaler och gemener</li>
-<li>Vissa vanliga ord ignoreras av sökmotorn</li>
-<li>Vid Default-Sök får du träffar på <i>alla</i> termer som angivits i sökfrågan (m.a.o., <i>AND</i> är implicit)</li>
-<li>Kombinera olika ord med <i>OR</i> för att hitta artiklar som innehåller minst ett av sökorden; t.ex. <i>utbildning OR forskning</i></li>
-<li>Använd parenteser för att utföra mer avancerade sökningar; t.ex. <i>archive ((tidskrift OR konferens) NOT avhandling)</i></li>
-<li>Sök efter en exakt fras genom att använda citationstecken; t.ex. <i>"Open Access-publicering"</i></li>
-<li>Exkludera ord genom att skriva <b>-</b> eller <i>NOT</i> innan sökordet; t.ex. <i>online -politik</i> eller <i>online NOT politik</i></li>
-<li>Använd <b>*</b> för att matcha mot alla typer av tecken; t.ex. <i>soci* morality</i> ger träffar på "sociological" eller "societal"</li>
+<li>Vissa vanliga ord utesluts av sökmotorn</li>
+<li>Som default får du träffar på <em>alla</em> termer som angivits i sökfrågan (med andra ord, <em>AND</em> är implicit)</li>
+<li>Kombinera olika ord med <em>OR</em> för att hitta artiklar som innehåller minst ett av sökorden; t.ex. <em>utbildning OR forskning</em></li>
+<li>Använd parenteser för att skapa mer avancerade söksträngar; t.ex. <em>arkiv ((tidskrift OR konferens) NOT avhandlingar)</em></li>
+<li>Sök efter en exakt fras genom att använda citationstecken; t.ex. <em>"open access-publicering"</em></li>
+<li>Exkludera ord genom att skriva <strong>-</strong> eller <em>NOT</em> innan sökordet; t.ex. <em>online -politik</em> eller <em>online NOT politik</em></li>
+<li>Använd <strong>*</strong> för att matcha alla typer av tecken; t.ex. <em>soci* morality</em> ger träffar på dokument som innehåller "sociological" eller "societal"</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
+	<message key="article.pageTitle">Visar {$title}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	<message key="article.download">Ladda ned den här PDF-filen</message>
+	<message key="article.pluginMissing"><![CDATA[<p>Här ska PDF-filen du valt visas om din webbläsare har ett plugin för att läsa PDF-filer installerad (exempelvis en nyare version av <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikelnedladdning</message>
-	<message key="article.nonpdf.note"><![CDATA[Nedladdning av vald fil sker automatiskt. Om nedladdningen inte påbörjas, klicka på länken nedan. Observera att filen kan behöva ett speciellt läsarprogram eller en särskild typ av plugin för att synas.<br /><br />Om filen inte laddas ned automatiskt, <a href="{$url}"> klicka här</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Nedladdningen av filen du valde bör starta automatiskt. Om den inte gör det, klicka på länken nedan. Observera att filen kan behöva ett särskilt läsarprogram eller en särskild typ av plugin för att synas.<br /><br />Om nedladdningen inte startar automatiskt, <a href="{$url}">klicka här</a>.]]></message>
 
 	<!-- Site index -->
-	<message key="site.journalsHosted">Tidskrifter som den här sidan är värd för</message>
+	<message key="site.journalsHosted">Tidskrifter som den här webbplatsen är värd för</message>
 	<message key="site.journalView">Visa tidskrift</message>
-	<message key="site.journalRegister">Registrera</message>
+	<message key="site.journalRegister">Registrera dig</message>
 	<message key="site.journalCurrent">Aktuellt nummer</message>
-
+	<message key="site.noJournals">Det finns inga tillgängliga tidskrifter.</message>
 
 	<!-- Current index -->
 	<message key="current.current">Aktuellt</message>
@@ -708,200 +759,227 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 
 	<!-- Archive index -->
 	<message key="archive.archives">Arkiv</message>
+	<message key="archive.archivesPageNumber">Arkiv - Sida {$pageNumber}</message>
 	<message key="archive.browse">Bläddra bland äldre nummer</message>
-	<message key="archive.issueUnavailable">Hittar inga nummer</message>
+	<message key="archive.issueUnavailable">Numret är inte tillgängligt</message>
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistik</message>
+	<message key="about.contact">Kontakt</message>
+	<message key="about.aboutContext">Om tidskriften</message>
+	<message key="about.history">Tidskriftens historia</message>
 	<message key="about.editorialTeam">Redaktion</message>
 	<message key="about.editorialTeam.biography">Biografi</message>
-	<message key="about.editorialPolicies">Redaktionella policies</message>
+	<message key="about.editorialPolicies">Redaktionella policyer</message>
 	<message key="about.focusAndScope">Ämne och fokus</message>
-	<message key="about.sectionPolicies">Sektionspolicies</message>
-	<message key="about.submissions">Manuskript</message>
-	<message key="about.onlineSubmissions">Online-inlämning av manuskript</message>
-	<message key="about.onlineSubmissions.login">Gå till Login</message>
-	<message key="about.onlineSubmissions.registrationRequired">För att skicka in bidrag och följa deras status krävs registrering.</message>
-	<message key="about.authorGuidelines">Författarriktlinjer</message>
-	<message key="about.submissionPreparationChecklist">Checklista för inskickande av manuskript</message>
-	<message key="about.submissionPreparationChecklist.description">Som en del av manuskriptinlämningen måste författare kryssa för att manuskriptet uppfyller följande krav, manuskript som inte uppfyller kraven kan komma att skickas tillbaka till författaren.</message>
-	<message key="about.copyrightNotice">Upphovsrättsskydd</message>
-	<message key="about.privacyStatement">Sekretesspolicy</message>
+	<message key="about.sectionPolicies">Sektionspolicyer</message>
+	<message key="about.submissions">Bidrag</message>
+	<message key="about.onlineSubmissions.login">Logga in</message>
+	<message key="about.onlineSubmissions.register">Registrera dig</message>
+	<message key="about.onlineSubmissions.registrationRequired">{$login} eller {$register} för att skicka in ett bidrag.</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} eller {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Skapa nytt bidrag</message>
+	<message key="about.onlineSubmissions.viewSubmissions">visa bidrag som behandlas</message>
+	<message key="about.authorGuidelines">Riktlinjer för författare</message>
+	<message key="about.submissionPreparationChecklist">Checklista vid insändning av bidrag</message>
+	<message key="about.submissionPreparationChecklist.description">Som en del av insändningsprocessen måste författare kryssa för att bidraget uppfyller följande krav. Bidrag som inte uppfyller kraven kan komma att skickas tillbaka till författaren.</message>
+	<message key="about.copyrightNotice">Upphovsrättsdeklaration</message>
+	<message key="about.privacyStatement">Integritetspolicy</message>
 	<message key="about.authorFees">Författaravgifter</message>
 	<message key="about.authorFeesMessage">Den här tidskriften tillämpar följande författaravgifter.</message>
 	<message key="about.peerReviewProcess">Granskningsprocess</message>
 	<message key="about.publicationFrequency">Publiceringsfrekvens</message>
-	<message key="about.openAccessPolicy">Open Access Policy</message>
-	<message key="about.delayedOpenAccess">'Försenad' Open Access</message>
-	<message key="about.delayedOpenAccessDescription1">Innehållet i den här tidskriften kommer att tillgängligöras Open Access</message>
+	<message key="about.openAccessPolicy">Open access-policy</message>
+	<message key="about.delayedOpenAccess">Fördröjd open access</message>
+	<message key="about.delayedOpenAccessDescription1">Innehållet i den här tidskriften kommer att tillgängligöras som open access</message>
 	<message key="about.delayedOpenAccessDescription2">månad(er) efter att numret har publicerats.</message>
-	<message key="about.authorSelfArchive">Egenarkivering</message>
+	<message key="about.authorSelfArchive">Parallellpublicering</message>
 	<message key="about.archiving">Arkivering</message>
-	<message key="about.subscriptions">Abonnemang</message>
-	<message key="about.subscriptionsContact">Kontakt för frågor rörande abonnemangsformer</message>
-	<message key="about.availableSubscriptionTypes">Typer av abonnemang</message>
+	<message key="about.subscriptions">Prenumerationer</message>
+	<message key="about.subscriptions.individual">Enskilda prenumerationer</message>
+	<message key="about.subscriptions.institutional">Institutionsprenumerationer</message>
+	<message key="about.subscriptionsContact">Kontakt för prenumerationer</message>
+	<message key="about.subscriptionTypes.name">Namn</message>
+	<message key="about.subscriptionTypes.format">Format</message>
+	<message key="about.subscriptionTypes.duration">Längd</message>
+	<message key="about.subscriptionTypes.cost">Pris</message>
+	<message key="about.availableSubscriptionTypes">Prenumerationsformer</message>
 	<message key="about.memberships">Medlemskap</message>
 	<message key="about.aboutThisPublishingSystem">Om det här publiceringssystemet</message>
-	<message key="about.aboutOJSJournal"><![CDATA[Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett open source-system för tidskriftshantering och programvara för publicering utvecklad, stöttat och fritt distribuerat av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[Den här sidan använder Open Journal Systems {$ojsVersion}, ett open source-system för tidskriftshantering och programvara för publicering utvecklad, stöttat och fritt distribuerat av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
+	<message key="about.aboutThisPublishingSystem.altText">OJS process för redigering och publicering</message>
+	<message key="about.aboutOJSJournal"><![CDATA[Den här tidskriften använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Den här webbplatsen använder Open Journal Systems {$ojsVersion}, ett system för tidskriftshantering och publicering som bygger på fri och öppen programvara som utvecklas, drivs och distribueras fritt av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
 
 	<!-- Announcement -->
 
 	<!-- Help -->
-	<message key="help.ojsHelp">Open Journal Systems Hjälp</message>
-	<message key="help.ojsHelpAbbrev">OJS Hjälp</message>
+	<message key="help.ojsHelp">Open Journal Systems-hjälp</message>
+	<message key="help.ojsHelpAbbrev">OJS-hjälp</message>
+	<message key="help.searchReturnResults">Gå tillbaka till sökresultat</message>
+	<message key="help.goToEditPage">Redigera {$sectionTitle}</message>
 
 	<!-- Donations -->
 	<message key="donations.thankYou">Tack</message>
-	<message key="donations.thankYouMessage">Tack för ditt bidrag. Ditt bidrag är mycket uppskattat.</message>
+	<message key="donations.thankYouMessage">Tack för ditt bidrag, vi uppskattar det mycket!</message>
 
 	<!-- Payments -->
 	<message key="payment.loginRequired">Du måste vara inloggad för att kunna betala.</message>
-	<message key="payment.loginRequired.forArticle">Abonnemang eller pay-per-view krävs för att få tillgång till innehållet. För att verifiera abonnemang eller betalning, logga in på tidskriften.</message>
+	<message key="payment.loginRequired.forArticle">Prenumeration eller köp av enstaka artikel krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller för köpa enstaka artiklar.</message>
+	<message key="payment.loginRequired.forIssue">Prenumeration eller köp av enstaka nummer krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller köpa enstaka nummer.</message>
 	<message key="payment.loginRequired.forDonation">Du måste vara inloggad för att lämna en donation.</message>
 
 	<message key="payment.paid">Betalad</message>
 	<message key="payment.payNow">Betala nu</message>
 	<message key="payment.waive">Avstå</message>
 	<message key="payment.alreadyPaid">Redan betalat</message>
-	<message key="payment.alreadyPaidMessage">Välj den här rutan om du redan har skickat betalning till tidskriften för abonnemang. Abonnemanget kommer inte aktiveras förrän betalning inkommit. Klicka BETALA NU ovan för betalningsinstruktioner.</message>
+	<message key="payment.alreadyPaidMessage">Välj den här rutan om du redan har skickat din betalning till tidskriften för att slutföra prenumerationsregistreringen. Prenumerationsregistreringen kommer att hanteras först när betalningen inkommit. Klicka på BETALA NU ovan för betalningsinstruktioner.</message>
 	<message key="payment.paymentReceived">Betalning mottagen</message>
 	<message key="payment.paymentSent">Betalning har redan skickats</message>
-	<message key="payment.type.submission">Abonnemangsavgift</message>
+	<message key="payment.authorFees">Författaravgifter</message>
+	<message key="payment.type.submission">Manusavgift</message>
 	<message key="payment.type.publication">Publiceringsavgift</message>
-	<message key="payment.type.fastTrack">Snabbspår för granskningsavgift</message>
+	<message key="payment.type.publication.required">Publiceringsavgiften ska betalas.</message>
+	<message key="payment.type.fastTrack">Avgift för snabbspår till granskning</message>
 	<message key="payment.type.membership">Avgift för individuellt medlemskap</message>
-	<message key="payment.type.payPerView">Avgift för Artikel-Pay-Per-View</message>
-	<message key="payment.type.subscription">Abonnemangsavgift</message>
+	<message key="payment.type.purchaseArticle">Avgift för köp av enstaka artikel</message>
+	<message key="payment.type.purchaseIssue">Avgift för köp av enstaka nummer</message>
+	<message key="payment.type.subscription">Prenumerationsavgift</message>
 	<message key="payment.type.donation">Donationer</message>
+	<message key="payment.requestPublicationFee">Begär publiceringsavgift ({$feeAmount})</message>
+	<message key="payment.notFound">Betalning har begärts men begäran har förfallit. Kontakta tidskriftsansvarig för mer information.</message>
 
-	<message key="payment.donation.makeDonation">Gör en donation</message>
+	<message key="payment.donation.makeDonation">Donera</message>
 
-	<message key="payment.submission.paySubmission">Betala abonnemangsavgift</message>
-	<message key="payment.publication.payPublication">Betala för Publicering</message>
+	<message key="payment.submission.paySubmission">Betala prenumerationsavgift</message>
+	<message key="payment.publication.payPublication">Betala för publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsavgift betald</message>
 
 	<message key="payment.membership.buyMembership">Köp individuellt medlemskap</message>
 	<message key="payment.membership.renewMembership">Förnya individuellt medlemskap</message>
-	<message key="payment.membership.ends">Avslutas</message>
+	<message key="payment.membership.ends">Upphör</message>
 
-	<message key="payment.subscription.renew">Förnya abonnemang</message>
+	<message key="payment.subscription.purchase">Köp prenumeration</message>
+	<message key="payment.subscription.renew">Förnya prenumeration</message>
 	<message key="payment.subscription.expires">Upphör</message>
 
 	<!-- Installer -->
-	<message key="installer.appInstallation">OJS installation</message>
-	<message key="installer.ojsUpgrade">OJS Uppgradering</message>
-	<message key="installer.installationInstructions">
-	<![CDATA[<h4>OJS Version {$version}</h4>
+	<message key="installer.appInstallation">Installation av OJS</message>
+	<message key="installer.ojsUpgrade">Uppgradering av OJS</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-version {$version}</h4>
 
-<p>Tack för att du laddar ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README">README</a> filen som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP-hemsida</a>. Om du vill rapportera buggar eller behöver teknisk support, se<a href="http://forum.pkp.sfu.ca">supportforum</a> eller besök PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank"> system för buggrapportering</a>. Vi rekommenderar I första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README.md">README</a>-filen som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href="http://forum.pkp.sfu.ca">PKP:s supportforum</a> eller besök PKP:s <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Uppgradera</h4>
 
-<p>Om du uppgraderar en existerande version av OJS 2.x, <a href="{$upgradeUrl}">klicka här</a> för att gå vidare.</p>
+<p>Om du ska uppgradera en existerande OJS-installation, <a href="{$upgradeUrl}">klicka här</a> för att gå vidare.</p>
 
-<h4>Nödvändiga systemkrav</h4>
+<h4>Rekommenderade systemkrav</h4>
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; du använder för närvarande PHP {$phpVersion}{$wrongPhpText}</li>
 	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>
 	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>
-	<li>Operativsystem: Alla OS som stöder ovan nämnda programvara, även <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+	<li>Operativsystem: Alla OS som stöder ovan nämnda programvaror, även <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 </ul>
 
-<p>Eftersom PKP inte har resurser att testa alla möjliga kombinationer och versioner av programvaror och plattformar, kan vi inte garantera 100% funktionalitet och support.</p>
+<p>Eftersom PKP inte har resurser att testa alla möjliga kombinationer och versioner av programvaror och plattformar kan vi inte garantera 100% funktionalitet och support.</p>
 
-<p>Ändringar till de här inställningarna kan göras först efter installationen genom att redigera <tt>config.inc.php</tt> OJS basmapp, eller i gränssnittet för nätadministratören.</p>
+<p>Ändringar i dessa inställningar kan göras först efter installationen genom att redigera <tt>config.inc.php</tt> i OJS rotkatalog, eller i webbgränssnittet för systemadministration.</p>
 
-<h4>Stöttade databassystem</h4>
+<h4>Databassystem som stöds</h4>
 
-<p>OJS har för tillfället endast testats på MySQL och PostgreSQL, även om andra databasadministrationssystem stöttade av <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> kan fungera (helt eller delvis). Kompatibilitetsrapporter och/eller code patcher för alternativa DBMSs kan skickas til OJS teamet..</p>
-
+<p>OJS har i nuläget endast testats på MySQL och PostgreSQL, men andra databasadministrationssystem som stöds av <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> kan fungera (helt eller delvis). Kompatibilitetsrapporter och/eller kodpatchar för alternativa DBMS kan skickas til OJS-teamet.</p>
+]]></message>
+<message key="installer.preInstallationInstructions"><![CDATA[
 <h4>Innan installationen</h4>
 
-<p>1. Följande filer och mappar (liksom innehållet) måste göras överskrivningsbara:</p>
+
+<p>1. Följande filer och kataloger (och deras innehåll) måste göras skrivbara:</p>
 <ul>
-	<li><tt>config.inc.php</tt> är överskrivbar (optional): {$writable_config}</li>
-	<li><tt>public/</tt> är överskrivbar: {$writable_public}</li>
-	<li><tt>cache/</tt> är överskrivbar: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> är överskrivbar: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> är överskrivbar: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> är överskrivbar: {$writable_db_cache}</li>
+	<li><tt>config.inc.php</tt> är skrivbar (valfritt): {$writable_config}</li>
+	<li><tt>public/</tt> är skrivbar: {$writable_public}</li>
+	<li><tt>cache/</tt> är skrivbar: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> är skrivbar: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> är skrivbar: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> är skrivbar: {$writable_db_cache}</li>
 </ul>
 
-<p>2. En mapp för lagring av uppladdade filer måste skapas och göras överskrivbara (Se "Filinställningar" nedan).</p>
+<p>2. En katalog för lagring av uppladdade filer måste skapas och göras skrivbar (Se "Filinställningar" nedan).</p>]]></message>
+        <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS-version {$version}</h4>
 
-<h4>Manuel installation</h4>
-
-<p>Välj <strong>Manuell installation</strong> för SQL-frågor som krävs för att skapa OJS-databasens schema och grunddata så att databasinstallationen kan utföras manuellt. Denna valmöjligheten är nyttig för debugging av installationsproblem, särskilt för plattformar som systemet inte har stöd för. Observera att den här installationsmetoden varken kommer att laga databasen eller tabeller, även om konfigurationsfilen kommer att skrivas med de medföljande databasinställningarna.</p>]]></message>
-	<message key="installer.upgradeInstructions">
-		<![CDATA[<h4>OJS Version {$version}</h4>
-
-<p>Tack för att du laddar ned the Public Knowledge Project's <strong>Open Journal Systems</strong>. Innan du fortsätter, vänligen läs <a href="{$baseUrl}/docs/README">README</a> och <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> filerna som medföljer programvaran. För ytterligare information om the Public Knowledge Project, se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s hemsida</a>. Om du vill rapportera buggar eller behöver teknisk support, se<a href="http://forum.pkp.sfu.ca">supportforum</a> eller besök PKP's <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">system för buggraportering</a>. Vi rekommenderar I första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<p>Det rekommenderas <strong>kraftigt</strong> att du gör backup på din databas, filmappen, och OJS installationsmapp innan du fortsätter.</p>
-<p>Om du kör installationen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vänligen försäkra dig om att the max_execution_time directive i din php.ini konfigurationsfil är satt till ett högt gränsvärde. Om denna eller annan tidsbegränsning (ex. Apache's "Timeout" direktiv) överskrids och uppgraderingsprocessen avbryts, så måste arbetet hanteras manuellt.</p>]]></message>
-	<message key="installer.localeSettingsInstructions"><![CDATA[För fullständig Unicode (UTF-8) support, välj UTF-8 för samtliga teckeninställningar. Observera att denna support för tillfället kräver en MySQL >= 4.1.1 or PostgreSQL >= 7.1 databasserver. Observera även att en fullständig Unicode support kräver PHP >= 4.3.0 med support för<a href="http://www.php.net/mbstring" target="_blank">mbstring</a> bibliotek (aktiverad som default i de senaste PHPinstallationerna). Det kan uppstå problem med utökade teckeninställningar om inte servern uppfyller dessa krav.
+	<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README.md">README</a>- och <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>-filerna  som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href="http://forum.pkp.sfu.ca">PKP:s supportforum</a> eller besök PKP:s <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Det <strong>rekommenderas starkt</strong> att du gör backup på din databas, filkatalogen, och OJS installationkatalog innan du fortsätter.</p>
+<p>Om du kör installationen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vänligen försäkra dig om att the max_execution_time directive i din php.ini-konfigurationsfil är satt till ett högt gränsvärde. Om denna eller annan tidsbegränsning (t.ex. Apaches "Timeout"-direktiv) överskrids och uppgraderingsprocessen avbryts måste arbetet hanteras manuellt.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[För komplett Unicode-stöd (UTF-8), välj UTF-8 för samtliga teckenuppsättningsinställningar. Observera att fullt Unicode-stöd kräver att PHP har kompilerats med stöd för <a href="http://www.php.net/mbstring" target="_blank">mbstring</a>-biblioteket (aktiverat som default i nya PHP-installationer). Det kan uppstå problem med utökade teckenuppsättningar om inte servern uppfyller dessa krav.
 <br /><br />
-Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</strong>]]></message>
-	<message key="installer.localeInstructions">Primärspråket som ska användas i det här systemet. Se OJS-dokumentationen om du är intresserad av att använda språk som inte listas här.</message>
-	<message key="installer.additionalLocalesInstructions">Välj andra språk som ska stödjas av systemet. De här språken kommer finnas tillgängliga för användning i tidskrifter som sidan är värd för. Ytterligare språk kan installeras när som helst av Sidadministratören.</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Lägg till fullständigt söknamn på en existerande mapp där uppladdade filer kan sparas. Mappen bör inte vara direkttillgänglig från webben. <strong>Vänligen försäkra dig om att mappen existerar och är överskrivningsbar, före installation.</strong> Windows sökvägar ska innehålla omvända snedstreck, ex. "C:/myjournal/files".]]></message>
-	<message key="installer.databaseSettingsInstructions">OJS behöver tillgång till en SQL-databas för att lagra data. Se systemkrav ovan för en lista över databaser som stöds. I fälten nedan, ange inställningar som ska användas för uppkoppling till databasen.</message>
-	<message key="installer.installOJS">Installera Open Journal Systems</message>
-	<message key="installer.upgradeOJS">Uppgradera Open Journal Systems</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Varning:</b> Om installationen misslyckades under själva installationen kan du tvingas 'släppa' din OJS-databas eller dina databastabellerna innan du kan försöka att återinstallera databasen.]]></message>
+Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.allowFileUploads"><![CDATA[Din server tillåter i nuläget uppladdning av filer: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Din server tillåter i nuläget uppladdning av filer med en maxstorlek på: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="installer.localeInstructions">Primärt språk som systemet ska använda. Se OJS-dokumentationen om du är intresserad av att använda språk som inte listas här.</message>
+	<message key="installer.additionalLocalesInstructions">Välj andra språk som ska stödjas av systemet. De här språken kommer finnas tillgängliga för användning i tidskrifter som sidan är värd för. Ytterligare språk kan installeras när som helst i gränssnittet för webbplatsadministration.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Lägg till fullständig sökväg till en existerande katalog där uppladdade filer ska sparas. Katalogen bör inte vara direkt läsbar via webben. <strong>Vänligen försäkra dig före installation om att katalogen existerar och är skrivbar.</strong> Windows-sökvägar ska skrivas snedstreck, t.ex. "C:/mintidskrift/filer".]]></message>
+	<message key="installer.databaseSettingsInstructions">OJS behöver tillgång till en SQL-databas för att lagra data. Se systemkrav ovan för en lista över databaser som stöds. Ange detaljer i fälten nedan för databasanslutning.</message>
+	<message key="installer.installApplication">Installera Open Journal Systems</message>
+	<message key="installer.upgradeApplication">Uppgradera Open Journal Systems</message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Varning:</b> Om installationen misslyckades under själva databasinstallationen kan du tvingas kasta ("drop") din OJS-databas eller dina databastabeller innan du försöker att installera databasen igen.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VIKTIGT!</h4>
-<p>Installationen kunde inte skriva över konfigurationsfilen automatiskt. Innan du försöker använda systemet, vänligen öppna <tt>config.inc.php</tt> i en lämplig textredigerare och ersät innehållet med texten nedan.</p>]]></message>
-	<message key="installer.manualSQLInstructions"><![CDATA[<h4>Manuell installation</h4>
-<p>SQL-frågorna för att skapa OJS-databasens schema och grunddata visas nedan. Notera att systemet inte kan fungera förrän dessa frågor har körts manuellt. Du behöver också redigera konfigurationsfilen <tt>config.inc.php</tt> manuellt.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>Installationen av OJS är klar utan rapporterade problem.</p>
-<p>För att använda systemet, <a href="{$loginUrl}">logga in </a> med det användarnamn och lösenord som du angivit på föregående sida.</p>
-<p>Om du vill ta emot nyheter och uppdateringar, <strong>vänligen registrera på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Om du har frågor eller kommentarer, gå till <a href="http://forum.pkp.sfu.ca" target="_new">supportforum</a>.</p>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Uppgradering av OJS till version {$version} är klar utan rapporterade problem.</p>
-<p>Glöm inte att ändra "installed"-inställningen i din config.inc.php konfigurationsfil till <i>On</i>.</p>
-<p>Om du ännu inte har registrerat dig och önskar ta emot nyheter och uppdateringar, <strong>vänligen registrera dig på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Om du har frågor eller kommentarer, gå till <a href="http://forum.pkp.sfu.ca" target="_new">supportforum</a>.</p>]]></message>
+<p>Installationen kunde inte skriva över konfigurationsfilen automatiskt. Innan du försöker använda systemet, öppna <tt>config.inc.php</tt> i en lämplig textredigerare och ersätt innehållet med texten nedan.</p>]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>Installationen av OJS genomfördes utan problem.</p>
+<p><a href="{$loginUrl}">Logga in </a> med det användarnamn och lösenord som du angivit på föregående sida för att börja använda systemet.</p>
+<p>För att följa och delta i PKP-communityt finns följande möjligheter:
+<ol>
+	<li>Läs <a href="http://pkp.sfu.ca/blog" target="_new">PKP-bloggen</a> och följ <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS-flödet</a> för nyheter och uppdateringar.</li>
+	<li>Besök <a href="http://forum.pkp.sfu.ca" target="_new">supportforumet</a> om du har frågor eller kommentarer.</li>
+</ol>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Uppgraderingen av OJS till version {$version} genomfördes utan problem.</p>
+<p>Glöm inte att ändra tillbaka "installed"-inställningen i konfigurationsfilen config.inc.php till<em>On</em>.</p>
+<p>Skulle du inte redan ha registrerat dig och vill få nyheter och uppdateringar, <strong>registrera dig på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Om du har frågor eller kommentarer, besök gärna <a href="http://forum.pkp.sfu.ca" target="_new">supportforumet</a>.</p>]]></message>
 
+	<!-- Installation upgrade warnings -->
+	<message key="site.upgradeAvailable.admin"><![CDATA[Det finns en ny OJS-version tillgänglig! För närvarande använder du OJS {$currentVersion}. Den senaste versionen är OJS {$latestVersion}. Gå till <a href="http://pkp.sfu.ca/ojs_download" target="_new">den här sidan</a> för att ladda ned den senaste versionen och för att hitta instruktioner för uppgradering.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Det finns en ny OJS-version tillgänglig! För närvarande använder du OJS {$currentVersion}. Den senaste versionen är OJS {$latestVersion}. Kontakta din our webbplatsadministratör ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) för att göra hen uppmärksam på den här nya releasen. Mer information finns <a href="http://pkp.sfu.ca/ojs_download" target="_new">här</a>.]]></message>
 
 	<!-- Article Logs -->
-	<message key="log.author.documentRevised">{$authorName} har omarbetat artikeln {$submissionId}. Nytt fil-ID är {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} har avlösts som granskare för manuskript {$submissionId} för granskningsomgång {$round}.</message>
-	<message key="log.review.reviewInitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har påbörjats.</message>
-	<message key="log.review.reviewReinitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har åter påbörjats.</message>
-	<message key="log.review.reviewCleared">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har tagits bort.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} har skickats till omgång {$round} för granskning av manuskript {$submissionId}.</message>
-	<message key="log.review.reviewDueDateSet">Sista datum för omgång {$round} för granskning av manuskript av {$reviewerName} har satts till {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Rekommendation för omgång {$round} för granskning av manuskript {$submissionId} av {$reviewerName} har bestämts.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">Rekommendation för omgång {$round} för granskning av manuskript {$submissionId} har bestämts av redaktör, {$editorName}, i enlighet med granskaren, {$reviewerName}.</message>
-	<message key="log.review.resubmit">Manuskriptet {$submissionId} har åter skickats för granskning.</message>
-	<message key="log.review.reviewDeclined">{$reviewerName} har avslagit omgång {$round} för granskning av manuskript {$submissionId}.</message>
-	<message key="log.review.reviewAccepted">{$reviewerName} har accepterat omgång {$round} för granskning av manuskript {$submissionId}.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} har nekats omgång {$round} för granskning av manuskript {$submissionId} av {$reviewerName}.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} har accepterats omgång {$round} för granskning av manuskript {$submissionId} av {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av manuskriptet {$submissionId} i enlighet med granskaren, {$reviewerName}.</message>
-	<message key="log.review.reviewerFile">En fil för granskning har laddats upp.</message>
-	<message key="log.editor.decision">Ett beslut av redaktören({$decision}) för artikel {$submissionId} skapades av {$editorName}.</message>
+	<message key="log.author.documentRevised">{$authorName} har arbetat om artikel {$submissionId}. Nytt fil-ID är {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} har tagits bort som granskare för bidrag {$submissionId}, granskningsomgång {$round}.</message>
+	<message key="log.review.reviewInitiated">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har påbörjats.</message>
+	<message key="log.review.reviewReinitiated">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har börjat om på nytt.</message>
+	<message key="log.review.reviewCleared">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har tagits bort.</message>
+	<message key="log.review.reviewerRated">{$reviewerName} har betygsatts för sin granskning av bidraget {$submissionId}, omgång {$round}.</message>
+	<message key="log.review.reviewDueDateSet">Deadline för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har satts till {$dueDate}.</message>
+	<message key="log.review.reviewRecommendationSet">Rekommendation för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har registrerats.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">Rekommendation för omgång {$round} i granskningen av bidrag {$submissionId} har registrerats av redaktören {$editorName} å granskaren {$reviewerName}s vägnar.</message>
+	<message key="log.review.resubmit">Bidrag {$submissionId} har skickats in för granskning på nytt.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} har tackat nej till omgång {$round} i granskningen av bidrag {$submissionId}.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} har tackat ja till omgång {$round} i granskningen av bidrag {$submissionId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} har tackat nej till omgång {$round} i granskningen av bidrag {$submissionId} å {$reviewerName}s vägnar.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} har tackat ja till omgång {$round} i granskningen av bidrag {$submissionId} å {$reviewerName}s vägnar.</message>
+	<message key="log.review.reviewFileByProxy">Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av bidrag {$submissionId} å granskarens, {$reviewerName}, vägnar.</message>
+	<message key="log.review.reviewerFile">En fil granskningsfil har laddats upp.</message>
+	<message key="log.editor.decision">Ett redaktörsbeslut ({$decision}) för artikel {$submissionId} registrerades av {$editorName}.</message>
+	<message key="log.editor.recommendation">En redaktörsrekommendation ({$decision}) för artikel {$submissionId} registrerades av {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Manusredigering av manuskriptet {$submissionId} har påbörjats av {$copyeditorName}.</message>
-	<message key="log.copyedit.copyeditFileSet">Defaultfilen för manusredigering har valts.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har avslutat den inledande manusredigeringen av {$submissionId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har avslutat den slutliga manusredigeringen av manuskriptet {$submissionId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} har tilldelats att redigera manuskriptet {$submissionId}.</message>
-	<message key="log.copyedit.copyeditorFile">En version av manuskriptet för redigering har laddats upp.</message>
-	<message key="log.copyedit.authorFile">En version av manuskriptet, redigerad av författaren, har laddats upp.</message>
+	<message key="log.copyedit.initiate">Manusredigering av bidrag {$submissionId} har påbörjats av {$copyeditorName}.</message>
+	<message key="log.copyedit.copyeditFileSet">Defaultfil för manusredigering har valts.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har avslutat första manusredigering av bidrag {$submissionId}.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har avslutat slutgiltig manusredigering av bidrag {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} har utsetts att redigera manuskriptet {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorFile">En manusredigerad version av manuskriptet har laddats upp.</message>
+	<message key="log.copyedit.authorFile">En version av manuskriptet, manusredigerad av författaren, har laddats upp.</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} har utsetts till Layoutredaktör för manuskript {$submissionId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} är inte länge ansvarig för layoutredigering av manuskript {$submissionId}.</message>
-	<message key="log.layout.layoutEditComplete">{$editorName} har avslutat layoutredigering för manuskript {$submissionId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} har utsetts till layoutredaktör för bidrag {$submissionId}.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} är inte länge ansvarig för layoutredigering av bidrag {$submissionId}.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} har avslutat layoutredigering av bidrag {$submissionId}.</message>
 
-	<message key="log.editor.metadataModified">Metadata till den här artikeln har ändrats av {$editorName}.</message>
-	<message key="log.editor.editorFile">En redaktörsveriosn av det här manuskriptet har laddats upp.</message>
-	<message key="log.editor.archived">Manuskriptet {$submissionId} har arkiverats.</message>
-	<message key="log.editor.restored">Manuskriptet {$submissionId} har återplacerats i kö.</message>
-	<message key="log.editor.editorAssigned">{$editorName} har utsetts till redaktör för manuskriptet {$submissionId}.</message>
+	<message key="log.editor.metadataModified">Artikelns metadata har ändrades av {$editorName}.</message>
+	<message key="log.editor.editorFile">En redaktörsversion av det här manuskriptet har laddats upp.</message>
+	<message key="log.editor.archived">Bidrag {$submissionId} har arkiverats.</message>
+	<message key="log.editor.restored">Bidrag {$submissionId} har återplacerats i kö.</message>
+	<message key="log.editor.editorAssigned">{$editorName} har utsetts till redaktör för bidrag {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} has utsett {$proofreaderName} att korrekturläsa manuskriptet {$submissionId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} har skickat {$submissionId} for planläggning.</message>
+	<message key="log.proofread.assign">{$assignerName} has utsett {$proofreaderName} att korrekturläsa bidrag {$submissionId}.</message>
+	<message key="log.proofread.complete">{$proofreaderName} har skickat {$submissionId} för planläggning.</message>
 
 	<message key="log.imported">{$userName} har importerat artikel {$submissionId}.</message>
 
@@ -909,21 +987,20 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 
 
 	<!-- RT Settings -->
-	<message key="rt.admin.settings">Val för läsverktyg</message>
+	<message key="rt.admin.settings">Alternativ för Läsverktyg</message>
 
-	<message key="rt.admin.rtEnable">För att aktivera Läsverktyg för den här sidan, gå till Val för lädverktyg.</message>
-	<message key="rt.admin.settings.description">Läsverktygen kommer att visas i en ram vid sidan av det publicerade materialet i de sektioner av tidskriften som stöder indexering. Läsverktygen består av en uppsättning valfria verktyg som hör till det publicerade materialet, (se nedan), och en uppsättning verktyg som ger tillgång till relaterad information, organiserad enligt ämne och diciplin.</message>
+	<message key="rt.admin.settings.description">Läsverktygen kommer att visas i en ruta vid sidan av det publicerade materialet i de sektioner av tidskriften som stöder indexering. Läsverktygen består av en uppsättning valbara verktyg relaterade till det publicerade materialet (se nedan) och en uppsättning verktyg som ger tillgång till relaterad information, organiserad enligt ämne och disciplin.</message>
 	<message key="rt.admin.settings.enableReadingTools">Aktivera Läsverktyg för valda sektioner av tidskriften.</message>
 	<message key="rt.admin.settings.relatedItems">Fält</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Inställningar för Relaterat material</a> för att visa, lägga till, korrigera, eller radera information från respektive fält.]]></message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Inställningar för relaterat material</a> för att visa, lägga till, korrigera, eller radera information från respektive fält.]]></message>
 
 	<message key="rt.admin.options">Verktyg för tidskriftselement</message>
-	<message key="rt.admin.relatedItems">Relaterade verktygselement</message>
+	<message key="rt.admin.relatedItems">Verktygselement för relaterat material</message>
 
-	<message key="rt.admin.settings.addComment">Lägg till kommentar (Gör det möjligt för läsare att kommentera det publicerade materialet. Tidskriftsansvarig kan radera kommentarerna).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Användare måste vara registrerade och inloggade för att lämna kommentarer, anonymitet är inte tillåtet.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Användare måste vara registrerade och inloggade för att lämna kommentarer, anonymitet är tillåtet.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Användare behöver inte registrera sig för att lämna kommentarer, anonymitet är tillåtet.</message>
+	<message key="rt.admin.settings.addComment">Lägg till kommentar (Gör det möjligt för läsare att posta kommentarer, som kan tas bort av tidskriftsansvarig.</message>
+	<message key="rt.admin.settings.addComment.authenticated">Användare måste vara registrerade och inloggade för att lämna kommentarer och det är inte tillåtet att vara anonym.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Användare måste vara registrerade och inloggade för att lämna kommentarer och det är tillåtet att vara anonym.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Användare behöver inte registrera sig för att lämna kommentarer och det är tillåtet att vara anonym.</message>
 
 
 	<!-- RT Versions -->
@@ -932,250 +1009,97 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 
 	<!-- RT Searches -->
 
-	<message key="rt.admin.validateUrls.description"><![CDATA[Förmodat ogiltiga URL:er för söksidor visas nedan.<br />
-Du bör verifiera de URL:er som är markerade som ogiltiga manuellt, eftersom urvalet inte kan garanteras till 100%.<br />
-Validering av URL:er kan misslyckas på sökningar som kräver inskickad data.]]></message>
+	<message key="rt.admin.validateUrls.description"><![CDATA[Förmodat ogiltiga URL:er för söksidor visas nedan.<br/>
+Du bör manuellt verifiera de URL:er som är markerade som ogiltiga eftersom urvalet inte kan garanteras till 100%.<br/>
+Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltiga i valideringen.]]></message>
 
 	<!-- RT Entities -->
 
 
 
 
-	<message key="rt.metadata.dublinCore.primaryAuthor">Skapare</message>
+	<message key="rt.metadata.dublinCore.primaryAuthor">Upphovsperson</message>
 
-	<message key="rt.metadata.pkp.primaryAuthor">Författarens namn, tillhörighet, land</message>
-	<message key="rt.metadata.pkp.peerReviewed">Granskad Artikel</message>
-	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
-
+	<message key="rt.metadata.pkp.primaryAuthor">Författarens namn, affiliering, land</message>
+	<message key="rt.metadata.pkp.peerReviewed">Sakkunniggranskad artikel</message>
 
 
 
 
-	<message key="rt.beNotifiedWhen">Få meddelande när...</message>
+
+	<message key="rt.beNotifiedWhen">Få avisering när ...</message>
 
 	<message key="rt.thisJournal">Sök tidskrift</message>
 
 
-	<message key="rt.context.authorTermsDescription">För material med fler än en författare, lämna alla namn markerade för att göra sökningar på medförfattares arbeten, eller sök direkt genom att markera ett namn. För ytterligare information om Sökmöjligheter, se OM. De här resurserna är valda för sin relevans och fria tillgång till delar av, eller hela innehållet.</message>
+	<message key="rt.context.authorTermsDescription">För material med fler än en författare, lämna samtliga namn markerade för att söka på arbeten av samma medförfattare, eller sök på en författare i taget genom att markera bara ett namn. För ytterligare information om resurserna sökningen sker i, se OM. De här resurserna är valda utifrån sin relevans och fria tillgång till hela eller delar av innehållet.</message>
 
+
+
+	<!-- Notification Types -->
+
+	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
+	<message key="notification.type.editing">Redaktionella händelser</message>
+	<message key="notification.type.submissionSubmitted">En ny artikel, "{$title}", har skickats in.</message>
+	<message key="notification.type.editorDecisionComment">En kommentar har tillfogats redaktörsbeslut för "{$title}."</message>
+	<message key="notification.type.galleyModified">En publiceringsversion har modifierats för "{$title}."</message>
+	<message key="notification.type.issuePublished">Ett nummer har publicerats.</message>
+	<message key="notification.type.newAnnouncement">Ett meddelande skickades ut.</message>
+	<message key="notification.type.reviewerFormComment">En granskning enligt granskningsformuläret har skickats in för "{$title}."</message>
+	<message key="notification.type.reviewing">Granskningshändelser</message>
+	<message key="notification.type.site">Webbplatshändelser</message>
+	<message key="notification.type.submissionComment">En redaktör kommenterade "{$title}."</message>
+	<message key="notification.type.submissions">Bidragshändelser</message>
+	<message key="notification.type.userComment">En läsare kommenterade "{$title}"</message>
+	<message key="notification.savedIssueMetadata">Metadata för publiceringen av numret sparades.</message>
+	<message key="notification.type.editorAssignmentTask">En ny artikel har skickats in och behöver bli tilldelad en redaktör.</message>
+	<message key="notification.type.assignProductionUser">Låt en användare skapa publiceringsversioner genom att använda Lägg till-länken i Deltagarlistan.</message>
+	<message key="notification.type.awaitingRepresentations">Väntar på publiceringsversioner.</message>
+	<message key="notification.type.publicationScheduled">Det här bidraget är inlagt för publicering.</message>
 
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.
 	 *
 	-->
+	<!-- Authorization -->
+	<message key="user.authorization.copyeditorAssignmentMissing">Åtkomst nekad! Du har inte blivit tilldelad rollen som manusredaktör för den här artikeln.</message>
+	<message key="user.authorization.noContext">Ingen tidskrift i den här kontexten!</message>
+	<message key="user.authorization.sectionAssignment">Du försöker att nå en artikel som inte ingår i din sektion.</message>
+	<message key="user.authorization.invalidIssue">Ogiltigt nummer valt!</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Ogiltigt bidrag från manusredaktör eller inget bidrag från manusredaktör valt!</message>
+
 	<!-- Icons: Default "alt" text -->
-	<message key="icon.small.alt">Liten</message>
-	<message key="icon.medium.alt">Medium</message>
-	<message key="icon.large.alt">Stor</message>
 
 	<!-- Debug messages -->
-	<message key="debug.notes.currencyListLoad">Laddad valutalista "{$filename}" från XML</message>
+	<message key="debug.notes.currencyListLoad">Laddade valutalistan "{$filename}" från XML</message>
 
-	<!--
-	 *
-	 * DEFAULT - Default settings for setup items.
-	 *
-	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet har inte publicerats tidigare, och ligger inte för publicering i annan tidskrift (eller se bifogad förklaring under Kommentarer under Redaktör).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen är i Microsoft Word, RTF, eller WordPerfect format.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Där det är möjligt har URL:er bifogats till referenser.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Texten är enkelradig; 12 punkters; använder kursivering snarare än understrykning (förutom hos URL-adresser); samt, samtliga illustrationer, figurer och tabeller är placerade löpande i texten ich inte i slutet.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Texten följer de stilistiska och bibliografiska kraven som sammanställts i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Författarinstruktioner</a>, under Om Tidskriften.]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Om manuskriptet lämnats för granskning i tidskriften, säkras <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">anonym granskning</a>).]]></message>
-	<message key="default.journalSettings.privacyStatement">Ifyllda namn och E-postadresser kommer endast att användas för tidskriftens ändamål och kommer inte tillgängliggöras för andra personer eller ändamål.</message>
-	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften tillämpar omedelbar Open Access enligt principen att ett fritt tillgängliggörande av forskning gynnar en global kunskapsspridning.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Den här tidskriften tillåter och uppmuntrar att författare publicerar sina artiklar även på personliga webbsidor eller institutionella arkiv, såväl före som efter publicering, ange i så fall den här tidskriften som bibliografisk referens.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[De olika stegen för manusredigering syftar till en ökad språklig och formmässig konsekvens. Författaren kan under processen göra egna korrigeringar i texten.
+	<!-- Grid Actions -->
+	<message key="grid.action.createContext">Skapa en ny tidskrift</message>
 
-The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal.
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">Nummer</message>
 
-<h4>Copyediting Systems</h4>
+	<message key="notification.type.approveSubmission">Det här bidraget väntar för närvarande på godkännande innan det kommer att synas i numret.</message>
+	<message key="notification.type.approveSubmissionTitle">Väntar på godkännande.</message>
 
-<b>1. Microsoft Word's Track Changes</b>
+	<message key="user.profile.form.showOtherContexts">Registrera dig hos andra tidskrifter</message>
+	<message key="user.profile.form.hideOtherContexts">Dölj andra tidskrifter</message>
 
-Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author.
+	<message key="article.view.interstitial">Välj en artikelfil att ladda ned.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Godkänd</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Väntar på godkännande</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Godkännande av publiceringsversion</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Godkänn den här publiceringsversionen för publicering.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Ta tillbaka godkännande för den här publiceringsversionen.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indexerar "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Den här sökfunktionaliteten tillåter inte omindexering per tidskrift.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Angiven sökväg för tidskrift, "{$journalPath}", kunde inte knytas till någon tidskrift.</message>
 
-The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets.
+	<message key="editor.issues.backIssues">Publicerade nummer</message>
+	<message key="editor.issues.futureIssues">Kommande nummer</message>
+	<message key="navigation.subscriptions">Prenumerationer</message>
 
-After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage.
-
-
-<b>2. Harvard Educational Review </b>
-
-<b>Instructions for Making Electronic Revisions to the Manuscript</b>
-
-Please follow the following protocol for making electronic revisions to your manuscript:
-
-<b>Responding to suggested changes</b>
-&nbsp; For each of the suggested changes that you accept, unbold the text
-&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <b>bold</b> it
-
-<b>Making additions and deletions</b>
-&nbsp; Indicate additions by <b>bolding</b> the new text
-&nbsp; Replace deleted sections with: <b>[deleted text]</b>
-&nbsp; If you delete a sentence or more, please indicate with a note, e.g., <b>[deleted 2 sentences]</b>
-
-<b>Responding to Queries to the Author (QAs)</b>
-&nbsp; Keep all QAs intact and bolded within the text. Do not delete them
-&nbsp; To reply to a QA, add a comment after it. Comments should be delimited using:
-<b>[Comment:</b>]
-&nbsp; e.g., <b>[Comment: Expanded discussion of methodology as you suggested]</b>
-
-<b>Making comments</b>
-&nbsp; Use comments to explain organizational changes or major revisions
-&nbsp; e.g., <b>[Comment: Moved the above paragraph from p. 5 to p. 7]</b>
-&nbsp; Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.
-
-<h4>An Illustration of an Electronic Revision</h4>
-
-<b>The original "manuscript" file</b>
-
-Before making dramatic departures from the structure and organization of your original manuscript, please check in with the co-chairs of your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file.
-
-
-<b>Manuscript returned to the author with queries and suggestions</b>
-
-Before making dramatic departures from the structure and organization of <b>the manuscript that we are returning to you</b>, please check in with the <b>editors who are co-chairing</b> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</b>
-
-<b>Revised manuscript sent back to HER</b>
-
-Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <b>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</b>
-
-After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <b>[deleted word]</b> revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</b>
-
-<b>Notes:</b>
-&bull; Unbolded text indicates acceptance of the suggested changes to the first sentence
-&bull; Sentence added in response to QA. Bold text indicates addition of new text
-&bull; [deleted word] indicates deletion of "completely"
-&bull; Comment contains a reply to the editors' QA]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
-	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
-	<h4>A. When the Author Provides a Link with the Reference</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
-	<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item.</p>
-<h4>For Spelling and Grammar Errors</h4>
-
-<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...</p>
-
-<pre>1. CHANGE...
-then the others
-TO...
-than the others</pre>
-<br />
-<pre>2. CHANGE...
-Malinowsky
-TO...
-Malinowski</pre>
-<br />
-
-<h4>For Formatting Errors</h4>
-
-<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...</p>
-<br />
-<pre>3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.</pre>
-<br />
-<pre>4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}
-]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Vi uppmuntrar läsare att abbonera på nyhetsmeddelanden från tidskriften. Använd<a href="{$indexUrl}/{$journalPath}/user/register">Registrera</a> längst upp på tidskriftens hemsida. Registrering innebär att du får E-post med innehållsförteckning varje gång ett nytt nummer publiceras. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Sekretesspolicy</a> som försäkrar att läsarens namn och E-Post inte kommer att användas för andra ändamål.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Intreserad av att skicka manuskript till den här tidskriften? Vi rekommenderar att du läser <a href="{$indexUrl}/{$journalPath}/about">Om Tidskriften</a> för tidskriftens olika sektionspolicies, liksom<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Författarinstruktioner</a>. Författare måste <a href="{$indexUrl}/{$journalPath}/user/register">registrera</a> sig i tidskiften innan inskickande av manuskript, eller, om du du redan är registrerad, klicka <a href="{$indexUrl}/index/login">logga in</a> och påbörja manusinlämningens 5 steg.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi uppmuntrar forskningsbibliotekarier att lista den här tidskriften bland bibliotekets elektronsika resurser. Vi uppmuntrar även att information om OJS öppna publiceringssystem sprids till fakulteter som publicerar forskningsmaterial (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Den här tidskriften tillämpar LOCKSS-principen för en effektivare spridning och arkivering bland de deltagande biblioteken. <a href="http://lockss.stanford.edu/">Mer...</a>]]></message>
-
-	<!-- Default settings for payment items. -->
-	<message key="common.homePageHeader.altText">Hemsidans sidhuvud</message>
-	<message key="article.article">Artikel</message>
-	<message key="article.coverPage.altText">Omslagsbild</message>
-	<message key="article.accessLogoOpen.altText">Open Access</message>
-	<message key="article.accessLogoRestricted.altText">Begränsad tillgång</message>
-	<message key="article.comments.sectionDefault">Default</message>
-	<message key="article.comments.disable">Avaktivera</message>
-	<message key="article.comments.enable">Aktivera</message>
-	<message key="article.fontSize.small.altText">Liten</message>
-	<message key="article.fontSize.medium.altText">Medium</message>
-	<message key="article.fontSize.large.altText">Stor</message>
-	<message key="subscriptions.status.other">Övrigt, se meddelanden</message>
-	<message key="user.subscriptions.form.deleteIpRange">Radera</message>
-	<message key="user.subscriptions.form.addIpRange">Lägg till</message>
-	<message key="about.history">Tidskriftens historik</message>
-	<message key="about.subscriptionTypes.name">Namn</message>
-	<message key="about.subscriptionTypes.format">Format</message>
-	<message key="about.subscriptionTypes.duration">Varaktighet</message>
-	<message key="about.subscriptionTypes.cost">Kostnad</message>
-	<message key="payment.authorFees">Författaravgifter</message>
-	<message key="user.noRoles.submitArticle">Lämna ett förslag</message>
-	<message key="user.noRoles.regReviewer">Registrera dig som sakkunnigbedömare</message>
-	<message key="user.noRoles.regReviewerClosed">Registrera dig som sakkunnigbedömare: Registrering är för närvarande avaktiverad.</message>
-	<message key="issue.coverPage.altText">Omslagsbild</message>
-	<message key="subscriptionTypes.currency">Giltighetstid</message>
-	<message key="subscriptionTypes.year">år</message>
-	<message key="subscriptionTypes.years">år</message>
-	<message key="subscriptionTypes.month">månad</message>
-	<message key="subscriptionTypes.months">månader</message>
-	<message key="subscriptionTypes.format">Format</message>
-	<message key="subscriptionTypes.format.online">Online</message>
-	<message key="subscriptionTypes.format.print">Tryck</message>
-	<message key="subscriptionTypes.format.printOnline">Tryck och Online</message>
-	<message key="subscriptions.inactive">Ej aktiv</message>
-	<message key="subscriptions.status">Status</message>
-	<message key="subscriptions.status.active">Aktiv</message>
-	<message key="subscriptions.status.awaitingManualPayment">Väntan på manuell betalning</message>
-	<message key="subscriptions.status.awaitingOnlinePayment">Väntan på Online-betalning</message>
-	<message key="subscriptionManager.individualSubscriptions">Individuella abonnemang</message>
-	<message key="subscriptionManager.institutionalSubscriptions">Institutionella abonnemang</message>
-	<message key="user.subscriptions.renew">Förnya</message>
-	<message key="user.subscriptions.purchase">Köpa</message>
-	<message key="user.subscriptions.purchaseNewSubscription">Köp nytt abonnemang</message>
-	<message key="user.subscriptions.purchaseIndividualSubscription">Köp individuellt abonnemang</message>
-	<message key="user.subscriptions.purchaseInstitutionalSubscription">Köp institutionellt abonnemang</message>
-	<message key="user.subscriptions.expires">Löper ut</message>
-	<message key="user.subscriptions.expired">Har löpt ut</message>
-	<message key="user.subscriptions.form.typeId">Typ av abbonemang</message>
-	<message key="user.subscriptions.form.membership">Medlemskap</message>
-	<message key="user.subscriptions.form.institutionName">Institutionens namn</message>
-	<message key="about.subscriptions.individual">Individuella abonnemang</message>
-	<message key="about.subscriptions.institutional">Institutionella abonnemang</message>
-	<message key="installer.installApplication">Installera Open Journal Systems</message>
-	<message key="installer.upgradeApplication">Uppgradera Open Journal Systems</message>
-	<message key="default.journalSettings.publicationFeeDescription">Om artikeln accepteras för publicering, kommer du ombedjas att betala en publiceringsavgift för att täcka publiceringskostnaderna.</message>
-	<message key="default.journalSettings.waiverPolicy">Om du inte har möjligheter att betala denna avgift finns möjlighet att avstå. Vi vill inte att eventuella finansieringsaspekter ska förhindra spridning av god forskning.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">Betalning av den här avgiften innebär att du kan läsa, ladda ner och skriva ut artikeln.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Betalning av den här avgiften innebär ett ettårsmedlemskap i föreningen, under vilken period du kommer att ha fri tillgänglighet till tidskriften.</message>
-	<message key="issue.fullIssue">Helt nummer</message>
-	<message key="issue.nonpdf.title">Ladda ned nummer</message>
-	<message key="issue.viewIssue">Visa nummer</message>
-	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
-	<li>Följande markeringar indikerar redigeringsbehov:
-		<ul>
-			<li class="highlightCopyediting">Redigering behövs på manusredigeringsstadiet</li>
-			<li class="highlightLayoutEditing">Redigering behövs på layoutstadiet</li>
-			<li class="higlightProofreading">Redigering behövs på korrekturstadiet</li>
-		</ul>
-	</li>
-</ol>]]></message>
-	<message key="user.register.reviewerInterests">Intresseområden vid granskning (huvudämnen och forskningsmetod):</message>
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} har tagit hand om redigeringsprocessen för artikeln {$submissionId}.</message>
 </locale>

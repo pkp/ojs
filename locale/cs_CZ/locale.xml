@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -40,7 +40,7 @@
 	<!-- Permissions -->
 
 	<message key="reviewer.article.enterReviewForm">Pro vyplnění formuláře recenze klikněte na ikonu.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
 
 	<!-- review forms end -->
 
@@ -167,7 +167,7 @@
 	<message key="submissions.step3">Krok 3</message>
 	<message key="submissions.queuedReview">Ve frontě k recenzi</message>
 	<message key="submissions.scheduled">Naplánované</message>
-	<message key="submissions.published">Publikované</message>
+	<message key="submissions.published">Publikováno</message>
 	<message key="submissions.initial">Počáteční</message>
 	<message key="submissions.proofread">Korektura</message>
 	<message key="submissions.initialProof">Počáteční kontrola</message>
@@ -186,7 +186,7 @@
 	<!-- Submission Notes -->
 
 	<!-- Common Journal Terms -->
-	<message key="journal.currentIssue">Aktuální výtisk</message>
+	<message key="journal.currentIssue">Aktuální číslo</message>
 	<message key="journal.journals">Časopisy</message>
 	<message key="journal.path">Cesta</message>
 	<message key="context.context">Časopis</message>
@@ -207,7 +207,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manažer časopisu</message>
-	<message key="user.role.sectionEditor">Editor sekce</message>
+	<message key="user.role.subEditor">Editor sekce</message>
 	<message key="user.role.subscriptionManager">Manažer předplatného</message>
 	<message key="user.role.managers">Manažeři časopisu</message>
 	<message key="user.role.subscriptionManagers">Manažeři předplatného</message>
@@ -342,7 +342,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Autorizační pluginy umožňují OJS delegovat ověření uživatelů na jiné systémy jako například LDAP servery.</message>
-	<message key="plugins.categories.citationFormats.description">Pluginy pro citační styly poskytují uživatelům různé formáty, ve kterých mohou být přístupné citace článků.</message>
 	<message key="plugins.categories.generic.description">Obecné pluginy se používají k rozšíření OJS různými způsoby, které nejsou podporovány jinými kategoriemi pluginů.</message>
 
 	<!-- Files Browser -->
@@ -458,17 +457,6 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Jméno odkazuje k profilu recenzenta.<br />
-Hodnocení je až 5 (Výborný).<br />
-Týdny udávají průměrnou dobu potřebnou pro zhotovení recenze.<br />
-Poslední udává datum poslední akceptované recenze.<br />
-Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></message>
-
-
-
-
-
-
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktivní editorské úkoly</message>
 	<message key="sectionEditor.completedEditorialAssignments">Dokončené editorské úkoly</message>
@@ -549,12 +537,10 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
         <message key="reviewer.article.selectRecommendation">Pro dovršení celého procesu vyberte doporučení a odešlete recenzi. Než vyberete doporučení, musíte vložit recenzi nebo nahrát soubor.</message>
 	<message key="reviewer.article.mustSelectDecision">Nebylo vybráno žádné doporučení. Před odesláním musíte vybrat doporučení.</message>
 	<message key="reviewer.article.confirmDecision">Jakmile zaznamenáte rozhodnutí, nebudete již moci v této recenzi provést žádné změny. Jste si jistý, že chcete pokračovat?</message>
-	<message key="reviewer.article.ensuringBlindReview">Zajištění anonymní recenze</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Soubor pro redaktora</message>
 	<message key="copyeditor.article.copyeditorFile">Soubor od redaktora</message>
-	<message key="copyeditor.article.uploadedFile">Nahraný soubor</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Soubor od redaktora</message>
 
 	<!-- Proofreader -->
@@ -674,8 +660,8 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="user.subscriptions.purchaseNewSubscription">Zakoupit nové předplatné</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Zakoupit individuální předplatné</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Zakoupit institucionální předplatné</message>
-	<message key="user.subscriptions.expires">Vyprší</message>
-	<message key="user.subscriptions.expired">Vypršelo</message>
+	<message key="user.subscriptions.expires">Vyprší dne {$date}</message>
+	<message key="user.subscriptions.expired">Vypršelo dne {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Zobrazit dostupné typy předplatného</message>
 	<message key="user.subscriptions.form.typeId">Typy předplatného</message>
 	<message key="user.subscriptions.form.membership">Členství</message>
@@ -751,7 +737,7 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="about.sectionPolicies">Pravidla sekcí</message>
 	<message key="about.submissions">Příspěvky</message>
 	<message key="about.onlineSubmissions.login">Jít na přihlášení</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registrace a přihlášení je zapotřebí pro online zasílání příspěvků a kontrolu jejich aktuálního stavu.</message>
+	<message key="about.onlineSubmissions.registrationRequired">K podání příspěvku je třeba {$login} nebo {$register}</message>
 	<message key="about.authorGuidelines">Pokyny pro autory</message>
 	<message key="about.submissionPreparationChecklist">Kontrolní seznam pro přípravu příspěvku</message>
 	<message key="about.submissionPreparationChecklist.description">Jako součást procesu odesílání příspěvku je požadováno, aby autoři zaškrnutím potvrdili, že jejich příspěvek je v souladu se všemi následujícími položkami. Příspěvky, které nebudou v souladu s těmito pravidly, mohou být autorům vráceny.</message>
@@ -1005,9 +991,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Vložte svou e-mailovou adresu, abyste dostávali okamžitá upozornění o důležitém novém obsahu, přidaném do časopisu.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Na této stránce jsou zobrazeny důležité aktuality tohoto časopisu jako vydání nového čísla, nebo oznámení. Můžete si objednat zasílání těchto upozornění pomocí RSS feeds (kliknutím na obrázek vpravo), nebo   <a href="{$emailUrl}">e-mailem.</a>]]></message>
-
 	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
@@ -1081,7 +1064,6 @@ Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po do
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} nebo {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Zaslat nový příspěvek</message>
 	<message key="about.onlineSubmissions.viewSubmissions">zobrazit vaše rozpracované příspěvky</message>
-	<message key="manager.setup.citations.enable">Povolit pomocník pro zpracování citací</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Nastavte nebo upravte doporučení recenzenta.</message>
 	<message key="article.pluginMissing"><![CDATA[<p>Vybraný soubor PDF by se měl načíst zde, pokud má váš webový prohlížeč nainstalovaný plugin pro čtení souborů PDF (například poslední verze <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>). </p>]]></message>
 	<message key="user.authorization.noContext">Žádný časopis v kontextu!</message>
@@ -1119,4 +1101,17 @@ Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po do
 <P> 2. Adresář pro ukládání nahraných souborů musí být vytvořen a zapisovatelný (viz "Nastavení souborů" níže). </p>]]></message>
 	<message key="help.goToEditPage">Editovat {$sectionTitle}</message>
 	<message key="notification.type.submissionSubmitted">Nový článek s názvem "{$title}" byl vložen.</message>
+	<message key="subscriptions.status.noSubscription">Nemáte aktivní předplatné.</message>
+	<message key="reader.purchasePrice">{$price}) ({$currency}</message>
+	<message key="payment.type.publication.required">Je třeba uhradit publikační poplatek.</message>
+	<message key="payment.requestPublicationFee">Požadovaný publikační poplatek ({$feeAmount})</message>
+	<message key="payment.notFound">Byla požadována platba, ale termín požadavku vypršel. Podrobné informace získáte od správce časopisu.</message>
+	<message key="notification.type.publicationScheduled">Příspěvek byl naplánován k publikování.</message>
+	<message key="navigation.subscriptions">Předplatné</message>
+	<message key="log.editor.submissionExpedited">{$editorName} převzal redakční proces příspěvku {$submissionId}.</message>
+	<message key="manager.setup.porticoDescription">Portico je nezisková služba, která se zasazuje o uchování digitálních publikací, včetně e-časopisů, elektronických knih a digitalizovaných historických sbírek. Pokud podepsal váš časopis smlouvu s Portico, povolte tuto službu zde:</message>
+	<message key="log.editor.recommendation">Doporučení redaktora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}.</message>
+	<message key="user.register.form.emailConsentAllContexts">Ano, chci dostávat upozornění na nové články a dostávat nová upozornění v rámci všech časopisů, ke kterým jsem se zaregistroval.</message>
+	<message key="notification.type.public">Veřejné oznámení</message>
+	<message key="user.reviewerPrompt.optin">Ano, chci být kontaktován s požadavky na recenze příspěvků do tohoto časopisu.</message>
 </locale>

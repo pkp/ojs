@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+* plugins/generic/recommendByAuthor/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.generic.recommendByAuthor.displayName">Rekommenderade artiklar av samma författare</message>
+	<message key="plugins.generic.recommendByAuthor.description">Det här pluginet infogar en lista på artiklar av samma författare på artikelns abstractsida.</message>
+    
+	<message key="plugins.generic.recommendByAuthor.heading">Mest lästa artiklar av samma författare</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">OBS.: Pluginet kräver minst ett statistik/rapport-plugin aktiverat för att fungera. Om dina statistikplugin skapar mer än ett mått, välj då det huvudsakliga måttet på sidan för administratörens sidinställningar och/eller inställningarna för tidskriftsansvarig.</message>
+</locale>

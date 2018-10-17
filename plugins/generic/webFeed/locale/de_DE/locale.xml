@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/webFeed/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -18,7 +18,7 @@
 	<message key="plugins.generic.webfeed.settings">Einstellungen</message>
 	<message key="plugins.generic.webfeed.settings.issue">Links zu Web-Feeds nur auf den Seiten der Ausgabe anzeigen.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Web-Feed-Links nur auf der Hauptseite und den Ausgaben-Seiten anzeigen</message>
-	<message key="plugins.generic.webfeed.settings.all">>Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen.</message>
+	<message key="plugins.generic.webfeed.settings.all">Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Items in der aktuellen Ausgabe anzeigen.</message>
 	<message key="plugins.generic.webfeed.settings.recent">Eine feste Anzahl der aktuellsten Elemente anzeigen.</message>

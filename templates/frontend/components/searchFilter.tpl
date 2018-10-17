@@ -1,8 +1,8 @@
 {**
  * templates/frontend/components/searchFilter.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of a filter (active or inactive) used on the search page.
@@ -25,7 +25,7 @@
 {/if}
 {if ($displayIf == "emptyFilter" && $isEmptyFilter) || ($displayIf == "activeFilter" && !$isEmptyFilter)}
 	<div class="cmp_search_filter">
-		<label for="{$filterName}">
+		<label for="{$filterName|escape}">
 			{translate key=$key}
 		</label>
 		<div class="value">
@@ -39,7 +39,7 @@
 			{else}
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName=$filterName filterValue=$filterValue}{/capture}
 				{if empty($filterInput)}
-					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField">
+					<input type="text" name="{$filterName|escape}" id="{$filterName|escape}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField">
 				{else}
 					{$filterInput}
 				{/if}

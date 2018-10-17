@@ -4,22 +4,17 @@
 <!--
   * plugins/importexport/crossref/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the tr_TR (Türkçe) locale.
-  *
+  * Localization strings.
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.importexport.crossref.displayName">Çapraz Referans XML İhraç Eklentisi</message>
 	<message key="plugins.importexport.crossref.description">Makale üst verilerini çapraz referans XML formatında ihraç et.</message>
-
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Kullanım:
-{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
-]]></message>
+	<!-- settings -->
 	<message key="plugins.importexport.crossref.requirements">Gereksinimler</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Tüm eklenti gereksinimleri tatmin edici.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Aşağıdaki öğeler başarılı bir CrossRef arşivleme için gereklidir.</message>
@@ -29,5 +24,50 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Lütfen arşivleyenin e-posta adresini giriniz.</message>
 	<message key="plugins.importexport.crossref.settings.form.username">Kullanıcı adı</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">CrossRef'ten almış olduğunuz kullanıcı adını giriniz.</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Bir dergi yayıncısı belirtilmemiş! <a href="{$journalSettingsUrl}" target="_blank">Dergi Ayarları Sayfasında</a> bir yayınevi  belirtmelisiniz.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[Dergi ISSN bilgisi belirtilmemiş! <a href="{$journalSettingsUrl}" target="_blank">Dergi Ayarları Sayfası"</a>nda ISSN eklemelisiniz.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">DOI genel tanımlayıcı eklentisinde DOI ataması için makaleler seçilmemiştir, bu nedenle eklenti için depolama veya ihraç yapılamamaktadır.</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Bu eklentiye, Dijital Nesne Tanımlayıcıları (DOI'ler) doğrudan CrossRef'e kaydettirmek istemeniz halinde, bunu yapmak için bir kullanıcı adı ve şifreye (<a href="http://www.crossref.org" target="_blank">CrossRef</a> den ulaşılabilir) ihtiyacınız olacaktır. Eğer kendi kullanıcı adınız ve şifreniz yoksa, yine de CrossRef XML biçimi ile dışa aktarma yapabilirsiniz, ancak DOI'lerinizi CrossRef'e OJS içinden kaydedemezsiniz.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS atanmış DOI'leri otomatik olarak CrossRef'e aktarır. Lütfen bu işlemin yayınlanma işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız tüm DOI'leri kontrol edebilirsiniz.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">DOI depolaması için CrossRef test API'sini (test ortamı) kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın.</message>
+	<!-- descriptions -->
+	<message key="plugins.importexport.crossref.issues.description">Not: Burada ihraç / kayıt için sadece sayılar (makaleler hariç) dikkate alınacaktır.</message>
+	<!-- statuses -->
+	<message key="plugins.importexport.crossref.status.submitted">Gönderildi</message>
+	<message key="plugins.importexport.crossref.status.completed">Depolandı</message>
+	<message key="plugins.importexport.crossref.status.failed">Başarısız Oldu</message>
+	<message key="plugins.importexport.crossref.status.registered">Etkin</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">İşaretli Etkin</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
+		<p>Depolama Duurmu:</p>
+		<p>
+		- Depolanmadı: Bu DOI için hiçbir depolama girişimi yapılmadı.<br />
+		- Gönderildi: Bu DOI depolama için gönderildi.<br />
+		- Depolandı: DOI, Crossref'e depolandı, ancak henüz aktif olmayabilir.<br />
+		- Etkin: DOI yatırıldı ve doğru şekilde çözümleniyor.<br />
+		- Başarısız: DOI depolama başarısız oldu.<br />
+		- Etkin işaretli: DOI, aktif olarak elle işaretlendi.
+		</p>
+		<p>Sadece son depolama girişiminin durumu görüntülenir.</p>
+		<p>Bir depolama başarısız olursa, lütfen sorunu çözün ve DOI'yi tekrar kaydettirmeyi deneyin.</p>]]></message>
+	<!-- actions -->
+	<message key="plugins.importexport.crossref.action.export">XML İndir</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Etkinleri İşaretle</message>
+	<message key="plugins.importexport.crossref.action.register">Göner</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Durumu kontrol et</message>
+	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef bilgi göndericisi</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[DOI kaydı başarısız oldu. Başarısız olanları görmek için lütfen "Araçlar > İçe Aktar / Dışa Aktar > CrossRef XML İhraç Eklentisi" bölümüne gidin.]]></message>
+
+	<!-- CLI -->
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Kullanım:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
+
+	<!--  notifications -->
+	<message key="plugins.importexport.crossref.register.error.mdsError">Gönderi başarısız! DOI kayıt sunucusu bir hata verdi: '{$ param}'. '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Gönderi başarılı!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Hiçbir sayı belirtilen sayı kimliği "{$issueId}" ile eşleşmedi.</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Hiçbir makale belirtilen makale kimliği "{$articleId}" ile eşleşmedi.</message>
 </locale>

@@ -1,8 +1,8 @@
 /**
  * @file plugins/themes/default/styles/head.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pkp_structure_head
@@ -192,7 +192,7 @@
 		// Needs to be defined outside of a media query or the font doesn't
 		// load
 		&:before {
-			&:extend(.fa);
+			.fa();
 			content: @fa-var-search;
 		}
 	}
@@ -210,7 +210,7 @@
 	.search_cancel{
 
 		&:before {
-			&:extend(.fa);
+			.fa();
 			content: @fa-var-times;
 			width: @double;
 			height: @double;
@@ -396,13 +396,8 @@
 	}
 
 	// Align to the right edge of the container
-	> li:last-child a {
+	> li:last-child > a {
 		padding-right: 0;
-	}
-
-	// Fix alignment issues in task-count
-	.profile > a {
-		text-align: right;
 	}
 
 	.task_count {
@@ -426,16 +421,6 @@
 		&:hover .task_count,
 		&:focus .task_count {
 			background: #fff;
-		}
-	}
-
-	.has_tasks {
-
-		ul .task_count,
-		ul a:hover .task_count,
-		ul a:focus .task_count {
-			background: #f00;
-			color: #fff;
 		}
 	}
 }

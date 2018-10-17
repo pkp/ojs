@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -139,14 +139,9 @@
 
 	<!-- Значения по умолчанию для элементов оплаты. -->
 	<message key="default.journalSettings.publicationFee">Публикация статьи</message>
-	<message key="default.journalSettings.publicationFeeDescription">Если статья будет принята к публикации, вас попросят внести оплату за публикацию статьи для покрытия издательских расходов.</message>
-	<message key="default.journalSettings.waiverPolicy">Если у вас нет финансовой возможности внести эти платежи, вы можете обратиться с просьбой об отмене каждого из этих платежей. Мы не хотим, чтобы платежи стали барьером для публикации достойной работы.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Купить статью</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Оплата этой суммы позволит вам просматривать, скачивать и распечатывать данную статью.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Купить выпуск</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Оплата этой суммы позволит вам просматривать, скачивать и распечатывать данный выпуск.</message>
 	<message key="default.journalSettings.membershipFee">Ассоциированное членство</message>
-	<message key="default.journalSettings.membershipFeeDescription">Оплата этой суммы включит вас в список членов данной ассоциации сроком на один год и даст свободный доступ к этому журналу.</message>
 
 	<!-- Значения по умолчанию для групп -->
 	<message key="default.groups.name.manager">Управляющий журналом</message>

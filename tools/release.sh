@@ -3,8 +3,8 @@
 #
 # tools/release.sh
 #
-# Copyright (c) 2014-2017 Simon Fraser University
-# Copyright (c) 2003-2017 John Willinsky
+# Copyright (c) 2014-2018 Simon Fraser University
+# Copyright (c) 2003-2018 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an automated (incremental) release of OJS.
@@ -70,12 +70,12 @@ sed -i	-e "s/<install version=\".*\">/<install version=\"${MAJOR}.${MINOR}.${REV
 	dbscripts/xml/upgrade.xml dbscripts/xml/install.xml
 git add dbscripts/xml/upgrade.xml dbscripts/xml/install.xml
 
-# Update the README
+# Update the README.md
 sed -i	-e "s/=== Version: .*/=== Version: ${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}/" \
 	-e "s/=== GIT tag: .*/=== GIT tag: ${THISTAG}/" \
 	-e "s/=== Release date: .*/=== Release date: ${BUILDDATE}/" \
-	docs/README
-git add docs/README
+	docs/README.md
+git add docs/README.md
 
 # Update the Doxygen config file
 sed -i	-e "s/^\(PROJECT_NUMBER.*= \).*/\1${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}/" \

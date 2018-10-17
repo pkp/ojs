@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/native/locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -16,6 +16,7 @@
 	<message key="plugins.importexport.native.description">استيراد وتصدير المقالات والأعداد</message>
 	<message key="plugins.importexport.native.import">استيراد</message>
 	<message key="plugins.importexport.native.import.instructions">إرفع ملف XML لاستيراده</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">إختر المقالات المزمع تصديرها</message>
 	<message key="plugins.importexport.native.exportSubmissions">تصدير المقالات</message>
 	<message key="plugins.importexport.native.exportIssues">تصدير الأعداد</message>
 	<message key="plugins.importexport.native.results">النتائج</message>
@@ -44,8 +45,14 @@ Commands:
 {$scriptName} {$pluginName} import [xmlFileName] [journal_path]
 	issue_id [issueId] section_abbrev [abbrev]
 ]]></message>
-	<message key="plugins.importexport.native.cliError">خطأ:</message>
+	<message key="plugins.importexport.native.error.unknownSection">قسم غير معروف: {$param}</message>
 	<message key="plugins.importexport.native.error.unknownUser">المستخدم المحدد: "{$userName}"غير موجود.</message>
-	<message key="plugins.importexport.native.error.unknownJournal">مسار المجلة المحدد: "{$journalPath}"غير موجود.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">تعذرت الكتابة إلى الملف "{$fileName}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">إن عنوان القسم "{$section1Title}" وعنوان القسم "{$section2Title}" ضمن العدد "{$issueTitle}" يطابقان أقسام أخرى مغايرة في المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">إن عنوان القسم "{$sectionTitle}" ضمن العدد "{$issueTitle}" يطابق أحد الأقسام الموجودة في المجلة، غير أن عنواناً آخر في هذا القسم لا يطابق عنواناً آخر ضمن ذلك القسم من المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">إن مختصر القسم "{$section1Abbrev}" ومختصر القسم "{$section2Abbrev}" ضمن العدد "{$issueTitle}" يطابقان أقسام أخرى مغايرة في المجلة.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">إن مختصر القسم "{$sectionAbbrev}" ضمن العدد "{$issueTitle}" يطابق أحد الأقسام الموجودة في المجلة، غير أن مختصراً آخر في هذا القسم لا يطابق مختصراً آخر ضمن ذلك القسم من المجلة.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">لا أحد أو أكثر من واحد من الأعداد تطابق رمز تعريف العدد المذكور "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">هناك عدد موجود يحمل الرمز التعريفي {$issueId} المطابق للرمز التعريفي للعدد المذكور "{$issueIdentification}".  هذا العدد لن يتم تعديله، لكن ستتم إضافة المقالات إليه.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">إن عنصر تعريف العدد مفقود من المقالة "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">إن المقالة "{$articleTitle}" مضمنة في أحد الأعداد، لكنها بلا تأريخ نشر.</message>
 </locale>

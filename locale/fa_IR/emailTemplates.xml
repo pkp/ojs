@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * locale/fa_IR/emailTemplates.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+
+<email_texts locale="fa_IR">
+	<email_text key="PASSWORD_RESET_CONFIRM">
+		<subject>تائیدیه دوباره تنظیم کردن رمزعبور</subject>
+		<body><![CDATA[درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &amp;lt;$siteTitle&amp;gt; به ما رسیده است.<br />
+<br />
+لطفا چنانچه شما این درخواست را نفرستاده اید، به این ایمیل توجهی نکنید، در این صورت رمز عبور شما تغییری نخواهد کرد. اگر مایل به تنظیم دوباره رمزعبور خود هستید، برروی پیوند زیر کلیک نمائید.<br />
+<br />
+تنظیم مجدد رمز عبور: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
+	</email_text>
+	<email_text key="PASSWORD_RESET">
+		<subject>رمز عبور دوباره تنظیم شد</subject>
+		<body><![CDATA[رمزعبور شما برای استفاده از وب سایت {$siteTitle}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.<br />
+<br />
+نام کاربری شما: {$username}<br />
+رمز ورود شما: {$password}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>ایمیلی برای کاربرانی که رمز خود را رست نموده اند</description>
+	</email_text>
+	<email_text key="USER_REGISTER">
+		<subject>ثبت نام کاربر جدید</subject>
+		<body><![CDATA[برای ثبت نام در {$contextName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.<br />
+<br />
+نام کاربری: {$username}<br />
+رمز عبور: {$password}<br />
+<br />
+<br />
+باتشکر<br />
+{$principalContactSignature}]]></body>
+		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+	</email_text>
+	<email_text key="USER_VALIDATE">
+		<subject>حساب کاربری خود را تایید کنید</subject>
+		<body><![CDATA[{$userFullName}<br />
+<br />
+حساب کاربری شما برای مجله {$contextName}, ایجاد شد. قبل از استفاده می بایست آن را تایید کنید. برای انجام این کار فقط کافی است که بر روی لینک زیر کلیک کنید:<br />
+<br />
+<a href="{$activateUrl}">{$activateUrl}</a><br />
+<br />
+با تشکر<br />
+{$principalContactSignature}]]></body>
+		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+	</email_text>
+	<email_text key="REVIEWER_REGISTER">
+		<subject>ثبت نام به عنوان کارشناس {$contextName}</subject>
+		<body><![CDATA[با توجه با تجارب جنابعالی, {$contextName} فرصت را مغتنم شمرده و نام شما را در زمره کارشناسان مجله ثبت کرده است. لازم به تذکر است که صرف این عمل هیچگونه مسئولیت و تعهدی را متوجه جنابعالی نمی سازد و فقط ما را قادر می سازد تا جهت ارسال مقاله برای کارشناسی احتمالی توسط جنابعالی براحتی با شما تماس بگیریم. هنگامی که از شما برای انجام کارشناسی یک مقاله دعوت به عمل می آید شما مختار خواهید بود که پس از دیدن عنوان و چکیده مقاله دعوت را بپذیرید یا از انجام کارشناسی خودداری کنید. بعلاوه در هر زمان که اراده کنید میتوانید از ما بخواهید تا نام شما را از لیست کارشناسان مجله حذف کنیم.<br />
+<br />
+نام کاربری و رمز عبور شما برای سایت مجله که جهت انجام تمام امورات آنلاین با این مجله لازم است در زیر آمده است.<br />
+<br />
+نام کاربری: {$username}<br />
+رمز عبور: {$password}<br />
+<br />
+با تشکر,<br />
+{$principalContactSignature}]]></body>
+		<description>This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</description>
+	</email_text>
+	<email_text key="PUBLISH_NOTIFY">
+		<subject>شماره جدید چاپ شد</subject>
+		<body><![CDATA[خوانندگان گرامی:<br />
+<br />
+{$contextName}، آخرین شماره خود را به نشانی &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; چاپ کرده است. از شما دعوت میشود که پس از ملاحظه فهرست عناوین از وب سایت مجله حاوی مقاله ها و موضوع های مورد علاقه بازدید کنید.<br />
+<br />
+از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
+	</email_text>
+	<email_text key="LOCKSS_NEW_ARCHIVE">
+		<subject>درخواست بایگانی کردن {$contextName}:</subject>
+		<body><![CDATA[مسئول محترم کتابخانه دانشگاه:<br />
+{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; ، عضو دانشکده شما می باشد &amp;lt;[name of member]&amp;gt;. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.<br />
+<br /><br />
+<br />
+برنامه LOCKSS تحت آدرس http://lockss.org که یک ابتکار بین المللی مربوط به ناشر/کتابخانه می باشد. این نرم افزار رایگان، حتی توسط یک رایانه شخصی نیز اجرا می گردد. کل سامانه آن لاین شده است و به نگهداری مختصری نیازمند است.<br />
+جهت کمک در بایگانی مجله ما، از شما دعوت می کنیم که عضو انجمن LOCKSS شوید تا به شما در جمع آوری و نگهداری عناوین تهیه شده توسط سازمان خود و دیگر پژوهشگران جهان، کمک کند. برای این کار، لطفا از وب سایت LOCKSS بازدید کنید تا اطلاعاتی درباره نحوه عملکرد این سامانه دراختیار شما قرار گیرد. منتظر اعلام خبر از شما راجع به امکان تهیه چنین سامانه ای برای این مجله هستم.<br />
+<br />
+<br />
+باتشکر<br />
+{$principalContactSignature}]]></body>
+		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>قدردانی برای ارسال مقاله</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+از ارسال مقاله &quot;{$submissionTitle}&quot; به {$contextName} متشکرم. با استفاده از سامانه الکترونیکی مدیریت مجله، که هم اکنون استفاده می شود، قادر خواهید بود ازطریق وارد شدن به وب سایت مجله، روند پیشرفت بررسی مقاله خود را پیگیری نمائید.<br />
+<br />
+آدرس مقاله : {$submissionUrl}<br />
+نام کاربری: {$authorUsername}<br />
+<br />
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>در صورت فعال سازی. این ایمیل به صورت خودکار به نوسنده مقاله پس از تکمیل عملیات ارسال مقاله، فرستاده خواهد شد.</description>
+	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>نا مناسب بودن مقاله برای مجله</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+بررسی اولیه انجام شده برروی مقاله &quot;{$submissionTitle}&quot; مشخص نموده است که این مقاله با چهارچوب و حیطه فعالیت {$contextName} مطابقت ندارد. توصیه می کنم که در راهنمای نویسندگان این مجله و همچنین در مقالات شماره اخیر جستجو کنید تا اطلاع بیشتری در مورد مقالات چاپ شده در این مجله کسب کنید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+	</email_text>
+	<email_text key="SUBMISSION_COMMENT">
+		<subject>اعلام نظر در مورد یک مقاله</subject>
+		<body><![CDATA[{$name}:<br />
+<br />
+&amp;lt;{$commentName}&amp;gt;، در مورد مقاله &quot;{$submissionTitle}&quot; در مجله {$contextName} اعلام نظر کرده است.<br />
+<br />
+{$comments}]]></body>
+		<description>This email notifies the various people involved in a submission's editing process that a new comment has been posted.</description>
+	</email_text>
+	<email_text key="SUBMISSION_DECISION_REVIEWERS">
+		<subject>تصمیم گیری درمورد مقاله "{$submissionTitle}"</subject>
+		<body><![CDATA[به عنوان یکی از کارشناسان مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، اینجانب نظرات داوری ارسال شده به نویسنده این متن را برای شما ارسال می کنم.<br />
+باردیگر از شما به خاطر مشارکت فعالتان در این فرایند سپاسگزاری می کنم.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+{$comments}]]></body>
+		<description>This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions.</description>
+	</email_text>
+	<email_text key="EDITOR_ASSIGN">
+		<subject>تعیین کارشناس مسئول</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+شما به عنوان کارشناس مسئول مقاله ضضض مربوط به {$contextName} انتخاب شده اید تا بر مراحل ویرایش آن نظارت داشته باشید.<br />
+<br />
+آدرس مقاله: {$submissionUrl}<br />
+نام کاربری: {$editorUsername}<br />
+<br />
+متشکرم<br />
+{$editorialContactSignature}]]></body>
+		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST">
+		<subject>درخواست کارشناسی مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot;که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید<br />
+<br />
+لطفا قبل از تاریخ &quot;{$responseDueDate}&quot; وارد وب سایت مجله شده و مشخص کنید که آیا مایل به قبول کارشناسی مقاله هستید یا خیر. همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید. آدرس وب سایت مجله <a href="{$contextUrl}">{$contextUrl}</a> است.<br />
+<br />
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ &quot;{$reviewDueDate}&quot; می باشد<br />
+<br />
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />
+<br />
+<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+آدرس مقاله : <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+از توجه شما به این درخواست سپاسگزاری می کنم.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK">
+		<subject>درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot; که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />
+<br />
+لطفا قبل از تاریخ {$reviewDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.<br />
+<br />
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.<br />
+<br />
+آدرس مقاله: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+از توجه شما به این درخواست متشکرم.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+--------------------------------<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+چکیده:<br />
+{$submissionAbstract}]]></body>
+		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED">
+		<subject>درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+شما به عنوان یک داور برای بررسی مقاله &quot;{$submissionTitle}&quot; انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />
+در ذیل متن راهنمای کارشناسی برای این مجله آمده است و مقاله ارسالی به این ایمیل پیوست شده است. توجه داشته باشید که باید متن کارشناسی و توصیه خود را تا تاریخ {$reviewDueDate} از طریق ایمیل ارسال کنید.<br />
+<br />
+لطفا با پاسخ دادن به این ایمیل قبل از تاریخ &amp;lt;{$reviewDueDate}&amp;gt; مشخص سازید که آیا قادر به انجام کارشناسی هستید یا خیر؟<br />
+از توجه شما به این درخواست سپاسگزارم.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+راهنمای داوری<br />
+<br />
+{$reviewGuidelines}]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری</description>
+	</email_text>
+	<email_text key="REVIEW_CANCEL">
+		<subject>درخواست لغو کارشناسی</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$contextName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.<br />
+<br />
+لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
+	</email_text>
+	<email_text key="REVIEW_CONFIRM">
+		<subject>داوری را قبول می کنم</subject>
+		<body><![CDATA[دبیر محترم:<br />
+<br />
+اینجانب داوری مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} را قبول می نمایم. از توجه شما متشکرم و بررسی آنرا در موعد مقرر ( {$reviewDueDate}) انجام خواهد داد.<br />
+<br />
+{$reviewerName}]]></body>
+		<description>ایمیلی از طرف داور به سردبیر یا دبیر بخشبرای اطلاع از پذیرش انجام داوری</description>
+	</email_text>
+	<email_text key="REVIEW_DECLINE">
+		<subject>قادر به داوری نمی باشم</subject>
+		<body><![CDATA[دبیر محترم:<br />
+<br />
+متاسفانه در حال حاضر قادر به داوری مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} نیستم.<br />
+از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.<br />
+<br />
+{$reviewerName}]]></body>
+		<description>ایمیلی از طرف داور به سردبیر یا دبیر بخش برای اطلاع از عدم پذیرش انجام داوری</description>
+	</email_text>
+	<email_text key="REVIEW_ACK">
+		<subject>قدردانی بخاطر بررسی مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+برای بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_ONECLICK">
+		<subject>یادآوری برای کارشناسی مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$submissionTitle},&quot; برای {$contextName}<br />
+منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.<br />
+<br />
+آدزس مقاله: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by a Section Editor to remind a reviewer that their review is due.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO">
+		<subject>یادآوری اتوماتیک برای کارشناسی مقاله ارسالی</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+این فقط یک یادآوری درخواست ما از شما جهت بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} است. امیدوار بودیم که متن کارشناسی شما تا تاریخ &amp;lt;{$reviewDueDate}&amp;gt; دریافت نماییم و به دلیل اتمام فرصت مقرر، این ایمیل به صورت اتوماتیک برای شما فرستاده می شود. بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید نتیجه کارشناسی خود را برایمان ارسال کنید.<br />
+<br />
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />
+<br />
+<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+آدرس مقاله: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
+		<subject>یادآوری برای کارشناسی مقاله (اتوماتیک)</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$submissionTitle},&quot; برای {$contextName}<br />
+منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.<br />
+<br />
+آدزس مقاله: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
+		<subject>درخواست انجام امور ویراستاری</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+از شما درخواست می شود که امور ویراستاری مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.<br />
+<br />
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا سوالی در این زمینه دارید، لطفا با من تماس بگیرید. پیشاپیش از قبول انجام امور ویراستاری برای این مجله سپاسگزارم.<br />
+<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
+	</email_text>
+	<email_text key="COPYEDIT_COMPLETE">
+		<subject>اتمام ویراستاری مقاله</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+هم اکنون ویراستاری مقاله جنابعالی با عنوان &quot;{$submissionTitle}&quot; برای مجله {$contextName} به پایان رسید. برای بررسی نتیجه ویراستاری و پاسخ دادن به سؤالات احتمالی لطفا مراحل زیر را دنبال کنید:<br />
+<br />
+۱. با استفاده از نام کاربری و رمز عبور خود و بکمک لینک زیر وارد سایت مجله شوید (در صورت فراموش کردن نام کاربری یا رمز عبور از گزینه مربوط به فراموشی رمز  عبور استفاده کنید)<br />
+۲. بر روی فایل موجود در مرحله اول ویراستاری کلیک کنید و آنرا دانلود کنید. پس از دانلود آنرا باز کنید.<br />
+۳. مقاله را بدقت مطالعه کرده و قسمتهای ویراستاری شده را بررسی کنید. لازم به ذکر است که در فایل ورد ارسالی تغییرات اعمال شده با رنگ و علائم مخصوص براحتی قابل تشخیص است. ویراستار ممکن است در متن مقاله سؤالاتی کرده باشد که لازم است بدقت به آنها جواب دهید.<br />
+۴. پس از وارد کردن پاسخ سؤالات<br />
+5. فایل را دخیره کرده و آپلود نمایید<br />
+<br />
+آدرس مقاله: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
+<br />
+{$participantName}]]></body>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_REQUEST">
+		<subject>بررسی نهایی ویراستاری</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+مراحل ویراستاری مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} توسط نویسنده و سردبیر مربوطه کامل شده است. هم اکنون نسخه بدون اشکال نهایی آماده انجام امور صفحه آرایی می باشد.<br />
+<br />
+آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+نام کاربری: {$participantUsername}<br />
+<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_COMPLETE">
+		<subject>بررسی نهایی ویراستاری کامل شد</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+در حال حاضر، یک نسخه ویراستاری شده ی بدون اشکال از مقاله شما با عنوان {$submissionTitle}مربوط به {$contextName} آماده شده و آماده انجام امور صفحه آرایی و نسخه پیش از چاپ می باشد.<br />
+<br />
+{$participantName}]]></body>
+		<description>This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin.</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>نسخه های پیش از چاپ مورد نیاز است</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را آماده نمایید.<br />
+<br />
+آدرس مقاله: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+نام کاربری: {$participantUsername}<br />
+<br />
+چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</description>
+	</email_text>
+	<email_text key="LAYOUT_COMPLETE">
+		<subject>نسخه های پیش از چاپ کامل شده است</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+نسخه های پیش از چاپ مقاله ضضض مربوط به {$contextName} حاضر شده و آماده بررسی نهایی می باشد.<br />
+لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />
+<br />
+<br />
+{$participantName}]]></body>
+		<description>This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed.</description>
+	</email_text>
+	<email_text key="LAYOUT_ACK">
+		<subject>قدردانی بخاطر انجام امور صفحه آرایی</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+از اینکه نسخه پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} را آماده نمودید از شما متشکرم. بدیهی است این امر کمک شایانی در روند چاپ خواهد بود.<br />
+<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_REQUEST">
+		<subject>درخواست بررسی نهایی از نویسنده</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+از شما درخواست می شود که نمونه پیش از چاپ مقاله ارسالی خود را تحت عنوان ضضض مربوط به {$contextName}، مورد بررسی نهایی قراردهید. لطفا برای دیدن نمونه های پیش از چاپ، بوسیله پیوند زیر وارد وب سایت مجله شوید. جهت فقط خواندن موارد غلط های املایی و صفحه آرایی در نسخه ای که چاپ خواهد شد، از پیوند VIEW PROOF استفاده کنید. این غلط ها را در کادر اطلاعات نمونه خوانی ذخیره کرده و طبق دستورالعمل های مربوط به بررسی نهایی (نمونه خوانی) که در وب سایت گنجانده شده است، عمل نمایید.<br />
+<br />
+آدرس مقاله: {$submissionUrl}<br />
+<br />
+چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.<br />
+<br />
+<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
+		<subject>بررسی نهایی کامل شد (نویسنده)</subject>
+		<body><![CDATA[بررسی نهایی کامل شد (نویسنده)]]></body>
+		<description>This email from the Author to the Proofreader and Editor notifies them that the Author's round of proofreading is complete and that details can be found in the article comments.</description>
+	</email_text>
+	<email_text key="PROOFREAD_AUTHOR_ACK">
+		<subject>قدردانی از نویسنده بخاطر بررسی نهایی مقاله</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+بخاطر بررسی نهایی مقاله خود تحت عنوان &quot;{$submissionTitle}&quot; مربوط به {$contextName} از شما متشکریم. منتظر آن هستیم تا مقاله شما بزودی چاپ گردد. چنانچه مشترک خدمات اطلاع رسانی مجله ما باشید، ایمیلی حاوی فهرست مطالب را دریافت خواهید کرد. لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Author acknowledges completion of the initial proofreading process and thanks them for their contribution.</description>
+	</email_text>
+	<email_text key="PROOFREAD_REQUEST">
+		<subject>درخواست بررسی نهایی</subject>
+		<body><![CDATA[{$proofreaderName}:<br />
+<br />
+از شما درخواست می شود که بررسی نهایی مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را انجام دهید.<br />
+<br />
+آدرس مقاله: {$submissionUrl}<br />
+نام کاربری: {$proofreaderUsername}<br />
+<br />
+چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید، با من تماس بگیرید.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Proofreader requests that they perform proofreading of an article's galleys. It provides information about the article and how to access it.</description>
+	</email_text>
+	<email_text key="PROOFREAD_COMPLETE">
+		<subject>بررسی نهایی کامل شد</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+درحال حاضر بررسی نهایی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} را به پایان رسانده ام. هم اکنون نمونه های پیش از چاپ، آماده اعمال تصحیح نهایی توسط صفحه آرا می باشد.<br />
+<br />
+{$proofreaderName}]]></body>
+		<description>This email from the Proofreader to the Section Editor notifies them that the Proofreader has completed the proofreading process.</description>
+	</email_text>
+	<email_text key="PROOFREAD_ACK">
+		<subject>قدردانی بخاطر انجام نمونه خوانی (بررسی نهایی)</subject>
+		<body><![CDATA[{$proofreaderName}:<br />
+<br />
+به خاطر بررسی نمونه پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} از شما متشکرم. بدیهی است این امر کمک شایانی در جهت ارتقاء سطح کیفی این مجله خواهد بود.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_REQUEST">
+		<subject>درخواست بررسی نهایی از صفحه آرا</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+از شما درخواست میگردد که براساس نتایج بررسی های نهایی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName}، اصلاحات لازم را ایجاد نمایید.<br />
+<br />
+آدرس مقاله: {$submissionUrl}<br />
+نام کاربری: {$participantUsername}<br />
+<br />
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا جهت طرح سوالات خود، با من تماس بگیرید.<br />
+<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Layout Editor notifies them that an article's galleys are ready for final proofreading. It provides information on the article and how to access it.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
+		<subject>اتمام بررسی نهایی (از طرف صفحه آرا)</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+اصلاح نمونه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} تمام شده است. هم اکنون این قسمت آماده چاپ می باشد.<br />
+<br />
+<br />
+{$participantName}]]></body>
+		<description>This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish.</description>
+	</email_text>
+	<email_text key="PROOFREAD_LAYOUT_ACK">
+		<subject>قدردانی بخاطر بررسی نهایی مقاله (از صفحه آرا)</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+به خاطر اصلاح نهایی نمونه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} از شما متشکرم. این امر، کمک شایان توجهی درجهت ارتقاء سطح کیفی مجله می باشد.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution.</description>
+	</email_text>
+	<email_text key="EMAIL_LINK">
+		<subject>شاید مایل به دیدن این مقاله باشید</subject>
+		<body><![CDATA[به نظر می رسد که شما مایل به ملاحظه مقاله {$authorName}تحت عنوان &quot;{$submissionTitle}&quot; باشید. این مقاله در شماره &amp;lt;{$volume}&amp;gt; جلد &amp;lt;$number&amp;gt; سال &amp;lt;{$year}&amp;gt; {$contextName} به چاپ رسیده است.<br />
+<br />
+آدرس مقاله:<br />
+<a href="{$articleUrl}">{$articleUrl}</a>]]></body>
+		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_NOTIFY">
+		<subject>اعلام اشتراک مجله</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+درحال حاضر شما به عنوان مشترک {$contextName}، با ویژگی های اشتراکی زیر در سامانه الکترونیکی مدیریت مجله ی ما ثبت نام شده اید:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+به منظور دستیابی به محتویات که فقط برای مشترکان در دسترس می باشد، براحتی با استفاده از نام کاربری تان &amp;lt;{$username}&amp;gt; در این سامانه واردشوید.<br />
+<br />
+بلافاصله پس از ورود به این سامانه، می توانید جزئیات اشتراک خود و رمز عبورتان را تغییر بدهید.<br />
+لطفا توجه کنید درصورتی که دارای اشتراک سازمانی باشید، نیازی به ورود به سیستم ندارید، زیرا این سامانه بصورت اتوماتیک درخواست های اشتراک را تایید می کند.<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="OPEN_ACCESS_NOTIFY">
+		<subject>اکنون مجله قابل دسترس است</subject>
+		<body><![CDATA[خوانندگان گرامی:<br />
+<br />
+{$contextName}، شماره جاری خود را بصورت دسترسی آزاد (Open Access) در اختیار خوانندگان قرار داده است. از شما دعوت میگردد که پس از ملاحظه فهرست مقالات در ذیل این نامه، به منظور بررسی مقالات و موضوع های مورد علاقه، از وب سایت مجله دیدن فرمایید.<br />
+<br />
+از توجه همیشگی شما نسبت به این مجله متشکریم.<br />
+<br />
+آدرس وب سایت مجله: <a href="{$contextUrl}">{$contextUrl}</a><br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
+		<subject>یادآوری پایان یافتن مدت اشتراک</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+اشتراک {$contextName} برای شما درحال اتمام می باشد.<br />
+<br />
+{$subscriptionType}<br />
+jhvdo hkrqh: {$expiryDate}<br />
+<br />
+به منظور اطمینان از دسترسی تان به این مجله، لطفا به وب سایت مجله مراجعه کرده و اشتراک خود را تمدید کنید. شما می توانید که با نام کاربری خود &amp;lt;نام کاربری&amp;gt; وارد این سامانه شوید.<br />
+<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
+		<subject>مدت اشتراک شما پایان یافته است</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+اشتراک {$contextName} برای شما به پایان رسیده است.<br />
+<br />
+{$subscriptionType}<br />
+تاریخ انقضاء: {$expiryDate}<br />
+<br />
+به منظور تجدید اشتراک خود، لطفا به وب سایت مجله مراجعه نمائید. شما قادر خواهید بود که با استفاده از نام کاربری خود &amp;lt;نام کاربری&amp;gt; وارد این سامانه شوید.<br />
+<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
+		<subject>اشتراک شما پایان یافت-آخرین یادآوری</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+اشتراک {$contextName} برای شما به پایان رسیده است.لطفا توجه کنید که این آخرین یادآوری است که برای شما ارسال خواهد شد.<br />
+<br />
+{$subscriptionType}<br />
+تاریخ انقضاء: {$expiryDate}<br />
+<br />
+به منظور تجدید اشتراک خود، لطفا به وب سایت مجله مراجعه نمائید. شما قادر خواهید بود که با استفاده از نام کاربری خود &amp;lt;نام کاربری&amp;gt; وارد شوید.<br />
+<br />
+لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
+	</email_text>
+		<email_text key="COPYEDIT_ACK">
+		<subject>تشکر بخاطر ویراستاری ({$submissionId})</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+از اینکه زحمت کشیده و مقاله &quot;{$submissionTitle},&quot; را برای مجله {$contextName} ویرایش کردید متشکرم.<br />
+این اقدام شما به منزله کمک بزرگی در راه ارتقا مجله میباشد.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_REQUEST">
+		<subject>درخواست بررسی مقاله ویرایش شده ({$submissionId})</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+مقاله شما با عنوان<br />
+&quot;{$submissionTitle}&quot;<br />
+ارسال شده به مجله<br />
+{$contextName}<br />
+مرحله اول ویرایش را پشت سر گذاشت و اکنون برای بررسی و اظهار نظر جنابعالی آماده است. برای این منظور مراحل زیر را دنبال کنید:<br />
+<br />
+بر روی لینک ارسال شده مقاله در قسمت زیر کلیک کنید. صفحه ورودی مجله ظاهر میشود<br />
+با استفاده از نام کاربری و رمز ورود خود وارد سایت مجله شوید و سپس بر روی لینک واقع فایل در مرحله یک کلیک کنید تا آنرا دانلود کنید<br />
+مقاله دانلود شده را باز کرده ومتن آنرا مخصوصا قسمتهائی که توسط ویراستار حذف, اضافه شده یا تغییر یافته بدقت مطالعه کنید. همچنین به سؤالاتی که از شما شده است پاسخ دهید.<br />
+هر گونه تغییر که لازم میدانید در متن بدهید تا آنرا مناسب تر کنید.<br />
+پس از تکمیل مقاله را ذخیره و آنرا در مرحله دوم بارگذاری کنید<br />
+بر روی فراداده های مقاله کلیک کنید تا آنرا نیز بررسی و تصحیح کنید.<br />
+بر روی شکلک زیر عبارت کامل شد کلیک کرده و ایمیل باز شده را ارسال کنید. این ایمیل برای ویراستار و دبیر مقاله خواهد رفت<br />
+<br />
+آدزس مقاله:<br />
+<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+<br />
+لطفا توجه فرمائید که این آخرین فرصت برای شما جهت اعمال تغییرات قابل توجه در مقاله میباشد. در مرحله بازبینی که متعاقب صفحه آرائی خواهد آمد فقط امکان تغییرات جزئی وجود دارد.<br />
+<br />
+چنانچه در حال حاضر به علت گرفتاری قادر به انجام این کار نیستید و یا هر سؤال دیگری دارید, لطفا مرا در جریان بگذارید.<br />
+از اینکه با ما همکاری میکنید متشکریم<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by the Section Editor to a submission's Author to request that they proofread the work of the copyeditor. It provides access information for the manuscript and warns that this is the last opportunity the author has to make substantial changes.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
+		<subject>بررسی مقاله ویرایش شده به اتمام رسید ({$submissionId})</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+{$contextName}<br />
+<br />
+هم اکنون بررسی مقاله ویرایش شده را به اتمام رساندم و اعلام میدارم که این مقاله آماده برای آخرین دور ویراستاری و ارسال برای صفحه آرائی میباشد.<br />
+<br />
+با تشکر<br />
+{$authorName}]]></body>
+		<description>This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_ACK">
+		<subject>تشکر بخاطر بررسی مقاله ویرایش شده ({$submissionId})</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+{$contextName}<br />
+<br />
+از اینکه مقاله ویرایش شده را بررسی کردید متشکرم. هماکنون مقاله شما برای صفحه آرائی ارسال میشود.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_ACK">
+		<subject>تشکر بخاطر انجام آخرین مرحله ویراستاری ({$submissionId})</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+{$contextName}<br />
+<br />
+از اینکه آخرین مرحله ویرایش مقاله را انجام دادید متشکرم. این اقدام مرحله ای مهم در روند ادیتوریال میباشد.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND">
+		<subject>یادآوری داوری مقاله ارسالی</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+این فقط یک یادآوری درخواست {$contextName} از شما جهت بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;است. امیدوار بودیم که متن داوری شما تا تاریخ &amp;lt;{$reviewDueDate}&amp;gt; به مجله ارسال شده باشد و بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید آنرا آماده کرده و نسبت به ارسال آن اقدام کنید.<br />
+<br />
+چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید، می توانید از پیوند زیر جهت دوباره تنظیم کردن رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />
+<br />
+<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+آدرس مقاله: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستیم.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای یادآوری انجام داوری</description>
+	</email_text>
+	<email_text key="LOCKSS_EXISTING_ARCHIVE">
+		<subject>تقاضای آزشیو برای {$contextName}</subject>
+		<body><![CDATA[مسئول محترم کتابخانه<br />
+<br />
+مجله {$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, مجله ای است که یکی از اعضای آن مؤسسه  (بنام فلان) در آن عضو میباشد. این مجله متقاضی آرشیو شدن محتوایش در یک سایت LOCKSS میباشد. خواهشمند است مساعدت فرموده و این مجله را در سیستم خود آرشیو کنید.rsity libraries.<br />
+<br />
+[توضیح مختصری از مجله]<br />
+<br />
+آدرس وبی برای مانیفست ناشری LOCKSS مجله ما بقرار زیر است:<br />
+<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+<br />
+از آنجائیکه شما عضو شبکه LOCKSS هستید خواهشمند است مساعدت فرموده و ما را در آرشیو خود ذخیره فرمائید.<br />
+با تشکر<br />
+{$principalContactSignature}]]></body>
+		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
+	</email_text>
+	<email_text key="NOTIFICATION">
+		<subject>فرم اطلاع رسانی جدید {$siteTitle}</subject>
+		<body><![CDATA[شما یک فرم اطلاع رسانی جدید از {$siteTitle} دارید<br />
+<br />
+لینک: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم نهایی: پذیرش مقاله ارسالی<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از پذیرش مقاله</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم : مقاله ارسالی نیاز به انجام اصلاحات دارد<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع ازنیازمندی مقاله به اعمال مجموعه ای از اصلاحات</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم نهایی: ارسال دوباره برای داوری<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال دوباره مقاله برای داوری</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم نهایی: عدم پذیرش مقاله ارسالی<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از عدم پدیرش پذیرش مقاله</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>خرید اشتراک شخصی</subject>
+		<body><![CDATA[An individual subscription has been purchased online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+کاربر:<br />
+{$userDetails}<br />
+<br />
+اطلاعات عضویت در صورت موجود بودن:<br />
+{$membership}<br />
+<br />
+برای دیدن یا ویرایش این اشتراک لطفا به آدرس زیر بروید.<br />
+<br />
+Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>خرید اشتراک سازمانی</subject>
+		<body><![CDATA[An institutional subscription has been purchased online for {$contextName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (if provided):<br />
+{$domain}<br />
+<br />
+IP Ranges (if provided):<br />
+{$ipRanges}<br />
+<br />
+مسئول تماس:<br />
+{$userDetails}<br />
+<br />
+اطلاعات عضویت در صورت وجود:<br />
+{$membership}<br />
+<br />
+برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.<br />
+<br />
+آدرس اشتراک: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>تمدید اشتراک شخصی</subject>
+		<body><![CDATA[An individual subscription has been renewed online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+کاربر:<br />
+{$userDetails}<br />
+<br />
+اطلاعات عضویت در صورت وجود:<br />
+{$membership}<br />
+<br />
+برای مشاهده یا ویرایش این اشتراک به آدرس زیر بروید.<br />
+<br />
+آدرس اشتراک: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>تمدید اشتراک سازمانی</subject>
+		<body><![CDATA[یک اشتراک سازمانی بصورت آن لاین برای {$contextName} با اطلاعات زیر تمدید شد.<br />
+<br />
+نوع اشتراک:<br />
+{$subscriptionType}<br />
+<br />
+مؤسسه:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+دامنه در صورت وجود:<br />
+{$domain}<br />
+<br />
+بازه IP در صورت وجود:<br />
+{$ipRanges}<br />
+<br />
+مسؤل تماس:<br />
+{$userDetails}<br />
+<br />
+اطلاعات عضویت در صورت وجود:<br />
+{$membership}<br />
+<br />
+برای مشاهده و ویرایش این اشتراک، لطفا به آدرس زیر بروید.<br />
+<br />
+آدرس اشتراک: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>ویرایش ارجاع</subject>
+		<body><![CDATA[{$authorFirstName},<br />
+<br />
+لطفا ارجاع صحیح برای رفرانس زیر از مقاله شما {$submissionTitle} را مشخص کنید و یا تایید نمائید:<br />
+<br />
+{$rawCitation}<br />
+<br />
+بت تشکر!<br />
+<br />
+{$userFirstName}<br />
+ویراستار, {$contextName}]]></body>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم نهایی: عدم پذیرش<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>این پیام زمان یارسال می شود که دبیر مقاله ارسالی را در اغاز رد می کند، بدون انکه وارد مرحله داوری شود</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
+<br />
+تصمیم : ارسال به داور خارجی<br />
+<br />
+مشاهده وضعیت مقاله ارسالی: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال مقاله برای داوری توسط یک داور خارجی</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>تصمیم دبیر</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+ روند داوری مقاله ارسالی شما (&quot;{$submissionTitle}&quot;)  تکمیل شده و به واحد انتشار ارسال شده است.<br />
+<br />
+مشاهده وضعیت مقاله ارسالی: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال مقاله برای چاپ</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>توصیه دبیر</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+توصیه اینجانب در مورد مقاله ارسالی (&quot;{$submissionTitle}&quot;) در {$contextName} ، {$recommendation} می باشد.<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به دبیر نهایی تصمیم گیرنده برای اطلاع از توصیه برای مقاله ارسالی</description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>پیامی برای {$contextName}</subject>
+		<body>لطفاً پیام خود را وارد کنید</body>
+		<description>پیام خالی که در قسمت اطلاع رسانی استفاده می شود</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>قدردانی برای ارسال مقاله</subject>
+		<body><![CDATA[با سلام,<br />
+<br />
+مقاله {$submitterName} مقاله &quot;{$submissionTitle}&quot; را به مجله {$contextName} ارسال نمودند <br />
+<br />
+در صورت داشتن هر گونه سوالی با من تماس حاصل فرمایید. از اینکه نتیجه پژوهش خود را برای این مجله ارسال نمودید، سپاسگذاریم<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>در صورت فعال سازی. این ایمیل به صورت خودکار به نوسنده مقاله پس از تکمیل عملیات ارسال مقاله، فرستاده خواهد شد.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+این ایمیل در مورد مقاله &quot;{$submissionTitle},&quot; که به مجله {$contextName} ارسال شده است، می باشد.<br />
+<br />
+در ادامه داوری های قبلی  این مقاله نمایش داده شده است و اکنون نویسنده نسخه اصلاحی خود را ارسال کرده است. در صورت امکان در ارزیابی این اصلاحات به ما کمک کنید.<br />
+<br />
+راهنمای داوری و همچنین مقاله به این ایمیل ضمیمه شده است. نتیجه داوری و همچنین توصیه شما در موذد این مقاله باید تا تاریخ {$reviewDueDate} ارسال شود.<br />
+<br />
+لطفاً تا تاریخ {$responseDueDate} برای ما با ایمیل پاسخ دهید که این داوری را می پذیرید یا نه.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+راهنمای داوری<br />
+<br />
+{$reviewGuidelines}<br />]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+این ایمیل در مورد مقاله &quot;{$submissionTitle},&quot; که به مجله {$contextName} ارسال شده است، می باشد.<br />
+<br />
+در ادامه داوری های قبلی  این مقاله نمایش داده شده است و اکنون نویسنده نسخه اصلاحی خود را ارسال کرده است. در صورت امکان در ارزیابی این اصلاحات به ما کمک کنید.<br />
+<br />
+لطفاً تا تاریخ {$responseDueDate} به سامانه وارد شده و پذیرش یا عدم پذیرش انجام این داوری را به اطلاع برسانید<br />
+<br />
+مهلت انجام داوری: {$reviewDueDate}.<br />
+<br />
+لینک مقاله: {$submissionReviewUrl}<br />
+<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>یادآوری درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+
+این ایمیل که به صورت خودکار ارسال شده است، جهت یادآوری درخواست انجام داوری مقاله &quot;{$submissionTitle},&quot; برای مجله {$contextName}. است.
+<br />
+لطفاً به سامانه {$contextUrl} وارد شده و پذیرش یا عدم پذیرش انجام این داوری را به اطلاع برسانید<br />
+<br />
+مهلت انجام داوری: {$reviewDueDate}.<br />
+<br />
+چنانچه رمز ورود خود را فراموش کرده اید م یتوانید از لینک زیر برای بازیابی رمز ورود خود استفاده کنید:
+{$passwordResetUrl}<br />
+<br />
+لینک مقاله: {$submissionReviewUrl}<br />
+<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>یادآوری درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+
+این ایمیل که به صورت خودکار ارسال شده است، جهت یادآوری درخواست انجام داوری مقاله &quot;{$submissionTitle},&quot; برای مجله {$contextName}. است. امیدواریم که تا تاریخ {$responseDueDate} نسبت به پذیرش یا عدم پذیرش این درخواست داوری به ما اطلاع رسانی نمایید
+<br />
+لطفاً به سامانه وارد شده و پذیرش یا عدم پذیرش انجام این داوری را به اطلاع برسانید<br />
+<br />
+مهلت انجام داوری: {$reviewDueDate}.<br />
+
+<br />
+لینک مقاله: {$submissionReviewUrl}<br />
+<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>آپلود نسخه اصلاح شده</subject>
+		<body><![CDATA[دبیر محترم:<br />
+<br />
+نسخه اصلاح شده مقاله &quot;{$submissionTitle}&quot; توسط {$authorName} در سامانه آپلود شد..<br />
+<br />
+لینک مقاله: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>ایمیلی که خودکار پس از آپلود نسخه اصلاحی توسط نویسنده  برای دبیر ارسال می شود</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>درخواست داوری مقاله</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot; که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />
+<br />
+لطفا قبل از تاریخ {$responseDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.<br />
+<br />
+چنانچه رمز عبور خود را فراموش کرده اید می توانید از لینک زیر به بازیابی رمز خود بپردازید: {$passwordResetUrl}
+<br/>
+ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.<br />
+<br />
+آدرس مقاله: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+از توجه شما به این درخواست متشکرم.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+--------------------------------<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+چکیده:<br />
+{$submissionAbstract}]]></body>
+		<description>ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری</description>
+	</email_text>
+</email_texts>

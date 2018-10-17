@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/SectionGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
@@ -33,7 +33,7 @@ class SectionGridHandler extends SetupGridHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @copydoc GridHandler::initialize()
+	 * @copydoc SetupGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
@@ -64,7 +64,7 @@ class SectionGridHandler extends SetupGridHandler {
 			} else {
 				$editors = array();
 				foreach ($assignedSubEditors as $subEditor) {
-					$editors[] = $subEditor->getLastName();
+					$editors[] = $subEditor->getFullName();
 				}
 				$editorsString = implode(', ', $editors);
 			}
@@ -76,7 +76,9 @@ class SectionGridHandler extends SetupGridHandler {
 				'seq' => $section->getSequence()
 			);
 		}
-		uasort($gridData, create_function('$a,$b', 'return $a[\'seq\']-$b[\'seq\'];'));
+		uasort($gridData, function($a,$b) {
+			return $a['seq']-$b['seq'];
+		});
 
 		$this->setGridDataElements($gridData);
 
@@ -170,7 +172,7 @@ class SectionGridHandler extends SetupGridHandler {
 
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);
-		$sectionForm->initData($args, $request);
+		$sectionForm->initData();
 		return new JSONMessage(true, $sectionForm->fetch($request));
 	}
 
@@ -188,7 +190,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionForm->readInputData();
 
 		if ($sectionForm->validate()) {
-			$sectionForm->execute($args, $request);
+			$sectionForm->execute();
 			return DAO::getDataChangedEvent($sectionForm->getSectionId());
 		}
 		return new JSONMessage(false);
@@ -231,4 +233,4 @@ class SectionGridHandler extends SetupGridHandler {
 	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -51,7 +51,6 @@
 	<message key="manager.payment.options.publicationFee">文章出版费</message>
 	<message key="manager.payment.options.purchaseArticleFee">购买文章费用</message>
 	<message key="manager.payment.options.text">支付方法描述</message>
-	<message key="manager.payment.options.waiverPolicy">放弃制度</message>
 	<message key="manager.payment.paymentId">支付ID</message>
 	<message key="manager.payment.paymentMethod">支付方法</message>
 	<message key="manager.payment.paymentMethod.description">系统提供了如下支付方法插件供您选择。</message>
@@ -254,7 +253,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意：</strong> 这封给审稿人的电子邮件邀请函会包涵一个特殊的网址链接，邀请审稿人直接进入稿件的「审稿」页面（同时可以存取其他需要登入身份的页面）。基于与这个选项相关的安全性理由，编辑在寄出给审稿人的邀请函之前，不能变更电子邮件或者增加副本(CCs)或密件副本(BCCs)。]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">审稿人评比</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">审稿人备忘录</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[在作者与审稿人上传文件的位置提供一个指向 <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">确认盲审</a>的链接。]]></message>
 	<message key="manager.setup.reviewPolicy">审稿方针</message>
 	<message key="manager.setup.searchEngineIndexing">搜寻引擎索引</message>
 	<message key="manager.setup.searchEngineIndexingDescription">为协助用户使用搜寻引擎来了解这份期刊，请提供一份简短的期刊说明与相关关键字（以分号(;)加以区隔）。</message>

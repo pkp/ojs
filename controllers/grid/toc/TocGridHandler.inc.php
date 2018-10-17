@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/toc/TocGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TocGridHandler
@@ -50,10 +50,10 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @copydoc CategoryGridHandler::initialize()
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $args = null) {
+		parent::initialize($request, $args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
 
@@ -134,7 +134,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc CategoryGridHandler::loadCategoryData()
 	 */
-	function loadCategoryData($request, $section) {
+	function loadCategoryData($request, &$section, $filter = null) {
 		return $this->publishedArticlesBySectionId[$section->getId()];
 	}
 
@@ -186,16 +186,16 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @copydoc GridHandler::getDataElementSequence()
+	 * @copydoc CategoryGridHandler::getDataElementInCategorySequence()
 	 */
-	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
+	function getDataElementInCategorySequence($categoryId, &$publishedArticle) {
 		return $publishedArticle->getSequence();
 	}
 
 	/**
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
-	function setDataElementInCategorySequence($sectionId, $publishedArticle, $newSequence) {
+	function setDataElementInCategorySequence($sectionId, &$publishedArticle, $newSequence) {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		if ($sectionId != $publishedArticle->getSectionId()) {
 			$publishedArticle->setSectionId($sectionId);
@@ -269,4 +269,4 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the eu_ES (Euskara) locale.
@@ -92,72 +92,7 @@
 	<message key="editor.navigation.futureIssues">Etorkizuneko zenbakiak</message>
 	<message key="editor.navigation.issueArchive">Aurreko zenbakiak</message>
 	<message key="editor.article.designateReviewVersion">Izendatu jatorrizko fitxategia Ebaluazio-bertsio gisa</message>
-	<message key="editor.article.uploadReviewVersion">Kargatu berrikusitako Ebaluazio-bertsio bat</message>
-	<message key="editor.article.showSuppFile">Aurkeztu fitxategia ebaluatzaileei</message>
-	<message key="editor.article.layoutAndProof">Maketazioa eta Probak</message>
-	<message key="editor.article.clear">Garbitu</message>
-	<message key="editor.article.clearReviewer">Kendu ebaluatzailea</message>
-	<message key="editor.article.changeSection">Aldatu atala</message>
-	<message key="editor.article.setDueDate">Ezarri mugaeguna</message>
-	<message key="editor.article.addReviewer">Gehitu ebaluatzailea</message>
-	<message key="editor.article.toReviewer">Ebaluatzaileari</message>
-	<message key="editor.article.notifyReviewer">Jakinarazi ebaluatzaileari</message>
-	<message key="editor.article.initiateReview">Hasi ebaluazioa</message>
-	<message key="editor.article.cancelReview">Ezereztu eskaera</message>
-	<message key="editor.article.clearReview">Kendu ebaluatzailea</message>
-	<message key="editor.article.enterRecommendation">Sartu gomendioa</message>
-	<message key="editor.article.enterReviewerRecommendation">Sartu Ebaluatzailearen gomendioa</message>
-	<message key="editor.article.recommendation">Gomendioa</message>
-	<message key="editor.article.selectReviewer">Hautatu Ebaluatzailea</message>
-	<message key="editor.article.replaceReviewer">Ordeztu Ebaluatzailea</message>
-	<message key="editor.article.editorToEnter">Editoreak hemen sar ditzake ebaluatzailearentzako gomendioak/iruzkinak</message>
-	<message key="editor.article.uploadReviewForReviewer">Kargatu ebaluazioa</message>
-	<message key="editor.article.peerReviewOptions">Adituen ebaluazioaren aukerak</message>
 	<message key="editor.article.decision">Erabakia</message>
-	<message key="editor.article.noEditorSelected">Ez da editorerik hautatu.</message>
-	<message key="editor.article.recordDecision">Grabatu erabakia</message>
-	<message key="editor.article.cannotRecord">Ataleko editorea grabatu gabe.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Egilearen bertsioa aztertzeko ebaluatzaileak</message>
-	<message key="editor.article.designateDueDate">Ezarri mugaeguna</message>
-	<message key="editor.article.designateDueDateDescription">Idatzi mugaegun berriaren data edo aste-kopurua.</message>
-	<message key="editor.article.todaysDate">Gaurko eguna</message>
-	<message key="editor.article.requestedByDate">Entregatzeko data</message>
-	<message key="editor.article.dueDateFormat">Formatua: UUUU-HH-EE</message>
-	<message key="editor.article.numberOfWeeks">Aste kopurua</message>
-	<message key="editor.article.selectCopyeditor">Izendatu Zuzentzailea</message>
-	<message key="editor.article.replaceCopyeditor">Ordeztu Zuzentzailea</message>
-	<message key="editor.article.editorsCopyedit">Editorearen Zuzenketa</message>
-	<message key="editor.article.showAuthor">Utzi egileari fitxategia ikusten</message>
-	<message key="editor.article.showCopyeditor">Erakutsi bertsioa zuzentzaileari</message>
-	<message key="editor.article.rateReviewer">Ebaluatzailearen balorazioa</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Onena</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Txarrena</message>
-	<message key="editor.article.comments">Iruzkinak</message>
-	<message key="editor.article.commentsRequired">Iruzkinen eremua nahitaezkoa da.</message>
-	<message key="editor.article.saveRating">Gorde balorazioa</message>
-	<message key="editor.article.noneSelected">Ez da bat ere hautatu</message>
-	<message key="editor.article.authorProofing">Egilearen proba-zuzenketa</message>
-	<message key="editor.article.archiveSubmission">Artxibatu bidalketa</message>
-	<message key="editor.article.restoreToQueue">Leheneratu Aktiboen Zerrendara</message>
-	<message key="editor.article.assignSectionEditor">Gehitu Ataleko editorea</message>
-	<message key="editor.article.assignEditor">Gehitu Editorea</message>
-	<message key="editor.article.selectEditor">Hautatu {$roleName}</message>
-	<message key="editor.article.selectDecision">Hautatu erabakia</message>
-	<message key="editor.article.selectLayoutEditor">Hautatu Maketatzailea</message>
-	<message key="editor.article.replaceLayoutEditor">Ordeztu Maketatzailea</message>
-	<message key="editor.article.reviewSubmission">Ebaluatu bidalketa</message>
-	<message key="editor.article.resubmitForReview">Birbidali fitxategia ebaluatzeko</message>
-	<message key="editor.article.resubmitFileForPeerReview">Birbidali hautatutako fitxategia adituen ebaluaziorako</message>
-	<message key="editor.article.sendToCopyedit">Bidali fitxategia Zuzentzera</message>
-	<message key="editor.article.selectProofreader">Izendatu proba-zuzentzailea</message>
-	<message key="editor.article.replaceProofreader">Ordeztu proba-zuzentzailea</message>
-	<message key="editor.article.authorComments">Egilearen iruzkinak</message>
-	<message key="editor.article.proofreaderComments">Proba-zuzentzailearen iruzkinak</message>
-	<message key="editor.article.layoutEditorFinal">Maketatzailearen azkena</message>
-	<message key="editor.article.noDate">(data)</message>
 	<message key="editor.submissions.showBy">Erakutsi</message>
 	<message key="editor.submissions.submitMMDD">Bidalia: HH-EE</message>
 	<message key="editor.submissions.activeAssignments">Esleipen aktiboak</message>
@@ -172,20 +107,9 @@
 	<message key="editor.article.scheduleForPublication">Argitaratzeko programatu:</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Esleitzeko</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Argitalpen-tarifa ordaindu gabe dago. Lana argitaratzeko programatzeko, jakinarazi egileari tarifa ordaindu behar duela, edo salbuetsi ordainketa.</message>
-	<message key="editor.article.display">Erakutsi</message>
-	<message key="editor.article.hideTocAuthorDescription">Ez sartu egileen izena zenbakiaren aurkibidean</message>
-	<message key="editor.article.hideTocAuthorDefault">Lehenetsia</message>
-	<message key="editor.article.hideTocAuthorHide">Ez sartu</message>
-	<message key="editor.article.hideTocAuthorShow">Erakutsi</message>
-	<message key="editor.article.cover">Azala</message>
 	<message key="editor.article.showCoverPage">Sortu artikulu honen azala ondorengo elementuekin.</message>
-	<message key="editor.article.coverImageDisplay">Erakutsi</message>
 	<message key="editor.article.hideCoverPageToc">Ez erakutsi azaleko irudia aurkibidean.</message>
 	<message key="editor.article.hideCoverPageAbstract">Ez erakutsi azaleko irudia artikuluaren laburpenaren ikuspegian.</message>
-	<message key="editor.article.coverImage">Azaleko irudia</message>
-	<message key="editor.article.coverImageInstructions">(gif, .jpg, edo .png formatuak onartzen dira)</message>
-	<message key="editor.article.uploaded">Kargatuta</message>
-	<message key="editor.article.removeCoverPage">Azaleko irudia kendu?</message>
 	<message key="editor.article.remove">Kendu</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Aurkezpena zuzentzera bidali baino lehen, erabili “Egileari Jakinarazi” esteka egileari erabakiaren berri emateko eta bidali behar den bertsioa hautatzeko.</message>
 	<message key="editor.notifyUsers.allReaders">Irakurle guztiak ({$count} erabiltzaileak)</message>
@@ -208,4 +132,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Jadanik bada ale publikoaren galera probaren identifikazioa.</message>
 	<message key="editor.issues.backToIssueGalleys">Atzera alearen galera probetara</message>
 	<message key="editor.issues.confirmDeleteGalley">Ziur al zaude alearen galera proba hau ezabatu nahi duzula?</message>
+	<message key="editor.article.coverImage">Azaleko irudia</message>
 </locale>

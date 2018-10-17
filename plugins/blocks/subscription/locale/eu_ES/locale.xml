@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Basque_(eu_ES)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Plugin honek harpidetzen informazioa ematen du alboko barran.</message>
 	<message key="plugins.block.subscription.blockTitle">Harpidetza</message>
 	<message key="plugins.block.subscription.expires">Iraungi</message>
-	<message key="plugins.block.subscription.providedBy">Sarbide-emailea: </message>
-	<message key="plugins.block.subscription.comingFromIP">IP honetatik: </message>
+	<message key="plugins.block.subscription.providedBy">Sarbide-emailea: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">IP honetatik: {$ip}</message>
 	<message key="plugins.block.subscription.about">Harpidetzak</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Hasi saioa harpidetza egiaztatzeko</message>
 </locale>

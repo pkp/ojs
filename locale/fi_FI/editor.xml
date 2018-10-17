@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Tämä käsikirjoitus arkistoidaan sen jälkeen, kun Ilmoita kirjoittajalle -sähköposti on lähetetty tai sen Ohita sähköposti-painiketta on painettu.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Ennen käsikirjoituksen lähettämistä teknisesti toimitettavaksi, ilmoita kirjoittajalle päätöksestä (käytä Ilmoita kirjoittajalle -linkkiä) ja valitse lähetettävä versio.</message>
 	<message key="editor.notifyUsers">Ilmoita käyttäjille</message>
-	<message key="editor.notifyUsers.allUsers">Kaikki tähän konferenssiin liittyvät käyttäjät ({$count})</message>
 	<message key="editor.notifyUsers.allReaders">Kaikki lukijat ({$count} käyttäjää)</message>
 	<message key="editor.notifyUsers.allAuthors">Kaikki julkaisseet kirjoittajat ({$count} käyttäjää)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Kaikki yksittäistilaajat ({$count} käyttäjää)</message>
@@ -120,76 +119,7 @@
 	<message key="grid.action.addIssueGalley">Luo numeron julkaistava tiedosto</message>
 	<message key="editor.navigation.issueArchive">Aiemmat numerot</message>
 	<message key="editor.article.designateReviewVersion">Määritä alkuperäinen tiedosto arviointiversioksi</message>
-	<message key="editor.article.uploadReviewVersion">Lataa korjattu arviointiversio</message>
-	<message key="editor.article.showSuppFile">Näytä tiedosto arvioijille</message>
-	<message key="editor.article.layoutAndProof">Taitto &amp; korjausvedos</message>
-	<message key="editor.article.clear">Poista</message>
-	<message key="editor.article.clearReviewer">Poista arvioija</message>
-	<message key="editor.article.changeSection">Vaihda osasto</message>
-	<message key="editor.article.setDueDate">Aseta määräpäivä</message>
-	<message key="editor.article.addReviewer">Lisää arvioija</message>
-	<message key="editor.article.toReviewer">Arvioijalle</message>
-	<message key="editor.article.notifyReviewer">Ilmoita arvioijalle</message>
-	<message key="editor.article.initiateReview">Aloita arviointi</message>
-	<message key="editor.article.cancelReview">Peruuta pyyntö</message>
-	<message key="editor.article.clearReview">Poista arvioija</message>
-	<message key="editor.article.enterRecommendation">Anna suositus</message>
-	<message key="editor.article.enterReviewerRecommendation">Anna arvioijasuositus</message>
-	<message key="editor.article.recommendation">Suositus</message>
-	<message key="editor.article.selectReviewer">Valitse arvioija</message>
-	<message key="editor.article.replaceReviewer">Korvaa arvioija</message>
-	<message key="editor.article.editorToEnter">Toimittaja täyttää suosituksen/kommentteja arvioijalle</message>
-	<message key="editor.article.uploadReviewForReviewer">Lataa arviointi</message>
-	<message key="editor.article.peerReviewOptions">Vertaisarvioinnin vaihtoehdot</message>
 	<message key="editor.article.decision">Päätös</message>
-	<message key="editor.article.noEditorSelected">Toimittajaa ei valittu.</message>
-	<message key="editor.article.recordDecision">Tallenna päätös</message>
-	<message key="editor.article.cannotRecord">Osastotoimittajaa ei ole vielä tallennettu tai arviointitiedosto ei ole saatavilla.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Arvioijat näkevät kirjoittajan version</message>
-	<message key="editor.article.designateDueDate">Määritä määräpäivä</message>
-	<message key="editor.article.designateDueDateDescription">Anna uuden määräajan päivämäärä tai kesto viikkoina.</message>
-	<message key="editor.article.todaysDate">Tämä päivä</message>
-	<message key="editor.article.requestedByDate">Pyydetään määräpäivään mennessä</message>
-	<message key="editor.article.dueDateFormat">Muodossa: VVVV-KK-PP</message>
-	<message key="editor.article.numberOfWeeks">Kesto viikkoina</message>
-	<message key="editor.article.selectCopyeditor">Valitse tekninen toimittaja</message>
-	<message key="editor.article.replaceCopyeditor">Korvaa tekninen toimittaja</message>
-	<message key="editor.article.editorsCopyedit">Toimittajan suorittama tekninen toimittaminen</message>
-	<message key="editor.article.showAuthor">Salli kirjoittajan nähdä tiedosto</message>
-	<message key="editor.article.showCopyeditor">Näytä versio tekniselle toimittajalle</message>
-	<message key="editor.article.rateReviewer">Arvioijan arvostelu</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Korkea</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Matala</message>
-	<message key="editor.article.comments">Kommentit</message>
-	<message key="editor.article.commentsRequired">Kommentit-kenttä on pakollinen.</message>
-	<message key="editor.article.saveRating">Tallenna arvostelu</message>
-	<message key="editor.article.noneSelected">Ei valittuja</message>
-	<message key="editor.article.authorProofing">Kirjoittajan korjausvedos</message>
-	<message key="editor.article.archiveSubmission">Hylkää ja arkistoi käsikirjoitus</message>
-	<message key="editor.article.restoreToQueue">Palauta aktiivisten luetteloon</message>
-	<message key="editor.article.assignSectionEditor">Lisää osastotoimittaja</message>
-	<message key="editor.article.assignEditor">Lisää toimittaja</message>
-	<message key="editor.article.selectEditor">Valitse {$roleName}</message>
-	<message key="editor.article.selectDecision">Valitse päätös</message>
-	<message key="editor.article.decision.accept">Hyväksy käsikirjoitus</message>
-	<message key="editor.article.decision.pendingRevisions">Vaatii korjauksia</message>
-	<message key="editor.article.decision.resubmit">Lähetä uudelleen arvioitavaksi</message>
-	<message key="editor.article.decision.decline">Hylkää käsikirjoitus</message>
-	<message key="editor.article.selectLayoutEditor">Valitse taittaja</message>
-	<message key="editor.article.replaceLayoutEditor">Korvaa taittaja</message>
-	<message key="editor.article.reviewSubmission">Arvioi käsikirjoitus</message>
-	<message key="editor.article.resubmitForReview">Lähetä tiedosto uudelleen arvioitavaksi</message>
-	<message key="editor.article.resubmitFileForPeerReview">Lähetä valittu tiedosto vertaisarvioitavaksi</message>
-	<message key="editor.article.sendToCopyedit">Lähetä tiedosto teknisesti toimitettavaksi</message>
-	<message key="editor.article.selectProofreader">Valitse oikolukija</message>
-	<message key="editor.article.replaceProofreader">Korvaa oikolukija</message>
-	<message key="editor.article.authorComments">Kirjoittajan kommentit</message>
-	<message key="editor.article.proofreaderComments">Oikolukijan kommentit</message>
-	<message key="editor.article.layoutEditorFinal">Taittajan lopullinen versio</message>
-	<message key="editor.article.noDate">(pvm)</message>
 	<message key="editor.submissions.showBy">Näytä (pvm) mennessä</message>
 	<message key="editor.submissions.submitMMDD">Lähetä KK-PP</message>
 	<message key="editor.submissions.activeAssignments">Aktiiviset toimeksiannot</message>
@@ -205,16 +135,7 @@
 	<message key="editor.article.scheduleForPublication">Ajoita julkaistavaksi (numerossa)</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Osoitetaan</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Julkaisumaksu maksamatta. Ilmoita kirjoittajalle, että maksu on maksettava tai siitä on luovuttava, jotta kohde voidaan ajoittaa julkaistavaksi.</message>
-	<message key="editor.article.display">Näytä</message>
-	<message key="editor.article.hideTocAuthorDescription">Jätä kirjoittajien nimet pois numeron sisällysluettelosta</message>
-	<message key="editor.article.hideTocAuthorDefault">Oletus</message>
-	<message key="editor.article.hideTocAuthorHide">Jätä pois</message>
-	<message key="editor.article.hideTocAuthorShow">Näytä</message>
-	<message key="editor.article.cover">Kansi</message>
-	<message key="editor.article.coverImage">Kansikuva</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Kansikuvaa, jonka halusit poistaa, ei löytynyt. Se on ehkä jo poistettu. Kokeile sivun uudelleenlatausta.</message>
-	<message key="editor.article.uploaded">Ladattu</message>
-	<message key="editor.article.removeCoverPage">Poistetaanko kansikuva?</message>
 	<message key="grid.action.removeArticle">Poista artikkeli numerosta</message>
 	<message key="editor.article.remove">Poista</message>
 	<message key="editor.article.remove.confirm">Haluatko varmasti poistaa tämän artikkelin numerosta? Artikkeli on mahdollista ajoittaa toiseen numeroon.</message>
@@ -224,5 +145,8 @@
 	<message key="editor.submission.selectGalleyFiles">Valitse julkaistavat tiedostot</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Tekninen toimittaja on muuttanut tämän luettelon lopulliset luonnostiedostot teknisesti toimitetuiksi versioiksi, jotka on ladattu alla olevan <span class="pkp_help_title">Tekninen toimittaminen</span>-otsikon alle.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri lähetysvaiheissa, voidaan lisätä oikolukulistalle rastittamalla Sisällytä-valintaruutu alla ja klikkaamalla Etsi: kaikki saatavilla olevat tiedostot näytetään ja voidaan valita lisättäväksi.</message>
-	<message key="editor.publicIdentificationExistsForTheSameType">Julkinen tunniste {$publicIdentifier} on jo toisen samantyyppisen kohteen käytössä. Valitse julkaisusi samantyyppisille kohteille yksilöivät tunnisteet.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Oletko varma, että haluat asettaa tämän numeron uusimmaksi?</message>
+	<message key="grid.action.setCurrentIssue">Aseta uusin numero</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Julkinen tunniste '{$publicIdentifier}' on jo käytössä. Valitse uniikki tunniste.</message>
+	<message key="editor.article.coverImage">Kansikuva</message>
 </locale>

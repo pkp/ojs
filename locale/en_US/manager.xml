@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -28,7 +28,7 @@
 	<message key="manager.payment.addPayment">Add Payment</message>
 	<message key="manager.payment.amount">Amount</message>
 	<message key="manager.payment.authorFees">Author Fees</message>
-	<message key="manager.payment.authorFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in Step 1 of the submission process and in About the Journal under Submissions, as well as at points where payment is required.</message>
+	<message key="manager.payment.authorFeesDescription">Enter fee amounts below in order to enable author processing charges.</message>
 	<message key="manager.payment.currency">Currency</message>
 	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
 	<message key="manager.payment.description">Description</message>
@@ -44,17 +44,17 @@
 	<message key="manager.payment.notFound">Not Found</message>
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
-	<message key="manager.payment.options.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note Users will be required to log in to make payments.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Are you sure you wish to delete this subscription?</message>
+	<message key="manager.payment.options.enablePayments">Payments will be enabled for this journal. Note that users will be required to log in to make payments.</message>
 	<message key="manager.payment.options.fee">Fee</message>
 	<message key="manager.payment.options.feeDescription">Fee Description</message>
 	<message key="manager.payment.options.feeName">Fee Name</message>
 	<message key="manager.payment.options.membershipFee">Association Membership</message>
 	<message key="manager.payment.options.onlypdf">Only Restrict Access to PDF version of issues and articles</message>
-	<message key="manager.payment.options.publicationFee">Article Publication</message>
+	<message key="manager.payment.options.publicationFee">Article Processing Charge</message>
 	<message key="manager.payment.options.purchaseArticleFee">Purchase Article</message>
 	<message key="manager.payment.options.purchaseIssueFee">Purchase Issue</message>
 	<message key="manager.payment.options.text">Description of Payment Method</message>
-	<message key="manager.payment.options.waiverPolicy">Waiver Policy</message>
 	<message key="manager.payment.paymentId">Payment ID</message>
 	<message key="manager.payment.paymentMethod">Payment Method</message>
 	<message key="manager.payment.paymentMethod.description">You may configure any of the following Payment Method Plugins from this screen.</message>
@@ -110,7 +110,8 @@
 	<message key="manager.sections.wordCountInstructions">Limit abstract word counts for this section (0 for no limit)</message>
 	<message key="manager.setup">Journal Settings</message>
 	<message key="manager.setup.masthead">Masthead</message>
-	<message key="manager.setup.masthead.description">List editors, managing directors, and other individuals associated with the journal.</message>
+	<message key="manager.setup.editorialTeam">Editorial Team</message>
+	<message key="manager.setup.editorialTeam.description">List editors, managing directors, and other individuals associated with the journal.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
 	<message key="manager.setup.layout">Journal Layout</message>
@@ -231,6 +232,12 @@
 	<message key="manager.setup.lists">Lists</message>
 	<message key="manager.setup.listsDescription">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page. Also, limit the number of links to display to subsequent pages of the list.</message>
 	<message key="manager.setup.enableArchive">Enable Archiving</message>
+	<message key="manager.setup.plnPluginEnable">PKP PN plugin enabled</message>
+	<message key="manager.setup.plnDescription">The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</message>
+	<message key="manager.setup.plnSettingsDescription">Click on the Settings link to accept the terms of use for the PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</message>
+	<message key="manager.setup.otherLockss">Alternate Archiving Options</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>
@@ -241,6 +248,8 @@
 	<message key="manager.setup.clockssLicenseLabel">CLOCKSS License Description</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[Enable Portico to store and distribute journal content to libraries participating in Portico.]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
@@ -292,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Note:</strong> The email invitation to reviewers will contain a special URL that takes invited reviewers directly to the Review page for the submission (with access to any other pages requiring them to log in). For security reasons with this option, editors are not able to modify email addresses or add CCs or BCCs prior to sending invitations to reviewers.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Reviewer Ratings</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Reviewer Reminders</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
 	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Provide a brief description of the journal which search engines can display when listing the journal in search results.</message>
@@ -407,9 +415,9 @@
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options For Subscription Journals</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Subscription Information</message>
-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be automatically placed under Subscriptions on the About the Journal page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Subscription Manager</message>
-	<message key="manager.subscriptionPolicies.subscriptionContactDescription">The contact listed under Subscriptions in About the Journal.</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactDescription">These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Please enter a valid email.</message>
 	<message key="manager.subscriptions">Subscriptions</message>
 	<message key="manager.individualSubscriptions">Individual Subscriptions</message>
@@ -522,7 +530,7 @@
 	<message key="manager.subscriptionTypes.form.membership">Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.options">Options</message>
-	<message key="manager.subscriptionTypes.form.public">Do not make this subscription type publicly available or visible (e.g. under Subscriptions in About the Journal).</message>
+	<message key="manager.subscriptionTypes.form.public">Do not make this subscription type publicly available or visible on the website.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 	<message key="manager.subscriptionTypes.form.typeName">Name of Type</message>
@@ -532,6 +540,12 @@
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
 	<message key="manager.distribution.access">Access</message>
+
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">Link to a page describing the subscriptions you offer.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Link to a page describing the visitor's current and past subscriptions.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">This link will only be displayed when a visitor is logged in.</message>
+
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categories</message>

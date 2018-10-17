@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -31,12 +31,12 @@
 	<message key="admin.auth.enableCreateUsers">Habilitar criação de usuários (caso suportado pelo plugin de autenticação!). Usuários criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, usuários criados através do cadastro de usuários também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão.</message>
 	<message key="admin.systemVersion">Versão do OJS</message>
 	<message key="admin.systemConfiguration">Configuração do OJS</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[Configurações do OJS no documento <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Configurações do OJS no arquivo <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Configurações da revista</message>
 	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
 	<message key="admin.contexts.confirmDelete">Deseja realmente excluir permanentemente esta revista e seu conteúdo?</message>
 	<message key="admin.contexts.create">Criar revista</message>
-	<message key="admin.journals.createInstructions">Seu cadastro como Editor-Gerente da revista será automático. Após a criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários.</message>
+	<message key="admin.journals.createInstructions">Seu cadastro como Gerente da Revista será automático. Após a criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários.</message>
 	<message key="admin.journals.urlWillBe">Geralmente é usado um acrônimo que identifica o periódico. A URL da revista será: {$sampleUrl}</message>
 	<message key="admin.contexts.form.pathRequired">O caminho é obrigatório.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">O caminho deve conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico.</message>
@@ -58,12 +58,6 @@
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
-	<message key="admin.settings.usePaging">Para sites com muitas publicações, quebrar a lista em várias páginas.</message>
-	<message key="admin.settings.journalsList">Elementos da publicação</message>
-	<message key="admin.settings.journalsList.description">Escolha os elementos da publicação que serão exibidos para cada publicação na página do site.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatura da publicação</message>
-	<message key="admin.settings.journalsList.showTitle">Título</message>
-	<message key="admin.settings.journalsList.showDescription">Descrição</message>
 	<message key="admin.categories">Categorias</message>
 	<message key="admin.categories.enable.description">O Administrador do Sistema poderá definir o conjunto de categorias aqui para ajudar a organizar grandes volumes de publicações. Editores-Gerentes poderão então escolher várias dessas categorias para cada publicação, e leitores poderão navegar nas coleções por categoria.</message>
 	<message key="admin.categories.disableCategories">Não organizar publicações em categorias.</message>
@@ -76,7 +70,7 @@
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.nameRequired">O nome da categoria é obrigatório.</message>
 	<message key="admin.settings.defaultMetricDescription">O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
-	
+
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
 	<ul>
 		<li>Seu servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>

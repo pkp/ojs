@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/api.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings for the REST API.
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="api.submissions.403.unpublishedIssues">У вас нет прав для просмотра неопубликованных выпусков.</message>
+</locale>

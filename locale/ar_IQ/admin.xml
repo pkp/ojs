@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -15,16 +15,10 @@
 	<message key="admin.hostedJournals">المجلات المستضافة</message>
 	<message key="admin.settings.journalRedirect">إعادة توجيه موقع المجلة</message>
 	<message key="admin.settings.options">خيارات التشغيل</message>
-	<message key="admin.settings.usePaging">إن كانت قائمة أسماء المجلات مطولة، إسمح لها أن تكون مجزأة على عدة صفحات</message>
 	<message key="admin.settings.journalRedirectInstructions">إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال</message>
 	<message key="admin.settings.noJournalRedirect">لا تنقل المتصفح إلى وجهة أخرى</message>
-	<message key="admin.settings.journalsList">عناصر المجلة</message>
-	<message key="admin.settings.journalsList.description">لطفاً، إختر العناصر التي سيعرضها الموقع لكل مجلة في صفحته الأولى</message>
-	<message key="admin.settings.journalsList.showThumbnail">الصورة المصغرة للمجلة</message>
-	<message key="admin.settings.journalsList.showTitle">عنوان المجلة</message>
-	<message key="admin.settings.journalsList.showDescription">وصف المجلة</message>
 	<message key="admin.settings.defaultMetricDescription">
-        هذا النظام قادر على توثيق معطيات إحصائية عن استعماله بعدة معايير، وتلك المعايير يمكن إظهارها بسياقات متعددة. غير أن هناك حالات 
+        هذا النظام قادر على توثيق معطيات إحصائية عن استعماله بعدة معايير، وتلك المعايير يمكن إظهارها بسياقات متعددة. غير أن هناك حالات
         لا بد فيها من اختيار أحد معطيات الاستعمال دون غيرها... منها على سبيل المثال لا الحصر: استعراض قائمة مرتبة هجائياً لأكثر المقالات استعمالاً
         أو لتقييم نتائج طلبات البحث (عن معلومات ضمن الموقع)، لذا، لطفاً، إختر أحد المعطيات الإحصائية ليكون بمثابة الاختيار الإفتراضي عموماً
 	</message>
@@ -35,7 +29,7 @@
 		<li>نظام المجلات المفتوحة غير قادر على تعديل ملف سجلاته، وهو عادة "registry/locales.xml".</li>
 	</ul>
 <p>إن حزم اللغات متاحة للتنزيل يدوياً عبر <a href="http://pkp.sfu.ca">موقع مشروع المعرفة العامة</a>.</p>]]></message>
-  
+
 	<message key="admin.languages.primaryLocaleInstructions">ستكون هذه اللغة هي الإفتراضية للموقع ولأي مجلة يستضيفها</message>
 	<message key="admin.languages.supportedLocalesInstructions">إختر أي من اللغات التي من المفترض أن يدعمها الموقع. حيث أن تلك اللغات ستكون متاحة لتظهر بها أي مجلة يستضيفها هذا الموقع، كما أنها ستظهر ضمن قائمة إختيار اللغة المتاحة للمستخدم المستعرض للموقع، (والتي بالإمكان تجاوزها في بعض الصفحات المتخصصة فقط). فيما لو تم الاقتصار على لغة واحدة، فإن قائمة تقليب اللغات لن تكون ظاهرة للمستخدم، كما أن الإعدادات الإضافية المتعلقة باللغات لن تكون متاحة للمجلات المستضافة في الموقع.</message>
 	<message key="admin.locale.maybeIncomplete">اللغات المعلمة بالنجمة قد تكون غير مكتملة</message>
@@ -56,7 +50,6 @@
 	<message key="admin.journals.createInstructions">سيتم تلقائياً منحك دور رئيس التحرير في هذه المجلة. بعد إنشاء مجلة جديدة، سيتم توجيهك لضبط إعداداتها من أجل إكمال مرحلة التهيئة الأولية.</message>
 	<message key="admin.journals.journalSettings">إعدادات المجلة</message>
 	<message key="admin.journals.noneCreated">لم تتم استضافة أي مجلة بعد</message>
-	<message key="admin.contexts.confirmDelete">هل أنت متأكد من رغبتك في إزالة هذه المجلة من الموقع ومحو جميع متعلقاتها؟</message>
 	<message key="admin.contexts.create">استضف مجلة</message>
 	<message key="admin.journals.urlWillBe">ينبغي أن يكون بشكل كلمة واحدة قصيرة أو اختصاراً يعرِّف المجلة. رابط المجلة سيكون {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">العنوان مطلوب حتماً.</message>
@@ -78,7 +71,7 @@
 	<message key="admin.mergeUsers.allUsers">كل المستخدمين المسجلين</message>
 	<message key="admin.mergeUsers.confirm">هل أنت متأكد من رغبتك في ضم المستخدمين المحددين البالغ عددهم {$oldAccountCount} ضمن حساب المستخدم ذو اسم الدخول "{$newUsername}"؟ إن جميع تلك الحسابات ستزول من الموقع بعد إتمام هذه العملية والتي لا سبيل إلى التراجع عنها لاحقاً. لاحظ أن عدد الحسابات المعنية بالضم هو {$oldAccountCount}</message>
 	<message key="admin.mergeUsers.noneEnrolled">لا أحد مسجل في الموقع بعد</message>
-  
+
 	<!-- Categories -->
 	<message key="admin.categories">الأصناف</message>
 	<message key="admin.categories.enable.description">مدير الموقع له أن يستحدث هنا عدداً من الأصناف لمساعدة متصفحي الموقع في الوصول إلى المجلات العلمية عندما يكون عددها كبيراً، وعندها يمكن لمديري تلك المجلات وضع مجلاتهم في أي من تلك الأصناف، الأمر الذي يتيح لمستخدمي الموقع الوصول إلى مبتغاهم عبر الرجوع إلى تلك الطريقة من التصنيف</message>

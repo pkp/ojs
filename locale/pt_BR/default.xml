@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -116,10 +116,6 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
         <br />
         <pre>4. FORMATAÇÃO
         O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
-	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceito para publicação, será necessário o pagamento de uma taxa de publicação de artigo para auxiliar nos custos de publicação. Consulte a política de isenção de taxas.</message>
-	<message key="default.journalSettings.waiverPolicy">Caso não possa arcar com as taxas descritas, notifique a equipe editorial por meio do campo Comentários, pois não é de interesse da revista que quaisquer taxas impeçam a publicação de trabalhos de alta relevância para o público.</message>
-	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">O pagamento da taxa permitirá visualizar, baixar e imprimir este artigo.</message>
 	<message key="section.default.title">Artigos</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.publicationFee">Publicação de artigo</message>
@@ -127,7 +123,6 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 	<message key="default.journalSettings.membershipFee">Registro em entidade de classe</message>
 	<message key="section.default.policy">Política padrão de seção</message>
 	<message key="default.journalSettings.purchaseIssueFee">Adquirir edição</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento desta taxa permite ver, baixar e imprimir esta edição.</message>
 	<message key="default.genres.article">Texto do artigo</message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivos distribuídos entre bibliotecas participantes e permite que tais bibliotecas mantenham cópias permanentes da revista para propósitos de preservação e recuperação. <a href="http://clockss.org/">Saiba mais...</a>]]></message>
 	<message key="default.groups.name.manager">Gerente da revista</message>

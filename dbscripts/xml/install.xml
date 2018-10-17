@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
 <!--
-  * install.xml
+  * dbscripts/xml/install.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Installation descriptor file.
   -->
 
-<install version="3.0.2.0">
+<install version="3.2.0.0">
+	<code function="checkPhpVersion" />
+
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 
@@ -32,8 +34,8 @@
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
 	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
-	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
+	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -45,4 +47,5 @@
 	<code function="createData"/>
 	<code function="createConfig"/>
 	<code function="addPluginVersions"/>
+	<code function="installDefaultNavigationMenus"/>
 </install>

@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -36,7 +36,7 @@
 	<!-- Journal Management -->
 	<!--  peer review -->
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
 
 	<!-- review forms end -->
 
@@ -211,7 +211,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
-	<message key="user.role.sectionEditor">Editor Bagian</message>
+	<message key="user.role.subEditor">Editor Bagian</message>
 	<message key="user.role.subscriptionManager">Manajer Langganan</message>
 	<message key="user.role.managers">Manajer Jurnal</message>
 	<message key="user.role.subEditors">Editor Bagian</message>
@@ -366,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">Plugin Galley Artikel</message>
 	<message key="plugins.categories.viewableFiles.description">Plugin Galley Artikel memungkinkan ditampilkannya tipe dokumen yang berbeda sebagai galley artikel.</message>
 	<message key="plugins.categories.auth.description">Plugin Otorisasi memungkinkan Open Journal Systems mendelegasikan otentikasi pengguna ke sistem eksternal, seperti server LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Plugin Format Sitasi memberikan pilihan format sitasi naskah bagi penulis.</message>
 	<message key="plugins.categories.generic.description">Plugin Generik digunakan untuk menyediakan fungsi tambahan bagi Open Journal Systems melalui berbagai cara yang belum disediakan oleh plugin lainnya.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems mendukung <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) untuk memastikan pengarsipan jurnal yang aman dan permanen. LOCKSS merupakan piranti lunak open source karya Stanford University Library yang memungkinkan perpustakaan mengabadikan situs jurnalnya dengan mengirim setiap terbitan baru untuk disimpan. Secara berkala setiap simpanan divalidasi isinya terhadap simpanan di perpustakaan lain, dan jika isi di situs rusak atau hilang, simpanan di perpustakaan lain akan digunakan untuk mengembalikan data.
@@ -394,7 +393,6 @@ Penulis yang mempublikasikan naskahnya di jurnal ini menyetujui hal-hal berikut:
 	<li>Penulis bisa mengikuti kontrak tambahan lain untuk distribusi non-ekslusif bagi karyanya tersebut (contoh: mempostingnya ke repositori institusi atau menerbitkannya dalam sebuah buku), dengan penghargaan terhadap penerbitan pertama di jurnal ini.</li>
 	<li>Penulis diizinkan dan didorong untuk mem-posting karya mereka online (contoh: di repositori institusi atau di website mereka) sebelum dan selama proses penyerahan, karena dapat mengarahkan ke pertukaran produktif, seperti halnya sitiran yang lebih awal dan lebih banyak dari karya yang diterbitkan. (Lihat <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Aktifkan Citation Markup Assistant</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Langkah: Antrian Penyerahan Naskah &gt; Review Naskah &gt; Pengeditan Naskah &gt; Daftar Isi.<br /><br />
@@ -480,11 +478,6 @@ Anda dapat memberi alasan penonaktifannya kepada pengguna.</message>
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Tautan nama ke profil Reviewer. <br />
-Nilai tertinggi adalah 5 (Bagus sekali).<br />
-Minggu menunjukkan waktu rata-rata untuk menyelesaikan review.<br />
-Yang terbaru adalah tanggal review paling baru yang diterima.<br />
-Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berlangsung.]]></message>
 
 
 
@@ -574,12 +567,10 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="reviewer.article.selectRecommendation.byEditor">Tetapkan atau atur rekomendasi reviewer.</message>
 	<message key="reviewer.article.mustSelectDecision">Tidak ada rekomendasi dipilih. Anda harus memilih satu rekomendasi untuk diserahkan.</message>
 	<message key="reviewer.article.confirmDecision">Saat Anda sudah menyimpan keputusan, Anda tidak akan bisa membuat perubahan untuk review ini. Apakah Anda yakin untuk melanjutkan?</message>
-	<message key="reviewer.article.ensuringBlindReview">Memastikan Review Anonim</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File untuk C/E</message>
 	<message key="copyeditor.article.copyeditorFile">File Copyeditor</message>
-	<message key="copyeditor.article.uploadedFile">File yang diunggah</message>
 	<message key="copyeditor.article.copyeditorFinalFile">File Copyeditor</message>
 
 	<!-- Proofreader -->
@@ -870,7 +861,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="installer.ojsUpgrade">Upgrade OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
 
-<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong> dari Public Knowledge Project. Sebelum melanjutkan, silakan membaca <a href="{$baseUrl}/docs/README">README</a>. File disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silakan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">laman web PKP</a>. Jika Anda memiliki laporan bug atau memerlukan dukungan teknis mengenai OJS, lihat <a href="http://forum.pkp.sfu.ca" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Laporkan bug sistem</a>.  Selain itu Anda dapat menghubungi tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong> dari Public Knowledge Project. Sebelum melanjutkan, silakan membaca <a href="{$baseUrl}/docs/README.md">README</a>. File disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silakan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">laman web PKP</a>. Jika Anda memiliki laporan bug atau memerlukan dukungan teknis mengenai OJS, lihat <a href="http://forum.pkp.sfu.ca" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Laporkan bug sistem</a>.  Selain itu Anda dapat menghubungi tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Upgrade</h4>
 
@@ -910,7 +901,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<p>2. Buat direktori khusus untuk menyimpan file unggahan dan buat "writable" (lihat Pengaturan File di bawah ini)</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versi OJS {$version}</h4>
 
-<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong> dari Public Knowledge Project. Sebelum melanjutkan, silakan membaca <a href="{$baseUrl}/docs/README">README</a> dan <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> yang disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silakan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href="http://forum.pkp.sfu.ca" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Laporkan bug sistem</a>.  Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong> dari Public Knowledge Project. Sebelum melanjutkan, silakan membaca <a href="{$baseUrl}/docs/README.md">README</a> dan <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> yang disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silakan kunjungi <a href="http://pkp.sfu.ca/" target="_blank">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href="http://forum.pkp.sfu.ca" target="_blank">forum dukungan</a> atau kunjungi PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Laporkan bug sistem</a>.  Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p><strong>Sangat disarankan agar</strong> Anda memback up database Anda, direktori file, dan direktori instalasi OJS sebelum melanjutkan.</p>
 <p>Jika Anda menjalankan <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, pastikan perintah max_execution_time di file konfigurasi php.ini diatur hingga batas tinggi. Jika batas ini atau batas lain (contoh: perintah "Timeout" Apache) telah terlewati dan proses upgrade terganggu, akan dibutuhkan intervensi manual.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Untuk dukungan lengkap Unicode (UTF-8), pilih UTF-8 untuk semua pengaturan karakter set. Perhatikan bahwa dukungan lengkap Unicode membutuhkan kompilasi PHP dengan dukungan terhadap pustaka <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (tersedia secara default pada instalasi PHP terbaru). Anda mungkin akan menemui masalah menggunakan set karakter lengkap jika server Anda tidak memenuhi persyaratan.
@@ -1039,8 +1030,6 @@ Validasi mungkin gagal pada URL yang mensyaratkan form data yang dikirimkan.]]><
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Masukkan alamat email Anda untuk menerima notifikasi langsung tentang konten baru yang ditambahkan ke jurnal.</message>
-	<message key="notification.notificationsPublicDescription">Halaman ini menampilkan update penting seputar jurnal ini seperti terbitan baru atau pengumuman.  Anda dapat memperoleh pemberitahuan melalui RSS feeds (klik gambar di samping), atau <![CDATA[  <a href="{$emailUrl}">melalui email.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Naskah baru, "{$title}", telah diserahkan.</message>
 	<message key="notification.type.editing">Event Editing</message>

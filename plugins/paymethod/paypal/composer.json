@@ -1,5 +1,6 @@
 {
 	"require": {
+		"symfony/event-dispatcher" : "~2.7",
 		"omnipay/paypal": "~2.0"
 	}
 }

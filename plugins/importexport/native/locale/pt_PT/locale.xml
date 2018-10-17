@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -51,4 +51,7 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">A abreviatura da secção "{$sectionAbbrev}" no número "{$issueTitle}" corresponde a uma secção existente da revista, mas uma outra abreviatura desta secção não corresponde a outra abreviatura da secção existente da revista.</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Nenhum ou mais do que um número corresponde à identificação do problema identificado"{$issueIdentification}".</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">O elemento de identificação do número está em falta para o artigo "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Selecione artigos a exportar</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">O número existem com id {$issueId} corresponde à identificação de revista indicada "{$issueIdentification}". Este número não será modificado, mas os artigos serão adicionados.</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">O artigo  "{$articleTitle}" faz parte de um número, mas não tem data de publicação.</message>
 </locale>

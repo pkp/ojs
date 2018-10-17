@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -93,71 +93,7 @@
 	<message key="editor.navigation.futureIssues">Toekomstige nummers</message>
 	<message key="editor.navigation.issueArchive">Oude nummers</message>
 	<message key="editor.article.designateReviewVersion">Wijs het originele bestand aan als de reviewversie</message>
-	<message key="editor.article.uploadReviewVersion">Laad een herziene reviewversie</message>
-	<message key="editor.article.showSuppFile">Toon het bestand aan de reviewers</message>
-	<message key="editor.article.layoutAndProof"><![CDATA[Opmaak & proeflezen]]></message>
-	<message key="editor.article.clear">Wis</message>
-	<message key="editor.article.clearReviewer">Wis reviewer</message>
-	<message key="editor.article.changeSection">Verander sectie</message>
-	<message key="editor.article.setDueDate">Uiterste datum instellen</message>
-	<message key="editor.article.addReviewer">Reviewer toevoegen</message>
-	<message key="editor.article.toReviewer">Naar reviewer</message>
-	<message key="editor.article.notifyReviewer">Bericht reviewer</message>
-	<message key="editor.article.initiateReview">Initieer reviewer</message>
-	<message key="editor.article.cancelReview">Herroep verzoek</message>
-	<message key="editor.article.clearReview">Wis reviewer</message>
-	<message key="editor.article.enterRecommendation">Geef aanbeveling</message>
-	<message key="editor.article.enterReviewerRecommendation">Geef aanbeveling van de reviewer</message>
-	<message key="editor.article.recommendation">Aanbeveling</message>
-	<message key="editor.article.selectReviewer">Kies reviewer</message>
-	<message key="editor.article.replaceReviewer">Vervang reviewer</message>
-	<message key="editor.article.editorToEnter">Redacteur voor het invoeren van aanbevelingen/comentaar voor de reviewer</message>
-	<message key="editor.article.uploadReviewForReviewer">Review laden</message>
-	<message key="editor.article.peerReviewOptions">Peer review-opties</message>
 	<message key="editor.article.decision">Beslissing</message>
-	<message key="editor.article.noEditorSelected">Geen redacteur geselecteerd.</message>
-	<message key="editor.article.recordDecision">Beslissing vastleggen</message>
-	<message key="editor.article.cannotRecord">Nog geen sectieredacteur gekozen.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers zien auteursversie</message>
-	<message key="editor.article.designateDueDate">Een uiterste datum aanwijzen</message>
-	<message key="editor.article.designateDueDateDescription">Geef de datum of aantal weken voor de nieuwe uiterste datum.</message>
-	<message key="editor.article.todaysDate">Datum van vandaag</message>
-	<message key="editor.article.requestedByDate">Gevraagde datum</message>
-	<message key="editor.article.dueDateFormat">Formaat: JJJJ-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Aantal weken</message>
-	<message key="editor.article.selectCopyeditor">Kies tekstredacteur</message>
-	<message key="editor.article.replaceCopyeditor">Vervang tekstredacteur</message>
-	<message key="editor.article.editorsCopyedit">Tekstredactie redacteur</message>
-	<message key="editor.article.showAuthor">Laat bestand zien aan de auteur</message>
-	<message key="editor.article.showCopyeditor">Toon versie aan de tekstredacteur</message>
-	<message key="editor.article.rateReviewer">Oordeel reviewer</message>
-	<message key="editor.article.reviewerRating.veryGood">5 hoog</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Laag</message>
-	<message key="editor.article.comments">Commentaar</message>
-	<message key="editor.article.commentsRequired">Het commentaarveld is verplicht.</message>
-	<message key="editor.article.saveRating">Bewaar oordeel</message>
-	<message key="editor.article.noneSelected">Geen gekozen</message>
-	<message key="editor.article.authorProofing">Proeflezen door de auteur</message>
-	<message key="editor.article.restoreToQueue">Terug naar de actieve lijst</message>
-	<message key="editor.article.assignSectionEditor">Voeg sectieredacteur toe</message>
-	<message key="editor.article.assignEditor">Voeg redacteur toe</message>
-	<message key="editor.article.selectEditor">Kies {$roleName}</message>
-	<message key="editor.article.selectDecision">Kies beslissing</message>
-	<message key="editor.article.selectLayoutEditor">Kies opmaakredacteur</message>
-	<message key="editor.article.replaceLayoutEditor">Vervang opmaakredacteur</message>
-	<message key="editor.article.reviewSubmission">Review inzending</message>
-	<message key="editor.article.resubmitForReview">Bestand opnieuw indienen voor review</message>
-	<message key="editor.article.resubmitFileForPeerReview">Bestand opnieuw indienen voor peer review</message>
-	<message key="editor.article.sendToCopyedit">Bestand naar opmaak sturen</message>
-	<message key="editor.article.selectProofreader">Proeflezen toekennen</message>
-	<message key="editor.article.replaceProofreader">Proeflezer vervangen</message>
-	<message key="editor.article.authorComments">Commentaar auteur</message>
-	<message key="editor.article.proofreaderComments">Commentaar proeflezer</message>
-	<message key="editor.article.layoutEditorFinal">Laatste opmaak</message>
-	<message key="editor.article.noDate">(datum)</message>
 	<message key="editor.submissions.showBy">Toon op</message>
 	<message key="editor.submissions.submitMMDD">Inzenden MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Actieve taken</message>
@@ -172,25 +108,13 @@
 	<message key="editor.article.scheduleForPublication">Inplannen voor publicatie in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Nog toe te wijzen</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publicatiekosten niet betaald. Vraag de auteur om betaling of scheld die kwijt om het item voor publicatie in te plannen.</message>
-	<message key="editor.article.display">Toon</message>
-	<message key="editor.article.hideTocAuthorDescription">Auteursnamen weglaten uit de inhoudsopgave</message>
-	<message key="editor.article.hideTocAuthorDefault">Standaard</message>
-	<message key="editor.article.hideTocAuthorHide">Laat weg</message>
-	<message key="editor.article.hideTocAuthorShow">Toon</message>
-	<message key="editor.article.cover">Omslag</message>
 	<message key="editor.article.showCoverPage">Maak een omslag voor dit artikel met de volgende elementen.</message>
-	<message key="editor.article.coverImageDisplay">Toon</message>
 	<message key="editor.article.hideCoverPageToc">Omslagafbeelding niet tonen in de inhoudsopgave</message>
 	<message key="editor.article.hideCoverPageAbstract">Omslagafbeelding niet tonen in de artikelsamenvattingsweergave</message>
-	<message key="editor.article.coverImage">Omslagafbeelding</message>
-	<message key="editor.article.coverImageInstructions">(Toegestane formaten: .gif, .jpg en .png)</message>
-	<message key="editor.article.uploaded">Geladen</message>
-	<message key="editor.article.removeCoverPage">Verwijder omslagafbeelding?</message>
 	<message key="editor.article.remove">Verwijder</message>
 	<message key="editor.issues.enableOpenAccessDate">Vertraagde open access inschakelen</message>
 	<message key="editor.issues.unpublishIssue">Publicatie nummer terugdraaien</message>
 	<message key="editor.issues.confirmUnpublish">Weet u zeker dat u de publicatie van dit nummer terug wilt draaien?</message>
-	<message key="editor.article.archiveSubmission">Verwerp en archiveer inzending</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuele abonnees ({$count} gebruikers)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionele abonnees ({$count} gebruikers)</message>
 	<message key="editor.notifyUsers.allReaders">Alle lezers ({$count} gebruikers)</message>
@@ -207,4 +131,5 @@
 	<message key="editor.issues.galleyLocaleRequired">Een nummer-proef taalkode is verplicht.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Publieke identificatie van de nummer-proef bestaat al</message>
 	<message key="editor.publicIdentificationExists">De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object (nummer, artikel, proef of aanvullend bestand). Kies een unieke identificatie.</message>
+	<message key="editor.article.coverImage">Omslagafbeelding</message>
 </locale>

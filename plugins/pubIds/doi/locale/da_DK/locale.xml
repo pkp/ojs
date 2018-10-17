@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -13,7 +13,7 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Dette plug-in gør det muligt at tildele DOI’er (Digital Object Identifiers) til numre, artikler, satsskibe og supplerende filer i OJS.</message>
+	<message key="plugins.pubIds.doi.description">Denne plug-in gør det muligt at tildele DOI’er (Digital Object Identifiers) til numre, artikler, satsskibe og supplerende filer i OJS.</message>
 	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Konfigurér dette DOI plug-in, så det bliver muligt at administrere og bruge DOI’er i OJS:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tidsskriftsindhold</message>
@@ -35,7 +35,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Anvend standardformaterne.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g ftil satsskibe.]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Indskriv et særskilt DOI-suffiks for hvert publiceret element. Der findes et ekstra DOI-felt på hvert elements metadataside.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Indsæt et DOI-suffiks-format til numre.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Indsæt DOI-suffiks-formatet til numre.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Indsæt DOI-suffiks-formatet til artikler.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Indsæt DOI-suffiks-formatet til satsskibe.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Tildel nye DOI'er</message>
@@ -44,7 +44,7 @@
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">Nummer</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">artikel</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">satsskib</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">satsskib (publiceringsklar fil)</message>
 	<message key="plugins.pubIds.doi.editor.customSuffixMissing">DOI kan ikke tilføjes, da det brugerdefinerede suffiks mangler.</message>
 	<message key="plugins.pubIds.doi.editor.patternNotResolved">DOI kan ikke tilføjes, da det indeholder et ikke-kendt format.</message>
 	<message key="plugins.pubIds.doi.editor.canBeAssigned">Dette er en forhåndsvisning af DOI. Vælg afkrydsningsfeltet og gem formularen for at tilføje DOI.</message>
@@ -52,11 +52,14 @@
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Det angivne DOI-suffiks er allere i brug i forbindelse med et andet publiceret element. Vælg et unikt DOI-suffiks for hvert element.</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Fjern DOI</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Er du sikker på, at du vil slette det eksisterende DOI?</message>
-	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Fjer nummer-objekt-DOI'er</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Fjern nummer-objekt-DOI'er</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Er du sikker på, at du vil slette det eksisterende nummer-objekt-DOI?</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Brug den følgende mulighed til at fjerne DOI'er fra alle objekter (artikler og satsskibe) i det planlagte indhold for dette nummer.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi">Tilføj DOI {$pubId} til {$pubObjectType}</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI kan ikke tilføjes, da det brugerdefinerede suffiks mangler.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} kan ikke tilføjes, da det indeholder et ikke-kendt format.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} er belvet tilføjet.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Tildel DOI'er</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Tildel DOI'er til alle publicerede tidsskrifts objekter, der ikke allerede er tildelt DOI'er. Denne handling kan ikke bruges med den individuelle suffiks-konfiguration. Hvis du har ændret DOI-konfigurationen ovenfor, skal du gemme dine ændringer, før du starter denne handling. Det kan tage lang tid at tildele DOI'er afhængigt af antallet af publicerede objekter i tidsskriftet.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Er du sikker på, at du vil tildele DOI'er til alle publicerede objekter, der ikke allerede er tildelt DOI'er?</message>
 </locale>

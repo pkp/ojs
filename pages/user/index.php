@@ -7,8 +7,8 @@
 /**
  * @file pages/user/index.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_user
@@ -17,22 +17,6 @@
  */
 
 switch ($op) {
-	//
-	// Profiles
-	//
-	case 'profile':
-		define('HANDLER_CLASS', 'ProfileHandler');
-		import('lib.pkp.pages.user.ProfileHandler');
-		break;
-	//
-	// Registration
-	//
-	case 'register':
-	case 'registerUser':
-	case 'activateUser':
-		define('HANDLER_CLASS', 'RegistrationHandler');
-		import('lib.pkp.pages.user.RegistrationHandler');
-		break;
 	//
 	// Misc.
 	//
@@ -50,6 +34,8 @@ switch ($op) {
 		define('HANDLER_CLASS', 'UserHandler');
 		import('pages.user.UserHandler');
 		break;
+	default:
+		require_once('lib/pkp/pages/user/index.php');
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * plugins/reports/views/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -14,5 +14,10 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.reports.views.displayName">Se rapport</message>
-	<message key="plugins.reports.views.description">Dette plugin genererer en CSV-rapport om antal læsere for hver enkelt artikel.</message>
+	<message key="plugins.reports.views.description">Denne plugin genererer en CSV-rapport som viser antal læsere for hver enkelt artikel.</message>
+	<message key="plugins.reports.views.articleId">Artikel-ID</message>
+	<message key="plugins.reports.views.articleTitle">Artikeltitel</message>
+	<message key="plugins.reports.views.datePublished">Publiceringsdato</message>
+	<message key="plugins.reports.views.abstractViews">Resume-visninger</message>
+	<message key="plugins.reports.views.galleyViews">Totalvisning af publiceringsversion</message>
 </locale>

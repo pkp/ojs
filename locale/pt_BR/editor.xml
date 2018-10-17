@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -34,7 +34,7 @@
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do editor</message>
 	<message key="editor.issues.createIssue">Incluir edição</message>
-	<message key="editor.issues.currentIssue">Edição atual</message>
+	<message key="editor.issues.currentIssue">Edição Atual</message>
 	<message key="editor.issues.numArticles">Itens</message>
 	<message key="editor.issues.noArticles">Nenhum item agendado para esta edição.</message>
 	<message key="editor.issues.confirmDelete">Deseja realmente excluir esta edição permanentemente?</message>
@@ -90,71 +90,7 @@
 	<message key="editor.navigation.futureIssues">Edições futuras</message>
 	<message key="editor.navigation.issueArchive">Edições anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como versão para avaliação</message>
-	<message key="editor.article.uploadReviewVersion">Enviar atualização da versão para avaliação</message>
-	<message key="editor.article.showSuppFile">Habilitar documento aos avaliadores</message>
-	<message key="editor.article.layoutAndProof"><![CDATA[Layout & Leitura de Prova]]></message>
-	<message key="editor.article.clear">Liberar</message>
-	<message key="editor.article.clearReviewer">Liberar avaliador</message>
-	<message key="editor.article.changeSection">Alterar seção</message>
-	<message key="editor.article.setDueDate">Definir prazo para conclusão</message>
-	<message key="editor.article.addReviewer">Incluir avaliador</message>
-	<message key="editor.article.toReviewer">Para o avaliador</message>
-	<message key="editor.article.notifyReviewer">Notificar Avaliador</message>
-	<message key="editor.article.initiateReview">Iniciar avaliação</message>
-	<message key="editor.article.cancelReview">Cancelar solicitação</message>
-	<message key="editor.article.clearReview">Liberar da avaliação</message>
-	<message key="editor.article.enterRecommendation">Definir recomendação</message>
-	<message key="editor.article.enterReviewerRecommendation">Definir recomendação em nome do avaliador</message>
-	<message key="editor.article.recommendation">Recomendação</message>
-	<message key="editor.article.selectReviewer">Selecionar avaliador</message>
-	<message key="editor.article.replaceReviewer">Substituir avaliador</message>
-	<message key="editor.article.editorToEnter">Editor deve incluir a recomendação/comentários pelo avaliador</message>
-	<message key="editor.article.uploadReviewForReviewer">Enviar avaliação</message>
-	<message key="editor.article.peerReviewOptions">Opções da avaliação pelos pares</message>
 	<message key="editor.article.decision">Decisão</message>
-	<message key="editor.article.noEditorSelected">Nenhum editor designado.</message>
-	<message key="editor.article.recordDecision">Registrar decisão</message>
-	<message key="editor.article.cannotRecord">Editor de Seção não definido ainda.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Avaliadores para a versão do autor</message>
-	<message key="editor.article.designateDueDate">Definir prazo para conclusão</message>
-	<message key="editor.article.designateDueDateDescription">Digite outra data ou o número de semanas para alterar o prazo para conclusão da avaliação.</message>
-	<message key="editor.article.todaysDate">Data de hoje</message>
-	<message key="editor.article.requestedByDate">Prazo até</message>
-	<message key="editor.article.dueDateFormat">Formato: YYYY-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Semanas</message>
-	<message key="editor.article.selectCopyeditor">Selecionar editor de texto</message>
-	<message key="editor.article.replaceCopyeditor">Substituir editor de texto</message>
-	<message key="editor.article.editorsCopyedit">Edição de texto do editor</message>
-	<message key="editor.article.showAuthor">Permitir acesso ao autor</message>
-	<message key="editor.article.showCopyeditor">Exibir versão do Editor de Texto</message>
-	<message key="editor.article.rateReviewer">Classificação do avaliador</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Bom</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Fraco</message>
-	<message key="editor.article.comments">Comentários</message>
-	<message key="editor.article.commentsRequired">Comentários obrigatórios.</message>
-	<message key="editor.article.saveRating">Salvar classificação</message>
-	<message key="editor.article.noneSelected">Nenhum designado</message>
-	<message key="editor.article.authorProofing">Leitura de Prova pelo autor</message>
-	<message key="editor.article.restoreToQueue">Restaurar para a lista Ativo</message>
-	<message key="editor.article.assignSectionEditor">Incluir editor de seção</message>
-	<message key="editor.article.assignEditor">Incluir editor</message>
-	<message key="editor.article.selectEditor">Escolher {$roleName}</message>
-	<message key="editor.article.selectDecision">Escolha a decisão</message>
-	<message key="editor.article.selectLayoutEditor">Selecionar Editor de Layout</message>
-	<message key="editor.article.replaceLayoutEditor">Substituir editor de layout</message>
-	<message key="editor.article.reviewSubmission">Avaliar submissão</message>
-	<message key="editor.article.resubmitForReview">Submeter a nova rodada</message>
-	<message key="editor.article.resubmitFileForPeerReview"><![CDATA[Escolha um dos documentos abaixo e clique em "Enviar novamente" para iniciar uma nova rodada. <br />]]></message>
-	<message key="editor.article.sendToCopyedit">Enviar documento para a edição de texto</message>
-	<message key="editor.article.selectProofreader">Selecionar leitor de prova</message>
-	<message key="editor.article.replaceProofreader">Substituir leitor de prova</message>
-	<message key="editor.article.authorComments">Comentários do autor</message>
-	<message key="editor.article.proofreaderComments">Comentários do leitor de prova</message>
-	<message key="editor.article.layoutEditorFinal">Conclusão do editor de layout</message>
-	<message key="editor.article.noDate">(data)</message>
 	<message key="editor.submissions.showBy">Exibir por</message>
 	<message key="editor.submissions.submitMMDD">Enviar MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Tarefas ativas</message>
@@ -169,25 +105,13 @@
 	<message key="editor.article.scheduleForPublication">Agendar para publicação em</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">A agendar</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">A taxa para publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação.</message>
-	<message key="editor.article.display">Exibir</message>
-	<message key="editor.article.hideTocAuthorDescription">Omitir nomes dos autores no sumário da edição</message>
-	<message key="editor.article.hideTocAuthorDefault">Padrão</message>
-	<message key="editor.article.hideTocAuthorHide">Omitir</message>
-	<message key="editor.article.hideTocAuthorShow">Exibir</message>
-	<message key="editor.article.cover">Capa</message>
 	<message key="editor.article.showCoverPage">Criar capa para este artigo com os seguintes elementos.</message>
-	<message key="editor.article.coverPageDisplay">Exibir</message>
 	<message key="editor.article.hideCoverPageToc">Não exibir miniatura da capa no sumário.</message>
 	<message key="editor.article.hideCoverPageAbstract">Não exibir capa na página de resumo de artigo.</message>
-	<message key="editor.article.coverPage">Capa do artigo</message>
-	<message key="editor.article.coverPageInstructions">(Formatos permitidos: .gif, jpg ou .png)</message>
-	<message key="editor.article.uploaded">Enviado</message>
-	<message key="editor.article.removeCoverPage">Excluir capa?</message>
 	<message key="editor.article.remove">Excluir</message>
 	<message key="editor.issues.enableOpenAccessDate">Habilitar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
-	<message key="editor.article.archiveSubmission">Rejeitar e arquivar submissão</message>
 	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} usuários)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos os autores com publicações ({$count} usuários)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} usuários)</message>
@@ -225,7 +149,9 @@
 	<message key="editor.issues.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ela já pode ter sido excluída. Tente recarregar a página.</message>
 	<message key="editor.issues.invalidCoverImageFormat">Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png.</message>
 	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
-	<message key="editor.article.coverImage">Imagem de Capa</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor, escolha identificadores únicos para os objetos do mesmo tipo dentro de sua revista.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Tem certeza que deseja definir este número como o atual?</message>
+	<message key="grid.action.setCurrentIssue">Definir Número Atual</message>
+	<message key="editor.article.coverImage">Imagem de Capa</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/admin.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -59,8 +59,6 @@
 	<message key="admin.mergeUsers.confirm">Er du sikker på at du vil slå sammen brukerkontoen med navnet "{$oldUsername}" med kontoen med brukernavnet "{$newUsername}"?  Etterpå finnes ikke brukerkontoen med navnet "{$oldUsername}" lenger. Denne handlingen kan ikke omgjøres.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Ingen vervete brukere</message>
 	<message key="admin.locale.maybeIncomplete">Merkede lokaliseringsfiler kan være ukomplette.</message>
-	<message key="admin.settings.journalsList.showTitle">Tidsskrifttittel</message>
-	<message key="admin.settings.journalsList.showDescription">Tidsskriftbeskrivelse</message>
 	<message key="admin.categories">Kategorier</message>
 	<message key="admin.categories.enable.description">Nettstedsadministrator kan velge å definere et sett kategorier her, for å organisere store sett med tidsskrift. Tidsskriftadministratorer kan da velge flere av disse kategoriene for hvert tidsskrift, og lesere kan bla gjennom tidsskriftsamlingene via kategoriene.</message>
 	<message key="admin.categories.disableCategories">Ikke organiser tidsskrifter etter kategorier.</message>
@@ -70,9 +68,6 @@
 	<message key="admin.categories.create">Lag ny kategori</message>
 	<message key="admin.categories.noneCreated">Ingen kategorier er laget.</message>
 	<message key="admin.settings.options">Valg</message>
-	<message key="admin.settings.usePaging">Dersom nettstedet har mange tidsskrift: Bryt tidsskrift listen opp over flere sider.</message>
-	<message key="admin.settings.journalsList">Tidsskriftelementer</message>
-	<message key="admin.settings.journalsList.description">Velg de tidsskriftelementer som skal vises for hvert tidsskrift på nettstedet.</message>
 	<message key="admin.categories.confirmDelete">Er du sikker på at du ønsker å slette denne kategorien?</message>
 	<message key="admin.categories.name">Kategorinavn</message>
 	<message key="admin.categories.nameRequired">Kategorinavn må oppgis.</message>

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -56,7 +56,6 @@
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
  * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
- * @uses $citationPlugins Array of citation format plugins
  * @uses $copyright string Copyright notice. Only assigned if statement should
  *   be included with published articles.
  * @uses $copyrightHolder string Name of copyright holder
@@ -107,7 +106,7 @@
 			{* DOI (requires plugin) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $pubIdPlugin->getPubIdType() != 'doi'}
-					{php}continue;{/php}
+					{continue}
 				{/if}
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
@@ -191,13 +190,19 @@
 			{/if}
 
 			{* References *}
-			{if $article->getCitations()}
+			{if $parsedCitations->getCount() || $article->getCitations()}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
 					<div class="value">
-						{$article->getCitations()|nl2br}
+						{if $parsedCitations->getCount()}
+							{iterate from=parsedCitations item=parsedCitation}
+								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+							{/iterate}
+						{elseif $article->getCitations()}
+							{$article->getCitations()|nl2br}
+						{/if}
 					</div>
 				</div>
 			{/if}
@@ -227,7 +232,7 @@
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 							</li>
 						{/foreach}
 					</ul>
@@ -256,36 +261,53 @@
 				</div>
 			{/if}
 
-			{* Citation formats *}
-			{if $citationPlugins|@count}
-				<div class="item citation_formats">
-					{* Output the first citation format *}
-					{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
-						<div class="sub_item citation_display">
-							<div class="label">
-								{translate key="submission.howToCite"}
-							</div>
-							<div id="citationOutput" class="value">
-								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
-							</div>
-						</div>
-						{php}break;{/php}
-					{/foreach}
-
-					{* Output list of all citation formats *}
-					<div class="sub_item citation_format_options">
+			{* How to cite *}
+			{if $citation}
+				<div class="item citation">
+					<div class="sub_item citation_display">
 						<div class="label">
-							{translate key="submission.howToCite.citationFormats"}
+							{translate key="submission.howToCite"}
 						</div>
 						<div class="value">
-							<ul>
-								{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
-									<li class="{$citationPlugin->getName()|escape}{if $smarty.foreach.citationPlugins.iteration == 1} current{/if}">
-										{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()}/{$citationPlugin->getName()|escape}{/capture}
-										<a href="{$citationUrl}"{if !$citationPlugin->isDownloadable()} data-load-citation="true"{/if} target="_blank">{$citationPlugin->getCitationFormatName()|escape}</a>
-									</li>
-								{/foreach}
-							</ul>
+							<div id="citationOutput" role="region" aria-live="polite">
+								{$citation}
+							</div>
+							<div class="citation_formats">
+								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+									{translate key="submission.howToCite.citationFormats"}
+								</button>
+								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+									<ul class="citation_formats_styles">
+										{foreach from=$citationStyles item="citationStyle"}
+											<li>
+												<a
+													aria-controls="citationOutput"
+													href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
+													data-load-citation
+													data-json-href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgsJson}"
+												>
+													{$citationStyle.title|escape}
+												</a>
+											</li>
+										{/foreach}
+									</ul>
+									{if count($citationDownloads)}
+										<div class="label">
+											{translate key="submission.howToCite.downloadCitation"}
+										</div>
+										<ul class="citation_formats_styles">
+											{foreach from=$citationDownloads item="citationDownload"}
+												<li>
+													<a href="{url page="citationstylelanguage" op="download" path=$citationDownload.id params=$citationArgs}">
+														<span class="fa fa-download"></span>
+														{$citationDownload.title|escape}
+													</a>
+												</li>
+											{/foreach}
+										</ul>
+									{/if}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -319,7 +341,7 @@
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $pubIdPlugin->getPubIdType() == 'doi'}
-					{php}continue;{/php}
+					{continue}
 				{/if}
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
@@ -345,6 +367,9 @@
 				<div class="item copyright">
 					{if $licenseUrl}
 						{if $ccLicenseBadge}
+							{if $copyrightHolder}
+								<p>{translate key="submission.copyrightStatement" copyrightHolder=$copyrightHolder copyrightYear=$copyrightYear}</p>
+							{/if}
 							{$ccLicenseBadge}
 						{else}
 							<a href="{$licenseUrl|escape}" class="copyright">

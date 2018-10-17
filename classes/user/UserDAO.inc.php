@@ -3,8 +3,8 @@
 /**
  * @file classes/user/UserDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserDAO
@@ -32,7 +32,7 @@ class UserDAO extends PKPUserDAO {
 	 * if the was expired, renew to current date + 1 year
 	 * @param $user User
 	 */
-	function renewMembership(&$user){
+	function renewMembership($user){
 		$dateEnd = $user->getSetting('dateEndMembership', 0);
 		if (!$dateEnd) $dateEnd = 0;
 
@@ -45,4 +45,4 @@ class UserDAO extends PKPUserDAO {
 	}
 }
 
-?>
+

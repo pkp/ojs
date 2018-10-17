@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
 
 	<!-- review forms end -->
 
@@ -204,7 +204,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Aldizkariaren kudeatzailea</message>
-	<message key="user.role.sectionEditor">Ataleko editorea</message>
+	<message key="user.role.subEditor">Ataleko editorea</message>
 	<message key="user.role.subscriptionManager">Harpidetza-kudeatzailea</message>
 	<message key="user.role.managers">Aldizkariaren kudeatzaileak</message>
 	<message key="user.role.subscriptionManagers">Harpidetza-kudeatzaileak</message>
@@ -317,7 +317,6 @@ key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 	<message key="plugins.categories.auth.description">Baimena emateko pluginen bidez, erabiltzaile-autentifikazioa beste sistema batzuei delega diezaieke Open Journal Systems-ek, esate baterako LDAP zerbitzariei.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Aipamen-formatuen pluginen bidez, erabiltzaileek hainbat formatu izango dituzte aipamenak ikusteko.</message>
 
 
 	<message key="plugins.categories.generic.description">Plugin generikoek Open Journal Systems hedatzen dute, gainerako plugin kategoriek egin ezin dituzten hainbat gauzatarako.</message>
@@ -428,12 +427,6 @@ Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari.</
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Izena ebaluatzailearen profilerako esteka da.<br />
-Balorazio-eskala: 1-5 (Bikaina).<br />
-Asteak: ebaluazioa egiteko batez besteko denbora. <br />
-Azkena: azkeneko onartutako ebaluazioaren data.<br />
-Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]></message>
 
 
 
@@ -521,12 +514,10 @@ itsatsi ebaluazioko oharrak hemen</message>
         <message key="reviewer.article.selectRecommendation">Hautatu gomendio bat era bidali ebaluazioa prozesua osatzeko. Gomendio bat hautatu aurretik, ebaluazio bat sartu behar duzu edo fitxategi bat kargatu.</message>
 	<message key="reviewer.article.mustSelectDecision">Ez da gomendiorik hautatu. Gomendio bat aukeratu behar duzu bidaltzeko.</message>
 	<message key="reviewer.article.confirmDecision">Erabaki bat grabatzen duzunean, ezingo duzu aldaketarik egin ebaluazio honetan. Ziur zaude jarraitu nahi duzula?</message>
-	<message key="reviewer.article.ensuringBlindReview">Ebaluazio anonimoa segurtatu</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Zuzentzeko fitxategia</message>
 	<message key="copyeditor.article.copyeditorFile">Zuzentzailearen fitxategia</message>
-	<message key="copyeditor.article.uploadedFile">Kargatutako fitxategia</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Zuzentzailearen fitxategia</message>
 
 	<!-- Proofreader -->
@@ -758,7 +749,7 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="installer.ojsUpgrade">OJS bertsio-berritzea</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
 
-<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur ezazu mesedez software honekin batera ematen den <a href="{$baseUrl}/docs/README">README</a> fitxategia. Public Knowledge Project-i eta dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
+<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur ezazu mesedez software honekin batera ematen den <a href="{$baseUrl}/docs/README.md">README</a> fitxategia. Public Knowledge Project-i eta dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
 
 <h4>Bertsio-berritzea</h4>
 
@@ -807,7 +798,7 @@ datu-basearen ezarpenak konfigurazio-fitxategian idatziko diren
 arren.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
 
-<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href="{$baseUrl}/docs/README">README</a> eta <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
+<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href="{$baseUrl}/docs/README.md">README</a> eta <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
 <p>Aurrera jarraitu aurretik, <strong>biziki gomendatzen dizugu</strong> datu-basearen, fitxategien direktorioaren eta OJSren instalazio-direktorioaren kopiak egitea.</p>
 <p><a href="http://www.php.net/features.safe-mode" target="_blank">PHP modu seguruan</a> exekutatzen ari bazara, ziurtatu zure php.ini konfigurazio-fitxategiko max_execution_time direktibaren muga altu jarrita dagoela. Muga horretara edo besteren batera (adib. Apache-ren "Timeout" direktibarenera) heltzen bada eta bertsio-berritzeko prozesua geratzen bada, eskuz konpondu behar da.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Unicode (UTF-8) euskarri osoa edukitzeko, hautatu UTF-8 karaktere-joko guztien ezarpenetan. Kontuan izan, euskarri horrek MySQL >= 4.1.1 edo PostgreSQL >= 7.1 datu-base zerbitzaria eskatzen duela. Kontuan izan, halaber, Unicode euskarri osoa edukitzeko, PHP >= 4.3.0 eduki behar dela <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> liburutegirako euskarriarekin konpilatuta (lehenespenez gaitzen da PHP instalazio berrietan). Zure zerbitzariak baldintza horiek betetzen ez baditu, problemak izan ditzakezu karaktere-joko hedatuak erabiltzeko.
@@ -1015,8 +1006,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="payment.subscription.purchase">Erosi harpidetza</message>
 	<message key="installer.installApplication">Instalatu Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Bertsio-berritu Open Journal Systems</message>
-	<message key="notification.mailListDescription">Sartu zure helbide eletkronikoa aldizkariari gehitu zaizkion eduki berri garrantzitsuen jakinarazpenak berehala jasotzeko.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Orri honek aldizkariarekin lotutako eguneraketa garrantzitsuak erakusten ditu, hala nola gai edo anuntzio berriak. Jakinarazpen horietan izen-eman dezakezu, bai RSS jarioekin (eskuineko irudietan klik eginez), bai <a href="{$emailUrl}">posta elektronikoz. </a>]]></message>
 	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$title}", aurkeztu da.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$title}" artikuluan.</message>

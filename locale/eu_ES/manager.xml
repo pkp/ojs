@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the eu_ES (Euskara) locale.
@@ -49,7 +49,6 @@
 	<message key="manager.payment.options.publicationFee">Artikulua argitaratzea</message>
 	<message key="manager.payment.options.purchaseArticleFee">Artikulua erostea</message>
 	<message key="manager.payment.options.text">Ordaintzeko metodoaren azalpena</message>
-	<message key="manager.payment.options.waiverPolicy">Salbuespen-politika</message>
 	<message key="manager.payment.paymentId">Ordainketa ID</message>
 	<message key="manager.payment.paymentMethod">Ordaintzeko modua</message>
 	<message key="manager.payment.paymentMethod.description">Pantaila honetan ondorengo Ordaintzeko metodoen pluginetako edozein konfigura dezakezu.</message>
@@ -246,7 +245,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Oharra:</strong> Ebaluatzaileei mezu elektroniko bat bidaltzen zaienean bidalketa bat ebaluatzeko gonbita egiteko, zuzenean bidalketaren orrira eramaten duen URL bat jarriko da mezuan (saioa hasteko behar diren gainerako orrietarako sarbidearekin). Segurtasun-arrazoiengatik, aukera honekin editoreek ezingo dute helbide elektronikorik aldatu edo CC edo BCC helbiderik gehitu ebaluatzaileei gonbitak bidali aurretik.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ebaluatzaileen kalifikazioa</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Ebaluatzaileentzako oroigarriak</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Ezarri <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ebaluazio anonimoa segurtatzen</a> duten estekak egileek eta ebaluatzaileek fitxategiak kargatzen dituzten orrietarako.]]></message>
 	<message key="manager.setup.reviewPolicy">Ebaluazio-politika</message>
 	<message key="manager.setup.searchEngineIndexing">Bilatzailearen indexatzea</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Bilatzaileen bitartez aldizkari honetara heltzen laguntzeko, idatzi aldizkariaren azalpen labur bat eta gako-hitz esanguratsuak (puntu eta komaz bereizita).</message>

@@ -4,16 +4,16 @@
 <!--
   * plugins/gateways/resolver/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.gateways.resolver.displayName">Plugin para Resolver</message>
-	<message key="plugins.gateways.resolver.description">Este plugin obtiene números y artículos basado en  información de citas.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">No se ha podido resolver una entidad basada en la información de la cita especificada.  Por favor asegúrese que la información de la cita es comprensible y se refiere a una entidad de este despliegue de OJS.</message>
+	<message key="plugins.gateways.resolver.displayName">Módulo Resolver</message>
+	<message key="plugins.gateways.resolver.description">Este módulo obtiene números y artículos basado en información de citas.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">No se ha podido resolver una entidad basada en la información de la cita especificada. Por favor asegúrese que la información de la cita es comprensible y se refiere a una entidad de esta instalación de OJS.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exportación Participaciones</message>
 </locale>

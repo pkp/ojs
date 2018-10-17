@@ -3,8 +3,8 @@
 /**
  * @file pages/information/InformationHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class InformationHandler
@@ -16,6 +16,21 @@
 import('classes.handler.Handler');
 
 class InformationHandler extends Handler {
+
+	/**
+	 * @see PKPHandler::authorize()
+	 */
+	function authorize($request, &$args, $roleAssignments) {
+		$context = $request->getContext();
+		if (!$context || !$context->getSetting('restrictSiteAccess')) {
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
+
+		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
+		$this->addPolicy(new ContextRequiredPolicy($request));
+		return parent::authorize($request, $args, $roleAssignments);
+	}
 
 	/**
 	 * Display the information page for the journal.
@@ -92,4 +107,4 @@ class InformationHandler extends Handler {
 	}
 }
 
-?>
+

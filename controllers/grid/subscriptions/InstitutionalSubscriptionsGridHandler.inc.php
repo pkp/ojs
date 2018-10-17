@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/subscriptions/InstitutionalSubscriptionsGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class InstitutionalSubscriptionsGridHandler
@@ -19,13 +19,13 @@ import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	/**
-	 * @copydoc GridHandler::initialize()
+	 * @copydoc SubscriptionsGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
 		// Basic grid configuration.
-		$this->setTitle('subscriptionManager.individualSubscriptions');
+		$this->setTitle('subscriptionManager.institutionalSubscriptions');
 
 		//
 		// Grid columns.
@@ -36,15 +36,6 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 			new GridColumn(
 				'name',
 				'common.name',
-				null,
-				null,
-				$cellProvider
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
-				'email',
-				'user.email',
 				null,
 				null,
 				$cellProvider
@@ -86,6 +77,15 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 				$cellProvider
 			)
 		);
+		$this->addColumn(
+			new GridColumn(
+				'referenceNumber',
+				'manager.subscriptions.referenceNumber',
+				null,
+				null,
+				$cellProvider
+			)
+		);
 	}
 
 
@@ -93,9 +93,42 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	// Implement methods from GridHandler.
 	//
 	/**
+	 * @copydoc GridHandler::renderFilter()
+	 */
+	function renderFilter($request) {
+		$context = $request->getContext();
+
+		// Import field constants.
+		import('lib.pkp.classes.user.PKPUserDAO');
+		import('classes.subscription.InstitutionalSubscriptionDAO');
+		$fieldOptions = array(
+			IDENTITY_SETTING_GIVENNAME => 'user.givenName',
+			IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
+			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_EMAIL => 'user.email',
+			SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
+			SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
+			SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',
+			SUBSCRIPTION_INSTITUTION_NAME => 'manager.subscriptions.form.institutionName',
+			SUBSCRIPTION_DOMAIN => 'manager.subscriptions.form.domain',
+			SUBSCRIPTION_IP_RANGE => 'manager.subscriptions.form.ipRange',
+		);
+
+		$matchOptions = array(
+			'contains' => 'form.contains',
+			'is' => 'form.is'
+		);
+
+		$filterData = array(
+			'fieldOptions' => $fieldOptions,
+			'matchOptions' => $matchOptions
+		);
+
+		return parent::renderFilter($request, $filterData);
+	}
+
+	/**
 	 * @copydoc GridHandler::loadData()
-	 * @param $request PKPRequest
-	 * @return array Grid data.
 	 */
 	protected function loadData($request, $filter) {
 		// Get the context.
@@ -103,16 +136,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $subscriptionDao->getByJournalId($journal->getId());
-		// FIXME: , $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
-		/* return $userGroupDao->getUsersById(
-			$filter['userGroup'],
-			$filter['includeNoRole']?null:$context->getId(),
-			$filter['searchField'],
-			$filter['search']?$filter['search']:null,
-			$filter['searchMatch'],
-			$rangeInfo
-		); */
+		return $subscriptionDao->getByJournalId($journal->getId(), null, $filter['searchField'], $filter['searchMatch'], $filter['search']?$filter['search']:null, null, null, null, $rangeInfo);
 	}
 
 
@@ -128,7 +152,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	function editSubscription($args, $request) {
 		// Form handling.
 		$subscriptionForm = new InstitutionalSubscriptionForm($request, $request->getUserVar('rowId'));
-		$subscriptionForm->initData($args, $request);
+		$subscriptionForm->initData();
 
 		return new JSONMessage(true, $subscriptionForm->fetch($request));
 	}
@@ -146,7 +170,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$subscriptionForm->readInputData();
 
 		if ($subscriptionForm->validate()) {
-			$subscriptionForm->execute($args, $request);
+			$subscriptionForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_SUCCESS);
 			// Prepare the grid row data.
@@ -176,4 +200,4 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	}
 }
 
-?>
+

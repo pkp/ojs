@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/SubmissionSubmitStep3Form.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionSubmitStep3Form
@@ -27,6 +27,19 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 			new SubmissionMetadataFormImplementation($this)
 		);
 	}
+
+	/**
+	 * @copydoc Form::fetch()
+	 */
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		// get word count of the section
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($this->submission->getSectionId());
+		$wordCount = $section->getAbstractWordCount();
+		$templateMgr->assign('wordCount', $wordCount);
+		return parent::fetch($request);
+	}
 }
 
-?>
+

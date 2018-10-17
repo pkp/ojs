@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
+  *
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.reports.counter.description">COUNTER plugin umožňuje zaznamenávání a vytváření zpráv o aktivitě na stránkách.</message>
+	<message key="plugins.reports.counter">COUNTER statistiky</message>
+
+	<message key="plugins.reports.counter.1a.title">Zpráva časopisu 1 (R3): Požadavek na Full-Text článku po měsících a časopisech</message>
+	<message key="plugins.reports.counter.1a.title1">Zpráva časopisu 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Počet úspěšných požadavků na Full-Text článků po měsících a časopisech (Rok {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Datum spuštění:</message>
+	<message key="plugins.reports.counter.1a.publisher">Vydavatel</message>
+	<message key="plugins.reports.counter.1a.platform">Platforma</message>
+	<message key="plugins.reports.counter.1a.printIssn">Print ISSN</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">Online ISSN</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">YTD Celkem</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Celkem pro všechny časopisy</message>
+	<message key="plugins.reports.counter.legacyStats">Odkazy níže generují zprávy využití pomocí starého pluginu počítání přístupů. Pokud chcete počty generovat pomocí nového OJS počítadla, použijte odkazy výše.</message>
+</locale>

@@ -3,8 +3,8 @@
 /**
  * @file classes/oai/ojs/OAIDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIDAO
@@ -212,7 +212,7 @@ class OAIDAO extends PKPOAIDAO {
 		$journalId = array_shift($setIds);
 		$sectionId = array_shift($setIds);
 
-		$params = array();
+		$params = array('publishingMode', (int) PUBLISHING_MODE_NONE, (int) STATUS_DECLINED);
 		if (isset($journalId)) $params[] = (int) $journalId;
 		if (isset($sectionId)) $params[] = (int) $sectionId;
 		if ($submissionId) $params[] = (int) $submissionId;
@@ -224,7 +224,7 @@ class OAIDAO extends PKPOAIDAO {
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
-			'SELECT	LEAST(a.last_modified, i.last_modified) AS last_modified,
+			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
 				s.section_id AS section_id,
@@ -238,11 +238,12 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN issues i ON (i.issue_id = pa.issue_id)
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_DECLINED . '
+				LEFT JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
+			WHERE	i.published = 1 AND j.enabled = 1 AND (jsl.setting_value IS NULL OR jsl.setting_value <> ?) AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
-				' . ($until?' AND LEAST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
+				' . ($until?' AND GREATEST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND a.submission_id = ?':'') . '
 			UNION
 			SELECT	dot.date_deleted AS last_modified,
@@ -264,9 +265,8 @@ class OAIDAO extends PKPOAIDAO {
 			ORDER BY ' . $orderBy,
 			$params
 		);
-
 		return $result;
 	}
 }
 
-?>
+

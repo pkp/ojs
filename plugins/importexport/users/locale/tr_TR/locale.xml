@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
@@ -32,11 +32,33 @@ Komutlar:
 	<message key="plugins.importexport.users.import.usersWereImported">Aşağıdaki kullanıcılar sisteme başarı ile eklendi</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Veri alınırken hata oldu</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Bu kullanıcıların sisteme eklenmesini istediğiniz kullanıcılar olduğunu onaylayınız.</message>
-	<message key="plugins.importexport.users.unknownPress">Belirtilen "{$pressPath}" sistemde bulunmayan bir dizin.</message>
+	<message key="plugins.importexport.users.unknownPress">Bilinmeyen bir dergi yolu "{$journalPath}" belirtildi.</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Kullanıcı verilerini dışarı ver</message>
 	<message key="plugins.importexport.users.export.exportByRole">Kullanıcıları rollerine göre ver</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Tümünü ver</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Veriler verilmeye hazırlanırken hata oldu</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">"{$fileName}" dosyasına yazamıyorum.</message>
+	<message key="plugins.importexport.users.cliUsage.examples">Örnekler:
+
+	Kullanıcıları myImportFile.xml dosyasından içe aktar:
+
+	{$scriptName} {$pluginName} myImportFile.xml myJournal'ı içe aktar
+
+
+
+	Tüm kullanıcıları myJournal'dan dışa aktar:
+
+	{$scriptName} {$pluginName} myExportFile.xml myJournal'dan ihraç et
+
+
+
+	Kullanıcıları ID'leri ile dışa aktar:
+
+	{$scriptName} {$pluginName} myExportFile.xml myJournal 1 2 ihraç et</message>
+	<message key="plugins.importexport.users.import.warning">Uyarı</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">{$importHash} ile şifreli şifreler kullanılamıyor; OJS, {$ojsHash} kullanacak şekilde yapılandırıldı. Devam ederseniz, içe aktarılan kullanıcıların şifrelerini sıfırlamanız gerekir.</message>
+	<message key="plugins.importexport.users.importComplete">İçe aktarma başarıyla tamamlandı. Kullanılmayan kullanıcı adları ve e-posta adresleri olan kullanıcılar, birlikte gelen kullanıcı grupları ile birlikte içe aktarılmıştır.</message>
+	<message key="plugins.importexport.users.results">Sonuçlar</message>
+	<message key="plugins.importexport.users.uploadFile">Devam etmek için lütfen "İçe Aktar"ın altında bir dosya yükleyin.</message>
 </locale>

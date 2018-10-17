@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -30,7 +30,7 @@
 	<message key="manager.payment.authorFees">Autor/innengebühren</message>
 	<message key="manager.payment.authorFeesDescription">Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen unter "1. Schritt" der Beitragseinreichung, im "Über uns" der Zeitschrift unter "Zur Zeitschrift" sowie an allen Stellen, an denen eine Zahlung erforderlich ist.</message>
 	<message key="manager.payment.currency">Währung</message>
-	<message key="manager.payment.currencymessage">OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das Abonnement bezahlt wird, der hier festgelegten entpricht.</message>
+	<message key="manager.payment.currencymessage">OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das Abonnement bezahlt wird, der hier festgelegten entspricht.</message>
 	<message key="manager.payment.description">Beschreibung</message>
 	<message key="manager.payment.details">Details</message>
 	<message key="manager.payment.editSubscription">Abonnement bearbeiten</message>
@@ -44,6 +44,7 @@
 	<message key="manager.payment.notFound">Nicht gefunden</message>
 	<message key="manager.payment.options">Optionen</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
 	<message key="manager.payment.options.enablePayments">Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können.</message>
 	<message key="manager.payment.options.fee">Gebühr</message>
 	<message key="manager.payment.options.feeDescription">Beschreibung der Gebühr</message>
@@ -54,7 +55,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Artikel erwerben</message>
 	<message key="manager.payment.options.purchaseIssueFee">Ausgabe erwerben</message>
 	<message key="manager.payment.options.text">Beschreibung der Zahlungsmethode</message>
-	<message key="manager.payment.options.waiverPolicy">Richtlinien zum Verzicht auf Gebühren</message>
 	<message key="manager.payment.paymentId">Zahlungs-ID</message>
 	<message key="manager.payment.paymentMethod">Zahlungsmethode</message>
 	<message key="manager.payment.paymentMethod.description">Sie können hier jede der aufgeführten Zahlungsmethoden konfigurieren.</message>
@@ -64,6 +64,7 @@
 	<message key="manager.payment.readerFeesDescription">Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen im "Über uns" der Zeitschrift unter "Zur Zeitschrift" und an allen Stellen, an denen eine Zahlung erforderlich ist.</message>
 	<message key="manager.payment.records">Protokoll</message>
 	<message key="manager.payments">Zahlungen</message>
+	<message key="manager.paymentTypes">Zahlweisen</message>
 	<message key="manager.payment.userName">Zahler/in</message>
 	<message key="manager.people.allEnrolledUsers">Bei dieser Zeitschrift registrierte Benutzer/innen</message>
 	<message key="manager.people.allJournals">Alle Zeitschriften</message>
@@ -105,11 +106,12 @@
 	<message key="manager.sections.submissionReview">Es findet kein Peer Review statt.</message>
 	<message key="manager.section.submissionsToThisSection">Eingereichte Beiträge für diese Rubrik</message>
 	<message key="manager.sections.unassigned">Zur Verfügung stehende Rubrikredakteur/innen</message>
-	<message key="manager.sections.wordCount">Wort-Anzahl</message>
+	<message key="manager.sections.wordCount">Wortanzahl</message>
 	<message key="manager.sections.wordCountInstructions">Wortanzahl für Abstracts für diese Rubrik begrenzen (0 für keine Begrenzung):</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.setup.masthead">Impressum</message>
-	<message key="manager.setup.masthead.description">Nennen Sie Redakteur/innen, Verwalter/innen und andere mit der Zeitschrift verbundene Personen.</message>
+	<message key="manager.setup.editorialTeam">Redaktion</message>
+	<message key="manager.setup.editorialTeam.description">Nennen Sie Redakteur/innen, Verwalter/innen und andere mit der Zeitschrift verbundene Personen.</message>
 	<message key="manager.setup.homepageContent">Inhalte der Zeitschriften-Homepage</message>
 	<message key="manager.setup.homepageContentDescription">Die Zeitschriften-Homepage besteht standardmäßig aus Navigations-Links. Zusätzliche Inhalte können hinzugefügt werden, indem eine oder alle der folgenden Optionen ausgewählt werden. Sie werden in der angezeigten Reihenfolge auftauchen.</message>
 	<message key="manager.setup.layout">Layout der Zeitschrift</message>
@@ -162,9 +164,9 @@
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Anzeige der</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
-	<message key="manager.setup.enableUserRegistration">Besucher/innen können einen Benutzeraccount bei der Zeitschrift.</message>
+	<message key="manager.setup.enableUserRegistration">Besucher/innen können einen Benutzeraccount bei der Zeitschrift registrieren.</message>
 	<message key="manager.setup.focusAndScope">Konzept</message>
-	<message key="manager.setup.focusAndScope.description">Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Arikel und anderer hier zu veröffentlichenden Werke.</message>
+	<message key="manager.setup.focusAndScope.description">Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Artikel und anderer hier zu veröffentlichenden Werke.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
 	<message key="manager.setup.form.issnInvalid">Die angegebene ISSN ist ungültig.</message>
@@ -230,6 +232,12 @@
 	<message key="manager.setup.lists">Listen</message>
 	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
 	<message key="manager.setup.enableArchive">Archivierung aktivieren</message>
+	<message key="manager.setup.plnPluginEnable">PKP-PN-Plugin aktiviert</message>
+	<message key="manager.setup.plnDescription">Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt.</message>
+	<message key="manager.setup.plnSettingsDescription">Klicken Sie auf Einstellungen, um die Nutzungsbedingungen des PKP PN zu akzeptieren.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt. Das PKP-PN-Plugin für OJS 3 wird momentan entwickelt und wird bald in der Plugin-Gallerie verfügbar sein.</message>
+	<message key="manager.setup.otherLockss">Einstellungen für alternative Archivierungen</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und speichern und verteilen Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über ein <a href="{$lockssUrl}" target="_blank">LOCKSS-Manifest</a>. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Eine LOCKSS-Lizenz wird in "Über uns" unter Archivierung erscheinen: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-Lizenz</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Beschreibung der LOCKSS-Lizenz</message>
@@ -240,6 +248,8 @@
 	<message key="manager.setup.clockssLicenseLabel">Beschreibung der CLOCKSS-Lizenz</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Registrieren Sie sich für den CLOCKSS-Dienst, indem Sie <a href="http://clockss.org/" target="_blank">die CLOCKSS-Website</a> besuchen.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[Portico ermöglichen, Zeitschrifteninhalte zu archivieren und an teilnehmende Bibliotheken auszuliefern.]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">Gestaltung</message>
 	<message key="manager.setup.look.description">Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet.</message>
@@ -250,7 +260,7 @@
 	<message key="manager.setup.managingTheJournal">4. Schritt: Die Zeitschrift verwalten</message>
 	<message key="manager.setup.navigationBar">Navigationsleiste</message>
 	<message key="manager.setup.navigationBarDescription">Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu.</message>
-	<message key="manager.setup.navItemIsAbsolute">Die URL ist ein absolute Adresse (z.B. " http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
+	<message key="manager.setup.navItemIsAbsolute">Die URL ist eine absolute Adresse (z.B. "http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
 	<message key="manager.setup.navItemIsLiteral">Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. "Einrichtung der Zeitschrift") und nicht aus einem Lokalisierungsschlüssel (z.B. "manager.setup")</message>
 	<message key="manager.setup.noImageFileUploaded">Keine Grafikdatei hochgeladen.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Style Sheet hochgeladen.</message>
@@ -291,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Bewertung der Gutachterin/des Gutachters</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
 	<message key="manager.setup.reviewPolicy">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Damit die Nutzer/innen von Suchmaschinen die Zeitschrift einfacher finden, stellen Sie bitte eine kurze Beschreibung der Zeitschrift und charakteristische Schlagworte (durch Semikolon getrennt) zusammen.</message>
 	<message key="manager.setup.searchEngineIndexing">Für Suchmaschinen indizieren</message>
@@ -315,13 +324,13 @@
 	<message key="manager.setup.submissions.description">Richtlinien für Autor/innen, Copyright und Indizierung (einschließlich Registrierung).</message>
 	<message key="manager.setup.subscription">Einige oder alle Inhalte der Zeitschrift sind nur für Abonnent/innen zugänglich.</message>
 	<message key="manager.setup.subscriptionDescription">Die Einrichtung der Funktion einer Abonnementverwaltung ist in diesem Fall nötig. Diese hat Zugang zu den Abonnement-Modulen, was auch frei zugängliche Angebote, Selbst-Archivierung und Benachrichtigungen per E-Mail beinhaltet.</message>
-	<message key="manager.setup.noPublishing">OJS wird nicht verwandt, um die Zeitschrifteninhalte online zu veröffentlichen.</message>
+	<message key="manager.setup.noPublishing">OJS wird nicht verwendet, um die Zeitschrifteninhalte online zu veröffentlichen.</message>
 	<message key="manager.setup.typeExamples">(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; Umfrage/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
 	<message key="manager.setup.uniqueIdentifier">Eindeutige Kennung</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Artikel und Ausgaben können mit einer Identifikationsnummer oder einer Zeichenkette gekennzeichnet werden, wobei ein System, z.B. das DOI (Digital Object Identifier)-System, verwendet werden sollte.</message>
-	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion/ein Herausgeber/innen- und Gutachter/innengremium.</message>
+	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion bzw. ein Herausgeber/innengremium.</message>
 	<message key="manager.setup.useThumbnail">Vorschaubild</message>
 	<message key="manager.setup.useImageTitle">Titelgrafik</message>
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
@@ -342,7 +351,7 @@
 	<message key="manager.statistics.statistics.description">OJS berechnet folgende Statistiken für jede Zeitschrift: "Tage bis zur Begutachtung" wird vom Beitragseingang (oder dem Eingang der zu begutachtenden Version) bis zur ersten Redaktionsentscheidung berechnet, während die "Tage bis zur Veröffentlichung" der angenommenen Beiträge vom Hochladen des Originals bis zur Veröffentlichung berechnet werden.</message>
 	<message key="manager.statistics.statistics.itemsPublished">Veröffentlichte Beiträge</message>
 	<message key="manager.statistics.statistics.makePublic">Mitteilungen, die den Leser/innen in "Über uns" vermittelt werden.</message>
-	<message key="manager.statistics.statistics.note">Anmerkung: Die Prozentsätze der Gutachter/innenempfehlungen summieren sich nicht notwendigerweise auf 100%, weil erneut eingereichte Beiträge entweder angenommen, abgelehnt oder noch in Bearbeitung sein können.</message>
+	<message key="manager.statistics.statistics.note">Anmerkung: Die Prozentsätze der Gutachter/innenempfehlungen summieren sich nicht notwendigerweise auf 100 %, weil erneut eingereichte Beiträge entweder angenommen, abgelehnt oder noch in Bearbeitung sein können.</message>
 	<message key="manager.statistics.statistics.numIssues">Erschienene Ausgaben</message>
 	<message key="manager.statistics.statistics.numSubmissions">Gesamtzahl der Beiträge:</message>
 	<message key="manager.statistics.statistics.peerReviewed">Peer Review abgeschlossen</message>
@@ -378,14 +387,12 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">Monat(e) nach Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">Woche(n) nach Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">Monat(e) vor Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">Woche(n) vor Ablauf des Abonnements.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} Monate</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} Wochen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Erinnerung an das Auslaufen des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automatische E-Mails zur Erinnerung (verfügbar unter den Standard-E-Mails des OJS) können den Abonnent/innen sowohl vor als auch nach dem Ablauf des Abonnements zugehen.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Anmerkung:</strong> Hierzu muss die/der Website-Administrator/in <tt>scheduled_tasks</tt> in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
@@ -404,7 +411,7 @@
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines individuellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines institutionellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements sind die Bewilligung der Domain und der IP-Bereiche und die Aktivierung des Abonnements durch die Abonnementverwalter/innen erforderlich.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter iunter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter unter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open-Access-Optionen für Abonnement-Zeitschriften</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Zeitschriften mit Abonnement können "verzögerten Open Access" und/oder "Selbstarchivierung durch die/den Autor/in" anbieten und damit die Leser/innenschaft vergrößern und die Häufigkeit, in der Beiträge zitiert werden, heraufsetzen.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informationen zum Abonnement</message>
@@ -415,7 +422,8 @@
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.individualSubscriptions">Individuelle Abonnements</message>
 	<message key="manager.institutionalSubscriptions">Institutionelle Abonnements</message>
-	<message key="manager.subscriptions.confirmDelete">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
+	<message key="manager.subscriptions.confirmRenew">Sind Sie sicher, dass Sie dieses Abonnement erneuern möchten?</message>
+	<message key="manager.subscriptions.confirmDelete">Sind Sie sicher, dass Sie dieses Abonnement löschen möchten?</message>
 	<message key="manager.subscriptions.summary">Zusammenfassung der Abonnements</message>
 	<message key="manager.subscriptions.create">Ein neues Abonnement erstellen</message>
 	<message key="manager.subscriptions.createTitle">Erstellen</message>
@@ -533,6 +541,12 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
 	<message key="manager.distribution.access">Zugriff</message>
 
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">Verlinken Sie eine Seite, die die angebotenen Abonnements beschreibt.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Verlinken Sie eine Seite, die die aktuellen und früheren Abonnements der Besucherin/des Besuchers beschreibt.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Dieser Link wird nur angezeigt, wenn eine Nutzerin/ein Nutzer eingeloggt ist.</message>
+
+
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorien</message>
 	<message key="manager.setup.categories.description">Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen.</message>
@@ -546,13 +560,13 @@
 	<message key="manager.setup.copyrightYearBasis.article">Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels abgeleitet, wie bei "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.issue">Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe abgeleitet.</message>
 	<message key="manager.setup.resetPermissions">Artikelrechte zurücksetzen</message>
-	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher diesem Artikel zugewiesen sind, zurücksetzen möchten?</message>
-	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, nutzen Sie den Knopf unten.</message>
+	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher den Artikeln zugewiesen sind, zurücksetzen möchten?</message>
+	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Nutzen Sie den Knopf unten, um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, zurückzusetzen.</message>
 
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">Bestandteile</message>
 	<message key="grid.genres.title">Artikelbestandteile</message>
-	<message key="grid.genres.description">Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei entweder mit der kompletten Einreichung 99Z oder einem bestimmten Bestandteil, identifiziert anhand der Nummer (z.B. 02), verknüpfen.</message>
+	<message key="grid.genres.description">Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei entweder mit der kompletten Einreichung 99Z oder einem bestimmten Bestandteil, identifiziert anhand der Nummer (z.B. 02), zu verknüpfen.</message>
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->

@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/articles/ArticleReportDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportDAO
@@ -92,41 +92,42 @@ class ArticleReportDAO extends DAO {
 		}
 
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$authorDao = DAORegistry::getDAO('AuthorDAO');
 		$articles = $articleDao->getByContextId($journalId);
+		$params = array_merge(
+			$authorDao->getFetchParameters(),
+			array(
+				'biography',
+				'biography',
+				$locale,
+				'affiliation',
+				'affiliation',
+				$locale,
+				(int) $journalId,
+			)
+		);
 		$authorsReturner = array();
 		$index = 1;
 		while ($article = $articles->next()) {
 			$result = $this->retrieve(
-				'SELECT	aa.first_name AS fname,
-					aa.middle_name AS mname,
-					aa.last_name AS lname,
-					aa.email AS email,
-					aa.country AS country,
-					aa.url AS url,
+				'SELECT	' . $authorDao->getFetchColumns() .',
+					a.email AS email,
+					a.country AS country,
+					a.url AS url,
 					COALESCE(aasl.setting_value, aas.setting_value) AS biography,
 					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation
-				FROM	authors aa
-					JOIN submissions a ON (aa.submission_id = a.submission_id)
-					LEFT JOIN author_settings aas ON (aa.author_id = aas.author_id AND aas.setting_name = ? AND aas.locale = ?)
-					LEFT JOIN author_settings aasl ON (aa.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
-					LEFT JOIN author_settings aaas ON (aa.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = ?)
-					LEFT JOIN author_settings aaasl ON (aa.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
+				FROM	authors a
+					JOIN submissions s ON (a.submission_id = s.submission_id)
+					' . $authorDao->getFetchJoins() .'
+					LEFT JOIN author_settings aas ON (a.author_id = aas.author_id AND aas.setting_name = ? AND aas.locale = s.locale)
+					LEFT JOIN author_settings aasl ON (a.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
+					LEFT JOIN author_settings aaas ON (a.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = s.locale)
+					LEFT JOIN author_settings aaasl ON (a.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
 				WHERE
-					a.context_id = ? AND
-					a.submission_progress = 0 AND
-					aa.submission_id = ?',
-				array(
-					'biography',
-					$primaryLocale,
-					'biography',
-					$locale,
-					'affiliation',
-					$primaryLocale,
-					'affiliation',
-					$locale,
-					(int) $journalId,
-					$article->getId()
-				)
+					s.context_id = ? AND
+					s.submission_progress = 0 AND
+					a.submission_id = ?',
+				array_merge($params, array((int) $article->getId()))
 			);
 			$authorIterator = new DBRowIterator($result);
 			$authorsReturner[$article->getId()] = $authorIterator;
@@ -138,4 +139,4 @@ class ArticleReportDAO extends DAO {
 	}
 }
 
-?>
+

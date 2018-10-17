@@ -4,12 +4,11 @@
 <!--
   * plugins/importexport/doaj/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
-  *
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
@@ -19,7 +18,7 @@
 	<message key="plugins.importexport.doaj.registrationIntro">Wenn Sie Artikel aus OJS heraus registrieren möchten, geben Sie bitte Ihren DOAJ-API-Key ein. Ansonsten können Sie immer noch Metadaten in das DOAJ-XML-Format exportieren, aber keine Artikel aus OJS bei DOAJ registrieren.</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey">DOAJ-API-Key</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Sie finden Ihren API-Key auf Ihrer DOAJ-Nutzerseite.</message>
-	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS wird Artikel automatisch an DOAJ abliefern. Bitte berücksichtigen Sie, dass dies eine Weile nach Veröffentlichung dauern kann. Sie können nach allen unregistrierten Artikeln suchen.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS wird Artikel automatisch an DOAJ abliefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach allen unregistrierten Artikeln suchen.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Die DOAJ-Test-API (Testumgebung) für die Registrierung nutzen. Bitte vergessen Sie nicht, diese Option für den Produktivbetrieb wieder abzuwählen.</message>
 	  
 	<message key="plugins.importexport.doaj.senderTask.name">DOAJ automatic registration task</message>

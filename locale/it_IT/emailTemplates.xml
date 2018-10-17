@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -125,16 +125,6 @@ La ringrazio per la preferenza espressa nei confronti di {$contextName}.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questa email, quando è abilitata, viene mandata automaticamente ad un autore quando lui o lei completa il processo di sottomissione del manoscritto al journal. Fornisce informazioni su come rintracciare la submission attraverso il processo e ringrazia l'autore per la submission.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Submission non idonea</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Una revisione iniziale di &quot;{$submissionTitle}&quot; ha rilevato che questa submission non rientra nello scopo e nel focus di {$contextName}. Le suggerisco di consultare meglio la sezione delle informazioni della rivista, per saperne di più sul genere di contributi che pubblichiamo.<br />
-Può comunque considerare di proporre la submission ad altra rivista più idonea.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Commento alla submission </subject>
@@ -624,30 +614,6 @@ Grazie,<br />
 Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nuova notifica da {$siteTitle}</subject>
-		<body><![CDATA[Hai ricevuto una notifica da  {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Se non vuoi ricevere altre notifiche, vai alla pagina {$unsubscribeLink} per cancellarti.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Benvenuto nella mailing list di {$siteTitle}!</subject>
-		<body><![CDATA[Hai chiesto di ricevere notifiche da {$siteTitle}.<br />
-<br />
-Clicca su questo link per confermare e aggiungere il tuo indirizzo nella lista di distribuzione: {$confirmLink}<br />
-<br />
-Se non vuoi ricevere email di notifica, vai alla pagina {$unsubscribeLink} per cancellarti.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Questo messaggio viene inviato a utenti che si sono appena registrati per ricevere le notifiche.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisione dell'editor</subject>

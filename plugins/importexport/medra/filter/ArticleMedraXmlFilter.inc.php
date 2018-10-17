@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/ArticleMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleMedraXmlFilter
@@ -109,7 +109,6 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			$epubFormat = O4DOI_EPUB_FORMAT_HTML;
 		} else {
 			$galley = $pubObject;
-			$galleyFile = $galley->getFile();
 			if ($cache->isCached('articles', $galley->getSubmissionId())) {
 				$article = $cache->get('articles', $galley->getSubmissionId());
 			} else {
@@ -122,7 +121,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			$epubFormat = null;
 			if ($galley->isPdfGalley()) {
 				$epubFormat = O4DOI_EPUB_FORMAT_PDF;
-			} else if ($galley->getRemoteURL() || $galleyFile->getFileType() == 'text/html') {
+			} else if ($galley->getRemoteURL() || $galley->getFileType() == 'text/html') {
 				$epubFormat = O4DOI_EPUB_FORMAT_HTML;
 			}
 		}
@@ -214,7 +213,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// Extent (for article-as-manifestation only)
 		if ($galley && !$galley->getRemoteURL()) {
 			$galleyFile = $galley->getFile();
-			$contentItemNode->appendChild($this->createExtentNode($doc, $galleyFile));
+			if ($galleyFile) $contentItemNode->appendChild($this->createExtentNode($doc, $galleyFile));
 		}
 		// Article Title (mandatory)
 		$titles = $this->getTranslationsByPrecedence($article->getTitle(null), $objectLocalePrecedence);
@@ -348,11 +347,11 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// Contributor role (mandatory)
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR));
 		// Person name (mandatory)
-		$personName = $author->getFullName();
+		$personName = $author->getFullName(false);
 		assert(!empty($personName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonName', htmlspecialchars($personName, ENT_COMPAT, 'UTF-8')));
 		// Inverted person name
-		$invertedPersonName = $author->getFullName(true);
+		$invertedPersonName = $author->getFullName(false, true);
 		assert(!empty($invertedPersonName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
 		// Affiliation
@@ -397,4 +396,4 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 
 }
 
-?>
+

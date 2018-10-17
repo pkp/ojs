@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/sr_SR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_SR)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Ovaj blok prikazuje informacije o pretplat.</message>
 	<message key="plugins.block.subscription.blockTitle">Pretplata</message>
 	<message key="plugins.block.subscription.expires">Ističe</message>
-	<message key="plugins.block.subscription.providedBy">Pristup odobrio</message>
-	<message key="plugins.block.subscription.comingFromIP">Od</message>
+	<message key="plugins.block.subscription.providedBy">Pristup odobrio {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Od {$ip}</message>
 	<message key="plugins.block.subscription.about">Pretplate</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Prijavite se da potvrdite pretplatu</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -75,4 +75,7 @@
 	<message key="submission.citationFormat.notFound">Pyydettyä viittausmuotoa ei voitu noutaa.</message>
 
 	<message key="submission.metadataDescription">Nämä määritykset perustuvat Dublin Core -metatietosanastostandardiin. Se on kansainvälinen standardi, jolla kuvataan julkaisun sisältöä.</message>
+	<message key="section.any">Kaikki osastot</message>
+	<message key="submission.abstract.wordCount.description">Abstraktin tulee olla korkeintaan {$wordCount} sanaa.</message>
+	<message key="submission.submit.form.wordCountAlert">Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen.</message>
 </locale>

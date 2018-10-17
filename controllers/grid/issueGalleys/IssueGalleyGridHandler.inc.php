@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issueGalleys/IssueGalleyGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridHandler
@@ -232,7 +232,7 @@ class IssueGalleyGridHandler extends GridHandler {
 		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($issue->getId());
-		return $issueFileManager->downloadFile($issueGalley->getFileId());
+		return $issueFileManager->downloadById($issueGalley->getFileId());
 	}
 
 	/**
@@ -249,8 +249,8 @@ class IssueGalleyGridHandler extends GridHandler {
 		$issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
 		$issueGalleyForm->readInputData();
 
-		if ($issueGalleyForm->validate($request)) {
-			$issueId = $issueGalleyForm->execute($request);
+		if ($issueGalleyForm->validate()) {
+			$issueId = $issueGalleyForm->execute();
 			return DAO::getDataChangedEvent($issueId);
 		}
 		return new JSONMessage(false);
@@ -281,4 +281,4 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -58,14 +58,8 @@
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
-	<message key="admin.settings.usePaging">Para plataformas com muitas revistas, distribuir as revistas por diferentes páginas.</message>
-	<message key="admin.settings.journalsList">Elementos da revista</message>
-	<message key="admin.settings.journalsList.description">Por favor, seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Thumbnail da revista</message>
-	<message key="admin.settings.journalsList.showTitle">Título da revista</message>
-	<message key="admin.settings.journalsList.showDescription">Descrição da revista</message>
 	<message key="admin.settings.defaultMetricDescription">A instalação do OJS foi configurada para guardar mais do que uma métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
-		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar 
+		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar
 		resultados da pesquisa. Por favor, seleccione um das métricas configuradas como padrão.</message>
 	<message key="admin.categories">Categorias</message>
 	<message key="admin.categories.enable.description">O administrador pode escolher definir um mapa de categorias para ajudar na organização de plataformas que alojam muitas revistas. Os directores de revista poderão escolher diversas categorias para cada revista, e leitores pode pesquisar os conteúdos das revistas por categoria.</message>

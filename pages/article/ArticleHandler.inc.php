@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -45,8 +45,9 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * @see PKPHandler::initialize()
+	 * @param $args array Arguments list
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = array()) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
 		$journal = $request->getContext();
@@ -114,11 +115,12 @@ class ArticleHandler extends Handler {
 			}, $supplementaryGenres);
 
 			foreach ($galleys as $galley) {
+				$remoteUrl = $galley->getRemoteURL();
 				$file = $galley->getFile();
-				if (!$file) {
+				if (!$remoteUrl && !$file) {
 					continue;
 				}
-				if (in_array($file->getGenreId(), $primaryGenreIds)) {
+				if ($remoteUrl || in_array($file->getGenreId(), $primaryGenreIds)) {
 					$primaryGalleys[] = $galley;
 				} elseif (in_array($file->getGenreId(), $supplementaryGenreIds)) {
 					$supplementaryGalleys[] = $galley;
@@ -151,6 +153,11 @@ class ArticleHandler extends Handler {
 			'copyrightYear' => $article->getCopyrightYear(),
 		));
 
+		// Citations
+		$citationDao = DAORegistry::getDAO('CitationDAO');
+		$parsedCitations = $citationDao->getBySubmissionId($article->getId());
+		$templateMgr->assign('parsedCitations', $parsedCitations);
+
 		// Keywords
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
 		$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), array(AppLocale::getLocale())));
@@ -158,11 +165,6 @@ class ArticleHandler extends Handler {
 		// Consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-
-		// Citation formats
-		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
-		$templateMgr->assign('citationPlugins', $citationPlugins);
 
 		if (!$galley) {
 			// No galley: Prepare the article landing page.
@@ -184,8 +186,7 @@ class ArticleHandler extends Handler {
 
 			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
-			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager = new OJSPaymentManager($request);
+			$paymentManager = Application::getPaymentManager($journal);
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}
@@ -257,6 +258,7 @@ class ArticleHandler extends Handler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
+		if (!isset($this->galley)) $request->getDispatcher()->handle404();
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		else if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
@@ -275,7 +277,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadById($fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');
@@ -325,7 +327,7 @@ class ArticleHandler extends Handler {
 				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedArticle->getId());
 
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($request);
+				$paymentManager = Application::getPaymentManager($journal);
 
 				$purchasedIssue = false;
 				if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
@@ -348,7 +350,7 @@ class ArticleHandler extends Handler {
 						}
 
 						if (!Validation::isLoggedIn()) {
-							Validation::redirectLogin("payment.loginRequired.forArticle");
+							Validation::redirectLogin('payment.loginRequired.forArticle');
 						}
 
 						/* if the article has been paid for then forget about everything else
@@ -360,11 +362,12 @@ class ArticleHandler extends Handler {
 							$this->issue = $issue;
 							$this->article = $publishedArticle;
 							return true;
-						} else {
-							$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
-							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+						} elseif ($paymentManager->purchaseArticleEnabled()) {
+							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
+							$paymentManager->queuePayment($queuedPayment);
 
-							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+							$paymentForm->display($request);
 							exit;
 						}
 					}
@@ -384,56 +387,6 @@ class ArticleHandler extends Handler {
 	}
 
 	/**
-	 * Fetch an item citation
-	 * @param $args
-	 * @param $request
-	 */
-	function cite($args, $request) {
-		$router = $request->getRouter();
-		$this->setupTemplate($request);
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$citeType = isset($args[1]) ? $args[1] : null;
-		$returnFormat = isset($args[2]) ? $args[2] : null;
-
-		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-
-		import('lib.pkp.classes.core.JSONMessage');
-
-		if (empty($citeType) || !isset($citationPlugins[$citeType])) {
-			AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION);
-			$errorMessage = __('submission.citationFormat.notFound');
-			if ($returnFormat == 'json') {
-				return new JSONMessage(false, $errorMessage);
-			} else {
-				echo $errorMessage;
-			}
-			return;
-		}
-
-		$article = $this->article;
-		$issue = $this->issue;
-		$journal = $request->getContext();
-
-		// Initiate a file download and exit
-		if ($citationPlugins[$citeType]->isDownloadable()) {
-			$citationPlugins[$citeType]->downloadCitation($article, $issue, $journal);
-			return;
-		}
-
-		$citation = $citationPlugins[$citeType]->fetchCitation($article, $issue, $journal);
-
-		// Return a JSON formatted string
-		if ($returnFormat == 'json') {
-			return new JSONMessage(true, $citation);
-
-		// Display it straight to the browser
-		} else {
-			echo $citation;
-			return;
-		}
-	}
-
-	/**
 	 * Set up the template. (Load required locale components.)
 	 * @param $request PKPRequest
 	 */
@@ -443,4 +396,4 @@ class ArticleHandler extends Handler {
 	}
 }
 
-?>
+

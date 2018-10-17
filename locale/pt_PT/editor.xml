@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -34,8 +34,6 @@
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do Editor</message>
 	<message key="editor.issues.createIssue">Criar Edição</message>
-	<message key="editor.issues.backIssues">Edições Anteriores</message>
-	<message key="editor.issues.futureIssues">Edições Futuras</message>
 	<message key="editor.issues.currentIssue">Edição Actual</message>
 	<message key="editor.issues.numArticles">Artigos</message>
 	<message key="editor.issues.noArticles">Nenhum artigo agendado para esta edição.</message>
@@ -59,15 +57,12 @@
 	<message key="editor.issues.remove">Remover</message>
 	<message key="editor.issues.proofed">Corrigido</message>
 	<message key="editor.issues.removeCoverPage">Remover imagem da capa?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.styleFile">Folha de Estilos</message>
 	<message key="editor.issues.invalidStyleFormat">O formato de Folha de Estilos é inválido. Certifique-se que o documento enviado é um documento CSS válido! Documentos CSS com comentários no início poderão ser rejeitados. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.removeStyleFile">Eliminar Folha de Estilos?</message>
 	<message key="editor.issues.coverPageCaption">Legenda da capa</message>
 	<message key="editor.issues.showCoverPage">Criar capa personalizada para esta edição.</message>
 	<message key="editor.issues.coverPageDisplay">Exibir</message>
-	<message key="editor.issues.hideCoverPageArchives">Não exibir miniatura da capa na lista de edições</message>
-	<message key="editor.issues.hideCoverPageCover">Não exibir imagem de capa antes do sumário</message>
 	<message key="editor.issues.openAccess">Acesso Livre</message>
 	<message key="editor.issues.subscription">Subscrição</message>
 	<message key="editor.issues.identification">Identificação</message>
@@ -92,71 +87,7 @@
 	<message key="editor.navigation.futureIssues">Edições Futuras</message>
 	<message key="editor.navigation.issueArchive">Edições Anteriores</message>
 	<message key="editor.article.designateReviewVersion">Designar documento original como Versão para Revisão</message>
-	<message key="editor.article.uploadReviewVersion">Enviar Versão para Revisão actualizada</message>
-	<message key="editor.article.showSuppFile">Apresentar documento ao revisor</message>
-	<message key="editor.article.layoutAndProof"><![CDATA[Layout & Leitura de Prova]]></message>
-	<message key="editor.article.clear">Limpar</message>
-	<message key="editor.article.clearReviewer">Retirar Revisor</message>
-	<message key="editor.article.changeSection">Alterar Secção</message>
-	<message key="editor.article.setDueDate">Definir Prazo para conclusão</message>
-	<message key="editor.article.addReviewer">Adicionar Revisor</message>
-	<message key="editor.article.toReviewer">Para o Revisor</message>
-	<message key="editor.article.notifyReviewer">Notificar Revisor</message>
-	<message key="editor.article.initiateReview">Iniciar Revisão</message>
-	<message key="editor.article.cancelReview">Cancelar Revisão</message>
-	<message key="editor.article.clearReview">Retirar Revisor</message>
-	<message key="editor.article.enterRecommendation">Definir Recomendação</message>
-	<message key="editor.article.enterReviewerRecommendation">Definir Recomendação pelo Revisor</message>
-	<message key="editor.article.recommendation">Recomendação</message>
-	<message key="editor.article.selectReviewer">Seleccionar revisor</message>
-	<message key="editor.article.replaceReviewer">Substituir revisor</message>
-	<message key="editor.article.editorToEnter">Editor deve incluir a recomendação/comentários pelo revisor</message>
-	<message key="editor.article.uploadReviewForReviewer">Enviar revisão</message>
-	<message key="editor.article.peerReviewOptions">Opções de Revisão por Pares</message>
 	<message key="editor.article.decision">Decisão</message>
-	<message key="editor.article.noEditorSelected">Nenhum editor designado.</message>
-	<message key="editor.article.recordDecision">Registar Decisão</message>
-	<message key="editor.article.cannotRecord">Editor de Secção ainda não foi registado.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Revisores devem visualizar versão do autor</message>
-	<message key="editor.article.designateDueDate">Definir Prazo para conclusão</message>
-	<message key="editor.article.designateDueDateDescription">Insira outra data ou o número de semanas para alterar o prazo para conclusão da revisão.</message>
-	<message key="editor.article.todaysDate">Data de Hoje</message>
-	<message key="editor.article.requestedByDate">Prazo até</message>
-	<message key="editor.article.dueDateFormat">Formato: YYYY-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">No. de Semanas</message>
-	<message key="editor.article.selectCopyeditor">Seleccionar Editor de Texto</message>
-	<message key="editor.article.replaceCopyeditor">Substituir Editor de Texto</message>
-	<message key="editor.article.editorsCopyedit">Edição de Texto do Editor</message>
-	<message key="editor.article.showAuthor">Permitir acesso ao autor</message>
-	<message key="editor.article.showCopyeditor">Exibir versão do Editor de Texto</message>
-	<message key="editor.article.rateReviewer">Classificação do revisor</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Bom</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Fraco</message>
-	<message key="editor.article.comments">Comentários</message>
-	<message key="editor.article.commentsRequired">Comentários obrigatórios.</message>
-	<message key="editor.article.saveRating">Guardar Classificação</message>
-	<message key="editor.article.noneSelected">Nenhum seleccionada</message>
-	<message key="editor.article.authorProofing">Leitura de Prova pelo Autor</message>
-	<message key="editor.article.restoreToQueue">Restaurar para Lista Activa</message>
-	<message key="editor.article.assignSectionEditor">Designar Editor de Secção</message>
-	<message key="editor.article.assignEditor">Designar Editor</message>
-	<message key="editor.article.selectEditor">Escolher {$roleName}</message>
-	<message key="editor.article.selectDecision">Seleccionar Decisão</message>
-	<message key="editor.article.selectLayoutEditor">Seleccionar Editor de Layout</message>
-	<message key="editor.article.replaceLayoutEditor">Substituir Editor de Layout</message>
-	<message key="editor.article.reviewSubmission">Rever Submissão</message>
-	<message key="editor.article.resubmitForReview">Enviar documento novamente para Revisão</message>
-	<message key="editor.article.resubmitFileForPeerReview">Enviar documento seleccionado para revisão por pares</message>
-	<message key="editor.article.sendToCopyedit">Enviar documento para Edição de Texto</message>
-	<message key="editor.article.selectProofreader">Seleccionar Leitor de Prova</message>
-	<message key="editor.article.replaceProofreader">Substituir Leitor de Prova</message>
-	<message key="editor.article.authorComments">Comentários do Autor</message>
-	<message key="editor.article.proofreaderComments">Comentários do Leitor de Prova</message>
-	<message key="editor.article.layoutEditorFinal">Conclusão do Editor de Layout</message>
-	<message key="editor.article.noDate">(data)</message>
 	<message key="editor.submissions.showBy">Exibir por</message>
 	<message key="editor.submissions.submitMMDD">Enviar MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Tarefas Activas</message>
@@ -171,27 +102,11 @@
 	<message key="editor.article.scheduleForPublication">Agendar para publicar em</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">A Agendar</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">A Taxa para Publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação.</message>
-	<message key="editor.article.display">Exibir</message>
-	<message key="editor.article.hideTocAuthorDescription">Omitir nomes dos autores no sumário da edição</message>
-	<message key="editor.article.hideTocAuthorDefault">Padrão</message>
-	<message key="editor.article.hideTocAuthorHide">Omitir</message>
-	<message key="editor.article.hideTocAuthorShow">Exibir</message>
-	<message key="editor.article.cover">Capa</message>
-	<message key="editor.article.showCoverPage">Criar capa para este artigo com os seguintes elementos.</message>
-	<message key="editor.article.coverImageDisplay">Exibir</message>
-	<message key="editor.article.hideCoverPageToc">Não exibir miniatura da capa no sumário</message>
-	<message key="editor.article.hideCoverPageAbstract">Não exibir imagem de capa na página de resumo de artigo</message>
-	<message key="editor.article.coverImage">Imagem de capa</message>
-	<message key="editor.article.coverImageInstructions">(Formatos permitidos: .gif, jpg ou .png)</message>
-	<message key="editor.article.uploaded">Enviado</message>
-	<message key="editor.article.removeCoverPage">Eliminar imagem de capa?</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.enableOpenAccessDate">Activar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
-	<message key="editor.article.archiveSubmission">Rejeitar e Arquivar submissão</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para Copyediting, use o link Notificar Autor para informá-lo sobre a decisão e seleccionar a versão que vai ser enviada.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Enviar para Copyediting</message>
 	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos os autores publicados ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>
@@ -229,4 +144,8 @@
 	<message key="editor.submission.selectGalleyFiles">Seleccionar Ficheiros Edição</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Os ficheiros de rascunho finais nesta lista são transformados por um Copyeditor em versões copiadas, carregadas abaixo em <span class ="pkp_help_title">Copyediting </span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Todos os ficheiros que já foram enviados para qualquer etapa de submissão podem ser adicionados à Listagem de Revisão, marcando a caixa de selecção Incluir abaixo e clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem ser escolhidos para inclusão.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Deseja realmente definir esta edição como a atual?</message>
+	<message key="grid.action.setCurrentIssue">Definir como Edição Atual</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor escolha identificadores únicos para os objetos do mesmo tipo da sua revista.</message>
+	<message key="editor.article.coverImage">Imagem de capa</message>
 </locale>

@@ -9,8 +9,8 @@
 /**
  * @file classes/article/Article.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Article
@@ -50,7 +50,7 @@ class Article extends Submission {
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
 				switch($context->getSetting('copyrightHolderType')) {
 					case 'author':
-						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString());
+						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString(false));
 						break;
 					case 'other':
 						$fieldValue = $context->getSetting('copyrightHolderOther');
@@ -258,6 +258,30 @@ class Article extends Submission {
 
 		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getContextId()) . '/' . $coverImage;
 	}
+
+	/**
+	 * Get full URLs all cover images
+	 *
+	 * @return array
+	 */
+	function getCoverImageUrls() {
+		$coverImages = $this->getCoverImage(null);
+		if (empty($coverImages)) {
+			return array();
+		}
+
+		$request = Application::getRequest();
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		$urls = array();
+
+		foreach ($coverImages as $locale => $coverImage) {
+			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getJournalFilesPath($this->getJournalId()), $coverImage);
+		}
+
+		return $urls;
+	}
 }
 
-?>
+

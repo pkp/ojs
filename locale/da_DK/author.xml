@@ -4,8 +4,8 @@
 <!--
   * /locale/da_DK/author.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -20,7 +20,7 @@
 	<message key="author.submit.stepsToSubmit">Manuskriptprocessens fem trin</message>
 	<message key="author.submit.startHereTitle">Start en ny indsendelse</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klik her</a> for at gå til trin 1 af de fem trin, som indsendelsesprocessen består af.]]></message>
-	<message key="author.submit.step1">Trin 1. Start indsendelsen</message>
+	<message key="author.submit.step1">Trin 1. Påbegynd indsendelsen</message>
 	<message key="author.submit.step4">Trin 4. Overførsel af supplerende filer</message>
 	<message key="author.submit.step4a">Trin 4a. Tilføj en supplerende fil</message>
 	<message key="author.submit.step5">Trin 5. Bekræft indsendelsen</message>
@@ -37,12 +37,8 @@
 	<message key="author.submissions.confirmDelete">Er du sikker på, at du vil slette dette ufuldstændige manuskript?</message>
 	<message key="author.submissions.viewStatus">Vis status</message>
 	<message key="author.submissions.noSubmissions">Ingen manuskripter.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Er du stødt på vanskeligheder? Kontakt <a href="mailto:{$supportEmail}">{$supportName}</a> for at få hjælp ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Er du stødt på vanskeligheder? Kontakt <a href="mailto:{$supportEmail}">{$supportName}</a> for at få hjælp.]]></message>
 	<message key="author.submit.journalSection">Tidsskriftssektion</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Vælg den relevante sektion til dette manuskript (se Sektioner og Politikker under <a href="{$aboutUrl}" target="_new">Om</a> tidsskriftet).]]></message>
-	<message key="submission.submit.selectSection">Vælg en sektion...</message>
-	<message key="author.submit.submissionChecklist">Manuskripttjekliste</message>
 	<message key="author.submit.verifyChecklist">Du skal sikre, at alle elementer på manuskripttjeklisten er opfyldt, inden du fortsætter.</message>
 	<message key="author.submit.copyrightNoticeAgree">Forfatterne accepterer vilkårene under Oplysninger om ophavsret, der vil finde anvendelse på dette manuskript, hvis og når det publiceres af dette tidsskrift (kommentarer til redaktøren kan tilføjes nedenfor).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Du skal acceptere vilkårene under Oplysninger om ophavsret, inden du fortsætter.</message>
@@ -56,7 +52,7 @@
 	<message key="author.submit.deleteAuthor">Slet forfatter</message>
 	<message key="author.submit.submissionIndexingDescription">Angiv termer for indeksering af manuskriptet, og adskil termerne med et semikolon (term1; term2; term3).</message>
 	<message key="author.submit.coverageInstructions">Henviser til geografisk placering, kronologisk eller historisk dækning og/eller karaktertræk ved forskningseksempel.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[Engelsk=en; Fransk=fr; Spansk=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Flere koder</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[Engelsk=en; Fransk=fr; Dansk=da. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Flere koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Mindst én forfatter er påkrævet.</message>
 	<message key="author.submit.form.authorRequiredFields">Fornavnet, efternavnet og e-mail-adressen på hver enkelt forfatter er påkrævet.</message>
 	<message key="author.submit.form.titleRequired">Angiv artiklens titel.</message>
@@ -116,9 +112,8 @@
 	<message key="author.submissions.queuedReviewRevisions">Under bedømmelse: Rettelser påkrævet</message>
 	<message key="author.submissions.queuedEditingCopyedit">Under redigering: Manuskriptredigering påkrævet</message>
 	<message key="author.submissions.queuedEditingProofread">Under redigering: Korrekturlæsning påkrævet</message>
-	<message key="author.submit.submissionLocale">Indleveringssprog</message>
-	<message key="author.submit.submissionLocaleDescription">Dette tidsskrift accepterer indleverede manuskripter på en række sprog. Vælg det primære sprog for indleveringen i rullemenuen.</message>
 	<message key="author.submit.form.localeRequired">Vælg et indleveringssprog.</message>
 	<message key="author.submit.reorder">Genbestil forfatternavn</message>
 	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for resuméer i denne sektion.</message>
+	<message key="author.submit.nextSteps">Næste trin</message>
 </locale>

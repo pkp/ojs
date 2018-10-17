@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/subscriptions/PaymentsGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaymentsGridCellProvider
@@ -16,6 +16,17 @@
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
 class PaymentsGridCellProvider extends GridCellProvider {
+	/** @var Request */
+	var $_request;
+
+	/**
+	 * Constructor.
+	 * @param $request Request
+	 */
+	function __construct($request) {
+		$this->_request = $request;
+		parent::__construct();
+	}
 
 	//
 	// Template methods from GridCellProvider
@@ -34,14 +45,18 @@ class PaymentsGridCellProvider extends GridCellProvider {
 		switch ($column->getId()) {
 			case 'name':
 				$userDao = DAORegistry::getDAO('UserDAO');
-				$user = $userDao->getById($payment->getUser());
+				$user = $userDao->getById($payment->getUserId());
 				return array('label' => $user->getFullName());
-				break;
+			case 'type':
+				$paymentManager = Application::getPaymentManager($this->_request->getJournal());
+				return array('label' => $paymentManager->getPaymentName($payment));
+			case 'amount':
+				return array('label' => $payment->getAmount() . ' ' . $payment->getCurrencyCode());
 			case 'timestamp':
-				return array('label' => $payment->subscription->getUserEmail());
+				return array('label' => $payment->getTimestamp());
 		}
 		assert(false);
 	}
 }
 
-?>
+

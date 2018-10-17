@@ -3,8 +3,8 @@
 /**
  * @file tests/data/50-SectionsTest.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionsTest
@@ -34,25 +34,18 @@ class SectionsTest extends WebTestCase {
 		$this->waitForElementPresent($selector='css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]');
 		$this->click($selector);
 
-		// Add Section Editor (David Buskins)
-		$this->waitForElementPresent($selector='css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
+		// Add Section Editors (David Buskins and Stephanie Berardo)
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'David Buskins\')');
 		$this->clickAt($selector);
-
-		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'David Buskins\']');
-		$this->select('name=newRowId[name]', 'label=David Buskins');
-
-		// Persist this one and add another (Stephanie Berardo)
-		$this->clickAt("css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]", "10,10");
-		$this->waitForElementPresent('css=span:contains(\'David Buskins\')');
-		$this->waitForElementPresent('xpath=(//select[@name="newRowId[name]"])[2]//option[text()=\'Stephanie Berardo\']');
-		$this->select('xpath=(//select[@name="newRowId[name]"])[2]', 'label=Stephanie Berardo');
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'Stephanie Berardo\')');
+		$this->clickAt($selector);
 
 		// Save changes
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Verify resulting grid row
-		$this->assertEquals('Berardo, Buskins', $this->getText('css=#cell-1-editors > span'));
+		$this->assertEquals('Stephanie Berardo, David Buskins', $this->getText('css=#cell-1-editors > span'));
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Create a new "Reviews" section
@@ -64,10 +57,8 @@ class SectionsTest extends WebTestCase {
 		$this->click('id=abstractsNotRequired');
 
 		// Add a Section Editor (Minoti Inoue)
-		$this->waitForElementPresent($selector='css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'Minoti Inoue\')');
 		$this->clickAt($selector);
-		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'Minoti Inoue\']');
-		$this->select('name=newRowId[name]', 'label=Minoti Inoue');
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 	}

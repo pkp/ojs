@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -37,9 +37,9 @@
 
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>La fase de correcció de proves serveix per detectar errors d'ortografia, de gramàtica i de format a la galerada. No es poden fer més canvis importants durant aquesta fase, excepte si es comenta a l'editor/a de secció. A Maquetació, feu clic a «Visualitza la prova» per veure-la en HTML, PDF i altres formats disponibles que s'utilitzen per publicar aquest element.</p> <h4>Per a errors d'ortografia i de gramàtica</h4> <p>Copieu la paraula o seqüència de paraules on hi hagi una problema i enganxeu-les al quadre de «Correccions» amb les instruccions «Canvia per» per a l'editor/a que trobeu a continuació:</p> <pre>1. CANVIA... aleshores la resta PER... llavors la resta</pre> <br /> <pre>2. CANVIA... Malinowsky PER... Malinowsky</pre> <br /> <h4>Per errors de formatació</h4> <p>Descriviu la ubicació i la naturalesa del problema al quadre de correccions de proves després d'escriure el títol «FORMAT» com es mostra a continuació:</p> <br /> <pre>3. FORMAT Els números de la taula 3 no estan alineats a la tercera columna.</pre> <br /> <pre>4. FORMAT El paràgraf que comença per «L'últim tema...» no està previst.</pre>]]></message>
 	
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Animem els lectors/ores que s’inscriguin al servei de notificació de publicació a la revista. Utilitzeu l’enllaç <a href="{$indexUrl}/{$journalPath}/user/register">Registre</a> a l’inici de la pàgina inicial de la revista. Un cop el lector/a s’hagi registrat, rebrà la taula de continguts per correu electrònic per cada nou número de la revista. Aquesta llista també permet que la revista pugui demostrar que té un cert nivell de seguiment o de lectors/ores. Vegeu la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Declaració de privacitat</a> de la revista, que assegura als lectors/ores que el seu nom i correu electrònic no s'utilitzarà per a cap altra finalitat.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Esteu interessat/da a trametre a aquesta revista? Reviseu la secció de les polítiques de la revista a <a href="{$indexUrl}/{$journalPath}/about">Informació de la revista</a> i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Indicacions de l’autor/a</a>. Els autors/ores s'han de <a href="{$indexUrl}/{$journalPath}/user/register">registrar</a> a la pàgina de la revista abans d'enviar una tramesa. Si ja s'han registrat, poden <a href="{$indexUrl}/index/login">iniciar sessió</a> i començar el procés de cinc passos.]]></message>	
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Recomanem als bibliotecaris/àries que incloguin la revista als catàlegs de revistes electròniques de la seva biblioteca. La revista també és un sistema de publicació de codi obert i és adequat per a les biblioteques per tal que l'utilitzin els membres de la facultat que treballen en l’edició de revistes Open Journal Systems (veieu <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -47,14 +47,34 @@
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Publicació de l'article</message>
-	<message key="default.journalSettings.publicationFeeDescription">Si s'accepta la publicació de l'article, haureu de pagar una quota de publicació de l’article per cobrir les despeses de publicació.</message>
-	<message key="default.journalSettings.waiverPolicy">Si no teniu fons per pagar les quotes, podreu prescindir de pagar-les una vegada. No volem que el fet de no pagar la quota impedeixi publicar obres importants.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Compra d'un article</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">El pagament de la quota us permet veure, descarregar i imprimir l'article.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Compra d'un número</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">El pagament de la quota us permet veure, descarregar i imprimir el número.</message>
 	<message key="default.journalSettings.membershipFee">Afiliació a l’associació</message>
-	<message key="default.journalSettings.membershipFeeDescription">El pagament de la quota us inscriurà com a membre de l'associació durant un any i us proporcionarà accés lliure a la revista.</message>
-	<message key="default.journalSettings.emailHeader">El següent missatge s'entrega en nom de {$journalName}.
-________________________________________________________________________</message>
+	<message key="default.genres.article">Text de l'article</message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Aquesta revista utilitza el sistema CLOCKSS per crear un sistema d'arxius distribuït entre les biblioteques participants i permet que aquestes biblioteques creïn arxius permanents de la revista amb finalitats de preservació i restauració. <a href="http://clockss.org/">Més...</a>]]></message>
+	<message key="default.groups.name.manager">Gestor/a de la revista</message>
+	<message key="default.groups.plural.manager">Gestors/es de la revista</message>
+	<message key="default.groups.abbrev.manager">GR</message>
+	<message key="default.groups.name.editor">Editor/a de la revista</message>
+	<message key="default.groups.plural.editor">Editors/es de la revista</message>
+	<message key="default.groups.abbrev.editor">ER</message>
+	<message key="default.groups.name.guestEditor">Editor/a convidada</message>
+	<message key="default.groups.plural.guestEditor">Editors/es convidades</message>
+	<message key="default.groups.abbrev.guestEditor">EC</message>
+	<message key="default.groups.name.sectionEditor">Editor/a de secció</message>
+	<message key="default.groups.plural.sectionEditor">Editors/es de secció</message>
+	<message key="default.groups.abbrev.sectionEditor">ESec</message>
+	<message key="default.groups.name.subscriptionManager">Gestor/a de subscripció</message>
+	<message key="default.groups.plural.subscriptionManager">Gestors/es de subscripció</message>
+	<message key="default.groups.abbrev.subscriptionManager">GSubs</message>
+	<message key="default.genres.researchInstrument">Instrument de recerca</message>
+	<message key="default.genres.researchMaterials">Materials de recerca</message>
+	<message key="default.genres.researchResults">Resultats de la recerca</message>
+	<message key="default.genres.transcripts">Transcripcions</message>
+	<message key="default.genres.dataAnalysis">Anàlisis de dades</message>
+	<message key="default.genres.dataSet">Conjunt de dades</message>
+	<message key="default.genres.sourceTexts">Textos font</message>
+	<message key="default.groups.name.externalReviewer">Revisor/a</message>
+	<message key="default.groups.plural.externalReviewer">Revisors/es</message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
 </locale>

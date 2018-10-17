@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localization strings.
@@ -162,7 +162,7 @@
 
 	<!-- Rôle -->
 	<message key="user.role.manager">Directeur de la revue</message>
-	<message key="user.role.sectionEditor">Rédacteur de rubrique</message>
+	<message key="user.role.subEditor">Rédacteur de rubrique</message>
 	<message key="user.role.subscriptionManager">Responsable des abonnements</message>
 	<message key="user.role.managers">Directeurs de revue</message>
 	<message key="user.role.subscriptionManagers">Responsables des abonnements</message>
@@ -277,13 +277,6 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 		</ul>
 	Cette tâche doit être effectuée par un administrateur de site.]]></message>
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nom des liens vers le profil de l'évaluateur.<br />
-Notation est sur 5 (Excellent).<br />
-Semaines réfèrent au temps moyen nécessaire pour compléter une évaluation.<br />
-Dernière est la date de la plus récente évaluation acceptée.<br />
-Active indique combien d'évaluations sont présentement considérées ou en cours.]]></message>
-
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Travail éditorial en cours</message>
 	<message key="sectionEditor.completedEditorialAssignments">Travail éditorial terminé</message>
@@ -357,12 +350,10 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
         <message key="reviewer.article.uploadFile">En outre, vous pouvez télécharger les fichiers pour fins de consultation par le rédacteur et/ou l'auteur.</message>
 	<message key="reviewer.article.mustSelectDecision">Aucune recommandation n'a été sélectionnée. Vous devez choisir une recommandation à soumettre.</message>
 	<message key="reviewer.article.confirmDecision">Du moment que vous aurez enregistré une décision, vous ne pourrez plus modifier l'évaluation. Êtes-vous certain de vouloir continuer?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assurer une évaluation à l'aveugle</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fichier à réviser</message>
 	<message key="copyeditor.article.copyeditorFile">Fichier du réviseur</message>
-	<message key="copyeditor.article.uploadedFile">Fichier téléchargé</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fichier du réviseur</message>
 
 	<!-- Proofreader -->
@@ -441,7 +432,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="user.register.openAccessNotificationDescription">Avisé par courriel quand un numéro devient disponible en accès libre.</message>
 	<message key="user.register.authorDescription">Apte à soumettre des articles à la revue</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Disposé à faire des évaluations par les pairs des soumissions à la revue.</message>
-	<message key="user.register.reviewerDescription">Disposé à faire des évaluations par les pairs des soumissions à la revue. Identifier les intérêts pour les évaluations (principaux sujets traités, méthodes de recherche).</message>
+	<message key="user.register.reviewerDescription">Disposé à faire des évaluations par les pairs des soumissions à la revue.</message>
 
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Explorer l'Index des auteurs</message>
@@ -498,7 +489,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="about.onlineSubmissions.registrationRequired">{$login} ou ({$register}) pour faire une soumission.</message>
 	<message key="about.authorGuidelines">Directives aux auteurs</message>
 	<message key="about.submissionPreparationChecklist">Liste de vérification de la soumission</message>
-	<message key="about.submissionPreparationChecklist.description">En tant que partie intégrante du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec tous les éléments suivants, et les soumissions peuvent être retournées aux auteurs qui ne sont pas conformes à ces directives.</message>
+	<message key="about.submissionPreparationChecklist.description">Les auteurs doivent s'assurer de la conformité de leur soumission avec l'ensemble des éléments suivants. Les soumissions non conformes peuvent être retournées aux auteurs.</message>
 	<message key="about.copyrightNotice">Mention de droit d'auteur</message>
 	<message key="about.privacyStatement">Déclaration de confidentialité</message>
 	<message key="about.peerReviewProcess">Processus d'évaluation par les pairs</message>
@@ -681,7 +672,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="reader.openAccess">Accès libre</message>
 	<message key="reader.subscriptionAccess">Accès sous abonnement</message>
 	<message key="reader.subscriptionOrFeeAccess">Accès sous abonnement ou avec frais</message>
-	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation fournissent aux utilisateurs différents formats par lesquels ils peuvent accéder aux citations d'articles.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement des modules linguistiques à partir du serveur Web du Public Knowledge Project n'est pas disponible présentement car :</p>
 	<ul>
 		<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire "tar" de GNU</li>
@@ -715,8 +705,8 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="reviewer.article.restrictedFileAccess">La soumission sera disponible quand et si un évaluateur accepte d'effectuer l'évaluation</message>
 	<message key="reviewer.competingInterests">Conflits d'intérêts</message>
 	<message key="submission.layout.referenceLinking">Liens de référence</message>
-	<message key="about.authorFees">Droits d'auteur</message>
-	<message key="about.authorFeesMessage">Cette revue prélève les droits d'auteur suivants.</message>
+	<message key="about.authorFees">Frais pour les auteurs</message>
+	<message key="about.authorFeesMessage">Cette revue prélève auprès des auteurs les frais suivants.</message>
 	<message key="about.memberships">Adhésions</message>
 	<message key="donations.thankYou">Merci</message>
 	<message key="donations.thankYouMessage">Merci de votre contribution. Votre geste est très apprécié.</message>
@@ -725,7 +715,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.loginRequired.forDonation">Vous devez vous connecter pour effectuer un don.</message>
 	<message key="payment.paid">Payé</message>
 	<message key="payment.payNow">Payer maintenant</message>
-	<message key="payment.waive">Déroger</message>
+	<message key="payment.waive">Renonciation</message>
 	<message key="payment.alreadyPaid">Déjà payé</message>
 	<message key="payment.alreadyPaidMessage">Sélectionner cette case si vous avez déjà envoyé votre paiement à la revue afin de compléter le processus de soumission. La soumission ne sera évaluée que sur réception du paiement. Cliquer sur PAYER MAINTENANT ci-dessus pour consulter les directives de paiement.</message>
 	<message key="payment.paymentReceived">Paiement reçu</message>
@@ -746,7 +736,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.subscription.renew">Renouveler l'abonnement</message>
 	<message key="payment.subscription.expires">Expire</message>
 	<message key="rt.admin.settings.addComment">Ajouter des commentaires (permet aux lecteurs d'afficher des commentaires, le directeur de la revue pouvant les effacer).</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Veuillez remplir les champs obligatoires.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Veuillez remplir les champs obligatoires.</message>
 	<message key="common.homePageHeader.altText">En-tête de la page d'accueil</message>
 	<message key="common.journalHomepageImage.altText">Image de la page d'accueil de la revue</message>
 	<message key="article.coverPage.altText">Image de la page couverture</message>
@@ -792,7 +782,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="subscriptions.status.needsApproval">En attente d'approbation</message>
 	<message key="subscriptions.status.awaitingManualPayment">En attente de paiement manuel</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">En attente de paiment en ligne</message>
-	<message key="subscriptions.status.other">Autre, Voir Notes</message>
+	<message key="subscriptions.status.other">Autre, voir Notes</message>
 	<message key="subscriptions.individualDescription">Les abonnements individuels demandent ude se connecter pour avoir accès au contenu auquel on est abonné.</message>
 	<message key="subscriptions.institutionalDescription">Les abonnements institutionnels ne demandent pas de se connecter. Le domaine et/ou l'adresse IP de l'utilisateur est utilisé afin de fournir l'accès au contenu auquel on est abonné.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Note :</strong> Les abonnements institutionnels souscrits en ligne demandent une approbation du domaine et des intervalles d'adresses IP avant que l'abonnement soit activé.]]></message>
@@ -801,7 +791,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="subscriptionManager.subscriptionTypes">Types d'abonnement</message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La revue utilisera un système de classification sujet disponible sur le Web.<br />
 Titre du système de classification]]></message>
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Étapes : Soumission en attente &gt; Soumission en évaluation &gt; Soumission en révision &gt; Table des matières.<br /><br />]]></message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Étapes : Soumission en attente &gt; Soumission en évaluation &gt; Soumission en révision &gt; Table des matières.<br /><br />Sélectionnez un modèle pour gérer ces aspects du processus éditorial. Pour désigner des Rédacteurs ou des Rédacteurs de rubrique, allez à Rédacteurs dans Gestion de la revue.)]]></message>
 	<message key="manager.people.confirmDisable">Désactiver cet utilisateur? Ceci empêchera l'utilisateur de se connecter au système. Vous pouvez optionnellement fournir à l'utilisateur une raison expliquant la désactivation de son compte.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Les éléments surlignés indiquent qu'une action du rédacteur est nécessaire.</li>
@@ -818,8 +808,8 @@ Titre du système de classification]]></message>
 	<message key="user.subscriptions.purchaseNewSubscription">Souscrire à un nouvel abonnement</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Souscrire à un abonnement individuel</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Souscrire à un abonnement institutionnel</message>
-	<message key="user.subscriptions.expires">Expire</message>
-	<message key="user.subscriptions.expired">Expiré</message>
+	<message key="user.subscriptions.expires">Expiration: {$date}</message>
+	<message key="user.subscriptions.expired">Expiré: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Afficher les types d'abonnement disponibles</message>
 	<message key="user.subscriptions.form.typeId">Type d'abonnement</message>
 	<message key="user.subscriptions.form.membership">Adhésion</message>
@@ -853,8 +843,6 @@ Titre du système de classification]]></message>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br />
 Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br />
 La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
-	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
 	<message key="notification.type.editing">Événements de révision</message>
 	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
@@ -876,7 +864,7 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.subscriptions.status.needsApprovalDescription">L'abonnement doit être étudié avant d'être activé</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Le paiement manuel a été initié mais n'a pas encore été reçu</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Un paiement en ligne a été initié mais annulé ou non complété</message>
-	<message key="payment.authorFees">Droits d'auteur</message>
+	<message key="payment.authorFees">Frais pour les auteurs</message>
 	<message key="navigation.categories">Catégories</message>
 	<message key="navigation.categories.browse">Naviguer</message>
 	<message key="issue.fullIssue">L'ensemble du numéro</message>
@@ -890,7 +878,7 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="site.upgradeAvailable.admin"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Allez à <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> pour télécharger la dernière version d'OJS et voir les instructions concernant la mise à jour.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Contactez votre administrateur de site ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) pour lui signaler cette nouvelle version. Plus d'information <a href="http://pkp.sfu.ca/ojs_download" target="_new">ici</a>.]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Votre serveur permet actuellement le téléchargement de fichiers : <strong>{$allowFileUploads}</strong>]]></message>
-	<message key="user.authorization.copyeditorAssignmentMissing">Accès refusé! Vous n'avez pas été désigné rédacteur/éditeur de cet article.</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Accès refusé! Vous n'avez pas été désigné comme réviseur de cet article.</message>
 	<message key="user.authorization.sectionAssignment">Vous tentez d'accéder à un article qui ne fait pas partie de votre section.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Dépôt du rédacteur non valide ou non requis!</message>
 	<message key="user.profile.profileImage">Image du profil</message>
@@ -906,8 +894,8 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.register.otherContextRoles">Demander les rôles suivants.</message>
 	<message key="user.register.noContextReviewerInterests">Si vous demandez d'être évaluateur pour une revue, indiquez vos champs d'intérêts.</message>
 	<message key="grid.catalogEntry.approvedRepresentation.title">Approbation des épreuves</message>
-	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[*<p>Approuver cette épreuve pour publication.</p>]]></message>
-	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[*<p>Retirer l'approbation pour cette épreuve.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Approuver cette épreuve pour publication.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Retirer l'approbation pour cette épreuve.</p>]]></message>
 	<message key="search.cli.rebuildIndex.indexing">indexation de "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Cette implémentation de recherche ne permet pas la réindexation par journal.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">Le chemin d'accès donné "{$journalPath}" ne mène à aucun journal.</message>
@@ -975,10 +963,22 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 </ul>
 
 <p>2. Un répertoire pour stocker les fichiers téléchargés doit être créé et accessible en écriture (voir "Paramètres des fichiers" ci-dessous).</p>]]></message>
-	<message key="article.pluginMissing"><![CDATA[*<p>Le fichier PDF sélectionné devrait se s'afficher ici si un plugiciel de lecture de PDF est installé dans votre navigateur (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.pluginMissing"><![CDATA[<p>Le fichier PDF sélectionné devrait se s'afficher ici si un plugiciel de lecture de PDF est installé dans votre navigateur (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
 <br /> <br />
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
-	<message key="manager.setup.citations.enable">Activer l'Assistant au balisage de référence (Citation Markup Assistant)</message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
+	<message key="user.reviewerPrompt.optin">Oui, j'aimerais être contacté(e) pour des demandes d'évaluation pour des soumissions à cette revue.</message>
+	<message key="subscriptions.status.noSubscription">Votre abonnement n'est pas actif.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico est un service à but non lucratif voué à la préservation de publications numériques, notamment des revues électroniques, des livres électroniques et des collections historiques numérisées. Si votre revue a signé un contrat avec Portico, activez-le ici:</message>
+	<message key="payment.type.publication.required">Le paiement des frais de publication est dû.</message>
+	<message key="payment.requestPublicationFee">Demande de frais de publication ({$feeAmount})</message>
+	<message key="payment.notFound">La demande de paiement a expiré. Veuillez communiquer avec un responsable de la revue pour plus de détails.</message>
+	<message key="log.editor.recommendation">Une recommandation éditoriale ({$decision}) pour l'article {$submissionId} a été enregistrée par {$editorName}.</message>
+	<message key="notification.type.public">Annonces publiques</message>
+	<message key="notification.type.publicationScheduled">La publication de cet article a été planifiée.</message>
+	<message key="navigation.subscriptions">Abonnements</message>
+	<message key="log.editor.submissionExpedited">{$editorName} a pris en charge l'édition de l'article {$submissionId}.</message>
+	<message key="user.register.form.emailConsentAllContexts">Oui, j'aimerais recevoir une notification pour les nouvelles publications et les annonces de toutes les revues auxquelles je me suis inscrit(e).</message>
 </locale>

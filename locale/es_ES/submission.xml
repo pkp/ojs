@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings for the es_ES (Español (España)) locale.
@@ -68,8 +68,10 @@
 	<message key="submission.submit.form.authorRequiredFields">El nombre, los apellidos y el correo electrónico de cada autor son obligatorios.</message>
 	<message key="submission.submit.form.titleRequired">Por favor, introduzca el título de su artículo.</message>
 	<message key="submission.submit.form.abstractRequired">Por favor, introduzca el resumen de su artículo.</message>
-	<message key="submission.submit.form.contributorRoleRequired">Por favor, seleccione el rol del colaborador.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Seleccione el rol del colaborador/a.</message>
 	<message key="submission.citationFormat.notFound">El formato de cita solicitado no puede recuperarse.</message>
 	<message key="submission.metadataDescription">Estas especificaciones se basan en el conjunto de metadatos Dublin Core, un estándar internacional utilizado para describir el contenido de una revista.</message>
 	<message key="section.any">Cualquier sección</message>
+	<message key="submission.abstract.wordCount.description">El resumen debe tener {$wordCount} palabras o menos.</message>
+	<message key="submission.submit.form.wordCountAlert">El resumen es demasiado largo, debería acortarlo para que se ajuste al límite marcado para esta sección.</message>
 </locale>

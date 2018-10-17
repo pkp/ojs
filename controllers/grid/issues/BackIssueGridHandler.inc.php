@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -32,7 +32,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @copydoc IssueGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
@@ -104,4 +104,4 @@ class BackIssueGridHandler extends IssueGridHandler {
 	}
 }
 
-?>
+

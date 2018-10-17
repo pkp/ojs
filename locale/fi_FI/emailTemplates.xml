@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -22,31 +22,6 @@ Linkki: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Uusi ilmoitus julkaisusta {$siteTitle}</subject>
-		<body><![CDATA[Teille on uusi ilmoitus julkaisusta {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Linkki: {$url}<br />
---<br />
-<br />
-Mikäli ette halua enää vastaanottaa ilmoitussähköposteja, klikatkaa {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to unregistered users on the notification mailing list.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Tervetuloa sivuston {$siteTitle} postituslistalle!</subject>
-		<body><![CDATA[Olette rekisteröitynyt ottamaan vastaan ilmoituksia sivustolta {$siteTitle}.<br />
-<br />
-Klikatkaa tätä linkkiä vahvistaaksenne pyynnön ja lisätäksenne sähköpostiosoitteenne postituslistalle: {$confirmLink}<br />
-<br />
-Mikäli ette enää halua vastaanottaa ilmoitussähköposteja, klikatkaa {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Vahvista salasanan vaihtaminen</subject>
@@ -165,14 +140,17 @@ Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Soveltumaton käsikirjoitus</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Käsikirjoituksesi on vastaanotettu</subject>
+		<body><![CDATA[Hei,<br />
 <br />
-Käsikirjoituksen &quot;{$submissionTitle}&quot; alustavan arvion perusteella tämä käsikirjoitus ei valitettavasti sovellu julkaistavaksi julkaisussa {$contextName}. Suosittelen, että tutustutte julkaisun kuvaukseen Tietoa-otsikon alla sekä julkaisun tämänhetkiseen sisältöön saadaksenne paremman käsityksen siitä, millaisia töitä julkaisemme. Voitte myös lähettää käsikirjoituksenne johonkin toiseen, sopivampaan julkaisuun.<br />
+{$submitterName} on lähettänyt julkaisuumme {$contextName} käsikirjoituksen &quot;{$submissionTitle}&quot;.<br />
+<br />
+Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsitte tämän julkaisun työllenne.<br />
 <br />
 Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users specified during the submission process.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Toimituksellinen toimeksianto</subject>
@@ -263,7 +241,7 @@ Ystävällisin terveisin,<br />
 		<subject>Artikkelin arviointipyyntö</subject>
 		<body><![CDATA[Hyvä {$reviewerName},<br />
 <br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme vastauksenne {$responseDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua. 
+Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme vastauksenne {$responseDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua.
 <br />
 Uskon, että olisitte sopiva arvioija kyseiselle käsikirjoitukselle. Käsikirjoituksen abstrakti löytyy tämän sähköpostin lopusta. Toivon, että harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />
 <br />
@@ -598,7 +576,7 @@ Ystävällisin terveisin,<br />
 		<subject>Julkaistavat tiedostot valmiita</subject>
 		<body><![CDATA[Hyvä {$editorialContactName},<br />
 <br />
-Julkaisuun {$contectName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
+Julkaisuun {$contextName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
 <br />
 Mikäli teillä on kysyttävää, otattehan minuun yhteyttä.<br />
 <br />
@@ -807,7 +785,7 @@ Tekninen toimittaja, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Korjattu versio on ladattu</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Hyvät toimittajat,<br />
 <br />
 {$authorName} on ladannut käsikirjoituksen &quot;{$submissionTitle}&quot; korjatun version.<br />
 <br />
@@ -821,5 +799,27 @@ Ystävällisin terveisin,<br />
 		<subject>Viesti julkaisua {$contextName} koskien</subject>
 		<body><![CDATA[Kirjoita viesti]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Toimittajan päätös</subject>
+		<body>
+			<![CDATA[Hyvä {$authorName},<br />
+<br />
+Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
+<br />
+Päätöksemme on: Käsikirjoitus on hylätty<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Toimittajan suositus</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Julkaisun {$contextName} käsikirjoitusta &quot;{$submissionTitle}&quot; on: {$recommendation}<br />
+<br />
+Ystävällisin terveisin,<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
 	</email_text>
 </email_texts>

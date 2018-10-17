@@ -6,8 +6,8 @@
 /**
  * @file plugins/importexport/datacite/DataciteExportDeployment.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportDeployment
@@ -18,10 +18,10 @@
  */
 
 // XML attributes
-define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-3');
+define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-4');
 define('DATACITE_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
-define('DATACITE_XSI_SCHEMAVERSION' , '3');
-define('DATACITE_XSI_SCHEMALOCATION' , 'http://schema.datacite.org/meta/kernel-3/metadata.xsd');
+define('DATACITE_XSI_SCHEMAVERSION' , '4');
+define('DATACITE_XSI_SCHEMALOCATION' , 'http://schema.datacite.org/meta/kernel-4/metadata.xsd');
 
 class DataciteExportDeployment {
 	/** @var Context The current import/export context */
@@ -136,4 +136,4 @@ class DataciteExportDeployment {
 
 }
 
-?>
+

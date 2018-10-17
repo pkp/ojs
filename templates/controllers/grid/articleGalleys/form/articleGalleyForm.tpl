@@ -1,8 +1,8 @@
 {**
  * templates/editor/issues/articleGalleyForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to add/edit an issue galley.
@@ -17,7 +17,7 @@
 		// Attach the form handler.
 		$('#articleGalleyForm').pkpHandler('$.pkp.controllers.grid.representations.form.RepresentationFormHandler',
 			{ldelim}
-				remoteRepresentation: {$remoteRepresentation|json_encode escape=false}
+				remoteRepresentation: {$remoteRepresentation|json_encode}
 			{rdelim}
 		);
 	{rdelim});
@@ -39,8 +39,8 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{if $articleGalleyFile && ($articleGalleyFile->getFileType()=='text/html' || $articleGalleyFile->getFileType()=='application/xml')}
-		{url|assign:dependentFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.dependent.DependentFilesGridHandler" op="fetchGrid" submissionId=$submissionId fileId=$articleGalleyFile->getFileId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}
+	{if $articleGalleyFile && $articleGalleyFile->supportsDependentFiles()}
+		{capture assign=dependentFilesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.files.dependent.DependentFilesGridHandler" op="fetchGrid" submissionId=$submissionId fileId=$articleGalleyFile->getFileId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}{/capture}
 		{load_url_in_div id="dependentFilesGridDiv" url=$dependentFilesGridUrl}
 	{/if}
 

@@ -4,8 +4,8 @@
 <!--
   * plugins/themes/default/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -14,6 +14,8 @@
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.themes.default.name">Domyślny motyw</message>
 	<message key="plugins.themes.default.description">Motyw domyślny OJS3.</message>
+
+	<!-- Theme options -->
 	<message key="plugins.themes.default.option.typography.label">Typografia</message>
 	<message key="plugins.themes.default.option.typography.description">Wybierz ustawienia krojów pisma które najlepiej pasują do Twojego czasopisma.</message>
 	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: Krój projektowany z myślą o wyświetlaniu na ekranach, zaprojektowany przez Google z dużym wsparciem dla języków.</message>

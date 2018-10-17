@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/editorDecision/form/InitiateExternalReviewForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class InitiateReviewForm
@@ -34,16 +34,16 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 	//
 	/**
 	 * Execute the form.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 */
-	function execute($args, $request) {
+	function execute() {
+		$request = Application::getRequest();
+
 		// Retrieve the submission.
 		$submission = $this->getSubmission();
 
 		// Record the decision.
 		import('classes.workflow.EditorDecisionActionsManager');
-		$actionLabels = EditorDecisionActionsManager::getActionLabels(array($this->_decision));
+		$actionLabels = EditorDecisionActionsManager::getActionLabels($request->getContext(), $this->getStageId(), array($this->_decision));
 
 		import('lib.pkp.classes.submission.action.EditorAction');
 		$editorAction = new EditorAction();
@@ -57,4 +57,4 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 	}
 }
 
-?>
+

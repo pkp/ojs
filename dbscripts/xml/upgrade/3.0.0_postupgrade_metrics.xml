@@ -4,8 +4,8 @@
 <!--
   * dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   -->
@@ -14,16 +14,9 @@
 	<sql>
 		<query>UPDATE metrics SET assoc_type = 1048585 WHERE assoc_type = 257</query>
 	</sql>
-	<!-- update the ASSOC_TYPE_SUPP_FILE = 262 constant to ASSOC_TYPE_SUBMISSION_FILE = 515 defined in PKPApplication -->
+	<!-- update the ASSOC_TYPE_SUPP_FILE = 262 constant to ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531 defined in PKPApplication -->
 	<sql>
-		<query>UPDATE metrics SET assoc_type = 515 WHERE assoc_type = 262</query>
-	</sql>
-
-	<!-- update the supp file ids to the new file ids, ASSOC_TYPE_SUBMISSION_FILE = 515 -->
-	<sql>
-		<query driver="mysql">UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 515 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
-		<query driver="mysqli">UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 515 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
-		<query driver="postgres7">UPDATE metrics SET assoc_id = sfs.file_id FROM submission_file_settings sfs WHERE metrics.assoc_type = 515 AND sfs.setting_name = 'old-supp-id' AND CAST(nullif(sfs.setting_value, '') AS integer) = metrics.assoc_id</query>
+		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 262</query>
 	</sql>
 
 	<!-- fill the new metrics columns (assoc_object_type, assoc_object_id, pkp_section_id and representation_id) appropriately: -->

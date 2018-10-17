@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -150,7 +150,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Director</message>
-	<message key="user.role.sectionEditor">Editor de Secção</message>
+	<message key="user.role.subEditor">Editor de Secção</message>
 	<message key="user.role.subscriptionManager">Gestor de Subscrições</message>
 	<message key="user.role.managers">Directores</message>
 	<message key="user.role.subscriptionManagers">Gestores de Subscrições</message>
@@ -247,15 +247,6 @@
 Configurar o suporte ao LOCKSS para o OJS é necessário somente após a publicação de uma edição estar quase completa, bastando seguir os passos a seguir:]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[A revista utiliza um sistema de classificação de assunto disponível na web.<br />
-Título do sistema de classificação:]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Para ter o conteúdo desta revista indexado dentro de um sistema global de distribuição de bases de pesquisa, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registe</a> o URL da revista no <a href="http://pkp.sfu.ca/harvester/" target="_blank">Colectador de Metadados</a> do Public Knowledge Project. Esta ferramenta recolha os recolha de cada item indexado desta revista, possibilitando pesquisas colectivas e precisas entre os portais de pesquisa que utilizam o protocolo de recolha de metadados do <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative, OAI-PMH</a>.
-<br /><br />
-Caso o administrador do portal já tenha registado a revista no portal do Colectador do PKP, a revista será automaticamente indexada, sem necessidade de registo individual.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <strong>Site URL</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>Base URL for OAI Archive</strong>.]]></message>
-
-
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Fila de Submissão > Revisão de Submissão > Edição de Submissão > Fila de Espera > Sumário.<br /><br />
 Escolha um modelo para administrar os aspectos do processo editorial. (Para designar um Director e Editores de Secção, aceda a opção Editores em Administração da Revista.)]]></message>
@@ -269,11 +260,6 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	Esta tarefa deve ser executada por um administrador do portal.]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do revisor.<br />
-Classificação vai até 5 (Excelente).<br />
-Dias refere-se ao tempo médio para concluir uma revisão.<br />
-Última é a data da última aceitação de revisão,<br />
-Activo indica revisão em consideração ou em progresso.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Tarefas Editoriais Activas</message>
@@ -350,12 +336,10 @@ Activo indica revisão em consideração ou em progresso.]]></message>
         <message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a revisão para concluir o processo. É obrigatório incluir os comentários da revisão ou transferir uma Versão para Revisão do documento antes de definir a sua revisão.</message>
 	<message key="reviewer.article.mustSelectDecision">Não foi seleccionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a revisão.</message>
 	<message key="reviewer.article.confirmDecision">Uma vez registada a decisão não será mais possível modificar a revisão. Deseja realmente proceder?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assegurando uma Revisão Cega segura</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Ficheiro para Edição de Texto (C/E)</message>
 	<message key="copyeditor.article.copyeditorFile">Versão do Editor de Texto</message>
-	<message key="copyeditor.article.uploadedFile">Documento Transferido</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Versão do Editor de Texto</message>
 
 	<!-- Proofreader -->
@@ -432,7 +416,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<!-- Registration -->
 	<message key="user.register.noJournals">Não há revistas para se registar neste portal.</message>
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
-	<message key="user.register.loginToRegister">Insira o nome de utilizador e senha para registar-se na revista.</message>
 	<message key="user.register.registrationDisabled">Registo de utilizadores desactivado no momento.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha inserida não contém o mínimo de caracteres.</message>
 	<message key="user.register.readerDescription">Notificado via e-mail da publicação de nova edição da revista.</message>
@@ -493,7 +476,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<message key="about.focusAndScope">Âmbito</message>
 	<message key="about.sectionPolicies">Políticas de Secção</message>
 	<message key="about.submissions">Submissões</message>
-	<message key="about.onlineSubmissions">Submissões Online</message>
 	<message key="about.onlineSubmissions.login">Acesso</message>
 	<message key="about.onlineSubmissions.registrationRequired">{$login} ou {$register} para submeter um artigo.</message>
 	<message key="about.authorGuidelines">Instruções para Autores</message>
@@ -527,7 +509,7 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<message key="installer.ojsUpgrade">Actualização do Sistema</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versão {$version}</h4>
 
-<p>Agradecemos o seu interesse em utilizar o <strong>Sistema Electrónico de Edição de Revistas</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README_pt">README_pt</a> incluído com o pacote. Para mais informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, aceda ao <a href="http://pkp.sfu.ca/" target="_blank">portal do PKP</a>. Clique em <a href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://seer.ibict.br" target="_blank">Portal do SEER</a> para mais informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Sistema Electrónico de Edição de Revistas/Open Journal Systems visite <a href="forum.ibict.br">Forum do Ibict</a>, <a href="forum.pkp.sfu.ca">PKP Support Forum</a>, ou <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a> do PKP. Embora os fóruns sejam a forma preferencial de contacto, também pode-se entrar em contacto com a Equipa do SEER através dos formulários disponíveis na secção <a href="http://seer.ibict.br/index.php?option=com_content&task=view&id=270&Itemid=113" target="_blank">Fale conosco</a> no <a href="http://seer.ibict.br" target="_blank">portal do SEER</a> e para a <a href="mailto:pkp.contact@gmail.com">Equipa do PKP (pkp.contact@gmail.com)</a>.</p>
+<p>Agradecemos o seu interesse em utilizar o <strong>Sistema Electrónico de Edição de Revistas</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README.md_pt">README_pt</a> incluído com o pacote. Para mais informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, aceda ao <a href="http://pkp.sfu.ca/" target="_blank">portal do PKP</a>. Clique em <a href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://seer.ibict.br" target="_blank">Portal do SEER</a> para mais informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Sistema Electrónico de Edição de Revistas/Open Journal Systems visite <a href="forum.ibict.br">Forum do Ibict</a>, <a href="forum.pkp.sfu.ca">PKP Support Forum</a>, ou <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a> do PKP. Embora os fóruns sejam a forma preferencial de contacto, também pode-se entrar em contacto com a Equipa do SEER através dos formulários disponíveis na secção <a href="http://seer.ibict.br/index.php?option=com_content&task=view&id=270&Itemid=113" target="_blank">Fale conosco</a> no <a href="http://seer.ibict.br" target="_blank">portal do SEER</a> e para a <a href="mailto:pkp.contact@gmail.com">Equipa do PKP (pkp.contact@gmail.com)</a>.</p>
 
 <h4>Actualização</h4>
 
@@ -567,7 +549,7 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 <li>Um pasta para armazenar os ficheiros de submissão deve ser criado e com permissão de escrita (veja mais abaixo Configuração de Ficheiros).</li></ol>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Versão {$version}</h4>
 
-<p>Agradecemos o seu interesse em utilizar o <strong>Sistema Electrónico de Edição de Revistas</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README_pt">README_pt</a> e o <a href="{$baseUrl}/docs/UPGRADE_pt">UPGRADE_pt</a>incluído com o pacote. Para mais informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, aceda ao <a href="http://pkp.sfu.ca/" target="_blank">portal do PKP</a>. Clique em <href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://www.ibict.br/seer/" target="_blank">Secção sobre o SEER/OJS</a>para mais informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Sistema Electrónico de Edição de Revistas/Open Journal Systems visite <a href="forum.ibict.br">Forum do Ibict</a>, <a href="forum.pkp.sfu.ca">PKP Support Forum</a>, ou <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a> do PKP. Embora os fóruns sejam a forma preferencial de contacto, também pode-se enviar e-mail para a <a href="mailto:seer@ibict.br">Equipa do SEER (seer@ibict.br)</a> e para a <a href="mailto:pkp.contact@gmail.com">Equipa do PKP (pkp.contact@gmail.com)</a>.</p>
+<p>Agradecemos o seu interesse em utilizar o <strong>Sistema Electrónico de Edição de Revistas</strong>, desenvolvido pelo Public Knowledge Project. Antes de continuar, leia o documento <a href="{$baseUrl}/docs/README.md_pt">README_pt</a> e o <a href="{$baseUrl}/docs/UPGRADE.md_pt">UPGRADE_pt</a>incluído com o pacote. Para mais informações sobre o Public Knowledge Project e outros sistemas desenvolvidos, aceda ao <a href="http://pkp.sfu.ca/" target="_blank">portal do PKP</a>. Clique em <href="http://www.ibict.br" target="_blank">portal do Ibict/MCT</a> e em <a href="http://www.ibict.br/seer/" target="_blank">Secção sobre o SEER/OJS</a>para mais informações sobre o envolvimento do Instituto Brasileiro de Informação em Ciência e Tecnologia com o sistema. Para reportar erros, sugestões ou dúvidas sobre o Sistema Electrónico de Edição de Revistas/Open Journal Systems visite <a href="forum.ibict.br">Forum do Ibict</a>, <a href="forum.pkp.sfu.ca">PKP Support Forum</a>, ou <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Github.com issues</a> do PKP. Embora os fóruns sejam a forma preferencial de contacto, também pode-se enviar e-mail para a <a href="mailto:seer@ibict.br">Equipa do SEER (seer@ibict.br)</a> e para a <a href="mailto:pkp.contact@gmail.com">Equipa do PKP (pkp.contact@gmail.com)</a>.</p>
 
 <p>É <strong>altamente recomendado</strong> fazer cópia de segurança da base de dados, das pastas para submissão e da pasta raíz do sistema antes de proceder.</p>
 <p>Caso esteja executando o <a href="http://www.php.net/features.safe-mode" target="_blank">PHP em Modo Seguro (Safe Mode)</a>, assegure-se que a directiva max_execution_time no php.ini esteja configurada para um limite alto. Caso este ou qualquer outro limite (ex.: directivas de timeout do Apache) for alcançada e o processo de actualização for interrompido, será necessário restaurar a versão anterior e executar novamente a actualização, alterando as configurações de limites no servidor.</p>]]></message>
@@ -590,7 +572,6 @@ O servidor actualmente tem suporte a mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewInitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada.</message>
 	<message key="log.review.reviewReinitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada novamente.</message>
-	<message key="log.review.reviewCancelled">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi cancelada.</message>
 	<message key="log.review.reviewCleared">{$reviewerName} foi liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} recebeu classificação para a ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Foi definido para {$dueDate} o prazo para conclusão da ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}.</message>
@@ -694,7 +675,6 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via método 
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
 	<message key="reader.subscriptionOrFeeAccess">Acesso Restrito ou Pago</message>
-	<message key="plugins.categories.citationFormats.description">Plugins de Formatos de Citação oferecem aos utilizadores vários formatos para a citação do documento.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direitos de Autor Creative Commons</h3>
 <h4>1. Proposta de Política para Periódicos de Acesso Livre</h4>
 Autores que publicam nesta revista concordam com os seguintes termos:
@@ -751,13 +731,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="rt.admin.settings.addComment.anonymous">Utilizadores devem estar registados e ligados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar registado para comentar, com permissão de anonimato.</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do ficheiro XML</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível transferir idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
-	<ul>
-		<li>O servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>
-		<li>O sistema não possui permissão para alterar o ficheiro de registo de idiomas, normalmente "registry/locales.xml".</li>
-                <li>O servidor não possui permissões para conexão remota ao servidor do PKP</li>
-	</ul>
-Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">portal do PKP</a>.</p>]]></message>
 	<message key="reader.subscriptionRequiredLoginText">Subscrição exigida para acesso ao item. Para verificar a sua subscrição, aceda à revista.</message>
 	<message key="about.authorFees">Taxas para Autores</message>
 	<message key="about.authorFeesMessage">Este periódico cobra as seguintes taxas aos autores</message>
@@ -772,7 +745,7 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="payment.paymentSent">Pagamento já foi enviado</message>
 	<message key="payment.submission.paySubmission">Pagar taxa de submissão</message>
 	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de revisão</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
 	<message key="common.homePageHeader.altText">Cabeçalho da página inicial</message>
 	<message key="common.journalHomepageImage.altText">Imagem de capa da revista</message>
 	<message key="article.coverPage.altText">Imagem da capa</message>
@@ -839,8 +812,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="user.subscriptions.purchaseNewSubscription">Adquirir nova subscrição</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Adquirir Subscrição Individual</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Adquirir Subscrição Institucional</message>
-	<message key="user.subscriptions.expires">Vencimento</message>
-	<message key="user.subscriptions.expired">Vencida</message>
+	<message key="user.subscriptions.expires">Expira em {$date}</message>
+	<message key="user.subscriptions.expired">Expirou em {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Ver tipos disponíveis de Subscrições</message>
 	<message key="user.subscriptions.form.typeId">Tipo de Subscrição</message>
 	<message key="user.subscriptions.form.membership">Registo em Entidade de Classe</message>
@@ -871,8 +844,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="payment.subscription.purchase">Adquirir Subscrições</message>
 	<message key="installer.installApplication">Instalar o sistema</message>
 	<message key="installer.upgradeApplication">Actualizar o sistema</message>
-	<message key="notification.mailListDescription">Indique o seu endereço de e-mail para receber notificações imediatas sobre conteúdo importante recentemente publicado na revista.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Esta página exibe actualizações importantes associadas a esta revista, como lançamento de edições e notícias. Assine as notificações através de canais RSS (clicando nas imagens à direita), ou <a href="{$emailUrl}">por e-mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Foi produzido um comentário sobre a decisão editorial de "{$title}".</message>
@@ -902,43 +873,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="issue.nonpdf.title">Download Número</message>
 	<message key="issue.viewIssue">Ver Número</message>
 	<message key="site.noJournals">Não existem revistas.</message>
-	<message key="gifts.buyer">De</message>
-	<message key="gifts.buyerDescription">Quem oferece o donativo?</message>
-	<message key="gifts.recipient">Para</message>
-	<message key="gifts.recipientDescription">Para quem é o donativo?</message>
-	<message key="gifts.thankYou">Obrigado</message>
-	<message key="gifts.thankYouMessage">A oferta do seu donativo foi concluída. Receberá uma cópia da prenda através de e-mail logo que o pagamento seja processado.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Subscrição de Donativo</message>
-	<message key="gifts.subscriptionFormIntroduction">Por favor, preencha o formulário abaixo. A informação sobre o contacto, assim como a nota sobre o donativo, será usada para enviar ao destinatário e informá-lo que sobre o novo donativo subscrito (receberá também uma cópia deste e-mail).</message>
-	<message key="gifts.details">Detalhes Donativo</message>
-	<message key="gifts.detailsDescription">Por favor, escolha o donativo em baixo e inclua uma mensagem personalisada que será enviada ao destinatário (receberá também uma cópia deste e-mail).</message>
-	<message key="gifts.gift">Donativo</message>
-	<message key="gifts.noteTitle">Título</message>
-	<message key="gifts.note">Nota Donativo</message>
-	<message key="gifts.noteTitleRequired">Por favor, indique um título para a sua mensagem pernonalisada.</message>
-	<message key="gifts.noteRequired">Por favor, indique uma mensagem pernonalisada.</message>
-	<message key="gifts.localeRequired">Por favor, seleccione o idioma para a sua mensagem pernonalisada.</message>
-	<message key="gifts.myGifts">Meus Donativos</message>
-	<message key="gifts.manageMyGifts">Gerir Meus Donativos</message>
-	<message key="gifts.redeemGift">Resgatar Donativo</message>
-	<message key="gifts.status.notRedeemed">Disponível</message>
-	<message key="gifts.status.redeemed">Resgatadas</message>
-	<message key="gifts.status.redeemGift">Resgatar Donativo</message>
-	<message key="gifts.subscriptions">Subscrições</message>
-	<message key="gifts.subscriptionsDescription">A subscrição de donativo resgatado substituirá a sua actual subscrição (se possuir alguma). As subscrições têm início na data de resgate e serão válidas durante o período do tipo de subscrição.</message>
-	<message key="gifts.purchaseGiftSubscription">Fazer a subscrição de donativo</message>
-	<message key="gifts.giftSubscriptionsAvailable">As subscrições de donativos também estão disponíveis. As subscrições de donativos podem ser feitas em qualquer altura pelo destinatário e são uma excelente forma de apoiar esta revista.</message>
-	<message key="gifts.noSubscriptions">Nenhuma subscrição donativos</message>
-	<message key="gifts.giftRedeemed">O donativo foi resgatado com sucesso.</message>
-	<message key="gifts.noGiftToRedeem">O donativo não está disponível para resgate.</message>
-	<message key="gifts.giftAlreadyRedeemed">Este donativo já foi resgatado.</message>
-	<message key="gifts.giftNotValid">O donativo não é válido e não pode ser resgatado.</message>
-	<message key="gifts.subscriptionTypeNotValid">O tipo de subscrição para este donativo não é válida. Por favor contacte o gestor de assinaturas.</message>
-	<message key="gifts.subscriptionNonExpiring">O donativo não foi resgatado uma vez que possui uma assinatura vitalícia com esta revista.</message>
 	<message key="payment.loginRequired.forIssue">Subscrição ou compra de número necessários para acedero ao artigo. Para verificar a subscrição, aceda a compra anterior, ou compre número, faça login na revista.</message>
 	<message key="payment.type.purchaseIssue">Taxa Compra Número</message>
-	<message key="payment.type.gift">Donativo</message>
-	<message key="payment.type.gift.subscription">Subscrição</message>
 	<message key="installer.allowFileUploads"><![CDATA[O servidor actualmente permite uploads de ficheiros: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[O servidor actualmente permite o upload máximo de ficheiros com o tamanho de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Está disponível uma nova versão do OJS! Actualmente usa a versão do OJS {$currentVersion}. A versão mais recente do OJS {$latestVersion}. Por favor visite <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> para fazer download da versão mais recente e encontre as instruções para a actualização]]></message>
@@ -951,31 +887,9 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 
 
 
-	<message key="dashboard.myQueue">Painel de Controlo</message>
 	<message key="editor.navigation.issues">Números</message>
 	<message key="editor.issues.futureIssues">Próximos</message>
 	<message key="editor.issues.backIssues">Anteriores</message>
-	<message key="navigation.settings">Definições</message>
-	<message key="navigation.access">Gestão de acessos</message>
-	<message key="navigation.tools">Ferramentas</message>
-	<message key="navigation.admin">Administrador</message>
-	<message key="navigation.viewFrontend">Previsualizar</message>
-	<message key="navigation.submissions">Submissões</message>
-	<message key="navigation.archives">Arquivo</message>
-	<message key="navigation.items.shownTotal">Total</message>
-	<message key="navigation.tools.importExport">Importar / exportar</message>
-	<message key="navigation.tools.statistics">Estatísticas</message>
-	<message key="submission.submit.newSubmissionSingle">Submeter</message>
-	<message key="submission.mySubmissions">As minhas submissões</message>
-	<message key="common.queue.long.myAssigned">As minhas tarefas</message>
-	<message key="grid.submission.itemTitle">Título</message>
-	<message key="workflow.stage">Estado</message>
-	<message key="workflow.review.externalReview">Revisão externa</message>
-	<message key="common.tasks">Tarefas ativas</message>
-	<message key="manager.website">Website</message>
-	<message key="manager.workflow">Fluxo de trabalho</message>
-	<message key="manager.distribution">Permissões</message>
-	<message key="manager.siteAccessOptions.siteAccessOptions">Opções de acesso</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Esta edição estará disponível num site separado.</message>
 	<message key="submission.layout.galley.remoteURL">URL do conteúdo hospedado remotamente</message>
 	<message key="context.current">Revista Actual:</message>
@@ -1010,7 +924,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems also supports the <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. CLOCKSS is based upon the open source LOCKSS software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
 <br /><br />
 Setting up CLOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway.]]></message>
-	<message key="manager.setup.citations.enable">Activar o assistente de marcação de citações</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Highlighted items indicate action is required by an editor, labelled as follows:
 		<ul>
@@ -1068,4 +981,14 @@ Setting up CLOCKSS support for Open Journal Systems does not need to take place 
 	<message key="search.cli.rebuildIndex.indexing">Indexão "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">A execução da pesquisa não permite a re-indexação por revista.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">O caminho fornecido "{$journalPath}" não pôde ser usado nesta revista.</message>
+	<message key="subscriptions.status.noSubscription">Não tem uma subscrição ativa.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">O Portico é um serviço sem fins lucrativos com vista à preservação de publicações digitais, incluindo revistas eletrónicas, e-books, e outras coleções históricas digitalizadas. Se a sua revista tiver um contrato com o Portico, poderá ativá-lo aqui:</message>
+	<message key="payment.type.publication.required">A taxa de publicação está em pagamento.</message>
+	<message key="payment.requestPublicationFee">Solicitar taxa de publicação ({$feeAmount})</message>
+	<message key="payment.notFound">Foi solicitado um pagamento, mas o prazo expirou. Contacte o Gestor da Revista para mais informação.</message>
+	<message key="navigation.subscriptions">Subscrições</message>
+	<message key="log.editor.submissionExpedited">{$editorName} tomou o processo de edição do artigo {$submissionId}.</message>
+	<message key="notification.type.publicationScheduled">Esta submissão foi agendada para publicação.</message>
+	<message key="log.editor.recommendation">O editor {$editorName} registou uma recomendação ({$decision}) para o artigo {$submissionId}.</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/search.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Display the page to search and view search results.
@@ -56,7 +56,7 @@
 				<label class="label" for="authors">
 					{translate key="search.author"}
 				</label>
-				<input type="text" for="authors" name="authors" value="{$authors}">
+				<input type="text" for="authors" name="authors" value="{$authors|escape}">
 			</div>
 		</fieldset>
 
@@ -68,7 +68,7 @@
 	{* Search results, finally! *}
 	<div class="search_results">
 		{iterate from=results item=result}
-			{include file="frontend/objects/article_summary.tpl" article=$result.publishedArticle journal=$result.journal showDatePublished=true}
+			{include file="frontend/objects/article_summary.tpl" article=$result.publishedArticle journal=$result.journal showDatePublished=true hideGalleys=true}
 		{/iterate}
 	</div>
 

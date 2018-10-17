@@ -1,37 +1,40 @@
 {**
  * plugins/paymethod/manual/templates/paymentForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Manual payment page
  *}
-{strip}
-{assign var="pageTitle" value="plugins.paymethod.manual"}
-{include file="common/header.tpl"}
-{/strip}
+{include file="frontend/components/header.tpl" pageTitle="plugins.paymethod.manual"}
 
-<div id="paymentForm">
-<table class="data">
-	<tr>
-		<td class="label">{translate key="plugins.paymethod.manual.purchase.title"}</td>
-		<td class="value"><strong>{$itemName|escape}</strong></td>
-	</tr>
-	{if $itemAmount}
+
+<div class="page page_payment_form">
+	<h1 class="page_title">
+		{translate key="plugins.paymethod.manual"}
+	</h1>
+
+	<table class="cmp_table">
 		<tr>
-			<td class="label">{translate key="plugins.paymethod.manual.purchase.fee"}</td>
-			<td class="value"><strong>{$itemAmount|string_format:"%.2f"}{if $itemCurrencyCode} ({$itemCurrencyCode|escape}){/if}</strong></td>
+			<th>{translate key="plugins.paymethod.manual.purchase.title"}</th>
+			<td>{$itemName|escape}</td>
 		</tr>
-	{/if}
-	{if $itemDescription}
-	<tr>
-		<td colspan="2">{$itemDescription|nl2br}</td>
-	</tr>
-	{/if}
-</table>
-<p>{$manualInstructions|nl2br}</p>
+		{if $itemAmount}
+			<tr>
+				<th>{translate key="plugins.paymethod.manual.purchase.fee"}</th>
+				<td>{$itemAmount|string_format:"%.2f"}{if $itemCurrencyCode} ({$itemCurrencyCode|escape}){/if}</td>
+			</tr>
+		{/if}
+	</table>
 
-<p><a href="{url page="payment" op="plugin" path="ManualPayment"|to_array:"notify":$queuedPaymentId|escape}" class="action">{translate key="plugins.paymethod.manual.sendNotificationOfPayment"}</a>
+	<p>{$manualInstructions|nl2br}</p>
+
+	<p>
+		<a class="cmp_button" href="{url page="payment" op="plugin" path="ManualPayment"|to_array:"notify":$queuedPaymentId|escape}" class="action">
+			{translate key="plugins.paymethod.manual.sendNotificationOfPayment"}
+		</a>
+	</p>
 </div>
-{include file="common/footer.tpl"}
+
+{include file="frontend/components/footer.tpl"}

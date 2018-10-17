@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/VkarbasizaedSubmissionTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class VkarbasizaedSubmissionTest
@@ -22,10 +22,10 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'vkarbasizaed',
-			'firstName' => 'Vajiheh',
-			'lastName' => 'Karbasizaed',
+			'givenName' => 'Vajiheh',
+			'familyName' => 'Karbasizaed',
 			'affiliation' => 'University of Tehran',
-			'country' => 'Iran (Islamic Republic of)',
+			'country' => 'Iran, Islamic Republic of',
 		));
 
 		$title = 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran';
@@ -38,8 +38,8 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('jjanssen', 'Julie Janssen');
-		$this->assignReviewer('phudson', 'Paul Hudson');
+		$this->assignReviewer('Julie Janssen');
+		$this->assignReviewer('Paul Hudson');
 		$this->recordEditorialDecision('Accept Submission');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');

@@ -1,8 +1,8 @@
 /**
  * @file styles/objects/article_details.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Styles applying to a view of an article with all details
@@ -168,25 +168,93 @@
 		}
 	}
 
-	.citation_display .value {
-		font-size: @font-tiny;
-	}
+	.citation_display {
 
-	.citation_format_options ul {
-		&:extend(.pkp_unstyled_list all);
-	}
-
-	// RefWorks form
-	.citation_display form {
-
-		textarea {
-			max-width: 100%;
-			max-height: 19em;
-			white-space: nowrap;
+		.value {
+			font-size: @font-tiny;
 		}
 
-		input[type="submit"] {
-			&:extend(.cmp_button);
+		// Hide the bibliography number produced by some CSL styles
+		.csl-left-margin {
+			display: none;
+		}
+
+		[aria-hidden="true"] {
+			display: none;
+		}
+
+		.citation_formats {
+			margin-top: 1em;
+			border: @form-border;
+			border-radius: @radius;
+		}
+
+		.citation_formats_button {
+			position: relative;
+			background: transparent;
+			border: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			box-shadow: none;
+			padding: 0 1em;
+			width: 100%;
+			font-family: @font-heading;
+			font-weight: @normal;
+			color: @text-light;
+			text-align: left;
+
+			&:after {
+				.fa();
+				content: @fa-var-caret-down;
+				position: absolute;
+				top: 50%;
+				right: 1em;
+				transform: translateY(-50%);
+			}
+
+			&[aria-expanded="true"] {
+
+				&:after {
+					content: @fa-var-caret-up;
+				}
+			}
+
+			&:focus {
+				background: @bg-shade;
+				outline: 0;
+			}
+		}
+
+		.citation_formats_styles {
+			.pkp_unstyled_list;
+
+			a {
+				display: block;
+				padding: 0.5em 1em;
+				border-bottom: @bg-border;
+				text-decoration: none;
+
+				&:focus {
+					background: @bg-shade;
+					outline: 0;
+				}
+			}
+
+			li:last-child a {
+				border-bottom: none;
+			}
+		}
+
+		.citation_formats_list .label {
+			padding: 1em 1em 0.25em 1em;
+		}
+
+		.citation_formats_styles + .label {
+			border-top: @bg-border;
+		}
+
+		span {
+			margin-right: 0.5em;
 		}
 	}
 

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/medra/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -38,4 +38,5 @@
 	<message key="plugins.importexport.medra.cliUsage">Modo de Utilização: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.medra.intro"><![CDATA[Se pretende registar os DOI no sistema mEDRA, siga as indicações referidas no <a href="http://www.medra.org/en/guide.htm" target="_blank">Sítio do mEDRA (EN)</a> para receber um utilizador e uma senha. Se não tiver o seu próprio utilizador e respetiva senha, poderá, ainda assim, exportar nos formados XML do mEDRA (Onix para DOI) mas não poderá registar os seus DOI no sistema mEDRA a partir do OJS. Note the a senha será armazenada em formato texto, ou seja, não encriptada, dados os requisitos do serviço de registo do mEDRA.]]></message>
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedForm
@@ -37,7 +37,7 @@ class ExternalFeedForm extends Form {
 		$this->feedId = isset($feedId) ? $feedId : null;
 		$this->journalId = $journalId;
 
-		parent::__construct($plugin->getTemplatePath() . 'externalFeedForm.tpl');
+		parent::__construct($plugin->getTemplateResource('externalFeedForm.tpl'));
 
 		// Feed URL is provided
 		$this->addCheck(new FormValidatorUrl($this, 'feedUrl', 'required', 'plugins.generic.externalFeed.form.feedUrlValid'));
@@ -59,17 +59,17 @@ class ExternalFeedForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$plugin = $this->plugin;
-		$request = $plugin->getRequest();
+		$request = Application::getRequest();
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('feedId', $this->feedId);
 
 		$plugin->import('ExternalFeed');
 
-		parent::display();
+		parent::display($request, $template);
 	}
 
 	/**
@@ -159,4 +159,4 @@ class ExternalFeedForm extends Form {
 
 }
 
-?>
+

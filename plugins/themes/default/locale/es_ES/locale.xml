@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/default/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
+  * Localization strings.
+  -->
+  
+<locale name="es_ES" full_name="Español (España)">  
+	<message key="plugins.themes.default.name">Tema por defecto</message>
+	<message key="plugins.themes.default.description">Este tema implementa la estética por defecto.</message>
+
+	<!-- Theme options -->
+	<message key="plugins.themes.default.option.typography.label">Tipografa</message>
+	<message key="plugins.themes.default.option.typography.description">Escoge la combinación de fuentes que se ajusta a esta revista.</message>
+	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: Fuente digital nativa diseñada por Google con un amplio soporte idiomático.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif">Noto Serif: Variante con sarifa de la fuente digital nativa de Google.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif_notoSans">Noto Serif/Noto Sans: Emparejamiento complementario con sarifa para los títulos sin sarifa para el cuerpo de texto.</message>
+	<message key="plugins.themes.default.option.typography.notoSans_notoSerif">Noto Sans/Noto Serif: Emparejamiento complementario sin sarifa para los títulos con sarifa para el cuerpo de texto.</message>
+	<message key="plugins.themes.default.option.typography.lato">Lato: Fuente sin sarifa, moderna y popular.</message>
+	<message key="plugins.themes.default.option.typography.lora">Lora: Fuente serif de amplio espectro, buena para leer en línea</message>
+	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: un emparejamiento complementario con sarifa para los títulos y sin sarifa para el cuerpo de texto.</message>
+	<message key="plugins.themes.default.option.colour.label">Color</message>
+	<message key="plugins.themes.default.option.colour.description">Escoja un color para la cabecera.</message>
+</locale>

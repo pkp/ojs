@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@cyrillic/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
@@ -49,7 +49,8 @@
 	<message key="manager.website.archiving">Архивирање</message>
 	<message key="manager.setup">Подешавања часописа</message>
 	<message key="manager.setup.masthead">Управа</message>
-	<message key="manager.setup.masthead.description">Наведите уреднике, директоре секретаре и остале људе који су укључени у рад часописа.</message>
+	<message key="manager.setup.editorialTeam">Часопис уређују</message>
+	<message key="manager.setup.editorialTeam.description">Наведите уреднике, директоре секретаре и остале људе који су укључени у рад часописа.</message>
 	<message key="manager.setup.homepageContent">Садржај почетне стране часописа</message>
 	<message key="manager.setup.layout">Изглед часописа</message>
 	<message key="manager.setup.useStyleSheet">Style sheet часописа</message>
@@ -151,7 +152,6 @@
 	<message key="manager.payment.options.publicationFee">Објављивање чланка</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купи чланак</message>
 	<message key="manager.payment.options.text">Опис метода плаћања</message>
-	<message key="manager.payment.options.waiverPolicy">Политика изузећа од плаћања</message>
 	<message key="manager.payment.paymentId">ID плаћања</message>
 	<message key="manager.payment.paymentMethod">Метод плаћања</message>
 	<message key="manager.payment.paymentMethod.description">Можете конфигурисати било који од Додатака за метод плаћања на овом екрану.</message>
@@ -492,7 +492,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Укључи приступ рецензента једним кликом.</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Бодовања рецензента</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Подсетници за рецензенте</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Поставите везу за  <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Обезбеђујемо слепу рецензију</a> на странама где аутори и рецензенти постављају на сервер своје фајлове..]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Обавештења о онлајн плаћањима</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Обавести Управника за претплату емајлом о куповини институционалне претплате (препоручено).</message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Могућности отвореног приступа за претплату на часописе</message>

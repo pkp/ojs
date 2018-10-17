@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/JmwandengaSubmissionTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JmwandengaSubmissionTest
@@ -22,8 +22,8 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'jmwandenga',
-			'firstName' => 'John',
-			'lastName' => 'Mwandenga',
+			'givenName' => 'John',
+			'familyName' => 'Mwandenga',
 			'affiliation' => 'University of Cape Town',
 			'country' => 'South Africa',
 		));
@@ -38,9 +38,9 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('jjanssen', 'Julie Janssen');
-		$this->assignReviewer('amccrae', 'Aisla McCrae');
-		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->assignReviewer('Julie Janssen');
+		$this->assignReviewer('Aisla McCrae');
+		$this->assignReviewer('Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');

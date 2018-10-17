@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -87,71 +87,7 @@
 	<message key="editor.issues.pages">Stranice</message>
 	<message key="editor.navigation.futureIssues">Budući brojevi časopisa</message>
 	<message key="editor.navigation.issueArchive">Prošli brojevi časopisa</message>
-	<message key="editor.article.uploadReviewVersion">Revidirana verzija za recenziju</message>
-	<message key="editor.article.showSuppFile">Omogući recenzentima pristup datoteci</message>
-	<message key="editor.article.layoutAndProof">Prijelom i korektura</message>
-	<message key="editor.article.clear">Ukloni</message>
-	<message key="editor.article.clearReviewer">Ukloni recenzenta</message>
-	<message key="editor.article.changeSection">Promijeni rubriku</message>
-	<message key="editor.article.setDueDate">Podesi rok zaduženja</message>
-	<message key="editor.article.addReviewer">Dodaj recenzenta</message>
-	<message key="editor.article.toReviewer">Za recenzenta</message>
-	<message key="editor.article.notifyReviewer">Obavijesti recenzenta</message>
-	<message key="editor.article.initiateReview">Započni recenziju</message>
-	<message key="editor.article.cancelReview">Otkaži zahtjev</message>
-	<message key="editor.article.clearReview">Ukloni recenzenta</message>
-	<message key="editor.article.enterRecommendation">Unesite preporuku</message>
-	<message key="editor.article.enterReviewerRecommendation">Unesite preporuku recenzenta</message>
-	<message key="editor.article.recommendation">Preporuka</message>
-	<message key="editor.article.selectReviewer">Odabir recenzenta</message>
-	<message key="editor.article.replaceReviewer">Zamjeni recenzenta</message>
-	<message key="editor.article.editorToEnter">Za urednika da unese preporuku/komentare za recenzenta</message>
-	<message key="editor.article.uploadReviewForReviewer">Datoteka s recenzijom</message>
-	<message key="editor.article.peerReviewOptions">Mogućnosti recenzije</message>
 	<message key="editor.article.decision">Odluka</message>
-	<message key="editor.article.noEditorSelected">Nije odabran urednik.</message>
-	<message key="editor.article.recordDecision">Zapiši odluku</message>
-	<message key="editor.article.cannotRecord">Članku nije dodijeljen urednik!</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Recenzenti mogu vidjeti autorovu verziju.</message>
-	<message key="editor.article.designateDueDate">Odredite rok</message>
-	<message key="editor.article.designateDueDateDescription">Unesite broj tjedana ili datum novog roka za ovo zaduženje.</message>
-	<message key="editor.article.todaysDate">Današnji datum</message>
-	<message key="editor.article.requestedByDate">Zatraženo do dana</message>
-	<message key="editor.article.dueDateFormat">Format: GGGG-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Broj tjedana</message>
-	<message key="editor.article.selectCopyeditor">Dodijeli lektora</message>
-	<message key="editor.article.replaceCopyeditor">Zamijeni lektora</message>
-	<message key="editor.article.editorsCopyedit">Lektura urednika</message>
-	<message key="editor.article.showAuthor">Dopusti autoru da vidi datoteku</message>
-	<message key="editor.article.showCopyeditor">Prikaži verziju lektoru</message>
-	<message key="editor.article.rateReviewer">Ocjena recenzenta</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Odlično</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Nedovoljno</message>
-	<message key="editor.article.comments">Komentari</message>
-	<message key="editor.article.commentsRequired">Potrebno je unijeti tekst u polje komentara.</message>
-	<message key="editor.article.saveRating">Spremi ocjenu</message>
-	<message key="editor.article.noneSelected">Ništa nije izabrano</message>
-	<message key="editor.article.authorProofing">Korektura autora</message>
-	<message key="editor.article.restoreToQueue">Obnovi na aktivnoj listi</message>
-	<message key="editor.article.assignSectionEditor">Dodaj uredniku rubrika</message>
-	<message key="editor.article.assignEditor">Dodaj uredniku</message>
-	<message key="editor.article.selectEditor">Odaberite {$roleName}</message>
-	<message key="editor.article.selectDecision">Odaberite odluku</message>
-	<message key="editor.article.selectLayoutEditor">Odaberite grafičkog urednika</message>
-	<message key="editor.article.replaceLayoutEditor">Zamijenite grafičkog urednika</message>
-	<message key="editor.article.reviewSubmission">Recenzija prijave</message>
-	<message key="editor.article.resubmitForReview">Ponovno podnesi datoteku za recenziju</message>
-	<message key="editor.article.resubmitFileForPeerReview">Odaberite verziju za naredni krug recenzije</message>
-	<message key="editor.article.sendToCopyedit">Pošalji datoteku u lekturu</message>
-	<message key="editor.article.selectProofreader">Dodijeli korektora</message>
-	<message key="editor.article.replaceProofreader">Zamijeni korektora</message>
-	<message key="editor.article.authorComments">Komentari autora</message>
-	<message key="editor.article.proofreaderComments">Komentari korektora</message>
-	<message key="editor.article.layoutEditorFinal">Konačni urednikov prijelom</message>
-	<message key="editor.article.noDate">(datum)</message>
 	<message key="editor.submissions.showBy">Prikaži po</message>
 	<message key="editor.submissions.submitMMDD">Podnesi MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Aktivna zaduženja</message>
@@ -166,20 +102,9 @@
 	<message key="editor.article.scheduleForPublication">Raspored za objavljivanje</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">će biti dodijeljen</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Naknada za objavljivanje nije plaćena. Za raspoređivanje priloga za objavljivanje obavijestite autora da plati naknadu ili zatraži izuzeće od naknade.</message>
-	<message key="editor.article.display">Prikaz</message>
-	<message key="editor.article.hideTocAuthorDescription">Ispusti ime autora iz kazala sadržaja broja.</message>
-	<message key="editor.article.hideTocAuthorDefault">Prema zadanom</message>
-	<message key="editor.article.hideTocAuthorHide">Ispusti</message>
-	<message key="editor.article.hideTocAuthorShow">Prikaži</message>
-	<message key="editor.article.cover">Naslovnica</message>
 	<message key="editor.article.showCoverPage">Kreiraj naslovnu stranicu za ovaj prilog sa sljedećim elementima.</message>
-	<message key="editor.article.coverImageDisplay">Prikaz</message>
 	<message key="editor.article.hideCoverPageToc">Ne prikazuj umanjenu sliku naslovne stranice u kazalu sadržaja.</message>
 	<message key="editor.article.hideCoverPageAbstract">Ne prikazuj sliku naslovne stranice u sažetku priloga.</message>
-	<message key="editor.article.coverImage">Slika naslovne stranice</message>
-	<message key="editor.article.coverImageInstructions">(dozvoljeni formati: .gif, .jpg ili .png)</message>
-	<message key="editor.article.uploaded">Priložena</message>
-	<message key="editor.article.removeCoverPage">Želite li ukloniti sliku naslovne stranice?</message>
 	<message key="editor.article.remove">Ukloni</message>
 	<message key="editor.notifyUsers.allReaders">Svi čitatelji  ({$count} korisnika)</message>
 	<message key="editor.notifyUsers.allAuthors">Svi objavljeni autori ({$count} korisnika)</message>
@@ -189,7 +114,6 @@
 	<message key="editor.issues.volumeRequired">Volum je obavezan i mora bitiožnačen pozitivnom brojčanom vrijednosti.</message>
 	<message key="editor.issues.unpublishIssue">Opozovi objavljivanje izdanja</message>
 	<message key="editor.issues.confirmUnpublish">Da li ste sigurni da želite poništiti objavljivanje ovog izdanja?</message>
-	<message key="editor.article.archiveSubmission">Odbij i arhiviraj podnesak članka</message>
 	<message key="editor.home">Urednička strana</message>
 	<message key="editor.issues.issueData">Podaci o izdanju</message>
 	<message key="editor.editorAdministration">Administracija urednika</message>
@@ -207,4 +131,5 @@
 	<message key="editor.issues.backToIssueGalleys">Povratak na korekturne kopije izdanja</message>
 	<message key="editor.issues.confirmDeleteGalley">Da li ste sigurni da želite obrisati ove korekturne kpije izdanja?</message>
 	<message key="editor.reassign">Ponovo dodijeli</message>
+	<message key="editor.article.coverImage">Slika naslovne stranice</message>
 </locale>

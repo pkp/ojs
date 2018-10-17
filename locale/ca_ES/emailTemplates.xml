@@ -4,8 +4,8 @@
 <!--
   * locale/ca_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -142,15 +142,6 @@ Si teniu cap pregunta, contacteu amb mi. Gràcies per tenir en compte aquesta pu
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest correu electrònic, quan està habilitat, s'envia automàticament als altres autors/ores que no són usuaris/àries a l'OMP especificats durant el procés de tramesa.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Tramesa rebutjada</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Després d'una primera revisió de &quot;{$submissionTitle}&quot;, hem decidit que aquesta tramesa no s'adequa a la temàtica i l'àmbit de {$contextName}. Per a conèixer millor el tipus d'obres que publiquem us recomano que consulteu la descripció d'aquesta revista a la secció Quant a i també els articles publicats fins ara. També podeu intentar trametre aquest manuscrit a una altra revista més adequada.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentari de la tramesa</subject>

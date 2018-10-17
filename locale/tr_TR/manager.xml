@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
@@ -52,7 +52,6 @@
 	<message key="manager.payment.options.publicationFee">Makale Yayını</message>
 	<message key="manager.payment.options.purchaseArticleFee">Makale Satın Al</message>
 	<message key="manager.payment.options.text">Ödeme Metodu Açıklaması</message>
-	<message key="manager.payment.options.waiverPolicy">Feragat Politikası</message>
 	<message key="manager.payment.paymentId">Ödeme Numarası</message>
 	<message key="manager.payment.paymentMethod">Ödeme Yönetmi</message>
 	<message key="manager.payment.paymentMethod.description">Bu ekrandan aşağıdaki ödeme metodu eklentilerinden birinin konfigürasyonunu yapmalısınız.</message>
@@ -151,7 +150,6 @@
 	<message key="manager.setup.enableAnnouncements">Dergi yöneticilerinin dergilerine duyuru eklemelerini etkinleştir.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Göster</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">Dergi sayfasındaki en son duyurular.</message>
-	<message key="manager.setup.enablePublicIssueId">Sayılar için özel tanımlayıcı kullanılacaktır.</message>
 	<message key="manager.setup.enableUserRegistration">Kullanıcılar aşağıda belirtilen bir veya birden çok rol ile dergiye kendileri üye olabilirler.</message>
 	<message key="manager.setup.focusAndScope">Odak ve kapsam</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Çalışmalarını Dizinlemek İsteyen Yazarlar için</message>
@@ -330,10 +328,6 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini engelle.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Kısmen Sonlandır</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak abonelik sonuna kadar yayınlanan içeriğe erişimini koru.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Aboneleri e-posta ile uyar</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">hafta sonra (abonelik bitince).</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Aboneleri e-posta ile uyar</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">hafta önce (abonelik bitmeden).</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Abonelik Sonu Uyarısı</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Otomatik e-posta hatırlatıcıları (ADS tarafından hazırlanmış e-postalar Dergi Yöneticileri tarafından düzenlenebilir) hem önce hem de bir abonelik süresi dolduktan sonra abonelere gönderilebilir.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Not:</strong> Bu seçeneğin etkinleşmesi için, site yöneticisinin ADS ayar dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Ayrıca sunucunun da bazı özellikleri desteklemesi gerekir (her zaman mümkün olmayabilir), daha fazla bilgi için ADS belgelerine bakınız.]]></message>
@@ -496,14 +490,7 @@
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Dergi ana sayfa görüntülemeleri</message>
 	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
 	<message key="manager.setup.copyrightYearBasis">Yeni makalenin temel telif hakkı yılı</message>
-	<message key="manager.website.appearance">Website Görünümü</message>
-	<message key="manager.website.information">Website Bilgisi</message>
-    	<message key="manager.setup.logo">Website Logosu</message>
-    	<message key="manager.setup.pageFooter">Website Alt Metini</message>
-	<message key="manager.website.title">Website Başlığı</message>
-    	<message key="manager.website.archiving">Website Arşivi</message>
-    	<message key="manager.setup.pageFooterDescription">Websitenizin alt bölümüne eklemelerinizi buradan yapabilirsiniz.</message>
-
+	<message key="manager.website.archiving">Website Arşivi</message>
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->
 	<message key="plugins.importexport.common.settings">Ayarlar</message>
@@ -513,4 +500,102 @@
 	<message key="plugins.importexport.common.action.register">Kayıt</message>
 	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.register.success">Kayıt Başarılı!</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Bu aboneliği silmek istediğinizden emin misiniz?</message>
+	<message key="manager.paymentTypes">Ödeme Türleri</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Henüz bölüm editörü yok. İlk önce Yönetim > Ayarlar > Kullanıcılar Rolleri &amp; ile en az bir kullanıcıya bu rolü ekleyin.]]></message>
+	<message key="manager.setup.masthead">Yönetici Listesi</message>
+	<message key="manager.setup.editorialTeam">Kişiler ve Kurullar</message>
+	<message key="manager.setup.editorialTeam.description">Yöneticiler, editörler ve dergiyle ilişkili diğer kişileri listeleyin.</message>
+	<message key="manager.setup.homepageContent">Dergi Ana Sayfa İçeriği</message>
+	<message key="manager.setup.homepageContentDescription">Derginin ana sayfası varsayılan olarak gezinme bağlantılarından oluşur. Ek ana sayfa içeriği, gösterilen sıraya göre görünecek olan aşağıdaki seçeneklerden biri veya tümü kullanılarak eklenebilir.</message>
+	<message key="manager.setup.layout">Dergi Düzeni</message>
+	<message key="manager.setup.useStyleSheet">Dergi biçim sayfası</message>
+	<message key="manager.setup.contextName">Dergi Adı</message>
+	<message key="manager.setup.pageHeader">Dergi Sayfa Başlığı</message>
+	<message key="manager.setup.focusAndScope.description">Yazarlar, okuyucular ve kütüphanecilere derginin yayınlayacağı makaleleri ve diğer öğeleri açıklayın.</message>
+	<message key="manager.setup.form.issnInvalid">Belirtilen ISSN geçerli değil.</message>
+	<message key="manager.setup.includeCreativeCommons">Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm çalışmalarla birlikte uygun zamanda bir Creative Commons lisansı ekleyin.</message>
+	<message key="manager.setup.journalSummary">Dergi Özeti</message>
+	<message key="manager.setup.journalSummary.description">Derginizin dergiler listesinde gösterilebilecek kısa bir açıklamasını giriniz.</message>
+	<message key="manager.setup.journalAbout">Dergi Hakkında</message>
+	<message key="manager.setup.journalAbout.description">Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya CLOCKSS arşivleme sistemine dahil edilmesini içerebilir.</message>
+	<message key="manager.setup.favicon">Dergi Favori İkonu</message>
+	<message key="manager.setup.faviconDescription">Kullanıcılar sitenizi ziyaret ettiğinde gezinme çubuğunun yanında görüntülemek için buraya bir favicon ekleyin.</message>
+	<message key="manager.setup.faviconInvalid">Geçersiz favicon biçimi. Kabul edilebilir biçimler:  .ico, .png ve .gif.</message>
+	<message key="manager.setup.journalThumbnail.description">Dergi listelerinde kullanılabilen küçük bir logo veya derginin temsili.</message>
+	<message key="manager.setup.journalThumbnail.altText">Küçük resim için alternatif metin</message>
+	<message key="manager.setup.enableArchive">Arşivi Etkinleştir</message>
+	<message key="manager.setup.plnPluginEnable">PKP PN eklentisi etkinleştirildi</message>
+	<message key="manager.setup.plnDescription">PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır.</message>
+	<message key="manager.setup.plnSettingsDescription">PKP PN için kullanım şartlarını kabul etmek için Ayarlar bağlantısına tıklayın.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Koruma Ağı (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır. OJS 3 için PKP PN eklentisi şu anda geliştiriliyor ve eklenti galerisinde yakında sunulacak.</message>
+	<message key="manager.setup.otherLockss">Alternatif Arşivleme Seçenekleri</message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS Lisansı</a>]]></message>
+	<message key="manager.setup.lockssLicenseLabel">LOCKSS Lisansı Açıklaması</message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Bir CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini depolamak ve dağıtmak için CLOCKSS uygulamasını etkinleştirin.]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href="http://clockss.org/" target="_blank">CLOCKSS Lisansı</a>]]></message>
+	<message key="manager.statistics.defaultMetricDescription">Derginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. Kullanım istatistikleri birkaç bağlamda görüntülenecektir.
+		Tek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. En çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini varsayılan olarak seçin.</message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">İçindekiler sayfası görünümleri tablosu</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Lütfen verilen onay kutusunu kullanın.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} Aylar</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} Haftalar</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir.</message>
+	<message key="manager.subscriptions.confirmRenew">Bu aboneliği yenilemek istediğinizden emin misiniz?</message>
+	<message key="manager.distribution.access">Erişim</message>
+	<message key="manager.navigationMenus.subscriptions.description">Sunduğunuz abonelikleri açıklayan bir sayfaya bağlantı verin.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Ziyaretçinin mevcut ve geçmiş aboneliklerini açıklayan bir sayfaya bağlantı verin.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Bu bağlantı sadece bir ziyaretçi giriş yaptığında görüntülenecektir.</message>
+	<message key="grid.category.path">Yol</message>
+	<message key="grid.action.addSection">Bölüm Ekle</message>
+	<message key="manager.setup.section.description">Bir derginin yayınlanmış sayılarındaki makaleler, genellikle tema veya içerik türü (Örn. İnceleme Makaleleri, Araştırma, vb.) tarafından Bölümlerde düzenlenir.</message>
+	<message key="settings.roles.gridDescription">Roller, dergideki farklı izin düzeylerine ve ilişkili iş akışlarına erişim verilmiş olan, kullanıcı grubundaki kullanıcı gruplarıdır. Beş farklı izin düzeyi vardır: Dergi Yöneticileri dergideki her şeye erişebilir (tüm içerik ve ayarlar); Bölüm Editörleri, atanan tüm içeriğe tam erişime sahiptir; Dergi Asistanları, bir editör tarafından kendilerine açıkça verilen tüm gönderilere sınırlı erişime sahiptir; Hakemler, incelenmek üzere atanmış oldukları gönderileri görebilir ve yapabilirler; Yazarlar, kendi gönderileriyle ilgili sınırlı miktarda bilgiyi görebilir ve bunlarla etkileşime girebilir. Ek olarak, rollere erişim, İç Değerlendirme, Gözden Geçirme, Editörlük ve Prodüksiyona erişim verilebilecek beş farklı aşama görevi vardır.</message>
+	<message key="manager.publication.library">Yayıncı Kütüphanesi</message>
+	<message key="manager.setup.copyrightYearBasis.article">Makale: varsayılan yıl, makalenin yayınlanma tarihinden itibaren, "olduğu gibi yayınla" yazısında olduğu gibi alınacaktır.</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Sayı: Varsayılan yıl, sayının yayınlanma tarihinden itibaren çizilecektir.</message>
+	<message key="manager.setup.resetPermissions.confirm">Makalelere zaten eklenmiş izin verilerini sıfırlamak istediğinizden emin misiniz?</message>
+	<message key="manager.setup.resetPermissions.description">Telif hakkı bildirimi ve lisans bilgileri, yayınlanan içeriklere kalıcı olarak eklenecek ve yeni gönderilere yönelik politikaları değiştirerek bu verilerin değişmeyeceğinden emin olun. Yayımlanmış içeriklere zaten eklenmiş kayıtlı izinleri sıfırlamak için aşağıdaki düğmeyi kullanın.</message>
+	<message key="grid.genres.title.short">Bileşenler</message>
+	<message key="grid.genres.title">Makale Bileşenleri</message>
+	<message key="grid.genres.description">Bu bileşenler dosya isimlendirme amaçları için kullanılır ve dosya yükleme üzerine açılan menüde sunulur. ## belirtilen türler, kullanıcının dosyayı tüm gönderi 99Z ile veya belirli bir bileşeni numarayla ilişkilendirmesine izin verir (ör. 02).</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI Eklentisi Ayarları</message>
+	<message key="plugins.importexport.common.export.articles">Makaleler</message>
+	<message key="plugins.importexport.common.export.issues">Sayılar</message>
+	<message key="plugins.importexport.common.export.representations">Dizgiler</message>
+	<message key="plugins.importexport.common.missingRequirements">Eklenti gereksinimleri karşılanmadı</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Bu eklentiyi kullanabilmek için lütfen "Genel Belirleyici / Public Identifier" eklenti kategorisine gidin, DOI eklentisini etkinleştirin ve yapılandırın ve orada geçerli bir DOI öneki belirtin.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Eklenti tam olarak ayarlanmamış.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">DOI Genel Tanımlayıcı eklentisinde DOI ataması için herhangi bir yayın öğesi seçilmemiştir, bu nedenle bu eklentide hiçbir depo veya ihracat olanağı yoktur.</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Şifrenin düz metin olarak, yani şifrelenmemiş olarak kaydedileceğini lütfen unutmayın.</message>
+	<message key="plugins.importexport.common.filter.issue">Herhangi Bir Sayı</message>
+	<message key="plugins.importexport.common.status.any">Herhangi Bir Durum</message>
+	<message key="plugins.importexport.common.status.notDeposited">Depolanmamış</message>
+	<message key="plugins.importexport.common.status.markedRegistered">İşaretli kayıt</message>
+	<message key="plugins.importexport.common.status.registered">Kayıtlı</message>
+	<message key="plugins.importexport.common.action">Eylem</message>
+	<message key="plugins.importexport.common.action.export">İhraç</message>
+	<message key="plugins.importexport.common.action.markRegistered">İşaretli kayıt</message>
+	<message key="plugins.importexport.common.validation">İhraç ve kayıt işleminden önce XML'i doğrulayın.</message>
+	<message key="plugins.importexport.common.error.noObjectsSelected">Hiçbir nesne seçilmedi.</message>
+	<message key="plugins.importexport.common.error.validation">Seçilen nesneler dönüştürülemedi.</message>
+	<message key="plugins.importexport.common.invalidXML">Geçersiz XML:</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Çıktı dosyası {$param} yazılabilir değil.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Çıktı dosyası {$param} okunabilir değil.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Kayıt başarılı değil! DOI kayıt sunucusu bir hata verdi:  '{$param}'.</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI öneki, günlük için {$path} yolu eksik.</message>
+	<message key="plugins.importexport.common.cliError">HATA:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Belirtilen günlük yolu "{$journalPath}" mevcut değil.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Belirtilen nesneler bulunamadı.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Dergi ayarları'nda tanımlanan birincil kişiye bir kopya gönderin.</message>
+	<message key="manager.setup.clockssLicenseLabel">CLOCKSS Lisansı Açıklaması</message>
+	<message key="manager.setup.clockssRegister"><![CDATA[<a href="http://clockss.org/" target="_blank"> CLOCKSS Web Sitesini</a> ziyaret ederek CLOCKSS hizmetine kaydolun.]]></message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable">Dergi içeriğini Portico'ya katılan kütüphanelere depolamak ve dağıtmak için Portico'yu etkinleştirin.</message>
+	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.setup.Issn">ISSN</message>
 </locale>

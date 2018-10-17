@@ -3,8 +3,8 @@
 /**
  * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ManualPaymentPlugin
@@ -18,31 +18,31 @@ import('lib.pkp.classes.plugins.PaymethodPlugin');
 class ManualPaymentPlugin extends PaymethodPlugin {
 
 	/**
-	 * @see Plugin::getName
+	 * @copydoc Plugin::getName
 	 */
 	function getName() {
 		return 'ManualPayment';
 	}
 
 	/**
-	 * @see Plugin::getDisplayName
+	 * @copydoc Plugin::getDisplayName
 	 */
 	function getDisplayName() {
 		return __('plugins.paymethod.manual.displayName');
 	}
 
 	/**
-	 * @see Plugin::getDescription
+	 * @copydoc Plugin::getDescription
 	 */
 	function getDescription() {
 		return __('plugins.paymethod.manual.description');
 	}
 
 	/**
-	 * @see Plugin::register
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
 			return true;
 		}
@@ -50,7 +50,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @copydoc PaymentPlugin::getSettingsForm()
+	 * @copydoc PaymethodPlugin::getSettingsForm()
 	 */
 	function getSettingsForm($context) {
 		$this->import('ManualPaymentSettingsForm');
@@ -58,36 +58,33 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see PaymentPlugin::isConfigured
+	 * @copydoc PaymethodPlugin::isConfigured
 	 */
-	function isConfigured() {
-		$context = $this->getRequest()->getContext();
+	function isConfigured($context) {
 		if (!$context) return false;
 		if ($this->getSetting($context->getId(), 'manualInstructions') == '') return false;
 		return true;
 	}
 
 	/**
-	 * @see PaymentPlugin::displayPaymentForm
+	 * @copydoc PaymethodPlugin::getPaymentForm
 	 */
-	function displayPaymentForm($queuedPaymentId, $queuedPayment, $request) {
-		if (!$this->isConfigured()) return false;
-		$context = $request->getContext();
+	function getPaymentForm($context, $queuedPayment) {
+		if (!$this->isConfigured($context)) return null;
+
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-		$templateMgr = TemplateManager::getManager($request);
-		$user = $request->getUser();
 
-		$templateMgr->assign('itemName', $queuedPayment->getName());
-		$templateMgr->assign('itemDescription', $queuedPayment->getDescription());
-		if ($queuedPayment->getAmount() > 0) {
-			$templateMgr->assign('itemAmount', $queuedPayment->getAmount());
-			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode());
-		}
-		$templateMgr->assign('manualInstructions', $this->getSetting($context->getId(), 'manualInstructions'));
-		$templateMgr->assign('queuedPaymentId', $queuedPaymentId);
-
-		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
-		return true;
+		import('lib.pkp.classes.form.Form');
+		$paymentForm = new Form($this->getTemplateResource('paymentForm.tpl'));
+		$paymentManager = Application::getPaymentManager($context);
+		$paymentForm->setData(array(
+			'itemName' => $paymentManager->getPaymentName($queuedPayment),
+			'itemAmount' => $queuedPayment->getAmount()>0?$queuedPayment->getAmount():null,
+			'itemCurrencyCode' => $queuedPayment->getAmount()>0?$queuedPayment->getCurrencyCode():null,
+			'manualInstructions' => $this->getSetting($context->getId(), 'manualInstructions'),
+			'queuedPaymentId' => $queuedPayment->getId(),
+		));
+		return $paymentForm;
 	}
 
 	/**
@@ -102,9 +99,9 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$op = isset($args[0])?$args[0]:null;
 		$queuedPaymentId = isset($args[1])?((int) $args[1]):0;
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$ojsPaymentManager = new OJSPaymentManager($request);
-		$queuedPayment =& $ojsPaymentManager->getQueuedPayment($queuedPaymentId);
+		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
+		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId);
+		$paymentManager = Application::getPaymentManager($context);
 		// if the queued payment doesn't exist, redirect away from payments
 		if (!$queuedPayment) $request->redirect(null, 'index');
 
@@ -118,10 +115,10 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 				$mail->setReplyTo(null);
 				$mail->addRecipient($contactEmail, $contactName);
 				$mail->assignParams(array(
-					'contextName' => $journal->getLocalizedName(),
+					'contextName' => $context->getLocalizedName(),
 					'userFullName' => $user?$user->getFullName():('(' . __('common.none') . ')'),
 					'userName' => $user?$user->getUsername():('(' . __('common.none') . ')'),
-					'itemName' => $queuedPayment->getName(),
+					'itemName' => $paymentManager->getPaymentName($queuedPayment),
 					'itemCost' => $queuedPayment->getAmount(),
 					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 				));
@@ -141,25 +138,16 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see Plugin::getInstallEmailTemplatesFile
+	 * @copydoc Plugin::getInstallEmailTemplatesFile
 	 */
 	function getInstallEmailTemplatesFile() {
 		return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
 	}
 
 	/**
-	 * @see Plugin::getInstallEmailTemplateDataFile
+	 * @copydoc Plugin::getInstallEmailTemplateDataFile
 	 */
 	function getInstallEmailTemplateDataFile() {
 		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
 	}
-
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
 }
-
-?>

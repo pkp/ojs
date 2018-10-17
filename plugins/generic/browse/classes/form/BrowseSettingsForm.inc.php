@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/browse/classes/form/BrowseSettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
@@ -32,7 +32,7 @@ class BrowseSettingsForm extends Form {
 	function __construct(&$plugin, $journalId) {
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
@@ -100,4 +100,4 @@ class BrowseSettingsForm extends Form {
 	}
 }
 
-?>
+

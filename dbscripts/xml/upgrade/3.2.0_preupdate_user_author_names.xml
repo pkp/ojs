@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Make a copy of the needed users and authors columns in a new DB table, to work with them later, because they will be removed in between.
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			CREATE TABLE users_tmp AS (SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users)
+		</query>
+		<query>
+			CREATE TABLE authors_tmp AS (SELECT author_id, submission_id, first_name, last_name, middle_name, suffix FROM authors)
+		</query>
+	</sql>
+</data>

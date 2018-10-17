@@ -3,8 +3,8 @@
 /**
  * @file plugins/blocks/subscription/SubscriptionBlockPlugin.inc.php
  *
- * Copyright (c) 2013-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionBlockPlugin
@@ -70,7 +70,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journal->getId());
 			if ($subscriptionId) {
-				$institutionalSubscription = $subscriptionDao->getSubscription($subscriptionId);
+				$institutionalSubscription = $subscriptionDao->getById($subscriptionId);
 				$templateMgr->assign(array(
 					'institutionalSubscription' => $institutionalSubscription,
 					'userIP' => $ip,
@@ -78,16 +78,14 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 			}
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($journal);
 
 		if (isset($individualSubscription) || isset($institutionalSubscription)) {
-			$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
-			$templateMgr->assign('acceptSubscriptionPayments', $acceptSubscriptionPayments);
+			$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 		}
 
 		return parent::getContents($templateMgr, $request);
 	}
 }
 
-?>
+

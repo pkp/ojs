@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings.
@@ -51,4 +51,7 @@ Přijímán je následující formát:
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Zkratka sekce "{$sectionAbbrev}" v čísle "{$issueTitle}" odpovídá existující sekci časopisu, ale další zkratka této sekce neodpovídá jiné zkratce existující sekce časopisu.</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Žádné nebo nebo naopak více než jedno číslo odpovídá identifikaci daného čísla "{$issueIdentification}".</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Identifikační element čísla chybí v článku "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Zvolte článek pro export</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Existující číslo s id {$issueId} odpovídá zadané identifikaci čísla "{$issueIdentification}". Toto číslo se nezmění, ale články budou přidány.</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Článek "{$articleTitle}" je obsažen v tomto čísle, ale nemá zadáno datum zveřejnění.</message>
 </locale>

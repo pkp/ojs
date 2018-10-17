@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/paymethod/paypal/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.paymethod.paypal.displayName">دفع الرسوم عبر Paypal</message>
+	<message key="plugins.paymethod.paypal.description">معالجة المدفوعات ستتم عبر خدمة PayPal.</message>
+	<message key="plugins.paymethod.paypal">دفع الرسوم عبر Paypal</message>
+	<message key="plugins.paymethod.paypal.settings">إعدادات الدفع المالي عبر Paypal</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">نمط الاختبار</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">اسم الحساب</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">الرمز التعريفي للعميل</message>
+	<message key="plugins.paymethod.paypal.settings.secret">الرمز السري</message>
+	<message key="plugins.paymethod.paypal.error">حدث خطأ في المناقلة المالية. لطفاً، راسل رئيس تحرير المجلة لمعرفة التفاصيل.</message>
+</locale>

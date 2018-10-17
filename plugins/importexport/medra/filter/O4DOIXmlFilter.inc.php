@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/O4DOIXmlFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class O4DOIXmlFilter
@@ -138,7 +138,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ToCompany',  'mEDRA'));
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SentDate',  date('YmdHi')));
 		// Message note
-		$app = PKPApplication::getApplication();
+		$app = Application::getApplication();
 		$name = $app->getName();
 		$version = $app->getCurrentVersion();
 		$versionString = $version->getVersionString();
@@ -545,4 +545,4 @@ class O4DOIXmlFilter extends NativeExportFilter {
 
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/medra/locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -43,7 +43,7 @@
 	<message key="plugins.importexport.medra.settings.form.manifestation">تجلي</message>
 
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">تصدير الأعداد بشكل</message>
-	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">سيقوم نظام المجلات المفتوحة بتسجيل المكونات الرقمية DOI تلقائياً في mEDRA. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعد النشر بسبب المعالجة. بإمكانك بعدها التحقق من كل المكونات غير المسجلة.</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">سيقوم نظام المجلات المفتوحة بتسجيل المكونات الرقمية DOI تلقائياً في mEDRA. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعيد النشر بسبب المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك بعدها التحقق من كل المكونات غير المسجلة.</message>
 	<message key="plugins.importexport.medra.settings.form.testMode.description">استعمل خاصية إختبار mEDRA (بيئة الاختبار) للمكونات الرقمية. لطفاً، لا تنس إزالة هذا الخيار عند التشغيل الفعلي.</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: إن DOI المعينة للمقالات سيتم تصديرها إلى mEDRA بشكل <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'أعمال'</a>. أما DOI المعينة للألواح الطباعية فسيتم تصديرها بمثابة <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'تجليات'</a>.]]></message>

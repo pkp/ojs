@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/crossref/templates/index.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -44,12 +44,12 @@
 					{/if}
 				{/foreach}
 				{if !$currentContext->getSetting('publisherInstitution')}
-					{url|assign:journalSettingsUrl router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="context" escape=false}
+					{capture assign=journalSettingsUrl}{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="context" escape=false}{/capture}
 					{capture assign=missingPublisherMessage}{translate key="plugins.importexport.crossref.error.publisherNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
 					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingPublisherMessage}
 				{/if}
 				{if !$currentContext->getSetting('onlineIssn') && !$currentContext->getSetting('printIssn')}
-					{url|assign:journalSettingsUrl router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="context" escape=false}
+					{capture assign=journalSettingsUrl}{url router=$smarty.const.ROUTE_PAGE page="management" op="settings" path="context" escape=false}{/capture}
 					{capture assign=missingIssnMessage}{translate key="plugins.importexport.crossref.error.issnNotConfigured" journalSettingsUrl=$journalSettingsUrl}{/capture}
 					{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=crossrefConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents=$missingIssnMessage}
 				{/if}
@@ -59,7 +59,7 @@
 			</div>
 		{/if}
 
-		{url|assign:crossrefSettingsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="index" escape=false}
+		{capture assign=crossrefSettingsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="CrossRefExportPlugin" category="importexport" verb="index" escape=false}{/capture}
 		{load_url_in_div id="crossrefSettingsGridContainer" url=$crossrefSettingsGridUrl}
 	</div>
 
@@ -75,7 +75,7 @@
 				{csrf}
 				<input type="hidden" name="tab" value="exportSubmissions-tab" />
 				{fbvFormArea id="submissionsXmlForm"}
-					{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}
+					{capture assign=submissionsListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}{/capture}
 					{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 					{fbvFormSection list="true"}
 						{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}

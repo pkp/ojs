@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/dublinCoreMeta/DublinCoreMetaPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DublinCoreMetaPlugin
@@ -17,14 +17,11 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class DublinCoreMetaPlugin extends GenericPlugin {
 	/**
-	 * Register the plugin, if enabled.
-	 * @param $category string
-	 * @param $path string
-	 * @return boolean
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
+			if ($this->getEnabled($mainContextId)) {
 				HookRegistry::register('ArticleHandler::view',array(&$this, 'articleView'));
 			}
 			return true;
@@ -67,8 +64,8 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		$i=0;
-		foreach (explode(', ', $article->getAuthorString()) as $author) {
-			$templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author) . '"/>');
+		foreach ($article->getAuthors(true) as $author) {
+			$templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
 		}
 
 		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished())) {
@@ -96,7 +93,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 			$templateMgr->addHeader('dublinCorePages', '<meta name="DC.Identifier.pageNumber" content="' . htmlspecialchars($pages) . '"/>');
 		}
 
-		foreach((array) $templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
+		foreach((array) $templateMgr->getTemplateVars('pubIdPlugins') as $pubIdPlugin) {
 			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('dublinCorePubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="DC.Identifier.' . htmlspecialchars($pubIdPlugin->getPubIdDisplayType()) . '" content="' . htmlspecialchars($pubId) . '"/>');
 			}
@@ -164,4 +161,4 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

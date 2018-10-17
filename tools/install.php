@@ -3,8 +3,8 @@
 /**
  * @file tools/install.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class installTool
@@ -47,4 +47,4 @@ class OJSInstallTool extends InstallTool {
 $tool = new OJSInstallTool(isset($argv) ? $argv : array());
 $tool->execute();
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
 	<message key="editor.notifyUsers">Notify Users</message>
-	<message key="editor.notifyUsers.allUsers">All users associated with this journal ({$count} users)</message>
 	<message key="editor.notifyUsers.allReaders">All readers ({$count} users)</message>
 	<message key="editor.notifyUsers.allAuthors">All published authors ({$count} users)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">All individual subscribers ({$count} users)</message>
@@ -121,72 +120,7 @@
 	<message key="grid.action.setCurrentIssue">Set Current Issue</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
-	<message key="editor.article.uploadReviewVersion">Upload a revised Review Version</message>
-	<message key="editor.article.showSuppFile">Present file to reviewers</message>
-	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
-	<message key="editor.article.clear">Clear</message>
-	<message key="editor.article.clearReviewer">Clear reviewer</message>
-	<message key="editor.article.changeSection">Change Section</message>
-	<message key="editor.article.setDueDate">Set Due Date</message>
-	<message key="editor.article.addReviewer">Add Reviewer</message>
-	<message key="editor.article.toReviewer">To Reviewer</message>
-	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
-	<message key="editor.article.initiateReview">Initiate Review</message>
-	<message key="editor.article.cancelReview">Cancel Request</message>
-	<message key="editor.article.clearReview">Clear Reviewer</message>
-	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
-	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
-	<message key="editor.article.recommendation">Recommendation</message>
-	<message key="editor.article.selectReviewer">Select Reviewer</message>
-	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
-	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
-	<message key="editor.article.uploadReviewForReviewer">Upload review</message>
-	<message key="editor.article.peerReviewOptions">Peer Review Options</message>
 	<message key="editor.article.decision">Decision</message>
-	<message key="editor.article.noEditorSelected">No editor selected.</message>
-	<message key="editor.article.recordDecision">Record Decision</message>
-	<message key="editor.article.cannotRecord">Section editor not yet recorded or no review file present.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
-	<message key="editor.article.designateDueDate">Designate a Due Date</message>
-	<message key="editor.article.designateDueDateDescription">Enter the date or number of weeks for the new due date.</message>
-	<message key="editor.article.todaysDate">Today's Date</message>
-	<message key="editor.article.requestedByDate">Requested By Date</message>
-	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Number of Weeks</message>
-	<message key="editor.article.selectCopyeditor">Assign Copyeditor</message>
-	<message key="editor.article.replaceCopyeditor">Replace Copyeditor</message>
-	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
-	<message key="editor.article.showAuthor">Let author view file</message>
-	<message key="editor.article.showCopyeditor">Show version to copyeditor</message>
-	<message key="editor.article.rateReviewer">Reviewer rating</message>
-	<message key="editor.article.reviewerRating.veryGood">5 High</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Low</message>
-	<message key="editor.article.comments">Comments</message>
-	<message key="editor.article.commentsRequired">The comments field is required.</message>
-	<message key="editor.article.saveRating">Save Rating</message>
-	<message key="editor.article.noneSelected">None Selected</message>
-	<message key="editor.article.authorProofing">Author Proofing</message>
-	<message key="editor.article.archiveSubmission">Reject and Archive Submission</message>
-	<message key="editor.article.restoreToQueue">Restore to Active List</message>
-	<message key="editor.article.assignSectionEditor">Add Section Editor</message>
-	<message key="editor.article.assignEditor">Add Editor</message>
-	<message key="editor.article.selectEditor">Select {$roleName}</message>
-	<message key="editor.article.selectDecision">Select decision</message>
-	<message key="editor.article.selectLayoutEditor">Select Layout Editor</message>
-	<message key="editor.article.replaceLayoutEditor">Replace Layout Editor</message>
-	<message key="editor.article.reviewSubmission">Review Submission</message>
-	<message key="editor.article.resubmitForReview">Resubmit file for Review</message>
-	<message key="editor.article.resubmitFileForPeerReview">Resubmit selected file for peer review</message>
-	<message key="editor.article.sendToCopyedit">Send file to Copyediting</message>
-	<message key="editor.article.selectProofreader">Assign Proofreader</message>
-	<message key="editor.article.replaceProofreader">Replace Proofreader</message>
-	<message key="editor.article.authorComments">Author Comments</message>
-	<message key="editor.article.proofreaderComments">Proofreader Comments</message>
-	<message key="editor.article.layoutEditorFinal">Layout Editor Final</message>
-	<message key="editor.article.noDate">(date)</message>
 	<message key="editor.submissions.showBy">Show By</message>
 	<message key="editor.submissions.submitMMDD">Submit MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Active Assignments</message>
@@ -202,16 +136,7 @@
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</message>
-	<message key="editor.article.display">Display</message>
-	<message key="editor.article.hideTocAuthorDescription">Omit author names from issue table of contents</message>
-	<message key="editor.article.hideTocAuthorDefault">Default</message>
-	<message key="editor.article.hideTocAuthorHide">Omit</message>
-	<message key="editor.article.hideTocAuthorShow">Show</message>
-	<message key="editor.article.cover">Cover</message>
-	<message key="editor.article.coverImage">Cover image</message>
 	<message key="editor.article.removeCoverImageFileNotFound">The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</message>
-	<message key="editor.article.uploaded">Uploaded</message>
-	<message key="editor.article.removeCoverPage">Remove cover image?</message>
 	<message key="grid.action.removeArticle">Remove Article From Issue</message>
 	<message key="editor.article.remove">Remove</message>
 	<message key="editor.article.remove.confirm">Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</message>
@@ -222,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Final draft files in this list are transformed by a Copyeditor into copyedited versions, uploaded below under <span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Any files that have already been uploaded to any submission stage can be added to the Proofreading listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your journal.</message>
+	<message key="editor.article.coverImage">Cover Image</message>
 </locale>

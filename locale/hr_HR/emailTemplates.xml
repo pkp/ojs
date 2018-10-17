@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -101,16 +101,6 @@ U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.<br />
 Srdačno,<br />
 {$editorialContactSignature}]]></body>
 		<description>Ovaj se obrazac e-pošte automatski šalje autoru kada su on ili ona završili postupak prijave priloga časopisu. Poruka daje informacije o tome kako mogu pratiti prilog kroz uređivački postupak.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Tematski neprimjeren prilog</subject>
-		<body><![CDATA[Poštovana/i {$authorName},<br />
-<br />
-inicijalnom recenzijom članka &quot;{$submissionTitle}&quot; ustanovili smo da se vaš prilog ne uklapa u djelokrug i područje časopisa {$contextName}. Predlažemo da pogledate opis časopisa (u sekciji &quot;O časopisu&quot;) te sadržaj izdanih brojeva kako biste stekli bolji uvid o vrsti radova koje objavljujemo. Predlažemo vam da razmotrite prijavu ovog priloga nekom drugom, primjerenijem, časopisu.<br />
-<br />
-Srdačno,<br />
-{$editorialContactSignature}]]></body>
-		<description/>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Komentar priloga</subject>

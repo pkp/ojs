@@ -1,8 +1,8 @@
 #
 # registry/minifiedScripts.txt
 #
-# Copyright (c) 2014-2017 Simon Fraser University
-# Copyright (c) 2003-2017 John Willinsky
+# Copyright (c) 2014-2018 Simon Fraser University
+# Copyright (c) 2003-2018 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # This file contains a list of all JavaScript files that should be compiled
@@ -26,9 +26,6 @@ lib/pkp/js/lib/underscore/underscore.js
 
 # JSON library
 lib/pkp/js/lib/json/json2.js
-
-# Our own functions (depend on plug-ins)
-lib/pkp/js/functions/general.js
 
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
@@ -64,7 +61,6 @@ lib/pkp/js/controllers/TabHandler.js
 lib/pkp/js/controllers/MenuHandler.js
 lib/pkp/js/controllers/UploaderHandler.js
 lib/pkp/js/controllers/AutocompleteHandler.js
-lib/pkp/js/controllers/RangeSliderHandler.js
 lib/pkp/js/controllers/RevealMoreHandler.js
 lib/pkp/js/controllers/NotificationHandler.js
 lib/pkp/js/controllers/HelpPanelHandler.js
@@ -100,13 +96,15 @@ lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js
-lib/pkp/js/controllers/grid/filter/form/FilterFormHandler.js
+lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuFormHandler.js
+lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuItemsFormHandler.js
 lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js
 lib/pkp/js/controllers/grid/settings/user/form/UserDetailsFormHandler.js
 lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
 lib/pkp/js/controllers/grid/settings/metadata/MetadataGridHandler.js
 lib/pkp/js/controllers/tab/settings/form/FileViewFormHandler.js
 lib/pkp/js/controllers/tab/settings/announcements/form/AnnouncementSettingsFormHandler.js
+lib/pkp/js/controllers/tab/settings/archiving/form/ArchivingSettingsFormHandler.js
 lib/pkp/js/controllers/tab/settings/permissions/form/PermissionSettingsFormHandler.js
 lib/pkp/js/controllers/tab/settings/paymentMethod/PaymentMethodHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js

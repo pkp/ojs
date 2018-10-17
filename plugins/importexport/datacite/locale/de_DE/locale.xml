@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/datacite/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -31,7 +31,7 @@
 
 	<message key="plugins.importexport.datacite.settings.form.username">Benutzer/innenname (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen (symbol) ein, den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
-	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS wird die zugewiesenen DOI automatisch an DataCite liefern. Bitte berücksichtigen Sie, dass dies eine Weile nach der Veröffentlichung dauern kann. Sie können nach bisher unregistrieren DOI suchen.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS wird die zugewiesenen DOI automatisch an DataCite liefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen.</message>
 	<message key="plugins.importexport.datacite.settings.form.testMode.description">Den DataCite-Test-Präfix für die DOI-Registrierung benutzen. Bitte vergessen Sie nicht, diese Option vor dem Produktivbetrieb abzuwählen.</message>
 
 	<message key="plugins.importexport.datacite.senderTask.name">DataCite automatic registration task</message>

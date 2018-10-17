@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -218,4 +218,7 @@
 	<message key="editor.submission.selectGalleyFiles">Vyberte soubory sazebnice</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Konečné návrhy souborů v tomto seznamu jsou převedeny redaktorem do redakčních verzí, nahrany níže pod <span class = "pkp_help_title">Redakce</ span>.¨]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Jakékoli soubory, které již byly nahrány do libovolné etapy podání článku, mohou být přidány do seznamu Korektury zaškrtnutím políčka Zahrnout a klepnutím na tlačítko Hledat: budou uvedeny všechny dostupné soubory a mohou být vybrány k zařazení.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Jste si jisti, že chcete nastavit toto číslo jako číslo aktuální?</message>
+	<message key="grid.action.setCurrentIssue">Nastavte aktuální číslo</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Veřejný identifikátor '{$publicIdentifier}' již existuje pro jiný objekt stejného typu. Vyberte prosím jedinečné identifikátory pro objekty stejného typu v časopise.</message>
 </locale>

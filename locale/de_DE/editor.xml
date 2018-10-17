@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Dieser Beitrag wird archiviert, nachdem die Benachrichtigungs-E-Mail an die Autorin/den Autor entweder versendet wurde oder nachdem "E-Mail überspringen" angeklickt wurde.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den ‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung zu informieren, und wählen Sie die zu überweisende Version aus.</message>
 	<message key="editor.notifyUsers">Benutzer/innen benachrichtigen</message>
-	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
 	<message key="editor.notifyUsers.allReaders">Alle Leser/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allAuthors">Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuellen Abonnent/innen ({$count} Nutzer/innen)</message>
@@ -109,7 +108,6 @@
 	<message key="editor.issues.galleyLocaleRequired">Eine Regionaleinstellung für die Ausgabenfahne wird benötigt.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Die öffentliche Kennung der Ausgabenfahne existiert bereits.</message>
 	<message key="editor.issues.backToIssueGalleys">Zurück zu den Ausgabenfahnen</message>
-	<message key="editor.issues.viewingGalley">Ausgabenfahne ansehen</message>
 	<message key="editor.issues.confirmDeleteGalley">Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?</message>
 	<message key="editor.issues.identifiers">Identifier</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>
@@ -122,72 +120,7 @@
 	<message key="grid.action.setCurrentIssue">Aktuelle Ausgabe festlegen</message>
 	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
 	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei zur Begutachtungsversion machen</message>
-	<message key="editor.article.uploadReviewVersion">Eine überarbeitete Begutachtungsversion hochladen</message>
-	<message key="editor.article.showSuppFile">Datei den Gutachter/innen übergeben</message>
-	<message key="editor.article.layoutAndProof">Layout &amp; Korrektur</message>
-	<message key="editor.article.clear">Entfernen</message>
-	<message key="editor.article.clearReviewer">Gutachter/in entfernen</message>
-	<message key="editor.article.changeSection">Rubrik ändern</message>
-	<message key="editor.article.setDueDate">Abgabetermin angeben</message>
-	<message key="editor.article.addReviewer">Gutachter/in hinzufügen</message>
-	<message key="editor.article.toReviewer">An Gutachter/in</message>
-	<message key="editor.article.notifyReviewer">Gutachter/in benachrichtigen</message>
-	<message key="editor.article.initiateReview">Begutachtung veranlassen</message>
-	<message key="editor.article.cancelReview">Anfrage an Gutachter/in stornieren</message>
-	<message key="editor.article.clearReview">Gutachter/in löschen</message>
-	<message key="editor.article.enterRecommendation">Empfehlung eintragen</message>
-	<message key="editor.article.enterReviewerRecommendation">Empfehlung der Gutachterin/des Gutachters eintragen</message>
-	<message key="editor.article.recommendation">Empfehlung</message>
-	<message key="editor.article.selectReviewer">Gutachter/in auswählen</message>
-	<message key="editor.article.replaceReviewer">Die Gutachterin/den Gutachter ersetzen</message>
-	<message key="editor.article.editorToEnter">Hier können Redakteur/innen Empfehlungen/Kommentare für die Gutachterin/den Gutachter eingeben.</message>
-	<message key="editor.article.uploadReviewForReviewer">Gutachten hochladen</message>
-	<message key="editor.article.peerReviewOptions">Peer-Review-Optionen</message>
 	<message key="editor.article.decision">Entscheidung</message>
-	<message key="editor.article.noEditorSelected">Kein/e Redakteur/in ausgewählt.</message>
-	<message key="editor.article.recordDecision">Entscheidung protokollieren</message>
-	<message key="editor.article.cannotRecord">Bisher kein/e Rubrikredakteur/in festgelegt, oder es ist keine Begutachtungsfassung vorhanden.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Gutachter/innen, denen die Autor/innenversion zugeht</message>
-	<message key="editor.article.designateDueDate">Abgabetermin festlegen</message>
-	<message key="editor.article.designateDueDateDescription">Geben Sie ein Datum oder eine Anzahl von Wochen für den neuen Abgabetermin ein.</message>
-	<message key="editor.article.todaysDate">Heutiges Datum</message>
-	<message key="editor.article.requestedByDate">Datum der Abgabe</message>
-	<message key="editor.article.dueDateFormat">Format: JJJJ-MM-TT</message>
-	<message key="editor.article.numberOfWeeks">Anzahl der Wochen</message>
-	<message key="editor.article.selectCopyeditor">Beitrag einer Lektorin/einem Lektor zuweisen</message>
-	<message key="editor.article.replaceCopyeditor">Lektor/in ersetzen</message>
-	<message key="editor.article.editorsCopyedit">Lektorat durch Redakteur/in</message>
-	<message key="editor.article.showAuthor">Autor/in die Datei zeigen</message>
-	<message key="editor.article.showCopyeditor">Version der Lektorin/dem Lektor zeigen</message>
-	<message key="editor.article.rateReviewer">Gutachter/in bewerten</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Hoch</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Niedrig</message>
-	<message key="editor.article.comments">Kommentare</message>
-	<message key="editor.article.commentsRequired">Das "Kommentare"-Feld muss ausgefüllt werden.</message>
-	<message key="editor.article.saveRating">Bewertung speichern</message>
-	<message key="editor.article.noneSelected">Keine Auswahl getroffen</message>
-	<message key="editor.article.authorProofing">Korrekturlektur durch Autor/in</message>
-	<message key="editor.article.archiveSubmission">Beitrag ablehnen und archivieren</message>
-	<message key="editor.article.restoreToQueue">Wieder in die Liste der zu bearbeitenden Beiträge aufnehmen</message>
-	<message key="editor.article.assignSectionEditor">Rubrikredakteur/in zuweisen</message>
-	<message key="editor.article.assignEditor">Redakteur/in zuweisen</message>
-	<message key="editor.article.selectEditor">{$roleName} auswählen</message>
-	<message key="editor.article.selectDecision">Entscheidung auswählen</message>
-	<message key="editor.article.selectLayoutEditor">Layouter/in auswählen</message>
-	<message key="editor.article.replaceLayoutEditor">Layouter/in ersetzen</message>
-	<message key="editor.article.reviewSubmission">Beitrag begutachten</message>
-	<message key="editor.article.resubmitForReview">Datei erneut zur Begutachtung einreichen</message>
-	<message key="editor.article.resubmitFileForPeerReview">Die ausgewählte Datei erneut zum Peer Review einreichen</message>
-	<message key="editor.article.sendToCopyedit">Datei ans Lektorat schicken</message>
-	<message key="editor.article.selectProofreader">Beitrag einer Korrekturlektorin/einem Korrekturlektor zuweisen</message>
-	<message key="editor.article.replaceProofreader">Korrekturlektor/in ersetzen</message>
-	<message key="editor.article.authorComments">Kommentare der Autorin/des Autors</message>
-	<message key="editor.article.proofreaderComments">Kommentare der Korrekturlektorin/des Korrekturlektors</message>
-	<message key="editor.article.layoutEditorFinal">Endgültige Version der Layouterin/des Layouters.</message>
-	<message key="editor.article.noDate">(Datum)</message>
 	<message key="editor.submissions.showBy">Anzeigen zum</message>
 	<message key="editor.submissions.submitMMDD">Einreichen MM-TT</message>
 	<message key="editor.submissions.activeAssignments">Aktuelle Aufgaben</message>
@@ -203,16 +136,7 @@
 	<message key="editor.article.scheduleForPublication">Zur Veröffentlichung vorsehen in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Muss noch zugewiesen werden</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Die Veröffentlichungsgebühr für diesen Artikel wurde noch nicht bezahlt. Sie können den Artikel zur Veröffentlichung einplanen, sobald die Gebühr bezahlt ist.</message>
-	<message key="editor.article.display">Anzeigen</message>
-	<message key="editor.article.hideTocAuthorDescription">Autor/innennamen nicht im Inhaltsverzeichnis der Ausgabe anzeigen</message>
-	<message key="editor.article.hideTocAuthorDefault">Voreinstellung</message>
-	<message key="editor.article.hideTocAuthorHide">Nicht anzeigen</message>
-	<message key="editor.article.hideTocAuthorShow">Anzeigen</message>
-	<message key="editor.article.cover">Titelseite</message>
-	<message key="editor.article.coverImage">Titelbild</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden.</message>
-	<message key="editor.article.uploaded">Hochgeladen</message>
-	<message key="editor.article.removeCoverPage">Titelbild entfernen?</message>
 	<message key="grid.action.removeArticle">Artikel aus der Ausgabe entfernen</message>
 	<message key="editor.article.remove">Entfernen</message>
 	<message key="editor.article.remove.confirm">Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? Der Artikel kann danach für eine andere Ausgabe eingeplant werden.</message>
@@ -223,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Endgültige Entwurfsdateien in dieser Liste werden durch eine/n Lektor/in in lektorierte Versionen umgewandelt und unter <span class="pkp_help_title">Lektorat</span> hochgeladen.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Alle Dateien, die bisher zu irgendeiner Phase der Einreichung hochgeladen worden sind, können zur Korrekturliste hinzugefügt werden, indem die Auswahlbox unten angeklickt wird und auf Suchen geklickt wird: Alle verfügbaren Dateien werden aufgelistet und können ausgewählt werden.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Die öffentliche Kennung '{$publicIdentifier}' wird bereits für ein Objekt des selben Typs verwendet. Bitte wählen Sie innerhalb Ihrer Zeitschrift eindeutige Kennungen für Objekte gleichen Typs.</message>
+	<message key="editor.article.coverImage">Titelbild</message>
 </locale>

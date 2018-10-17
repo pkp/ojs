@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -72,4 +72,6 @@
 	<message key="submission.citationFormat.notFound">O formato de citação solicitado não pôde ser recuperado.</message>
 	<message key="submission.metadataDescription">Estas especificações são baseadas no conjunto de metadados Dublin Core, um padrão internacional usado para descrever o conteúdo da revista.</message>
 	<message key="section.any">Qualquer Secção</message>
+	<message key="submission.submit.form.wordCountAlert">O seu resumo é demasiado longo. Por favor encurte-o de modo a conter menos palavras do que as indicadas abaixo para esta secção.</message>
+	<message key="submission.abstract.wordCount.description">O resumo deverá ter no máximo {$wordCount} palavras.</message>
 </locale>

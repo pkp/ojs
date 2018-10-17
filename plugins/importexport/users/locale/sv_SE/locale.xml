@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.importexport.users.displayName">XML-plugin för användare</message>
+	<message key="plugins.importexport.users.description">Importerar och exporterar användare</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Användning: {$scriptName} {$pluginName} [kommando] ...
+Commands:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+]]></message>
+	<message key="plugins.importexport.users.cliUsage.examples"><![CDATA[
+Exampel:
+	Importera användare till myJournal från myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	Exportera alla användare från myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Exportera användare specifierade genom deras ID:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Importera användare</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Välj en XML-fil som innehåller användarinformation att importera till den här tidskriften. För att se detaljer för filformatet, se tidskriftens hjälpfunktion.<br /><br />Observera att om importfilen innehåller användarnamn eller e-postadresser som redan finns i systemet kommer data för dessa användare inte att importeras och eventuella nya roller kommer att tilldelas den existerande användaren.]]></message>
+	<message key="plugins.importexport.users.import.dataFile">Fil med användardata</message>
+	<message key="plugins.importexport.users.import.sendNotify">Skicka ett meddelande via e-post till varje importerad användare med användarens amvändarnamn och lösenord.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Fortsätt att importera andra användare om ett fel uppstår.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Följande användare har importerats till systemet</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Ett fel uppstod under importen</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Bekräfta att du vill importera dessa användare till systemet</message>
+	<message key="plugins.importexport.users.import.warning">Varning</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Kan inte använda lösenord lagrade i {$importHash}; OJS är konfigurerad att använda {$ojsHash}. Om du vill fortsätta behöver du återställa importerade användares lösenord.</message>
+	<message key="plugins.importexport.users.unknownPress">En okänd sökväg till tidskriften, "{$journalPath}", angavs.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Exportera användare</message>
+	<message key="plugins.importexport.users.export.exportByRole">Exportera per roll</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Exportera alla</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Ett fel uppstod under exporten</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Kan inte skriva till filen "{$fileName}".</message>
+	<message key="plugins.importexport.users.importComplete">Importen lyckades. Användare med användarnamn och e-postadresser som inte redan används har importerats, tillsammans med tillhörande användargrupper.</message>
+	<message key="plugins.importexport.users.results">Resultat</message>
+	<message key="plugins.importexport.users.uploadFile">Ladda upp en fil under "Importera" för att fortsätta.</message>
+</locale>

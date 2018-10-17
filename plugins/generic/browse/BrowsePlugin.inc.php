@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/browse/BrowsePlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BrowsePlugin
@@ -17,16 +17,12 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class BrowsePlugin extends GenericPlugin {
-
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
+			if ($this->getEnabled($mainContextId)) {
 				// Add new navigation items in the navigation block plugin
 				HookRegistry::register('Plugins::Blocks::Navigation::BrowseBy',array($this, 'addNavigationItem'));
 				// Handler for browse plugin pages
@@ -54,13 +50,6 @@ class BrowsePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
-	/**
 	 * Get the handler path for this plugin.
 	 */
 	function getHandlerPath() {
@@ -74,9 +63,9 @@ class BrowsePlugin extends GenericPlugin {
 		$smarty = $params[1];
 		$output =& $params[2];
 
-		$journal = $smarty->get_template_vars('currentJournal');
+		$journal = $smarty->getTemplateVars('currentJournal');
 
-		$templateMgr = TemplateManager::getManager($this->getRequest());
+		$templateMgr = TemplateManager::getManager(Application::getRequest());
 		if ($this->getSetting($journal->getId(), 'enableBrowseBySections')) {
 			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page' => 'browseSearch', 'op'=>'sections'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.browse.search.sections'), $smarty) . '</a></li>';
 		}
@@ -121,7 +110,7 @@ class BrowsePlugin extends GenericPlugin {
 		switch (array_shift($args)) {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
 				$journal = $request->getJournal();
 
 				$this->import('classes.form.BrowseSettingsForm');
@@ -149,4 +138,4 @@ class BrowsePlugin extends GenericPlugin {
 	}
 }
 
-?>
+

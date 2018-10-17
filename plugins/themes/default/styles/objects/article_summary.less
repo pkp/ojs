@@ -1,11 +1,11 @@
 /**
  * @file styles/objects/article_details.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @brief Styles applying to a view of an article with all details
+ * @brief Styles applying to a summary view of an article for lists
  * @link templates/frontend/objects/article_details.tpl
  */
 .obj_article_summary {
@@ -31,6 +31,14 @@
 		a {
 			text-decoration: none;
 		}
+	}
+
+	.subtitle {
+		display: block;
+		margin-top: 0.25em;
+		margin-bottom: 0.5em;
+		font-weight: @normal;
+		color: @text-light;
 	}
 
 	.meta {

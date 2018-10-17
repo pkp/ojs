@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/subscriptions/SubscriptionReportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionReportPlugin
@@ -17,13 +17,10 @@ import('lib.pkp.classes.plugins.ReportPlugin');
 
 class SubscriptionReportPlugin extends ReportPlugin {
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		$this->addLocaleData();
 		return $success;
 	}
@@ -54,7 +51,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * @copydoc ReportPlugin::display() 
+	 * @copydoc ReportPlugin::display()
 	 */
 	function display($args, $request) {
 		$journal = $request->getJournal();
@@ -271,4 +268,4 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	}
 }
 
-?>
+

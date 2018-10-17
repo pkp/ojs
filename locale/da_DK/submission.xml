@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -71,4 +71,7 @@
 	<message key="submission.submit.privacyStatement">Erklæring om beskyttelse af personlige oplysninger</message>
 	<message key="submission.submit.form.authorRequiredFields">Fornavn, efternavn og e-mailadresse for hver forfatter er påkrævet.</message>
 	<message key="submission.citationFormat.notFound">Det ønskede citationsformat kunne ikke genfindes.</message>
+	<message key="section.any">Enhver sektion</message>
+	<message key="submission.abstract.wordCount.description">Resumeet skal være på {$wordCount} ord eller derunder.</message>
+	<message key="submission.submit.form.wordCountAlert">Dit resume er for langt. Forkort det venligst til under den ordgrænse, der er angivet for dette afsnit.</message>
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearch.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearch
@@ -46,7 +46,7 @@ class ArticleSearch extends SubmissionSearch {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalTitles = array();
 		if ($orderBy == 'popularityAll' || $orderBy == 'popularityMonth') {
-			$application = PKPApplication::getApplication();
+			$application = Application::getApplication();
 			$metricType = $application->getDefaultMetricType();
 			if (is_null($metricType)) {
 				// If no default metric has been found then sort by score...
@@ -80,7 +80,7 @@ class ArticleSearch extends SubmissionSearch {
 					$authors = $authorDao->getBySubmissionId($submissionId);
 					$authorNames = array();
 					foreach ($authors as $author) { /* @var $author Author */
-						$authorNames[] = $author->getFullName(true);
+						$authorNames[] = $author->getFullName(false, true);
 					}
 					$orderKey = implode('; ', $authorNames);
 					unset($authors, $authorNames);
@@ -350,7 +350,7 @@ class ArticleSearch extends SubmissionSearch {
 		);
 
 		// Only show the "popularity" options if we have a default metric.
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (!is_null($metricType)) {
 			$resultSetOrderingOptions['popularityAll'] = __('search.results.orderBy.popularityAll');
@@ -391,4 +391,4 @@ class ArticleSearch extends SubmissionSearch {
 	}
 }
 
-?>
+

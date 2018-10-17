@@ -4,8 +4,8 @@
 <!--
   * 3.1.0_preupdate_payments.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Database updates XML file (run before schema is reconciled).
@@ -13,7 +13,8 @@
   -->
 <data>
 	<!-- Issue #1816: Abstract completed payments into library -->
-	<sql>
-		<rename table="completed_payments" column="journal_id" to="context_id" />
-	</sql>
+	<sql><rename table="completed_payments" column="journal_id" to="context_id" /></sql>
+
+	<!-- Use app-independent language in queued payments serialized data -->
+	<sql><query>UPDATE queued_payments SET payment_data=REPLACE(payment_data,'journalId','contextId')</query></sql>
 </data>

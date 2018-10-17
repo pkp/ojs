@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -27,7 +27,6 @@
 	<message key="editor.submissionReview.confirmDecision">Czy na pewno?</message>
 	<message key="editor.submissionReview.emailWillArchive">Przesłane teksty zostaną zarchiwizowane po przesłaniu powiadomienia do autora (możesz pominąć przesłanie powiadomienia klikając w "Pomiń wysłanie wiadomości".</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Zanim prześlesz tekst do Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wyborze wersji do przesłania.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Prześli do redakcji technicznej</message>
 	<message key="editor.notifyUsers">Powiadom użytkowników o nowym numerze</message>
 	<message key="editor.notifyUsers.allUsers">Wszyscy użytkownicy związani z tą konferencją ({$count})</message>
 	<message key="editor.notifyUsers.allReaders">Wszyscy czytelnicy ({$count})</message>
@@ -149,10 +148,6 @@
 	<message key="editor.article.assignEditor">Dodaj redaktora czasopisma</message>
 	<message key="editor.article.selectEditor">Wybierz {$roleName}</message>
 	<message key="editor.article.selectDecision">Wybierz decyzję</message>
-	<message key="editor.article.decision.accept">Zaakceptuj zgłoszony tekst</message>
-	<message key="editor.article.decision.pendingRevisions">Wymagane poprawki</message>
-	<message key="editor.article.decision.resubmit">Do ponownej recenzji</message>
-	<message key="editor.article.decision.decline">Odrzucenie zgłoszonego tekstu</message>
 	<message key="editor.article.selectLayoutEditor">Wybierz składacza</message>
 	<message key="editor.article.replaceLayoutEditor">Zmień składacza</message>
 	<message key="editor.article.reviewSubmission">Prześlij recenzje</message>
@@ -223,4 +218,8 @@
 	<message key="editor.submission.selectGalleyFiles">Wybierz pliki do publikacji.</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Pliki znajdujące się na tej liście są pobierane przez korektora. Po korekcie poprawione pliki powinny zostać przesłane poniżej, w sekcji <span class="pkp_help_title">Korekta</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Wszystkie pliki przesłane do dowolnego etapu mogą zostać dodane do listy korekty końcowej przez oznaczenie pola Uwzględnij poniżej i kliknięciu Szukaj: Wszystkie możliwe do dodania pliki będą widoczne w liście i dostępne do wybrania.</message>
+	<message key="editor.editorAdministration">Administracja</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Na pewno ustawić ten numer jako aktualny?</message>
+	<message key="grid.action.setCurrentIssue">Ustaw aktualny numer</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Identyfikator publiczny '{$publicIdentifier}' już istnieje dla innego obiektu tego samego rodzaju. Wybierz unikatowy identyfikator dla obiektów tego samego typu w swoim czasopiśmie.</message>
 </locale>

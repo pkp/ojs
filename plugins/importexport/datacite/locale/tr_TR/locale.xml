@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/datacite/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
@@ -19,4 +19,10 @@
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 	<message key="plugins.importexport.datacite.senderTask.name">DataCite bilgi göndericisi</message>
+	<message key="plugins.importexport.datacite.settings.description">Lütfen ilk kez kullanmadan önce DataCite İhraç eklentisini yapılandırın.</message>
+	<message key="plugins.importexport.datacite.intro"><![CDATA[Eğer DOI'leri DataCite'a kaydettirmek istiyorsanız, lütfen yerel DataCite Üyenize yönlendirecek olan <a href="http://datacite.org/contact" target="_blank">DataCite Ana Sayfası</a> üzerinden Managing Agent ile iletişime geçin. Üye kuruluşla bir bağlantı kurduktan sonra, kalıcı tanımlayıcıları (DOI) silmek ve ilgili üst verileri kaydetmek için DataCite servisine erişim sağlanacaktır. Eğer kendi kullanıcı adınız ve şifreniz yoksa, DataCite XML formatına aktarmaya devam edebilirsiniz, ancak DOI'lerinizi DataCite ile OJS içinden kaydedemezsiniz. Şifrenin, DataCite kayıt hizmeti gereksinimleri nedeniyle düz metin (şifrelenmemiş) olarak kaydedileceğini lütfen unutmayın.]]></message>
+	<message key="plugins.importexport.datacite.settings.form.username">Kullanıcı adı (Sembol)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Lütfen DataCite'dan aldığınız kullanıcı adını (sembolü) girin. Kullanıcı adı, üst üste iki nokta  içermemelidir.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS, DOI'leri otomatik olarak DataCite'a depolayacak. Lütfen bu işlemin yayınlama işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız tüm DOI'leri kontrol edebilirsiniz.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">DOI kaydı için DataCite test önekini kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın.</message>
 </locale>

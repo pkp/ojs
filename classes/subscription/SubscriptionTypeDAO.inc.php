@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionTypeDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypeDAO
@@ -312,8 +312,8 @@ class SubscriptionTypeDAO extends DAO {
 			FROM subscription_types
 			WHERE	journal_id = ?
 				AND institutional = ?
-				' . ($disablePublicDisplaySql===true?'AND disable_public_display = 1':'') . '
-				' . ($disablePublicDisplaySql===false?'AND disable_public_display = 0':'') . '
+				' . ($disablePublicDisplay===true?'AND disable_public_display = 1':'') . '
+				' . ($disablePublicDisplay===false?'AND disable_public_display = 0':'') . '
 			ORDER BY seq',
 			array((int) $journalId, (int) $institutional),
 			$rangeInfo
@@ -376,4 +376,4 @@ class SubscriptionTypeDAO extends DAO {
 	}
 }
 
-?>
+

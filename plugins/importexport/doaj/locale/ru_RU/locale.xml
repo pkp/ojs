@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ru_RU (Русский) locale.
@@ -19,12 +19,12 @@
 	<message key="plugins.importexport.doaj.registrationIntro">Если вы хотите зарегистрировать статьи прямо из OJS, пожалуйста, введите ваш ключ API DOAJ. Если у вас нет ключа API DOAJ, вы все равно сможете экспортировать в формат DOAJ XML, но не сможете зарегистрировать ваши статьи с DOAJ напрямую из OJS.</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey">Ключ API DOAJ</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Вы найдете ключ API на своей странице пользователя DOAJ.</message>
-	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS будет автоматически депонировать статьи в DOAJ. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки. Вы можете проверить все незарегистрированные статьи.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS будет автоматически депонировать статьи в DOAJ. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные статьи.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Использовать тестовый API DOAJ (среда тестирования) для регистрации. Пожалуйста, не забудьте убрать этот параметр для реальной работы.</message>
-	  
+
 	<message key="plugins.importexport.doaj.senderTask.name">Задача автоматической регистрации DOAJ</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">Депонирование не удалось! API DOAJ  вернул ошибку : «{$param}».</message>
-	
+
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Вызов:
 {$scriptName} {$pluginName} export [ИмяФайлаXML] [путь_журнала] articles IdОбъекта1 [IdОбъекта2] ...
 ]]></message>

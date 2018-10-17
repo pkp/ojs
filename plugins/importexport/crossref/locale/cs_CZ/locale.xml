@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -35,7 +35,7 @@
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS uloží přiřazené DOI automaticky do CrossRef. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny neregistrované DOI.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Použijte testovací rozhraní API CrossRef (zkušební prostředí) pro vklad DOI. Nezapomeňte tuto možnost odstranit před reálným používání časopisu.</message>
 	<message key="plugins.importexport.crossref.issues.description">Poznámka: Pro účely exportu/registrace zde budou zohledněny pouze čísla (a nikoliv jejich články).</message>
-	<message key="plugins.importexport.crossref.status.submitted">Podáno</message>
+	<message key="plugins.importexport.crossref.status.submitted">Odesláno</message>
 	<message key="plugins.importexport.crossref.status.completed">Uloženo</message>
 	<message key="plugins.importexport.crossref.status.failed">Selhalo</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktivní</message>
@@ -57,8 +57,8 @@
 	<message key="plugins.importexport.crossref.action.checkStatus">Zkontrolovat status</message>
 	<message key="plugins.importexport.crossref.senderTask.name">Úloha automatické registrace CrossRef</message>
 	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[DOI se nepodařilo zaregistrovat. Přejděte prosím do nabídky Nástroje> Import/Export> Plugin pro export XML CrossRef, abyste viděli neúspěšná uložení.]]></message>
-	<message key="plugins.importexport.crossref.register.error.mdsError">Podání nebylo úspěšné! Registrační server DOI vrátil chybu: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Podání bylo úspěšné!</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Odeslání nebylo úspěšné! Registrační server DOI vrátil chybu: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Odeslání bylo úspěšné!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Žádné číslo neodpovídá tomuto ID čísla: "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">¨Žádný článek neodpovídá tomuto ID článku "{$articleId}".</message>
 </locale>

@@ -2,6 +2,7 @@
 ./build
 temp
 /files
+/plugins/paymethod/paypal/vendor/
 .htaccess
 .project
 .buildpath
@@ -9,4 +10,4 @@ temp
 .DS_Store
 node_modules
 js/build.js
-js/build.js.map
+styles/build.css

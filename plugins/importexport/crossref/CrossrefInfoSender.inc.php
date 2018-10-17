@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/CrossrefInfoSender.php
  *
- * Copyright (c) 2013-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossrefInfoSender
@@ -156,7 +156,7 @@ class CrossrefInfoSender extends ScheduledTask {
 		// export XML
 		$exportXml = $plugin->exportXML($objects, $filter, $journal);
 		// Write the XML to a file.
-		$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectFileNamePart, $journal, '.xml');
+		$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectsFileNamePart, $journal, '.xml');
 		$fileManager->writeFile($exportFileName, $exportXml);
 		// Deposit the XML file.
 		$result = $plugin->depositXML($objects, $journal, $exportFileName);
@@ -164,7 +164,7 @@ class CrossrefInfoSender extends ScheduledTask {
 			$this->_addLogEntry($result);
 		}
 		// Remove all temporary files.
-		$fileManager->deleteFile($exportFileName);
+		$fileManager->deleteByPath($exportFileName);
 	}
 
 	/**
@@ -184,4 +184,4 @@ class CrossrefInfoSender extends ScheduledTask {
 	}
 
 }
-?>
+

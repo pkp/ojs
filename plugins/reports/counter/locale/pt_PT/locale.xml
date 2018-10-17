@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT locale.
+  *
+  -->
+ 
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.reports.counter.description"><![CDATA[O plugin COUNTER permite armazenar e produzir relatórios compatíveis com a iniciativa <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>, sobre a actividade no portal.]]></message>
+	<message key="plugins.reports.counter">Estatísticas COUNTER</message>
+
+	<message key="plugins.reports.counter.1a.title">Relatório 1 (R3): Solicitações de texto completo de artigos por mês e revista</message>
+	<message key="plugins.reports.counter.1a.title1">Relatório 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Número de solicitações bem-sucedidas de texto completo de artigos por mês e revista (Ano {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Data da execução:</message>
+	<message key="plugins.reports.counter.1a.publisher">Editora</message>
+	<message key="plugins.reports.counter.1a.platform">Plataforma</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN (Impresso)</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">ISSN (Eletrónico)</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">Total YTD</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">HTML YTD</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">PDF YTD</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas as revistas</message>
+	<message key="plugins.reports.counter.legacyStats">Os links em baixo geram relatórios usando os dados do antigo plugin COUNTER. Se pretende gerar relatórios COUNTER usando o novo tipo de métrica do COUNTER do OJS, use os links em cima.</message>
+	<message key="plugins.reports.counter.release">Lançamento do COUNTER</message>
+	<message key="plugins.reports.counter.olderReports">Relatórios antigos do portal</message>
+	<message key="plugins.reports.counter.error.badParameters">Os parâmetros do relatório eram inválidos.</message>
+	<message key="plugins.reports.counter.error.badRequest">O pedido do relatório é inválido.</message>
+	<message key="plugins.reports.counter.error.noResults">Não foram encontrados resultados para este relatório.</message>
+	<message key="plugins.reports.counter.error.noXML">Os resultados não poderiam ser formatados como XML.</message>
+	<message key="plugins.reports.counter.1a.introduction">Estes links geram relatórios COUNTER com base na versão obsoleta 3.0. Este relatório abrange todas as revistas do portal. Use a versão mais recente em vez disso, quando possível.</message>
+	<message key="plugins.reports.counter.1a.name">Relatório COUNTER JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.xml">Versão XML</message>
+	<message key="plugins.reports.counter.1a.description">Relatório 1 (R3) COUNTER da Revista: Artigo com texto completo solicitados por mês e revista</message>
+	<message key="plugins.reports.counter.1a.anonymous">anónimo</message>
+	<message key="plugins.reports.counter.allCustomers">Todos os Clientes</message>
+</locale>

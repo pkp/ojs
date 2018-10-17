@@ -7,8 +7,8 @@
 /**
  * @file api/v1/issues/index.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup api_v1_issues
@@ -16,5 +16,5 @@
  *
  */
 
-import('api.v1.issues.IssuesHandler');
-return new IssuesHandler();
+import('api.v1.issues.IssueHandler');
+return new IssueHandler();

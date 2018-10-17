@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/urn/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -78,4 +78,5 @@
 	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} wurde zugewiesen.</message>
 	<!-- errors -->
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Die Prüfziffer fehlt.</message>
+
 </locale>

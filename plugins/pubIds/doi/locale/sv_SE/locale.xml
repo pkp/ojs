@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Detta plugin möjliggör tilldelning av Digital Object Identifiers för nummer, artiklar och publiceringsversioner i OJS.</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.description">Konfigurera DOI-pluginet för att kunna administrera och använda DOI:er i OJS:</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tidskriftens innehåll</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Välj de objekt som ska tilldelas DOI:er.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Välj de publiceringsobjekt som kommer att få Digital Object Identifiers (DOI:er) tilldelade sig:</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Nummer</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Artiklar</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Publiceringsversioner</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI-prefix</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[DOI-prefix delas ut av t.ex. <a href="http://www.crossref.org" target="_new">Crossref</a> och är i formatet 10.xxxx (t.ex. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI-prefixet är obligatoriskt och måste vara i formatet 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI-suffix</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Ett DOI-suffix kan ha vilket format som helst, men måste vara unikt bland de publiceringsobjekt som tilldelats samma DOI-prefix:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Använd mönstret som fyllts i nedan för att generera DOI-suffix. Använd %j för tidskriftens initialer, %v för volymn, %i för nummer, %Y för år, %a för OJS artikel-ID, %g för OJS publiceringsversions-ID, %f för OJS fil-ID, %p för sidnummer och %x för "Custom Identifier".</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Exempelvis skulle vol%viss%ipp%p kunna generera följande DOI: 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">för nummer</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">för artiklar</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">för publiceringsversioner</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Använd default-mönster.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i för nummer<br />%j.v%vi%i.%a för artiklar<br />%j.v%vi%i.%a.g%g för publiceringsversioner.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Fyll i ett individuellt DOI-suffix för varje publicerat objekt. Ytterligare fält för DOI finns på varje objekts metadata-sida.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Fyll i DOI-suffixmönstret för nummer.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Fyll i  DOI-suffixmönstret för artiklar.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Fyll i  DOI-suffixmönstret för publiceringsversioner.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Tilldela DOI igen</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Om du ändrar din DOI-konfiguration kommer DOI:er som redan tilldelats inte att ändras. När DOI-konfigurationen sparats, använd denna knapp för att rensa alla befintliga DOI:er så att de nya inställningarna träder i kraft för befintliga objekt.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Är du säker på att du vill ta bort alla befintliga DOI:er?</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Tilldela DOI:er</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Tilldela DOI:er för alla publicerade tidskrifters objekt som inte tilldelats DOI:er. Denna åtgärd kan inte användas tillsammans med individuella suffix. Om du har ändrat DOI-konfigurationen ovan, spara dina ändringar innan du påbörjar den här åtgärden. Tilldelning av DOI:er kan ta lång tid, beroende på antalet publicerade objekt i tidskriften.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Är du säker på att du vill tilldela DOI:er till alla publicerade objekt som inte har tilldelats DOI?</message>
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">nummer</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">artikel</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">publiceringsversion</message>
+	<message key="plugins.pubIds.doi.editor.customSuffixMissing">DOI kan inte tilldelas eftersom ett anpassat suffix saknas.</message>
+	<message key="plugins.pubIds.doi.editor.patternNotResolved">DOI kan inte tilldelas eftersom det innehåller ett ofullständigt mönster.</message>
+	<message key="plugins.pubIds.doi.editor.canBeAssigned">Det du ser är en förhandsgranskning av DOI:t. Kryssa i rutan och spara formuläret för att tilldela DOI:t.</message>
+	<message key="plugins.pubIds.doi.editor.assigned">DOI är tilldelat till {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Angivet DOI-suffix används redan för ett annat publicerat objekt. Fyll i ett unikt DOI-suffix för varje objekt.</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Rensa DOI</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Är du säker på att du vill ta bort befintlig DOI?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Rensa DOI:er för objekt i nummer</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Är du säker på att du vill ta bort befintliga DOI:er för objekt i nummer?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Använd följande för att rensa alla DOI:er för alla objekt (artiklar och publiceringsversioner) som ska publiceras i detta nummer.</message>
+	<!-- assignment form -->
+	<message key="plugins.pubIds.doi.editor.assignDoi">Tilldela DOI:t {$pubId} till {$pubObjectType}</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI:t kan inte tilldelas eftersom ett anpassat suffix saknas.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI:t {$pubId} kan inte tilldelas eftersom det innehåller ett ofullständigt mönster.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI:t {$pubId} har tilldelats.</message>
+ </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/editor/issues/issueGalleyForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to add/edit an issue galley.
@@ -38,8 +38,8 @@
 		{fbvFormSection title="submission.layout.galleyLabel" required="true"}
 			{fbvElement type="text" value=$label id="label" required="true"}
 		{/fbvFormSection}
-			{fbvFormSection title="submission.layout.publicGalleyId" required="true"}
-				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId" required="true"}
+			{fbvFormSection title="submission.layout.publicGalleyId"}
+				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId"}
 			{/fbvFormSection}
 		{fbvFormSection title="common.language" required="true"}
 			{fbvElement type="select" id="galleyLocale" from=$supportedLocales selected=$galleyLocale|default:$formLocale translate=false required="true"}

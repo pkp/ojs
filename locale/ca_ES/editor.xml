@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -31,7 +31,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Aquesta tramesa s’arxivarà després d’haver enviat el correu electrònic «Notifica a l’autor/a» o d’haver premut el botó «Omet el correu electrònic».</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Abans d’enviar la tramesa per fer la correcció d’originals, utilitzeu l’enllaç «Notifica a l’autor/a» per informar l’autor/a de la decisió i seleccioneu la versió que s’ha d’enviar.</message>
 	<message key="editor.notifyUsers">Notifica als usuaris/àries</message>
-	<message key="editor.notifyUsers.allUsers">Tots els usuaris/àries associats a aquesta revista ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allReaders">Tots els lectors/ores ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allAuthors">Tots els autors/ores publicats ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tots els subscriptors/ores individuals ({$count} usuaris/àries)</message>
@@ -114,72 +113,7 @@
 	<message key="editor.navigation.futureIssues">Propers números</message>
 	<message key="editor.navigation.issueArchive">Números anteriors</message>
 	<message key="editor.article.designateReviewVersion">Designa el fitxer original com a versió de revisió</message>
-	<message key="editor.article.uploadReviewVersion">Carrega una versió de revisió revisada</message>
-	<message key="editor.article.showSuppFile">Presenta el fitxer als revisors/ores</message>
-	<message key="editor.article.layoutAndProof">Maquetació i correcció</message>
-	<message key="editor.article.clear">Esborra</message>
-	<message key="editor.article.clearReviewer">Esborra el revisor/a</message>
-	<message key="editor.article.changeSection">Canvia la secció</message>
-	<message key="editor.article.setDueDate">Estableix la data de venciment</message>
-	<message key="editor.article.addReviewer">Afegeix un revisor/a</message>
-	<message key="editor.article.toReviewer">Per al revisor/a</message>
-	<message key="editor.article.notifyReviewer">Notifica al revisor/a</message>
-	<message key="editor.article.initiateReview">Inicia la revisió</message>
-	<message key="editor.article.cancelReview">Cancel·la la sol·licitud</message>
-	<message key="editor.article.clearReview">Esborra el revisor/a</message>
-	<message key="editor.article.enterRecommendation">Introdueix una recomanació</message>
-	<message key="editor.article.enterReviewerRecommendation">Introdueix una recomanació de revisor/a</message>
-	<message key="editor.article.recommendation">Recomanació</message>
-	<message key="editor.article.selectReviewer">Selecciona un revisor/a</message>
-	<message key="editor.article.replaceReviewer">Reemplaça el revisor/a</message>
-	<message key="editor.article.editorToEnter">L’editor/a ha d'introduir recomanacions o comentaris per al revisor/a</message>
-	<message key="editor.article.uploadReviewForReviewer">Carrega la revisió</message>
-	<message key="editor.article.peerReviewOptions">Opcions per a la revisió de persones expertes</message>
 	<message key="editor.article.decision">Decisió</message>
-	<message key="editor.article.noEditorSelected">No heu seleccionat cap editor/a.</message>
-	<message key="editor.article.recordDecision">Enregistra la decisió</message>
-	<message key="editor.article.cannotRecord">L’editor/a de secció encara no ha estat enregistrat/ada o bé no hi ha cap fitxer de revisió.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Els revisors/ores veuen la versió de l’autor/a</message>
-	<message key="editor.article.designateDueDate">Designa una data de venciment</message>
-	<message key="editor.article.designateDueDateDescription">Introduïu la data o les setmanes que falten fins a la nova data de venciment.</message>
-	<message key="editor.article.todaysDate">Data d’avui</message>
-	<message key="editor.article.requestedByDate">Sol·licitat per data</message>
-	<message key="editor.article.dueDateFormat">Format: DD-MM-AAAA</message>
-	<message key="editor.article.numberOfWeeks">Nombre de setmanes</message>
-	<message key="editor.article.selectCopyeditor">Assigna un corrector/a d’originals</message>
-	<message key="editor.article.replaceCopyeditor">Reemplaça el corrector/a d’originals</message>
-	<message key="editor.article.editorsCopyedit">Correcció de l’editor/a</message>
-	<message key="editor.article.showAuthor">Permet que l’autor/a visualitzi el fitxer</message>
-	<message key="editor.article.showCopyeditor">Mostra la versió al corrector/a d’originals</message>
-	<message key="editor.article.rateReviewer">Puntuació del revisor/a</message>
-	<message key="editor.article.reviewerRating.veryGood">5 alta</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 baixa</message>
-	<message key="editor.article.comments">Comentaris</message>
-	<message key="editor.article.commentsRequired">Heu d’emplenar el camp de comentaris.</message>
-	<message key="editor.article.saveRating">Desa la puntuació</message>
-	<message key="editor.article.noneSelected">No n’heu seleccionat cap</message>
-	<message key="editor.article.authorProofing">Correcció de proves per l’autor/a</message>
-	<message key="editor.article.archiveSubmission">Rebutja i arxiva la tramesa</message>
-	<message key="editor.article.restoreToQueue">Restaura a la llista activa</message>
-	<message key="editor.article.assignSectionEditor">Afegeix un editor/a de secció</message>
-	<message key="editor.article.assignEditor">Afegeix un editor/a</message>
-	<message key="editor.article.selectEditor">Selecciona {$roleName}</message>
-	<message key="editor.article.selectDecision">Selecciona una decisió</message>
-	<message key="editor.article.selectLayoutEditor">Selecciona un maquetista</message>
-	<message key="editor.article.replaceLayoutEditor">Reemplaça el maquetista</message>
-	<message key="editor.article.reviewSubmission">Revisa la tramesa</message>
-	<message key="editor.article.resubmitForReview">Torna a trametre el fitxer per a revisió</message>
-	<message key="editor.article.resubmitFileForPeerReview">Torna a trametre el fitxer seleccionat per a una revisió de persones expertes</message>
-	<message key="editor.article.sendToCopyedit">Envia el fitxer per fer la correcció d’originals</message>
-	<message key="editor.article.selectProofreader">Assigna un corrector/a de proves</message>
-	<message key="editor.article.replaceProofreader">Reemplaça el corrector/a de proves</message>
-	<message key="editor.article.authorComments">Comentaris de l’autor/a</message>
-	<message key="editor.article.proofreaderComments">Comentaris del corrector/a de proves</message>
-	<message key="editor.article.layoutEditorFinal">Versió final del maquetista</message>
-	<message key="editor.article.noDate">(data)</message>
 	<message key="editor.submissions.showBy">Mostra per</message>
 	<message key="editor.submissions.submitMMDD">Enviat el MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Assignacions actives</message>
@@ -194,20 +128,34 @@
 	<message key="editor.article.scheduleForPublication">Planifica per a la publicació a</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Encara no s’ha assignat</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">No s’ha pagat la quota de publicació. Per poder planificar l’element per a la publicació, notifiqueu a l’autor/a que ha de pagar la quota o fer l'exempció del pagament.</message>
-	<message key="editor.article.display">Visualització</message>
-	<message key="editor.article.hideTocAuthorDescription">Omet els noms dels autors/ores de la taula de continguts dels números</message>
-	<message key="editor.article.hideTocAuthorDefault">Per defecte</message>
-	<message key="editor.article.hideTocAuthorHide">Omet</message>
-	<message key="editor.article.hideTocAuthorShow">Mostra</message>
-	<message key="editor.article.cover">Portada</message>
 	<message key="editor.article.showCoverPage">Crea una portada per a aquest article amb els elements següents:</message>
-	<message key="editor.article.coverImageDisplay">Visualització</message>
 	<message key="editor.article.hideCoverPageToc">No mostris una miniatura de la imatge de la portada a la taula de continguts.</message>
 	<message key="editor.article.hideCoverPageAbstract">No mostris la imatge de la portada a la visualització del resum de l’article.</message>
-	<message key="editor.article.coverImage">Imatge per a la portada</message>
-	<message key="editor.article.coverImageInstructions">(Formats admesos: .gif, .jpg, .png)</message>
-	<message key="editor.article.uploaded">Carregat</message>
-	<message key="editor.article.removeCoverPage">Voleu eliminar la imatge de la portada?</message>
 	<message key="editor.article.remove">Elimina</message>
 	<message key="editor.issues.invalidAccessDate">La data d’accés no és vàlida.</message>
+	<message key="editor.issues.editIssue">Gestió del número: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Data de publicació</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">La imatge de portada que volíeu eliminar no coincideix amb la d'aquest número. Actualitzi la pàgina i torni-ho a provar.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Format d'imatge de portada no vàlid. Els formats acceptats són .gif, .jpg, o .png.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Segur que voleu establir aquest número com a l'actual?</message>
+	<message key="editor.issues.identifiers">Identificadors</message>
+	<message key="grid.action.addGalley">Afegir galerada</message>
+	<message key="grid.action.publish">Publicar número</message>
+	<message key="grid.action.addIssue">Crear número</message>
+	<message key="grid.action.viewIssue">Visualitzar</message>
+	<message key="grid.action.previewIssue">Previsualitzar</message>
+	<message key="grid.action.addIssueGalley">Crear galerada del número</message>
+	<message key="grid.action.setCurrentIssue">Establir número actual</message>
+	<message key="editor.article.schedulePublication">Programar per publicar</message>
+	<message key="editor.article.removeCoverImageFileNotFound">La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</message>
+	<message key="grid.action.removeArticle">Eliminar article del número</message>
+	<message key="editor.article.remove.confirm">Segur que voleu eliminar aquest article del número? L'article estarà disponible per programar-lo en un altre número.</message>
+	<message key="editor.issues.editIssueGalley">Editar galerada del número</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[El maquetador/a prepara aquests arxius per a cada galerada i aleshores els carrega al lloc <span class="pkp_help_title">Proves</span> adequat per a la seva correcció.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Seleccionar els arxius de galerada</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[El corrector transforma els borradors finals d'aquesta llista en versions revisades i les carrega a continuació a <span class="pkp_help_title">Correcció d'originals</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la llista de correcció de proves marcant la casella inferior "Incloure" i fent clic a "Cercar". D'aquesta manera es llistaran tots els arxius disponibles i es podran escollir per incloure'ls.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">L'identificador públic '{$publicIdentifier}' ja existeix per a un altre objecte del mateix tipus. Esculli identificadors únics per als objectes del mateix tipus dins la seva revista.</message>
+	<message key="editor.article.coverImage">Imatge per a la portada</message>
 </locale>

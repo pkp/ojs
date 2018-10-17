@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -36,8 +36,6 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klikkaa kuvaketta täyttääksesi arviointilomakkeen.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Täytä pakolliset kentät.</message>
-
 	<!-- review forms end -->
 
 	<!--
@@ -211,16 +209,13 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Julkaisun hallinnoija</message>
-	<message key="user.role.sectionEditor">Osastotoimittaja</message>
+	<message key="user.role.subEditor">Osastotoimittaja</message>
 	<message key="user.role.subscriptionManager">Tilaussihteeri</message>
 	<message key="user.role.managers">Julkaisun hallinnoijat</message>
 	<message key="user.role.subEditors">Osastotoimittajat</message>
 	<message key="user.role.subscriptionManagers">Tilaussihteerit</message>
 	<message key="user.role.journalAssistant">Avustaja</message>
 	<message key="user.role.journalAssistants">Avustajat</message>
-	<message key="user.role.guestEditor">Vieraileva toimittaja</message>
-	<message key="user.role.guestEditors">Vierailevat toimittajat</message>
-
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Numero</message>
 	<message key="issue.issues">Numerot</message>
@@ -368,7 +363,6 @@
 	<message key="plugins.categories.viewableFiles">Artikkelien julkaistavien tiedostojen lisäosat</message>
 	<message key="plugins.categories.viewableFiles.description">Artikkelien julkaistavien tiedostojen lisäosat tukevat sitä, että julkaistavia tiedostoja voidaan näyttää eri tiedostomuodoissa.</message>
 	<message key="plugins.categories.auth.description">Käyttöoikeus-lisäosa sallii Open Journal Systemsin siirtää käyttäjän todentamiseen liittyviä tehtäviä muiden järjestelmien, kuten LDAP-palvelimien, hoidettavaksi.</message>
-	<message key="plugins.categories.citationFormats.description">Viittausmuotolisäosat tarjoavat käyttäjille erilaisia malleja viittausten käyttöön.</message>
 	<message key="plugins.categories.generic.description">Yleisiä lisäosia käytetään laajentamaan Open Journal Systemsiä sellaisilla eri tavoilla, joita ei tueta muissa lisäosakategorioissa.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems tukee <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) -järjestelmää varmistaakseen julkaisulle turvallisen ja pysyvän arkiston. LOCKSS on Stanford University Libraryssa kehitetty avoimen lähdekoodin ohjelmisto, joka antaa kirjastoille mahdollisuuden valittujen verkkojulkaisujen säilyttämiseen, keräten säännöllisesti rekisteröityjen julkaisujen verkkosivustojen äskettäin julkaistua sisältöä ja arkistoiden sen. Jokainen arkisto tarkistetaan toistuvasti muiden kirjastojen välimuistien avulla. Mikäli sisältö on vioittunut tai kadonnut, se voidaan palauttaa muiden välimuistien tai itse julkaisun avulla.
@@ -396,7 +390,6 @@ Tässä julkaisussa julkaisevat kirjoittajat hyväksyvät seuraavat ehdot:
 	 <li>Kirjoittajat voivat tehdä erillisiä, muita sopimuksia työn tässä julkaisussa julkaistun versio levittämisestä ilman yksityisoikeutta (esim. lähettää sen julkaisuarkistoon tai julkaista sen kirjassa) vain, jos työn ensijulkaisu tässä julkaisussa mainitaan.</li>
 	 <li>Kirjoittajilla on lupa lähettää työnsä verkkoon (esim. julkaisuarkistoihin tai omille verkkosivuilleen) sekä ennen käsikirjoituksen lähetysprosessia että sen aikana. Kirjoittajia myös kannustetaan toimimaan näin, koska se voi johtaa hyödyllisiin kanssakäymisiin sekä siihen, että julkaistuun työhön viitataan jo aikaisemmassa vaiheessa ja enemmän. (Lisää <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">avoimen saatavuuden vaikutuksesta</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Ota viittaustenhallintatyökalu käyttöön</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Vaiheet: Käsikirjoitusjono &gt; Käsikirjoituksen arviointi &gt; Käsikirjoituksen toimittaminen&gt; Sisällysluettelo.<br /><br />
@@ -482,12 +475,6 @@ Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nimi linkittyy arvioijan profiiliin.<br/>
-Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
-”Viikot” viittaa keskimääräisen aikaan, jonka kuluessa arviointi tulee suorittaa.<br/>
-”Viimeisin” kertoo viimeisimmän hyväksytyn arvioinnin päivämäärän.<br/>
-”Aktiiviset” kertoo kuinka monta arviointia on käsiteltävänä tai parhaillaan käynnissä.]]></message>
-
 
 
 
@@ -576,12 +563,9 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="reviewer.article.selectRecommendation.byEditor">Aseta tai muuta arvioijan suositusta.</message>
 	<message key="reviewer.article.mustSelectDecision">Yhtään suositusta ei valittu. Et voi lähettää arviointia, ennen kuin valitset suosituksen.</message>
 	<message key="reviewer.article.confirmDecision">Kun olet tallentanut päätöksesi, et voi enää tehdä muutoksia arviointiisi. Haluatko varmasti jatkaa?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sokkoarvioinnin varmistaminen</message>
-
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Teknisesti toimitettava tiedosto</message>
 	<message key="copyeditor.article.copyeditorFile">Teknisen toimittajan tiedosto</message>
-	<message key="copyeditor.article.uploadedFile">Ladattu tiedosto</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Teknisen toimittajan tiedosto</message>
 
 	<!-- Proofreader -->
@@ -701,8 +685,8 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="user.subscriptions.purchaseNewSubscription">Osta uusi tilaus</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Osta yksittäistilaus</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Osta instituutiotilaus</message>
-	<message key="user.subscriptions.expires">Päättyy</message>
-	<message key="user.subscriptions.expired">Päättynyt</message>
+	<message key="user.subscriptions.expires">Päättyy: {$date}</message>
+	<message key="user.subscriptions.expired">Päättynyt: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Näytä tarjolla olevat tilausvaihtoehdot</message>
 	<message key="user.subscriptions.form.typeId">Tilausvaihtoehto</message>
 	<message key="user.subscriptions.form.membership">Jäsenyys</message>
@@ -830,6 +814,7 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="donations.thankYou">Kiitos</message>
 	<message key="donations.thankYouMessage">Kiitos lahjoituksesta. Arvostamme sitä suuresti.</message>
 
+	<!-- Gifts -->
 	<!-- Payments -->
 	<message key="payment.loginRequired">Voit maksaa vain sisäänkirjautuneena.</message>
 	<message key="payment.loginRequired.forArticle">Tähän kohteeseen pääsy edellyttää tilausta tai artikkelin ostoa. Vahvistaaksesi tilauksen, päästäksesi edelliseen tilaukseen tai ostaaksesi artikkelin sinun on kirjauduttava julkaisuun.</message>
@@ -852,7 +837,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="payment.type.purchaseIssue">Osta numero -maksu</message>
 	<message key="payment.type.subscription">Tilausmaksu</message>
 	<message key="payment.type.donation">Lahjoitukset</message>
-
 	<message key="payment.donation.makeDonation">Tee lahjoitus</message>
 
 	<message key="payment.submission.paySubmission">Maksa käsikirjoituksen lähetysmaksu</message>
@@ -1041,8 +1025,6 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Anna sähköpostiosoitteesi saadaksesi välittömästi ilmoituksen aina, kun julkaisuun lisätään tärkeää uutta sisältöä.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Tältä sivulta näet tähän julkaisuun liittyvät tärkeät päivitykset, kuten uuden numeron julkaisemisen tai tiedotteita. Voit tilata nämä ilmoitukset RSS-syötteinä (klikkaamalla oikealla olevia kuvia) tai <a href="{$emailUrl}">sähköpostiisi.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Uusi artikkeli, "{$title}", on lähetetty.</message>
 	<message key="notification.type.editing">Toimittamiseen liittyvät tapahtumat</message>
@@ -1103,4 +1085,18 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 
 	<message key="editor.issues.backIssues">Vanhat numerot</message>
 	<message key="editor.issues.futureIssues">Tulevat numerot</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Ole hyvä ja täytä kaikki pakolliset kentät.</message>
+	<message key="navigation.subscriptions">Tilaukset</message>
+	<message key="notification.type.publicationScheduled">Tämä käsikirjoitus on ajoitettu julkaistavaksi.</message>
+	<message key="log.editor.recommendation">{$editorName} tallensi päätöksen ({$decision}) käsikirjoitukselle {$submissionId}.</message>
+	<message key="subscriptions.status.noSubscription">Sinulla ei ole aktiivista tilausta.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico on voittoa tavoittelematon palvelu, joka tarjoaa digitaalisten julkaisujen pitkäaikaissäilytystä. Jos julkaisusi on solminut sopimuksen Porticon kanssa, ota se käyttöön täältä:</message>
+	<message key="payment.type.publication.required">Julkaisumaksu tulee maksettavaksi.</message>
+	<message key="payment.requestPublicationFee">Pyydä julkaisumaksua ({$feeAmount})</message>
+	<message key="payment.notFound">Maksua on pyydetty, mutta pyyntö on vanhentunut. Ota yhteyttä julkaisuun.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} on nopeuttanut käsikirjoituksen {$submissionId} käsittelyä.</message>
+	<message key="user.reviewerPrompt.optin">Kyllä, minulle voi lähettää vertaisarviointeja koskevia pyyntöjä tästä julkaisusta.</message>
+	<message key="user.register.form.emailConsentAllContexts">Kyllä, haluan uusia numeroita ja tiedotteita koskevia ilmoituksia kaikista julkaisuista, joihin olen rekisteröitynyt.</message>
+	<message key="notification.type.public">Julkiset tiedotteet</message>
 </locale>

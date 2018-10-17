@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -54,7 +54,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Beli Artikel</message>
 	<message key="manager.payment.options.purchaseIssueFee">Beli Terbitan</message>
 	<message key="manager.payment.options.text">Deskripsi Metode Pembayaran</message> 
-	<message key="manager.payment.options.waiverPolicy">Kebijakan Dispensasi Biaya</message> 
 	<message key="manager.payment.paymentId">ID Pembayaran</message>	
 	<message key="manager.payment.paymentMethod">Metode Pembayaran</message> 
 	<message key="manager.payment.paymentMethod.description">Anda bisa mengkonfigurasikan Plugin Metode Pembayaran berikut ini dari layar ini.</message> 
@@ -109,7 +108,8 @@
 	<message key="manager.sections.wordCountInstructions">Batasi jumlah kata abstrak untuk bagian ini (0 jika tidak ada batasan):</message>
 	<message key="manager.setup">Pengaturan Jurnal</message>
 	<message key="manager.setup.masthead">Tajuk</message>
-	<message key="manager.setup.masthead.description">Sebutkan editor, direktur pelaksana, dan pihak-pihak lain yang terkait dalam struktur organisasi pelaksana jurnal.</message>
+	<message key="manager.setup.editorialTeam">Dewan Editor</message>
+	<message key="manager.setup.editorialTeam.description">Sebutkan editor, direktur pelaksana, dan pihak-pihak lain yang terkait dalam struktur organisasi pelaksana jurnal.</message>
 	<message key="manager.setup.homepageContent">Konten Beranda Jurnal</message>
 	<message key="manager.setup.homepageContentDescription">Beranda jurnal secara default terdiri dari tautan navigasi. Konten lainnya dapat ditambahkan dengan satu atau semua opsi berikut, yang akan muncul sesuai urutan.</message>
 	<message key="manager.setup.layout">Layout Jurnal</message>
@@ -291,7 +291,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Catatan:</strong>  email undangan ke Reviewer akan berisi URL yang akan membawa Reviewer yang diundang secara langsung ke halaman review untuk naskah (untuk akses ke halaman lain mengharuskan mereka untuk login). Untuk alasan keamanan dengan pilihan ini, editor tidak bisa memodifikasi alamat email atau menambahkan CCs atau BCCs sebelum mengirimkan undangan kepada Reviewer.]]></message> 
 	<message key="manager.setup.reviewOptions.reviewerRatings">Rating Review</message> 
 	<message key="manager.setup.reviewOptions.reviewerReminders">Pengingat Review</message> 
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Menyediakan tautan ke <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Memastikan Reviewer Anonim</a> di halaman di mana penulis dan Reviewer mengunggah file.]]></message> 
 	<message key="manager.setup.reviewPolicy">Kebijakan Review</message> 
 	<message key="manager.setup.searchEngineIndexing">Pengindeksan Mesin Pencari</message> 
 	<message key="manager.setup.searchEngineIndexingDescription">Untuk membantu pengguna dalam menemukan jurnal pada search engine, masukkan deskripsi singkat tentang kami dan kata kunci yang relevan (dipisahkan oleh titik koma).</message>	

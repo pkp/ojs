@@ -4,8 +4,8 @@
 <!--
   * @file plugins/generic/openAIRE/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OpenAIRE plugin localization strings for the pt_PT (Português (Portugal)) locale.
@@ -16,4 +16,5 @@
 	<message key="plugins.generic.openAIRE.description">O plugin OpenAIRE inclui o elemento projectID nos metadados do artigo e estende a interface OAI-PMH para se adequar às Orientações do OpenAIRE 1.1, auxiliando as revistas que usam o OJS a serem compatíveis com o OpenAIRE.</message>
 	<message key="plugins.generic.openAIRE.projectID">OpenAIRE Número de Projeto (Project ID)</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Indique um número de projeto válido (6 números)</message>
+	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Caso o trabalho aqui apresentado tenha resultado de uma iniciativa Europeia de acordo com a plataforma de metadados <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a>, por favor inclua o identificador de projeto (ProjectID), um número de seis dígitos que corresponde ao identificador do Contrato de Financiamento.]]></message>
 </locale>

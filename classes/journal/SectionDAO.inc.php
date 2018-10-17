@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/SectionDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionDAO
@@ -309,11 +309,11 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $journalId int Journal ID
 	 * @return array editorId => array(sections they edit)
 	 */
-	function &getEditorSections($journalId) {
+	function getEditorSections($journalId) {
 		$returner = array();
 
 		$result = $this->retrieve(
-			'SELECT s.*, se.user_id AS editor_id FROM section_editors se, sections s WHERE se.section_id = s.section_id AND s.journal_id = se.journal_id AND s.journal_id = ?',
+			'SELECT s.*, se.user_id AS editor_id FROM section_editors se, sections s WHERE se.section_id = s.section_id AND s.journal_id = se.context_id AND s.journal_id = ?',
 			(int) $journalId
 		);
 
@@ -610,4 +610,4 @@ class SectionDAO extends PKPSectionDAO {
 
 }
 
-?>
+

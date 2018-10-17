@@ -3,8 +3,8 @@
 /**
  * @file tests/classes/search/ArticleSearchTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchTest
@@ -58,8 +58,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$this->registerMockJournalDAO();
 		$this->registerMockSectionDAO();
 
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		if (is_null($request->getRouter())) {
 			$router = new PKPRouter();
 			$request->setRouter($router);
@@ -92,8 +91,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$keywords = array(null => 'test');
 		$articleSearch = new ArticleSearch();
 		$error = '';
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		$searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
 
 		// Test whether the result from the mocked DAOs is being returned.
@@ -136,8 +134,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$testToDate = date('Y-m-d H:i:s', strtotime('2012-03-15 18:30:00'));
 		$error = '';
 
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 
 		foreach($testCases as $testCase) {
 			// Test a simple search with the simulated callback.
@@ -348,4 +345,4 @@ class ArticleSearchTest extends PKPTestCase {
 		DAORegistry::registerDAO('SectionDAO', $sectionDAO);
 	}
 }
-?>
+

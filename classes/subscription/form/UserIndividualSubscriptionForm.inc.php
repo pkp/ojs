@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/UserIndividualSubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserIndividualSubscriptionForm
@@ -35,7 +35,7 @@ class UserIndividualSubscriptionForm extends Form {
 	 * @param $subscriptionId int
 	 */
 	function __construct($request, $userId = null, $subscriptionId = null) {
-		parent::__construct('subscription/userIndividualSubscriptionForm.tpl');
+		parent::__construct('frontend/pages/purchaseIndividualSubscription.tpl');
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
@@ -44,7 +44,7 @@ class UserIndividualSubscriptionForm extends Form {
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
 		if (isset($subscriptionId)) {
-			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); 
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
 				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
@@ -55,16 +55,23 @@ class UserIndividualSubscriptionForm extends Form {
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, false, false);
-		$this->subscriptionTypes = $subscriptionTypes->toArray();
+		$this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
 
 		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function($typeId) use ($journalId) {
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+			return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;
+		}));
 
 		// Ensure that user does not already have a subscription for this journal
 		if (!isset($subscriptionId)) {
 			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'), array($journalId), true));
 		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = DAORegistry::getDAO(\'IndividualSubscriptionDAO\'); $checkId = $subscriptionDao->getByUserId($userId, $journalId); return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;'), array($journalId, $subscriptionId)));
+			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function($userId) use ($journalId, $subscriptionId) {
+				$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
+				return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;
+			}));
 		}
 
 		$this->addCheck(new FormValidatorPost($this));
@@ -86,38 +93,40 @@ class UserIndividualSubscriptionForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
-		$templateMgr = TemplateManager::getManager();
-		if (isset($this->subscription)) {
-			$subscriptionId = $this->subscription->getId();
-		} else {
-			$subscriptionId = null;
+	function display($request = null, $template = null) {
+		if (is_null($request)) {
+			$request = $this->request;
 		}
-
-		$templateMgr->assign('subscriptionId', $subscriptionId);
-		$templateMgr->assign('subscriptionTypes', $this->subscriptionTypes);
-		parent::display();
+		$templateMgr = TemplateManager::getManager($this->request);
+		$templateMgr->assign(array(
+			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
+			'subscriptionTypes' => array_map(
+				function($subscriptionType) {return $subscriptionType->getLocalizedName() . ' (' . $subscriptionType->getCost() . ' ' . $subscriptionType->getCurrencyCodeAlpha() . ')';},
+				$this->subscriptionTypes
+			),
+		));
+		parent::display($request, $template);
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeId', 'membership')); 
+		$this->readUserVars(array('typeId', 'membership'));
 
 		// If subscription type requires it, membership is provided
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
-		if ($needMembership) { 
+		if ($needMembership) {
 			$this->addCheck(new FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
 		}
 	}
 
 	/**
-	 * Create/update individual subscription. 
+	 * Create/update individual subscription.
 	 */
 	function execute() {
 		$journal = $this->request->getJournal();
@@ -142,10 +151,9 @@ class UserIndividualSubscriptionForm extends Form {
 			$subscription = $this->subscription;
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($this->request);
+		$paymentManager = Application::getPaymentManager($journal);
 		$paymentPlugin = $paymentManager->getPaymentPlugin();
-		
+
 		if ($paymentPlugin->getName() == 'ManualPayment') {
 			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
 		} else {
@@ -163,11 +171,10 @@ class UserIndividualSubscriptionForm extends Form {
 			$individualSubscriptionDao->insertObject($subscription);
 		}
 
-		$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
-		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		$queuedPayment = $paymentManager->createQueuedPayment($this->request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$paymentManager->queuePayment($queuedPayment);
 
-		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+		$paymentForm->display($this->request);
 	}
 }
-
-?>

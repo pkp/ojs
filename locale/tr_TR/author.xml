@@ -4,12 +4,11 @@
 <!--
   * locale/tr_TR/author.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
-  *
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
@@ -45,12 +44,8 @@
 	<message key="author.submissions.confirmDelete">Tamamlanmamış bu gönderiyi silmek istediğinizden emin misiniz?</message>
 	<message key="author.submissions.viewStatus">Durumu Görüntüle</message>
 	<message key="author.submissions.noSubmissions">Gönderi yok.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Problem mi yaşıyorsunuz?  Yardım için <a href="mailto:{$supportEmail}">{$supportName}</a> adlı yetkiliye başvurabilirsiniz. ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Problem mi yaşıyorsunuz? Yardım için <a href="mailto:{$supportEmail}">{$supportName}</a> adlı yetkiliye başvurabilirsiniz.]]></message>
 	<message key="author.submit.journalSection">Dergi Bölümü</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Bu gönderi için uygun bir bölüm seçin (Daha fazla bilgi için dergi <a href="{$aboutUrl}" target="_new">Hakkında</a> başlığı altındaki Bölümler ve Politikalara bakınız).]]></message>
-	<message key="submission.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
-	<message key="author.submit.submissionChecklist">Başvuru Kontrol Listesi</message>
 	<message key="author.submit.verifyChecklist">Devam etmeden önce başvuru kontrol listesindeki her öğenin tamalanmış olduğundan emin olmalısınız.</message>
 	<message key="author.submit.copyrightNoticeAgree">Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devam etmeden önce telif hakkı ile ilgili koşulları kabul etmeniz gerekmektedir.</message>
@@ -119,4 +114,5 @@
 	<message key="author.article.authorRevisedFile">Yazar Dosyası</message>
 	<message key="author.submit.authorSubmitLoginMessage">Bu dergiye gönderi yapabilmek için bir üyelik gerekiyor. Üyeler, gönderiler ve gönderilerle ilgili durum değişikliklerinde editörlerin değişiklikleri takip etmesini ve yazarlarla iletişim kurmasını sağlar.</message>
 	<message key="author.submit.qualifyForWaiver">Bu yazı için Makale Gönderi Ücreti vazgeçileceğini lütfen göz önüde buludurun.</message>
+	<message key="author.submit.nextSteps">Sonraki Adım</message>
 </locale>

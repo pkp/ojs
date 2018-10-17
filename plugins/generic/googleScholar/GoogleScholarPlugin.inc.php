@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/googleScholar/GoogleScholarPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GoogleScholarPlugin
@@ -17,14 +17,11 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class GoogleScholarPlugin extends GenericPlugin {
 	/**
-	 * Register the plugin, if enabled.
-	 * @param $category string
-	 * @param $path string
-	 * @return boolean
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
+			if ($this->getEnabled($mainContextId)) {
 				HookRegistry::register('ArticleHandler::view',array(&$this, 'articleView'));
 			}
 			return true;
@@ -56,13 +53,17 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addHeader('googleScholarRevision', '<meta name="gs_meta_revision" content="1.1"/>');
 		$templateMgr->addHeader('googleScholarJournalTitle', '<meta name="citation_journal_title" content="' . htmlspecialchars($journal->getName($journal->getPrimaryLocale())) . '"/>');
+
+		if ($abbreviation = $journal->getSetting('abbreviation', $journal->getPrimaryLocale()) || $abbreviation = $journal->getSetting('acronym', $journal->getPrimaryLocale())) {
+			$templateMgr->addHeader('googleScholarJournalAbbrev', '<meta name="citation_journal_abbrev" content="' . htmlspecialchars($abbreviation) . '"/>');
+		}
+
 		if (($issn = $journal->getSetting('onlineIssn')) || ($issn = $journal->getSetting('printIssn')) || ($issn = $journal->getSetting('issn'))) {
 			$templateMgr->addHeader('googleScholarIssn', '<meta name="citation_issn" content="' . htmlspecialchars($issn) . '"/> ');
-
 		}
 
 		foreach ($article->getAuthors() as $i => $author) {
-			$templateMgr->addHeader('googleScholarAuthor' . $i, '<meta name="citation_author" content="' . htmlspecialchars($author->getFirstName()) . (($middleName = htmlspecialchars($author->getMiddleName()))?" $middleName":'') . ' ' . htmlspecialchars($author->getLastName()) . '"/>');
+			$templateMgr->addHeader('googleScholarAuthor' . $i, '<meta name="citation_author" content="' . htmlspecialchars($author->getFullName(false)) .'"/>');
 			if ($affiliation = htmlspecialchars($author->getAffiliation($article->getLocale()))) {
 				$templateMgr->addHeader('googleScholarAuthor' . $i . 'Affiliation', '<meta name="citation_author_institution" content="' . $affiliation . '"/>');
 			}
@@ -88,10 +89,9 @@ class GoogleScholarPlugin extends GenericPlugin {
 			if ($endPage = $article->getEndingPage()) $templateMgr->addHeader('googleScholarEndPage', '<meta name="citation_lastpage" content="' . htmlspecialchars($endPage) . '"/>');
 		}
 
-		foreach((array) $templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
+		foreach((array) $templateMgr->getTemplateVars('pubIdPlugins') as $pubIdPlugin) {
 			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('googleScholarPubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="citation_' . htmlspecialchars(strtolower($pubIdPlugin->getPubIdDisplayType())) . '" content="' . htmlspecialchars($pubId) . '"/>');
-
 			}
 		}
 
@@ -137,4 +137,4 @@ class GoogleScholarPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

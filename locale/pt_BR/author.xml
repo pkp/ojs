@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/author.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -14,7 +14,7 @@
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="author.submit">Nova submissão</message>
 	<message key="author.track">Submissões ativas</message>
-	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política  de Conflito de Interesses</a>]]></message>
+	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Política de Conflito de Interesses</a>]]></message>
 	<message key="author.submit.submitArticle">Submeter artigo</message>
 	<message key="author.submit.stepsToSubmit">5 Passos para a submissão</message>
 	<message key="author.submit.startHereTitle">Iniciar nova submissão</message>
@@ -27,7 +27,7 @@
 	<message key="author.submit.step5">Passo 5. Confirmação da submissão</message>
 	<message key="author.submit.start">Início</message>
 	<message key="author.submit.upload">Transferência do manuscrito</message>
-	<message key="author.submit.metadata">Inclusão de metadados</message>
+	<message key="author.submit.metadata">Dados da Submissão </message>
 	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
 	<message key="author.submit.confirmation">Confirmação</message>
 	<message key="submission.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor.</message>

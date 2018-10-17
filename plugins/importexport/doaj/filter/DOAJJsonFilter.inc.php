@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJJsonFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJJsonFilter
@@ -123,7 +123,7 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 		$article['bibjson']['author'] = array();
 		$articleAuthors = $pubObject->getAuthors();
 		foreach ($articleAuthors as $articleAuthor) {
-			$author = array('name' => $articleAuthor->getFullName());
+			$author = array('name' => $articleAuthor->getFullName(false));
 			$email = $articleAuthor->getEmail();
 			if (!empty($email)) $author['email'] = $email;
 			$affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());
@@ -164,4 +164,4 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 
 }
 
-?>
+

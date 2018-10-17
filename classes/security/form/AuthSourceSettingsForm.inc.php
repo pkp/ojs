@@ -3,8 +3,8 @@
 /**
  * @file classes/security/form/AuthSourceSettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthSourceSettingsForm
@@ -36,9 +36,9 @@ class AuthSourceSettingsForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('authId', $this->authId);
 
@@ -47,7 +47,7 @@ class AuthSourceSettingsForm extends Form {
 			$templateMgr->assign('pluginTemplate', $this->plugin->getSettingsTemplate());
 		}
 
-		parent::display();
+		parent::display($request, $template);
 	}
 
 	/**
@@ -89,4 +89,4 @@ class AuthSourceSettingsForm extends Form {
 	}
 }
 
-?>
+

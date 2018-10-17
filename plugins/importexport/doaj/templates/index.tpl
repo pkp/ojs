@@ -1,8 +1,8 @@
 {**
  * @file plugins/importexport/doaj/index.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -41,7 +41,7 @@
 			</div>
 		{/if}
 		<p><a href="http://www.doaj.org/application/new" target="_blank">{translate key="plugins.importexport.doaj.export.contact"}</a></p>
-		{url|assign:doajSettingsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="DOAJExportPlugin" category="importexport" verb="index" escape=false}
+		{capture assign=doajSettingsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="DOAJExportPlugin" category="importexport" verb="index" escape=false}{/capture}
 		{load_url_in_div id="doajSettingsGridContainer" url=$doajSettingsGridUrl}
 	</div>
 	{if $allowExport}
@@ -56,7 +56,7 @@
 				{csrf}
 				<input type="hidden" name="tab" value="exportSubmissions-tab" />
 				{fbvFormArea id="submissionsXmlForm"}
-					{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.ExportPublishedSubmissionsListGridHandler" op="fetchGrid" plugin="doaj" category="importexport" escape=false}
+					{capture assign=submissionsListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.ExportPublishedSubmissionsListGridHandler" op="fetchGrid" plugin="doaj" category="importexport" escape=false}{/capture}
 					{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 					{fbvFormSection list="true"}
 						{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}

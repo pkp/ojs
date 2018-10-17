@@ -1,62 +1,107 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
+var isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: [
-      './js/load.js',
+    'babel-polyfill',
+    './lib/ui-library/src/styles/_global.less',
+    './js/load.js'
   ],
   output: {
-    path: path.resolve(__dirname, 'js'),
-    filename: 'build.js'
+    path: path.resolve(__dirname),
+    filename: 'js/build.js'
   },
   module: {
     rules: [
       {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+            },
+            {
+              loader: 'less-loader',
+            }
+          ],
+          fallback: 'style-loader',
+        })
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
+        options: {
+          loaders: {
+            less: ExtractTextPlugin.extract({
+              use: [
+                {
+                  loader: 'css-loader',
+                },
+                {
+                  loader: 'less-loader',
+                }
+              ],
+              fallback: 'vue-style-loader'
+            })
+          }
+        }
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      }
     ]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.common.js',
+      '@': path.resolve(__dirname, 'lib/ui-library/src')
     }
   },
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
-}
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
+  devtool: isProduction ? false : '#eval-source-map',
+  plugins: [
+    // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: isProduction ? '"production"' : '"development"'
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
       compress: {
-        warnings: false
+        warnings: isProduction ? false : true
+      },
+      sourceMap: isProduction ? false : true
+    }),
+    // extract css into its own file
+    new ExtractTextPlugin({
+      filename: 'styles/build.css'
+    }),
+    // Compress extracted CSS. We are using this plugin so that possible
+    // duplicated CSS from different components can be deduped.
+    new OptimizeCSSPlugin({
+      cssProcessorOptions: {
+        safe: true
       }
     }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
-}
+  ],
+};

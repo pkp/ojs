@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
@@ -30,10 +30,20 @@ class IssueForm extends Form {
 	 */
 	function __construct($issue = null) {
 		parent::__construct('controllers/grid/issues/form/issueForm.tpl');
-		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', create_function('$showVolume, $form', 'return !$showVolume || $form->getData(\'volume\') ? true : false;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'showNumber', 'optional', 'editor.issues.numberRequired', create_function('$showNumber, $form', 'return !$showNumber || $form->getData(\'number\') ? true : false;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', create_function('$showYear, $form', 'return !$showYear || $form->getData(\'year\') ? true : false;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', create_function('$showTitle, $form', 'return !$showTitle || implode(\'\', $form->getData(\'title\'))!=\'\' ? true : false;'), array($this)));
+
+		$form = $this;
+		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', function($showVolume) use ($form) {
+			return !$showVolume || $form->getData('volume') ? true : false;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'showNumber', 'optional', 'editor.issues.numberRequired', function($showNumber) use ($form) {
+			return !$showNumber || $form->getData('number') ? true : false;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', function($showYear) use ($form) {
+			return !$showYear || $form->getData('year') ? true : false;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', function($showTitle) use ($form) {
+			return !$showTitle || implode('', $form->getData('title'))!='' ? true : false;
+		}));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 		$this->issue = $issue;
@@ -87,8 +97,9 @@ class IssueForm extends Form {
 	/**
 	 * @copydoc Form::validate()
 	 */
-	function validate($request) {
+	function validate($callHooks = true) {
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$request = Application::getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
@@ -100,13 +111,13 @@ class IssueForm extends Form {
 			}
 		}
 
-		return parent::validate();
+		return parent::validate($callHooks);
 	}
 
 	/**
 	 * @copydoc Form::initData()
 	 */
-	function initData($request) {
+	function initData() {
 		if (isset($this->issue)) {
 			$locale = AppLocale::getLocale();
 			$this->_data = array(
@@ -153,15 +164,17 @@ class IssueForm extends Form {
 			'datePublished',
 		));
 
-		$this->addCheck(new FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
-
+		$form = $this;
+		$this->addCheck(new FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', function() use ($form) {
+			return $form->getData('showVolume') || $form->getData('showNumber') || $form->getData('showYear') || $form->getData('showTitle');
+		}));
 	}
 
 	/**
 	 * Save issue settings.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -232,4 +245,4 @@ class IssueForm extends Form {
 	}
 }
 
-?>
+

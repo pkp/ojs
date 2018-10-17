@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/LucenePlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LucenePlugin
@@ -96,16 +96,13 @@ class LucenePlugin extends GenericPlugin {
 	// Implement template methods from Plugin.
 	//
 	/**
-	 * @see Plugin::register()
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 
-		if ($success && $this->getEnabled()) {
-			// This plug-in requires PHP 5.0.
-			if (!checkPhpVersion('5.0.0')) return false;
-
+		if ($success && $this->getEnabled($mainContextId)) {
 			// Register callbacks (application-level).
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
@@ -204,13 +201,6 @@ class LucenePlugin extends GenericPlugin {
 		return true;
 	}
 
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
 	//
 	// Implement template methods from GenericPlugin.
 	//
@@ -224,7 +214,7 @@ class LucenePlugin extends GenericPlugin {
 			case 'settings':
 				// Prepare the template manager.
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
 
 				// Instantiate an embedded server instance.
 				$this->import('classes.EmbeddedServer');
@@ -359,7 +349,7 @@ class LucenePlugin extends GenericPlugin {
 		if (!in_array($op, $publicOps)) return;
 
 		// Get the journal object from the context (optimized).
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request); /* @var $journal Journal */
 		if ($op == 'usageMetricBoost' && $journal != null) return;
@@ -749,7 +739,7 @@ class LucenePlugin extends GenericPlugin {
 		if ($template != 'search/search.tpl') return false;
 
 		// Get the request.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Assign our private stylesheet.
 		$templateMgr = $params[0];
@@ -777,7 +767,7 @@ class LucenePlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 		$smarty->assign($params[0]);
-		$output .= $smarty->fetch($this->getTemplatePath() . 'filterInput.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('filterInput.tpl'));
 		return false;
 	}
 
@@ -794,7 +784,7 @@ class LucenePlugin extends GenericPlugin {
 			'spellingSuggestionUrlParams',
 			array($this->_spellingSuggestionField => $this->_spellingSuggestion)
 		);
-		$output .= $smarty->fetch($this->getTemplatePath() . 'preResults.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('preResults.tpl'));
 		return false;
 	}
 
@@ -845,7 +835,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// Render the template.
 		$output =& $params[2];
-		$output .= $smarty->fetch($this->getTemplatePath() . 'additionalSectionMetadata.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('additionalSectionMetadata.tpl'));
 		return false;
 	}
 
@@ -865,7 +855,7 @@ class LucenePlugin extends GenericPlugin {
 		// Check error conditions:
 		// - the "ranking/sorting-by-metric" feature is not enabled
 		// - a "main metric" is not configured
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (!($this->getSetting(0, 'rankingByMetric') || $this->getSetting(0, 'sortingByMetric')) ||
 				empty($metricType)) return;
@@ -885,7 +875,9 @@ class LucenePlugin extends GenericPlugin {
 		if (empty($metricReport)) return;
 
 		// Pluck the metric values and find the maximum.
-		$max = max(array_map(create_function('$reportRow', 'return $reportRow["metric"];'), $metricReport));
+		$max = max(array_map(function($reportRow) {
+			return $reportRow['metric'];
+		}, $metricReport));
 		if ($max <= 0) return;
 
 		// Get the Lucene plugin installation ID.
@@ -1098,7 +1090,7 @@ class LucenePlugin extends GenericPlugin {
 		}
 
 		// Assign parameters.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$mail->assignParams(
 			array('siteName' => $site->getLocalizedTitle(), 'error' => $error)
@@ -1162,4 +1154,4 @@ class LucenePlugin extends GenericPlugin {
 		$solr->reloadExternalFiles();
 	}
 }
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -28,7 +28,7 @@
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Se você quiser usar este plugin para registrar Digital Object Identifiers (DOIs) diretamente com o CrossRef, você precisará de um nome de usuário e senha (disponível em <a href="http://www.crossref.org" target="_blank"> CrossRef </a>). Se você não tiver seu próprio nome de usuário e senha, ainda poderá exportar para o formato CrossRef XML, mas não poderá registrar os nomes DOI com a CrossRef a partir do OJS.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.username">Nome de usuário</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Por favor, informe o nome de usuário que você revcebeu da CrossRef.</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">O OJS depositará automaticamente os metadados dos DOIs atribuídos na CrossRef. Observe que isso pode levar um curto período de tempo após a publicação do processo. Você pode verificar todas os DOIs não registradas.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">O OJS depositará automaticamente os metadados dos DOIs atribuídos na CrossRef. Observe que isso pode levar um curto período de tempo após a publicação do processo. Você pode verificar todas os DOIs não registrados.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Use a API de teste CrossRef (ambiente de teste) para o depósito DOI. Não se esqueça de remover esta opção para a produção.</message>
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Nota: Somente as edições (e não seus artigos) serão considerados para exportação/registro aqui.</message>

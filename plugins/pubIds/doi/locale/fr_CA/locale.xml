@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -59,4 +59,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Le DOI ne peut pas être attribué: le suffixe est manquant.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">Le DOI {$pubId} ne peut pas être attribué: il contient un modèle non résolvable.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">Le DOI {$pubId} a été attribué.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Attribuer des DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Attribuer des DOI à tous les objets de revues publiés pour lesquels aucun DOI n'a été attribué. Cette action ne peut pas être utilisée avec la configuration du suffixe individuel. Si vous avez modifié la configuration DOI ci-dessus, veuillez enregistrer vos modifications avant de lancer cette action. L'attribution de DOI peut prendre beaucoup de temps, en fonction du nombre d'objets publiés dans la revue.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Êtes-vous certain de vouloir attribuer des DOIs à tous les objets publiés sans DOI?</message>
 </locale>

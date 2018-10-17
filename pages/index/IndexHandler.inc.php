@@ -3,8 +3,8 @@
 /**
  * @file pages/index/IndexHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndexHandler
@@ -81,16 +81,11 @@ class IndexHandler extends Handler {
 				$request->redirect($journal->getPath());
 			}
 
+			$templateMgr->assign('pageTitleTranslated', $site->getLocalizedTitle());
 			$templateMgr->assign('about', $site->getLocalizedAbout());
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 
-			// If we're using paging, fetch the parameters
-			$usePaging = $site->getSetting('usePaging');
-			if ($usePaging) $rangeInfo = $this->getRangeInfo($request, 'journals');
-			else $rangeInfo = null;
-			$templateMgr->assign('usePaging', $usePaging);
-
-			$journals = $journalDao->getAll(true, $rangeInfo);
+			$journals = $journalDao->getAll(true);
 			$templateMgr->assign('journals', $journals);
 			$templateMgr->assign('site', $site);
 
@@ -100,4 +95,4 @@ class IndexHandler extends Handler {
 	}
 }
 
-?>
+

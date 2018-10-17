@@ -4,14 +4,14 @@
 <!--
   * plugins/generic/dublinCoreMeta/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
 
-<locale name="de_DE" full_name="Deutsch">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.dublinCoreMeta.name">Dublin-Core-Plugin</message>
 	<message key="plugins.generic.dublinCoreMeta.description">Dieses Plugin bettet Dublin-Core-Meta-Tags zur besseren Indizierung in die Artikel-Seiten ein.</message>
 </locale>

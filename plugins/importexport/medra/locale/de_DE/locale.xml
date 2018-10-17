@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/medra/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -42,7 +42,7 @@
 	<message key="plugins.importexport.medra.settings.form.work">Werk</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">Manifestation</message>
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Ausgaben exportieren als</message>	
-	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS wird zugewiesene DOI automatisch bei mEDRA registrieren. Bitte berücksichtigen Sie, dass dies eine Weile nach der Veröffentlichung dauern kann. Sie können nach bisher unregistrieren DOI suchen.</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS wird zugewiesene DOI automatisch bei mEDRA registrieren. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen.</message>
 	<message key="plugins.importexport.medra.settings.form.testMode.description">Die mEDRA-Test-API (Testumgebung) für die DOI-Ablieferung benutzen. Bitte vergessen Sie nicht, diese Option vor dem Produktivbetrieb abzuwählen.</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Achtung: DOI, die Artikeln zugewiesen worden sind, werden zu mEDRA als <a href="http://www.medra.org/de/metadata_td.htm" target="_blank">'Werke'</a> exportiert. DOI, die Fahnen zugewiesen worden sind, werden als <a href="http://www.medra.org/de/metadata_td.htm" target="_blank">'Manifestationen'</a> exportiert.]]></message>

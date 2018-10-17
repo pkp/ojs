@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -28,7 +28,7 @@
 	<message key="manager.payment.addPayment">أضف عملية الدفع</message>
 	<message key="manager.payment.amount">المبلغ</message>
 	<message key="manager.payment.authorFees">رسوم المؤلف</message>
-	<message key="manager.payment.authorFeesDescription">الاختيارات المحددة، مع أوصافها ورسومها (والتي بالإمكان تعديلها أدناه) ستظهر ضمن الخطوة (1) من عملية تقديم طلب النشر، وضمن (عن المجلة) تحت باب طلبات النشر، كما أنها ستظهر أيضاً في مواضع أخرى تتطلب الدفع المالي.</message>
+	<message key="manager.payment.authorFeesDescription">أدخل مبالغ الرسوم أدناه من أجل تمكين معالجة رسوم النشر.</message>
 	<message key="manager.payment.currency">العملة</message>
 	<message key="manager.payment.currencymessage">نظام المجلات المفتوحة لا يجري أي عملية للتحويل بين العملات. عند قبول المدفوعات المالية للاشتراكات، عليك التأكد من كون مبلغ الاشتراك هو بعملة مطابقة للعملة المحددة هنا.</message>
 	<message key="manager.payment.description">الوصف</message>
@@ -44,17 +44,17 @@
 	<message key="manager.payment.notFound">لم يُعثر عليه</message>
 	<message key="manager.payment.options">الخيارات</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">هذا الأمر سيُمكن مدفوعات الاشتراكات حيث ستكون: أنواعها ومبالغها ومددها واشتراكاتها مدارة من قبل المجلة عبر (مدير الاشتراكات).</message>
-	<message key="manager.payment.options.enablePayments">أنقر هنا لتمكين وحدة المدفوعات. عليك ضبط إعدادات الدفع عبر إملاء النموذج أدناه. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بدفع المال.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">هل أنت متأكد من رغبتك في حذف هذا الاشتراك؟</message>
+	<message key="manager.payment.options.enablePayments">سيتم تمكين وحدة المدفوعات لهذه المجلة. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بدفع المال.</message>
 	<message key="manager.payment.options.fee">الرسم</message>
 	<message key="manager.payment.options.feeDescription">وصف الرسم</message>
 	<message key="manager.payment.options.feeName">اسم الرسم</message>
 	<message key="manager.payment.options.membershipFee">عضوية الرابطة</message>
 	<message key="manager.payment.options.onlypdf">إجعل الوصول مقتصراً على نسخ PDF من المؤلفات والأعداد</message>
-	<message key="manager.payment.options.publicationFee">نشر المؤلفات</message>
+	<message key="manager.payment.options.publicationFee">رسوم نشر المؤلفات</message>
 	<message key="manager.payment.options.purchaseArticleFee">شراء مؤلَّف</message>
 	<message key="manager.payment.options.purchaseIssueFee">شراء عدد</message>
 	<message key="manager.payment.options.text">وصف طريقة الدفع</message>
-	<message key="manager.payment.options.waiverPolicy">سياسة الخصم</message>
 	<message key="manager.payment.paymentId">معرَّف الدفع</message>
 	<message key="manager.payment.paymentMethod">طريقة الدفع</message>
 	<message key="manager.payment.paymentMethod.description">بإمكانك ضبط إعدادات أي من إضافات طريقة الدفع الآتية عبر هذه الصفحة.</message>
@@ -64,6 +64,7 @@
 	<message key="manager.payment.readerFeesDescription">الخيارات المحددة مع أوصافها ورسوماتها (والتي بالإمكان تعديلها أدناه)، ستظهر في (عن المجلة) تحت باب السياسات، فضلاً عن ظهورها في مواضع أخرى حيثما يتطلب الدفع المالي.</message>
 	<message key="manager.payment.records">السجلات</message>
 	<message key="manager.payments">المدفوعات</message>
+	<message key="manager.paymentTypes">أنواع المدفوعاتPayment Types</message>
 	<message key="manager.payment.userName">معرَّف الدفع</message>
 	<message key="manager.people.allEnrolledUsers">الأفراد ذوي الأدوار في هذه المجلة</message>
 	<message key="manager.people.allJournals">جميع المجلات</message>
@@ -109,7 +110,8 @@
 	<message key="manager.sections.wordCountInstructions">قيد عدد كلمات الملخص في هذا القسم (الصفر يعني بلا قيد):</message>
 	<message key="manager.setup">التهيئة</message>
 	<message key="manager.setup.masthead">طاقم المجلة</message>
-	<message key="manager.setup.masthead.description">قائمة بالمحررين، المدراء وغيرهم من الشخصيات المرتبطة بالمجلة.</message>
+	<message key="manager.setup.editorialTeam">هيئة التحرير</message>
+	<message key="manager.setup.editorialTeam.description">قائمة بالمحررين، المدراء وغيرهم من الشخصيات المرتبطة بالمجلة.</message>
 	<message key="manager.setup.homepageContent">محتوى الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.homepageContentDescription">الصفحة الرئيسية للمجلة تشتمل إفتراضياً على روابط التنقل. يمكن إلحاق محتويات إضافية في الصفحة الرئيسية باستعمال واحد أو أكثر من الخيارات الآتية والتي ستظهر حسب ترتيبها المعروض أدناه.</message>
 	<message key="manager.setup.layout">تصميم المجلة</message>
@@ -157,7 +159,7 @@
 	<message key="manager.setup.emailBounceAddressDescription">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.emails">تحديد هوية البريد الالكتروني</message>
-          <message key="manager.setup.emailSignature">التوقيع</message>
+	<message key="manager.setup.emailSignature">التوقيع</message>
 	<message key="manager.setup.emailSignatureDescription">رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (الإعدادات).</message>
 	<message key="manager.setup.enableAnnouncements">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">عرض</message>
@@ -230,6 +232,12 @@
 	<message key="manager.setup.lists">القوائم</message>
 	<message key="manager.setup.listsDescription">أدخل أكبر عدد من الفقرات (على سبيل المثال: طلبات النشر، المستخدمون، مهام التحرير) التي لها أن تظهر في كل صفحة، وعدد روابط الصفحات التي لها أن تظهر في كل صفحة.</message>
 	<message key="manager.setup.enableArchive">تمكين الحفظ</message>
+	<message key="manager.setup.plnPluginEnable">الإضافة PKP PN ممكنة</message>
+	<message key="manager.setup.plnDescription">إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية.</message>
+	<message key="manager.setup.plnSettingsDescription">أنقر على رابط الإعدادات للموافقة على شروط استعمال شبكة الحفظ لمشروع المعرفة العامة.</message>
+	<message key="manager.setup.plnPluginArchiving">شبكة الحفظ لمشروع المعرفة العامة (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية. إن الإضافة الخاصة بشبكة الحفظ والمخصصة للنسخة الثالثة من نظام المجلات المفتوحة هي قيد التطوير حالياً وستكون متاحة ضمن معرض الإضافات قريباً.</message>
+	<message key="manager.setup.otherLockss">خيارات أرشفة بديلة</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[تمكين LOCKSS لتخزين وتوزيع محتوى المجلة لدى المكتبات المساهمة بواسطة صفحة LOCKSS <a href="{$lockssUrl}" target="_blank">وثيقة الناشر الأساسية</a>. إن رخصة LOCKSS ستظهر ضمن (عن المجلة) تحت (الحفظ):]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[رخصة LOCKSS ستظهر في (عن المجلة) تحت باب الحفظ: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">رخصة LOCKSS</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">وصف رخصة LOCKSS</message>
@@ -240,6 +248,8 @@
 	<message key="manager.setup.clockssLicenseLabel">وصف رخصة CLOCKSS</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[سجل للحصول على خدمة CLOCKSS عبر زيارة <a href="http://clockss.org/" target="_blank">موقع CLOCKSS</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[تمكين Portico من حفظ وتوزيع محتوى المجلة للمكتبات المشاركة في Portico.]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">المظهر</message>
 	<message key="manager.setup.look.description">رأس الصفحة الرئيسية، المحتوى، رأس المجلة، تذييلها، شريط التنقل، وملف الأنماط.</message>
@@ -291,7 +301,7 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>ملاحظة:</strong> إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً خاصاً يأخذهم مباشرة إلى صفحة التحكيم الخاصة بالطلب المعني (مع إمكانية الوصول إلى أي صفحات أخرى يتطلبها تسجيل دخولهم). لأسباب أمنية مع هذا الخيار، لا يكون بإمكان المحررين تعديل عناوين البريد الالكتروني أو تمرير نسخة من الرسالة إلى أطراف أخرى ليس لها علاقة بالتحكيم.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">تقييم المحكم</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">تذكيرات المحكم</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[ضمِّنها روابط <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">لضمان التحكيم السري</a> على الصفحات المتعلقة برفع الملفات إلى الموقع من قبل المحكمين والمؤلفين.]]></message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[إظهار روابط <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">لضمان التحكيم السري</a> على الصفحات التي يقوم فيها المؤلفون والمحكمون برفع الملفات.]]></message>
 	<message key="manager.setup.reviewPolicy">سياسة التحكيم</message>
 	<message key="manager.setup.searchEngineIndexing">فهرسة محركات البحث</message>
 	<message key="manager.setup.searchEngineIndexingDescription">لمساعدة مستعملي محركات البحث في العثور على هذه المجلة، زود الموقع بوصف موجز للمجلة والكلمات المفتاحية ذات العلاقة بها (مفصولة بفارزة منقوطة إنجليزية).</message>
@@ -330,7 +340,7 @@
 	<message key="manager.statistics.defaultMetricDescription">
 		إن مجلتك مهيئة لتسجيل أكثر من مقياس تشغيل واحد. إحصائيات التشغيل ستم عرضها في عدة سياقات.
 		هناك حالات لا بد فيها من استعمال معيار تشغيل إحصائي واحد، مثل: عرض قائمة مرتبة هجائياً لمؤلَّفات الأكثر استعمالاً
-        أو عند تقييم نتائج البحث في الموقع. لطفاً، إختر أحد المقاييس الإحصائية ليكون بمثابة المعيار الإفتراضي.
+		أو عند تقييم نتائج البحث في الموقع. لطفاً، إختر أحد المقاييس الإحصائية ليكون بمثابة المعيار الإفتراضي.
 	</message>
 	<message key="manager.statistics.statistics">إحصائيات المجلة</message>
 	<message key="manager.statistics.statistics.articleViews">عدد مشاهدات المؤلَّف (للمؤلفين حصراً)</message>
@@ -378,14 +388,12 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">يتم تقييد وصول القراء إلى كل المحتوى المتعلق بالاشتراك عند انتهاء صلاحيته.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">إنتهاء صلاحية جزئي</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">يتم تقييد وصول القراء إلى المحتوى المنشور بعد انتهاء الصلاحية، لكن يبقى وصولهم إلى محتوى الاشتراك المنشور قبل ذلك متاحاً.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">إشعار المشتركين عبر البريد الالكتروني</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">شهر/أشهر بعد انتهاء صلاحية الاشتراك.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">إشعار المشتركين عبر البريد الالكتروني</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">أسبوع/أسابيع بعد انتهاء صلاحية الاشتراك.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">إشعار المشتركين عبر البريد الالكتروني</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">شهر/أشهر قبل انتهاء صلاحية الاشتراك.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">إشعار المشتركين عبر البريد الالكتروني</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">أسبوع/أسابيع قبل انتهاء صلاحية الاشتراك.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} شهر/شهور</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} أسبوع/أسابيع</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">إشعار المشتركين بريدياً بعد انتهاء مدة الاشتراك</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">إشعار المشتركين بريدياً بعد انتهاء مدة الاشتراك.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">إشعار المشتركين بريدياً قبل انتهاء مدة الاشتراك.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">إشعار المشتركين بريدياً قبل انتهاء مدة الاشتراك.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">تذكيرات انتهاء صلاحية الاشتراك</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">رسائل التذكير الآلية (متاحة للتعديل من قبل رئيس تحرير المجلة عبر باب المراسلات المحضرة) يمكن إرسالها إلى المشتركين سواءً قبل انتهاء صلاحية اشتراكاتهم أو بعدها.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
@@ -415,6 +423,7 @@
 	<message key="manager.subscriptions">الاشتراكات</message>
 	<message key="manager.individualSubscriptions">الاشتراكات المنفردة</message>
 	<message key="manager.institutionalSubscriptions">الاشتراكات المؤسساتية</message>
+	<message key="manager.subscriptions.confirmRenew">ل أنت متأكد من رغبتك في تجديد هذا الاشتراك؟</message>
 	<message key="manager.subscriptions.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا الاشتراك؟</message>
 	<message key="manager.subscriptions.summary">ملخص الاشتراكات</message>
 	<message key="manager.subscriptions.create">أنشئ اشتراكاً جديداً</message>
@@ -519,10 +528,10 @@
 	<message key="manager.subscriptionTypes.form.individual">منفرد (يتم التحقق من المستخدم عند دخوله إلى الموقع)</message>
 	<message key="manager.subscriptionTypes.form.institutional">مؤسساتي (يتم التحقق من المشتركين عبر مجالهم أو عنوان IP لهم)</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">لطفاً، استعمل الخيارات المتاحة لك.</message>
-	<message key="manager.subscriptionTypes.form.membership"><![CDATA[الاشتراكات تتطلب بيانات العضوية<br />(مثلاً: للرابطة أو المنظمة أو الجمعية... إلخ.)]]></message>
+	<message key="manager.subscriptionTypes.form.membership">الاشتراكات تتطلب بيانات العضوية (مثلاً: للرابطة أو المنظمة أو الجمعية... إلخ.)</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">لطفاً، استعمل خانة التأشير المتاحة لك.</message>
 	<message key="manager.subscriptionTypes.form.options">الخيارات</message>
-	<message key="manager.subscriptionTypes.form.public"><![CDATA[لا تجعل هذه النوعية من الاشتراكات متاحة أو مرئية للعامة<br />(مثلاً: تحت بند الاشتراكات في صفحة "عن المجلة").]]></message>
+	<message key="manager.subscriptionTypes.form.public">لا تجعل هذه النوعية من الاشتراكات متاحة أو مرئية للعامة (مثلاً: تحت بند الاشتراكات في صفحة "عن المجلة").</message>
 	<message key="manager.subscriptionTypes.form.publicValid">لطفاً، استعمل خانة التأشير المتاحة لك.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">إحفظ وأنشئ واحداً آخر</message>
 	<message key="manager.subscriptionTypes.form.typeName">تسمية النوع</message>
@@ -532,7 +541,13 @@
 	<message key="manager.subscriptionTypes.noneCreated">لم يتم إنشاء أنواع الاشتراكات بعد.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">أُنشِئت نوعية الاشتراك بنجاح.</message>
 	<message key="manager.distribution.access">الوصول</message>
-	
+
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">رابط إلى الصفحة التي تصف الاشتراكات المتاحة في المجلة.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">رابط إلى الصفحة التي تصف الاشتراك الحالي والاشتراكات السابقة للمستخدم.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">هذا الرابط سيظهر فقط إذا قام المستخدم بتسجيل دخوله إلى الموقع.</message>
+
+
 	<!-- Categories -->
 	<message key="manager.setup.categories">التصنيفات</message>
 	<message key="manager.setup.categories.description">إختر التصنيفات الأكثر مناسبة من المجموعة المدرجة أعلاه. سيكون القراء قادرين على التصفح حسب الصنف من المجموعة الكاملة للمجلة.</message>
@@ -584,7 +599,8 @@
 	<message key="plugins.importexport.common.error.noObjectsSelected">لم يتم إختيار أي مكون.</message>
 	<message key="plugins.importexport.common.error.validation">تعذر تحويل المكونات المختارة.</message>
 	<message key="plugins.importexport.common.invalidXML">خطأ في XML:</message>
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">الملف الخارجي {$param} غير قابل للكتابة.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">ملف الإخراج {$param} غير قابل للكتابة.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">ملف الإدخال {$param} غير قابل للكتابة.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">التسجيل لم ينجح! أبلغ ملقم تسجيل DOI عن خطأ: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">نجحت عملية التسجيل!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">بادئة معرف DOI مفقودة للمجلة الموجودة في المسار {$path}.</message>

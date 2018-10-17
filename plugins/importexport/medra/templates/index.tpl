@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/medra/templates/index.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -54,7 +54,7 @@
 			</div>
 		{/if}	
 			
-		{url|assign:medraSettingsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="MedraExportPlugin" category="importexport" verb="index" escape=false}
+		{capture assign=medraSettingsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="MedraExportPlugin" category="importexport" verb="index" escape=false}{/capture}
 		{load_url_in_div id="medraSettingsGridContainer" url=$medraSettingsGridUrl}
 	</div>
 
@@ -70,7 +70,7 @@
 				<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 					<input type="hidden" name="tab" value="exportSubmissions-tab" />
 					{fbvFormArea id="submissionsXmlForm"}
-						{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="medra" category="importexport" escape=false}
+						{capture assign=submissionsListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="medra" category="importexport" escape=false}{/capture}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
@@ -102,7 +102,7 @@
 				<form id="exportIssueXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
 					<input type="hidden" name="tab" value="exportIssues-tab" />
 					{fbvFormArea id="issuesXmlForm"}
-						{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="medra" category="importexport" escape=false}
+						{capture assign=issuesListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="medra" category="importexport" escape=false}{/capture}
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
@@ -134,7 +134,7 @@
 				<form id="exportRepresentationXmlForm" class="pkp_form" action="{plugin_url path="exportRepresentations"}" method="post">
 					<input type="hidden" name="tab" value="exportRepresentations-tab" />
 					{fbvFormArea id="representationsXmlForm"}
-						{url|assign:representationsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportRepresentationsListGridHandler" op="fetchGrid" plugin="medra" category="importexport" escape=false}
+						{capture assign=representationsListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportRepresentationsListGridHandler" op="fetchGrid" plugin="medra" category="importexport" escape=false}{/capture}
 						{load_url_in_div id="representationsListGridContainer" url=$representationsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/issue_toc.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Issue which displays a full table of contents.
@@ -77,7 +77,7 @@
 	</div>
 
 	{* Full-issue galleys *}
-	{if $issueGalleys && $hasAccess}
+	{if $issueGalleys}
 		<div class="galleys">
 			<h2>
 				{translate key="issue.fullIssue"}
@@ -85,7 +85,7 @@
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}
 					<li>
-						{include file="frontend/objects/galley_link.tpl" parent=$issue}
+						{include file="frontend/objects/galley_link.tpl" parent=$issue purchaseFee=$currentJournal->getSetting('purchaseIssueFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 					</li>
 				{/foreach}
 			</ul>
@@ -102,7 +102,7 @@
 					{$section.title|escape}
 				</h2>
 			{/if}
-			<ul class="articles">
+			<ul class="cmp_article_list articles">
 				{foreach from=$section.articles item=article}
 					<li>
 						{include file="frontend/objects/article_summary.tpl"}

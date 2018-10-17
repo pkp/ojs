@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/tests/classes/SolrWebServiceTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SolrWebServiceTest
@@ -58,7 +58,7 @@ class SolrWebServiceTest extends PKPTestCase {
 		parent::setUp();
 
 		// We need a router for URL generation.
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$_SERVER['REQUEST_METHOD'] = 'GET';
 		$request = $application->getRequest();
 		if (!is_a($request->getRouter(), 'PKPRouter')) {
@@ -675,4 +675,4 @@ class SolrWebServiceTest extends PKPTestCase {
 		$returner[] = 'indexingState';
 	}
 }
-?>
+

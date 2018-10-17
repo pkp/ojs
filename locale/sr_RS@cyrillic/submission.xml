@@ -4,14 +4,14 @@
 <!--
   * locale/sr_RS@cyrillic/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
   -->
 
-<locale name="sr_RS@cyrillic" full_name = "Cрпски">
+<locale name="sr_RS@cyrillic" full_name="Cрпски">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

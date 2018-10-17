@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -48,7 +48,7 @@
 بعد إنجاز كل ما سبق، يقوم المحكم بالمرور الأخير على النص للمصادقة عليه تمهيداً لمرحلة النظر في التنسيقات والإخراج العام.
 
 
-<strong>2. التحكيم التعليمي لهارفرد </strong>
+<strong>2. التحكيم التعليمي لهارفرد</strong>
 
 <strong>إرشادات لعمل تحكيم الكتروني للنصوص</strong>
 
@@ -139,14 +139,9 @@
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">نشر المؤلَّف العلمي</message>
-	<message key="default.journalSettings.publicationFeeDescription">إن تم قبول هذا المؤلَّف للنشر، ستتم مطالبتك بتسديد رسوم النشر لتغطية نفقات النشر.</message>
-	<message key="default.journalSettings.waiverPolicy">إن لم يكن لك تمويل يسمح بدفع هذه الرسوم، ستكون لك فرصة للمطالبة بتخفيض كل رسم منها. نحن لا نريد لتلك الرسوم أن تكون عائقاً أمام الأعمال القيمة والنافعة.</message>
 	<message key="default.journalSettings.purchaseArticleFee">شراء مؤلَّف</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">إن دفع هذا الرسم سيمكنك من عرض وتنزيل وطباعة هذا المؤلَّف.</message>
 	<message key="default.journalSettings.purchaseIssueFee">شراء عدد</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">إن دفع هذا الرسم سيمكنك من عرض وتنزيل وطباعة هذا العدد.</message>
 	<message key="default.journalSettings.membershipFee">عضوية الرابطة</message>
-	<message key="default.journalSettings.membershipFeeDescription">إن دفع هذا الرسم سيمكنك من الانخراط كعضو في هذه الجمعية أو الرابطة لسنة واحدة وسيتيح لك الوصول (مدفوع الثمن) لهذه المجلة.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">رئيس تحرير المجلة</message>

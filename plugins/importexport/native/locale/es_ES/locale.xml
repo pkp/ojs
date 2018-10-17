@@ -4,18 +4,18 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.native.displayName">Complemento XML nativo</message>
-	<message key="plugins.importexport.native.description">Importar y exportar libros en el formato XML nativo de OMP.</message>
+	<message key="plugins.importexport.native.displayName">Módulo XML nativo</message>
+	<message key="plugins.importexport.native.description">Importar y exportar libros en el formato XML nativo.</message>
 	<message key="plugins.importexport.native.import">Importar</message>
-	<message key="plugins.importexport.native.import.instructions">Por favor, selecciona un archivo XML para subir y pincha en "Iniciar subida". Cuando se haya completado la subida del archivo, pincha en "OK" para importarlo a OMP.</message>
+	<message key="plugins.importexport.native.import.instructions">Por favor, selecciona un archivo XML para subir y pincha en "Iniciar subida". Cuando se haya completado la subida del archivo, pincha en "OK" para importarlo al gestor.</message>
 	<message key="plugins.importexport.native.export">Exportar</message>
 	<message key="plugins.importexport.native.results">Resultados</message>
 	<message key="plugins.inportexport.native.uploadFile">Por favor, sube un archivo en "Importar" para continuar.</message>
@@ -24,4 +24,34 @@
 	<message key="plugins.importexport.native.import.error.sectionTitleMatch">El título de sección "{$sectionTitle}" del número "{$issueTitle}" se corresponde con una sección existente de la revista, pero otro título de esta sección no se corresponde con un título en la sección existente de la revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">La abreviatura de sección "{$section1Abbrev}" y la abreviatura de sección "{$section2Abbrev}" del número "{$issueTitle}" se corresponden con otras secciones de la revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">La abreviatura de sección "{$sectionAbbrev}" del número "{$issueTitle}" se corresponde con una sección existente de la revista, pero otra abreviatura de esta sección no se corresponde con una abreviatura en la sección existente de la revista.</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Seleccione los artículos para exportar</message>
+	<message key="plugins.importexport.native.exportSubmissions">Exportar artículos</message>
+	<message key="plugins.importexport.native.exportIssues">Exportar números</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [command] ...
+Comandos:
+	impor [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Se requieren los siguientes parámetros adicionales para importar datos, en función del nodo raíz del documento XML.
+
+Si el nodo raíz es <article> o <articles>, se necesitan parámetros adicionales.
+Se aceptan los formatos siguientes:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">Sección desconocida {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">El usuario/a especificado ("{$userName}") no existe.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Ningún número o más de uno coincide con la identificación de número proporcionada ("{$issueIdentification}").</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">El número ya existente con el identificador {$issueId} coincide con el identificador de número proporcionado ("{$issueIdentification}"). Este número no se modificará, pero se añadirán los artículos.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">No se encuentra el elemento identificador de número para el artículo "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">El artículo "{$articleTitle}" está asignado a un número pero no tiene fecha de publicación.</message>
 </locale>

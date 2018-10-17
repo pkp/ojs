@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -22,31 +22,6 @@ Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>New notification from {$siteTitle}</subject>
-		<body><![CDATA[You have a new notification from {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to unregistered users on the notification mailing list.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
-		<body><![CDATA[You have signed up to receive notifications from {$siteTitle}.<br />
-<br />
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}<br />
-<br />
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Password Reset Confirmation</subject>
@@ -174,14 +149,6 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Unsuitable Submission</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-An initial review of &quot;{$submissionTitle}&quot; has made it clear that this submission does not fit within the scope and focus of {$contextName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Editorial Assignment</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -266,7 +233,7 @@ Thank you for considering this request.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Article Review Request</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date. 
+Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date.
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
@@ -796,7 +763,7 @@ Copy-Editor, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editors:<br />
 <br />
 A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
 <br />

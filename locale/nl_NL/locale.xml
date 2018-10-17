@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -161,7 +161,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Tijdschriftbeheerder</message>
-	<message key="user.role.sectionEditor">Sectieredacteur</message>
+	<message key="user.role.subEditor">Sectieredacteur</message>
 	<message key="user.role.subscriptionManager">Abonnementenbeheerder</message>
 	<message key="user.role.managers">Tijdschriftbeheerders</message>
 	<message key="user.role.subscriptionManagers">Abonnementenbeheerders</message>
@@ -267,7 +267,6 @@
 
 
 
-	<message key="plugins.categories.citationFormats.description">Citatieformaat plugins leveren de gebruikers verschillende formaten voor arikelcitaties.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem om een permanent archief van het tijdschrift te verzekeren. LOCKSS is open source software, ontwikkeld door Stanford University Library, die bibliotheken in staat stelt om geselecteerde internet-tijdschriften te archiveren door die tijdschriften regelmatig  te onderzoeken op nieuwe inhoud en die dan te archiveren. Ieder archief wordt continue gevalideerd tegen archieven in andere bibliotheken. Verloren of beschadigd materiaal wordt uit de andere archieven hersteld.
 <br /><br />
@@ -325,11 +324,6 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 </ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br />
-Oordeel is van 1 tot  5 (Uitstekend).<br />
-Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br />
-Laatste is de datum van de laatst geaccepteerde review.<br />
-Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Actieve redactietaken</message>
@@ -411,12 +405,10 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
         <message key="reviewer.article.selectRecommendation">Kies een aanbeveling en stuur het review in om het prodes af te ronden. U moet een review invoeren of een bestand laden voor u een aanbeveling kiest.</message>
 	<message key="reviewer.article.mustSelectDecision">Geen aanbeveling geselecteerd. U moet een aanbeveling kiezen om in te kunnen sturen.</message>
 	<message key="reviewer.article.confirmDecision">Als u een beslissing hebt vastgelegd kunt u de review niet meer veranderen. Weet u zeker dat u door wilt gaan?</message>
-	<message key="reviewer.article.ensuringBlindReview">Een blinde review verzekeren</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Stuur naar tekstredactie</message>
 	<message key="copyeditor.article.copyeditorFile">Bestand voor tekstredacteur</message>
-	<message key="copyeditor.article.uploadedFile">Geladen bestand</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Bestand voor tekstredacteur</message>
 
 	<!-- Proofreader -->
@@ -644,7 +636,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
 
-<p>Dank u voor het downloaden van <strong>Open Journal Systems</strong> van het Public Knowledge Project. Lees voor u verdergaat eerst het <a href="{$baseUrl}/docs/README">README</a> bestand van de software. Voor meer informatie over het Public Knowledge Project en zijn software projecten, zie de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Als u problemen wilt melden of technische vragen wilt stellen over Open Journal Systems, zie het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">probleemrapportage systeem</a>. Hoewel het support forum de voorkeur heeft kun u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Dank u voor het downloaden van <strong>Open Journal Systems</strong> van het Public Knowledge Project. Lees voor u verdergaat eerst het <a href="{$baseUrl}/docs/README.md">README</a> bestand van de software. Voor meer informatie over het Public Knowledge Project en zijn software projecten, zie de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Als u problemen wilt melden of technische vragen wilt stellen over Open Journal Systems, zie het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">probleemrapportage systeem</a>. Hoewel het support forum de voorkeur heeft kun u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Upgrade</h4>
 
@@ -686,7 +678,7 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 <p>Kies <strong>Handmatige installatie</strong> om de  SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
 
-<p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README">README</a> en <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README.md">README</a> en <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Het is <strong>sterk aanbevolen</strong> dat u een backup maakt van uw databank, bestanden-map en OJS installatiemap voor u verder gaat.</p>
 <p>Als u draait in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, verzeker u er dan van dat de max_execution_timeout in uw php.ini op een hoge waarde staat. Als deze of een andere tijdslimiet (bv. Apache's "Timeout" waarde) bereikt wordt en het upgrade proces onderbroken wordt, is handmatige interventie noodzakelijk.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Kies UTF-8 voor alle karakterset-instellingen als u volledige Unicode (UTF-8) ondersteuning wilt. Merk op dat dit momenteel een MySQL >= 4.1.1 of PostgreSQL >= 7.1 database vereist. Merk ook op dat volledige Unicode ondersteuning  PHP >= 4.3.0 gecompileerd met ondersteuning van de <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> bibliotheek vereist (standaard ingeschakeld in de meeste recente PHP installaties). Als uw server niet aan deze eisen voldoet kunnen er problemen ontstaan met het gebruik van uitgebreide karaktersets.
@@ -818,7 +810,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
 	<message key="common.homePageHeader.altText">Home-pagina kop</message>
 	<message key="common.journalHomepageImage.altText">Tijdschrift home-pagina afbeelding</message>
 	<message key="article.coverPage.altText">Omslagafbeelding</message>
@@ -905,7 +897,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="about.subscriptions.individual">Individuele abonnementen</message>
 	<message key="about.subscriptions.institutional">Institutionele abonnementen</message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[als hier IP reeksen opgegeven worden is het domein optioneel.<br />Geldige waarden zijn een IP adres (bv. 142.58.103.1), IP reeks (bv. 142.58.103.1 - 142.58.103.4), een IP reeks met wildcard '*' (bv. 142.58.*.*), en een IP reeks mets CIDR (e.g. 142.58.100.0/24).]]></message>
-	<message key="notification.mailListDescription">Geef uw e-mail adres op om op de hoogte gesteld te worden van belangrijke nieuwe inhoud van het tijdschrift.</message>
 	<message key="notification.type.editorDecisionComment">Er is een commentaar achtergelaten op de redacteursbeslissing van "{$title}".</message>
 	<message key="notification.type.galleyModified">Een proef van "{$title}" gewijzigd.</message>
 	<message key="notification.type.issuePublished">Er is een nieuw nummer gepubliceerd</message>
@@ -917,7 +908,6 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="notification.type.submissionComment">Een redacteur heeft "{$title}" van commentaar voorzien.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste "voor redacteur en auteur" en de tweede "voor redacteur". De tijdschriftbeheerder kan ook een peer review formulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
 	<message key="notification.type.articleSubmitted">Een nieuw artikel, "{$title}", is ingestuurd.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Deze pagina toont belangrijke berichten over dit tijdschrift zoals nieuwe nummers of nieuwsberichten. U kunt zich op deze berichten abonneren via RSS feeds (door op de afbeeldingen rechts te klikken) of   <a href="{$emailUrl}">via e-mail.</a>]]></message>
 	<message key="notification.type.editing">Redactieberichten</message>
 	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$title}"</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>

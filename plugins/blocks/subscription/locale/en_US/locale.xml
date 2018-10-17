@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/en_US/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -16,8 +16,10 @@
 	<message key="plugins.block.subscription.description">This plugin provides sidebar subscription information.</message>
 	<message key="plugins.block.subscription.blockTitle">Subscription</message>
 	<message key="plugins.block.subscription.expires">Expires</message>
-	<message key="plugins.block.subscription.providedBy">Access provided by</message>
-	<message key="plugins.block.subscription.comingFromIP">From</message>
+	<message key="plugins.block.subscription.providedBy">Access provided by: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Accessed from: {$ip}</message>
 	<message key="plugins.block.subscription.about">Subscriptions</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Login to verify subscription</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Login to access subscriber-only resources.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">A subscription is required to access some resources.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Learn More</message>
 </locale>

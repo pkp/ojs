@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/classes/form/DOAJSettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJSettingsForm
@@ -56,7 +56,7 @@ class DOAJSettingsForm extends Form {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		// Add form validation checks.
 		$this->addCheck(new FormValidatorPost($this));
@@ -123,4 +123,4 @@ class DOAJSettingsForm extends Form {
 
 }
 
-?>
+

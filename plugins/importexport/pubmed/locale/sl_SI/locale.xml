@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/pubmed/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.importexport.pubmed.displayName">Vtičnik za PubMed XML izvoz</message>
+	<message key="plugins.importexport.pubmed.description">Izvozi metapodatke prispevka v PubMed XML obliki za indeksiranje v MEDLINE.</message>
+	
+	<message key="plugins.importexport.pubmed.export">Izvozi podatke</message>
+	<message key="plugins.importexport.pubmed.export.issues">Izvozi številke</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Izbertie številko za izvoz.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Izvoz prispevkov</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Izberi prispevke za izvoz.</message>
+	
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Uporaba: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.pubmed.cliError">NAPAKA:</message>
+
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Nobena številka na ustreza podanemu ID-ju številke "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Noben prispevek ne ustreza podatnemu ID-ju prispevka "{$articleId}".</message>
+
+
+</locale>

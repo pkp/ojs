@@ -3,12 +3,12 @@
 /**
  * @file classes/subscription/Subscription.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Subscription
- * @ingroup subscription 
+ * @ingroup subscription
  * @see SubscriptionDAO
  *
  * @brief Basic class describing a subscription.
@@ -69,7 +69,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get the user's full name of the subscription.
-	 * @return string 
+	 * @return string
 	 */
 	function getUserFullName() {
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -78,7 +78,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get the user's email of the subscription.
-	 * @return string 
+	 * @return string
 	 */
 	function getUserEmail() {
 		$userDao = DAORegistry::getDAO('UserDAO');
@@ -116,7 +116,7 @@ class Subscription extends DataObject {
 	 */
 	function getSubscriptionTypeSummaryString() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+		$subscriptionType =& $subscriptionTypeDao->getById($this->getData('typeId'));
 		return $subscriptionType->getSummaryString();
 	}
 
@@ -157,7 +157,7 @@ class Subscription extends DataObject {
 
 	/**
 	 * Get subscription end date.
-	 * @return date (YYYY-MM-DD) 
+	 * @return date (YYYY-MM-DD)
 	 */
 	function getDateEnd() {
 		return $this->getData('dateEnd');
@@ -270,4 +270,4 @@ class Subscription extends DataObject {
 	}
 }
 
-?>
+

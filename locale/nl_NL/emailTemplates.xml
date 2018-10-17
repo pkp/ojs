@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -127,15 +127,6 @@ Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar een auteur als die de inzendprocedure van een manuscript bij het tijdschrift voltooit. Er wordt informatie gegeven over het volgen van de inzending door het proces en de auteur wordt bedankt voor de inzending.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Ongeschikte inzending</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Een eerste review van &quot;{$submissionTitle}&quot; heeft duidelijk gemaakt dat deze inzending niet past binnen de scope en focus van {$contextName}. Ik raad u aan om kennis te nemen van de beschrijving van dit tijdschrift bij Over dit tijdschrift en van de actuele inhoud om meer te weten te komen over het werk dat we publiceren. U kunt overwegen om dit manuscript in te zenden bij een ander, meer geschikt tijdschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description/>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Opmerking bij inzending</subject>
@@ -477,7 +468,7 @@ Gebruikersnaam: {$participantUsername}<br />
 Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen heeft, neemt u dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur naar de opmaakredacteur meldt dat de proeven gereed zijn voor de laatste proefleesronde. Het geeft informatie over het arikel en hoe het te bereiken.</description>
+		<description>Deze e-mail van de sectieredacteur naar de opmaakredacteur meldt dat de proeven gereed zijn voor de laatste proefleesronde. Het geeft informatie over het artikel en hoe het te bereiken.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Proeflezen gereed (opmaakredacteur)</subject>
@@ -589,30 +580,6 @@ Aarzel niet om contact met mij op te nemen als u vragen heeft.<br />
 Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nieuw bericht van {$siteTitle}</subject>
-		<body><![CDATA[U heeft een nieuw bericht van {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Als u deze berichten niet meer wilt ontvangen, ga dan naar {$unsubscribeLink} en voer uw e-mail adres en wachtwoord in.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welkom bij de {$siteTitle} maillijst!</subject>
-		<body><![CDATA[U heeft zich geregistreerd om berichten te ontvangen van {$siteTitle}.<br />
-<br />
-Klik op deze link om uw verzoek te bevestigen en uw e-mail adres toe te voegen aan de lijst: {$confirmLink}<br />
-<br />
-Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsubscribeLink} <br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Deze e-mail wordt verstuurd naar een ongeregistreerde gebruiker die zich zojuist heeft geregistreerd voor notoficatiemails</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redacteursbeslissing</subject>

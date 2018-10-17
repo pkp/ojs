@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.2.0_update.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.2.0.0 general updates.
+  -->
+<data>
+	<!-- pkp/pkp-lib#2894 pkp/pkp-lib#4036 Set 0 review ratings to NULL -->
+	<sql>
+		<query>UPDATE review_assignments SET quality = NULL WHERE quality = 0</query>
+	</sql>
+</data>

@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Этот материал будет перенесен в архив после того, как будет отправлено письмо «Уведомить автора» или нажата кнопка «Не отправлять письмо».</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Перед отправкой материала на литературное редактирование используйте ссылку «Уведомить автора», чтобы сообщить автору о решении и выберите версию, которую нужно отправить.</message>
 	<message key="editor.notifyUsers">Уведомить пользователей</message>
-	<message key="editor.notifyUsers.allUsers">Все пользователи, связанные с этим журналом ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allReaders">Все читатели ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allAuthors">Все опубликованные авторы ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Все индивидуальные подписчики ({$count} пользователей)</message>
@@ -121,72 +120,7 @@
 	<message key="grid.action.setCurrentIssue">Задать текущий выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
 	<message key="editor.article.designateReviewVersion">Обозначить оригинальный файл как версию для рецензирования</message>
-	<message key="editor.article.uploadReviewVersion">Загрузить переработанную версию для рецензирования</message>
-	<message key="editor.article.showSuppFile">Предоставить файл рецензентам</message>
-	<message key="editor.article.layoutAndProof">Верстка и корректура</message>
-	<message key="editor.article.clear">Очистить</message>
-	<message key="editor.article.clearReviewer">Убрать рецензента</message>
-	<message key="editor.article.changeSection">Изменить раздел</message>
-	<message key="editor.article.setDueDate">Задать срок выполнения</message>
-	<message key="editor.article.addReviewer">Добавить рецензента</message>
-	<message key="editor.article.toReviewer">Рецензенту</message>
-	<message key="editor.article.notifyReviewer">Уведомить рецензента</message>
-	<message key="editor.article.initiateReview">Начать рецензирование</message>
-	<message key="editor.article.cancelReview">Отменить запрос</message>
-	<message key="editor.article.clearReview">Удалить рецензента</message>
-	<message key="editor.article.enterRecommendation">Ввести рекомендацию</message>
-	<message key="editor.article.enterReviewerRecommendation">Ввести рекомендацию рецензента</message>
-	<message key="editor.article.recommendation">Рекомендация</message>
-	<message key="editor.article.selectReviewer">Выбрать рецензента</message>
-	<message key="editor.article.replaceReviewer">Заменить рецензента</message>
-	<message key="editor.article.editorToEnter">Редактор для ввода рекомендаций/комментариев для рецензента</message>
-	<message key="editor.article.uploadReviewForReviewer">Загрузить рецензию</message>
-	<message key="editor.article.peerReviewOptions">Параметры рецензирования</message>
 	<message key="editor.article.decision">Решение</message>
-	<message key="editor.article.noEditorSelected">Редактор не выбран.</message>
-	<message key="editor.article.recordDecision">Записать решение</message>
-	<message key="editor.article.cannotRecord">Редактор раздела еще не назначен или не предоставлен файл рецензии.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Рецензенты, которые могут увидеть авторскую версию</message>
-	<message key="editor.article.designateDueDate">Обозначить срок выполнения</message>
-	<message key="editor.article.designateDueDateDescription">Введите дату или количество недель, чтобы задать новый срок выполнения.</message>
-	<message key="editor.article.todaysDate">Сегодняшняя дата</message>
-	<message key="editor.article.requestedByDate">Срок выполнения</message>
-	<message key="editor.article.dueDateFormat">Формат: ГГГГ-MM-ДД</message>
-	<message key="editor.article.numberOfWeeks">Количество недель</message>
-	<message key="editor.article.selectCopyeditor">Назначить литературного редактора</message>
-	<message key="editor.article.replaceCopyeditor">Заменить литературного редактора</message>
-	<message key="editor.article.editorsCopyedit">Правка литературного редактора</message>
-	<message key="editor.article.showAuthor">Разрешить автору просмотр файла</message>
-	<message key="editor.article.showCopyeditor">Показать версию литературному редактору</message>
-	<message key="editor.article.rateReviewer">Рейтинг рецензента</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Отлично</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Плохо</message>
-	<message key="editor.article.comments">Комментарии</message>
-	<message key="editor.article.commentsRequired">Поле комментария должно быть заполнено.</message>
-	<message key="editor.article.saveRating">Сохранить оценку</message>
-	<message key="editor.article.noneSelected">Ничего не выбрано</message>
-	<message key="editor.article.authorProofing">Авторская корректура</message>
-	<message key="editor.article.archiveSubmission">Отклонить и переместить материал в архив</message>
-	<message key="editor.article.restoreToQueue">Восстановить в списке активных</message>
-	<message key="editor.article.assignSectionEditor">Добавить редактора раздела</message>
-	<message key="editor.article.assignEditor">Добавить редактора</message>
-	<message key="editor.article.selectEditor">Выбрать {$roleName}</message>
-	<message key="editor.article.selectDecision">Выбрать решение</message>
-	<message key="editor.article.selectLayoutEditor">Выбрать верстальщика</message>
-	<message key="editor.article.replaceLayoutEditor">Заменить верстальщика</message>
-	<message key="editor.article.reviewSubmission">Рецензирование материала</message>
-	<message key="editor.article.resubmitForReview">Повторно отправить файл на рецензию</message>
-	<message key="editor.article.resubmitFileForPeerReview">Повторно отправить выбранный файл на рецензирование</message>
-	<message key="editor.article.sendToCopyedit">Отправить файл на литературное редактирование</message>
-	<message key="editor.article.selectProofreader">Назначить корректора</message>
-	<message key="editor.article.replaceProofreader">Заменить корректора</message>
-	<message key="editor.article.authorComments">Комментарии автора</message>
-	<message key="editor.article.proofreaderComments">Комментарии корректора</message>
-	<message key="editor.article.layoutEditorFinal">Итоговая версия после верстки</message>
-	<message key="editor.article.noDate">(дата)</message>
 	<message key="editor.submissions.showBy">Показать по</message>
 	<message key="editor.submissions.submitMMDD">Отправить MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Активные редакционные задания</message>
@@ -202,16 +136,7 @@
 	<message key="editor.article.scheduleForPublication">Запланировать для публикации в</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Будет назначено позже</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Не поступила плата за публикацию. Чтобы запланировать материал к публикации уведомите автора о необходимости внести плату или отмените платеж.</message>
-	<message key="editor.article.display">Показать</message>
-	<message key="editor.article.hideTocAuthorDescription">Убрать имена авторов из содержания выпуска</message>
-	<message key="editor.article.hideTocAuthorDefault">По умолчанию</message>
-	<message key="editor.article.hideTocAuthorHide">Убрать</message>
-	<message key="editor.article.hideTocAuthorShow">Показать</message>
-	<message key="editor.article.cover">Обложка</message>
-	<message key="editor.article.coverImage">Изображение обложки</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Изображение обложки, которое вы хотите удалить, не удается найти. Возможно оно уже было удалено. Попробуйте перезагрузить страницу.</message>
-	<message key="editor.article.uploaded">Загружен</message>
-	<message key="editor.article.removeCoverPage">Удалить изображение обложки?</message>
 	<message key="grid.action.removeArticle">Удалить статью из выпуска</message>
 	<message key="editor.article.remove">Удалить</message>
 	<message key="editor.article.remove.confirm">Вы уверены, что хотите удалить эту статью из выпуска? Статья будет доступна для планирования к публикации в другом выпуске.</message>
@@ -222,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Итоговые файлы черновиков в этом списке преобразованы литературным редактором в версии, прошедши литературное редактирование, загруженные ниже в раздел  <span class="pkp_help_title">«Литературное редактирование»</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Все файлы, которые уже были загружены на любом этапе отправки материала, могут быть добавлены в список «Корректура», для этого нужно поставить галочку «Включить» ниже и щелкнуть на кнопке «Поиск»: все доступные файлы будут показаны в списке и могут быть выбраны для включения.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Открытый идентификатор «{$publicIdentifier}» уже существует для другого объекта этого же типа. Пожалуйста, выбирайте уникальные идентификаторы для объектов одного типа в вашем журнале.</message>
+	<message key="editor.article.coverImage">Изображение обложки</message>
 </locale>

@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Feu clic a la icona per emplenar el formulari de revisió.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Empleneu els camps obligatoris.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Empleneu els camps obligatoris.</message>
 
 	<!-- review forms end -->
 
@@ -207,7 +207,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Administrador/a de la revista</message>
-	<message key="user.role.sectionEditor">Editor/a de secció</message>
+	<message key="user.role.subEditor">Editor/a de secció</message>
 	<message key="user.role.subscriptionManager">Administrador/a de subscripcions</message>
 	<message key="user.role.managers">Administradors/ores de revistes</message>
 	<message key="user.role.subscriptionManagers">Administradors/ores de subscripcions</message>
@@ -339,7 +339,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Els mòduls d’autorització permeten que l’Open Journal Systems delegui les tasques d’autenticació d’usuaris/àries a altres sistemes, com ara els servidors LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Els mòduls de format de citació permeten als usuaris/àries accedir a les citacions d’articles amb diversos formats.</message>
 	<message key="plugins.categories.generic.description">Els mòduls genèrics s’utilitzen per ampliar les funcionalitats de l’Open Journal Systems no incloses en altres categories de mòduls.</message>
 
 	<!-- Files Browser -->
@@ -410,7 +409,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[El nom enllaça amb el perfil del revisor/a.<br /> La puntuació és sobre 5 (Excel·lent).<br /> El camp «Setmanes» indica el període de temps mitjà utilitzat per completar una revisió.<br /> El camp «Darrera» indica la data de l’última revisió acceptada.<br /> El camp «Actives» llista les revisions en curs.]]></message>
 
 
 
@@ -497,12 +495,10 @@
 		<message key="reviewer.article.selectRecommendation">Seleccioneu una recomanació i trameteu la revisió per completar el procés. Heu d'introduir una revisió o carregar un fitxer abans de seleccionar una recomanació.</message>
 	<message key="reviewer.article.mustSelectDecision">No s’ha seleccionat cap recomanació. Heu de seleccionar la recomanació que vulgueu trametre.</message>
 	<message key="reviewer.article.confirmDecision">Una vegada hàgiu enregistrat una decisió, no podreu fer canvis en aquesta revisió. Esteu segur/a que voleu continuar?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assegurar una avaluació anònima</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fitxer per corregir</message>
 	<message key="copyeditor.article.copyeditorFile">Fitxer del corrector/a d'originals</message>
-	<message key="copyeditor.article.uploadedFile">Fitxer carregat</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fitxer del corrector/a d'originals</message>
 
 	<!-- Proofreader -->
@@ -767,8 +763,8 @@
 	<!-- Installer -->
 	<message key="installer.appInstallation">Instal·lació de l’OJS</message>
 	<message key="installer.ojsUpgrade">Actualització de l’OJS</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versió {$version}</h4> <p>Gràcies per descarregar-vos l’<strong>Open Journal Systems</strong> del Public Knowledge Project. Abans de continuar, llegiu el fitxer <a href="{$baseUrl}/docs/README">README</a> que s’inclou amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si voleu enviar informes d'error o peticions de suport tècnic sobre l'Open Journal Systems, visiteu el <a href="http://forum.pkp.sfu.ca" target="_blank">fòrum de suport</a> o el <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema d’informe d'errors</a> en línia de PKP. Tot i que el fòrum de suport és el mètode de contacte preferit, també podeu enviar un correu electrònic a l'equip a l'adreça <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p> <h4>Actualització</h4> <p>Si esteu actualitzant una versió existent de l'OJS 2.x, <a href="{$upgradeUrl}">feu clic aquí</a> per continuar.</p> <h4>Requisits del sistema recomanats</h4> <ul> <li><a href="http://www.php.net/" target="_blank">PHP</a> &gt;= {$phpRequiredVersion}; actualment feu servir PHP {$phpVersion}{$wrongPhpText}</li> <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> &gt;= 4.1 o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> &gt;= 9.1.5</li> <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> &gt;= 1.3.2x or &gt;= 2.0.4x o Microsoft IIS 6</li> <li>Sistema operatiu: Qualsevol SO compatible amb el programari anterior, inclosos <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> i <a href="http://www.microsoft.com/">Windows</a>.</li> </ul> <p>El PKP no disposa de recursos per comprovar totes les possibles combinacions de versions de programari i plataformes, per la qual cosa no ofereix garanties de funcionament correcte ni assistència.</p> <p>Una vegada finalitzada la instal·lació podreu modificar aquests paràmetres editant el fitxer <tt>config.inc.php</tt> del directori base de l’OJS, o bé accedint a la interfície web d’administració del lloc.</p> <h4>Sistemes de bases de dades compatibles</h4> <p>Només s’ha comprovat la compatibilitat amb MySQL i PostgreSQL, però és possible que l’OJS també funcioni (parcialment o completament) amb altres sistemes de gestió de bases de dades compatibles amb <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>. Podeu enviar informes de compatibilitat i pedaços de codi per a sistemes de gestió de bases de dades alternatius a l’equip d'OJS.</p> <h4>Passos previs a la instal·lació</h4> <p>1. Comproveu que els fitxers i directoris següents (i també els seus continguts) tinguin permís d’escriptura:</p> <ul> <li><tt>config.inc.php</tt> té permís d’escriptura (opcional): {$writable_config}</li> <li><tt>public/</tt> té permís d’escriptura: {$writable_public}</li> <li><tt>cache/</tt> té permís d’escriptura: {$writable_cache}</li> <li><tt>cache/t_cache/</tt> té permís d’escriptura: {$writable_templates_cache}</li> <li><tt>cache/t_compile/</tt> té permís d’escriptura: {$writable_templates_compile}</li> <li><tt>cache/_db</tt> té permís d’escriptura: {$writable_db_cache}</li> </ul> <p>2. Haureu de crear un directori i habilitar-hi els permisos d'escriptura per poder desar-hi els arxius carregats (vegeu «Configuració de fitxers» més avall).</p>]]></message>
-	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versió {$version}</h4> <p>Gràcies per descarregar-vos l’<strong>Open Journal Systems</strong> del Public Knowledge Project. Abans de continuar, llegiu els fitxers <a href="{$baseUrl}/docs/README">README</a> i <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> que s’inclouen amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si voleu enviar informes d'error o peticions de suport tècnic sobre l'Open Journal Systems, visiteu el <a href="http://forum.pkp.sfu.ca" target="_blank">fòrum de suport</a> o el <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema d’informe d'errors</a> en línia de PKP. Tot i que el fòrum de suport és el mètode de contacte preferit, també podeu enviar un correu electrònic a l'equip a l'adreça <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p> <p>És molt <strong>important</strong> que feu una còpia de la vostra base de dades, del directori d'arxius i del directori d'instal·lació de l'OJS abans de continuar.</p> <p>Si funcioneu amb <a href="http://www.php.net/features.safe-mode" target="_blank">mode de seguretat PHP</a>, assegureu-vos que la directiva max_execution_time del vostre arxiu de configuració php.ini està al màxim nivell. Si s'assoleix aquest o qualsevol altre límit de temps (p.  ex., la directiva "Timeout" d'Apache) i no s'ha completat el procés d'actualització, farà falta intervenir manualment.</p>]]></message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Versió {$version}</h4> <p>Gràcies per descarregar-vos l’<strong>Open Journal Systems</strong> del Public Knowledge Project. Abans de continuar, llegiu el fitxer <a href="{$baseUrl}/docs/README.md">README</a> que s’inclou amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si voleu enviar informes d'error o peticions de suport tècnic sobre l'Open Journal Systems, visiteu el <a href="http://forum.pkp.sfu.ca" target="_blank">fòrum de suport</a> o el <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema d’informe d'errors</a> en línia de PKP. Tot i que el fòrum de suport és el mètode de contacte preferit, també podeu enviar un correu electrònic a l'equip a l'adreça <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p> <h4>Actualització</h4> <p>Si esteu actualitzant una versió existent de l'OJS 2.x, <a href="{$upgradeUrl}">feu clic aquí</a> per continuar.</p> <h4>Requisits del sistema recomanats</h4> <ul> <li><a href="http://www.php.net/" target="_blank">PHP</a> &gt;= {$phpRequiredVersion}; actualment feu servir PHP {$phpVersion}{$wrongPhpText}</li> <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> &gt;= 4.1 o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> &gt;= 9.1.5</li> <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> &gt;= 1.3.2x or &gt;= 2.0.4x o Microsoft IIS 6</li> <li>Sistema operatiu: Qualsevol SO compatible amb el programari anterior, inclosos <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a> i <a href="http://www.microsoft.com/">Windows</a>.</li> </ul> <p>El PKP no disposa de recursos per comprovar totes les possibles combinacions de versions de programari i plataformes, per la qual cosa no ofereix garanties de funcionament correcte ni assistència.</p> <p>Una vegada finalitzada la instal·lació podreu modificar aquests paràmetres editant el fitxer <tt>config.inc.php</tt> del directori base de l’OJS, o bé accedint a la interfície web d’administració del lloc.</p> <h4>Sistemes de bases de dades compatibles</h4> <p>Només s’ha comprovat la compatibilitat amb MySQL i PostgreSQL, però és possible que l’OJS també funcioni (parcialment o completament) amb altres sistemes de gestió de bases de dades compatibles amb <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>. Podeu enviar informes de compatibilitat i pedaços de codi per a sistemes de gestió de bases de dades alternatius a l’equip d'OJS.</p> <h4>Passos previs a la instal·lació</h4> <p>1. Comproveu que els fitxers i directoris següents (i també els seus continguts) tinguin permís d’escriptura:</p> <ul> <li><tt>config.inc.php</tt> té permís d’escriptura (opcional): {$writable_config}</li> <li><tt>public/</tt> té permís d’escriptura: {$writable_public}</li> <li><tt>cache/</tt> té permís d’escriptura: {$writable_cache}</li> <li><tt>cache/t_cache/</tt> té permís d’escriptura: {$writable_templates_cache}</li> <li><tt>cache/t_compile/</tt> té permís d’escriptura: {$writable_templates_compile}</li> <li><tt>cache/_db</tt> té permís d’escriptura: {$writable_db_cache}</li> </ul> <p>2. Haureu de crear un directori i habilitar-hi els permisos d'escriptura per poder desar-hi els arxius carregats (vegeu «Configuració de fitxers» més avall).</p>]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versió {$version}</h4> <p>Gràcies per descarregar-vos l’<strong>Open Journal Systems</strong> del Public Knowledge Project. Abans de continuar, llegiu els fitxers <a href="{$baseUrl}/docs/README.md">README</a> i <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> que s’inclouen amb aquesta aplicació. Per a més informació sobre el Public Knowledge Project i els seus projectes de programari, visiteu el <a href="http://pkp.sfu.ca/" target="_blank">lloc web del PKP</a>. Si voleu enviar informes d'error o peticions de suport tècnic sobre l'Open Journal Systems, visiteu el <a href="http://forum.pkp.sfu.ca" target="_blank">fòrum de suport</a> o el <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema d’informe d'errors</a> en línia de PKP. Tot i que el fòrum de suport és el mètode de contacte preferit, també podeu enviar un correu electrònic a l'equip a l'adreça <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p> <p>És molt <strong>important</strong> que feu una còpia de la vostra base de dades, del directori d'arxius i del directori d'instal·lació de l'OJS abans de continuar.</p> <p>Si funcioneu amb <a href="http://www.php.net/features.safe-mode" target="_blank">mode de seguretat PHP</a>, assegureu-vos que la directiva max_execution_time del vostre arxiu de configuració php.ini està al màxim nivell. Si s'assoleix aquest o qualsevol altre límit de temps (p.  ex., la directiva "Timeout" d'Apache) i no s'ha completat el procés d'actualització, farà falta intervenir manualment.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Seleccioneu UTF-8 per a tots els paràmetres de conjunt de caràcters per a una compatibilitat completa amb Unicode UTF-8. Aquesta compatibilitat actualment necessita un servidor de base de dades MySQL &gt;= 4.1.1 o PostgreSQL &gt;= 7.1. Per a una funcionalitat correcta d'Unicode, heu de tenir PHP &gt;= 4.3.0 compilat amb compatibilitat per a la llibreria <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (habilitada per defecte en la majoria d’instal·lacions PHP recents). Si el vostre servidor no compleix aquests requeriments, pot ser que tingueu problemes amb els conjunts de caràcters extensos.<br /><br /> El vostre servidor admet mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[El vostre servidor admet càrregues de fitxers: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[El vostre servidor admet càrregues de fitxers amb una mida màxima de: <strong>{$maxFileUploadSize}</strong>]]></message>
@@ -871,8 +867,6 @@
 	<message key="rt.context.authorTermsDescription">Per a les obres amb més d’un autor/a, deixeu tots els noms activats si voleu cercar obres que tinguin la mateixa autoria de manera col·laborativa o bé activeu un sol nom si voleu cercar cada persona una per una. Feu clic a «Sobre la revista» per obtenir més informació sobre el recurs cercat. Aquests recursos han estat seleccionats per la rellevància que tenen i perquè ofereixen accés lliure (gratuït) a tots o part dels continguts.</message>
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Introduïu el vostre correu electrònic per rebre notificacions immediates del contingut important nou que s'afegeixi a la revista.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[  <a href="{$emailUrl}">per correu electrònic.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">S'ha tramès un nou article: "{$title}".</message>
 	<message key="notification.type.editing">Esdeveniments d'edició</message>
@@ -901,4 +895,89 @@
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">S’ha carregat la llista de monedes "{$filename}" des d’XML.</message>
+	<message key="context.current">Revista actual:</message>
+	<message key="context.select">Canviar a una altra revista:</message>
+	<message key="article.return">Tornar als detalls de l'article</message>
+	<message key="journal.viewAllIssues">Veure tots els números</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Incloure usuaris/àries sense rols en aquesta revista</message>
+	<message key="user.reviewerPrompt">Voldria revisar trameses per a aquesta revista?</message>
+	<message key="user.reviewerPrompt.userGroup">Sí, sol·licitar el rol {$userGroup}.</message>
+	<message key="user.register.contextsPrompt">En quines revistes d'aquest lloc li agradaria registrar-se?</message>
+	<message key="user.register.otherContextRoles">Sol·licitar els rols següents.</message>
+	<message key="user.register.noContextReviewerInterests">Si ha sol·licitat ser revisor/a en alguna revista introdueixi els seus temes d'interès, si us plau.</message>
+	<message key="user.role.subEditors">Editors/es de secció</message>
+	<message key="user.role.journalAssistant">Assistent/a de revista</message>
+	<message key="user.role.journalAssistants">Assistents/es de revista</message>
+	<message key="issue.return">Tornar als detalls del número</message>
+	<message key="submission.event.submissionSubmitted">Article enviat</message>
+	<message key="search.results.orderBy">Ordenar resultats per</message>
+	<message key="search.results.orderBy.article">Títol de l'article</message>
+	<message key="search.results.orderBy.author">Autor/a</message>
+	<message key="search.results.orderBy.date">Data de publicació</message>
+	<message key="search.results.orderBy.issue">Número</message>
+	<message key="search.results.orderBy.journal">Títol de la revista</message>
+	<message key="search.results.orderBy.popularityAll">Popularitat (històric)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularitat (últim mes)</message>
+	<message key="search.results.orderBy.relevance">Rellevància</message>
+	<message key="search.results.orderDir.asc">Ascendent</message>
+	<message key="search.results.orderDir.desc">Descendent</message>
+	<message key="search.results.similarDocuments">documents similars</message>
+	<message key="plugins.categories.viewableFiles">Mòduls de galerada d'article</message>
+	<message key="plugins.categories.viewableFiles.description">Els mòduls de galerada d'article afegeixen suport per mostrar diferents tipus de document com a galerades d'article.</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Aquesta galerada estarà disponible en un lloc web diferent.</message>
+	<message key="submission.layout.galley.remoteURL">URL de contingut allotjat remotament</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Configuri o ajusti la recomanació del revisor/a.</message>
+	<message key="user.register.selectContext">Seleccioni una revista per registrar-s'hi:</message>
+	<message key="article.pageTitle">Vista de {$title}</message>
+	<message key="article.download">Descarrega aquest arxiu PDF</message>
+	<message key="archive.archivesPageNumber">Arxius - Pàgina {$pageNumber}</message>
+	<message key="about.contact">Contacte</message>
+	<message key="about.aboutContext">Sobre la revista</message>
+	<message key="about.onlineSubmissions.register">Registrar</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} o {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Fer una nova tramesa</message>
+	<message key="about.onlineSubmissions.viewSubmissions">veure les trameses pendents</message>
+	<message key="help.goToEditPage">Editar {$sectionTitle}</message>
+	<message key="notification.type.submissionSubmitted">S'ha enviat un nou article: "{$title}".</message>
+	<message key="grid.action.createContext">Crear un nova revista</message>
+	<message key="editor.navigation.issues">Números</message>
+	<message key="notification.type.approveSubmissionTitle">Esperant acceptació.</message>
+	<message key="user.profile.form.showOtherContexts">Registrar-se en altres revistes</message>
+	<message key="user.profile.form.hideOtherContexts">Amaga les altres revistes</message>
+	<message key="article.view.interstitial">Esculli un arxiu d'article per descarregar, si us plau.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Acceptat</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Esperant acceptació</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Acceptació de galerada</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Acceptar aquesta galerada per a la publicació.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Cancel·lar l'acceptació d'aquesta galerada.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indexant "{$journalName}"</message>
+	<message key="editor.issues.backIssues">Números anteriors</message>
+	<message key="editor.issues.futureIssues">Números pròxims</message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems també suporta l'ús del sistema <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) per assegurar un arxivament permanent i segur a la revista. CLOCKSS es basa en el programari de codi font obert LOCKSS desenvolupat a la biblioteca de la Universitat de Stanford, que permet a les biblioteques mantenir les revistes web seleccionades a través del sondeig regular dels llocs web de les revistes registrades per recopilar-ne els nous continguts publicats i arxivar-los. Cada arxiu es valida contínuament amb la memòria cau d'altres biblioteques i, si el contingut es corromp o es perd, s'utilitzen les altres memòries cau o la revista per restaurar-lo.
+<br /><br />
+No cal configurar el suport CLOCKSS per a Open Journal Systems fins que comenci la publicació.]]></message>
+	<message key="notification.type.approveSubmission">Aquesta tramesa està actualment esperant l'acceptació. Quan l'obtingui apareixerà en el número.</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">La implementació de la cerca no permet reindexació per revista.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">La ruta especificada "{$journalPath}" no coincideix amb cap revista.</message>
+	<message key="article.pluginMissing"><![CDATA[<p>L'arxiu PDF que ha seleccionat hauria de carregar-se si el seu navegador té instal·lat un mòdul de lectura de PDF reader (per exemple, una versió recent de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Passos per a la preinstal·lació</h4>
+
+
+<p>1. Els directoris i arxius següents (i els seus continguts) han de ser editables:</p>
+<ul>
+	<li><tt>config.inc.php</tt> és editable (opcional): {$writable_config}</li>
+	<li><tt>public/</tt> és editable: {$writable_public}</li>
+	<li><tt>cache/</tt> és editable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> és editable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> és editable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> és editable: {$writable_db_cache}</li>
+</ul>
+
+<p>2. S'ha de crear un directori editable per emmagatzemar els arxius carregats (veure "Configuració d'arxiu" a continuació).</p>]]></message>
+	<message key="notification.savedIssueMetadata">S'han desat les metadades de publicació del número.</message>
+	<message key="notification.type.editorAssignmentTask">S'ha tramès un article nou i se li ha d'assignar un editor/a.</message>
+	<message key="notification.type.assignProductionUser">Asigna un usuari/ària per crear galerades amb l'opció "Afegir" de la llista de participants.</message>
+	<message key="notification.type.awaitingRepresentations">Esperant galerades.</message>
+	<message key="user.authorization.noContext">Cap revista en aquest context!</message>
+	<message key="user.authorization.invalidIssue">Sol·licitud de número invàlida!</message>
 </locale>

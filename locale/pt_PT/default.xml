@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -144,17 +144,12 @@ Os números na Tabela 3 não estão alinhadas na 3ª coluna.</pre>
 <br />
 <pre>4. FORMATAÇÃO
 O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
-	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceite para publicação, será necessário o pagamento de uma Taxa de Publicação de Artigo para suportar os custos de publicação.</message>
-	<message key="default.journalSettings.waiverPolicy">Caso não possa pagar as taxas descritas, notifique a Equipa Editorial através do campo Comentários, pois não é de interesse da revista que taxas impeçam a publicação de trabalhos relevantes.</message>
-	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante a sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">O pagamento da taxa permitirá visualizar, transferir e imprimir este artigo.</message>
 	<message key="section.default.title">Artigos</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.publicationFee">Publicação de artigo</message>
 	<message key="default.journalSettings.purchaseArticleFee">Comprar Artigo</message>
 	<message key="default.journalSettings.membershipFee">Registo em Entidade de Classe</message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar Número</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento deste montante permite ver, descarregar e imprimir o número.</message>
 	<message key="default.genres.article">Texto Artigo</message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivamento distribuído entre as bibliotecas participantes e permite que estas bibliotecas criem arquivos permanentes da revista para fins de preservação e restauração. <a href="http://clockss.org/">Mais ...</a>]]></message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>

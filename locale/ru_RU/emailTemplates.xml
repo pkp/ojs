@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localized email templates XML file.
@@ -22,31 +22,6 @@
 <br />
 {$principalContactSignature}]]></body>
 		<description>Это письмо отправляется зарегистрированным пользователям, которые указали, что данный тип уведомления отправляется им электронной почтой.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Новое уведомление с сайта «{$siteTitle}»</subject>
-		<body><![CDATA[Вы получили новое уведомление с сайта «{$siteTitle}»:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Ссылка: {$url}<br />
---<br />
-<br />
-Если хотите прекратить получать письма с уведомлениями, пожалуйста, перейдите по ссылке {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Это письмо отправляется незарегистрированным пользователям в списке рассылки уведомлений.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Добро пожаловать в список рассылки сайта «{$siteTitle}»!</subject>
-		<body><![CDATA[Вы подписались на получение уведомлений с сайта «{$siteTitle}».<br />
-<br />
-Пожалуйста, щелкните на этой ссылке для подтверждения запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}<br />
-<br />
-Если хотите прекратить получать письма с уведомлениями, пожалуйста, перейдите по ссылке {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Это письмо отправляется незарегистрированному пользователю, который только что зарегистрировался в списке рассылки уведомлений.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Подтверждение сброса пароля</subject>
@@ -173,14 +148,6 @@ URL материала: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Это письмо (если эта возможность включена) автоматически отправляется другим авторам, которые не являются пользователями OJS, указанным в процессе отправки материала.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Материал не подходит</subject>
-		<body><![CDATA[Здравствуйте, {$authorName}!<br />
-<br />
-Первоначальное знакомство с материалом «{$submissionTitle}» дало понять, что он не соответствует тематике и направленности журнала «{$contextName}». Я рекомендую Вам внимательно ознакомиться с описанием журнала в разделе «О нас», а также с содержанием свежих выпусков журнала, чтобы составить более полное представление о работах, которые мы публикуем. Вы также можете подумать об отправке этого материала в другой, более подходящий журнал.<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Назначение редактором</subject>
@@ -543,6 +510,16 @@ URL материала: {$submissionUrl}<br />
 ]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Отклонить материал» относительно присланного материала.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Рекомендация редактора</subject>
+		<body><![CDATA[Здравствуйте, {$editors}!<br />
+<br />
+По материалу «{$submissionTitle}», отправленному в «{$contextName}», могу рекомендовать следующее: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Это письмо рекомендующего редактора или редактора раздела редакторам или редакторам раздела, принимающим решение, чтобы уведомить их об итоговой рекомендации относительного присланного материала.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Запрос на литературное редактирование</subject>
 		<body><![CDATA[Здравствуйте, {$participantName}!<br />
@@ -787,7 +764,7 @@ URL подписки: {$subscriptionUrl}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Загружена исправленная версия</subject>
-		<body><![CDATA[Здравствуйте, {$editorialContactName}!<br />
+		<body><![CDATA[Уважаемые редакторы!<br />
 <br />
 Исправленная версия материала «{$submissionTitle}» была загружена на сайт (автор — {$authorName}).<br />
 <br />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/gateways/resolver/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.gateways.resolver.displayName">Vtičnik Resolver</message>
+	<message key="plugins.gateways.resolver.description">Vtičnik razrešuje številke in prispevke na podlagi informacij o citiranju.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Razreševanje ene entitete s pomočjo podanih informacij o citiranju ni mogoče. Prosimo, da zagotovite izčrpne podatke o citiranju, ki se nanašajo na to namestitev OJS-ja.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Izvozi rezultate</message>
+</locale>

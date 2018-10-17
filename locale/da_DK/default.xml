@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -111,14 +111,7 @@ ________________________________________________________________________<br/>
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Publicering af artiklen</message>
-	<message key="default.journalSettings.publicationFeeDescription">Hvis dette manuskript accepteres med henblik på publicering, vil du blive bedt om at betale et artikelpubliceringsgebyr til dækning af publiceringsomkostningerne.</message>
-	<message key="default.journalSettings.waiverPolicy">Hvis du ikke har tilstrækkelige midler til betale sådanne gebyrer, har du mulighed for at give afkald på de enkelte gebyrer. Vi ønsker ikke, at gebyrer skal forhindre et værdigt værk i at blive publiceret.</message>
-	<message key="default.journalSettings.purchaseArticleFee">Køb artikel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Betaling af dette gebyr gør det muligt for dig at se, downloade, og udskrive denne artikel.</message>
-	<message key="default.journalSettings.membershipFee">Foreningsmedlemsskab</message>
-	<message key="default.journalSettings.membershipFeeDescription">Ved betaling af dette gebyr bliver du medlem af denne forening i ét år, og du har gratis adgang til dette tidsskrift.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Købsnummer</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Betaling af dette gebyr vil gøre det muligt for dig at læse, downloade og printe dette nummer.</message>
 	<message key="default.genres.article">Artikeltekst</message>
 	<message key="default.genres.researchInstrument">Forskningsredskab</message>
 	<message key="default.genres.researchMaterials">Forskningsmateriale</message>
@@ -131,8 +124,8 @@ ________________________________________________________________________<br/>
 	<message key="default.groups.name.manager">Tidsskriftschef</message>
 	<message key="default.groups.plural.manager">Tidsskriftschefer</message>
 	<message key="default.groups.abbrev.manager">JM</message>
-	<message key="default.groups.name.editor">Tidsskfitsredaktør</message>
-	<message key="default.groups.plural.editor">Tidsskfitsredaktører</message>
+	<message key="default.groups.name.editor">Tidsskriftredaktør</message>
+	<message key="default.groups.plural.editor">Tidsskriftredaktører</message>
 	<message key="default.groups.abbrev.editor">JE</message>
 	<message key="default.groups.name.guestEditor">Gæsteredaktør</message>
 	<message key="default.groups.plural.guestEditor">Gæsteredaktører</message>
@@ -146,4 +139,6 @@ ________________________________________________________________________<br/>
 	<message key="default.groups.name.externalReviewer">Bedømmer</message>
 	<message key="default.groups.plural.externalReviewer">Bedømmere</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.journalSettings.purchaseArticleFee">Køb artikel</message>
+	<message key="default.journalSettings.membershipFee">Foreningsmedlemskab</message>
 </locale>

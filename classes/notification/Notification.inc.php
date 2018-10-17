@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/Notification.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSNotification
@@ -15,6 +15,7 @@
 
 /** Notification associative types. */
 define('NOTIFICATION_TYPE_PUBLISHED_ISSUE', 		0x10000015);
+define('NOTIFICATION_TYPE_PUBLICATION_SCHEDULED',	0x10000016);
 
 // OJS-specific trivial notifications
 define('NOTIFICATION_TYPE_BOOK_REQUESTED',			0x3000001);
@@ -34,4 +35,4 @@ import('lib.pkp.classes.notification.NotificationDAO');
 class Notification extends PKPNotification {
 }
 
-?>
+

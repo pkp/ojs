@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
@@ -18,8 +18,10 @@
 	<message key="plugins.block.subscription.description">Tento plugin přidá do postranního panelu blok s informací o předplatném.</message>
 	<message key="plugins.block.subscription.blockTitle">Předplatné</message>
 	<message key="plugins.block.subscription.expires">Vyprší</message>
-	<message key="plugins.block.subscription.providedBy">Přístup poskytl:</message>
-	<message key="plugins.block.subscription.comingFromIP">Přichází z IP:</message>
-	<message key="plugins.block.subscription.about">Předplatné</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Přihlaste se pro ověření předplatného</message>
+	<message key="plugins.block.subscription.providedBy">Přístup poskytl: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Přichází z IP: {$ip}</message>
+	<message key="plugins.block.subscription.about">Přístupy</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Přihlaste se pro přístup k zdrojům s omezeným přístupem.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Pro přístup k některým zdrojům je třeba předplatné.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Více informací</message>
 </locale>

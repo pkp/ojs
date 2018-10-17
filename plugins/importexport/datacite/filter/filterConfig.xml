@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/datacite/filter/filterConfig.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Filter Configuration.
@@ -18,21 +18,21 @@
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
 			inputType="class::classes.issue.Issue"
-			outputType="xml::schema(http://schema.datacite.org/meta/kernel-3/metadata.xsd)" />
+			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 		<!-- DataCite XML article output -->
 		<filterGroup
 			symbolic="article=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
 			inputType="class::classes.article.Article"
-			outputType="xml::schema(http://schema.datacite.org/meta/kernel-3/metadata.xsd)" />
+			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 		<!-- DataCite XML galley output -->
 		<filterGroup
 			symbolic="galley=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
 			inputType="class::classes.article.ArticleGalley"
-			outputType="xml::schema(http://schema.datacite.org/meta/kernel-3/metadata.xsd)" />
+			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 	</filterGroups>
 	<filters>
 		<!-- DataCite XML issue output -->

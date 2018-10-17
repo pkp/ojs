@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -41,8 +41,8 @@
 	<message key="submission.reviewFormResponse">Formularz recenzji</message>
 
 
-	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>	
+	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
 	
 	<!-- review forms end -->
 
@@ -62,13 +62,13 @@
 	<message key="common.journalHomepageImage.altText">Baner</message>
 
 	<!-- Common Form Messages -->
-	
+
 	<!-- Common Email Messages -->
 
 	<!-- Common Localization Terms -->
 
 	<!-- Common Error Messages -->
-		
+
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Pomoc</message>
 	<message key="navigation.archives">Archiwum</message>
@@ -81,7 +81,7 @@
 	<message key="navigation.competingInterestGuidelines">Wytyczne w zakresie konfliktu interesów</message>
 	<message key="navigation.infoForAuthors.long">Informacje dla autorów</message>
 	<message key="navigation.infoForLibrarians.long">Informacje dla bibliotekarzy</message>
-	
+
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Nieprzypisane</message>
 	<message key="common.queue.short.submissionsUnassigned">Nieprzypisane</message>
@@ -95,7 +95,7 @@
 	<message key="common.queue.short.active">Aktywne</message>
 	<message key="common.queue.long.completed">Archiwum</message>
 	<message key="common.queue.short.completed">Archiwum</message>
-	
+
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
@@ -169,7 +169,7 @@
 	<message key="submission.proofreading">Korekta pliku do publikacji</message>
 	<message key="submission.scheduling">Harmonogram</message>
 	<message key="submission.scheduledIn">Zaplanowane do publikacji w {$issueName}.</message>
-	<message key="submission.scheduledIn.tba">(do uzgodnienia)</message>	
+	<message key="submission.scheduledIn.tba">(do uzgodnienia)</message>
 	<message key="submissions.sec">Dział</message>
 	<message key="submissions.step1">Krok 1</message>
 	<message key="submissions.step3">Krok 3</message>
@@ -192,7 +192,7 @@
 	<message key="submissions.proofreadingComplete">Zaakceptowane do opublikowania</message>
 
 	<!-- Submission Notes -->
-	
+
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Aktualny numer</message>
 	<message key="journal.journals">Czasopisma</message>
@@ -215,7 +215,7 @@
 	<!-- Roles -->
 	<message key="user.role.manager">Administrator czasopisma</message>
 	<message key="user.role.editor">Redaktor czasopisma</message>
-	<message key="user.role.sectionEditor">Redaktor działu</message>
+	<message key="user.role.subEditor">Redaktor działu</message>
 	<message key="user.role.layoutEditor">Składacz</message>
 	<message key="user.role.copyeditor">Korektor</message>
 	<message key="user.role.proofreader">Korektor pliku do publikacji</message>
@@ -223,13 +223,13 @@
 	<message key="user.role.subscriptionManager">Administrator subskrypcji</message>
 	<message key="user.role.managers">Administratorzy czasopisma</message>
 	<message key="user.role.editors">Redaktorzy</message>
-	<message key="user.role.sectionEditors">Redaktorzy działu</message>
+	<message key="user.role.subEditors">Redaktorzy działu</message>
 	<message key="user.role.layoutEditors">Składacze</message>
 	<message key="user.role.copyeditors">Korektorzy</message>
 	<message key="user.role.proofreaders">Korektorzy pliku do publikacji</message>
 	<message key="user.role.authors">Autorzy</message>
 	<message key="user.role.subscriptionManagers">Administratorzy subskrypcji</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Numer</message>
 	<message key="issue.issues">Numery</message>
@@ -279,19 +279,14 @@
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
 	<message key="submission.event.general.issueAssigned">Artykuły przypisany do numeru</message>
 	<message key="submission.event.general.articlePublished">Artykuł opublikowany</message>
-
 	<message key="submission.event.author.authorRevision">Korekta autora przesłana</message>
-
 	<message key="submission.event.general.authorRevision">Plik korekty autora zaktualizowany</message>
-	
 	<message key="submission.event.editor.editorAssigned">Redaktor przypisany do zgłoszonego tekstu</message>
 	<message key="submission.event.editor.editorUnassigned">Redaktor odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.editor.editorDecision">Decyzja redaktora wysłana</message>
 	<message key="submission.event.editor.editorFile">Plik redaktora zaktualizowany</message>
 	<message key="submission.event.editor.submissionArchived">Wysłany tekst przeniesiony do archiwum</message>
 	<message key="submission.event.editor.submissionRestored">Wysłany tekst przywrócony z archiwum</message>
-	
-	
 	<message key="submission.event.copyedit.copyeditorAssigned">Korektor przypisany do zgłoszonego tekstu</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Korektor odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Korekta rozpoczęta</message>
@@ -299,13 +294,11 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Wstępna korekta ukończona</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Korekta ukończona</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Plik po korekcie zaktualizowany</message>
-	
 	<message key="submission.event.proofread.proofreaderAssigned">Korektor pliku do publikacji przypisany do zgłoszenia</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Korektor pliku do publikacji odłączony od zgłoszenia</message>
 	<message key="submission.event.proofread.proofreadInitiated">Korekta pliku do publikacji rozpoczęta</message>
 	<message key="submission.event.proofread.proofreadRevision">Plik po korekcie pliku do publikacji zaktualizowany</message>
 	<message key="submission.event.proofread.proofreadCompleted">Korekta pliku do publikacji ukończona</message>
-	
 	<message key="submission.event.layout.layoutEditorAssigned">Składacz przypisany do tekstu</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Składacz odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.layout.layoutInitiated">Skład rozpoczęty</message>
@@ -320,30 +313,30 @@
 
 	<!-- Reader article view -->
 	<message key="reader.subscribersOnly">Tylko dla subskrybentów</message>
-	<message key="reader.subscriptionRequiredLoginText">Wymagana subskrypcja. Aby zweryfikować subskrypcję, zaloguj do czasopisma.</message>  
+	<message key="reader.subscriptionRequiredLoginText">Wymagana subskrypcja. Aby zweryfikować subskrypcję, zaloguj do czasopisma.</message>
 	<message key="reader.openAccess">Otwarty dostęp</message>
 	<message key="reader.subscriptionAccess">Dostęp przez subskrypcję</message>
 	<message key="reader.subscriptionOrFeeAccess">Dostęp poprzez subskrypcję lub za opłatą</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Uwagi do artykułu</message>
-	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
+	<message key="comments.authenticated"><![CDATA[przez <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
 	<!-- Site Administration -->
 
-	
-	
+
+
 	<!-- Languages -->
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Podaj inne źródło uwierzytelniania niż OJS, uzyskując następujący wynik:</p>
 <ul>
 	<li>Jeżeli użytkownik usiłuje utworzyć nowe konto w systemie używając nazwy użytkownika, która już istnieje w źródle uwierzytelniania (poza bazą OJS), rejestracja jest dozwolona tylko w przypadku podania poprawnego hasła dla nazwy użytkownika.</li>
 </ul>]]></message>
-	
+
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>UWAGA!</div>
 <p>System nie był w stanie automatycznie nadpisać pliku konfiguracji. Aby zastosować zmiany w konfiguracji musisz otworzyć plik <tt>config.in.php</tt> w edytorze tekstu i zmienić jego zawartość z treścią zamieszczoną w poniższym polu.</p>]]></message>
-	
+
 
 	<!-- Site Administrator Merge Users -->	
 
@@ -352,38 +345,25 @@
 	<message key="subscriptionManager.individualSubscriptions">Indywidualne subskrypcje</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Instytucjonalne subskrypcje</message>
 	<message key="subscriptionManager.subscriptionTypes">Typy subskrypcji</message>
-	
+
 	<!-- Journal Management -->
 
 	<!-- Statistics & Reports -->
 
-
 	<!-- Plugin Management -->
-	
+
 	<!-- Payment Management -->
-
-
-		
-
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Wtyczka autoryzacji pozwala aby Open Journal System uwierzytelniał użytkowników za pomocą zewnętrznych systemów, takich jak LDAP.</message>
-
-
-	<message key="plugins.categories.citationFormats.description">Wtyczki formatu cytowań pozwalają użytkownikom pobierać opisy bibliograficzne artykułów w różnych formatach.</message>
-
-
 	<message key="plugins.categories.generic.description">Wtyczki ogólne są wykorzystywane do rozszerzania możliwości Open Journal Systems i nie są wspierane przez inne rodzaje wtyczek.</message>
-
 	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
-
-
 	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
 
 
- 
+
 
 	<!-- Files Browser -->
 
@@ -398,7 +378,7 @@
 	<message key="manager.setup.lockssDescription"><![CDATA[LOCKSS jest otwartoźródłowym systemem opracowanym przez Bibliotekę Uniwerytetu Stanford, który umożliwia archiwizowanie wybranych czasopism publikowanych w internecie. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku występienia błędów lub nieciągłości danych.
 <br /><br />
 Konfiguracja LOCKSS dla OJS może zostać przeprowadzona zarówno przed jak i po opublikowaniu treści w czasopiśmie. Możesz włączyć system LOCKSS poniżej:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Informacje o prawach autorskich zaproponowane przez Creative Commons</h3>
 <h4>1. Zaproponowana polityka dla czasopisma, które zapewnia otwarty dostęp</h4>
@@ -416,7 +396,6 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<li>Autorzy mogą zawierać dodatkowe umowy niewyłączne na rozpowszechnianie opublikowanej wersji utworu (np. udostępnienie w instytucjonalnym repozytorium lub opublikowanie w książce), które zobowiązywać będą do podania tytułu czasopisma, jako miejsca pierwszej publikacji.</li>
 <li>Autorzy mogą udostępniać swoje utwory online (np. w instytucjonalnym repozytorium lub na stronie internetowej) przed oraz podczas procesu rozpatrywania zgłoszenia, co może zapewnić pierwszeństwo pracy, jak również zapewnić wcześniejsze cytowania pracy (zob. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations">Włącz asystenta cytowań</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Dostępne są następujące narzędzia umożliwiające czytelnikom lokalizowanie wersji on-line cytowanej przez autora pracy:</p>
@@ -429,7 +408,7 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Setup Step 5 -->
 
 	<!-- Languages -->
-	
+
 	<!-- Section Management -->
 
 	<!-- Import/Export -->
@@ -444,7 +423,7 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	]]></message>
 
 
-	
+
 	<!-- Email Management -->
 
 	<!-- Subscription Policy Management -->
@@ -472,7 +451,7 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>
 Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
@@ -484,7 +463,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 
 
 
-	
+
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktywne prace redakcyjne</message>
 	<message key="sectionEditor.completedEditorialAssignments">Ukończone prace redakcyjne</message>
@@ -493,7 +472,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="sectionEditor.author.confirmRenotify">Ponowne powiadomienie autora spowoduje zresetowanie ustawień w zakresie tekstu.</message>
 	<message key="sectionEditor.layout.confirmRenotify">Ponowne powiadomienie składacza spowoduje zresetowanie ustawień w zakresie przypisanego tekstu</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Ponowne powiadomienie korektora pliku do publikacji spowoduje zresetowanie ustawień w zakresie przypisanego tekstu.</message>
-
 	<message key="sectionEditor.regrets.breadcrumb">Odmowy</message>
 	<message key="sectionEditor.regrets.title">#{$submissionId} Odmowy recenzentów, anulowania, wcześniejsze etapy</message>
 	<message key="sectionEditor.regrets">Odmowy</message>
@@ -520,7 +498,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="reviewer.pendingReviews">Artykuły w recenzji</message>
 	<message key="reviewer.completedReviews">Ukończone</message>
 	<message key="reviewer.averageQuality">Ocena</message>
-	
+
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Plik do zrecenzowania</message>
 	<message key="reviewer.article.notifyTheEditor">Powiadom redaktora</message>
@@ -535,38 +513,36 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="reviewer.article.recommendation">Rekomendacje</message>
 	<message key="reviewer.article.submitReview">Wyślij recenzję do redaktora</message>
 	<message key="reviewer.article.reviewerComments">Uwagi</message>
-	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>	
+	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Wersja wysłana przez recenzenta</message>
-	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Jeżeli chcesz uzupełnić plik o komentarze dla redaktora
-, zapisz plik na dysku.)</message>
-        <message key="reviewer.article.schedule.request">Prośba redaktora</message>
-        <message key="reviewer.article.schedule.response">Twoja odpowiedź</message>
-        <message key="reviewer.article.schedule.submitted">Wysłane recenzje</message>
-        <message key="reviewer.article.schedule.due">Termin</message>
-	<message key="reviewer.article.decision.accept">Zaakceptuj zgłoszony tekst</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Jeżeli chcesz uzupełnić plik o komentarze dla redaktora, zapisz plik na dysku.)</message>
+	<message key="reviewer.article.schedule.request">Prośba redaktora</message>
+	<message key="reviewer.article.schedule.response">Twoja odpowiedź</message>
+	<message key="reviewer.article.schedule.submitted">Wysłane recenzje</message>
+	<message key="reviewer.article.schedule.due">Termin</message>
+	<message key="reviewer.article.decision.accept">Zaakceptuj tekst</message>
 	<message key="reviewer.article.decision.pendingRevisions">Wymagane poprawki</message>
-	<message key="reviewer.article.decision.resubmitHere">Prześlij do ponownej recenzji</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Do zgłoszenia w innym czasopiśmie</message>
-	<message key="reviewer.article.decision.decline">Odrzucenie zgłoszonego tekstu</message>
+	<message key="reviewer.article.decision.resubmitHere">Wymagane poprawki i ponowna recenzja</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Do zgłoszenia w innym czasopiśmie</message>
+	<message key="reviewer.article.decision.decline">Odrzuć tekst</message>
 	<message key="reviewer.article.decision.seeComments">Rekomendacje w komentarzu</message>
 	<message key="reviewer.article.schedule">Harmonogram</message>
-        <message key="reviewer.article.submissionToBeReviewed">Teksty do zrecenzowania</message>
-        <message key="reviewer.article.reviewSchedule">Harmonogram recenzowania</message>
-        <message key="reviewer.article.reviewSteps">Etapy recenzowania</message>
-        <message key="reviewer.article.reviewerGuidelines">Wytyczne dla recenzentów</message>
+	<message key="reviewer.article.submissionToBeReviewed">Teksty do zrecenzowania</message>
+	<message key="reviewer.article.reviewSchedule">Harmonogram recenzowania</message>
+	<message key="reviewer.article.reviewSteps">Etapy recenzowania</message>
+	<message key="reviewer.article.reviewerGuidelines">Wytyczne dla recenzentów</message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
-        <message key="reviewer.article.notifyEditorA">Powiadom redaktora prowadzącego</message>
-        <message key="reviewer.article.notifyEditorB">czy podejmiesz się recenzji.</message>
-        <message key="reviewer.article.consultGuidelines">Jeżeli masz zamiar podjąć się recenzji, przeczytaj wytyczne zamieszczone poniżej.</message>
-        <message key="reviewer.article.downloadSubmission">Kliknij nazwę pliku w celu jego pobrania do recenzji.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Określ czy posiadasz zainteresowania badawcze zbieżne z recenzowaną pracą (zobacz <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">zasady</a>).]]></message>
+	<message key="reviewer.article.notifyEditorA">Powiadom redaktora prowadzącego</message>
+	<message key="reviewer.article.notifyEditorB">czy podejmiesz się recenzji.</message>
+	<message key="reviewer.article.consultGuidelines">Jeżeli masz zamiar podjąć się recenzji, przeczytaj wytyczne zamieszczone poniżej.</message>
+	<message key="reviewer.article.downloadSubmission">Kliknij nazwę pliku w celu jego pobrania do recenzji.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Określ czy posiadasz zainteresowania badawcze zbieżne z recenzowaną pracą (zobacz <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">zasady</a>).]]></message>
 	<message key="reviewer.competingInterests">Zainteresowania badawcze</message>
-        <message key="reviewer.article.enterReviewA">Kliknij aby wprowadzić (lub wkleić) twoją recenzję tekstu.</message>
-        <message key="reviewer.article.uploadFile">Dodatkowo, możesz wysłać pliki przeznaczone dla redaktora i/albo autora (np. plik z tekstem z naniesionymi komentarzami).</message>
-        <message key="reviewer.article.selectRecommendation">Aby zakończyć proces recenzji wybierz rekomendację i kliknij Wyślij recenzję do redaktora. Musisz wprowadzić recenzję lub wysłać plik, aby wybór rekomendacji był aktywny.</message>
+	<message key="reviewer.article.enterReviewA">Kliknij, aby wprowadzić (lub wkleić) recenzję tekstu.</message>
+	<message key="reviewer.article.uploadFile">Dodatkowo, możesz wysłać pliki przeznaczone dla redaktora i/albo autora (np. plik z tekstem z naniesionymi komentarzami).</message>
+	<message key="reviewer.article.selectRecommendation">Aby zakończyć proces recenzji wybierz rekomendację i kliknij Wyślij recenzję do redaktora. Musisz wprowadzić recenzję lub wysłać plik, aby wybór rekomendacji był aktywny.</message>
 	<message key="reviewer.article.mustSelectDecision">Rekomendacja nie została wybrana. Przed wysłaniem musisz wybrać rekomendację.</message>
 	<message key="reviewer.article.confirmDecision">Po zapisaniu decyzji, dalsze zmiany nie będą możliwe. Czy chcesz kontynuować?</message>
-	<message key="reviewer.article.ensuringBlindReview">Zapewnienie ślepej recenzji</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Plik dla korektora</message>
@@ -634,7 +610,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="submission.proofread.instructions">Wytyczne dla korektora pliku do publikacji</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artykuł</message>
 	<message key="submission.logType.author">Autor</message>
 	<message key="submission.logType.editor">Redaktor czasopisma</message>
@@ -642,11 +618,11 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="submission.logType.copyedit">Korekta</message>
 	<message key="submission.logType.layout">Skład</message>
 	<message key="submission.logType.proofread">Zaakceptowane</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Korespondencja redaktor/autor</message>
 	<message key="submission.comments.copyeditComments">Uwagi korektora</message>
@@ -769,7 +745,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 
 	<!-- Help -->
 	<message key="help.ojsHelp">Pomoc Open Journal Systems</message>
-	<message key="help.ojsHelpAbbrev">Pomoc OJS</message>	
+	<message key="help.ojsHelpAbbrev">Pomoc OJS</message>
 	<message key="help.searchReturnResults">Wróc do wyników wyszukiwania</message>
 
 	<!-- Donations -->
@@ -791,7 +767,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="payment.type.subscription">Opłata za subksrypcję</message>
 
 
-	<message key="payment.membership.renewMembership">Renew Individual Membership</message>	
 
 
 
@@ -830,11 +805,9 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} został(a) przypisany(a) do wykonania korekty tekstu {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Plik po korekcie został przesłany przez korektora.</message>
 	<message key="log.copyedit.authorFile">Plik po korekcie został przesłany przez autora.</message>
-
 	<message key="log.layout.layoutEditorAssigned">{$editorName} został(a) przypisany(a) do wykonania składu tekstu {$submissionId}.</message>
 	<message key="log.layout.layoutEditorUnassigned">{$editorName} został(a) odłączony(a) od wykonania składu tekstu {$submissionId}.</message>
 	<message key="log.layout.layoutEditComplete">{$editorName} ukończył(a) skład tekstu {$submissionId}.</message>
-
 	<message key="log.editor.metadataModified">Metadane tekstu zostały zmienione przez {$editorName}.</message>
 	<message key="log.editor.editorFile">Wersja redaktorska pliku została wysłana.</message>
 	<message key="log.editor.archived">Tekst {$submissionId} został zarchiwizowany.</message>
@@ -855,10 +828,8 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="rt.admin.settings.enableReadingTools">Włącz Narzędzia dla czytelników, dla oznaczonych działów czasopisma.</message>
 	<message key="rt.admin.settings.relatedItems">Dziedzina</message>
 	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Zobacz <a href="{$relatedItemsLink}" class="action">Ustawienia powiązanych pozycji</a> aby zobaczyć, dodać, poprawić lub usunąć powiązane pozycje dla każdej dziedziny.]]></message>
-
 	<message key="rt.admin.options">Journal Item Tools</message>
 	<message key="rt.admin.relatedItems">Narzędzia powiązanych pozycji</message>
-
 	<message key="rt.admin.settings.addComment">Dodaj komentarz (włącza możliwość umieszczania komentarzy przez czytelników, które mogą być usuwane przez Administratora czasopisma).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe nie jest dozwolone. </message>
 	<message key="rt.admin.settings.addComment.anonymous">Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe jest dozwolone.</message>
@@ -874,18 +845,16 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Poniżej wyświetlone są prawdopodobnie niepoprawne adresy URL wyszukiwanych stron.<br/>
 Powinieneś(naś) ręcznie zweryfikować każdy URL i oznaczyć jako poprawny, jako że automatyczne testowanie URL nie zawsze działa w 100%.<br/>
 Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wymagają opublikowania danych formularza.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
 
 
 	<message key="rt.metadata.dublinCore.primaryAuthor">Autor</message>
-
 	<message key="rt.metadata.pkp.primaryAuthor">Imię, nazwisko autora, afiliacja, kraj</message>
 	<message key="rt.metadata.pkp.peerReviewed">Recenzowany artykuł</message>
 	<message key="rt.beNotifiedWhen">Powiadom gdy...</message>
-
 	<message key="rt.thisJournal">Wyszukaj w czasopiśmie</message>
 
 
@@ -898,7 +867,7 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$title}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$title}" został zmodyfikowany.</message>
 	<message key="notification.type.issuePublished">Nowy numer został opublikowany.</message>
-	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>	
+	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>
 	<message key="notification.type.reviewerFormComment">Recenzja od recenzenta została przesłana do "{$title}".</message>
 	<message key="notification.type.reviewing">Wydarzenia dotyczące procesu recenzji</message>
 	<message key="notification.type.site">Wydarzenia dotyczące strony</message>
@@ -939,29 +908,12 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="gifts.gift">Podarunek</message>
 	<message key="gifts.noteTitle">Tytuł</message>
 	<message key="gifts.note">Opis podarunku</message>
-	<message key="gifts.noteTitleRequired">Please provide a title for your personalized message.</message>
-	<message key="gifts.noteRequired">Please provide a personalized message.</message>
 	<message key="gifts.localeRequired">Proszę o wybranie języka dla spersonalizowanej wiadomości.</message>
 	<message key="gifts.myGifts">Moje podarunki</message>
 	<message key="gifts.manageMyGifts">Zarządzaj moimi podarunkami</message>
-	<message key="gifts.redeemGift">Redeem Gift</message>
 	<message key="gifts.status.notRedeemed">Dostępny</message>
-	<message key="gifts.status.redeemed">Redeemed</message>
-	<message key="gifts.status.redeemGift">Redeem Gift</message>
 	<message key="gifts.subscriptions">Subskrypcje</message>
-	<message key="gifts.subscriptionsDescription">A gift subscription redeemed here will replace your existing subscription (if you have one). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
-	<message key="gifts.purchaseGiftSubscription">Give a gift subscription</message>
-	<message key="gifts.giftSubscriptionsAvailable">Gift subscriptions are also available. Gift subscriptions can be redeemed at any time by the recipient and are a great way to support this journal.</message>
-	<message key="gifts.noSubscriptions">No gift subscriptions</message>
-	<message key="gifts.giftRedeemed">The gift was successfully redeemed.</message>
-	<message key="gifts.noGiftToRedeem">This gift is not available to be redeemed.</message>
-	<message key="gifts.giftAlreadyRedeemed">This gift has already been redeemed.</message>
-	<message key="gifts.giftNotValid">This gift is not valid and could not be redeemed.</message>
-	<message key="gifts.subscriptionTypeNotValid">The subscription type for this gift is not valid. Please contact the subscription manager.</message>
-	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
-	<message key="payment.loginRequired.forIssue">Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal.</message>
 	<message key="payment.type.purchaseIssue">Zapłać za dostęp do numeru</message>
-	<message key="payment.type.gift">Gift</message>
 	<message key="payment.type.gift.subscription">Subskrypcja</message>
 	<message key="installer.allowFileUploads"><![CDATA[Serwer umożliwia przesyłanie plików: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Serwer umożliwia przesyłanie plików o maksymalnym rozmiarze: <strong>{$maxFileUploadSize}</strong>]]></message>
@@ -986,7 +938,6 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="submission.event.submissionSubmitted">Artykuł przesłany</message>
 	<message key="plugins.categories.viewableFiles">Wtyczki widoku plików z artykułami</message>
 	<message key="plugins.categories.viewableFiles.description">Wtyczki widoku pliku z artykułami wspierają różne formaty plików w zakresie sposobów wyświetlania.</message>
-	<message key="manager.setup.citations.enable">Włącz asystenta cytowań</message>
 	<message key="user.reviewerPrompt">Czy byłbyś skłonny(a) recenzować teksty zgłaszane do tego czasopisma?</message>
 	<message key="user.reviewerPrompt.userGroup">Tak, wyślij prośbę o nadanie roli: {$userGroup}.</message>
 	<message key="user.register.contextsPrompt">Do których czasopism na tej stronie chciałbyś(abyś) się zarejestrować?</message>
@@ -1066,4 +1017,10 @@ Skonfigurowanie CLOCKSS w Open Journal Systems nie wymaga posiadania opublikowan
 	<message key="search.cli.rebuildIndex.unknownJournal">Podana ścieżka "{$journalPath}" nie odnosi się do czasopisma.</message>
 	<message key="editor.issues.backIssues">Opublikowane numery</message>
 	<message key="editor.issues.futureIssues">Zaplanowane numery</message>
+	<message key="subscriptions.status.noSubscription">Nie posiadasz aktualnej prenumeraty.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="submission.layout.referenceLinking">Linkowanie odniesień</message>
+	<message key="log.editor.recommendation">Rekomendacja ({$decision}) dla tekstu {$submissionId} została utworzona przez {$editorName}.</message>
+	<message key="navigation.subscriptions">Subskrypcje</message>
+	<message key="log.editor.submissionExpedited">{$editorName} rozpoczął proces edycji tego artykułu {$submissionId}.</message>
 </locale>

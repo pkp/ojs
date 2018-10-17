@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -31,7 +31,7 @@
 	<message key="submission.submit.newSubmissionSingle">Nový příspěvek</message>
 	<message key="grid.action.workflow">Workflow příspěvku</message>
 	<message key="submission.issueEntry">Metadata</message>
-	<message key="submission.submit.whatNext.description">Časopis byl informován o vašem podání a byl vám zaslán email s potvrzením o vašem příspěvku. Jakmile editor zkontroluje podání, bude vás kontaktovat.</message>
+	<message key="submission.submit.whatNext.description">Redakce časopisu byla informována o vašem příspěvku a byl vám zaslán email s potvrzením o vašem příspěvku. Jakmile redaktor zkontroluje příspěvek, bude vás kontaktovat.</message>
 	<message key="grid.action.galleyInIssueEntry">Ve vstupu do čísla je sazebnice</message>
 	<message key="grid.action.issueEntry">Prohlédněte si metadata příspěvku</message>
 	<message key="submission.issueEntry.modalTitle">Metadata příspěvku a publikační metadata</message>
@@ -72,4 +72,6 @@
 	<message key="submission.citationFormat.notFound">Požadovaný citační formát nelze načíst.</message>
 	<message key="submission.metadataDescription">Tyto specifikace vycházejí z množiny metadat Dublin Core, což je mezinárodní standard používaný k popisu obsahu časopisu.</message>
 	<message key="section.any">Libovolná sekce</message>
+	<message key="submission.abstract.wordCount.description">Abstrakt musí obsahovat maximálně {$wordCount} slov.</message>
+	<message key="submission.submit.form.wordCountAlert">Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci.</message>
 </locale>

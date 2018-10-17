@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/SubmissionMetadataFormImplementation.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionMetadataFormImplementation
@@ -33,6 +33,28 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 		$section = $sectionDao->getById($submission->getSectionId());
 		return !$section->getAbstractsNotRequired();
 	}
+
+	/**
+	 *
+	 * @copydoc PKPSubmissionMetadataFormImplementation::addChecks()
+	 */
+	function addChecks($submission) {
+		parent::addChecks($submission);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
+		$wordCount = $section->getAbstractWordCount();
+		if (isset($wordCount) && $wordCount > 0) {
+			$this->_parentForm->addCheck(new FormValidatorCustom($this->_parentForm, 'abstract', 'required', 'submission.submit.form.wordCountAlert', function($abstract) use($wordCount) {
+				foreach ($abstract as $localizedAbstract) {
+					if (count(preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($localizedAbstract))))) > $wordCount) {
+						return false;
+					}
+				}
+				return true;
+			}));
+		}
+	}
+
 }
 
-?>
+

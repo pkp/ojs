@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/datacite/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -25,4 +25,7 @@
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
 	<message key="plugins.importexport.datacite.senderTask.name">Dados DataCite do remetente</message>
+	<message key="plugins.importexport.datacite.settings.description">Por favor configure o plugin de exportação DataCite antes de utilizá-lo pela primeira vez.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS depositará DOIs automaticamente no DataCite. Por favor note que isso pode levar um tempo depois da publicação. Você pode verificar os DOIs não registrados.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Use o prefixo de testes do DataCite para registro dos DOI. Não esqueça de remover esta opção quando não estiver mais em testes.</message>
 </locale>

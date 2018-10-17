@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -41,7 +41,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">请填写必添项目</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">请填写必添项目</message>
 
 	<!-- review forms end -->
 
@@ -205,7 +205,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">期刊管理员</message>
-	<message key="user.role.sectionEditor">栏目编辑</message>
+	<message key="user.role.subEditor">栏目编辑</message>
 	<message key="user.role.subscriptionManager">订阅管理员</message>
 	<message key="user.role.managers">期刊管理员</message>
 	<message key="user.role.subscriptionManagers">订阅管理员</message>
@@ -351,7 +351,6 @@
 	<message key="plugins.categories.auth.description">认证插件程序让OJS将用户认证的工作授权给其他的系统，像是LDAP服务器.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">引文格式插件可以给点击文章引文的用户提供不同的引文格式.</message>
 
 
 	<message key="plugins.categories.generic.description">该类型插件以各种方式扩充OJS，让其他种类的WEB程序可以支持OJS.</message>
@@ -442,12 +441,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[
-		姓名链接到审稿人帐号。<br />
-		从5(极佳)开始评分。<br />
-		「周数」意指完成一份审稿工作的平均时期<br />
-		「最新」是指最近接受的审稿工作日期<br />
-		「进行中」是指有多少审稿工作目前正待考虑或者正在进行。]]></message>
 
 
 
@@ -534,12 +527,10 @@
         <message key="reviewer.article.selectRecommendation">选择一个建议选项并提交以完成流程，在选择之前您必须输入一个建议或者上传一个文件.</message>
 	<message key="reviewer.article.mustSelectDecision">没有选择任何建议选项。您必须选择发送一个建议选项。</message>
 	<message key="reviewer.article.confirmDecision">一旦您记录了一个决定，您将不再能够变更这份审稿意见书。您确定您要继续下一步？?</message>
-	<message key="reviewer.article.ensuringBlindReview">确保盲审</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">对于文本编辑的文件</message>
 	<message key="copyeditor.article.copyeditorFile">文本编辑文件</message>
-	<message key="copyeditor.article.uploadedFile">已经上传的文件</message>
 	<message key="copyeditor.article.copyeditorFinalFile">文本编辑文件</message>
 
 	<!-- Proofreader -->
@@ -808,7 +799,7 @@
 	<message key="installer.appInstallation">OJS安装</message>
 	<message key="installer.ojsUpgrade">OJS升级</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本 {$version}</h4>
-<p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href="{$baseUrl}/docs/README">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href="http://pkp.sfu.ca/" target="_blank">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href="http://forum.pkp.sfu.ca" target="_blank">支持论坛</a>或者访问PKP的在线 <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href="{$baseUrl}/docs/README.md">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href="http://pkp.sfu.ca/" target="_blank">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href="http://forum.pkp.sfu.ca" target="_blank">支持论坛</a>或者访问PKP的在线 <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <h4>升级</h4>
 <p>如果您要升级现有的OJS 2.x的安装, <a href="{$upgradeUrl}">点击这里</a> 开始.</p>
 <h4>推荐系统要求</h4>
@@ -837,7 +828,7 @@
 <p>选择 <strong>手动安装</strong> to 显示必要的 SQL语句来创建OJS数据库架构和初始数据，该数据库可以执行手动安装. 此选项可以用于调试安装问题，特别是不支持的平台。请注意，此安装方法将不会试图创建数据库或表，虽然配置文件将写入提供的数据库设置。</p>]]></message>
 	<message key="installer.upgradeInstructions">><![CDATA[
 		<h4>OJS版本{$version}</h4>
-		<p>谢谢您下载公共知识项目(Public Knowledge Project)的 <strong>开放期刊系统(Open Journal Systems)</strong>。在进行下一步之前，请先阅读这份软件中的<a href="{$baseUrl}/docs/README">README</a>文件。想了解更多关于公共知识项目以及其软件计划，请见：<a href="http://pkp.sfu.ca/" target="_blank">PKP网站</a>。如果您要回报关于开放期刊系统的错误信息或者有相关的技术支持问题，请见：<a href="http://forum.pkp.sfu.ca">支持讨论区</a>，或者请见PKP的线上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">错误回报系统</a>。虽然我们比较希望以讨论区做为联系的管道，不过您也可以寄信给技术团队：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
+		<p>谢谢您下载公共知识项目(Public Knowledge Project)的 <strong>开放期刊系统(Open Journal Systems)</strong>。在进行下一步之前，请先阅读这份软件中的<a href="{$baseUrl}/docs/README.md">README</a>文件。想了解更多关于公共知识项目以及其软件计划，请见：<a href="http://pkp.sfu.ca/" target="_blank">PKP网站</a>。如果您要回报关于开放期刊系统的错误信息或者有相关的技术支持问题，请见：<a href="http://forum.pkp.sfu.ca">支持讨论区</a>，或者请见PKP的线上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">错误回报系统</a>。虽然我们比较希望以讨论区做为联系的管道，不过您也可以寄信给技术团队：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
 		<p>我们<strong>强烈地建议您</strong>在继续下一步之前，请备份您的数据库、文件目录以及OJS的安装目录</p>
 		<p>如果您正在执行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 请确保在您的 php.ini 配置文件中配置max_execution_time指令一个高额的上限。如果这个或者其他的时间上限（例如Apache的 "Timeout"指令）已到，而升级程序遭到中断，您必须以手动的方式介入。</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[为了完整支持Unicode (UTF-8)编码，请选择以UTF-8作为编码位。注意，这项支持目前需要一个MySQL >= 4.1.1或者PostgreSQL >= 7.1 的数据库服务器。也请注意，完整的Unicode编码需要PHP >= 4.3.0搭配支持<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>库 (最新版本的PHP安装过程已经预设启动)。如果您的服务器没有满足这些条件的话，您可能在使用额外的字符集时会碰到问题<br /><br />
@@ -954,8 +945,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">请输入您的电子邮件地址，便于接收该期刊重要的新内容通知.</message>
-	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
 
 	<message key="notification.type.articleSubmitted">一篇新文章, "{$title}", 已经提交.</message>
 	<message key="notification.type.editing">编辑事件</message>

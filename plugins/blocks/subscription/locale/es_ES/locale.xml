@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
@@ -18,8 +18,10 @@
 	<message key="plugins.block.subscription.description">Este módulo proporciona información sobre las suscripciones en la barra lateral.</message>
 	<message key="plugins.block.subscription.blockTitle">Suscripción</message>
 	<message key="plugins.block.subscription.expires">Caduca</message>
-	<message key="plugins.block.subscription.providedBy">Acceso proporcionado por</message>
-	<message key="plugins.block.subscription.comingFromIP">De</message>
+	<message key="plugins.block.subscription.providedBy">Acceso proporcionado por {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">De {$ip}</message>
 	<message key="plugins.block.subscription.about">Suscripciones</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Inicie sesión para verificar la suscripción</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Necesita suscribirse para acceder a algunos recursos.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Saber más</message>
 </locale>

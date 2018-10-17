@@ -3,8 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSCompletedPaymentDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSCompletedPaymentDAO
@@ -24,7 +24,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $contextId int optional
 	 * @return CompletedPayment
 	 */
-	function getCompletedPayment($completedPaymentId, $contextId = null) {
+	function getById($completedPaymentId, $contextId = null) {
 		$params = array((int) $completedPaymentId);
 		if ($contextId) $params[] = (int) $contextId;
 
@@ -96,7 +96,7 @@ class OJSCompletedPaymentDAO extends DAO {
 				$completedPayment->getAmount(),
 				$completedPayment->getCurrencyCode(),
 				$completedPayment->getPayMethodPluginName(),
-				(int) $completedPayment->getCompletedPaymentId()
+				(int) $completedPayment->getId()
 			)
 		);
 
@@ -112,23 +112,28 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Look for a completed PURCHASE_ARTICLE payment matching the article ID
+	 * Get a payment by assoc info
 	 * @param $userId int
-	 * @param $articleId int
+	 * @param $paymentType int PAYMENT_TYPE_...
+	 * @param $assocId int
+	 * @return CompletedPayment|null
 	 */
-	function hasPaidPurchaseArticle($userId, $articleId) {
+	function getByAssoc($userId = null, $paymentType = null, $assocId = null) {
+		$params = array();
+		if ($userId) $params[] = (int) $userId;
+		if ($paymentType) $params[] = (int) $paymentType;
+		if ($assocId) $params[] = (int) $assocId;
 		$result = $this->retrieve(
-			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
-			array(
-				PAYMENT_TYPE_PURCHASE_ARTICLE,
-				(int) $userId,
-				(int) $articleId
-			)
+			'SELECT * FROM completed_payments WHERE 1=1' .
+			($userId?' AND user_id = ?':'') .
+			($paymentType?' AND payment_type = ?':'') .
+			($assocId?' AND assoc_id = ?':''),
+			$params
 		);
 
-		$returner = false;
+		$returner = null;
 		if (isset($result->fields[0]) && $result->fields[0] != 0) {
-			$returner = true;
+			$returner = $this->_fromRow($result->fields);
 		}
 
 		$result->Close();
@@ -136,33 +141,36 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Look for a completed PURCHASE_ISSUE payment matching the user and issue IDs
+	 * Look for a completed PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
+	 * @param $userId int
+	 * @param $articleId int
+	 */
+	function hasPaidPurchaseArticle($userId, $articleId) {
+		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId)?true:false;
+	}
+
+	/**
+	 * Look for a completed PAYMENT_TYPE_PURCHASE_ISSUE payment matching the user and issue IDs
 	 * @param int $userId
 	 * @param int $issueId
 	 */
 	function hasPaidPurchaseIssue($userId, $issueId) {
-		$result = $this->retrieve(
-			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
-			array(
-				PAYMENT_TYPE_PURCHASE_ISSUE,
-				(int) $userId,
-				(int) $issueId
-			)
-		);
+		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId)?true:false;
+	}
 
-		$returner = false;
-		if (isset($result->fields[0]) && $result->fields[0] != 0) {
-			$returner = true;
-		}
-
-		$result->Close();
-		return $returner;
+	/**
+	 * Look for a completed PAYMENT_TYPE_PUBLICATION payment matching the user and article IDs
+	 * @param int $userId
+	 * @param int $articleId
+	 */
+	function hasPaidPublication($userId, $articleId) {
+		return $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId)?true:false;
 	}
 
 	/**
 	 * Retrieve an array of payments for a particular context ID.
 	 * @param $contextId int
-	 * @return object DAOResultFactory containing matching payments
+	 * @return array Matching payments
 	 */
 	function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -171,13 +179,19 @@ class OJSCompletedPaymentDAO extends DAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+		$returner = array();
+		while (!$result->EOF) {
+			$payment = $this->_fromRow($result->fields);
+			$returner[$payment->getId()] = $payment;
+			$result->MoveNext();
+		}
+		return $returner;
 	}
 
 	/**
 	 * Retrieve an array of payments for a particular user ID.
 	 * @param $userId int
-	 * @return object DAOResultFactory containing matching payments
+	 * @return array Matching payments
 	 */
 	function getByUserId($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -186,7 +200,12 @@ class OJSCompletedPaymentDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+		$returner = array();
+		while (!$result->EOF) {
+			$payment = $this->_fromRow($result->fields);
+			$returner[$payment->getId()] = $payment;
+			$result->MoveNext();
+		}
 		return $returner;
 	}
 
@@ -203,7 +222,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $row array
 	 * @return CompletedPayment
 	 */
-	function _returnPaymentFromRow($row) {
+	function _fromRow($row) {
 		$payment = $this->newDataObject();
 		$payment->setTimestamp($this->datetimeFromDB($row['timestamp']));
 		$payment->setId($row['completed_payment_id']);
@@ -218,5 +237,3 @@ class OJSCompletedPaymentDAO extends DAO {
 		return $payment;
 	}
 }
-
-?>

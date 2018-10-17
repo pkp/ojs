@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -152,14 +152,9 @@ ________________________________________________________________________<br/>
 
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Publikování článku</message>
-	<message key="default.journalSettings.publicationFeeDescription">Pokud bude tento článek přijat k publikaci, budete požádán o zaplacení Poplatku za publikování článku, který pokrývá náklady na publikování.</message>
-	<message key="default.journalSettings.waiverPolicy">Pokud nemáte prostředky na uhrazení těchto poplatků, budete mít možnost požádat o prominutí každého poplatku. Nechceme, aby poplatky zabránily odpublikování hodnotných prací.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Koupit článek</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Zaplacení tohoto poplatku Vám zpřístupní článek pro prohlížení, stažení a vytisknutí.</message>
 	<message key="default.journalSettings.membershipFee">Členství v asociaci</message>
-	<message key="default.journalSettings.membershipFeeDescription">Zaplacení tohoto poplatku Vás přihlásí jako člena této asociace na jeden rok a poskytne Vám volný přístup k tomuto časopisu.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Zakoupit číslo</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Zaplacení tohoto poplatku vám umožní vidět, stáhnout a tisknout toto číslo.</message>
 	<message key="default.genres.article">Text článku</message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Tento časopis využívá systém CLOCKSS k vytvoření distribuovaného systému archivace mezi zúčastněnými knihovnami a umožňuje knihovnám vytvářet trvalé archivy časopisu pro účely uchování a obnovy. <a href="http://clockss.org/"> Více ... </a>]]></message>
 	<message key="default.groups.name.manager">Manažer časopisu</message>

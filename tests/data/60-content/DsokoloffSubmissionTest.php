@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/DsokoloffSubmissionTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DsokoloffSubmissionTest
@@ -22,8 +22,8 @@ class DsokoloffSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'dsokoloff',
-			'firstName' => 'Domatilia',
-			'lastName' => 'Sokoloff',
+			'givenName' => 'Domatilia',
+			'familyName' => 'Sokoloff',
 			'affiliation' => 'University College Cork',
 			'country' => 'Ireland',
 		));
@@ -42,9 +42,9 @@ class DsokoloffSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('phudson', 'Paul Hudson');
-		$this->assignReviewer('amccrae', 'Aisla McCrae');
-		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->assignReviewer('Paul Hudson');
+		$this->assignReviewer('Aisla McCrae');
+		$this->assignReviewer('Adela Gallego');
 		$this->logOut();
 		$this->performReview('phudson', null, $title, 'Decline Submission');
 	}

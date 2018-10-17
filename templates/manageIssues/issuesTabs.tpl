@@ -1,8 +1,8 @@
 {**
  * templates/manageIssues/issues.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * The issue management page.
@@ -21,12 +21,12 @@
 	</ul>
 	<div id="futureIssuesDiv">
 		{help file="issue-management.md" class="pkp_help_tab"}
-		{url|assign:futureIssuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid" escape=false}
+		{capture assign=futureIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.FutureIssueGridHandler" op="fetchGrid" escape=false}{/capture}
 		{load_url_in_div id="futureIssuesGridContainer" url=$futureIssuesGridUrl}
 	</div>
 	<div id="backIssuesDiv">
 		{help file="issue-management.md" class="pkp_help_tab"}
-		{url|assign:backIssuesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid" escape=false}
+		{capture assign=backIssuesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.BackIssueGridHandler" op="fetchGrid" escape=false}{/capture}
 		{load_url_in_div id="backIssuesGridContainer" url=$backIssuesGridUrl}
 	</div>
 </div>

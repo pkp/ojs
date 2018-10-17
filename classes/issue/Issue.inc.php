@@ -8,8 +8,8 @@
 /**
  * @file classes/issue/Issue.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Issue
@@ -407,6 +407,30 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * Get the full URL to all localized cover images
+	 *
+	 * @return array
+	 */
+	function getCoverImageUrls() {
+		$coverImages = $this->getCoverImage(null);
+		if (empty($coverImages)) {
+			return array();
+		}
+
+		$request = Application::getRequest();
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		$urls = array();
+
+		foreach ($coverImages as $locale => $coverImage) {
+			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getJournalFilesPath($this->getJournalId()), $coverImage);
+		}
+
+		return $urls;
+	}
+
+	/**
 	 * Set issue cover image alternate text
 	 * @param $coverImageAltText string
 	 * @param $locale string
@@ -418,9 +442,10 @@ class Issue extends DataObject {
 	/**
 	 * Return the string of the issue identification based label format
 	 * @param $force array force show/hide of data components
+	 * @param $locale string use spcific non-default locale
 	 * @return string
 	 */
-	function getIssueIdentification($force = array()) {
+	function getIssueIdentification($force = array(), $locale = null) {
 
 		$displayOptions = array(
 			'showVolume' => $this->getData('showVolume'),
@@ -430,15 +455,21 @@ class Issue extends DataObject {
 		);
 
 		$displayOptions = array_merge($displayOptions, $force);
+		if(is_null($locale)){
+			$locale = AppLocale::getLocale();
+		}
 
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_COMMON));
-		$volLabel = __('issue.vol');
-		$numLabel = __('issue.no');
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_COMMON), $locale);
+		$volLabel = PKPLocale::translate('issue.vol', array(), $locale);
+		$numLabel = PKPLocale::translate('issue.no', array(), $locale);
 
 		$vol = $this->getData('volume');
 		$num = $this->getData('number');
 		$year = $this->getData('year');
-		$title = $this->getLocalizedTitle();
+		$title = $this->getTitle($locale);
+		if(empty($title)){
+			$title = $this->getLocalizedTitle();
+		}
 
 		$identification = array();
 		foreach($displayOptions as $opt => $val) {
@@ -473,7 +504,8 @@ class Issue extends DataObject {
 					'showNumber' => true,
 					'showYear' => true,
 					'showTitle' => false,
-				)
+				),
+				$locale
 			);
 		}
 
@@ -529,4 +561,4 @@ class Issue extends DataObject {
 	}
 }
 
-?>
+

@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/plugins/importexport/FunctionalDoiExportTest.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalDoiExportTest
@@ -822,7 +822,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		if ($host) $_SERVER['HTTP_HOST'] = $host;
 		$_SERVER['SCRIPT_NAME'] = '/index.php';
 		$_SERVER['PATH_INFO'] = '/test';
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$request = $application->getRequest();
 		import('classes.core.PageRouter');
 		$router = new PageRouter();
@@ -899,4 +899,4 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		}
 	}
 }
-?>
+

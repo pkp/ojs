@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -128,14 +128,7 @@
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">论文出版</message>
-	<message key="default.journalSettings.publicationFeeDescription">如果文章被杂志录用，您将被要求支付文章出版费.</message>
-	<message key="default.journalSettings.waiverPolicy">如果你没有资金来支付这些费用，你将有机会申请免除每个费用。我们不想因为收费问题阻止了有价值的作品的发表.</message>
 	<message key="default.journalSettings.purchaseArticleFee">购买文章</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">支付此费用后，您可以浏览，下载和打印这篇文章.</message>
 	<message key="default.journalSettings.membershipFee">协会会员</message>
-	<message key="default.journalSettings.membershipFeeDescription">这项费用支付后，您将作为这本期刊的会员，可以在一年内免费阅读这本期刊的所有文章.</message>
 	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">支付该项费用后您可以查看、下载和打印该期文章。</message>
-	<message key="default.journalSettings.emailHeader">下面的信息以期刊{$journalName}的名义发出。
-________________________________________________________________________</message>
 </locale>

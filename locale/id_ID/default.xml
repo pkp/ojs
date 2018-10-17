@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -139,14 +139,9 @@ Mohon ikuti protokol berikut dalam membuat revisi elekronik untuk naskah Anda:
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Publikasi Artikel</message>
-	<message key="default.journalSettings.publicationFeeDescription">Jika naskah ini diterbitkan, Anda akan dikenakan Biaya Publikasi Artikel.</message>
-	<message key="default.journalSettings.waiverPolicy">Jika Anda tidak mempunyai dana untuk membayar biaya penerbitan, Anda berkesempatan untuk memperoleh dispensasi.  Kami tidak ingin biaya menghambat penerbitan karya yang berharga.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Beli Artikel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Pembayaran biaya ini akan memberi Anda akses untuk membaca, mengunduh, dan mencetak artikel ini.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Beli Terbitan</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Pembayaran biaya ini akan memberi Anda akses untuk membaca, mengunduh, dan mencetak edisi terbitan ini.</message>
 	<message key="default.journalSettings.membershipFee">Keanggotaan Asosiasi</message>
-	<message key="default.journalSettings.membershipFeeDescription">Pembayaran biaya ini akan mendaftarkan Anda sebagai anggota di asosiasi ini untuk satu tahun dan memberikan akses gratis ke jurnal ini.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Manajer Jurnal</message>

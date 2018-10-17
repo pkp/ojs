@@ -4,21 +4,78 @@
 <!--
   * plugins/pubIds/urn/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * URN plugin localization strings
   -->
- 
+
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">Bu eklenti, Tekbiçim Kaynak İsimlerinin OJS'deki dizgi tablaları, makalelere ve galerilere atanmasını sağlar.</message>
 
 	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.description">OJS’de URN’leri yönetmek ve kullanmak için lütfen URN eklentisini yapılandırın:</message>
+
 	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Dergi İçeriği</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Lütfen URN'lerin atanması gereken öğeleri seçiniz.</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Lütfen Tekbiçim Kaynak İsimlerine (URN) sahip olacak yayın öğelerini seçin:</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Sayılar</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Makaleler</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Dizgi Tablaları</message>
+
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN Ön Eki</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">The URN prefix is the fix, never changing part of the URN (e.g. "urn:nbn:de:0000-").</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Son Eki</message>
-	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Seç</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[URN öneki şablonu şu biçiminde olmalıdır: "urn:"&lt;NID&gt;":"&lt;NSS&gt;]]></message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN Son Eki</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Bir URN son eki herhangi bir biçimde olabilir, ancak atanan aynı URN öneki ile tüm yayınlanan öğeler arasında tekil olmalıdır:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">URN soneklerini oluşturmak için aşağıda girilen şablonu kullanın. Dergi için %j, cilt numarası için %v, sayı için %i, yıl için %Y, OJS makale ID'si için %a, OJS dizgi tablası ID'si için %g, OJS dosya kimliği için %f, sayfa numarası için %p ve "Özel Tanımlayıcı" için %x kullanın.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">Örneğin, vol%viss%ipp%p, "vol3iss2pp230" URN sonekini oluşturabilir.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">sayılar için</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">makaleler için</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">dizgi tablaları için</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Lütfen sayılar için URN sonek şablonunu girin.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Lütfen makaleler için URN sonek biçimini girin.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Lütfen dizgi tablaları için URN sonek şablonunu girin.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Varsayılan şablonu kullanın.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[Sayılar için %j.v%vi%i, <br />makaleler için %j.v%vi%i.%a<br />, dizgi tablaları için %j.v%vi%i.%a.g%g.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Yayınlanan her bir öğe için tek bir URN sonek girin. Her öğenin üst veri sayfasında ek bir URN giriş alanı bulacaksınız.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Kontrol Numarası</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Kontrol numarası otomatik olarak bir URN'nin son hanesi olarak hesaplanacak ve eklenecektir.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Ad alanı</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Kalıcı tanımlayıcı ad alanı genellikle kayıt için gereklidir (ör. Deutsche Nationalbibliothek'te).</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Seç</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL Çözümleyici</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(Ör. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Lütfen çözümleyici URL'sini girin.</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">URN'leri Yeniden Ata</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">URN yapılandırmanızı değiştirirseniz, önceden atanan URN'ler bundan etkilenmez. URN yapılandırması kaydedildikten sonra, mevcut tüm URN'leri temizlemek için bu düğmeyi kullanın, böylece yeni ayarlar mevcut öğelerle etkinleşecektir.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Mevcut tüm URN'leri silmek istediğinizden emin misiniz?</message>
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">sayı</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">makale</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">dizgi tablası</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">Özel sonek eksik olduğundan URN atanamaz.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">Çözümlenmemiş bir şablon içerdiğinden URN atanamaz.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">Gördüğünüz şey, URN'nin bir önizlemesi. Onay kutusunu seçin ve URN atamak için formu kaydedin.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">URN, bu {$pubObjectType} öğesine atanmıştır.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Verilen URN son eki, başka bir yayınlanan öğe için zaten kullanılıyor. Lütfen her bir öğe için tekil bir URN son eki girin.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">URN Temizle</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Mevcut URN'yi silmek istediğinizden emin misiniz?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Sayı Öğe URN'lerini Temizle</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Mevcut sayı öğe URN'lerini silmek istediğinizden emin misiniz?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Bu sayı için şu anda planlanmış tüm öğelerin (makale ve dizgi tablaları) URN'lerini temizlemek için aşağıdaki seçeneği kullanın.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Kontrol Numarası Ekle</message>
+	<!-- assignment form -->
+	<message key="plugins.pubIds.urn.editor.assignURN">URN {$pubId}'yı bu {$pubObjectType}'ye atayın.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">Özel sonek eksik olduğundan URN atanamaz.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">Çözümlenmemiş bir şablon içerdiğinden URN {$pubId} atanamaz.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} atandı.</message>
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Kontrol numarası eksik.</message>
 </locale>

@@ -4,12 +4,12 @@
 <!--
   * locale/sr_RS@cyrillic/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University 
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
-  * 
+  *
   -->
 
 <locale name="sr_RS@cyrillic" full_name="Cрпски">
@@ -69,7 +69,7 @@
 	<message key="section.title">Наслов секције</message>
 	<message key="section.abbreviation">Скраћеница</message>
 	<message key="section.abbreviation.example">(Нпр. Чланци=CLA)</message>
-	
+
 
 	<!--  Common Article Terms  --><message key="article.articles">Чланци</message>
 	<message key="article.submissionId">ID поднеска чланка</message>
@@ -146,7 +146,7 @@
 	<message key="user.myJournals">Моји часописи</message>
 
 	<!--  Roles  -->	<message key="user.role.manager">Главни уредник</message>
-	<message key="user.role.sectionEditor">Уредник секције</message>
+	<message key="user.role.subEditor">Уредник секције</message>
 	<message key="user.role.subscriptionManager">Менаджер претплата</message>
 	<message key="user.role.managers">Главни уредници</message>
 	<message key="user.role.subscriptionManagers">Менаджери претплата</message>
@@ -270,14 +270,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<li>"Рок" се активира у тренутку када рецензент прихвати захтев за рецензију и означава број недеља до истека рока за израду рецензије или (-) када је рок рецензије истекао.</li>
 </ol>]]></message>
 
-	<!--  Editor Index Page  -->	<!--  Back Issues  -->	<!--  Create Issue / Issue Data  -->	<!--  Live Issues  -->	<!--  Navigation sidebar menu  -->	<!--  Used by editor in submission review / editing  -->	<message key="editor.article.selectReviewerNotes"><![CDATA[Линк на имену води до рецензентовог профила.<br />
-Оцене су до 5 (Одличан).<br />
-Недеље приказују просечно време које је рецензенту било потребно  за завршетак рецензије.<br />
-Последње приказује датум последње рецензије додате рецензенту.<br />
-Активних приказује на колико је рецензија рецензент тренутно ангажован.]]></message>
-
-
-
 
 	<!--  Section Editor  --><message key="sectionEditor.activeEditorialAssignments">Активна уредничка задужења</message>
 	<message key="sectionEditor.completedEditorialAssignments">Довршена уредничка задужења</message>
@@ -347,11 +339,9 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 
 	<message key="reviewer.article.mustSelectDecision">Нема одабране препоруке. Да бисте предали фајл или рецензију морате одабрати препоруку.</message>
 	<message key="reviewer.article.confirmDecision">Када сте једном записали одлуку, нећете више моћи направити никакве промене на овој рецензији. Да ли сте сигурни да желите да наставите?</message>
-	<message key="reviewer.article.ensuringBlindReview">Како осигурати анонимност рецензије</message>
 
 	<!--  Used in submission editing  --><message key="copyeditor.article.fileToCopyedit">Фајл за лекторисање</message>
 	<message key="copyeditor.article.copyeditorFile">Фајл лектора</message>
-	<message key="copyeditor.article.uploadedFile">Достављен фајл</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Фајл лектора</message>
 
 	<!--  Proofreader  --><message key="proofreader.noProofreadingAssignments">Коректура није додељена</message>
@@ -507,7 +497,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="installer.ojsUpgrade">OJS надоградња</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS верзија {$version}</h4>
 
-<p>Хвала вам на преузимању Public Knowledge Project-овог <strong>Open Journal Systems-a</strong>. Пре поступка, молимо вас да прочитате <a href="{$baseUrl}/docs/README">README</a> фајл који долази уз овај програм. За више информација о Public Knowledge Project-у и његовим програмским пројектима, посетите <a href="http://pkp.sfu.ca/" target="_blank">PKP sajt</a>. Ако примите извештај о грешки у програму или тражите техничку подршку за Open Journal Systems, погледајте <a href="http://forum.pkp.sfu.ca">форум за подршку</a> или посетите  PKP-ов онлајн <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систем за пријављивање грешке</a>. Иако је форум за подршку коришћенија метода контактирања, можете послати и имејл стручном тиму на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Хвала вам на преузимању Public Knowledge Project-овог <strong>Open Journal Systems-a</strong>. Пре поступка, молимо вас да прочитате <a href="{$baseUrl}/docs/README.md">README</a> фајл који долази уз овај програм. За више информација о Public Knowledge Project-у и његовим програмским пројектима, посетите <a href="http://pkp.sfu.ca/" target="_blank">PKP sajt</a>. Ако примите извештај о грешки у програму или тражите техничку подршку за Open Journal Systems, погледајте <a href="http://forum.pkp.sfu.ca">форум за подршку</a> или посетите  PKP-ов онлајн <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систем за пријављивање грешке</a>. Иако је форум за подршку коришћенија метода контактирања, можете послати и имејл стручном тиму на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Надоградња</h4>
 
@@ -551,7 +541,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 <p>Izaberite <strong>Manuelnu instalaciju</strong> da bi prikazali SQL izjave potrebne za kreiranje OJS схеме базе података и иницијалних података, тако да инсталација базе података може бити извршена ручно. Та опција је корисна када откривате грешке код инсталационих проблема, делимично на неподржаним платформама. Напомена: овај метод инсталације неће предузети ништа како би креирао базу података или било коју табелу, иако ће конфигурациони фајл свеједно бити записан са испорученим подешавањима базе података.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS верзија {$version}</h4>
 
-<p>Хвала Вам што сте преузели Public Knowledge Project, <strong>Open Journal Systems</strong>. Пре поступка, молимо прочитајте <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> фајлове укључене у пакету са овим софтвером. За више информација о Public Knowledge Project-у и његовим софтверским пројектима, молимо посетите <a href="http://pkp.sfu.ca/" target="_blank">PKP sajt</a>. Ако имате пријаву о грешци или тражите техничку подршку за OJS, погледајте <a href="http://forum.pkp.sfu.ca">форум подршке</a> или посетите PKP-ов онлајн <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систем пријаве грешака</a>. Иако је форум подршке преферирана метода контакта, такође можете тиму послати имејл на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Хвала Вам што сте преузели Public Knowledge Project, <strong>Open Journal Systems</strong>. Пре поступка, молимо прочитајте <a href="{$baseUrl}/docs/README.md">README</a> и <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> фајлове укључене у пакету са овим софтвером. За више информација о Public Knowledge Project-у и његовим софтверским пројектима, молимо посетите <a href="http://pkp.sfu.ca/" target="_blank">PKP sajt</a>. Ако имате пријаву о грешци или тражите техничку подршку за OJS, погледајте <a href="http://forum.pkp.sfu.ca">форум подршке</a> или посетите PKP-ов онлајн <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систем пријаве грешака</a>. Иако је форум подршке преферирана метода контакта, такође можете тиму послати имејл на <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <p><strong>Препоручљиво је</strong> да направите сигурносну копију ваше базе података, директоријума са фајловима и OJS инсталационог директоријума пре наставка.</p>
 <p>Ако имате покренут <a href="http://www.php.net/features.safe-mode" target="_blank">PHP сигурносни мод</a>, молимо осигурајте да је max_execution_time директива у вашем php.ini конфигурационом фајлу постављена на висок лимит. Ако је тај или било који други временски лимит (нпр. Apacheva "timeout" директива) досегнут и поступак надоградње прекинут, биће потребна ручна интервенција.</p>]]></message>
@@ -654,7 +644,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 		<li>OJS не може модификовати локализациони registry фајл, обично "registry/locales.xml".</li>
 	</ul>
 <p>Фајл са језицима можете ручно преузети са <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Додаци за обликовање цитата омогућују корисницима преузимање цитата у различитим библиографским стандардима.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предложене Creative Commons одредбе о ауторским правима</h3>
 <h4>1. Предлог за часописе који омогућују отворен приступ</h4>
 Аутори који објављују у овом часопису пристају на следеће услове:
@@ -728,7 +717,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="debug.notes.currencyListLoad">Учитана је листа валута "{$filename}" из XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Текст пријаве ће бити на располагању када и ако рецензент прихвати понуду израде рецензије.</message>
 	<message key="reviewer.article.enterReviewForm">Кликните на икону и испуните образац за реценцзију.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Испуните обавезана поља.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Испуните обавезана поља.</message>
 	<message key="common.homePageHeader.altText">Заглавље наслове стране</message>
 	<message key="common.journalHomepageImage.altText">Слика насловне стране часописа</message>
 	<message key="article.coverPage.altText">Насловна страна</message>
@@ -838,8 +827,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="installer.installApplication">Инсталирај OJS</message>
 	<message key="installer.upgradeApplication">Надогради OJS</message>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Потенцијалоно погрешни URL-ovi за сајтове за претрагу су приказани ниже.<бр />Потребно је да ручно проверите сваки URL пошто ово није 100% ипсравно.]]></message>
-	<message key="notification.mailListDescription">Унесите Вашу имејл адресу како бисте примали тренутна обавештења о важним новим адржајима у часопису.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Ова страница приказује важне надоградње везане за часопис, као што су нови бројеви или обавештења (вести). Можете се претплатити на ова обавештења преко RSS-a (кликом на слику десно) ili <a href="{$emailUrl}">путем имејла.</a>]]></message>
 	<message key="notification.type.editing">Догађаји у уредништву</message>
 	<message key="notification.type.editorDecisionComment">Остављен је коментар на уредникову одлуку "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Рецензија преко рецензентске форме је предата за "{$param}".</message>
@@ -918,7 +905,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="search.results.similarDocuments">слични документи</message>
 	<message key="plugins.categories.viewableFiles">Додатак за пробне копије чланка</message>
 	<message key="plugins.categories.viewableFiles.description">Додатак за пробне копије чланка даје подршку за приказ разних типова докумената као пробних копија.</message>
-	<message key="manager.setup.citations.enable">Укључи помоћник означавања цитата</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Овај пробни отисак ће бити доступан на посебном сајту.</message>
 	<message key="submission.layout.galley.remoteURL">URL за садржај на удаљеном серверу</message>
 	<message key="user.register.selectContext">Одаберите часопис у који се желите регистровати:</message>

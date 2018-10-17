@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukranian_(uk_UA)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Цей модуль відображає панель з інформацією про передплату.</message>
 	<message key="plugins.block.subscription.blockTitle">Передплата</message>
 	<message key="plugins.block.subscription.expires">закінчується</message>
-	<message key="plugins.block.subscription.providedBy">Доступ забезпечує</message>
-	<message key="plugins.block.subscription.comingFromIP">З</message>
+	<message key="plugins.block.subscription.providedBy">Доступ забезпечує {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">З {$ip}</message>
 	<message key="plugins.block.subscription.about">Передплати</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Увійдіть, щоб підтвердити передплату</message>
 </locale>

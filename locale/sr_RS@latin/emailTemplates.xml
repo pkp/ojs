@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@latin/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University 
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localized email templates XML file.
@@ -23,33 +23,6 @@ Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Ova poruka je poslata registrovanim korisnicima koji su obeležili da žele da primaju poruke putem imejla.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nova poruka od {$siteTitle}</subject>
-		<body><![CDATA[Imate novu poruku od {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Ukoliko želite da više ne primate obaveštenja o novim porukama idite na link  {$unsubscribeLink} i unesite imejl adresu i lozinku.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Ova poruka je poslata neregistrovanim korisnicima na mejling listi</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Dobrodošli na {$siteTitle} mejling listu!</subject>
-		<body><![CDATA[Prijavili ste se da primate obaveštenja od {$siteTitle}.<br />
-<br />
-Molimo Vas da kliknete na link kako biste potvrdili svoj zahtev i dodali Vašu imejl adresu na mejling listu: {$confirmLink}<br />
-<br />
-Ukoliko ne želite više da primate imejlove o obaveštenjima, idite na {$unsubscribeLink} i unesite imejl adresu i lozinku.<br />
-<br />
-Vaša lozinka za onemogućavanje imejl obaveštenja je: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Ova poruka se šalje neregistrovanim korisnicima koji su se tek registrovali na mejling listu obaveštenja</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
 		<subject>Obaveštenje o pretplati</subject>

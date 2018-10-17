@@ -4,8 +4,8 @@
 <!--
   * 3.0.0_postupdate.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 3.0.0 post database updates XML file.
@@ -23,6 +23,5 @@
 		<drop table="articles_migration" />
 		<drop table="article_supplementary_files" />
 		<drop table="article_supp_file_settings" />
-		<drop table="submission_html_galley_images" />
 	</sql>
 </data>

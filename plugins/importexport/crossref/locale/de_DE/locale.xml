@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -28,7 +28,7 @@
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Wenn Sie dieses Plugin benutzen möchten, um Digital Object Identifiers (DOI) direkt bei Crossref zu registrieren, benötigen Sie dazu einen Nutzernamen und ein Passwort (das Sie bei <a href="http://www.crossref.org" target="_blank">Crossref</a> erhalten). Wenn Sie keine eigenen Zugangsdaten haben, können Sie immer noch Metadaten in das Crossref-XML-Format exportieren, aber Sie können Ihre DOI nicht aus OJS heraus bei Crossref registrieren.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.username">Benutzer/innenname</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen ein, den Sie von Crossref erhalten haben.</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS wird die zugewiesenen DOI automatisch an Crossref liefern. Bitte berücksichtigen Sie, dass dies eine Weile nach der Veröffentlichung dauern kann. Sie können nach bisher unregistrieren DOI suchen.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS wird die zugewiesenen DOI automatisch an Crossref liefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Die Crossref-Test-API (Testumgebung) für die DOI-Ablieferung benutzen. Bitte vergessen Sie nicht, diese Option vor dem Produktivbetrieb abzuwählen.</message>
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Hinweis: Nur Ausgaben (aber nicht ihre Artikel) werden hier für Export und Registrierung berücksichtigt.</message>

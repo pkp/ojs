@@ -1,8 +1,8 @@
 {**
  * plugins/generic/webFeed/templates/rss2.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * RSS 2 feed template
@@ -61,7 +61,7 @@
 					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
-					<author>{$article->getAuthorString()|escape:"html"}</author>
+					<author>{$article->getAuthorString(false)|escape:"html"}</author>
 					{* <category/> *}
 					{* <comments/> *}
 					{* <source/> *}

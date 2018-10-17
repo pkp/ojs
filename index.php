@@ -44,14 +44,14 @@
  *
  * To learn more about developing OJS, there are several additional resources
  * that may be useful:
- * - The docs/README document
+ * - The docs/README.md document
  * - The PKP support forum at http://forum.pkp.sfu.ca
  * - Documentation available at http://pkp.sfu.ca/ojs_documentation
  *
  * @file ojs/index.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup index
@@ -67,4 +67,4 @@ $application = require('./lib/pkp/includes/bootstrap.inc.php');
 // Serve the request
 $application->execute();
 
-?>
+

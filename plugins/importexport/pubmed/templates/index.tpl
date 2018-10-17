@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/native/templates/index.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -53,7 +53,7 @@
 		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
 			{csrf}
 			{fbvFormArea id="issuesXmlForm"}
-				{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}
+				{capture assign=issuesListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 				{fbvFormButtons submitText="plugins.importexport.native.exportIssues" hideCancel="true"}
 			{/fbvFormArea}

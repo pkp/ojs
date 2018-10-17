@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings
@@ -23,4 +23,5 @@
 	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS automaticky uloží články do DOAJ. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete si prohlédnout všechny nezaregistrované články.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Pro registraci použijte testovací rozhraní API (testovací prostředí) DOAJ. Nezapomeňte tuto možnost odstranit před produkční fází.</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">Uložení nebylo úspěšné! DOAJ API vrátilo následující chybu: '{$param}'.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Automatická registrace DOAJ</message>
 </locale>

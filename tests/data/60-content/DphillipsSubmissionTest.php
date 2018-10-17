@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/DphillipsSubmissionTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DphillipsSubmissionTest
@@ -22,8 +22,8 @@ class DphillipsSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'dphillips',
-			'firstName' => 'Dana',
-			'lastName' => 'Phillips',
+			'givenName' => 'Dana',
+			'familyName' => 'Phillips',
 			'affiliation' => 'University of Toronto',
 			'country' => 'Canada',
 		));
@@ -38,8 +38,8 @@ class DphillipsSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('jjanssen', 'Julie Janssen');
-		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->assignReviewer('Julie Janssen');
+		$this->assignReviewer('Adela Gallego');
 		$this->recordEditorialDecision('Accept Submission');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');

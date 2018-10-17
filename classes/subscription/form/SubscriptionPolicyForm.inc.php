@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionPolicyForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionPolicyForm
@@ -14,7 +14,7 @@
  */
 
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');
-define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '24');
+define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX', '12');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MIN', '1');
@@ -74,7 +74,7 @@ class SubscriptionPolicyForm extends Form {
 			$this->validNumWeeksAfterExpiry[$i] = __('manager.subscriptionPolicies.xWeeks', array('x' => $i));
 		}
 
-		parent::__construct('subscriptions/subscriptionPolicyForm.tpl');
+		parent::__construct('payments/subscriptionPolicyForm.tpl');
 
 		// If provided, subscription contact email is valid
 		$this->addCheck(new FormValidatorEmail($this, 'subscriptionEmail', 'optional', 'manager.subscriptionPolicies.subscriptionContactEmailValid'));
@@ -102,8 +102,7 @@ class SubscriptionPolicyForm extends Form {
 	 * @param $request PKPRequest
 	 */
 	function fetch($request) {
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($request->getJournal());
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'validDuration' => $this->validDuration,
@@ -112,8 +111,7 @@ class SubscriptionPolicyForm extends Form {
 			'validNumMonthsAfterExpiry' => $this->validNumMonthsAfterExpiry,
 			'validNumWeeksAfterExpiry' => $this->validNumWeeksAfterExpiry,
 			'scheduledTasksEnabled' => (boolean) Config::getVar('general', 'scheduled_tasks'),
-			'journalPaymentsEnabled' => $paymentManager->isConfigured(),
-			'acceptSubscriptionPayments' => $paymentManager->acceptSubscriptionPayments(),
+			'paymentsEnabled' => $paymentManager->isConfigured(),
 		));
 
 		return parent::fetch($request);
@@ -202,4 +200,4 @@ class SubscriptionPolicyForm extends Form {
 	}
 }
 
-?>
+

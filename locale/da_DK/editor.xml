@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -21,12 +21,12 @@
 	<message key="editor.publishedIssues">Publicerede numre</message>
 	<message key="editor.allSections">Alle sektioner</message>
 	<message key="editor.allEditors">Alle redaktører</message>
-	<message key="editor.me">Me</message>
+	<message key="editor.me">Mig</message>
 	<message key="editor.submissionArchive.noSubmissions">Der findes ingen manuskripter i arkivet.</message>
 	<message key="editor.submissionArchive.saveChanges">Vil du gemme ændringerne til de arkiverede manuskripter? Manuskripter, der er markeret til sletning, slettes permanent fra systemet.</message>
 	<message key="editor.submissionArchive.confirmDelete">Er du sikker på, at du vil slette dette manuskript permanent?</message>
 	<message key="editor.submissionReview.confirmDecision">Er du sikker på, at du vil registrere denne beslutning?</message>
-	<message key="editor.submissionReview.emailWillArchive">Manuskriptet arkiveres, når du har sendt e-mailen Underret forfatter, eller når du har trykket på knappen Spring e-mail over.</message>
+	<message key="editor.submissionReview.emailWillArchive">Manuskriptet arkiveres, når du har sendt e-mailen 'Underret forfatter', eller når du har trykket på knappen 'Spring e-mail over'.</message>
 	<message key="editor.notifyUsers">Underret brugere</message>
 	<message key="editor.notifyUsers.inProgress">Underretter brugere...</message>
 	<message key="editor.usersNotified">Underrettede brugere</message>
@@ -35,8 +35,6 @@
 	<message key="editor.notifyUsers.includeToc">Medtag indholdsfortegnelsen fra dette nummer:</message>
 	<message key="editor.editorAdministration">Administration af redaktører</message>
 	<message key="editor.issues.createIssue">Opret nummer</message>
-	<message key="editor.issues.backIssues">Tidligere numre</message>
-	<message key="editor.issues.futureIssues">Fremtidige numre</message>
 	<message key="editor.issues.currentIssue">Aktuelt nummer</message>
 	<message key="editor.issues.numArticles">Artikler</message>
 	<message key="editor.issues.noArticles">Der er i øjeblikket ikke planlagt nogen artikler til dette nummer.</message>
@@ -55,20 +53,17 @@
 	<message key="editor.issues.accessDate">Dato for Open Access</message>
 	<message key="editor.issues.invalidAccessDate">Adgangsdatoen er ikke gyldig.</message>
 	<message key="editor.issues.coverPage">Forsidebillede</message>
-	<message key="editor.issues.coverPageInstructions">(Tilladte formater: .gif, .jpg eller .png )</message>
+	<message key="editor.issues.coverPageInstructions">(Tilladte formater: .jpg eller .png )</message>
 	<message key="editor.issues.uploaded">Overført</message>
 	<message key="editor.issues.remove">Fjern</message>
 	<message key="editor.issues.proofed">Korrekturlæst</message>
 	<message key="editor.issues.removeCoverPage">Vil du fjerne forsidebilledet?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Ugyldigt forsideformat. De accepterede formater er .gif, .jpg eller .png.</message>
 	<message key="editor.issues.styleFile">Typografiark</message>
 	<message key="editor.issues.invalidStyleFormat">Ugyldigt format for typografiark. Kontroller, at den fremsendte fil er en gyldig CSS. (Vær opmærksom på, at typografiark med kommentarer i begyndelsen kan blive afvist).</message>
 	<message key="editor.issues.removeStyleFile">Vil du fjerne typografiarket?</message>
 	<message key="editor.issues.coverPageCaption">Billedtekst til forside</message>
 	<message key="editor.issues.showCoverPage">Opret en forside til dette nummer med følgende artikler.</message>
 	<message key="editor.issues.coverPageDisplay">Vis</message>
-	<message key="editor.issues.hideCoverPageArchives">Vis ikke forsidebillede thumbnail i liste over numre</message>
-	<message key="editor.issues.hideCoverPageCover">vis ikke forsidebillede før indholdsfortegnelse</message>
 	<message key="editor.issues.openAccess">Open Access</message>
 	<message key="editor.issues.subscription">Abonnement</message>
 	<message key="editor.issues.identification">Identifikation</message>
@@ -93,71 +88,7 @@
 	<message key="editor.navigation.futureIssues">Fremtidige numre</message>
 	<message key="editor.navigation.issueArchive">Tidligere numre</message>
 	<message key="editor.article.designateReviewVersion">Angiv den oprindelige fil som Bedømmelsesversion</message>
-	<message key="editor.article.uploadReviewVersion">Overfør en revideret bedømmelsesversion</message>
-	<message key="editor.article.showSuppFile">Præsenter fil for bedømmere</message>
-	<message key="editor.article.layoutAndProof">Layout og korrektur</message>
-	<message key="editor.article.clear">Ryd</message>
-	<message key="editor.article.clearReviewer">Ryd bedømmer</message>
-	<message key="editor.article.changeSection">Skift sektion</message>
-	<message key="editor.article.setDueDate">Angiv forfaldsdato</message>
-	<message key="editor.article.addReviewer">Tilføj bedømmer</message>
-	<message key="editor.article.toReviewer">Til bedømmer</message>
-	<message key="editor.article.notifyReviewer">Underret bedømmer</message>
-	<message key="editor.article.initiateReview">Start bedømmelse</message>
-	<message key="editor.article.cancelReview">Annuller forespørgsel</message>
-	<message key="editor.article.clearReview">Ryd bedømmer</message>
-	<message key="editor.article.enterRecommendation">Angiv anbefaling</message>
-	<message key="editor.article.enterReviewerRecommendation">Angiv bedømmers anbefaling</message>
-	<message key="editor.article.recommendation">Anbefaling</message>
-	<message key="editor.article.selectReviewer">Vælg bedømmer</message>
-	<message key="editor.article.replaceReviewer">Erstat bedømmer</message>
-	<message key="editor.article.editorToEnter">Redaktør skal angive anbefaling/kommentarer for bedømmer</message>
-	<message key="editor.article.uploadReviewForReviewer">Overfør bedømmelse</message>
-	<message key="editor.article.peerReviewOptions">Indstillinger for peer review</message>
 	<message key="editor.article.decision">Beslutning</message>
-	<message key="editor.article.noEditorSelected">Der er ikke valgt nogen redaktører.</message>
-	<message key="editor.article.recordDecision">Registrer beslutning</message>
-	<message key="editor.article.cannotRecord">Sektionsredaktøren er endnu ikke registreret.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Bedømmer skal se forfatterversion</message>
-	<message key="editor.article.designateDueDate">Angiv en forfaldsdato</message>
-	<message key="editor.article.designateDueDateDescription">Angiv datoen eller antallet af uger for den nye forfaldsdato.</message>
-	<message key="editor.article.todaysDate">Dags dato</message>
-	<message key="editor.article.requestedByDate">Anmodet efter dato</message>
-	<message key="editor.article.dueDateFormat">Format: ÅÅÅÅ-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Antal uger</message>
-	<message key="editor.article.selectCopyeditor">Tildel manuskriptredaktør</message>
-	<message key="editor.article.replaceCopyeditor">Erstat manuskriptredaktør</message>
-	<message key="editor.article.editorsCopyedit">Redaktørs manuskriptredigering</message>
-	<message key="editor.article.showAuthor">Lad forfatter se fil</message>
-	<message key="editor.article.showCopyeditor">Vis version til manuskriptredaktør</message>
-	<message key="editor.article.rateReviewer">Bedømmerklassificering</message>
-	<message key="editor.article.reviewerRating.veryGood">5 Høj</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 Lav</message>
-	<message key="editor.article.comments">Kommentarer</message>
-	<message key="editor.article.commentsRequired">Kommentarfeltet er obligatorisk.</message>
-	<message key="editor.article.saveRating">Gem klassificering</message>
-	<message key="editor.article.noneSelected">Ingen valgte</message>
-	<message key="editor.article.authorProofing">Forfatterkorrektur</message>
-	<message key="editor.article.restoreToQueue">Gendan til aktiv liste</message>
-	<message key="editor.article.assignSectionEditor">Tilføj sektionsredaktør</message>
-	<message key="editor.article.assignEditor">Tilføj redaktør</message>
-	<message key="editor.article.selectEditor">Vælg {$roleName}</message>
-	<message key="editor.article.selectDecision">Vælg beslutning</message>
-	<message key="editor.article.selectLayoutEditor">Vælg layoutredaktør</message>
-	<message key="editor.article.replaceLayoutEditor">Erstat layoutredaktør</message>
-	<message key="editor.article.reviewSubmission">Bedøm manuskript</message>
-	<message key="editor.article.resubmitForReview">Fremsend filen igen til bedømmelse</message>
-	<message key="editor.article.resubmitFileForPeerReview">Fremsend markeret fil igen til peer review</message>
-	<message key="editor.article.sendToCopyedit">Send fil til manuskriptredigering</message>
-	<message key="editor.article.selectProofreader">Tildel korrekturlæser</message>
-	<message key="editor.article.replaceProofreader">Erstat korrekturlæser</message>
-	<message key="editor.article.authorComments">Kommentarer fra forfatter</message>
-	<message key="editor.article.proofreaderComments">Kommentarer fra korrekturlæser</message>
-	<message key="editor.article.layoutEditorFinal">Sidste layoutredaktør</message>
-	<message key="editor.article.noDate">(dato)</message>
 	<message key="editor.submissions.showBy">Vis efter</message>
 	<message key="editor.submissions.submitMMDD">Fremsend MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Aktive tildelinger</message>
@@ -172,30 +103,15 @@
 	<message key="editor.article.scheduleForPublication">Planlæg publicering i</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Skal tildeles</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publiceringsgebyret er ikke betalt. Bed forfatteren om at betale gebyr, eller giv afkald på gebyr, hvis du vil planlægge publicering af element.</message>
-	<message key="editor.article.display">Vis</message>
-	<message key="editor.article.hideTocAuthorDescription">Udelad forfatternavne fra indholdsfortegnelse</message>
-	<message key="editor.article.hideTocAuthorDefault">Standard</message>
-	<message key="editor.article.hideTocAuthorHide">Udelad</message>
-	<message key="editor.article.hideTocAuthorShow">Vis</message>
-	<message key="editor.article.cover">Forside</message>
-	<message key="editor.article.showCoverPage">Opret forside for denne artikel med følgende elementer.</message>
-	<message key="editor.article.coverImageDisplay">Vis</message>
-	<message key="editor.article.hideCoverPageToc">Vis ikke forsidebillede thumbnail i indholdsfortegnelse.</message>
-	<message key="editor.article.hideCoverPageAbstract">Vis ikke forsidebillede i artikel abstract visning</message>
-	<message key="editor.article.coverImage">Forsidebillede</message>
-	<message key="editor.article.coverImageInstructions">(Tilladte formater: .gif, .jpg, eller .png)</message>
-	<message key="editor.article.uploaded">Uploaded</message>
-	<message key="editor.article.removeCoverPage">Fjen forsidebillede?</message>
 	<message key="editor.article.remove">Fjern</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Inden du sender et indleveret manuskript til manuskriptredigering, skal du bruge linket Underret forfatter til at informere forfatteren om beslutningen og vælge den version, der skal sendes.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Inden du sender et indleveret manuskript til manuskriptredigering, skal du bruge linket 'Underret forfatter' til at informere forfatteren om beslutningen og vælge den version, der skal sendes.</message>
 	<message key="editor.notifyUsers.allReaders">Alle læsere ({$count} brugere)</message>
 	<message key="editor.notifyUsers.allAuthors">Alle udgivne forfattere({$count} brugere)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuelle abonnenter ({$count} brugere)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionsabonnenter ({$count} brugere)</message>
-	<message key="editor.issues.enableOpenAccessDate">Aktiver forsinket åben adgang</message>
+	<message key="editor.issues.enableOpenAccessDate">Aktivér forsinket åben adgang</message>
 	<message key="editor.issues.unpublishIssue">Træk udgivet nummer tilbage</message>
 	<message key="editor.issues.confirmUnpublish">Er du sikker på, at du vil trække dette udgivne nummer tilbage?</message>
-	<message key="editor.article.archiveSubmission">Afvis og arkiver indlevering</message>
 	<message key="editor.issues.galleys">Hele numre</message>
 	<message key="editor.issues.galley">Hele numre</message>
 	<message key="editor.issues.viewingGalley">Se hele nummeret</message>
@@ -226,7 +142,11 @@
 	<message key="editor.issues.invalidCoverImageFormat">Ugyldigt format til forsidebillede. De godkendte formater er  .gif, .jpg, or .png.</message>
 	<message key="editor.issues.identifiers">Identifikationer</message>
 	<message key="grid.action.publish">Publicér nummer</message>
-	<message key="editor.submission.selectGalleyFiles">Vælg publi´ceringsklare filer</message>
+	<message key="editor.submission.selectGalleyFiles">Vælg publicéringsklare filer</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Det sidste udkast på denne liste tilrettes af en manuskriptredaktør til den manuskriptredigerede version uploadet nedenfor under <span class="pkp_help_title">Manuskriptredigering</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Enhver fil, der allerede er blevet uploadet til et af indsendelsestrinnene kan tilføjes korrekturlæsningslisten ved nedenfor at markere afkrydsningsfeltet ud for 'Inkludér' og klikke 'Søg': Alle tilgængelige filer vil stå opført og kan tilvælges.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Er du sikker på at du vil registrere dette nummer som det nyeste?</message>
+	<message key="grid.action.setCurrentIssue">Sæt nyeste nummer</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Identifikatoren (publicid) '{$publicIdentifier}' eksisterer allerede i forbindelse med et andet objekt af samme type. Vælg unikke identifikatorer for objekter af samme type i dit tidsskrift.</message>
+	<message key="editor.article.coverImage">Forsidebillede</message>
 </locale>

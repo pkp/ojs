@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -43,7 +43,6 @@
 	<message key="manager.payment.notFound">No se pudo encontrar</message>
 	<message key="manager.payment.options">Opciones</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta opción activa el pago para suscribirse a la revista. Los tipos de suscripción, el coste, la duración y las suscripciones en sí las administra el gestor/a (de suscripciones) de la revista.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta opción activa el pago para donación de suscripciones y permite a los lectores/as de la revista comprar donaciones de suscripciones para otros lectores/as.</message>
 	<message key="manager.payment.options.enablePayments">Haga clic aquí para habilitar el módulo de pagos. Debe configurar las opciones de pago. Para ello, rellene el siguiente formulario. Tenga en cuenta que debe iniciar sesión para realizar cualquier pago.</message>
 	<message key="manager.payment.options.fee">Cuota</message>
 	<message key="manager.payment.options.feeDescription">Descripción de la cuota</message>
@@ -54,7 +53,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Comprar un artículo</message>
 	<message key="manager.payment.options.purchaseIssueFee">Comprar un número</message>
 	<message key="manager.payment.options.text">Descripción de la forma de pago</message>
-	<message key="manager.payment.options.waiverPolicy">Política de exención de pago</message>
 	<message key="manager.payment.paymentId">Id. del pago</message>
 	<message key="manager.payment.paymentMethod">Forma de pago</message>
 	<message key="manager.payment.paymentMethod.description">Puede configurar cualquiera de los siguientes módulos de formas de pago en esta pantalla.</message>
@@ -153,8 +151,7 @@
 	<message key="manager.setup.enableAnnouncements">Permitir que los gestores/as de la revista publiquen avisos.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostrar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">los últimos avisos publicados en la página inicial.</message>
-	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores personalizados para identificar las publicaciones.</message>
-	<message key="manager.setup.enableUserRegistration">Los usuarios/as pueden registrarse en la revista con uno o varios de los siguientes roles:</message>
+	<message key="manager.setup.enableUserRegistration">Los visitantes pueden registrar una cuenta de usuario/a en la revista.</message>
 	<message key="manager.setup.focusAndScope">Objeto y alcance</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Instrucciones de indexación para los autores/as</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS se adhiere al protocolo <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, estándar emergente para proporcionar acceso indexado a recursos de investigación electrónicos a escala global. Los autores/as deben usar una plantilla similar para proporcionar los metadatos necesarios para sus envíos. El gestor/a de la revista debe seleccionar las categorías para la indexación y mostrar a los autores/as ejemplos relevantes para ayudarlos a indexar sus trabajos, separando los términos con un punto y coma (p. ej., término1; término2). Las entradas deben introducirse como ejemplos utilizando "p. ej.," o "Por ejemplo,".]]></message>
@@ -209,6 +206,12 @@
 	<message key="manager.setup.layoutTemplates.title">Título</message>
 	<message key="manager.setup.lists">Listas</message>
 	<message key="manager.setup.listsDescription">Introduzca el número máximo de elementos (p. ej., envíos, usuarios/as o asignación de tareas de edición) que aparecerán en cada página de una lista, así como el número de enlaces de las páginas que se mostrarán en cada una de dichas páginas.</message>
+	<message key="manager.setup.plnPluginEnable">Módulo PKP PN activado</message>
+	<message key="manager.setup.plnDescription">La Red de Preservación de PKP (PKP Preservation Network, en inglés) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos.</message>
+	<message key="manager.setup.plnSettingsDescription">Haga clic en el enlace de ajustes para aceptar los términos de uso de PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">PKP Preservation Network (PN) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos. El módulo PKP PN para OJS 3 está actualmente en desarrollo y estará disponible el la garería de módulos pronto.</message>
+	<message key="manager.setup.otherLockss">Opciones alternativas de archivo</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Habilite LOCKSS para almacenar y distribuir contenido de la revista en bibliotecas colaboradoras a través de una página del <a href="{$lockssUrl}" target="_blank">Manifiesto editorial</a> LOCKSS. Puede encontrar la licencia de LOCKSS en la sección Archivo de la sección Acerca de la revista:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifique de 6 a 10 bibliotecas que registrarán y almacenarán temporalmente la revista. Por ejemplo, consulte las instituciones en las que trabajan los editores/as o los miembros del consejo de redacción y/o las instituciones que ya emplean el sistema LOCKSS. Ver <a href="http://www.lockss.org/community/" target="_blank">la comunidad LOCKSS</a>. Use las invitaciones preparadas para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotecas que emplean LOCKSS</a> o (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotecas que aún no emplean LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Apariencia</message>
@@ -261,7 +264,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> La invitación por correo electrónico para revisores/as contendrá una dirección URL especial que dirige a los revisores/as directamente a la página de revisión para el envío (con acceso a cualquier otra página que requiera iniciar sesión). Por razones de seguridad, los editores/as no pueden modificar las direcciones de correo electrónico o añadir direcciones en copia o copia oculta antes de enviar las invitaciones a los revisores/as.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Calificación de los revisores/as</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Recordatorios para los revisores/as</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Proporcionar enlaces para <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Asegurar la evaluación anónima</a> en páginas donde los autores/as y revisores/as suben archivos.]]></message>
 	<message key="manager.setup.reviewPolicy">Política de revisión</message>
 	<message key="manager.setup.searchEngineIndexing">Indización en buscadores</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Para ayudar a los usuarios/as de buscadores a descubrir la revista, proporcione una breve descripción de ésta y las palabras clave que mejor la definan (separadas mediante punto y coma).</message>
@@ -343,10 +345,6 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Los lectores/as no podrán acceder a ningún contenido de la suscripción después del vencimiento de esta.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Vencimiento parcial</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Los lectores/as no podrán acceder al contenido reciente de la suscripción, pero tendrán acceso al contenido de dicha suscripción publicado antes de la fecha de vencimiento de esta.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notificar a los suscriptores/as por correo electrónico</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">semana/s después del vencimiento de la suscripción.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notificar a los suscriptores/as por correo electrónico</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semana/s antes del vencimiento de la suscripción.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Recordatorios del vencimiento de la suscripción</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Se pueden enviar correos electrónicos automáticos a los suscriptores/as antes y después del vencimiento de su suscripción. El gestor/a de la revista puede editar estos mensajes en la sección Plantillas de correo de OJS.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Nota:</strong> Para activar estas opciones, el administrador/a del sitio debe habilitar la opción <tt>scheduled_tasks</tt> en el archivo de configuración de OJS. Es posible que se requiera una configuración adicional del servidor para admitir esta función (puede que no todos los servidores la permitan) siguiendo las indicaciones en la documentación del OJS.]]></message>
@@ -373,7 +371,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gestor/a de suscripciones</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">El contacto se encuentra en el apartado Suscripciones de la sección Acerca de la revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Introduzca una dirección de correo electrónico válida.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">La configuración de la política de suscripción se actualizó.</message>
 	<message key="manager.subscriptions">Suscripciones</message>
 	<message key="manager.individualSubscriptions">Suscripciones individuales</message>
 	<message key="manager.institutionalSubscriptions">Suscripciones institucionales</message>
@@ -500,10 +497,11 @@
 	<message key="manager.setup.resetPermissions">Reinicia permisos de artículo</message>
 	<message key="manager.setup.resetPermissions.description">La declaración del copyright y la información de la licencia se añadirán permanentemente al contenido publicado, garantizando que estos datos no cambian en caso de que lo hagan las políticas de la revista para los nuevos envíos. Para reiniciar la información almacenada de los permisos que ya se han adjuntado al contenido publicado, utiliza los botones que se muestran a continuación.</message>
 	<message key="manager.setup.copyrightYearBasis">Poner la fecha del copyright del artículo a</message>
-	<message key="manager.website.archiving">Archivando</message>
+	<message key="manager.website.archiving">Almacenamiento</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Aún no hay editores/as de sección. Añada este rol al menos a un usuario vía Administración > Ajustes > Users &amp; Roles first.]]></message>
 	<message key="manager.setup.masthead">Cabecera</message>
-	<message key="manager.setup.masthead.description">Listar editores/as, directores/as de gestión y otras personas asociadas con la revista.</message>
+	<message key="manager.setup.editorialTeam">Equipo editorial</message>
+	<message key="manager.setup.editorialTeam.description">Listar editores/as, directores/as de gestión y otras personas asociadas con la revista.</message>
 	<message key="manager.setup.homepageContent">Contenido de la página de inicio de la revista</message>
 	<message key="manager.setup.homepageContentDescription">La página de inicio de la revista consta de los enlaces por defecto. Se le puede añadir contenido adicional mediante una o todas las opciones siguientes, que aparecerán en el orden mostrado.</message>
 	<message key="manager.setup.layout">Estilo de la revista</message>
@@ -534,15 +532,7 @@
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visualizaciones de la tabla de contenidos del número</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Por favor, use la casilla de verificación proporcionada.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar a los suscriptores/as por correo electrónico</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mes(es) después del vencimiento de la suscripción.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar a los suscriptores/as por correo electrónico</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mes(es) después del vencimiento de la suscripción.</message>
 	<message key="manager.distribution.access">Acceso</message>
-	<message key="manager.settings.journalDescription">Todos los ajustes específicos de la revista (cabecera, contactos, políticas, normas, filiación y soporte, categorías y series).</message>
-	<message key="manager.settings.publicationDescription">Todos los ajustes específicos del proceso de publicación (configuración general, fases del envío, de la revisión, de la edición y de la producción, plantillas de correo).</message>
-	<message key="manager.settings.websiteDescription">Todos los ajustes específicos de las páginas web públicas (página de inicio, apariencia, lenguaje).</message>
-	<message key="manager.settings.distributionDescription">Todos los ajustes específicos del proceso de distribución (notificación, indexación, archivado, pago, herramientas de lectura).</message>
 	<message key="grid.category.path">Ruta</message>
 	<message key="grid.action.addSection">Añadir sección</message>
 	<message key="manager.setup.section.description">Los artículos incluidos en números ya publicados de una revista se organizan en secciones, normalmente por tema o tipo de contenido (p. ej.: artículos de revisión, investigación, etc.).</message>
@@ -571,7 +561,6 @@
 	<message key="plugins.importexport.common.action.export">Exportar</message>
 	<message key="plugins.importexport.common.action.markRegistered">Marcar como registrado</message>
 	<message key="plugins.importexport.common.action.register">Registrar</message>
-	<message key="plugins.importexport.common.action.checkStatus">Comprobar estado</message>
 	<message key="plugins.importexport.common.error.noObjectsSelected">Ningún objeto seleccionado.</message>
 	<message key="plugins.importexport.common.error.validation">No se pueden convertir los objetos seleccionados.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no es editable.</message>
@@ -588,4 +577,18 @@
 	<message key="plugins.importexport.common.error.unknownJournal">La ruta de la revista especificada, "{$journalPath}", no existe.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Los objetos especificados no se pueden encontrar.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Enviar una copia al contacto principal identificado en los ajustes de la revista.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">¿Está seguro de que desea eliminar la suscripción?</message>
+	<message key="manager.paymentTypes">Tipos de pago</message>
+	<message key="manager.setup.porticoEnable">Active Portico para almacenar y distribuir el contenido de la revista a bibliotecas colaboradoras de Portico.</message>
+	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} meses</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} semanas</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Notificar a los suscriptores por correo electrónico tras la caducidad de la suscripción.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Notificar a los suscriptores por correo electrónico tras la caducidad de la suscripción.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Notificar a los suscriptores por correo electrónico antes de la caducidad de la suscripción.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Notificar a los suscriptores por correo electrónico antes de la caducidad de la suscripción.</message>
+	<message key="manager.subscriptions.confirmRenew">¿Está seguro de que desea renovar la suscripción?</message>
+	<message key="manager.navigationMenus.subscriptions.description">Enlazar con una página que describa las suscripciones disponibles.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Enlazar con una página que describa las suscripciones actuales y anteriores del visitante.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">El enlace solo se mostrará cuando el visitante haya iniciado la sesión.</message>
 </locale>

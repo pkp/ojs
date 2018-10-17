@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -127,14 +127,6 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Gaituta badago, mezu hau automatikoki bidaltzen zaio egileari, aldizkarira eskuizkribua bidaltzeko prozesua osatzen duenean. Bidalketaren jarraipena egiteko informazioa bidaltzen dio, eta eskerrak ematen dizkio lana bidaltzeagatik.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidalketa desegokia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-&quot;{$submissionTitle}&quot; artikulua aztertu dugu, eta garbi dago ez zaiola egokitzen {$contextName} aldizkariaren esparruari eta orientazioari. Gure webgunean Aldizkariari buruz ematen dugun informazioa eta une honetan eskaintzen dugun edukia kontsultatzea gomendatzen dizugu, zein eratako lanak argitaratzen ditugun ikusteko. Eskuizkribua beste aldizkari batera, gaiari hobeto egokitzen zaion batera, bidali beharko zenuke.<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Bidalketari buruzko iruzkina</subject>
@@ -594,33 +586,6 @@ Esteka: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mezu hau mota honetako jakinarazpena jasotzea hautatu duten erabiltzaile erregistratuei bidaltzen zaie.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle} gunearen jakinarazpen berria</subject>
-		<body><![CDATA[{$siteTitle} gunearen jakinarazpen berri bat daukazu:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Esteka: {$url}<br />
---<br />
-<br />
-Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu hau jakinarazpenen posta-zerrendako erabiltzaile erregistratu gabeei bidaltzen zaie.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Ongi etorri {$siteTitle} posta-zerrendara!</subject>
-		<body><![CDATA[{$siteTitle} gunearen jakinarazpenak jasotzeko izena eman duzu.<br />
-<br />
-Egin klik esteka honetan zure eskaera berresteko eta zure helbide elektronikoa posta-zerrendan gehitzeko: {$confirmLink}<br />
-<br />
-Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.<br />
-<br />
-Hau da jakinarazpen-mezuak desgaitzeko zure pasahitza: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu hau jakinarazpenen posta-zerrendako erabiltzaile erregistratu berriei bidaltzen zaie.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editorearen erabakia</subject>
