@@ -383,6 +383,21 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 	/**
+	 * Retrieve all sections for a journal.
+	 * @param $journalId int Journal ID
+	 * @param $rangeInfo DBResultRange optional
+	 * @return DAOResultFactory containing Sections ordered by sequence
+	 */
+	function getByContextId($journalId, $rangeInfo = null) {
+		$result = $this->retrieveRange(
+			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
+			(int) $journalId, $rangeInfo
+		);
+
+		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
+	/**
 	 * Retrieve all sections.
 	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory containing Sections ordered by journal ID and sequence
