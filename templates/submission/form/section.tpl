@@ -16,8 +16,5 @@
 {/fbvFormSection}
 
 {foreach from=$sectionPolicies key="sectionPolicySectionId" item="content"}
-	{if $sectionPolicySectionId != $sectionId}
-		{assign var=sectionPolicyHidden value=true}
-	{/if}
 	{include file="submission/form/sectionPolicy.tpl" sectionId=$sectionPolicySectionId content=$content}
 {/foreach}
