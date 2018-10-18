@@ -323,6 +323,22 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; The reply-to field will be set with the reply-to or from address.
 ; force_default_envelope_sender = Off
 
+; Force a DMARC compliant from header (RFC5322.From)
+; If any of your users have email addresses in domains not under your control
+; you may need to set this to be compliant with DMARC policies published by
+; those 3rd party domains.
+; Setting this will move the users address into the reply-to field and the
+; from field wil be rewritten with the default_envelope_sender.
+; To use this you must set force_default_enveloper_sender = On and
+; default_envelope_sender must be set to a valid address in a domain you own.
+; force_dmarc_compliant_from = Off
+
+; The display name to use with a DMARC compliant from header
+; By default the DMARC compliant from will have an empty name but this can
+; be changed by adding a text here.
+; You can use '%n' to insert the display name of the original from header
+; dmarc_compliant_from_displayname = '%n via OJS'
+
 ; Amount of time required between attempts to send non-editorial emails
 ; in seconds. This can be used to help prevent email relaying via OJS.
 time_between_emails = 3600
