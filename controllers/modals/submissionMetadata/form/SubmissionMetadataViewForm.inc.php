@@ -39,7 +39,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
+		$sectionOptions = $sectionDao->getTitlesByContextId($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 		// get word count of the section

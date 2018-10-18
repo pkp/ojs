@@ -386,11 +386,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * Retrieve all sections for a journal.
 	 * @param $journalId int Journal ID
 	 * @param $rangeInfo DBResultRange optional
+	 * @param $submittableOnly boolean optional. Whether to return only sections
+	 *  that can be submitted to by anyone.
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
-	function getByContextId($journalId, $rangeInfo = null) {
+	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
+			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 
@@ -608,5 +610,4 @@ class SectionDAO extends PKPSectionDAO {
 			array((float) $seq, (int) $issueId, (int) $sectionId)
 		);
 	}
-
 }
