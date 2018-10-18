@@ -172,5 +172,5 @@ Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoituk
 	<message key="default.groups.abbrev.externalReviewer">A</message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim} $contextName {$rdelim}</a>]]></message>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>
