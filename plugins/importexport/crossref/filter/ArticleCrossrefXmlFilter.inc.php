@@ -117,6 +117,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}
 			$contributorsNode->appendChild($personNameNode);
+			$isFirst = false;
 		}
 		$journalArticleNode->appendChild($contributorsNode);
 
