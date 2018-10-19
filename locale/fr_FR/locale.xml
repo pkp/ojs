@@ -52,6 +52,7 @@
 	<message key="navigation.browseByAuthor">Par auteur</message>
 	<message key="navigation.infoForAuthors">Pour les auteurs</message>
 	<message key="navigation.infoForLibrarians">Pour les bibliothécaires</message>
+	<message key="navigation.competingInterestGuidelines">Lignes directrices sur les intérêts concurrents</message>
 	<message key="navigation.infoForAuthors.long">Information pour les auteurs</message>
 	<message key="navigation.infoForLibrarians.long">Information pour les bibliothécaires</message>
 
@@ -83,6 +84,7 @@
 	<message key="section.abbreviation">Abréviation</message>
 	<message key="section.abbreviation.example">(Par exemple, Articles=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Article</message>
 	<message key="article.articles">Articles</message>
 	<message key="article.submissionId">ID de la soumission</message>
 	<message key="article.title">Titre</message>
@@ -270,6 +272,9 @@
 	<message key="plugins.categories.generic.description">Les plugiciels génériques sont utilisés pour étendre les possibilités d'Open Journal Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de plugiciels.</message>
 	<message key="plugins.categories.auth.description">Les plugiciels d'autorisation permettent au Open Journal Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
 
+	<message key="plugins.categories.auth.description">Les modules d'autorisation permettent au Open Journal Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
+
+	<message key="plugins.block.information.link">Information</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems prend en charge le système <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
 	<br /><br />
 	La configuration de la prise en charge de LOCKSS pour Open Journal Systems n'a pas à être effectuée avant que le processus de publication soit bien enclenché, en quel cas, suivre ces deux étapes :]]></message>
@@ -288,6 +293,11 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 		</ul>
 	Cette tâche doit être effectuée par un administrateur de site.]]></message>
 
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Nom des liens vers le profil de l'évaluateur.<br />
+Notation est sur 5 (Excellent).<br />
+Semaines réfèrent au temps moyen nécessaire pour compléter une évaluation.<br />
+Dernière est la date de la plus récente évaluation acceptée.<br />
+Active indique combien d'évaluations sont présentement considérées ou en cours.]]></message>
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Travail éditorial en cours</message>
 	<message key="sectionEditor.completedEditorialAssignments">Travail éditorial terminé</message>
@@ -366,6 +376,7 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fichier à réviser</message>
 	<message key="copyeditor.article.copyeditorFile">Fichier du réviseur</message>
+	<message key="copyeditor.article.uploadedFile">Fichier déposé</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fichier du réviseur</message>
 
 	<!-- Proofreader -->
@@ -685,6 +696,7 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="reader.openAccess">Accès libre</message>
 	<message key="reader.subscriptionAccess">Accès sous abonnement</message>
 	<message key="reader.subscriptionOrFeeAccess">Accès sous abonnement ou avec frais</message>
+	<message key="plugins.categories.citationFormats.description">Les modules de format de citation fournissent aux utilisateurs différents formats par lesquels ils peuvent accéder aux citations d'articles.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement des modules linguistiques à partir du serveur Web du Public Knowledge Project n'est pas disponible présentement car :</p>
 	<ul>
 		<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire "tar" de GNU</li>
@@ -858,6 +870,8 @@ Titre du système de classification]]></message>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br />
 Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br />
 La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
+	<message key="notification.mailListDescription">Saisir votre adresse de courriel pour être avisé immédiatement de tout nouveau contenu important ajouté à la revue.</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Cette page montre les mises à jour importantes associées avec cette revue tel que les nouvelles parutions et les annonces. Vous pouvez vous abonner à ces avis par l'intermédiaire des flux RSS (en cliquant sur les images à droite), ou <a href="{$emailUrl}">par courriel.</a>]]></message>
 	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
 	<message key="notification.type.editing">Événements de révision</message>
 	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
@@ -1017,9 +1031,11 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
 <br /> <br />
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
+	<message key="manager.setup.citations.enable">Activer l'Assistant au balisage de référence (Citation Markup Assistant)</message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Merci de remplir les champs requis.</message>
 	<message key="user.reviewerPrompt.optin">Oui, j'accepte d'évaluer des articles pour ce journal.</message>
+	<message key="article.details">Détails</message>
 	<message key="subscriptions.status.noSubscription">Vous n'avez pas d'abonnement actif.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>
 	<message key="manager.setup.porticoDescription">Portico est un service non commercial d'archivage. Si votre journal a signé un contrat avec Portico, activez le ici :</message>
@@ -1032,4 +1048,9 @@ L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu 
 	<message key="notification.type.publicationScheduled">Cette soumission a été programmée pour publication.</message>
 	<message key="navigation.subscriptions">Abonnements</message>
 	<message key="log.editor.submissionExpedited">{$editorName} prend en charge le processus éditorial pour la soumission {$submissionId}.</message>
+	<message key="user.reviewerPrompt.optin">Oui, je souhaite que l'on me contacte  pour des demandes d'évaluation des articles soumis à cette revue.</message>
+	<message key="manager.setup.porticoDescription">Portico est un service sans but lucratif voué à la préservation des publications numériques, y compris les revues électroniques, les livres électroniques et les collections historiques numérisées. Si votre revue a signé un contrat avec Portico, activez-le ici :</message>
+	<message key="user.register.form.emailConsentAllContexts">Oui, j'aimerais être informé des nouvelles publications et annonces pour toutes les revues dans lesquelles je suis inscrit.</message>
+	<message key="notification.type.public">Annonces publiques</message>
+	<message key="log.editor.submissionExpedited">{$editorName} a pris le processus d'édition pour l'article {$submissionId}.</message>
 </locale>

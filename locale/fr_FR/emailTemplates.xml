@@ -893,4 +893,13 @@ Notre décision est de refuser votre soumission<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ce mail est envoyé à l'auteur si le rédacteur refuse la soumission avant même de la faire évaluer</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Recommandation éditoriale</subject>
+		<body><![CDATA[{$editors}<br />
+<br /> 
+La recommandation concernant la soumission à {$contextName}, &quot;{$submissionTitle}&quot ; est : {$recommandation}<br />
+<br /> 
+{$editorialContactSignature}<br />]]></body>
+		<description>Ce courriel du rédacteur en chef ou du rédacteur en chef de la section à l'intention des rédacteurs en chef décideurs ou des rédacteurs en chef de la section les avise d'une recommandation finale concernant la soumission.</description>
+	</email_text>
 </email_texts>
