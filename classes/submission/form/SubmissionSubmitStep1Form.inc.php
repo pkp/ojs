@@ -46,14 +46,22 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 			$section = $sectionDao->getById($sectionId);
 
 			$sectionPolicy = $section ? $section->getLocalizedPolicy() : null;
-			$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
-			if (strlen($sectionPolicyPlainText) > 0)
+			if ($this->doesSectionPolicyContainAnyText($sectionPolicy))
 				$sectionPolicies[$sectionId] = $sectionPolicy;
 		}
 
 		$templateMgr->assign('sectionPolicies', $sectionPolicies);
 
 		return parent::fetch($request);
+	}
+
+	/**
+	 * Checks whether a section policy contains any text (plain / readable).
+	 */
+	private function doesSectionPolicyContainAnyText($sectionPolicy)
+	{
+		$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
+		return strlen($sectionPolicyPlainText) > 0;
 	}
 
 	/**
