@@ -56,10 +56,13 @@
 			prototype.uploadFileHandler_ = function(sourceElement, event, rowId) {
 
 		// FIXME: Inter-widget messaging is needed here.
-		setTimeout(function() {
-			$('a[id^="component-grid-articlegalleys-articlegalleygrid-row-' + rowId +
-					'-addFile-button-"]').click();
-		}, 0);
+		var selector = 'a[id^="component-grid-articlegalleys-articlegalleygrid-row-' +
+				rowId + '-addFile-button-"]';
+		$.when($(selector)).then(function() {
+			$(function() {
+				$(selector).click();
+			});
+		});
 	};
 
 
