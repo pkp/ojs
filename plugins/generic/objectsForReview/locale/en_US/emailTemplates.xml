@@ -70,6 +70,21 @@ Please feel free to contact me if you have any questions or concerns about this 
 {$editorialContactSignature}</body>
 		<description>This email is sent by an editor to an object review author when an editor assigns the object for review to the author.</description>
 	</email_text>
+	<email_text key="OFR_OBJECT_OFFERED">
+		<subject>Object for Review: Object Assigned</subject>
+		<body>Dear {$authorName}:
+
+Through this email, I would like to invite you to write a review for {$ objectForReviewTitle} {$objectForReviewAuthors}.
+
+If you want to answer positively: {$ acceptUrl}
+
+If you wish to decline the offer: {$ declineUrl}
+
+Please feel free to contact me if you have any questions or concerns about this object review.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an object review author when an editor offers the object for review to the author.</description>
+	</email_text>
 	<email_text key="OFR_OBJECT_DENIED">
 		<subject>Object for Review</subject>
 		<body>Dear {$authorName}:
@@ -91,6 +106,24 @@ Can you please confirm whether this object is still available for review?
 
 {$authorContactSignature}</body>
 		<description>This email is sent to an editor by an author interested in writing an object review for a listed object.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_DECLINED">
+		<subject>Object for Review: Object declined</subject>
+		<body>Dear {$editorName}:
+
+Unfortunately, I can not respond positively to your proposal to write an object review of {$objectForReviewTitle}.
+
+{$authorContactSignature}</body>
+		<description>This email is sent to an editor by an author who declines the proposal of writing an object review.</description>
+	</email_text>
+	<email_text key="OFR_OBJECT_ACCEPTED">
+		<subject>Object for Review: Object accepted</subject>
+		<body>Dear {$editorName}:
+
+In response to your proposal, I would like to inform you that I am interested in writing an object review of {$objectForReviewTitle}.
+
+{$authorContactSignature}</body>
+		<description>This email is sent to an editor by an author who accepts the proposal of writing an object review.</description>
 	</email_text>
 	<email_text key="OFR_OBJECT_MAILED">
 		<subject>Object for Review: Object Mailed</subject>
@@ -119,4 +152,16 @@ I hope you consider reviewing another object from our listing, either at this ti
 {$editorialContactSignature}</body>
 		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
 	</email_text>
+	<email_text key="OFR_REVIEW_OFFER_CANCELED">
+		<subject>Object for Review</subject>
+		<body>Dear {$authorName}:
+
+This email cancels the proposal that was made to you to write a review of{$objectForReviewTitle}.
+
+I hope you consider reviewing another object from our listing, either at this time or in the future.
+
+{$editorialContactSignature}</body>
+		<description>This email is sent by an editor to an interested author when an object is no longer available for review.</description>
+	</email_text>
+	
 </email_texts>

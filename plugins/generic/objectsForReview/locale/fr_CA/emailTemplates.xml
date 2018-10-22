@@ -70,6 +70,19 @@ N'hésitez pas à me contacter si vous avez des questions ou des inquiétudes à
 {$editorialContactSignature}</body>
 		<description></description>
 	</email_text>
+	<email_text key="OFR_OBJECT_OFFERED">
+		<subject>Proposition de compte rendu d'un objet</subject>
+		<body>Madame, Monsieur, {$authorName}:
+
+Par ce courriel, je souhaite vous proposer de rédiger un compte rendu pour l'objet {$objectForReviewTitle}. 
+
+URL pour repondre favorablement ou décliner la proposition : {$responseUrl}
+
+N'hésitez pas à me contacter si vous avez des questions ou besoin d’informations complémentaires concernant ce compte rendu.
+
+{$editorialContactSignature}</body>
+		<description>Ce courriel est envoyé par un rédacteur à un auteur quand un rédacteur propose un compte rendu d’un objet à un auteur.</description>
+	</email_text>
 	<email_text key="OFR_OBJECT_DENIED">
 		<subject>Objet à évaluer</subject>
 		<body>Chèr(e) {$authorName}:
