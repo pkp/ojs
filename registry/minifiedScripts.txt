@@ -24,9 +24,6 @@ lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js
 # Underscore library
 lib/pkp/js/lib/underscore/underscore.js
 
-# JSON library
-lib/pkp/js/lib/json/json2.js
-
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
 lib/pkp/js/classes/ObjectProxy.js
