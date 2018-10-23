@@ -13,7 +13,6 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.block.languageToggle.selectLabel">Scegli la lingua</message>
 	<message key="plugins.block.languageToggle.displayName">Blocco per la scelta della lingua</message>
 	<message key="plugins.block.languageToggle.description">Questo plugin inserisce nel menu laterale un menu a tendina che permette agli utenti di scegliere la lingua dell'interfaccia.</message>
 </locale>
