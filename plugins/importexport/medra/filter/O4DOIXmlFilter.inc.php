@@ -161,10 +161,10 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Serial Work (mandatory)
 		$serialPublicationNode->appendChild($this->createSerialWorkNode($doc, $journalLocalePrecedence));
 		// Electronic Serial Version
-		$onlineIssn = $context->getSetting('onlineIssn');
+		$onlineIssn = $context->getData('onlineIssn');
 		$serialPublicationNode->appendChild($this->createSerialVersionNode($doc,  $onlineIssn, O4DOI_PRODUCT_FORM_ELECTRONIC, $epubFormat));
 		// Print Serial Version
-		if (($printIssn = $context->getSetting('printIssn')) && $this->isWork($context, $plugin)) {
+		if (($printIssn = $context->getData('printIssn')) && $this->isWork($context, $plugin)) {
 			$serialPublicationNode->appendChild($this->createSerialVersionNode($doc,  $printIssn, O4DOI_PRODUCT_FORM_PRINT, null));
 		}
 		return $serialPublicationNode;
@@ -231,7 +231,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		// Publishing role (mandatory)
 		$publisherNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PublishingRole', O4DOI_PUBLISHING_ROLE_PUBLISHER));
 		// Publisher name (mandatory)
-		$publisher = $context->getSetting('publisherInstitution');
+		$publisher = $context->getData('publisherInstitution');
 		if (empty($publisher)) {
 			// Use the journal title if no publisher is set.
 			// This corresponds to the logic implemented for OAI interfaces, too.

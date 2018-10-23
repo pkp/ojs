@@ -55,6 +55,7 @@ script:
       ./lib/pkp/tools/travis/validate-xml.sh
       ./lib/pkp/tools/buildjs.sh -n
       ./lib/pkp/tools/checkHelp.sh
+      ./lib/pkp/tools/travis/validate-json.sh
     fi
 
 after_script:

@@ -371,16 +371,8 @@
 	<message key="plugins.categories.auth.description">إضافات المصادقة تسمح لنظام المجلات المفتوحة بتفويض مهام المصادقة إلى أنظمة أخرى، مثل: ملقمات LDAP</message>
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم شبكات <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة LOCKSS هي برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
-<br /><br />
-إن إعداد نظام LOCKSS ليقدم الدعم لنظام المجلات المفتوحة لا يستلزم أن يحدث حتى تبدأ المجلة بإصدار أعدادها بشكل نهائي. عند هذه النقطة اتبع الخطوات الآتية:]]>
-</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم أيضاً شبكات <a href="http://clockss.org/" target="_blank">CLOCKSS</a> Controlled Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة CLOCKSS تستند إلى برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
-<br /><br />
-إن إعداد نظام CLOCKSS ليقدم الدعم لنظام المجلات المفتوحة لا يستلزم أن يحدث حتى تبدأ المجلة بإصدار أعدادها بشكل نهائي.]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>أمثلة على إشعارات الترخيص الخلاقة الدارجة ضمن ملاحظات الحقوق الفكرية</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>أمثلة على إشعارات الترخيص الخلاقة الدارجة ضمن ملاحظات الحقوق الفكرية</h3>
 <h4>1. السياسة المقترحة للمجلات التي تتيح الوصول المفتوح</h4>
 المؤلفون الناشرون عبر هذه المجلة يوافقون على البنود الآتية:
 <ol type="a">
@@ -796,7 +788,6 @@
 	<message key="about.delayedOpenAccess">الوصول المفتوح المؤجل</message>
 	<message key="about.delayedOpenAccessDescription1">محتويات هذه المجلة ستكون متوافرة بشكل يسمح للوصول المفتوح</message>
 	<message key="about.delayedOpenAccessDescription2">شهر/أشهر بعد نشر الإصدار</message>
-	<message key="about.authorSelfArchive">الأرشفة الذاتية للمؤلف</message>
 	<message key="about.archiving">الأرشفة</message>
 	<message key="about.subscriptions">الاشتراكات</message>
 	<message key="about.subscriptions.individual">اشتراكات منفردة</message>
@@ -986,57 +977,7 @@
 
 	<message key="log.imported">{$userName} قد استورد المؤلَّف {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">خيارات أدوات القراءة</message>
-
-	<message key="rt.admin.settings.description">إن أدوات القراءة تظهر في إطار مجاور للمؤلفات المنشورة ضمن أقسام المجلة المخصصة للفهرسة. أدوات القراءة تتضمن مجموعة من الأدوات الإختيارية المتعلقة بما هو منشور، والمبينة أدناه، مع مجموعة من الأدوات التي تسهل الوصول إلى متعلقاتها، مرتبة حسب الحقل ومدى الضبط.</message>
-	<message key="rt.admin.settings.enableReadingTools">تمكين أدوات القراءة للأقسام المحددة من المجلة.</message>
-	<message key="rt.admin.settings.relatedItems">الحقل</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[أنظر <a href="{$relatedItemsLink}" class="action">مجاميع الفقرات ذات الصلة</a> للعرض، الإضافة، التعديل، الحذف لكل حقل.]]></message>
-
-	<message key="rt.admin.options">أدوات مكونات المجلة</message>
-	<message key="rt.admin.relatedItems">أدوات المكونات ذات الصلة</message>
-
-	<message key="rt.admin.settings.addComment">أضف تعليقاً (تمكين القراء من إدراج تعليقاتهم مع السماح لرئيس تحرير المجلة في حذفها).</message>
-	<message key="rt.admin.settings.addComment.authenticated">على المستخدمين أن يكونوا مسجلين في الموقع وقاموا بالدخول فيه ليتمكنوا من إدراج تعليق، مع إلزام التعريف بالهوية.</message>
-	<message key="rt.admin.settings.addComment.anonymous">على المستخدمين أن يكونوا مسجلين في الموقع وقاموا بالدخول فيه ليتمكنوا من إدراج تعليق، مع إمكانية إخفاء الهوية.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">لا يُشترط على المستخدمين أن يكونوا مسجلين في الموقع ليتمكنوا من إدراج تعليق، مع إمكانية إخفاء الهوية.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[الروابط الخاطئة إحتمالاً لمواقع البحث مبينة أدناه.<br />
-عليك التحقق يدوياً من أي رابط معلم بأنه غير صحيح، حيث أن هذا الإختبار ليس مضمون الدقة 100% .<br />
-التحقق قد يفشل بالنسبة لروابط البحث التي تتطلب نماذج إدراج للبيانات.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">المنشئ</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">اسم المؤلف، الانتماء، الدولة</message>
-	<message key="rt.metadata.pkp.peerReviewed">مؤلَّف محكَّم</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">يُبَلَّغ عندما...</message>
-
-	<message key="rt.thisJournal">إبحث في المجلة</message>
-
-
-	<message key="rt.context.authorTermsDescription">للمؤلفات التي لها أكثر من مؤلف، أترك جميع الأسماء مؤشرة للبحث عن الأعمال ذات التأليف المشترك المناظرة، أو إبحث كل واحد على حدة عبر تأشير اسم واحد. لتعرف المزيد عن الموارد التي يتم البحث فيها، أنقر (عن). تم اختيار تلك الموارد لعلاقتها (كلاً أو جزءً) ولكونها متاحة للوصول المفتوح.</message>
-
+	<message key="metadata.pkp.peerReviewed">مؤلَّف محكَّم</message>
 
 
 	<!-- Notification Types -->

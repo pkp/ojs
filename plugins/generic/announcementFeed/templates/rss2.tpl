@@ -16,8 +16,8 @@
 		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
-		{elseif $journal->getLocalizedSetting('searchDescription')}
-			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
+		{elseif $journal->getLocalizedData('searchDescription')}
+			{assign var="description" value=$journal->getLocalizedData('searchDescription')}
 		{/if}
 		<description>{$description|strip|escape:"html"}</description>
 

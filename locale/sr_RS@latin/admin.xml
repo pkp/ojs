@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Izdanja</message>
 	<message key="admin.settings.journalRedirect">Redirekcija časopisa</message>
 	<message key="admin.settings.journalRedirectInstructions">Pristup sajtu će biti preusmeren na časopis. Ovo može biti korisno ako hostujete samo jedan časopis.</message>
-	<message key="admin.settings.noJournalRedirect">Ne radi preusmeravanje</message>
 	<message key="admin.languages.primaryLocaleInstructions">Ovo će biti primarni jezik za sajt za sve časopise.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Odaberite lokalizacije koje želite da podržite na sajtu. One će biti dostupne za sve časopise i prikazivaće se u meniju za odabir jezika. Ukoliko ne odaberete ni jedan dodatni jezik meni za izbor jezika se neće prikazivati.</message>
 	<message key="admin.locale.maybeIncomplete">Markirane lokalizacije nisu kompletne.</message>
@@ -57,23 +56,9 @@
 	<message key="admin.mergeUsers.allUsers">Svi korisnici koji imaju uloge</message>
 	<message key="admin.mergeUsers.confirm">Da li ste sigurni da želite da spojite korisničke naloge {$oldAccountCount} u nalog sa korisničkim imenom "{$newUsername}"? odabrani nalozi {$oldAccountCount} više neće postojati.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nema korisnika sa dodeljenim ulogama.</message>
-	<message key="admin.settings.options">Opcije</message>
-	<!-- Categories -->
-	<message key="admin.categories">Kategorije</message>
-	<message key="admin.categories.disableCategories">Ne organizuj časopise u kategorije.</message>
-	<message key="admin.categories.enableCategories">Dozvoli urednicima časopisa da organizuju časopise u kategorije.</message>
-	<message key="admin.categories.editTitle">Uredi kategoriju</message>
-	<message key="admin.categories.createTitle">Napravi kategoriju</message>
-	<message key="admin.categories.create">Napravi novu kategoriju</message>
-	<message key="admin.categories.noneCreated">Nema napravljenih kategorija</message>
-	<message key="admin.categories.confirmDelete">Da li ste isgurni da želite izbrisati ovu kategoriju</message>
-	<message key="admin.categories.name">Ime</message>
-	<message key="admin.categories.nameRequired">Obavezno je ime kategorije</message>
 	<message key="admin.settings.defaultMetricDescription">Vaša OJS instalacija je konfigurisana da može sačuvati rezultate jednog ili više načina merenja upotrebe. Statistika upotrebe će biti prikazana u nekoliko konteksta. U slučajevima kad mora biti upotrebljen samo jedan način merenja, npr. da bi se prikazala lista najčešće upotrebljenih članak ili za rangiranje rezultata pretrage.  Odaberite jedan od podešenih merenja kao pretpostavljen.</message>
-	<message key="admin.categories.enable.description">Administrator sajta može definisati više kategorija kako bi se organizovao većibroj časopisa. Upravnici časopisa mogu odabrati nekoliko kategorija za svoj časopis kako bi čitaoci mogli da nađu časopise pretragom u kolekciji časopisa.</message>
 	<message key="admin.languages.confirmDisable">Da li ste sigurni da želite da onemogućite ovu lokalizaciju? Ovo će uticati na časopise koji ju koriste.</message>
 	<message key="admin.contexts.form.titleRequired">Naslov je obavezan.</message>
-	<message key="admin.presses.createInstructions">Automatski će Vam biti dodeljena uloga menadžera ovog časopisa. Nakon što ga napravite bićete preusmereni na čarobnjak podešavanja kako biste završili inicijalna podešavanja časopisa.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Podsetnik o isteku pretplate</message>
 	<message key="admin.scheduledTask.openAccessNotification">Obaveštenje o Otvorenom pristupu</message>
 	<message key="admin.scheduledTask.reviewReminder">Podsetnik o recenziji</message>

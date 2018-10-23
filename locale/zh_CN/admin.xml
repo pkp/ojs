@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">主办期刊</message>
 	<message key="admin.settings.journalRedirect">期刊重定向</message>
 	<message key="admin.settings.journalRedirectInstructions">到本站的请求将重定向到这本期刊，如果网站只有一本主办期刊的时候这个功能很有用。</message>
-	<message key="admin.settings.noJournalRedirect">不重定向</message>
 	<message key="admin.languages.primaryLocaleInstructions">这将是本站和所有主办期刊的默认语言。</message>
 	<message key="admin.languages.supportedLocalesInstructions">选择这个网站支持的所有地区配置。本网站上的所有期刊皆可使用所选择的地区配置，而且会在每一期刊的网站出现(但是可以经由期刊特定的配置所覆盖)。如果只有一种语言被配置，语言选择表单将不会出现，而相关的语言配置也不会出现。</message>
 	<message key="admin.locale.maybeIncomplete">标记的语言环境也许没有完成.</message>
@@ -58,18 +57,6 @@
 	<message key="admin.mergeUsers.allUsers">所有的注册用户</message>
 	<message key="admin.mergeUsers.confirm">您确认将合并用户名为 "{$oldUsername}" 的帐户到用户名为 "{$newUsername}"的帐户里? 操作后用户名为 "{$oldUsername}"将不再存在. 这个操作不可撤销.</message>
 	<message key="admin.mergeUsers.noneEnrolled">没有登记的用户.</message>
-	<message key="admin.categories.confirmDelete">你确定要删除此类别吗？</message>
-	<message key="admin.categories.name">名称</message>
-	<message key="admin.categories.nameRequired">类别名称不能为空</message>
-	<message key="admin.categories">分类</message>
-	<message key="admin.categories.editTitle">编辑类别</message>
-	<message key="admin.categories.createTitle">新建类别</message>
-	<message key="admin.categories.create">新建一个类别</message>
-	<message key="admin.categories.noneCreated">没有创建任何类别</message>
-	<message key="admin.settings.options">选项</message>
-	<message key="admin.categories.enable.description">网站管理员可以选择定义此处的一套类别来帮助其组织更大规模的期刊。期刊管理员可以随后从其中为每本期刊选择若干类别，读者可以通过类别分类来浏览期刊内容。</message>
-	<message key="admin.categories.disableCategories">不要将期刊组织成类。</message>
-	<message key="admin.categories.enableCategories">允许期刊管理员将期刊组织成类。</message>
 	<message key="admin.settings.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
 在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
 

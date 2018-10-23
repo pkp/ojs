@@ -695,7 +695,6 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="about.delayedOpenAccess">Gecikmeli Açık Erişim</message>
 	<message key="about.delayedOpenAccessDescription1">Bu derginin içeriği</message>
 	<message key="about.delayedOpenAccessDescription2">ay sonra açık erişim biçiminde erişilebilir olacaktır.</message>
-	<message key="about.authorSelfArchive">Yazar Kişisel Arşivleme</message>
 	<message key="about.archiving">Arşivleme</message>
 	<message key="about.subscriptions">Abonelik</message>
 	<message key="about.subscriptions.individual">Bireysel Abonelik</message>
@@ -874,48 +873,7 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 
 	<message key="log.imported">{$userName} {$submissionId} numaralı gönderiyi sisteme yükledi.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Okuma Araçları Ayarları</message>
-
-	<message key="rt.admin.settings.description">Okuma araçları indekslenen dergi bölümlerinde yayınlanan yazının yanında okuyucuya gösterilir. Yayınlanan yazı ile ilişkili bir dizi isteğe bağlı araçtan oluşurlar ve aşağıda listelenmişlerdir.</message>
-	<message key="rt.admin.settings.enableReadingTools">Derginin seçilen bölümleri için okuma araçlarını etkinleştir.</message>
-	<message key="rt.admin.settings.relatedItems">Alan</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Her alan için ilişkili yazılar setini görmek, düzeltmek veya silmek için  <a href="{$relatedItemsLink}" class="action">İlişkili Yazılar Seti</a> bağlantısına bakınız.]]></message>
-
-	<message key="rt.admin.options">Dergi Öğe Araçları</message>
-	<message key="rt.admin.relatedItems">İlişkili Öğe Araçları</message>
-
-	<message key="rt.admin.settings.addComment">Yorum ekle (Yorum gönderisi için okuyucuları etkinleştir. Dergi Yöneticisi yorumları silebilir.)</message>
-	<message key="rt.admin.settings.addComment.authenticated">Gönderi için izin verilmemiş anonim kullanıcıların üye olması ve giriş yapması gereklidir.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Gönderi için izin verilmiş anonim kullanıcıların üye olması ve giriş yapması gereklidir.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Gönderi için izin verilmiş anonim kullanıcıların üye olması gerekmez.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-	<message key="rt.admin.validateUrls.description"><![CDATA[Aranan sitelerdeki olası geçersiz bağlantılar aşağıda listelenmiştir.<br />
-Bu test %100 doğru sonuç veremediği için, geçersiz bağlantıları, kontrol ederek doğrulamanız gerekmektedir.<br />
-Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladır.]]></message>
-
-
-	<!-- RT Entities -->
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Oluşturan</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Yazarın adı, kurumu, ülkesi</message>
-	<message key="rt.metadata.pkp.peerReviewed">Değerlendirmeden Geçmiş Makale</message>
-	<message key="rt.beNotifiedWhen">...olduğu zaman bilgilendirilmek istersen</message>
-
-	<message key="rt.thisJournal">Dergide Ara</message>
-
-
-	<message key="rt.context.authorTermsDescription">Birden fazla yazarı olan makaleler için, bütün yazar isimlerini işaretlerseniz birlikte yaptıkları benzer çalışmaları, ya da tek bir isim işareleyerek yazarların tek tek eserlerini arayabilirsiniz. Araştırılan kaynak hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
+	<message key="metadata.pkp.peerReviewed">Değerlendirmeden Geçmiş Makale</message>
 
 	<!-- Notification Types -->
 	<message key="notification.type.articleSubmitted">"{$title}" başlıklı bir makale gönderildi..</message>

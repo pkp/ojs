@@ -64,7 +64,7 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 		$article = array();
 		$article['bibjson']['journal'] = array();
 		// Publisher name (i.e. institution name)
-		$publisher = $context->getSetting('publisherInstitution');
+		$publisher = $context->getData('publisherInstitution');
 		if (!empty($publisher)) $article['bibjson']['journal']['publisher'] = $publisher;
 		// To-Do: license ???
 		// Journal's title (M)
@@ -72,9 +72,9 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 		$article['bibjson']['journal']['title'] = $journalTitle;
 		// Identification Numbers
 		$issns = array();
-		$pissn = $context->getSetting('printIssn');
+		$pissn = $context->getData('printIssn');
 		if (!empty($pissn)) $issns[] = $pissn;
-		$eissn = $context->getSetting('onlineIssn');
+		$eissn = $context->getData('onlineIssn');
 		if (!empty($eissn)) $issns[] = $eissn;
 		if (!empty($issns)) $article['bibjson']['journal']['issns'] = $issns;
 		// Volume, Number

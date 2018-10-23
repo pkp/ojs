@@ -23,6 +23,9 @@ use \OJS\Services\SectionService;
 use \OJS\Services\NavigationMenuService;
 use \OJS\Services\IssueService;
 use \OJS\Services\GalleyService;
+use \OJS\Services\ContextService;
+use \PKP\Services\PKPSiteService;
+use \PKP\Services\PKPSchemaService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -65,6 +68,21 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// User service
 		$pimple['user'] = function() {
 			return new UserService();
+		};
+
+		// Context service
+		$pimple['context'] = function() {
+			return new ContextService();
+		};
+
+		// Site service
+		$pimple['site'] = function() {
+			return new PKPSiteService();
+		};
+
+		// Schema service
+		$pimple['schema'] = function() {
+			return new PKPSchemaService();
 		};
 	}
 }

@@ -244,9 +244,9 @@ class OpenAIREPlugin extends GenericPlugin {
 			// OpenAIRE DC Rights
 			$openAIRERights = 'info:eu-repo/semantics/';
 			$status = '';
-			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
+			if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = 'openAccess';
-			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+			} else if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = 'openAccess';
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
@@ -259,7 +259,7 @@ class OpenAIREPlugin extends GenericPlugin {
 					}
 				}
 			}
-			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
+			if ($journal->getData('restrictSiteAccess') == 1 || $journal->getData('restrictArticleAccess') == 1) {
 				$status = 'restrictedAccess';
 			}
 			$openAIRERights = $openAIRERights . $status;

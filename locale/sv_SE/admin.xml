@@ -14,9 +14,7 @@
 <locale name="sv_SE" full_name="Svenska">
 	<message key="admin.hostedJournals">Tidskrifter på den här webbplatsen</message>
 	<message key="admin.settings.journalRedirect">Omdirigering av tidskrift</message>
-	<message key="admin.settings.options">Alternativ</message>
 	<message key="admin.settings.journalRedirectInstructions">Anrop till huvudsidan kommer att dirigeras om till den här tidskriften. Detta kan till exempel vara lämpligt om webbplatsen endast hyser en tidskrift.</message>
-	<message key="admin.settings.noJournalRedirect">Omdirigera inte</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Din OJS-installation är konfigurerad för att registrera mer än ett användningsmått. Användningsstatistiken kommer att presenteras i flera sammanhang.
 		Det finns fall där endast ett användningsmått måste användas, t.ex. för att visa en sorterad lista över de mest använda bidragen eller för
@@ -72,19 +70,6 @@
 	<message key="admin.mergeUsers.confirm">Är du säker på att du vill slå ihop kontot med användarnamnet "{$oldUsername}" med kontot med användarnamnet "{$newUsername}"? Kontot med användarnamnet "{$oldUsername}" kommer inte längre att existera efteråt. Åtgärden kan inte ångras.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Inga registrerade användare.</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Kategorier</message>
-	<message key="admin.categories.enable.description">Webbplatsens administratör kan här skapa ett antal kategorier för att ordna stora uppsättningar tidskrifter. Tidskriftsansvariga för varje tidskrift kan sedan välja bland dessa kategorier och läsare kan bläddra i tidskriftssamlingar per kategori.</message>
-	<message key="admin.categories.disableCategories">Ordna inte tidskrifter i kategorier.</message>
-	<message key="admin.categories.enableCategories">Tillåt tidskriftsadministratörer att ordna tidskrifter i kategorier.</message>
-	<message key="admin.categories.editTitle">Redigera kategori</message>
-	<message key="admin.categories.createTitle">Skapa kategori</message>
-	<message key="admin.categories.create">Skapa en ny kategori</message>
-	<message key="admin.categories.noneCreated">Inga kategorier skapade.</message>
-	<message key="admin.categories.confirmDelete">Är du säker på att du vill radera denna kategori?</message>
-	<message key="admin.categories.name">Namn</message>
-	<message key="admin.categories.nameRequired">Det krävs ett kategorinamn.</message>
-	<message key="admin.presses.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide där du kan göra de första inställningarna.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Påminnelse om att prenumeration löper ut</message>
 	<message key="admin.scheduledTask.openAccessNotification">Open access-avisering</message>
 	<message key="admin.scheduledTask.reviewReminder">Granskningspåminnelse</message>

@@ -29,6 +29,8 @@ switch ($op) {
 	case 'tools':
 	case 'importexport':
 	case 'statistics':
+	case 'permissions':
+	case 'resetPermissions':
 		import('pages.management.ToolsHandler');
 		define('HANDLER_CLASS', 'ToolsHandler');
 		break;

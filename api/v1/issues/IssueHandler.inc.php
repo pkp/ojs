@@ -92,7 +92,7 @@ class IssueHandler extends APIHandler {
 		$issueService = ServicesContainer::instance()->get('issue');
 
 		if (!$context) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$defaultParams = array(
@@ -203,7 +203,7 @@ class IssueHandler extends APIHandler {
 		$issue = $issueDao->getCurrent($context->getId());
 
 		if (!$issue) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = ServicesContainer::instance()
@@ -230,7 +230,7 @@ class IssueHandler extends APIHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
 		if (!$issue) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = ServicesContainer::instance()

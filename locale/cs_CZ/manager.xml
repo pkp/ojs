@@ -109,17 +109,14 @@
 	<message key="manager.setup.alternateHeader">Alternativní hlavička</message>
 	<message key="manager.setup.alternateHeaderDescription">Alternativně lze místo názvu a loga vložit do textového pole níže HTML verzi hlavičky. Pokud nechcete tuto možnost využít, nechte pole prázdné.</message>
 	<message key="manager.setup.announcements">Oznámení</message>
-	<message key="manager.setup.announcementsDescription">Mohou být publikována oznámení informující čtenáře o událostech a novinkách spojených s časopisem. Vydaná oznámení se zobrazí na stránce Oznámení.</message>
-	<message key="manager.setup.announcementsIntroduction">Doplňující informace</message>
-	<message key="manager.setup.announcementsIntroductionDescription">Vložte jakékoliv doplňující informace, které by měly být zobrazeny čtenářům na stránce Oznámení.</message>
+	<message key="manager.setup.enableAnnouncements.description">Mohou být publikována oznámení informující čtenáře o událostech a novinkách spojených s časopisem. Vydaná oznámení se zobrazí na stránce Oznámení.</message>
+	<message key="manager.setup.announcementsIntroduction.description">Vložte jakékoliv doplňující informace, které by měly být zobrazeny čtenářům na stránce Oznámení.</message>
 	<message key="manager.setup.appearInAboutJournal">(K zobrazení v části O časopisu)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Požadovat od autorů, aby spolu s příspěvkem zaslali soubor s prohlášením o střetu zájmů.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Požadovat od recenzentů, aby s každým svým posudkem zasílali soubor s prohlášením o střetu zájmů.</message>
-	<message key="manager.setup.copyeditInstructions">Instrukce pro redigovnání</message>
-	<message key="manager.setup.copyeditInstructionsDescription">Instrukce pro redigování budou spřístupněny redaktorům, autorům a editorům sekcí ve fázi redigování příspěvku. Níže je uveden výchozí set instrukcí v HTML, který může být kdykoliv upraven nebo nahrazen manžerem časopisu (v HTML nebo prostý text).</message>
 	<message key="manager.setup.copyrightNotice">Oznámení o copyrightu</message>
-	<message key="manager.setup.coverage">Pokrytí</message>
-	<message key="manager.setup.coverageDescription">Odkazuje na zeměpisnou lokalitu, chronologické nebo historické pokrytí, a/nebo charakteristiky výzkumného souboru.</message>
+	<message key="manager.setup.metadata.coverage">Pokrytí</message>
+	<message key="manager.setup.metadata.coverage.description">Odkazuje na zeměpisnou lokalitu, chronologické nebo historické pokrytí, a/nebo charakteristiky výzkumného souboru.</message>
 	<message key="manager.setup.currentIssue">Aktuální číslo</message>
 	<message key="manager.setup.customizingTheLook">Krok 5. Úprava vzhledu</message>
 	<message key="manager.setup.customTags">Uživatelské tagy (štítky)</message>
@@ -134,14 +131,12 @@
 	<message key="manager.setup.displayCurrentIssue">Přidat obsah aktuálního čísla (pokud je dostupné).</message>
 	<message key="manager.setup.editorDecision">Rozhodnutí editora</message>
 	<message key="manager.setup.emailBounceAddress">Adresa pro nedoručitelné zprávy</message>
-	<message key="manager.setup.emailBounceAddressDescription">Jakékoliv nedoručitelné e-maily povedou k zaslání chybové zprávy na tuto adresu.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Poznámka</strong> Pro aktivaci této možnosti musí administrátor stránky povolit možnost <tt>allow_envelope_sender</tt> v konfiguračním souboru OJS. Pro podporu této funkce může být vyžadována další konfigurace serveru (která nemusí být možná na všech serverech), jak je naznačeno v dokumentaci OJS.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">Jakékoliv nedoručitelné e-maily povedou k zaslání chybové zprávy na tuto adresu.</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>Poznámka</strong> Pro aktivaci této možnosti musí administrátor stránky povolit možnost <tt>allow_envelope_sender</tt> v konfiguračním souboru OJS. Pro podporu této funkce může být vyžadována další konfigurace serveru (která nemusí být možná na všech serverech), jak je naznačeno v dokumentaci OJS.]]></message>
 	<message key="manager.setup.emails">E-mailová identifikace</message>
 	<message key="manager.setup.emailSignature">Podpis</message>
-	<message key="manager.setup.emailSignatureDescription">Připravené e-maily, které jsou systémem posílány ve jménu časopisu budou mít na konci přidán následující podpis. Obsah připravených e-mailů je možné editovat v části Správa časopisu.</message>
-	<message key="manager.setup.enableAnnouncements">Umožnit manažerům časopisu přidávat oznámení časopisu.</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">Zobrazit</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">z nejnovějších oznámení na domácí stránce časopisu.</message>
+	<message key="manager.setup.emailSignature.description">Připravené e-maily, které jsou systémem posílány ve jménu časopisu budou mít na konci přidán následující podpis. Obsah připravených e-mailů je možné editovat v části Správa časopisu.</message>
+	<message key="manager.setup.enableAnnouncements.enable">Umožnit manažerům časopisu přidávat oznámení časopisu.</message>
 	<message key="manager.setup.enableUserRegistration">Uživatelé se mohou do časopisu registrovat v jedné nebo více z následujících rolí:</message>
 	<message key="manager.setup.focusAndScope">Zaměření a záběr</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Autorům pro indexaci jejich práce</message>
@@ -188,12 +183,6 @@
 	<message key="manager.setup.journalTheme">Téma vzhledu časopisu</message>
 	<message key="manager.setup.journalTitle">Název časopisu</message>
 	<message key="manager.setup.labelName">Název popisku</message>
-	<message key="manager.setup.layoutInstructions">Instrukce pro typografickou úpravu</message>
-	<message key="manager.setup.layoutInstructionsDescription">Je možné připravit instrukce pro typografickou úpravu, které stanoví jak formátovat položky publikované v časopise. Tyto instrukce lze vložit níže v HTML nebo jako prostý text. Budou zpřístupněny typografovi a editorovi sekce na stránce určené pro redigování každého příspěvku. (Jelikož každý časopis může uplatňovat svůj vlastní formát souborů, citační normu atd., není zde poskytnut výchozí set instrukcí.)</message>
-	<message key="manager.setup.layoutTemplates">Šablony pro typografickou úpravu</message>
-	<message key="manager.setup.layoutTemplatesDescription">Je možné nahrát šablony, které budou dostupné pro všechny standardní formáty příspěvků publikovaných v časopise (např. článek, recenze knihy atd.) s využitím jakéhokoliv formátu souboru (např. pdf, doc, atd.). Šablony budou doplněny o poznámky, které přesně specifikují font, velikosti písma, okraje, atd. a budou sloužit jako návod pro typografy a korektory.</message>
-	<message key="manager.setup.layoutTemplates.file">Soubor šablony</message>
-	<message key="manager.setup.layoutTemplates.title">Název</message>
 	<message key="manager.setup.lists">Seznamy</message>
 	<message key="manager.setup.listsDescription">Zadejte maximální počet položek (například příspěvků, uživatelů nebo úkolů), které se zobrazí na každé stránce seznamu a počet odkazů na stránky zobrazených na každé stránce.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Umožněte technologii LOCKSS ukládat a distribuovat obsah časopisu v zúčastněných knihovnách přes LOCKSS stránku <a href="{$lockssUrl}" target="_blank">Seznam vydavatelů</a>. LOCKSS licence se zobrazí v části O časopisu – Archivování:]]></message>
@@ -214,35 +203,32 @@
 	<message key="manager.setup.note">Poznámka</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Poznámka:</strong> E-mail s poděkováním za příspěvek je v současnoti zakázán. Pro použití této funkce, povolte SUBMISSION_ACK e-mail v <a class="action" href="{$preparedEmailsUrl}">Připravených e-mailech</a>.]]></message>
 	<message key="manager.setup.numPageLinks">Odkazů na stránky</message>
-	<message key="manager.setup.onlineAccessManagement">Přístup k obsahu časopisu</message>
+	<message key="manager.setup.publishingMode">Přístup k obsahu časopisu</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
-	<message key="manager.setup.openAccess">Časopis bude poskytovat otevřený přístup ke svému obsahu.</message>
+	<message key="manager.distribution.publishingMode.openAccess">Časopis bude poskytovat otevřený přístup ke svému obsahu.</message>
 	<message key="manager.setup.pageNumberIdentifier">Možnost číslování stránek</message>
 	<message key="manager.setup.policies">Pravidla</message>
 	<message key="manager.setup.policies.description">Zaměření, recenzní řízení, sekce, soukromí, zabezpečení a další položky.</message>
 	<message key="manager.setup.printIssn">Tištěné ISSN</message>
 	<message key="manager.setup.proofingInstructions">Instrukce pro korektury</message>
 	<message key="manager.setup.proofingInstructionsDescription">Instrukce pro korektury budou zpřístupněny, korektorům, autorům, typografům a editorům sekcí ve fázi editování příspěvku. Níže je uveden výchozí set instrukcí v HTML, který může být kdykoliv upraven nebo nahrazen manažerem časopisu (v HTML nebo prostý text).</message>
-	<message key="manager.setup.provideRefLinkInstructions">Poskytnout instrukce typografům.</message>
 	<message key="manager.setup.publicationSchedule">Plán publikací</message>
 	<message key="manager.setup.publicationScheduleDescription">Práce mohou být v časopisu publikovány hromadně jako součást jednoho čísla s vlastním obsahem. Alternativně mohou být jednotlivé práce publikovány jakmile jsou k tomu připraveny, tak že budou přidány do obsahu "aktuálního" čísla. Poskytněte čtenářům v části O časopisu informace o systému, který tento časopis bude používat a o předpokládané frekvenci publikování.</message>
 	<message key="manager.setup.publicationScheduling">Plánování publikací</message>
 	<message key="manager.setup.publicIdentifier">Identifikace obsahu časopisu</message>
 	<message key="manager.setup.publisher">Vydavatel</message>
-	<message key="manager.setup.publisherDescription">Název organizace vydávající časopis bude zobrazen v části O časopisu.</message>
+	<message key="manager.setup.publishingDescription">Název organizace vydávající časopis bude zobrazen v části O časopisu.</message>
 	<message key="manager.setup.referenceLinking">Odkazování na reference</message>
-	<message key="manager.setup.refLinkInstructions.description">Instrukce pro typografickou úpravu při odkazování na reference</message>
 	<message key="manager.setup.restrictArticleAccess">Uživatelé musí být registrovaní a přihlášení, aby mohli prohlížet obsah s otevřeným přístupem.</message>
 	<message key="manager.setup.restrictSiteAccess">Uživatelé musí být registrovaní a přihlášení, aby mohli prohlížet stránky časopisu.</message>
 	<message key="manager.setup.reviewGuidelines">Instrukce pro recenzování</message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Instrukce pro recenzování udávají recenzentům kritéria pro posuzování adekvátnosti příspěvků pro publikování v časopisu, stejně tak jakékoliv další instrukce pro přípravu efektivní a nápomocné recenze. Během provádění recenze jsou recenzentům nabídnuty dva textové rámce, první "pro autora a edotira" a druhý "pro editora". Případně může správce časopisu vytvořit formulář pro recenzenty <a href="{$reviewFormsUrl}" class="action">Formuláře pro recenzenty</a>. Ve všech případech budou mít editoři možnost zahrnout recenzentovy poznámky do korespondence s autorem.]]></message>
 	<message key="manager.setup.reviewOptions">Možnosti recenzí</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automatická e-mailová připomenutí (dostupná ve výchozích e-mailech OJS) mohou být posílána recenzentům ve dvou bodech (editor přitom vždy také může zaslat e-mail přímo recenzentovi)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Poznámka:</strong> Pro aktivování těchto možností musí administrátor stránky povolit možnost <tt>scheduled_tasks</tt> v konfiguračním souboru OJS. Pro podporu těchto funkcí může být nutná další konfigurace serveru (což nemusí být možné na všech serverech), jak je naznačeno v OJS dokumentaci.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Anonymní recenze</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Obvyklé povolené časové období pro zpracování recenzí</message>
 	<message key="manager.setup.reviewOptions.onQuality">Editor bude hodnotit recenzenty na pětistupňové škále kvality po každé recenzi.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Recenzenti budou mít přístup k souboru s příspěvkem pouze poté, co odsouhlasí, že zpracují jeho recenzi.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Recenzenti budou mít přístup k souboru s příspěvkem pouze poté, co odsouhlasí, že zpracují jeho recenzi.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Přístup pro recenzenta</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Umožnit přístup recenzentovi na-jedno-kliknutí.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Poznámka:</strong> E-mailové pozvání pro recenzenta bude obsahovat speciální URL, které dovede pozvané recenzenty přímo na Recenzní stránku k danému příspěvku (s přístupem na jakékoliv další stránky normálně vyžadující přihlášení). Z bezpečnostních důvodů nemohou editoři při tomto nastavení pozměnit e-mailové adresy nebo přidat CC nebo BCC předtím, než pošlou recenzentům pozvání.]]></message>
@@ -251,12 +237,10 @@
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Poskytnout odkazy na <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Zajištění anonymní recenze</a> na stránkách, ze kterých autoři a recenzenti nahrávají soubory.]]></message>
 	<message key="manager.setup.reviewPolicy">Pravidla recenzního řízení</message>
 	<message key="manager.setup.searchEngineIndexing">Indexace vyhledávacími nástroji</message>
-	<message key="manager.setup.searchEngineIndexingDescription">Abyste usnadnili uživatelům vyhledávacích nástrojů objevení tohoto časopisu, poskytněte stručný popis časopisu a relevantní klíčová slova (oddělená středníkem).</message>
+	<message key="manager.setup.searchEngineIndexing.description">Abyste usnadnili uživatelům vyhledávacích nástrojů objevení tohoto časopisu, poskytněte stručný popis časopisu a relevantní klíčová slova (oddělená středníkem).</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sekce a editoři sekcí</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(Pokud nejsou přidány sekce, jsou příspěvky dle výchozího nastavení zasílány do sekce Články.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[Pro vytvoření nebo úpravu sekcí časopisu (například Články, Recenze knih, atd.) přejděte na Správa sekcí.<br /><br />Autoři při odesílání příspěvků do časopisu vyznačí...]]></message>
-	<message key="manager.setup.securitySettings">Nastavení přístupu a zabezpečení</message>
-	<message key="manager.setup.securitySettingsDescription">OJS poskytuje řadu možností vztahujících se k bezpečnosti, které mohou být využity pro omezení obsahu časopisu a zachování doplňkových informací o příspěvcích pro účely auditu.</message>
 	<message key="manager.setup.selectEditorDescription">Editora časopisu, který na něj bude během redakčního řízení dohlížet.</message>
 	<message key="manager.setup.selectSectionDescription">Sekci časopisu, pro kterou je příspěvek zamýšlen.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Vždy zobrazovat odkazy sazebnice a indikovat omezený přístup.</message>
@@ -270,8 +254,7 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">V průběhu podávání příspěvku do časopisu jsou autoři nejdříve požádáni, aby zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu příspěvku a potvrdili tak jejich splnění; poté mohou postupovat dále. Zaškrtávací seznam je také zobrazen v Pokyny autorům v části O časopisu. Seznam můžete upravit níže, pamatujte ale, že aby autoři mohli pokračovat dále v odesílání svého příspěvku, budou muset zaškrtnutím potvrdit všechny položky tohoto seznamu.</message>
 	<message key="manager.setup.submissions">Příspěvky</message>
 	<message key="manager.setup.submissions.description">Instrukce pro autory, copyright a indexace (včetně registrace).</message>
-	<message key="manager.setup.subscription">Časopis bude vyžadovat pro přístup k některým částem nebo k celému obsahu předplatné.</message>
-	<message key="manager.setup.subscriptionDescription">Toto vyžaduje přidělení manažera předplatného, který má přístup do modulu pro předpaltné obshujícího doplňková nastavení otevřeného přístupu, sebearchivování a e-mailových notifikací.</message>
+	<message key="manager.distribution.publishingMode.subscription">Časopis bude vyžadovat pro přístup k některým částem nebo k celému obsahu předplatné.</message>
 	<message key="manager.setup.typeExamples">(např. historické dotazování; kvaziexperiment; literární analýza; interview)</message>
 	<message key="manager.setup.typeMethodApproach">Typ (Metoda/Přístup)</message>
 	<message key="manager.setup.typeProvideExamples">Poskytněte příklady relevantních typů výzkumu, metod a přístupů pro tento obor</message>
@@ -279,7 +262,6 @@
 	<message key="manager.setup.uniqueIdentifierDescription">Články a čísla mohou být označeny identifikačním číslem nebo řetězcem přičemž lze uplatnit registrační systém jako "Digital Object Identifier System" (DOI).</message>
 	<message key="manager.setup.useEditorialReviewBoard">Časopis bude využívat redakční/recenzní radu.</message>
 	<message key="manager.setup.useImageTitle">Obrázek názvu</message>
-	<message key="manager.setup.useJournalStyleSheet">Style sheet časopisu</message>
 	<message key="manager.setup.userRegistration">Registrace uživatelů</message>
 	<message key="manager.setup.useTextTitle">Text názvu</message>
 	<message key="manager.statistics.statistics">Statistiky časopisu</message>
@@ -305,8 +287,6 @@
 	<message key="manager.statistics.statistics.selectSections">Vyberte sekce, pro které mají být v tomto časopise vypočítávány statistiky o recenzním řízení.</message>
 	<message key="manager.statistics.statistics.subscriptions">Předplatné</message>
 	<message key="manager.subscriptionPolicies">Pravidla předplatného</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">Pravidla sebe-archivování autora</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Následující Pravidla sebe-archivování autora budou uvedena na stránce O časopisu pod Pravidly.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Zpožděný otevřený přístup</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">I při zpožděném otevřeném přístupu mohou editoři vyhradit určité články v rámci jednoho čísla pro okamžitý otevřený přístup.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Dřívější čísla tohoto časopisu budou dostupná ve formátu otevřeného přístupu</message>
@@ -457,7 +437,7 @@
 	<message key="manager.sections.wordCount">Počet slov</message>
 	<message key="manager.sections.wordCountInstructions">Omezit počet slov abstraktu pro tuto sekci na (0 pro žádný limit):</message>
 	<message key="manager.setup.historyDescription">Tento text se zobrazí v části "O časopisu" webových stránek časopisu a může být použit pro popis změn v názvu, redakční radě a dalších položkách souvisejících s historií časopisu.</message>
-	<message key="manager.setup.noPublishing">OJS nebude používán pro online publikování obsahu časopisu.</message>
+	<message key="manager.distribution.publishingMode.none">OJS nebude používán pro online publikování obsahu časopisu.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Oznámení o online platbě</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatická e-mailová oznámení (dostupná pro editaci manažerovi časopisu v Připravených emailech OJS) mohou být zasílána manažerovi předplatného po provedení online platby předplatného.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Informovat manažera předplatného e-mailem po provedení online koupě individuálního předplatného.</message>
@@ -485,7 +465,6 @@
 	<message key="manager.statistics.reports.filters.byContext.description">Zúžení výsledků podle kontextu (vydání a/nebo článek).</message>
 	<message key="manager.language.submissions">Příspěvky</message>
 	<message key="manager.payment.options.purchaseIssueFee">Zakoupit přístup k číslu</message>
-	<message key="manager.setup.resetPermissions.description">Informace o autorský právech a licenci budou stále připojeny k publikovanému obsahu a budou zajišťovat, že se nezmění ani v případě, že časopis změní autorská práva nových příspěvků. K změně autorských práv na standardní hodnostu použijte tlačítko níže.</message>
 	<message key="manager.setup.copyrightYearBasis">Založit rok copyrightu nového článku na</message>
 	<message key="manager.statistics.defaultMetricDescription">Váš časopis je nakonfigurován k využívaní více metrik. Statistiky čtenosti budou zobrazovány ve více souvislostech. Jsou případy, kdy musí být zobrazovány jednotlivé statistiky, např. pro zobrazení seznamu nejčtenějších článků, nebo pro zobrazení rozsahu vyhledávání. Vyberte si, prosím, jednu z nakonfigurovaných metrik jako standardní.</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, ostatní sazebnice) a/nebo podle jednoho, nebo více id.</message>
@@ -507,25 +486,19 @@
 	<message key="manager.website.archiving">Archivace</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role.]]></message>
 	<message key="manager.setup.masthead">Hlavní titulek</message>
+	<message key="manager.setup.editorialTeam">Editorský tým</message>
 	<message key="manager.setup.homepageContent">Obsah domovské stránky časopisu</message>
 	<message key="manager.setup.homepageContentDescription">Domovská stránka časopisu ve výchozím nastavení obsahuje navigační odkazy. Další obsah domovské stránky lze přidat pomocí jedné nebo více následujících možností, které se zobrazí v uvedeném pořadí.</message>
-	<message key="manager.setup.layout">Vzhled časopisu</message>
 	<message key="manager.setup.useStyleSheet">Style sheet časopisu</message>
 	<message key="manager.setup.contextName">Jméno časopisu</message>
 	<message key="manager.setup.pageHeader">Hlavička stránky časopisu</message>
 	<message key="manager.setup.focusAndScope.description">Popište autorům, čtenářům a knihovníkům zaměření článků a dalších položek, které časopis publikuje.</message>
 	<message key="manager.setup.form.issnInvalid">Zadané ISSN není platné.</message>
 	<message key="manager.setup.journalSummary">Souhrn informací o časopise</message>
-	<message key="manager.setup.journalSummary.description">Stručný popis časopisu, který lze zobrazit v seznamech časopisů.</message>
 	<message key="manager.setup.journalAbout">O časopise</message>
 	<message key="manager.setup.journalAbout.description">Zahrňte de veškeré informace o vašem časopise, které mohou být zajímavé pro čtenáře, autory nebo recenzenty. Tyto informace by měly zahrnovat vaše zásady otevřeného přístupu, zaměření a rozsah časopisu, oznámení o autorských právech, povolení sponzoringu, historii časopisu, prohlášení o ochraně osobních údajů a zařazení do libovolného archivního systému LOCKSS nebo CLOCKSS.</message>
-	<message key="manager.setup.favicon">Favicon časopisu</message>
-	<message key="manager.setup.faviconDescription">Přidejte favicon pro tento časopis, který se zobrazí vedle navigačního panelu při návštěvě vašeho webu.</message>
-	<message key="manager.setup.faviconInvalid">Neplatný formát favicon. Přijatelné jsou .ico, .png a .gif.</message>
 	<message key="manager.setup.includeCreativeCommons">Pro časopisy, které nabízejí okamžitý nebo zpožděný otevřený přístup, uveďte ve vhodnou dobu licenci Creative Commons ke všem publikovaným pracím.</message>
 	<message key="manager.setup.journalThumbnail.description">Malé logo či obrázek reprezentující časopis, který může být využit v seznamu časopisů.</message>
-	<message key="manager.setup.journalThumbnail.altText">Alternativní text pro obrázek</message>
-	<message key="manager.setup.enableArchive">Povolit archivování</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Licence LOCKSS se objeví v O časopise pod Archivace: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Licence LOCKSS</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Popis licence LOCKSS</message>
 	<message key="manager.setup.lockssTitle">LOCKSS</message>
@@ -534,7 +507,6 @@
 	<message key="manager.setup.clockssLicenseLabel">Popis licence CLOCKSS</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Přihlaste se k službě CLOCKSS na adrese <a href="http://clockss.org/" target="_blank"> webu CLOCKSS </a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Obsah čísla s počty přístupů</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Použijte, prosím,  zaškrtávací políčka.</message>
 	<message key="manager.distribution.access">Přístup</message>

@@ -173,7 +173,7 @@ class BrowseHandler extends Handler {
 
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
-		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+		if (!$journal || !$journal->getData('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 	}

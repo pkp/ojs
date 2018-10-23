@@ -18,7 +18,7 @@
 	<message key="section.default.policy"></message>
 
 	<message key="default.genres.article">Artikeltext</message>
-	
+
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
@@ -31,80 +31,6 @@
 	<message key="default.journalSettings.checklist.bibliographicRequirements">Texten följer de stilmässiga och bibliografiska regler som beskrivs i Riktlinjer för författare.</message>
 	<message key="default.journalSettings.privacyStatement">De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</message>
 	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften gör sitt innehåll fritt tillgängligt omedelbart vid publicering enligt open access-principen om att det främjar ett ökat kunskapsutbyte världen över om forskning är fritt tillgänglig.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Den här tidskriften tillåter och uppmuntrar författare att publicera bidrag insända till tidskriften på sina personliga hemsidor eller i institutionella arkiv både före och efter publicering, så länge bibliografiska detaljer medföljer som anger att bidraget publicera(t)s i den här tidskriften.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manusredigerings-stadiet är till för att förbättra artikeltextens flyt, tydlighet, grammatik, ordval och formatering. Det utgör sista chansen för författaren att göra större ändringar i texten eftersom de korrigeringar som görs i nästa steg endast avser stavfel och justeringar gällande formatering.
-
-Filen som ska manusredigerad är i Word- eller .rtf-format och kan därför enkelt redigeras med en ordbehandlare. Instruktionerna som följer här föreslår två olika tillvägagångssätt för manusredigering. Det ena baseras på Microsoft Words Spåra ändringar-funktion och kräver att såväl manusredaktör, redaktör och författare har tillgång till detta program. Det andra tillvägagångssättet är programoberoende och har, med deras tillåtelse, lånats av Harvard Educational Review. Tidskriftsredaktörer har möjlighet att ändra i dessa instruktioner, så eventuella förslag på förbättringar välkomnas av redaktionen.
-
-
-<h4>System för manusredigering</h4>
-
-<strong>1. Microsoft Words Spåra ändringar</strong>
-
-Under verktyg i menyraden finns funktionen Spåra ändringar, som möjliggör för manusredaktören att göra tillägg (texten visas i annan färg) och strykningar (texten stryks över i färg eller visas som borttagen i marginalen). Manusredaktören kan ställa frågor/uppgifter till både författaren (Frågor till författaren, QAs) och redaktören (Frågor till redaktören, QEs). Den manusredigerade versionen laddas sedan upp och redaktören meddelas. Redaktören granskar sedan texten och meddelar i sin tur författaren.
-
-Redaktören och författaren ska lämna föreslagna ändringar som de inte tycker behöver åtgärdas. Om de bedömer att det behövs ytterligare ändringar utöver de redan markerade kan redaktören eller författaren ändra befintliga tillägg och strykningar eller göra nya tillägg eller strykningar på andra håll i texten. Både författare och redaktörer ska svara på samtliga frågor/uppgifter ställda till dem, i svar inom hakparenteser.
-
-När texten har granskats av redaktör och författare är det manusredaktören som accepterar ändringar och skickar texten vidare till layout- och publiceringsversions-stadiet.
-
-
-<strong>2. Harvard Educational Review</strong>
-
-<strong>Instruktioner för att göra ändringar i manuskriptet digitalt</strong>
-
-Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manuskript digitalt:
-
-<strong>Att svara på föreslagna ändringar changes.</strong>
-&nbsp; Ta bort fetstil från texten för varje föreslagen ändring som du accepterar.
-&nbsp; Sätt in originaltexten på nytt och <strong>feta</strong> den för varje föreslagen ändring du inte accepterar.
-
-<strong>Att göra tillägg och strykningar.</strong>
-&nbsp; Markera tillägg med att sätta den nya texten i <strong>fet</strong> stil.
-&nbsp; Ersätt strukna partier med <strong>[struken text]</strong>.
-&nbsp; Om stryker mer än en mening, markera gärna det med en anteckning, t.ex. <strong>[strök 2 meningar]</strong>.
-
-<strong>Att svara på Frågor till författaren (QAs).</strong>
-&nbsp; Behåll alla QAs intakta och fetade i texten. Ta inte bort dem.
-&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt 
-<strong>[Kommentar:]</strong>
-&nbsp; t.ex., <strong>[Kommentar: Utvecklade metoddiskussion enligt ditt förslag]</strong>.
-
-<strong>Att kommentera.</strong>
-&nbsp; Använd kommentarer för att förklara omflyttningar och större ändringar
-&nbsp; t.ex., <strong>[Kommentar: Flyttade ovanstående stycken från s. 5 till s. 7].</strong>
-&nbsp; Observera: I den mån du refererar till sidnummer, använd pagineringen från utskriftskopian av manuskriptet du fick skickat till dig. Det här är viktigt eftersom sidnummer ändras när dokumentet bearbetas digitalt.
-
-<h4>Ett exempel på digital manusbearbetning</h4>
-
-<ol>
-<li><strong>Första manusredigering.</strong> Tidskriftens manusredaktör redigerar texten för att förbättra flyt, klarhet, grammatik, ordval och formatering och lägger in frågor till författaren där det behövs. När första redigeringen är färdig laddar manusredaktören upp det bearbetade dokumentet via tidskriftens webbplats och meddelar författaren att hen har ett bearbetat manuskript att granska.</li>
-<li><strong>Författarens manusredigering.</strong> Författare måste stämma av med ansvariga redaktörer innan hen gör större avvikelser från struktur och disposition i det redigerade manuskriptet. Författare ska acceptera eller avvisa samtliga ändringar gjorda i den första manusredigeringen och svara på alla frågor till författaren. När författaren är färdig med sin genomgång ska hen byta namn på filen från FörfattarnamnQA.doc (t.ex. LeeQA.doc till LeeQAR.doc) och ladda upp det genomgångna documentet via tidskriftens webbplats enligt instruktion.</li>
-<li><strong>Slutgiltig manusredigering.</strong> Tidskriftens manusredaktör godkänner ändringarna gjorda av författaren och använder författarens svar på frågorna för att färdigställa det slutliga manuskriptet. När det är klart laddar manusredaktören upp det slutgiltiga dokumentet via tidskriftens webbplats och meddelar layouredaktören att manuskriptet ska typsättas.</li>
-</ol>]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Att lägga till referenslänkning till layoutprocessen</h4>
-	<p>När ett bidrag ska omvandlas till HTML eller PDF, se till att samtliga hyperlänkar i bidraget är aktiva.</p>
-	<h4>A. När en författare inkluderar en länk i referensen</h4>
-	<ol>
-	<li>Medan bidraget fortfarande föreligger i ordbehandlingsformat (t.ex. Word), lägg till frasen "VIEW ITEM" i slutet av referensen som har en URL.</li>
-	<li>Gör frasen till en hyperlänk genom att markera den och använda Words länkverktyg med URL:en från #2.</li>
-	</ol>
-	<h4>B. Att aktivera möjligheten för läsare att söka i Google Scholar efter referenser.</h4>
-	<ol>
-		<li>Medan bidraget fortfarande föreligger i ordbehandlingsformat (t.ex. Word), kopiera titeln på den refererade publikationen från referenslistan (om titeln inte verkar särskilt unik – exempelvis "Peace" – kopiera både författare och titel.</li>
-		<li>Klistra in referensens titel mellan %22:orna i följande URL (lägg till ett + mellan varje ord): http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
-
-	<li>Lägg till frasen "GS SEARCH" i slutet av varje referens i bidragets referenslista.</li>
-	<li>Gör frasen till en hyperlänk genom att markera den och använda Words länkverktyg med URL:en från #2.</li>
-	</ol>
-	<h4>C. Att aktivera möjligheten för läsare att söka efter referenser med en DOI.</h4>
-	<ol>
-	<li>Medan bidraget fortfarande är i Word, kopiera en grupp referenser till CrossRefs Text Query http://www.crossref.org/freeTextQuery/.</li>
-	<li>Klistra in varje DOI som hittas i följande URL (mellan = och &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
-	<li>Lägg till frasen CrossRef i slutet av varje referens i bidragets referenslista.</li>
-	<li>Gör frasen till en hyperlänk genom att markera den och använda Words länkverktyg med URL:en från #2.</li>
-	</ol>]]></message>
-
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Korrekturläsningsstadiet är till för att fånga upp eventuella fel i publiceringsversionens stavning, grammatik och formatering. I det här steget ska inte några substantiella ändringar göras, om det inte finns en särskild överenskommelse med sektionsredaktören. I Layout, klicka på VISA KORREKTUR för att se HTML, PDF, och andra tillgängliga filformat som används för att publicera bidraget.</p>
 	<h4>Korrektur av stavfel och grammatik</h4>
 
@@ -131,9 +57,9 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<pre>4. FORMATERING
 	Styckeindraget som inleder "Det senaste ämnet..." är inte avsiktligt..</pre>]]></message>
 
-	<message key="default.journalSettings.forReaders"><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}/{$journalPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Integritetspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Är du intresserad av att skicka in ett bidrag till den här tidskriften? Då rekommenderar vi att du läser igenom <a href="{$indexUrl}/{$journalPath}/about">Om tidskriften</a>-sidan för att få en uppfattning om tidskriftens sektionspolicyer, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Riktlinjer för författare</a>. För att skicka in ett bidrag måste du som författare <a href="{$indexUrl}/{$journalPath}/user/register">registrera dig</a> hos tidskriften. Om du redan har ett konto kan du bara <a href="{$indexUrl}/index/login">logga in</a> och påbörja processen, som består av fem steg.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi uppmuntrar bibliotekarier vid forskningsbibliotek att lista den här tidskriften i sitt biblioteks bestånd av elektroniska tidskrifter. Det kan också vara värt att notera att den här tidskriftens publiceringssystem, som utgör fri och öppen programvara, är ett passande system för bibliotek att drifta för sina forskare och de tidskrifter de arbetar med (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}/{$journalPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Integritetspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Är du intresserad av att skicka in ett bidrag till den här tidskriften? Då rekommenderar vi att du läser igenom <a href="{$indexUrl}/{$journalPath}/about">Om tidskriften</a>-sidan för att få en uppfattning om tidskriftens sektionspolicyer, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Riktlinjer för författare</a>. För att skicka in ett bidrag måste du som författare <a href="{$indexUrl}/{$journalPath}/user/register">registrera dig</a> hos tidskriften. Om du redan har ett konto kan du bara <a href="{$indexUrl}/index/login">logga in</a> och påbörja processen, som består av fem steg.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Vi uppmuntrar bibliotekarier vid forskningsbibliotek att lista den här tidskriften i sitt biblioteks bestånd av elektroniska tidskrifter. Det kan också vara värt att notera att den här tidskriftens publiceringssystem, som utgör fri och öppen programvara, är ett passande system för bibliotek att drifta för sina forskare och de tidskrifter de arbetar med (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Den här tidskriften utnyttjar LOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://www.lockss.org/">Läs mer...</a>]]></message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Den här tidskriften utnyttjar CLOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://clockss.org/">Läs mer...</a>]]></message>
 
@@ -142,7 +68,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<message key="default.journalSettings.purchaseArticleFee">Köp av enstaka artikel</message>
 	<message key="default.journalSettings.purchaseIssueFee">Köp av enstaka nummer</message>
 	<message key="default.journalSettings.membershipFee">Medlemskap</message>
-	
+
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Tidskriftsansvarig</message>
 	<message key="default.groups.plural.manager">Tidskriftsansvariga</message>
@@ -174,5 +100,5 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<message key="default.groups.abbrev.externalReviewer">G</message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Hostované časopisy</message>
 	<message key="admin.settings.journalRedirect">Přesměrování časopisu</message>
 	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
-	<message key="admin.settings.noJournalRedirect">Nepřesměrovávat</message>
 	<message key="admin.languages.primaryLocaleInstructions">Toto bude výchozí jazyk pro stránku a všechny hostované časopisy.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
 	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají.</message>
@@ -56,26 +55,7 @@
 	<message key="admin.mergeUsers.confirm">Jste si jistý, že chcete sloučit vybraný účet/účty   "{$oldAccountCount}" do účtu s uživatelským jménem "{$newUsername}"? Vybraný účet/účty  "{$oldAccounCount}" poté přestane/přestanou existovat. Tato akce je nevratná.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Žádní zapsaní uživatelé.</message>
 	<message key="admin.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
-	<message key="admin.settings.options">Volby</message>
-	<message key="admin.categories">Kategorie</message>
-	<message key="admin.categories.disableCategories">Neorganizovat časopisy do kategorií.</message>
-	<message key="admin.categories.enableCategories">Dovolit manažerům organizovat časopisy do kategorií.</message>
-	<message key="admin.categories.editTitle">Editovat kategorii</message>
-	<message key="admin.categories.createTitle">Vytvořit kategorii</message>
-	<message key="admin.categories.create">Vytvořit novou kategorii</message>
-	<message key="admin.categories.noneCreated">Nebyla vytvořena žádná kategorie</message>
-	<message key="admin.categories.name">Jméno</message>
-	<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
-	<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
-	<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
-	<message key="admin.categories.nameRequired">Je požadováno jméno kategorie.</message>
-	<message key="admin.settings.usePaging">Pro stránky s mnoha časopisy je vhodné rozdělit seznam časopisů na několik stránek.</message>
-	<message key="admin.settings.journalsList">Prvky časopisu</message>
-	<message key="admin.settings.journalsList.description">Zvolte prvky časopisu, které budou zobrazeny pro každý časopis na úvodní stránce.</message>
 	<message key="admin.settings.defaultMetricDescription">Vaše instalace OJS je konfigurována k zaznamenávání více metrik. Statistiky čtenosti budou zobrazeny ve více kontextech. V některých případech musí být použita jedna statistika čtenosti, např. při zobrazování seznamu nejčtenějších článků, nebo při zobrazení rozsahu hledání. Vyberte si, prosím, jednu z následujících metrik jako standardní.</message>
-	<message key="admin.categories.enable.description">Administrátor webu se může rozhodnout definovat sadu kategorií, aby mohlo být zorganizováno více časopisů. Manažer časopisu se pak může rozhodnou pro jednu či více kategorií, do kterých časopis spadá.</message>
-	<message key="admin.categories.confirmDelete">Přejete si smazat tuto kategorii?</message>
-	
 	<message key="admin.languages.confirmDisable">Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na všechny časopisy, které tuto lokalizaci využívají.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Stahování jazykových balíčků z webu Public Knowledge Project je momentálně nedostupné protože:</p>
 	<ul>
@@ -84,7 +64,6 @@
 	</ul>
 <p>Jazykové balíčky lze stáhnout manuálně z <a href="http://pkp.sfu.ca">webu PKP</a>.</p>]]></message>
 	<message key="admin.contexts.form.titleRequired">Je třeba zadat název.</message>
-	<message key="admin.presses.createInstructions">Automaticky vám bude přidělena role správce tohoto časopisu. Poté, co vytvoříte nový časopis, budete přesměrováni na průvodce nastavením, abyste dokončili počáteční nastavení tohoto časopisu.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Připomenutí vypršení předplatného</message>
 	<message key="admin.scheduledTask.openAccessNotification">Upozornění na otevřený přístup (Open Access)</message>
 	<message key="admin.scheduledTask.reviewReminder">Připomínka recenze</message>

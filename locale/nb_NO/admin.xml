@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
 	<message key="admin.settings.journalRedirect">Tidsskriftomdirigering</message>
 	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>
-	<message key="admin.settings.noJournalRedirect">Ikke omdiriger</message>
 	<message key="admin.languages.primaryLocaleInstructions">Dette vil bli standard språk for nettstedet og alle de tidsskriftene det er vert for.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet.</message>
 	<message key="admin.languages.confirmUninstall">Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen.</message>
@@ -59,16 +58,4 @@
 	<message key="admin.mergeUsers.confirm">Er du sikker på at du vil slå sammen brukerkontoen med navnet "{$oldUsername}" med kontoen med brukernavnet "{$newUsername}"?  Etterpå finnes ikke brukerkontoen med navnet "{$oldUsername}" lenger. Denne handlingen kan ikke omgjøres.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Ingen vervete brukere</message>
 	<message key="admin.locale.maybeIncomplete">Merkede lokaliseringsfiler kan være ukomplette.</message>
-	<message key="admin.categories">Kategorier</message>
-	<message key="admin.categories.enable.description">Nettstedsadministrator kan velge å definere et sett kategorier her, for å organisere store sett med tidsskrift. Tidsskriftadministratorer kan da velge flere av disse kategoriene for hvert tidsskrift, og lesere kan bla gjennom tidsskriftsamlingene via kategoriene.</message>
-	<message key="admin.categories.disableCategories">Ikke organiser tidsskrifter etter kategorier.</message>
-	<message key="admin.categories.enableCategories">Tillat at Tidsskriftadaministratorer organiserer tidsskrift etter kategorier.</message>
-	<message key="admin.categories.editTitle">Rediger kategori</message>
-	<message key="admin.categories.createTitle">Lag kategori</message>
-	<message key="admin.categories.create">Lag ny kategori</message>
-	<message key="admin.categories.noneCreated">Ingen kategorier er laget.</message>
-	<message key="admin.settings.options">Valg</message>
-	<message key="admin.categories.confirmDelete">Er du sikker på at du ønsker å slette denne kategorien?</message>
-	<message key="admin.categories.name">Kategorinavn</message>
-	<message key="admin.categories.nameRequired">Kategorinavn må oppgis.</message>
 </locale>

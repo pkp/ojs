@@ -11,13 +11,13 @@
   * Localization strings for the sr_RS@latin (Srpski) locale (default journal settings).
   *
   -->
- 
+
 <locale name="sr_RS@latin" full_name="Srpski">
 	<!-- Section default -->
 	<message key="section.default.title">Članci</message>
 	<message key="section.default.abbrev">ART</message>
 	<!--
-	 *	
+	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
@@ -60,15 +60,13 @@
 	<message key="default.groups.abbrev.externalReviewer">R</message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 	<message key="default.genres.article">Tekst članka</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Ovaj časopis dozvoljava i ohrabruje autore da postave svoje prijavljene članke na ličnom sajtu ili u institucionalnim repozitorijima pre ili nakon objavljivanja obezbeđujući bibliografske detalje koji priznaju objavljivanje u ovom časopisu.</message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
-	<message key="default.journalSettings.copyeditInstructions">Faza korekture je namenjena da poboljša tok, jasnoću, gramatiku, fraze i formatiranje članka. U ovoj fazi autor ima poslednju šansu da učini suštinske izmene na tekstu jer je sledeća faza ograničena samo na slovne greške i ispravke u formatiranju.</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href="{$indexUrl}/{$journalPath}/user/register">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href="{$indexUrl}/{$journalPath}/user/register">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href="{$indexUrl}/index/login">prijave</a> i da započnu proces prijave članka od pet koraka.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Ohrabrujemo naučne bibliotekare da uvrste ovaj časopis u listu bibliotečkih časopisa. Može biti vredno da se napomene da ovaj časopis koristi sistem otvorenog koda za objavljivanje koji je pogodan za biblioteke za njihove fakultetske članove da ga koriste sa časopisima u kojima su uključeni u procesu redakcije   (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href="{$indexUrl}/{$journalPath}/user/register">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href="{$indexUrl}/{$journalPath}/user/register">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href="{$indexUrl}/index/login">prijave</a> i da započnu proces prijave članka od pet koraka.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Ohrabrujemo naučne bibliotekare da uvrste ovaj časopis u listu bibliotečkih časopisa. Može biti vredno da se napomene da ovaj časopis koristi sistem otvorenog koda za objavljivanje koji je pogodan za biblioteke za njihove fakultetske članove da ga koriste sa časopisima u kojima su uključeni u procesu redakcije   (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Faza korekture ima nameru da uhvati sve pravopisne greške, gramatičke greške i formatiranje članka. Veće suštinske izmene se ne mogu raditi u ovoj fazi sve dok se to ne dogovori sa urednikom sekcije/rubrike. U delu Izgled, kliknite na Vidi probnu kopiju da vidite HTML, PDF i druge dostupne formate fajlova koji se koriste u ovom sistemu objavljivanja..</p>
 
@@ -80,7 +78,7 @@ ________________________________________________________________________<br/>
 
 	<pre>1. PROMENI...
 
-	a onda 
+	a onda
 
 	U...
 

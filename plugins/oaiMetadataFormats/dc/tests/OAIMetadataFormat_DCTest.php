@@ -224,7 +224,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 			case 'name':
 				return array('en_US' => 'journal-title');
 
-			case 'copyrightNotice':
+			case 'licenseTerms':
 				return array('en_US' => 'journal-copyright');
 
 			case 'publisherInstitution':
@@ -252,4 +252,3 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
        	return $handler.'-'.$op.'-'.implode('-', $path);
 	}
 }
-

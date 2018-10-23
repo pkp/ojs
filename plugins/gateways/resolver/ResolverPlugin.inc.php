@@ -155,8 +155,8 @@ class ResolverPlugin extends GatewayPlugin {
 			}
 
 			echo $this->sanitize($journal->getLocalizedName()) . "\t";
-			echo $this->sanitize($journal->getSetting('printIssn')) . "\t";
-			echo $this->sanitize($journal->getSetting('onlineIssn')) . "\t";
+			echo $this->sanitize($journal->getData('printIssn')) . "\t";
+			echo $this->sanitize($journal->getData('onlineIssn')) . "\t";
 			echo $this->sanitize($startDate===null?'':strftime('%Y-%m-%d', $startDate)) . "\t"; // start_date
 			echo $this->sanitize($endDate===null?'':strftime('%Y-%m-%d', $endDate)) . "\t"; // end_date
 			echo $this->sanitize('') . "\t"; // embargo_months

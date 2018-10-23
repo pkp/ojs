@@ -15,6 +15,8 @@
 
 namespace OJS\Services;
 
+use \ServicesContainer;
+
 class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropertyService {
 
 	/**
@@ -68,7 +70,12 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 			}
 		}
 
+		$locales = $args['request']->getContext()->getSupportedLocales();
+		$values = ServicesContainer::instance()->get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $locales);
+
 		\HookRegistry::call('Section::getProperties::values', array(&$values, $section, $props, $args));
+
+		ksort($values);
 
 		return $values;
 	}
@@ -96,5 +103,26 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 		\HookRegistry::call('Section::getProperties::fullProperties', array(&$props, $section, $args));
 
 		return $props;
+	}
+
+	/**
+	 * Add a new section
+	 *
+	 * This does not check if the user is authorized to add a section, or
+	 * validate or sanitize this section.
+	 *
+	 * @param $section Section
+	 * @param $context Journal
+	 * @return Section
+	 */
+	public function addSection($section, $context) {
+		$sectionDao = \DAORegistry::getDAO('SectionDAO');
+
+		// Don't allow sections to be added to any other context
+		$section->setJournalId($context->getId());
+
+		$sectionDao->insertObject($section);
+
+		return $section;
 	}
 }

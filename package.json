@@ -41,11 +41,11 @@
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "style-loader": "^0.20.1",
     "url-loader": "^0.6.2",
-    "vue": "^2.5.13",
+    "vue": "^2.5.16",
     "vue-loader": "^14.0.3",
     "vue-router": "^3.0.1",
     "vue-style-loader": "^3.0.3",
-    "vue-template-compiler": "^2.5.13",
+    "vue-template-compiler": "^2.5.16",
     "vuedraggable": "^2.14.1",
     "webpack": "^3.10.0"
   },
@@ -59,6 +59,10 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "vue-slider-component": "^2.5.3"
+    "v-tooltip": "^2.0.0-rc.32",
+    "vue-scrollto": "^2.11.0",
+    "vue-slider-component": "^2.5.3",
+    "vue-tabs-component": "^1.4.0",
+    "vue2-dropzone": "^3.2.2"
   }
 }

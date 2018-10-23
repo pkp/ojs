@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Aldizkari ostatatuak</message>
 	<message key="admin.settings.journalRedirect">Aldizkarira birbideratu</message>
 	<message key="admin.settings.journalRedirectInstructions">Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako.</message>
-	<message key="admin.settings.noJournalRedirect">Ez birbideratu</message>
 	<message key="admin.languages.primaryLocaleInstructions">Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza lehenetsia.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan.</message>
 	<message key="admin.languages.confirmUninstall">Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan.</message>
@@ -58,16 +57,4 @@
 	<message key="admin.locale.maybeIncomplete">Markatutako localeak osatu gabe egon daitezke.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
 	<message key="admin.journals.createInstructions">Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko.</message>
-	<message key="admin.settings.options">Aukerak</message>
-	<message key="admin.categories">Kategoriak</message>
-	<message key="admin.categories.enable.description">Aldizkari multzo handiak antolatzen laguntzeko, Webgunearen Administratzaileek aukera dezakete kategoria multzo bat definitzea. Aldizkarien Kudeatzaileek, ondoren, aukera dezakete kategoria hauetako guztien artean, eta irakurleek aldizkari bildumak araka ditzakete kategoriaren arabera.</message>
-	<message key="admin.categories.disableCategories">Ez antolatu aldizkariak kategorietan.</message>
-	<message key="admin.categories.enableCategories">Utzi Aldizkarien Kudeatzaileei aldizkariak kategoriatan antolatzen.</message>
-	<message key="admin.categories.editTitle">Editatu kategoria</message>
-	<message key="admin.categories.createTitle">Sortu kategoria</message>
-	<message key="admin.categories.create">Sortu kategoria berri bat</message>
-	<message key="admin.categories.noneCreated">Ez da kategoriarik sortu.</message>
-	<message key="admin.categories.confirmDelete">Ziur al zaude kategoria hau ezabatu nahi duzula?</message>
-	<message key="admin.categories.name">Izena</message>
-	<message key="admin.categories.nameRequired">Beharrezkoa da kategoria izen bat.</message>
 </locale>

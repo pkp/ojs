@@ -70,8 +70,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journal = $journalDao->getById(1);
 		$this->initialJournalSettings = array(
-			'publisherInstitution' => $journal->getSetting('publisherInstitution'),
-			'supportEmail' => $journal->getSetting('supportEmail')
+			'publisherInstitution' => $journal->getData('publisherInstitution'),
+			'supportEmail' => $journal->getData('supportEmail')
 		);
 
 		// Store initial DOI settings.

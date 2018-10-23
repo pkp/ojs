@@ -138,8 +138,8 @@
 	<message key="manager.setup.copyeditInstructions">Lektorska navodila</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Lektorska navodila bodo na voljo lektorjem, avtorjem in urednikom rubrik me procesom urejanja prispevkov. Spodaj so privzeta navodila v HTML formatu in jih lahko urednik revije kadarkoli spremeni (v HTML formatu ali kot prosto besedilo).</message>
 	<message key="manager.setup.copyrightNotice">Avtorske pravice</message>
-	<message key="manager.setup.coverage">Obseg</message>
-	<message key="manager.setup.coverageDescription">Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/ali karakteristike raziskovanega vzorca.</message>
+	<message key="manager.setup.metadata.coverage">Obseg</message>
+	<message key="manager.setup.metadata.coverage.description">Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/ali karakteristike raziskovanega vzorca.</message>
 	<message key="manager.setup.currentIssue">Trenutna številka</message>
 	<message key="manager.setup.customizingTheLook">Korak 5. Prilagajanje izgleda</message>
 	<message key="manager.setup.customTags">Posebne HTML oznake</message>

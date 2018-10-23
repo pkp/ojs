@@ -286,7 +286,7 @@ class SearchHandler extends Handler {
 		parent::setupTemplate($request);
 		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
-		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+		if (!$journal || !$journal->getData('restrictSiteAccess')) {
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}
 	}

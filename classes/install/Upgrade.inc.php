@@ -715,8 +715,10 @@ class Upgrade extends Installer {
 			WHERE pa.views > 0 AND i.issue_id is not null;', $params, false);
 
 		// Set the site default metric type.
-		$siteSettingsDao = DAORegistry::getDAO('SiteSettingsDAO'); /* @var $siteSettingsDao SiteSettingsDAO */
-		$siteSettingsDao->updateSetting('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+		$site->setData('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+		$siteDao->updateObject($site);
 
 		return true;
 	}
@@ -2042,15 +2044,15 @@ class Upgrade extends Installer {
 		while ($journal = $journals->next()) {
 			$settings = $journalSettingsDao->loadSettings($journal->getId());
 			$supportedFormLocales = $journal->getSupportedFormLocales();
-			$focusAndScope = $journal->getSetting('focusScopeDesc');
+			$focusAndScope = $journalSettingsDao->getSetting('focusScopeDesc');
 			$focusAndScope['localeKey'] = 'about.focusAndScope';
-			$reviewPolicy = $journal->getSetting('reviewPolicy');
+			$reviewPolicy = $journalSettingsDao->getSetting('reviewPolicy');
 			$reviewPolicy['localeKey'] = 'about.peerReviewProcess';
-			$pubFreqPolicy = $journal->getSetting('pubFreqPolicy');
+			$pubFreqPolicy = $journalSettingsDao->getSetting('pubFreqPolicy');
 			$pubFreqPolicy['localeKey'] = 'about.publicationFrequency';
 			$oaPolicy = array();
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
-				$oaPolicy = $journal->getSetting('openAccessPolicy');
+				$oaPolicy = $journalSettingsDao->getSetting('openAccessPolicy');
 				$oaPolicy['localeKey'] = 'about.openAccessPolicy';
 			}
 			// the elements order accords to how they were displayed on the about page
@@ -2061,14 +2063,14 @@ class Upgrade extends Installer {
 				'openAccessPolicy' => $oaPolicy,
 			);
 
-			$customAboutItems = $journal->getSetting('customAboutItems');
+			$customAboutItems = $journalSettingsDao->getSetting('customAboutItems');
 
-			$sponsorNote = $journal->getSetting('sponsorNote');
-			$sponsors = $journal->getSetting('sponsors');
-			$contributorNote = $journal->getSetting('contributorNote');
+			$sponsorNote = $journalSettingsDao->getSetting('sponsorNote');
+			$sponsors = $journalSettingsDao->getSetting('sponsors');
+			$contributorNote = $journalSettingsDao->getSetting('contributorNote');
 			$contributorNote['localeKey'] = 'grid.contributor.title';
-			$contributors = $journal->getSetting('contributors');
-			$history = $journal->getSetting('history');
+			$contributors = $journalSettingsDao->getSetting('contributors');
+			$history = $journalSettingsDao->getSetting('history');
 			$history['localeKey'] = 'about.history';
 			// the elements order accords to how they were displayed on the about page
 			$otherSettings = array(
@@ -2196,7 +2198,7 @@ class Upgrade extends Installer {
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
 			$settings = $journalSettingsDao->loadSettings($journal->getId());
-			if ($journal->getSetting('boardEnabled')) {
+			if ($journalSettingsDao->getSetting('boardEnabled')) {
 				// get all users by group ID
 				$groupUsers = array();
 				$groupPrimaryLocaleTitles = array();
@@ -2240,7 +2242,7 @@ class Upgrade extends Installer {
 			foreach ($supportedFormLocales as $locale) {
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, $locale);
 				$masthead[$locale] = '';
-				if ($journal->getSetting('boardEnabled')) {
+				if ($journalSettingsDao->getSetting('boardEnabled')) {
 					// The Editorial Team feature has been enabled.
 					// Generate information using Group data.
 					foreach ($groupUsers as $groupId => $usersArray) {
@@ -2870,7 +2872,7 @@ class Upgrade extends Installer {
 		$result = $submissionFileDao->retrieve(
 			'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
 			'old-supp-id'
-		);	
+		);
  		# Loop through the data and save to temp table
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -2886,7 +2888,7 @@ class Upgrade extends Installer {
 		$metricsDao->update(
 			'UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?',
 			array(531, 2531)
-		);		
+		);
  		# delete all existing 531 values from the actual metrics table
 		$metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
  		# copy updated 531 values from metrics_supp to metrics table
@@ -2894,8 +2896,244 @@ class Upgrade extends Installer {
  		# Drop metrics_supp table
 		$metricsDao->update('DROP TABLE metrics_supp');
  		return true;
-	}	
+	}
 
+	/*
+	 * Migrate site locale settings to a serialized array in the database
+	 */
+	function migrateSiteLocales() {
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+
+		$result = $siteDao->retrieve('SELECT installed_locales, supported_locales FROM site');
+
+		$set = $params = [];
+		$row = $result->GetRowAssoc(false);
+		$type = 'array';
+		foreach ($row as $column => $value) {
+			if (!empty($value)) {
+				$set[] = $column . ' = ?';
+				$params[] = $siteDao->convertToDB(explode(':', $value), $type);
+			}
+		}
+		$siteDao->update('UPDATE site SET ' . join(',', $set), $params);
+
+		$result->Close();
+
+		return true;
+	}
+
+	/**
+	 * Migrate active sidebar blocks from plugin_settings to journal_settings
+	 *
+	 * @return boolean
+	 */
+	function migrateSidebarBlocks() {
+
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+
+		$plugins = PluginRegistry::loadCategory('blocks');
+		if (empty($plugins)) {
+			return true;
+		}
+
+		// Sanitize plugin names for use in sql IN().
+		$sanitizedPluginNames = array_map(function($name) {
+			return '"' . preg_replace("/[^A-Za-z0-9]/", '', $name) . '"';
+		}, array_keys($plugins));
+
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+		$result = $pluginSettingsDao->retrieve(
+			'SELECT plugin_name, context_id, setting_value FROM plugin_settings WHERE plugin_name IN (' . join(',', $sanitizedPluginNames) . ') AND setting_name="context";'
+		);
+
+		$sidebarSettings = [];
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			if ($row['setting_value'] != BLOCK_CONTEXT_SIDEBAR) {
+				$result->MoveNext();
+			}
+			$seq = $pluginSettingsDao->getSetting($row['context_id'], $row['plugin_name'], 'seq');
+			if (!isset($sidebarSettings[$row['context_id']])) {
+				$sidebarSettings[$row['context_id']] = [];
+			}
+			$sidebarSettings[$row['context_id']][(int) $seq] = $row['plugin_name'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		foreach ($sidebarSettings as $contextId => $contextSetting) {
+			// Order by sequence
+			ksort($contextSetting);
+			$contextSetting = array_values($contextSetting);
+			if ($contextId) {
+				$contextDao = Application::getContextDAO();
+				$context = $contextDao->getById($contextId);
+				$context->setData('sidebar', $contextSetting);
+				$contextDao->updateObject($context);
+			} else {
+				$siteDao = DAORegistry::getDAO('SiteDAO');
+				$site = $siteDao->getSite();
+				$site->setData('sidebar', $contextSetting);
+				$siteDao->updateObject($site);
+			}
+		}
+
+		$pluginSettingsDao->update('DELETE FROM plugin_settings WHERE plugin_name IN (' . join(',', $sanitizedPluginNames ) . ') AND (setting_name="context" OR setting_name="seq");');
+
+		return true;
+	}
+
+	/**
+	 * Add an entry for the site stylesheet to the site_settings database when it
+	 * exists
+	 */
+	function migrateSiteStylesheet() {
+		$request = Application::getRequest();
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		if (!file_exists($publicFileManager->getSiteFilesPath() . '/sitestyle.css')) {
+			return true;
+		}
+
+		$site = $siteDao->getSite();
+		$site->setData('styleSheet', 'sitestyle.css');
+		$siteDao->updateObject($site);
+
+		return true;
+	}
+
+	/**
+	 * Migrate the metadata settings in the database to use a single row with one
+	 * of the new constants
+	 */
+	function migrateMetadataSettings() {
+		$contextDao = Application::getContextDao();
+
+		$metadataSettings = [
+			'coverage',
+			'languages',
+			'rights',
+			'source',
+			'subjects',
+			'type',
+			'disciplines',
+			'keywords',
+			'agencies',
+			'citations',
+		];
+
+		$result = $contextDao->retrieve('SELECT ' . $contextDao->primaryKeyColumn . ' from ' . $contextDao->tableName);
+		$contextIds = [];
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$contextIds[] = $row[$contextDao->primaryKeyColumn];
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		foreach ($metadataSettings as $metadataSetting) {
+			foreach ($contextIds as $contextId) {
+				$result = $contextDao->retrieve('
+					SELECT * FROM ' . $contextDao->settingsTableName . ' WHERE
+						' . $contextDao->primaryKeyColumn . ' = ?
+						AND (
+							setting_name = ?
+							OR setting_name = ?
+							OR setting_name = ?
+						)
+					',
+					[
+						$contextId,
+						$metadataSetting . 'EnabledWorkflow',
+						$metadataSetting . 'EnabledSubmission',
+						$metadataSetting . 'Required',
+					]
+				);
+				$value = METADATA_DISABLE;
+				while (!$result->EOF) {
+					$row = $result->getRowAssoc(false);
+					if ($row['setting_name'] === $metadataSetting . 'Required' && $row['setting_value']) {
+						$value = METADATA_REQUIRE;
+					} elseif ($row['setting_name'] === $metadataSetting . 'EnabledSubmission' && $row['setting_value'] && $value !== METADATA_REQUIRE) {
+						$value = METADATA_REQUEST;
+					} elseif ($row['setting_name'] === $metadataSetting . 'EnabledWorkflow' && $row['setting_value'] && $value !== METADATA_REQUEST && $value !== METADATA_REQUIRED) {
+						$value = METADATA_ENABLE;
+					}
+					$result->MoveNext();
+				}
+				$result->Close();
+
+				if ($value !== METADATA_DISABLE) {
+					$contextDao->update('
+						INSERT INTO ' . $contextDao->settingsTableName . ' SET
+							' . $contextDao->primaryKeyColumn . ' = ?,
+							locale = ?,
+							setting_name = ?,
+							setting_value = ?
+						',
+						[
+							$contextId,
+							'',
+							$metadataSetting,
+							$value,
+						]
+					);
+				}
+
+				$contextDao->update('
+					DELETE FROM ' . $contextDao->settingsTableName . ' WHERE
+						' . $contextDao->primaryKeyColumn . ' = ?
+						AND (
+							setting_name = ?
+							OR setting_name = ?
+							OR setting_name = ?
+						)
+					',
+					[
+						$contextId,
+						$metadataSetting . 'EnabledWorkflow',
+						$metadataSetting . 'EnabledSubmission',
+						$metadataSetting . 'Required',
+					]
+				);
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Copy a journal's copyrightNotice to a new licenseTerms setting, leaving
+	 * the copyrightNotice in place.
+	 */
+	function createLicenseTerms() {
+		$contextDao = Application::getContextDao();
+
+		$result = $contextDao->retrieve('SELECT * from ' . $contextDao->settingsTableName . ' WHERE setting_name="copyrightNotice"');
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$contextDao->update('
+				INSERT INTO ' . $contextDao->settingsTableName . ' SET
+					' . $contextDao->primaryKeyColumn . ' = ?,
+					locale = ?,
+					setting_name = ?,
+					setting_value = ?
+				',
+				[
+					$row[$contextDao->primaryKeyColumn],
+					$row['locale'],
+					'licenseTerms',
+					$row['setting_value'],
+				]
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return true;
+	}
 }
-
-

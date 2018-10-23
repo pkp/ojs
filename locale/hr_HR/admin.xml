@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Časopisi u sustavu</message>
 	<message key="admin.settings.journalRedirect">Izravno preusmjeravanje na časopis</message>
 	<message key="admin.settings.journalRedirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>
-	<message key="admin.settings.noJournalRedirect">Ne preusmjeravaj</message>
 	<message key="admin.languages.primaryLocaleInstructions">Ovo će biti standardni jezik stranice i svakog časopisa koji se na njoj nalazi.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Izaberite sve jezike za koje želite da budu podržani na stranici. Izabrane prijevode bit će moguće koristiti sa svim časopisima postavljenim u sustavu, te će se na svakoj stranici prikazivati i izbornik jezika (što se može uključiti ili isključiti na razini pojedinog časopisa). Ako je izabran samo jedan jezik, jezični izbornik se neće prikazivati, niti će glavnim urednicima pojedinih časopisa biti na raspolaganu jezične postavke.</message>
 	<message key="admin.languages.confirmUninstall">Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjecati na časopise koji trenutno koriste taj prijevod.</message>
@@ -56,22 +55,10 @@
 	<message key="admin.mergeUsers.allUsers">Svi evidentirani korisnici</message>
 	<message key="admin.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
-	<message key="admin.settings.options">Mogućnosti</message>
 	<message key="admin.locale.maybeIncomplete">Označeni prijevodi su možda nezavršeni.</message>
 	<message key="admin.systemVersion">OJS verzija</message>
-	<message key="admin.categories">Kategorije</message>
-	<message key="admin.categories.disableCategories">Ne organiziraj časopise u kategorije.</message>
-	<message key="admin.categories.editTitle">Uredi kategoriju</message>
-	<message key="admin.categories.createTitle">Napravi kategoriju</message>
-	<message key="admin.categories.create">Napravi novu kategoriju</message>
-	<message key="admin.categories.noneCreated">Nema napravljenih kategorija.</message>
-	<message key="admin.categories.confirmDelete">Da li ste sigurni da želite izbrisati ovu kategoriju?</message>
-	<message key="admin.categories.name">Ime</message>
-	<message key="admin.categories.nameRequired">Obavezno je ime kategorije.</message>
 	<message key="admin.settings.defaultMetricDescription">Vaš časopis je podešen tako da bilježi više od jednog načina mjerenja upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko konteksta.
 Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata pretrage.
 Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni.</message>
-	<message key="admin.categories.enableCategories">Dozvoli Ravnateljima časopisa organizirati časopise u kategorije</message>
-	<message key="admin.categories.enable.description">Administrator internet mjesta može odrediti kategorije kako i lakše organizirati brojne nizove časopisa. Ravnatelji časopisa mogu odabrati nekoliko od tih kategorija  za svaki časopis kako bi čitatelji pregledavali kolekcije časopisa po kategorijama.</message>
 
 </locale>

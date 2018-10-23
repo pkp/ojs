@@ -15,6 +15,7 @@
 
 namespace OJS\Services;
 
+use \ServicesContainer;
 use \PKP\Services\EntityProperties\PKPBaseEntityPropertyService;
 
 class GalleyService extends PKPBaseEntityPropertyService {
@@ -37,6 +38,8 @@ class GalleyService extends PKPBaseEntityPropertyService {
 		$isSubmissionGalley = is_a($galley, 'Representation');
 		$isIssueGalley = is_a($galley, 'IssueFile');
 		$dispatcher = $request->getDispatcher();
+		$router = $request->getRouter();
+
 		$values = array();
 
 		foreach ($props as $prop) {
@@ -58,7 +61,7 @@ class GalleyService extends PKPBaseEntityPropertyService {
 							$parentId = $galley->getIssueId();
 						}
 						if ($parentPath) {
-							$values[$prop] = $this->getAPIHref(
+							$values[$prop] = $router->getApiUrl(
 								$args['request'],
 								$arguments['contextPath'],
 								$arguments['version'],
@@ -75,10 +78,10 @@ class GalleyService extends PKPBaseEntityPropertyService {
 					$values[$prop] = $galley->getLabel(null);
 					break;
 				case 'urlRemote':
-					$values[$prop] = $isSubmissionGalley ? $galley->getRemoteURL() : null;
+					$values[$prop] = $isSubmissionGalley ? $galley->getRemoteURL() : '';
 					break;
 				case 'urlPublished':
-					$values[$prop] = null;
+					$values[$prop] = '';
 					if ($isSubmissionGalley) {
 						$parentPath = 'article';
 						$parentId = $parent->getBestArticleId();
@@ -190,7 +193,11 @@ class GalleyService extends PKPBaseEntityPropertyService {
 			}
 		}
 
+		$values = ServicesContainer::instance()->get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $context->getSupportedLocales());
+
 		\HookRegistry::call('Galley::getProperties::values', array(&$values, $galley, $props, $args));
+
+		ksort($values);
 
 		return $values;
 	}

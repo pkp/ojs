@@ -63,29 +63,24 @@
 	<message key="manager.setup.addItem">Legg til element</message>
 	<message key="manager.setup.addItemtoAboutJournal">Legg til element som skal vises i Om tidsskriftet</message>
 	<message key="manager.setup.additionalContent">Ytterligere innhold</message>
-	<message key="manager.setup.additionalContentDescription">Legg til følgende innhold (i form av text/HTML) som vil bli vist nedenfor hjemmesidebildet, hvis det er lastet opp.</message>
+	<message key="manager.setup.additionalContent.description">Legg til følgende innhold (i form av text/HTML) som vil bli vist nedenfor hjemmesidebildet, hvis det er lastet opp.</message>
 	<message key="manager.setup.addNavItem">Legg til element</message>
 	<message key="manager.setup.addSponsor">Legg til sponsor</message>
 	<message key="manager.setup.alternateHeader">Alternativ topptekst</message>
 	<message key="manager.setup.alternateHeaderDescription">I stedet for tittel og logo kan en HTML-versjon av toppteksten skrives inn i tekstboksen nedenfor. La ellers tekstboksen stå tom.</message>
 	<message key="manager.setup.announcements">Oppslagstavle</message>
-	<message key="manager.setup.announcementsDescription">Oppslag kan publiseres for å informere lesere om tidsskriftnyheter og begivenheter. Publiserte oppslag vises på oppslagstavlen.</message>
-	<message key="manager.setup.announcementsIntroduction">Ytterligere informasjon</message>
-	<message key="manager.setup.announcementsIntroductionDescription">Skriv inn øvrig informasjon som skal vises til lesere på oppslagstavlen.</message>
+	<message key="manager.setup.enableAnnouncements.description">Oppslag kan publiseres for å informere lesere om tidsskriftnyheter og begivenheter. Publiserte oppslag vises på oppslagstavlen.</message>
+	<message key="manager.setup.announcementsIntroduction.description">Skriv inn øvrig informasjon som skal vises til lesere på oppslagstavlen.</message>
 	<message key="manager.setup.appearInAboutJournal">(Vil bli vist i Om tidsskriftet)</message>
-	<message key="manager.setup.authorCopyrightNotice">Erklæring om copyright</message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">Krev at forfatterene aksepterer erklæringen om copyright i løpet av innsendingsprosessen.</message>
+	<message key="manager.setup.copyrightNotice.description">Krev at forfatterene aksepterer erklæringen om copyright i løpet av innsendingsprosessen.</message>
 	<message key="manager.setup.authorGuidelines">Forfatterinstruks</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Orienter forfatterne om format- og bibliografistandardene som skal brukes i bidrag til tidsskriftet (for eks. <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001, eller <a href="http://www.icmje.org/" target="_blank"><i>Vancouver-standarden</i></a>). Det er en fordel å gi eksempler på de vanligste siteringsformatene som skal brukes for tidsskrift og bøker, men henvisning til et større normsett vil likevel være nødvendig. Gjør også klart hvilke typer av tilleggsfiler redaksjonen vil oppfordre forfatterene om å laste opp, i tillegg til manuskriptet, for å styrke leserenes innsikt og innsyn i forskningsarbeidet (for eks. rådata, strukturerte datasett, forskningsinstrument, mediedokumentasjon etc.).]]></message>
 	<message key="manager.setup.contributor">Bidragsyter</message>
 	<message key="manager.setup.contributors">Andre støttespillere</message>
 	<message key="manager.setup.contributorsDescription">Ytterligere virksomheter eller organisasjoner som gir økonomisk eller annen støtte til tidsskriftet vil bli vist i Om tidsskriftet, og kan følges opp med en takksigelse.</message>
 	<message key="manager.setup.copyediting">Manusredaktører</message>
-	<message key="manager.setup.copyeditInstructions">Instruks for manusredigering</message>
-	<message key="manager.setup.copyeditInstructionsDescription">Instruksen for manusredigering vil bli gjort tilgjengelig for manusredaktører, forfattere, og seksjonsredaktører i manusredigeringsstadiet. Nedenfor finner du standardinstruksjoner (i HTML). Disse kan omgjøres eller erstattes av redaksjonslederen når som helst (i HTML eller ren tekst).</message>
-	<message key="manager.setup.copyrightNotice">Erklæring om copyright</message>
-	<message key="manager.setup.coverage">Dekning</message>
-	<message key="manager.setup.coverageDescription">Viser til dekning i både tid og rom; geografisk, topologisk, kronologisk eller historisk dekning, og/eller karakteristika ved materialet/utvalget.</message>
+	<message key="manager.setup.metadata.coverage">Dekning</message>
+	<message key="manager.setup.metadata.coverage.description">Viser til dekning i både tid og rom; geografisk, topologisk, kronologisk eller historisk dekning, og/eller karakteristika ved materialet/utvalget.</message>
 	<message key="manager.setup.currentIssue">Nyeste utgave</message>
 	<message key="manager.setup.customizingTheLook">Trinn 5. Tilpasning av utseendet</message>
 	<message key="manager.setup.customTags">Tilpassete etiketter</message>
@@ -99,14 +94,12 @@
 	<message key="manager.setup.disciplineProvideExamples">Gi eksempler på relevante fagemner for dette tidsskriftet</message>
 	<message key="manager.setup.displayCurrentIssue">Legg til innholdsoversikten for nyste utgave (hvis tilgjengelig).</message>
 	<message key="manager.setup.emailBounceAddress">Feilmeldingsadresse</message>
-	<message key="manager.setup.emailBounceAddressDescription">Alle e-poster som ikke kan leveres, vil utløse en feilmelding som sendes til denne adressen.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>allow_envelope_sender</tt> valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">Alle e-poster som ikke kan leveres, vil utløse en feilmelding som sendes til denne adressen.</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>allow_envelope_sender</tt> valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></message>
 	<message key="manager.setup.emails">E-post identifikasjon</message>
 	<message key="manager.setup.emailSignature">Signatur</message>
-	<message key="manager.setup.emailSignatureDescription">De forberedte e-postene som blir sendt av systemet på vegne av tidsskriftet kommer til å ha følgende signatur nederst. Selve meldingstekstene til de forberedte e-postene er tilgjengelig for redigering under Tidsskriftadministrasjon.</message>
-	<message key="manager.setup.enableAnnouncements">Tillat redaksjonsledere å legge til tidsskriftsoppslag.</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">Vis de</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">nyeste oppslagene på tidsskriftets hjemmeside.</message>
+	<message key="manager.setup.emailSignature.description">De forberedte e-postene som blir sendt av systemet på vegne av tidsskriftet kommer til å ha følgende signatur nederst. Selve meldingstekstene til de forberedte e-postene er tilgjengelig for redigering under Tidsskriftadministrasjon.</message>
+	<message key="manager.setup.enableAnnouncements.enable">Tillat redaksjonsledere å legge til tidsskriftsoppslag.</message>
 	<message key="manager.setup.enableUserRegistration">Tillat brukere å registrere selv på tidsskriftets nettsted som:</message>
 	<message key="manager.setup.focusAndScope">Hovedfokus og spennvidde</message>
 	<message key="manager.setup.focusAndScopeDescription">Skriv inn en erklæring nedenfor, som vil bli vist i Om tidsskriftet. Den skal forklare forfattere, lesere, og bibliotekarer hva slags artikler og andre elementer tidsskriftet kommer til å publisere.</message>
@@ -130,7 +123,7 @@
 	<message key="manager.setup.guidelines">Retningslinjer</message>
 	<message key="manager.setup.guidingSubmissions">Trinn 3. Innsending av manuskript</message>
 	<message key="manager.setup.homepageImage">Hjemmesidebilde</message>
-	<message key="manager.setup.homepageImageDescription">Legg til en bilde- eller grafikkfil til midten av siden.</message>
+	<message key="manager.setup.homepageImage.description">Legg til en bilde- eller grafikkfil til midten av siden.</message>
 	<message key="manager.setup.information">Informasjon</message>
 	<message key="manager.setup.information.description">Korte beskrivelser av tidsskriftet for interesserte bibliotekarer, forfattere, og lesere som blir tilgjengelig i 'informasjon'-delen av sidefeltet.</message>
 	<message key="manager.setup.information.forAuthors">For forfattere</message>
@@ -160,13 +153,6 @@
 	<message key="manager.setup.journalStyleSheetInvalid">Ugyldig stylesheetformat for tidsskriftet. Akseptert format er .css.</message>
 	<message key="manager.setup.journalTitle">Tidsskrifttittel</message>
 	<message key="manager.setup.labelName">Etikettnavn</message>
-	<message key="manager.setup.layoutAndGalleys">Layoutredaktører</message>
-	<message key="manager.setup.layoutInstructions">Instruks for layoutredigering</message>
-	<message key="manager.setup.layoutInstructionsDescription">Instruks for layoutredigering skal gjøre rede for normene for formatering av elementer som skal publiseres i tidsskriftet, og skrives inn nedenfor i HTML eller ren tekst. Instruksen vil bli gjort tilgjengelig for layoutredaktør og seksjonsredaktør på redigeringssiden for hvert manuskript. (Her tilbys ingen standardinstruksjoner, fordi hvert tidsskrift fritt kan velge filformat, bibliografisk standard, stylesheets etc.)</message>
-	<message key="manager.setup.layoutTemplates">Layoutmaler</message>
-	<message key="manager.setup.layoutTemplatesDescription">Maler kan lastes opp for å vises under Layout for hvert av standardformatene tidsskriftet benytter (for eks. artikkel, bokanmeldelse etc.) i filformat valgt av tidsskriftet (for eks. pdf, doc etc.) med vedlegg av merknader som spesifiserer skrifttype, størrelse, marger, etc. til veiledning for Layoutredaktører og Korrekturlesere.</message>
-	<message key="manager.setup.layoutTemplates.file">Malfil</message>
-	<message key="manager.setup.layoutTemplates.title">Tittel</message>
 	<message key="manager.setup.lists">Lister</message>
 	<message key="manager.setup.listsDescription">Skriv inn maksimalt antall elementer (for eksempel manuskript, brukere, eller redigeringsoppdrag) som skal vises på hver side av en liste, og antallet sider lenker som skal vises på hver side.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Tillat LOCKSS å lagre og distribuere tidsskriftinnholdet hos tilsluttete bibliotek via et LOCKSS <a href="{$lockssUrl}" target="_blank">Utgivermanifest</a>. En LOCKSS-lisens vil i så fall bli vist i 'Om' tidsskriftet, under Arkivering:]]></message>
@@ -196,9 +182,9 @@
 	<message key="manager.setup.noUseLayoutEditors">Redaktørene kommer til å lage sideoppsett i format som egner seg for elektronisk publisering.</message>
 	<message key="manager.setup.noUseProofreaders">Redaktørene og forfattere kommer til å korrigere sideoppsett.</message>
 	<message key="manager.setup.numPageLinks">Side lenker</message>
-	<message key="manager.setup.onlineAccessManagement">Administrasjon av nettilgang</message>
+	<message key="manager.setup.publishingMode">Administrasjon av nettilgang</message>
 	<message key="manager.setup.onlineIssn">ISSN for nettutgaven</message>
-	<message key="manager.setup.openAccess">Tidsskriftet kommer til å gi åpen tilgang (Open Access) til alt publisert innhold.</message>
+	<message key="manager.distribution.publishingMode.openAccess">Tidsskriftet kommer til å gi åpen tilgang (Open Access) til alt publisert innhold.</message>
 	<message key="manager.setup.openAccessPolicy">Open Access-retningslinjer</message>
 	<message key="manager.setup.openAccessPolicyDescription">Skriv inn en erklæring om tidsskriftets retningslinjer for Open Access, som vil bli vist i 'Om' tidsskriftet.</message>
 	<message key="manager.setup.pageNumberIdentifier">Sidetallsvalg</message>
@@ -226,23 +212,22 @@
 	<message key="manager.setup.publicationScheduling">Publiseringsplanlegging</message>
 	<message key="manager.setup.publicIdentifier">Identifikasjon av tidsskriftinnhold</message>
 	<message key="manager.setup.publisher">Utgiver</message>
-	<message key="manager.setup.publisherDescription">Navnet til organisasjonen som publiserer tidsskriftet vil bli vist i 'Om' tidsskriftet.</message>
+	<message key="manager.setup.publishingDescription">Navnet til organisasjonen som publiserer tidsskriftet vil bli vist i 'Om' tidsskriftet.</message>
 	<message key="manager.setup.registerJournalForIndexing">Registrer tidsskriftet for indeksering (Metadata Harvesting)</message>
 	<message key="manager.setup.restrictArticleAccess">Brukere må logge inn for å se publiserte artikler i fulltekst.</message>
 	<message key="manager.setup.restrictSiteAccess">Brukere må logge inn for å se tidsskriftets nettsted.</message>
 	<message key="manager.setup.reviewGuidelines">Instruks for fagkonsulenter</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Instruksen for fagkonsulenter gir fagkonsulentene kriterier for vurdering av om et manuskript egner seg for publisering i tidsskriftet, og dessuten eventuelle råd om hvordan konsulentuttalelser bør være for å bidra til effektivt og nyttig manuskriptarbeid, og til å fremme god skikk i kollegiale samarbeid.</message>
 	<message key="manager.setup.reviewOptions">Fagvurderingsvalgmuligheter</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automatiserte e-post purringer (tilgjengelig i OJS's default e-poster) kan sendes til fagkonsulenter ved to anledninger (redaktøren kan i tillegg sende e-post direkte til fagkonsulenten)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>NB:</strong> For å aktivere disse valgmulighetene, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt>-valgmuligheten i OJS-konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></message>
 	<message key="manager.setup.reviewOptions.noteOnModification">Kan endres i løpet av den redaksjonelle prosessen.</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Vanlig varighet tillatt for fagfellevurderinger</message>
 	<message key="manager.setup.reviewOptions.onQuality">Redaktører kommer til å rangere fagkonsulentene på en fempunkts skala etter hvert vurderingsoppdrag.</message>
-	<message key="manager.setup.reviewOptions.remindForInvite1">Hvis fagkonsulenten ikke har svart på en forespørsel om vurderingsoppdrag innen</message>
-	<message key="manager.setup.reviewOptions.remindForInvite2">dager.</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit1">Hvis fagkonsulenten ikke har sendt inn en anbefaling innen</message>
-	<message key="manager.setup.reviewOptions.remindForSubmit2">dager etter oppdragets ventet-dato.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Fagkonsulenter kommer til å få tilgang til manuskriptfilen bare etter å ha akseptert vurderingsoppdraget.</message>
+	<message key="manager.setup.reviewOptions.reminders.response.description1">Hvis fagkonsulenten ikke har svart på en forespørsel om vurderingsoppdrag innen</message>
+	<message key="manager.setup.reviewOptions.reminders.response.description2">dager.</message>
+	<message key="manager.setup.reviewOptions.reminders.submit.description1">Hvis fagkonsulenten ikke har sendt inn en anbefaling innen</message>
+	<message key="manager.setup.reviewOptions.reminders.submit.description2">dager etter oppdragets ventet-dato.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Fagkonsulenter kommer til å få tilgang til manuskriptfilen bare etter å ha akseptert vurderingsoppdraget.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Fagkonsulenttilgang</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Slå på ettklikks fagkonsulenttilgang.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>NB:</strong> E-post-invitasjonen til fagkonsulenter kommer til å inneholde en spesiell URL som binger den inviterte fagkonsulenten direkte til fagvurderingssiden for det aktuelle manuskriptet (tilgang til andre sider vil likevel kreve innlogging).  Med denne valgmuligheten slått på, kan ikke redaktørene endre e-postadresser eller legge til kopier eller blindkopier ved bestilling av fagvurderinger (av sikkerhetsgrunner).]]></message>
@@ -256,12 +241,10 @@
 	<message key="manager.setup.reviewProcessStandard">Standard fagvurderingsprosess</message>
 	<message key="manager.setup.reviewProcessStandardDescription">Redaktøren sender e-post til de utvalgte Fagkonsulentene med tittelen og sammendrag av manuskriptet, og dessuten en invitasjon til å logge inn på tidsskriftets nettsted for å ferdigstille vurderingen. Fagkonsulenten går inn på nettstedet for å ta på seg vurderingsoppdraget, for å laste ned manuskriptet, sende inn sine kommentarer, og velge en anbefaling.</message>
 	<message key="manager.setup.searchEngineIndexing">Søkermotorindeksering</message>
-	<message key="manager.setup.searchEngineIndexingDescription">For at brukere av søkemotorer skal finne dette tidsskriftet, bør du gi en kort beskrivelse av tidsskriftet, og relevante nøkkelord (atskilt med semikolon).</message>
+	<message key="manager.setup.searchEngineIndexing.description">For at brukere av søkemotorer skal finne dette tidsskriftet, bør du gi en kort beskrivelse av tidsskriftet, og relevante nøkkelord (atskilt med semikolon).</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Tidsskriftseksjoner og seksjonsredaktører</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(Hvis seksjoner ikke er angitt, vil bidraget bli sendt inn til Artikler.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[For å opprette eller endre seksjoner for tidsskriftet (f.eks. Artikler, Bokanmeldelser, etc.), gå til seksjonsadministrasjon.<br /><br />Når forfattere sender inn elementer til tidsskriftet, kommer de til å angi ...]]></message>
-	<message key="manager.setup.securitySettings">Sikkerhets- og tilgangsinnstillinger</message>
-	<message key="manager.setup.securitySettingsDescription">OJS gir en rekke sikkerhetsrelaterte valgmuligheter, som kan brukes for å styre tilgangen til tidsskriftets innhold, og bevare øvrig informasjon om manuskript for revisjonsformål.</message>
 	<message key="manager.setup.selectEditorDescription">Tidsskriftredaktør som skal følge bidraget gjennom den redaksjonelle prosessen.</message>
 	<message key="manager.setup.selectSectionDescription">Tidsskriftseksjonen bidraget skal vurderes for.</message>
 	<message key="manager.setup.siteAccess">Ytterligere begrensninger i tilgang til nettstedet eller artiklene</message>
@@ -276,8 +259,7 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ved innsending av manuskript til tidsskriftet, må forfattere først krysse av for hvert element på Sjekkliste for klargjøring av manuskript, før de får gå videre. Sjekklisten vises også i forfatterinstruksen, under 'Om' tidsskriftet. Sjekklisten kan redigeres nedenfor, men alle elementene på listen må krysses av før forfatteren kan gå videre med innsendingen.</message>
 	<message key="manager.setup.submissions">Innsendte manuskripter</message>
 	<message key="manager.setup.submissions.description">Forfatterinstruks, copyright, og indeksering (herunder registrering).</message>
-	<message key="manager.setup.subscription">Tidsskriftet kommer til å kreve abonnement for tilgang til alt eller deler av innholdet.</message>
-	<message key="manager.setup.subscriptionDescription">Modulen for abonnementsadministrasjon krever at en abonnementskontakt oppnevnes, som får tilgang til modulen, der det finnes ytterligere valgmuligheter for Open Access, selvarkivering, og e-postvarsling.</message>
+	<message key="manager.distribution.publishingMode.subscription">Tidsskriftet kommer til å kreve abonnement for tilgang til alt eller deler av innholdet.</message>
 	<message key="manager.setup.technicalSupportContact">Teknisk kontaktperson</message>
 	<message key="manager.setup.technicalSupportContactDescription">Denne personen vil bli oppført på tidsskriftets kontaktside, til bruk for redaktører, forfattere, og fagkonsulenter, og bør ha kjennskap til systemet fra synsvinkelen til alle rollene. Ettersom dette tidsskriftsystemet krever lite teknisk støtte, bør dette betraktes som en deltidsoppgave. Det vil likevel forekomme behov, for eksempel når forfattere og fagkonsulenter får problemer med instruksjonene eller filformat, eller når det blir nødvendig å sørge for at det regelmessig blir tatt sikkerhetskopi av tidsskriftet på serveren.</message>
 	<message key="manager.setup.typeExamples">(F.eks. historisk studium; tankeeksperiment; feltundersøkelse; retorisk analyse; aksjonsforskning; kartlegging/intervju)</message>
@@ -289,7 +271,6 @@
 	<message key="manager.setup.useEditorialReviewBoard">Tidsskriftet skal ha redaksjons- eller fagfelleråd.</message>
 	<message key="manager.setup.useImageLogo">Logobilde</message>
 	<message key="manager.setup.useImageTitle">Tittelbilde</message>
-	<message key="manager.setup.useJournalStyleSheet">Tidsskrift stylesheet</message>
 	<message key="manager.setup.useLayoutEditors">Tidsskriftet kommer til å utpeke layoutredaktører for å lage sideoppsett i HTML, PDF, PS osv. for elektronisk publisering.</message>
 	<message key="manager.setup.useProofreaders">Tidsskriftet kommer til å utpeke korrekturlesere som vil korrigere korrekturutskriftene (sammen med forfatterene).</message>
 	<message key="manager.setup.userRegistration">Brukerregistrering</message>
@@ -319,8 +300,6 @@
 	<message key="manager.statistics.statistics.selectSections">Velg seksjonene for utregning av dette tidsskriftets statistikk over fagfellevurdering.</message>
 	<message key="manager.statistics.statistics.subscriptions">Abonnement</message>
 	<message key="manager.subscriptionPolicies">Abonnementsregler</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">Retningslinjer om selvarkivering for forfattere</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Følgende retningslinjer vil bli vist i 'Om' tidsskriftet.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Utsatt Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Med utsatt Open Access kan redaktøren likevel peke ut enkeltartikler innen en utgave for umiddelbar Open Access.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Tidligere utgaver av dette tidsskriftet vil bli tilgjengelig i Open Access-format</message>
@@ -485,7 +464,6 @@
 	<message key="manager.sections.hideTocAuthor">Utelat forfatternavn for seksjonselementer fra utgavens innholdsoversikt.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Legg til en ny databaselenke</message>
 	<message key="manager.setup.competingInterests">Erklæring om interessekonflikter</message>
-	<message key="manager.setup.competingInterests.description"><![CDATA[I biomedisinske tidsskrift er det vanlig å kreve at både forfattere og fagkonsulenter avgir en erklæring om de befinner seg i roller eller posisjoner som kan føre til motstridende interesser eller interessekonflikter knyttet til forskningsarbeidet (se <a href="http://www.plosbiology.org/static/competing.action" target="_new">PLoS Policy</a>).]]></message>
 	<message key="manager.setup.competingInterests.guidelines"><![CDATA[Retningslinjer for innsending av en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireAuthors"><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></message>
 	<message key="manager.setup.competingInterests.requireReviewers"><![CDATA[Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn.]]></message>
@@ -500,10 +478,8 @@
 	<message key="manager.setup.journalLogo.altText">Tidsskriftlogo</message>
 	<message key="manager.setup.journalTheme">Tidsskriftnettsidenes designtema.</message>
 	<message key="manager.setup.notifyAllAuthorsOnDecision">Når e-postfunksjonen 'Send beskjed til forfatter' brukes skal e-posten sendes til alle medforfattere, ikke bare til den forfatteren som sendte inn manuskriptet.</message>
-	<message key="manager.setup.provideRefLinkInstructions">Gi instruks for layoutredaktører</message>
 	<message key="manager.setup.publicationFormatNumber">Nummer</message>
 	<message key="manager.setup.referenceLinking">Aktive henvisningslenker</message>
-	<message key="manager.setup.refLinkInstructions.description">Layoutinstruks for aktive henvisningslenker</message>
 	<message key="manager.setup.reviewerDatabaseLink">Database over potensielle fagkonsulenter</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Legg til en lenke til en relevant og tilgjengelig litteraturdatabase på 'Velg fagkonsulent'-siden, for at databasen skal kunne brukes til å søke etter potensielle fagkonsulenter.</message>
 	<message key="manager.setup.reviewOptions.blindReview">Anonym fagvurdering</message>
@@ -566,13 +542,10 @@
 	<message key="manager.subscriptionTypes.form.options">Valgmuligheter</message>
 	<message key="manager.setup.historyDescription">Denne teksten vil vises i "Om"-avsnittet av tidsskriftets nettsted, og kan benyttes til å beskriver endringer i navn, redaksjon og annet som er relevant for tidsskriftets publiseringshistorie.</message>
 	<message key="manager.sections.wordCountInstructions">Begrens antall ord i abstrakt i denne delen av tidsskriftet til (0 betyr ingen begrensning):</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Opphavsrettserklæringen som legges inn nedenfor vil bli synlig i "om tidsskriftet" og i metadataene for hver publisert artikkel/tilsv. Selv om det det er opp til tidsskriftet å inngå opphavsrettsavtale med forfattere, anbefaler The Public Knowledge Project å bruke en <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> lisens. For dette formål finnes det et <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">forslag til opphavsretterklæring</a> som kan klippes og limes inn nedenfor for tidsskrifter som (a) tilbyr open access, (b) tilbyr forsinket open access, eller (c) ikke tilbyr open access.]]></message>
+	<message key="manager.setup.copyrightNoticeDescription"><![CDATA[Opphavsrettserklæringen som legges inn nedenfor vil bli synlig i "om tidsskriftet" og i metadataene for hver publisert artikkel/tilsv. Selv om det det er opp til tidsskriftet å inngå opphavsrettsavtale med forfattere, anbefaler The Public Knowledge Project å bruke en <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> lisens. For dette formål finnes det et <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">forslag til opphavsretterklæring</a> som kan klippes og limes inn nedenfor for tidsskrifter som (a) tilbyr open access, (b) tilbyr forsinket open access, eller (c) ikke tilbyr open access.]]></message>
 	<message key="manager.setup.contributorNoteDescription">Denne teksten vil vises nedenfor «Andre støttespillere» ovenfor listen med støttespillernes navn/url under «Tidsskriftets sponsorer» på «Om»-siden.</message>
 	<message key="manager.setup.history">Tidsskriftets historie</message>
-	<message key="manager.setup.favicon">Tidsskriftets favicon</message>
-	<message key="manager.setup.faviconDescription">Legg til et favicon som vises ved siden av navigasjonslinjen når brukere er inne på ditt nettsted.</message>
-	<message key="manager.setup.faviconInvalid">Ugyldig favicon-format. Tillatte formater er .ico, .png, and .gif.</message>
-	<message key="manager.setup.noPublishing">OJS vil ikke bli brukt til å publisere tidsskriftets innhold på nett.</message>
+	<message key="manager.distribution.publishingMode.none">OJS vil ikke bli brukt til å publisere tidsskriftets innhold på nett.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Melding on online-betalinger</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatiske e-postbeskjeder (som kan redigeres av tidsskriftadministratorer i OJS' e-postmaler) kan sendes til abonnementsansvarlig når en online abonnementsbetaling er fullført.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Gi abonnementsansvarlig beskjed via e-post når noen kjøper et individuelt abonnement online.</message>
@@ -612,23 +585,18 @@
 	<message key="manager.section.noSectionEditors"><![CDATA[Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først.]]></message>
 	<message key="manager.setup.masthead">Kolofon</message>
 	<message key="manager.setup.editorialTeam">Redaksjon</message>
-	<message key="manager.setup.editorialTeam.description">Opprett en liste over redaktører, redaksjonsledere  og andre personer tilknyttet tidsskriftet.</message>
 	<message key="manager.setup.homepageContent">Innhold på hjemmesiden</message>
 	<message key="manager.setup.homepageContentDescription">Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen.</message>
-	<message key="manager.setup.layout">Tidsskriftets sideoppsett</message>
 	<message key="manager.setup.useStyleSheet">Tidsskriftets stilark</message>
 	<message key="manager.setup.contextName">Tidsskriftets navn</message>
 	<message key="manager.setup.pageHeader">Tidsskriftets topptekst</message>
 	<message key="manager.setup.focusAndScope.description">Beskriv til forfattere, lesere og bibliotekarer spennvidden på artikler og annet innhold som tidsskriftet vil publisere.</message>
 	<message key="manager.setup.form.issnInvalid">Angitt ISSN er ugyldig.</message>
 	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
-	<message key="manager.setup.journalSummary.description">En kort beskrivelse av tidsskriftet som kan vises i listen over tidsskrift.</message>
 	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
 	<message key="manager.setup.journalAbout.description">Inkluder informasjon om tidsskriftet som kan være av interesse for lesere, forfattere eller fagfeller. Dette kan inkludere retningslinjer for open access, hovedfokus og spennvidde for tidsskriftet, opphavsrettsnotis, informasjon om sponsorer, tidsskriftets historie, erklæring om personopplysninger og arkivering i LOCKSS eller CLOCKSS arkivsystem.</message>
 	<message key="manager.setup.journalThumbnail">Tidsskriftets miniatyrbilde</message>
 	<message key="manager.setup.journalThumbnail.description">En liten logo eller representasjon av tidsskriftet som kan bli brukt i listen over tidsskrift.</message>
-	<message key="manager.setup.journalThumbnail.altText">Alternativ tekst for miniatyrbildet</message>
-	<message key="manager.setup.enableArchive">Slå på arkivering</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[En LOKCSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-lisens</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Beskrivelse av LOCKSS-lisens</message>
 	<message key="manager.setup.lockssTitle">LOCKSS</message>
@@ -637,7 +605,6 @@
 	<message key="manager.setup.clockssLicenseLabel">Beskrivelse av CLOCKSS-lisens</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Meld deg på CLOCKSS-tjenesten ved å besøke nettsiden: <a href="http://clockss.org/" target="_blank"></a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.distribution.access">Tilgang</message>
 	<message key="grid.category.path">Sti</message>
 	<message key="grid.action.addSection">Legg til seksjon</message>
@@ -649,7 +616,6 @@
 	<message key="manager.setup.copyrightYearBasis.issue">Nummer: År vil bli hentet fra nummerets publiseringsdato.</message>
 	<message key="manager.setup.resetPermissions">Tilbakestill artikkelrettigheter</message>
 	<message key="manager.setup.resetPermissions.confirm">Er du sikker på at du ønsker å tilbakestille rettighetsinformasjon som er knyttet til artikler?</message>
-	<message key="manager.setup.resetPermissions.description">Erklæring om opphavsrett og lisensinformasjon vil bli permanent knyttet til publisert innhold for å sikre at disse dataene ikke blir endret når et tidsskrift endrer retningslinjer for nytt innhold. For å tilbakestille lagret rettighetsinformasjon knyttet til publisert innhold, bruk knappen under.</message>
 	<message key="grid.genres.title.short">Komponenter</message>
 	<message key="grid.genres.title">Artikkelkomponenter</message>
 	<message key="grid.genres.description">Disse komponentene er brukt for å navngi filer og er presentert i en nedtrekksmeny ved opplasting av filer. Stilene som er tildelt ## tillater brukeren å knytte filen til enten hele innsendingen 99Z eller en bestemt nummerert komponent (f.eks. 02).</message>

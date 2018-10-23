@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Tijdschriften</message>
 	<message key="admin.settings.journalRedirect">Doorsturen naar tijdschrift</message>
 	<message key="admin.settings.journalRedirectInstructions">Bezoekers van de hoofdsite worden doorgestuurd naar dit tijdschrift. Dit kan handig zijn als de site maar één tijdschrift bevat.</message>
-	<message key="admin.settings.noJournalRedirect">Niet doorsturen</message>
 	<message key="admin.languages.primaryLocaleInstructions">Dit wordt de standaard taalkeuze voor de site en de tijdschriften daarin.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Selecteer de talen die de site moet ondersteunen. De geselecteerde talen zijn beschikbaar voor alle tijdschriften in de site en zullen ook verschijnen in een taalkeuzemenu  op alle pagina's van de site (dat kan overruled worden voor specifieke tijdschriften). Als er slechts één taal geselecteerd wordt zal er geen taalkeuzemenu getoond worden en zijn er geen taalinstellingen bij de tijdschriften.</message>
 	<message key="admin.languages.confirmUninstall">Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken.</message>
@@ -58,18 +57,6 @@
 	<message key="admin.mergeUsers.confirm">Weet u zeker dat u de geselecteerde {$oldAccountCount} account(s) wilt samenvoegen met gebruikersnaam "{$newUsername}"? de geselecteerde {$oldAccountCount} account(s) bestaan dan niet meer. Deze actie kan niet ongedaan gemaakt worden.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Geen gebruikers.</message>
 	<message key="admin.locale.maybeIncomplete">De gemarkeerde talen kunnen incompleet zijn.</message>
-	<message key="admin.categories.editTitle">Categorie bewerken</message>
-	<message key="admin.categories.name">Naam</message>
-	<message key="admin.categories.disableCategories">Organiseer de tijdschriften niet in categorieën.</message>
-	<message key="admin.categories.enableCategories">Geef tijdschriftbeheerders de mogelijkheid tijdschriften in categorieën te organiseren.</message>
-	<message key="admin.categories.createTitle">Categorie maken</message>
-	<message key="admin.categories.create">Maak een nieuwe categorie</message>
-	<message key="admin.categories.noneCreated">Er zijn nog geen categorieën.</message>
-	<message key="admin.categories.confirmDelete">Weet u zeker dat u deze categorie wilt verwijderen?</message>
-	<message key="admin.categories.nameRequired">Een categorienaam is verplicht</message>
-	<message key="admin.categories">Categorieën</message>
-	<message key="admin.categories.enable.description">De sitebeheerder kan hier een set categorieën definiëren om te helpen de tijdschriften te organiseren. Tijdschriftbeheerders kunnen deze categorieën aan hun tijdschrift toekennen. Gebruikers kunnen de tijdschriften op categorie bekijken.</message>
-	<message key="admin.settings.options">Opties</message>
 	<message key="admin.settings.defaultMetricDescription">Uw OJS installatie geconfigureerd voor meer dan een gebruiksmeting. Gebruiksstatistieken worden in verschillende contexten getoond.
 		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikelen te tonen of om
 		zoekresultaten te wegen. Kies een van de methodes als standaard.</message>

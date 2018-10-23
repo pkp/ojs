@@ -122,7 +122,7 @@ class IssueHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 		$context = $request->getContext();
 
-		$count = $context->getSetting('itemsPerPage') ? $context->getSetting('itemsPerPage') : Config::getVar('interface', 'items_per_page');
+		$count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
 		$offset = $page > 1 ? ($page - 1) * $count : 0;
 
 		import('classes.core.ServicesContainer');
@@ -213,7 +213,7 @@ class IssueHandler extends Handler {
 			$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId());
 
 			// Check if login is required for viewing.
-			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess')) {
+			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getData('restrictArticleAccess')) {
 				Validation::redirectLogin();
 			}
 
@@ -242,7 +242,7 @@ class IssueHandler extends Handler {
 							return true;
 						} else {
 							// Otherwise queue an issue purchase payment and display payment form
-							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
+							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getData('purchaseIssueFee'));
 							$paymentManager->queuePayment($queuedPayment);
 
 							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);

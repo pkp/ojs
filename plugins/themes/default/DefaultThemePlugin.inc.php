@@ -33,25 +33,48 @@ class DefaultThemePlugin extends ThemePlugin {
 	public function init() {
 
 		// Register theme options
-		$this->addOption('typography', 'radio', array(
-			'label' => 'plugins.themes.default.option.typography.label',
-			'description' => 'plugins.themes.default.option.typography.description',
-			'options' => array(
-				'notoSans' => 'plugins.themes.default.option.typography.notoSans',
-				'notoSerif' => 'plugins.themes.default.option.typography.notoSerif',
-				'notoSerif_notoSans' => 'plugins.themes.default.option.typography.notoSerif_notoSans',
-				'notoSans_notoSerif' => 'plugins.themes.default.option.typography.notoSans_notoSerif',
-				'lato' => 'plugins.themes.default.option.typography.lato',
-				'lora' => 'plugins.themes.default.option.typography.lora',
-				'lora_openSans' => 'plugins.themes.default.option.typography.lora_openSans',
-			)
-		));
+		$this->addOption('typography', 'FieldOptions', [
+			'type' => 'radio',
+			'label' => __('plugins.themes.default.option.typography.label'),
+			'description' => __('plugins.themes.default.option.typography.description'),
+			'options' => [
+				[
+					'value' => 'notoSans',
+					'label' => __('plugins.themes.default.option.typography.notoSans'),
+				],
+				[
+					'value' => 'notoSerif',
+					'label' => __('plugins.themes.default.option.typography.notoSerif'),
+				],
+				[
+					'value' => 'notoSerif_notoSans',
+					'label' => __('plugins.themes.default.option.typography.notoSerif_notoSans'),
+				],
+				[
+					'value' => 'notoSans_notoSerif',
+					'label' => __('plugins.themes.default.option.typography.notoSans_notoSerif'),
+				],
+				[
+					'value' => 'lato',
+					'label' => __('plugins.themes.default.option.typography.lato'),
+				],
+				[
+					'value' => 'lora',
+					'label' => __('plugins.themes.default.option.typography.lora'),
+				],
+				[
+					'value' => 'lora_openSans',
+					'label' => __('plugins.themes.default.option.typography.lora_openSans'),
+				],
+			],
+			'default' => 'notoSans',
+		]);
 
-		$this->addOption('baseColour', 'colour', array(
-			'label' => 'plugins.themes.default.option.colour.label',
-			'description' => 'plugins.themes.default.option.colour.description',
+		$this->addOption('baseColour', 'FieldColor', [
+			'label' => __('plugins.themes.default.option.colour.label'),
+			'description' => __('plugins.themes.default.option.colour.description'),
 			'default' => '#1E6292',
-		));
+		]);
 
 		// Load primary stylesheet
 		$this->addStyle('stylesheet', 'styles/index.less');
@@ -208,5 +231,3 @@ class DefaultThemePlugin extends ThemePlugin {
 		return __('plugins.themes.default.description');
 	}
 }
-
-

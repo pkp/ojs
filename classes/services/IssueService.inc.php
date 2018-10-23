@@ -16,6 +16,7 @@
 namespace OJS\Services;
 
 use \Journal;
+use \ServicesContainer;
 use \PKP\Services\EntityProperties\PKPBaseEntityPropertyService;
 use \OJS\Services\QueryBuilders\IssueListQueryBuilder;
 use \DBResultRange;
@@ -139,7 +140,7 @@ class IssueService extends PKPBaseEntityPropertyService {
 		import('classes.issue.Issue');
 		$accessStatus = null;
 
-		switch ($journal->getSetting('publishingMode')) {
+		switch ($journal->getData('publishingMode')) {
 			case PUBLISHING_MODE_SUBSCRIPTION:
 			case PUBLISHING_MODE_NONE:
 				$accessStatus = ISSUE_ACCESS_SUBSCRIPTION;
@@ -161,6 +162,7 @@ class IssueService extends PKPBaseEntityPropertyService {
 		$request = $args['request'];
 		$context = $request->getContext();
 		$dispatcher = $request->getDispatcher();
+		$router = $request->getRouter();
 		$values = array();
 
 		foreach ($props as $prop) {
@@ -173,7 +175,7 @@ class IssueService extends PKPBaseEntityPropertyService {
 					if (!empty($args['slimRequest'])) {
 						$route = $args['slimRequest']->getAttribute('route');
 						$arguments = $route->getArguments();
-						$values[$prop] = $this->getAPIHref(
+						$values[$prop] = $router->getApiUrl(
 							$args['request'],
 							$arguments['contextPath'],
 							$arguments['version'],
@@ -279,7 +281,11 @@ class IssueService extends PKPBaseEntityPropertyService {
 			}
 		}
 
+		$values = ServicesContainer::instance()->get('schema')->addMissingMultilingualValues(SCHEMA_ISSUE, $values, $context->getSupportedLocales());
+
 		\HookRegistry::call('Issue::getProperties::values', array(&$values, $issue, $props, $args));
+
+		ksort($values);
 
 		return $values;
 	}

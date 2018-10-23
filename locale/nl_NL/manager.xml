@@ -108,17 +108,13 @@
 	<message key="manager.setup.alternateHeader">Alternatieve kop</message>
 	<message key="manager.setup.alternateHeaderDescription">Als alternatief voor titel en logo kan in het tekstvak hieronder een HTML versie van de kop opgegeven worden. Laat het tekstvak leeg als dit niet van toepassing is.</message>
 	<message key="manager.setup.announcements">Nieuwsberichten</message>
-	<message key="manager.setup.announcementsDescription">Er kunnen nieuwsberichten gepubliceerd worden om lezers op  de hoogte te brengen van nieuws en gebeurtenissen gerelateerd aan het tijdschrift. Gepubliceerde nieuwsberichten verschijnen op de Nieuwsberichten pagina.</message>
-	<message key="manager.setup.announcementsIntroduction">Additionele informatie</message>
-	<message key="manager.setup.announcementsIntroductionDescription">Andere informatie die op de Nieuwsberichten pagina getoond moet worden aan de lezers.</message>
+	<message key="manager.setup.enableAnnouncements.description">Er kunnen nieuwsberichten gepubliceerd worden om lezers op  de hoogte te brengen van nieuws en gebeurtenissen gerelateerd aan het tijdschrift. Gepubliceerde nieuwsberichten verschijnen op de Nieuwsberichten pagina.</message>
+	<message key="manager.setup.announcementsIntroduction.description">Andere informatie die op de Nieuwsberichten pagina getoond moet worden aan de lezers.</message>
 	<message key="manager.setup.appearInAboutJournal">(Om op te nemen in Over dit Tijdschrift)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Verplicht auteurs een verklaring omtrent  strijdige belangen in te dienen met hun inzending.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Verplicht reviewers een verklaring inzake strijdige belangen in te dienen met iedere review die ze insturen.</message>
-	<message key="manager.setup.copyeditInstructions">Instructies voor tekstredactie</message>
-	<message key="manager.setup.copyeditInstructionsDescription">Instructies voor de tekstredactie worden in de inzendings-redactie fase beschikbaar gesteld aan de tekstredacteurs, auteurs en sectieredacteurs. Zie hieronder voor een set voorbeeldinstructies in HTML. Deze kunnen op ieder gewenst moment door de tijdschriftbeheerder gewijzigd of vervangen worden (in HTML of gewone tekst).</message>
-	<message key="manager.setup.copyrightNotice">Auteursrecht verklaring</message>
-	<message key="manager.setup.coverage">Bereik</message>
-	<message key="manager.setup.coverageDescription">Verwijst naar geo-spatiale locatie, chronologische of historische spreiding en/of steekproef-karakteristiek van het onderzoek.</message>
+	<message key="manager.setup.metadata.coverage">Bereik</message>
+	<message key="manager.setup.metadata.coverage.description">Verwijst naar geo-spatiale locatie, chronologische of historische spreiding en/of steekproef-karakteristiek van het onderzoek.</message>
 	<message key="manager.setup.currentIssue">Huidig nummer</message>
 	<message key="manager.setup.customizingTheLook">Stap 5. Aanpassen van het uiterlijk</message>
 	<message key="manager.setup.customTags">Eigen tags</message>
@@ -133,14 +129,12 @@
 	<message key="manager.setup.displayCurrentIssue">De inhoudsopgave van het huidige nummer toevoegen (indien beschikbaar).</message>
 	<message key="manager.setup.editorDecision">Beslissing redacteur</message>
 	<message key="manager.setup.emailBounceAddress">Retouradres voor onbestelbare e-mail</message>
-	<message key="manager.setup.emailBounceAddressDescription">E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op dit adres.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Noot:</strong> Om deze optie te activeren moet de beheerder de <tt>allow_envelope_sender</tt> optie in het OJS configuratiebestand inschakelen. Additionale server configuratie kan noodzakelijk zijn om deze optie te gebruiken (die niet op alle servers ondersteund wordt) zoals aangegeven in de OJS documentatie.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op dit adres.</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>Noot:</strong> Om deze optie te activeren moet de beheerder de <tt>allow_envelope_sender</tt> optie in het OJS configuratiebestand inschakelen. Additionale server configuratie kan noodzakelijk zijn om deze optie te gebruiken (die niet op alle servers ondersteund wordt) zoals aangegeven in de OJS documentatie.]]></message>
 	<message key="manager.setup.emails">E-mail identificatie</message>
 	<message key="manager.setup.emailSignature">Ondertekening</message>
-	<message key="manager.setup.emailSignatureDescription">De voorbewerkte e-mails die door het systeem namens het tijdschrift verzonden worden, krijgen de volgende ondertekening toegevoegd aan het einde. De tekst van de voorbwerkte e-mails kan aangepast worden bij tijdschriftbeheer.</message>
-	<message key="manager.setup.enableAnnouncements">Geef tijdschriftbeheerders de mogelijkheid om nieuwsberichten bij het tijdschrift te plaatsen</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">Toon</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">van de nieuwste berichten op de homepage van het tijdschrift</message>
+	<message key="manager.setup.emailSignature.description">De voorbewerkte e-mails die door het systeem namens het tijdschrift verzonden worden, krijgen de volgende ondertekening toegevoegd aan het einde. De tekst van de voorbwerkte e-mails kan aangepast worden bij tijdschriftbeheer.</message>
+	<message key="manager.setup.enableAnnouncements.enable">Geef tijdschriftbeheerders de mogelijkheid om nieuwsberichten bij het tijdschrift te plaatsen</message>
 	<message key="manager.setup.enablePublicIssueId">Er worden aangepaste identificaties gebruikt voor het identificeren van nummers.</message>
 	<message key="manager.setup.enableUserRegistration">Gebruikers kunnen zichzelf registreren bij het tijdschrift in een of meer van de volgende rollen:</message>
 	<message key="manager.setup.focusAndScope">Focus en missie</message>
@@ -188,12 +182,6 @@
 	<message key="manager.setup.journalTheme">Thema van het tijdschrift</message>
 	<message key="manager.setup.journalTitle">Tijdschrifttitel</message>
 	<message key="manager.setup.labelName">Label naam</message>
-	<message key="manager.setup.layoutInstructions">Opmaakinstructies</message>
-	<message key="manager.setup.layoutInstructionsDescription">Opmaakinstructies voor het indelen van te publiceren artikelen kunnen voorbereid worden en hieronder ingevoerd als HTML of tekst. Ze zullen ter beschikking gesteld worden van de opmaakredacteur en sectieredacteur op de Bewerk-pagina van iedere inzending (aangezien ieder tijdschrift eigen bestandsformaten, bibliografische standaards, stylesheets, enz. kan gebruiken wordt geen standaardset instructies meegeleverd).</message>
-	<message key="manager.setup.layoutTemplates">Opmaaksjablonen</message>
-	<message key="manager.setup.layoutTemplatesDescription">Sjablonen voor de opmaak van ieder van de standaardformaten van het tijdschrift (bv. pdf, doc, etc.) kunnen geladen worden. Sjablonen kunnen in ieder bestandsformaat zijn (bv. pdf, doc, etc.) met annotaties om lettergrootte, marges enz. te specificeren bij wijze van richtlijn voor de opmaakredacteuren en proeflezers.</message>
-	<message key="manager.setup.layoutTemplates.file">Sjabloonbestand</message>
-	<message key="manager.setup.layoutTemplates.title">Titel</message>
 	<message key="manager.setup.lists">Lijsten</message>
 	<message key="manager.setup.listsDescription">Geef het maximale aantal onderdelen (zoals inzendingen, gebruikers of opmaaktaken) die op één pagina van een lijst getoond wordt en het aantal paginalinks dat op iedere pagina getoond wordt.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Gebruik LOCKSS voor het opslaan en distribueren van de inhoud van het tijdschrift bij deelnemende bibliotheken via een LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> pagina. Een LOCKSS licentie zal verschijnen bij Over dit Tijdschrift onder Archiveren:]]></message>
@@ -214,35 +202,32 @@
 	<message key="manager.setup.note">Notitie</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Noot:</strong> Het bevestigen van inzendingen is momenteel uitgeschakeld. Omde deze voorziening te gebruiken moet  SUBMISSION_ACK email in <a class="action" href="{$preparedEmailsUrl}">Voorbereide e-mails</a> ingeschakeld worden.]]></message>
 	<message key="manager.setup.numPageLinks">Paginalinks</message>
-	<message key="manager.setup.onlineAccessManagement">Toegang tot de tijdschriftinhoud</message>
+	<message key="manager.setup.publishingMode">Toegang tot de tijdschriftinhoud</message>
 	<message key="manager.setup.onlineIssn">ISSN online versie</message>
-	<message key="manager.setup.openAccess">Het tijdschrift biedt vrije toegang (open access) tot de inhoud.</message>
+	<message key="manager.distribution.publishingMode.openAccess">Het tijdschrift biedt vrije toegang (open access) tot de inhoud.</message>
 	<message key="manager.setup.pageNumberIdentifier">Paginanummer optie</message>
 	<message key="manager.setup.policies">Beleid</message>
 	<message key="manager.setup.policies.description">Focus, peer review, secties, privacy, beveiliging en andere gegevens over het tijdschrift.</message>
 	<message key="manager.setup.printIssn">ISSN gedrukte versie</message>
 	<message key="manager.setup.proofingInstructions">Instructies voor proeflezen</message>
 	<message key="manager.setup.proofingInstructionsDescription">De instructies voor proeflezen worden beschikbaar gesteld aan proeflezers, auteurs, opmaakredacteuren en sectieredacteuren tijdens de inzendingsbewerking-fase. Hieronder een standaard set instructies in HTML, die door de tijdschriftbeheerder op ieder moment veranderd of vervangen kan worden  (in HTML of tekst).</message>
-	<message key="manager.setup.provideRefLinkInstructions">Lever instructies aan opmaakredacteuren.</message>
 	<message key="manager.setup.publicationSchedule">Publicatieschema</message>
 	<message key="manager.setup.publicationScheduleDescription">Artikelen kunnen collectief gepubliceerd worden als onderdeel van een nummer met een eigen inhoudsopgave. Het is ook mogelijk om artikelen te publiceren zodra ze gereed zijn door ze toe te voegen aan de inhoudsopgave van het "actuele" volume. Geef lezers in Over dit tijdschrift inzicht in het systeem dat door dit tijdschrift gebruikt wordt en in de verwachte verschijningsfrequentie.</message>
 	<message key="manager.setup.publicationScheduling">Publicatieplanning</message>
 	<message key="manager.setup.publicIdentifier">Identificatie van tijdschriftinhoud</message>
 	<message key="manager.setup.publisher">Uitgever</message>
-	<message key="manager.setup.publisherDescription">De naam van de organisatie die het tijdschrift uitgeeft wordt getoond bij Over dit tijdschrift.</message>
+	<message key="manager.setup.publishingDescription">De naam van de organisatie die het tijdschrift uitgeeft wordt getoond bij Over dit tijdschrift.</message>
 	<message key="manager.setup.referenceLinking">Linken van referenties</message>
-	<message key="manager.setup.refLinkInstructions.description">Opmaakinstructies voor het linken van referenties</message>
 	<message key="manager.setup.restrictArticleAccess">Gebruikers moeten geregistreerd en ingelogd zijn om open access materiaal te bekijken.</message>
 	<message key="manager.setup.restrictSiteAccess">Gebruikers moeten geregistreerd en ingelogd zijn om het tijdschrift te bekijken.</message>
 	<message key="manager.setup.reviewGuidelines">Review richtlijnen</message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[De review richtlijnen verschaffen de reviewers de criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in dit tijdschrift. Ze bevatten ook instructies voor het maken van een effectief en behulpzaam review. Bij het uitvoeren van het review krijgen reviewers twee tekstvelden, de eerste "voor auteur en redacteur" en de tweede "voor redacteur". Het is ook mogelijk dat de tijdschriftbeheerder een reviewformulier aanmaakt onder <a href="{$reviewFormsUrl}" class="action">Reviewformulieren</a>. In alle gevallen krijgen redacteuren de optie om de reviews op te nemen in hun correspondentie met de auteur.]]></message>
 	<message key="manager.setup.reviewOptions">Opties voor reviews</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automatische e-mail herinneringen (beschikbaar in de standaard e-mails van OJS) kunnen op twee momenten naar de reviewer gestuurd worden (de redacteur kan de reviewer altijd direct e-mailen)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Noot:</strong> Om deze opties te kunnen activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. Additionale serverconfiguratie is mogelijk nodig om deze functionaliteit te kunnen gebruiken (wat wellicht niet op alle servers mogelijk is), zoals aangegeven is in de OJS documentatie.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Blinde review</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">De vastgestelde tijd voor een review</message>
 	<message key="manager.setup.reviewOptions.onQuality">Redacteurs beoordelen de reviewers op een vijfpuntsschaal op kwaliteit na iedere review.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Reviewers hebben pas toegang tot een inzending nadat ze toegestemd hebben om die te beoordelen.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Reviewers hebben pas toegang tot een inzending nadat ze toegestemd hebben om die te beoordelen.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Toegang voor reviewers</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Schakel één-klik toegang voor reviewers in.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Noot:</strong> De e-mail uitnodiging voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteuren geen e-mailadressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigingen aan reviewers als deze optie is ingeschakeld.]]></message>
@@ -250,12 +235,10 @@
 	<message key="manager.setup.reviewOptions.reviewerReminders">Herinneringen aan de reviewer</message>
 	<message key="manager.setup.reviewPolicy">Beleid voor reviews</message>
 	<message key="manager.setup.searchEngineIndexing">Zoek-indexering</message>
-	<message key="manager.setup.searchEngineIndexingDescription">Geef hier trefwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift.</message>
+	<message key="manager.setup.searchEngineIndexing.description">Geef hier trefwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Secties en Sectieredacteurs</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(Als er geen sectie wordt opgegeven, wordt het stuk ingezonden voor de artikelen-sectie)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[Ga naar Sectiebeheer om secties voor het tijdschrift aan te maken of te wijzigen (bv. Artikelen, Boekreviews, enz.).<br /><br />Auteurs geven bij de inzending van stukken het volgende aan...]]></message>
-	<message key="manager.setup.securitySettings">Instellingen voor toegang en beveiliging</message>
-	<message key="manager.setup.securitySettingsDescription">OJS biedt een aantal aan beveiliging gerelateerde opties die de toegang tot de inhoud van het tijdschrift kunnen beperken en kan additionele informatie over inzendingen bewaren voor controledoeleinden.</message>
 	<message key="manager.setup.selectEditorDescription">De redacteur die het door het redactieproces zal leiden.</message>
 	<message key="manager.setup.selectSectionDescription">De tijdschriftsectie waarvoor het stuk overwogen moet worden.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Altijd de proefdruk-links tonen en beperkte toegang aangeven.</message>
@@ -269,8 +252,7 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">Bij het aanleveren van een inzending voor het tijdschrift wordt aan auteurs gevraagd om eerst ieder punt op de checklist ter voorbereiding van een inzending af te vinken. De checklist wordt ook getoond in bij de auteursrichtlijnen, onder Over dit tijdschrift. De checklist kan hieronder aangepast worden. Alle punten moeten aangevinkt worden voor auteurs verder kunnen gaan met hun inzending.</message>
 	<message key="manager.setup.submissions">Inzendingen</message>
 	<message key="manager.setup.submissions.description">Auteursrichtlijnen, copyright, and indexering (inclusief registratie).</message>
-	<message key="manager.setup.subscription">Het tijdschrift vereist een abonnement om toegang tot een deel van of al het materiaal te krijgen.</message>
-	<message key="manager.setup.subscriptionDescription">Dit vereist het aanwijzen van een abonnementenbeheerder die toegang heeft tot de abonnementenmodule.  Die module heeft additionele opties voor open access, zelfarchivering en e-mail notificatie.</message>
+	<message key="manager.distribution.publishingMode.subscription">Het tijdschrift vereist een abonnement om toegang tot een deel van of al het materiaal te krijgen.</message>
 	<message key="manager.setup.typeExamples">(Bv. Historisch onderzoek; Quasi-Experimenteel; Literaire Analyse; Enquete/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Type (methode/benadering)</message>
 	<message key="manager.setup.typeProvideExamples">Geef voorbeelden van relevante onderzoekstypes, -methodes en -benaderingen voor dit veld</message>
@@ -278,7 +260,6 @@
 	<message key="manager.setup.uniqueIdentifierDescription">Artikelen en nummers kunnen gelabeld worden met een identificatienummer of -tekst, gebruikmakend van een registratiesysteem als het Digital Object Identifier System (DOI).</message>
 	<message key="manager.setup.useEditorialReviewBoard">Dit tijdschrift zal een redactie/review team gebruiken.</message>
 	<message key="manager.setup.useImageTitle">Titelafbeelding</message>
-	<message key="manager.setup.useJournalStyleSheet">Stylesheet van het tijdschrift</message>
 	<message key="manager.setup.userRegistration">Registratie van gebruikers</message>
 	<message key="manager.setup.useTextTitle">Titel tekst</message>
 	<message key="manager.statistics.statistics">Tijdschrift statistieken</message>
@@ -304,8 +285,6 @@
 	<message key="manager.statistics.statistics.selectSections">Kies de secties voor het berekenen van de peer-review statistieken van dit tijdschrift.</message>
 	<message key="manager.statistics.statistics.subscriptions">Abonnees</message>
 	<message key="manager.subscriptionPolicies">Abonnementenbeleid</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">Beleid voor archiveren door de auteur</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">De volgende verklaring voor publiceren door de auteur wordt getoond bij Verlaringen in Over dit tijdschrift</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Vertraagde Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">In het geval van vertraagde open access kunnen redacteuren specifieke artikelen binnen een nummer aanwijzen als open access.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Oude nummers van dit tijdschrift zullen beschikbaar komen in een open access formaat</message>
@@ -470,7 +449,7 @@
 	<message key="manager.sections.wordCountInstructions">Begrens aantal woorden voor deze sectie (0 voor ongelimiteerd):</message>
 	<message key="manager.setup.history">Geschiedenis van het tijdschrift</message>
 	<message key="manager.setup.historyDescription">Deze tekst verschijnt in de "Over" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven.</message>
-	<message key="manager.setup.noPublishing">OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren.</message>
+	<message key="manager.distribution.publishingMode.none">OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Berichten over online betalingen</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatische e-mailberichten (aan te passen door de tijdschriftbeheerders  bij de OJS voorbereide e-mails) die gestuurd kunnen worden aan de abonnementenbeheerder bij het voltooien van online betalingen van abonnementen.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Noot:</strong> Institutionele abonnementen die online gekocht worden vereisen goedkeuring van het opgegeven domein en IP reeksen en activatie van het abonnement door de abonnementenbeheerder.]]></message>
@@ -485,7 +464,6 @@
 	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
 
 	<message key="manager.setup.resetPermissions">Artikel-toestemmingen terugzetten</message>
-	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>
 	<message key="manager.statistics.defaultMetricDescription">Uw tijdschrift is geconfigureerd voor meer dan een gebruiksmeting Gebruiksstatistieken zullen getoond worden in verschillende contexten.
 		Er zijn situaties waar een enkele statistiek gebruikt moet worden, bv. om een geordende lijst van meestgebruikte artikelen te tonen of om
 		zoekresultaten te ranngschikken. Kies een van de hieronder getoonde metrieken als standaard.</message>

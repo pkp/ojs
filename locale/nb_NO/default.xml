@@ -11,7 +11,7 @@
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
- 
+
 <locale name="nb_NO" full_name="Norsk bokmål">
  	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet er ikke tidligere publisert, og er heller ikke til vurdering i noe annet tidsskrift (eller gi forklaring i feltet 'Kommentarer til redaktøren').</message>
 	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen er levert i Microsoft Word eller RTF filformat.</message>
@@ -20,72 +20,7 @@
  	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teksten følger formatkravene for stil og bibliografisk formatering, slik de er angitt i <a href="submissions#authorGuidelines" target="_blank">Forfatterinstruksen</a>, som finnes i <i>Om tidsskriftet</i>.]]></message>
  	<message key="default.journalSettings.privacyStatement">Navn og e-postadresser som skrives inn til dette tidsskriftet og nettstedet vil kun bli brukt for de formålene som er oppgitt for tidsskriftet eller som følger av gyldig rettslig pålegg, og vil ikke bli gjort tilgjengelig verken for andre formål eller for uvedkommende.</message>
  	<message key="default.journalSettings.openAccessPolicy"><![CDATA[Tidsskriftet kommer til å gi alle brukere åpen tilgang <i>(Open Access)</i>, det vil si fri og gratis tilgang til alt publisert innhold.]]></message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Forfattere oppfordres til å gjøre sine artikler fra dette tidsskriftet tilgjengelig på personlige eller institusjonelle nettsted, forutsatt at de bibliografiske detaljdata for primærpubliseringen alltid er oppgitt.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manusredigeringsarbeidet skal forbedre flyt, klarhet, grammatisk korrekthet, ordvalg og formatvalg i artiklene. Dette stadiet er siste sjanse for forfatteren til å gjøre innholdsmessige endringer i teksten, ettersom det neste stadiet er begrenset til korreksjon av trykkfeil og formatering. 
-
-Filen til manusredigering skal være i Word eller .rtf filformat, og kan derfor ganske enkelt redigeres som et vanlig tekstdokument. De følgende instruksene viser to innfallsvinkler til rutiner for manusredigering. Den første bygger på Microsoft Words 'Spor endringer'-funksjon, og krever at både manusredaktøren, redaktøren og forfatteren bruker dette programmet. Den andre innfallsvinkelen er uavhengig av programvare, og er hentet fra  Harvard Educational Review, med deres tillatelse. Vær oppmerksom på at ansvarlig redaktør står fritt til å tilpasse disse instruksene, så kom gjerne med forslag til forbedringer av prosessen. 
-
-<h4>To manusredigeringsrutiner</h4>
-
-<b>1. Microsoft Words 'Spor endringer'</b>
-
-Under Verktøy på menylinjen i Word finnes funksjonen 'Spor endringer', som tillater manusredaktøren å skrive innskudd (teksten vises i farge) og slette (tekst vises overstreket i farge, eller i margen: merket slettet). Manusredaktøren kan dessuten både skrive inn spørsmål til forfatteren [SpF:] og til redaktøren [SpR:] ved å skrive spørsmålene inn i hakeparenteser i teksten. Så lastes den manusredigerte versjonen opp til tidsskriftet, og redaktøren varsles. Redaktøren vurderer deretter teksten med merknadene, og kontakter så forfatteren. 
-
-Redaktøren og forfatteren skal la de endringene de er fornøyde med stå. Hvis videre endringer er nødvendig, kan redaktøren og forfatteren både gjøre sine nye endringer i de første innskuddene eller slettingene, og skrive nye innskudd eller slette andre steder i teksten. Forfatteren og redaktøren bør svare på alle spørsmål manusredaktøren har stilt dem, fortrinnsvis ved å skrive svaret inn i samme hakeparentes [SpF. xxxxx; F. yyyyy]
-
-Etter at teksten er revidert av både redaktøren og forfatteren, skal manusredaktøren foreta en siste gjennomgang for å godkjenne alle endringer, før teksten sendes videre til sideoppsett. 
-
-
-<b>2. Harvard Educational Review  (<i>HER</i>)</b>
-
-<b>Instruks for elektronisk omarbeiding av manuskriptet</b>
-
-Vennligst følg følgende rutine når du skal omarbeide manuskriptet ditt elektronisk:
-
-<b>Svar på foreslåtte endringer</b>
-&nbsp; For hver av de foreslåtte endringene som du aksepterer: fjern uthevingen fra teksten
-&nbsp; For hver av de foreslåtte endringene som du ikke aksepterer: skriv inn den opprinnelige teksten, og <b>uthev</b> den
-
-<b>Foreslå tillegg og strykninger</b>
-&nbsp; Marker tillegg ved å <b>utheve</b> den nye teksten
-&nbsp; Erstatt slettet tekst med: <b>[slettet tekst]</b>
-&nbsp; Hvis du sletter en hel setning eller flere, vennligst presiser dette, for eks. <b>[slettet 2 setninger]</b>
-
-<b>Svar på  spørsmål til forfatteren (SpF)</b>
-&nbsp; La alle SpF stå intakt og uthevet inne i teksten. Ikke slette dem
-&nbsp; For å svare på et SpF, legger du til en kommentar etter det. Kommentarer bør vise i samme format som SpF, i hakeparentes og uthevet, slik:
-<b>[Kommentar: xxxxx</b>]
-&nbsp; for eks. <b>[Kommentar: Utvidet metodediskusjonen, slik Red. foreslo]</b>
-
-<b>Gi kommentarer</b>
-&nbsp; Bruk kommentarer for å forklare strukturendringer eller større omarbeidinger
-&nbsp; for eks. <b>[Kommentar: Flyttet avsnittet ovenfor fra s. 5 til s. 7]</b>
-&nbsp; NB: Når du henviser til sidetall, vennligst bruk sidetallene fra den sidestabile PDF-utgaven av manuskriptet, som du fikk tilsendt sammen medtekstbehandlingsfilen. Dette er viktig fordi sideovergangene endres etter hvert som dokumentfilen blir omarbeidet elektronisk.
-
-<h4>Eksempel på en elektronisk omarbeiding</h4>
-
-<b>Den opprinnelige "manuskript"-filen</b>
-
-Før du foretar drastiske endringer av struktur og disposisjon i originalmanuskriptet ditt, bør du avklare dette med redaktørene for arbeidet med ditt manuskript. Etter at du er ferdig med omarbeidingen, gjør du om filnavnet fra ForfatternavnSpF.doc til ForfatternavnSvSpF.doc (for eks. fra ArvidJensenSpF.doc til ArvidJensenSvSpF.doc). Skriv ut et papireksemplar av manuskriptet ditt, og postlegg det sammen med en diskett med den fullstendig omarbeidete tekstbehandlingsfilen med det nye navnet.
-
-
-<b>Manuskriptversjon til forfatteren med spørsmål og forslag</b>
-
-Før du foretar drastiske endringer av struktur og disposisjon i originalmanuskriptet <b>du her får tilbake for omarbeiding</b>, bør du avklare <b>slike endringer</b> med <b>den fagansvarlige redaktøren</b> for arbeidet med ditt manuskript. Etter at du er ferdig med omarbeidingen, gjør du om filnavnet fra ForfatternavnSpF.doc til ForfatternavnSvSpF.doc (for eks. fra ArvidJensenSpF.doc til ArvidJensenSvSpF.doc). Skriv ut et papireksemplar av manuskriptet ditt, og postlegg det sammen med en diskett med den fullstendig omarbeidete tekstbehandlingsfilen med det nye navnet . <b>[SpF: I dette avsnittet bør det fremheves enda klarere hvor viktig det er at instruksene blir fulgt nøye, fordi redigeringsprosessen ellers kan bli svært forsinket]</b>
-
-<b>Omarbeidet manuskript til <i>HER</i></b>
-
-Før du foretar drastiske endringer av struktur og disposisjon i originalmanuskriptet du her får tilbake for omarbeiding, bør du avklare slike endringer med den fagansvarlige redaktøren for arbeidet med <b>manuskriptet ditt.  Vær oppmerksom på at avvik fra instruksen kan føre til betydelige forsinkelser i det redaksjonelle arbeidet med bidraget ditt.</b>
-
-Etter at du er ferdig med omarbeidingen, gjør du om filnavnet fra ForfatternavnSpF.doc til ForfatternavnSvSpF.doc (for eks. fra ArvidJensenSpF.doc til ArvidJensenSvSpF.doc). Skriv ut et papireksemplar av manuskriptet ditt, og postlegg det sammen med en diskett med den <b>[slettet ord]</b> omarbeidete tekstbehandlingsfilen med det nye navnet . <b>[SpF: I dette avsnittet bør det fremheves enda klarere hvor viktig det er at instruksene blir fulgt nøye, fordi redigeringsprosessen ellers kan bli svært forsinket]</b> [Kommentar: I tråd med kommentaren din her, har jeg lagt til en setning og et avsnittsskift.]</b>
-
-<b>I eksempelet ovenfor:</b>
-&bull; Fjernet utheving av tekst viser at forfatteren godtok endringene i den første setningen
-&bull; En setning er lagt til som følge av SpF. Uthevet tekst viser ny tekst
-&bull; [slettet ord] viser sletting av "fullstendig"
-&bull; [Kommentar] inneholder svar på redaktørens SpF]]></message>
-
- 	<message key="default.journalSettings.proofingInstructions"><![CDATA[Korrekturstadiet skal vanligvis bare korrigere feil i de oppsatte sidenes ortografi, grammatikk, og formatering. Innholdsmessige endringer tillates ikke i dette stadiet, medmindre seksjonsredaktøren har godkjent dette spesielt på forhånd. Klikk på Layout i Vis korrektur for å få se hvilke HTML, PDF og andre tigjengelige filformat som er brukt ved publiseringen av dette elementet. 
+ 	<message key="default.journalSettings.proofingInstructions"><![CDATA[Korrekturstadiet skal vanligvis bare korrigere feil i de oppsatte sidenes ortografi, grammatikk, og formatering. Innholdsmessige endringer tillates ikke i dette stadiet, medmindre seksjonsredaktøren har godkjent dette spesielt på forhånd. Klikk på Layout i Vis korrektur for å få se hvilke HTML, PDF og andre tigjengelige filformat som er brukt ved publiseringen av dette elementet.
 
 <strong>Ved ortografiske og grammatiske feil</strong>
 
@@ -112,11 +47,11 @@ Tallene i Tabell 3, 3. kolonne er ikke rett justert.
 4. FORMATERING
 Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________<br>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]>
+<a href="{$contextUrl}">{$contextName}</a>]]>
 </message>
- 	<message key="default.journalSettings.forReaders"><![CDATA[Vi oppfordrer alle lesere til å registrere seg for å motta publiseringsvarsel fra dette tidsskriftet. Bruk <a href="{$indexUrl}/{$journalPath}/user/register">Registrer</a> lenken øverst på hjemmesiden for tidsskriftet. Da vil du få tilsendt en e-post med innholdsoversikten for hver nye utgivelse fra tidsskriftet. På denne måten kan tidsskriftet dessuten dokumentere leserkretsen sin. Se gjerne tidsskriftets <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Erklæring om personopplysninger</a>, som skal sikre at leserenes navn og e-postadresser ikke brukes for uvedkommende formål.]]></message>
- 	<message key="default.journalSettings.forAuthors"><![CDATA[Ønsker du å sende inn bidrag til dette tidsskriftet? I så fall bør du sette deg inn i  retningslinjene for tidsskriftetsseksjonene under <a href="{$indexUrl}/{$journalPath}/about">Om tidsskriftet</a>, og <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Forfatterinstruksen</a>. Forfattere må <a href="{$indexUrl}/{$journalPath}/user/register">registrere</a> seg i tidsskriftet før de kan sende inn bidrag. Hvis du allerede er registrert, kan du ganske enkelt <a href="{$indexUrl}/index/login">logge inn</a> og starte innsendingsprosessen.]]></message>
- 	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi oppfordrer alle forskningsbibliotekarer til å føre dette tidsskriftet inn i den elektroniske tidsskriftbeholdningen ved deres bibliotek. Dessuten gjør vi oppmerksom på at dette tidsskriftets open source programvare egner seg for bibliotek som vil være vertskap for fagansattes arbeid med fagtidsskrift (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+ 	<message key="default.contextSettings.forReaders"><![CDATA[Vi oppfordrer alle lesere til å registrere seg for å motta publiseringsvarsel fra dette tidsskriftet. Bruk <a href="{$indexUrl}/{$journalPath}/user/register">Registrer</a> lenken øverst på hjemmesiden for tidsskriftet. Da vil du få tilsendt en e-post med innholdsoversikten for hver nye utgivelse fra tidsskriftet. På denne måten kan tidsskriftet dessuten dokumentere leserkretsen sin. Se gjerne tidsskriftets <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Erklæring om personopplysninger</a>, som skal sikre at leserenes navn og e-postadresser ikke brukes for uvedkommende formål.]]></message>
+ 	<message key="default.contextSettings.forAuthors"><![CDATA[Ønsker du å sende inn bidrag til dette tidsskriftet? I så fall bør du sette deg inn i  retningslinjene for tidsskriftetsseksjonene under <a href="{$indexUrl}/{$journalPath}/about">Om tidsskriftet</a>, og <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Forfatterinstruksen</a>. Forfattere må <a href="{$indexUrl}/{$journalPath}/user/register">registrere</a> seg i tidsskriftet før de kan sende inn bidrag. Hvis du allerede er registrert, kan du ganske enkelt <a href="{$indexUrl}/index/login">logge inn</a> og starte innsendingsprosessen.]]></message>
+ 	<message key="default.contextSettings.forLibrarians"><![CDATA[Vi oppfordrer alle forskningsbibliotekarer til å føre dette tidsskriftet inn i den elektroniske tidsskriftbeholdningen ved deres bibliotek. Dessuten gjør vi oppmerksom på at dette tidsskriftets open source programvare egner seg for bibliotek som vil være vertskap for fagansattes arbeid med fagtidsskrift (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
  	<message key="default.journalSettings.lockssLicense"><![CDATA[Dette tidsskriftet benytter LOCKSS systemet for å utvikle et distribuert arkivsystem sammen med andre tilsluttete bibliotek, og tillater disse bibliotekene å opprette permanente fullstendige arkiv av tidsskriftet, til bevarings- og gjenopprettingsformål . <a href="http://www.lockss.org/">Mer...</a>]]></message>
 
 	<message key="section.default.title">Artikler</message>
@@ -124,26 +59,5 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 	<message key="default.journalSettings.publicationFee">Artikkelpublisering</message>
 	<message key="default.journalSettings.purchaseArticleFee">Kjøp artikkel</message>
 	<message key="default.journalSettings.membershipFee">Foreningsmedlemskap</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Å legge til lenker til referanser som del av layoutprosessen</h4>
-	<p>Når et manus gjøres om til HTML eller PDF, må du sørge for at alle hyperlenker i manuset er aktive.</p>
-	<h4>A. Når forfatteren oppgir en lenke med referansen</h4>
-	<ol>
-	<li>Mens manuset fortsatt er i tekstbehandlingsformatet (f.eks. Word), legg teksten SE REFERANSEN på slutten av referansen som har en URL.</li>
-	<li>Gjør den teksten om til en hyperlenke ved å markere den, og bruk Words verktøy for å sette inn hyperlenken forfatteren har angitt.</li>
-	</ol>
-	<h4>B. Gjør det mulig å søke i Google Scholar etter referanser</h4>
-	<ol>
-	<li>Mens manuset fortsatt er i tekstbehandlingsformat (f.eks. Word), kopierer du tittelen på arbeidet det refereres til i referanselisten (om tittelen virker lite spesifikk – f.eks. «Fred» – kopiér forfatter og tittel) .</li>
-	<li>Lim referansens tittel mellom %22-ene nedenfor, med en + mellom hvert ord: http://scholar.google.com/scholar?q=%22LIM+INN+TITTELEN+HER%22&hl=en&lr=&btnG=Search</li>
-	<li>Legg til teksten SØK I GS på slutten av hver referanse i manusets referanseliste.</li>
-	<li>Gjør teksten SØK i GS om til en hyperlenke ved å markere den, og bruk Words verktøy for å sette inn hyperlenker og legg inn URLen du laget under punkt 2 foran.</li>
-	</ol>
-	<h4>C. Gjør det mulig å søke etter referanser med en DOI</h4>
-	<ol>
-	<li>Mens manuset fortsatt er i tekstbehandlingsformatet, kopierer du hele referanselisten inn i CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Lim hver DOI du får tilbake fra spørringen inn i følgende URL (mellom = og &): http://www.cmaj.ca/cgi/external_ref?access_num=LIM DOI#HER&link_type=DOI</li>
-	<li>Legg til teksten «CrossRef» på slutten av hver referanse i manusets referanseliste.</li>
-	<li>Gjør den teksten om til en hyperlenke ved å merke den og bruk Words verktøy for innsetting av hyperlenke, og den aktuelle URLen som ble laget under pkt 2.</li>
-	</ol>]]></message>
 	<message key="default.journalSettings.purchaseIssueFee">Kjøp dette nummeret</message>
 </locale>

@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Revistas Hospedadas</message>
 	<message key="admin.settings.journalRedirect">Redireccionamento para revista hospedada</message>
 	<message key="admin.settings.journalRedirectInstructions">Os pedidos realizados no Portal Principal serão direccionados a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
-	<message key="admin.settings.noJournalRedirect">Não redireccionar</message>
 	<message key="admin.languages.primaryLocaleInstructions">Este será o idioma padrão para o portal e todas as revistas hospedadas.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Os idiomas seleccionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desactivada individualmente por revista). Caso não sejam seleccionados vários idiomas, a lista de idiomas não estará disponível e a opção "configurações de idioma" não estará disponível para as revistas.</message>
 	<message key="admin.languages.confirmUninstall">Deseja realmente remover este idioma? A execução pode afectar revistas hospedas que podem estar utilizando o idioma.</message>
@@ -57,21 +56,9 @@
 	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldAccountCount}" no registo do utilizador "{$newUsername}"? O registo de "{$oldAccountCount}" será eliminado permanentemente. Esta acção é irreversível!</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
-	<message key="admin.settings.options">Opções</message>
 	<message key="admin.settings.defaultMetricDescription">A instalação do OJS foi configurada para guardar mais do que uma métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
 		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar
 		resultados da pesquisa. Por favor, seleccione um das métricas configuradas como padrão.</message>
-	<message key="admin.categories">Categorias</message>
-	<message key="admin.categories.enable.description">O administrador pode escolher definir um mapa de categorias para ajudar na organização de plataformas que alojam muitas revistas. Os directores de revista poderão escolher diversas categorias para cada revista, e leitores pode pesquisar os conteúdos das revistas por categoria.</message>
-	<message key="admin.categories.disableCategories">Não organizar as revistas por categorias</message>
-	<message key="admin.categories.enableCategories">Permitir aos Directores da Revista organizar a revista por categorias.</message>
-	<message key="admin.categories.editTitle">Editar Categoria</message>
-	<message key="admin.categories.createTitle">Criar Categoria</message>
-	<message key="admin.categories.create">Criar uma nova Categoria</message>
-	<message key="admin.categories.noneCreated">Não foram criadas categorias</message>
-	<message key="admin.categories.confirmDelete">Tem a certeza que pretende eliminar esta categoria?</message>
-	<message key="admin.categories.name">Nome</message>
-	<message key="admin.categories.nameRequired">É obrigatório indicar um nome da categoria</message>
 	<message key="admin.languages.confirmDisable">Tem a certeza de que deseja desactivar este idioma? Esta acção pode afectar todas as revistas hospedadas actualmente usando este idioma.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
 	<ul>
@@ -80,7 +67,6 @@
 	</ul>
 <p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
 	<message key="admin.contexts.form.titleRequired">É obrigatório um título.</message>
-	<message key="admin.presses.createInstructions">Será automaticamente inscrito como director desta revista. Após a edição de uma nova revista, será redirecionado para o assistente de configurações, para completar a configuração inicial da revista.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Lembrete de caducidade de subscrição/assinatura</message>
 	<message key="admin.scheduledTask.openAccessNotification">Notificação de Acesso Aberto</message>
 	<message key="admin.scheduledTask.reviewReminder">Lembrete de Revisão</message>

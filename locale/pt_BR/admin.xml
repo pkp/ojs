@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Revistas hospedadas</message>
 	<message key="admin.settings.journalRedirect">Redirecionamento para revista</message>
 	<message key="admin.settings.journalRedirectInstructions">As solicitações realizadas ao portal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
-	<message key="admin.settings.noJournalRedirect">Não redirecionar</message>
 	<message key="admin.languages.primaryLocaleInstructions">Este será o idioma padrão para o portal e todas as revistas hospedadas.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Os idiomas selecionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desativada individualmente por revista). Caso não sejam selecionados vários idiomas, a lista de idiomas não estará disponível e a opção "configurações de idioma" não estará disponível para as revistas.</message>
 	<message key="admin.languages.confirmUninstall">Deseja realmente remover este idioma? A execução pode afetar revistas hospedas que podem estar utilizando o idioma.</message>
@@ -57,18 +56,6 @@
 	<message key="admin.mergeUsers.confirm">Deseja realmente mesclar os "{$oldAccountCount}" cadastro(s) selecionado(s) no cadastro do usuário "{$newUsername}"? Os "{$oldAccountCount}" serão excluídos permanentemente. Esta ação é irreversível!</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
-	<message key="admin.settings.options">Opções</message>
-	<message key="admin.categories">Categorias</message>
-	<message key="admin.categories.enable.description">O Administrador do Sistema poderá definir o conjunto de categorias aqui para ajudar a organizar grandes volumes de publicações. Editores-Gerentes poderão então escolher várias dessas categorias para cada publicação, e leitores poderão navegar nas coleções por categoria.</message>
-	<message key="admin.categories.disableCategories">Não organizar publicações em categorias.</message>
-	<message key="admin.categories.enableCategories">Permitir a gerentes organizar publicações em categorias.</message>
-	<message key="admin.categories.editTitle">Editar categoria</message>
-	<message key="admin.categories.createTitle">Criar categoria</message>
-	<message key="admin.categories.create">Criar nova categoria</message>
-	<message key="admin.categories.noneCreated">Nenhuma categoria criada.</message>
-	<message key="admin.categories.confirmDelete">Deseja realmente excluir esta categoria?</message>
-	<message key="admin.categories.name">Nome</message>
-	<message key="admin.categories.nameRequired">O nome da categoria é obrigatório.</message>
 	<message key="admin.settings.defaultMetricDescription">O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
 
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
@@ -80,7 +67,6 @@
 Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">portal do PKP</a>.</p>]]></message>
 	<message key="admin.contexts.form.titleRequired">O título é obrigatório</message>
 	<message key="admin.languages.confirmDisable">Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer revistas hospedadas utilizando o idioma.</message>
-	<message key="admin.presses.createInstructions">Você será automaticamente designado como o gerente desta revista. Depois de criar uma nova revista, você será redirecionado para o assistente de configurações, para completar a configuração inicial da revista.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Lembrete de Expiração da Assinatura</message>
 	<message key="admin.scheduledTask.openAccessNotification">Notificação de Acesso Aberto</message>
 	<message key="admin.scheduledTask.reviewReminder">Lembrete de Avaliação</message>

@@ -352,11 +352,8 @@
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Altre reti LOCKSS</strong>
-<br /><br />
-Se ritieni di aver accesso a una o più reti LOCKSS elencate <a href="http://www.lockss.org/community/networks/" target="_blank">qui</a>, contatta l'amministratore della rete di tuo interesse per richiedere l'inclusione. Il completamento del modulo qui sotto permetterà l'inclusione della rivista nella rete. <em>Non verrà conservato alcun contenuto prima che tu avverta il gestore della rete di tuo interesse</em>.]]></message>
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta di notifica dell'uso di una licenza Creative Commons nell'Informativa sui diritti</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Proposta di notifica dell'uso di una licenza Creative Commons nell'Informativa sui diritti</h3>
 <h4>1. Proposta per riviste Open Access</h4>
 Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 <ol type="a">
@@ -750,7 +747,6 @@ Seleziona un modello per gestire questi aspetti del processo editoriale. (Per de
 	<message key="about.delayedOpenAccess">Open Access con embargo</message>
 	<message key="about.delayedOpenAccessDescription1">I contenuti di questa rivista saranno resi disponibili ad accesso aperto</message>
 	<message key="about.delayedOpenAccessDescription2">mese/i dopo la pubblicazione di ciascun fascicolo.</message>
-	<message key="about.authorSelfArchive">Author Self-Archiving</message>
 	<message key="about.archiving">Archiviazione</message>
 	<message key="about.subscriptions">Abbonamenti</message>
 	<message key="about.subscriptions.individual">Abbonamenti individuali</message>
@@ -936,53 +932,7 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 
 	<message key="log.imported">{$userName} ha importato un articolo{$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-
-	<message key="rt.admin.settings">Impostazioni</message>
-
-	<message key="rt.admin.settings.description">Gli strumenti di lettura compaiono in una colonna accanto agli articoli pubblicati, nelle sezioni della rivista definite per l'indicizzazione. Essi consistono in una serie di strumenti legati agli articoli pubblicati, elencati qui sotto, e un insieme di strumenti che danno accesso a risorse correlate e sono organizzati per materie e argomento.</message>
-	<message key="rt.admin.settings.enableReadingTools">Abilita i Reading Tool per determinate sezioni della rivista.</message>
-	<message key="rt.admin.settings.relatedItems">Campo</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Vedi gli <a href="{$relatedItemsLink}" class="action">Strumenti per risorse correlate</a> per vedere, aggiungere, correggere, o cancellare risorse correlate per ogni campo.]]></message>
-
-	<message key="rt.admin.options">Opzioni</message>
-	<message key="rt.admin.relatedItems">Strumenti per risorse correlate</message>
-
-	<message key="rt.admin.settings.addComment">Aggiunti un commento (abilita i lettori a inviare commenti; il Journal Manager può comunque rimuoverli).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e autenticati per inviare commenti; l'anonimato non è permesso.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e autenticati per inviare commenti; l'anonimato è permesso.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Gli utenti non devono essere registrati e autenticati per inviare commenti; l'anonimato è permesso.</message>
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Sono elencati di seguito gli URL che probabilmente non sono validi per la ricerca nei siti.<br/>
-&#x00C8; necessario verificare manualmente gli URL segnati come non validi, in quanto questo test non è accurato al 100%.<br/>
-Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che richiedono dati inviati tramite form.]]></message>
-
-	<!-- RT Entities -->
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Autore</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nome dell'autore, affiliazione, nazione</message>
-	<message key="rt.metadata.pkp.peerReviewed">Articolo Peer-reviewed</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Ricevi una notifica quando...</message>
-
-	<message key="rt.thisJournal">Cerca nella rivista</message>
-
-
-	<message key="rt.context.authorTermsDescription">Per gli articoli con più di un autore, mantieni contrassegnati tutti nomi per ricercare lavori con analoghi co-autori, oppure, contrassegnando solo il nome dell'autore, troverai tutte le sue opere. Queste risorse sono state selezionate per la loro rilevanza e il loro libero accesso a tutto o una parte dei loro contenuti.</message>
+	<message key="metadata.pkp.peerReviewed">Articolo Peer-reviewed</message>
 
 	<!-- Notification Types -->
 

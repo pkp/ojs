@@ -1,0 +1,316 @@
+{
+	"title": "Journal",
+	"description": "A journal.",
+	"properties": {
+		"abbreviation": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"clockssLicense": {
+			"type": "string",
+			"multilingual": true,
+			"defaultLocaleKey": "default.journalSettings.clockssLicense",
+			"validation": [
+				"nullable"
+			]
+		},
+		"currency": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"currency"
+			]
+		},
+		"delayedOpenAccessDuration": {
+			"type": "integer",
+			"validation": [
+				"nullable"
+			]
+		},
+		"delayedOpenAccessPolicy": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"enableOpenAccessNotification": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"enableSubscriptionOnlinePaymentNotificationRenewIndividual": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"enableSubscriptionOnlinePaymentNotificationRenewInstitutional": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"journalThumbnail": {
+			"type": "object",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			],
+			"properties": {
+				"temporaryFileId": {
+					"type": "integer",
+					"writeOnly": "true"
+				},
+				"name": {
+					"type": "string"
+				},
+				"uploadName": {
+					"type": "string"
+				},
+				"width": {
+					"type": "integer"
+				},
+				"height": {
+					"type": "integer"
+				},
+				"dateUploaded": {
+					"type": "string",
+					"validation": [
+						"date_format:Y-m-d H:i:s"
+					]
+				},
+				"altText": {
+					"type": "string"
+				}
+			}
+		},
+		"lockssLicense": {
+			"type": "string",
+			"multilingual": true,
+			"defaultLocaleKey": "default.journalSettings.lockssLicense",
+			"validation": [
+				"nullable"
+			]
+		},
+		"membershipFee": {
+			"type": "number",
+			"default": 0,
+			"validation": [
+				"nullable"
+			]
+		},
+		"membershipFeeDescription": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"membershipFeeName": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"numMonthsAfterSubscriptionExpiryReminder": {
+			"type": "integer",
+			"validation": [
+				"nullable"
+			]
+		},
+		"numMonthsBeforeSubscriptionExpiryReminder": {
+			"type": "integer",
+			"validation": [
+				"nullable"
+			]
+		},
+		"numWeeksAfterSubscriptionExpiryReminder": {
+			"type": "integer",
+			"validation": [
+				"nullable"
+			]
+		},
+		"numWeeksBeforeSubscriptionExpiryReminder": {
+			"type": "integer",
+			"validation": [
+				"nullable"
+			]
+		},
+		"onlineIssn": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"issn"
+			]
+		},
+		"paymentPluginName": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
+		"paymentsEnabled": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"printIssn": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"issn"
+			]
+		},
+		"publicationFee": {
+			"type": "number",
+			"default": 0,
+			"validation": [
+				"nullable"
+			]
+		},
+		"publicationFeeDescription": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"publicationFeeName": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"purchaseArticleFee": {
+			"type": "number",
+			"default": 0,
+			"validation": [
+				"nullable"
+			]
+		},
+		"purchaseArticleFeeDescription": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"purchaseArticleFeeEnabled": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"purchaseArticleFeeName": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"purchaseIssueFee": {
+			"type": "number",
+			"validation": [
+				"nullable"
+			]
+		},
+		"purchaseIssueFeeEnabled": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"restrictArticleAccess": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"restrictOnlyPdf": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"submissionFee": {
+			"type": "number",
+			"validation": [
+				"nullable"
+			]
+		},
+		"submissionFeeDescription": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"submissionFeeName": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"subscriptionAdditionalInformation": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"subscriptionEmail": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"email_or_localhost"
+			]
+		},
+		"subscriptionExpiryPartial": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"subscriptionMailingAddress": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
+		"subscriptionName": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
+		"subscriptionPhone": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		}
+	}
+}

@@ -144,7 +144,7 @@ class ArticleHandler extends Handler {
 
 		// Copyright and license info
 		$templateMgr->assign(array(
-			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
+			'licenseTerms' => $journal->getLocalizedData('licenseTerms'),
 		));
 		if ($article->getLicenseURL()) $templateMgr->assign(array(
 			'licenseUrl' => $article->getLicenseURL(),
@@ -315,7 +315,7 @@ class ArticleHandler extends Handler {
 			$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.
-			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId) {
+			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getData('restrictArticleAccess') && isset($galleyId) && $galleyId) {
 				Validation::redirectLogin();
 			}
 
@@ -363,7 +363,7 @@ class ArticleHandler extends Handler {
 							$this->article = $publishedArticle;
 							return true;
 						} elseif ($paymentManager->purchaseArticleEnabled()) {
-							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
+							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getData('purchaseArticleFee'));
 							$paymentManager->queuePayment($queuedPayment);
 
 							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
@@ -395,5 +395,3 @@ class ArticleHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 	}
 }
-
-

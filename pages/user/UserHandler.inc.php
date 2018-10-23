@@ -27,7 +27,7 @@ class UserHandler extends PKPUserHandler {
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 		$templateMgr = TemplateManager::getManager($request);
-		if (!$journal || !$user || $journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) {
+		if (!$journal || !$user || $journal->getData('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) {
 			$request->redirect(null, 'index');
 		}
 
@@ -55,11 +55,11 @@ class UserHandler extends PKPUserHandler {
 		$this->setupTemplate($request);
 
 		$templateMgr->assign(array(
-			'subscriptionName' => $journal->getSetting('subscriptionName'),
-			'subscriptionEmail' => $journal->getSetting('subscriptionEmail'),
-			'subscriptionPhone' => $journal->getSetting('subscriptionPhone'),
-			'subscriptionMailingAddress' => $journal->getSetting('subscriptionMailingAddress'),
-			'subscriptionAdditionalInformation' => $journal->getLocalizedSetting('subscriptionAdditionalInformation'),
+			'subscriptionName' => $journal->getData('subscriptionName'),
+			'subscriptionEmail' => $journal->getData('subscriptionEmail'),
+			'subscriptionPhone' => $journal->getData('subscriptionPhone'),
+			'subscriptionMailingAddress' => $journal->getData('subscriptionMailingAddress'),
+			'subscriptionAdditionalInformation' => $journal->getLocalizedData('subscriptionAdditionalInformation'),
 			'journalTitle' => $journal->getLocalizedName(),
 			'journalPath' => $journal->getPath(),
 			'individualSubscriptionTypesExist' => $individualSubscriptionTypesExist,
@@ -76,8 +76,8 @@ class UserHandler extends PKPUserHandler {
 	 * @return boolean True iff setup is incomplete
 	 */
 	function _checkIncompleteSetup($journal) {
-		if($journal->getLocalizedAcronym() == '' || $journal->getSetting('contactEmail') == '' ||
-		   $journal->getSetting('contactName') == '' || $journal->getLocalizedSetting('abbreviation') == '') {
+		if($journal->getLocalizedAcronym() == '' || $journal->getData('contactEmail') == '' ||
+		   $journal->getData('contactName') == '' || $journal->getLocalizedData('abbreviation') == '') {
 			return true;
 		} else return false;
 	}
@@ -103,7 +103,7 @@ class UserHandler extends PKPUserHandler {
 	function purchaseSubscription($args, $request) {
 		$this->validate(null, $request);
 		$journal = $request->getJournal();
-		if (empty($args) || !$journal || $journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+		if (empty($args) || !$journal || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
 			$request->redirect(null, 'index');
 		}
 
@@ -181,7 +181,7 @@ class UserHandler extends PKPUserHandler {
 
 		$journal = $request->getJournal();
 		if (!$journal) $request->redirect(null, 'index');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'index');
+		if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'index');
 
 		$paymentManager = Application::getPaymentManager($journal);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
@@ -278,7 +278,7 @@ class UserHandler extends PKPUserHandler {
 	function completePurchaseSubscription($args, $request) {
 		$this->validate(null, $request);
 		$journal = $request->getJournal();
-		if (!$journal || count($args) != 2 || $journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+		if (!$journal || count($args) != 2 || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
 			$request->redirect(null, 'index');
 		}
 
@@ -324,7 +324,7 @@ class UserHandler extends PKPUserHandler {
 	function payRenewSubscription($args, $request) {
 		$this->validate(null, $request);
 		$journal = $request->getJournal();
-		if (count($args) != 2 || !$journal || $journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+		if (count($args) != 2 || !$journal || $journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
 			$request->redirect(null, 'index');
 		}
 
@@ -382,7 +382,7 @@ class UserHandler extends PKPUserHandler {
 
 		$paymentManager = Application::getPaymentManager($journal);
 
-		$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getSetting('membershipFee'));
+		$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getData('membershipFee'));
 		$paymentManager->queuePayment($queuedPayment);
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);

@@ -34,7 +34,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff configured
 	 */
 	function isConfigured() {
-		return parent::isConfigured() && $this->_context->getSetting('paymentsEnabled');
+		return parent::isConfigured() && $this->_context->getData('paymentsEnabled');
 	}
 
 	/**
@@ -120,7 +120,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function publicationEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('publicationFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('publicationFee') > 0;
 	}
 
 	/**
@@ -128,7 +128,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function membershipEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('membershipFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('membershipFee') > 0;
 	}
 
 	/**
@@ -136,7 +136,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseArticleEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('purchaseArticleFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('purchaseArticleFee') > 0;
 	}
 
 	/**
@@ -144,7 +144,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseIssueEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('purchaseIssueFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('purchaseIssueFee') > 0;
 	}
 
 	/**
@@ -152,7 +152,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function onlyPdfEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('restrictOnlyPdf');
+		return $this->isConfigured() && $this->_context->getData('restrictOnlyPdf');
 	}
 
 	/**
@@ -160,7 +160,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return PaymentPlugin
 	 */
 	function getPaymentPlugin() {
-		$paymentMethodPluginName = $this->_context->getSetting('paymentPluginName');
+		$paymentMethodPluginName = $this->_context->getData('paymentPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
 			$plugins = PluginRegistry::loadCategory('paymethod');

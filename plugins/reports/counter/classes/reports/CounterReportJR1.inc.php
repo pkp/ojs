@@ -147,9 +147,9 @@ class CounterReportJR1 extends CounterReport {
 		$journalName = $journal->getLocalizedName();
 		$journalPubIds = array();
 		foreach (array('print', 'online') as $issnType) {
-			if ($journal->getSetting($issnType.'Issn')) {
+			if ($journal->getData($issnType.'Issn')) {
 				try {
-					$journalPubIds[] = new COUNTER\Identifier(ucfirst($issnType).'_ISSN', $journal->getSetting($issnType.'Issn'));
+					$journalPubIds[] = new COUNTER\Identifier(ucfirst($issnType).'_ISSN', $journal->getData($issnType.'Issn'));
 				} catch (Exception $ex) {
 					// Just ignore it
 				}

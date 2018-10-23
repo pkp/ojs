@@ -17,8 +17,8 @@
 
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
-		{elseif $journal->getLocalizedSetting('searchDescription')}
-			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
+		{elseif $journal->getLocalizedData('searchDescription')}
+			{assign var="description" value=$journal->getLocalizedData('searchDescription')}
 		{/if}
 
 		<description>{$description|strip|escape:"html"}</description>
@@ -28,16 +28,16 @@
 			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
 		{/if}
 
-		{if $journal->getLocalizedSetting('copyrightNotice')}
-			<copyright>{$journal->getLocalizedSetting('copyrightNotice')|strip|escape:"html"}</copyright>
+		{if $journal->getLocalizedData('licenseTerms')}
+			<copyright>{$journal->getLocalizedData('licenseTerms')|strip|escape:"html"}</copyright>
 		{/if}
 
-		{if $journal->getSetting('contactEmail')}
-			<managingEditor>{$journal->getSetting('contactEmail')|strip|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|strip|escape:"html"}){/if}</managingEditor>
+		{if $journal->getData('contactEmail')}
+			<managingEditor>{$journal->getData('contactEmail')|strip|escape:"html"}{if $journal->getData('contactName')} ({$journal->getData('contactName')|strip|escape:"html"}){/if}</managingEditor>
 		{/if}
 
-		{if $journal->getSetting('supportEmail')}
-			<webMaster>{$journal->getSetting('supportEmail')|strip|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|strip|escape:"html"}){/if}</webMaster>
+		{if $journal->getData('supportEmail')}
+			<webMaster>{$journal->getData('supportEmail')|strip|escape:"html"}{if $journal->getData('contactName')} ({$journal->getData('supportName')|strip|escape:"html"}){/if}</webMaster>
 		{/if}
 
 		{if $issue->getDatePublished()}

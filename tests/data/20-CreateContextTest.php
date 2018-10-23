@@ -58,21 +58,21 @@ class CreateContextTest extends WebTestCase {
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
 		$this->clickAndWait($selector);
-		$this->waitForElementPresent('css=[id^=abbreviation-]');
-		$this->type('css=[id^=abbreviation-]', 'J Pub Know');
-		$this->type('css=[id^=acronym-]', 'PK');
-		$this->click('//form[@id=\'mastheadForm\']//button[text()=\'Save\']');
-		$this->waitForTextPresent('Your changes have been saved.');
+		$this->waitForElementPresent('css=[id*=abbreviation-]');
+		$this->type('css=[id*=abbreviation-]', 'J Pub Know');
+		$this->type('css=[id*=acronym-]', 'PK');
+		$this->click('//button[text()=\'Submit\']');
+		$this->waitForTextPresent('The masthead details for this journal have been successfully updated.');
 
 		// Management > Settings > Contact
 		$this->click('link=Contact');
-		$this->waitForElementPresent($selector='css=[id^=contactEmail-]');
+		$this->waitForElementPresent($selector='css=[id*=contactEmail-]');
 		$this->type($selector, 'rvaca@mailinator.com');
-		$this->type('css=[id^=contactName-]', 'Ramiro Vaca');
-		$this->type('css=[id^=supportEmail-]', 'rvaca@mailinator.com');
-		$this->type('css=[id^=supportName-]', 'Ramiro Vaca');
-		$this->type('css=[id^=mailingAddress-]', "123 456th Street\nBurnaby, British Columbia\nCanada");
-		$this->click('//form[@id=\'contactForm\']//button[text()=\'Save\']');
-		$this->waitForTextPresent('Your changes have been saved.');
+		$this->type('css=[id*=contactName-]', 'Ramiro Vaca');
+		$this->type('css=[id*=supportEmail-]', 'rvaca@mailinator.com');
+		$this->type('css=[id*=supportName-]', 'Ramiro Vaca');
+		$this->type('css=[id*=mailingAddress-]', "123 456th Street\nBurnaby, British Columbia\nCanada");
+		$this->click('//button[text()=\'Submit\']');
+		$this->waitForTextPresent('The contact details for this journal have been successfully updated.');
 	}
 }

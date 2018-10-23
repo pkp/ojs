@@ -239,8 +239,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 				PAYMENT_TYPE_PUBLICATION,
 				$markAsPaid ? $submitterAssignment->getUserId() : $user->getId(),
 				$submission->getId(),
-				$markAsPaid ? $context->getSetting('publicationFee') : 0,
-				$markAsPaid ? $context->getSetting('currency') : ''
+				$markAsPaid ? $context->getData('publicationFee') : 0,
+				$markAsPaid ? $context->getData('currency') : ''
 			);
 
 			$paymentManager->queuePayment($queuedPayment);

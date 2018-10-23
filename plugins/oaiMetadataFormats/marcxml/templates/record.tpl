@@ -15,14 +15,14 @@
 	{if $article->getDatePublished()}
 		<controlfield tag="008">"{$article->getDatePublished()|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>
 	{/if}
-	{if $journal->getSetting('onlineIssn')}
+	{if $journal->getData('onlineIssn')}
 		<datafield tag="022" ind1="#" ind2="#">
-			<subfield code="$a">{$journal->getSetting('onlineIssn')|escape}</subfield>
+			<subfield code="$a">{$journal->getData('onlineIssn')|escape}</subfield>
 		</datafield>
 	{/if}
-	{if $journal->getSetting('printIssn')}
+	{if $journal->getData('printIssn')}
 		<datafield tag="022" ind1="#" ind2="#">
-			<subfield code="$a">{$journal->getSetting('printIssn')|escape}</subfield>
+			<subfield code="$a">{$journal->getData('printIssn')|escape}</subfield>
 		</datafield>
 	{/if}
 	<datafield tag="042" ind1=" " ind2=" ">
@@ -50,8 +50,8 @@
 	</datafield>{/if}
 
 	{assign var=publisher value=$journal->getName($journal->getPrimaryLocale())}
-	{if $journal->getSetting('publisherInstitution')}
-		{assign var=publisher value=$journal->getSetting('publisherInstitution')}
+	{if $journal->getData('publisherInstitution')}
+		{assign var=publisher value=$journal->getData('publisherInstitution')}
 	{/if}
 	<datafield tag="260" ind1=" " ind2=" ">
 		<subfield code="b">{$publisher|escape}</subfield>

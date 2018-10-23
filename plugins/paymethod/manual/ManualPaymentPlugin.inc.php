@@ -44,17 +44,50 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function register($category, $path, $mainContextId = null) {
 		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
+			\HookRegistry::register('Form::config::before', array($this, 'addSettings'));
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * @copydoc PaymethodPlugin::getSettingsForm()
+	 * Add settings to the payments form
+	 *
+	 * @param $hookName string
+	 * @param $form FormComponent
 	 */
-	function getSettingsForm($context) {
-		$this->import('ManualPaymentSettingsForm');
-		return new ManualPaymentSettingsForm($this, $context->getId());
+	public function addSettings($hookName, $form) {
+		if ($form->id !== FORM_PAYMENT_SETTINGS) {
+			return;
+		}
+
+		$context = Application::getRequest()->getContext();
+		if (!$context) {
+			return;
+		}
+
+		$form->addGroup([
+				'id' => 'manualPayment',
+				'label' => __('plugins.paymethod.manual.displayName'),
+				'showWhen' => 'paymentsEnabled',
+			])
+			->addField(new FieldTextArea('manualInstructions', [
+				'label' => __('plugins.paymethod.manual.settings'),
+				'value' => $this->getSetting($context->getId(), 'manualInstructions'),
+				'groupId' => 'manualPayment',
+			]));
+
+		return;
+	}
+
+	/**
+	 * @copydoc PaymethodPlugin::saveSettings()
+	 */
+	public function saveSettings($params, $slimRequest, $request) {
+		$allParams = $slimRequest->getParsedBody();
+		$manualInstructions = isset($allParams['manualInstructions']) ? (string) $allParams['manualInstructions'] : '';
+		$this->updateSetting($request->getContext()->getId(), 'manualInstructions', $manualInstructions);
+		return [];
 	}
 
 	/**
@@ -109,8 +142,8 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 			case 'notify':
 				import('lib.pkp.classes.mail.MailTemplate');
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-				$contactName = $context->getSetting('contactName');
-				$contactEmail = $context->getSetting('contactEmail');
+				$contactName = $context->getData('contactName');
+				$contactEmail = $context->getData('contactEmail');
 				$mail = new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
 				$mail->setReplyTo(null);
 				$mail->addRecipient($contactEmail, $contactName);
