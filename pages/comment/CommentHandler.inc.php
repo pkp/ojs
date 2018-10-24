@@ -240,7 +240,7 @@ class CommentHandler extends Handler {
 				$request->url(null, 'article', 'view', array(
 					$article->getBestArticleId($request->getJournal()), $galleyId
 				)),
-				String::stripUnsafeHtml($article->getLocalizedTitle()),
+				PKPString::stripUnsafeHtml($article->getLocalizedTitle()),
 				true
 			)
 		);

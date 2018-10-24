@@ -146,7 +146,7 @@ class DOAJExportDom {
 			if (empty($title)) continue;
 
 			$titleNode = XMLCustomWriter::createChildWithText($doc, $root, 'title', $title);
-			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($titleNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
+			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($titleNode, 'language', DOAJExportDom::mapLang(PKPString::substr($locale, 0, 2)));
 		}
 
 		/* --- Authors and affiliations --- */
@@ -176,8 +176,8 @@ class DOAJExportDom {
 		foreach ((array) $article->getAbstract(null) as $locale => $abstract) {
 			if (empty($abstract)) continue;
 
-			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', String::html2text($abstract));
-			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($abstractNode, 'language', DOAJExportDom::mapLang(String::substr($locale, 0, 2)));
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', PKPString::html2text($abstract));
+			if (strlen($locale) == 5) XMLCustomWriter::setAttribute($abstractNode, 'language', DOAJExportDom::mapLang(PKPString::substr($locale, 0, 2)));
 		}
 
 		/* --- FullText URL --- */

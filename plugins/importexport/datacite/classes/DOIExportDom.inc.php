@@ -242,7 +242,7 @@ class DOIExportDom {
 	 */
 	function &createElementWithText($name, $value, $attributes = array()) {
 		$element =& XMLCustomWriter::createElement($this->getDoc(), $name);
-		$elementContent =& XMLCustomWriter::createTextNode($this->getDoc(), String::html2text($value));
+		$elementContent =& XMLCustomWriter::createTextNode($this->getDoc(), PKPString::html2text($value));
 		XMLCustomWriter::appendChild($element, $elementContent);
 		foreach($attributes as $attributeName => $attributeValue) {
 			XMLCustomWriter::setAttribute($element, $attributeName, $attributeValue);

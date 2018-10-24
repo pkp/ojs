@@ -281,7 +281,7 @@ class SubscriptionAction {
 			$searchMatch = Request::getUserVar('searchMatch');
 
 		} else if (isset($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}

@@ -153,7 +153,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		}
 
 		// Perform replacement for ojs://... URLs
-		$contents = String::regexp_replace_callback(
+		$contents = PKPString::regexp_replace_callback(
 			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
 			array(&$this, '_handleOjsUrl'),
 			$contents
@@ -178,7 +178,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 		// if client encoding is set to iso-8859-1, transcode string to HTML entities
 		// since we transform all XML in utf8 and can't rely on built-in PHP functions
-		if (LOCALE_ENCODING == "iso-8859-1") $contents =& String::utf2html($contents);
+		if (LOCALE_ENCODING == "iso-8859-1") $contents =& PKPString::utf2html($contents);
 
 		return $contents;
 	}

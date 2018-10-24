@@ -859,7 +859,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$registeredDoi = $object->getPubId('doi');
 		assert(!empty($registeredDoi));
 		if ($this->isTestMode($request)) {
-			$registeredDoi = String::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
+			$registeredDoi = PKPString::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
 		}
 		$this->saveRegisteredDoi($object, $registeredDoi);
 	}

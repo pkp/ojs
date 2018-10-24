@@ -68,7 +68,7 @@ class UserBlockPlugin extends BlockPlugin {
 					$loginUrl = Request::url(null, 'login');
 					$forceSSL = true;
 				}
-				$loginUrl = String::regexp_replace('/^http:/', 'https:', $loginUrl);
+				$loginUrl = PKPString::regexp_replace('/^http:/', 'https:', $loginUrl);
 			}
 			$templateMgr->assign('userBlockLoginSSL', $forceSSL);
 			$templateMgr->assign('userBlockLoginUrl', $loginUrl);

@@ -340,7 +340,7 @@ class CrossRefExportDom extends DOIExportDom {
 		/* Abstracts */
 		if ($article->getAbstract($journal->getPrimaryLocale())) {
 			$abstractNode =& XMLCustomWriter::createElement($doc, 'jats:abstract');
-			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'jats:p', String::html2utf(strip_tags($article->getAbstract($journal->getPrimaryLocale()))));
+			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'jats:p', PKPString::html2utf(strip_tags($article->getAbstract($journal->getPrimaryLocale()))));
 			XMLCustomWriter::appendChild($journalArticleNode, $abstractNode);
 		}
 

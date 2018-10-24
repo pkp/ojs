@@ -1735,9 +1735,9 @@ class SolrWebService extends XmlWebService {
 		if (is_null($queryKeywords)) {
 			// Query keywords.
 			$queryKeywords = array(
-				String::strtoupper(__('search.operator.not')) => 'NOT',
-				String::strtoupper(__('search.operator.and')) => 'AND',
-				String::strtoupper(__('search.operator.or')) => 'OR'
+				PKPString::strtoupper(__('search.operator.not')) => 'NOT',
+				PKPString::strtoupper(__('search.operator.and')) => 'AND',
+				PKPString::strtoupper(__('search.operator.or')) => 'OR'
 			);
 		}
 
@@ -1749,7 +1749,7 @@ class SolrWebService extends XmlWebService {
 
 		// Translate the search phrase.
 		foreach($translationTable as $translateFrom => $translateTo) {
-			$searchPhrase = String::regexp_replace("/(^|\s)$translateFrom(\s|$)/i", "\\1$translateTo\\2", $searchPhrase);
+			$searchPhrase = PKPString::regexp_replace("/(^|\s)$translateFrom(\s|$)/i", "\\1$translateTo\\2", $searchPhrase);
 		}
 
 		return $searchPhrase;
@@ -1869,12 +1869,12 @@ class SolrWebService extends XmlWebService {
 		// Check whether the suggestion really concerns the
 		// last word of the user input.
 		if (!(isset($startOffset) && isset($endOffset)
-			&& String::strlen($userInput) == $endOffset)) return array();
+			&& PKPString::strlen($userInput) == $endOffset)) return array();
 
 		// Replace the last word in the user input
 		// with the suggestions maintaining case.
 		foreach($suggestions as &$suggestion) {
-			$suggestion = $userInput . String::substr($suggestion, $endOffset - $startOffset);
+			$suggestion = $userInput . PKPString::substr($suggestion, $endOffset - $startOffset);
 		}
 		return $suggestions;
 	}
@@ -1900,7 +1900,7 @@ class SolrWebService extends XmlWebService {
 		// facet results. This may be an invalid query
 		// but edismax will deal gracefully with syntax
 		// errors.
-		$userInput = String::substr($userInput, 0, -String::strlen($facetPrefix));
+		$userInput = PKPString::substr($userInput, 0, -PKPString::strlen($facetPrefix));
 		switch ($fieldName) {
 			case 'query':
 				// The 'query' filter goes agains all fields.
@@ -1931,7 +1931,7 @@ class SolrWebService extends XmlWebService {
 		} else {
 			$params['facet.field'] = $fieldName . '_spell';
 		}
-		$facetPrefixLc = String::strtolower($facetPrefix);
+		$facetPrefixLc = PKPString::strtolower($facetPrefix);
 		$params['facet.prefix'] = $facetPrefixLc;
 
 		// Make the request.
@@ -1951,7 +1951,7 @@ class SolrWebService extends XmlWebService {
 		foreach($termSuggestions as $termSuggestion) {
 			// Restore case if possible.
 			if (strpos($termSuggestion, $facetPrefixLc) === 0) {
-				$termSuggestion = $facetPrefix . String::substr($termSuggestion, String::strlen($facetPrefix));
+				$termSuggestion = $facetPrefix . PKPString::substr($termSuggestion, PKPString::strlen($facetPrefix));
 			}
 			$suggestions[] = $userInput . $termSuggestion;
 		}

@@ -763,7 +763,7 @@ class PLNPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function newUUID() {
-		return String::generateUUID();
+		return PKPString::generateUUID();
 	}
 	
 
