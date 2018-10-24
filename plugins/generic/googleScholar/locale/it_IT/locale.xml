@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the it_IT (Italiano) locale.
+  * Contributed by Andrea Marchitelli - CINECA
+  *
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+
+	<!-- Google Analytics -->
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleScholar.name">Plugin indicizzazione Google Scholar</message>
+	<message key="plugins.generic.googleScholar.description">Questo plugin attiva l'indicizzazione del contenuto pubblicato in Google Scholar.</message>
+</locale>

@@ -32,20 +32,13 @@
 	<message key="plugins.generic.lucene.message.searchServiceOffline">Sfortunatamente, il servizio di ricerca in OJS al momento è offline.</message>
 	<message key="plugins.generic.lucene.message.techAdminInformed">L'amministratore tecnico di questa rivista è stato informato del problema.</message>
 	<message key="plugins.generic.lucene.message.webServiceError">Il web service Lucene ha restituito un errore.</message>
-
+	
+	<message key="plugins.generic.lucene.rebuildIndex.couldNotDeleteFieldCache">Non puoi cancellare la cache. Per favore esegui 'rm cache/fc-plugins-lucene-fieldCache.php' a mano con gli adeguati permessi.</message>
 	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} articoli individuati per l'aggiornamento</message>
+	<message key="plugins.generic.lucene.rebuildIndex.rebuildDictionaries">Ricostruisci i dizionari</message>
+	<message key="plugins.generic.lucene.rebuildIndex.updateBoostFile">Aggiorna le statistiche d'uso</message>
 	
 	<message key="plugins.generic.lucene.results.didYouMean">Forse cercavi</message>
-	<message key="plugins.generic.lucene.results.orderBy">Ordina i risultati per</message>
-	<message key="plugins.generic.lucene.results.orderBy.relevance">Rilevanza</message>
-	<message key="plugins.generic.lucene.results.orderBy.author">Autore</message>
-	<message key="plugins.generic.lucene.results.orderBy.issue">Fascicolo</message>
-	<message key="plugins.generic.lucene.results.orderBy.date">Data di pubblicazione</message>
-	<message key="plugins.generic.lucene.results.orderBy.journal">Titolo della rivista</message>
-	<message key="plugins.generic.lucene.results.orderBy.article">Titolo dell'articolo</message>
-	<message key="plugins.generic.lucene.results.orderDir.asc">Ascendente</message>
-	<message key="plugins.generic.lucene.results.orderDir.desc">Discendente</message>
-	<message key="plugins.generic.lucene.results.similarDocuments">documenti simili</message>
 	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
 		<h4>Suggerimenti di ricerca:</h4><ul>
 			<li>La ricerca non differenzia maiuscole e minuscole nei termini inseriti</li>
@@ -73,12 +66,23 @@
 		<strong>Assicurati di aver letto il file README del plugin (plugins/generic/lucene/README) prima di cambiare la configurazione di default.</strong>
 		Se stai usando lo scenario embedded dietro firewall come spiegato nel file README, probabilmente non avrai necessità di apportare alcuna modifica.
 	]]></message>
+	<message key="plugins.generic.lucene.settings.dictionaryRebuild">Ricostruisci dizionari</message>
 	<message key="plugins.generic.lucene.settings.faceting">Faccettazione (mostra un box di navigazione con filtri aggiuntivi per raffinare la ricerca)</message>
 	<message key="plugins.generic.lucene.settings.facetingSelectCategory">Devi specificare categorie per le faccette</message>
 	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
 		Il plugin Lucene offre diverse funzionalità di ricerca opzionali. La maggior parte di queste sono abilitate di default ma possono essere disabilitate o configurate in maniera più specifica.
 	]]></message>
 	<message key="plugins.generic.lucene.settings.highlighting">Evidenziazione (mostra un breve estratto del testo di ciascun articolo contenente le parole oggetto della ricerca)</message>
+
+	<message key="plugins.generic.lucene.settings.indexAdministration">Amministrazione Indice</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild">Ricostruzione indice</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild.confirm">Ricostruire l'indice e/o i dizionari richiede lungo tempo. Sei sicuro di procedere ?</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildAllJournals">Rifai l'indice per tutte le riviste </message>
+	<message key="plugins.generic.lucene.settings.indexRebuildDescription">Se il tuo indice su Lucene diventa fuori sincrono o corrotto, puoi rifare gli indici per rivista o per tutt le riviste. I dizionari vanno rifatti dopo la ricostruzione dell'indice se usi l'auto-suggerimento o altri tipi di suggerimenti. (Vedi plugins/generic/lucene/README per dettagli.)</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildJournal">Rifai l'indice per la rivista "{$journalName}"</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildMessages">Output dell'ultimo rifacimento dell'indice:</message>
+	<message key="plugins.generic.lucene.settings.instantSearch">Ricerca istantannea (ATTENZIONE: usa molte risorse)</message>
+
 	<message key="plugins.generic.lucene.settings.instId">ID univoco dell'installazione</message>
 	<message key="plugins.generic.lucene.settings.instIdRequired">Inserisci un ID che identifichi univocamente questa installazione di OJS sul server di ricerca Solr.</message>
 	<message key="plugins.generic.lucene.settings.instIdInstructions">Se usi un server di ricerca centralizzato, devi indicare un ID univoco per ciascuna installazione di OJS che condivide l'indice.  Puoi usare un testo a tua scelta, ma deve essere diverso per ciascuna installazione coinvolta (es. l'indirizzo IP statico del server se hai una installazione OJS per server).</message>
@@ -88,13 +92,47 @@
 	<message key="plugins.generic.lucene.settings.passwordInstructions">Ilserisci la password del server Solr.</message>
 	<message key="plugins.generic.lucene.settings.passwordRequired">Inserisci una password valida per autenticarti al server Solr.</message>
 	<message key="plugins.generic.lucene.settings.pullIndexing">Indicizzazione pull (funzionalità avanzata, vedi il file README per ulteriori informazioni)</message>
+
+	<message key="plugins.generic.lucene.settings.rankingByMetricEnabled">Ranking attraverso le statistiche d'uso (La metrica '{$metricName}' è usata per influenzare il ranking)</message>
+	<message key="plugins.generic.lucene.settings.rankingByMetricDisabled">Ranking attraverso le statistiche d'uso disabilitato.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpoint">URL dell'endpoint di ricerca</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">l'endpoint della ricreca Solr consiste della URL del server URL e di un handler per la ricerca. Vedi come esempio l'impostazione di default. Cambia questo parametro solamente se stai usando un server di ricerca centralizzato.</message>
 	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Inserisci una URL valida per l'endpoint (Solr search server e search handler) al quale ti vuoi connettere.</message>
 	<message key="plugins.generic.lucene.settings.searchFeatures">Configurazione delle funzionalità di ricerca</message>
+
+	<message key="plugins.generic.lucene.settings.serverNotAvailable"><![CDATA[
+		Attualmente non puoi amministrare il server Solr dall'interfaccia web.<br/>
+		<br/>
+		Possibili ragioni sono:
+		<ul>
+			<li>Non hai Solr installato nella tua instanza OJS (vedi 'plugins/generic/lucene/README' per dettagli).</li>
+			<li>L'installazion può essere incompleta. Controlla le directory 'plugins/generic/lucene/lib/solr' e 'plugins/generic/lucene/lib/jetty', devono contenere o puntare ai file di solr/jetty.</li>
+			<li>I file di amministrazione 'start.sh', 'stop.sh' e 'check.sh' in 'plugins/generic/lucene/embedded/bin' devono essere eseguibili. Controlla i permessi.</li>
+			<li>I file in 'files/lucene/' non sono scrivibili dal tuo utente di apache. Controlla i permessi</li>
+			<li>Controlla che non ci sia un processo solr già attivo con un altro utente.</li>
+			<li>La tua configurazione di PHP potrebbe aver disabilitato l'esecuzione di script, controlla le configurazioni 'safe_mode' e 'disabled_function' in php.ini.</li>
+		</ul>
+	]]></message>
 	<message key="plugins.generic.lucene.settings.simdocs">Altri come questo (mostra un link a "documenti simili" per ogni risultato)</message>
 	<message key="plugins.generic.lucene.settings.solrServerSettings">Impostazioni del server Solr</message>
+	<message key="plugins.generic.lucene.settings.sortingByMetricEnabled">Ordinati secondo le statistiche d'uso. (La metrica '{$metricName}' viene usato per ordinare per popolarità)</message>
+	<message key="plugins.generic.lucene.settings.sortingByMetricDisabled">Ordine secondo le statistiche d'uso non attivo</message>
 	<message key="plugins.generic.lucene.settings.spellcheck">Suggerimenti (mostra termini di ricerca alternativi)</message>
+
+	<message key="plugins.generic.lucene.settings.startStopServer">Amministrazione di Solr</message>
+	<message key="plugins.generic.lucene.settings.startServer">Start Server</message>
+	<message key="plugins.generic.lucene.settings.stopServer">Stop Server</message>
+	<message key="plugins.generic.lucene.settings.updateBoostFile">Aggiorna dati Ranking</message>
+	<message key="plugins.generic.lucene.settings.updateBoostFileDescription">Le statistiche d'uso vanno aggiornate di frequeste su Solr, ad esempio ogni giorno oppure ogni mese. Per farlo clicca il bottone qua sopra. Il tutto può essere automatizzato (vedi 'plugins/generic/lucene/README' per dettagli).</message>
+	<message key="plugins.generic.lucene.settings.updateBoostFileDisabled"><![CDATA[
+		Le statistiche d'uso vanno copiate regolarmente nel server Solrs. Non riesci a fare l'update attraverso l'interfaccia web.<br/>
+		<br/>
+		Ci possono essere varie ragioni.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.usageStatistics">Statistiche d'uso</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Parmatri del proxy</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Usa i parametri del proxy prendendoli dal file config.inc.php per le richieste al Solr web service.</message>
+
 	<message key="plugins.generic.lucene.settings.username">Username</message>
 	<message key="plugins.generic.lucene.settings.usernameInstructions">Il server Solr usa l'autenticazione HTTP BASIC. Inserisci la username.</message>
 	<message key="plugins.generic.lucene.settings.usernameRequired">Inserisci un'username valida per autenticarti al server Solr (i due punti non sono permessi).</message>
