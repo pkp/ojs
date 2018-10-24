@@ -60,11 +60,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('classes.admin.form.JournalSiteSettingsForm');
 
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
-		} else {
-			$settingsForm =& new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
-		}
+		$settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
 
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
@@ -85,11 +81,7 @@ class AdminJournalHandler extends AdminHandler {
 
 		import('classes.admin.form.JournalSiteSettingsForm');
 
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$settingsForm = new JournalSiteSettingsForm($request->getUserVar('journalId'));
-		} else {
-			$settingsForm =& new JournalSiteSettingsForm($request->getUserVar('journalId'));
-		}
+		$settingsForm = new JournalSiteSettingsForm($request->getUserVar('journalId'));
 
 		$settingsForm->readInputData();
 

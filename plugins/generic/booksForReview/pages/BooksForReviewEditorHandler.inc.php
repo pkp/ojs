@@ -163,12 +163,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$countries =& $countryDao->getCountries();
 
-			// PHP4 Requires explicit instantiation-by-reference
-			if (checkPhpVersion('5.0.0')) {
-				$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			} else {
-				$bfrForm =& new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			}
+			$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
 			$bfrForm->initData();
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('mode', $mode);
@@ -207,12 +202,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		if (($bookId != null && $bfrDao->getBookForReviewJournalId($bookId) == $journalId) || $bookId == null) {
 
-			// PHP4 Requires explicit instantiation-by-reference
-			if (checkPhpVersion('5.0.0')) {
-				$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			} else {
-				$bfrForm =& new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			}
+			$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
 			$bfrForm->readInputData();
 
 			// Add an author
@@ -341,12 +331,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$bfrPlugin->import('classes.form.BooksForReviewSettingsForm');
 		$templateMgr =& TemplateManager::getManager();
 
-		// PHP4 Requires explicit instantiation-by-reference
-		if (checkPhpVersion('5.0.0')) {
-			$form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
-		} else {
-			$form =& new BooksForReviewSettingsForm($bfrPlugin, $journalId);
-		}
+		$form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
 			$templateMgr->assign('scheduledTasksEnabled', true);

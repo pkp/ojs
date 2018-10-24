@@ -86,8 +86,6 @@ class SwordPlugin extends GenericPlugin {
 		$plugins =& $args[1];
 		switch ($category) {
 			case 'importexport':
-				// This plugin is only available on PHP5.x.
-				if (!checkPhpVersion('5.0.0')) break;
 				$this->import('SwordImportExportPlugin');
 				$importExportPlugin = new SwordImportExportPlugin($this->getName());
 				$plugins[$importExportPlugin->getSeq()][$importExportPlugin->getPluginPath()] =& $importExportPlugin;
