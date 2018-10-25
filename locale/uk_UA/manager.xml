@@ -45,6 +45,7 @@
 	<message key="manager.payment.notFound">Не знайдено</message>
 	<message key="manager.payment.options">Налаштування</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Активація платежів за передплати; типи, вартість, тривалість передплат та переліки передплатників налаштовуються менеджером передплати.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Ви впевнені, що хочете видалити дану підписку?</message>
 	<message key="manager.payment.options.enablePayments">Оберіть цей пункт, щоб включити модуль платежів. Заповніть форму нижче, щоб налаштувати платежі. Зауважте, що користувачі повинні увійти до системи, щоб здійснити платіж.</message>
 	<message key="manager.payment.options.fee">Розмір платежу</message>
 	<message key="manager.payment.options.feeDescription">Опис платежу</message>
@@ -64,6 +65,7 @@
 	<message key="manager.payment.readerFeesDescription">Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться у розділі "Політика" сторінки "Про журнал", а також на сторінках, що стосуються цих платежів.</message>
 	<message key="manager.payment.records">Історія</message>
 	<message key="manager.payments">Платежі</message>
+	<message key="manager.paymentTypes">Типи платежів</message>
 	<message key="manager.payment.userName">ID платежу</message>
 	<message key="manager.people.allEnrolledUsers">Користувачі, які мають ролі у цьому журналі</message>
 	<message key="manager.people.allJournals">Всі журнали</message>
@@ -231,6 +233,12 @@
 	<message key="manager.setup.lists">Списки</message>
 	<message key="manager.setup.listsDescription">Вкажіть максимальну кількість одиниць (наприклад, подань, користувачів, редакційних призначень), що відображатиметься на кожній одній сторінці списку, а також кількість посилань на сторінки списку.</message>
 	<message key="manager.setup.enableArchive">Дозволити архівування</message>
+	<message key="manager.setup.plnPluginEnable">Плагін PKP PN увімкнено</message>
+	<message key="manager.setup.plnDescription">Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють кілька базових критеріїв.</message>
+	<message key="manager.setup.plnSettingsDescription">Клацніть по посиланню "Налаштування" щоб прийняти умови використання PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">Мережа архівування PKP (PKP Preservation Network, PKP PN))</message>
+	<message key="manager.setup.plnPluginNotInstalled">Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють декілька базових критеріїв. Плагін PKP PN для OJS 3 зараз знаходиться у розробці та незабаром буде доступним у галереї плагінів.</message>
+	<message key="manager.setup.otherLockss">Альтернативні варіанти архівування</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Дозволити LOCKSS для збереження та розповсюдження змісту журналу бібліотеками, що беруть участь у проекті, через сторінку <a href="{$lockssUrl}" target="_blank">Видавничий маніфест LOCKSS</a>. Ліцензія LOCKSS з'явиться на сторінці "Про журнал" у розділі "Архівування":]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Ліцензія LOCKSS з'явиться в розділі «Про журнал» під заголовком «Архівація журналу»: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Ліцензія LOCKSS</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Опис ліцензії LOCKSS</message>
@@ -241,6 +249,8 @@
 	<message key="manager.setup.clockssLicenseLabel">Опис ліцензії CLOCKSS </message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Підпишіться на сервіс CLOCKSS, відвідавши <a href="http://clockss.org/" target="_blank">веб-сайт CLOCKSS</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[Увімкнути Portico для зберігання та розповсюдження контенту журналу по бібліотекам, що беруть участь у Portico.]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">Вигляд</message>
 	<message key="manager.setup.look.description">Заголовок домашньої сторінки, зміст, заголовок журналу, підпис, навігаційна панель та таблиці стилів.</message>
@@ -377,14 +387,13 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Після завершення передплати читачі втрачатимуть доступ до всього передплатного змісту.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Часткове завершення</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Після завершення передплати читачі втрачатимуть доступ до нового передплатного контенту, але продовжуватимуть мати доступ до змісту, опублікованого до дати завершення передплати.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Повідомляти передплатників поштою через</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">місяць(ів) після завершення передплати.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Повідомляти передплатників поштою через</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">тижнів після завершення передплати.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Повідомляти передплатників поштою за</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">місяць(ів) до завершення передплати.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Повідомляти передплатників поштою за</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">тижнів до завершення передплати.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} місяців</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} тижнів</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Сповістити учасників електронною поштою після закінчення терміну підписки</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Сповістити учасників електронною поштою після закінчення терміну підписки.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Сповістити учасників електронною поштою після закінчення терміну підписки.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Сповістити учасників електронною поштою після закінчення терміну підписки.</message>
+	
 	<message key="manager.subscriptionPolicies.expiryReminders">Нагадування про завершення передплати</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Автоматизовані поштові нагадування (зміст яких може редагувати менеджер журналу у розділі "Шаблони листів") можуть розсилатись передплатникам як до, так і після завершення їх передплат.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Примітка:</strong> Щоб активувати цї опції адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цих опцій може вимагати також додаткових конфігурацій (що можливо не на всіх серверах).]]></message>
@@ -415,6 +424,7 @@
 	<message key="manager.subscriptions">Передплати</message>
 	<message key="manager.individualSubscriptions">Індивідуальні передплати</message>
 	<message key="manager.institutionalSubscriptions">Інституційні передплати</message>
+	<message key="manager.subscriptions.confirmRenew">Ви впевнені, що хочете продовжити дану підписку?</message>
 	<message key="manager.subscriptions.confirmDelete">Ви впевнені, що хочете видалити цю передплату?</message>
 	<message key="manager.subscriptions.summary">Загальна інформація про передплати</message>
 	<message key="manager.subscriptions.create">Створити нову передплату</message>
@@ -453,6 +463,7 @@
 	<message key="manager.subscriptions.form.referenceNumber">Реєстраційний номер</message>
 	<message key="manager.subscriptions.form.membershipInstructions">Якщо тип передплати вимагає членства передплатників у певній асоціації або організації, вкажіть інформацію про необхідне членство.</message>
 	<message key="manager.subscriptions.form.membershipRequired">Обраний тип передплати потребує вказання інформації про членство.</message>
+	<message key="manager.subscriptions.form.notes">Примітки</message>
 	<message key="manager.subscriptions.form.domain">Домен</message>
 	<message key="manager.subscriptions.form.institutionName">Назва установи</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">Необхідно вказати назву установи</message>
@@ -530,12 +541,18 @@
 	<message key="manager.subscriptionTypes.name">Тип передплати</message>
 	<message key="manager.subscriptionTypes.noneCreated">Жодного типу передплати не було створено.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип передплати створений успішно.</message>
+	<message key="manager.distribution.access">Доступ</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
-	     <message key="manager.setup.categories">Категорії</message>
-	     <message key="manager.sections.alertDelete">Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів.</message>
-	     <message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
-	     <message key="manager.setup.useThumbnail">Мініатюра</message>
-	     <message key="manager.setup.categories.description">Зі списку нижче оберіть найбільш відповідні категорії. Читачі зможуть переглядати статті за обраними категоріями.</message>
+	<message key="manager.setup.categories">Категорії</message>
+	<message key="manager.sections.alertDelete">Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів.</message>
+	<message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
+	<message key="manager.setup.useThumbnail">Мініатюра</message>
+	<message key="manager.setup.categories.description">Зі списку нижче оберіть найбільш відповідні категорії. Читачі зможуть переглядати статті за обраними категоріями.</message>
+
+	<!-- Елементи меню навігації -->
+	<message key="manager.navigationMenus.subscriptions.description">Посилання на сторінку, що описує підписки, які ви пропонуєте.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Посилання на сторінку, що описує поточні та минулі підписки користувача.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Це посилання відображатиметься лише у випадку, коли користувач увійшов до системи.</message>
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Категорії</message>
@@ -583,11 +600,13 @@
 	<message key="plugins.importexport.common.action.export">Експорт</message>
 	<message key="plugins.importexport.common.action.markRegistered">Відмітити зареєстрованим</message>
 	<message key="plugins.importexport.common.action.register">Зареєструвати</message>
+	<message key="plugins.importexport.common.validation">Перевіряти XML перед експортом та реєстрацією.</message>
 	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">Немає обраних об'єктів.</message>
 	<message key="plugins.importexport.common.error.validation">Неможливо конвертувати вибрані об'єкти.</message>
 	<message key="plugins.importexport.common.invalidXML">Невірний XML:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Файл результатів {$param} не доступний для запису.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Вхідний файл {$param} не доступний для читання.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Реєстрація пройшла невдало! Реєстраційний сервер DOI повернув помилку: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Реєстрація пройшла успішно!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Відсутній префікс DOI для журналу з адресою {$path}.</message>
