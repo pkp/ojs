@@ -138,11 +138,11 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		// Include page info, if available and parseable.
 		$matches = null;
-		if (String::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $article->getPages(), $matches)) {
+		if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $article->getPages(), $matches)) {
 			$matchedPage = htmlspecialchars(Core::cleanVar($matches[1]));
 			$response .= "\t\t\t\t<fpage>$matchedPage</fpage><lpage>$matchedPage</lpage>\n";
 			$pageCount = 1;
-		} elseif (String::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
+		} elseif (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
 			$matchedPageFrom = htmlspecialchars(Core::cleanVar($matches[1]));
 			$matchedPageTo = htmlspecialchars(Core::cleanVar($matches[3]));
 			$response .=
@@ -170,7 +170,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$abstract = htmlspecialchars(Core::cleanVar(strip_tags($article->getLocalizedAbstract())));
 		if (!empty($abstract)) {
 			$abstract = "<p>$abstract</p>";
-			// $abstract = '<p>' . String::regexp_replace('/\n+/', '</p><p>', $abstract) . '</p>';
+			// $abstract = '<p>' . PKPString::regexp_replace('/\n+/', '</p><p>', $abstract) . '</p>';
 			$response .= "\t\t\t<abstract xml:lang=\"" . strtoupper(substr($primaryLocale, 0, 2)) . "\">$abstract</abstract>\n";
 		}
 		if (is_array($article->getAbstract(null))) foreach ($article->getAbstract(null) as $locale => $abstract) {
@@ -178,7 +178,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			$abstract = htmlspecialchars(Core::cleanVar(strip_tags($abstract)));
 			if (empty($abstract)) continue;
 			$abstract = "<p>$abstract</p>";
-			//$abstract = '<p>' . String::regexp_replace('/\n+/', '</p><p>', $abstract) . '</p>';
+			//$abstract = '<p>' . PKPString::regexp_replace('/\n+/', '</p><p>', $abstract) . '</p>';
 			$response .= "\t\t\t<abstract-trans xml:lang=\"" . strtoupper(substr($locale, 0, 2)) . "\">$abstract</abstract-trans>\n";
 		}
 

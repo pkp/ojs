@@ -41,7 +41,7 @@ class PeopleHandler extends ManagerHandler {
 		$sortDirection = Request::getUserVar('sortDirection');
 		$sortDirection = isset($sortDirection) ? $sortDirection : SORT_DIRECTION_ASC;
 
-		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
+		if ($roleSymbolic != 'all' && PKPString::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
 			if ($roleId == null) {
 				Request::redirect(null, null, null, 'all');
@@ -65,7 +65,7 @@ class PeopleHandler extends ManagerHandler {
 			$searchMatch = Request::getUserVar('searchMatch');
 
 		} elseif (!empty($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
@@ -186,7 +186,7 @@ class PeopleHandler extends ManagerHandler {
 			$searchMatch = Request::getUserVar('searchMatch');
 
 		} elseif (!empty($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
@@ -412,11 +412,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign_by_ref('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$userForm = new UserManagementForm($userId);
-		} else {
-			$userForm =& new UserManagementForm($userId);
-		}
+		$userForm = new UserManagementForm($userId);
 
 		if ($userForm->isLocaleResubmit()) {
 			$userForm->readInputData();
@@ -472,7 +468,7 @@ class PeopleHandler extends ManagerHandler {
 		if (Request::getUserVar('roleSymbolic')!=null) $roleSymbolic = Request::getUserVar('roleSymbolic');
 		else $roleSymbolic = isset($args[0])?$args[0]:'all';
 
-		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
+		if ($roleSymbolic != 'all' && PKPString::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
 			if ($roleId == null) {
 				Request::redirect(null, null, null, 'all');
@@ -496,7 +492,7 @@ class PeopleHandler extends ManagerHandler {
 			$searchMatch = Request::getUserVar('searchMatch');
 
 		} else if (!empty($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
@@ -646,11 +642,7 @@ class PeopleHandler extends ManagerHandler {
 
 		import('classes.manager.form.UserManagementForm');
 
-		if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-			$userForm = new UserManagementForm($userId);
-		} else {
-			$userForm =& new UserManagementForm($userId);
-		}
+		$userForm = new UserManagementForm($userId);
 
 		$userForm->readInputData();
 
@@ -662,11 +654,7 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr->assign('currentUrl', $request->url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
 				unset($userForm);
-				if (checkPhpVersion('5.0.0')) { // WARNING: This form needs $this in constructor
-					$userForm = new UserManagementForm();
-				} else {
-					$userForm =& new UserManagementForm();
-				}
+				$userForm = new UserManagementForm();
 				$userForm->initData($args, $request);
 				$userForm->display();
 

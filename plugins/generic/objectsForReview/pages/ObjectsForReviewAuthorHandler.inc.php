@@ -218,7 +218,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 				$paramArray = array(
 					'editorName' => strip_tags($editorFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
-					'authorContactSignature' => String::html2text($user->getContactSignature())
+					'authorContactSignature' => PKPString::html2text($user->getContactSignature())
 				);
 			}
 			$email->addRecipient($editorEmail, $editorFullName);

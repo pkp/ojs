@@ -189,7 +189,7 @@ class CounterReport {
 			try {
 				$report = new COUNTER\Reports(
 					new COUNTER\Report(
-						String::generateUUID(),
+						PKPString::generateUUID(),
 						$this->getRelease(),
 						$this->getCode(),
 						$this->getTitle(),

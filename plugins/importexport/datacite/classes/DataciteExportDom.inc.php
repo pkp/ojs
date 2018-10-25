@@ -317,7 +317,7 @@ class DataciteExportDom extends DOIExportDom {
 			return $falseVar;
 		}
 		if ($this->getTestMode()) {
-			$doi = String::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
+			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
 		}
 		return $this->createElementWithText('identifier', $doi, array('identifierType' => 'DOI'));
 	}
@@ -729,7 +729,7 @@ class DataciteExportDom extends DOIExportDom {
 			$nullVar = null;
 		}
 		if ($this->getTestMode()) {
-			$id = String::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $id);
+			$id = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $id);
 		}
 
 		return $this->createElementWithText(

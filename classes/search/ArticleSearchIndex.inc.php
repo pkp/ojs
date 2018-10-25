@@ -278,21 +278,21 @@ class ArticleSearchIndex {
 		$cleanText = Core::cleanVar($text);
 
 		// Remove punctuation
-		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $cleanText);
-		$cleanText = String::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
-		$cleanText = String::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
-		$cleanText = String::strtolower($cleanText);
+		$cleanText = PKPString::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $cleanText);
+		$cleanText = PKPString::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
+		$cleanText = PKPString::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
+		$cleanText = PKPString::strtolower($cleanText);
 
 		// Split into words
-		$words = String::regexp_split('/\s+/', $cleanText);
+		$words = PKPString::regexp_split('/\s+/', $cleanText);
 
 		// FIXME Do not perform further filtering for some fields, e.g., author names?
 
 		// Remove stopwords
 		$keywords = array();
 		foreach ($words as $k) {
-			if (!isset($stopwords[$k]) && String::strlen($k) >= $minLength && !is_numeric($k)) {
-				$keywords[] = String::substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
+			if (!isset($stopwords[$k]) && PKPString::strlen($k) >= $minLength && !is_numeric($k)) {
+				$keywords[] = PKPString::substr($k, 0, SEARCH_KEYWORD_MAX_LENGTH);
 			}
 		}
 		return $keywords;

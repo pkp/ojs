@@ -350,9 +350,9 @@ class UserXMLParser {
 	 */
 	function generateUsername(&$user) {
 		$userDao =& DAORegistry::getDAO('UserDAO');
-		$baseUsername = String::regexp_replace('/[^A-Z0-9]/i', '', $user->getLastName());
+		$baseUsername = PKPString::regexp_replace('/[^A-Z0-9]/i', '', $user->getLastName());
 		if (empty($baseUsername)) {
-			$baseUsername = String::regexp_replace('/[^A-Z0-9]/i', '', $user->getFirstName());
+			$baseUsername = PKPString::regexp_replace('/[^A-Z0-9]/i', '', $user->getFirstName());
 		}
 		if (empty($baseUsername)) {
 			// Default username if we can't use the user's last or first name

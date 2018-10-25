@@ -487,7 +487,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$searchMatch = $request->getUserVar('searchMatch');
 
 			} elseif (!empty($searchInitial)) {
-				$searchInitial = String::strtoupper($searchInitial);
+				$searchInitial = PKPString::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
 			}
@@ -606,7 +606,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$searchMatch = $request->getUserVar('searchMatch');
 
 		} elseif (!empty($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
@@ -1224,7 +1224,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$searchMatch = $request->getUserVar('searchMatch');
 
 			} elseif (!empty($searchInitial)) {
-				$searchInitial = String::strtoupper($searchInitial);
+				$searchInitial = PKPString::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
 			}
@@ -1709,7 +1709,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$searchMatch = $request->getUserVar('searchMatch');
 
 			} elseif (!empty($searchInitial)) {
-				$searchInitial = String::strtoupper($searchInitial);
+				$searchInitial = PKPString::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
 			}
@@ -2289,7 +2289,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$searchMatch = $request->getUserVar('searchMatch');
 
 			} elseif (!empty($searchInitial)) {
-				$searchInitial = String::strtoupper($searchInitial);
+				$searchInitial = PKPString::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
 			}

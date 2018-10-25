@@ -173,7 +173,7 @@ class PluginManagementHandler extends ManagerHandler {
 				// tar archive basename (less potential version number) must equal plugin directory name
 				// and plugin files must be in a directory named after the plug-in.
 				$matches = array();
-				String::regexp_match_get('/^[a-zA-Z0-9]+/', basename($temporaryFile->getOriginalFileName(), '.tar.gz'), $matches);
+				PKPString::regexp_match_get('/^[a-zA-Z0-9]+/', basename($temporaryFile->getOriginalFileName(), '.tar.gz'), $matches);
 				$pluginName = array_pop($matches);
 				// Create random dirname to avoid symlink attacks.
 				$pluginDir = dirname($temporaryFile->getFilePath()) . DIRECTORY_SEPARATOR . $pluginName . substr(md5(mt_rand()), 0, 10);

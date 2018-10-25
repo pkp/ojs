@@ -38,7 +38,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 
 		$templateMgr->assign(array(
 			'subject' => isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'',
-			'abstract' => String::html2text($article->getAbstract($article->getLocale())),
+			'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
 			'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
 		));
 
