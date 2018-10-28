@@ -991,4 +991,9 @@ Setting up CLOCKSS support for Open Journal Systems does not need to take place 
 	<message key="log.editor.submissionExpedited">{$editorName} tomou o processo de edição do artigo {$submissionId}.</message>
 	<message key="notification.type.publicationScheduled">Esta submissão foi agendada para publicação.</message>
 	<message key="log.editor.recommendation">O editor {$editorName} registou uma recomendação ({$decision}) para o artigo {$submissionId}.</message>
+	<message key="user.reviewerPrompt.optin">Sim, quero ser contactado com pedidos de revisão a submissões para esta revista.</message>
+	<message key="user.register.form.emailConsentAllContexts">Sim, quero ser notificado de novas publicações e anúncios para todas as revistas em que me registei.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Sim, concordo que os meus dados sejam recolhidos e armazenados de acordo com os <a href="{$privacyUrl}" target="_blank">termos de privacidade</a> da revista.]]></message>
+	<message key="user.register.form.missingContextConsent">Tem de concordar com os termos de privacidade para todas as revistas para as quais se registou.</message>
+	<message key="user.register.form.missingSiteConsent">Tem de concordar com os termos de privacidade deste sítio.</message>
 </locale>
