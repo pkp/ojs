@@ -29,6 +29,9 @@ class CrossrefReferenceLinkingPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled($mainContextId)) {
 			if (!isset($mainContextId)) $mainContextId = $this->getCurrentContextId();
 			if ($this->crossrefCredentials($mainContextId) && $this->citationsEnabled($mainContextId)) {
+				// register scheduled task
+				HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+
 				// references tab i.e. citation form hooks
 				HookRegistry::register('citationsform::display', array($this, 'getAdditionalCitationActionNames'));
 				HookRegistry::register('citationsform::execute', array($this, 'citationsFormExecute'));
@@ -154,6 +157,23 @@ class CrossrefReferenceLinkingPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * @see AcronPlugin::parseCronTab()
+	 * @param $hookName string
+	 * @param $args array [
+	 *  @option array Task files paths
+	 * ]
+	 * @return bolean
+	 */
+	function callbackParseCronTab($hookName, $args) {
+		if ($this->getEnabled() || !Config::getVar('general', 'installed')) {
+			$taskFilesPath =& $args[0]; // Reference needed.
+			$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+		}
+		return false;
+	}
+
+
+	/**
 	 * Hook to articlecrossrefxmlfilter::execute and add references data to the Crossref XML export
 	 * @param $hookName string
 	 * @param $params array [
@@ -260,8 +280,8 @@ class CrossrefReferenceLinkingPlugin extends GenericPlugin {
 	 */
 	function getAdditionalCitationActionNames($hookName, $params) {
 		$templateMgr = TemplateManager::getManager();
-		$submission =& $templateMgr->get_template_vars('submission');
-		$parsedCitations =& $templateMgr->get_template_vars('parsedCitations');
+		$submission =& $templateMgr->getTemplateVars('submission');
+		$parsedCitations =& $templateMgr->getTemplateVars('parsedCitations');
 
 		$notificationLabel = '<span class="label">'.$this->getDisplayName().'</span>';
 		if (!$parsedCitations->getCount() || !$submission->getStoredPubId('doi') || !$submission->getData($this->getCitationsDiagnosticIdSettingName())) {
@@ -289,7 +309,7 @@ class CrossrefReferenceLinkingPlugin extends GenericPlugin {
 
 		// Add "Check Crossref DOIs" button only if the submission has a DOI and the references were deposited
 		if ($parsedCitations->getCount() && $submission->getStoredPubId('doi') && $submission->getData($this->getCitationsDiagnosticIdSettingName())) {
-			$actionNames =& $templateMgr->get_template_vars('actionNames');
+			$actionNames =& $templateMgr->getTemplateVars('actionNames');
 			$actionNames['getDois'] = __('plugins.generic.crossrefReferenceLinking.citationsFormActionName');
 			$templateMgr->assign(array(
 				'actionNames' => $actionNames,
