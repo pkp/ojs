@@ -336,8 +336,9 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; The display name to use with a DMARC compliant from header
 ; By default the DMARC compliant from will have an empty name but this can
 ; be changed by adding a text here.
-; You can use '%n' to insert the display name of the original from header
-; dmarc_compliant_from_displayname = '%n via OJS'
+; You can use '%n' to insert the users name from the original from header
+; and '%s' to insert the localized sitename.
+; dmarc_compliant_from_displayname = '%n via %s'
 
 ; Amount of time required between attempts to send non-editorial emails
 ; in seconds. This can be used to help prevent email relaying via OJS.
