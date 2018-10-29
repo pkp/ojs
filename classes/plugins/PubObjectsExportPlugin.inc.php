@@ -89,7 +89,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 					$templateMgr->assign(array(
 						'statusMessage' => htmlentities($statusMessage),
 					));
-					return new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'statusMessage.tpl'));
+					return new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('statusMessage.tpl')));
 				}
 		}
 		return parent::manage($args, $request);

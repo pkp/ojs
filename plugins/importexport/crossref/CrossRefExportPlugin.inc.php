@@ -236,7 +236,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 					$resultErrors[] = $result;
 				}
 				// Remove all temporary files.
-				$fileManager->deleteFile($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
 			}
 			// send notifications
 			if (empty($resultErrors)) {
@@ -466,7 +466,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 						$resultErrors[] = $result;
 					}
 					// Remove all temporary files.
-					$fileManager->deleteFile($exportFileName);
+					$fileManager->deleteByPath($exportFileName);
 				}
 				// display deposit result status messages
 				if (empty($resultErrors)) {
