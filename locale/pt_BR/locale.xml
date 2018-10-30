@@ -618,7 +618,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="installer.ojsUpgrade">Atualização do sistema</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4> Versão do OJS {$version}</h4>
 
-<p>Obrigado por baixar o <strong>Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia o arquivo <a href="{$baseUrl}/docs/README.md">README</a> incluídoeste software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Obrigado por baixar o <strong>Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia o arquivo <a href="{$baseUrl}/docs/README">README</a> incluídoeste software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4> Atualização</h4>
 
@@ -644,7 +644,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 <message key="installer.upgradeInstructions"><![CDATA[
 <h4> Versão do OJS {$version}</h4>
 
-<p>Obrigado por baixar o <strong> Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia os arquivos <a href="{$baseUrl}/docs/README.md"> README</a> e <a href="{$baseUrl}/docs/UPGRADE.md"> UPGRADE</a> incluídos com Este software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href = "https://github.com/pkp/pkp-lib#issues" target = "_ blank"> sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com"> pkp.contact@gmail.com</a>.</p>
+<p>Obrigado por baixar o <strong> Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia os arquivos <a href="{$baseUrl}/docs/README"> README</a> e <a href="{$baseUrl}/docs/UPGRADE"> UPGRADE</a> incluídos com Este software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href = "https://github.com/pkp/pkp-lib#issues" target = "_ blank"> sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com"> pkp.contact@gmail.com</a>.</p>
 <p>É <strong> fortemente recomendado</strong> que você faz backup do banco de dados, do diretório de arquivos e do diretório de instalação do OJS antes de prosseguir.</p>
 <p>Se você estiver executando em <a href="http://www.php.net/features.safe-mode" target="_blank"> Modo de segurança PHP</a>, certifique-se de que a diretiva max_execution_time em Seu arquivo de configuração do php.ini está configurado para um limite alto. Se este ou qualquer outro limite de tempo (por exemplo, a diretiva "Timeout" do Apache) for alcançado e o processo de atualização for interrompido, será necessária uma intervenção manual.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Para suporte total ao Unicode (UTF-8), escolha UTF-8 para todas as configurações de caracteres. Note que o suporte requer o MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Suporte total ao Unicode requer o PHP >= 4.3.0 compilado com suporte à biblioteca<a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (habilitada em instalações padrão de versões mais recentes do PHP). Problemas com conjuntos de caracteres podem ocorrer caso estes requisitos não sejam atendidos pelo servidor.
@@ -798,7 +798,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.loginRequired.forArticle"><![CDATA[Documento disponível apenas para assinantes ou exige pagamento para acesso.<br />É necessário logar para fazer um pagamento.]]></message>
 	<message key="payment.loginRequired.forDonation">É necessário logar para fazer uma doação.</message>
 	<message key="payment.type.submission">Taxa de Submissão</message>
-	<message key="payment.type.publication">Taxa de Publicação</message>
+	<message key="payment.nation">Taxa de Publicação</message>
 	<message key="payment.type.fastTrack">Taxa de Acompanhamento Rápido da Avaliação</message>
 	<message key="payment.type.membership">Taxa de Assinatura Individual</message>
 	<message key="payment.type.subscription">Taxa de Assinatura</message>
@@ -1041,6 +1041,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 <p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
 	<message key="notification.type.submissionSubmitted">Um novo artigo foi submetido: "{$title}".</message>
+	<message key="notification.type.public">Anúncios Públicos</message>
 	<message key="notification.savedIssueMetadata">Metadados da edição salvos.</message>
 	<message key="notification.type.editorAssignmentTask">Um novo artigo foi submetido ao qual um editor precisa ser atribuído.</message>
 	<message key="user.authorization.noContext">Nenhuma revista em contexto!</message>
@@ -1073,5 +1074,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 	<message key="editor.issues.backIssues">Edições anteriores</message>
 	<message key="editor.issues.futureIssues">Edições futuras</message>
+	<message key="navigation.subscriptions">Assinaturas</message>
 
 </locale>

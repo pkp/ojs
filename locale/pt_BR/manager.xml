@@ -121,7 +121,8 @@
 	<message key="manager.setup.currentIssue">Edição Atual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da revista</message>
 	<message key="manager.setup.customTags">Tags META personalizadas</message>
-	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.</message>
+	<message key="manager.setup.customTagsDescription"><![CDATA[ tags META, inseridas no cabeçalho HTML das páginas do sistema.]]></message>
+	<!--<message key="manager.setup.customTagsDescription">tags META, inseridas no cabeçalho HTML das páginas do sistema</message>-->
 	<message key="manager.setup.details">Detalhes</message>
 	<message key="manager.setup.details.description">Nome da revista, ISSN, contatos, editora e patrocinadores e sistemas de busca.</message>
 	<message key="manager.setup.disableUserRegistration">O Gerente da Revista é responsável por cadastrar todos os usuários, permitindo a editores e editores de seção cadastrar avaliadores.</message>
@@ -141,6 +142,7 @@
 	<message key="manager.setup.enableAnnouncementsHomepage1">Exibir</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">das notícias mais recentes na página inicial da revista.</message>
 	<message key="manager.setup.enableUserRegistration">Usuários visitantes podem se cadastrar na revista, assumindo um ou mais papéis.</message>
+        <message key="manager.setup.disableUserRegistration">Os Editores Gerentes registrarão todas as contas de usuário. Editores ou editores de seção podem registrar contas de usuários para revisores.</message>
 	<message key="manager.setup.focusAndScope">Foco e escopo</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indexação da submissão</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[O sistema adota o Protocolo para Coleta de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos eletrônicos de pesquisa em escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Gerente da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser apresentados como exemplos ao acessar a página, por meio das expressões "Ex." ou "Por exemplo,".]]></message>
@@ -246,6 +248,7 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Aviso:</strong> O convite ao avaliador conterá uma URL especial que levará os avaliadores diretamente à página de avaliação da submissão em questão (sendo necessário realizar o login para acessar outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou incluir destinatários de Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos avaliadores.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Classificação de avaliadores</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Lembretes aos avaliadores</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Oferecer links para informações sobre <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assegurando a avaliação pelos pares cega</a> nas páginas onde autores e avaliadores enviam documentos ao sistema.]]></message>
 	<message key="manager.setup.reviewPolicy">Política de avaliação</message>
 	<message key="manager.setup.searchEngineIndexing">Indexação para mecanismos de busca</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Para auxiliar usuários de mecanismos de busca a descobrir sua revista, inclua uma breve descrição sobre a revista e palavras-chave relevantes (separadas por ponto-e-vírgula ";").</message>
@@ -523,6 +526,11 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.setup.faviconInvalid">Formato favicon inválido. Formatos aceitos são .ico, .png e .gif.</message>
 	<message key="manager.setup.journalThumbnail.description">Um pequeno logotipo ou representação da revista que pode ser usado em listas de revistas.</message>
 	<message key="manager.setup.journalThumbnail.altText">Texto alternativo para miniaturas</message>
+	<message key="manager.setup.plnPluginEnable">Plug-in PN do PKP ativado</message>
+	<message key="manager.setup.plnDescription">A Rede de Preservação PKP (PN) fornece serviços gratuitos de preservação para qualquer publicação do OJS que atenda a alguns critérios básicos.</message>
+	<message key="manager.setup.plnSettingsDescription">Clique no link Configurações para aceitar os termos de uso da PN do PKP.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">A Rede de Preservação PKP (PN) fornece serviços gratuitos de preservação para qualquer publicação do OJS que atenda a alguns critérios básicos. O plugin PKP PN para OJS 3 está atualmente em desenvolvimento e estará disponível na galeria de plugins em breve.</message>
 	<message key="manager.setup.enableArchive">Habilitar Arquivamento</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Uma licença LOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank"> Licença  LOCKSS </a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Descrição da Licença LOCKSS</message>
