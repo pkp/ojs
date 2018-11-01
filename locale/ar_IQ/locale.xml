@@ -191,7 +191,7 @@
 	<message key="journal.viewAllIssues">معاينة جميع الأعداد</message>
 
 	<!-- User -->
-	<message key="user.noRoles.selectUsersWithoutRoles">ضمِّن المستخدمين الذين ليس لهم أدواء في هذه المجلة.</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">ضمِّن المستخدمين الذين ليس لهم أدوار في هذه المجلة.</message>
 	<message key="user.profile.profileImage">صورة الملف التعريفي</message>
 	<message key="user.showAllJournals">أظهر مجلاتي</message>
 	<message key="user.registerForOtherJournals">سجِّل في مجلات أُخر</message>
@@ -1054,7 +1054,7 @@
 	<message key="notification.type.submissionComment">وضع المحرر تعليقاً عن المؤلَّف "{$title}".</message>
 	<message key="notification.type.submissions">أحداث طلب النشر</message>
 	<message key="notification.type.userComment">وضع قارئ تعليقاً عن المؤلَّف "{$title}"</message>
-	<message key="notification.type.public">إعلانات عامة</message>
+	<message key="notification.type.public">إشعارات عامة</message>
 	<message key="notification.savedIssueMetadata">البيانات الوصفية لنشر العدد قد تم حفظها.</message>
 	<message key="notification.type.editorAssignmentTask">مؤلَّف جديد تم تقديمه وهو بحاجة إلى تعيينه لمحرر.</message>
 	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط التعيين في قائمة المشاركين.</message>

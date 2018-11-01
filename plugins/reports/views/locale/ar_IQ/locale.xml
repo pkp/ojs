@@ -12,7 +12,7 @@
   -->
 
 <locale name="ar_IQ" full_name="العربية">
-	<message key="plugins.reports.views.displayName">معاينة التقرير</message>
+	<message key="plugins.reports.views.displayName">تقرير المعاينة</message>
 	<message key="plugins.reports.views.description">هذه الإضافة تعطي تقريراً بصيغة CSV يصف قراءات كل مقالة.</message>
 	<message key="plugins.reports.views.articleId">رمز المقالة التعريفي</message>
 	<message key="plugins.reports.views.articleTitle">عنوان المقالة</message>
