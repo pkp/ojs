@@ -95,7 +95,9 @@
 	<message key="editor.issues.unpublishIssue">Скасувати публікацію випуску</message>
 	<message key="editor.issues.previewIssue">Переглянути випуск</message>
 	<message key="editor.issues.preview">(Попередній перегляд)</message>
-	<message key="editor.issues.confirmPublish">Ви впевнені, що хочете опублікувати новий випуск?</message>
+	<message key="editor.issues.confirmPublish">Ви впевнені, що хочете опублікувати новий випуск?</message>	
+	<message key="editor.issues.confirmUnpublish">Ви впевнені, що хочете скасувати публікацію цього опублікованого випуску?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Ви впевнені, що хочете зробити даний випуск поточним?</message>
 	<message key="editor.issues.publicArticleIdExists">Неможливо зберегти публічний ідентифікатор статті:</message>
 	<message key="editor.issues.noLiveIssues">Немає опублікованих випусків</message>
 	<message key="editor.issues.open">Відкритий</message>
@@ -118,6 +120,7 @@
 	<message key="grid.action.viewIssue">Переглянути</message>
 	<message key="grid.action.previewIssue">Попередній перегляд</message>
 	<message key="grid.action.addIssueGalley">Створити гранку випуску</message>
+	<message key="grid.action.setCurrentIssue">Задати поточний випуск</message>
 	<message key="editor.navigation.issueArchive">Попередні випуски</message>
 	<message key="editor.article.designateReviewVersion">Позначити оригінальний файл як версію для рецензування</message>
 	<message key="editor.article.decision">Рішення</message>
@@ -132,10 +135,12 @@
 	<message key="editor.submissions.lastCompleted">Остання завершена</message>
 	<message key="editor.submissions.assignedTo">Призначено</message>
 	<message key="editor.submissions.inSection">У розділі</message>
+	<message key="editor.article.schedulePublication">Запланувати для публікації</message>
 	<message key="editor.article.scheduleForPublication">Запланувати для публікації у</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Буде визначено</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Плата за публікацію не отримана. Щоб внести статтю до графіку публікації, нагадайте автору про необхідність сплати рахунку або зробіть виняток та скасуйте плату.</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Зображення обкладинки, яке ви хочете видалити, не вдається знайти. Можливо воно вже було видалено. Спробуйте перезавантажити сторінку.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Хибний формат зображення обкладинки. Дозволені формати: .gif, .jpg, .png.</message>
 	<message key="grid.action.removeArticle">Видалити статтю з випуску</message>
 	<message key="editor.article.remove">Видалити</message>
 	<message key="editor.article.remove.confirm">Ви впевнені, що хочете видалити цю статтю з випуску? Стаття буде доступна для планування в інший випуск.</message>
@@ -145,5 +150,6 @@
 	<message key="editor.submission.selectGalleyFiles">Вибрати файли гранок</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Готові файли чернеток з цього списку, пройшовши літературне редагування, завантажені літературним редактором в розділ <span class="pkp_help_title">«Літературне редагування»</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Всі файли, які були завантажені на будь-якому етапі подання рукопису, можуть бути додані в список «Коректура», для цього потрібно поставити галочку «Включити» нижче і клацнути на кнопці «Пошук»: всі доступні файли будуть показані в списку і можуть бути обрані для включення.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Публічний ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту такого ж типу. Будь ласка, обирайте унікальні Ідентифікатори для об'єктів одного типу у Вашому журналі.</message>
 	<message key="editor.article.coverImage">Зображення обкладинки</message>
 </locale>
