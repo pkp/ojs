@@ -16,12 +16,10 @@
 	<message key="plugins.paymethod.manual.description">L'amministratore può registrare i dettagli del pagamento effettuato da un utente al di fuori da OJS.</message>
 	<message key="plugins.paymethod.manual">Pagamento offline</message>
 	<message key="plugins.paymethod.manual.settings">Impostazioni dei pagamenti offline</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Istruzioni</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Istruzioni di pagamento per gli utenti che selezioneranno il pagamento offline</message>
-	
-	<message key="plugins.paymethod.manual.purchase.title">Titolo</message>
-	<message key="plugins.paymethod.manual.purchase.fee">Tariffa</message>	
-	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Invia una notifica di pagamento</message>
+
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Invia notifica di pagamento</message>	
 	<message key="plugins.paymethod.manual.paymentNotification">Notifica di pagamento</message>
 	<message key="plugins.paymethod.manual.notificationSent">Notifica di pagamento inviata</message>
+	<message key="plugins.paymethod.manual.purchase.title">Titolo</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Tariffa</message>	
 </locale>

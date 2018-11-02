@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+
+	<message key="plugins.paymethod.paypal.displayName">Pagamento tariffe via PayPal</message>
+	<message key="plugins.paymethod.paypal.description">I pagamenti verranno processati usando il servizio di PayPal</message>
+	<message key="plugins.paymethod.paypal">Pagamento tramite PayPal</message>
+	<message key="plugins.paymethod.paypal.settings">Configurazioni di PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Modalità test</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Account</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">Client ID</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Segreto</message>
+	<message key="plugins.paymethod.paypal.error">C'è stato un errore nella transazione. Contatta il journal manager per i dettagli</message>
+</locale>

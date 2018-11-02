@@ -15,9 +15,9 @@
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.reports.views.displayName">Report delle viste</message>
 	<message key="plugins.reports.views.description">Questo plugin genera un report CSV che riepiloga le viste su ciascun articolo</message>
-	<message key="plugins.reports.views.galleyViews">Totale visualizzazioni della gabbia</message>
 	<message key="plugins.reports.views.articleId">ID dell'articolo</message>
 	<message key="plugins.reports.views.articleTitle">Titolo dell'articolo</message>
 	<message key="plugins.reports.views.datePublished">Data di pubblicazione</message>
 	<message key="plugins.reports.views.abstractViews">Visualizzazioni dell'abstract</message>
+	<message key="plugins.reports.views.galleyViews">Totale visualizzazioni della gabbia</message>
 </locale>
