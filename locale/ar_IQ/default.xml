@@ -25,7 +25,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">هذا المؤلَّف لم يسبق له النشر، ولم يُعرض على مجلة علمية أخرى للنظر فيه (أو هناك توضيح بشأن هذا الأمر مقدم إلى هيئة التحرير في خانة التعليقات)</message>
-	<message key="default.journalSettings.checklist.fileFormat">ملف التقديم هو بأحد الصيغ الآتية: OpenOffice, Microsoft Word, RTF, WordPerfect</message>
+	<message key="default.journalSettings.checklist.fileFormat">ملف التقديم هو بإحدى الصيغ الآتية: OpenOffice, Microsoft Word, RTF, WordPerfect</message>
 	<message key="default.journalSettings.checklist.addressesLinked">حيثما تطلب الأمر، أضيفت روابط للمراجع المستعملة في المؤلَّف (الروابط هي وصلات إلى العناوين على الشبكة العنكبوتية)</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">فقرات النص ذات تباعد مفرد للأسطر، بحجم خط (12) نقطة، تم فيه استعمال الخط المائل بدلاً عن الخط التحتاني (باستثناء عناوين الروابط)، وجميع الرسوم والأشكال والجداول متوضعة ضمن النص المتعلق بها عوضاً عن تجميعها في نهاية الملف</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[إن نص المؤلَّف مقيد بالمتطلبات النمطية والأسلوبية الواردة في <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">دليل المؤلِّف</a>, الموجود في النص التعريفي بالمجلة ضمن هذا الموقع]]></message>

@@ -65,7 +65,7 @@ after_script:
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/post-data-build.sh; fi
 
   # Print logs and outputs for debugging.
-  - tail -c 1048576 error.log
+  - tail -n 200 error.log
   - cat ./lib/pkp/tests/results/error.log
-  - sudo apt-get install sharutils
-  - test "$(ls -A lib/pkp/tests/results | grep .png)" && (tar cz lib/pkp/tests/results/*.png | uuencode /dev/stdout)
+#  - sudo apt-get install sharutils
+#  - test "$(ls -A lib/pkp/tests/results | grep .png)" && (tar cz lib/pkp/tests/results/*.png | uuencode /dev/stdout)

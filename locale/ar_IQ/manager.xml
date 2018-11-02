@@ -64,7 +64,7 @@
 	<message key="manager.payment.readerFeesDescription">الخيارات المحددة مع أوصافها ورسوماتها (والتي بالإمكان تعديلها أدناه)، ستظهر في (عن المجلة) تحت باب السياسات، فضلاً عن ظهورها في مواضع أخرى حيثما يتطلب الدفع المالي.</message>
 	<message key="manager.payment.records">السجلات</message>
 	<message key="manager.payments">المدفوعات</message>
-	<message key="manager.paymentTypes">أنواع المدفوعاتPayment Types</message>
+	<message key="manager.paymentTypes">أنواع المدفوعات</message>
 	<message key="manager.payment.userName">معرَّف الدفع</message>
 	<message key="manager.people.allEnrolledUsers">الأفراد ذوي الأدوار في هذه المجلة</message>
 	<message key="manager.people.allJournals">جميع المجلات</message>
@@ -155,7 +155,7 @@
 	<message key="manager.setup.disciplineProvideExamples">أدرج أمثلة على التخصصات العلمية ذات العلاقة بهذه المجلة</message>
 	<message key="manager.setup.displayCurrentIssue">أدرج جدول المحتويات للإصدار الحالي (لو توفر).</message>
 	<message key="manager.setup.editorDecision">قرار المحرر</message>
-	<message key="manager.setup.emailBounceAddress">العنوان التخميني</message>
+	<message key="manager.setup.emailBounceAddress">عنوان الارتداد</message>
 	<message key="manager.setup.emailBounceAddressDescription">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.emails">تحديد هوية البريد الالكتروني</message>
@@ -183,7 +183,7 @@
 	<message key="manager.setup.guidingSubmissions">الخطوة 3. إرشاد طلبات النشر</message>
 	<message key="manager.setup.includeCreativeCommons">بالنسبة للمجلات التي تقدم الوصول المفتوح المباشر أو المؤجل، ضمّن رخصة الأعمال الإبداعية المشاعة مع كل الأعمال المنشورة في الوقت المناسب.</message>
 	<message key="manager.setup.information">المعلومات</message>
-	<message key="manager.setup.information.description">وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء متاح ضمن خانة  "المعلومات" من الشريط الجانبي.</message>
+	<message key="manager.setup.information.description">وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء، متاح ضمن خانة  "المعلومات" من الشريط الجانبي.</message>
 	<message key="manager.setup.information.forAuthors">للمؤلفين</message>
 	<message key="manager.setup.information.forLibrarians">لأمناء المكتبات</message>
 	<message key="manager.setup.information.forReaders">للقراء</message>
@@ -397,7 +397,7 @@
 	<message key="manager.subscriptionPolicies.expiryReminders">تذكيرات انتهاء صلاحية الاشتراك</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">رسائل التذكير الآلية (متاحة للتعديل من قبل رئيس تحرير المجلة عبر باب المراسلات المحضرة) يمكن إرسالها إلى المشتركين سواءً قبل انتهاء صلاحية اشتراكاتهم أو بعدها.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
-	<message key="manager.subscriptionPolicies.expirySelectOne">إختر واحداً مما يأتي:</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">إختر واحداً مما يأتي...:</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[يمكن استعمال HTML في خانة النص (لحجم الخط ولونه... إلخ.)، مع معاملة الضغط على زر "return" على أنه <tt>&lt;br&gt;</tt>؛ إن محرر HTML يعمل مع المتصفح Firefox.]]></message>
 	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">لطفاً، إختر قيمة صائبة لعدد الأشهر بعد انتهاء صلاحية الاشتراك.</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">لطفاً، إختر قيمة صائبة لعدد الأشهر قبل انتهاء صلاحية الاشتراك.</message>
