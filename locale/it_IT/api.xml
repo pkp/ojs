@@ -11,6 +11,6 @@
   * Localization strings for the REST API.
   -->
 
-<locale name="it_ITS" full_name="Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="api.submissions.403.unpublishedIssues">Non hai il permesso si vedere i fascicoli non pubblicati.</message>
 </locale>
