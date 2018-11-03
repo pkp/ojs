@@ -7,10 +7,10 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * DOI plugin localization strings for the it_IT locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Questo plugin attiva l'assegnazione dei Digital Object Identifiers a fascicoli, articoli e file in OJS</message>

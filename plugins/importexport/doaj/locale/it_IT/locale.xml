@@ -8,8 +8,7 @@
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the it_IT (Italiano) locale.
-  *
+  * Localization strings
   -->
 
 <locale name="it_IT" full_name="Italiano">

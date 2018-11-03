@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/themes/default/locale/it_IT/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -12,9 +12,10 @@
   -->
 
 <locale name="it_IT" full_name="Italiano">
-
 	<message key="plugins.themes.default.name">Tema di default</message>
 	<message key="plugins.themes.default.description">Questo tema è il tema di default</message>
+
+	<!-- Theme options -->
 	<message key="plugins.themes.default.option.typography.label">I fonts</message>
 	<message key="plugins.themes.default.option.typography.description">Scegli una combinazione di forn the vadano bene per questa rivista.</message>
 	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: Un font digital-native font fatto da Google con un esteso supporto linguistico.</message>
