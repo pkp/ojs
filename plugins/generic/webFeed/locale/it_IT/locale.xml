@@ -7,24 +7,25 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT locale.
-  * Contributed by Andrea Marchitelli - CINECA.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.webfeed.displayName">Feed della rivista</message>
 	<message key="plugins.generic.webfeed.description">Questo plugin genera il feed RSS/Atom per il fascicolo corrente.</message>
 	<message key="plugins.generic.webfeed.settings">Impostazioni</message>
+	<message key="plugins.generic.webfeed.settings.issue">Mostra il link ai feed solo sulle pagine dell'articolo.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Mostra il link ai feed sulla home page e sulle pagine dei fascicoli.</message>
+	<message key="plugins.generic.webfeed.settings.all">Mostra il link ai feed su tutte le pagine della rivista.</message>
+
 	<message key="plugins.generic.webfeed.settings.currentIssue">Mostra gli articoli pubblicati nel fascicolo corrente</message>
+	<message key="plugins.generic.webfeed.settings.recent">Mostra un numero fisso degli articoli più recenti.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">articoli pubblicati più recenti.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Per favore inserisci un intero positivo per gli articoli recenti pubblicati</message>
-	<message key="plugins.generic.webfeed.settings.issue">Mostra il link ai feed solo sulle pagine dell'articolo.</message>
-	<message key="plugins.generic.webfeed.settings.all">Mostra il link ai feed su tutte le pagine della rivista.</message>
 	<message key="plugins.generic.webfeed.atom.altText">Lodo Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
-	<message key="plugins.generic.webfeed.settings.homepage">Mostra il link ai feed sulla home page e sulle pagine dei fascicoli.</message>
+	<message key="plugins.generic.webfeed.settings.recent">Mostra un numero fisso degli articoli più recenti.</message>
 </locale>
 

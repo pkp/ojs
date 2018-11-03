@@ -24,6 +24,6 @@ Informazioni aggiuntive (se disponibili):<br />
 <br />
 Server vars:<br />
 {$serverVars}]]></body>
-		<description></description>
+		<description>Questa mail viene inviata dal plugin paypal al gestore di un journal quanto si notano delle attività sospette o c'è bisogno di un intervento manuale.</description>
 	</email_text>
 </email_texts>

@@ -7,12 +7,13 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * DOI plugin localization strings for the it_IT locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Questo plugin attiva l'assegnazione dei Digital Object Identifiers a fascicoli, articoli e file in OJS</message>
 	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
@@ -32,25 +33,42 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Suffisso DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Il suffisso URN può assumere qualsiasi forma, ma deve restare unico per ciascun oggetto pubblicato che abbia lo stesso prefisso.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Usa il pattern inserito sotto per generare suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %Y per l'anno, %a per l'ID OJS degli articoli, %g per gli ID OJS dei file degli articoli, %f per gli ID OJS dei file e %p per il numero di pagina.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Per esempio, vol%viss%ipp%p creerà il suffisso "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">per i fascicoli</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">per gli articoli</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">per i file principali</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Per esempio, vol%viss%ipp%p creerà il suffisso "vol3iss2pp230".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Usa i pattern di default.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for i fascicoli<br />%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per l'impaginato.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Inserisci un suffisso individuale per ogni cosa pubblicata. Troverai un campo addizionale per il DOI in ogni pagina per i metadati.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Inserisci il pattern del suffisso DOI per i fascicoli.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Inserisci il pattern del suffisso DOI per gli articoli.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Inserisci il pattern del suffisso DOI per i file principali degli articoli.</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Riassegna i DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Se cambi la tua configurazione dei DOI, i DOI già assegnati non vengono toccati. Una volta che la configurazione dei DOI è stata salvata, usando questo bottone tutti i DOI esistenti vengono cancellati  e cosi le nuove configurazioni interverranno sugli oggetti già esistenti.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Sei sicuro di eliminare tutti i DOI esistenti?</message>	
 
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Assegna i DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Assegna DOI a tutte le componenti che non hanno assegnato un DOI. Questa azione non può essere usata con i suffissi individuali per ogni DOI. Se hai modificato la configurazione dei DOI qua sopra, salvala prima iniziare quest'azione. Assegnare i DOI può richiedere molto tempo, dipende dal numero di componeti che ci sono nella rivista.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Sei sicuro di voler assegnate dei DOI a tutte le componenti pubblicate che non hanno in questo momento un DOI ?</message>
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">fascicolo</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">articolo</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">file principale</message>
-	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Il suffisso DOI inserito è già in uso per un altro oggetto pubblicato. Inserisci un DOI unico per ciascun oggetto.</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">gabbia / file</message>
+	<message key="plugins.pubIds.doi.editor.customSuffixMissing">Il DOI non può essere assegnato perché il suffisso individuale manca.</message>
 	<message key="plugins.pubIds.doi.editor.patternNotResolved">Il DOI non può essere assegnato perché contiene un indirizzo non valido</message>
+	<message key="plugins.pubIds.doi.editor.canBeAssigned">Quello che vedi è un'anticipazione del DOI. Seleziona il checkbox e salva il modulo per assegnare il DOI.</message>
+	<message key="plugins.pubIds.doi.editor.assigned">Il DOI è assegnato ad {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Il suffisso DOI inserito è già in uso per un altro oggetto pubblicato. Inserisci un DOI unico per ciascun oggetto.</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Cancella DOI</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Sei sicuro di voler cancellare il DOI esistente?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Cancella i DOI collegati ai fascicoli</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Sei sicuro di voler cancellare gli esistente DOI collegati ai fascicoli ?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Usa la seguente opzione per cancellare i DOI di tutti i componenti (articoli e gabbie/file) attualmente programmati per questo fascicolo.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi">Assegna il DOI {$pubId} a questo {$pubObjectType}</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Il DOI non può essere assegnato perchè il suffisso individuale manca.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">Il DOI {$pubId} non può essere assegnato perchè contiene una forma non risolta.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">Il DOI {$pubId} è stato assegnato.</message>
 </locale>

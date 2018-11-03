@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/marc/locale/it_IT/locale.xml
+  * plugins/generic/googleScholar/locale/it_IT/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -12,6 +12,6 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<message key="plugins.OAIMetadata.marc.displayName">MARC Metadata Format</message>
-	<message key="plugins.OAIMetadata.marc.description">Struttura i metadati in maniera confacente al formato MARC.</message>
+	<message key="plugins.generic.googleScholar.name">Plugin indicizzazione Google Scholar</message>
+	<message key="plugins.generic.googleScholar.description">Questo plugin attiva l'indicizzazione del contenuto pubblicato in Google Scholar.</message>
 </locale>

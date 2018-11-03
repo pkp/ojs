@@ -7,13 +7,18 @@
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT (Italiano) locale.
-  * Contributed by Andrea Marchitelli - CINECA.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
- 
+
 <locale name="it_IT" full_name="Italiano">
+	<!-- Section default -->
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La submission non è stata precedentemente pubblicata, né proposta a un'altra rivista (oppure si fornisce una spiegazione all'editor nei commenti).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Il file di submission è in un formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Il testo ha spaziatura singola; usa un font 12 punti ; impiega il corsivo invece della sottolineatura (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine.</message>
@@ -21,7 +26,6 @@
 	<message key="default.journalSettings.privacyStatement">I nomi e gli indirizzi email inseriti in questo sito della rivista  saranno utilizzati esclusivamente per gli scopi dichiarati e non verranno resi disponibili per nessun altro uso.</message>
 	<message key="default.journalSettings.openAccessPolicy">Questa rivista fornisce accesso aperto ai suoi contenuti, ritendendo che rendere le ricerche disponibili liberamente al pubblico migliori lo scambio della conoscenza a livello globale.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Questa rivista consente agli autori di depositare i contributi inviati alla rivista sul proprio sito personale e sull'archivio istituzionale, prima e dopo la pubblicazione, con la sola richiesta di indicare gli estremi della pubblicazione.</message>
-
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[
 		La fase di copyediting  serve a migliorare la sintassi, la chiarezza, il vocabolario e la presentazione dell'articolo. Rappresenta l'ultima occasione per l'autore di proporre cambiamenti sostanziali, dato che nella fase successiva &#x00E8; limitato ai tipi e alle correzioni della formattazione. 
 			<h4>Sistemi di Copyediting</h4>
@@ -127,14 +131,14 @@ Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre
 	<message key="default.journalSettings.publicationFee">Pubblicazione di un articolo</message>
 	<message key="default.journalSettings.purchaseArticleFee">Acquisto di un articolo</message>
 	<message key="default.journalSettings.membershipFee">Iscrizione</message>
-	<message key="section.default.policy"></message>
+	<message key="section.default.policy">Politica di default</message>
 	<message key="default.journalSettings.purchaseIssueFee">Acquista il fascicolo</message>
 	<message key="default.genres.article">Articolo</message>
-	<message key="default.groups.name.manager">Direttore</message>
+	<message key="default.groups.name.manager">Journal Manager</message>
 	<message key="default.groups.plural.manager">Direttori</message>
 	<message key="default.groups.abbrev.manager">MNGR</message>
-	<message key="default.groups.name.editor">Editor</message>
-	<message key="default.groups.plural.editor">Editor</message>
+	<message key="default.groups.name.editor">Editor in capo</message>
+	<message key="default.groups.plural.editor">Editors</message>
 	<message key="default.groups.abbrev.editor">EDT</message>
 	<message key="default.groups.name.guestEditor">Guest editor</message>
 	<message key="default.groups.plural.guestEditor">Guest editor</message>
@@ -155,4 +159,8 @@ Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre
 	<message key="default.groups.name.externalReviewer">Revisore esterno</message>
 	<message key="default.groups.plural.externalReviewer">Revisori esterni</message>
 	<message key="default.groups.abbrev.externalReviewer">REV</message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Questa rivista usa il sistema CLOCKSS per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste biblioteche di creare archivi permanebti di riviste per conservazione e ripristinio. Vedi di più sul sito di <a href="http://clockss.org/">CLOCKSS</a>]]></message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>

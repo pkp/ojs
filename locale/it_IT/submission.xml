@@ -7,8 +7,8 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT (Italiano) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -27,10 +27,51 @@
 	<message key="submission.submit.newSubmissionSingle">Nuova proposta</message>
 	<message key="submission.issueEntry">Metadati</message>
 	<message key="submission.submit.whatNext.description">La redazione ha ricevuto notifica della tua proposta e ti è stata inviata una email di conferma. Appena gli editor avranno visionato la tua proposta sarai contattato.</message>
-	<message key="submission.issueEntry.modalTitle">Metadati</message>
+	<message key="submission.issueEntry.modalTitle">Metadati della proposta e di pubblicazione</message>
 	<message key="submission.issueEntry.publicationMetadata">Pubblicazione</message>
 	<message key="submission.confirmSubmit">Sei sicuro di voler inviare la proposta?</message>
 	<message key="workflow.review.externalReview">Revisione</message>
 	<message key="editor.submission.decision.sendExternalReview">Invia questa proposta al revisore esterno</message>
 	<message key="submission.upload.fileContents">File della proposta</message>
+	<message key="submission.submit.userGroup">Invia usando il mio ruolo come ...</message>
+	<message key="submission.submit.userGroupDescription">Scegli il tipo di utente con il quale invii questa proposta.</message>
+	<message key="submission.title.tip"><![CDATA[Il tipo di proposta è di solito  'immagine', 'testo', o un altro tipo multimediale come 'software' o 'interativo'. Per favore scegli il più rilevante per la tua propostoa. Esempio possono essere trovati qui: <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Inizia una nuova proposta in</message>
+	<message key="grid.action.workflow">Flusso di lavoro per una proposta</message>
+	<message key="grid.action.galleyInIssueEntry">La gabbia appare all'interno del fascicolo</message>
+	<message key="grid.action.issueEntry">Vedi i metadati della proposta</message>
+	<message key="submission.issueEntry.submissionMetadata">Proposta</message>
+	<message key="submission.issueEntry.confirm">Inserisci questo articolo nel fascicolo basandoti sui metadati presenti qua sotto.</message>
+	<message key="submission.event.articleGalleyMadeAvailable">La gabbia "{$galleyFormatName}" di questo articolo è resa disponibile.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">La gabbia "{$galleyFormatName}" di questo articolo è resa indisponibile.</message>
+	<message key="submission.event.publicIdentifiers">L'identificativo pubblico di questa proposta è aggiornato.</message>
+	<message key="grid.issueEntry.availableGalley.title">Formato approvato</message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Questa gabbia <em>non sarà più disponibile</em> ai lettori.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Questa gabbia <em>sarà  a disposizione</em> dei lettori.</p>]]></message>
+	<message key="grid.action.availableArticleGalley">Rendi questa gabbia disponibile</message>
+	<message key="submission.galleyFiles">I files della gabbia</message>
+	<message key="submission.proofReadingDescription"><![CDATA[Il layout editor carica i file production-ready che sono stati preparati per la pubblicazione qui. Usa <em>Assegna valutatore</em> to disignare autori e/o altri a controllare le gabbie, con i file corretti caricati per l'approvazione priam della pubblicazione]]></message>
+	<message key="grid.action.approveProof">Approva questa bozza per l'inclusione nella gabbia</message>
+	<message key="grid.action.pageProofApproved">Questa bozza è stata approvata per l'inclusione nella gabbia</message>
+	<message key="submission.submit.titleAndSummary">Titolo e abstract</message>
+	<message key="submission.submit.upload.description">Carica i file associati con questa proposta, inclusi l'articolo, i set di dati, le immagini, etc.</message>
+	<message key="submission.pageProofs">Correzione di bozze</message>
+	<message key="submission.event.issueMetadataUpdated">I metadati di questa proposta sono stati aggiornati.</message>
+	<message key="submission.complete">Approvata</message>
+	<message key="submission.incomplete">In attesa di approvazione</message>
+	<message key="submission.submit.form.localeRequired">Per favore seleziona una lingua per la proposta</message>
+	<message key="submission.submit.submissionChecklist">Lista di controllo per le proposte</message>
+	<message key="submission.submit.submissionChecklistDescription">Devi leggere e controllare di aver completato quanto richiesto qui sotto prima di procedere.</message>
+	<message key="submission.submit.privacyStatement">Informativa sulla privacy</message>
+	<message key="submission.submit.contributorRole">Ruolo dei contributori</message>
+	<message key="submission.submit.form.authorRequired">Alemo un autore è richiesto.</message>
+	<message key="submission.submit.form.authorRequiredFields">Il nome, cognome e l'email sono richiesti per ogni autore.</message>
+	<message key="submission.submit.form.titleRequired">Per favore insersci il titolo del tuo articolo</message>
+	<message key="submission.submit.form.abstractRequired">Per favore inserisci l'abstract dell'articolo.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Per favore selezione il ruolo del contributore.</message>
+	<message key="submission.citationFormat.notFound">Il formato di citazione richiesto non è stato trovato.</message>
+	<message key="submission.metadataDescription">Le specifiche sono basate sul set del Dublin Core, uno standard internazionale usato per descrivere i contenuti delle riviste.</message>
+	<message key="section.any">Qualsiasi sezione</message>
+	<message key="submission.abstract.wordCount.description">L'abstract deve essere di {$wordCount} parole o meno.</message>
+	<message key="submission.submit.form.wordCountAlert">Il tuo abstract è troppo lungo. Per favore accorcialo sotto il limite di parole indicato per questa sezione.</message>
 </locale>

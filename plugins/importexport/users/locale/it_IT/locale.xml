@@ -7,9 +7,8 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the en_US (Italian) locale.
-  * Contributed by AePIC Team CILEA.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -22,6 +21,16 @@ Commands:
 	export [xmlFileName] [journal_path]
 	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
+	<message key="plugins.importexport.users.cliUsage.examples"><![CDATA[
+Examples:
+	Importa utenti dentro la rivista usando il file myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+	Esporta tutti gli utenti da myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+	Esporta gli utenti specificando il loro ID:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2
+]]></message>
+
 	<message key="plugins.importexport.users.import.importUsers">Importa Utenti</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleziona un file di dati XML contenente informazioni sull'utente da importare in questo press. Vedi l'help del press per dettagli sul formato di questo file.<br /><br />Nota che se il importato file contiene ogni username o indirizzo email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e ogni nuovo ruolo da creare sar&#x00E0; assegnato agli utenti esisenti.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Importazione utente fallita</message>
@@ -42,4 +51,7 @@ Commands:
 	<message key="plugins.importexport.users.export.couldNotWriteFile">Non si pu&#x00F2; scrivere sul file "{$fileName}".</message>
 	<message key="plugins.importexport.users.import.warning">Attenzione</message>
 	<message key="plugins.importexport.users.import.encryptionMismatch">Non si possono usare password criptate con {$importHash}; OMP è configurato per usare {$ompHash}. Se continui, dovrai resettare le password degli utenti importati.</message>
+	<message key="plugins.importexport.users.importComplete">L'import è finito con successo. Gli utenti con usernames and email che non sono ancora in uso sono stati importati, insieme ai gruppi di utenti.</message>
+	<message key="plugins.importexport.users.results">Risultati</message>
+	<message key="plugins.importexport.users.uploadFile">Per favore importa un file "Importa" per continuare</message>
 </locale>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendByAuthor/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+
+	<message key="plugins.generic.recommendByAuthor.displayName">Altri articoli dello stesso autore</message>
+	<message key="plugins.generic.recommendByAuthor.description">Questo plugin inserisce una lista di articoli dello stesso autore nella pagina di abstract dell'articolo.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Puoi leggere altri articoli dello stesso autore/i</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Attenzione: Questo plugin richiede che almeno un plugin di report/statistiche sia abilitato. Se il tuo plugin di statistiche prevede più di una metrica, seleziona una matrica principale nelle configurazioni dell'admin o nella pagine di configurazione del journal manager.</message>
+</locale>

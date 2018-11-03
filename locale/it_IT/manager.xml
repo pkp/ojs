@@ -5,12 +5,10 @@
   * locale/it_IT/manager.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2000-2018 John Willinsky
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT (Italiano) locale.
-  * Contributed by Andrea Marchitelli - CINECA.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -145,7 +143,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">avvisi recenti nella homepage della rivista.</message>
-	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista con uno o più dei seguenti ruoli:</message>
+	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista.</message>
 	<message key="manager.setup.focusAndScope">Scopo e ambito</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indicizzare gli articoli</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS aderisce all'<a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> (OAI-PMH), lo standard per la creazione di un accesso indicizzato su scala globale alle risorse elettroniche per la ricerca. Gli autori utlizzeranno un modello simile per fornire i metadati relativi alle loro submission. L'amministratore selezioner&#x00E0; le catetorie relative all'indicizzazione, fornendo agli autori esempi utili per la classificazione dei loro lavori, separando i termini con un punto e virgola (es. primo termine; secondo termine). Le varie voci saranno presentate come esempi utilizzando "Es.", oppure "Ad esempio".]]></message>
@@ -200,7 +198,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.lists">Liste</message>
 	<message key="manager.setup.listsDescription">Inserisci il numero massimo di voci delle liste che devono comparire nelle diverse pagine (es. fascicoli, utenti o incarichi) e il numero di link alle altre pagine da visualizzare.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Abilita  LOCKSS a conservare e distribuire il contenuto della rivista alle biblioteche partecipanti attivando il <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. Una licenza LOCKSS apparir&#x00E0; nelle informazioni sulla rivista, sotto Archiviazione:]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Identifica 6-10 biblioteche che registreranno e depositeranno la rivista. Per esempio, guarda alle istituzioni dove lavorano gli editor o i membri della direzione e/o istituzioni che gi&#x00E0; parteciapno al LOCKSS. Vedi <a href="http://www.lockss.org/community/" target="_blank">participating libraries</a>. Usa gli inviti preparati per (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">biblioteche partecipanti al LOCKSS</a> o (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identifica 6-10 biblioteche che registreranno e depositeranno la rivista. Per esempio, guarda alle istituzioni dove lavorano gli editor o i membri della direzione e/o istituzioni che già parteciapno al LOCKSS. Vedi <a href="http://www.lockss.org/community/" target="_blank">le biblioteche partecipanti</a>.]]></message>
 	<message key="manager.setup.look">Aspetto</message>
 	<message key="manager.setup.look.description">Testata dell'homepage, contenuto, testata della rivista, pie' di pagina, menu di navigazione e fogli di stile.</message>
 	<message key="manager.setup.management">Gestione</message>
@@ -237,7 +235,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.refLinkInstructions.description">Istruzioni di layout per i link di riferimento</message>
 	<message key="manager.setup.restrictArticleAccess">Gli utenti devono essere registrati e aver effettuato il log in per vedere i contenuti open access.</message>
 	<message key="manager.setup.restrictSiteAccess">Gli utenti devono essere registrati e aver effettuato il log in per vedere il sito della rivista.</message>
-	<message key="manager.setup.reviewGuidelines"></message>
+	<message key="manager.setup.reviewGuidelines">Linee guida per la revisione</message>
 	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Le Linee guida per la revisione delle proposte forniscono ai revisori i criteri per giudicare la qualità di una proposta e la relativa possibilità di pubblicazione all'interno della rivista, così come qualsiasi tipo informazioni particolare per preparare una revisione valida e utile.
 
 Al momento di concludere una revisione, ai revisori vengono presentate due box, la prima "per l'autore e per l'editor" e la seconda solamente "per l'editor". In alternativa, l'amministratore della rivista può creare <a href="{$reviewFormsUrl}" class="action">moduli per la peer review</a>. In ogni caso, gli editor potranno includere i commenti dei revisori nella corrispondenza con gli autori.]]></message>
@@ -253,6 +251,7 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Voto ai revisori</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Promemoria per i revisori</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Aggiungi il link a <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Come assicurare una revisione cieca</a> alle pagine dove gli autori e i revisori caricano i file.]]></message>
 	<message key="manager.setup.reviewPolicy">Politiche di revisione</message>
 	<message key="manager.setup.searchEngineIndexing">SEO (Ottimizzazione per i motori di ricerca)</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Per aumentare la visibilità della rivista nei motori di ricerca, inserisci una breve descrizione e le relative keyword (separate da virgola).</message>
@@ -330,10 +329,6 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.subscriptionPolicies.expiryFullDescription">I lettori non possono più accedere dal momento di scadenza dell'abbonamento.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Scadenza parziale</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">I lettori non possono accedere ai contenuti pubblicati successivamente alla scadenza dell'abbonamento, ma mantengono l'accesso a ciò che è stato pubblicato prima.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Avvisa gli abbonati per email</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">settimana (settimane) dopo la scadenza dell'abbonamento.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Avvisa gli abbonati per email</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">settimana (settimane)prima della scadenza dell'abbonamento.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Avvisi di scadenza degli abbonamenti</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Possono essere inviate email automatiche di avviso (modificabili dagli amministratori della rivista tra le email precompilate di OJS) agli abbonati sia prima che dopo la scadenza di un abbonamento.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Nota:</strong> Per attivare queste opzioni, l'amministratore del sito deve abilitare l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. Potrebbero essere necessarie ulteriori configurazioni del server per supportare questa funzionalit&#x00E0; (che potrebbe non essere attivabile su tutti i server), come indicato nella documentazione di OJS.]]></message>
@@ -515,8 +510,6 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="plugins.importexport.common.register.success">Registrazione conclusa con successo!</message>
 	<message key="manager.website.archiving">Archiviazione</message>
 	<message key="manager.setup.masthead">Testata</message>
-	<message key="manager.setup.editorialTeam">Editorial Team</message>
-	<message key="manager.setup.editorialTeam.description">Informazioni sulla redazione</message>
 	<message key="manager.setup.useStyleSheet">Foglio di stile</message>
 	<message key="manager.setup.contextName">Nome della rivista</message>
 	<message key="manager.setup.journalSummary">Presentazione della rivista</message>
@@ -528,7 +521,7 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="manager.setup.journalThumbnail.description">Un piccolo logo da usare negli indici di riviste</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.distribution.access">Accesso</message>
-	<message key="manager.publication.library">Editore</message>
+	<message key="manager.publication.library">Materiali di supporto</message>
 	<message key="grid.genres.title.short">Componenti</message>
 	<message key="plugins.importexport.common.settings.DOIPluginSettings">Impostazioni plugin DOI</message>
 	<message key="plugins.importexport.common.export.articles">Articoli</message>
@@ -540,4 +533,71 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="plugins.importexport.common.status.registered">Registrato</message>
 	<message key="plugins.importexport.common.action.export">Esporta</message>
 	<message key="plugins.importexport.common.action.markRegistered">Segna come registrato</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Sei sicuro di cancellare questo abbonamento ?</message>
+	<message key="manager.paymentTypes">Tipi di pagameti</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Non ci sono editor di sezione ancora. Aggiungi questo ruolo almeno ad un utente con Utenti & Ruoli]]></message>
+	<message key="manager.setup.homepageContent">Contenuto Homepage rivista</message>
+	<message key="manager.setup.homepageContentDescription">L'homepage della rivista consiste di default di links per la navigazione. Contenuto addizionale viene aggiunto usando una per una le opzioni seguenti, che apprarirano nell'ordine con cui sono mostrate.</message>
+	<message key="manager.setup.layout">Layout della rivista</message>
+	<message key="manager.setup.pageHeader">Header pagine della rivista</message>
+	<message key="manager.setup.focusAndScope.description">Descrive agli autori, ai lettori e ai bibliotecari di cosa si occupano gli articoli e gli altri scritti che la rivista pubblicherà.</message>
+	<message key="manager.setup.form.issnInvalid">L'ISSN immesso non è valido.</message>
+	<message key="manager.setup.includeCreativeCommons">Per tutti le riviste che offrono gli articoli immediatamente o dopo un certo tempo in open access, includi una licenza Creative Commons per tutto quanto verrà messo a disposizione.</message>
+	<message key="manager.setup.faviconInvalid">Invalido formato per la favicon. Formati accettati sono ico, .png, e .gif.</message>
+	<message key="manager.setup.journalThumbnail.altText">Testo alternativo per la thumbnail</message>
+	<message key="manager.setup.enableArchive">Attiva l'Archiving</message>
+	<message key="manager.setup.plnPluginEnable">Plugin PKP PN attivato</message>
+	<message key="manager.setup.plnDescription">Il PKP Preservation Network (PN) fornisce un servizio di preservazione gratuito ad ogni rivista OJS che ha alcuni requisiti di base.</message>
+	<message key="manager.setup.plnSettingsDescription">Clicca su link 'Configurazione' per accettare i termini d'uso del PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">Il PKP Preservation Network (PN) fornisce un servizio di preservazione gratuito ad ogni rivista OJS che ha alcuni requisiti di base. Il plugin PKP PN per OJS3 è in corso di sviluppo e sarà disponibile tra i plugin installabili presto.</message>
+	<message key="manager.setup.otherLockss">Alternative all'archiviazione.</message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Una licenza LOCKSS apparira nella pagina di About della rivista sotto Archiviazione: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Licenza LOCKSS</a>]]></message>
+	<message key="manager.setup.lockssLicenseLabel">Descrizione licenza LOCKSS</message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Abilita CLOCKSS per conservare e distribuire il contenuto delle riviste alle biblioteche che partecipano alla tua  <a href="{$clockssUrl}" target="_blank">rete CLOCKSS</a>.]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[Una licenza CLOCKSS apparirà nella pagina diAbout della rivista sotto Archiviazione: a href="http://clockss.org/" target="_blank">Licenza CLOCKSS</a>]]></message>
+	<message key="manager.setup.clockssLicenseLabel">Descrizione licenza CLOCKSS</message>
+	<message key="manager.setup.clockssRegister"><![CDATA[Sottoscrivi il servizio CLOCKSS visitando il <a href="http://clockss.org/" target="_blank">sito di CLOCKSS</a>.]]></message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable">Abilita Portico per conservare e distribuire il contenuto delle rivista alla biblioteche che partecipano a Portico.</message>
+	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">Tabella con i dati delle visualizzazioni per pagina.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} Mesi</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} Settimane</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Notifica agli abbonati per mail dopo la scadenza dell'abbonamento</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Notifica agli abbonati per mail dopo la scadenza dell'abbonamento.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Notifica agli abbonati per mail prima della scadenza dell'abbonamento</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Notifica agli abbonati per mail prima della scadenza dell'abbonamento</message>
+	<message key="manager.subscriptions.confirmRenew">Sei sicuto di rinnovare questo abbonamento?</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Per favore usa la casella di spunta fornita.</message>
+	<message key="manager.navigationMenus.subscriptions.description">Link ad una pagina che descrive l'abbonamento offerto.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Link ad una pagina che descrive l'attuale e i passati abbonamenti.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Questo link è visibile solo quanto l'utente è loggato.</message>
+	<message key="grid.category.path">Path</message>
+	<message key="grid.action.addSection">Aggiungi sezione</message>
+	<message key="manager.setup.section.description">Gli articoli nei fascicoli pubblicati sono organizzati in sezioni, di solito per tema o per contenuto (articoli refereati, editoriali, etc.).</message>
+	<message key="settings.roles.gridDescription">I ruoli sono gruppi di utenti nella rivista a cui è concesso l'accesso a diversi livelli di autorizzazione e flussi di lavoro presenti all'interno della rivista. Esistono cinque diversi livelli di autorizzazione: i Journal Manager che hanno accesso a tutto (tutto il contenuto e le impostazioni); gli editors di sezione che hanno accesso completo a tutti i contenuti assegnati alla sezione; gli assistenti che hanno un accesso limitato a quanto gli è stato esplicitamente assegnato da un editor; i revisori possono vedere ed gestire le proposte a cui sono stati assegnati per la revisione; e in fine gli autori possono vedere e interagire, con una quantità limitata di informazioni, solo sulle proprie proposte. Inoltre ci sono cinque diverse fasi a cui i ruoli possono accedere: Invio proposta, Revisione interna, Revisione, Correzione editoriale e Produzione.</message>
+	<message key="manager.setup.copyrightYearBasis.article">Articolo: l'anno di default verrà preso dall'anno di pubblicazione, nell'ottica "pubblica-appena-vai".</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Fascicolo: l'anno di default verrà preso dall'anno di pubblicazione del fascicolo</message>
+	<message key="manager.setup.resetPermissions.confirm">Sei sicuro di voler reimpostare i permessi già assegnati agli articoli?</message>
+	<message key="grid.genres.title">Componenti dell'articolo</message>
+	<message key="grid.genres.description">Questi componenti sono usati per dare nomi ai file e sono presentati in un menu a tendina sui file in caricamento. I componenti designati ## permettono all'utente di associare il file a tutta la proposta 99Z o a un componente particolare per numero (ad esempio 02).</message>
+	<message key="plugins.importexport.common.export.issues">Fascicoli</message>
+	<message key="plugins.importexport.common.export.representations">Gabbie</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Nessuno degli oggetti pubblicabili è stato selezionato per l'assegnazione del DOI nel plugin relativo, per tanto non è possibile depositare o esportare con questo plugin</message>
+	<message key="plugins.importexport.common.filter.issue">Qualsiasi fascicolo</message>
+	<message key="plugins.importexport.common.action">Azione</message>
+	<message key="plugins.importexport.common.validation">Valida l'XML prima dell'esportazione e della registrazione.</message>
+	<message key="plugins.importexport.common.error.noObjectsSelected">Nessun oggetto selezionato</message>
+	<message key="plugins.importexport.common.error.validation">Non posso convertire gli oggetti selezionati</message>
+	<message key="plugins.importexport.common.invalidXML">XML invalido:</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Il file di input {$param} non è leggibile.</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Il prefisso DOI manca per la rivista con il path {$path}.</message>
+	<message key="plugins.importexport.common.cliError">ERRORE:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Il path specificato, "{$journalPath}", non esiste.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Gli oggetti specificati non sono stati trovati.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Manda una copia al contatto primario, identificato nelle configurazioni della rivista.</message>
+	<message key="manager.setup.editorialTeam">Team editoriale</message>
+	<message key="manager.setup.editorialTeam.description">Elenca editori, direttori, responsabili e altri individui associati con la rivista.</message>
 </locale>
