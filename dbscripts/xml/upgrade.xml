@@ -55,6 +55,10 @@
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.2.0.9">
+			<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml" condition="return $installer->columnExists('published_submissions', 'date_published');" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/log.xml" />
@@ -215,6 +219,10 @@
 	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
 		<note file="docs/release-notes/README-3.1.1" />
+	</upgrade>
+
+	<upgrade minversion="3.0.0.0" maxversion="3.2.0.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_versioning.xml" /> <!-- condition="return $installer->tableExists('published_submissions_tmp')" -->
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

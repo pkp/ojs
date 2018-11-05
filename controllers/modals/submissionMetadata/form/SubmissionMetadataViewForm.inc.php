@@ -84,7 +84,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	/**
 	 * Initialize form data
 	 */
-	function initData() {
+	function initData($submissionVersion = 1) {
 		parent::initData();
 		$submission = $this->getSubmission();
 		$locale = AppLocale::getLocale();
@@ -156,5 +156,3 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		}
 	}
 }
-
-

@@ -175,6 +175,12 @@
 	<message key="submissions.editorRuling">Editor Ruling</message>
 	<message key="submission.eventLog">Event Log</message>
 
+	<!-- Versioning -->
+	<message key="submission.versioning.versionHistory">Version History</message>
+	<message key="submission.versioning.version">Version {$version} ({$date})</message>
+	<message key="submission.versioning.linkToLatest">This is a previous version. See </message>
+	<message key="submission.versioning.latest">latest version</message>
+
 	<!-- Submission list search engine -->
 	<message key="submissions.copyeditComplete">Copyedited</message>
 	<message key="submissions.layoutComplete">Layout edited</message>

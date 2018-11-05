@@ -219,5 +219,3 @@ class AuthorDAO extends PKPAuthorDAO {
 		return new Author();
 	}
 }
-
-

@@ -65,6 +65,16 @@
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
 <article class="obj_article_details">
+
+  {* Notification if there is a more recent version of this article *}
+	{if $isPreviousVersion}
+		<div class='cmp_notification'>
+			{translate key="submission.versioning.linkToLatest"}
+			{assign var=newVersionLink value=$article->getBestArticleId()}
+			<a href="{url op="view" path=$newVersionLink|escape}">{translate key="submission.versioning.latest"}</a>.
+		</div>
+	{/if}
+
 	<h1 class="page_title">
 		{$article->getLocalizedTitle()|escape}
 	</h1>
@@ -78,9 +88,9 @@
 	<div class="row">
 		<div class="main_entry">
 
-			{if $article->getAuthors()}
+			{if $article->getAuthors(false, $submissionVersion)}
 				<ul class="item authors">
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$article->getAuthors(false, $submissionVersion) item=author}
 						<li>
 							<span class="name">
 								{$author->getFullName()|escape}
@@ -231,6 +241,7 @@
 				<div class="item galleys">
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
+              {assign var=galleyId value=$galley->getId()}
 							<li>
 								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 							</li>
@@ -257,6 +268,20 @@
 					</div>
 					<div class="value">
 						{$article->getDatePublished()|date_format:$dateFormatShort}
+					</div>
+				</div>
+			{/if}
+
+      {* Display article versions *}
+			{if $previousVersions|@count > 1}
+				<div class="item versioning">
+					<div class="label">
+						{translate key="submission.versioning.versionHistory"}
+					</div>
+					<div class="value">
+						{foreach from=$previousVersions item=submissionVersion}
+              <a href="{url op="version" path=$article->getBestArticleId()|to_array:$submissionVersion->getSubmissionVersion()}">{translate key="submission.versioning.version" version=$submissionVersion->getSubmissionVersion() date=$submissionVersion->getDatePublished()|date_format:$dateFormatShort}</a><br>
+						{/foreach}
 					</div>
 				</div>
 			{/if}

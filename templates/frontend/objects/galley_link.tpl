@@ -48,9 +48,17 @@
 		{assign var=restricted value="1"}
 	{/if}
 {/if}
+{* Versioning *}
+{if $isPreviousVersion}
+	{assign var=path value=$parentId|to_array:$submissionVersion:$galley->getBestGalleyId()}
+	{assign var=operation value="version"}
+{else}
+	{assign var=path value=$parentId|to_array:$galley->getBestGalleyId()}
+	{assign var=operation value="view"}
+{/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}">
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op=$operation path=$path}">
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Make a copy needed submissions columns in a new DB table, to work with them later, because the date_published will be removed in between.
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			CREATE TABLE published_submissions_tmp AS (SELECT submission_id, date_published FROM published_submissions)
+		</query>
+		<query>
+			CREATE TABLE submission_galleys_tmp AS (SELECT galley_id, file_id FROM submission_galleys)
+		</query>
+	</sql>
+</data>

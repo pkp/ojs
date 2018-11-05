@@ -41,7 +41,7 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 		$submission = $this->getSubmission();
 		$submissionDao = Application::getSubmissionDAO();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
+		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $publishedArticleDao->getLatestVersionId($submission->getId()));
 		$isExistingEntry = $publishedArticle?true:false;
 
 		if ($isExistingEntry) {
@@ -53,5 +53,3 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 		$submissionDao->updateObject($submission);
 	}
 }
-
-

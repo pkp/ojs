@@ -175,6 +175,12 @@
 	<message key="submissions.editorRuling">Redaktionsbeschluss</message>
 	<message key="submission.eventLog">Protokoll der Ereignisse</message>
 
+	<!-- Versioning -->
+	<message key="submission.versioning.versionHistory">Versionsgeschiche</message>
+	<message key="submission.versioning.version">Version {$version} ({$date})</message>
+	<message key="submission.versioning.linkToLatest">Dies ist eine alte Version. Siehe </message>
+	<message key="submission.versioning.latest">aktuellste Version</message>
+
 	<!-- Submission list search engine -->
 	<message key="submissions.copyeditComplete">Lektorat beendet</message>
 	<message key="submissions.layoutComplete">Layout fertig</message>

@@ -17,16 +17,20 @@ import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
 
 class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 
-	/** @var Submission **/
+	/** @var $_submission Submission **/
 	var $_submission;
+
+	/** @var $_submissionVersion submission version **/
+	var $_submissionVersion;
 
 	/**
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function __construct($submission) {
+	function __construct($submission, $submissionVersion) {
 		parent::__construct();
 		$this->_submission = $submission;
+		$this->_submissionVersion = $submissionVersion;
 	}
 
 	//
@@ -59,6 +63,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	function getRequestArgs($row) {
 		return array(
 			'submissionId' => $this->_submission->getId(),
+			'submissionVersion' => $this->_submissionVersion,
 		);
 	}
 

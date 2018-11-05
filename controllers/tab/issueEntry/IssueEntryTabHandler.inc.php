@@ -100,8 +100,11 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();
 		$user = $request->getUser();
+		$submissionVersion = $args['submissionVersion'] ? $args['submissionVersion'] : null;
+
+		$formParams = array('displayedInContainer' => true, 'submissionVersion' => $submissionVersion);
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
-		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
+		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, $formParams);
 		$issueEntryPublicationMetadataForm->initData();
 		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
 	}
@@ -277,11 +280,11 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	 * @copydoc PublicationEntryTabHandler::_getPublicationEntrySubmissionReviewForm()
 	 * @return PKPForm
 	 */
-	function _getPublicationEntrySubmissionReviewForm() {
+	function _getPublicationEntrySubmissionReviewForm($submissionVersion) {
 
 		$submission = $this->getSubmission();
 		import('controllers.modals.submissionMetadata.form.IssueEntrySubmissionReviewForm');
-		return new IssueEntrySubmissionReviewForm($submission->getId(), $this->getStageId(), array('displayedInContainer' => true));
+		return new IssueEntrySubmissionReviewForm($submission->getId(), $this->getStageId(), array('displayedInContainer' => true, 'submissionVersion' => $submissionVersion));
 	}
 
 	/**
@@ -292,5 +295,3 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		return 'modals.submissionMetadata.IssueEntryHandler';
 	}
 }
-
-

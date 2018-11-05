@@ -29,6 +29,13 @@
 	<message key="grid.action.galleyInIssueEntry">Galley appears in issue entry</message>
 	<message key="grid.action.issueEntry">View this submission's metadata</message>
 
+	<!-- Versioning -->
+	<message key="submission.production.version">Version {$submissionVersion}</message>
+	<message key="submission.production.newVersion">New Version</message>
+	<message key="submission.production.editMetadata">Metadata of this Version</message>
+	<message key="submission.production.editMetadata.info">This is the metadata of version {$version}.</message>
+	<message key="submission.production.editMetadata.previous">Previous versions can be seen at the corresponding tab at the production stage.</message>
+
 	<!-- Submission Information Modal -->
 	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
 	<message key="submission.issueEntry.submissionMetadata">Submission</message>

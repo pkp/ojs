@@ -26,6 +26,9 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 		$templateMgr = TemplateManager::getManager($request);
 		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$submissionDao = Application::getSubmissionDAO();
+		$submissionVersion = $submissionDao->getLatestVersionId($submission->getId());
+
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_PRODUCTION:
 				$dispatcher = $request->getDispatcher();
@@ -37,7 +40,7 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 							$request, ROUTE_COMPONENT, null,
 							'tab.issueEntry.IssueEntryTabHandler',
 							'publicationMetadata', null,
-							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
+							array('submissionId' => $submission->getId(), 'stageId' => $stageId, 'submissionVersion' => $submissionVersion)
 						),
 						__('submission.issueEntry.publicationMetadata')
 					),

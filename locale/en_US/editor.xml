@@ -132,6 +132,8 @@
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.assignedTo">Assigned To</message>
 	<message key="editor.submissions.inSection">In Section</message>
+	<message key="editor.article.publishVersion">Publish this Version</message>
+	<message key="editor.article.editMetadata">Metadata of this Version</message>
 	<message key="editor.article.schedulePublication">Schedule For Publication</message>
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>

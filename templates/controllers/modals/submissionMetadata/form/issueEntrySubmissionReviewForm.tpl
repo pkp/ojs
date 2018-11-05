@@ -47,6 +47,12 @@
 	<input type="hidden" name="stageId" value="{$stageId|escape}" />
 	<input type="hidden" name="displayedInContainer" value="{$formParams.displayedInContainer|escape}" />
 	<input type="hidden" name="tab" value="submission" />
+  {* Versioning *}
+	{assign var=submissionVersion value=$formParams.submissionVersion}
+	{if !$formParams.submissionVersion}
+		{assign var=submissionVersion value=$latestVersionId}
+	{/if}
+	<input type="hidden" name="submissionVersion" id="submissionVersion" value="{$submissionVersion|escape}" />
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 
@@ -58,7 +64,7 @@
 	{if !$formParams.hideSubmit || !$formParams.anonymous}
 		{* generate a unique ID for the form *}
 		{assign var="authorsGridContainer" value="authorsGridContainer-"|uniqid|escape}
-		{capture assign=authorGridUrl}{url router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId stageId=$stageId escape=false}{/capture}
+		{capture assign=authorGridUrl}{url router=$smarty.const.ROUTE_COMPONENT  component="grid.users.author.AuthorGridHandler" op="fetchGrid" submissionId=$submissionId submissionVersion=$submissionVersion stageId=$stageId escape=false}{/capture}
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
 
