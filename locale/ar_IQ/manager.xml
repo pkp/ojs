@@ -490,7 +490,7 @@
 	<message key="manager.subscriptions.selectSubscriber.desc">صلاحيات الوصول إلى الاشتراك تُمنح تلقائياً لمدير الاشتراكات في المجلة، وإلى المحررين ومحرري الأقسام والمصممين الطباعيين والمدققين ومصححي القراءة.</message>
 	<message key="manager.subscriptions.select">إختر</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">الاشتراك أُنشئ بنجاح.</message>
-	<message key="manager.subscriptions.subscriptionType">نوعيةالاشتراك</message>
+	<message key="manager.subscriptions.subscriptionType">نوعية الاشتراك</message>
 	<message key="manager.subscriptions.user">المستخدم</message>
 	<message key="manager.subscriptions.contact">عنوان الاتصال</message>
 	<message key="manager.subscriptions.institutionName">اسم المؤسسة</message>
