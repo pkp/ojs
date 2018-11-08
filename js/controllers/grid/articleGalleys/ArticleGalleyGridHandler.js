@@ -58,11 +58,18 @@
 		// FIXME: Inter-widget messaging is needed here.
 		var selector = 'a[id^="component-grid-articlegalleys-articlegalleygrid-row-' +
 				rowId + '-addFile-button-"]';
-		$.when($(selector)).then(function() {
-			$(function() {
+
+		function defferedClick(selector) {
+			if ($(selector).length) {
 				$(selector).click();
-			});
-		});
+			} else {
+				setTimeout(function() {
+					defferedClick(selector);
+				}, 200);
+			}
+		}
+
+		defferedClick(selector);
 	};
 
 
