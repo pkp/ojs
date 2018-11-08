@@ -111,6 +111,8 @@ class ViewReportPlugin extends ReportPlugin {
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=views-' . date('Ymd') . '.csv');
 		$fp = fopen('php://output', 'wt');
+		//Add BOM (byte order mark) to fix UTF-8 in Excel
+		fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
 		fputcsv($fp, array_merge($columns, $galleyLabels));
 
 		ksort($abstractViewCounts);
