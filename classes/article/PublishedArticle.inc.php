@@ -76,7 +76,7 @@ class PublishedArticle extends Article {
 	 */
 	function getViews() {
 		$application = Application::getApplication();
-		return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_ARTICLE, $this->getId());
+		return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_SUBMISSION, $this->getId());
 	}
 
 	/**

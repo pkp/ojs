@@ -113,7 +113,7 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 		);
 		foreach ($records as $record) {
 			$record['load_id'] = 'functional test data';
-			$record['assoc_type'] = ASSOC_TYPE_ARTICLE;
+			$record['assoc_type'] = ASSOC_TYPE_SUBMISSION;
 			$record['day'] = '20130415';
 			$record['metric_type'] = 'oas::counter';
 			$metricsDao->insertRecord($record);
@@ -191,7 +191,7 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 		);
 		foreach ($records as $record) {
 			$record['load_id'] = 'functional test data';
-			$record['assoc_type'] = ASSOC_TYPE_ARTICLE;
+			$record['assoc_type'] = ASSOC_TYPE_SUBMISSION;
 			$record['day'] = '20130415';
 			$record['metric_type'] = 'oas::counter';
 			$metricsDao->insertRecord($record);

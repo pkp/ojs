@@ -864,7 +864,7 @@ class LucenePlugin extends GenericPlugin {
 		// Ordering seems to be important, see the remark about pre-sorting the file here:
 		// https://lucene.apache.org/solr/api-3_6_2/org/apache/solr/schema/ExternalFileField.html
 		$column = STATISTICS_DIMENSION_ARTICLE_ID;
-		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE));
+		$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION));
 		if ($timeFilter == 'month') {
 			$oneMonthAgo = date('Ymd', strtotime('-1 month'));
 			$today = date('Ymd');

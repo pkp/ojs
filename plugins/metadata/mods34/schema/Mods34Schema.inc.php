@@ -23,7 +23,7 @@ class Mods34Schema extends PKPMods34Schema {
 	 */
 	function __construct() {
 		// Configure the MODS schema.
-		parent::__construct(ASSOC_TYPE_ARTICLE);
+		parent::__construct(ASSOC_TYPE_SUBMISSION);
 	}
 }
 

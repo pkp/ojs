@@ -90,7 +90,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					if ($publishedArticle) {
 						$pubObject = $publishedArticle;
-						$assocType = ASSOC_TYPE_ARTICLE;
+						$assocType = ASSOC_TYPE_SUBMISSION;
 						$canonicalUrlParams = array($pubObject->getId());
 						$idParams = array('m' . $pubObject->getId());
 					}
@@ -143,7 +143,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 		return array(
 			ASSOC_TYPE_JOURNAL,
 			ASSOC_TYPE_ISSUE,
-			ASSOC_TYPE_ARTICLE
+			ASSOC_TYPE_SUBMISSION,
 		);
 	}
 

@@ -160,7 +160,7 @@ class JournalDAO extends ContextDAO {
 
 		$pubObjectDaos = array(
 			ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
-			ASSOC_TYPE_ARTICLE => Application::getSubmissionDAO(),
+			ASSOC_TYPE_SUBMISSION => Application::getSubmissionDAO(),
 			ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
 			ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
 			ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')

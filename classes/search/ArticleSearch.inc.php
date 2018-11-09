@@ -55,7 +55,7 @@ class ArticleSearch extends SubmissionSearch {
 				// Retrieve a metrics report for all articles.
 				$column = STATISTICS_DIMENSION_ARTICLE_ID;
 				$filter = array(
-					STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE),
+					STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION),
 					STATISTICS_DIMENSION_ARTICLE_ID => array(array_keys($unorderedResults))
 				);
 				if ($orderBy == 'popularityMonth') {

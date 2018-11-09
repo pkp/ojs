@@ -57,7 +57,7 @@ class StatisticsHelper extends PKPStatisticsHelper {
 				ASSOC_TYPE_SECTION => __('section.section'),
 				ASSOC_TYPE_ISSUE => __('issue.issue'),
 				ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
-				ASSOC_TYPE_ARTICLE => __('article.article'),
+				ASSOC_TYPE_SUBMISSION => __('article.article'),
 				ASSOC_TYPE_SUBMISSION_FILE => __('submission.galleyFiles')
 		);
 

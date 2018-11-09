@@ -89,7 +89,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		if (empty($metricType)) $smarty->assign('noMetricSelected', true);
 		$column = STATISTICS_DIMENSION_ARTICLE_ID;
 		$filter = array(
-				STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE),
+				STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION),
 				STATISTICS_DIMENSION_ARTICLE_ID => array($results)
 		);
 		$orderBy = array(STATISTICS_METRIC => STATISTICS_ORDER_DESC);
