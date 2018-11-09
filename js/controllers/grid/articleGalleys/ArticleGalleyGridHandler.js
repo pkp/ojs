@@ -59,17 +59,17 @@
 		var selector = 'a[id^="component-grid-articlegalleys-articlegalleygrid-row-' +
 				rowId + '-addFile-button-"]';
 
-		function defferedClick(selector) {
+		function deferredClick(selector) {
 			if ($(selector).length) {
 				$(selector).click();
 			} else {
 				setTimeout(function() {
-					defferedClick(selector);
+					deferredClick(selector);
 				}, 200);
 			}
 		}
 
-		defferedClick(selector);
+		deferredClick(selector);
 	};
 
 
