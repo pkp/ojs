@@ -20,6 +20,7 @@ import('lib.pkp.classes.core.PKPApplication');
 define('PHP_REQUIRED_VERSION', '5.6.0');
 define('REQUIRES_XSL', false);
 
+define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION); // DEPRECATED but needed by filter framework
 define('ASSOC_TYPE_GALLEY',		ASSOC_TYPE_REPRESENTATION);
 
 define('ASSOC_TYPE_JOURNAL',		0x0000100);
