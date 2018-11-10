@@ -675,6 +675,9 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 	<message key="user.register.form.emailConsentAllContexts">Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Ja, ich stimme zu, dass meine Daten in Übereinstimmung mit der <a href="{$privacyUrl}" target="_blank">Erklärung zum Schutz persönlicher Daten</a> dieser Zeitschrift erfasst und gespeichert werden.]]></message>
+	<message key="user.register.form.missingContextConsent">Sie müssen für jede Zeitschrift, bei der Sie sich registrieren, der jeweiligen Erklärung zum Schutz persönlicher Daten zustimmen.</message>
+	<message key="user.register.form.missingSiteConsent">Sie müssen der Erklärung zum Schutz persönlicher Daten der Website zustimmen.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
