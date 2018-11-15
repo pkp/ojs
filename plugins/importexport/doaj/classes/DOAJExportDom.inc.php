@@ -231,7 +231,6 @@ class DOAJExportDom {
 		$root = XMLCustomWriter::createElement($doc, 'author');
 
 		XMLCustomWriter::createChildWithText($doc, $root, 'name', $author->getFullName());
-		XMLCustomWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
 
 		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
 			XMLCustomWriter::createChildWithText($doc, $root, 'affiliationId', current(array_keys($affilList, $author->getAffiliation($article->getLocale()))));
