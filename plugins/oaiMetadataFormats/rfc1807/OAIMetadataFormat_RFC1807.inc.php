@@ -76,7 +76,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('author', $creators) .
 			($article->getDatePublished()?$this->formatElement('date', $article->getDatePublished()):'') .
 			$this->formatElement('copyright', strip_tags($journal->getLocalizedData('licenseTerms'))) .
-			$this->formatElement('other_access', "url:$url") .
+			($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE?$this->formatElement('other_access', "url:$url"):'') .
 			$this->formatElement('keyword', $subject) .
 			$this->formatElement('period', $coverage) .
 			$this->formatElement('monitoring', $article->getLocalizedSponsor()) .
