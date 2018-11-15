@@ -119,13 +119,11 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 			'type' => 'fulltext',
 			'content_type' => 'html'
 		);
-		// Authors: name, email and affiliation
+		// Authors: name and affiliation
 		$article['bibjson']['author'] = array();
 		$articleAuthors = $pubObject->getAuthors();
 		foreach ($articleAuthors as $articleAuthor) {
 			$author = array('name' => $articleAuthor->getFullName(false));
-			$email = $articleAuthor->getEmail();
-			if (!empty($email)) $author['email'] = $email;
 			$affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());
 			if (!empty($affiliation)) $author['affiliation'] = $affiliation;
 			$article['bibjson']['author'][] = $author;
