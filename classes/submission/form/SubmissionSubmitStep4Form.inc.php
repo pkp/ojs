@@ -95,11 +95,19 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 				'editorialContactSignature' => $context->getSetting('contactName'),
 			));
 
-			$mail->send($request);
+			if (!$mail->send($request)) {
+				import('classes.notification.NotificationManager');
+				$notificationMgr = new NotificationManager();
+				$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
+			}
 
 			$recipients = $authorMail->getRecipients();
 			if (!empty($recipients)) {
-				$authorMail->send($request);
+				if (!$authorMail->send($request)) {
+					import('classes.notification.NotificationManager');
+					$notificationMgr = new NotificationManager();
+					$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
+				}
 			}
 		}
 

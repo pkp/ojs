@@ -152,7 +152,12 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		// Send notification email
 		if ($this->_data['notifyEmail'] == 1) {
 			$mail = $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
-			$mail->send();
+			if (!$mail->send()) {
+				import('classes.notification.NotificationManager');
+				$notificationMgr = new NotificationManager();
+				$request = Application::getRequest();
+				$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
+			}
 		} 
 	}
 }
