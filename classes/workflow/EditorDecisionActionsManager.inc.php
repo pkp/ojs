@@ -95,14 +95,20 @@ class EditorDecisionActionsManager {
 	static function getStageDecisions($context, $stageId, $makeDecision = true) {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
-				return self::_submissionStageDecisions($stageId, $makeDecision);
+				$result = self::_submissionStageDecisions($stageId, $makeDecision);
+				break;
 			case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-				return self::_externalReviewStageDecisions($context, $makeDecision);
+				$result = self::_externalReviewStageDecisions($context, $makeDecision);
+				break;
 			case WORKFLOW_STAGE_ID_EDITING:
-				return self::_editorialStageDecisions($makeDecision);
+				$result = self::_editorialStageDecisions($makeDecision);
+				break;
 			default:
 				assert(false);
 		}
+		HookRegistry::call('EditorAction::modifyDecisionOptions',
+			array($context, $stageId, &$makeDecision, &$result));
+		return $result;
 	}
 
 	/**
