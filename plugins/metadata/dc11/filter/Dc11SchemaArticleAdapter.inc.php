@@ -89,11 +89,24 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Subject
-		$subjects = array_merge_recursive(
-			(array) $article->getDiscipline(null),
-			(array) $article->getSubject(null)
+		$disciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
+		$disciplines = $disciplineDao->getDisciplines($article->getId(), $journal->getSupportedSubmissionLocales());
+		$disciplinesStrings = array_map(function($e){ return implode('; ', $e); }, $disciplines);
+
+		$keywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$keywords = $keywordDao->getKeywords($article->getId(), $journal->getSupportedSubmissionLocales());
+		$keywordsStrings = array_map(function($e){ return implode('; ', $e); }, $keywords);
+
+		$subjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+		$subjects = $subjectDao->getSubjects($article->getId(), $journal->getSupportedSubmissionLocales());
+		$subjectsStrings = array_map(function($e){ return implode('; ', $e); }, $subjects);
+
+		$dcSubjects = array_merge_recursive(
+			(array) $disciplinesStrings,
+			(array) $keywordsStrings,
+			(array) $subjectsStrings
 		);
-		$this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
+		$this->_addLocalizedElements($dc11Description, 'dc:subject', $dcSubjects);
 
 		// Description
 		$this->_addLocalizedElements($dc11Description, 'dc:description', $article->getAbstract(null));
