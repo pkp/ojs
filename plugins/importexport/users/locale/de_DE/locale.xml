@@ -12,8 +12,8 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.users.displayName">Benutzer XML Einschub</message>
-	<message key="plugins.importexport.users.description">Benutzer Import und Export</message>
+	<message key="plugins.importexport.users.displayName">Benutzer-XML-Plugin</message>
+	<message key="plugins.importexport.users.description">Benutzer/innen importieren und exportieren</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Gebrauch: {$scriptName} {$pluginName} [Befehl] ...
 Befehle:
