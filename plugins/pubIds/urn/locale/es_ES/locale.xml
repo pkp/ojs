@@ -13,14 +13,14 @@
 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.pubIds.urn.displayName">URN</message>
-	<message key="plugins.pubIds.urn.description">Este módulo activa la asiganción de URN (Uniform Resource Names) de los números, artículos y galeradas en OJS.</message>
+	<message key="plugins.pubIds.urn.description">Este módulo activa la asignación de URN (Uniform Resource Names) de los números, artículos y galeradas en OJS.</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.urn.manager.settings.description">Configura el módulo URN para poder administrar y usar URNs en OJS:</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Contenido de la revista</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Escoja los objetos a los que asignar URNs.</message>
-	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Escoja los objetos publicados al los que asignar URN (Uniform Resource Name):</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Escoja los objetos publicados a los que asignar URN (Uniform Resource Name):</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Números</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Artículos</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Galeradas</message>
@@ -41,9 +41,9 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Introduzca el patrón de sufijo URN para las galeradas.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Usar los patrones por defecto.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para galeradas.]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Introduzca un sufijo URN individual para cada item publicado. Encontrará un campo adicional para el URN en la pàgina de metadatos de cada item.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Introduzca un sufijo URN individual para cada item publicado. Encontrará un campo adicional para el URN en la página de metadatos de cada ítem.</message>
 	<message key="plugins.pubIds.urn.manager.settings.checkNo">Número de comprobación</message>
-	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">El número de comprobación (check number) se calculará automáticamente y se añadirà al final como último dígito del URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">El número de comprobación (check number) se calculará automáticamente y se añadirá al final como último dígito del URN.</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace">Espacio de nombres (namespace)</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Escoger</message>
 	<message key="plugins.pubIds.urn.manager.settings.namespace.description">El identificador persistente del espacio de nombres (namespace) requerido a menudo para el registro (p.ej. en la Deutsche Nationalbibliothek).</message>
@@ -52,8 +52,8 @@
 	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Introduzca la URL de resolución.</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Reasignar URNs</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Si cambia su configuración URN, los URNs ya asignados no se verán afectadas. Cuando guarde la configuración URN, podrá usar este botón para limpiar los URNs existentes, de forma que la nueva configuración tenga efecto para todos los objetos exitentes.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">¿Está seguro/a de que querer borrar todos los URNs existentes?</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Si cambia su configuración URN, los URNs ya asignados no se verán afectadas. Cuando guarde la configuración URN, podrá usar este botón para limpiar los URNs existentes, de forma que la nueva configuración tenga efecto para todos los objetos existentes.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">¿Está seguro/a de querer borrar todos los URNs existentes?</message>
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.urn.editor.urn">URN</message>
