@@ -13,5 +13,5 @@
 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.developedBy.displayName">Bloque "Creado por"</message>
-	<message key="plugins.block.developedBy.description">Este módulo proporciona una bloque lateral con un enlace a "Creado por".</message>
+	<message key="plugins.block.developedBy.description">Este módulo proporciona un bloque lateral con un enlace a "Creado por".</message>
 </locale>
