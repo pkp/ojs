@@ -12,7 +12,7 @@
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.users.displayName">Plugin XML de usuarios/as</message>
+	<message key="plugins.importexport.users.displayName">Módulo XML de usuarios/as</message>
 	<message key="plugins.importexport.users.description">Importación y exportación de usuarios/as</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [command] ...
@@ -22,7 +22,7 @@ Comandos:
 	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Importar usuarios/as</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleccione un fichero XML que contenga los datos de usarias/os que quiere importar en la revista. Consulte la ayuda e la revista para saber los detalles del formato de este fichero.<br /><br />Tenga en cuenta que si el fichero importado contiene nombres de usuaria/o o direcciones de correo-e que ya existan en el sistema no se importarán los datos de esas/os usuarias/os y los nuevos roles a crear se asignarán a las/os usuarias/os existentes.]]></message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleccione un fichero XML que contenga los datos de usuarias/os que quiere importar en la revista. Consulte la ayuda de la revista para saber los detalles del formato de este fichero.<br /><br />Tenga en cuenta que si el fichero importado contiene nombres de usuaria/o o direcciones de correo electrónico que ya existan en el sistema no se importarán los datos de esas/os usuarias/os y los nuevos roles a crear se asignarán a las/os usuarias/os existentes.]]></message>
 	<message key="plugins.importexport.users.import.dataFile">Fichero de datos de usuaria/o</message>
 	<message key="plugins.importexport.users.import.sendNotify">Enviar un correo electrónico de notificación a cada uno de los usuarios/as importados con su nombre de usuario/a y su contraseña.</message>
 	<message key="plugins.importexport.users.import.continueOnError">Continuar importando el resto de usuarias/os si ocurre un error.</message>
@@ -47,7 +47,7 @@ Comandos:
 
 	Exportar los usuarios/as especificados por su ID:
 	{$scriptName} {$pluginName} exportar myExportFile.xml myJournal 1 2</message>
-	<message key="plugins.importexport.users.importComplete">La importación finalizó correctamente. Se han importado los usuarios/as con nombres de usuario/a y correos electr´´onicos que ya no están en uso, junto con los grupos de usuarios/as correspondientes.</message>
+	<message key="plugins.importexport.users.importComplete">La importación finalizó correctamente. Se han importado los usuarios/as con nombres de usuario/a y correos electrónicos que ya no están en uso, junto con los grupos de usuarios/as correspondientes.</message>
 	<message key="plugins.importexport.users.results">Resultados</message>
 	<message key="plugins.importexport.users.uploadFile">Cargue un archivo en "Importar" para continuar.</message>
 </locale>
