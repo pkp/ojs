@@ -15,5 +15,5 @@
 	<message key="plugins.generic.recommendBySimilarity.description">Este módulo agrega una lista de artículos similares a la página de resumen del artículo.</message>
 	<message key="plugins.generic.recommendBySimilarity.heading">Artículos similares</message>
 	<message key="plugins.generic.recommendBySimilarity.advancedSearchIntro">También puede {advancedSearchLink} para este artículo.</message>
-	<message key="plugins.generic.recommendBySimilarity.advancedSearch">iniciar una búsqueda de similitud avanzada</message>
+	<message key="plugins.generic.recommendBySimilarity.advancedSearch">Iniciar una búsqueda de similitud avanzada</message>
 </locale>
