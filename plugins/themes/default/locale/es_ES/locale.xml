@@ -16,7 +16,7 @@
 	<message key="plugins.themes.default.description">Este tema implementa la estética por defecto.</message>
 
 	<!-- Theme options -->
-	<message key="plugins.themes.default.option.typography.label">Tipografa</message>
+	<message key="plugins.themes.default.option.typography.label">Tipografía</message>
 	<message key="plugins.themes.default.option.typography.description">Escoge la combinación de fuentes que se ajusta a esta revista.</message>
 	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: Fuente digital nativa diseñada por Google con un amplio soporte idiomático.</message>
 	<message key="plugins.themes.default.option.typography.notoSerif">Noto Serif: Variante con sarifa de la fuente digital nativa de Google.</message>
