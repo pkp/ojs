@@ -14,5 +14,5 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.reports.articles.displayName">Informe de Artículos</message>
 	<message key="plugins.reports.articles.description">Este módulo genera un informe CSV que contiene una lista de artículos y su información.</message>
-	<message key="plugins.reports.articles.nodecision">Sin Desición</message>
+	<message key="plugins.reports.articles.nodecision">Sin decisión</message>
 </locale>
