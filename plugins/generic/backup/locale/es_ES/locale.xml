@@ -15,7 +15,7 @@
 	<message key="plugins.generic.backup.name">Módulo de copia de seguridad</message>
 	<message key="plugins.generic.backup.description">Este módulo genera una copia de seguridad de la instalación.</message>
 	<message key="plugins.generic.backup.link">Descargar copia de seguridad</message>
-	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Los enlaces siguientes permiten al administrador del sitio descargar una copia de seguridad completa de varios componentes de la instalación. Una copia de seguridad completa contiene <strong>todos</strong> los siguientes componentes. Le remitimos a la documentación técnica para obtener más información acerca de cómo se relacionan estos componentes.</p>]]></message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Los siguientes enlaces permiten al administrador del sitio descargar una copia de seguridad completa de varios componentes de la instalación. Una copia de seguridad completa contiene <strong>todos</strong> los siguientes componentes. Le remitimos a la documentación técnica para obtener más información acerca de cómo se relacionan estos componentes.</p>]]></message>
 	<message key="plugins.generic.backup.db">Base de datos</message>
 	<message key="plugins.generic.backup.files">Archivos</message>
 	<message key="plugins.generic.backup.code">Código</message>
