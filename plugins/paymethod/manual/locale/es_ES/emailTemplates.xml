@@ -17,7 +17,7 @@
 El ítem pagado es &quot;{$itemName}&quot;.<br />
 El precio es {$itemCost} ({$itemCurrencyCode}).<br />
 <br />
-Este correo ha sido generado por el plugin de Pago Manual de  Open Journal Systems.]]></body>
+Este correo ha sido generado por el módulo de Pago Manual de Open Journal Systems.]]></body>
 		<description>Este correo se usa para notificar al gestor/a de la revista de que se ha realizado un pago manual.</description>
 	</email_text>
 </email_texts>
