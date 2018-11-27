@@ -52,10 +52,10 @@ class SettingsHandler extends ManagementHandler {
 		$router = $request->getRouter();
 		$dispatcher = $request->getDispatcher();
 
-		$apiUrl = $router->getApiUrl($request, $context->getPath(), 'v1', 'contexts', $context->getId());
+		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
 		$lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
 		$clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
-		$paymentsUrl = $router->getApiUrl($request, $context->getPath(), 'v1', '_payments');
+		$paymentsUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), '_payments');
 
 		$supportedFormLocales = $context->getSupportedFormLocales();
 		$localeNames = AppLocale::getAllLocales();
@@ -63,10 +63,8 @@ class SettingsHandler extends ManagementHandler {
 			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
 		}, $supportedFormLocales);
 
-		import('components.forms.context.ArchivingLockssForm');
-		$archivingLockssForm = new ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
-		import('components.forms.context.PaymentSettingsForm');
-		$paymentSettingsForm = new PaymentSettingsForm($apiUrl, $locales, $context);
+		$archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
+		$paymentSettingsForm = new \APP\components\forms\context\PaymentSettingsForm($apiUrl, $locales, $context);
 
 		// Create a dummy "form" for the PKP Preservation Network settings. This
 		// form loads a single field which enables/disables the plugin, and does
@@ -74,7 +72,7 @@ class SettingsHandler extends ManagementHandler {
 		// an API is in place for plugins and plugin settings.
 		$versionDao = DAORegistry::getDAO('VersionDAO');
 		$isPlnInstalled = $versionDao->getCurrentVersion('plugins.generic', 'pln', true);
-		$archivePnForm = new FormComponent('archivePn', 'PUT', 'dummy', 'dummy', $supportedFormLocales);
+		$archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', 'dummy', $supportedFormLocales);
 		$archivePnForm->addPage([
 				'id' => 'default',
 				'submitButton' => null,
@@ -85,9 +83,9 @@ class SettingsHandler extends ManagementHandler {
 			]);
 
 		if (!$isPlnInstalled) {
-			$archivePnForm->addField(new FieldHTML('pn', [
+			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
 				'label' => __('manager.setup.plnPluginArchiving'),
-				'value' => __('manager.setup.plnPluginNotInstalled'),
+				'description' => __('manager.setup.plnPluginNotInstalled'),
 				'groupId' => 'default',
 			]));
 		} else {
@@ -96,7 +94,7 @@ class SettingsHandler extends ManagementHandler {
 			$pnDisablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'disable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
 			$pnSettingsUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('verb' => 'settings', 'plugin' => 'plnplugin', 'category' => 'generic'));
 
-			$archivePnForm->addField(new FieldArchivingPn('pn', [
+			$archivePnForm->addField(new \PKP\components\forms\FieldArchivingPn('pn', [
 				'label' => __('manager.setup.plnPluginArchiving'),
 				'description' => __('manager.setup.plnDescription'),
 				'terms' => __('manager.setup.plnSettingsDescription'),

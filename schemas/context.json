@@ -44,6 +44,12 @@
 				"nullable"
 			]
 		},
+		"enableOai": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
 		"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual": {
 			"type": "boolean",
 			"validation": [

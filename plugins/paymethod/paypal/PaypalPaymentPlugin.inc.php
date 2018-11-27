@@ -72,7 +72,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 				'label' => __('plugins.paymethod.paypal.displayName'),
 				'showWhen' => 'paymentsEnabled',
 			])
-			->addField(new FieldOptions('testMode', [
+			->addField(new \PKP\components\forms\FieldOptions('testMode', [
 				'label' => __('plugins.paymethod.paypal.settings.testMode'),
 				'options' => [
 					['value' => true, 'label' => __('common.enable')]
@@ -80,12 +80,12 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 				'value' => (bool) $this->getSetting($context->getId(), 'testMode'),
 				'groupId' => 'paypalpayment',
 			]))
-			->addField(new FieldText('clientId', [
+			->addField(new \PKP\components\forms\FieldText('clientId', [
 				'label' => __('plugins.paymethod.paypal.settings.clientId'),
 				'value' => $this->getSetting($context->getId(), 'clientId'),
 				'groupId' => 'paypalpayment',
 			]))
-			->addField(new FieldText('secret', [
+			->addField(new \PKP\components\forms\FieldText('secret', [
 				'label' => __('plugins.paymethod.paypal.settings.secret'),
 				'value' => $this->getSetting($context->getId(), 'secret'),
 				'groupId' => 'paypalpayment',
@@ -197,5 +197,3 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 }
-
-

@@ -11,7 +11,10 @@
  *
  * @brief A preset form for the site config settings.
  */
-import('lib.pkp.components.forms.FormComponent');
+namespace APP\components\forms\site;
+use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldSelect;
+use \PKP\components\forms\FieldText;
 
 define('FORM_SITE_CONFIG', 'siteConfig');
 
@@ -34,8 +37,7 @@ class SiteConfigForm extends FormComponent {
 		$this->successMessage = __('admin.settings.config.success');
 		$this->locales = $locales;
 
-		$contexts = \ServicesContainer::instance()->get('context')
-			->getContexts(['isEnabled' => true]);
+		$contexts = \Services::get('context')->getMany(['isEnabled' => true]);
 
 		$this->addField(new FieldText('title', [
 			'label' => __('admin.settings.siteTitle'),

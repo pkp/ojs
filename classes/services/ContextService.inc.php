@@ -12,18 +12,16 @@
  * @brief Extends the base context service class with app-specific
  *  requirements.
  */
-namespace OJS\Services;
+namespace APP\Services;
 
 class ContextService extends \PKP\Services\PKPContextService {
-	/** @copydoc PKPContextService::$contextsFileDirName */
+	/** @copydoc \PKP\Services\PKPContextService::$contextsFileDirName */
 	var $contextsFileDirName = 'journals';
 
 	/**
 	 * Initialize hooks for extending PKPContextService
 	 */
 	public function __construct() {
-		parent::__construct();
-
 		$this->installFileDirs = array(
 			\Config::getVar('files', 'files_dir') . '/%s/%d',
 			\Config::getVar('files', 'files_dir'). '/%s/%d/articles',
@@ -35,16 +33,6 @@ class ContextService extends \PKP\Services\PKPContextService {
 		\HookRegistry::register('Context::edit', array($this, 'afterEditContext'));
 		\HookRegistry::register('Context::delete', array($this, 'afterDeleteContext'));
 		\HookRegistry::register('Context::validate', array($this, 'validateContext'));
-	}
-
-
-	/**
-	 * Helper function to return the app-specific context list query builder
-	 *
-	 * @return \OJS\Services\QueryBuilders\ContextListQueryBuilder
-	 */
-	public function getContextListQueryBuilder() {
-		return new \OJS\Services\QueryBuilders\ContextListQueryBuilder();
 	}
 
 	/**
@@ -71,7 +59,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$section->setEditorRestricted(false);
 		$section->setHideTitle(false);
 
-		\ServicesContainer::instance()->get('section')->addSection($section, $context);
+		\Services::get('section')->addSection($section, $context);
 	}
 
 	/**

@@ -11,7 +11,9 @@
  *
  * @brief Add OJS-specific fields to the masthead form.
  */
-import('lib.pkp.components.forms.context.PKPMastheadForm');
+namespace APP\components\forms\context;
+use \PKP\components\forms\context\PKPMastheadForm;
+use \PKP\components\forms\FieldText;
 
 class MastheadForm extends PKPMastheadForm {
 

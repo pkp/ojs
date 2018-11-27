@@ -13,9 +13,9 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="admin.hostedJournals">Hosted Journals</message>
-	<message key="admin.settings.appearance.success">The site appearance settings have been successfully updated.<message>
-	<message key="admin.settings.config.success">The site configuration settings have been successfully updated.<message>
-	<message key="admin.settings.info.success">The site information has been successfully updated.<message>
+	<message key="admin.settings.appearance.success">The site appearance settings have been successfully updated.</message>
+	<message key="admin.settings.config.success">The site configuration settings have been successfully updated.</message>
+	<message key="admin.settings.info.success">The site information has been successfully updated.</message>
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
 	<message key="admin.settings.defaultMetricDescription">

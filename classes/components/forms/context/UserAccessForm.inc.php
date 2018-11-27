@@ -11,7 +11,9 @@
  *
  * @brief Add OJS-specific fields to the users and roles access settings form.
  */
-import('lib.pkp.components.forms.context.PKPUserAccessForm');
+namespace APP\components\forms\context;
+use \PKP\components\forms\context\PKPUserAccessForm;
+use \PKP\components\forms\FieldOptions;
 
 class UserAccessForm extends PKPUserAccessForm {
 

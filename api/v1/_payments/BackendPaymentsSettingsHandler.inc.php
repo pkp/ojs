@@ -14,7 +14,7 @@
  *  settings.
  */
 import('lib.pkp.classes.handler.APIHandler');
-import('classes.core.ServicesContainer');
+import('classes.core.Services');
 
 class BackendPaymentsSettingsHandler extends APIHandler {
 
@@ -27,7 +27,7 @@ class BackendPaymentsSettingsHandler extends APIHandler {
 			'PUT' => array(
 				array(
 					'pattern' => $rootPattern,
-					'handler' => array($this, 'editPayments'),
+					'handler' => array($this, 'edit'),
 					'roles' => array(
 						ROLE_ID_SITE_ADMIN,
 						ROLE_ID_MANAGER,
@@ -62,11 +62,11 @@ class BackendPaymentsSettingsHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function editPayments($slimRequest, $response, $args) {
+	public function edit($slimRequest, $response, $args) {
 		$request = $this->getRequest();
 		$context = $request->getContext();
 		$params = $slimRequest->getParsedBody();
-		$contextService = ServicesContainer::instance()->get('context');
+		$contextService = Services::get('context');
 
 		// Process query params to format incoming data as needed
 		foreach ($slimRequest->getParsedBody() as $param => $val) {
@@ -104,8 +104,8 @@ class BackendPaymentsSettingsHandler extends APIHandler {
 			return $response->withStatus(400)->withJson($errors);
 		}
 
-		$context = $contextService->getContext($context->getId());
-		$context = $contextService->editContext($context, $params, $request);
+		$context = $contextService->get($context->getId());
+		$context = $contextService->edit($context, $params, $request);
 
 		return $response->withJson($params);
 	}

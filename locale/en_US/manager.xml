@@ -161,7 +161,7 @@
 	<message key="manager.setup.editorDecision">Editor Decision</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddress.description">Any undeliverable emails will result in an error message to this address.</message>
-	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[In order send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignature.description">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</message>
@@ -321,6 +321,8 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</message>
 	<message key="manager.setup.submissions">Submissions</message>
 	<message key="manager.setup.submissions.description">Author guidelines, copyright, and indexing (including registration).</message>
+	<message key="manager.setup.enableOai">Enable OAI</message>
+	<message key="manager.setup.enableOai.description"><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></message>
 	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
 	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>

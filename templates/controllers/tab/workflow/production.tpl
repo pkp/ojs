@@ -9,7 +9,7 @@
  *}
 
 {* Help tab *}
-{help file="editorial-workflow/production.md" class="pkp_help_tab"}
+{help file="editorial-workflow/production" class="pkp_help_tab"}
 
 <div id="production">
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions refreshOn="stageStatusUpdated"}

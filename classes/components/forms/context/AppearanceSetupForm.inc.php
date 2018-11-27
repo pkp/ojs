@@ -12,7 +12,9 @@
  * @brief A preset form for general website appearance setup, such as uploading
  *  a logo.
  */
-import('lib.pkp.components.forms.context.PKPAppearanceSetupForm');
+namespace APP\components\forms\context;
+use \PKP\components\forms\context\PKPAppearanceSetupForm;
+use \PKP\components\forms\FieldUploadImage;
 
 class AppearanceSetupForm extends PKPAppearanceSetupForm {
 

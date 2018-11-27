@@ -13,7 +13,7 @@
  *  allows a user to enable/disable the PKP Preservation Network plugin, and
  *  access the settings, from a form-like view in the distribution settings.
  */
-import ('lib.pkp.components.forms.FieldOptions');
+namespace APP\components\forms;
 class FieldArchivingPn extends FieldOptions {
 	/** @copydoc Field::$component */
 	public $component = 'field-archiving-pn';

@@ -13,19 +13,19 @@
  * @brief Utility class to package all OJS services
  */
 
-namespace OJS\Services;
+namespace APP\Services;
 
 use \Pimple\Container;
-use \PKP\Services\AuthorService;
-use \PKP\Services\UserService;
-use \OJS\Services\SubmissionService;
-use \OJS\Services\SectionService;
-use \OJS\Services\NavigationMenuService;
-use \OJS\Services\IssueService;
-use \OJS\Services\GalleyService;
-use \OJS\Services\ContextService;
-use \PKP\Services\PKPSiteService;
+use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPSchemaService;
+use \PKP\Services\PKPSiteService;
+use \PKP\Services\PKPUserService;
+use \APP\Services\ContextService;
+use \APP\Services\GalleyService;
+use \APP\Services\IssueService;
+use \APP\Services\NavigationMenuService;
+use \APP\Services\SectionService;
+use \APP\Services\SubmissionService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -37,7 +37,7 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
 		// Author service
 		$pimple['author'] = function() {
-			return new AuthorService();
+			return new PKPAuthorService();
 		};
 
 		// Submission service
@@ -67,7 +67,7 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
 		// User service
 		$pimple['user'] = function() {
-			return new UserService();
+			return new PKPUserService();
 		};
 
 		// Context service

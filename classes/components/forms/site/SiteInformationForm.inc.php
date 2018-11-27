@@ -11,7 +11,11 @@
  *
  * @brief A preset form for the site information settings.
  */
-import('lib.pkp.components.forms.FormComponent');
+namespace APP\components\forms\site;
+use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldRichTextarea;
+use \PKP\components\forms\FieldText;
+use \PKP\components\forms\FieldTextarea;
 
 define('FORM_SITE_INFO', 'siteInfo');
 

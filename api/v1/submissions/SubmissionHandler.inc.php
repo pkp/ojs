@@ -15,7 +15,7 @@
  */
 
 import('lib.pkp.classes.handler.APIHandler');
-import('classes.core.ServicesContainer');
+import('classes.core.Services');
 
 class SubmissionHandler extends APIHandler {
 
@@ -29,12 +29,12 @@ class SubmissionHandler extends APIHandler {
 			'GET' => array (
 				array(
 					'pattern' => $this->getEndpointPattern(),
-					'handler' => array($this, 'getSubmissionList'),
+					'handler' => array($this, 'getMany'),
 					'roles' => $roles
 				),
 				array(
 					'pattern' => $this->getEndpointPattern() . '/{submissionId}',
-					'handler' => array($this, 'getSubmission'),
+					'handler' => array($this, 'get'),
 					'roles' => $roles
 				),
 				array(
@@ -71,7 +71,7 @@ class SubmissionHandler extends APIHandler {
 			$routeName = $route->getName();
 		}
 
-		if ($routeName === 'getSubmission' || $routeName === 'getGalleys' || $routeName === 'getParticipants') {
+		if ($routeName === 'get' || $routeName === 'getGalleys' || $routeName === 'getParticipants') {
 			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
 			$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 		}
@@ -87,11 +87,11 @@ class SubmissionHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function getSubmissionList($slimRequest, $response, $args) {
+	public function getMany($slimRequest, $response, $args) {
 		$request = Application::getRequest();
 		$currentUser = $request->getUser();
 		$context = $request->getContext();
-		$submissionService = ServicesContainer::instance()->get('submission');
+		$submissionService = Services::get('submission');
 
 		if (!$context) {
 			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
@@ -108,7 +108,7 @@ class SubmissionHandler extends APIHandler {
 		}
 
 		$items = array();
-		$submissions = $submissionService->getSubmissions($context->getId(), $params);
+		$submissions = $submissionService->getMany($params);
 		if (!empty($submissions)) {
 			$propertyArgs = array(
 				'request' => $request,
@@ -120,7 +120,7 @@ class SubmissionHandler extends APIHandler {
 		}
 
 		$data = array(
-			'itemsMax' => $submissionService->getSubmissionsMaxCount($context->getId(), $params),
+			'itemsMax' => $submissionService->getMax($params),
 			'items' => $items,
 		);
 
@@ -135,18 +135,16 @@ class SubmissionHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function getSubmission($slimRequest, $response, $args) {
+	public function get($slimRequest, $response, $args) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$request = Application::getRequest();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
-		$data = ServicesContainer::instance()
-			->get('submission')
-			->getFullProperties($submission, array(
-				'request' => $request,
-				'slimRequest' 	=> $slimRequest
-			));
+		$data = Services::get('submission')->getFullProperties($submission, array(
+			'request' => $request,
+			'slimRequest' 	=> $slimRequest
+		));
 
 		return $response->withJson($data, 200);
 	}
@@ -183,7 +181,7 @@ class SubmissionHandler extends APIHandler {
 
 		$galleys = $publishedArticle->getGalleys();
 		if (!empty($galleys)) {
-			$galleyService = ServicesContainer::instance()->get('galley');
+			$galleyService = Services::get('galley');
 			$args = array(
 				'request' => $request,
 				'slimRequest' => $slimRequest,
@@ -220,9 +218,10 @@ class SubmissionHandler extends APIHandler {
 
 		$data = array();
 
-		$userService = ServicesContainer::instance()->get('user');
+		$userService = Services::get('user');
 
-		$users = $userService->getUsers($context->getId(), array(
+		$users = $userService->getMany(array(
+			'contextId' => $context->getId(),
 			'count' => 100, // high upper-limit
 			'assignedToSubmission' => $submission->getId(),
 			'assignedToSubmissionStage' => $stageId,
@@ -317,6 +316,8 @@ class SubmissionHandler extends APIHandler {
 					break;
 			}
 		}
+
+		$returnParams['contextId'] = $context->getId();
 
 		\HookRegistry::call('API::submissions::params', array(&$returnParams, $slimRequest));
 

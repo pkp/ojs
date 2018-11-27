@@ -71,7 +71,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				import('lib.pkp.components.listPanels.submissions.SelectSubmissionsListPanel');
+				import('lib.pkp.classes.components.listPanels.submissions.SelectSubmissionsListPanel');
 				$exportSubmissionsListPanel = new SelectSubmissionsListPanel(array(
 					'title' => 'plugins.importexport.native.exportSubmissionsSelect',
 					'count' => 100,

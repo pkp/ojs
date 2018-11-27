@@ -27,24 +27,24 @@ class JournalGridHandler extends ContextGridHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function editContext($args, $request) {
-		import('classes.core.ServicesContainer');
-		$contextService = ServicesContainer::instance()->get('context');
+		import('classes.core.Services');
+		$contextService = Services::get('context');
 		$context = null;
 
 		if ($request->getUserVar('rowId')) {
-			$context = $contextService->getContext((int) $request->getUserVar('rowId'));
+			$context = $contextService->get((int) $request->getUserVar('rowId'));
 			if (!$context) {
 				return new JSONMessage(false);
 			}
 		}
 
-		$router = $request->getRouter();
+		$dispatcher = $request->getDispatcher();
 		if ($context) {
-			$apiUrl = $router->getApiUrl($request, $context->getPath(), 'v1', 'contexts', $context->getId());
+			$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
 			$successMessage = __('admin.contexts.form.edit.success');
 			$supportedLocales = $context->getSupportedFormLocales();
 		} else {
-			$apiUrl = $router->getApiUrl($request, '*', 'v1', 'contexts');
+			$apiUrl = $dispatcher->url($request, ROUTE_API, CONTEXT_ID_ALL, 'contexts');
 			$successMessage = __('admin.contexts.form.create.success');
 			$supportedLocales = $request->getSite()->getSupportedLocales();
 		}
@@ -54,8 +54,7 @@ class JournalGridHandler extends ContextGridHandler {
 			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
 		}, $supportedLocales);
 
-		import('components.forms.context.ContextForm');
-		$contextForm = new ContextForm($apiUrl, $successMessage, $locales, $request->getBaseUrl(), $context);
+		$contextForm = new \APP\components\forms\context\ContextForm($apiUrl, $successMessage, $locales, $request->getBaseUrl(), $context);
 		$contextFormConfig = $contextForm->getConfig();
 
 		// Pass the URL to the context settings wizard so that the AddContextForm
@@ -91,16 +90,16 @@ class JournalGridHandler extends ContextGridHandler {
 			return new JSONMessage(false);
 		}
 
-		import('classes.core.ServicesContainer');
-		$contextService = ServicesContainer::instance()->get('context');
+		import('classes.core.Services');
+		$contextService = Services::get('context');
 
-		$context = $contextService->getContext((int) $request->getUserVar('rowId'));
+		$context = $contextService->get((int) $request->getUserVar('rowId'));
 
 		if (!$context) {
 			return new JSONMessage(false);
 		}
 
-		$contextService->deleteContext($context);
+		$contextService->delete($context);
 
 		return DAO::getDataChangedEvent($journalId);
 	}

@@ -11,7 +11,7 @@
  *
  * @brief Instantiates and manages a UI component to list submissions.
  */
-import('lib.pkp.components.listPanels.submissions.PKPSubmissionsListPanel');
+import('lib.pkp.classes.components.listPanels.submissions.PKPSubmissionsListPanel');
 import('lib.pkp.classes.db.DBResultRange');
 import('lib.pkp.classes.submission.Submission');
 
@@ -78,10 +78,8 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			return array();
 		}
 
-		import('classes.core.ServicesContainer');
-		$sections = ServicesContainer::instance()
-				->get('section')
-				->getSectionList($context->getId());
+		import('classes.core.Services');
+		$sections = Services::get('section')->getSectionList($context->getId());
 
 		return array_map(function($section) {
 			return array(

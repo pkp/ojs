@@ -13,7 +13,7 @@
  * @brief Helper class that encapsulates NavigationMenu business logic
  */
 
-namespace OJS\Services;
+namespace APP\Services;
 
 /** types for all ojs default navigationMenuItems */
 define('NMI_TYPE_SUBSCRIPTIONS', 'NMI_TYPE_SUBSCRIPTIONS');

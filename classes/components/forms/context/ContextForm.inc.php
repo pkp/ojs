@@ -11,7 +11,9 @@
  *
  * @brief Add OJS-specific fields to the context add/edit form.
  */
-import('lib.pkp.components.forms.context.PKPContextForm');
+namespace APP\components\forms\context;
+use \PKP\components\forms\context\PKPContextForm;
+use \PKP\components\forms\FieldText;
 
 class ContextForm extends PKPContextForm {
 

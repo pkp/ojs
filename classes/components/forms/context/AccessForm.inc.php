@@ -12,7 +12,9 @@
  * @brief A preset form for configuring the terms under which a journal will
  *  allow access to its published content.
  */
-import('lib.pkp.components.forms.FormComponent');
+namespace APP\components\forms\context;
+use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldOptions;
 
 define('FORM_ACCESS', 'access');
 
@@ -43,7 +45,17 @@ class AccessForm extends FormComponent {
 					['value' => PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
 					['value' => PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
 				],
-				'value' => (bool) $context->getData('publishingMode'),
+				'value' => $context->getData('publishingMode'),
+			]))
+			->addField(new FieldOptions('enableOai', [
+				'label' => __('manager.setup.enableOai'),
+				'description' => __('manager.setup.enableOai.description'),
+				'type' => 'radio',
+				'options' => [
+					['value' => true, 'label' => __('common.enable')],
+					['value' => false, 'label' => __('common.disable')],
+				],
+				'value' => $context->getData('enableOai'),
 			]));
 	}
 }

@@ -1,26 +1,26 @@
 <?php
 
 /**
- * @file classes/services/QueryBuilders/IssueListQueryBuilder.php
+ * @file classes/services/QueryBuilders/.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class SubmissionListQueryBuilder
+ * @class
  * @ingroup query_builders
  *
- * @brief Submission list Query builder
+ * @brief Issue list Query builder
  */
 
-namespace OJS\Services\QueryBuilders;
+namespace APP\Services\QueryBuilders;
 
 use PKP\Services\QueryBuilders\BaseQueryBuilder;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class IssueListQueryBuilder extends BaseQueryBuilder {
+class IssueQueryBuilder extends BaseQueryBuilder {
 
-	/** @var int Context ID */
+	/** @var int|string|null Context ID or '*' to get from all contexts */
 	protected $contextId = null;
 
 	/** @var array list of columns for query */
@@ -48,13 +48,15 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	protected $countOnly = null;
 
 	/**
-	 * Constructor
+	 * Set context issues filter
 	 *
-	 * @param $contextId int context ID
+	 * @param int|string $contextId
+	 *
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
-	public function __construct($contextId) {
-		parent::__construct();
+	public function filterByContext($contextId) {
 		$this->contextId = $contextId;
+		return $this;
 	}
 
 	/**
@@ -63,7 +65,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	 * @param string $column
 	 * @param string $direction
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function orderBy($column, $direction = 'DESC') {
 		if ($column === 'lastModified') {
@@ -82,7 +84,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	 *
 	 * @param boolean $isPublished
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function filterByPublished($isPublished) {
 		$this->isPublished = $isPublished;
@@ -94,7 +96,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	 *
 	 * @param array $volumes
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function filterByVolumes($volumes) {
 		if (!is_null($volumes) && !is_array($volumes)) {
@@ -109,7 +111,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	 *
 	 * @param array $numbers
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function filterByNumbers($numbers) {
 		if (!is_null($numbers) && !is_array($numbers)) {
@@ -124,7 +126,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	 *
 	 * @param array $years
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function filterByYears($years) {
 		if (!is_null($years) && !is_array($years)) {
@@ -139,7 +141,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	 *
 	 * @param bool $enable
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
 	 */
 	public function countOnly($enable = true) {
 		$this->countOnly = $enable;
@@ -154,11 +156,19 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	public function get() {
 		$this->columns[] = 'i.*';
 		$q = Capsule::table('issues as i')
-					->where('i.journal_id','=', $this->contextId)
 					->leftJoin('issue_settings as is', 'i.issue_id', '=', 'is.issue_id')
 					->leftJoin('custom_issue_orders as o', 'o.issue_id', '=', 'i.issue_id')
 					->orderBy($this->orderColumn, $this->orderDirection)
 					->groupBy('i.issue_id');
+
+		// context
+		// Never permit a query without a context_id clause unless the '*' wildcard
+		// has been set explicitely.
+		if (is_null($this->contextId)) {
+			$q->where('i.journal_id', '=', CONTEXT_ID_NONE);
+		} elseif ($this->contextId !== '*') {
+			$q->where('i.journal_id', '=' , $this->contextId);
+		}
 
 		// published
 		if (!is_null($this->isPublished)) {
@@ -181,7 +191,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 		}
 
 		// Allow third-party query statements
-		\HookRegistry::call('Issue::getIssues::queryObject', array(&$q, $this));
+		\HookRegistry::call('Issue::getMany::queryObject', array(&$q, $this));
 
 		if (!empty($this->countOnly)) {
 			$q->select(Capsule::raw('count(*) as issue_count'));

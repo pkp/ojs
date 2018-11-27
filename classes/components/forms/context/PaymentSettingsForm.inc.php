@@ -11,7 +11,10 @@
  *
  * @brief A preset form for configuring the general payment settings.
  */
-import('lib.pkp.components.forms.FormComponent');
+namespace APP\components\forms\context;
+use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldOptions;
+use \PKP\components\forms\FieldSelect;
 
 define('FORM_PAYMENT_SETTINGS', 'paymentSettings');
 
@@ -34,7 +37,7 @@ class PaymentSettingsForm extends FormComponent {
 		$this->successMessage = __('manager.payment.success');
 		$this->locales = $locales;
 
-		$currencyDao = DAORegistry::getDAO('CurrencyDAO');
+		$currencyDao = \DAORegistry::getDAO('CurrencyDAO');
 		$currencies = [];
 		foreach ($currencyDao->getCurrencies() as $currency) {
 			$currencies[] = [
@@ -44,7 +47,7 @@ class PaymentSettingsForm extends FormComponent {
 		}
 
 		// Ensure payment method plugins can hook in
-		PluginRegistry::loadCategory('paymethod', true);
+		\PluginRegistry::loadCategory('paymethod', true);
 
 		$this->addGroup([
 				'id' => 'setup',

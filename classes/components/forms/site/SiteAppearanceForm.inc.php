@@ -11,7 +11,12 @@
  *
  * @brief A preset form for the site appearance settings.
  */
-import('lib.pkp.components.forms.FormComponent');
+namespace APP\components\forms\site;
+use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldOptions;
+use \PKP\components\forms\FieldRichTextarea;
+use \PKP\components\forms\FieldUpload;
+use \PKP\components\forms\FieldUploadImage;
 
 define('FORM_SITE_APPEARANCE', 'siteAppearance');
 
@@ -37,7 +42,7 @@ class SiteAppearanceForm extends FormComponent {
 		$this->locales = $locales;
 
 		$sidebarOptions = [];
-		$plugins = PluginRegistry::loadCategory('blocks', true);
+		$plugins = \PluginRegistry::loadCategory('blocks', true);
 		foreach ($plugins as $pluginName => $plugin) {
 			$sidebarOptions[] = [
 				'value' => $pluginName,

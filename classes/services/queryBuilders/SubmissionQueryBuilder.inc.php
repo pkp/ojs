@@ -1,23 +1,23 @@
 <?php
 
 /**
- * @file classes/services/QueryBuilders/SubmissionListQueryBuilder.php
+ * @file classes/services/QueryBuilders/SubmissionQueryBuilder.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class SubmissionListQueryBuilder
+ * @class SubmissionQueryBuilder
  * @ingroup query_builders
  *
  * @brief Submission list Query builder
  */
 
-namespace OJS\Services\QueryBuilders;
+namespace APP\Services\QueryBuilders;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionListQueryBuilder {
+class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQueryBuilder {
 
 	/** @var int|array Section ID(s) */
 	protected $sectionIds = null;
@@ -27,7 +27,7 @@ class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissi
 	 *
 	 * @param int|array $sectionIds
 	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
 	 */
 	public function filterBySections($sectionIds) {
 		$this->sectionIds = $sectionIds;

@@ -17,7 +17,7 @@
 <data>
 	<sql>
 		<query>
-			UPDATE journal_settings SET setting_value="styleSheet.css" WHERE setting_name="styleSheet";
+			UPDATE journal_settings SET setting_value='styleSheet.css' WHERE setting_name='styleSheet';
 		</query>
 		<query>
 			ALTER TABLE site DROP COLUMN original_style_file_name

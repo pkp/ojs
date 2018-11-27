@@ -54,14 +54,12 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $publishedSubmission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('classes.core.ServicesContainer');
+				import('classes.core.Services');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							ServicesContainer::instance()
-									->get('submission')
-									->getWorkflowUrlByUserRoles($publishedSubmission)
+							Services::get('submission')->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
 						$title
 					)
@@ -148,5 +146,3 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 	}
 
 }
-
-

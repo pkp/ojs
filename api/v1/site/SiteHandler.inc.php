@@ -28,7 +28,7 @@ class SiteHandler extends APIHandler {
 			'GET' => array(
 				array(
 					'pattern' => $this->getEndpointPattern(),
-					'handler' => array($this, 'getSite'),
+					'handler' => array($this, 'get'),
 					'roles' => $roles,
 				),
 				array(
@@ -40,7 +40,7 @@ class SiteHandler extends APIHandler {
 			'PUT' => array(
 				array(
 					'pattern' => $this->getEndpointPattern(),
-					'handler' => array($this, 'editSite'),
+					'handler' => array($this, 'edit'),
 					'roles' => $roles,
 				),
 				array(
@@ -78,10 +78,10 @@ class SiteHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function getSite($slimRequest, $response, $args) {
+	public function get($slimRequest, $response, $args) {
 		$request = $this->getRequest();
 
-		$siteProps = ServicesContainer::instance()->get('site')
+		$siteProps = Services::get('site')
 			->getFullProperties($request->getSite(), [
 				'request' => $request,
 			]);
@@ -133,10 +133,10 @@ class SiteHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function editSite($slimRequest, $response, $args) {
+	public function edit($slimRequest, $response, $args) {
 		$request = $this->getRequest();
 		$site = $request->getSite();
-		$siteService = ServicesContainer::instance()->get('site');
+		$siteService = Services::get('site');
 
 		$params = $this->convertStringsToSchema(SCHEMA_SITE, $slimRequest->getParsedBody());
 
@@ -145,7 +145,7 @@ class SiteHandler extends APIHandler {
 		if (!empty($errors)) {
 			return $response->withStatus(400)->withJson($errors);
 		}
-		$site = $siteService->editSite($site, $params, $request);
+		$site = $siteService->edit($site, $params, $request);
 
 		$siteProps = $siteService->getFullProperties($site, array(
 			'request' => $request,
@@ -167,7 +167,7 @@ class SiteHandler extends APIHandler {
 	public function editTheme($slimRequest, $response, $args) {
 		$request = $this->getRequest();
 		$site = $request->getSite();
-		$siteService = ServicesContainer::instance()->get('site');
+		$siteService = Services::get('site');
 
 		$params = $slimRequest->getParsedBody();
 
@@ -182,7 +182,7 @@ class SiteHandler extends APIHandler {
 			if (!empty($errors)) {
 				return $response->withJson($errors, 400);
 			}
-			$newSite = $siteService->editSite($site, ['themePluginPath' => $themePluginPath], $request);
+			$newSite = $siteService->edit($site, ['themePluginPath' => $themePluginPath], $request);
 		}
 
 		// Get the appropriate theme plugin

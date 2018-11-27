@@ -11,7 +11,9 @@
  *
  * @brief A preset form for configuring the LOCKSS and CLOCKSS settings.
  */
-import('lib.pkp.components.forms.FormComponent');
+namespace APP\components\forms\context;
+use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldOptions;
 
 define('FORM_ARCHIVING_LOCKSS', 'archivingLockss');
 

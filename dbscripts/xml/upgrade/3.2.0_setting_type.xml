@@ -9,8 +9,8 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Remove the setting_type column from the journal_settings and site_settings
-	* tables. This column is obsolete now that we use the context.json schema to
-	* define setting types.
+  * tables. This column is obsolete now that we use the context.json schema to
+  * define setting types.
   *
   -->
 

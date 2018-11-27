@@ -13,22 +13,15 @@
  * @brief Helper class that encapsulates galley business logic
  */
 
-namespace OJS\Services;
+namespace APP\Services;
 
-use \ServicesContainer;
-use \PKP\Services\EntityProperties\PKPBaseEntityPropertyService;
+use \Services;
+use \PKP\Services\interfaces\EntityPropertyInterface;
 
-class GalleyService extends PKPBaseEntityPropertyService {
-
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		parent::__construct($this);
-	}
+class GalleyService implements EntityPropertyInterface {
 
 	/**
-	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getProperties()
+	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getProperties()
 	 */
 	public function getProperties($galley, $props, $args = null) {
 		\PluginRegistry::loadCategory('pubIds', true);
@@ -61,12 +54,11 @@ class GalleyService extends PKPBaseEntityPropertyService {
 							$parentId = $galley->getIssueId();
 						}
 						if ($parentPath) {
-							$values[$prop] = $router->getApiUrl(
+							$values[$prop] = $dispatcher->url(
 								$args['request'],
-								$arguments['contextPath'],
-								$arguments['version'],
-								$parentPath,
-								$parentId
+								ROUTE_API,
+								$context->getPath(),
+								$parentPath . '/' . $parentId
 							);
 						}
 					}
@@ -193,7 +185,7 @@ class GalleyService extends PKPBaseEntityPropertyService {
 			}
 		}
 
-		$values = ServicesContainer::instance()->get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $context->getSupportedLocales());
+		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $context->getSupportedLocales());
 
 		\HookRegistry::call('Galley::getProperties::values', array(&$values, $galley, $props, $args));
 

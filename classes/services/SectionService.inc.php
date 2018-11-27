@@ -13,18 +13,12 @@
 * @brief Helper class that encapsulates section business logic
 */
 
-namespace OJS\Services;
+namespace APP\Services;
 
-use \ServicesContainer;
+use \Services;
+use \PKP\Services\interfaces\EntityPropertyInterface;
 
-class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropertyService {
-
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		parent::__construct($this);
-	}
+class SectionService implements EntityPropertyInterface {
 
 	/**
 	 * Get array of sections
@@ -49,7 +43,7 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 	}
 
 	/**
-	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getProperties()
+	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getProperties()
 	 */
 	public function getProperties($section, $props, $args = null) {
 		$values = array();
@@ -71,7 +65,7 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 		}
 
 		$locales = $args['request']->getContext()->getSupportedLocales();
-		$values = ServicesContainer::instance()->get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $locales);
+		$values = Services::get('schema')->addMissingMultilingualValues(SCHEMA_GALLEY, $values, $locales);
 
 		\HookRegistry::call('Section::getProperties::values', array(&$values, $section, $props, $args));
 
@@ -81,7 +75,7 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 	}
 
 	/**
-	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
+	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getSummaryProperties()
 	 */
 	public function getSummaryProperties($section, $args = null) {
 		$props = array (
@@ -94,7 +88,7 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 	}
 
 	/**
-	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getFullProperties()
+	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getFullProperties()
 	 */
 	public function getFullProperties($section, $args = null) {
 		// No fuller representation of a section is used at this time
