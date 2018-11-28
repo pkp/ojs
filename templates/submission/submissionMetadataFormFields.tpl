@@ -12,7 +12,7 @@
 	{capture assign="sectionDescription"}{if !$readOnly}submission.submit.metadataForm.tip{/if}{/capture}
 	{fbvFormSection description=$sectionDescription title="common.languages"}
 		{capture assign=languagesSourceUrl}{url router=$smarty.const.ROUTE_PAGE page="submission" op="fetchChoices" list="languages"}{/capture}
-		{fbvElement type="keyword" id="languages" subLabelTranslate=true multilingual=true current=$languages source=$languagesSourceUrl disabled=$readOnly}
+		{fbvElement type="keyword" id="languages" subLabelTranslate=true multilingual=true current=$languages sourceUrl=$languagesSourceUrl disabled=$readOnly}
 	{/fbvFormSection}
 {/capture}
 {include file="core:submission/submissionMetadataFormFields.tpl"}
