@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * event_log_oneclickuserid.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Add missing user id on event logs from 'one-click' reviews.
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			UPDATE event_log el JOIN ( event_log_settings els JOIN review_assignments ra ) ON ( els.log_id=el.log_id AND els.setting_name='reviewId' AND ra.review_id=els.setting_value )
+			SET el.user_id = ra.reviewer_id
+			WHERE el.event_type IN ( x'40000006', x'40000007', x'40000009', x'40000013' ) AND el.user_id=0;
+		</query>
+	</sql>
+</data>
