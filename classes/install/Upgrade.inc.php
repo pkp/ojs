@@ -1056,6 +1056,9 @@ class Upgrade extends Installer {
 				$creatorUserId = $managerUsers->next()->getId();
 			}
 			$article = $articleDao->getById($row['article_id']);
+			if (!$article){
+                                error_log("ERROR: Article ".$row['article_id']." could not be found in the original OJS database. Check if the article and submission exist and if the section_id field is correctly set");
+                        }
 
 			// if it is a remote supp file and article is published, convert it to a remote galley
 			if (!$row['file_id'] && $row['remote_url'] != '' && $article->getStatus() == STATUS_PUBLISHED) {
