@@ -66,7 +66,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @see Plugin::getPluginPath()
 	 */
 	function getPluginPath() {
-		$plugin =& $this->_getLucenePlugin();
+		$plugin = $this->_getLucenePlugin();
 		return $plugin->getPluginPath();
 	}
 
@@ -102,7 +102,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * @copydoc LazyLoadPlugin::getEnabled()
 	 */
 	function getEnabled($contextId = null) {
-		$plugin =& $this->_getLucenePlugin();
+		$plugin = $this->_getLucenePlugin();
 		return $plugin->getEnabled($contextId);
 	}
 
@@ -139,7 +139,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 */
 	function getContents($templateMgr, $request = null) {
 		// Get facets from the parent plug-in.
-		$plugin =& $this->_getLucenePlugin();
+		$plugin = $this->_getLucenePlugin();
 		$facets = $plugin->getFacets();
 
 		// Check whether we got any facets to display.
@@ -168,9 +168,8 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * Get the lucene plugin object
 	 * @return LucenePlugin
 	 */
-	function &_getLucenePlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->_parentPluginName);
-		return $plugin;
+	function _getLucenePlugin() {
+		return PluginRegistry::getPlugin('generic', $this->_parentPluginName);
 	}
 }
 

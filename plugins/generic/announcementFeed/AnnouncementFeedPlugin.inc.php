@@ -24,12 +24,10 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		if ($this->getEnabled($mainContextId)) {
 			HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
 			$this->import('AnnouncementFeedBlockPlugin');
-			$blockPlugin = new AnnouncementFeedBlockPlugin($this);
-			PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+			PluginRegistry::register('blocks', new AnnouncementFeedBlockPlugin($this), $this->getPluginPath());
 
 			$this->import('AnnouncementFeedGatewayPlugin');
-			$gatewayPlugin = new AnnouncementFeedGatewayPlugin($this);
-			PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
+			PluginRegistry::register('gateways', new AnnouncementFeedGatewayPlugin($this), $this->getPluginPath());
 		}
 		return true;
 	}

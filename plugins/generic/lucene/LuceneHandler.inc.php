@@ -196,9 +196,8 @@ class LuceneHandler extends Handler {
 	 * Get the lucene plugin object
 	 * @return LucenePlugin
 	 */
-	function &_getLucenePlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', LUCENE_PLUGIN_NAME);
-		return $plugin;
+	function _getLucenePlugin() {
+		return PluginRegistry::getPlugin('generic', LUCENE_PLUGIN_NAME);
 	}
 }
 

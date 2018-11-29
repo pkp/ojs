@@ -23,7 +23,7 @@ class PaymentHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function plugin($args, $request) {
-		$paymentMethodPlugins =& PluginRegistry::loadCategory('paymethod');
+		$paymentMethodPlugins = PluginRegistry::loadCategory('paymethod');
 		$paymentMethodPluginName = array_shift($args);
 		if (empty($paymentMethodPluginName) || !isset($paymentMethodPlugins[$paymentMethodPluginName])) {
 			$request->redirect(null, null, 'index');

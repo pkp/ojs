@@ -40,12 +40,10 @@ class WebFeedPlugin extends GenericPlugin {
 		if ($this->getEnabled($mainContextId)) {
 			HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
 			$this->import('WebFeedBlockPlugin');
-			$blockPlugin = new WebFeedBlockPlugin($this);
-			PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+			PluginRegistry::register('blocks', new WebFeedBlockPlugin($this), $this->getPluginPath());
 
 			$this->import('WebFeedGatewayPlugin');
-			$gatewayPlugin = new WebFeedGatewayPlugin($this);
-			PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
+			PluginRegistry::register('gateways', new WebFeedGatewayPlugin($this), $this->getPluginPath());
 		}
 		return true;
 	}

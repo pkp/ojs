@@ -63,8 +63,8 @@ class ExternalFeedDAO extends DAO {
 	 * @param $row array
 	 * @return ExternalFeed
 	 */
-	function &_returnExternalFeedFromRow($row) {
-		$externalFeedPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
+	function _returnExternalFeedFromRow($row) {
+		$externalFeedPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$externalFeedPlugin->import('ExternalFeed');
 
 		$externalFeed = new ExternalFeed();

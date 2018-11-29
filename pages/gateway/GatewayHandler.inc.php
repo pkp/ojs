@@ -206,9 +206,9 @@ class GatewayHandler extends Handler {
 		$this->validate();
 		$pluginName = array_shift($args);
 
-		$plugins =& PluginRegistry::loadCategory('gateways');
+		$plugins = PluginRegistry::loadCategory('gateways');
 		if (isset($pluginName) && isset($plugins[$pluginName])) {
-			$plugin =& $plugins[$pluginName];
+			$plugin = $plugins[$pluginName];
 			if (!$plugin->fetch($args, $request)) {
 				$request->redirect(null, 'index');
 			}

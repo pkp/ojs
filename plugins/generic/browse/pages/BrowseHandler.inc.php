@@ -27,7 +27,7 @@ class BrowseHandler extends Handler {
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 
-		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
+		$browsePlugin = PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		$enableBrowseBySections = $browsePlugin->getSetting($journal->getId(), 'enableBrowseBySections');
 		if ($enableBrowseBySections) {
 			if (isset($args[0]) && $args[0] == 'view') {
@@ -87,7 +87,7 @@ class BrowseHandler extends Handler {
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 
-		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
+		$browsePlugin = PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		$enableBrowseByIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'enableBrowseByIdentifyTypes');
 		if ($enableBrowseByIdentifyTypes) {
 			if (isset($args[0]) && $args[0] == 'view') {
