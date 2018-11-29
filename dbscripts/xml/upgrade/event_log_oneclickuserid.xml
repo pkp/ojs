@@ -17,7 +17,7 @@
 		<query>
 			UPDATE event_log el JOIN ( event_log_settings els JOIN review_assignments ra ) ON ( els.log_id=el.log_id AND els.setting_name='reviewId' AND ra.review_id=els.setting_value )
 			SET el.user_id = ra.reviewer_id
-			WHERE el.event_type IN ( x'40000006', x'40000007', x'40000009', x'40000013' ) AND el.user_id=0;
-		</query>
+			WHERE el.user_id=0 AND el.event_type IN ( 1073741830, 1073741831, 1073741833, 1073741843 );
+		</query> <!-- ARTICLE_LOG_REVIEW_ACCEPT, ARTICLE_LOG_REVIEW_DECLINE, ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_REVIEW_FILE -->
 	</sql>
 </data>
