@@ -25,7 +25,7 @@
 			{fbvElement required="true" type="select" id="accessStatus" from=$accessOptions selected=$accessStatus}
 		{/fbvFormSection}
 		{fbvFormSection title="editor.issues.accessDate"}
-			{fbvElement type="text" id="openAccessDate" value=$openAccessDate|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
+			{fbvElement type="text" id="openAccessDate" value=$openAccessDate size=$fbvStyles.size.SMALL class="datepicker"}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons submitText="common.save"}

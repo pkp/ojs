@@ -45,7 +45,7 @@
 		{fbvFormArea id="datePublishedArea" title="editor.issues.datePublished"}
 			{fbvFormSection}
 				{if $issuePublished}
-					{fbvElement type="text" id="datePublished" value=$datePublished|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
+					{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker"}
 				{/if}
 			{/fbvFormSection}
 		{/fbvFormArea}
