@@ -991,7 +991,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 
 
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
 	<message key="notification.type.galleyModified">Byla změněna sazebnice článku "{$title}".</message>

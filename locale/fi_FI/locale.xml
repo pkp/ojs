@@ -1026,7 +1026,6 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Uusi artikkeli, "{$title}", on lähetetty.</message>
 	<message key="notification.type.editing">Toimittamiseen liittyvät tapahtumat</message>
 	<message key="notification.type.submissionSubmitted">Uusi artikkeli, "{$title}", on lähetetty.</message>
 	<message key="notification.type.editorDecisionComment">Toimittajan kohdetta "{$title}" koskevaa päätöstä on kommentoitu.</message>

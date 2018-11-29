@@ -1039,7 +1039,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
 	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
