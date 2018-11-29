@@ -719,7 +719,6 @@
 	<message key="log.imported">{$userName} مقاله  {$submissionId} را وارد کرد.</message>
 	<message key="metadata.pkp.peerReviewed">مقاله داوری شده</message>
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ارسال شد.</message>
 	<message key="notification.type.editing">ویرایش رویدادها</message>
 	<message key="notification.type.submissionSubmitted">یک مقاله با عنوان  "{$title}" ارسال شده است</message>
 	<message key="notification.type.editorDecisionComment">نقطه‌نظری در خصوص تصمیم دبیر درباره "{$title}" برجا گذاشته شده است.</message>

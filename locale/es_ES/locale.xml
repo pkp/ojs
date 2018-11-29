@@ -814,7 +814,6 @@
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Se envió un nuevo artículo, "{$title}".</message>
 	<message key="notification.type.editing">Edición de eventos</message>
 	<message key="notification.type.editorDecisionComment">Se dejó un comentario en la decisión editorial para "{$title}".</message>
 	<message key="notification.type.galleyModified">Se modificó una galerada para "{$title}".</message>

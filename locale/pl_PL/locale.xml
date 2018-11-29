@@ -819,7 +819,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="notification.mailListDescription">Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Ta strona zawiera informacje o ważnych aktualizacjach treści czasopisma, takich jak nowe numery lub ogłoszenia. Możesz subskrybować powiadomienia za pomocą czytnika RSS (klikając w ikonę), lub   <a href="{$emailUrl}">przez e-mail.</a>]]></message>
 
-	<message key="notification.type.articleSubmitted">Nowy artykuł, "{$title}", został wysłany.</message>
 	<message key="notification.type.editing">Edycja wydarzeń</message>
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$title}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$title}" został zmodyfikowany.</message>

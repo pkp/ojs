@@ -913,7 +913,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.subscription.purchase">Kjøp abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikkel, "{$title}", har blitt innlevert.</message>
 	<message key="notification.type.editing">Redigeringshendelser</message>
 	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$title}" har blitt kommentert.</message>
 	<message key="notification.type.galleyModified">Et sideoppsett til "{$title}" har blitt endret.</message>

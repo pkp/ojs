@@ -982,7 +982,6 @@
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">تم تقديم مؤلَّف جديد بعنوان "{$title}".</message>
 	<message key="notification.type.editing">أحداث التحرير</message>
 	<message key="notification.type.submissionSubmitted">مؤلَّف جديد بعنوان "{$title}"، قد تم تقديمه.</message>
 	<message key="notification.type.editorDecisionComment">تم وضع تعليق على قرار المحرر المتعلق بالمؤلَّف "{$title}".</message>

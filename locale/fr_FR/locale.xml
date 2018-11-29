@@ -819,7 +819,6 @@ Titre du système de classification]]></message>
 	<message key="payment.subscription.purchase">Souscrire à un abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Mettre à jour Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
 	<message key="notification.type.editing">Événements de révision</message>
 	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
 	<message key="notification.type.galleyModified">Une épreuve a été modifiée pour "{$title}".</message>

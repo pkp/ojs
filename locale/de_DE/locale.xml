@@ -979,7 +979,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
 	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>

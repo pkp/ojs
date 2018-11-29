@@ -1030,7 +1030,6 @@
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Надіслана нова стаття: "{$title}".</message>
 	<message key="notification.type.editing">Події редакційного процесу</message>
 	<message key="notification.type.submissionSubmitted">Нова стаття, "{$title}," була подана.</message>
 	<message key="notification.type.editorDecisionComment">Залишений коментар на рішення редактора щодо статті"{$title}".</message>

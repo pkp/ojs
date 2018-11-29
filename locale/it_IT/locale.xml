@@ -936,7 +936,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">&#200; stato proposto un nuovo articolo, "{$title}"></message>
 	<message key="notification.type.editing">Eventi modificati</message>
 	<message key="notification.type.editorDecisionComment">La decisione dell'editor su  "{$title}" &#232; stata commentata.</message>
 	<message key="notification.type.galleyModified">La gabbia di "{$title}" &#232; stata modificata.</message>

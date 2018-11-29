@@ -835,7 +835,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="payment.subscription.purchase">Køb abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Opgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", er blevet indleveret.</message>
 	<message key="notification.type.editing">Redigeringshændelser</message>
 	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$title}".</message>
 	<message key="notification.type.galleyModified">Der er foretaget en ændring af et publiceringsformatet til "{$title}".</message>

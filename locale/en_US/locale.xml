@@ -983,7 +983,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">A new article, "{$title}", has been submitted.</message>
 	<message key="notification.type.editing">Editing Events</message>
 	<message key="notification.type.submissionSubmitted">A new article, "{$title}," has been submitted.</message>
 	<message key="notification.type.editorDecisionComment">A comment has been left on the editor decision for "{$title}."</message>

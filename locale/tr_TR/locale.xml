@@ -876,7 +876,6 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="metadata.pkp.peerReviewed">Değerlendirmeden Geçmiş Makale</message>
 
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">"{$title}" başlıklı bir makale gönderildi..</message>
 	<message key="notification.type.editing">Düzenleme durumları</message>
 	<message key="notification.type.editorDecisionComment">"{$title}" başlıklı makale için editör yorum yaptı.</message>
 	<message key="notification.type.galleyModified">"{$title}" başlıklı makale güncellendi.</message>

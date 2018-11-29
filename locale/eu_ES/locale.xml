@@ -957,7 +957,6 @@ artikuluaren probak zuzentzeko.</message>
 	<message key="payment.subscription.purchase">Erosi harpidetza</message>
 	<message key="installer.installApplication">Instalatu Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Bertsio-berritu Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$title}", aurkeztu da.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$title}" artikuluan.</message>
 	<message key="notification.type.galleyModified">Galerada bat aldatu da "{$title}" artikuluan.</message>

@@ -936,7 +936,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="metadata.pkp.peerReviewed">Recenzovaný článek</message>
 
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
 	<message key="notification.type.galleyModified">Byla změněna sazebnice článku "{$title}".</message>

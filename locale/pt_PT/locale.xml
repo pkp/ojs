@@ -792,7 +792,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="payment.subscription.purchase">Adquirir Subscrições</message>
 	<message key="installer.installApplication">Instalar o sistema</message>
 	<message key="installer.upgradeApplication">Actualizar o sistema</message>
-	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Foi produzido um comentário sobre a decisão editorial de "{$title}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>

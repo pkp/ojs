@@ -751,7 +751,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="about.subscriptionTypes.duration">Trajanje</message>
 	<message key="about.subscriptionTypes.cost">Cena</message>
 	<message key="payment.authorFees">Naknade za autora</message>
-	<message key="notification.type.articleSubmitted">Novi članak, "{$title}", je predat.</message>
 	<message key="notification.type.galleyModified">Fajl za prikaz je izmenjen za "{$title}".</message>
 	<message key="notification.type.issuePublished">Izdanje je objavljeno.</message>
 	<message key="notification.type.newAnnouncement">Novo obaveštenje je napravljeno.</message>

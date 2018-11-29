@@ -857,7 +857,6 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="notification.type.reviewerFormComment">Er is een reviewformulier ingediend voor "{$title}".</message>
 	<message key="notification.type.submissionComment">Een redacteur heeft "{$title}" van commentaar voorzien.</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste "voor redacteur en auteur" en de tweede "voor redacteur". De tijdschriftbeheerder kan ook een peer review formulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
-	<message key="notification.type.articleSubmitted">Een nieuw artikel, "{$title}", is ingestuurd.</message>
 	<message key="notification.type.editing">Redactieberichten</message>
 	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$title}"</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>

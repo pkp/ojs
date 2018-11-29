@@ -884,7 +884,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="user.subscriptions.statusInformation">Aktivne i istekle pretplate su dole prikazane sa datumima isteka. Dodatno, slijedeće statusne informacije mogu biti prikzanu uz svaku pretplatu.</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Ako je ovdje unesen domen, IP opseg nije obavezan. <br />Važeće vrijednosti za naživ domena je (npr. hrcak.srce.hr)]]></message>
 	<message key="payment.loginRequired.forIssue">Da bi pristupili ovoj stavki potrebna je pretplata ili kupiti izdanje. Prijavite se u sustav i časopis za provjeriti pretplatu, pristupiti prethodnoj kupovini ili sada kupiti izdanje.</message>
-	<message key="notification.type.articleSubmitted">Novi članak "{$title}", je podnešen.</message>
 	<message key="notification.type.editorDecisionComment">Postavljen je komentar na urednikovu odluku za  "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Obrazac za recenziju je poslata za  "{$title}".</message>
 	<message key="notification.type.submissionComment">Urednik je komentirao  "{$title}".</message>

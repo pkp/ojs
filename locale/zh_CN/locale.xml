@@ -898,7 +898,6 @@
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">一篇新文章, "{$title}", 已经提交.</message>
 	<message key="notification.type.editing">编辑事件</message>
 	<message key="notification.type.editorDecisionComment">在编辑的决定里已经对 "{$title}"进行了评论</message>
 	<message key="notification.type.galleyModified">草稿已经被修改，关于"{$title}".</message>

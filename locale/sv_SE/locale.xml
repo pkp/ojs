@@ -978,7 +978,6 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editing">Redaktionella händelser</message>
 	<message key="notification.type.submissionSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editorDecisionComment">En kommentar har tillfogats redaktörsbeslut för "{$title}."</message>

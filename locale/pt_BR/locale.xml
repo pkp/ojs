@@ -983,7 +983,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="payment.subscription.purchase">Adquirir Assinatura</message>
 	<message key="installer.installApplication">Instalar o sistema</message>
 	<message key="installer.upgradeApplication">Atualizar o sistema</message>
-	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Um comentário foi feito sobre a decisão editorial de "{$title}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>

@@ -774,7 +774,6 @@ Aктивирани OAI протокол може бити искључен на
 	<message key="about.subscriptionTypes.duration">Трајање</message>
 	<message key="about.subscriptionTypes.cost">Цена</message>
 	<message key="payment.authorFees">Накнаде за аутора</message>
-	<message key="notification.type.articleSubmitted">Нови чланак, "{$param}", je predat.</message>
 	<message key="notification.type.galleyModified">Фајл за приказ је измењен за "{$param}".</message>
 	<message key="notification.type.issuePublished">Издање је објављено.</message>
 	<message key="notification.type.newAnnouncement">Ново обавештење је направљено.</message>

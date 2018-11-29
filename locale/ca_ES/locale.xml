@@ -827,7 +827,6 @@
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">S'ha tramès un nou article: "{$title}".</message>
 	<message key="notification.type.editing">Esdeveniments d'edició</message>
 	<message key="notification.type.editorDecisionComment">S'ha fet un comentari a la decisió de l'editor/a a "{$title}".</message>
 	<message key="notification.type.galleyModified">S'ha modificat una galerada a "{$title}".</message>

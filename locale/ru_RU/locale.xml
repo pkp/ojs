@@ -981,7 +981,6 @@
 
 	<!-- Типы уведомлений -->
 
-	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editing">События редактирования</message>
 	<message key="notification.type.submissionSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editorDecisionComment">Добавлен комментарий о решении редакции для «{$title}».</message>

@@ -971,7 +971,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Naskah baru, "{$title}", telah diserahkan.</message>
 	<message key="notification.type.editing">Event Editing</message>
 	<message key="notification.type.submissionSubmitted">Naskah baru, "{$title}," telah diserahkan.</message>
 	<message key="notification.type.editorDecisionComment">Ada komentar terhadap keputusan editor bagi "{$title}."</message>
