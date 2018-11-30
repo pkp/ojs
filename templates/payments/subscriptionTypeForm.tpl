@@ -12,6 +12,13 @@
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#subscriptionTypeForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#individual, #institutional').on('change', function() {ldelim}
+			if ($('#institutional').prop('checked')) {ldelim}
+				$('#membership').prop('checked', false).prop('disabled', true);
+			{rdelim} else {ldelim}
+				$('#membership').prop('disabled', false);
+			{rdelim}
+		{rdelim});
 	{rdelim});
 </script>
 
