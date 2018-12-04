@@ -89,24 +89,14 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Subject
-		$disciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
-		$disciplines = $disciplineDao->getDisciplines($article->getId(), $journal->getSupportedSubmissionLocales());
-		$disciplinesStrings = array_map(function($e){ return implode('; ', $e); }, $disciplines);
-
-		$keywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
-		$keywords = $keywordDao->getKeywords($article->getId(), $journal->getSupportedSubmissionLocales());
-		$keywordsStrings = array_map(function($e){ return implode('; ', $e); }, $keywords);
-
-		$subjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
-		$subjects = $subjectDao->getSubjects($article->getId(), $journal->getSupportedSubmissionLocales());
-		$subjectsStrings = array_map(function($e){ return implode('; ', $e); }, $subjects);
-
-		$dcSubjects = array_merge_recursive(
-			(array) $disciplinesStrings,
-			(array) $keywordsStrings,
-			(array) $subjectsStrings
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+		$supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
+		$subjects = array_merge_recursive(
+			(array) $submissionKeywordDao->getKeywords($article->getId(), $supportedLocales),
+			(array) $submissionSubjectDao->getSubjects($article->getId(), $supportedLocales)
 		);
-		$this->_addLocalizedElements($dc11Description, 'dc:subject', $dcSubjects);
+		$this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 
 		// Description
 		$this->_addLocalizedElements($dc11Description, 'dc:description', $article->getAbstract(null));
