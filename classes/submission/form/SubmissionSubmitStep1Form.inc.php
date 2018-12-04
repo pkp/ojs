@@ -35,11 +35,33 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 
 		// Get section options for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = array('0' => '') + $sectionDao->getTitles($this->context->getId(), !$canSubmitAll);
+		$sectionOptions = array('0' => '') + $sectionDao->getTitlesByContextId($this->context->getId(), !$canSubmitAll);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
+		$templateMgr->assign('sectionId', $request->getUserVar('sectionId'));
+
+		// Get section policies for this context
+		$sectionPolicies = array();
+		foreach ($sectionOptions as $sectionId => $sectionTitle) {
+			$section = $sectionDao->getById($sectionId);
+
+			$sectionPolicy = $section ? $section->getLocalizedPolicy() : null;
+			if ($this->doesSectionPolicyContainAnyText($sectionPolicy))
+				$sectionPolicies[$sectionId] = $sectionPolicy;
+		}
+
+		$templateMgr->assign('sectionPolicies', $sectionPolicies);
 
 		return parent::fetch($request);
+	}
+
+	/**
+	 * Checks whether a section policy contains any text (plain / readable).
+	 */
+	private function doesSectionPolicyContainAnyText($sectionPolicy)
+	{
+		$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
+		return strlen($sectionPolicyPlainText) > 0;
 	}
 
 	/**

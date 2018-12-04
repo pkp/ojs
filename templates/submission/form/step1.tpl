@@ -13,7 +13,10 @@
 	{capture assign="additionalFormContent2"}
 		{if $sectionOptions|@count == 2}
 			{* There is only one section; choose it invisibly *}
-			{fbvElement type="hidden" id="sectionId" value=$sectionOptions|@array_keys|@array_pop}
+			{assign var=preselectedSectionId value=$sectionOptions|@array_keys|@array_pop}
+			{fbvElement type="hidden" id="sectionId" value=$preselectedSectionId}
+
+			{include file="submission/form/sectionPolicy.tpl" sectionId=$preselectedSectionId content=$sectionPolicies[$preselectedSectionId]}
 		{else}
 			{include file="submission/form/section.tpl"}
 		{/if}
