@@ -322,7 +322,7 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; default_envelope_sender = my_address@my_host.com
 
 ; Force the default envelope sender (if present)
-; This is useful if setting up a site-wide noreply address
+; This is useful if setting up a site-wide no-reply address
 ; The reply-to field will be set with the reply-to or from address.
 ; force_default_envelope_sender = Off
 
@@ -331,7 +331,7 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 time_between_emails = 3600
 
 ; Maximum number of recipients that can be included in a single email
-; (either as To:, Cc:, or Bcc: addresses) for a non-priveleged user
+; (either as To:, Cc:, or Bcc: addresses) for a non-privileged user
 max_recipients = 10
 
 ; If enabled, email addresses must be validated before login is possible.
@@ -399,10 +399,10 @@ oai_max_records = 100
 
 [interface]
 
-; Number of items to display per page; overridable on a per-journal basis
+; Number of items to display per page; can be overridden on a per-journal basis
 items_per_page = 25
 
-; Number of page links to display; overridable on a per-journal basis
+; Number of page links to display; can be overridden on a per-journal basis
 page_links = 10
 
 
