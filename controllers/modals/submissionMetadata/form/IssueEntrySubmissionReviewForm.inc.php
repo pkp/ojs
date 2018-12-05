@@ -36,9 +36,10 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	 */
 	function execute() {
 		parent::execute();
-		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this));
 
 		$submission = $this->getSubmission();
+		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this, $submission));
+
 		$submissionDao = Application::getSubmissionDAO();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
