@@ -46,7 +46,7 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 
 		// Get section options for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = array('0' => '') + $sectionDao->getTitles($context->getId(), !$canSubmitAll);
+		$sectionOptions = array('0' => '') + $sectionDao->getTitlesByContextId($context->getId(), !$canSubmitAll);
 
 		// Get section policies for this context
 		$sectionPolicies = array();

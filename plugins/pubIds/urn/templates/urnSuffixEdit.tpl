@@ -27,8 +27,8 @@
 				{/fbvFormSection}
 				{if $canBeAssigned}
 					<p class="pkp_help">{translate key="plugins.pubIds.urn.editor.canBeAssigned"}</p>
-					{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
-					{include file="`$templatePath`urnAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+					{assign var=templatePath value=$pubIdPlugin->getTemplateResource('urnAssignCheckBox.tpl')}
+					{include file=$templatePath pubId="" pubObjectType=$pubObjectType}
 				{else}
 					<p class="pkp_help">{translate key="plugins.pubIds.urn.editor.customSuffixMissing"}</p>
 				{/if}
@@ -45,8 +45,8 @@
 			<p>{$pubIdPlugin->getPubId($pubObject)|escape}</p>
 			{if $canBeAssigned}
 				<p class="pkp_help">{translate key="plugins.pubIds.urn.editor.canBeAssigned"}</p>
-				{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
-				{include file="`$templatePath`urnAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+				{assign var=templatePath value=$pubIdPlugin->getTemplateResource('urnAssignCheckBox.tpl')}
+				{include file=$templatePath pubId="" pubObjectType=$pubObjectType}
 			{else}
 				<p class="pkp_help">{translate key="plugins.pubIds.urn.editor.patternNotResolved"}</p>
 			{/if}

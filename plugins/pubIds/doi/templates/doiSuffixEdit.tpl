@@ -22,8 +22,8 @@
 					{fbvElement type="text" label="plugins.pubIds.doi.manager.settings.doiSuffix" id="doiSuffix" value=$doiSuffix size=$fbvStyles.size.MEDIUM}
 				{/fbvFormSection}
 				{if $canBeAssigned}
-					{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
-					{include file="`$templatePath`doiAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+					{assign var=templatePath value=$pubIdPlugin->getTemplateResource('doiAssignCheckBox.tpl')}
+					{include file=$templatePath pubId="" pubObjectType=$pubObjectType}
 				{else}
 					<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.customSuffixMissing"}</p>
 				{/if}
@@ -42,8 +42,8 @@
 			<p>{$pubIdPlugin->getPubId($pubObject)|escape}</p>
 			{if $canBeAssigned}
 				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.canBeAssigned"}</p>
-				{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
-				{include file="`$templatePath`doiAssignCheckBox.tpl" pubId="" pubObjectType=$pubObjectType}
+				{assign var=templatePath value=$pubIdPlugin->getTemplateResource('doiAssignCheckBox.tpl')}
+				{include file=$templatePath pubId="" pubObjectType=$pubObjectType}
 			{else}
 				<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.patternNotResolved"}</p>
 			{/if}
