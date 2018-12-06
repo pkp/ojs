@@ -27,8 +27,8 @@
 				{/if}
 			{/fbvFormSection}
 		{else}
-			{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
-			{include file="`$templatePath`doiAssignCheckBox.tpl" pubId=$pubId pubObjectType=$pubObjectType}
+			{assign var=templatePath value=$pubIdPlugin->getTemplateResource('doiAssignCheckBox.tpl')}
+			{include file=$templatePath pubId=$pubId pubObjectType=$pubObjectType}
 		{/if}
 	{/if}
 	{/fbvFormArea}
