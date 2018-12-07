@@ -101,6 +101,7 @@
 	<message key="section.title">Название раздела</message>
 	<message key="section.abbreviation">Аббревиатура</message>
 	<message key="section.abbreviation.example">(Например, Статьи=СТ)</message>
+	<message key="section.policy">Правила раздела</message>
 
 	<!-- Общие термины статьи -->
 	<message key="article.article">Статья</message>
