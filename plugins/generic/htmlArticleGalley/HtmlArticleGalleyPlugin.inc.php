@@ -181,7 +181,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			$contents = str_replace('{$' . $key . '}', $value, $contents);
 		}
 		
-		HookRegistry::call('HtmlArticleGalleyPlugin::htmlGalleyContent', array(&$galley, &$contents));
+		HookRegistry::call('HtmlArticleGalleyPlugin::htmlGalleyContent', array($galley, &$contents, $submissionFile, $embeddableFiles));
 
 		return $contents;
 	}
