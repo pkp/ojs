@@ -25,6 +25,7 @@
 					<sequence>
 						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
 						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
+						<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
 					</sequence>
 					<attribute name="section_ref" type="string" use="required" />
 					<attribute name="seq" type="int" />
@@ -118,7 +119,7 @@
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
-			<element ref="pkp:issue_covers" minOccurs="0" maxOccurs="1" />
+			<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
 		</sequence>
@@ -160,7 +161,7 @@
 		</sequence>
 	</complexType>
 
-	<element name="issue_covers">
+	<element name="covers">
 		<complexType>
 			<sequence>
 				<element ref="pkp:cover" minOccurs="1" maxOccurs="unbounded" />

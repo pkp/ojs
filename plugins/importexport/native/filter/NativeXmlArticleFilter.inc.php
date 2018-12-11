@@ -141,6 +141,11 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			case 'pages':
 				$submission->setPages($n->textContent);
 				break;
+			case 'covers':
+				import('plugins.importexport.native.filter.NativeFilterHelper');
+				$nativeFilterHelper = new NativeFilterHelper();
+				$nativeFilterHelper->parseCovers($this, $n, $submission, ASSOC_TYPE_SUBMISSION);
+				break;
 			default:
 				parent::handleChildElement($n, $submission);
 		}
@@ -263,6 +268,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		}
 		return $issue;
 	}
+
 }
 
 ?>
