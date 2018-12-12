@@ -43,9 +43,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 		$this->addPolicy(new SubmissionAccessPolicy(
 			$request,
 			$args,
-			$roleAssignments,
-			'submissionId',
-			$router->getRequestedOp($request)=='submission' || (in_array($router->getRequestedOp($request), array('step', 'saveStep')) && $request->getUserVar('step') == 1) // Limit declined review views to step 1
+			$roleAssignments
 		));
 
 
