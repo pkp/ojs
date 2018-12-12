@@ -1048,4 +1048,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} has taken the edit process for the article {$submissionId}.</message>
+
+	<message key="catalog.sortBy">Order of articles</message>
+	<message key="catalog.sortBy.categoryDescription">Choose how to order articles in this category.</message>
 </locale>

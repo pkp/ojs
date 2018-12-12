@@ -67,6 +67,7 @@
 	<schema file="lib/pkp/xml/schema/controlledVocab.xml" />
 	<schema file="lib/pkp/xml/schema/submissions.xml" />
 	<schema file="lib/pkp/xml/schema/submissionFiles.xml" />
+	<schema file="lib/pkp/xml/schema/categories.xml" />
 	<schema file="lib/pkp/xml/schema/notes.xml" />
 	<schema file="lib/pkp/xml/schema/genres.xml" />
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />

@@ -62,6 +62,8 @@
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
 
+	{include file="submission/form/categories.tpl"}
+
 	{* Cover Image *}
 	{fbvFormArea id="coverImage" title="editor.article.coverImage"}
 		{if !$formParams.readOnly}
