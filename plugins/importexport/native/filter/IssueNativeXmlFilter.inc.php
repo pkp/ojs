@@ -97,7 +97,12 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
-		$this->addCoverImages($doc, $issueNode, $issue);
+		// cover images
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $issue);
+		if ($coversNode) $issueNode->appendChild($coversNode);
+
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
 
@@ -218,36 +223,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	}
 
 	/**
-	 * Add the issue cover images to its DOM element.
-	 * @param $doc DOMDocument
-	 * @param $issueNode DOMElement
-	 * @param $issue Issue
-	 */
-	function addCoverImages($doc, $issueNode, $issue) {
-		$coverImages = $issue->getCoverImage(null);
-		if (!empty($coverImages)) {
-			$deployment = $this->getDeployment();
-			$issueCoversNode = $doc->createElementNS($deployment->getNamespace(), 'issue_covers');
-			foreach ($coverImages as $locale => $coverImage) {
-				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
-				$coverNode->setAttribute('locale', $locale);
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
-				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($issue->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
-
-				import('classes.file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
-				$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $coverImage;
-				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-				$embedNode->setAttribute('encoding', 'base64');
-				$coverNode->appendChild($embedNode);
-
-				$issueCoversNode->appendChild($coverNode);
-			}
-			$issueNode->appendChild($issueCoversNode);
-		}
-	}
-
-	/**
 	 * Add the sections to the Issue DOM element.
 	 * @param $doc DOMDocument
 	 * @param $issueNode DOMElement
@@ -289,5 +264,3 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	}
 
 }
-
-
