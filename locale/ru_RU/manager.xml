@@ -448,6 +448,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Пожалуйста, выберите правильную дату начала подписки.</message>
 	<message key="manager.subscriptions.form.dateEnd">Дата окончания</message>
 	<message key="manager.subscriptions.form.dateEndRequired">Дата окончания подписки обязательна.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Срок действия этого типа подписки не ограничен; пожалуйста, не указывайте дату начала подписки.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Срок действия этого типа подписки не ограничен; пожалуйста, не указывайте дату окончания подписки.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Пожалуйста, выберите правильную дату окончания подписки.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Обратите внимание: Все изменения ниже отразятся в профиле пользователя во всей системе.</message>
 	<message key="manager.subscriptions.form.userId">Пользователь</message>
