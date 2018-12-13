@@ -83,9 +83,12 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		}
 		$pages = $submission->getPages();
 		if (!empty($pages)) $submissionNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'pages', htmlspecialchars($pages, ENT_COMPAT, 'UTF-8')));
+		// cover images
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $submission);
+		if ($coversNode) $submissionNode->appendChild($coversNode);
 		return $submissionNode;
 	}
 
 }
-
-
