@@ -46,7 +46,6 @@ plugins/generic/cookiesAlert								\
 plugins/generic/counter									\
 plugins/generic/customLocale								\
 plugins/generic/externalFeed								\
-plugins/generic/lucene									\
 plugins/generic/phpMyVisites								\
 plugins/generic/recommendBySimilarity							\
 plugins/generic/translator								\
