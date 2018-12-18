@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/browse/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_German_(de_DE)
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.block.browse">Browsen</message>
+	<message key="plugins.block.browse.displayName">Browse-Block</message>
+	<message key="plugins.block.browse.description">Dieses Plugin stellt "Browse"-Werkzeuge in der Sidebar bereit.</message>
+	<message key="plugins.block.browse.category">Kategorien</message>
+</locale>
