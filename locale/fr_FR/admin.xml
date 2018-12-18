@@ -41,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique.</message>
 	<message key="admin.contexts.form.pathExists">Le chemin sélectionné est déjà utilisé par une autre revue.</message>
 	<message key="admin.journals.enableJournalInstructions">Permettre à cette revue d'apparaître publiquement sur le site</message>
-	<message key="admin.journals.journalDescription">Description de la revue</message>
+	<message key="admin.contexts.contextDescription">Description de la revue</message>
 	<message key="admin.journal.pathImportInstructions">Chemin d'accès à la revue existant ou à créer (par ex., "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer les abonnements</message>
 	<message key="admin.journals.transcode">Conversion des métadonnées de l'article à partir de la norme ISO 8859-1</message>

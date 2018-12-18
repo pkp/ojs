@@ -24,54 +24,23 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Це подання раніше не було опубліковане і не надсилалося на розгляд до редакцій інших журналів (або вкажіть пояснення у коментарях для редактора).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Веб-посилання у тексті супроводжуються повними коректними адресами URL.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам щодо стилістики та бібліографії, викладеним у <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>
-	<message key="default.journalSettings.privacyStatement">Імена та електронні адреси, вказані користувачами на сайті цього журналу, будуть використані виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
-	<message key="default.journalSettings.openAccessPolicy">Цей журнал підтримує політику миттєвого відкритого доступу до опублікованого контенту, слідуючи принципам вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Стадія коректури необхідна для пошуку у гранках дрібних помилок орфографії, граматики та форматування. Більш серйозні зміни можуть вноситись на цьому етапі лише за умови їх попереднього погодження з редактором розділу. Для того, щоб побачити гранку статті у HTML, PDF або іншому форматі, натисніть посилання "Переглянути верстку" в розділі "Верстка".</p>
-<h4>Щодо помилок орфографії та граматики</h4>
-
-<p>Скопіюйте проблемне слово або словосполучення та вставте його у форму "Виправлення коректора" з вказівкою "Змінити на..." для редактора. Наприклад:</p>
-
-<pre>1. Змінити...
-одне
-НА...
-інше</pre>
-<br />
-<pre>2. Змінити...
-Малиновский
-НА...
-Малиновський</pre>
-<br />
-
-<h4>Щодо помилок форматування</h4>
-
-<p>У форму "Виправлення коректора" вставте підзаголовок "Форматування", вкажіть проблемне місце та коротко охарактеризуйте суть проблеми. Наприклад:</p>
-<br />
-<pre>3. Форматування
-Не вирівняні цифри у третьому стовпчику Табл. 3.</pre>
-<br />
-<pre>4. Форматування
-Перед абзацом, що починається словами "Ця остання тема..." немає відступу.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Це подання раніше не було опубліковане і не надсилалося на розгляд до редакцій інших журналів (або вкажіть пояснення у коментарях для редактора).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Веб-посилання у тексті супроводжуються повними коректними адресами URL.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Текст відповідає вимогам щодо стилістики та бібліографії, викладеним у <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></message>
+	<message key="default.contextSettings.privacyStatement">Імена та електронні адреси, вказані користувачами на сайті цього журналу, будуть використані виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</message>
+	<message key="default.contextSettings.openAccessPolicy">Цей журнал підтримує політику миттєвого відкритого доступу до опублікованого контенту, слідуючи принципам вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
-{$indexUrl}/{$journalPath}
+{$indexUrl}{$contextPath}
 ]]></message>
-	<message key="default.contextSettings.forReaders"><![CDATA[Ми пропонуємо авторам реєструватися на сайті, щоб скористатись службою повідомлень цього журналу. Для реєстрації використайте посилання <a href="{$indexUrl}/{$journalPath}/user/register">Зареєструватися</a> у верхньому меню домашньої сторінки сайту журналу. У Вас буде можливість оперативно отримувати поштою сторінки змісту нових опублікованих випусків нашого видання та дозволите редакції відстежувати читацькі пріоритети та інтереси. Будь ласка, ознайомтеся з нашим <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Положенням про конфіденційність</a>, у якому йдеться про те, що журнал гарантує нерозповсюдження імен та електронних адрес своїх читачів стороннім особам.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Бажаєте опублікувати свою статтю у цьому журналі? Рекомендуємо ознайомитись з нашою редакційною політикою на сторінці <a href="{$indexUrl}/{$journalPath}/about">Про журнал</a> та переглянути <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Керівництво для авторів</a>. Для того, щоб мати можливість подавати рукописи до нашого видання, автори повинні <a href="{$indexUrl}/{$journalPath}/user/register">зареєструватися</a> на сайті журналу. Якщо Ви вже зареєстровані, просто <a href="{$indexUrl}/index/login">увійдіть на сайт</a> та пройдіть 5 кроків подання рукопису на розгляд.]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Ми пропонуємо авторам реєструватися на сайті, щоб скористатись службою повідомлень цього журналу. Для реєстрації використайте посилання <a href="{$indexUrl}{$contextPath}/user/register">Зареєструватися</a> у верхньому меню домашньої сторінки сайту журналу. У Вас буде можливість оперативно отримувати поштою сторінки змісту нових опублікованих випусків нашого видання та дозволите редакції відстежувати читацькі пріоритети та інтереси. Будь ласка, ознайомтеся з нашим <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Положенням про конфіденційність</a>, у якому йдеться про те, що журнал гарантує нерозповсюдження імен та електронних адрес своїх читачів стороннім особам.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Бажаєте опублікувати свою статтю у цьому журналі? Рекомендуємо ознайомитись з нашою редакційною політикою на сторінці <a href="{$indexUrl}{$contextPath}/about">Про журнал</a> та переглянути <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Керівництво для авторів</a>. Для того, щоб мати можливість подавати рукописи до нашого видання, автори повинні <a href="{$indexUrl}{$contextPath}/user/register">зареєструватися</a> на сайті журналу. Якщо Ви вже зареєстровані, просто <a href="{$indexUrl}/index/login">увійдіть на сайт</a> та пройдіть 5 кроків подання рукопису на розгляд.]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[Ми пропонуємо науковим бібліотекам включити цей журнал до списків своїх електронних колекцій. Додатково, в цій видавничій системі передбачено засоби інтеграції з бібліотечним програмним забезпеченням, що дозволяє бібліотекам забезпечувати архівне збереження електронного контенту журналу та/або безпосередньо брати участь у видавничому процесі. Більш детально про ці можливості див. на сайті <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Цей журнал використовує систему LOCKSS (Lots of Copies Keep Stuff Safe) для захищеного та надійного розподіленого архівування опублікованого контенту журналу в численних бібліотеках та інформаційних центрах. Бібліотеки-учасниці проекту LOCKSS гарантують довготермінове зберігання повнотекстових архівів журналу та автоматичне відновлення пошкодженої інформації. <a href="http://www.lockss.org/">Детальніше...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Цей журнал використовує систему CLOCKSS (Controled LOCKSS) для розподіленого архівного зберігання опублікованого контенту журналу в численних бібліотеках та дозволяє цим бібліотекам створювати архіви журналів з метою довготермінового зберігання та відновлення пошкодженої інформації. <a href="http://clockss.org/">Детальніше...</a>]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Цей журнал використовує систему LOCKSS (Lots of Copies Keep Stuff Safe) для захищеного та надійного розподіленого архівування опублікованого контенту журналу в численних бібліотеках та інформаційних центрах. Бібліотеки-учасниці проекту LOCKSS гарантують довготермінове зберігання повнотекстових архівів журналу та автоматичне відновлення пошкодженої інформації. <a href="http://www.lockss.org/">Детальніше...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Цей журнал використовує систему CLOCKSS (Controled LOCKSS) для розподіленого архівного зберігання опублікованого контенту журналу в численних бібліотеках та дозволяє цим бібліотекам створювати архіви журналів з метою довготермінового зберігання та відновлення пошкодженої інформації. <a href="http://clockss.org/">Детальніше...</a>]]></message>
 
-
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Публікація статті</message>
-	<message key="default.journalSettings.purchaseArticleFee">Купити статтю</message>
-	<message key="default.journalSettings.membershipFee">Членство у асоціації</message>
-	<message key="default.journalSettings.purchaseIssueFee">Купити випуск</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Менеджер журналу</message>
@@ -102,7 +71,7 @@
 	<message key="default.groups.name.externalReviewer">Рецензент</message>
 	<message key="default.groups.plural.externalReviewer">Рецензенти</message>
 	<message key="default.groups.abbrev.externalReviewer">Рец</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

@@ -26,7 +26,6 @@
 	<message key="manager.payment.amount">Beløb</message>
 	<message key="manager.payment.authorFees">Forfattergebyrer</message>
 	<message key="manager.payment.authorFeesDescription">De valgte indstillinger samt deres beskrivelser og gebyrer (som kan redigeres nedenfor) vises i trin 1 i manuskriptprocessen og under Om tidsskriftet under Manuskripter samt i de situationer, hvor der kræves betaling.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS foretager ingen valutakonverteringer. Hvis du accepterer betalinger for abonnementer, skal du sikre, at abonnementsvalutaen svarer til den, der er angivet her.</message>
 	<message key="manager.payment.description">Beskrivelse</message>
 	<message key="manager.payment.details">Detaljer</message>
@@ -58,7 +57,6 @@
 	<message key="manager.payment.readerFees">Læsergebyrer</message>
 	<message key="manager.payment.readerFeesDescription">De valgte indstillinger samt deres beskrivelser og gebyrer (som kan redigeres nedenfor) vises under Om tidsskriftet under Politikker samt i de situationer, hvor der kræves betaling.</message>
 	<message key="manager.payment.records">Poster</message>
-	<message key="manager.payments">Betalinger</message>
 	<message key="manager.payment.userName">Betalings-id</message>
 	<message key="manager.people.allEnrolledUsers">Brugere, der er tilmeldt dette tidsskrift</message>
 	<message key="manager.people.allJournals">Alle tidsskrifter</message>
@@ -168,7 +166,7 @@
 	<message key="manager.setup.journalHomepageHeader">Sidehoved på tidsskriftets hjemmeside</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Tidsskriftshjemmesidehovede</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">En grafik version af tidsskriftets titel og logo (som en .gif-, .jpg- eller .png-fil) kan overføres til hjemmesiden og vil erstatte den tekstversion, der ellers er vist.</message>
-	<message key="manager.setup.journalInitials">Initialer for tidsskrift</message>
+	<message key="manager.setup.contextInitials">Initialer for tidsskrift</message>
 	<message key="manager.setup.journalLayout">Tidsskriftslayout</message>
 	<message key="manager.setup.journalLayoutDescription">Vælg et tidsskriftstema, og vælg layoutkomponenter her. Du kan også overføre et typografiark for tidsskriftet, der kan bruges til at tilsidesætte typografidata i typografiarkene for hele systemet og i tematypografiarkene (hvis der er valgt et tema).</message>
 	<message key="manager.setup.journalLogo">Tidsskriftslogo</message>
@@ -180,10 +178,9 @@
 	<message key="manager.setup.journalSetupUpdated">Konfigurationen af tidsskriftet er blevet opdateret.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Ugyldigt format for typografiark til tidsskrift. Det accepterede format er .css.</message>
 	<message key="manager.setup.journalTheme">Tidsskriftstema</message>
-	<message key="manager.setup.journalTitle">Titel på tidsskrift</message>
+	<message key="manager.setup.contextTitle">Titel på tidsskrift</message>
 	<message key="manager.setup.labelName">Etiketnavn</message>
 	<message key="manager.setup.lists">Lister</message>
-	<message key="manager.setup.listsDescription">Angiv det maksimale antal elementer (f.eks. manuskripter, brugere eller redigeringsopgaver), der skal vises på de enkelte sider på en liste, samt det antal sidelinks, der skal vises på hver side.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktivér LOCKSS for at gemme og distribuere tidsskriftsindhold hos deltagende biblioteker via LOCKSS-siden <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>. Der vises en LOCKSS-licens under Om tidsskriftet under Arkiverer:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Find 6-10 bibliotekarer, der skal registrere og gemme tidsskriftet. Tag f.eks. kontakt til institutioner, hvor redaktører eller udvalgsmedlemmer arbejder, og/eller institutioner, der allerede deltager i LOCKSS. Se <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. Brug de forberedte invitationer til (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">biblioteker, der deltager i LOCKSS</a> eller (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">biblioteker, der endnu ikke deltager i LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Udseende</message>
@@ -242,7 +239,6 @@
 	<message key="manager.setup.selectEditorDescription">Hvilken tidsskriftsredaktør, der skal føre elementet igennem den redaktionelle proces.</message>
 	<message key="manager.setup.selectSectionDescription">Hvilken tidsskriftssektion, elementet skal tages i betragtning til.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Vis altid links til publiceringsversioner, og angiv begrænset adgang.</message>
-	<message key="manager.setup.siteAccess">Yderligere adgangsbegrænsninger for websteder og artikler</message>
 	<message key="manager.setup.stepsToJournalSite">Fem trin til et tidsskrifts websted</message>
 	<message key="manager.setup.subjectExamples">(F.eks. Fotosyntese; Sorte huller; Firfarveproblemet; Bayesiansk teori)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nøgleord</message>
@@ -468,9 +464,9 @@
 	<message key="manager.statistics.reports.filters.byObject.description">Indsnævre resultatet ud fra elementtype (tidsskrift, nummer, artikel, pdf-format, andrepubliceringsformater) og/eller ud fra et eller flere element-id'er.</message>
 	<message key="manager.setup.copyrightYearBasis">Basér ny artikels ophavsretsår på</message>
 	<message key="manager.setup.contextName">Titel på tidsskrift</message>
-	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
-	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
-	<message key="manager.setup.journalAbout.description">Her indskrives alle de informationer, som kan være af interesse for læsere, forfattere eller bedømmere. Det gælder f.eks. tidsskriftets fokusområde, oplysninger om ophavsret, open access politik, en erklæring om beskyttelse af personlige oplysninger, tidsskriftets historie mm.</message>
+	<message key="manager.setup.contextSummary">Tidsskriftsbeskrivelse</message>
+	<message key="manager.setup.contextAbout">Om tidsskriftet</message>
+	<message key="manager.setup.contextAbout.description">Her indskrives alle de informationer, som kan være af interesse for læsere, forfattere eller bedømmere. Det gælder f.eks. tidsskriftets fokusområde, oplysninger om ophavsret, open access politik, en erklæring om beskyttelse af personlige oplysninger, tidsskriftets historie mm.</message>
 	<message key="manager.setup.masthead">Kolofon</message>
 	<message key="manager.setup.editorialTeam">Redaktionsgruppe</message>
 	<message key="manager.website.archiving">Arkivering</message>

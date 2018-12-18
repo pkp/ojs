@@ -19,13 +19,7 @@ use \Pimple\Container;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPSchemaService;
 use \PKP\Services\PKPSiteService;
-use \PKP\Services\PKPUserService;
-use \APP\Services\ContextService;
-use \APP\Services\GalleyService;
-use \APP\Services\IssueService;
-use \APP\Services\NavigationMenuService;
-use \APP\Services\SectionService;
-use \APP\Services\SubmissionService;
+use \APP\Services\UserService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -67,7 +61,7 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
 		// User service
 		$pimple['user'] = function() {
-			return new PKPUserService();
+			return new UserService();
 		};
 
 		// Context service

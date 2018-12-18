@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Сумма</message>
 	<message key="manager.payment.authorFees">Платежи автора</message>
 	<message key="manager.payment.authorFeesDescription">Введите суммы платежей ниже, чтобы включить платежи автора.</message>
-	<message key="manager.payment.currency">Валюта</message>
 	<message key="manager.payment.currencymessage">OJS не выполняет конвертацию валют. Если вы принимаете платежи за подписки, убедитесь, что валюта платежа за подписку соответствует указанной здесь валюте.</message>
 	<message key="manager.payment.description">Описание</message>
 	<message key="manager.payment.details">Детали</message>
@@ -63,7 +62,6 @@
 	<message key="manager.payment.readerFees">Платежи читателя</message>
 	<message key="manager.payment.readerFeesDescription">Выбранные варианты, вместе с их описаниями и ценами (они могут быть изменены ниже), появятся на странице «О журнале» в разделе «Правила», а также во всех местах, где требуется оплата.</message>
 	<message key="manager.payment.records">Записи</message>
-	<message key="manager.payments">Платежи</message>
 	<message key="manager.paymentTypes">Виды платежей</message>
 	<message key="manager.payment.userName">ID платежа</message>
 	<message key="manager.people.allEnrolledUsers">Пользователи, записанные в этот журнал</message>
@@ -186,15 +184,15 @@
 	<message key="manager.setup.itemsPerPage">Элементов на странице</message>
 	<message key="manager.setup.journalAbbreviation">Аббревиатура названия журнала</message>
 	<message key="manager.setup.journalArchiving">Архивация журнала</message>
-	<message key="manager.setup.journalSummary">Обзор журнала</message>
-	<message key="manager.setup.journalAbout">О журнале</message>
-	<message key="manager.setup.journalAbout.description">Включите сюда любую информацию о журнале, которая может быть интересна читателям, авторам или рецензентам. Это могут быть правила открытого доступа, концепция журнала, условия передачи авторских прав, информация о спонсорах, история журнала, заявление о конфиденциальности и включение материалов в архивную систему LOCKSS или CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Обзор журнала</message>
+	<message key="manager.setup.contextAbout">О журнале</message>
+	<message key="manager.setup.contextAbout.description">Включите сюда любую информацию о журнале, которая может быть интересна читателям, авторам или рецензентам. Это могут быть правила открытого доступа, концепция журнала, условия передачи авторских прав, информация о спонсорах, история журнала, заявление о конфиденциальности и включение материалов в архивную систему LOCKSS или CLOCKSS.</message>
 	<message key="manager.setup.journalHomepageContent">Контент главной страницы журнала</message>
 	<message key="manager.setup.journalHomepageContentDescription">Главная страница журнала по умолчанию состоит из навигационных ссылок. Дополнительный контент на главной странице может быть добавлен с помощью одного или нескольких следующих параметров, которые появятся на странице в показанном порядке. Обратите внимание, что текущий выпуск всегда доступен по ссылке «Текущий выпуск» на панели навигации.</message>
 	<message key="manager.setup.journalHomepageHeader">Заголовок главной страницы журнала</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Заголовок главной страницы журнала</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Графическая версия названия и логотипа журнала (в виде файла в формате .gif, .jpg или .png) может быть загружена на главную страницу. Эта версия заменит текстовую версию, отображаемую по умолчанию.</message>
-	<message key="manager.setup.journalInitials">Аббревиатура названия журнала</message>
+	<message key="manager.setup.contextInitials">Аббревиатура названия журнала</message>
 	<message key="manager.setup.journalLayout">Макет журнала</message>
 	<message key="manager.setup.journalLayoutDescription">Выберите здесь тему оформления журнала и компоненты макета. Таблица стилей журнала также может быть загружена на сайт и использована для переопределения стиля, заданного системными таблицами стилей и таблицей стилей темы (если выбрана тема).</message>
 	<message key="manager.setup.journalLogo">Логотип журнала</message>
@@ -208,10 +206,9 @@
 	<message key="manager.setup.journalTheme">Тема оформления журнала</message>
 	<message key="manager.setup.journalThumbnail">Миниатюра журнала</message>
 	<message key="manager.setup.journalThumbnail.description">Маленький логотип или обложка журнала, которые могут использоваться в списке журналов.</message>
-	<message key="manager.setup.journalTitle">Название журнала</message>
+	<message key="manager.setup.contextTitle">Название журнала</message>
 	<message key="manager.setup.labelName">Название метки</message>
 	<message key="manager.setup.lists">Списки</message>
-	<message key="manager.setup.listsDescription">Введите максимальное количество элементов (например, материалов, пользователей или редакционных заданий), которые будут отображаться на каждой странице списка. Также ограничьте количество ссылок для отображения следующих страниц списка.</message>
 	<message key="manager.setup.plnPluginEnable">Модуль PKP PN включен</message>
 	<message key="manager.setup.plnDescription">Сеть архивирования PKP (PKP Preservation Network, PKP PN) предоставляет бесплатные сервисы архивирования для любых журналов на OJS, удовлетворяющих нескольким базовым критериям.</message>
 	<message key="manager.setup.plnSettingsDescription">Щелкните на ссылке «Настройки», чтобы принять условия использования PKP PN.</message>
@@ -284,7 +281,6 @@
 	<message key="manager.setup.selectEditorDescription">Редактор журнала, который будет контролировать прохождение материала через редакционный процесс.</message>
 	<message key="manager.setup.selectSectionDescription">Раздел журнала, в котором будет расссматриваться данный материал.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Всегда показывать ссылки на гранки и уведомлять об ограниченном доступе.</message>
-	<message key="manager.setup.siteAccess">Дополнительные ограничения на доступ к сайту и к статьям</message>
 	<message key="manager.setup.stepsToJournalSite">Пять шагов к веб-сайту журнала</message>
 	<message key="manager.setup.subjectExamples">(Например, Фотосинтез; Черные дыры; Проблема четырех красок; Теория Байеса)</message>
 	<message key="manager.setup.subjectKeywordTopic">Ключевые слова</message>

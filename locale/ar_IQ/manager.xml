@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">المبلغ</message>
 	<message key="manager.payment.authorFees">رسوم المؤلف</message>
 	<message key="manager.payment.authorFeesDescription">أدخل مبالغ الرسوم أدناه من أجل تمكين معالجة رسوم النشر.</message>
-	<message key="manager.payment.currency">العملة</message>
 	<message key="manager.payment.currencymessage">نظام المجلات المفتوحة لا يجري أي عملية للتحويل بين العملات. عند قبول المدفوعات المالية للاشتراكات، عليك التأكد من كون مبلغ الاشتراك هو بعملة مطابقة للعملة المحددة هنا.</message>
 	<message key="manager.payment.description">الوصف</message>
 	<message key="manager.payment.details">التفاصيل</message>
@@ -63,7 +62,6 @@
 	<message key="manager.payment.readerFees">رسوم القرّاء</message>
 	<message key="manager.payment.readerFeesDescription">الخيارات المحددة مع أوصافها ورسوماتها (والتي بالإمكان تعديلها أدناه)، ستظهر في (عن المجلة) تحت باب السياسات، فضلاً عن ظهورها في مواضع أخرى حيثما يتطلب الدفع المالي.</message>
 	<message key="manager.payment.records">السجلات</message>
-	<message key="manager.payments">المدفوعات</message>
 	<message key="manager.paymentTypes">أنواع المدفوعات</message>
 	<message key="manager.payment.userName">معرَّف الدفع</message>
 	<message key="manager.people.allEnrolledUsers">الأفراد ذوي الأدوار في هذه المجلة</message>
@@ -186,15 +184,15 @@
 	<message key="manager.setup.itemsPerPage">عدد فقرات الصفحة</message>
 	<message key="manager.setup.journalAbbreviation">مختصر اسم المجلة</message>
 	<message key="manager.setup.journalArchiving">محفوظات المجلة</message>
-	<message key="manager.setup.journalSummary">ملخص المجلة</message>
-	<message key="manager.setup.journalAbout">عن المجلة</message>
-	<message key="manager.setup.journalAbout.description">ضمّن أي معلومات عن مجلتك قد تكون ذات أهمية للقراء، والمؤلفين أو المحكمين. هذا قد يشمل سياسة الوصول المفتوح التي تتبعها، مجالات عمل المجلة، بيان الحقوق الفكرية، التصريح بالجهات الداعمة، تأريخ المجلة، بيان الخصوصية، وما إذا كانت المجلة منضمة إلى أي من أنظمة الحفظ الاحتياطي LOCKSS أو CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">ملخص المجلة</message>
+	<message key="manager.setup.contextAbout">عن المجلة</message>
+	<message key="manager.setup.contextAbout.description">ضمّن أي معلومات عن مجلتك قد تكون ذات أهمية للقراء، والمؤلفين أو المحكمين. هذا قد يشمل سياسة الوصول المفتوح التي تتبعها، مجالات عمل المجلة، بيان الحقوق الفكرية، التصريح بالجهات الداعمة، تأريخ المجلة، بيان الخصوصية، وما إذا كانت المجلة منضمة إلى أي من أنظمة الحفظ الاحتياطي LOCKSS أو CLOCKSS.</message>
 	<message key="manager.setup.journalHomepageContent">محتوى الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.journalHomepageContentDescription">إفتراضياً، تتضمن الصفحة الرئيسية روابط للتنقل. يمكن إضافة محتوى إضافي لها عبر استعمال واحد أو أكثر من الخيارات الآتية، والتي ستظهر بالترتيب المعاين. لاحظ أن الإصدار الحالي يمكن الوصول إليه دوماً عبر رابط (الإصدار الحالي) في شريط التنقل.</message>
 	<message key="manager.setup.journalHomepageHeader">رأس الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.journalHomepageHeader.altText">رأس الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">نسخة رسومية من عنوان المجلة وشعارها بالصيغ: (.gif، .jpg أو .png) يمكن رفعها لتظهر في الصفحة الرئيسية، وعندها ستستبدل النسخة النصية التي لو لا وجودها، لظهرت في الصفحة. بعبارة أخرى، دائماً استعمالك للصور يعتبره الموقع بديل عن النصوص.</message>
-	<message key="manager.setup.journalInitials">الحروف الأولية للمجلة</message>
+	<message key="manager.setup.contextInitials">الحروف الأولية للمجلة</message>
 	<message key="manager.setup.journalLayout">تصميم المجلة</message>
 	<message key="manager.setup.journalLayoutDescription">إختر نمطاً لمظهر المجلة مع مكونات التصميم من هنا. بالإمكان أيضاً رفع ملف أنماط إلى الموقع، والذي يمكن عبره تخطي بيانات النمط القياسي وحسب ما يتناسب مع رغبة وأهداف الجهة المستفيدة من الموقع.</message>
 	<message key="manager.setup.journalLogo">شعار المجلة</message>
@@ -208,10 +206,9 @@
 	<message key="manager.setup.journalTheme">نمط المجلة</message>
 	<message key="manager.setup.journalThumbnail">مصغر المجلة</message>
 	<message key="manager.setup.journalThumbnail.description">شعار صغير أو ما يمثل المجلة بالإمكان استعماله ضمن قائمة مجلات الموقع.</message>
-	<message key="manager.setup.journalTitle">عنوان المجلة</message>
+	<message key="manager.setup.contextTitle">عنوان المجلة</message>
 	<message key="manager.setup.labelName">اسم الملصق</message>
 	<message key="manager.setup.lists">القوائم</message>
-	<message key="manager.setup.listsDescription">أدخل أكبر عدد من الفقرات (على سبيل المثال: طلبات النشر، المستخدمون، مهام التحرير) التي لها أن تظهر في كل صفحة، وعدد روابط الصفحات التي لها أن تظهر في كل صفحة.</message>
 	<message key="manager.setup.plnPluginEnable">الإضافة PKP PN ممكنة</message>
 	<message key="manager.setup.plnDescription">إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية.</message>
 	<message key="manager.setup.plnSettingsDescription">أنقر على رابط الإعدادات للموافقة على شروط استعمال شبكة الحفظ لمشروع المعرفة العامة.</message>
@@ -285,7 +282,6 @@
 	<message key="manager.setup.selectEditorDescription">محرر المجلة الذي سيطلع عليها خلال عملية التحرير.</message>
 	<message key="manager.setup.selectSectionDescription">قسم المجلة المتعلق بالفقرة المعنية.</message>
 	<message key="manager.setup.showGalleyLinksDescription">دائماً أظهر روابط لوح الطباعة وقيّد الوصول إلى المحتوى.</message>
-	<message key="manager.setup.siteAccess">تقييدات الوصول في الموقع ومحتوياته الأخرى</message>
 	<message key="manager.setup.stepsToJournalSite">خمس خطوات للحصول على موقع للمجلة</message>
 	<message key="manager.setup.subjectExamples">(مثل: التركيب الضوئي، الثقوب السوداء، مشكلة الخرائط رباعية الألوان، نظرية الكم)</message>
 	<message key="manager.setup.subjectKeywordTopic">الكلمات المفتاحية</message>

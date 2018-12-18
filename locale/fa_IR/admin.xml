@@ -44,7 +44,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">مسیر فقط می‌تواند شامل کاراکترهای حروف و عدد باشد</message>
 	<message key="admin.contexts.form.pathExists">مسیر انتخاب شده قبلاً توسط یک مجله دیگر انتخاب شده است</message>
 	<message key="admin.journals.enableJournalInstructions">فعال سازی مجله و نمایش عمومی ان در سایت</message>
-	<message key="admin.journals.journalDescription">توصیف مجله</message>
+	<message key="admin.contexts.contextDescription">توصیف مجله</message>
 	<message key="admin.journal.pathImportInstructions">مسیر موجود یا مسیری که باید ایجاد شود (مانند: ojs)</message>
 	<message key="admin.journals.importSubscriptions">درون‌ریزی اشتراک‌ها</message>
 	<message key="admin.journals.transcode">کد انتقال فراداده‌های مقاله از ISO8859-1</message>

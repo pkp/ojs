@@ -43,7 +43,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">这个路径只能含有英文字母和数字符号，底线(_)和连字号(-)，而且一定要以英文字母和数字符号当做开头和结尾.</message>
 	<message key="admin.contexts.form.pathExists">选择的路径已经被其他期刊使用中.</message>
 	<message key="admin.journals.enableJournalInstructions">启用这个期刊使其公开显示在这个网站</message>
-	<message key="admin.journals.journalDescription">期刊描述</message>
+	<message key="admin.contexts.contextDescription">期刊描述</message>
 	<message key="admin.journal.pathImportInstructions">已经存在的期刊路径或者将要创建的路径(例如 "ojs").</message>
 	<message key="admin.journals.importSubscriptions">导入订阅</message>
 	<message key="admin.journals.transcode">从ISO8859-1转码文章源数据</message>

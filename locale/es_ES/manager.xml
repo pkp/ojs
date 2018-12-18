@@ -28,7 +28,6 @@
 	<message key="manager.payment.amount">Importe</message>
 	<message key="manager.payment.authorFees">Cuotas de los autores/as</message>
 	<message key="manager.payment.authorFeesDescription">Las opciones seleccionadas, su descripción y las cuotas (todo ello se puede editar más abajo) se mostrarán en el paso n.º 1 del proceso de envío y en Envíos, dentro de la sección Acerca de la revista, así como en aquellos puntos en los que se requiera cualquier pago.</message>
-	<message key="manager.payment.currency">Moneda</message>
 	<message key="manager.payment.currencymessage">OJS no realiza conversiones de moneda. Si decide cobrar por suscripción, debe asegurarse de que la moneda de pago sea la misma que la especificada aquí.</message>
 	<message key="manager.payment.description">Descripción</message>
 	<message key="manager.payment.details">Detalles</message>
@@ -61,7 +60,6 @@
 	<message key="manager.payment.readerFees">Cuota para lectores/as</message>
 	<message key="manager.payment.readerFeesDescription">Las opciones seleccionadas, su descripción y las cuotas (todo ello se puede editar más abajo) se mostrarán dentro de la página Acerca de la revista, debajo de la sección Políticas, así como en aquellos puntos en los que se requiera cualquier pago.</message>
 	<message key="manager.payment.records">Registro</message>
-	<message key="manager.payments">Pagos</message>
 	<message key="manager.payment.userName">Id. del pago</message>
 	<message key="manager.people.allEnrolledUsers">Usuarios/as inscritos a la revista</message>
 	<message key="manager.people.allJournals">Todas las revistas</message>
@@ -177,7 +175,7 @@
 	<message key="manager.setup.journalHomepageHeader">Encabezado de la página inicial de la revista</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Encabezado de la página inicial de la revista</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Es posible cargar una versión gráfica (.gif, .jpg o .png) del título y del logotipo de la revista para que ésta reemplace a la versión de texto y se muestre como encabezado en la página inicial.</message>
-	<message key="manager.setup.journalInitials">Iniciales de la revista</message>
+	<message key="manager.setup.contextInitials">Iniciales de la revista</message>
 	<message key="manager.setup.journalLayout">Estilo de la revista</message>
 	<message key="manager.setup.journalLayoutDescription">En esta sección puede elegir el tema y el estilo de la revista y seleccionar sus componentes. Si lo prefiere, también puede cargar una hoja de estilo para reemplazar los datos del estilo y del tema incluidos en las hojas de estilo del sistema, siempre y cuando haya elegido un tema.</message>
 	<message key="manager.setup.journalLogo">Logotipo de la revista</message>
@@ -190,10 +188,9 @@
 	<message key="manager.setup.journalStyleSheetInvalid">El formato de la hoja de estilo no es válido. El formato aceptado es .css.</message>
 	<message key="manager.setup.journalTheme">Tema de la revista</message>
 	<message key="manager.setup.journalThumbnail">Miniatura de la revista</message>
-	<message key="manager.setup.journalTitle">Título de la revista</message>
+	<message key="manager.setup.contextTitle">Título de la revista</message>
 	<message key="manager.setup.labelName">Nombre de la etiqueta</message>
 	<message key="manager.setup.lists">Listas</message>
-	<message key="manager.setup.listsDescription">Introduzca el número máximo de elementos (p. ej., envíos, usuarios/as o asignación de tareas de edición) que aparecerán en cada página de una lista, así como el número de enlaces de las páginas que se mostrarán en cada una de dichas páginas.</message>
 	<message key="manager.setup.plnPluginEnable">Módulo PKP PN activado</message>
 	<message key="manager.setup.plnDescription">La Red de Preservación de PKP (PKP Preservation Network, en inglés) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos.</message>
 	<message key="manager.setup.plnSettingsDescription">Haga clic en el enlace de ajustes para aceptar los términos de uso de PKP PN.</message>
@@ -258,7 +255,6 @@
 	<message key="manager.setup.selectEditorDescription">El editor/a de la revista ejercerá de supervisor durante todo el proceso editorial.</message>
 	<message key="manager.setup.selectSectionDescription">La sección de la revista para la que se considerará el elemento.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Mostrar siempre los enlaces de galeradas e indicar que el acceso es restringido.</message>
-	<message key="manager.setup.siteAccess">Restricciones adicionales de acceso al sitio y a los artículos</message>
 	<message key="manager.setup.stepsToJournalSite">Cinco pasos para configurar el sitio web de la revista</message>
 	<message key="manager.setup.subjectExamples">(p. ej., fotosíntesis; agujeros negros; Teorema de los cuatro colores; Teoría de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palabras clave</message>
@@ -487,9 +483,9 @@
 	<message key="manager.setup.focusAndScope.description">Describir a autores/as, lectores/as y bibliotecarios/as el rango de artículos y otros elementos que la revista publicará.</message>
 	<message key="manager.setup.form.issnInvalid">El ISSN especificado no es válido.</message>
 	<message key="manager.setup.includeCreativeCommons">Las revistas que ofrecen acceso abierto inmediato o retardado deben incluir una licencia Creative Commons con todo el trabajo publicado en el momento adecuado.</message>
-	<message key="manager.setup.journalSummary">Índice de la revista</message>
-	<message key="manager.setup.journalAbout">Acerca de la revista</message>
-	<message key="manager.setup.journalAbout.description">Incluya toda la información sobre su revista que considere de interés para lectores/as, autores/as o revisores/as, por ejemplo: la política de acceso abierto, el enfoque y ámbito de la revista, el aviso de derechos de autor, la declaración de esponsorización, la historia de la revista, la declaración de privacidad o la inclusión en algún sistema de archivo LOCKSS o CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Índice de la revista</message>
+	<message key="manager.setup.contextAbout">Acerca de la revista</message>
+	<message key="manager.setup.contextAbout.description">Incluya toda la información sobre su revista que considere de interés para lectores/as, autores/as o revisores/as, por ejemplo: la política de acceso abierto, el enfoque y ámbito de la revista, el aviso de derechos de autor, la declaración de esponsorización, la historia de la revista, la declaración de privacidad o la inclusión en algún sistema de archivo LOCKSS o CLOCKSS.</message>
 	<message key="manager.setup.journalThumbnail.description">Un pequeño logotipo o imagen de la revista que pueda usarse en el listado de revistas.</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Una licencia LOCKSS aparecerá en "Acerca de la revista" debajo de "Archivado": <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Descripción de la licencia LOCKSS</message>

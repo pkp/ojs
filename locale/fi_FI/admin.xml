@@ -54,7 +54,7 @@ OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käytt�
 	<message key="admin.contexts.form.pathAlphaNumeric">Polku voi sisältää vain aakkosnumeerisia merkkejä, alaviivoja ja yhdysmerkkejä, ja sen täytyy alkaa ja päättyä aakkosnumeeriseen merkkiin.</message>
 	<message key="admin.contexts.form.pathExists">Valittu polku on jo toisen julkaisun käytössä.</message>
 	<message key="admin.journals.enableJournalInstructions">Näytä tämä julkaisu julkisesti sivustolla</message>
-	<message key="admin.journals.journalDescription">Julkaisun kuvaus</message>
+	<message key="admin.contexts.contextDescription">Julkaisun kuvaus</message>
 	<message key="admin.journal.pathImportInstructions">Olemassa oleva julkaisupolku tai luotava polku (esim. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Tuo tilaukset</message>
 	<message key="admin.journals.transcode">Muunna artikkelin metatiedot ISO8859-1 -merkistöstä</message>

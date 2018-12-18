@@ -103,23 +103,23 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	}
 
 	/**
-	 * Run app-specific query builder methods for getSubmissionList
+	 * Run app-specific query builder methods for getMany
 	 *
 	 * @param $hookName string
 	 * @param $args array [
-	 *		@option \APP\Services\QueryBuilders\SubmissionQueryBuilder $submissionListQB
-	 *		@option int $contextId
-	 *		@option array $requestArgs
+	 *		@option \APP\Services\QueryBuilders\SubmissionQueryBuilder
+	 *		@option int Context ID
+	 *		@option array Request args
 	 * ]
 	 *
 	 * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
 	 */
 	public function modifySubmissionQueryBuilder($hookName, $args) {
-		$submissionListQB =& $args[0];
+		$submissionQB =& $args[0];
 		$requestArgs = $args[1];
 
 		if (!empty($requestArgs['sectionIds'])) {
-			$submissionListQB->filterBySections($requestArgs['sectionIds']);
+			$submissionQB->filterBySections($requestArgs['sectionIds']);
 		}
 	}
 

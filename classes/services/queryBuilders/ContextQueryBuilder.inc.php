@@ -16,12 +16,12 @@ namespace APP\Services\QueryBuilders;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 class ContextQueryBuilder extends \PKP\Services\QueryBuilders\PKPContextQueryBuilder {
-	/** @var string The database name for this context: `journals` or `presses` */
+	/** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$db */
 	protected $db = 'journals';
 
-	/** @var string The database name for this context's settings: `journal_setttings` or `press_settings` */
+	/** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$dbSettings */
 	protected $dbSettings = 'journal_settings';
 
-	/** @var string The column name for a context ID: `journal_id` or `press_id` */
+	/** @copydoc \PKP\Services\QueryBuilders\PKPContextQueryBuilder::$dbIdColumn */
 	protected $dbIdColumn = 'journal_id';
 }

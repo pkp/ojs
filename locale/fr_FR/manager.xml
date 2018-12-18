@@ -25,7 +25,6 @@
 	<message key="manager.payment.amount">Montant</message>
 	<message key="manager.payment.authorFees">Droits d'auteur</message>
 	<message key="manager.payment.authorFeesDescription">Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront à l'étape 1 du processus de soumission et dans la section À propos de la revue, sous Soumissions, ainsi qu'aux étapes où un paiement est requis.</message>
-	<message key="manager.payment.currency">Devise</message>
 	<message key="manager.payment.currencymessage">OJS n'effectue pas la conversion des devises. Si vous acceptez les paiements pour les abonnements, veuillez vous assurer que la devise d'abonnement correspond à celle spécifiée ici.</message>
 	<message key="manager.payment.description">Description</message>
 	<message key="manager.payment.details">Détails</message>
@@ -51,7 +50,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Acheter un article</message>
 	<message key="manager.payment.options.submissionFee">Soumission d'article</message>
 	<message key="manager.payment.options.text">Description de la méthode de paiement</message>
-	<message key="manager.payment.options.waiverPolicy">Politique d'exemption</message>
 	<message key="manager.payment.paymentId">ID du paiement</message>
 	<message key="manager.payment.paymentMethod">Mode de paiement</message>
 	<message key="manager.payment.paymentMethod.description">Vous pouvez configurer n'importe quel des plugiciels de mode de paiement suivants à partir de cet écran.</message>
@@ -60,7 +58,6 @@
 	<message key="manager.payment.readerFees">Frais de lecture</message>
 	<message key="manager.payment.readerFeesDescription">Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront À propos de la revue, sous Politiques, ainsi qu'aux étapes où un paiement est requis.</message>
 	<message key="manager.payment.records">Enregistrements</message>
-	<message key="manager.payments">Paiements</message>
 	<message key="manager.payment.userName">ID du paiement</message>
 	<message key="manager.people.allEnrolledUsers">Utilisateurs inscrits à cette revue</message>
 	<message key="manager.people.allJournals">Toutes les revues</message>
@@ -174,7 +171,7 @@
 	<message key="manager.setup.journalHomepageHeader">En-tête de la page d'accueil de la revue</message>
 	<message key="manager.setup.journalHomepageHeader.altText">En-tête de la page d'accueil de la revue</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Une version graphique du titre et du logo de la revue (tel un fichier .gif, .jpg, ou .png) peut être téléchargée pour la page d'accueil, qui remplacera la version textuelle qui y figure habituellement.</message>
-	<message key="manager.setup.journalInitials">Initiales de la revue</message>
+	<message key="manager.setup.contextInitials">Initiales de la revue</message>
 	<message key="manager.setup.journalLayout">Mise en page de la revue</message>
 	<message key="manager.setup.journalLayoutDescription">Sélectionner un thème de revue et les composantes de la mise en page. Une feuille de style de revue peut également être téléchargée, afin d'être utilisée en remplacement des données de style utilisées dans toutes les feuilles de style du système et les feuilles de style du thème (lorsqu'un thème est sélectionné).</message>
 	<message key="manager.setup.journalLogo">Logo de la revue</message>
@@ -186,10 +183,9 @@
 	<message key="manager.setup.journalSetupUpdated">La configuration de votre revue a été mise à jour.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Format de feuille de style de la revue non valide. Le format accepté .css.</message>
 	<message key="manager.setup.journalTheme">Thème de la revue</message>
-	<message key="manager.setup.journalTitle">Titre de la revue</message>
+	<message key="manager.setup.contextTitle">Titre de la revue</message>
 	<message key="manager.setup.labelName">Nom de l'étiquette</message>
 	<message key="manager.setup.lists">Listes</message>
-	<message key="manager.setup.listsDescription">Saisir le nombre maximum d'éléments (par exemple, soumissions, utilisateurs, ou assignations) qui figurent dans chaque page d'une liste, et le nombre de liens à afficher sur chaque page.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Activer LOCKSS pour stocker et distribuer le contenu de la revue aux bibliothèques participantes via une page <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> LOCKSS. Une licence LOCKSS apparaîtra dans « À propos de la revue » sous Archivage :]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifier 6 à 10 bibliothèques qui enregistreront et mettreront en cache la revue. Par exemple, ayez recours à des institutions dont les Rédacteurs ou les Membres de la direction participent déjà à LOCKSS. Voir <a href="http://lockss.org/lockss/Libraries" target="_blank">les bibliothèques participantes</a>. Utiliser les invitations préparées pour les (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliothèques participantes dans LOCKSS</a> ou (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliothèques non participantes dans LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">L'apparence</message>
@@ -248,7 +244,6 @@
 	<message key="manager.setup.selectEditorDescription">Le rédacteur de la revue qui suivra tout le processus éditorial.</message>
 	<message key="manager.setup.selectSectionDescription">La rubrique de la revue pour laquelle l'article sera pris en considération.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Toujours afficher les liens des épreuves et indiquer l'accès restreint.</message>
-	<message key="manager.setup.siteAccess">Restrictions supplémentaires concernant l'accès à l'article et au site</message>
 	<message key="manager.setup.stepsToJournalSite">Cinq étapes pour configurer votre revue</message>
 	<message key="manager.setup.subjectExamples">(Par ex., Photosynthèse; Trous noirs; Cartes en quadrichromie; Théorème de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Mots-clés</message>
@@ -543,9 +538,9 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="plugins.importexport.common.export.issues">Numéros</message>
 	<message key="plugins.importexport.common.export.representations">Épreuves</message>
 	<message key="plugins.importexport.common.status.markedRegistered">Marqué comme enregistré</message>
-	<message key="manager.setup.journalSummary">Présentation de la revue</message>
-	<message key="manager.setup.journalAbout">À propos</message>
-	<message key="manager.setup.journalAbout.description">Inclure toute information sur votre revue qui pourrait intéresser les lecteurs, les auteurs ou les rapporteurs. Cela peut inclure votre politique de libre accès, les champs d'intérêt, les questions entourant les droits d'auteur, la divulgation des commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans n'importe quel système d'archives LOCKSS ou CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Présentation de la revue</message>
+	<message key="manager.setup.contextAbout">À propos</message>
+	<message key="manager.setup.contextAbout.description">Inclure toute information sur votre revue qui pourrait intéresser les lecteurs, les auteurs ou les rapporteurs. Cela peut inclure votre politique de libre accès, les champs d'intérêt, les questions entourant les droits d'auteur, la divulgation des commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans n'importe quel système d'archives LOCKSS ou CLOCKSS.</message>
 	<message key="manager.setup.clockssLicenseLabel">Description de la licence CLOCKSS</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[*Inscrivez-vous au service CLOCKSS en visitant le site <a href="http://clockss.org/" target="_blank"> CLOCKSS </a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>

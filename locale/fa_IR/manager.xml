@@ -27,7 +27,6 @@
 	<message key="manager.payment.amount">مقدار</message>
 	<message key="manager.payment.authorFees">هزینه‌های نویسنده</message>
 	<message key="manager.payment.authorFeesDescription">گزینه‌های انتخابی همراه با شرح و قیمت‌های آن (که در این قسمت قابل ویرایش است) در مرحله ۱ ارسال مقاله و در قسمت «درباره مجله» تحت قسمت ارسال مقاله, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد.</message>
-	<message key="manager.payment.currency">واحد پول</message>
 	<message key="manager.payment.currencymessage">OJS هیچ تبدیل واحد پولی را انجام نمی‌دهد. چنانچه پرداخت برای اشتراک‌ها را قبول می‌کنید باید از تطابق واحد پولی پرداخت‌ها از آنچه در اینجا ذکر شده اطمینان حاصل کنید </message>
 	<message key="manager.payment.description">توصیف</message>
 	<message key="manager.payment.details">جزئیات</message>
@@ -61,7 +60,6 @@
 	<message key="manager.payment.readerFees">قیمت برای خوانندگان</message>
 	<message key="manager.payment.readerFeesDescription">گزینه‌های انتخابی همراه با شرح و قیمت‌های آن (که در این قسمت قابل ویرایش است) در قسمت «درباره مجله» تحت قسمت ارسال مقاله, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد.</message>
 	<message key="manager.payment.records">رکوردها</message>
-	<message key="manager.payments">پرداخت‌ها</message>
 	<message key="manager.paymentTypes">انواع پرداخت </message>
 	<message key="manager.payment.userName">شناسه پرداخت</message>
 	<message key="manager.people.allEnrolledUsers">کاربران این مجله</message>
@@ -184,15 +182,15 @@
 	<message key="manager.setup.itemsPerPage">تعداد موارد در هر صفحه</message>
 	<message key="manager.setup.journalAbbreviation">نام اختصاری مجله</message>
 	<message key="manager.setup.journalArchiving">بایگانی مجله</message>
-	<message key="manager.setup.journalSummary">توضیح مختصر درباره مجله</message>
-	<message key="manager.setup.journalAbout">درباره مجله</message>
-	<message key="manager.setup.journalAbout.description">وارد کردن اطلاعاتی درباره مجله که ممکن است مورد علاقه‌ی خوانندگان و داوران باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد ، زمینه مطالعاتی مجله، حق نشر، حامیان مجله، پیشینه‌ی مجله؛ بیانیه حفظ حریمی شخصی و ... باشد.</message>
+	<message key="manager.setup.contextSummary">توضیح مختصر درباره مجله</message>
+	<message key="manager.setup.contextAbout">درباره مجله</message>
+	<message key="manager.setup.contextAbout.description">وارد کردن اطلاعاتی درباره مجله که ممکن است مورد علاقه‌ی خوانندگان و داوران باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد ، زمینه مطالعاتی مجله، حق نشر، حامیان مجله، پیشینه‌ی مجله؛ بیانیه حفظ حریمی شخصی و ... باشد.</message>
 	<message key="manager.setup.journalHomepageContent">محتوای صفحه اصلی مجله</message>
 	<message key="manager.setup.journalHomepageContentDescription">به صورت پیش‌فرض محتوی صفحه اصلی شامل لینک‌های گشت‌وگذار می‌باشد. برای افزودن محتویات دیگر به صفحه خانگی می‌توانید گزینه‌های زیر را بکار ببرید که به ترتیب ظاهر می‌شود. توجه داشته باشید که شماره جاری مجله همیشه از منوی گشت‌وگذار قابل انتخاب است.</message>
 	<message key="manager.setup.journalHomepageHeader">سرتیتر صفحه اصلی مجله</message>
 	<message key="manager.setup.journalHomepageHeader.altText">سرتیتر صفحه اصلی مجله</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">یک نسخه گرافیکی از عنوان و لوگو مجله (به‌صورت یک فایلgif، png یا jpg). می‌توان برای نمایش در صفحه اصلی آپلود کرد که جایگزین نسخه متنی می‌شود. در غیر این صورت نسخه متنی نمایش داده می‌شود.</message>
-	<message key="manager.setup.journalInitials">حروف اول مجله</message>
+	<message key="manager.setup.contextInitials">حروف اول مجله</message>
 	<message key="manager.setup.journalLayout">طرح‌بندی مجله</message>
 	<message key="manager.setup.journalLayoutDescription">در این قسمت یک پوسته و سپس اجزای طرح‌بندی را انتخاب کنید. همچنین می‌توانید به جای این کار یک استایل شیت برای مجله آپلود کرد.</message>
 	<message key="manager.setup.journalLogo">لوگوی مجله</message>
@@ -206,10 +204,9 @@
 	<message key="manager.setup.journalTheme">پوسته مجله</message>
 	<message key="manager.setup.journalThumbnail">تصویر کوچک (بندانگشتی) مجله</message>
 	<message key="manager.setup.journalThumbnail.description">یک لوگوی کوچک از مجله برای نمایش در لیست مجلات</message>
-	<message key="manager.setup.journalTitle">عنوان مجله</message>
+	<message key="manager.setup.contextTitle">عنوان مجله</message>
 	<message key="manager.setup.labelName">نام برچسب</message>
 	<message key="manager.setup.lists">لیست‌ها</message>
-	<message key="manager.setup.listsDescription">حداکثر تعداد مواردی که در هر صفحه از لیست می‌توانند قرار گیرند و تعداد صفحاتی که لینک آن‌ها در هر صفحه نمایش داده شود را مشخص کنید.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[فعال کردن  LOCKSS برای ذخیره و انتشار محتوای مجله در کتابخانه‌های ثبت‌نام شده از طریق صفحه  <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> ]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[یک مجوز LOCKSS در قسمت درباره مجله  و تحت عنوان بایگانی ظاهر می‌شود: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">توضیح مجوز LOCKSS</message>
@@ -276,7 +273,6 @@
 	<message key="manager.setup.selectEditorDescription">دبیری که مسئول رسیدگی به مقاله است</message>
 	<message key="manager.setup.selectSectionDescription">نوع مقاله که آیتم مورد نظر به آن تعلق دارد</message>
 	<message key="manager.setup.showGalleyLinksDescription">نمایش لینک تمام متن و تذکر دسترسی محدود </message>
-	<message key="manager.setup.siteAccess">دستیابی به سایت</message>
 	<message key="manager.setup.stepsToJournalSite">مراحل پنج‌گانه نصب مجله</message>
 	<message key="manager.setup.subjectExamples">مانند: فتوسنتز; سیاه‌چاله; مسئله نقشه چهار رنگ; تئوری بازی</message>
 	<message key="manager.setup.subjectKeywordTopic">کلیدواژه‌ها</message>

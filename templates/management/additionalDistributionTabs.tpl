@@ -8,6 +8,15 @@
  * @brief OJS-specific tabs for the distribution settings page
  *}
 
+<tab name="{translate key="manager.distribution.access"}">
+	{help file="settings" section="distribution" class="pkp_help_tab"}
+	<pkp-form
+		v-bind="forms.{$smarty.const.FORM_ACCESS}"
+		@set-fields="setFormFields"
+		@set-errors="setFormErrors"
+		@set-visible-locales="setFormVisibleLocales"
+	/>
+</tab>
 <tab id="archive" name="{translate key="manager.website.archiving"}">
 	{help file="settings" section="distribution" class="pkp_help_tab"}
 	<tabs :options="{ useUrlFragment: false}" class="tabs-component--side">
@@ -29,13 +38,4 @@
 		</tab>
 		{call_hook name="Template::Settings::distribution::archiving"}
 	</tabs>
-</tab>
-<tab id="payments" name="{translate key="manager.payments"}">
-	{help file="settings" section="distribution" class="pkp_help_tab"}
-	<pkp-form
-		v-bind="forms.{$smarty.const.FORM_PAYMENT_SETTINGS}"
-		@set-fields="setFormFields"
-		@set-errors="setFormErrors"
-		@set-visible-locales="setFormVisibleLocales"
-	/>
 </tab>

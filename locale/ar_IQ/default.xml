@@ -24,50 +24,19 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">هذا المؤلَّف لم يسبق له النشر، ولم يُعرض على مجلة علمية أخرى للنظر فيه (أو هناك توضيح بشأن هذا الأمر مقدم إلى هيئة التحرير في خانة التعليقات)</message>
-	<message key="default.journalSettings.checklist.fileFormat">ملف التقديم هو بإحدى الصيغ الآتية: OpenOffice, Microsoft Word, RTF, WordPerfect</message>
-	<message key="default.journalSettings.checklist.addressesLinked">حيثما تطلب الأمر، أضيفت روابط للمراجع المستعملة في المؤلَّف (الروابط هي وصلات إلى العناوين على الشبكة العنكبوتية)</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">فقرات النص ذات تباعد مفرد للأسطر، بحجم خط (12) نقطة، تم فيه استعمال الخط المائل بدلاً عن الخط التحتاني (باستثناء عناوين الروابط)، وجميع الرسوم والأشكال والجداول متوضعة ضمن النص المتعلق بها عوضاً عن تجميعها في نهاية الملف</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[إن نص المؤلَّف مقيد بالمتطلبات النمطية والأسلوبية الواردة في <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">دليل المؤلِّف</a>, الموجود في النص التعريفي بالمجلة ضمن هذا الموقع]]></message>
-	<message key="default.journalSettings.privacyStatement">أسماء الأشخاص وعناوين البريد الالكتروني المحفوظة في موقع المجلة هذا ستتم الاستفادة منها حصرياً للأغراض المنصوص عليها من قبل المجلة، ولن تكون متاحة لأي أغراض أخرى أو لأي طرف ثالث</message>
-	<message key="default.journalSettings.openAccessPolicy">هذه المجلة العلمية تسمح بالوصول المفتوح والمباشر إلى محتوياتها من مبدأ أن إتاحة البحوث العلمية مجاناً للعامة يخدم وبشكل أكبر تبادل المعارف والعلوم بين بني الإنسان</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>إن مرحلة التدقيق الإملائي مخصصة لكشف أي أخطاء محتملة في الإملاء والنحو والقواعد والتنضيد. أي تعديلات جوهرية أخرى على النص متعذرة في هذه المرحلة، ما لم تُناقش مع محرر القسم في المجلة. في إطار النظام، أنقر على VIEW PROOF لتتمكن من مشاهدة صيغ الملفات HTML، PDF أو أي صيغ أخرى متاحة للنشر بها لهذه الفقرة.</p>
-	<h4>للأخطاء الإملائية والنحوية</h4>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">هذا المؤلَّف لم يسبق له النشر، ولم يُعرض على مجلة علمية أخرى للنظر فيه (أو هناك توضيح بشأن هذا الأمر مقدم إلى هيئة التحرير في خانة التعليقات)</message>
+	<message key="default.contextSettings.checklist.fileFormat">ملف التقديم هو بإحدى الصيغ الآتية: OpenOffice, Microsoft Word, RTF, WordPerfect</message>
+	<message key="default.contextSettings.checklist.addressesLinked">حيثما تطلب الأمر، أضيفت روابط للمراجع المستعملة في المؤلَّف (الروابط هي وصلات إلى العناوين على الشبكة العنكبوتية)</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">فقرات النص ذات تباعد مفرد للأسطر، بحجم خط (12) نقطة، تم فيه استعمال الخط المائل بدلاً عن الخط التحتاني (باستثناء عناوين الروابط)، وجميع الرسوم والأشكال والجداول متوضعة ضمن النص المتعلق بها عوضاً عن تجميعها في نهاية الملف</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[إن نص المؤلَّف مقيد بالمتطلبات النمطية والأسلوبية الواردة في <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">دليل المؤلِّف</a>, الموجود في النص التعريفي بالمجلة ضمن هذا الموقع]]></message>
+	<message key="default.contextSettings.privacyStatement">أسماء الأشخاص وعناوين البريد الالكتروني المحفوظة في موقع المجلة هذا ستتم الاستفادة منها حصرياً للأغراض المنصوص عليها من قبل المجلة، ولن تكون متاحة لأي أغراض أخرى أو لأي طرف ثالث</message>
+	<message key="default.contextSettings.openAccessPolicy">هذه المجلة العلمية تسمح بالوصول المفتوح والمباشر إلى محتوياتها من مبدأ أن إتاحة البحوث العلمية مجاناً للعامة يخدم وبشكل أكبر تبادل المعارف والعلوم بين بني الإنسان</message>
 
-	<p>إنسخ الكلمة الخاطئة (أو مجموعة الكلمات) في خانة (تصحيح الأخطاء الإملائية) مع مراعاة وضع الأوامر المخصصة للمحرر "CHANGE-TO" كما يلي:</p>
-
-	<pre>1. CHANGE...
-	then the others
-	TO...
-	than the others</pre>
-	<br />
-	<pre>2. CHANGE...
-	Malinowsky
-	TO...
-	Malinowski</pre>
-	<br />
-
-	<h4>بالنسبة لأخطاء التنضيد</h4>
-
-	<p>صف موقع المشكلة وطبيعتها في خانة (تصحيح الأطاء الإملائية) وذلك بعد وضع العنوان "FORMATTING" فيه وكما في المثال الآتي:</p>
-	<br />
-	<pre>3. FORMATTING
-	The numbers in Table 3 are not aligned in the third column.</pre>
-	<br />
-	<pre>4. FORMATTING
-	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
-
-	<message key="default.contextSettings.forReaders"><![CDATA[نحن نشجع القراء على التسجيل في خدمة إشعار النشر المتاحة في هذه المجلة. إستعمل <a href="{$indexUrl}/{$journalPath}/user/register">رابط التسجيل</a> المتواجد في أعلى الصفحة الرئيسية للمجلة. هذا التسجيل سيقدم لصاحبه رسالة بالبريد الكتروني تتضمن جدولاً بعمليات النشر الجديدة في المجلة. ذلك الجدول أو القائمة تساعد المجلة على استقطاب القراء مما يساعدها على الانتشار ويكسب لها سمعة في الوسط العلمي. أنظر <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">بيان الخصوصية</a> الذي يؤكد أن أسماء الأشخاص المسجلين في الموقع وعناوينهم البريدية لن تكون متاحة إلا للأغراض المتعلقة بإجراء النشر.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[ألديك اهتمام بالنشر في هذه المجلة؟ نوصيك إذن بمراجعة صفحة <a href="{$indexUrl}/{$journalPath}/about">عن المجلة</a> للاطلاع على سياسة عمل هذا القسم في المجلة، فضلاً عن <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">دليل المؤلفين</a>. يحتاج المؤلفون إلى <a href="{$indexUrl}/{$journalPath}/user/register">التسجيل</a> في المجلة ليتمكون من إرسال طلباتهم للنشر فيها، أو إن سبق لهم التسجيل فيها، <a href="{$indexUrl}/index/login">تسجيل الدخول</a> والشروع بالخطوات الخمس لتقديم طلب النشر.]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[نحن نشجع القراء على التسجيل في خدمة إشعار النشر المتاحة في هذه المجلة. إستعمل <a href="{$indexUrl}{$contextPath}/user/register">رابط التسجيل</a> المتواجد في أعلى الصفحة الرئيسية للمجلة. هذا التسجيل سيقدم لصاحبه رسالة بالبريد الكتروني تتضمن جدولاً بعمليات النشر الجديدة في المجلة. ذلك الجدول أو القائمة تساعد المجلة على استقطاب القراء مما يساعدها على الانتشار ويكسب لها سمعة في الوسط العلمي. أنظر <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">بيان الخصوصية</a> الذي يؤكد أن أسماء الأشخاص المسجلين في الموقع وعناوينهم البريدية لن تكون متاحة إلا للأغراض المتعلقة بإجراء النشر.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[ألديك اهتمام بالنشر في هذه المجلة؟ نوصيك إذن بمراجعة صفحة <a href="{$indexUrl}{$contextPath}/about">عن المجلة</a> للاطلاع على سياسة عمل هذا القسم في المجلة، فضلاً عن <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">دليل المؤلفين</a>. يحتاج المؤلفون إلى <a href="{$indexUrl}{$contextPath}/user/register">التسجيل</a> في المجلة ليتمكون من إرسال طلباتهم للنشر فيها، أو إن سبق لهم التسجيل فيها، <a href="{$indexUrl}/index/login">تسجيل الدخول</a> والشروع بالخطوات الخمس لتقديم طلب النشر.]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[نحن نشجع العاملين في مكتبات البحوث العلمية على تضمين هذه المجلة في قوائم مكتباتهم المنشورة على الإنترنت للمجلات العلمية الناشرة للبحوث والمقالات العلمية. كما أنه من الناجع الإشارة إلى أن الموقع المستضيف لهذه المجلة يعمل بنظام يتناسب مع حاجات هذه المكتبات من حيث إمكانية حفظ حسابات منتسبيها ليتمكنوا من المشاركة في هيئة تحريرها. (أنظر <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[هذه المجلة تستعمل نظام LOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href="http://www.lockss.org/">للمزيد أنظر...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[هذه المجلة تستعمل نظام CLOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href="http://clockss.org/">للمزيد أنظر...</a>]]></message>
-
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">نشر المؤلَّف العلمي</message>
-	<message key="default.journalSettings.purchaseArticleFee">شراء مؤلَّف</message>
-	<message key="default.journalSettings.purchaseIssueFee">شراء عدد</message>
-	<message key="default.journalSettings.membershipFee">عضوية الرابطة</message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[هذه المجلة تستعمل نظام LOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href="http://www.lockss.org/">للمزيد أنظر...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[هذه المجلة تستعمل نظام CLOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href="http://clockss.org/">للمزيد أنظر...</a>]]></message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">رئيس تحرير المجلة</message>
@@ -98,7 +67,7 @@
 	<message key="default.groups.name.externalReviewer">محكم</message>
 	<message key="default.groups.plural.externalReviewer">محكمون</message>
 	<message key="default.groups.abbrev.externalReviewer">ح</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

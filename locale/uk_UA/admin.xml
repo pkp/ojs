@@ -55,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
 	<message key="admin.contexts.form.pathExists">Обраний шлях вже використовується іншим журналом.</message>
 	<message key="admin.journals.enableJournalInstructions">Дозволити відображення цьоого журналу на сайті</message>
-	<message key="admin.journals.journalDescription">Опис журналу</message>
+	<message key="admin.contexts.contextDescription">Опис журналу</message>
 	<message key="admin.journal.pathImportInstructions">Існуючий шлях журналу або шлях, що має бути створений (наприклад, "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Імпорт передплат</message>
 	<message key="admin.journals.transcode">Перекодувати метадані статті з ISO8859-1</message>

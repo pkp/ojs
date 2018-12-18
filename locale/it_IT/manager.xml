@@ -25,7 +25,6 @@
 	<message key="manager.payment.amount">Importo</message>
 	<message key="manager.payment.authorFees">Tariffe per gli autori</message>
 	<message key="manager.payment.authorFeesDescription">Le opzioni selezionate, insieme alle loro descrizioni e quote (che possono essere modificate qui sotto), appariranno nel Passo 1 del processo di submission e nella pagina delle informazioni sulla rivista, sotto Submission, come anche nei diversi punti dove viene richiesto il pagamento.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS non effettua alcuna conversione di valuta. Nell'accettare i pagamenti per gli abbonamenti, devi assicurarti tu che la valuta del modulo abbonamenti  coincida con quella specificata qui.</message>
 	<message key="manager.payment.description">Descrizione</message>
 	<message key="manager.payment.details">Dettagli</message>
@@ -57,7 +56,6 @@
 	<message key="manager.payment.readerFees">Tariffe per i lettori</message>
 	<message key="manager.payment.readerFeesDescription">Le opzioni selezionate, insieme alle loro descrizioni e quote (che possono essere modificate qui sotto), appariranno nella pagina delle informazioni sulla rivista, sotto 'Politiche', come anche ai punti dove viene richiesto il pagamento.</message>
 	<message key="manager.payment.records">Registri</message>
-	<message key="manager.payments">Pagamenti</message>
 	<message key="manager.payment.userName">ID del pagamento</message>
 	<message key="manager.people.allEnrolledUsers">Utenti iscritti a questa rivista</message>
 	<message key="manager.people.allJournals">tutte le riviste</message>
@@ -169,7 +167,7 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.journalHomepageHeader">Intestazione della homepage della rivista</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Intestazione della homepage della rivista</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">È possibile caricare un'immagine con il titolo ed il logo della rivista per l'homepage (in formato .gif, .jpg, o .png), che sostituirà il testo eventualmente presente.</message>
-	<message key="manager.setup.journalInitials">Iniziali della rivista</message>
+	<message key="manager.setup.contextInitials">Iniziali della rivista</message>
 	<message key="manager.setup.journalLayout">Layout della rivista</message>
 	<message key="manager.setup.journalLayoutDescription">Scegli un tema e seleziona i componenti del layout qui. Puoi anche caricare anche un foglio di stile (CSS) per questa rivista, che sovrasscriverà i fogli di stile del sito e l'eventuale foglio di stile del tema (se è stato scelto un tema).</message>
 	<message key="manager.setup.journalLogo">Logo</message>
@@ -181,10 +179,9 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.journalSetupUpdated">Il setup della rivista è stato aggiornato.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Formato per il foglio di stile della rivista non valido. Il formato accettato è .css.</message>
 	<message key="manager.setup.journalTheme">Tema della rivista</message>
-	<message key="manager.setup.journalTitle">Titolo della rivista</message>
+	<message key="manager.setup.contextTitle">Titolo della rivista</message>
 	<message key="manager.setup.labelName">Nome dell'etichetta</message>
 	<message key="manager.setup.lists">Liste</message>
-	<message key="manager.setup.listsDescription">Inserisci il numero massimo di voci delle liste che devono comparire nelle diverse pagine (es. fascicoli, utenti o incarichi) e il numero di link alle altre pagine da visualizzare.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Abilita  LOCKSS a conservare e distribuire il contenuto della rivista alle biblioteche partecipanti attivando il <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. Una licenza LOCKSS apparir&#x00E0; nelle informazioni sulla rivista, sotto Archiviazione:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifica 6-10 biblioteche che registreranno e depositeranno la rivista. Per esempio, guarda alle istituzioni dove lavorano gli editor o i membri della direzione e/o istituzioni che già parteciapno al LOCKSS. Vedi <a href="http://www.lockss.org/community/" target="_blank">le biblioteche partecipanti</a>.]]></message>
 	<message key="manager.setup.look">Aspetto</message>
@@ -244,7 +241,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.selectEditorDescription">L'editor della rivista che seguirà l'articolo lungo il processo editoriale.</message>
 	<message key="manager.setup.selectSectionDescription">La sezione della rivista cui è destinato l'articolo.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Mostra sempre i link alle bozze e indica l'accesso ristretto.</message>
-	<message key="manager.setup.siteAccess">Restrizioni aggiuntive di accesso al sito e agli articoli</message>
 	<message key="manager.setup.stepsToJournalSite">Cinque passaggi per creare il sito web della rivista</message>
 	<message key="manager.setup.subjectExamples">(Es., Fotosintesi; Buchi neri; Teorie bayesiane; Semiotica)</message>
 	<message key="manager.setup.subjectKeywordTopic">Parole chiave</message>
@@ -489,9 +485,9 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="manager.setup.editorialTeam">Editorial Team</message>
 	<message key="manager.setup.useStyleSheet">Foglio di stile</message>
 	<message key="manager.setup.contextName">Nome della rivista</message>
-	<message key="manager.setup.journalSummary">Presentazione della rivista</message>
-	<message key="manager.setup.journalAbout">Informazioni sulla rivista</message>
-	<message key="manager.setup.journalAbout.description">Scopo e ambito della rivista, politiche, informazioni sulla peer review, copyright, archiviazione, sponsor, ecc.</message>
+	<message key="manager.setup.contextSummary">Presentazione della rivista</message>
+	<message key="manager.setup.contextAbout">Informazioni sulla rivista</message>
+	<message key="manager.setup.contextAbout.description">Scopo e ambito della rivista, politiche, informazioni sulla peer review, copyright, archiviazione, sponsor, ecc.</message>
 	<message key="manager.setup.journalThumbnail.description">Un piccolo logo da usare negli indici di riviste</message>
 	<message key="manager.distribution.access">Accesso</message>
 	<message key="manager.publication.library">Materiali di supporto</message>

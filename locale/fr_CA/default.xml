@@ -12,56 +12,27 @@
   -->
 
 <locale name = "fr_CA" full_name = "Français (Canada)">
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas déjà été publiée et n'est pas considérée actuellement par une autre revue. Si ce n'est pas le cas, fournir une explication dans le champ "Commentaires au rédacteur".</message>
-	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne, utilise une police de 12 points, emploie l'italique plutôt que le souligné (sauf pour les adresses URL) et place toutes les illustrations, figures et tableaux aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans les  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>, qui se trouvent dans la section « À propos de la revue ».]]></message>
-	<message key="default.journalSettings.privacyStatement">Les noms et courriels saisis dans le site de cette revue seront utilisés exclusivement aux fins indiquées par cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</message>
-	<message key="default.journalSettings.openAccessPolicy">Cette revue fournit l'accès libre immédiat à son contenu se basant sur le principe que rendre la recherche disponible au public gratuitement facilite un plus grand échange du savoir, à l'échelle de la planète.</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">La soumission n'a pas déjà été publiée et n'est pas considérée actuellement par une autre revue. Si ce n'est pas le cas, fournir une explication dans le champ "Commentaires au rédacteur".</message>
+	<message key="default.contextSettings.checklist.fileFormat">Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Le texte est à simple interligne, utilise une police de 12 points, emploie l'italique plutôt que le souligné (sauf pour les adresses URL) et place toutes les illustrations, figures et tableaux aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans les  <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>, qui se trouvent dans la section « À propos de la revue ».]]></message>
+	<message key="default.contextSettings.privacyStatement">Les noms et courriels saisis dans le site de cette revue seront utilisés exclusivement aux fins indiquées par cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</message>
+	<message key="default.contextSettings.openAccessPolicy">Cette revue fournit l'accès libre immédiat à son contenu se basant sur le principe que rendre la recherche disponible au public gratuitement facilite un plus grand échange du savoir, à l'échelle de la planète.</message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$contextUrl}">{$contextName}</a>]]></message>
-	<message key="default.contextSettings.forReaders"><![CDATA[Nous invitons les lecteurs à s'inscrire pour recevoir les avis de publication de cette revue. Utiliser le lien <a href="{$indexUrl}/{$journalPath}/user/register">S'inscrire</a> en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue de revendiquer un certain niveau de soutien ou de lectorat. Voir la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Déclaration de confidentialité</a> de la revue qui certifie aux lecteurs que leur nom et leur courriel ne seront pas utilisés à d'autres fins.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Intéressé à soumettre à cette revue? Nous vous recommandons de consulter les politiques de rubrique de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">À propos de la revue</a> ainsi que les <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">S'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/{$journalPath}/login">ouvrir une session</a> et accéder au tableau de bord pour commencer les 5 étapes du processus]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Nous invitons les lecteurs à s'inscrire pour recevoir les avis de publication de cette revue. Utiliser le lien <a href="{$indexUrl}{$contextPath}/user/register">S'inscrire</a> en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue de revendiquer un certain niveau de soutien ou de lectorat. Voir la <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Déclaration de confidentialité</a> de la revue qui certifie aux lecteurs que leur nom et leur courriel ne seront pas utilisés à d'autres fins.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Intéressé à soumettre à cette revue? Nous vous recommandons de consulter les politiques de rubrique de la revue à la page <a href="{$indexUrl}{$contextPath}/about">À propos de la revue</a> ainsi que les <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}{$contextPath}/user/register">S'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}{$contextPath}/login">ouvrir une session</a> et accéder au tableau de bord pour commencer les 5 étapes du processus]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[Nous incitons les bibliothécaires à lister cette revue dans leur fonds de revues numériques. Aussi, il peut être pertinent de mentionner que ce système de publication en accès libre est conçu pour être hébergé par les bibliothèques de recherche pour que les membres de leurs facultés l'utilisent avec les revues dans lesquelles ils sont impliqués (voir <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et afin de permettre à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.org/">En savoir plus...</a>]]></message>
-	<message key="default.journalSettings.checklist.addressesLinked">Lorsque possible, les URL des références ont été fournies.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>L'étape de correction d'épreuves vise à corriger toute erreur dans le formatage, la grammaire et l'orthographe de l'épreuve. Des modifications plus substantielles ne peuvent être effectuées à cette étape, à moins que cela ne soit discuté avec le Responsable de rubrique. Dans Mise en page, cliquez sur AFFICHER L'ÉPREUVE pour voir le HTML, le PDF et les autres formats de fichiers disponibles utilisés dans la publication de cet article.</p>
-<h4>Pour les erreurs de grammaire et d'orthographe</h4>
-
-<p>Copiez le mot ou les groupes de mots problématiques et les coller dans la boîte Corrections d'épreuves avec les instructions au rédacteur « MODIFIER POUR » comme suit...</p>
-
-<pre>1. MODIFIER...
-then the others
-POUR...
-than the others</pre>
-<br />
-<pre>2. MODIFIER...
-Malinowsky
-POUR...
-Malinowski</pre>
-<br />
-
-<h4>Pour les erreurs de formatage</h4>
-
-<p>Décrire l'emplacement et la nature du problème dans la boîte Corrections d'épreuves après avoir saisi le titre « FORMATAGE » comme suit...</p>
-<br />
-<pre>3. FORMATAGE
-Les chiffres dans le Tableau 3 ne sont pas alignés dans la troisième colonne.</pre>
-<br />
-<pre>4. FORMATAGE
-Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</pre>]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et afin de permettre à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.org/">En savoir plus...</a>]]></message>
+	<message key="default.contextSettings.checklist.addressesLinked">Lorsque possible, les URL des références ont été fournies.</message>
 	<message key="section.default.title">Articles</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.publicationFee">Publication d'article</message>
-	<message key="default.journalSettings.purchaseArticleFee">Acheter un article</message>
-	<message key="default.journalSettings.membershipFee">Adhésion à l'association</message>
 	<message key="section.default.policy"></message>
-	<message key="default.journalSettings.purchaseIssueFee">Acheter un numéro</message>
-	<message key="default.journalSettings.emailHeader">Le message suivant est délivré au nom de {$journalName}.
+	<message key="default.contextSettings.emailHeader">Le message suivant est délivré au nom de {$journalName}.
 ________________________________________________________________________</message>
 	<message key="default.genres.article">Texte de l'article</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Cette revue utilise le système CLOCKSS pour créer un système d'archivage distribué parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes de la revue à des fins de conservation et de reconstitution. <a href="http://clockss.org/"> Plus ... </a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Cette revue utilise le système CLOCKSS pour créer un système d'archivage distribué parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes de la revue à des fins de conservation et de reconstitution. <a href="http://clockss.org/"> Plus ... </a>]]></message>
 	<message key="default.groups.name.manager">Directeur de la revue</message>
 	<message key="default.groups.plural.manager">Directeurs de la revue</message>
 	<message key="default.groups.abbrev.manager">DIR</message>

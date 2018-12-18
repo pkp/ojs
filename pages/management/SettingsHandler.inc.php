@@ -32,8 +32,6 @@ class SettingsHandler extends ManagementHandler {
 			ROLE_ID_MANAGER,
 			array(
 				'settings',
-				'publication',
-				'distribution',
 			)
 		);
 	}
@@ -55,7 +53,6 @@ class SettingsHandler extends ManagementHandler {
 		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
 		$lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
 		$clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
-		$paymentsUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), '_payments');
 
 		$supportedFormLocales = $context->getSupportedFormLocales();
 		$localeNames = AppLocale::getAllLocales();
@@ -63,8 +60,8 @@ class SettingsHandler extends ManagementHandler {
 			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
 		}, $supportedFormLocales);
 
+		$accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
 		$archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
-		$paymentSettingsForm = new \APP\components\forms\context\PaymentSettingsForm($apiUrl, $locales, $context);
 
 		// Create a dummy "form" for the PKP Preservation Network settings. This
 		// form loads a single field which enables/disables the plugin, and does
@@ -120,9 +117,9 @@ class SettingsHandler extends ManagementHandler {
 
 		// Add forms to the existing settings data
 		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['forms'][FORM_ARCHIVING_LOCKSS] = $archivingLockssForm->getConfig();
+		$settingsData['forms'][$accessForm->id] = $accessForm->getConfig();
+		$settingsData['forms'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
 		$settingsData['forms'][$archivePnForm->id] = $archivePnForm->getConfig();
-		$settingsData['forms'][FORM_PAYMENT_SETTINGS] = $paymentSettingsForm->getConfig();
 		$templateMgr->assign('settingsData', $settingsData);
 
 		// Hook into the settings templates to add the appropriate tabs

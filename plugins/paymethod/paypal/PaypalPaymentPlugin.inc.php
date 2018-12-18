@@ -80,6 +80,11 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 				'value' => (bool) $this->getSetting($context->getId(), 'testMode'),
 				'groupId' => 'paypalpayment',
 			]))
+			->addField(new \PKP\components\forms\FieldText('accountName', [
+				'label' => __('plugins.paymethod.paypal.settings.accountName'),
+				'value' => $this->getSetting($context->getId(), 'accountName'),
+				'groupId' => 'paypalpayment',
+			]))
 			->addField(new \PKP\components\forms\FieldText('clientId', [
 				'label' => __('plugins.paymethod.paypal.settings.clientId'),
 				'value' => $this->getSetting($context->getId(), 'clientId'),
@@ -102,6 +107,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 		$saveParams = [];
 		foreach ($allParams as $param => $val) {
 			switch ($param) {
+				case 'accountName':
 				case 'clientId':
 				case 'secret':
 					$saveParams[$param] = (string) $val;

@@ -11,7 +11,7 @@
 {include file="common/header.tpl" pageTitle="journal.journals"}
 
 <div class="pkp_page_content pkp_page_admin">
-	{capture assign=journalsUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.admin.journal.JournalGridHandler" op="fetchGrid" escape=false}{/capture}
+	{capture assign=journalsUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.admin.context.ContextGridHandler" op="fetchGrid" escape=false}{/capture}
 	{load_url_in_div id="journalGridContainer" url=$journalsUrl refreshOn="form-success"}
 </div><!-- .pkp_page_content -->
 

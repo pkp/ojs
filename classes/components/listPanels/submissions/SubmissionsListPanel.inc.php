@@ -38,7 +38,9 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	}
 
 	/**
-	 * @copydoc PKPSubmissionsListPanel::getWorkflowStages()
+	 * Get an array of workflow stages supported by the current app
+	 *
+	 * @return array
 	 */
 	public function getWorkflowStages() {
 		return array(

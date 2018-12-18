@@ -28,7 +28,6 @@
 	<message key="manager.payment.amount">数额</message>
 	<message key="manager.payment.authorFees">作者费用管理</message>
 	<message key="manager.payment.authorFeesDescription">选择的选项，连同它们的说明和费用(可以在下面进行编辑),将出现在投稿流程的第一步和投稿下面的关于期刊,以及在哪里需要支付点.</message>
-	<message key="manager.payment.currency">支付货币</message>
 	<message key="manager.payment.currencymessage">OJS不执行任何货币转换.  如果接受付款订阅, 你必须确定订阅货币与这里指定的一个匹配.</message>
 	<message key="manager.payment.description">描述</message>
 	<message key="manager.payment.details">详细</message>
@@ -58,7 +57,6 @@
 	<message key="manager.payment.paymentType">支付类型</message>
 	<message key="manager.payment.readerFees">读者费用</message>
 	<message key="manager.payment.records">支付记录</message>
-	<message key="manager.payments">支付管理</message>
 	<message key="manager.payment.userName">支付ID</message>
 	<message key="manager.people.allEnrolledUsers">全部注册用户</message>
 	<message key="manager.people.allJournals">所有期刊</message>
@@ -173,7 +171,7 @@
 	<message key="manager.setup.journalHomepageHeader">期刊首页标题</message>
 	<message key="manager.setup.journalHomepageHeader.altText">期刊首页头部</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">可以上传一个图片版本的期刊标题和标志图形(logo)到首页上（以.gif、.jpg、.png的文件格式），以替换文字版本的显示方式。</message>
-	<message key="manager.setup.journalInitials">期刊起首字母</message>
+	<message key="manager.setup.contextInitials">期刊起首字母</message>
 	<message key="manager.setup.journalLayout">期刊布局</message>
 	<message key="manager.setup.journalLayoutDescription">在这里选择一个期刊主题并选择期刊布局组件。一个期刊样式也可以在这里添加，它将替换系统默认的样式与主题样式（被选择的）。</message>
 	<message key="manager.setup.journalLogo">期刊图标</message>
@@ -185,10 +183,9 @@
 	<message key="manager.setup.journalSetupUpdated">您的期刊配置已经更新。</message>
 	<message key="manager.setup.journalStyleSheetInvalid">无效的期刊样式表格式。可接受的格式为.css的文件格式。</message>
 	<message key="manager.setup.journalTheme">期刊主题</message>
-	<message key="manager.setup.journalTitle">期刊名称</message>
+	<message key="manager.setup.contextTitle">期刊名称</message>
 	<message key="manager.setup.labelName">标签名</message>
 	<message key="manager.setup.lists">列表</message>
-	<message key="manager.setup.listsDescription">.输入每页显示项目的最大数字（例如投稿数、用户数或者编辑作业指派人数），以及显示每个页面的链接数目。</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[启用LOCKSS，在加入LOCKSS的图书馆中保存与散布期刊的内容。<a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>页面。 A LOCKSS的认证信息会显示在「期刊存档」的「期刊介绍」中：]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[列出6-10个会注册并且快取这份期刊的图书馆。比方说，指派编辑或者编委成员工作的机构，以及＼或者已经加入LOCKSS的机构。见 <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. 用预备好的邀请函寄给(i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a>或者 (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">外观</message>
@@ -247,7 +244,6 @@
 	<message key="manager.setup.selectEditorDescription">将会全程监控处理过程的期刊编辑</message>
 	<message key="manager.setup.selectSectionDescription">将会考虑纳入此项目的期刊栏目。</message>
 	<message key="manager.setup.showGalleyLinksDescription">总是显示相关文档链接以及明示的受限存取。</message>
-	<message key="manager.setup.siteAccess">网站权限</message>
 	<message key="manager.setup.stepsToJournalSite">创建一个期刊网站的5个步骤</message>
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地图问题、贝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">关键字</message>

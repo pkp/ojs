@@ -24,50 +24,19 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Naskah belum pernah diterbitkan sebelumnya, dan tidak sedang dalam pertimbangan untuk diterbitkan di jurnal lain (atau sudah dijelaskan dalam Komentar kepada Editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">File naskah dalam format dokumen OpenOffice, Microsoft Word, atau RTF.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Referensi yang dapat diakses online telah dituliskan URL-nya.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Naskah diketik dengan teks 1 spasi; font 12; menggunakan huruf miring, bukan huruf bergaris bawah (kecuali alamat URL); dan semua ilustrasi, gambar, dan tabel diletakkan dalam teks pada tempat yang diharapkan, bukan dikelompokkan tersendiri di akhir naskah.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements">Pengetikan naskah dan sitasi mengikuti gaya selingkung yang disyaratkan dalam Panduan Penulis</message>
- 	<message key="default.journalSettings.privacyStatement">Nama dan alamat email yang dimasukkan di website ini hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk disebarluaskan ke pihak lain.</message>
-	<message key="default.journalSettings.openAccessPolicy">Jurnal ini menyediakan akses terbuka yang pada prinsipnya membuat riset tersedia secara gratis untuk publik dan akan mensupport pertukaran pengetahuan global terbesar.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[ <p>Tahap proofreading dimaksudkan untuk menemukan kesalahan di format, tata bahasa, dan ejaan galley. Perubahan substansi tidak bisa dibuat di tahap ini, kecuali didiskusikan dengan Editor Bagian. Di Layout, klik di VIEW PROOF untuk melihat HTML, PDF, dan format file lain yang tersedia dalam menerbitkan naskah ini.</p>
-	<h4>Untuk kesalahan tata bahasa dan ejaan</h4>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Naskah belum pernah diterbitkan sebelumnya, dan tidak sedang dalam pertimbangan untuk diterbitkan di jurnal lain (atau sudah dijelaskan dalam Komentar kepada Editor).</message>
+	<message key="default.contextSettings.checklist.fileFormat">File naskah dalam format dokumen OpenOffice, Microsoft Word, atau RTF.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Referensi yang dapat diakses online telah dituliskan URL-nya.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Naskah diketik dengan teks 1 spasi; font 12; menggunakan huruf miring, bukan huruf bergaris bawah (kecuali alamat URL); dan semua ilustrasi, gambar, dan tabel diletakkan dalam teks pada tempat yang diharapkan, bukan dikelompokkan tersendiri di akhir naskah.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements">Pengetikan naskah dan sitasi mengikuti gaya selingkung yang disyaratkan dalam Panduan Penulis</message>
+ 	<message key="default.contextSettings.privacyStatement">Nama dan alamat email yang dimasukkan di website ini hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk disebarluaskan ke pihak lain.</message>
+	<message key="default.contextSettings.openAccessPolicy">Jurnal ini menyediakan akses terbuka yang pada prinsipnya membuat riset tersedia secara gratis untuk publik dan akan mensupport pertukaran pengetahuan global terbesar.</message>
 
-	<p>Salin kata atau frase yang menjadi masalah dan letakkan mereka di kotak Koreksi Proofreading dengan instruksi "UBAH_KE" untuk editor seperti contoh berikut ini:</p>
-
-	<pre>1. UBAH...
-	di tulis lengkap
-	KE...
-	ditulis lengkap</pre>
-	<br />
-	<pre>2. UBAH...
-	Malinowsky
-	KE....
-	Malinowski</pre>
-	<br />
-
-	<h4>Untuk kesalahan format </h4>
-
-	<p>Jelaskan letak kesalahan dalam kotak Koreksi Proofreading setelah mengetik judul "FORMAT" seperti contoh berikut ini:</p>
-	<br />
-	<pre>3. FORMAT
-	Nomor dalam Tabel 3 tidak sejajar di kolom ketiga.</pre>
-	<br />
-	<pre>4. FORMAT
-	Paragraf yang dimulai dengan "Topik terakhir ini..." tidak menjorok.</pre>]]></message>
-
-	<message key="default.contextSettings.forReaders"><![CDATA[Kami mendorong pembaca untuk mendaftarkan diri di layanan notifikasi penerbitan untuk jurnal ini. Gunakan tautan <a href="{$indexUrl}/{$journalPath}/user/register">Daftar</a>di bagian atas beranda jurnal. Dengan mendaftar, pembaca akan memperoleh email berisi Daftar Isi tiap ada terbitan jurnal baru. Daftar ini juga membuat jurnal dapat mengetahui tingkat dukungan atau jumlah pembaca. Lihat jurnal <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Pernyataan Privasi</a>, yang meyakinkan pembaca bahwa nama dan alamat email yang didaftarkan tidak akan digunakan untuk tujuan lain.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Tertarik menerbitkan jurnal? Kami merekomendasikan Anda mereview halaman <a href="{$indexUrl}/{$journalPath}/about">Tentang Kami </a>untuk kebijakan bagian jurnal serta <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Petunjuk Penulis </a>. Penulis perlu <a href="{$indexUrl}/{$journalPath}/user/register">Mendaftar </a>dengan jurnal sebelum menyerahkan atau jika sudah terdaftar <a href="{$indexUrl}/index/login">login</a>dan mulai proses lima langkah.]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Kami mendorong pembaca untuk mendaftarkan diri di layanan notifikasi penerbitan untuk jurnal ini. Gunakan tautan <a href="{$indexUrl}{$contextPath}/user/register">Daftar</a>di bagian atas beranda jurnal. Dengan mendaftar, pembaca akan memperoleh email berisi Daftar Isi tiap ada terbitan jurnal baru. Daftar ini juga membuat jurnal dapat mengetahui tingkat dukungan atau jumlah pembaca. Lihat jurnal <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Pernyataan Privasi</a>, yang meyakinkan pembaca bahwa nama dan alamat email yang didaftarkan tidak akan digunakan untuk tujuan lain.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Tertarik menerbitkan jurnal? Kami merekomendasikan Anda mereview halaman <a href="{$indexUrl}{$contextPath}/about">Tentang Kami </a>untuk kebijakan bagian jurnal serta <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Petunjuk Penulis </a>. Penulis perlu <a href="{$indexUrl}{$contextPath}/user/register">Mendaftar </a>dengan jurnal sebelum menyerahkan atau jika sudah terdaftar <a href="{$indexUrl}/index/login">login</a>dan mulai proses lima langkah.]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[Kami mendorong pustakawan riset untuk mendaftar jurnal diantara pemegang jurnal eletronik perpustakaan. Begitu juga, ini mungkin berharga bahwa sistem penerbitan sumber terbuka jurnal cocok untuk perpustakaan untuk menjadi tuan rumah untuk anggota fakultas untuk menggunakan jurnal saat mereka terlibat dalam proses editing. (Lihat <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[OJS sistem LOCKSS berfungsi sebagai sistem pengarsipan terdistribusi antar-perpustakaan yang menggunakan sistem ini dengan tujuan membuat arsip permanen (untuk preservasi dan restorasi). <a href="http://www.lockss.org/">Lanjut...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
-
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Publikasi Artikel</message>
-	<message key="default.journalSettings.purchaseArticleFee">Beli Artikel</message>
-	<message key="default.journalSettings.purchaseIssueFee">Beli Terbitan</message>
-	<message key="default.journalSettings.membershipFee">Keanggotaan Asosiasi</message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[OJS sistem LOCKSS berfungsi sebagai sistem pengarsipan terdistribusi antar-perpustakaan yang menggunakan sistem ini dengan tujuan membuat arsip permanen (untuk preservasi dan restorasi). <a href="http://www.lockss.org/">Lanjut...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Manajer Jurnal</message>
@@ -98,7 +67,7 @@
 	<message key="default.groups.name.externalReviewer">Reviewer</message>
 	<message key="default.groups.plural.externalReviewer">Reviewer</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

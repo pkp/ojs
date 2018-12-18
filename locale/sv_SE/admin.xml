@@ -55,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Sökvägen får endast innehålla alfanumeriska tecken, understreck, och bindestreck, samt måste inledas och avslutas med ett alfanumeriskt tecken.</message>
 	<message key="admin.contexts.form.pathExists">Vald sökväg används redan av en annan tidskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Gör tidskriften publik.</message>
-	<message key="admin.journals.journalDescription">Beskrivning av tidskriften</message>
+	<message key="admin.contexts.contextDescription">Beskrivning av tidskriften</message>
 	<message key="admin.journal.pathImportInstructions">Existerande sökväg till tidskriften eller sökväg som ska skapas (t.ex. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importera prenumerationer</message>
 	<message key="admin.journals.transcode">Konvertera artikelns metadata med ISO 8859-1</message>

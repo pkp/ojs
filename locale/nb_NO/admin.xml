@@ -37,7 +37,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn.</message>
 	<message key="admin.contexts.form.pathExists">Den valgte filstien er allerede tatt i bruk av et annet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Tillat at dette tidsskriftet vises offentlig på nettstedet</message>
-	<message key="admin.journals.journalDescription">Tidsskriftbeskrivelse</message>
+	<message key="admin.contexts.contextDescription">Tidsskriftbeskrivelse</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftfilsti, eller filsti som skal opprettes (for eks. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnement</message>
 	<message key="admin.journals.transcode">Artikkelens Transcode-metadata fra ISO8859-1</message>

@@ -41,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Stien må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn.</message>
 	<message key="admin.contexts.form.pathExists">Den valgte sti bruges allerede af et andet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Offentliggør dette tidsskrift på webstedet</message>
-	<message key="admin.journals.journalDescription">Tidsskriftsbeskrivelse</message>
+	<message key="admin.contexts.contextDescription">Tidsskriftsbeskrivelse</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnementer</message>
 	<message key="admin.journals.transcode">Omsæt kode for artikelmetadata fra ISO8859-1</message>

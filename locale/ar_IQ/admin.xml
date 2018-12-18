@@ -55,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">تسمية المسار متوقع لها أن تتكون من سلسلة حروف إنجليزية وأرقام وشُرط تحتية وواصلات، ولا بد لها أن تبدأ وتنتهي بحرف إنجليزي أو رقم حصراً</message>
 	<message key="admin.contexts.form.pathExists">المسار الذي اخترته سبق وأن استُعمل لمجلة أخرى</message>
 	<message key="admin.journals.enableJournalInstructions">إسمح لهذه المجلة بالظهور علانية في الموقع</message>
-	<message key="admin.journals.journalDescription">وصف المجلة</message>
+	<message key="admin.contexts.contextDescription">وصف المجلة</message>
 	<message key="admin.journal.pathImportInstructions">المسار الحالي للمجلة، أو المسار المزمع إنشاؤه، مثلاً: "ojs"</message>
 	<message key="admin.journals.importSubscriptions">استورد إشتراكات</message>
 	<message key="admin.journals.transcode">حول ترميز البيانات الوصفية من صيغة ISO8859-1</message>

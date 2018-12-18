@@ -143,7 +143,7 @@
 	<message key="manager.setup.journalHomepageContentDescription">Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen. Merk at nåværende utgave alltid er tilgjengelig gjennom nyeste-lenken i navigasjonsfeltet.</message>
 	<message key="manager.setup.journalHomepageHeader">Tidsskriftets hjemmesidetopptekst</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">En grafisk versjon av tidsskriftets tittel og logo (i en .gif-, .jpg-, eller .png-fil) kan lastes opp for hjemmesiden, som kommer til å erstatte tekstversjonen som ellers vises.</message>
-	<message key="manager.setup.journalInitials">Tidsskriftinitialer</message>
+	<message key="manager.setup.contextInitials">Tidsskriftinitialer</message>
 	<message key="manager.setup.journalLogo">Tidsskriftlogo</message>
 	<message key="manager.setup.journalPageFooter">Tidsskriftside bunntekst</message>
 	<message key="manager.setup.journalPageFooterDescription">Dette er bunnteksten for tidsskriftet ditt. For å endre eller oppdatere bunnteksten, lim inn HTML kode i tekstboksen nedenfor. For eksempel et annet navigasjonsfelt, et telleverk etc. Denne bunnteksten vil bli vist på hver side.</message>
@@ -151,10 +151,9 @@
 	<message key="manager.setup.journalSetup">Tidsskriftoppsett</message>
 	<message key="manager.setup.journalSetupUpdated">Ditt tidsskriftoppsett er nå oppdatert.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Ugyldig stylesheetformat for tidsskriftet. Akseptert format er .css.</message>
-	<message key="manager.setup.journalTitle">Tidsskrifttittel</message>
+	<message key="manager.setup.contextTitle">Tidsskrifttittel</message>
 	<message key="manager.setup.labelName">Etikettnavn</message>
 	<message key="manager.setup.lists">Lister</message>
-	<message key="manager.setup.listsDescription">Skriv inn maksimalt antall elementer (for eksempel manuskript, brukere, eller redigeringsoppdrag) som skal vises på hver side av en liste, og antallet sider lenker som skal vises på hver side.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Tillat LOCKSS å lagre og distribuere tidsskriftinnholdet hos tilsluttete bibliotek via et LOCKSS <a href="{$lockssUrl}" target="_blank">Utgivermanifest</a>. En LOCKSS-lisens vil i så fall bli vist i 'Om' tidsskriftet, under Arkivering:]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[Se <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">andre versjoner av LOCKSS-lisensen</a>.]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifiser 6-10 bibliotek som vil registrere og cache tidsskriftet. Du kan for eksempel henvende deg til institusjoner hvor redaktører eller rådsmedlemmer arbeider og/eller institusjoner som allerede deltar i LOCKSS. Se <a href="http://www.lockss.org/community/" target="_blank">tilsluttete bibliotek</a>. Bruk de forberedte invitasjonene til (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotek tilsluttet LOCKSS</a> eller (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotek som ennå ikke er tilsluttet LOCKSS</a>.]]></message>
@@ -247,7 +246,6 @@
 	<message key="manager.setup.sectionsDescription"><![CDATA[For å opprette eller endre seksjoner for tidsskriftet (f.eks. Artikler, Bokanmeldelser, etc.), gå til seksjonsadministrasjon.<br /><br />Når forfattere sender inn elementer til tidsskriftet, kommer de til å angi ...]]></message>
 	<message key="manager.setup.selectEditorDescription">Tidsskriftredaktør som skal følge bidraget gjennom den redaksjonelle prosessen.</message>
 	<message key="manager.setup.selectSectionDescription">Tidsskriftseksjonen bidraget skal vurderes for.</message>
-	<message key="manager.setup.siteAccess">Ytterligere begrensninger i tilgang til nettstedet eller artiklene</message>
 	<message key="manager.setup.sponsors">Sponsorer</message>
 	<message key="manager.setup.sponsorsDescription">Navnet til organisasjoner (for eks. forskerorganisasjoner, institutter, nettverk etc.) som støtter tidsskriftet vil bli vist i 'Om' tidsskriftet, og kan følges opp med en merknad med takk.</message>
 	<message key="manager.setup.stepsToJournalSite">Fem trinn til et nettsted for tidsskriftet</message>
@@ -420,7 +418,6 @@
 	<message key="manager.payment.amount">Beløp</message>
 	<message key="manager.payment.authorFees">Forfatterbetaling</message>
 	<message key="manager.payment.authorFeesDescription">De valgte alternativene med beskrivelse og priser vil vises både i trinn 1 av innsendingsprosessen, i 'Om' tidsskriftet, og når det kreves betaling.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS utfører ingen valutakonversjoner. Hvis tidsskriftet skal ta betalt for abonnement, må du sørge for at den valutaen som er spesifisert her, er den riktige.</message>
 	<message key="manager.payment.description">Beskrivelse</message>
 	<message key="manager.payment.details">Detaljer</message>
@@ -452,7 +449,6 @@
 	<message key="manager.payment.readerFees">Leserbetaling</message>
 	<message key="manager.payment.readerFeesDescription">De valgte alternativene med beskrivelse og priser vil vises både i 'Om' tidsskriftet, og når det kreves betaling. (Prisene og beskrivelsene kan redigeres nedenfor.)</message>
 	<message key="manager.payment.records">Betalingsoversikt</message>
-	<message key="manager.payments">Betalinger</message>
 	<message key="manager.payment.userName">Betalings-ID</message>
 	<message key="manager.people.allEnrolledUsers">Registrerte brukere med roller i dette tidsskriftet</message>
 	<message key="manager.people.allSiteUsers">Verve en bruker fra tidsskriftnettstedet til dette tidsskriftet</message>
@@ -592,9 +588,9 @@
 	<message key="manager.setup.pageHeader">Tidsskriftets topptekst</message>
 	<message key="manager.setup.focusAndScope.description">Beskriv til forfattere, lesere og bibliotekarer spennvidden på artikler og annet innhold som tidsskriftet vil publisere.</message>
 	<message key="manager.setup.form.issnInvalid">Angitt ISSN er ugyldig.</message>
-	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
-	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
-	<message key="manager.setup.journalAbout.description">Inkluder informasjon om tidsskriftet som kan være av interesse for lesere, forfattere eller fagfeller. Dette kan inkludere retningslinjer for open access, hovedfokus og spennvidde for tidsskriftet, opphavsrettsnotis, informasjon om sponsorer, tidsskriftets historie, erklæring om personopplysninger og arkivering i LOCKSS eller CLOCKSS arkivsystem.</message>
+	<message key="manager.setup.contextSummary">Tidsskriftsbeskrivelse</message>
+	<message key="manager.setup.contextAbout">Om tidsskriftet</message>
+	<message key="manager.setup.contextAbout.description">Inkluder informasjon om tidsskriftet som kan være av interesse for lesere, forfattere eller fagfeller. Dette kan inkludere retningslinjer for open access, hovedfokus og spennvidde for tidsskriftet, opphavsrettsnotis, informasjon om sponsorer, tidsskriftets historie, erklæring om personopplysninger og arkivering i LOCKSS eller CLOCKSS arkivsystem.</message>
 	<message key="manager.setup.journalThumbnail">Tidsskriftets miniatyrbilde</message>
 	<message key="manager.setup.journalThumbnail.description">En liten logo eller representasjon av tidsskriftet som kan bli brukt i listen over tidsskrift.</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[En LOKCSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-lisens</a>]]></message>

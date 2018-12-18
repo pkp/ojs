@@ -13,16 +13,15 @@
 		"clockssLicense": {
 			"type": "string",
 			"multilingual": true,
-			"defaultLocaleKey": "default.journalSettings.clockssLicense",
+			"defaultLocaleKey": "default.contextSettings.clockssLicense",
 			"validation": [
 				"nullable"
 			]
 		},
-		"currency": {
+		"copyrightYearBasis": {
 			"type": "string",
 			"validation": [
-				"nullable",
-				"currency"
+				"nullable"
 			]
 		},
 		"delayedOpenAccessDuration": {
@@ -109,10 +108,17 @@
 				}
 			}
 		},
+		"licenseTerms": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			]
+		},
 		"lockssLicense": {
 			"type": "string",
 			"multilingual": true,
-			"defaultLocaleKey": "default.journalSettings.lockssLicense",
+			"defaultLocaleKey": "default.contextSettings.lockssLicense",
 			"validation": [
 				"nullable"
 			]
@@ -175,12 +181,6 @@
 				"nullable"
 			]
 		},
-		"paymentsEnabled": {
-			"type": "boolean",
-			"validation": [
-				"nullable"
-			]
-		},
 		"printIssn": {
 			"type": "string",
 			"validation": [
@@ -207,6 +207,19 @@
 			"multilingual": true,
 			"validation": [
 				"nullable"
+			]
+		},
+		"publisherInstitution": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
+		"publishingMode": {
+			"type": "integer",
+			"validation": [
+				"nullable",
+				"in:0,1,2"
 			]
 		},
 		"purchaseArticleFee": {

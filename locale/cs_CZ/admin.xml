@@ -40,7 +40,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
 	<message key="admin.contexts.form.pathExists">Zvolená cesta již je využívána jiným časopisem.</message>
 	<message key="admin.journals.enableJournalInstructions">Povolte pro tento časopis, aby byl na těchto stránkách veřejně zobrazen</message>
-	<message key="admin.journals.journalDescription">Popis časopisu</message>
+	<message key="admin.contexts.contextDescription">Popis časopisu</message>
 	<message key="admin.journal.pathImportInstructions">Existující cesta k časopisu nebo cesta, která má být vytvořena (např. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importovat předplatné</message>
 	<message key="admin.journals.transcode">Překódovat metadata článků z ISO8859-1</message>

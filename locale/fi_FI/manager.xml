@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Summa</message>
 	<message key="manager.payment.authorFees">Kirjoittajamaksut</message>
 	<message key="manager.payment.authorFeesDescription">Valitut vaihtoehdot kuvauksineen ja maksuineen (joita voidaan muokata alla), näkyvät lähetysprosessin ensimmäisessä vaiheessa, Tietoa julkaisusta -sivulla Käsikirjoitukset-kohdassa sekä sellaisissa kohdissa, joissa vaaditaan maksu.</message>
-	<message key="manager.payment.currency">Valuutta</message>
 	<message key="manager.payment.currencymessage">OJS ei muunna valuuttoja. Jos hyväksyt tilausmaksuja, muista varmistaa, että tilauksen valuutta vastaa tässä määritettyä valuuttaa.</message>
 	<message key="manager.payment.description">Kuvaus</message>
 	<message key="manager.payment.details">Tiedot</message>
@@ -62,7 +61,6 @@
 	<message key="manager.payment.readerFees">Lukijamaksut</message>
 	<message key="manager.payment.readerFeesDescription">Valitut vaihtoehdot kuvauksineen ja maksuineen (joita voidaan muokata alla), näkyvät Tietoa julkaisusta -sivulla Toimintaperiaatteet-otsikon alla, sekä sellaisissa kohdissa, joissa vaaditaan maksu.</message>
 	<message key="manager.payment.records">Maksutietueet</message>
-	<message key="manager.payments">Maksut</message>
 	<message key="manager.paymentTypes">Maksutyypit</message>
 	<message key="manager.payment.userName">Maksun tunniste</message>
 	<message key="manager.people.allEnrolledUsers">Tähän julkaisuun lisätyt käyttäjät</message>
@@ -185,15 +183,15 @@
 	<message key="manager.setup.itemsPerPage">Kohteita per sivu</message>
 	<message key="manager.setup.journalAbbreviation">Julkaisun lyhenne</message>
 	<message key="manager.setup.journalArchiving">Julkaisun arkistointi</message>
-	<message key="manager.setup.journalSummary">Julkaisu lyhyesti</message>
-	<message key="manager.setup.journalAbout">Tietoa julkaisusta</message>
-	<message key="manager.setup.journalAbout.description">Sisällytä tähän mitä tahansa tietoa julkaisusta, joka saattaa kiinnostaa lukijoita, kirjoittajia ja arvioijia. Kiinnostavia tietoja voivat olla esim. avoimen saatavuuden periaate, julkaisun tarkoitus ja toimintaperiaatteet, tekijänoikeushuomautus, tiedonanto tukemista koskien, julkaisun historia, tietosuojaseloste ja LOCKSS tai CLOCKSS-arkistojärjestelmiin kuuluminen.</message>
+	<message key="manager.setup.contextSummary">Julkaisu lyhyesti</message>
+	<message key="manager.setup.contextAbout">Tietoa julkaisusta</message>
+	<message key="manager.setup.contextAbout.description">Sisällytä tähän mitä tahansa tietoa julkaisusta, joka saattaa kiinnostaa lukijoita, kirjoittajia ja arvioijia. Kiinnostavia tietoja voivat olla esim. avoimen saatavuuden periaate, julkaisun tarkoitus ja toimintaperiaatteet, tekijänoikeushuomautus, tiedonanto tukemista koskien, julkaisun historia, tietosuojaseloste ja LOCKSS tai CLOCKSS-arkistojärjestelmiin kuuluminen.</message>
 	<message key="manager.setup.journalHomepageContent">Julkaisun etusivun sisältö</message>
 	<message key="manager.setup.journalHomepageContentDescription">Oletusarvoisesti etusivu koostuu siirtymälinkeistä. Muuta sisältöä etusivulle voidaan liittää käyttämällä yhtä tai kaikkia seuraavista vaihtoehdoista, jotka ilmestyvät esitetyssä järjestyksessä. Huomaa, että uusimpaan numeroon pääsee aina navigointipalkin Uusin numero -linkin kautta.</message>
 	<message key="manager.setup.journalHomepageHeader">Julkaisun etusivun ylätunniste</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Julkaisun etusivun ylätunniste</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Etusivulle voidaan ladata myös julkaisun nimen ja logon graafinen versio (.gif, .jpg, tai .png -muodossa), joka korvaa sivustolla muutoin näkyvän tekstimuotoisen nimen.</message>
-	<message key="manager.setup.journalInitials">Julkaisun alkukirjaimet</message>
+	<message key="manager.setup.contextInitials">Julkaisun alkukirjaimet</message>
 	<message key="manager.setup.journalLayout">Julkaisun taitto</message>
 	<message key="manager.setup.journalLayoutDescription">Valitse julkaisulle teema sekä taiton osat tässä. Myös julkaisun tyylitiedosto voidaan ladata. Sen avulla voidaan syrjäyttää koko järjestelmän kattavien tyylitiedostojen ja teeman tyylitiedoston (jos teema valitaan) sisältämät tyylitiedot.</message>
 	<message key="manager.setup.journalLogo">Julkaisun logo</message>
@@ -207,10 +205,9 @@
 	<message key="manager.setup.journalTheme">Julkaisun teema</message>
 	<message key="manager.setup.journalThumbnail">Julkaisun pikkukuva</message>
 	<message key="manager.setup.journalThumbnail.description">Pieni logo tai julkaisua edustava kuva, jota voidaan käyttää julkaisulistassa.</message>
-	<message key="manager.setup.journalTitle">Julkaisun nimi</message>
+	<message key="manager.setup.contextTitle">Julkaisun nimi</message>
 	<message key="manager.setup.labelName">Selitteen nimi</message>
 	<message key="manager.setup.lists">Listat</message>
-	<message key="manager.setup.listsDescription">Rajoita listassa näytettävien kohteiden määrää (esim. käsikirjoitukset, käyttäjät tai toimitustoimeksiannot), ennen kuin seuraavat kohteet näytetään toisella sivulla. Rajoita samoin listan seuraavilla sivuilla näytettävää linkkien määrää.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Tallentaaksesi ja jakaaksesi julkaisun sisältöä osallistuvissa kirjastoissa, ota LOCKSS käyttöön LOCKSS:in <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> -sivun kautta.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[LOCKSS-lisenssi näkyy Tietoa julkaisusta sivulla Arkistointi-kohdassa: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-lisenssi</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS-lisenssin kuvaus</message>
@@ -278,7 +275,6 @@
 	<message key="manager.setup.selectEditorDescription">Julkaisun toimittaja, joka on mukana toimitusprosessin alusta loppuun asti.</message>
 	<message key="manager.setup.selectSectionDescription">Julkaisun osasto, johon kohdetta harkitaan.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Näytä aina julkaistavien tiedostojen linkit ja ilmaise rajoitettu saatavuus.</message>
-	<message key="manager.setup.siteAccess">Sivuston ja artikkeleiden saatavuuden lisärajoitukset</message>
 	<message key="manager.setup.stepsToJournalSite">Julkaisun verkkosivuston luomisen viisi vaihetta</message>
 	<message key="manager.setup.subjectExamples">(Esim. fotosynteesi; mustat aukot; neliväriteoreema; Bayesin teoreema)</message>
 	<message key="manager.setup.subjectKeywordTopic">Avainsanat</message>

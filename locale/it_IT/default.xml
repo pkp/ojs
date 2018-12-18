@@ -19,50 +19,20 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">La submission non è stata precedentemente pubblicata, né proposta a un'altra rivista (oppure si fornisce una spiegazione all'editor nei commenti).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Il file di submission è in un formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Il testo ha spaziatura singola; usa un font 12 punti ; impiega il corsivo invece della sottolineatura (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Il testo aderisce alle richieste stilistiche e bibliografiche riassunte nelle <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida dell'autore</a>, che si trova nella pagina di informazioni sulla rivista.]]></message>
-	<message key="default.journalSettings.privacyStatement">I nomi e gli indirizzi email inseriti in questo sito della rivista  saranno utilizzati esclusivamente per gli scopi dichiarati e non verranno resi disponibili per nessun altro uso.</message>
-	<message key="default.journalSettings.openAccessPolicy">Questa rivista fornisce accesso aperto ai suoi contenuti, ritendendo che rendere le ricerche disponibili liberamente al pubblico migliori lo scambio della conoscenza a livello globale.</message>
-	<message key="default.contextSettings.forReaders"><![CDATA[Incoraggiamo i lettori a iscriversi al servizio di notifica di questa rivista. Usa il link <a href="{$indexUrl}/{$journalPath}/user/register">Registra</a> in alto alla  homepage della rivista. Con questa registrazione il lettore ricever&#x00E0; l'indice per email di ogni nuova uscita della rivista.  Vedi la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">dichiarazione sulla privacy</a> della rivista che assicura il lettori che il loro nome e indirizzo email non sar&#x00E0; usato per altri fini.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Interessato a proporre contributi a questa rivista? Raccomandiamo di rivedere la pagina <a href="{$indexUrl}/{$journalPath}/about">Info</a>, in particolare le politiche delle sezioni della  rivista, e le <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida per l'autore</a>. Gli autori devono <a href="{$indexUrl}/{$journalPath}/user/register">registrarsi</a> per  effettuare la prima submission alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href="{$indexUrl}/index/login">log in</a> e cominciare il processo guidato in 5 fasi.]]></message>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">La submission non è stata precedentemente pubblicata, né proposta a un'altra rivista (oppure si fornisce una spiegazione all'editor nei commenti).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Il file di submission è in un formato OpenOffice, Microsoft Word, RTF, o WordPerfect.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Il testo ha spaziatura singola; usa un font 12 punti ; impiega il corsivo invece della sottolineatura (eccetto con gli indirizzi URL); e tutte le illustrazioni, figure, e tabelle sono posizionate  all'interno del testo nei punti appropriati, piuttosto che alla fine.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Il testo aderisce alle richieste stilistiche e bibliografiche riassunte nelle <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">linee guida dell'autore</a>, che si trova nella pagina di informazioni sulla rivista.]]></message>
+	<message key="default.contextSettings.privacyStatement">I nomi e gli indirizzi email inseriti in questo sito della rivista  saranno utilizzati esclusivamente per gli scopi dichiarati e non verranno resi disponibili per nessun altro uso.</message>
+	<message key="default.contextSettings.openAccessPolicy">Questa rivista fornisce accesso aperto ai suoi contenuti, ritendendo che rendere le ricerche disponibili liberamente al pubblico migliori lo scambio della conoscenza a livello globale.</message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Incoraggiamo i lettori a iscriversi al servizio di notifica di questa rivista. Usa il link <a href="{$indexUrl}{$contextPath}/user/register">Registra</a> in alto alla  homepage della rivista. Con questa registrazione il lettore ricever&#x00E0; l'indice per email di ogni nuova uscita della rivista.  Vedi la <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">dichiarazione sulla privacy</a> della rivista che assicura il lettori che il loro nome e indirizzo email non sar&#x00E0; usato per altri fini.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Interessato a proporre contributi a questa rivista? Raccomandiamo di rivedere la pagina <a href="{$indexUrl}{$contextPath}/about">Info</a>, in particolare le politiche delle sezioni della  rivista, e le <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">linee guida per l'autore</a>. Gli autori devono <a href="{$indexUrl}{$contextPath}/user/register">registrarsi</a> per  effettuare la prima submission alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href="{$indexUrl}/index/login">log in</a> e cominciare il processo guidato in 5 fasi.]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[Suggeriamo ai bibliotecari di aggiungere questa rivista nel loro sistema di reference linking. Inoltre, segnaliamo che il sistema open source utilizzato per la pubblicazione di questa rivista potrebbe essere proposto anche per la gestione di riviste nelle quali i bibliotecari siano coinvolti (vedi <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a> per ulteriori dettagli).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Questa rivista partecipa a LOCKSS  per creare un sistema di archiviazione distribuito tra biblioteche e permette a queste  di creare archivi permanenti della rivista a scopo di conservazione. <a href="http://www.lockss.org/">Prosegui...</a>]]></message>
-	<message key="default.journalSettings.checklist.addressesLinked">Dove possibile, sono stati fornite le URL dei riferimenti</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Questo passo è fatto per togliere qualunque errore nello spelling, nella grammatica e nella formattazione. Cambiamenti più sostanziali non possono essere fatti in questo passo, a meno che non siano stati discussi con il section editor. Nel layout, fai click su "visualizza" per vedere l'HTML, il PDF o altri formati di file disponibili utilizzati nella pubblicazione di questo item </p>
-<h4>Per gli errori di grammatica o di battitura</h4>
-
-<p>Copia il testo sbagliato e incollalo dentro l'area di correzione seguendo le istruzioni di "MODIFICA" qui di seguito</p>
-
-<pre>1. MODIFICA...
-poi il resto
-IN...
-poi il resto</pre>
-<br />
-<pre>2. MODIFICA...
-Rosso
-IN...
-Rossi</pre>
-<br />
-
-<h4>Per gli errori di formattazione</h4>
-
-<p>Descrivi la locazione e la natura del problema nell'apposita area dopo aver digitato "FORMATTAZIONE" come qui di seguito</p>
-<br />
-<pre>3. FORMATTAZIONE
-Il numero nella tabella 3 non è allineato nella prima colonna
-</pre>
-<br />
-<pre>4. FORMATTAZIONE
-Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Questa rivista partecipa a LOCKSS  per creare un sistema di archiviazione distribuito tra biblioteche e permette a queste  di creare archivi permanenti della rivista a scopo di conservazione. <a href="http://www.lockss.org/">Prosegui...</a>]]></message>
+	<message key="default.contextSettings.checklist.addressesLinked">Dove possibile, sono stati fornite le URL dei riferimenti</message>
 	<message key="section.default.title">Articoli</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.publicationFee">Pubblicazione di un articolo</message>
-	<message key="default.journalSettings.purchaseArticleFee">Acquisto di un articolo</message>
-	<message key="default.journalSettings.membershipFee">Iscrizione</message>
 	<message key="section.default.policy">Politica di default</message>
-	<message key="default.journalSettings.purchaseIssueFee">Acquista il fascicolo</message>
 	<message key="default.genres.article">Articolo</message>
 	<message key="default.groups.name.manager">Journal Manager</message>
 	<message key="default.groups.plural.manager">Direttori</message>
@@ -89,8 +59,8 @@ Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre
 	<message key="default.groups.name.externalReviewer">Revisore esterno</message>
 	<message key="default.groups.plural.externalReviewer">Revisori esterni</message>
 	<message key="default.groups.abbrev.externalReviewer">REV</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Questa rivista usa il sistema CLOCKSS per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste biblioteche di creare archivi permanebti di riviste per conservazione e ripristinio. Vedi di più sul sito di <a href="http://clockss.org/">CLOCKSS</a>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Questa rivista usa il sistema CLOCKSS per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste biblioteche di creare archivi permanebti di riviste per conservazione e ripristinio. Vedi di più sul sito di <a href="http://clockss.org/">CLOCKSS</a>]]></message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>

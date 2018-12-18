@@ -23,50 +23,20 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Tätä käsikirjoitusta ei ole aiemmin julkaistu, eikä sitä ole lähetetty toiseen julkaisuun (tai asiasta on annettu selvitys Kommentteja toimittajalle -kohdassa).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Käsikirjoitustiedosto on OpenOffice-, Microsoft Word- tai RTF-asiakirjan tiedostomuodossa.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Lähteiden URL-osoitteet on annettu, mikäli ne ovat saatavilla.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Tekstin riviväli on yksi; kirjasinkoko on 12; tekstissä käytetään kursiivia, ei alleviivausta (paitsi URL-osoitteissa); ja kaikki kuvat, kuviot ja taulukot on sijoitettu ensisijaisesti sopiviin kohtiin tekstin lomaan, ei tekstin loppuun.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements">Teksti noudattaa kirjoittajan ohjeissa määriteltyjä stilistisiä ja bibliografisia vaatimuksia.</message>
-	<message key="default.journalSettings.privacyStatement">Tämän julkaisun sivustolle syötettyjä nimiä ja sähköpostiosoitteita käytetään yksinomaan tämän julkaisun tarkoituksiin, eikä niitä luovuteta mihinkään muuhun tarkoitukseen tai muille osapuolille.</message>
-	<message key="default.journalSettings.openAccessPolicy">Tämä julkaisun sisällöt ovat välittömästi avoimesti saatavilla noudattaen periaatetta, jonka mukaan tutkimuksen tekeminen vapaasti saatavilla olevaksi suurelle yleisölle tukee suurempaa globaalia tiedonvaihtoa.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Oikolukuvaiheen tarkoituksena on huomata virheet julkaistavien tiedostojen oikeinkirjoituksessa, kieliopissa ja muotoilussa. Tässä vaiheessa ei voida enää tehdä merkittäviä muutoksia, ellei osastotoimittajan kanssa ole keskusteltu asiasta. Taitto-kohdassa, klikkaa VIEW PROOF nähdäksesi HTML, PDF- ja muut käytettävissä olevat tiedostomuodot, joita käytetään tämän kohteen julkaisemissa.</p>
-	<h4>Oikeinkirjoitus- ja kielioppivirheet</h4>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Tätä käsikirjoitusta ei ole aiemmin julkaistu, eikä sitä ole lähetetty toiseen julkaisuun (tai asiasta on annettu selvitys Kommentteja toimittajalle -kohdassa).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Käsikirjoitustiedosto on OpenOffice-, Microsoft Word- tai RTF-asiakirjan tiedostomuodossa.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Lähteiden URL-osoitteet on annettu, mikäli ne ovat saatavilla.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Tekstin riviväli on yksi; kirjasinkoko on 12; tekstissä käytetään kursiivia, ei alleviivausta (paitsi URL-osoitteissa); ja kaikki kuvat, kuviot ja taulukot on sijoitettu ensisijaisesti sopiviin kohtiin tekstin lomaan, ei tekstin loppuun.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements">Teksti noudattaa kirjoittajan ohjeissa määriteltyjä stilistisiä ja bibliografisia vaatimuksia.</message>
+	<message key="default.contextSettings.privacyStatement">Tämän julkaisun sivustolle syötettyjä nimiä ja sähköpostiosoitteita käytetään yksinomaan tämän julkaisun tarkoituksiin, eikä niitä luovuteta mihinkään muuhun tarkoitukseen tai muille osapuolille.</message>
+	<message key="default.contextSettings.openAccessPolicy">Tämä julkaisun sisällöt ovat välittömästi avoimesti saatavilla noudattaen periaatetta, jonka mukaan tutkimuksen tekeminen vapaasti saatavilla olevaksi suurelle yleisölle tukee suurempaa globaalia tiedonvaihtoa.</message>
 
-	<p>Kopioi ongelmalliset sanat tai sanaryhmät ja liitä ne Oikoluvun korjaukset -kenttään yhdessä "CHANGE TO" -ohjeistuksen kanssa toimittajalle seuraavasti:</p>
-
-	<pre>1. CHANGE...
-	kun muut
-	TO...
-	kuin muut</pre>
-	<br />
-	<pre>2. CHANGE...
-	Malinowsky
-	TO...
-	Malinowski</pre>
-	<br />
-
-	<h4>Muotoiluvirheet</h4>
-
-	<p>Kuvaile ongelman sijainti ja luonne Oikoluvun korjaukset -kentässä "FORMATTING"-otsikon jälkeen seuraavasti:</p>
-	<br />
-	<pre>3. FORMATTING
-	Taulukon 3 numerot eivät kohdistu oikein kolmannessa sarakkeessa.</pre>
-	<br>
-	<pre>4. FORMATTING
-	Kappaletta, joka alkaa "Tämä viimeksi mainittu aihe..." ei ole sisennetty.</pre>]]></message>
-
-	<message key="default.contextSettings.forReaders"><![CDATA[Kehotamme lukijoita rekisteröitymään palveluun, joka ilmoittaa tämän julkaisun uusista julkaisuista. Käytä tämän julkaisun etusivun yläosassa olevaa <a href="{$indexUrl}/{$journalPath}/user/register">Rekisteröidy</a> -linkkiä. Rekisteröitymisen tuloksena lukijalle lähetetään sähköpostitse julkaisun jokaisen uuden numeron sisällysluettelo. Tämän palvelun käyttäjälistan avulla julkaisu myös saa tietoa kannattajamääristään ja lukijakunnastaan. Julkaisun <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Tietosuojaseloste</a> takaa, että lukijoiden nimiä ja sähköpostiosoitteita ei käytetä muihin tarkoituksiin.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Kiinnostaako tähän julkaisuun kirjoittaminen? Suosittelemme, että tutustut <a href="{$indexUrl}/{$journalPath}/about">Tietoa julkaisusta</a> -sivulla julkaisun osastoiden käytäntöihin sekä ohjeisiin sivulla <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Kirjoittajan ohjeet</a>. Kirjoittajien tulee <a href="{$indexUrl}/{$journalPath}/user/register">rekisteröityä</a> julkaisun käyttäjäksi ennen lähettämistä tai jo rekisteröidyttyään <a href="{$indexUrl}/index/login">kirjautua sisään</a> aloittaakseen viisiportaisen prosessin.]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Kehotamme lukijoita rekisteröitymään palveluun, joka ilmoittaa tämän julkaisun uusista julkaisuista. Käytä tämän julkaisun etusivun yläosassa olevaa <a href="{$indexUrl}{$contextPath}/user/register">Rekisteröidy</a> -linkkiä. Rekisteröitymisen tuloksena lukijalle lähetetään sähköpostitse julkaisun jokaisen uuden numeron sisällysluettelo. Tämän palvelun käyttäjälistan avulla julkaisu myös saa tietoa kannattajamääristään ja lukijakunnastaan. Julkaisun <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Tietosuojaseloste</a> takaa, että lukijoiden nimiä ja sähköpostiosoitteita ei käytetä muihin tarkoituksiin.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Kiinnostaako tähän julkaisuun kirjoittaminen? Suosittelemme, että tutustut <a href="{$indexUrl}{$contextPath}/about">Tietoa julkaisusta</a> -sivulla julkaisun osastoiden käytäntöihin sekä ohjeisiin sivulla <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Kirjoittajan ohjeet</a>. Kirjoittajien tulee <a href="{$indexUrl}{$contextPath}/user/register">rekisteröityä</a> julkaisun käyttäjäksi ennen lähettämistä tai jo rekisteröidyttyään <a href="{$indexUrl}/index/login">kirjautua sisään</a> aloittaakseen viisiportaisen prosessin.]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[Kannustamme tutkimuskirjastojen hoitajia lisäämään tämän julkaisun kirjastojensa elektronisten julkaisujen kokoelmaan. Huomionarvoista on myös, että kirjastot voivat ylläpitää tämän julkaisun avoimen lähdekoodin julkaisujärjestelmää, ja tarjota sen tiedekuntien jäsenten käyttöön tieteellisten julkaisujen toimittamistarkoituksiin (ks. <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Tämä julkaisu hyödyntää LOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://www.lockss.org/">Lisää...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Tämä julkaisu hyödyntää CLOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://clockss.org/">Lisää...</a>]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Tämä julkaisu hyödyntää LOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://www.lockss.org/">Lisää...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Tämä julkaisu hyödyntää CLOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://clockss.org/">Lisää...</a>]]></message>
 
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Artikkelin julkaiseminen</message>
-	<message key="default.journalSettings.purchaseArticleFee">Osta artikkeli</message>
-	<message key="default.journalSettings.purchaseIssueFee">Osta numero</message>
-	<message key="default.journalSettings.membershipFee">Yhdistyksen jäsenyys</message>
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Julkaisun hallinnoija</message>
 	<message key="default.groups.plural.manager">Julkaisun hallinnoijat</message>
@@ -96,7 +66,7 @@
 	<message key="default.groups.name.externalReviewer">Arvioija</message>
 	<message key="default.groups.plural.externalReviewer">Arvioijat</message>
 	<message key="default.groups.abbrev.externalReviewer">A</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>

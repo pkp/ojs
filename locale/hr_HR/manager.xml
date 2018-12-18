@@ -24,7 +24,6 @@
 	<message key="manager.payment.amount">Iznos</message>
 	<message key="manager.payment.authorFees">Naplata od autora</message>
 	<message key="manager.payment.authorFeesDescription">Odabrane opcije, zajedno s njihovim opisom i iznosom (koji se mogu uređivati na ovoj stranici) bit će navedene u prvom koraku postupka prijave priloga, u rubrici "prijave priloga" pod poveznicom "o časopisu", kao i na svim mjestima gdje se traži plaćanje.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS ne preračunava vrijednosti valuta. Ukoliko naplaćujete usluge časopisa, valuta u kojoj se zaprimaju uplate mora biti identična ovdje odabranoj.</message>
 	<message key="manager.payment.description">Opis</message>
 	<message key="manager.payment.details">Detalji</message>
@@ -56,7 +55,6 @@
 	<message key="manager.payment.readerFees">Naplata od čitatelja</message>
 	<message key="manager.payment.readerFeesDescription">Odabrane opcije, zajedno s njihovim opisom i iznosom (koji se mogu uređivati na ovoj stranici) bit će navedene u rubrici "uređivačka politika" pod poveznicom "o časopisu", kao i na svim mjestima gdje se traži plaćanje.</message>
 	<message key="manager.payment.records">Arhiv naplata</message>
-	<message key="manager.payments">Naplata</message>
 	<message key="manager.payment.userName">Identifikacijski broj naplate</message>
 	<message key="manager.people.allEnrolledUsers">Svi registrirani korisnici časopisa</message>
 	<message key="manager.people.allJournals">Svi časopisi</message>
@@ -161,7 +159,7 @@
 	<message key="manager.setup.journalHomepageHeader">Zaglavlje naslovne stranice časopisa</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Zaglavlje naslovne stranice časopisa</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Kao zaglavlje naslovne stranice časopisa mogu se postaviti tekstualna ili grafička verzija naslova te logotip časopisa (u obliku .gif, .jpg, ili .png datoteke).</message>
-	<message key="manager.setup.journalInitials">Inicijali časopisa</message>
+	<message key="manager.setup.contextInitials">Inicijali časopisa</message>
 	<message key="manager.setup.journalLayout">Raspored elemenata</message>
 	<message key="manager.setup.journalLayoutDescription">Ovdje možete odabrati stilsku temu i raspored elemenata sučelja časopisa. Također, moguće je postaviti i stilsku tablicu koju će časopis koristiti namjesto sistemske ili tematske (ukoliko je izabrana) stilske tablice.</message>
 	<message key="manager.setup.journalLogo">Logotip časopisa</message>
@@ -171,10 +169,9 @@
 	<message key="manager.setup.journalSetupUpdated">Uređivanje postavki časopisa je ažurirano.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Neispravan format stilske tablice časopisa. Prihvaćeni format je .css.</message>
 	<message key="manager.setup.journalTheme">Stilska tema časopisa</message>
-	<message key="manager.setup.journalTitle">Naslov časopisa</message>
+	<message key="manager.setup.contextTitle">Naslov časopisa</message>
 	<message key="manager.setup.labelName">Naziv stavke</message>
 	<message key="manager.setup.lists">Ispis popisa</message>
-	<message key="manager.setup.listsDescription">Unesite maksimalan broj stavki koji se može pojaviti na pojedinoj stranici raznih popisa koje generira časopis (na primjer, arhiv izdanja, kazalo autora, popis prijava, korisnika ili uređivanje zaduženja), te broj poveznica na prethodne odnosno slijedeće stranice popisa koji se može prikazati ispod popisa.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Omogućite LOCKSS-u da u krugu knjižnica koje sudjeluju pohranjuje i distribuira sadržaj vašeg časopisa. <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> stranici. LOCKSS licenca će se pojaviti u stranici About the Journal u Archiving:]]</message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identificirajte 6-10 knjižnica koje će evidentirati i arhivirati sadržaj časopisa. Na primjer, institucije gdje urednici ili članovi uredništva rade i/ili druge institucije koje već sudjeluju u LOCKSS-u. Pogledajte <a href="http://www.lockss.org/community/" target="_blank">knjižnice koje sudjeluju</a>. Koristite pripremljene pozivnice za (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">knjižnice koje sudjeluju u LOCKSS-u</a> ili (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">knjižnice koje još ne sudjeluju u LOCKSS-u</a>.]]></message>
 	<message key="manager.setup.look">Izgled</message>
@@ -232,7 +229,6 @@
 	<message key="manager.setup.selectEditorDescription">Urednik časopisa koji će to vidjeti kroz postupak uređivanja.</message>
 	<message key="manager.setup.selectSectionDescription">Rubrika časopisa za koju će stavka biti razmatrana.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Uvijek prikaži poveznicu na pun tekst priloga, uz naznaku ograničenja pristupa.</message>
-	<message key="manager.setup.siteAccess">Dodatna ograničenja pristupa stranici i člancima</message>
 	<message key="manager.setup.stepsToJournalSite">Postavljanje mrežne stranice časopisa u pet koraka</message>
 	<message key="manager.setup.subjectExamples">(Npr. fotosinteza; crne rupe; mirovinska reforma; Bayesova teorija)</message>
 	<message key="manager.setup.subjectKeywordTopic">Ključne riječi</message>

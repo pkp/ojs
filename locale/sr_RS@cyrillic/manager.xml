@@ -73,7 +73,6 @@
 	<message key="manager.setup.enableUserRegistration">Посетиоци могу сами да се региструју</message>
 	<message key="manager.setup.restrictArticleAccess">Корисници морају бити регистровани и пријављени да би приступили садржају отвореног приступа.</message>
 	<message key="manager.setup.restrictSiteAccess">Корисници морају бити регистровани и пријављени да би приступили сајту часописа.</message>
-	<message key="manager.setup.siteAccess">Додатна ограничења за приступ сајту и чланцима.</message>
 	<message key="manager.setup.userRegistration">Регистрација корисника</message>
 	<message key="manager.journalManagement">Управљање часописом</message>
 	<message key="manager.language.ui">УИ</message>
@@ -86,7 +85,6 @@
 	<message key="manager.payment.addPayment">Додај плаћање</message>
 	<message key="manager.payment.amount">Износ</message>
 	<message key="manager.payment.authorFees">Накнаде за аутора</message>
-	<message key="manager.payment.currency">Валута</message>
 	<message key="manager.payment.currencymessage">OJS не извршава конверзије валута. Ако примате плађања претплата морате обезбедити да валута претплате одговара овој која је одређена овде.</message>
 	<message key="manager.payment.description">Опис</message>
 	<message key="manager.payment.details">Детаљи</message>
@@ -134,7 +132,7 @@
 	<message key="manager.payment.options.onlypdf">Само ограничи приступ за PDF верзију броја и чланака</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Неисправан формат странице стила. Прихваћен формат је .css.</message>
 	<message key="manager.setup.journalTheme">тема часописа</message>
-	<message key="manager.setup.journalTitle">Наслов часописа</message>
+	<message key="manager.setup.contextTitle">Наслов часописа</message>
 	<message key="manager.setup.lists">Листе</message>
 	<message key="manager.payment.authorFeesDescription">Одабране опције са њиховим описима и накнадама (које могу бити измењене испод) ће се појавити у Корак 1 процесу пријаве чланка и у О часопису и Пријаве делу као и уделовима где је плаћање накнада назначено.</message>
 	<message key="manager.payment.generalFeesDescription">Чланство асоцијације ће се појавити у страници О часопису у делу Политике,а линк за донације ће се појавити изнад функције за претрагу у оквиру са десне стране.</message>
@@ -150,7 +148,6 @@
 	<message key="manager.payment.readerFees">Накнада за читаоце</message>
 	<message key="manager.payment.readerFeesDescription">Одабране опције са њиховим описима и накнадама (које могу бити измењене испод) ће се појавити у страници О часопису и Политике делу као и уделовима где је плаћање накнада неопходно.</message>
 	<message key="manager.payment.records">Забелешке</message>
-	<message key="manager.payments">Плаћања</message>
 	<message key="manager.payment.userName">ID Плаћања</message>
 	<message key="manager.people.allEnrolledUsers">Корисници уписани у часопис</message>
 	<message key="manager.people.allJournals">Сви часописи</message>
@@ -357,18 +354,18 @@
 	<message key="manager.setup.itemsPerPage">Ставки по страни</message>
 	<message key="manager.setup.journalAbbreviation">Скраћеница часописа</message>
 	<message key="manager.setup.journalArchiving">Архивирање часописа</message>
-	<message key="manager.setup.journalSummary">Сажетак часописа</message>
-	<message key="manager.setup.journalAbout">О часопису</message>
+	<message key="manager.setup.contextSummary">Сажетак часописа</message>
+	<message key="manager.setup.contextAbout">О часопису</message>
 	<message key="manager.setup.alternateHeaderDescription">Могуће је унети HTML верзију уместо наслова и лого фајла за заглавље сајта, у кутију за текст испод. Уколико то не намервате учините оставите ту кутију за текст празну.</message>
 	<message key="manager.setup.historyDescription">Текст ће се појавити у страници О часопису и он треба да опише промене у наслову, редкацијски одбор и друге ставке релевантне за историју објављивања часописа.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS је усаглашен са <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> протоколом за сакупљање метаподатака што је нови стандард за обезбеђивање добро индексираног приступа електронским ресурсима на глобалном нивоу. Уатори ће користити сличан шаблон за уписивање метаподатака о својим пријављеним чланцима. Управник часописа ће одабрати категорије за индексирање и представити их ауторима како би им помогао у току индексирања.]]></message>
-	<message key="manager.setup.journalAbout.description">Упишите информације које могу бити инетерсантне за ваше читаоце, ауторе и рецензенте. Ту можете уписати информације о политици отвореног приступа, фокуса и опсега часописа, ауторска права, спонзорства, историју часописа, изјаву о приватности и укљученост у неки од LOCKSS или CLOCKSS система за архивирање.</message>
+	<message key="manager.setup.contextAbout.description">Упишите информације које могу бити инетерсантне за ваше читаоце, ауторе и рецензенте. Ту можете уписати информације о политици отвореног приступа, фокуса и опсега часописа, ауторска права, спонзорства, историју часописа, изјаву о приватности и укљученост у неки од LOCKSS или CLOCKSS система за архивирање.</message>
 	<message key="manager.setup.journalHomepageContent">Садржај почетне странице часописа</message>
 	<message key="manager.setup.journalHomepageContentDescription">По почертној поставци почетна страница се сатсоји од навигцијских веза. Додатни садржај се може додати користећи једну или све од следећих могућности које ће се појавити у приказаном редоследу.  Тренутни број је увек доступан преко менија Тренутни број у навигацијској траци.</message>
 	<message key="manager.setup.journalHomepageHeader">Заглавље почетне стране часописа</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Заглавље почетне стране часописа</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Графичка верзија наслова и  лого часописа (као .gif, .jpg, или .png фајл) може да се постави на почетну страну и тако заменити текстуалну верзију која би се иначе видела.</message>
-	<message key="manager.setup.journalInitials">Иницијали часописа</message>
+	<message key="manager.setup.contextInitials">Иницијали часописа</message>
 	<message key="manager.setup.journalLayout">Изглед часописа</message>
 	<message key="manager.setup.journalLayoutDescription">Одаберите тему часописа и одаберите компоненте изгледа. Можете поставити и стрницу стила часописа која ће имати приоритет у приказу стране ако је одабрана тема или у целом систему.</message>
 	<message key="manager.setup.journalLogo">Лого часописа</message>
@@ -380,7 +377,6 @@
 	<message key="manager.setup.journalSetupUpdated">Ажурирано је подешавање вашег часописа</message>
 	<message key="manager.setup.journalThumbnail.description">Мали лого или представљање часописа које може бити коришћено у листи часописа.</message>
 	<message key="manager.setup.labelName">Име етикете</message>
-	<message key="manager.setup.listsDescription">Одредите број ставки (на пример, пријављених чланака, корисника или додељених задатака) који ће се појавити у листи показујући ставке према редоследу и на другим странама. Такође, одредите број веза које показују наредне стране на листи.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Укључи LOCKSS  за чување и дистрибуцију садржаја часописа у библиотекама које учествују преко LOCKSS <a href="{$lockssUrl}" target="_blank">Издавачкиманифест</a> стране.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[LOCKSS лиценца ће се појавити у страни О часопису одељку Архивирање: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS лиценца</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Опис LOCKSS лиценце</message>

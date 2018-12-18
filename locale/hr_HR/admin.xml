@@ -41,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Putanja smije sadržavati samo alfanumeričke znakove, podvlačenja i povlake, mora početi, a i završiti s alfanumeričkim znakom.</message>
 	<message key="admin.contexts.form.pathExists">Odabrana putanja je već u korištenju drugog časopisa.</message>
 	<message key="admin.journals.enableJournalInstructions">Omogućite ovom časopisu da se pojavi javno na stranici.</message>
-	<message key="admin.journals.journalDescription">Opis časopisa</message>
+	<message key="admin.contexts.contextDescription">Opis časopisa</message>
 	<message key="admin.journal.pathImportInstructions">Postojeća putanja časopisa ili putanja koju treba kreirati (npr. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Prenesi pretplate i pretplatnike</message>
 	<message key="admin.journals.transcode">Prekodiraj metapodatke prenesenih članaka iz ISO8859-1</message>

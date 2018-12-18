@@ -37,7 +37,7 @@
 	<message key="admin.journals.createInstructions">Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po utworzeniu czasopisma, zaloguj się jako administrator w celu dokończenia procesu konfiguracji.</message>
 	<message key="admin.journals.urlWillBe">Krótkie słowo lub akronim identyfikujące czasopismo. Adres będzie miał postać {$sampleUrl}</message>
 	<message key="admin.journals.enableJournalInstructions">Włącz czasopismo aby było widoczne w obrębie całej strony.</message>
-	<message key="admin.journals.journalDescription">Opis czasopisma</message>
+	<message key="admin.contexts.contextDescription">Opis czasopisma</message>
 	<message key="admin.journal.pathImportInstructions">Istniejąca ścieżka czasopisma lub ścieżka do utworzenia (np., "forum").</message>
 	<message key="admin.journals.importSubscriptions">Importuj subskrypcje</message>
 	<message key="admin.journals.transcode">Transkoduj dane artykułu z ISO8859-1</message>

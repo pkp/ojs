@@ -42,7 +42,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Путања може да садржи само алфанумеричке карактере, подвлаке и цртице и мора почињати и завршавати са алфанумеричким карактером</message>
 	<message key="admin.contexts.form.pathExists">Дата путања се већ користи за други часопис.</message>
 	<message key="admin.journals.enableJournalInstructions">Дозволи да се часопис јавно приказује на сајту</message>
-	<message key="admin.journals.journalDescription">Опис часописа</message>
+	<message key="admin.contexts.contextDescription">Опис часописа</message>
 	<message key="admin.journal.pathImportInstructions">Постојећа путања или путања за креирање (нпр. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Увези претплате</message>
 	<message key="admin.journals.transcode">Препиши метаподатке чланака из ISO8859-1</message>

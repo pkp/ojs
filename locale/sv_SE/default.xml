@@ -24,50 +24,19 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Bidraget har aldrig publicerats tidigare. Det är inte heller under övervägande hos en annan tidskrift (om så är fallet förklaras det i Kommentarer till redaktören).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Den insända filen för bidraget är i något av filformaten OpenOffice, Microsoft Word eller RTF.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">URL:er har angivits för de referenser där det är möjligt.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Texten är satt med enkelt radavstånd, använder 12 punkters typsnittsstorlek, kursiverad text istället för understruken (utom när det gäller URL:er). Alla illustrationer, figurer och tabeller är också inbäddade i texten och inte förlagda till slutet.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements">Texten följer de stilmässiga och bibliografiska regler som beskrivs i Riktlinjer för författare.</message>
-	<message key="default.journalSettings.privacyStatement">De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</message>
-	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften gör sitt innehåll fritt tillgängligt omedelbart vid publicering enligt open access-principen om att det främjar ett ökat kunskapsutbyte världen över om forskning är fritt tillgänglig.</message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Korrekturläsningsstadiet är till för att fånga upp eventuella fel i publiceringsversionens stavning, grammatik och formatering. I det här steget ska inte några substantiella ändringar göras, om det inte finns en särskild överenskommelse med sektionsredaktören. I Layout, klicka på VISA KORREKTUR för att se HTML, PDF, och andra tillgängliga filformat som används för att publicera bidraget.</p>
-	<h4>Korrektur av stavfel och grammatik</h4>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Bidraget har aldrig publicerats tidigare. Det är inte heller under övervägande hos en annan tidskrift (om så är fallet förklaras det i Kommentarer till redaktören).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Den insända filen för bidraget är i något av filformaten OpenOffice, Microsoft Word eller RTF.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">URL:er har angivits för de referenser där det är möjligt.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Texten är satt med enkelt radavstånd, använder 12 punkters typsnittsstorlek, kursiverad text istället för understruken (utom när det gäller URL:er). Alla illustrationer, figurer och tabeller är också inbäddade i texten och inte förlagda till slutet.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements">Texten följer de stilmässiga och bibliografiska regler som beskrivs i Riktlinjer för författare.</message>
+	<message key="default.contextSettings.privacyStatement">De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</message>
+	<message key="default.contextSettings.openAccessPolicy">Den här tidskriften gör sitt innehåll fritt tillgängligt omedelbart vid publicering enligt open access-principen om att det främjar ett ökat kunskapsutbyte världen över om forskning är fritt tillgänglig.</message>
 
-	<p>Kopiera det felaktiga ordet eller meningen och klistra in dem i rutan Rättelser efter korrekturläsning, åtgärdas med "ÄNDRA TILL"-åtgärder för redaktören enligt nedan:</p>
-
-	<pre>1. ÄNDRA...
-	en de andra
-	TILL...
-	än de andra</pre>
-	<br />
-	<pre>2. ÄNDRA...
-	Malinowsky
-	TILL...
-	Malinowski</pre>
-	<br />
-
-	<h4>Korrektur av formatering</h4>
-
-	<p>Beskriv vad problemet är och var det förekommer i rutan Rättelser efter korrekturläsning. Använd "FORMATERING" som inledande rubrik enligt nedan:</p>
-	<br />
-	<pre>3. FORMATERING
-	Siffrorna i Tabell 3 är inte justerade i tredje kolumnen.</pre>
-	<br />
-	<pre>4. FORMATERING
-	Styckeindraget som inleder "Det senaste ämnet..." är inte avsiktligt..</pre>]]></message>
-
-	<message key="default.contextSettings.forReaders"><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}/{$journalPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Integritetspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Är du intresserad av att skicka in ett bidrag till den här tidskriften? Då rekommenderar vi att du läser igenom <a href="{$indexUrl}/{$journalPath}/about">Om tidskriften</a>-sidan för att få en uppfattning om tidskriftens sektionspolicyer, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Riktlinjer för författare</a>. För att skicka in ett bidrag måste du som författare <a href="{$indexUrl}/{$journalPath}/user/register">registrera dig</a> hos tidskriften. Om du redan har ett konto kan du bara <a href="{$indexUrl}/index/login">logga in</a> och påbörja processen, som består av fem steg.]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}{$contextPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Integritetspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Är du intresserad av att skicka in ett bidrag till den här tidskriften? Då rekommenderar vi att du läser igenom <a href="{$indexUrl}{$contextPath}/about">Om tidskriften</a>-sidan för att få en uppfattning om tidskriftens sektionspolicyer, samt <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Riktlinjer för författare</a>. För att skicka in ett bidrag måste du som författare <a href="{$indexUrl}{$contextPath}/user/register">registrera dig</a> hos tidskriften. Om du redan har ett konto kan du bara <a href="{$indexUrl}/index/login">logga in</a> och påbörja processen, som består av fem steg.]]></message>
 	<message key="default.contextSettings.forLibrarians"><![CDATA[Vi uppmuntrar bibliotekarier vid forskningsbibliotek att lista den här tidskriften i sitt biblioteks bestånd av elektroniska tidskrifter. Det kan också vara värt att notera att den här tidskriftens publiceringssystem, som utgör fri och öppen programvara, är ett passande system för bibliotek att drifta för sina forskare och de tidskrifter de arbetar med (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Den här tidskriften utnyttjar LOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://www.lockss.org/">Läs mer...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Den här tidskriften utnyttjar CLOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://clockss.org/">Läs mer...</a>]]></message>
-
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Publicering</message>
-	<message key="default.journalSettings.purchaseArticleFee">Köp av enstaka artikel</message>
-	<message key="default.journalSettings.purchaseIssueFee">Köp av enstaka nummer</message>
-	<message key="default.journalSettings.membershipFee">Medlemskap</message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Den här tidskriften utnyttjar LOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://www.lockss.org/">Läs mer...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Den här tidskriften utnyttjar CLOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://clockss.org/">Läs mer...</a>]]></message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Tidskriftsansvarig</message>
@@ -98,7 +67,7 @@
 	<message key="default.groups.name.externalReviewer">Granskare</message>
 	<message key="default.groups.plural.externalReviewer">Granskare</message>
 	<message key="default.groups.abbrev.externalReviewer">G</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

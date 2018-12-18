@@ -22,7 +22,7 @@
 		<li><a name="subscriptionTypes" href="{url op="subscriptionTypes"}">{translate key="subscriptionManager.subscriptionTypes"}</a></li>
 		<li><a name="subscriptionPolicies" href="{url op="subscriptionPolicies"}">{translate key="manager.subscriptionPolicies"}</a></li>
 		<li><a name="paymentTypes" href="{url op="paymentTypes"}">{translate key="manager.paymentTypes"}</a></li>
-		<li><a name="payments" href="{url op="payments"}">{translate key="manager.payments"}</a></li>
+		<li><a name="payments" href="{url op="payments"}">{translate key="manager.paymentMethod"}</a></li>
 	</ul>
 </div>
 

@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Summa</message>
 	<message key="manager.payment.authorFees">Författaravgifter</message>
 	<message key="manager.payment.authorFeesDescription">Mata in avgifter nedan för att aktivera författaravgifter.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS stöder inte valutaomvandling. Om du accepterar betalning, försäkra dig om att prenumerationspriset överensstämmer med följande belopp:</message>
 	<message key="manager.payment.description">Beskrivning</message>
 	<message key="manager.payment.details">Detaljer</message>
@@ -63,7 +62,6 @@
 	<message key="manager.payment.readerFees">Läsaravgifter</message>
 	<message key="manager.payment.readerFeesDescription">Följande alternativ, inklusive beskrivningar och avgifter (redigeras nedan), visas under Policyer i Om tidskriften, liksom vid de ställen där betalning krävs.</message>
 	<message key="manager.payment.records">Register</message>
-	<message key="manager.payments">Betalningar</message>
 	<message key="manager.paymentTypes">Betalningsformer</message>
 	<message key="manager.payment.userName">Betalnings-ID</message>
 	<message key="manager.people.allEnrolledUsers">Tillagda användare till tidskriften</message>
@@ -186,15 +184,15 @@
 	<message key="manager.setup.itemsPerPage">Artiklar per sida</message>
 	<message key="manager.setup.journalAbbreviation">Förkortning för tidskriften</message>
 	<message key="manager.setup.journalArchiving">Tidskriftsarkivering</message>
-	<message key="manager.setup.journalSummary">Kort beskrivning av tidskriften</message>
-	<message key="manager.setup.journalAbout">Om tidskriften</message>
-	<message key="manager.setup.journalAbout.description">Skriv här information om tidskriften som kan vara intressant för läsare, författare eller sakkunniggranskare. Det kan vara tidskriftens open access-policy, ämne och målgrupp, upphovsrättsvillkor, sponsorer, tidskriftens historia och om tidskriften ingår i arkivsystem som LOCKSS eller CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Kort beskrivning av tidskriften</message>
+	<message key="manager.setup.contextAbout">Om tidskriften</message>
+	<message key="manager.setup.contextAbout.description">Skriv här information om tidskriften som kan vara intressant för läsare, författare eller sakkunniggranskare. Det kan vara tidskriftens open access-policy, ämne och målgrupp, upphovsrättsvillkor, sponsorer, tidskriftens historia och om tidskriften ingår i arkivsystem som LOCKSS eller CLOCKSS.</message>
 	<message key="manager.setup.journalHomepageContent">Innehåll på tidskriftens förstasida</message>
 	<message key="manager.setup.journalHomepageContentDescription">Förstasidan består av förvalda navigeringslänkar. Ytterliggare innehåll kan läggas till genom följande alternativ. Alternativen visas i den ordningen som de står nedan. Observera att du alltid kan nå det senaste numret genom att klicka Senaste i navigeringsmenyn.</message>
 	<message key="manager.setup.journalHomepageHeader">Webbsidans sidhuvud</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Webbsidans sidhuvud</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">En grafisk version av tidskriftens titel och logotyp (som .gif, .jpg, eller .png fil) kan laddas upp och ersätta den textverion som annars visas på webbsidan.</message>
-	<message key="manager.setup.journalInitials">Tidskriftens initialer</message>
+	<message key="manager.setup.contextInitials">Tidskriftens initialer</message>
 	<message key="manager.setup.journalLayout">Tidskriftens layout</message>
 	<message key="manager.setup.journalLayoutDescription">Välj tema och layout för tidskriften här. En stilmall för tidskriften kan också laddas upp och ersätter då de förvalda teman och layouter.</message>
 	<message key="manager.setup.journalLogo">Tidskriftens logotyp</message>
@@ -208,10 +206,9 @@
 	<message key="manager.setup.journalTheme">Tema för tidskriften</message>
 	<message key="manager.setup.journalThumbnail">Miniatyrbild</message>
 	<message key="manager.setup.journalThumbnail.description">En liten logotyp för tidskriften som kan användas i tidskriftslistan.</message>
-	<message key="manager.setup.journalTitle">Tidskriftens titel</message>
+	<message key="manager.setup.contextTitle">Tidskriftens titel</message>
 	<message key="manager.setup.labelName">Etikettsnamn</message>
 	<message key="manager.setup.lists">Listor</message>
-	<message key="manager.setup.listsDescription">Ange antal träffar som visas på på varje sida (t.ex. bidrag, användare eller redaktörsuppdrag). Ange också hur många länkar som ska visas på varje sida.</message>
 	<message key="manager.setup.plnPluginEnable">PKP PN-pluginet aktiverat</message>
 	<message key="manager.setup.plnDescription">PKP Preservation Network (PN) tillhandahåller kostnadsfria tjänster för arkivering och bevarande för alla OJS-tidskrifter som uppfyller några grundläggande krav.</message>
 	<message key="manager.setup.plnSettingsDescription">Klicka på Settings-länken för att acceptera villkoren för att ansluta sig till PKP PN.</message>
@@ -283,7 +280,6 @@
 	<message key="manager.setup.selectEditorDescription">Tidskriftsredaktören som kommer att följa bidraget genom den redaktionella processen.</message>
 	<message key="manager.setup.selectSectionDescription">Lämplig tidskriftssektion för bidraget.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Visa alltid länkar till publiceringsversionerna och markera när tillgången är begränsad.</message>
-	<message key="manager.setup.siteAccess">Ytterligare begränsingar för webbplatsen och tillgången av artiklar</message>
 	<message key="manager.setup.stepsToJournalSite">Fem steg som skapar en webbplats för tidskriften</message>
 	<message key="manager.setup.subjectExamples">(t.ex., Fotosyntes; Svarta hål; Zenons paradoxer)</message>
 	<message key="manager.setup.subjectKeywordTopic">Nyckelord</message>

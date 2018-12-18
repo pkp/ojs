@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Quantitat</message>
 	<message key="manager.payment.authorFees">Quotes dels autors/ores</message>
 	<message key="manager.payment.authorFeesDescription">Les opcions seleccionades, juntament amb la descripció i la quota corresponents (que podeu editar a continuació), apareixen al pas 1 del procés de tramesa, a la pàgina «Sobre la revista», secció «Trameses», i també en els passos que requereixin fer pagaments.</message>
-	<message key="manager.payment.currency">Moneda</message>
 	<message key="manager.payment.currencymessage">L’OJS no fa conversions de moneda. Si accepteu pagaments per les subscripcions, assegureu-vos que la moneda de la subscripció coincideixi amb la que s’indica aquí.</message>
 	<message key="manager.payment.description">Descripció</message>
 	<message key="manager.payment.details">Detalls</message>
@@ -62,7 +61,6 @@
 	<message key="manager.payment.readerFees">Quotes per als lectors/ores</message>
 	<message key="manager.payment.readerFeesDescription">Les opcions seleccionades, juntament amb la descripció i la quota corresponents (que podeu editar a continuació), apareixen a la pàgina «Sobre la revista», secció «Polítiques», i també en els passos que requereixen fer pagaments.</message>
 	<message key="manager.payment.records">Registres</message>
-	<message key="manager.payments">Pagaments</message>
 	<message key="manager.payment.userName">Id. del pagament</message>
 	<message key="manager.people.allEnrolledUsers">Usuaris/àries donats d’alta en aquesta revista</message>
 	<message key="manager.people.allJournals">Totes les revistes</message>
@@ -179,7 +177,7 @@
 	<message key="manager.setup.journalHomepageHeader">Capçalera de la pàgina inicial de la revista</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Capçalera de la pàgina inicial de la revista</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Podeu carregar una versió gràfica del títol i del logotip de la revista (en format .gif, .jpg o .png) per a la pàgina inicial, perquè reemplaci el text que es mostra per defecte.</message>
-	<message key="manager.setup.journalInitials">Inicials de la revista</message>
+	<message key="manager.setup.contextInitials">Inicials de la revista</message>
 	<message key="manager.setup.journalLayout">Maquetació de la revista</message>
 	<message key="manager.setup.journalLayoutDescription">Trieu un tema per a la revista i seleccioneu-ne els components de maquetació aquí. També podeu carregar un full d’estil per a la revista perquè substitueixi les dades dels fulls d’estil de tot el sistema i el full d’estil del tema, en cas que n’hàgiu seleccionat un.</message>
 	<message key="manager.setup.journalLogo">Logotip de la revista</message>
@@ -192,10 +190,9 @@
 	<message key="manager.setup.journalStyleSheetInvalid">El format del full d’estil per a la revista no és vàlid. El format admès és .css.</message>
 	<message key="manager.setup.journalTheme">Tema de la revista</message>
 	<message key="manager.setup.journalThumbnail">Miniatura de la revista</message>
-	<message key="manager.setup.journalTitle">Títol de la revista</message>
+	<message key="manager.setup.contextTitle">Títol de la revista</message>
 	<message key="manager.setup.labelName">Nom de l’etiqueta</message>
 	<message key="manager.setup.lists">Llistes</message>
-	<message key="manager.setup.listsDescription">Introduïu el nombre màxim d’elements (per exemple, trameses, usuaris/àries o assignacions d’edició) que apareixen a cada pàgina d’una llista, i també el nombre d’enllaços que es mostren en cada pàgina.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Habilita el LOCKSS perquè emmagatzemi els continguts de la revista i els distribueixi a les biblioteques participants a través de la pàgina <a href="{$lockssUrl}" target="_blank"> Publisher Manifest</a> de LOCKSS. A la pàgina «Sobre la revista», a «Arxivament», es mostra una llicència de LOCKSS:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifiqueu entre 6 i 10 biblioteques perquè registrin la revista i l’emmagatzemin a la memòria cau. Per exemple, cerqueu institucions on treballin els editors/ores o altres membres del consell o bé institucions que ja participin en el LOCKSS. Vegeu <a href="http://www.lockss.org/community/" target="_blank">la comunitat LOCKSS</a>. Feu servir les plantilles d'invitació per a (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">les biblioteques que participen en el LOCKSS</a> or per a (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">les biblioteques que encara no hi participen</a>.]]></message>
 	<message key="manager.setup.look">Aparença</message>
@@ -254,7 +251,6 @@
 	<message key="manager.setup.selectEditorDescription">L’editor/a de la revista que segueix tot el procés editorial.</message>
 	<message key="manager.setup.selectSectionDescription">La secció de la revista adequada per a la tramesa.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Mostra sempre els enllaços a les galerades i indica l’accés restringit.</message>
-	<message key="manager.setup.siteAccess">Restriccions addicionals per a l’accés al lloc web i als articles</message>
 	<message key="manager.setup.stepsToJournalSite">Cinc passos per crear el lloc web d’una revista</message>
 	<message key="manager.setup.subjectExamples">(P. ex. fotosíntesi, forats negres, teorema dels quatre colors, fórmula de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Paraules clau</message>
@@ -533,9 +529,9 @@
 	<message key="plugins.importexport.common.export.issues">Números</message>
 	<message key="plugins.importexport.common.export.representations">Galerades</message>
 	<message key="manager.setup.includeCreativeCommons">Les revistes que ofereixen accés obert immediat o retardat han d'incloure una llicència Creative Commons en el moment adequat amb tot el treball publicat.</message>
-	<message key="manager.setup.journalSummary">Índex de la revista</message>
-	<message key="manager.setup.journalAbout">Sobre la revista</message>
-	<message key="manager.setup.journalAbout.description">Inclogui qualsevol informació sobre la revista que pugui ser d'interès per a lectors/es, autors/es o revisors/es, com per exemple: política d'accés obert, focus i àmbit de la revista, avís de drets d'autor, divulgació del patrocini, història de la revista, declaració de privacitat o si està inclosa en algun sistema d'arxius LOCKSS o CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Índex de la revista</message>
+	<message key="manager.setup.contextAbout">Sobre la revista</message>
+	<message key="manager.setup.contextAbout.description">Inclogui qualsevol informació sobre la revista que pugui ser d'interès per a lectors/es, autors/es o revisors/es, com per exemple: política d'accés obert, focus i àmbit de la revista, avís de drets d'autor, divulgació del patrocini, història de la revista, declaració de privacitat o si està inclosa en algun sistema d'arxius LOCKSS o CLOCKSS.</message>
 	<message key="manager.setup.journalThumbnail.description">Un petit logotip o representació de la revista que es pot usar en el llistat de revistes.</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Apareixerà una llicència LOCKSS en l'apartat "Sobre la revista" sota "Emmagatzematge": <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">llicència LOCKSS</a>]]></message>
 	<message key="manager.setup.clockssEnable"><![CDATA[Permetre que CLOCKSS emmagatzemi i distribueixi el contingut de la revista entre les biblioteques participants a través d'una pàgina CLOCKSS de <a href="{$clockssUrl}" target="_blank">manifest editorial</a>.]]></message>

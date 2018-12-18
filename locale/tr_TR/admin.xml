@@ -42,7 +42,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Yol sadece alfanümerik karekterler, alt çizgi, tire içerebilir ve bir alfanümerik karekterle başlamak ve bitmek zorundadır.</message>
 	<message key="admin.contexts.form.pathExists">Seçilen yol bir başka dergi tarafından kullanılmaktadır.</message>
 	<message key="admin.journals.enableJournalInstructions">Bu derginin sitede açık olarak görülebilir olmasını sağlayın</message>
-	<message key="admin.journals.journalDescription">Dergi tanımı</message>
+	<message key="admin.contexts.contextDescription">Dergi tanımı</message>
 	<message key="admin.journal.pathImportInstructions">Varolan dergi yolu veya dergi yolu oluşturmak (Ör., "ads").</message>
 	<message key="admin.journals.importSubscriptions">Abonelik Al</message>
 	<message key="admin.journals.transcode">Makale üst verisini ISO8859-1'den transfer et</message>

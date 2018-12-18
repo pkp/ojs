@@ -60,7 +60,7 @@
 	<message key="admin.contexts.form.create.success">{$name} was created successfully.</message>
 	<message key="admin.contexts.form.edit.success">{$name} was edited successfully.</message>
 	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
-	<message key="admin.journals.journalDescription">Journal description</message>
+	<message key="admin.contexts.contextDescription">Journal description</message>
 	<message key="admin.journal.pathImportInstructions">Existing journal path or path to create (e.g., "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Import subscriptions</message>
 	<message key="admin.journals.transcode">Transcode article metadata from ISO8859-1</message>

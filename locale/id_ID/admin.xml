@@ -51,7 +51,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Path hanya dapat berisi karakter alfanumerik, garis bawah, dan tanda hubung, dan harus dimulai dan diakhiri dengan karakter alfanumerik.</message>
 	<message key="admin.contexts.form.pathExists">Path sudah digunakan oleh jurnal lainnya.</message>
 	<message key="admin.journals.enableJournalInstructions">Tampilkan jurnal kepada publik di situs</message>
-	<message key="admin.journals.journalDescription">Deskripsi Jurnal</message>
+	<message key="admin.contexts.contextDescription">Deskripsi Jurnal</message>
 	<message key="admin.journal.pathImportInstructions">Path jurnal yang sudah ada atau path yang hendak dibuat (contoh: ojs).</message>
 	<message key="admin.journals.importSubscriptions">Impor Langganan</message>
 	<message key="admin.journals.transcode">Transcode metadata naskah dari ISO8859-1</message>

@@ -41,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">O caminho deve conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico.</message>
 	<message key="admin.contexts.form.pathExists">O caminho selecionado já está em uso por outra revista.</message>
 	<message key="admin.journals.enableJournalInstructions">Permitir Acesso Livre a esta revista no portal</message>
-	<message key="admin.journals.journalDescription">Descrição</message>
+	<message key="admin.contexts.contextDescription">Descrição</message>
 	<message key="admin.journal.pathImportInstructions">Caminho existente ou caminho a ser criado (ex.:</message>
 	<message key="admin.journals.importSubscriptions">Importar assinaturas</message>
 	<message key="admin.journals.transcode">Transcodificar metadados de ISO8859-1</message>

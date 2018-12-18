@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Розмір</message>
 	<message key="manager.payment.authorFees">Платежі авторів</message>
 	<message key="manager.payment.authorFeesDescription">Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться на Кроці 1 процесу подання рукопису, у розділі "Подання" сторінки "Про журнал", а також на сторінках, що стосуються цих платежів.</message>
-	<message key="manager.payment.currency">Валюта</message>
 	<message key="manager.payment.currencymessage">OJS не передбачає можливості перерахунку валют. Якщо журнал приймає платежі за передплату, переконайтеся, що валюта збігається із вказаною тут.</message>
 	<message key="manager.payment.description">Опис</message>
 	<message key="manager.payment.details">Подробиці</message>
@@ -64,7 +63,6 @@
 	<message key="manager.payment.readerFees">Платежі читачів</message>
 	<message key="manager.payment.readerFeesDescription">Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться у розділі "Політика" сторінки "Про журнал", а також на сторінках, що стосуються цих платежів.</message>
 	<message key="manager.payment.records">Історія</message>
-	<message key="manager.payments">Платежі</message>
 	<message key="manager.paymentTypes">Типи платежів</message>
 	<message key="manager.payment.userName">ID платежу</message>
 	<message key="manager.people.allEnrolledUsers">Користувачі, які мають ролі у цьому журналі</message>
@@ -186,15 +184,15 @@
 	<message key="manager.setup.itemsPerPage">Елементів на сторінці</message>
 	<message key="manager.setup.journalAbbreviation">Абревіатура журналу</message>
 	<message key="manager.setup.journalArchiving">Архівування журналу</message>
-	<message key="manager.setup.journalSummary">Короткий опис журналу</message>
-	<message key="manager.setup.journalAbout">Про журнал</message>
-	<message key="manager.setup.journalAbout.description">Вкажіть основні відомості про журнал, що зацікавлять читачів, авторів або рецензентів. Це можуть бути положення про відкритий доступ, концепція журналу, умови передачі авторських прав, інформація про спонсорів, історія журналу, політика конфіденційності або відомості про включення матеріалів в архівну систему LOCKSS або CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Короткий опис журналу</message>
+	<message key="manager.setup.contextAbout">Про журнал</message>
+	<message key="manager.setup.contextAbout.description">Вкажіть основні відомості про журнал, що зацікавлять читачів, авторів або рецензентів. Це можуть бути положення про відкритий доступ, концепція журналу, умови передачі авторських прав, інформація про спонсорів, історія журналу, політика конфіденційності або відомості про включення матеріалів в архівну систему LOCKSS або CLOCKSS.</message>
 	<message key="manager.setup.journalHomepageContent">Зміст домашньої сторінки журналу</message>
 	<message key="manager.setup.journalHomepageContentDescription">За замовчуванням, на домашній сторінці розміщені лише навігаційні посилання. Використовуючи наступні опції можливо налаштувати домашню сторінку на відображення певного додаткового змісту. Зауважте, що зміст поточного випуску журналу завжди доступний за посиланням "Поточний випуск" на навігаційній панелі.</message>
 	<message key="manager.setup.journalHomepageHeader">Заголовок домашньої сторінки</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Заголовок домашньої сторінки</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Замість тексту, який відображається на домашній сторінці за замовчуванням, можна вивантажити графічну версію назви та логотипу журналу (як файл формату .gif, .jpg або .png).</message>
-	<message key="manager.setup.journalInitials">Абревіатура журналу</message>
+	<message key="manager.setup.contextInitials">Абревіатура журналу</message>
 	<message key="manager.setup.journalLayout">Макет журналу</message>
 	<message key="manager.setup.journalLayoutDescription">Оберіть тему журналу та визначте компоненти макету. Крім того, можна вивантажити таблиці стилів, які будуть застосовані над загальносистемними даними та таблицями стилів теми (якщо вона обрана).</message>
 	<message key="manager.setup.journalLogo">Логотип журналу</message>
@@ -208,10 +206,9 @@
 	<message key="manager.setup.journalTheme">Тема стилю журналу</message>
 	<message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
 	<message key="manager.setup.journalThumbnail.description">Маленький логотип або обкладинка журналу, які можуть використовуватися в списку журналів.</message>
-	<message key="manager.setup.journalTitle">Назва журналу</message>
+	<message key="manager.setup.contextTitle">Назва журналу</message>
 	<message key="manager.setup.labelName">Назва елементу</message>
 	<message key="manager.setup.lists">Списки</message>
-	<message key="manager.setup.listsDescription">Вкажіть максимальну кількість одиниць (наприклад, подань, користувачів, редакційних призначень), що відображатиметься на кожній одній сторінці списку, а також кількість посилань на сторінки списку.</message>
 	<message key="manager.setup.plnPluginEnable">Плагін PKP PN увімкнено</message>
 	<message key="manager.setup.plnDescription">Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють кілька базових критеріїв.</message>
 	<message key="manager.setup.plnSettingsDescription">Клацніть по посиланню "Налаштування" щоб прийняти умови використання PKP PN.</message>
@@ -284,7 +281,6 @@
 	<message key="manager.setup.selectEditorDescription">Редактор журналу, який наглядатиме за редакційним процесом.</message>
 	<message key="manager.setup.selectSectionDescription">Розділ журналу для об'єктів.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Завжди відображати посилання на повні тексти та повідомляти про обмежений доступ.</message>
-	<message key="manager.setup.siteAccess">Додаткові обмеження доступу до веб-сайту та статей</message>
 	<message key="manager.setup.stepsToJournalSite">П'ять кроків для створення веб-сайту журналу</message>
 	<message key="manager.setup.subjectExamples">(наприклад, Фотосинтез; Чорні діри; Проблема чотирьох фарб; Теорема Баєса)</message>
 	<message key="manager.setup.subjectKeywordTopic">Ключові слова</message>

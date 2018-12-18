@@ -25,7 +25,6 @@
 	<message key="manager.payment.amount">Total</message>
 	<message key="manager.payment.authorFees">Taxas para autores</message>
 	<message key="manager.payment.authorFeesDescription">As opções definidas (bem como as descrições, que podem ser alteradas, e as taxas) serão exibidas no Passo 1 do processo de submissão e na seção Submissões do Sobre a revista, assim como nos locais onde pagamento é exigido.</message>
-	<message key="manager.payment.currency">Moeda</message>
 	<message key="manager.payment.currencymessage">O sistema não realiza conversão de moeda. Ao aceitar pagamentos pela assinatura, certifique-se do tipo de moeda ter sido especificado corretamente.</message>
 	<message key="manager.payment.description">Descrição</message>
 	<message key="manager.payment.details">Detalhes</message>
@@ -57,7 +56,6 @@
 	<message key="manager.payment.readerFees">Taxas para leitores</message>
 	<message key="manager.payment.readerFeesDescription">As opções definidas (bem como as descrições, que podem ser alteradas, e as taxas) serão exibidas na seção Políticas, da página Sobre a revista, assim como nos locais onde algum pagamento seja exigido.</message>
 	<message key="manager.payment.records">Registros</message>
-	<message key="manager.payments">Formas de pagamento</message>
 	<message key="manager.payment.userName">Usuário</message>
 	<message key="manager.people.allEnrolledUsers">Usuários cadastrados nesta revista</message>
 	<message key="manager.people.allJournals">Todas as revistas</message>
@@ -166,7 +164,7 @@
 	<message key="manager.setup.journalHomepageHeader">Cabeçalho da capa</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Cabeçalho da capa</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Uma versão em formato de imagem do título e logotipo da revista (como .gif, .jpg, ou .png ) pode ser submetida, que substituirá a versão em texto que aparece como padrão.</message>
-	<message key="manager.setup.journalInitials">Sigla</message>
+	<message key="manager.setup.contextInitials">Sigla</message>
 	<message key="manager.setup.journalLayout">Visual</message>
 	<message key="manager.setup.journalLayoutDescription">Escolha um visual e defina o posicionamento dos componentes. Uma folha de estilos (CSS) também pode ser enviada, podendo alterar os padrões do estilo geral do sistema e do visual (caso tenha sido escolhido).</message>
 	<message key="manager.setup.journalLogo">Logotipo</message>
@@ -178,10 +176,9 @@
 	<message key="manager.setup.journalSetupUpdated">Configuração atualizada.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Formato de folha de estilo inválido. Formato aceitável é .css.</message>
 	<message key="manager.setup.journalTheme">Tema para o visual</message>
-	<message key="manager.setup.journalTitle">Título</message>
+	<message key="manager.setup.contextTitle">Título</message>
 	<message key="manager.setup.labelName">Rótulo</message>
 	<message key="manager.setup.lists">Listas</message>
-	<message key="manager.setup.listsDescription">Informe o número máximo de itens (por exemplo, submissões, usuários, ou tarefas editoriais) que aparecem em toda página de listagem, e o número de links por página a serem exibidos.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Permitir ao LOCKSS armazenar e distribuir o conteúdo da revista a bibliotecas participantes por meio do <a href="{$lockssUrl}" target="_blank">Manifesto de Publicação</a> do LOCKSS. Uma licença LOCKSS aparecerá na página  Sobre a revista na seção Arquivamento:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifique 6 a 10 bibliotecas que cadastrarão e guardarão o cache da revista. Por exemplo, escolha instituições às quais os editores ou Membros do Comitê já sejam associados, e/ou instituições já participantes do LOCKSS. Visite <a href="http://www.lockss.org/community/" target="_blank">bibliotecas participantes</a>. Utilize o convite preparado para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">Bibliotecas participantes do LOCKSS</a> ou (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">Bibliotecas NÃO participantes do LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Visual</message>
@@ -240,7 +237,6 @@
 	<message key="manager.setup.selectEditorDescription">O editor será responsável pelo processo editorial.</message>
 	<message key="manager.setup.selectSectionDescription">A seção para qual o documento deverá ser considerado.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Sempre exibir links para composições e indicar acesso restrito.</message>
-	<message key="manager.setup.siteAccess">Restrições adicionais de acesso ao portal e aos artigos</message>
 	<message key="manager.setup.stepsToJournalSite">Cinco passos para ter uma revista na Web</message>
 	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitetura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
@@ -489,9 +485,9 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mês(es) antes da expiração da assinatura.</message>
 	<message key="manager.setup.focusAndScope.description">Descreva aos autores, leitores e bibliotecários a gama de artigos e outros itens a revista vai publicar.</message>
 	<message key="manager.setup.form.issnInvalid">O ISSN especificado não é válido.</message>
-	<message key="manager.setup.journalSummary">Resumo da Revista</message>
-	<message key="manager.setup.journalAbout">Sobre a Revista</message>
-	<message key="manager.setup.journalAbout.description">Incluea qualquer informação sobre a revista que pode ser de interesse para os leitores, autores ou colaboradores. Isso poderia incluir a sua política de acesso aberto, o foco e o escopo da revista, aviso de direitos autorais, a divulgação de patrocínio, a história da revista, uma declaração de privacidade, e inclusão em qualquer sistema de arquivo LOCKSS ou CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Resumo da Revista</message>
+	<message key="manager.setup.contextAbout">Sobre a Revista</message>
+	<message key="manager.setup.contextAbout.description">Incluea qualquer informação sobre a revista que pode ser de interesse para os leitores, autores ou colaboradores. Isso poderia incluir a sua política de acesso aberto, o foco e o escopo da revista, aviso de direitos autorais, a divulgação de patrocínio, a história da revista, uma declaração de privacidade, e inclusão em qualquer sistema de arquivo LOCKSS ou CLOCKSS.</message>
 	<message key="manager.setup.journalThumbnail.description">Um pequeno logotipo ou representação da revista que pode ser usado em listas de revistas.</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Uma licença LOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank"> Licença  LOCKSS </a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Descrição da Licença LOCKSS</message>

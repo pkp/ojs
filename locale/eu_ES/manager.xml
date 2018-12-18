@@ -26,7 +26,6 @@
 	<message key="manager.payment.amount">Zenbatekoa</message>
 	<message key="manager.payment.authorFees">Egile-tarifak</message>
 	<message key="manager.payment.authorFeesDescription">Hautatutako aukerak, dagozkien azalpenekin eta tarifekin batera (behean edita daitezke), bidalketa-prozesuaren 1. urratsean azalduko dira, eta halaber Aldizkariari buruz orriko Bidalketak sailean, eta ordainketa eskatzen duten gainerako puntuetan.</message>
-	<message key="manager.payment.currency">Moneta</message>
 	<message key="manager.payment.currencymessage">OJSk ez du moneta-bihurketarik egiten.  Harpidetza kobratzen bada, moneta bera zehaztu behar duzu hemen.</message>
 	<message key="manager.payment.description">Azalpena</message>
 	<message key="manager.payment.details">Xehetasunak</message>
@@ -57,7 +56,6 @@
 	<message key="manager.payment.readerFees">Irakurle-tarifak</message>
 	<message key="manager.payment.readerFeesDescription">Hautatutako aukerak, dagozkien azalpenekin eta tarifekin batera (behean edita daitezke), Aldizkariari buruz orriko Politikak sailean azalduko dira, eta halaber ordainketa eskatzen duten gainerako puntuetan.</message>
 	<message key="manager.payment.records">Erregistroak</message>
-	<message key="manager.payments">Ordainketak</message>
 	<message key="manager.payment.userName">Ordainketa ID</message>
 	<message key="manager.people.allEnrolledUsers">Aldizkari honetan inskribatutako erabiltzaileak</message>
 	<message key="manager.people.allJournals">Aldizkari guztiak</message>
@@ -167,7 +165,7 @@
 	<message key="manager.setup.journalHomepageHeader">Aldizkariaren Hasierako orriaren goiburua</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Aldizkariaren Hasierako orriaren goiburua</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Aldizkariaren tituluaren eta logoaren bertsio grafikoa (.gif, .jpg, edo .png fitxategi bat) karga daiteke hasierako orrian, bestela agertuko litzatekeen testu-bertsioaren ordez ager dadin.</message>
-	<message key="manager.setup.journalInitials">Aldizkariaren inizialak</message>
+	<message key="manager.setup.contextInitials">Aldizkariaren inizialak</message>
 	<message key="manager.setup.journalLayout">Aldizkariaren diseinua</message>
 	<message key="manager.setup.journalLayoutDescription">Aukeratu aldizkariarentzako tema bat eta hautatu diseinu-osagaiak. Aldizkariaren estilo-orria ere karga daiteke. Estilo-orri horrek sistema guztian erabiltzen diren estilo-orrien eta temaren estilo-orriaren (temarik aukeratu bada) estilo-datuak gainidatzi ahal izango ditu.</message>
 	<message key="manager.setup.journalLogo">Aldizkariaren logoa</message>
@@ -179,10 +177,9 @@
 	<message key="manager.setup.journalSetupUpdated">Zure aldizkariaren konfigurazioa eguneratu da.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Aldizkariaren estilo-orriaren formatua ez da zuzena: .css formatua bakarrik onartzen da.</message>
 	<message key="manager.setup.journalTheme">Aldizkariaren tema</message>
-	<message key="manager.setup.journalTitle">Aldizkariaren titulua</message>
+	<message key="manager.setup.contextTitle">Aldizkariaren titulua</message>
 	<message key="manager.setup.labelName">Etiketa-izena</message>
 	<message key="manager.setup.lists">Zerrendak</message>
-	<message key="manager.setup.listsDescription">Adierazi zerrendako orrialde bakoitzean gehienez zenbat elementu (bidalketa, erabiltzaile, esleipen etab.) eta zenbat orrialdetarako estekak agertuko diren.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS gaitu aldizkariaren edukia biltegiratzeko eta liburutegi partaideei bidaltzeko LOCKSSen <a href="{$lockssUrl}" target="_blank">Argitaratzailearen Manifestu</a> orri baten bidez. LOCKSS lizentzia Aldizkariari buruz orrian agertuko da, Artxibatzean:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Aldizkaria erregistratu eta cachean gordeko duten 6-10 liburutegi identifikatu. Adibidez, editoreek edo Kontseiluko kideek lan egiten duten erakundeak eta/edo dagoeneko LOCKSSen parte hartzen duten erakundeak. Ikusi <a href="http://www.lockss.org/community/" target="_blank">liburutegi partaideak</a>. Erabili prestatuta dauden gonbitak (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSSen parte hartzen duten liburutegietara</a> edo (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSSen oraindik parte hartzen ez duten liburutegietara</a> bidaltzeko.]]></message>
 	<message key="manager.setup.look">Itxura</message>
@@ -239,7 +236,6 @@
 	<message key="manager.setup.selectEditorDescription">Aldizkariko zein editorek jarraituko duen lana prozesu editorialean zehar.</message>
 	<message key="manager.setup.selectSectionDescription">Lana aldizkariaren zein ataletarako pentsatua den.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Beti erakutsi galerada-estekak eta adierazi sarbide murriztua.</message>
-	<message key="manager.setup.siteAccess">Gunean eta artikuluetan sartzeko murrizketa gehiago</message>
 	<message key="manager.setup.stepsToJournalSite">Aldizkariaren webgunea konfiguratzeko bost urrats</message>
 	<message key="manager.setup.subjectExamples">(Adib., Fotosintesia; Zulo beltzak; Lau koloretako maparen teorema; Bayes-en teorema)</message>
 	<message key="manager.setup.subjectKeywordTopic">Gako-hitzak</message>

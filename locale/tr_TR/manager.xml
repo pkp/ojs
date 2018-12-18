@@ -28,7 +28,6 @@
 	<message key="manager.payment.amount">Tutar</message>
 	<message key="manager.payment.authorFees">Yazar Ücretleri</message>
 	<message key="manager.payment.authorFeesDescription">Hakkında başlığı altında, dergiye yapılan gönderilerdeki açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi gönderi sürecinin 1. Adımında görülür.</message>
-	<message key="manager.payment.currency">Para Birimi</message>
 	<message key="manager.payment.currencymessage">ADS herhangi bir para birimi dönüşümünü gerçekleştirmez. Abonelik için ödemeleri kabul ederseniz, abonelik parasının burada belirtilenle eşleştiğinden emin olmalısınız.</message>
 	<message key="manager.payment.description">Tanım</message>
 	<message key="manager.payment.details">Detaylar</message>
@@ -60,7 +59,6 @@
 	<message key="manager.payment.readerFees">Okuyucu Ücretleri</message>
 	<message key="manager.payment.readerFeesDescription">Hakkında başlığı altındaki politikalarda açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi görülür.</message>
 	<message key="manager.payment.records">Kayıtlar</message>
-	<message key="manager.payments">Ödemeler</message>
 	<message key="manager.payment.userName">Ödeme Numarası</message>
 	<message key="manager.people.allEnrolledUsers">Bu Dergideki Kayıtlı Kullanıcılar</message>
 	<message key="manager.people.allJournals">Tüm Dergiler</message>
@@ -176,7 +174,7 @@
 	<message key="manager.setup.journalHomepageHeader">Dergi Ana Sayfa Başlığı</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Dergi Ana Sayfa Başlığı</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Dergi başlığının grafik bir biçimi (Örneğin: jpg, png veya gif) ve dergi logosu ana sayfa için yüklenebilir. Yükleme yapıldığında yazı biçimindeki başlığın yeri alır.</message>
-	<message key="manager.setup.journalInitials">Dergi baş harfleri</message>
+	<message key="manager.setup.contextInitials">Dergi baş harfleri</message>
 	<message key="manager.setup.journalLayout">Dergi Mizanpajı</message>
 	<message key="manager.setup.journalLayoutDescription">Bir dergi teması seçiniz ve düzen parçalarını yerleştiriniz. Bir dergi biçimi aynı zamanda sistem çapında biçim ve tema biçimini (bir tema seçilmiş ise) geçersiz kılmak için kullanılabilir.</message>
 	<message key="manager.setup.journalTheme">Dergi Teması</message>
@@ -188,10 +186,9 @@
 	<message key="manager.setup.journalSetupUpdated">Derginizin yapıladırması güncellenmiştir.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Biçimlendirme sayfası için geçersiz dosya biçimi. Desteklenen dosya biçimi .css dir.</message>
 	<message key="manager.setup.journalTheme">Dergi Teması</message>
-	<message key="manager.setup.journalTitle">Dergi başlığı</message>
+	<message key="manager.setup.contextTitle">Dergi başlığı</message>
 	<message key="manager.setup.labelName">Etiket adı</message>
 	<message key="manager.setup.lists">Listeler</message>
-	<message key="manager.setup.listsDescription">Sayfalarda öğeler (örneğin aboneler, kullanıcılar, düzenleme atamaları v.b.) gösterilirken bir kerede gösterilebilecek en fazla madde sayısını giriniz.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href="{$lockssUrl}" target="_blank">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı "Dergi Hakkında" sayfasında görünecektir:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://lockss.org/lockss/Libraries" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></message>
 	<message key="manager.setup.look">Görünüş</message>
@@ -251,7 +248,6 @@
 	<message key="manager.setup.selectEditorDescription">Dergi editörü bunu editoryal süreç olarak görecektir.</message>
 	<message key="manager.setup.selectSectionDescription">Dergi bölümü göz önüne alınacaktır.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Daima dizgi bağantısını göster ve sınırlı erişimi belirt.</message>
-	<message key="manager.setup.siteAccess">Ek Site ve Makale Erişim Kısıtlamaları</message>
 	<message key="manager.setup.stepsToJournalSite">Bir Dergi Web Sitesi İçin Beş Adım</message>
 	<message key="manager.setup.subjectExamples">(Örneğin: Fotosentez; Kara Delikler; Dört Renkli Harita Sorunu; Bayes Kuramı)</message>
 	<message key="manager.setup.subjectKeywordTopic">Anahtar Kelimeler</message>
@@ -493,10 +489,10 @@
 	<message key="manager.setup.focusAndScope.description">Yazarlar, okuyucular ve kütüphanecilere derginin yayınlayacağı makaleleri ve diğer öğeleri açıklayın.</message>
 	<message key="manager.setup.form.issnInvalid">Belirtilen ISSN geçerli değil.</message>
 	<message key="manager.setup.includeCreativeCommons">Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm çalışmalarla birlikte uygun zamanda bir Creative Commons lisansı ekleyin.</message>
-	<message key="manager.setup.journalSummary">Dergi Özeti</message>
-	<message key="manager.setup.journalSummary.description">Derginizin dergiler listesinde gösterilebilecek kısa bir açıklamasını giriniz.</message>
-	<message key="manager.setup.journalAbout">Dergi Hakkında</message>
-	<message key="manager.setup.journalAbout.description">Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya CLOCKSS arşivleme sistemine dahil edilmesini içerebilir.</message>
+	<message key="manager.setup.contextSummary">Dergi Özeti</message>
+	<message key="manager.setup.contextSummary.description">Derginizin dergiler listesinde gösterilebilecek kısa bir açıklamasını giriniz.</message>
+	<message key="manager.setup.contextAbout">Dergi Hakkında</message>
+	<message key="manager.setup.contextAbout.description">Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya CLOCKSS arşivleme sistemine dahil edilmesini içerebilir.</message>
 	<message key="manager.setup.favicon">Dergi Favori İkonu</message>
 	<message key="manager.setup.faviconDescription">Kullanıcılar sitenizi ziyaret ettiğinde gezinme çubuğunun yanında görüntülemek için buraya bir favicon ekleyin.</message>
 	<message key="manager.setup.faviconInvalid">Geçersiz favicon biçimi. Kabul edilebilir biçimler:  .ico, .png ve .gif.</message>

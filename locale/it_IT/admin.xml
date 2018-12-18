@@ -41,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Il path può contenere solo caratteri alfanumerici, underscore e trattini. Deve iniziare e finire con un carattere alfanumerico e non può contenere spazi.</message>
 	<message key="admin.contexts.form.pathExists">Il path indicato è già utilizzato da un'altra rivista.</message>
 	<message key="admin.journals.enableJournalInstructions">Mostra pubblicamente la rivista sul sito</message>
-	<message key="admin.journals.journalDescription">Descrizione della rivista</message>
+	<message key="admin.contexts.contextDescription">Descrizione della rivista</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (es. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importa abbonamenti</message>
 	<message key="admin.journals.transcode">Converti i metadata dell'articolo da ISO8859-1</message>

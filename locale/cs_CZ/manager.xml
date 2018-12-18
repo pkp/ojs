@@ -25,7 +25,6 @@
 	<message key="manager.payment.amount">Částka</message>
 	<message key="manager.payment.authorFees">Autorské poplatky</message>
 	<message key="manager.payment.authorFeesDescription">Vybrané možnosti spolu s jejich popisem a poplatkem (lze editovat níže) se objeví v Kroku 1 při odesílání příspěvku a v části O časopise pod Příspěvky a dále na místech, kde je platba vyžadována.</message>
-	<message key="manager.payment.currency">Měna</message>
 	<message key="manager.payment.currencymessage">OJS neprovádí žádné měnové převody. Pokud přijímáte platbu za předplatné, musíte zajistit, že měna předplatného odpovídá měně zde specifikované.</message>
 	<message key="manager.payment.description">Popis</message>
 	<message key="manager.payment.details">Detaily</message>
@@ -57,7 +56,6 @@
 	<message key="manager.payment.readerFees">Poplatky čtenářů</message>
 	<message key="manager.payment.readerFeesDescription">Vybrané možnosti spolu s jejich popisem a poplatky (lze editovat níže) se objeví v části O časopise pod Pravidly a dále na místech, kde je platby vyžadována.</message>
 	<message key="manager.payment.records">Záznamy</message>
-	<message key="manager.payments">Platby</message>
 	<message key="manager.payment.userName">ID platby</message>
 	<message key="manager.people.allEnrolledUsers">Uživatelé zapsaní do tohoto časopisu</message>
 	<message key="manager.people.allJournals">Všechny časopisy</message>
@@ -169,7 +167,7 @@
 	<message key="manager.setup.journalHomepageHeader">Záhlaví domácí stránky časopisu</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Záhlaví domácí stránky časopisu</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Pro domácí stránku můžete nahrát grafickou verzi názvu a logo časopisu (jako soubory typu .gif, .jpg, nebo .png), které nahradí jinak zobrazovanou textovou verzi.</message>
-	<message key="manager.setup.journalInitials">Iniciály časopisu</message>
+	<message key="manager.setup.contextInitials">Iniciály časopisu</message>
 	<message key="manager.setup.journalLayout">Rozložení časopisu</message>
 	<message key="manager.setup.journalLayoutDescription">Zde vyberte téma vzhledu časopisu a komponenty grafického uspořádání. Je také možné nahrát soubor stylu časopisu, který může potlačit standardní soubor stylu stránek a soubor stylu tématu (pokud bylo téma zvoleno).</message>
 	<message key="manager.setup.journalLogo">Logo časopisu</message>
@@ -181,10 +179,9 @@
 	<message key="manager.setup.journalSetupUpdated">Nastavení časopisu bylo aktualizováno.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Neplatný formát souboru stylu časopisu. Podporovaný formát je .css.</message>
 	<message key="manager.setup.journalTheme">Téma vzhledu časopisu</message>
-	<message key="manager.setup.journalTitle">Název časopisu</message>
+	<message key="manager.setup.contextTitle">Název časopisu</message>
 	<message key="manager.setup.labelName">Název popisku</message>
 	<message key="manager.setup.lists">Seznamy</message>
-	<message key="manager.setup.listsDescription">Zadejte maximální počet položek (například příspěvků, uživatelů nebo úkolů), které se zobrazí na každé stránce seznamu a počet odkazů na stránky zobrazených na každé stránce.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Umožněte technologii LOCKSS ukládat a distribuovat obsah časopisu v zúčastněných knihovnách přes LOCKSS stránku <a href="{$lockssUrl}" target="_blank">Seznam vydavatelů</a>. LOCKSS licence se zobrazí v části O časopisu – Archivování:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifikujte 6–10 knihoven, které budou registrovat a uskladňovat časopis. Například se obraťte na instituce, kde pracují editoři nebo členové redakční rady a/nebo na instituce, které se již účastní LOCKSS. Viz <a href="http://lockss.org/lockss/Libraries" target="_blank">zúčastněné knihovny</a>. Využijte připravená pozvání pro (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">knihovny účastnící se LOCKSS</a> nebo (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">knihovny, které ještě nejsou zapojené v LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Vzhled</message>
@@ -244,7 +241,6 @@
 	<message key="manager.setup.selectEditorDescription">Editora časopisu, který na něj bude během redakčního řízení dohlížet.</message>
 	<message key="manager.setup.selectSectionDescription">Sekci časopisu, pro kterou je příspěvek zamýšlen.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Vždy zobrazovat odkazy sazebnice a indikovat omezený přístup.</message>
-	<message key="manager.setup.siteAccess">Další omezení přístupu ke stránce a článkům</message>
 	<message key="manager.setup.stepsToJournalSite">Pět kroků k webové stránce časopisu</message>
 	<message key="manager.setup.subjectExamples">(např. fotosyntéza; černé díry; bayesova teorie; atd.)</message>
 	<message key="manager.setup.subjectKeywordTopic">Klíčová slova</message>
@@ -494,9 +490,9 @@
 	<message key="manager.setup.pageHeader">Hlavička stránky časopisu</message>
 	<message key="manager.setup.focusAndScope.description">Popište autorům, čtenářům a knihovníkům zaměření článků a dalších položek, které časopis publikuje.</message>
 	<message key="manager.setup.form.issnInvalid">Zadané ISSN není platné.</message>
-	<message key="manager.setup.journalSummary">Souhrn informací o časopise</message>
-	<message key="manager.setup.journalAbout">O časopise</message>
-	<message key="manager.setup.journalAbout.description">Zahrňte de veškeré informace o vašem časopise, které mohou být zajímavé pro čtenáře, autory nebo recenzenty. Tyto informace by měly zahrnovat vaše zásady otevřeného přístupu, zaměření a rozsah časopisu, oznámení o autorských právech, povolení sponzoringu, historii časopisu, prohlášení o ochraně osobních údajů a zařazení do libovolného archivního systému LOCKSS nebo CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Souhrn informací o časopise</message>
+	<message key="manager.setup.contextAbout">O časopise</message>
+	<message key="manager.setup.contextAbout.description">Zahrňte de veškeré informace o vašem časopise, které mohou být zajímavé pro čtenáře, autory nebo recenzenty. Tyto informace by měly zahrnovat vaše zásady otevřeného přístupu, zaměření a rozsah časopisu, oznámení o autorských právech, povolení sponzoringu, historii časopisu, prohlášení o ochraně osobních údajů a zařazení do libovolného archivního systému LOCKSS nebo CLOCKSS.</message>
 	<message key="manager.setup.includeCreativeCommons">Pro časopisy, které nabízejí okamžitý nebo zpožděný otevřený přístup, uveďte ve vhodnou dobu licenci Creative Commons ke všem publikovaným pracím.</message>
 	<message key="manager.setup.journalThumbnail.description">Malé logo či obrázek reprezentující časopis, který může být využit v seznamu časopisů.</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Licence LOCKSS se objeví v O časopise pod Archivace: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Licence LOCKSS</a>]]></message>

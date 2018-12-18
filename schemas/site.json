@@ -12,7 +12,6 @@
 		"contactEmail": {
 			"type": "string",
 			"multilingual": true,
-			"defaultLocaleKey": "common.openJournalSystems",
 			"validation": [
 				"nullable",
 				"email_or_localhost"
@@ -21,6 +20,7 @@
 		"contactName": {
 			"type": "string",
 			"multilingual": true,
+			"defaultLocaleKey": "common.openJournalSystems",
 			"validation": [
 				"nullable"
 			]

@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Betrag</message>
 	<message key="manager.payment.authorFees">Autor/innengebühren</message>
 	<message key="manager.payment.authorFeesDescription">Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen unter "1. Schritt" der Beitragseinreichung, im "Über uns" der Zeitschrift unter "Zur Zeitschrift" sowie an allen Stellen, an denen eine Zahlung erforderlich ist.</message>
-	<message key="manager.payment.currency">Währung</message>
 	<message key="manager.payment.currencymessage">OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das Abonnement bezahlt wird, der hier festgelegten entspricht.</message>
 	<message key="manager.payment.description">Beschreibung</message>
 	<message key="manager.payment.details">Details</message>
@@ -63,7 +62,6 @@
 	<message key="manager.payment.readerFees">Leser/innen-Gebühren</message>
 	<message key="manager.payment.readerFeesDescription">Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen im "Über uns" der Zeitschrift unter "Zur Zeitschrift" und an allen Stellen, an denen eine Zahlung erforderlich ist.</message>
 	<message key="manager.payment.records">Protokoll</message>
-	<message key="manager.payments">Zahlungen</message>
 	<message key="manager.paymentTypes">Zahlweisen</message>
 	<message key="manager.payment.userName">Zahler/in</message>
 	<message key="manager.people.allEnrolledUsers">Bei dieser Zeitschrift registrierte Benutzer/innen</message>
@@ -186,15 +184,15 @@
 	<message key="manager.setup.itemsPerPage">Einträge pro Seite</message>
 	<message key="manager.setup.journalAbbreviation">Abkürzung des Zeitschriftennamens</message>
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
-	<message key="manager.setup.journalSummary">Zusammenfassung der Zeitschrift</message>
-	<message key="manager.setup.journalAbout">Über uns</message>
-	<message key="manager.setup.journalAbout.description">Nehmen Sie alle Informationen über Ihre Zeitschrift mit auf, die von Interesse für Leser/innen, Autor/innen oder Gutachter/innen sein könnten. Hierzu könnten Ihre Open-Access-Policy, das Konzept Ihrer Zeitschrift, Copyright-Angaben, Informationen über Sponsoren, die Geschichte der Zeitschrift, Angaben zum Datenschutz und die Beteiligung an LOCKSS- oder CLOCKSS-Archivierungssystemen gehören.</message>
+	<message key="manager.setup.contextSummary">Zusammenfassung der Zeitschrift</message>
+	<message key="manager.setup.contextAbout">Über uns</message>
+	<message key="manager.setup.contextAbout.description">Nehmen Sie alle Informationen über Ihre Zeitschrift mit auf, die von Interesse für Leser/innen, Autor/innen oder Gutachter/innen sein könnten. Hierzu könnten Ihre Open-Access-Policy, das Konzept Ihrer Zeitschrift, Copyright-Angaben, Informationen über Sponsoren, die Geschichte der Zeitschrift, Angaben zum Datenschutz und die Beteiligung an LOCKSS- oder CLOCKSS-Archivierungssystemen gehören.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageContentDescription">Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den "Aktuelle Ausgabe"-Link in der Navigationsleiste zu erreichen ist.</message>
 	<message key="manager.setup.journalHomepageHeader">Kopfzeile der Startseite</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Kopfzeile der Startseite der Zeitschrift</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder .png-Dateien) können für die Startseite hochgeladen werden (ansonsten erscheint eine Textversion).</message>
-	<message key="manager.setup.journalInitials">Kürzel der Zeitschrift</message>
+	<message key="manager.setup.contextInitials">Kürzel der Zeitschrift</message>
 	<message key="manager.setup.journalLayout">Zeitschriftenlayout</message>
 	<message key="manager.setup.journalLayoutDescription">Entscheiden Sie sich für eine Designvorlage für Ihre Zeitschrift und wählen Sie hier mögliche Layout-Bestandteile aus. Sie können auch ein Zeitschriften-Style Sheet hochladen, mit dessen Hilfe Sie die durch die System- und Themen-Style Sheets vorgegebenen Einstellungen ersetzen können.</message>
 	<message key="manager.setup.journalLogo">Logo der Zeitschrift</message>
@@ -208,10 +206,9 @@
 	<message key="manager.setup.journalTheme">Zeitschriften-Designvorlage</message>
 	<message key="manager.setup.journalThumbnail">Vorschaubild der Zeitschrift</message>
 	<message key="manager.setup.journalThumbnail.description">Ein kleines Logo oder Symbol Ihrer Zeitschrift, das in der Liste der Zeitschriften angezeigt werden kann.</message>
-	<message key="manager.setup.journalTitle">Titel der Zeitschrift</message>
+	<message key="manager.setup.contextTitle">Titel der Zeitschrift</message>
 	<message key="manager.setup.labelName">Seitenbenennung</message>
 	<message key="manager.setup.lists">Listen</message>
-	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
 	<message key="manager.setup.plnPluginEnable">PKP-PN-Plugin aktiviert</message>
 	<message key="manager.setup.plnDescription">Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt.</message>
 	<message key="manager.setup.plnSettingsDescription">Klicken Sie auf Einstellungen, um die Nutzungsbedingungen des PKP PN zu akzeptieren.</message>
@@ -284,7 +281,6 @@
 	<message key="manager.setup.selectEditorDescription">Redakteur/in, die/der den Beitrag betreut</message>
 	<message key="manager.setup.selectSectionDescription">Die Rubrik der Zeitschrift, für die der Beitrag in Frage kommt</message>
 	<message key="manager.setup.showGalleyLinksDescription">Links auf die Fahne immer anzeigen und beschränkten Zugang kennzeichnen.</message>
-	<message key="manager.setup.siteAccess">Zusätzliche Beschränkungen des Zugriffs auf Seiten und Artikel</message>
 	<message key="manager.setup.stepsToJournalSite">Fünf Schritte zu einer Zeitschrift</message>
 	<message key="manager.setup.subjectExamples">(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Schlagworte</message>

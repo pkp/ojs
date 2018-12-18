@@ -55,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы и цифры английского алфавита, подчеркивания и дефисы; путь должен начинаться и заканчиваться буквой или цифрой.</message>
 	<message key="admin.contexts.form.pathExists">Выбранный путь уже используется другим журналом.</message>
 	<message key="admin.journals.enableJournalInstructions">Включить показ этого журнала для всех на сайте</message>
-	<message key="admin.journals.journalDescription">Описание журнала</message>
+	<message key="admin.contexts.contextDescription">Описание журнала</message>
 	<message key="admin.journal.pathImportInstructions">Существующий путь журнала или новый путь для создания (например, «ojs»).</message>
 	<message key="admin.journals.importSubscriptions">Импортировать подписки</message>
 	<message key="admin.journals.transcode">Перекодировать метаданные статей из ISO8859-1</message>

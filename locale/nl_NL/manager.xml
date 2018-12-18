@@ -26,7 +26,6 @@
 	<message key="manager.payment.amount">Hoeveelheid</message>
 	<message key="manager.payment.authorFees">Betaling door de auteur</message>
 	<message key="manager.payment.authorFeesDescription">De geselecteerde opties worden met hun beschrijving en kosten getoond in stap 1 van de inzendingsprocecure en in Over het tijdschrift en op de plaatsen waar betaling vereist is.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS converteert valuta niet. Als u betalingen voor abonnementen accepteert, verzeker u ervan dat de valuta van het abonnement overeenkomt met de opgegeven valuta.</message>
 	<message key="manager.payment.description">Beschrijving</message>
 	<message key="manager.payment.details">Details</message>
@@ -58,7 +57,6 @@
 	<message key="manager.payment.readerFees">Betaling door de lezer</message>
 	<message key="manager.payment.readerFeesDescription">De geselecteerde opties worden met hun beschrijving (die hieronder aangepast kan worden) en kosten getoond in stap 1 van de inzendingsprocedure en in Over het tijdschrift en op de plaatsen waar betaling vereist is.</message>
 	<message key="manager.payment.records">Historie</message>
-	<message key="manager.payments">Betalingen</message>
 	<message key="manager.payment.userName">Betaling ID</message>
 	<message key="manager.people.allEnrolledUsers">Bij dit tijdschrift ingeschreven gebruikers</message>
 	<message key="manager.people.allJournals">Alle tijdschriften.</message>
@@ -168,7 +166,7 @@
 	<message key="manager.setup.journalHomepageHeader">Kop van de homepage van het tijdschrift</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Tijdschrift homepage kop</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Een grafische versie van de titel en het logo van het tijdschrift kan (als .gif, .jpg of .png bestand) geladen worden. Die versie vervangt de tekstversie op de homepage van het tijdschrift.</message>
-	<message key="manager.setup.journalInitials">Tijdschrift-initialen</message>
+	<message key="manager.setup.contextInitials">Tijdschrift-initialen</message>
 	<message key="manager.setup.journalLayout">Opmaak van het tijdschrift</message>
 	<message key="manager.setup.journalLayoutDescription">Kies hier een thema en opmaakonderdelen voor het tijdschrift. Er kan ook een stylesheet geladen worden. Daarmee kunnen opmaakelementen van de systeem-stylesheet en de stylesheet van het thema (indien gekozen) vervangen wrorden.</message>
 	<message key="manager.setup.journalLogo">Tijdschrift logo</message>
@@ -180,10 +178,9 @@
 	<message key="manager.setup.journalSetupUpdated">De instellingen van uw tijdschrift zijn bijgewerkt.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Onbruikbaar bestandsformaat voor de stylesheet. Bruikbaar is .css</message>
 	<message key="manager.setup.journalTheme">Thema van het tijdschrift</message>
-	<message key="manager.setup.journalTitle">Tijdschrifttitel</message>
+	<message key="manager.setup.contextTitle">Tijdschrifttitel</message>
 	<message key="manager.setup.labelName">Label naam</message>
 	<message key="manager.setup.lists">Lijsten</message>
-	<message key="manager.setup.listsDescription">Geef het maximale aantal onderdelen (zoals inzendingen, gebruikers of opmaaktaken) die op één pagina van een lijst getoond wordt en het aantal paginalinks dat op iedere pagina getoond wordt.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Gebruik LOCKSS voor het opslaan en distribueren van de inhoud van het tijdschrift bij deelnemende bibliotheken via een LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> pagina. Een LOCKSS licentie zal verschijnen bij Over dit Tijdschrift onder Archiveren:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Vind 6-10 bibliotheken die het tijdschrift willen registreren en een kopie bewaren. Denk aan instituten waar redacteuren of bestuursleden werken en die al in LOCKSS deelnemen. Zie <a href="http://www.lockss.org/community/" target="_blank">voor deelnemende bibliotheken</a>. Gebruik de voorbereide uitnodigingen voor (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotheken die al deelnemen in LOCKSS</a> of (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotheken die nog niet deelnemen in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Uiterlijk</message>
@@ -242,7 +239,6 @@
 	<message key="manager.setup.selectEditorDescription">De redacteur die het door het redactieproces zal leiden.</message>
 	<message key="manager.setup.selectSectionDescription">De tijdschriftsectie waarvoor het stuk overwogen moet worden.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Altijd de proefdruk-links tonen en beperkte toegang aangeven.</message>
-	<message key="manager.setup.siteAccess">Additionele restricties op site- en artikeltoegang.</message>
 	<message key="manager.setup.stepsToJournalSite">Een tijdschrift website in vijf stappen</message>
 	<message key="manager.setup.subjectExamples">(Bv. Fotosynthese; Zwarte gaten; Vier-kleuren kaart vraagstuk; Bayesiaanse Theorie)</message>
 	<message key="manager.setup.subjectKeywordTopic">Trefwoorden</message>

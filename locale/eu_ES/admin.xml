@@ -40,7 +40,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar dira.</message>
 	<message key="admin.contexts.form.pathExists">Hautatutako bidea beste aldizkari batek erabiltzen du.</message>
 	<message key="admin.journals.enableJournalInstructions">Gaitu aldizkari hau publikoki agertzeko gunean.</message>
-	<message key="admin.journals.journalDescription">Aldizkariaren azalpena</message>
+	<message key="admin.contexts.contextDescription">Aldizkariaren azalpena</message>
 	<message key="admin.journal.pathImportInstructions">Lehendik dagoen aldizkariaren kokalekua edo berria (adib., "ojs")</message>
 	<message key="admin.journals.importSubscriptions">Inportatu harpidetzak</message>
 	<message key="admin.journals.transcode">Bihurtu artikuluen metadatuak ISO8859-1etik.</message>

@@ -45,7 +45,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, y debe empezar y terminar con un carácter alfanumérico.</message>
 	<message key="admin.contexts.form.pathExists">La ruta seleccionada ya está siendo utilizada por otra revista.</message>
 	<message key="admin.journals.enableJournalInstructions">Habilitar esta revista para que aparezca de forma pública en el sitio</message>
-	<message key="admin.journals.journalDescription">Descripción de la revista</message>
+	<message key="admin.contexts.contextDescription">Descripción de la revista</message>
 	<message key="admin.journal.pathImportInstructions">Ruta actual de la revista o ruta que se desea crear (p. ej. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importar suscripciones</message>
 	<message key="admin.journals.transcode">Transcodificar metadatos de artículos de ISO8859-1</message>

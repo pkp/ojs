@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Jumlah</message>
 	<message key="manager.payment.authorFees">Biaya Penulis</message>
 	<message key="manager.payment.authorFeesDescription">Pilihan yang dipilih, dengan deskripsi dan biaya (yang dapat diedit di bawah ini), akan ditampilkan di Langkah 1 proses penyerahan naskah dan di Tentang Jurnal di bawah penyerahan naskah, serta di bagian mana pun pembayaran diperlukan.</message>
-	<message key="manager.payment.currency">Mata uang</message>
 	<message key="manager.payment.currencymessage">OJS tidak menyediakan konversi mata uang apa pun. Jika menerima pembayaran untuk langganan, Anda harus pastikan bahwa mata uang langganan sesuai dengan yang ada di sini.</message>
 	<message key="manager.payment.description">Deskripsi</message>
 	<message key="manager.payment.details">Detail</message>
@@ -62,7 +61,6 @@
 	<message key="manager.payment.readerFees">Biaya Pembaca</message>
 	<message key="manager.payment.readerFeesDescription">Pilihan ini, bersama dengan deskripsi dan biaya (yang dapat diedit di bawah ini), akan muncul di Tentang Jurnal di bawah Kebijakan, serta di bagian mana pun pembayaran diperlukan.</message>
 	<message key="manager.payment.records">Rekam</message>
-	<message key="manager.payments">Pembayaran</message>
 	<message key="manager.payment.userName">ID Pembayaran</message>
 	<message key="manager.people.allEnrolledUsers">Pengguna yang Terdaftar</message>
 	<message key="manager.people.allJournals">Semua Jurnal</message>
@@ -184,15 +182,15 @@
 	<message key="manager.setup.itemsPerPage">Item per halaman</message>
 	<message key="manager.setup.journalAbbreviation">Singkatan Jurnal</message>
 	<message key="manager.setup.journalArchiving">Pengarsipan Jurnal</message>
-	<message key="manager.setup.journalSummary">Ringkasan Jurnal</message>
-	<message key="manager.setup.journalAbout">Tentang Jurnal</message>
-	<message key="manager.setup.journalAbout.description">Tuliskan semua informasi tentang jurnal Anda yang mungkin bermanfaat bagi pembaca, penulis atau reviewer. Hal ini dapat mencakup kebijakan Open Access, fokus dan lingkup jurnal, pernyataan hak cipta, pernyataan sponsorship, sejarah jurnal, pernyataan privasi, dan keterlibatan di sistem pengarsipan LOCKSS maupun CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Ringkasan Jurnal</message>
+	<message key="manager.setup.contextAbout">Tentang Jurnal</message>
+	<message key="manager.setup.contextAbout.description">Tuliskan semua informasi tentang jurnal Anda yang mungkin bermanfaat bagi pembaca, penulis atau reviewer. Hal ini dapat mencakup kebijakan Open Access, fokus dan lingkup jurnal, pernyataan hak cipta, pernyataan sponsorship, sejarah jurnal, pernyataan privasi, dan keterlibatan di sistem pengarsipan LOCKSS maupun CLOCKSS.</message>
 	<message key="manager.setup.journalHomepageContent">Konten Beranda Jurnal</message>
 	<message key="manager.setup.journalHomepageContentDescription">Secara default, beranda terdiri dari tautan navigasi. Konten tambahan beranda dapat ditambahkan dengan menggunakan salah satu atau semua pilihan berikut ini, yang akan ditampilkan dalam urutan yang benar. Perhatikan bahwa terbitan terkini selalu dapat diakses melalui tautan Terkini di navigasi.</message>
 	<message key="manager.setup.journalHomepageHeader">Header Beranda Jurnal</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Header Beranda Jurnal</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Versi grafis judul dan logo jurnal (dalam bentuk file .gif, .jpg, atau .png) dapat diunggah untuk beranda, yang akan menggantikan versi teks.</message>
-	<message key="manager.setup.journalInitials">Inisial Jurnal</message>
+	<message key="manager.setup.contextInitials">Inisial Jurnal</message>
 	<message key="manager.setup.journalLayout">Layout Jurnal</message>
 	<message key="manager.setup.journalLayoutDescription">Pilih tema jurnal dan komponen layout di sini. Stylesheet jurnal juga boleh diunggah, yang dapat digunakan untuk menggantikan stylesheet dan tema default sistem.</message>
 	<message key="manager.setup.journalLogo">Logo Jurnal</message>
@@ -206,10 +204,9 @@
 	<message key="manager.setup.journalTheme">Tema Jurnal</message>
 	<message key="manager.setup.journalThumbnail">Thumbnail Jurnal</message>
 	<message key="manager.setup.journalThumbnail.description">Logo atau gambar kecil yang mewakili jurnal untuk digunakan di daftar jurnal.</message>
-	<message key="manager.setup.journalTitle">Nama Jurnal</message>
+	<message key="manager.setup.contextTitle">Nama Jurnal</message>
 	<message key="manager.setup.labelName">Nama Label</message>
 	<message key="manager.setup.lists">Daftar</message>
-	<message key="manager.setup.listsDescription">Batasi jumlah item (sebagai contoh: penyerahan, pengguna, atau tugas pengeditan) yang ditampilkan dalam sebuah daftar sebelum menampilkan item berikutnya di halaman lain.  Juga untuk membatasi jumlah tautan yang ditampilkan di halaman berikutnya.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktifkan LOCKSS untuk menyimpan dan mendistribusikan konten jurnal ke perpustakaan yang berpartisipasi melalui halaman <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> LOCKSS.]]></message>
  	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Lisensi LOCKSS akan muncul di Tentang Jurnal di bawah Pengarsipan: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Deskripsi Lisensi LOCKSS</message>
@@ -276,7 +273,6 @@
 	<message key="manager.setup.selectEditorDescription">Editor jurnal yang akan menyelesaikan proses editorial.</message>
 	<message key="manager.setup.selectSectionDescription">Bagian jurnal di mana item akan dipertimbangkan.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Selalu tampilkan tautan galley dan tunjukkan bahwa akses dibatasi.</message>
-	<message key="manager.setup.siteAccess">Pembatasan Akses Artikel dan Situs Tambahan</message>
 	<message key="manager.setup.stepsToJournalSite">5 Langkah ke Website Jurnal</message>
 	<message key="manager.setup.subjectExamples">(contoh: Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Kata Kunci</message>

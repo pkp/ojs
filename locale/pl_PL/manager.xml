@@ -28,7 +28,6 @@
 	<message key="manager.payment.amount">Suma</message>
 	<message key="manager.payment.authorFees">Opłaty dla autorów</message>
 	<message key="manager.payment.authorFeesDescription">Wybrane opcje, wraz z ich opisem i informacją o kosztach zostaną wyświetlone przy kroku 1 procesu wysyłania tekstu do czasopisma.</message>
-	<message key="manager.payment.currency">Waluta</message>
 	<message key="manager.payment.currencymessage">OJS nie przelicza walut.</message>
 	<message key="manager.payment.description">Opis</message>
 	<message key="manager.payment.details">Szczegóły</message>
@@ -149,7 +148,7 @@
 	<message key="manager.setup.journalHomepageHeader">Nagłówek strony głównej czasopisma</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Nagłówek strony głównej czasopisma</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Tytuł czasopisma może być wyświetlany jako grafika. Akceptowane formaty pliku to ICO, PNG, oraz GIF.</message>
-	<message key="manager.setup.journalInitials">Inicjały czasopisma</message>
+	<message key="manager.setup.contextInitials">Inicjały czasopisma</message>
 	<message key="manager.setup.journalLayout">Layout czasopisma</message>
 	<message key="manager.setup.journalLayoutDescription">Wybierz motyw dla czasopisma oraz jego elementy.</message>
 	<message key="manager.setup.journalLogo">Logo czasopisma</message>
@@ -161,10 +160,9 @@
 	<message key="manager.setup.journalSetupUpdated">Konfiguracja czasopisma została zaktualizowana.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Niepoprawny format szablonu stylów. Akceptowany plik musi posiadać rozszerzenie .css.</message>
 	<message key="manager.setup.journalTheme">Motyw czasopisma</message>
-	<message key="manager.setup.journalTitle">Tytuł czasopisma</message>
+	<message key="manager.setup.contextTitle">Tytuł czasopisma</message>
 	<message key="manager.setup.labelName">Etykieta</message>
 	<message key="manager.setup.lists">Listy</message>
-	<message key="manager.setup.listsDescription">Podaj maksymalną liczbę elementów, która będzie widoczna na każdej stronie listy, oraz liczbę linków wyświetlanych na każdej stronie.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Włącz LOCKSS w celu gromadzenia i udostępniania zawartości czasopisma za pośrednictwem usługi LOCKSS. <a href="{$lockssUrl}" target="_blank">Dowiedz się więcej na temat LOCKSS</a>. Treść licencji LOCKSS będzie widoczna w dziale O czasopiśmie:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">participating libraries</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Wygląd</message>
@@ -224,7 +222,6 @@
 	<message key="manager.setup.selectEditorDescription">Redaktor czasopisma, który będzie posiadał dostęp do procesu recenzji.</message>
 	<message key="manager.setup.selectSectionDescription">Dział czasopisma dla którego ustawienia mają zastosowanie.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Zawsze pokazuj łącza do finalnej wersji plików, ale informuj o braku dostępu.</message>
-	<message key="manager.setup.siteAccess">Dodatkowe ograniczenia dostępu do strony oraz tekstów</message>
 	<message key="manager.setup.stepsToJournalSite">Pięć kroków do utworzenia i zredagowania strony internetowej czasopisma</message>
 	<message key="manager.setup.subjectExamples">(np. fotosynteza; czarne dziury; etc.)</message>
 	<message key="manager.setup.subjectKeywordTopic">Słowa kluczowe</message>
@@ -295,9 +292,9 @@
 	<message key="manager.setup.masthead">Stopka redakcyjna</message>
 	<message key="manager.setup.editorialTeam">Zespół redakcyjny</message>
 	<message key="manager.setup.contextName">Tytuł czasopisma</message>
-	<message key="manager.setup.journalSummary">Skrótowe informacje o czasopiśmie</message>
-	<message key="manager.setup.journalAbout">O czasopiśmie</message>
-	<message key="manager.setup.journalAbout.description">Zamieść wszelkie informacje o czasopiśmie, które mogą być interesujące dla czytelników, autorów lub recenzentów. Możesz zamieścić informacje o polityce otwartego dostępu, zawartości i zasięgu czasopisma, prawach autorskich, instytucjach finansujących czasopismo, historii czasopisma, polityce prywatności, a także systemach archiwizacji takich jak np. LOCKSS lub CLOCKSS.</message>
+	<message key="manager.setup.contextSummary">Skrótowe informacje o czasopiśmie</message>
+	<message key="manager.setup.contextAbout">O czasopiśmie</message>
+	<message key="manager.setup.contextAbout.description">Zamieść wszelkie informacje o czasopiśmie, które mogą być interesujące dla czytelników, autorów lub recenzentów. Możesz zamieścić informacje o polityce otwartego dostępu, zawartości i zasięgu czasopisma, prawach autorskich, instytucjach finansujących czasopismo, historii czasopisma, polityce prywatności, a także systemach archiwizacji takich jak np. LOCKSS lub CLOCKSS.</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Nie ma jeszcze dodanego redaktora działu. Tę rolę przypisz najpierw co najmniej jednemu użytkownikowi poprzez Zarządzanie stroną > Ustawienia > Użytkownicy i ich role.]]></message>
 	<message key="manager.website.archiving">Archiwizacja</message>
 	<message key="manager.setup.homepageContent">Zawartość strony głównej czasopisma</message>

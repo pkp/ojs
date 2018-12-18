@@ -45,7 +45,7 @@
 		"Context": "context",
 		"ErrorResponse": {
 			"type": "object",
-			"description": "A response object that will be returned when the requested could not be fulfilled.",
+			"description": "A response object that will be returned when the request could not be fulfilled.",
 			"properties": {
 				"error": {
 					"type": "string"
@@ -60,8 +60,12 @@
 			"type": "object",
 			"description": "A response object that will be returned when there are validation errors for the request parameters. Typically used with forms.",
 			"example": {
-				"name": "You must provide a name to create a new user.",
-				"roles": "You must assign the user to one or more roles."
+				"name": [
+					"You must provide a name to create a new user."
+				],
+				"roles": [
+					"You must assign the user to one or more roles."
+				]
 			}
 		},
 		"Issue": "issue",
@@ -74,7 +78,7 @@
 			}
 		},
 		"ReviewRound": "reviewRound",
-		"ReviewSummary": {
+		"ReviewerSummary": {
 			"type": "object",
 			"description": "A special representation of a User assigned to a reviewer group. This model presents specific details about review activity.",
 			"properties": {
@@ -737,13 +741,6 @@
 					{
 						"name": "assignedToSubmissionStage",
 						"description": "Filter results by those assigned to this submission stage. Will be ignored if no `assignedToSubmission` parameter exists.",
-						"in": "query",
-						"required": false,
-						"type": "integer"
-					},
-					{
-						"name": "assignedToSection",
-						"description": "Filter the results by those assigned as section editors to this section ID.",
 						"in": "query",
 						"required": false,
 						"type": "integer"

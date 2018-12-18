@@ -42,7 +42,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens bevatten en moet beginnen en eindigen met een alfanuermiek teken.</message>
 	<message key="admin.contexts.form.pathExists">Het opgegeven pad is al in gebruik voor een ander tijdschrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Toon dit tijdschrift op de site</message>
-	<message key="admin.journals.journalDescription">Beschrijving tijdschrift</message>
+	<message key="admin.contexts.contextDescription">Beschrijving tijdschrift</message>
 	<message key="admin.journal.pathImportInstructions">Bestaand tijdschrift-pad of te creëren pad (bijvoorbeeld "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importeer abonnees</message>
 	<message key="admin.journals.transcode">Vertaal artikel-metadata van ISO8859-1</message>

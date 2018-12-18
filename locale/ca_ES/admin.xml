@@ -44,7 +44,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">La ruta només pot contenir caràcters alfanumèrics, guions baixos i guionets i ha de començar i acabar amb un caràcter alfanumèric.</message>
 	<message key="admin.contexts.form.pathExists">Ja hi ha una altra revista que utilitza la ruta seleccionada.</message>
 	<message key="admin.journals.enableJournalInstructions">Permet que aquesta revista aparegui públicament al lloc web</message>
-	<message key="admin.journals.journalDescription">Descripció de la revista</message>
+	<message key="admin.contexts.contextDescription">Descripció de la revista</message>
 	<message key="admin.journal.pathImportInstructions">Ruta existent a la revista o ruta que s'ha de crear (p. ex., «ojs»).</message>
 	<message key="admin.journals.importSubscriptions">Importa subscripcions</message>
 	<message key="admin.journals.transcode">Metadades de l'article Transcode de l’ISO8859-1</message>

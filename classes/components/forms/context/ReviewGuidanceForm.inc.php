@@ -1,6 +1,6 @@
 <?php
 /**
- * @file controllers/form/context/ReviewGuidanceForm.inc.php
+ * @file classes/components/form/context/ReviewGuidanceForm.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2000-2018 John Willinsky
