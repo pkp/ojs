@@ -57,6 +57,35 @@
 	}
 }
 
+// Browse sidebar block
+.block_browse {
+	font-size: @font-sml;
+
+	.has_submenu {
+		margin-top: @double;
+		font-size: @font-sml;
+		font-weight: @bold;
+		color: @text-light;
+
+		ul {
+			margin-top: @half - 1; // account for border
+			padding-top: @half;
+			font-weight: @normal;
+		}
+	}
+
+	.is_sub {
+		margin-left: @base;
+	}
+
+	.current a {
+		padding-left: 0.5em;
+		border-left: 4px solid @bg-border-color;
+		color: @text-light;
+		cursor: text;
+	}
+}
+
 .block_information,
 .block_language_toggle {
 
