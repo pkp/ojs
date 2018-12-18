@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/browse/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings for this plugin.
+  *
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.block.browse">Navegar</message>
+	<message key="plugins.block.browse.displayName">Bloco de Navegação</message>
+	<message key="plugins.block.browse.description">Este plugin oferece uma barra de ferramentas lateral para navegação.</message>
+	<message key="plugins.block.browse.category">Navegar a categoria</message>
+</locale>

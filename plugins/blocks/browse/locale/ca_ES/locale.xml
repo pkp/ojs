@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/browse/locale/ca_ES/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.block.browse">Navega</message>
+	<message key="plugins.block.browse.displayName">Bloc de navegació</message>
+	<message key="plugins.block.browse.description">Aquest mòdul proporciona les eines de "navegació" a la barra lateral.</message>
+	<message key="plugins.block.browse.category">Navega per categories</message>
+</locale>
