@@ -199,7 +199,7 @@ class Article extends Submission {
 	/**
 	 * get cover page server-side file name
 	 * @param $locale string
-	 * @return string
+	 * @return string|array
 	 */
 	function getCoverImage($locale) {
 		return $this->getData('coverImage', $locale);

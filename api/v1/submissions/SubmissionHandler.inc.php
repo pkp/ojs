@@ -90,7 +90,6 @@ class SubmissionHandler extends APIHandler {
 	public function getSubmissionList($slimRequest, $response, $args) {
 		$request = Application::getRequest();
 		$currentUser = $request->getUser();
-		$dispatcher = $request->getDispatcher();
 		$context = $request->getContext();
 		$submissionService = ServicesContainer::instance()->get('submission');
 
@@ -140,9 +139,6 @@ class SubmissionHandler extends APIHandler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$request = Application::getRequest();
-		$dispatcher = $request->getDispatcher();
-		$context = $request->getContext();
-
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
 		$data = ServicesContainer::instance()
@@ -169,6 +165,7 @@ class SubmissionHandler extends APIHandler {
 		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
+		$publishedArticle = null;
 		if ($submission && $context) {
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
@@ -254,7 +251,6 @@ class SubmissionHandler extends APIHandler {
 
 		$request = Application::getRequest();
 		$currentUser = $request->getUser();
-		$context = $request->getContext();
 
 		// Merge query params over default params
 		$defaultParams = array(

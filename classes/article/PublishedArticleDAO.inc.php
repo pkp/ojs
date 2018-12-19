@@ -385,11 +385,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			$sql .= ' AND s.context_id = ?';
 		}
 		$sql .= ' ORDER BY ps.issue_id, s.submission_id';
-		$result = $this->retrieve($sql, $params);
-
-		$result = $this->retrieveRange($sql, $params, $rangeInfo);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($this->retrieveRange($sql, $params, $rangeInfo), $this, '_fromRow');
 	}
 
 	/**
