@@ -15,4 +15,8 @@
 	<sql>
 		<query>UPDATE review_assignments SET quality = NULL WHERE quality = 0</query>
 	</sql>
+	<sql><!-- Move User from app-specific to shared lib -->
+		<query>UPDATE filter_groups SET input_type='class::lib.pkp.classes.user.User[]' WHERE input_type='class::classes.user.User[]'</query>
+		<query>UPDATE filter_groups SET output_type='class::lib.pkp.classes.user.User[]' WHERE output_type='class::classes.user.User[]'</query>
+	</sql>
 </data>
