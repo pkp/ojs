@@ -67,9 +67,6 @@ lib/pkp/lib/vendor/alex198710/pnotify/.git						\
 lib/pkp/lib/vendor/sebastian								\
 lib/pkp/lib/vendor/oyejorge/less.php/test						\
 lib/pkp/tools/travis									\
-lib/pkp/lib/swordappv2/.git								\
-lib/pkp/lib/swordappv2/.git								\
-lib/pkp/lib/swordappv2/test								\
 plugins/paymethod/paypal/vendor/omnipay/common/tests/					\
 plugins/paymethod/paypal/vendor/omnipay/paypal/tests/					\
 plugins/paymethod/paypal/vendor/guzzle/guzzle/docs/					\
