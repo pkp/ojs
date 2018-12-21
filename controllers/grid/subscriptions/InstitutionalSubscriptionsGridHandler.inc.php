@@ -99,7 +99,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$context = $request->getContext();
 
 		// Import field constants.
-		import('lib.pkp.classes.user.PKPUserDAO');
+		import('lib.pkp.classes.user.UserDAO');
 		import('classes.subscription.InstitutionalSubscriptionDAO');
 		$fieldOptions = array(
 			IDENTITY_SETTING_GIVENNAME => 'user.givenName',

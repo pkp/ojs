@@ -448,6 +448,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Please select a valid subscription start date.</message>
 	<message key="manager.subscriptions.form.dateEnd">End date</message>
 	<message key="manager.subscriptions.form.dateEndRequired">A subscription end date is required.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">This is a non-expiring subscription type; please do not specify a start date.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">This is a non-expiring subscription type; please do not specify an end date.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Please select a valid subscription end date.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Note: All changes below are to user's system-wide profile.</message>
 	<message key="manager.subscriptions.form.userId">User</message>

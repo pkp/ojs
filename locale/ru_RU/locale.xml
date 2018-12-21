@@ -101,6 +101,7 @@
 	<message key="section.title">Название раздела</message>
 	<message key="section.abbreviation">Аббревиатура</message>
 	<message key="section.abbreviation.example">(Например, Статьи=СТ)</message>
+	<message key="section.policy">Правила раздела</message>
 
 	<!-- Общие термины статьи -->
 	<message key="article.article">Статья</message>
@@ -782,6 +783,7 @@
 	<message key="about.onlineSubmissions.register">Зарегистрироваться</message>
 	<message key="about.onlineSubmissions.registrationRequired">Для отправки материала вам нужно {$login} или {$register}.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} или {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Отправить новый материал в раздел <a href="{$url}">«{$name}»</a>.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Отправить новый материал</message>
 	<message key="about.onlineSubmissions.viewSubmissions">просмотреть ранее отправленные материалы</message>
 	<message key="about.authorGuidelines">Руководство для авторов</message>

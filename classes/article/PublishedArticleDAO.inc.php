@@ -100,15 +100,15 @@ class PublishedArticleDAO extends ArticleDAO {
 		$sql = 'SELECT DISTINCT
 				ps.*,
 				s.*,
-				COALESCE(o.seq, ps.seq) AS section_seq,
+				COALESCE(o.seq, sec.seq) AS section_seq,
 				ps.seq,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
-				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
+				JOIN submissions s ON ps.submission_id = s.submission_id
+				JOIN sections sec ON (s.section_id = sec.section_id)
 				' . $this->getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
-			WHERE	ps.submission_id = s.submission_id
-				AND ps.issue_id = ?
+			WHERE	ps.issue_id = ?
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC';
 
@@ -385,11 +385,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			$sql .= ' AND s.context_id = ?';
 		}
 		$sql .= ' ORDER BY ps.issue_id, s.submission_id';
-		$result = $this->retrieve($sql, $params);
-
-		$result = $this->retrieveRange($sql, $params, $rangeInfo);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
+		return new DAOResultFactory($this->retrieveRange($sql, $params, $rangeInfo), $this, '_fromRow');
 	}
 
 	/**

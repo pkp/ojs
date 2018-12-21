@@ -111,11 +111,8 @@ class Application extends PKPApplication {
 			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
-			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
-			'UserDAO' => 'classes.user.UserDAO',
-			'UserSettingsDAO' => 'classes.user.UserSettingsDAO'
 		));
 	}
 

@@ -102,7 +102,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 	 * @param $request PKPRequest
 	 * @param $submission Submission
 	 * @param $submissionFile SubmissionFile
-	 * @param $user PKPUser
+	 * @param $user User
 	 */
 	function logDeletionEvent($request, $submission, $submissionFile, $user) {
 		// log the deletion event.

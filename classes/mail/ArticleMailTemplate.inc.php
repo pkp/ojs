@@ -20,19 +20,6 @@ import('classes.log.SubmissionEmailLogEntry'); // Bring in log constants
 
 class ArticleMailTemplate extends SubmissionMailTemplate {
 	/**
-	 * Constructor.
-	 * @param $article object
-	 * @param $emailKey string optional
-	 * @param $locale string optional
-	 * @param $journal object optional
-	 * @param $includeSignature boolean optional
-	 * @see SubmissionMailTemplate::SubmissionMailTemplate()
-	 */
-	function __construct($article, $emailKey = null, $locale = null, $journal = null, $includeSignature = true) {
-		parent::__construct($article, $emailKey, $locale, $journal, $includeSignature);
-	}
-
-	/**
 	 * @copydoc SubmissionMailTemplate::assignParams()
 	 */
 	function assignParams($paramArray = array()) {

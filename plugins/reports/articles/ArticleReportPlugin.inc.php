@@ -39,10 +39,16 @@ class ArticleReportPlugin extends ReportPlugin {
 		return 'ArticleReportPlugin';
 	}
 
+	/**
+	 * @copydoc Plugin::getDisplayName()
+	 */
 	function getDisplayName() {
 		return __('plugins.reports.articles.displayName');
 	}
 
+	/**
+	 * @copydoc Plugin::getDescriptionName()
+	 */
 	function getDescription() {
 		return __('plugins.reports.articles.description');
 	}
@@ -52,9 +58,10 @@ class ArticleReportPlugin extends ReportPlugin {
 	 */
 	function display($args, $request) {
 		$journal = $request->getJournal();
+		$acronym = PKPString::regexp_replace("/[^A-Za-z0-9 ]/", '', $journal->getLocalizedAcronym());
 
 		header('content-type: text/comma-separated-values');
-		header('content-disposition: attachment; filename=articles-' . date('Ymd') . '.csv');
+		header('content-disposition: attachment; filename=articles-' . $acronym . '-' . date('Ymd') . '.csv');
 
 		$articleReportDao = DAORegistry::getDAO('ArticleReportDAO');
 		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());
@@ -68,7 +75,7 @@ class ArticleReportPlugin extends ReportPlugin {
 			}
 		}
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
 
 		import('classes.article.Article');
 		import('classes.workflow.EditorDecisionActionsManager');
@@ -108,8 +115,18 @@ class ArticleReportPlugin extends ReportPlugin {
 		$columns = array_merge($columns, array(
 			'section_title' => __('section.title'),
 			'language' => __('common.language'),
+			'coverage' => __('rt.metadata.dublinCore.coverage'),
+			'rights' => __('rt.metadata.dublinCore.rights'),
+			'source' => __('rt.metadata.dublinCore.source'),
+			'subjects' => __('rt.metadata.dublinCore.subject'),
+			'type' => __('rt.metadata.dublinCore.type'),
+			'disciplines' => __('rt.metadata.pkp.discipline'),
+			'keywords' => __('rt.metadata.pkp.subject'),
+			'agencies' => __('submission.supportingAgencies'),
 			'editor_decision' => __('submission.editorDecision'),
-			'status' => __('common.status')
+			'status' => __('common.status'),
+			'url' => __('common.url'),
+			'doi' => __('metadata.property.displayName.doi'),
 		));
 
 		$fp = fopen('php://output', 'wt');
@@ -118,33 +135,68 @@ class ArticleReportPlugin extends ReportPlugin {
 		fputcsv($fp, array_values($columns));
 
 		import('classes.article.Article'); // Bring in getStatusMap function
-		$statusMap =& Article::getStatusMap();
+		$statusMap = Article::getStatusMap();
+
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+		$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
+		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO');
 
 		$authorIndex = 0;
-		while ($row = $articlesIterator->next()) {
-			$authors = $this->mergeAuthors($authorsIterator[$row['submission_id']]->toArray());
+		while ($article = $articlesIterator->next()) {
+			if ($article->getSubmissionProgress()) continue; // Incomplete submission
+			$authors = $this->mergeAuthors($authorsIterator[$article->getId()]->toArray());
 
-			foreach ($columns as $index => $junk) {
-				if ($index == 'editor_decision') {
-					if (isset($decisions[$row['submission_id']])) {
-						$columns[$index] = $decisionMessages[$decisions[$row['submission_id']]];
+			foreach ($columns as $index => $junk) switch(true) {
+				case $index == 'editor_decision':
+					if (isset($decisions[$article->getId()])) {
+						$columns[$index] = $decisionMessages[$decisions[$article->getId()]];
 					} else {
 						$columns[$index] = $decisionMessages[null];
 					}
-				} elseif ($index == 'status') {
-					$columns[$index] = __($statusMap[$row[$index]]);
-				} elseif ($index == 'abstract') {
-					$columns[$index] = html_entity_decode(strip_tags($row[$index]));
-				} elseif (strstr($index, 'biography') !== false) {
+					break;
+				case $index == 'status':
+					$columns[$index] = __($statusMap[$article->getStatus()]);
+					break;
+				case $index == 'abstract':
+					$columns[$index] = html_entity_decode(strip_tags($article->getLocalizedAbstract()));
+					break;
+				case strstr($index, 'biography') !== false:
 					// "Convert" HTML to text for export
 					$columns[$index] = isset($authors[$index])?html_entity_decode(strip_tags($authors[$index])):'';
-				} else {
-					if (isset($row[$index])) {
-						$columns[$index] = $row[$index];
-					} else if (isset($authors[$index])) {
-						$columns[$index] = $authors[$index];
-					} else $columns[$index] = '';
-				}
+					break;
+				case $index == 'url':
+					$columns[$index] = $request->url(null, 'workflow', 'access', $article->getId());
+					break;
+				case $index == 'doi':
+					$columns[$index] = $article->getStoredPubId('doi');
+					break;
+				case $index == 'submission_id': $columns[$index] = $article->getId(); break;
+				case $index == 'title': $columns[$index] = $article->getLocalizedTitle(); break;
+				case $index == 'section_title': $columns[$index] = $article->getSectionTitle(); break;
+				case $index == 'language': $columns[$index] = $article->getLanguage(); break;
+				case $index == 'coverage': $columns[$index] = $article->getLocalizedCoverage(); break;
+				case $index == 'rights': $columns[$index] = $article->getRights($article->getLocale()); break;
+				case $index == 'source': $columns[$index] = $article->getSource($article->getLocale()); break;
+				case $index == 'type': $columns[$index] = $article->getLocalizedType(); break;
+				case $index == 'subjects':
+					$subjects = $submissionSubjectDao->getSubjects($article->getId(), array($article->getLocale()));
+					$columns[$index] = join(', ', $subjects[$article->getLocale()]);
+					break;
+				case $index == 'disciplines':
+					$disciplines = $submissionDisciplineDao->getDisciplines($article->getId(), array($article->getLocale()));
+					$columns[$index] = join(', ', $disciplines[$article->getLocale()]);
+					break;
+				case $index == 'keywords':
+					$keywords = $submissionKeywordDao->getKeywords($article->getId(), array($article->getLocale()));
+					$columns[$index] = join(', ', $keywords[$article->getLocale()]);
+					break;
+				case $index == 'agencies':
+					$agencies = $submissionAgencyDao->getAgencies($article->getId(), array($article->getLocale()));
+					$columns[$index] = join(', ', $agencies[$article->getLocale()]);
+					break;
+				case isset($authors[$index]): $columns[$index] = $authors[$index]; break;
+				default: $columns[$index] = '';
 			}
 			fputcsv($fp, $columns);
 			$authorIndex++;
@@ -189,5 +241,4 @@ class ArticleReportPlugin extends ReportPlugin {
 	}
 
 }
-
 

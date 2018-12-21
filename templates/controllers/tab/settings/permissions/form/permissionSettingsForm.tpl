@@ -20,4 +20,4 @@
 		{fbvElement type="radio" id="copyrightYearBasis-submission" name="copyrightYearBasis" value="submission" checked=$copyrightYearBasis|compare:"submission" label="manager.setup.copyrightYearBasis.article"}
 	{/fbvFormSection}
 {/capture}
-{include file="core:controllers/tab/settings/permissions/form/permissionSettingsForm.tpl additionalFormContent=$additionalFormContent}
+{include file="core:controllers/tab/settings/permissions/form/permissionSettingsForm.tpl" additionalFormContent=$additionalFormContent}

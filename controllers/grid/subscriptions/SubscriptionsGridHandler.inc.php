@@ -98,8 +98,8 @@ abstract class SubscriptionsGridHandler extends GridHandler {
 	function renderFilter($request, $filterData = array()) {
 		$context = $request->getContext();
 
-		// Import PKPUserDAO to define the USER_FIELD_* constants.
-		import('lib.pkp.classes.user.PKPUserDAO');
+		// Import UserDAO to define the USER_FIELD_* constants.
+		import('lib.pkp.classes.user.UserDAO');
 		$fieldOptions = array(
 			IDENTITY_SETTING_GIVENNAME => 'user.givenName',
 			IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
