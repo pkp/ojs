@@ -11,7 +11,7 @@
 {if !$readOnly}
 	{assign var=sectionDescription value="author.submit.journalSectionDescription"}
 {/if}
-{fbvFormSection title="section.section" required=true}
+{fbvFormSection title="section.section"}
 	{fbvElement type="select" id="sectionId" label=$sectionDescription from=$sectionOptions selected=$sectionId translate=false disabled=$readOnly size=$fbvStyles.size.MEDIUM required=true}
 {/fbvFormSection}
 
