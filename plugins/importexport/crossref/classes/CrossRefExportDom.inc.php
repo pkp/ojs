@@ -355,7 +355,7 @@ class CrossRefExportDom extends DOIExportDom {
 		/* publisher_item is the article pages */
 		// CrossRef requires first_page and last_page of any contiguous range, then any other ranges go in other_pages
 		$pages = $article->getPageArray();
-		if (is_array($pages)) {
+		if (!empty($pages)) {
 			$firstRange = array_shift($pages);
 			$firstPage = array_shift($firstRange);
 			if (count($firstRange)) {
