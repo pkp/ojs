@@ -33,6 +33,6 @@ class AppearanceSetupForm extends PKPAppearanceSetupForm {
 				'options' => [
 					'url' => $temporaryFileApiUrl,
 				],
-			]), ['after', 'pageHeaderLogoImage']);
+			]), [FIELD_POSITION_AFTER, 'pageHeaderLogoImage']);
 	}
 }

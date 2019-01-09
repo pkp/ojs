@@ -27,6 +27,6 @@ class ContextForm extends PKPContextForm {
 				'label' => __('manager.setup.journalAbbreviation'),
 				'isMultilingual' => true,
 				'value' => $context ? $context->getData('abbreviation') : null,
-			]), ['after', 'acronym']);
+			]), [FIELD_POSITION_AFTER, 'acronym']);
 	}
 }

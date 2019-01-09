@@ -39,6 +39,6 @@ class LicenseForm extends PKPLicenseForm {
 					['value' => 'submission', 'label' => __('manager.distribution.copyrightYearBasis.submission')],
 				],
 				'value' => $context->getData('copyrightYearBasis'),
-			]), ['after', 'licenseUrl']);
+			]), [FIELD_POSITION_AFTER, 'licenseUrl']);
 	}
 }

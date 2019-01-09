@@ -33,7 +33,7 @@ class MastheadForm extends PKPMastheadForm {
 				'id' => 'publishing',
 				'label' => __('manager.setup.publishing'),
 				'description' => __('manager.setup.publishingDescription'),
-			], ['after', 'identity'])
+			], [FIELD_POSITION_AFTER, 'identity'])
 			->addField(new FieldText('publisherInstitution', [
 				'label' => __('manager.setup.publisher'),
 				'groupId' => 'publishing',
