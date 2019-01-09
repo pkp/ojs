@@ -734,7 +734,6 @@
 	<message key="about.delayedOpenAccess">延迟开放存取</message>
 	<message key="about.delayedOpenAccessDescription1">本期刊的内容将采用开发存取的格式</message>
 	<message key="about.delayedOpenAccessDescription2">个月后期刊将出版.</message>
-	<message key="about.authorSelfArchive">作者自存档</message>
 	<message key="about.archiving">存档</message>
 	<message key="about.subscriptions">订阅</message>
 	<message key="about.subscriptions.individual">个人订阅</message>
@@ -895,54 +894,7 @@
 
 	<message key="log.imported">{$userName}导入文章{$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">阅读工具选项</message>
-
-	<message key="rt.admin.settings.description">阅读工具以页框的方式出现在本期刊栏目中已经指派索引项的出版项目的侧边。阅读工具由一组与出版项目相关的选择性工具（详列在下），以及一组能够存取相关项目、由栏位和学科所组成的工具所组成。</message>
-	<message key="rt.admin.settings.enableReadingTools">为指定的期刊文稿类型启用阅读工具.</message>
-	<message key="rt.admin.settings.relatedItems">领域</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[见<a href="{$relatedItemsLink}" class="action">相关项目集</a> 以查看、新增、修正或删除每个栏位相关的项目]]></message>
-
-	<message key="rt.admin.options">期刊项目工具</message>
-	<message key="rt.admin.relatedItems">相关项目工具</message>
-
-	<message key="rt.admin.settings.addComment">添加评论(让读者可以提交评论，期刊管理员可以删除）.</message>
-	<message key="rt.admin.settings.addComment.authenticated">用户必须注册并登录后，才可以提交评论</message>
-	<message key="rt.admin.settings.addComment.anonymous">用户必须注册并登录后，才可以提交评论，匿名用户也允许提交</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">用户不必注册并登录可以提交评论，匿名用户也允许提交</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[
-		下面列出可能是无效的搜寻网站网址。<br />
-		您应该手动查证被标记成无效的任何网址，因为这个测试并非完全准确。<br />
-		验证需要递交表单资料的搜寻网址可能会失败。]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">创建者</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">作者姓名，工作单位，国家</message>
-	<message key="rt.metadata.pkp.peerReviewed">同行评议的文章</message>
-	<message key="rt.beNotifiedWhen">会得到通知在...</message>
-
-	<message key="rt.thisJournal">检索期刊</message>
-
-
-	<message key="rt.context.authorTermsDescription">由于文章拥有一个以上的作者，请选取所有的姓名以搜寻类似的共同作者作品，或者选取单个姓名以一次搜寻一个人。要学习更多关于搜寻资源的信息，请点击「介绍」。这些资源是基于其关连性与开放（自由）阅读所有或部分内容而被选取的.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">同行评议的文章</message>
 
 	<!-- Notification Types -->
 

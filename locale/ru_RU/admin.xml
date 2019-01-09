@@ -14,9 +14,7 @@
 <locale name="ru_RU" full_name="Русский">
 	<message key="admin.hostedJournals">Журналы на сайте</message>
 	<message key="admin.settings.journalRedirect">Перенаправление журнала</message>
-	<message key="admin.settings.options">Параметры</message>
 	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
-	<message key="admin.settings.noJournalRedirect">Не перенаправлять</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Ваша инсталляция OJS настроена на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.
 		Есть случаи, когда должна быть применена только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее используемых статей или проранжировать
@@ -57,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы и цифры английского алфавита, подчеркивания и дефисы; путь должен начинаться и заканчиваться буквой или цифрой.</message>
 	<message key="admin.contexts.form.pathExists">Выбранный путь уже используется другим журналом.</message>
 	<message key="admin.journals.enableJournalInstructions">Включить показ этого журнала для всех на сайте</message>
-	<message key="admin.journals.journalDescription">Описание журнала</message>
+	<message key="admin.contexts.contextDescription">Описание журнала</message>
 	<message key="admin.journal.pathImportInstructions">Существующий путь журнала или новый путь для создания (например, «ojs»).</message>
 	<message key="admin.journals.importSubscriptions">Импортировать подписки</message>
 	<message key="admin.journals.transcode">Перекодировать метаданные статей из ISO8859-1</message>
@@ -72,19 +70,6 @@
 	<message key="admin.mergeUsers.confirm">Вы уверены, что хотите объединить выбранные {$oldAccountCount} учетных записей в учетную запись с именем пользователя «{$newUsername}»? Выбранные {$oldAccountCount} учетные записи после этого перестанут существовать. Это действие нельзя отменить.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Нет записанных пользователей.</message>
 
-	<!-- Категории -->
-	<message key="admin.categories">Категории</message>
-	<message key="admin.categories.enable.description">Администратор сайта может определить здесь набор категорий, чтобы упростить упорядочение большого количества журналов. Менеджеры журналов затем могут выбрать некоторые из этих категорий для каждого журнала, а читатели смогут просматривать коллекции журналов по категориям.</message>
-	<message key="admin.categories.disableCategories">Не упорядочивать журналы по категориям.</message>
-	<message key="admin.categories.enableCategories">Разрешить управляющим журналов упорядочивать журналы по категориям.</message>
-	<message key="admin.categories.editTitle">Редактировать категорию</message>
-	<message key="admin.categories.createTitle">Создать категорию</message>
-	<message key="admin.categories.create">Создать новую категорию</message>
-	<message key="admin.categories.noneCreated">Ни одна категория не была создана.</message>
-	<message key="admin.categories.confirmDelete">Вы уверены, что хотите удалить эту категорию?</message>
-	<message key="admin.categories.name">Название</message>
-	<message key="admin.categories.nameRequired">Название категории обязательно.</message>
-	<message key="admin.presses.createInstructions">Вы будете автоматически записаны управляющим этого журнала. После создания нового журнала вы будете перенаправлены на мастер настройки журнала для завершения первоначальной настройки журнала.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Напоминание об окончании подписки</message>
 	<message key="admin.scheduledTask.openAccessNotification">Уведомление об открытом доступе</message>
 	<message key="admin.scheduledTask.reviewReminder">Напоминание рецензенту</message>

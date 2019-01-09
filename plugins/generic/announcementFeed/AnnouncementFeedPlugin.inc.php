@@ -59,7 +59,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
 			$templateManager = $args[0];
 			$currentJournal = $templateManager->getTemplateVars('currentJournal');
-			$announcementsEnabled = $currentJournal ? $currentJournal->getSetting('enableAnnouncements') : false;
+			$announcementsEnabled = $currentJournal ? $currentJournal->getData('enableAnnouncements') : false;
 
 			if (!$announcementsEnabled) {
 				return false;

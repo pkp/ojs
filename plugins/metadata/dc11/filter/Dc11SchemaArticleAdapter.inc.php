@@ -102,7 +102,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$this->_addLocalizedElements($dc11Description, 'dc:description', $article->getAbstract(null));
 
 		// Publisher
-		$publisherInstitution = $journal->getSetting('publisherInstitution');
+		$publisherInstitution = $journal->getData('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$publishers = array($journal->getPrimaryLocale() => $publisherInstitution);
 		} else {
@@ -129,7 +129,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$dc11Description->addStatement('dc:type', $driverType, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 		$types = $section->getIdentifyType(null);
 		$types = array_merge_recursive(
-			empty($types)?array(AppLocale::getLocale() => __('rt.metadata.pkp.peerReviewed')):$types,
+			empty($types)?array(AppLocale::getLocale() => __('metadata.pkp.peerReviewed')):$types,
 			(array) $article->getType(null)
 		);
 		$this->_addLocalizedElements($dc11Description, 'dc:type', $types);
@@ -163,10 +163,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 			$sources[$locale] .=  $pages;
 		}
 		$this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
-		if ($issn = $journal->getSetting('onlineIssn')) {
+		if ($issn = $journal->getData('onlineIssn')) {
 			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 		}
-		if ($issn = $journal->getSetting('printIssn')) {
+		if ($issn = $journal->getData('printIssn')) {
 			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 		}
 
@@ -267,4 +267,3 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 	}
 }
-

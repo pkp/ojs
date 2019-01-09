@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Quantitat</message>
 	<message key="manager.payment.authorFees">Quotes dels autors/ores</message>
 	<message key="manager.payment.authorFeesDescription">Les opcions seleccionades, juntament amb la descripció i la quota corresponents (que podeu editar a continuació), apareixen al pas 1 del procés de tramesa, a la pàgina «Sobre la revista», secció «Trameses», i també en els passos que requereixin fer pagaments.</message>
-	<message key="manager.payment.currency">Moneda</message>
 	<message key="manager.payment.currencymessage">L’OJS no fa conversions de moneda. Si accepteu pagaments per les subscripcions, assegureu-vos que la moneda de la subscripció coincideixi amb la que s’indica aquí.</message>
 	<message key="manager.payment.description">Descripció</message>
 	<message key="manager.payment.details">Detalls</message>
@@ -62,7 +61,6 @@
 	<message key="manager.payment.readerFees">Quotes per als lectors/ores</message>
 	<message key="manager.payment.readerFeesDescription">Les opcions seleccionades, juntament amb la descripció i la quota corresponents (que podeu editar a continuació), apareixen a la pàgina «Sobre la revista», secció «Polítiques», i també en els passos que requereixen fer pagaments.</message>
 	<message key="manager.payment.records">Registres</message>
-	<message key="manager.payments">Pagaments</message>
 	<message key="manager.payment.userName">Id. del pagament</message>
 	<message key="manager.people.allEnrolledUsers">Usuaris/àries donats d’alta en aquesta revista</message>
 	<message key="manager.people.allJournals">Totes les revistes</message>
@@ -117,19 +115,15 @@
 	<message key="manager.setup.alternateHeader">Capçalera de pàgina alternativa</message>
 	<message key="manager.setup.alternateHeaderDescription">Si ho preferiu, en lloc d’inserir un títol i un logotip com a capçalera de pàgina, podeu inserir una capçalera en format HTML en el quadre de text que hi ha a continuació. Deixeu aquest quadre en blanc si no voleu utilitzar aquesta opció.</message>
 	<message key="manager.setup.announcements">Avisos</message>
-	<message key="manager.setup.announcementsDescription">És possible publicar avisos per informar els lectors/ores sobre notícies i esdeveniments relacionats amb la revista. Els avisos publicats apareixen a la pàgina «Avisos».</message>
-	<message key="manager.setup.announcementsIntroduction">Informació addicional</message>
-	<message key="manager.setup.announcementsIntroductionDescription">Introduïu la informació addicional que vulgueu que vegin els lectors/ores a la pàgina «Avisos».</message>
+	<message key="manager.setup.enableAnnouncements.description">És possible publicar avisos per informar els lectors/ores sobre notícies i esdeveniments relacionats amb la revista. Els avisos publicats apareixen a la pàgina «Avisos».</message>
+	<message key="manager.setup.announcementsIntroduction.description">Introduïu la informació addicional que vulgueu que vegin els lectors/ores a la pàgina «Avisos».</message>
 	<message key="manager.setup.appearInAboutJournal">(Apareixerà a «Sobre la revista»)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Demana als autors/ores que presentin una declaració de conflictes d’interessos (CI) juntament amb la tramesa.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Demana als revisors/ores que incloguin una declaració de CI per cada avaluació d'experts/ertes que trametin.</message>
 	<message key="manager.setup.history">Història de la revista</message>
 	<message key="manager.setup.historyDescription">Aquest text apareix a la pàgina «Sobre la revista» del lloc web de la revista i es pot utilitzar per descriure canvis en títols, el consell de redacció i altres elements rellevants per a la història de la publicació de la revista.</message>
-	<message key="manager.setup.copyeditInstructions">Instruccions per a la correcció d'originals</message>
-	<message key="manager.setup.copyeditInstructionsDescription">Les instruccions per a la correcció d'originals es faran arribar als correctors/ores, autors/ores i editors/ores de secció durant l’etapa d’edició de trameses. A continuació s’ofereix un exemple d’instruccions en format HTML, que l’administrador/a de la revista pot modificar o reemplaçar en qualsevol moment (en HTML o en text net).</message>
-	<message key="manager.setup.copyrightNotice">Avís de drets d’autor/a</message>
-	<message key="manager.setup.coverage">Cobertura</message>
-	<message key="manager.setup.coverageDescription">Fa referència a la ubicació geoespacial, a la cobertura cronològica o històrica i/o a les característiques de la mostra de recerca.</message>
+	<message key="manager.setup.metadata.coverage">Cobertura</message>
+	<message key="manager.setup.metadata.coverage.description">Fa referència a la ubicació geoespacial, a la cobertura cronològica o històrica i/o a les característiques de la mostra de recerca.</message>
 	<message key="manager.setup.currentIssue">Número actual</message>
 	<message key="manager.setup.customizingTheLook">Pas 5. Personalitzar la visualització</message>
 	<message key="manager.setup.customTags">Etiquetes personalitzades</message>
@@ -144,14 +138,12 @@
 	<message key="manager.setup.displayCurrentIssue">Afegeix la taula de continguts per al número actual (si està disponible).</message>
 	<message key="manager.setup.editorDecision">Decisió de l’editor/a</message>
 	<message key="manager.setup.emailBounceAddress">Adreça de retorn</message>
-	<message key="manager.setup.emailBounceAddressDescription">S’enviarà un missatge d’error a aquesta adreça cada vegada que no s’hagi pogut entregar un missatge de correu electrònic.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Nota:</strong> Per activar aquesta opció, l’administrador/a del lloc web ha d’activar l’opció <tt>allow_envelope_sender</tt> del fitxer de configuració de l’OJS. És possible que es necessiti una configuració addicional del servidor perquè el programa admeti aquesta funció (és possible que no tots els servidors la permetin), tal com s'indica a la documentació de l'OJS.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">S’enviarà un missatge d’error a aquesta adreça cada vegada que no s’hagi pogut entregar un missatge de correu electrònic.</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>Nota:</strong> Per activar aquesta opció, l’administrador/a del lloc web ha d’activar l’opció <tt>allow_envelope_sender</tt> del fitxer de configuració de l’OJS. És possible que es necessiti una configuració addicional del servidor perquè el programa admeti aquesta funció (és possible que no tots els servidors la permetin), tal com s'indica a la documentació de l'OJS.]]></message>
 	<message key="manager.setup.emails">Identificació per correu electrònic</message>
 	<message key="manager.setup.emailSignature">Signatura</message>
-	<message key="manager.setup.emailSignatureDescription">Les plantilles dels missatges de correu electrònic enviats pel sistema en nom de la revista tenen la signatura següent al final. Podeu editar el cos de la plantilla dels missatges de correu electrònic a la secció «Administració de la revista».</message>
-	<message key="manager.setup.enableAnnouncements">Permet als administradors/ores de la revista que afegeixin avisos.</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">dels avisos més recents a la pàgina inicial de la revista.</message>
+	<message key="manager.setup.emailSignature.description">Les plantilles dels missatges de correu electrònic enviats pel sistema en nom de la revista tenen la signatura següent al final. Podeu editar el cos de la plantilla dels missatges de correu electrònic a la secció «Administració de la revista».</message>
+	<message key="manager.setup.enableAnnouncements.enable">Permet als administradors/ores de la revista que afegeixin avisos.</message>
 	<message key="manager.setup.enablePublicIssueId">S’utilitzen identificadors personalitzats per identificar números.</message>
 	<message key="manager.setup.enableUserRegistration">Els usuaris/àries es poden registrar a la revista amb un o més dels rols següents:</message>
 	<message key="manager.setup.focusAndScope">Objectius i temàtica</message>
@@ -185,7 +177,7 @@
 	<message key="manager.setup.journalHomepageHeader">Capçalera de la pàgina inicial de la revista</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Capçalera de la pàgina inicial de la revista</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Podeu carregar una versió gràfica del títol i del logotip de la revista (en format .gif, .jpg o .png) per a la pàgina inicial, perquè reemplaci el text que es mostra per defecte.</message>
-	<message key="manager.setup.journalInitials">Inicials de la revista</message>
+	<message key="manager.setup.contextInitials">Inicials de la revista</message>
 	<message key="manager.setup.journalLayout">Maquetació de la revista</message>
 	<message key="manager.setup.journalLayoutDescription">Trieu un tema per a la revista i seleccioneu-ne els components de maquetació aquí. També podeu carregar un full d’estil per a la revista perquè substitueixi les dades dels fulls d’estil de tot el sistema i el full d’estil del tema, en cas que n’hàgiu seleccionat un.</message>
 	<message key="manager.setup.journalLogo">Logotip de la revista</message>
@@ -198,16 +190,9 @@
 	<message key="manager.setup.journalStyleSheetInvalid">El format del full d’estil per a la revista no és vàlid. El format admès és .css.</message>
 	<message key="manager.setup.journalTheme">Tema de la revista</message>
 	<message key="manager.setup.journalThumbnail">Miniatura de la revista</message>
-	<message key="manager.setup.journalTitle">Títol de la revista</message>
+	<message key="manager.setup.contextTitle">Títol de la revista</message>
 	<message key="manager.setup.labelName">Nom de l’etiqueta</message>
-	<message key="manager.setup.layoutInstructions">Instruccions de maquetació</message>
-	<message key="manager.setup.layoutInstructionsDescription">Podeu preparar les instruccions de maquetació per formatar els elements que es publicaran a la revista i introduir-les a continuació en format HTML o de text net. Aquestes instruccions estan disponibles per al maquetista i l’editor/a de secció a la pàgina d’edició de cada tramesa. (Tingueu en compte que no es proporcionen instruccions predeterminades perquè cada revista pot utilitzar els seus propis formats de fitxer, normes bibliogràfiques, fulls d’estil, etc.)</message>
-	<message key="manager.setup.layoutTemplates">Plantilles per a la maquetació</message>
-	<message key="manager.setup.layoutTemplatesDescription">Podeu carregar plantilles perquè apareguin a la maqueta de cadascun dels formats estàndard publicats a la revista (articles, ressenyes literàries, etc.). Les plantilles poden tenir qualsevol format de fitxer (PDF, DOC, etc.) i poden incloure anotacions addicionals per indicar el tipus i la mida de la lletra, la mida dels marges, etc. als maquetistes i als correctors/ores de proves.</message>
-	<message key="manager.setup.layoutTemplates.file">Fitxer de la plantilla</message>
-	<message key="manager.setup.layoutTemplates.title">Títol</message>
 	<message key="manager.setup.lists">Llistes</message>
-	<message key="manager.setup.listsDescription">Introduïu el nombre màxim d’elements (per exemple, trameses, usuaris/àries o assignacions d’edició) que apareixen a cada pàgina d’una llista, i també el nombre d’enllaços que es mostren en cada pàgina.</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Habilita el LOCKSS perquè emmagatzemi els continguts de la revista i els distribueixi a les biblioteques participants a través de la pàgina <a href="{$lockssUrl}" target="_blank"> Publisher Manifest</a> de LOCKSS. A la pàgina «Sobre la revista», a «Arxivament», es mostra una llicència de LOCKSS:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifiqueu entre 6 i 10 biblioteques perquè registrin la revista i l’emmagatzemin a la memòria cau. Per exemple, cerqueu institucions on treballin els editors/ores o altres membres del consell o bé institucions que ja participin en el LOCKSS. Vegeu <a href="http://www.lockss.org/community/" target="_blank">la comunitat LOCKSS</a>. Feu servir les plantilles d'invitació per a (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">les biblioteques que participen en el LOCKSS</a> or per a (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">les biblioteques que encara no hi participen</a>.]]></message>
 	<message key="manager.setup.look">Aparença</message>
@@ -226,35 +211,32 @@
 	<message key="manager.setup.note">Nota</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Nota:</strong> El correu electrònic justificant de recepció de la tramesa està desactivat. Per utilitzar aquesta funció, habiliteu el missatge de correu electrònic SUBMISSION_ACK a <a class="action" href="{$preparedEmailsUrl}">Plantilles de missatges de correu electrònic</a>.]]></message>
 	<message key="manager.setup.numPageLinks">Enllaços</message>
-	<message key="manager.setup.onlineAccessManagement">Accés al contingut de la revista</message>
+	<message key="manager.setup.publishingMode">Accés al contingut de la revista</message>
 	<message key="manager.setup.onlineIssn">ISSN en línia</message>
-	<message key="manager.setup.openAccess">La revista ofereix accés lliure al seu contingut.</message>
+	<message key="manager.distribution.publishingMode.openAccess">La revista ofereix accés lliure al seu contingut.</message>
 	<message key="manager.setup.pageNumberIdentifier">Opcions per als números de pàgina</message>
 	<message key="manager.setup.policies">Polítiques</message>
 	<message key="manager.setup.policies.description">Temàtica, avaluació d'experts/ertes, seccions, privacitat, seguretat i altres temes addicionals.</message>
 	<message key="manager.setup.printIssn">ISSN en paper</message>
 	<message key="manager.setup.proofingInstructions">Instruccions per a la correcció de proves</message>
 	<message key="manager.setup.proofingInstructionsDescription">Les instruccions per a la correcció de proves es fan arribar als correctors/ores de proves, als autors/ores, als maquetistes i als editors/ores de secció durant l’etapa d’edició de trameses. A continuació s’ofereix un exemple d’instruccions en format HTML, que l'administrador/a de la revista pot editar o reemplaçar (en format HTML o en text net) en qualsevol moment.</message>
-	<message key="manager.setup.provideRefLinkInstructions">Proporciona instruccions als maquetistes.</message>
 	<message key="manager.setup.publicationSchedule">Planficació de publicació</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[És possible publicar col·lectivament elements de la revista com a part d’un número amb una taula de continguts específica per a aquesta part. De forma alternativa, es poden publicar elements de manera individual tan bon punt estiguin llestos, afegint-los a la taula de continguts del volum «actual». Informeu els lectors/ores, a la pàgina «Sobre la revista», del sistema utilitzat i de la freqüència de publicació prevista.]]></message>
 	<message key="manager.setup.publicationScheduling">Procés de planificació de publicacions</message>
 	<message key="manager.setup.publicIdentifier">Identificació dels continguts de la revista</message>
 	<message key="manager.setup.publisher">Institució publicadora</message>
-	<message key="manager.setup.publisherDescription">El nom de l’organització que publica la revista apareix a la pàgina «Sobre la revista».</message>
+	<message key="manager.setup.publishingDescription">El nom de l’organització que publica la revista apareix a la pàgina «Sobre la revista».</message>
 	<message key="manager.setup.referenceLinking">Enllaços de referència</message>
-	<message key="manager.setup.refLinkInstructions.description">Instruccions de maquetació per als enllaços de referència</message>
 	<message key="manager.setup.restrictArticleAccess">Els usuaris/àries han d’estar registrats i han d’haver iniciat la sessió per poder visualitzar els continguts d’accés lliure.</message>
 	<message key="manager.setup.restrictSiteAccess">Els usuaris/àries han d’estar registrats i han d’haver iniciat la sessió per poder visualitzar el lloc de la revista.</message>
 	<message key="manager.setup.reviewGuidelines">Directrius de revisió</message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[Les directrius de revisió proporcionen als revisors/ores els criteris per jutjar la idoneïtat d'una tramesa per ser publicada a la revista, i poden incloure instruccions especials per a la preparació d'una revisió eficaç i útil. A l'hora de fer la revisió, els revisors/ores trobaran dos quadres de text en blanc: el primer «per a l'autor/a i l'editor/a» i el segon «per a l'editor/a». D'altra banda, l'administrador/a de la revista pot crear un formulari d'avaluació d'experts/ertes a <a href="{$reviewFormsUrl}" class="action">Formularis de revisió</a>. En tots els casos, els editors/ores tenen l'opció d'incloure les revisions en correspondència amb l'autor/a.]]></message>
 	<message key="manager.setup.reviewOptions">Opcions de revisió</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">És possible enviar recordatoris automàtics per correu electrònic als revisors/ores (disponibles a les plantilles de missatges de correu electrònic de l’OJS) en dues ocasions (però l'editor/a pot enviar missatges de correu electrònic als revisors/ores directament sempre que ho vulgui).</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Nota:</strong> Per activar aquestes opcions, l’administrador/a del lloc ha d’habilitar l’opció <tt>scheduled_tasks</tt> del fitxer de configuració de l’OJS. És possible que es necessiti una configuració addicional del servidor perquè el programa admeti aquesta funció (és possible que no tots els servidors la permetin), tal com s'indica a la documentació de l'OJS.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Avaluació anònima</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Temps mitjà de què disposaran els revisors/ores</message>
 	<message key="manager.setup.reviewOptions.onQuality">Després de cada revisió, els editors/ores han de puntuar els revisors/ores segons una escala de qualitat de cinc punts.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Els revisors/ores només tenen accés al fitxer de la tramesa si han acceptat revisar-la.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Els revisors/ores només tenen accés al fitxer de la tramesa si han acceptat revisar-la.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Accés per als revisors/ores</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Habilita l’accés per a revisors/ores en un clic.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> La invitació per correu electrònic als revisors/ores conté un URL especial que dirigeix directament els revisors/ores convidats a la pàgina de revisió de la tramesa (amb accés a qualsevol altra pàgina que requereixi identificació). Per motius de seguretat, els editors/ores no poden modificar les adreces de correu electrònic ni afegir-ne als camps CC o CCO abans d’enviar les invitacions als revisors/ores.]]></message>
@@ -262,16 +244,13 @@
 	<message key="manager.setup.reviewOptions.reviewerReminders">Recordatoris per a la revisió</message>
 	<message key="manager.setup.reviewPolicy">Política de revisió</message>
 	<message key="manager.setup.searchEngineIndexing">Indexació per als motors de cerca</message>
-	<message key="manager.setup.searchEngineIndexingDescription">Per ajudar els usuaris/àries dels motors de cerca a trobar aquesta revista, indiqueu-ne una breu descripció i les paraules clau més importants (separades per punt i coma).</message>
+	<message key="manager.setup.searchEngineIndexing.description">Per ajudar els usuaris/àries dels motors de cerca a trobar aquesta revista, indiqueu-ne una breu descripció i les paraules clau més importants (separades per punt i coma).</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Seccions i editors/ores de secció</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(Si no s’afegeix cap secció, les trameses s’assignen per defecte a la secció «Articles»).</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[Per crear o modificar seccions de la revista (com ara articles, ressenyes literàries, etc.), entreu a l’Administració de seccions.<br /><br />Els autors/ores que facin trameses a la revista han de designar...]]></message>
-	<message key="manager.setup.securitySettings">Paràmetres d’accés i seguretat</message>
-	<message key="manager.setup.securitySettingsDescription">L’OJS ofereix una sèrie d’opcions de seguretat que permeten restringir els continguts de la revista i mantenir informació addicional relativa a les trameses per a finalitats de control.</message>
 	<message key="manager.setup.selectEditorDescription">L’editor/a de la revista que segueix tot el procés editorial.</message>
 	<message key="manager.setup.selectSectionDescription">La secció de la revista adequada per a la tramesa.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Mostra sempre els enllaços a les galerades i indica l’accés restringit.</message>
-	<message key="manager.setup.siteAccess">Restriccions addicionals per a l’accés al lloc web i als articles</message>
 	<message key="manager.setup.stepsToJournalSite">Cinc passos per crear el lloc web d’una revista</message>
 	<message key="manager.setup.subjectExamples">(P. ex. fotosíntesi, forats negres, teorema dels quatre colors, fórmula de Bayes)</message>
 	<message key="manager.setup.subjectKeywordTopic">Paraules clau</message>
@@ -281,9 +260,8 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">Abans de fer una tramesa a la revista, els autors/ores han de marcar com a complets tots els elements de la llista de verificació per a la preparació de la tramesa. Aquesta llista de verificació també apareix a les directrius per als autors/ores, dins la pàgina «Sobre la revista». A continuació podeu editar la llista de verificació, però tingueu en compte que els autors/ores n’han d’activar tots els elements per poder continuar amb la tramesa.</message>
 	<message key="manager.setup.submissions">Trameses</message>
 	<message key="manager.setup.submissions.description">Directrius per a l’autor/a, drets d’autoria i indexació (inclòs el registre).</message>
-	<message key="manager.setup.subscription">Tothom que vulgui accedir a una part o a la totalitat dels continguts de la revista, hi ha d'estar subscrit.</message>
-	<message key="manager.setup.subscriptionDescription">Aquesta acció requereix l’assignació d’un administrador/a de subscripcions que tingui accés al mòdul de subscripcions. Aquest mòdul inclou opcions addicionals d’accés lliure, d'arxivament automàtic i de notificació per correu electrònic.</message>
-	<message key="manager.setup.noPublishing">L'OJS no s'ha d'utilitzar per publicar continguts de la revista en línia.</message>
+	<message key="manager.distribution.publishingMode.subscription">Tothom que vulgui accedir a una part o a la totalitat dels continguts de la revista, hi ha d'estar subscrit.</message>
+	<message key="manager.distribution.publishingMode.none">L'OJS no s'ha d'utilitzar per publicar continguts de la revista en línia.</message>
 	<message key="manager.setup.typeExamples">(p. ex. recerca històrica, mètode quasiexperimental, anàlisi literària, enquesta/entrevista)</message>
 	<message key="manager.setup.typeMethodApproach">Tipus (mètode/enfocament)</message>
 	<message key="manager.setup.typeProvideExamples">Indiqueu exemples de tipus, mètodes i enfocaments de recerca rellevants per a aquest camp</message>
@@ -292,7 +270,6 @@
 	<message key="manager.setup.useEditorialReviewBoard">La revista compta amb un consell de redacció o de revisió.</message>
 	<message key="manager.setup.useThumbnail">Miniatura</message>
 	<message key="manager.setup.useImageTitle">Imatge del títol</message>
-	<message key="manager.setup.useJournalStyleSheet">Full d’estil de la revista</message>
 	<message key="manager.setup.userRegistration">Registre d’usuaris/àries</message>
 	<message key="manager.setup.useTextTitle">Text del títol</message>
 	<message key="manager.statistics.defaultMetricDescription">
@@ -327,8 +304,6 @@
 	<message key="manager.statistics.statistics.selectSections">Seleccioneu les seccions de la revista per a les quals vulgueu calcular les estadístiques relatives a l'avaluació d'experts/ertes.</message>
 	<message key="manager.statistics.statistics.subscriptions">Subscripcions</message>
 	<message key="manager.subscriptionPolicies">Polítiques de subscripció</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">Política d’autoarxivament per part dels autors/ores</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">La següent política d’autoarxivament per part dels autors/ores s'inclou a la secció «Polítiques» de la pàgina «Sobre la revista».</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Accés obert diferit</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Amb l’accés obert diferit, els editors/ores mantenen la possibilitat d’oferir accés lliure immediat a determinats articles d’un número.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Els números anteriors d’aquesta revista estaran disponibles en format d’accés obert</message>
@@ -495,7 +470,6 @@
 	<message key="manager.setup.categories">Categories</message>
 	<message key="manager.setup.categories.description">Seleccioneu les categories que considereu més adequades de la llista anterior. Els lectors/ores poden fer cerques per categoria en el conjunt d'articles i números que componen la revista.</message>
 	<message key="manager.setup.resetPermissions">Reinicia permisos d'article</message>
-	<message key="manager.setup.resetPermissions.description">La declaració del copyright i la informació de la llicència s'afegiran permanentment al contingut publicat, garantint que aquestes dades no canvien en cas de que ho facin les polítiques de la revista per a les noves trameses. Per reiniciar la informació emmagatzemada dels permisos que ja s'ha adjuntat al contingut publicat, utilitza els botons que es mostren a continuació.</message>
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<message key="plugins.importexport.common.settings">Configuració</message>
@@ -511,10 +485,8 @@
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
 	<message key="manager.setup.masthead">Capçalera</message>
 	<message key="manager.setup.editorialTeam">Equip editorial</message>
-	<message key="manager.setup.editorialTeam.description">Llista els editors/es, els directors/es de gestió i les altres persones associades amb la revista.</message>
 	<message key="manager.setup.homepageContent">Contingut de la pàgina d'inici de la revista</message>
 	<message key="manager.setup.homepageContentDescription">La pàgina d'inici de la revista consta dels enllaços de navegació per defecte. S'hi pot afegir contingut addicional mitjançant una o totes les opcions següents, que apareixeran en l'ordre mostrat.</message>
-	<message key="manager.setup.layout">Disseny de la revista</message>
 	<message key="manager.setup.useStyleSheet">Full d'estil de la revista</message>
 	<message key="manager.setup.contextName">Nom de la revista</message>
 	<message key="manager.setup.pageHeader">Capçalera de la revista</message>
@@ -541,7 +513,6 @@
 	<message key="manager.setup.lockssTitle">LOCKSS</message>
 	<message key="manager.setup.clockssLicenseLabel">Descripció de la llicència CLOCKSS</message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar els subscriptors/es per correu electrònic</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mes(os) després del venciment de la subscripció</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar els subscriptors/es per correu electrònic</message>
@@ -549,8 +520,6 @@
 	<message key="manager.distribution.access">Accés</message>
 	<message key="grid.category.path">Ruta</message>
 	<message key="grid.action.addSection">Afegir secció</message>
-	<message key="manager.setup.journalThumbnail.altText">Text alternatiu per a la miniatura</message>
-	<message key="manager.setup.enableArchive">Activa l'emmagatzematge</message>
 	<message key="manager.setup.lockssLicenseLabel">Descripció de llicència LOCKSS</message>
 	<message key="manager.publication.library">Biblioteca de l'editor/a</message>
 	<message key="grid.genres.title.short">Components</message>
@@ -560,13 +529,9 @@
 	<message key="plugins.importexport.common.export.issues">Números</message>
 	<message key="plugins.importexport.common.export.representations">Galerades</message>
 	<message key="manager.setup.includeCreativeCommons">Les revistes que ofereixen accés obert immediat o retardat han d'incloure una llicència Creative Commons en el moment adequat amb tot el treball publicat.</message>
-	<message key="manager.setup.journalSummary">Índex de la revista</message>
-	<message key="manager.setup.journalSummary.description">Una breu descripció de la revista per mostrar-se en el llistat de revistes.</message>
-	<message key="manager.setup.journalAbout">Sobre la revista</message>
-	<message key="manager.setup.journalAbout.description">Inclogui qualsevol informació sobre la revista que pugui ser d'interès per a lectors/es, autors/es o revisors/es, com per exemple: política d'accés obert, focus i àmbit de la revista, avís de drets d'autor, divulgació del patrocini, història de la revista, declaració de privacitat o si està inclosa en algun sistema d'arxius LOCKSS o CLOCKSS.</message>
-	<message key="manager.setup.favicon">Icona web de la revista</message>
-	<message key="manager.setup.faviconDescription">Afegeixi una icona web per a aquesta revista que es mostrarà al costat de la barra de navegació quan els usuaris/àries visitin aquest lloc.</message>
-	<message key="manager.setup.faviconInvalid">Format d'icona web no vàlid. Els formats acceptats són .ico, .png i .gif.</message>
+	<message key="manager.setup.contextSummary">Índex de la revista</message>
+	<message key="manager.setup.contextAbout">Sobre la revista</message>
+	<message key="manager.setup.contextAbout.description">Inclogui qualsevol informació sobre la revista que pugui ser d'interès per a lectors/es, autors/es o revisors/es, com per exemple: política d'accés obert, focus i àmbit de la revista, avís de drets d'autor, divulgació del patrocini, història de la revista, declaració de privacitat o si està inclosa en algun sistema d'arxius LOCKSS o CLOCKSS.</message>
 	<message key="manager.setup.journalThumbnail.description">Un petit logotip o representació de la revista que es pot usar en el llistat de revistes.</message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Apareixerà una llicència LOCKSS en l'apartat "Sobre la revista" sota "Emmagatzematge": <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">llicència LOCKSS</a>]]></message>
 	<message key="manager.setup.clockssEnable"><![CDATA[Permetre que CLOCKSS emmagatzemi i distribueixi el contingut de la revista entre les biblioteques participants a través d'una pàgina CLOCKSS de <a href="{$clockssUrl}" target="_blank">manifest editorial</a>.]]></message>

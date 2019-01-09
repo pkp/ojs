@@ -16,26 +16,6 @@
 import('lib.pkp.classes.db.SettingsDAO');
 
 class JournalSettingsDAO extends SettingsDAO {
-
-	/**
-	 * @see SettingsDAO::reloadLocalizedDefaultSettings()
-	 *
-	 * Install locale field only settings from an XML file.
-	 * @param $request Request
-	 * @param $locale string locale id for which settings will be loaded
-	 */
-	function reloadLocalizedDefaultContextSettings($request, $locale) {
-		$context = $request->getContext();
-		$filename = 'registry/journalSettings.xml';
-		$paramArray = array(
-			'indexUrl' => $request->getIndexUrl(),
-			'journalPath' => $context->getData('path'),
-			'primaryLocale' => $context->getPrimaryLocale(),
-			'journalName' => $context->getName($context->getPrimaryLocale())
-		);
-		parent::reloadLocalizedDefaultSettings($context->getId(), $filename, $paramArray, $locale);
-	}
-
 	/**
 	 * Get the settings table name.
 	 * @return string

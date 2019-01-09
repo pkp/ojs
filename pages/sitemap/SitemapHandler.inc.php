@@ -33,7 +33,7 @@ class SitemapHandler extends PKPSitemapHandler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
+		if ($journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
 			$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'current')));
 			$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'archive')));
 			$publishedIssues = $issueDao->getPublishedIssues($journalId);

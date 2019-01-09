@@ -6,7 +6,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  *}
-{help file="issue-management.md#edit-issue-identifiers" class="pkp_help_tab"}
+{help file="issue-management" section="edit-issue-identifiers" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.

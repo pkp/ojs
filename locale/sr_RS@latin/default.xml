@@ -11,28 +11,23 @@
   * Localization strings for the sr_RS@latin (Srpski) locale (default journal settings).
   *
   -->
- 
+
 <locale name="sr_RS@latin" full_name="Srpski">
 	<!-- Section default -->
 	<message key="section.default.title">Članci</message>
 	<message key="section.default.abbrev">ART</message>
 	<!--
-	 *	
+	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Rad koji prilažem nije ranije objavljivan, niti se nalazi u procesu razmatranja u drugom časopisu (ili je objašnjenje obezbeđeno u komentarima uredniku).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Fajl koji prilažem je u formatu OpenOffice, Microsoft Word, RTF, ili WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Gde je moguće URL-ovi referenci su priloženi.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Tekst ima prored 1,5, koristi font Times New Roman veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima ili na kraju.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Упутства за ауторе</a>, koja se nalaze u sekciji "O časopisu".]]></message>
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Objavljivanje radova</message>
-	<message key="default.journalSettings.purchaseArticleFee">Kupovina članaka</message>
-	<message key="default.journalSettings.membershipFee">Članstvo asocijacija</message>
-	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
-	<message key="default.journalSettings.privacyStatement">Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</message>
-	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis pruža otvoreni pristup sadržaju po principu koji omogućuje istraživački rad besplatno dostupan javnosti, a sve u cilju veće globalne razmene znanja.</message>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Rad koji prilažem nije ranije objavljivan, niti se nalazi u procesu razmatranja u drugom časopisu (ili je objašnjenje obezbeđeno u komentarima uredniku).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Fajl koji prilažem je u formatu OpenOffice, Microsoft Word, RTF, ili WordPerfect.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Gde je moguće URL-ovi referenci su priloženi.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Tekst ima prored 1,5, koristi font Times New Roman veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima ili na kraju.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Упутства за ауторе</a>, koja se nalaze u sekciji "O časopisu".]]></message>
+	<message key="default.contextSettings.privacyStatement">Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</message>
+	<message key="default.contextSettings.openAccessPolicy">Ovaj časopis pruža otvoreni pristup sadržaju po principu koji omogućuje istraživački rad besplatno dostupan javnosti, a sve u cilju veće globalne razmene znanja.</message>
 	<message key="default.groups.name.manager">Tehnički sekretar</message>
 	<message key="default.groups.plural.manager">Tehnički sekretari</message>
 	<message key="default.groups.abbrev.manager">JM</message>
@@ -58,61 +53,14 @@
 	<message key="default.groups.name.externalReviewer">Recenzent</message>
 	<message key="default.groups.plural.externalReviewer">Recenzenti</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 	<message key="default.genres.article">Tekst članka</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Ovaj časopis dozvoljava i ohrabruje autore da postave svoje prijavljene članke na ličnom sajtu ili u institucionalnim repozitorijima pre ili nakon objavljivanja obezbeđujući bibliografske detalje koji priznaju objavljivanje u ovom časopisu.</message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
-	<message key="default.journalSettings.copyeditInstructions">Faza korekture je namenjena da poboljša tok, jasnoću, gramatiku, fraze i formatiranje članka. U ovoj fazi autor ima poslednju šansu da učini suštinske izmene na tekstu jer je sledeća faza ograničena samo na slovne greške i ispravke u formatiranju.</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href="{$indexUrl}/{$journalPath}/user/register">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href="{$indexUrl}/{$journalPath}/user/register">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href="{$indexUrl}/index/login">prijave</a> i da započnu proces prijave članka od pet koraka.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Ohrabrujemo naučne bibliotekare da uvrste ovaj časopis u listu bibliotečkih časopisa. Može biti vredno da se napomene da ovaj časopis koristi sistem otvorenog koda za objavljivanje koji je pogodan za biblioteke za njihove fakultetske članove da ga koriste sa časopisima u kojima su uključeni u procesu redakcije   (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href="{$indexUrl}{$contextPath}/user/register">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href="{$indexUrl}{$contextPath}/about">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href="{$indexUrl}{$contextPath}/user/register">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href="{$indexUrl}/index/login">prijave</a> i da započnu proces prijave članka od pet koraka.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Ohrabrujemo naučne bibliotekare da uvrste ovaj časopis u listu bibliotečkih časopisa. Može biti vredno da se napomene da ovaj časopis koristi sistem otvorenog koda za objavljivanje koji je pogodan za biblioteke za njihove fakultetske članove da ga koriste sa časopisima u kojima su uključeni u procesu redakcije   (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Faza korekture ima nameru da uhvati sve pravopisne greške, gramatičke greške i formatiranje članka. Veće suštinske izmene se ne mogu raditi u ovoj fazi sve dok se to ne dogovori sa urednikom sekcije/rubrike. U delu Izgled, kliknite na Vidi probnu kopiju da vidite HTML, PDF i druge dostupne formate fajlova koji se koriste u ovom sistemu objavljivanja..</p>
-
-	<h4>Slovne i gramatičke greške</h4>
-
-
-
-	<p>Kopirajte problematičnu reč ili grupe reči i stavite ih u kutiju za korekturne ispravke sa "PROMENI U " instrukcijama za urednika kako sledi:</p>
-
-	<pre>1. PROMENI...
-
-	a onda 
-
-	U...
-
-	druge</pre>
-
-	<br />
-
-	<pre>2. PROMENI...
-
-	Malinowsky
-
-	U...
-
-	Malinowski</pre>
-
-	<br />
-
-	<h4>Za greške formatiranja</h4>
-
-
-
-	<p>Opišite lokalciju i prirodu problemau kutiji za korekturne ispravke nakon pisanja u naslovu "FORMATIRANjE" kako sledi:</p>
-
-	<br />
-
-	<pre>3. FORMATIRANjE
-
-	Brojevi u tabeli 3 nisu poravnati u trećoj koloni.</pre>
-
-	<br />
-
-	<pre>4. FORMATIRANjE
-
-	Paragraf koji počinje sa "Ova zadnja tema..."  nije propisno uvučen.</pre>]]></message>
 </locale>

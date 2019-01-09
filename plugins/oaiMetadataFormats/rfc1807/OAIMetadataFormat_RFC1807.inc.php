@@ -27,7 +27,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 		// Publisher
 		$publisher = $journal->getLocalizedName(); // Default
-		$publisherInstitution = $journal->getLocalizedSetting('publisherInstitution');
+		$publisherInstitution = $journal->getLocalizedData('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$publisher = $publisherInstitution;
 		}
@@ -75,7 +75,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 			$this->formatElement('author', $creators) .
 			($article->getDatePublished()?$this->formatElement('date', $article->getDatePublished()):'') .
-			$this->formatElement('copyright', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .
+			$this->formatElement('copyright', strip_tags($journal->getLocalizedData('licenseTerms'))) .
 			$this->formatElement('other_access', "url:$url") .
 			$this->formatElement('keyword', $subject) .
 			$this->formatElement('period', $coverage) .
@@ -104,5 +104,3 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		return $response;
 	}
 }
-
-

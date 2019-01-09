@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">Znesek</message>
 	<message key="manager.payment.authorFees">Pristojbina avtorja</message>
 	<message key="manager.payment.authorFeesDescription">Izbrane možnosti, skupaj z opisi in pristojbinami (ki jih lahko urejate spodaj), se bodo prikazale v prvem koraku procesa oddaje prispevka in v meniju O reviji, pod Oddani prispevki, enako kot na straneh, kjer je potrebno plačilo.</message>
-	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS ne dela nobenih valutnih pretvorb. Če želite sprejemati plačila v določeni valuti, morate sami vpisati pravilno vrednost naročnine v valuti.</message>
 	<message key="manager.payment.description">Opis</message>
 	<message key="manager.payment.details">Podrobnosti</message>
@@ -62,7 +61,6 @@
 	<message key="manager.payment.readerFees">Pristojbina za branje</message>
 	<message key="manager.payment.readerFeesDescription">Izbrane opcije (ki se lahko urejajo spodaj) bodo prikazane na strani O reviji pod politikami in na točkah, kjer bo potrebno plačilo</message>
 	<message key="manager.payment.records">Zapisi</message>
-	<message key="manager.payments">Plačila</message>
 	<message key="manager.payment.userName">ID plačila</message>
 	<message key="manager.people.allEnrolledUsers">Vsi registrirani uporabniki revije</message>
 	<message key="manager.people.allJournals">Vse revije</message>
@@ -138,8 +136,8 @@
 	<message key="manager.setup.copyeditInstructions">Lektorska navodila</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Lektorska navodila bodo na voljo lektorjem, avtorjem in urednikom rubrik me procesom urejanja prispevkov. Spodaj so privzeta navodila v HTML formatu in jih lahko urednik revije kadarkoli spremeni (v HTML formatu ali kot prosto besedilo).</message>
 	<message key="manager.setup.copyrightNotice">Avtorske pravice</message>
-	<message key="manager.setup.coverage">Obseg</message>
-	<message key="manager.setup.coverageDescription">Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/ali karakteristike raziskovanega vzorca.</message>
+	<message key="manager.setup.metadata.coverage">Obseg</message>
+	<message key="manager.setup.metadata.coverage.description">Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/ali karakteristike raziskovanega vzorca.</message>
 	<message key="manager.setup.currentIssue">Trenutna številka</message>
 	<message key="manager.setup.customizingTheLook">Korak 5. Prilagajanje izgleda</message>
 	<message key="manager.setup.customTags">Posebne HTML oznake</message>
@@ -192,10 +190,10 @@
 	<message key="manager.setup.itemsPerPage">Postavk na stran</message>
 	<message key="manager.setup.journalAbbreviation">Kratica za revijo</message>
 	<message key="manager.setup.journalArchiving">Arhiviranje revije</message>
-	<message key="manager.setup.journalSummary">Povzetek revije</message>
-	<message key="manager.setup.journalSummary.description">Kratek opis revije, ki se bo prikazoval na seznamu vseh revij na tem spletišču.</message>
-	<message key="manager.setup.journalAbout">O reviji</message>
-	<message key="manager.setup.journalAbout.description">Vključite vse informacije o reviji, ki so lahko zanimive za bralce, avtorje in recenzente. To lahko vključuje politiko prostega dostopa, fokus in obseg revije, izjava o avtorskih pravicah, politiko sponzorstva, zgodovino revije, izjavo o vrovanju osebnih podatkov in vključitev v LOCKSS ali CLOCKSS sistem arhiviranja.</message>
+	<message key="manager.setup.contextSummary">Povzetek revije</message>
+	<message key="manager.setup.contextSummary.description">Kratek opis revije, ki se bo prikazoval na seznamu vseh revij na tem spletišču.</message>
+	<message key="manager.setup.contextAbout">O reviji</message>
+	<message key="manager.setup.contextAbout.description">Vključite vse informacije o reviji, ki so lahko zanimive za bralce, avtorje in recenzente. To lahko vključuje politiko prostega dostopa, fokus in obseg revije, izjava o avtorskih pravicah, politiko sponzorstva, zgodovino revije, izjavo o vrovanju osebnih podatkov in vključitev v LOCKSS ali CLOCKSS sistem arhiviranja.</message>
 	<message key="manager.setup.favicon">Favicon revije</message>
 	<message key="manager.setup.faviconDescription">Dodajte favikon revije, ki se bo prikazoval poleg navigacijske vrstice, ko bodo uporabniki obiskali vašo spletno stran.</message>
 	<message key="manager.setup.faviconInvalid">Napačen format slike za favicon.Dovoljeni formati so .ico, .png, and .gif.</message>
@@ -204,7 +202,7 @@
 	<message key="manager.setup.journalHomepageHeader">Glava domače strani revije</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Glava domače strani revije</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">Naložite lahko grafično verzijo naslova in logotipa revije (kot .gif, .jpg ali .png datoteka), ki bo zamenjala besedilno verzijo, ki se drugače pojavlja.</message>
-	<message key="manager.setup.journalInitials">Inicialke revije</message>
+	<message key="manager.setup.contextInitials">Inicialke revije</message>
 	<message key="manager.setup.journalLayout">Izgled revije</message>
 	<message key="manager.setup.journalLayoutDescription">Izberite stilsko temo in razpored elementov naslovnice revije. Hkrati lahko postavite tudi stilsko tablico revije, ki bo zamenjala sistemsko določeno stilsko tablico ali tematsko stilsko tablico (če je določena).</message>
 	<message key="manager.setup.journalLogo">Logotip revije</message>
@@ -219,7 +217,7 @@
 	<message key="manager.setup.journalThumbnail">Ikona revije</message>
 	<message key="manager.setup.journalThumbnail.description">Mahen logo oziroma grafična predstavitev revije, ki se bo uporabila na seznamu revij na tem spletišču.</message>
 	<message key="manager.setup.journalThumbnail.altText">Nadomestno besedilo za sličico</message>
-	<message key="manager.setup.journalTitle">Naslov revije</message>
+	<message key="manager.setup.contextTitle">Naslov revije</message>
 	<message key="manager.setup.labelName">Ime oznake</message>
 	<message key="manager.setup.layoutInstructions">Navodila za prelom</message>
 	<message key="manager.setup.layoutInstructionsDescription">Tukaj lahko priložite navodila za prelom prispevkov objavljenih v reviji. Pripravljena so Lahko kot navadno besedilo ali HTML. Vidna bodo grafičnim urednikom in urednikom rubrik med urejanjem prispevkov. (Vsaka revija ima lahko svoj format datotek, bibilografske standarde, stilske tabele, itd, privzeto niso na voljo nobena navodila)</message>
@@ -228,7 +226,6 @@
 	<message key="manager.setup.layoutTemplates.file">Datoteka predloge</message>
 	<message key="manager.setup.layoutTemplates.title">Naslov</message>
 	<message key="manager.setup.lists">Izpis seznama</message>
-	<message key="manager.setup.listsDescription">Določite največje število postavk (npr. prispevki, uporabniki, uredniške zadolžitve), ki se lahko pojavi na strani različnih seznamov, ki jih generira OJS., in število povezav na predhodne in naslednje strani tega seznama, ki se pojavi pod delom seznam na vsaki strani spodaj.</message>
 	<message key="manager.setup.enableArchive">Omogoči arhiviranje</message>
 	<message key="manager.setup.plnPluginEnable">PKP PN vtičnik je omogočen</message>
 	<message key="manager.setup.plnDescription">PKP Preservation Network (PN) brezplačno zagotavlja servis za ohranjanje za vse OJS revije, ki zadostujejo nekaj osnovnih kriterijev.</message>
@@ -309,7 +306,6 @@
 	<message key="manager.setup.selectEditorDescription">Urednik revije, ki bo to videl skozi uredniški postopek.</message>
 	<message key="manager.setup.selectSectionDescription">rubrika revije, za katero bo prispevek predviden.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Vedno pokaži povezavo na celoten prispevek, z oznako omejenega pristopa.</message>
-	<message key="manager.setup.siteAccess">Dodatne omejitve dostopa do spletišča in prispevkov.</message>
 	<message key="manager.setup.stepsToJournalSite">Pet korakov za postavitev spletne strani revije</message>
 	<message key="manager.setup.subjectExamples">(npr. fotosinteza; črne luknje; pokojninska reforma; Bayesova teorija)</message>
 	<message key="manager.setup.subjectKeywordTopic">Ključne besede</message>

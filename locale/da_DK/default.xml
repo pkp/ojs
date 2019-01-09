@@ -11,7 +11,7 @@
   * Localization strings.
   *
   -->
- 
+
 <locale name="da_DK" full_name="Dansk">
 	<!-- Section default -->
 	<message key="section.default.title">Artikler</message>
@@ -23,95 +23,22 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet er ikke tidligere blevet publiceret, og det er heller ikke sendt til et andet tidsskrift med henblik på at komme i betragtning til at blive publiceret (eller der er angivet en forklaring under kommentarfeltet 'Kommentarer til redaktøren').</message>
-	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen er i et OpenOffice, Microsoft Word- eller RTF- eller dokumentfilformat.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Der er angivet URL-adresser til referencerne, hvor de er tilgængelige.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Teksten er skrevet med enkelt linjeafstand, benytter en 12-punktsskrifttype og anvender kursiv i stedet for understregning (med undtagelse af URL-adresser), og alle illustrationer, figurer og tabeller er placeret i teksten på passende steder i stedet for til sidst.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teksten opfylder de stilistiske og bibliografiske krav, der er beskrevet under <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new"> Retningslinjer for forfattere </a>, som findes under Om tidsskriftet.]]></message>
-	<message key="default.journalSettings.privacyStatement">De navne og adresser, der angives på dette tidsskrifts websted, vil udelukkende blive anvendt til tidsskriftets angivne formål og vil ikke blive gjort tilgængelige til andre formål eller for andre parter.</message>
-	<message key="default.journalSettings.openAccessPolicy">Dette tidsskrift tilbyder øjeblikkelig Open Access til tidsskriftets indhold på baggrund af princippet om, at gratis offentlig adgang til forskning understøtter en større global udveksling af viden.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Dette tidsskrift tillader og opfordrer forfattere til at lægge artikler, der er fremsendt til tidsskriftet, ud på personlige websteder eller institutionelle repositorier både før og efter publicering, samtidigt med at der angives bibliografiske oplysninger, som eventuelt tillægger dette tidsskrift æren for elementets publicering.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manuskriptredigeringsfasen har til formål at forbedre artiklens flow, klarhed, grammatik, ordvalg og formatering. Den repræsenterer en sidste chance for forfatteren for at foretage omfattende ændringer af teksten, da næste fase er begrænset til rettelser af trykfejl og formatering.<br /><br />Den fil, der skal redigeres, er i Word- eller .rtf-format og kan derfor nemt redigeres som et tekstbehandlingsdokument. Det sæt instruktioner, der er vist her, foreslår to fremgangsmåder for manuskriptredigering. Den ene er baseret på funktionen 'Ændringer' i Microsoft Word og kræver, at manuskriptredaktøren, redaktøren og forfatteren har adgang til dette program. Et andet system, som er uafhængigt af software, er lånt, med tilladelse, af Harvard Educational Review. Tidsskriftsredaktøren kan ændre disse instruktioner, og det er derfor muligt at foreslå ændringer til forbedring af processen for dette tidsskrift.<h4>Manuskriptredigeringssystemer</h4><strong> 1. Funktionen Ændringer i Microsoft Word<br /><br /></strong>Ved hjælp af funktionen 'Ændringer' under 'Funktioner' på menulinjen kan manuskriptredaktøren foretage indsættelser (teksten vises i farver) og sletninger (teksten vises som gennemstreget i farver eller som slettet i margenerne). Manuskriptredaktøren kan sende forespørgsler til både forfatteren (forfatterforespørgsler) og redaktøren (redaktørforespørgsler) ved at sætte firkantparenteser omkring disse forespørgsler. Derefter overføres den manuskriptredigerede version, og redaktøren underrettes. Redaktøren bedømmer derefter teksten og underretter forfatteren.<strong><br /></strong><br />Redaktøren og forfatteren skal bevare de ændringer, de er tilfredse med. Hvis der er behov for yderligere ændringer, kan redaktøren og forfatteren ændre de oprindelige indsættelser eller sletninger samt foretage nye indsættelser eller sletninger andre steder i teksten. Forfattere og redaktører skal besvare alle de forespørgsler, der sendes til dem. Svarene skal være placeret inde i firkantparenteserne.<br /><br />Når teksten er blevet bedømt af redaktøren og forfatteren, foretager manuskriptredaktøren en endelig godkendelse af teksten og accepterer ændringerne med henblik på forberedelse til layout- og publiceringsversions-fasen.<p> </p><strong><strong>2. Harvard Educational Review</strong></strong><p><strong>Instruktioner til, hvordan du foretager elektroniske rettelser af manuskriptet</strong></p><p>Følg nedenstående protokol, hvis du vil foretage elektroniske rettelser af dit manuskript:</p><p><strong>Svar på foreslåede ændringer</strong> <br /> For hver af de foreslåede ændringer du kan acceptere, skal du fjerne fremhævelsen af teksten  <br /> For hver af de foreslåede ændringer, du ikke kan acceptere, skal du angive den oprindelige tekst igen og <strong>fremhæve</strong>den</p><p><strong><strong>Angivelse af tilføjelser og sletninger<br /></strong></strong> Indiker tilføjelser ved at <strong>fremhæve</strong> den nye tekst<br /> Erstat slettede sektioner med: <strong>[slettet tekst]<br /></strong> Hvis du sletter en eller flere sætninger, skal du angive dette i en note, f.eks. <strong>[har slettet 2 sætninger]</strong></p><p><strong>Besvarelser på forespørgsler til forfatteren (QA'er)<br /></strong> Sørg for, at alle QA'er er intakte og fremhævet i teksten. Undlad at slette dem <br />Hvis du vil svare på en QA, skal du tilføje en kommentar efter den. Kommentarer skal afgrænses ved hjælp af: <strong>[Kommentar:</strong>]<br />f.eks. <strong>[Kommentar: Har udvidet diskussionen om metodik, som du har foreslået]</strong></p><p><strong>Angivelse af kommentarer<br /></strong> Brug kommentarer til at forklare organisatoriske ændringer eller større rettelser <br /> f.eks. <strong>[Kommentar: Har flyttet ovennævnte afsnit fra side 5 til side 7]<br /></strong> Bemærk! Ved henvisning til sidetal skal du bruge sidetallene fra den udskrevne kopi af manuskriptet, der blev sendt til dig. Dette er vigtigt, da sidetallene kan ændre sig, når et dokumentet rettes elektronisk.</p><h4>Et eksempel på en elektronisk rettelse</h4><ol><li><strong>Indledende manuskriptredigering.</strong> Manuskriptredaktøren redigerer teksten med det formål at forbedre artiklens flow, klarhed, grammatik, ordvalg og formatering og vil så vidt det er muligt inkludere forfatterens forespørgsler. Når den første redigering er færdig oploader manuskriptredaktøren det redigerede dokument via tidsskriftets web site og underretter forfatteren om, at manuskriptet er klar til bedømmelse.<br /> </li><li><strong>Forfatterens manuskriptredigering.</strong> Inden forfatteren foretager dramatiske afvigelser fra strukturen og organiseringen af det manuskript, der er returneret, skal de redaktører, der er tilknyttet manuskriptet kontaktes. Forfatteren skal acceptere/afvise de relevante ændringer, der er foretaget i den indledende redigering, og besvare alle de forespørgsler, der forelægges forfatteren. Når forfatteren er færdig med sine rettelser, skal filen omdøbes fra ForfatternavnQA.doc til ForfatternavnQAR.doc (f.eks. fra LarsenQA.doc til LarsenQAR.doc). Det reviderede dokument skal efterfølgende oploades via tidsskriftets web site som angivet.<br /> </li><li><strong>Endelig manuskriptredigering.</strong> Manuskriptredaktøren vil verificere de ændringer forfatteren har foretaget og inddrage disse i udfærdigelsen af det endelige manuskript. Når manuskriptredaktøren er færdig oploader han det endelige manuskript via tidsskriftets web site og underretter layoutredaktøren, der foretager den afsluttende formatering</li></ol>]]></message>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Manuskriptet er ikke tidligere blevet publiceret, og det er heller ikke sendt til et andet tidsskrift med henblik på at komme i betragtning til at blive publiceret (eller der er angivet en forklaring under kommentarfeltet 'Kommentarer til redaktøren').</message>
+	<message key="default.contextSettings.checklist.fileFormat">Manuskriptfilen er i et OpenOffice, Microsoft Word- eller RTF- eller dokumentfilformat.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Der er angivet URL-adresser til referencerne, hvor de er tilgængelige.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Teksten er skrevet med enkelt linjeafstand, benytter en 12-punktsskrifttype og anvender kursiv i stedet for understregning (med undtagelse af URL-adresser), og alle illustrationer, figurer og tabeller er placeret i teksten på passende steder i stedet for til sidst.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Teksten opfylder de stilistiske og bibliografiske krav, der er beskrevet under <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new"> Retningslinjer for forfattere </a>, som findes under Om tidsskriftet.]]></message>
+	<message key="default.contextSettings.privacyStatement">De navne og adresser, der angives på dette tidsskrifts websted, vil udelukkende blive anvendt til tidsskriftets angivne formål og vil ikke blive gjort tilgængelige til andre formål eller for andre parter.</message>
+	<message key="default.contextSettings.openAccessPolicy">Dette tidsskrift tilbyder øjeblikkelig Open Access til tidsskriftets indhold på baggrund af princippet om, at gratis offentlig adgang til forskning understøtter en større global udveksling af viden.</message>
 
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Sådan føjes angivelse af links til referencer til layoutprocessen</h4>
-
-	<p>Ved konvertering af et manuskript til HTML eller PDF skal du sørge for, at alle hyperlinks i manuskriptet er aktive.</p>
-
-	<h4>A. Når forfatteren angiver et link til referencen</h4>
-
-	<ol>
-
-	<li>Føj sætningen VIS ELEMENT til slutningen af den reference, som har en URL-adresse, mens manuskriptet stadig er i tekstbehandlingsformatet (f.eks. Word).</li>
-
-	<li>Omdan sætningen til et hyperlink ved at fremhæve den og benytte værktøjet Indsæt hyperlink i Word samt den URL-adresse, der blev forberedt under punkt 2.</li>
-
-	</ol>
-
-	<h4>B. Sådan får læsere mulighed for at søge efter referencer i Google Scholar</h4>
-
-	<ol>
-
-	<li>Kopier titlen på det værk, der er refereret på referencelisten (hvis titlen er for almindelig, f.eks. "Fred", skal du kopiere forfatter og titel), mens manuskriptet stadig er i tekstbehandlingsformatet (f.eks. Word).</li>
-	<li>Indsæt referencens titel mellem %22'erne, idet du placerer et plustegn (+) mellem hvert ord: http://scholar.google.com/scholar?q=%22INDSÆT+TITEL+HER%22&hl=en&lr=&btnG=Search</li>
-
-	<li>Føj sætningen GS-SØGNING til slutningen af hvert citat på manuskriptets referenceliste.</li>
-
-	<li>Omdan sætningen til et hyperlink ved at fremhæve den og benytte værktøjet Indsæt hyperlink i Word samt den URL-adresse, der blev forberedt under punkt 2.</li>
-
-	</ol>
-
-	<h4>C. Sådan får læsere mulighed for at søge efter referencer med et DOI</h4>
-
-	<ol>
-
-	<li>Mens manuskriptet stadig er i Word-formatet, skal du kopiere et bundt referencer til CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-
-	<li>Indsæt det DOI, som forespørgslen indeholder, i følgende URL-adresse (mellem = og &): http://www.cmaj.ca/cgi/external_ref?access_num=INDSÆT DOI#HER&link_type=DOI</li>
-
-	<li>Føj CrossRef til slutningen af hvert reference på manuskriptets referenceliste.</li>
-
-	<li>Omdan det til et hyperlink ved at fremhæve det og benytte værktøjet Indsæt hyperlink i Word samt den relevante URL-adresse, der blev forberedt under punkt 2.</li>
-
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Korrekturlæsningsfasen har til hensigt at fange eventuelle stave-, grammatik- og formateringsfejl i publiceringsversionen. Det er ikke muligt at foretage flere større ændringer i denne fase, medmindre det er blevet drøftet med sektionsredaktøren. Klik på VIS KORREKTUR under Layout for at få vist de HTML- og PDF-filformater samt andre tilgængelige filformater, der er anvendt ved publicering af dette element.</p>
-
-<h4>Stave-og grammatikfejl</h4>
-
-<p>Kopier det ord eller de grupper af ord, der er problemer med, og indsæt dem i feltet Korrekturrettelser med "RET TIL"-instruktioner til redaktøren som følger...</p>
-
-<pre>1. RET...
-derefter de andre
-TIL...
-end de andre</pre>
-<br />
-<pre>2. RET...
-Malinowsky
-TIL...
-Malinowski</pre>
-<br />
-
-<h4>Formateringsfejl</h4>
-
-<p>Beskriv problemets art, samt hvor det forekommer, i feltet Korrekturrettelser, efter du har indtastet titlen "FORMATERING" som følger...</p>
-<br />
-<pre>3. FORMATERING
-Tallene i tabel 3 er ikke justeret i tredje kolonne.</pre>
-<br />
-<pre>4. FORMATERING
-Afsnittet, der begynder med "Dette sidste emne...", er ikke blevet indrykket.</pre>]]></message>
-	
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Vi opfordrer læsere til at tilmelde sig nyhedstjenesten vedrørende publiceringer for dette tidsskrift. Brug linket <a href="{$indexUrl}/{$journalPath}/user/register">Registrer</a> øverst på tidsskriftets hjemmeside. Denne registrering medfører, at læseren via e-mail modtager indholdsfortegnelsen for alle nye numre af tidsskriftet. Denne liste giver også tidsskriftet mulighed for at hævde at have et vist supportniveau eller et vist antal læsere. Se tidsskriftets <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Erklæring om beskyttelse af personlige oplysninger</a>, der garanterer læserne, at deres navne og e-mail-adresser ikke benyttes til andre formål.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Er du interesseret i at fremsende et manuskript til dette tidsskrift? Vi anbefaler, at du gennemgår siden <a href="{$indexUrl}/{$journalPath}/about">Om tidsskriftet</a>, hvor du kan finde tidsskriftets sektionspolitikker, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Retningslinjer for forfattere</a>. Forfattere skal <a href="{$indexUrl}/{$journalPath}/user/register">tilmelde sig</a> tidsskriftet, inden de kan fremsende et manuskript. Hvis de allerede er tilmeldt, kan de blot <a href="{$indexUrl}/index/login">logge på</a> og påbegynde processen, der består af 5 trin.]]></message>	
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi opfordrer forskningsbibliotekarer til at anføre dette tidsskrift på listen over deres biblioteks beholdning af elektroniske tidsskrifter. Det kan desuden være nyttigt at bemærke, at dette tidsskrifts open source-publiceringssystem er velegnet til biblioteker, som kan være værter for det til deres fakultetsmedlemmer, som kan bruge det til de tidsskrifter, de er ved at redigere (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Dette tidsskrift benytter LOCKSS-systemet til at oprette et distribueret arkiveringssystem blandt deltagende biblioteker og tillader disse biblioteker at oprette permanente arkiver af tidsskriftet med henblik på bevaring og genskabelse. <a href="http://lockss.stanford.edu/">Mere...</a>]]></message>
-	
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Publicering af artiklen</message>
-	<message key="default.journalSettings.purchaseIssueFee">Købsnummer</message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Vi opfordrer læsere til at tilmelde sig nyhedstjenesten vedrørende publiceringer for dette tidsskrift. Brug linket <a href="{$indexUrl}{$contextPath}/user/register">Registrer</a> øverst på tidsskriftets hjemmeside. Denne registrering medfører, at læseren via e-mail modtager indholdsfortegnelsen for alle nye numre af tidsskriftet. Denne liste giver også tidsskriftet mulighed for at hævde at have et vist supportniveau eller et vist antal læsere. Se tidsskriftets <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Erklæring om beskyttelse af personlige oplysninger</a>, der garanterer læserne, at deres navne og e-mail-adresser ikke benyttes til andre formål.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Er du interesseret i at fremsende et manuskript til dette tidsskrift? Vi anbefaler, at du gennemgår siden <a href="{$indexUrl}{$contextPath}/about">Om tidsskriftet</a>, hvor du kan finde tidsskriftets sektionspolitikker, samt <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Retningslinjer for forfattere</a>. Forfattere skal <a href="{$indexUrl}{$contextPath}/user/register">tilmelde sig</a> tidsskriftet, inden de kan fremsende et manuskript. Hvis de allerede er tilmeldt, kan de blot <a href="{$indexUrl}/index/login">logge på</a> og påbegynde processen, der består af 5 trin.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Vi opfordrer forskningsbibliotekarer til at anføre dette tidsskrift på listen over deres biblioteks beholdning af elektroniske tidsskrifter. Det kan desuden være nyttigt at bemærke, at dette tidsskrifts open source-publiceringssystem er velegnet til biblioteker, som kan være værter for det til deres fakultetsmedlemmer, som kan bruge det til de tidsskrifter, de er ved at redigere (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Dette tidsskrift benytter LOCKSS-systemet til at oprette et distribueret arkiveringssystem blandt deltagende biblioteker og tillader disse biblioteker at oprette permanente arkiver af tidsskriftet med henblik på bevaring og genskabelse. <a href="http://lockss.stanford.edu/">Mere...</a>]]></message>
+
 	<message key="default.genres.article">Artikeltekst</message>
 	<message key="default.genres.researchInstrument">Forskningsredskab</message>
 	<message key="default.genres.researchMaterials">Forskningsmateriale</message>
@@ -120,7 +47,7 @@ ________________________________________________________________________<br/>
 	<message key="default.genres.dataAnalysis">Dataanalyse</message>
 	<message key="default.genres.sourceTexts">Kildetekster</message>
 	<message key="default.genres.dataSet">Datasæt</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Dette tidsskrift anvender CLOCKSS systemet for at understøtte et udbredt arkiveringssystem blandt deltagende biblioteker og giver disse biblioteker ret til permanent at arkivere tidsskriftet til bevaring og eventuel genoprettelse. <a href="http://clockss.org/">Mere...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Dette tidsskrift anvender CLOCKSS systemet for at understøtte et udbredt arkiveringssystem blandt deltagende biblioteker og giver disse biblioteker ret til permanent at arkivere tidsskriftet til bevaring og eventuel genoprettelse. <a href="http://clockss.org/">Mere...</a>]]></message>
 	<message key="default.groups.name.manager">Tidsskriftschef</message>
 	<message key="default.groups.plural.manager">Tidsskriftschefer</message>
 	<message key="default.groups.abbrev.manager">JM</message>
@@ -139,6 +66,4 @@ ________________________________________________________________________<br/>
 	<message key="default.groups.name.externalReviewer">Bedømmer</message>
 	<message key="default.groups.plural.externalReviewer">Bedømmere</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
-	<message key="default.journalSettings.purchaseArticleFee">Køb artikel</message>
-	<message key="default.journalSettings.membershipFee">Foreningsmedlemskab</message>
 </locale>

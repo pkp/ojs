@@ -42,11 +42,10 @@ class TemplateManager extends PKPTemplateManager {
 			$this->assign('sitePublicFilesDir', $siteFilesDir);
 			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
 
-			$siteStyleFilename = $publicFileManager->getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
-			if (file_exists($siteStyleFilename)) {
+			if ($site->getData('styleSheet')) {
 				$this->addStyleSheet(
 					'siteStylesheet',
-					$request->getBaseUrl() . '/' . $siteStyleFilename,
+					$request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . $site->getData('styleSheet'),
 					array(
 						'priority' => STYLE_SEQUENCE_LATE
 					)
@@ -76,12 +75,11 @@ class TemplateManager extends PKPTemplateManager {
 					'supportedLocales' => $context->getSupportedLocaleNames(),
 					'displayPageHeaderTitle' => $context->getLocalizedPageHeaderTitle(),
 					'displayPageHeaderLogo' => $context->getLocalizedPageHeaderLogo(),
-					'displayPageHeaderLogoAltText' => $context->getLocalizedSetting('pageHeaderLogoImageAltText'),
-					'numPageLinks' => $context->getSetting('numPageLinks'),
-					'itemsPerPage' => $context->getSetting('itemsPerPage'),
-					'enableAnnouncements' => $context->getSetting('enableAnnouncements'),
-					'contextSettings' => $context->getSettingsDAO()->getSettings($context->getId()),
-					'disableUserReg' => $context->getSetting('disableUserReg'),
+					'displayPageHeaderLogoAltText' => $context->getLocalizedData('pageHeaderLogoImageAltText'),
+					'numPageLinks' => $context->getData('numPageLinks'),
+					'itemsPerPage' => $context->getData('itemsPerPage'),
+					'enableAnnouncements' => $context->getData('enableAnnouncements'),
+					'disableUserReg' => $context->getData('disableUserReg'),
 				));
 
 				// Assign meta tags
@@ -89,18 +87,6 @@ class TemplateManager extends PKPTemplateManager {
 				if (!empty($favicon)) {
 					$faviconDir = $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId());
 					$this->addHeader('favicon', '<link rel="icon" href="' . $faviconDir . '/' . $favicon['uploadName'] . '">');
-				}
-
-				// Assign stylesheets and footer
-				$contextStyleSheet = $context->getSetting('styleSheet');
-				if ($contextStyleSheet) {
-					$this->addStyleSheet(
-						'contextStylesheet',
-						$request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()) . '/' . $contextStyleSheet['uploadName'],
-						array(
-							'priority' => STYLE_SEQUENCE_LATE
-						)
-					);
 				}
 
 				// Get a link to the settings page for the current context.
@@ -111,14 +97,14 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'context') );
 
 				$paymentManager = Application::getPaymentManager($context);
-				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
+				$this->assign('pageFooter', $context->getLocalizedData('pageFooter'));
 			} else {
 				// Check if registration is open for any contexts
 				$contextDao = Application::getContextDAO();
 				$contexts = $contextDao->getAll(true)->toArray();
 				$contextsForRegistration = array();
 				foreach($contexts as $context) {
-					if (!$context->getSetting('disableUserReg')) {
+					if (!$context->getData('disableUserReg')) {
 						$contextsForRegistration[] = $context;
 					}
 				}
@@ -127,11 +113,11 @@ class TemplateManager extends PKPTemplateManager {
 					'contexts' => $contextsForRegistration,
 					'disableUserReg' => empty($contextsForRegistration),
 					'displayPageHeaderTitle' => $site->getLocalizedPageHeaderTitle(),
-					'displayPageHeaderLogo' => $site->getLocalizedSetting('pageHeaderTitleImage'),
+					'displayPageHeaderLogo' => $site->getLocalizedData('pageHeaderTitleImage'),
 					'siteTitle' => $site->getLocalizedTitle(),
 					'primaryLocale' => $site->getPrimaryLocale(),
 					'supportedLocales' => $site->getSupportedLocaleNames(),
-					'pageFooter' => $site->getLocalizedSetting('pageFooter'),
+					'pageFooter' => $site->getLocalizedData('pageFooter'),
 				));
 
 			}

@@ -22,91 +22,34 @@ define('JOURNAL_FIELD_TITLE', 1);
 define('JOURNAL_FIELD_SEQUENCE', 2);
 
 class JournalDAO extends ContextDAO {
+	/** @copydoc SchemaDAO::$schemaName */
+	var $schemaName = 'context';
+
+	/** @copydoc SchemaDAO::$tableName */
+	var $tableName = 'journals';
+
+	/** @copydoc SchemaDAO::$settingsTableName */
+	var $settingsTableName = 'journal_settings';
+
+	/** @copydoc SchemaDAO::$primaryKeyColumn */
+	var $primaryKeyColumn = 'journal_id';
+
+	/** @var array Maps schema properties for the primary table to their column names */
+	var $primaryTableColumns = [
+		'id' => 'journal_id',
+		'path' => 'path',
+		'enabled' => 'enabled',
+		'seq' => 'seq',
+		'primaryLocale' => 'primary_locale',
+	];
 
 	/**
-	 * Construct a new Journal.
+	 * Create a new DataObject of the appropriate class
+	 *
 	 * @return DataObject
 	 */
-	function newDataObject() {
+	public function newDataObject() {
 		return new Journal();
-	}
-
-	/**
-	 * Internal function to return a Journal object from a row.
-	 * @param $row array
-	 * @return Journal
-	 */
-	function _fromRow($row) {
-		$journal = parent::_fromRow($row);
-		$journal->setPrimaryLocale($row['primary_locale']);
-		$journal->setEnabled($row['enabled']);
-		HookRegistry::call('JournalDAO::_returnJournalFromRow', array(&$journal, &$row));
-		return $journal;
-	}
-
-	/**
-	 * Update an existing journal.
-	 * @param $journal Journal
-	 */
-	function updateObject($journal) {
-		return $this->update(
-			'UPDATE journals
-			SET	path = ?,
-				seq = ?,
-				enabled = ?,
-				primary_locale = ?
-			WHERE journal_id = ?',
-			array(
-				$journal->getPath(),
-				(float) $journal->getSequence(),
-				$journal->getEnabled() ? 1 : 0,
-				$journal->getPrimaryLocale(),
-				(int) $journal->getId()
-			)
-		);
-	}
-
-	/**
-	 * Delete a journal by ID, INCLUDING ALL DEPENDENT ITEMS.
-	 * @param $journalId int
-	 */
-	function deleteById($journalId) {
-		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->deleteById($journalId);
-
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionDao->deleteByJournalId($journalId);
-
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issueDao->deleteByJournalId($journalId);
-
-		$emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplateDao->deleteEmailTemplatesByContext($journalId);
-
-		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionDao->deleteByJournalId($journalId);
-		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$subscriptionDao->deleteByJournalId($journalId);
-
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypeDao->deleteByJournal($journalId);
-
-		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
-		$announcementDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
-
-		$announcementTypeDao = DAORegistry::getDAO('AnnouncementTypeDAO');
-		$announcementTypeDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
-
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articleDao->deleteByContextId($journalId);
-
-		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
-		$pluginSettingsDao->deleteByContextId($journalId);
-
-		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
-		$reviewFormDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
-
-		parent::deleteById($journalId);
 	}
 
 	/**
@@ -180,33 +123,6 @@ class JournalDAO extends ContextDAO {
 			if ($dao->pubIdExists($pubIdType, $pubId, $excludedId, $journalId)) return true;
 		}
 		return false;
-	}
-
-	//
-	// Protected methods
-	//
-	/**
-	 * Get the table name for this context.
-	 * @return string
-	 */
-	protected function _getTableName() {
-		return 'journals';
-	}
-
-	/**
-	 * Get the table name for this context's settings table.
-	 * @return string
-	 */
-	protected function _getSettingsTableName() {
-		return 'journal_settings';
-	}
-
-	/**
-	 * Get the name of the primary key column for this context.
-	 * @return string
-	 */
-	protected function _getPrimaryKeyColumn() {
-		return 'journal_id';
 	}
 }
 

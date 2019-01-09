@@ -45,17 +45,83 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	function register($category, $path, $mainContextId = null) {
 		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
+			\HookRegistry::register('Form::config::before', array($this, 'addSettings'));
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * @copydoc PaymethodPlugin::getSettingsForm()
+	 * Add settings to the payments form
+	 *
+	 * @param $hookName string
+	 * @param $form FormComponent
 	 */
-	function getSettingsForm($context) {
-		$this->import('PaypalPaymentSettingsForm');
-		return new PaypalPaymentSettingsForm($this, $context->getId());
+	public function addSettings($hookName, $form) {
+		if ($form->id !== FORM_PAYMENT_SETTINGS) {
+			return;
+		}
+
+		$context = Application::getRequest()->getContext();
+		if (!$context) {
+			return;
+		}
+
+		$form->addGroup([
+				'id' => 'paypalpayment',
+				'label' => __('plugins.paymethod.paypal.displayName'),
+				'showWhen' => 'paymentsEnabled',
+			])
+			->addField(new \PKP\components\forms\FieldOptions('testMode', [
+				'label' => __('plugins.paymethod.paypal.settings.testMode'),
+				'options' => [
+					['value' => true, 'label' => __('common.enable')]
+				],
+				'value' => (bool) $this->getSetting($context->getId(), 'testMode'),
+				'groupId' => 'paypalpayment',
+			]))
+			->addField(new \PKP\components\forms\FieldText('accountName', [
+				'label' => __('plugins.paymethod.paypal.settings.accountName'),
+				'value' => $this->getSetting($context->getId(), 'accountName'),
+				'groupId' => 'paypalpayment',
+			]))
+			->addField(new \PKP\components\forms\FieldText('clientId', [
+				'label' => __('plugins.paymethod.paypal.settings.clientId'),
+				'value' => $this->getSetting($context->getId(), 'clientId'),
+				'groupId' => 'paypalpayment',
+			]))
+			->addField(new \PKP\components\forms\FieldText('secret', [
+				'label' => __('plugins.paymethod.paypal.settings.secret'),
+				'value' => $this->getSetting($context->getId(), 'secret'),
+				'groupId' => 'paypalpayment',
+			]));
+
+		return;
+	}
+
+	/**
+	 * @copydoc PaymethodPlugin::saveSettings()
+	 */
+	public function saveSettings($params, $slimRequest, $request) {
+		$allParams = $slimRequest->getParsedBody();
+		$saveParams = [];
+		foreach ($allParams as $param => $val) {
+			switch ($param) {
+				case 'accountName':
+				case 'clientId':
+				case 'secret':
+					$saveParams[$param] = (string) $val;
+					break;
+				case 'testMode':
+					$saveParams[$param] = $val === 'true';
+					break;
+			}
+		}
+		$contextId = $request->getContext()->getId();
+		foreach ($saveParams as $param => $val) {
+			$this->updateSetting($contextId, $param, $val);
+		}
+		return [];
 	}
 
 	/**
@@ -137,5 +203,3 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 }
-
-

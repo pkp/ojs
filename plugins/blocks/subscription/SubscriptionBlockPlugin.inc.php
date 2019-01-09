@@ -50,7 +50,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
+		if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			return '';
 
 		$user = $request->getUser();

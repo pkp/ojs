@@ -45,19 +45,19 @@ class Article extends Submission {
 		$fieldValue = null; // Scrutinizer
 		switch ($field) {
 			case PERMISSIONS_FIELD_LICENSE_URL:
-				$fieldValue = $context->getSetting('licenseURL');
+				$fieldValue = $context->getData('licenseURL');
 				break;
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
-				switch($context->getSetting('copyrightHolderType')) {
+				switch($context->getData('copyrightHolderType')) {
 					case 'author':
 						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString(false));
 						break;
-					case 'other':
-						$fieldValue = $context->getSetting('copyrightHolderOther');
-						break;
 					case 'context':
-					default:
+					case null:
 						$fieldValue = $context->getName(null);
+						break;
+					default:
+						$fieldValue = $context->getData('copyrightHolderOther');
 						break;
 				}
 				break;
@@ -69,7 +69,7 @@ class Article extends Submission {
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticle = $publishedArticleDao->getByArticleId($this->getId());
 				if ($publishedArticle) {
-					switch($context->getSetting('copyrightYearBasis')) {
+					switch($context->getData('copyrightYearBasis')) {
 						case 'submission':
 							// override to the submission's year if published as you go
 							$fieldValue = date('Y', strtotime($publishedArticle->getDatePublished()));
@@ -283,5 +283,3 @@ class Article extends Submission {
 		return $urls;
 	}
 }
-
-

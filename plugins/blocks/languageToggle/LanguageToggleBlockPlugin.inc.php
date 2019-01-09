@@ -16,17 +16,6 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class LanguageToggleBlockPlugin extends BlockPlugin {
-	/**
-	 * Determine whether the plugin is enabled. Overrides parent so that
-	 * the plugin will be displayed during install.
-	 *
-	 * @param $contextId int Context ID (journal/press)
-	 * @return boolean
-	 */
-	function getEnabled($contextId = null) {
-		if (!Config::getVar('general', 'installed')) return true;
-		return parent::getEnabled($contextId);
-	}
 
 	/**
 	 * Install default settings on system install.
@@ -42,29 +31,6 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 	 */
 	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
-	 * Get the block context. Overrides parent so that the plugin will be
-	 * displayed during install.
-	 *
-	 * @param $contextId int Context ID (journal/press)
-	 * @return int
-	 */
-	function getBlockContext($contextId = null) {
-		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_SIDEBAR;
-		return parent::getBlockContext($contextId);
-	}
-
-	/**
-	 * Determine the plugin sequence. Overrides parent so that
-	 * the plugin will be displayed during install.
-	 *
-	 * @param $contextId int Context ID (journal/press)
-	 */
-	function getSeq($contextId = null) {
-		if (!Config::getVar('general', 'installed')) return 2;
-		return parent::getSeq($contextId);
 	}
 
 	/**

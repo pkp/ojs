@@ -75,15 +75,15 @@ class DOAJXmlFilter extends NativeExportFilter {
 			$language = AppLocale::get3LetterIsoFromLocale($pubObject->getLocale());
 			if (!empty($language)) $recordNode->appendChild($node = $doc->createElement('language', $language));
 			// Publisher name (i.e. institution name)
-			$publisher = $context->getSetting('publisherInstitution');
+			$publisher = $context->getData('publisherInstitution');
 			if (!empty($publisher)) $recordNode->appendChild($node = $doc->createElement('publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
 			// Journal's title (M)
 			$journalTitle =  $context->getName($context->getPrimaryLocale());
 			$recordNode->appendChild($node = $doc->createElement('journalTitle', htmlspecialchars($journalTitle, ENT_COMPAT, 'UTF-8')));
 			// Identification Numbers
-			$issn = $context->getSetting('printIssn');
+			$issn = $context->getData('printIssn');
 			if (!empty($issn)) $recordNode->appendChild($node = $doc->createElement('issn', $issn));
-			$eissn = $context->getSetting('onlineIssn');
+			$eissn = $context->getData('onlineIssn');
 			if (!empty($eissn)) $recordNode->appendChild($node = $doc->createElement('eissn', $eissn));
 			// Article's publication date, volume, issue
 			if ($pubObject->getDatePublished()) {

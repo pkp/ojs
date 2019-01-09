@@ -365,16 +365,8 @@
 	<message key="plugins.categories.auth.description">Käyttöoikeus-lisäosa sallii Open Journal Systemsin siirtää käyttäjän todentamiseen liittyviä tehtäviä muiden järjestelmien, kuten LDAP-palvelimien, hoidettavaksi.</message>
 	<message key="plugins.categories.generic.description">Yleisiä lisäosia käytetään laajentamaan Open Journal Systemsiä sellaisilla eri tavoilla, joita ei tueta muissa lisäosakategorioissa.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems tukee <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) -järjestelmää varmistaakseen julkaisulle turvallisen ja pysyvän arkiston. LOCKSS on Stanford University Libraryssa kehitetty avoimen lähdekoodin ohjelmisto, joka antaa kirjastoille mahdollisuuden valittujen verkkojulkaisujen säilyttämiseen, keräten säännöllisesti rekisteröityjen julkaisujen verkkosivustojen äskettäin julkaistua sisältöä ja arkistoiden sen. Jokainen arkisto tarkistetaan toistuvasti muiden kirjastojen välimuistien avulla. Mikäli sisältö on vioittunut tai kadonnut, se voidaan palauttaa muiden välimuistien tai itse julkaisun avulla.
-<br /><br />
-LOCKSS-tukea ei tarvitse ottaa Open Journal Systemsissä käyttöön, ennen kuin julkaiseminen on jo täydessä vauhdissa. Toimi silloin näiden kahden vaiheen mukaan:]]></message>
-
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems tukee myös <a href="http://www.lockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) -järjestelmää varmistaakseen julkaisulle turvallisen ja pysyvän arkiston. CLOCKSS perustuu Stanford University Libraryssä kehitettyyn avoimen lähdekoodin LOCKSS-ohjelmistoon, joka antaa kirjastoille mahdollisuuden valittujen verkkojulkaisujen säilyttämiseen, keräten säännöllisesti rekisteröityjen julkaisujen verkkosivustojen äskettäin julkaistua sisältöä ja arkistoiden sen. Jokainen arkisto tarkistetaan toistuvasti muiden kirjastojen välimuistien avulla. Mikäli sisältö on vioittunut tai kadonnut, se voidaan palauttaa muiden välimuistien tai itse julkaisun avulla.
-<br /><br />
-CLOCKSS-tukea ei tarvitse ottaa Open Journal Systemsissä käyttöön, ennen kuin julkaiseminen on jo täydessä vauhdissa.]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Ehdotetut Creative Commons-tekijänoikeushuomautukset</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Ehdotetut Creative Commons-tekijänoikeushuomautukset</h3>
 <h4>1. Ehdotettu käytäntö julkaisuille, jotka tarjoavat avoimen saatavuuden (Open Access)</h4>
 Tässä julkaisussa julkaisevat kirjoittajat hyväksyvät seuraavat ehdot:
 <ol type="a">
@@ -785,7 +777,6 @@ Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.
 	<message key="about.delayedOpenAccess">Viiveellinen avoin saatavuus</message>
 	<message key="about.delayedOpenAccessDescription1">Tämän julkaisun sisältö tulee avoimesti saataville</message>
 	<message key="about.delayedOpenAccessDescription2">kuukautta numeron julkaisemisen jälkeen.</message>
-	<message key="about.authorSelfArchive">Kirjoittajan rinnakkaistallentaminen</message>
 	<message key="about.archiving">Arkistointi</message>
 	<message key="about.subscriptions">Tilaukset</message>
 	<message key="about.subscriptions.individual">Yksittäistilaukset</message>
@@ -971,57 +962,7 @@ Palvelimesi tukee tällä hetkellä mbstringiä: <strong>{$supportsMBString}</st
 
 	<message key="log.imported">{$userName} on tuonut artikkelin {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Lukutyökaluvalinnat</message>
-
-	<message key="rt.admin.settings.description">Lukutyökalut näkyvät kehyksissä julkaistujen kohteiden vieressä, sellaisissa julkaisun osastoissa, jotka on määrätty indeksoitavaksi. Lukutyökalut koostuvat julkaistuun kohteeseen liittyvistä valinnaisista työkaluista, jotka on listattu alla, sekä työkaluista, jotka tarjoavat pääsyn samankaltaisiin sisältöihin, alan ja tieteenalan mukaan järjestettynä.</message>
-	<message key="rt.admin.settings.enableReadingTools">Ota lukutyökalut käyttöön määrätyissä julkaisun osastoissa.</message>
-	<message key="rt.admin.settings.relatedItems">Ala</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Jos haluat katsoa, lisätä, korjata tai poistaa alakohtaisia samankaltaisia sisältöjä, katso <a href="{$relatedItemsLink}" class="action">Samankaltaisten sisältöjen joukot</a>.]]></message>
-
-	<message key="rt.admin.options">Sisältötyökalut</message>
-	<message key="rt.admin.relatedItems">Samankaltaiset sisällöt -työkalut</message>
-
-	<message key="rt.admin.settings.addComment">Lisää kommentti (sallii lukijoiden lähettää kommentteja, jotka julkaisun hallinnoija voi poistaa).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Kommentteja lähettääkseen käyttäjän tulee olla rekisteröitynyt ja kirjautuneena sisään, nimettömyyttä ei sallita.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Kommentteja lähettääkseen käyttäjän tulee olla rekisteröitynyt ja kirjautuneena sisään, nimettömyys sallitaan.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Kommentteja lähettääkseen käyttäjän ei tarvitse olla rekisteröitynyt, nimettömyys sallitaan.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Hakusivustojen URL-osoitteet, jotka ovat mahdollisesti virheellisiä, näkyvät alla.<br>
-Vahvista tässä virheellisiksi merkityt URL-osoitteet manuaalisesti, koska tämä testi ei ole 100 %:sen tarkka.<br/>
-Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jotka edellyttävät lähetysmuotoista tietoa.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Tekijä</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Kirjoittajan nimi, affiliaatio, maa</message>
-	<message key="rt.metadata.pkp.peerReviewed">Vertaisarvioitu artikkeli</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Ilmoitettava kun...</message>
-
-	<message key="rt.thisJournal">Etsi julkaisu</message>
-
-
-	<message key="rt.context.authorTermsDescription">Jos kohteella on useampi kirjoittaja, jätä kaikki nimet rastitetuiksi etsiessäsi töitä, joissa on kaikki samat kirjoittajat. Vaihtoehtoisesti voit etsiä yhden kirjoittajan töitä kerrallaan rastittamalla vain yhden nimen. Lisätietoja etsimästäsi resurssista saat klikkaamalla TIETOA. Nämä resurssit on valittu niiden relevanssin vuoksi, sekä sen vuoksi, että niiden koko sisällöt ovat vapaasti (ilmaiseksi) saatavilla.</message>
-
+	<message key="metadata.pkp.peerReviewed">Vertaisarvioitu artikkeli</message>
 
 
 	<!-- Notification Types -->
@@ -1091,7 +1032,6 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 	<message key="log.editor.recommendation">{$editorName} tallensi päätöksen ({$decision}) käsikirjoitukselle {$submissionId}.</message>
 	<message key="subscriptions.status.noSubscription">Sinulla ei ole aktiivista tilausta.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>
-	<message key="manager.setup.porticoDescription">Portico on voittoa tavoittelematon palvelu, joka tarjoaa digitaalisten julkaisujen pitkäaikaissäilytystä. Jos julkaisusi on solminut sopimuksen Porticon kanssa, ota se käyttöön täältä:</message>
 	<message key="payment.type.publication.required">Julkaisumaksu tulee maksettavaksi.</message>
 	<message key="payment.requestPublicationFee">Pyydä julkaisumaksua ({$feeAmount})</message>
 	<message key="payment.notFound">Maksua on pyydetty, mutta pyyntö on vanhentunut. Ota yhteyttä julkaisuun.</message>

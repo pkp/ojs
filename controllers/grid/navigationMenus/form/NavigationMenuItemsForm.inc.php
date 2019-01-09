@@ -14,16 +14,5 @@
  */
 
 import('lib.pkp.controllers.grid.navigationMenus.form.PKPNavigationMenuItemsForm');
-import('classes.core.ServicesContainer');
 
-class NavigationMenuItemsForm extends PKPNavigationMenuItemsForm {
-
-	function __construct($request, $navigationMenuItemId = null) {
-		ServicesContainer::instance()
-			->get('navigationMenu');
-
-		parent::__construct($request, $navigationMenuItemId);
-	}
-}
-
-
+class NavigationMenuItemsForm extends PKPNavigationMenuItemsForm { }

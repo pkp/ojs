@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Riviste</message>
 	<message key="admin.settings.journalRedirect">Redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
-	<message key="admin.settings.noJournalRedirect">Nessun redirect</message>
 	<message key="admin.languages.primaryLocaleInstructions">Questa sarà la lingua di default del sito e di ogni rivista.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue.</message>
 	<message key="admin.languages.confirmUninstall">Sei sicuro di voler disinstallare questa localizzazione? Questa operazione avrà effetto su tutte le lingue che la stanno utilizzando</message>
@@ -34,6 +33,7 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[Impostazioni di configurazione di OJS prese da <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Impostazioni della rivista</message>
 	<message key="admin.journals.noneCreated">Non è stata creata nessuna rivista.</message>
+	<message key="admin.contexts.confirmDelete">Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?</message>
 	<message key="admin.contexts.create">Crea una nuova rivista</message>
 	<message key="admin.journals.createInstructions">Sarai automaticamente registrato come manager di questa rivista. Dopo aver creato una nuova rivista, effettua il log in come manager per continuare il setup e registrare gli utenti.</message>
 	<message key="admin.journals.urlWillBe">Utilizzare un termine breve o un acronimo. La URL della rivista sarà {$sampleUrl}</message>
@@ -41,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Il path può contenere solo caratteri alfanumerici, underscore e trattini. Deve iniziare e finire con un carattere alfanumerico e non può contenere spazi.</message>
 	<message key="admin.contexts.form.pathExists">Il path indicato è già utilizzato da un'altra rivista.</message>
 	<message key="admin.journals.enableJournalInstructions">Mostra pubblicamente la rivista sul sito</message>
-	<message key="admin.journals.journalDescription">Descrizione della rivista</message>
+	<message key="admin.contexts.contextDescription">Descrizione della rivista</message>
 	<message key="admin.journal.pathImportInstructions">Path di una rivista esistente o path da creare (es. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importa abbonamenti</message>
 	<message key="admin.journals.transcode">Converti i metadata dell'articolo da ISO8859-1</message>
@@ -56,27 +56,9 @@
 	<message key="admin.mergeUsers.confirm">Sei sicuro di voler fondere {$oldAccountCount} account selezionato(i) con l'account con il nome utente "{$newUsername}"? I vecchi {$oldAccountCount} account non esisteranno più. Questa azione non è reversibile.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Non ci sono utenti iscritti</message>
 	<message key="admin.locale.maybeIncomplete">I file marcati potrebbero essere incompleti.</message>
-	<message key="admin.settings.options">Opzioni</message>
-	<message key="admin.settings.journalsList.showThumbnail">Anteprima della rivista</message>
-	<message key="admin.settings.journalsList.showTitle">Titolo della rivista</message>
-	<message key="admin.settings.journalsList.showDescription">Descrizione della rivista</message>
-	<message key="admin.categories">Categorie</message>
-	<message key="admin.categories.disableCategories">Non organizzare le riviste in categorie</message>
-	<message key="admin.categories.editTitle">Modifica categoria</message>
-	<message key="admin.categories.createTitle">Crea categoria</message>
-	<message key="admin.categories.create">Crea una nuova categoria</message>
-	<message key="admin.categories.noneCreated">Non sono state create categorie.</message>
-	<message key="admin.categories.confirmDelete">Vuoi davvero eliminare questa categoria?</message>
-	<message key="admin.categories.name">Nome</message>
-	<message key="admin.categories.enableCategories">Consenti agli amministratori delle riviste di organizzarle in categorie</message>
-	<message key="admin.categories.nameRequired">Inserire il nome di una categoria</message>
-	<message key="admin.settings.journalsList.description">Scegli gli elementi da mostrare per ciascuna rivista nella home page del sito.</message>
-	<message key="admin.settings.journalsList">Elementi della rivista</message>
-	<message key="admin.settings.usePaging">In siti con molte riviste, spezza la lista in diverse pagine.</message>
-	<message key="admin.categories.enable.description">L'amministratore del sito può definire qui un set di categorie per migliorare l'organizzazione di siti che ospitano molte riviste. Gli amministratori delle riviste possono poi scegliere alcune di queste categorie per ciascuna rivista e i lettori possono navigare attraverso le riviste per categorie.</message>
-	
-	<message key="admin.settings.defaultMetricDescription">Questa installazione OJS è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti. 
-Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca. 
+
+	<message key="admin.settings.defaultMetricDescription">Questa installazione OJS è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti.
+Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca.
 Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="admin.languages.confirmDisable">Sei sicuro di voler disabilitare questa traduzione. Questo impatterà tutte le riviste che la usano attualmente</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Scaricare i pacchetti linguistici dal Public Knowledge Project web server non è attualmente possibile perchè:</p>

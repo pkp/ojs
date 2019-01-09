@@ -26,8 +26,8 @@
 	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion|escape}">Open Journal Systems</generator>
 	{if $journal->getLocalizedDescription()}
 		{assign var="description" value=$journal->getLocalizedDescription()}
-	{elseif $journal->getLocalizedSetting('searchDescription')}
-		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
+	{elseif $journal->getLocalizedData('searchDescription')}
+		{assign var="description" value=$journal->getLocalizedData('searchDescription')}
 	{/if}
 	{if $description}
 	<subtitle>{$description|strip|escape:"html"}</subtitle>

@@ -376,18 +376,8 @@
 	<message key="plugins.categories.generic.description">Загальні модулі дозволяють багатьма шляхами розширити функціональність Open Journal Systems.</message>
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems підтримує систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) для захищеного та надійного архівування журналу. LOCKSS - це програмний засіб з відкритим вихідним кодом, розроблений Бібліотекою Стенфордського університету, який дозволяє бібліотекам забезпечувати збереження окремих веб-журналів, регулярно перевіряючи веб-сайти зареєстрованих журналів на наявність нового опублікованого контенту та архівуючи його. Кожен архів постійно перевіряється на відповідність з іншими; якщо контент виявляється пошкодженим або втраченим, інші архіви використовуються для його відновлення.
-<br /><br />
-Встановлення підтримки LOCKSS для Open Journal Systems не повинно здійснюватись до того часу, доки видавничий процес не розгорнутий повністю. Коли це станеться, зробіть два наступні кроки:]]></message>
-
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems підтримує систему <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe), щоб впевнитись у постійній та безпечній архівації журналу.  CLOCKSS заснована на відкритому програмному забезпеченні LOCKSS, , розроблений Бібліотекою Стенфордського університету, який дозволяє бібліотекам забезпечувати збереження окремих веб-журналів, регулярно перевіряючи веб-сайти зареєстрованих журналів на наявність нового опублікованого контенту та архівуючи його. Кожен архів постійно перевіряється на відповідність з іншими; якщо контент виявляється пошкодженим або втраченим, інші архіви використовуються для його відновлення.
-<br /><br />
-Встановлення підтримки LOCKSS для Open Journal Systems не повинно здійснюватись до того часу, доки видавничий процес не розгорнутий повністю.]]></message>
-
-	<message key="manager.setup.porticoDescription"><![CDATA[Portico - це некомерційний сервіс, призначений для збереження цифрових публікацій, у тому числі електронних журналів, книг та оцифрованих історичних колекцій. Якщо ваш журнал підписав контракт з Portico, увімкніть тут необхідні налаштування:]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Запропоноване Положення про авторські права Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Запропоноване Положення про авторські права Creative Commons</h3>
 <h4>1. Політика, яка рекомендується журналам, що пропонують відкритий доступ</h4>
 Автори, які подають матеріали до цього журналу, погоджуються з наступними положеннями:
 <ol type="a">
@@ -806,7 +796,6 @@
 	<message key="about.delayedOpenAccess">Відстрочений відкритий доступ</message>
 	<message key="about.delayedOpenAccessDescription1">Зміст цього журналу буде доступний у форматі відкритого доступу через</message>
 	<message key="about.delayedOpenAccessDescription2">місяців після дати публікації випуску.</message>
-	<message key="about.authorSelfArchive">Депонування робіт у відкритих архівах</message>
 	<message key="about.archiving">Архівування</message>
 	<message key="about.subscriptions">Передплати</message>
 	<message key="about.subscriptions.individual">Індивідуальні передплати</message>
@@ -1037,45 +1026,7 @@
 
 	<message key="log.imported">{$userName} імпортував статтю {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Налаштування інструментів читання</message>
-
-	<message key="rt.admin.settings.description">Інструменти читання з'являються на панелі поруч з опублікованими об'єктами індексованих розділів журналу. Інструментарій читання складається з двох наборів: поданого нижче набору інструментів, які допомагають працювати з опублікованими об'єктами, а також впорядкованого за галузями знань набору інструментів, які надають доступ до споріднених об'єктів.</message>
-	<message key="rt.admin.settings.enableReadingTools">Включити інструментарій читання для визначених розділів журналу.</message>
-	<message key="rt.admin.settings.relatedItems">Галузь</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Для перегляду, додавання, коригування або видалення пунктів списку споріднених об'єктів для кожної з галузей знань, див. <a href="{$relatedItemsLink}" class="action">Набори споріднених об'єктів</a>.]]></message>
-
-	<message key="rt.admin.options">Інструменти читання статей</message>
-	<message key="rt.admin.relatedItems">Інструменти пошуку споріднених об'єктів</message>
-
-	<message key="rt.admin.settings.addComment">Додати коментар (дозволяє читачам надсилати коментарі, які менеджер журналу може видаляти).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Коментарі приймаються лише від зареєстрованих користувачів, анонімність не дозволяється.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Коментарі приймаються лише від зареєстрованих користувачів, анонімність дозволяється.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Незареєстровані користувачі можуть надсилати коментарі, анонімність дозволяється.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Нижче відображені адреси URL пошукових сайтів, які, ймовірно, не є коректними.<br />
-Оскільки цей тест не дає 100% гарантії, вам потрібно вручну перевірити всі адреси URL, які були помічені як некоректні.<br />
-Негативні результати перевірки можуть бути пов'язані з тим, що сайт вимагає надсилання даних у формі.]]></message>
-
-	<!-- RT Entities -->
-	<message key="rt.metadata.dublinCore.primaryAuthor">Автор</message>
-	<message key="rt.metadata.pkp.primaryAuthor">Ім'я автора, місце роботи, держава</message>
-	<message key="rt.metadata.pkp.peerReviewed">Рецензована стаття</message>
-	<message key="rt.beNotifiedWhen">Повідомити, коли...</message>
-	<message key="rt.thisJournal">Пошук у цьому журналі</message>
-	<message key="rt.context.authorTermsDescription">Якщо авторів статті декілька, залиште всі імена відміченими, щоб знайти роботи, написані саме у цьому співавторстві, або шукайте роботи співавторів послідовно, відмічаючи для кожного пошуку лише одне ім'я. Щоб більше дізнатися про джерело, у якому Ви проводите пошук, натисніть відповідне посилання "Про нас". Ці джерела були вибрані через їх релевантність та відкритість (безкоштовність) їх змісту.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Рецензована стаття</message>
 
 	<!-- Notification Types -->
 

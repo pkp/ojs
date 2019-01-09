@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
-<!-- 
+<!--
   * locale/hr_HR/default.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
@@ -14,136 +14,21 @@
   -->
 
 <locale name="hr_HR">
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Prijavljeni članak nije prethodno objavljivan niti se nalazi u recenzijskom postupku pri nekom drugom časopisu. U suprotnom, molimo to obrazložiti pod "komentari uredniku".</message>
-	<message key="default.journalSettings.checklist.fileFormat">Datoteka koja sadrži rad je u Microsoft Word ili RTF formatu.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">URL adrese za mrežno dostupne bibliografske čestice su priložene.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Tekst sadrži jednostruki razmak; koristi se font 12; preferira se kurziv(italic), radije nego podcrtavanje (prihvaća se za URL adrese); i sve ilustracije, slike i tablice su smještene na prikladnim mjestima u tekstu, radije nego na njegovom kraju.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Smjernice za autore</a>, koje se nalaze u rubrici "o časopisu".]]></message>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Prijavljeni članak nije prethodno objavljivan niti se nalazi u recenzijskom postupku pri nekom drugom časopisu. U suprotnom, molimo to obrazložiti pod "komentari uredniku".</message>
+	<message key="default.contextSettings.checklist.fileFormat">Datoteka koja sadrži rad je u Microsoft Word ili RTF formatu.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">URL adrese za mrežno dostupne bibliografske čestice su priložene.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Tekst sadrži jednostruki razmak; koristi se font 12; preferira se kurziv(italic), radije nego podcrtavanje (prihvaća se za URL adrese); i sve ilustracije, slike i tablice su smještene na prikladnim mjestima u tekstu, radije nego na njegovom kraju.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Smjernice za autore</a>, koje se nalaze u rubrici "o časopisu".]]></message>
 
-	<message key="default.journalSettings.privacyStatement">Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</message>
-	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis omogućuje trenutni otvoren pristup svojem cjelokupnom sadržaju u skladu s uvjerenjem kako javna dostupnost istraživačkih spoznaja potiče veću razmjenu znanja i ideja.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Autorima je dozvoljeno i potiču se da tekstove koje su objavili u ovom časopisu postavljaju na osobne ili mrežne stranice svoje institucija, prije i nakon objave u časopisu, uz uvijet da prilože pune bibliografske informacije o tome gdje je članak izvorno objavljen.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Faze lekture su namijenjene da poboljšaju protok, jasnoću, gramatiku, način izražavanja i oblikovanje članka. Daju autoru posljednju mogućnost da napravi bilo kakve bitne promjene u tekstu, jer je svaka sljedeća faza ograničena na ispravljanje pogrešaka pri upisu i oblikovanju. 
-
-Datoteka za lekturu je u Word ili .rtf formatu i zbog toga može biti lako uređena kao dokument za obradu riječi. Skup uputa ovdje prikazan  predlaže dva pristupa za lekturu. Jedan je temeljen na Microsoft Word osobini "evidentiraj promjene"  i zahtijeva da lektor, urednik i autor imaju pristup tom programu. Drugi pristup koristi nezavisan program koji je, uz njihovo dopuštenje, preuzet od Harvard Educational Review. Urednik časopisa može izmijeniti ove upute u svrhu poboljšanja postupka.
-<h4>Sustavi za lekturu</h4>
-
-<b>1. Microsoft Word osobina "evidentiraj promjenu"</b>
-
-Osobina "evidentiraj promjene", koja se nalazi  pod  Alati u izbornoj traci, omogućuje lektoru unošenje (tekst se pojavljuje u boji) i brisanje (tekst se pojavljuje prekrižen u boji ili na marginama kao obrisan). Lektor može poslati poštom upite oboma, autoru (Upiti za autora) i uredniku (Upiti za urednika), tako da unese ove upite u uglate zagrade. Lektorirana verzija se potom šalje i urednik se obaviještava. Urednik potom obavlja recenziju teksta i obaviještava autora. 
-
-Urednik i autor ostavljaju one promjene kojima su zadovoljni. Ako su potrebne daljnje promjene, urednik i autor mogu napraviti izmijene početnih unošenja ili brisanja, kao i nova unošenja ili brisanja drugdje u tekstu. Autori i urednici bi trebali odgovoriti na sve upite adresirane na njih, na odgovarajućim mjestima unutar uglatih zagrada. 
-
-Nakon što su tekst recenzirali urednik i autor, lektor će dovršititi recenziju teksta prihvaćajući promjene, te pripremiti tekst za fazu njegova prijeloma.
-
-
-<b>2. Harvardska edukacijska recenzija</b>
-
-<b>Upute za pretvaranje elektronskih revizija u rukopis</b>
-
-Molimo slijedite sljedeći protokol za pretvaranje elektronskih revizija u vaš rukopis:
-
-<b>Odgovara na predložene promjene</b>
-&nbsp; Za svaku od predloženih promjena koju prihvaćate, isključite opciju podebljanog teksta
-&nbsp; Za svaku od predloženih promjena koju ne prihvaćate, iznova unesite originalni tekst i <b>podebljajte</b> ga
-
-<b>Stvaranje dodataka i brisanja</b>
-&nbsp; Ukažite na dodatke <b>podebljavajući</b> novi tekst
-&nbsp; Zamijenite izbrisane rubrike sa: <b>[izbrisan tekst]</b>
-&nbsp; Ako izbrišete rečenicu ili više, molimo ukažite na to bilješkom, npr. <b>[izbrisane 2 rečenice]</b>
-
-<b>Odgovaranje na upite autora(UA)</b>
-&nbsp; Ostavite sve  upite autora (UA) netaknute i podebljane unutar teksta. Ne brišite ih
-&nbsp; Kako biste odgovorili na upite autora (UA), dodajte nakon njih komentar. Komentari bi trebali biti razgraničeni koristeći:
-<b>[Komentar:</b>]
-&nbsp; npr. <b>[Komentar: Proširena rasprava metodologije kao što ste sugerirali]</b>
-
-<b>Sastavljanje komentara</b>
-&nbsp; Koristite komentare da bi ste objasnili organizacijske promjene ili velike revizije
-&nbsp; npr. <b>[Komentar: Premješten gornji paragraf od p. 5 do p. 7]</b>
-&nbsp; Obavijest: Kada navodite brojeve stranica molimo koristite brojeve stranica s printane kopije rukopisa koji vam je poslan. Ovo je važno jer se brojevi stranica mogu promijeniti prilikom elektronske revizije dokumenta.
-
-<h4>Ilustracija elektronske revizije</h4>
-
-<b>Originalni "rukopis" datoteke</b>
-
-Prije nego što napravite veće promjene strukture i organizacije vašeg rukopisa molimo prijavite  ko-presjedateljima vašeg rada. Nakon što se završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži kompletno revidiranu i preimenovanu datoteku obrade riječi.
-
-
-<b>Originalni rukopis je vraćen autoru s upitima i prijedlozima</b>
-
-Prije nego što napravite veće promjene strukture i organizacije <b>rukopisa kojega smo vam vratili</b>, molimo prijavite s <b>urednicima koji su ko-urednici</b> vašeg rada. Nakon što se završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži kompletno revidiranu i preimenovanu datoteku obrade riječi. <b>[UA: U ovom paragrafu, može biti od pomoći ako stavimo važnost da treba oprezno slijediti upute prilikom elektronske revizije. U protivnom, postupak uređivanja može biti značajno usporen]</b>
-
-<b>Revidiran rukopis poslati natrag HER-u</b>
-
-Prije nego što napravite veće promjene strukture i organizacije molimo prijavite s urednicima koji su ko-urednici vašeg rada.<b>Molimo uzmite u obzir da ukoliko ne slijedite sljedeće upute, može doći do značajne odgode izdavanja vašeg rukopisa.</b>
-
-Nakon što ste završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži <b>[obrisanu riječ]</b> revidiranu i preimenovanu datoteku obrade riječi. <b>[UA: U ovom paragrafu, može biti od pomoći ako stavimo važnost da treba oprezno slijediti upute prilikom elektronske revizije. U protivnom, postupak uređivanja može biti značajno usporen] [Komentar: Dodana je rečenica kao odgovor na vaš prijedlog]</b>
-
-<b>Bilješke:</b>
-&bull; Nemasno otisnut tekst ukazuje na prihvaćanje predloženih promijena za prvu rečenicu
-&bull; Rečenica dodana kao odgovor na UA. Masno otisnut tekst ukazuje na dodavanje novog teksta
-&bull; [obrisana riječ] ukazuje na brisanje "u potpunosti"
-&bull; Komentar sadrži odgovor na urednikove UA]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Faza korekture je namijenjena kako bi ukazala na bilo koje pravopisne, gramatičke i oblikovne pogreške u prijelomu. U ovoj fazi nema značajnih promjena, osim ako ih je odobrio Urednik rubrika. U prijelomu, kliknite na PREGLED KOREKTURE da biste vidjeli HTML, PDF i ostale moguće formate datoteka korištenih u objavljivanju ove stavke.</p>
-<h4>Za pravopisne i gramatičke pogreške</h4>
-
-<p>Kopirajte riječ ili grupu riječi koju treba izmijeniti i zalijepite ih u okvir. Slijede ispravke korekture s "IZMIJENI-U" uputama uredniku... </p>
-
-<pre>1. IZMIJENITE...
-onda ostali
-U...
-onda ostalima</pre>
-<br />
-<pre>2. IZMIJENITE...
-Malinowsky
-U...
-Malinowski</pre>
-<br />
-
-<h4>Za pogreške kod oblikovanja</h4>
-
-<p>Opišite lokaciju i prirodu problema u okviru Ispravke lekture nakon što ste upisali u naslovu "OBLIKOVANJE" kako slijedi...</p>
-<br />
-<pre>3. OBLIKOVANJE
-Brojevi u 3. tablici nisu poravnati s trećim stupcem.</pre>
-<br />
-<pre>4. OBLIKOVANJE
-Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
-<br />]]></message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+	<message key="default.contextSettings.privacyStatement">Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</message>
+	<message key="default.contextSettings.openAccessPolicy">Ovaj časopis omogućuje trenutni otvoren pristup svojem cjelokupnom sadržaju u skladu s uvjerenjem kako javna dostupnost istraživačkih spoznaja potiče veću razmjenu znanja i ideja.</message>
+	<message key="default.contextSettings.emailSignature">________________________________________________________________________
 {$journalName}
-{$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Potičemo čitatelje da se predbilježe za primanje obavijesti o novim izdanjima ovoga časopisa. Koristite <a href="{$indexUrl}/{$journalPath}/user/register">Registrirajte se</a> poveznicu na vrhu početne stranice časopisa. Ova registracija rezultirat će time da će čitatelj putem e-pošte primati kazalo sadržaja  za svaku novi broj ovoga časopisa. Popis predbilježenih čitatelja također pruža časopisu informacije o postignutom stupnju podrške čitateljstva. Pogledajte <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Izjavu o privatnosti</a> časopisa koja jamči čitateljima da njihovo ime i adresa e-pošte neće biti korišteni za druge potrebe.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Jeste li zainteresirani za ustupanje vlastitog priloga ovome časopisu? Preporučujemo da pregledate stranicu <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> u poveznici izdavačke politike časopisa i sadržaja pojedinih rubrika, kao i <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Smjernice za autore</a>. Autori se moraju <a href="{$indexUrl}/{$journalPath}/user/register">registrirati</a> prije nego mogu prijaviti svoj prilog, ili ako su već registrirani kao korisnici se jednostavno <a href="{$indexUrl}/{$journalPath}/login">prijaviti</a> i početi s procesom prijave priloga u 5 koraka.' u 'Autori se moraju registrirati da bi mogli objaviti svoj prilog, ili ako su već registrirani kao korisnici mogu se jednostavno prijaviti i početi s postupkom prijave priloga u 5 koraka.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Potičemo knjižničare knjižnica znanstveno-istraživačkih institucija da uvrste ovaj časopis u svoje evidencije elektroničkih časopisa. Isto tako, vrijedi istaknuti da pomoću ovoga sustava za izdavanje časopisa temeljenog na otvorenom kodu knjižnice jednostavno mogu istraživačima u vlastitoj instituciji pružiti platformu za uređivanje i izdavanje vlastitih časopisa (pogledajte <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sustav da bi kreirao distribucijski arhivski sustav među knjižnicama koji sudjeluju i dozvoljava tim knjižnicama da kreiraju trajne arhive časopisa u svrhu očuvanja i obnove. <a href="http://www.lockss.org/">Više...</a>]]></message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Uključivanje poveznica u proces prijeloma</h4>
-	<p>Kada prilog pretvarate u HTML ili PDF datoteku, provjerite da su sve poveznike u prijavi aktivne.</p>
-	<h4>A. Kada je autor priložio poveznicu uz referencu</h4>
-	<ol>
-	<li>Dok je prijava još u obliku za obradu teksta (npr. Word), dodajte frazu VIEW ITEM na kraj reference koja sadrži URL.</li>
-	<li>Pretvorite tu frazu u hipervezu tako što je osvjetlite i primjenite Wordov alat Insert Hyperlink i URL adresu pripremljenu pod #2.</li>
-	</ol>
-	<h4>B. Omogućite čitateljima da pretražuju Google Scholar za reference</h4>
-	<ol>
-	<li>Dok je prijava još u obliku za obradu teksta (npr. Word), kopirajte naslov referiranog rada u zaseban popis literature (ukoliko je naziv preopćenit, npr. "mir", kopirajte ima autora i naslov). </li>
-	<li>Zalijepite naziv reference tako da otpočinje i završava sa %22', te sadrži + između svake riječi: http://scholar.google.com/scholar?q=%22UMETNITE+NASLOV+OVDJE%22&hl=en&lr=&btnG=Search</li>
-	<li>Dodajte frazu GS SEARCH na kraj svakog citata u taj popis literature. </li>
-	<li>Pretvorite tu frazu u hipervezu tako što je osvjetlite i primjenite Wordov alat Insert Hyperlink i URL adresu pripremljenu pod #2.</li>
-	</ol>
-	<h4>C. Omogućite čitateljima da pretražuju reference sa DOI-jem</h4>
-	<ol>
-	<li>Dok je prijava još u obliku za obradu teksta (npr. Word), kopirajte reference u CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Zalijepite svaki DOI kojim upit rezultira u sljedeći URL (između = i &): http://www.cmaj.ca/cgi/external_ref?access_num=UMETNITE DOI #OVDJE&link_type=DOI</li>
-	<li>Dodajte frazu CrossRef na kraj svake čestice u popisu literature.</li>
-	<li>Pretvorite tu frazu u hipervezu tako što je osvjetlite i primjenite Wordov alat Insert Hyperlink i URL adresu pripremljenu pod #2.</li>
-	</ol>]]></message>
+{$indexUrl}{$contextPath}</message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Potičemo čitatelje da se predbilježe za primanje obavijesti o novim izdanjima ovoga časopisa. Koristite <a href="{$indexUrl}{$contextPath}/user/register">Registrirajte se</a> poveznicu na vrhu početne stranice časopisa. Ova registracija rezultirat će time da će čitatelj putem e-pošte primati kazalo sadržaja  za svaku novi broj ovoga časopisa. Popis predbilježenih čitatelja također pruža časopisu informacije o postignutom stupnju podrške čitateljstva. Pogledajte <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Izjavu o privatnosti</a> časopisa koja jamči čitateljima da njihovo ime i adresa e-pošte neće biti korišteni za druge potrebe.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Jeste li zainteresirani za ustupanje vlastitog priloga ovome časopisu? Preporučujemo da pregledate stranicu <a href="{$indexUrl}{$contextPath}/about">O časopisu</a> u poveznici izdavačke politike časopisa i sadržaja pojedinih rubrika, kao i <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Smjernice za autore</a>. Autori se moraju <a href="{$indexUrl}{$contextPath}/user/register">registrirati</a> prije nego mogu prijaviti svoj prilog, ili ako su već registrirani kao korisnici se jednostavno <a href="{$indexUrl}{$contextPath}/login">prijaviti</a> i početi s procesom prijave priloga u 5 koraka.' u 'Autori se moraju registrirati da bi mogli objaviti svoj prilog, ili ako su već registrirani kao korisnici mogu se jednostavno prijaviti i početi s postupkom prijave priloga u 5 koraka.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Potičemo knjižničare knjižnica znanstveno-istraživačkih institucija da uvrste ovaj časopis u svoje evidencije elektroničkih časopisa. Isto tako, vrijedi istaknuti da pomoću ovoga sustava za izdavanje časopisa temeljenog na otvorenom kodu knjižnice jednostavno mogu istraživačima u vlastitoj instituciji pružiti platformu za uređivanje i izdavanje vlastitih časopisa (pogledajte <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sustav da bi kreirao distribucijski arhivski sustav među knjižnicama koji sudjeluju i dozvoljava tim knjižnicama da kreiraju trajne arhive časopisa u svrhu očuvanja i obnove. <a href="http://www.lockss.org/">Više...</a>]]></message>
 	<message key="section.default.title">Članci</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.publicationFee">Objavljivanje članka</message>
-	<message key="default.journalSettings.purchaseArticleFee">Kupi članak</message>
-	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
-	<message key="default.journalSettings.membershipFee">Članstvo u asocijaciji</message>
 </locale>

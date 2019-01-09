@@ -85,7 +85,7 @@
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}
 					<li>
-						{include file="frontend/objects/galley_link.tpl" parent=$issue purchaseFee=$currentJournal->getSetting('purchaseIssueFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+						{include file="frontend/objects/galley_link.tpl" parent=$issue purchaseFee=$currentJournal->getData('purchaseIssueFee') purchaseCurrency=$currentJournal->getData('currency')}
 					</li>
 				{/foreach}
 			</ul>

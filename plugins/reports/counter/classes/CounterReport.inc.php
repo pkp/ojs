@@ -273,7 +273,7 @@ class CounterReport {
 				if ($availableContexts->getCount() > 1) {
 					$name = $site->getLocalizedTitle();
 				} else {
-					$name =  $context->getSetting('publisherInstitution');
+					$name =  $context->getData('publisherInstitution');
 					if (empty($name)) {
 						$name = $context->getLocalizedName();
 					}

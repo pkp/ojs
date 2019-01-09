@@ -715,8 +715,10 @@ class Upgrade extends Installer {
 			WHERE pa.views > 0 AND i.issue_id is not null;', $params, false);
 
 		// Set the site default metric type.
-		$siteSettingsDao = DAORegistry::getDAO('SiteSettingsDAO'); /* @var $siteSettingsDao SiteSettingsDAO */
-		$siteSettingsDao->updateSetting('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+		$site->setData('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+		$siteDao->updateObject($site);
 
 		return true;
 	}
@@ -2042,15 +2044,15 @@ class Upgrade extends Installer {
 		while ($journal = $journals->next()) {
 			$settings = $journalSettingsDao->loadSettings($journal->getId());
 			$supportedFormLocales = $journal->getSupportedFormLocales();
-			$focusAndScope = $journal->getSetting('focusScopeDesc');
+			$focusAndScope = $journalSettingsDao->getSetting('focusScopeDesc');
 			$focusAndScope['localeKey'] = 'about.focusAndScope';
-			$reviewPolicy = $journal->getSetting('reviewPolicy');
+			$reviewPolicy = $journalSettingsDao->getSetting('reviewPolicy');
 			$reviewPolicy['localeKey'] = 'about.peerReviewProcess';
-			$pubFreqPolicy = $journal->getSetting('pubFreqPolicy');
+			$pubFreqPolicy = $journalSettingsDao->getSetting('pubFreqPolicy');
 			$pubFreqPolicy['localeKey'] = 'about.publicationFrequency';
 			$oaPolicy = array();
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
-				$oaPolicy = $journal->getSetting('openAccessPolicy');
+				$oaPolicy = $journalSettingsDao->getSetting('openAccessPolicy');
 				$oaPolicy['localeKey'] = 'about.openAccessPolicy';
 			}
 			// the elements order accords to how they were displayed on the about page
@@ -2061,14 +2063,14 @@ class Upgrade extends Installer {
 				'openAccessPolicy' => $oaPolicy,
 			);
 
-			$customAboutItems = $journal->getSetting('customAboutItems');
+			$customAboutItems = $journalSettingsDao->getSetting('customAboutItems');
 
-			$sponsorNote = $journal->getSetting('sponsorNote');
-			$sponsors = $journal->getSetting('sponsors');
-			$contributorNote = $journal->getSetting('contributorNote');
+			$sponsorNote = $journalSettingsDao->getSetting('sponsorNote');
+			$sponsors = $journalSettingsDao->getSetting('sponsors');
+			$contributorNote = $journalSettingsDao->getSetting('contributorNote');
 			$contributorNote['localeKey'] = 'grid.contributor.title';
-			$contributors = $journal->getSetting('contributors');
-			$history = $journal->getSetting('history');
+			$contributors = $journalSettingsDao->getSetting('contributors');
+			$history = $journalSettingsDao->getSetting('history');
 			$history['localeKey'] = 'about.history';
 			// the elements order accords to how they were displayed on the about page
 			$otherSettings = array(
@@ -2196,7 +2198,7 @@ class Upgrade extends Installer {
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
 			$settings = $journalSettingsDao->loadSettings($journal->getId());
-			if ($journal->getSetting('boardEnabled')) {
+			if ($journalSettingsDao->getSetting('boardEnabled')) {
 				// get all users by group ID
 				$groupUsers = array();
 				$groupPrimaryLocaleTitles = array();
@@ -2240,7 +2242,7 @@ class Upgrade extends Installer {
 			foreach ($supportedFormLocales as $locale) {
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, $locale);
 				$masthead[$locale] = '';
-				if ($journal->getSetting('boardEnabled')) {
+				if ($journalSettingsDao->getSetting('boardEnabled')) {
 					// The Editorial Team feature has been enabled.
 					// Generate information using Group data.
 					foreach ($groupUsers as $groupId => $usersArray) {
@@ -2870,7 +2872,7 @@ class Upgrade extends Installer {
 		$result = $submissionFileDao->retrieve(
 			'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
 			'old-supp-id'
-		);	
+		);
  		# Loop through the data and save to temp table
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -2886,7 +2888,7 @@ class Upgrade extends Installer {
 		$metricsDao->update(
 			'UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?',
 			array(531, 2531)
-		);		
+		);
  		# delete all existing 531 values from the actual metrics table
 		$metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
  		# copy updated 531 values from metrics_supp to metrics table
@@ -2894,8 +2896,58 @@ class Upgrade extends Installer {
  		# Drop metrics_supp table
 		$metricsDao->update('DROP TABLE metrics_supp');
  		return true;
-	}	
+	}
 
+	/**
+	 * Add an entry for the site stylesheet to the site_settings database when it
+	 * exists
+	 */
+	function migrateSiteStylesheet() {
+		$request = Application::getRequest();
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		if (!file_exists($publicFileManager->getSiteFilesPath() . '/sitestyle.css')) {
+			return true;
+		}
+
+		$site = $siteDao->getSite();
+		$site->setData('styleSheet', 'sitestyle.css');
+		$siteDao->updateObject($site);
+
+		return true;
+	}
+
+	/**
+	 * Copy a context's copyrightNotice to a new licenseTerms setting, leaving
+	 * the copyrightNotice in place.
+	 */
+	function createLicenseTerms() {
+		$contextDao = Application::getContextDao();
+
+		$result = $contextDao->retrieve('SELECT * from ' . $contextDao->settingsTableName . ' WHERE setting_name="copyrightNotice"');
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$contextDao->update('
+				INSERT INTO ' . $contextDao->settingsTableName . ' SET
+					' . $contextDao->primaryKeyColumn . ' = ?,
+					locale = ?,
+					setting_name = ?,
+					setting_value = ?
+				',
+				[
+					$row[$contextDao->primaryKeyColumn],
+					$row['locale'],
+					'licenseTerms',
+					$row['setting_value'],
+				]
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		return true;
+	}
 }
-
-

@@ -75,10 +75,6 @@
 
 		<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>
 		{fbvElement type="textarea" id="delayedOpenAccessPolicy" value=$delayedOpenAccessPolicy rich=true label="about.delayedOpenAccess" multilingual=true}
-
-		<p>{translate key="manager.subscriptionPolicies.authorSelfArchiveDescription"}</p>
-		{fbvElement type="checkbox" id="enableAuthorSelfArchive" name="enableAuthorSelfArchive" value=1 checked=$enableAuthorSelfArchive label="manager.subscriptionPolicies.authorSelfArchive" disabled=$scheduledTasksEnabled|compare:0}
-		{fbvElement type="textarea" id="authorSelfArchivePolicy" value=$authorSelfArchivePolicy rich=true multilingual=true}
 	{/fbvFormSection}
 
 	{fbvFormButtons hideCancel=true submitText="common.save"}

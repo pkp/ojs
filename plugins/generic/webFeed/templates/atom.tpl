@@ -26,11 +26,11 @@
 	<updated>{$latestDate|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
-	{if $journal->getSetting('contactName')}
+	{if $journal->getData('contactName')}
 		<author>
-			<name>{$journal->getSetting('contactName')|strip|escape:"html"}</name>
-			{if $journal->getSetting('contactEmail')}
-			<email>{$journal->getSetting('contactEmail')|strip|escape:"html"}</email>
+			<name>{$journal->getData('contactName')|strip|escape:"html"}</name>
+			{if $journal->getData('contactEmail')}
+			<email>{$journal->getData('contactEmail')|strip|escape:"html"}</email>
 			{/if}
 		</author>
 	{/if}
@@ -46,8 +46,8 @@
 	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion|escape}">Open Journal Systems</generator>
 	{if $journal->getLocalizedDescription()}
 		{assign var="description" value=$journal->getLocalizedDescription()}
-	{elseif $journal->getLocalizedSetting('searchDescription')}
-		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
+	{elseif $journal->getLocalizedData('searchDescription')}
+		{assign var="description" value=$journal->getLocalizedData('searchDescription')}
 	{/if}
 
 	<subtitle type="html">{$description|strip|escape:"html"}</subtitle>

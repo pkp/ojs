@@ -251,7 +251,7 @@ For contributions that are distributed separately as patches or plugins:
 
 * i18n strings are defined in locale/<locale_key>/locale.xml.
 * Key names should be in the form "sectionname(.subsectionname)*.name".
-  E.g., "manager.setup.journalTitle"
+  E.g., "manager.setup.contextTitle"
 * Use {translate key="my.key.name"} in templates to translate i18n keys.
 * Use the String wrapper class in place of the built-in string
   manipulation/regexp routines when handling data that could potentially be in

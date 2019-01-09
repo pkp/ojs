@@ -38,7 +38,7 @@ class IssueAction {
 		assert($journal->getId() == $issue->getJournalId());
 
 		// Check subscription state.
-		$result = $journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
+		$result = $journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
 			$issue->getAccessStatus() != ISSUE_ACCESS_OPEN && (
 				is_null($issue->getOpenAccessDate()) ||
 				strtotime($issue->getOpenAccessDate()) > time()
@@ -103,7 +103,7 @@ class IssueAction {
 
 			// If no valid subscription, check if there is an expired subscription
 			// that was valid during publication date of requested content
-			if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
+			if (!$result && $journal->getData('subscriptionExpiryPartial')) {
 				if (isset($articleId)) {
 					if (isset($publishedArticle)) {
 						import('classes.subscription.SubscriptionDAO');
@@ -139,7 +139,7 @@ class IssueAction {
 
 			// If no valid subscription, check if there is an expired subscription
 			// that was valid during publication date of requested content
-			if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
+			if (!$result && $journal->getData('subscriptionExpiryPartial')) {
 				if (isset($articleId)) {
 					$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 					$publishedArticle = $publishedArticleDao->getByArticleId($articleId, null, true);

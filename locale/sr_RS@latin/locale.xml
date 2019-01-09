@@ -230,10 +230,6 @@ Aktivirani OAI protokol može biti isključen na nivou čitavog sajta promenom s
 	<message key="plugins.categories.auth.description">Autorizacijski dodaci omogućuju Open Journal Sistemu da vrši proveru verodostojnosti korisničkih pristupa putem spoljašnjih sistema  kao što je LDAP.</message>
 
 	<!--  Files Browser  -->	<!--  Journal Setup  -->	<!--  Setup Step 1  -->	<!--  Setup Step 2  -->
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems podržava <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (mnogo kopija čuva stvari sigurnima) sistem da bi osigurao sigurnu i trajnu arhivu za časopise. LOCKSS je program otvorenog koda razvijen pri univerzitetskoj biblioteci u Stanfordu koji omogućuje bibliotekama  da čuvaju odabrane elektronske časopise tako što periodički proveravaju sadržaj web sajtova časopisa registrovanih u sistemu, te arhiviraju sve novoobjavljene sadržaje. Sadržaj svakog arhiva se konstantno uspoređuje sa drugim bibliotekama koje su uključene u sistem, pa ako je bilo koji sadržaj neispravan ili izgubljen, sadržaj se obnavlja podacima iz drugih arhiva u mreži ili iz izvornog časopisa.
-<br /><br />
-Postavljanje LOCKSS podrške za Open Journal Systems nije potrebno dok izdavanje elektronske verzije časopisa nije zaista pokrenuto, odnosno prvi broj objavljen ili u izdavanju. Da bi se to učinilo, potrebno je slediti ova dva koraka:]]></message>
-
 	<!--  Setup Step 3  -->
 	<!--  Setup Step 4  -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Koraci: Red čekanja prijave > Recenzija prijave> Uređivanje prijave > Red čekanja pri određivanju rokova > Садржај.<br /><br />
@@ -470,7 +466,6 @@ Sadržaj priloženog fajla možete proveriti ukoliko kliknete na njegovo ime. Um
 	<message key="about.delayedOpenAccess">Odgođeni otvoreni pristup</message>
 	<message key="about.delayedOpenAccessDescription1">Sadržaj ovog časopisa bit će dostupan u formatu otvorenog pristupa</message>
 	<message key="about.delayedOpenAccessDescription2">mesec(i) nakon objavljivanja broja časopisa.</message>
-	<message key="about.authorSelfArchive">Autoarhiviranje autora</message>
 	<message key="about.archiving">Arhiviranje</message>
 	<message key="about.subscriptions">Pretplate</message>
 	<message key="about.subscriptionsContact">Kontakt za pretplate</message>
@@ -587,21 +582,7 @@ Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="log.imported">{$userName} je uneo članak {$submissionId}.</message>
 
-	<!--  Reading Tools entries  -->	<!--  RT Settings  -->
-	<message key="rt.admin.settings">Opcije alata za čitanje</message>
-	<message key="rt.admin.settings.description">Alati za čitanje prikazuju se uz objavljene priloge u indeksiranim sekcijama časopisa (ova se opcija postavlja za svaku sekciju pod "sekcije časopisa"). Alati za čitanje mogu sadržati razne opcije koje se odnose na dotični objavljeni prilog (navedene niže na ovoj stranici), i skupova opcija organizovanih po području i disciplini koje omogućavaju pretraživanje drugih web servisa za podatke vezane za člankom.</message>
-	<message key="rt.admin.settings.enableReadingTools">Omogući alate za čitanje za indeksirane rubrike časopisa.</message>
-	<message key="rt.admin.settings.relatedItems">Područja</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Pogledajte <a href="{$relatedItemsLink}" class="action">područja pretraživanja</a> da biste pregledali, dodali, ispravili ili obrisali stavke i kontekste pretraživanja za bilo koje područje.]]></message>
-	<message key="rt.admin.options">Alati za priloge časopisa</message>
-	<message key="rt.admin.relatedItems">Alati za pretraživanje srodnih sadržaja</message>
-	<message key="rt.admin.settings.addComment">Dodaj komentar (omogućuje čitaocima da ostavljaju komentare na objavljene priloge. Glavni urednik ima mogućnost brisanja komentara).</message>
-	<message key="rt.metadata.dublinCore.primaryAuthor">Primarni autor</message>
-	<message key="rt.metadata.pkp.primaryAuthor">Autorovo ime, pripadnost, zemlja</message>
-	<message key="rt.metadata.pkp.peerReviewed">Stručno recenzirani članak</message>
-	<message key="rt.beNotifiedWhen">Bićete obavešteni kada...</message>
-	<message key="rt.thisJournal">Pretraži časopis</message>
-	<message key="rt.context.authorTermsDescription">Za stavke koje imaju više od jednog autora, ostavite sva imena označena radi pretraživanja sličnih ko-autorskih radova, ili pretražujte jednog po jednog proveravajući samo pojedinačno ime. Da biste naučili više o pretraživanom izvoru, kliknite na O ČASOPISU. Ovi izvori su odabrani zbog svoje relevantnosti i otvorenog (besplatnog) pristupa njegovom celom ili delimičnom sadržaju.</message>
+	<message key="metadata.pkp.peerReviewed">Stručno recenzirani članak</message>
 
 	<message key="common.confirmComplete">Da li ste sigurni da želite da označite ovaj zadatak kao kompletiran?</message>
 	<message key="common.payment">Plaćanje</message>
@@ -613,7 +594,7 @@ Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="reader.openAccess">Otvoren pristup</message>
 	<message key="reader.subscriptionAccess">Pretplatnički pristup</message>
 	<message key="reader.subscriptionOrFeeAccess">Pretplatnički ili otvoren pristup</message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
 <h4>1. Predlog za časopise koji omogućuju otvoren pristup</h4>
 Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 <ol type="a">
@@ -678,9 +659,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="installer.databaseSettingsInstructions">OJS za čuvanje podataka zahteva pristup SQL bazi. Pregledajte gore navedene sistemske zahteve za popis baza koje OJS podržava. U niže priloženim poljima navedite parametre koji će se koristiti za povezivanje s bazom.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} je odbio/la {$round} recenziju priloga {$submissionId} u ime {$reviewerName}.</message>
 	<message key="log.editor.decision">{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$submissionId}.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Anonimni komentari nisu dozvoljeni. Korisnici moraju biti registrovani i prijavljeni da bi mogli ostavljati komentare.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Anonimni komentari su dozvoljeni, ali korisnici moraju biti registrovani i prijavljeni kako bi ostavili komentar.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dozvoljeni.</message>
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na ikonu i ispunite obrazac za recencziju.</message>
@@ -792,7 +770,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="payment.subscription.purchase">Kupi pretplatu</message>
 	<message key="installer.installApplication">Instaliraj OJS</message>
 	<message key="installer.upgradeApplication">Nadogradi OJS</message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Potencijalono pogrešni URL-ovi za sajtove za pretragu su prikazani niže.<br />Potrebno je da ručno proverite svaki URL pošto ovo nije 100% ipsravno.]]></message>
 	<message key="notification.type.editing">Događaji u redakciji</message>
 	<message key="notification.type.editorDecisionComment">Ostavljen je komentar na urednikovu odluku "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Recenzija preko recenzentske forme je predata za "{$title}".</message>
@@ -908,7 +885,4 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Ova primena pretrage ne dozvoljava ponovno indeksiranje po časopisu.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">Data putanja časopisa "{$journalPath}" nije mogla da se spoji sa časopisom.</message>
 	<message key="notification.type.approveSubmissionTitle">Čeka se odobrenje.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems takođe podržava <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) sistem da bi se osiguralo permanentno čuvanje i rhiviranje časopisa. CLOCKSS je zasnovan na programu otvorenog koda LOCKSS koji je razvije u  Stanford University Library koja omogućava da biblioteke sačuvaju odabrane časopise redovnim pokretanjem registrovanih sajtova časopisa za novi objavljeni sadržaj i arhiviranje. Svaka arhiva je kontinuirano proveravana prema memoriji podatak u biblioteci i ako se nađe da je deo sadržaja izgubljen ili oštećen druge memorije podataka se upotrebe kako bi se sadržaj vratio.
-<br /><br />
-Podešavanje CLOCKSS podrške za Open Journal Systems nije potrebno sve dok se objavljivanje ne realizuje..]]></message>
 </locale>

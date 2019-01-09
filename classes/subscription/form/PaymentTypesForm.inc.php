@@ -57,7 +57,7 @@ class PaymentTypesForm extends Form {
 	function initData() {
 		$journal = Application::getRequest()->getContext();
 		foreach (array_keys($this->settings) as $settingName) {
-			$this->setData($settingName, $journal->getSetting($settingName));
+			$this->setData($settingName, $journal->getData($settingName));
 		}
 	}
 

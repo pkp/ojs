@@ -140,9 +140,9 @@ class DRIVERPlugin extends GenericPlugin {
 
 			// is open access
 			$status = '';
-			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
+			if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = DRIVER_ACCESS_OPEN;
-			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+			} else if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
@@ -155,7 +155,7 @@ class DRIVERPlugin extends GenericPlugin {
 					}
 				}
 			}
-			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
+			if ($journal->getData('restrictSiteAccess') == 1 || $journal->getData('restrictArticleAccess') == 1) {
 				$status = DRIVER_ACCESS_RESTRICTED;
 			}
 
@@ -192,9 +192,9 @@ class DRIVERPlugin extends GenericPlugin {
 
 			// is open access
 			$status = '';
-			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
+			if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = DRIVER_ACCESS_OPEN;
-			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+			} else if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
@@ -207,7 +207,7 @@ class DRIVERPlugin extends GenericPlugin {
 					}
 				}
 			}
-			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
+			if ($journal->getData('restrictSiteAccess') == 1 || $journal->getData('restrictArticleAccess') == 1) {
 				$status = DRIVER_ACCESS_RESTRICTED;
 			}
 

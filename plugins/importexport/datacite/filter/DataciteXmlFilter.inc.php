@@ -188,7 +188,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 			}
 		}
 		// Rights
-		$rightsURL = $article ? $article->getLicenseURL() : $context->getSetting('licenseURL');
+		$rightsURL = $article ? $article->getLicenseURL() : $context->getData('licenseURL');
 		if(!empty($rightsURL)) {
 			$rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
 			$rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
@@ -456,12 +456,12 @@ class DataciteXmlFilter extends NativeExportFilter {
 		$node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_PROPRIETARY);
 		// ISSN - for issues only.
 		if (!isset($article) && !isset($galley)) {
-			$onlineIssn = $context->getSetting('onlineIssn');
+			$onlineIssn = $context->getData('onlineIssn');
 			if (!empty($onlineIssn)) {
 				$alternateIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'alternateIdentifier', $onlineIssn));
 				$node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_EISSN);
 			}
-			$printIssn = $context->getSetting('printIssn');
+			$printIssn = $context->getData('printIssn');
 			if (!empty($printIssn)) {
 				$alternateIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'alternateIdentifier', $printIssn));
 				$node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_ISSN);

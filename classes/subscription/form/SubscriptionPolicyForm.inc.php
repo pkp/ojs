@@ -28,19 +28,19 @@ import('lib.pkp.classes.form.Form');
 
 
 class SubscriptionPolicyForm extends Form {
-	/** @var validDuration array keys are valid open access delay months */	
+	/** @var validDuration array keys are valid open access delay months */
 	var $validDuration;
 
-	/** @var validNumMonthsBeforeExpiry array keys are valid expiry reminder months */	
+	/** @var validNumMonthsBeforeExpiry array keys are valid expiry reminder months */
 	var $validNumMonthsBeforeExpiry;
 
-	/** @var validNumWeeksBeforeExpiry array keys are valid expiry reminder weeks */	
+	/** @var validNumWeeksBeforeExpiry array keys are valid expiry reminder weeks */
 	var $validNumWeeksBeforeExpiry;
 
-	/** @var validNumMonthsAfterExpiry array keys are valid expiry reminder months */	
+	/** @var validNumMonthsAfterExpiry array keys are valid expiry reminder months */
 	var $validNumMonthsAfterExpiry;
 
-	/** @var validNumWeeksAfterExpiry array keys are valid expiry reminder weeks */	
+	/** @var validNumWeeksAfterExpiry array keys are valid expiry reminder weeks */
 	var $validNumWeeksAfterExpiry;
 
 	/**
@@ -134,8 +134,6 @@ class SubscriptionPolicyForm extends Form {
 			'delayedOpenAccessDuration' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessDuration'),
 			'delayedOpenAccessPolicy' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessPolicy'),
 			'enableOpenAccessNotification' => $journalSettingsDao->getSetting($journalId, 'enableOpenAccessNotification'),
-			'enableAuthorSelfArchive' => $journalSettingsDao->getSetting($journalId, 'enableAuthorSelfArchive'),
-			'authorSelfArchivePolicy' => $journalSettingsDao->getSetting($journalId, 'authorSelfArchivePolicy'),
 			'subscriptionExpiryPartial' => $journalSettingsDao->getSetting($journalId, 'subscriptionExpiryPartial'),
 			'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual'),
 			'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'),
@@ -152,7 +150,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'subscriptionExpiryPartial', 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', 'numMonthsBeforeSubscriptionExpiryReminder', 'numWeeksBeforeSubscriptionExpiryReminder', 'numWeeksAfterSubscriptionExpiryReminder', 'numMonthsAfterSubscriptionExpiryReminder'));
+		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'subscriptionExpiryPartial', 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', 'numMonthsBeforeSubscriptionExpiryReminder', 'numWeeksBeforeSubscriptionExpiryReminder', 'numWeeksAfterSubscriptionExpiryReminder', 'numMonthsAfterSubscriptionExpiryReminder'));
 
 		$this->addCheck(new FormValidatorInSet($this, 'delayedOpenAccessDuration', 'required', 'manager.subscriptionPolicies.delayedOpenAccessDurationValid', array_keys($this->validDuration)));
 
@@ -167,11 +165,11 @@ class SubscriptionPolicyForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('subscriptionAdditionalInformation', 'delayedOpenAccessPolicy', 'authorSelfArchivePolicy');
+		return array('subscriptionAdditionalInformation', 'delayedOpenAccessPolicy');
 	}
 
 	/**
-	 * Save subscription policies. 
+	 * Save subscription policies.
 	 */
 	function execute() {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
@@ -186,8 +184,6 @@ class SubscriptionPolicyForm extends Form {
 		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessDuration', $this->getData('delayedOpenAccessDuration'), 'int');
 		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessPolicy', $this->getData('delayedOpenAccessPolicy'), 'string', true); // Localized
 		$journalSettingsDao->updateSetting($journalId, 'enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'enableAuthorSelfArchive', $this->getData('enableAuthorSelfArchive') == null ? 0 : $this->getData('enableAuthorSelfArchive'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'authorSelfArchivePolicy', $this->getData('authorSelfArchivePolicy'), 'string', true); // Localized
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionExpiryPartial', $this->getData('subscriptionExpiryPartial') == null ? 0 : $this->getData('subscriptionExpiryPartial'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'), 'bool');

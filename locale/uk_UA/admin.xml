@@ -14,9 +14,7 @@
 <locale name="uk_UA" full_name="Українська">
 	<message key="admin.hostedJournals">Журнали на платформі</message>
 	<message key="admin.settings.journalRedirect">Перенаправлення до журналу</message>
-	<message key="admin.settings.options">Налаштування</message>
 	<message key="admin.settings.journalRedirectInstructions">Запити до головного сайту будуть перенаправлятися до цього журналу. Це може бути корисним, наприклад, якщо на сайті представлений єдиний журнал.</message>
-	<message key="admin.settings.noJournalRedirect">Не перенаправляти</message>
 	<message key="admin.settings.defaultMetricDescription">
         Ваша інсталяція OJS налаштована на запис декількох метрик використання. Статистика використання буде відображатися у декількох контекстах.
         Є випадки, коли повинна бути застосована тільки одна статистика використання, наприклад, щоб відобразити упорядкований список найбільш використовуваних статей або проранжувати результати пошуку. Будь ласка, оберіть одну з налаштованих метрик як метрики за замовчуванням.
@@ -57,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
 	<message key="admin.contexts.form.pathExists">Обраний шлях вже використовується іншим журналом.</message>
 	<message key="admin.journals.enableJournalInstructions">Дозволити відображення цьоого журналу на сайті</message>
-	<message key="admin.journals.journalDescription">Опис журналу</message>
+	<message key="admin.contexts.contextDescription">Опис журналу</message>
 	<message key="admin.journal.pathImportInstructions">Існуючий шлях журналу або шлях, що має бути створений (наприклад, "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Імпорт передплат</message>
 	<message key="admin.journals.transcode">Перекодувати метадані статті з ISO8859-1</message>
@@ -72,19 +70,6 @@
 	<message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Категорії</message>
-	<message key="admin.categories.enable.description">Щоб полегшити організацію великої номенклатури журналів, адміністратор сайту може обрати тут перелік категорій, за якими будуть організовуватись видання. Після цього, менеджери журналів зможуть обирати для своїх видань відповідні категорії. Таким чином, читачам стане доступна навігація між журналами за категоріями.</message>
-	<message key="admin.categories.disableCategories">Не організовувати журнали за категоріями.</message>
-	<message key="admin.categories.enableCategories">Заборонити менеджерам журналів організовувати журнали за категоріями.</message>
-	<message key="admin.categories.editTitle">Редагувати категорію</message>
-	<message key="admin.categories.createTitle">Створити категорію</message>
-	<message key="admin.categories.create">Створити нову категорію</message>
-	<message key="admin.categories.noneCreated">Жодної категорії не було створено.</message>
-	<message key="admin.categories.confirmDelete">Ви впевнені, що хочете видалити цю категорію?</message>
-	<message key="admin.categories.name">Назва</message>
-	<message key="admin.categories.nameRequired">Необхідно вказати назву категорії</message>
-	<message key="admin.presses.createInstructions">Ви будете автоматично призначені менеджером цього журналу. Після створення нового журналу ви будете перенаправлені в розділ налаштувань для завершення розпочатої конфігуварії опцій журналу.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Нагадування про закінчення підписки</message>
 	<message key="admin.scheduledTask.openAccessNotification">Повідомлення про відкритий доступ</message>
 	<message key="admin.scheduledTask.reviewReminder">Нагадування рецензенту</message>

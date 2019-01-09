@@ -75,7 +75,7 @@ class TocGridHandler extends CategoryGridHandler {
 		);
 
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		if ($request->getJournal()->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
+		if ($request->getJournal()->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
 			// Article access status
 			$this->addColumn(
 				new GridColumn(

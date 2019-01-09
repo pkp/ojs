@@ -32,12 +32,12 @@ class SubscriptionAction {
 
 		$journal = $request->getJournal();
 
-		$subscriptionContactName = $journal->getSetting('subscriptionName');
-		$subscriptionContactEmail = $journal->getSetting('subscriptionEmail');
+		$subscriptionContactName = $journal->getData('subscriptionName');
+		$subscriptionContactEmail = $journal->getData('subscriptionEmail');
 
 		if (empty($subscriptionContactEmail)) {
-			$subscriptionContactEmail = $journal->getSetting('contactEmail');
-			$subscriptionContactName = $journal->getSetting('contactName');
+			$subscriptionContactEmail = $journal->getData('contactEmail');
+			$subscriptionContactName = $journal->getData('contactName');
 		}
 
 		if (empty($subscriptionContactEmail)) return false;

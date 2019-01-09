@@ -335,12 +335,9 @@ editoreari onartzen duten ala ez, eta bide beretik bidaltzen dizkiote ebaluazioa
 eta gomendioa ere. Ebaluatzaileen onarpena (edo ezespena), eta ondorengo
 ebaluazio-txostena eta gomendioa Editoreek sartzen dute bidalketaren
 Ebaluazio-orrian, ebaluazio-prozesua erregistratuta uzteko.</message>
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems-ek <a href="http://www.lockss.org/" target="_blank"> LOCKSS</a> (Lots of Copies Keep Stuff Safe) sistema erabiltzen du aldizkariaren artxibo seguru eta iraunkorra segurtatzeko. LOCKSS iturburu irekiko softwarea da, Stanford-eko Unibertsitateko Liburutegiak garatua, liburutegiei hautatutako web-aldizkariak mantentzen laguntzeko. LOCKSSek erregularki begiratzen du erregistratutako aldizkarien webguneetan, zenbaki edo eduki berririk argitaratu den ikusteko eta, hala bada, artxibatzeko. Artxibo bakoitza etengabe balidatzen da liburutegiko beste cache batzuen kontra, eta eduki hondatu edo galdurik aurkitzen bada, beste cacheak edo aldizkaria erabiltzen dira leheneratzeko.
-<br /><br />
-Argitaratzen hasi arte, ez da beharrezkoa LOCKSS euskarria gehitzea Open Journal Systems-i. Orduan, bi urrats hauek egin beharko dira:]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Creative Commons Copyright informazio proposatuak</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Creative Commons Copyright informazio proposatuak</h3>
 <h4>1. Sarrera librea ematen duten Aldizkarientzat proposatutako politika</h4>
 Aldizkari honetan argitaratzen duten egileak ados daude baldintza hauekin:
 <ol type="a">
@@ -688,7 +685,6 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="about.delayedOpenAccess">Sarrera libre geroratua</message>
 	<message key="about.delayedOpenAccessDescription1">Aldizkari honen edukia, argitaratu eta handik</message>
 	<message key="about.delayedOpenAccessDescription2">hilabetera egongo da erabilgarri sarrera libreko formatuan.</message>
-	<message key="about.authorSelfArchive">Egileen auto-artxibatzea</message>
 	<message key="about.archiving">Artxibatzea</message>
 	<message key="about.subscriptions">Harpidetzak</message>
 	<message key="about.subscriptionsContact">Harpidetzen kontaktua</message>
@@ -866,52 +862,7 @@ artikuluaren probak zuzentzeko.</message>
 
 	<message key="log.imported">{$userName} erabiltzaileak {$submissionId} artikulua inportatu du.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Irakurtzeko tresnen aukerak</message>
-
-	<message key="rt.admin.settings.description">Irakurtzeko tresnak marko batean agertzen dira, indexatutako ataletan argitaratutako elementuen ondoan. Irakurtzeko tresnak bi multzotan banatzen dira, argitaratutako lanari buruzkoak batzuk (ikus beheko zerrenda), eta lan horrekin erlazionatutako elementuetara joatekoak beste batzuk (eremuz eta diziplinaz antolatuta).</message>
-	<message key="rt.admin.settings.enableReadingTools">Gaitu Irakurtzeko tresnak hautatutako ataletarako.</message>
-	<message key="rt.admin.settings.relatedItems">Eremua</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Eremu bakoitzarekin erlazionatutako lanak ikusi, gehitu, zuzendu edo ezabatzeko, ikus <a href="{$relatedItemsLink}" class="action">Erlazionatutako lanen multzoak</a>.]]></message>
-
-	<message key="rt.admin.options">Aldizkariko lanen tresnak</message>
-	<message key="rt.admin.relatedItems">Erlazionatutako lanen tresnak</message>
-
-	<message key="rt.admin.settings.addComment">Gehitu iruzkinak (iruzkinak bidaltzeko aukera ematen die irakurleei, baina Aldizkariaren kudeatzaileak ezaba ditzake).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Erabiltzaileak erregistratuta egon behar dira eta saioa hasi behar dute iruzkinak bidaltzeko; ez da anonimorik onartzen.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Erabiltzaileak erregistratuta egon behar dira eta saioa hasi behar dute iruzkinak bidaltzeko, baina anonimoak onartzen dira.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Erabiltzaileek ez daukate erregistratuta egon beharrik iruzkinak bidaltzeko, anonimoak onartzen dira.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Behean erakusten dira bilaketa egiteko guneen URL baliogabeak ematen dutenak.<br />
-Eskuz egiaztatu beharko dituzu baliogabeko gisa markatutako URLak, proba hau ez delako % 100 fidagarria.<br />
-Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatzen duten URLetan.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Sortzailea</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Egilearen izena, erakundea, herrialdea</message>
-	<message key="rt.metadata.pkp.peerReviewed">Adituek ebaluatutako artikulua</message>
-	<message key="rt.beNotifiedWhen">Jakinarazi....</message>
-
-	<message key="rt.thisJournal">Bilatu aldizkarian</message>
-
-
-	<message key="rt.context.authorTermsDescription">Egile bat baino gehiago dituzten lanetan, utzi izen guztiak hautatuta antzeko lankidetzan egindako lanak bilatzeko, edo bilatu banaka, izen bakarra hautatuta. Baliabideari buruzko informazio gehiago ikusteko, sakatu GURI BURUZ. Garrantziren arabera eta eduki osoa edo zati bat atzitzeko sarrera librearen (doakoaren) arabera hautatu dira baliabideak.</message>
-
+	<message key="metadata.pkp.peerReviewed">Adituek ebaluatutako artikulua</message>
 
 	<!--
 	 *

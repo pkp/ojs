@@ -32,120 +32,104 @@ class SettingsHandler extends ManagementHandler {
 			ROLE_ID_MANAGER,
 			array(
 				'settings',
-				'publication',
-				'distribution',
 			)
 		);
 	}
 
-
-	//
-	// Public handler methods
-	//
 	/**
-	 * Route to other settings operations.
+	 * Add the archive and payments tabs to the distribution settings page
+	 *
 	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function settings($args, $request) {
-		$path = array_shift($args);
-		switch($path) {
-			case 'index':
-			case '':
-			case 'context':
-				$this->journal($args, $request);
-				break;
-			case 'website':
-				$this->website($args, $request);
-				break;
-			case 'publication':
-				$this->publication($args, $request);
-				break;
-			case 'distribution':
-				$this->distribution($args, $request);
-				break;
-			case 'access':
-				$this->access($args, $request);
-				break;
-			default:
-				assert(false);
-		}
-	}
-
-	/**
-	 * Display The Journal page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function journal($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-
-		// Display a warning message if there is a new version of OJS available
-		if (Config::getVar('general', 'show_upgrade_warning')) {
-			import('lib.pkp.classes.site.VersionCheck');
-			if ($latestVersion = VersionCheck::checkIfNewVersionExists()) {
-				$templateMgr->assign('newVersionAvailable', true);
-				$templateMgr->assign('latestVersion', $latestVersion);
-				$currentVersion = VersionCheck::getCurrentDBVersion();
-				$templateMgr->assign('currentVersion', $currentVersion->getVersionString());
-
-				// Get contact information for site administrator
-				$roleDao = DAORegistry::getDAO('RoleDAO');
-				$siteAdmins = $roleDao->getUsersByRoleId(ROLE_ID_SITE_ADMIN);
-				$templateMgr->assign('siteAdmin', $siteAdmins->next());
-			}
-		}
-
-		$templateMgr->display('management/settings/journal.tpl');
-	}
-
-	/**
-	 * Display website page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function website($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		$journal = $request->getJournal();
-		$templateMgr->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
-		$templateMgr->display('management/settings/website.tpl');
-	}
-
-	/**
-	 * Display publication process page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function publication($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		$templateMgr->display('management/settings/workflow.tpl');
-	}
-
-	/**
-	 * Display distribution process page.
-	 * @param $args array
-	 * @param $request PKPRequest
+	 * @param $request Request
 	 */
 	function distribution($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.permissions
-		$templateMgr->display('management/settings/distribution.tpl');
-	}
+		parent::distribution($args, $request);
 
-	/**
-	 * Display Access and Security page.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function access($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
-		$this->setupTemplate($request);
-		$templateMgr->display('management/settings/access.tpl');
+		$context = $request->getContext();
+		$router = $request->getRouter();
+		$dispatcher = $request->getDispatcher();
+
+		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+		$lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
+		$clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
+
+		$supportedFormLocales = $context->getSupportedFormLocales();
+		$localeNames = AppLocale::getAllLocales();
+		$locales = array_map(function($localeKey) use ($localeNames) {
+			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
+		}, $supportedFormLocales);
+
+		$accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
+		$archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
+
+		// Create a dummy "form" for the PKP Preservation Network settings. This
+		// form loads a single field which enables/disables the plugin, and does
+		// not need to be submitted. It's a dirty hack, but we can change this once
+		// an API is in place for plugins and plugin settings.
+		$versionDao = DAORegistry::getDAO('VersionDAO');
+		$isPlnInstalled = $versionDao->getCurrentVersion('plugins.generic', 'pln', true);
+		$archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', 'dummy', $supportedFormLocales);
+		$archivePnForm->addPage([
+				'id' => 'default',
+				'submitButton' => null,
+			])
+			->addGroup([
+				'id' => 'default',
+				'pageId' => 'default',
+			]);
+
+		if (!$isPlnInstalled) {
+			$archivePnForm->addField(new \PKP\components\forms\FieldHTML('pn', [
+				'label' => __('manager.setup.plnPluginArchiving'),
+				'description' => __('manager.setup.plnPluginNotInstalled'),
+				'groupId' => 'default',
+			]));
+		} else {
+			$plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
+			$pnEnablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'enable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
+			$pnDisablePluginUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'disable', null, array('plugin' => 'plnplugin', 'category' => 'generic'));
+			$pnSettingsUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('verb' => 'settings', 'plugin' => 'plnplugin', 'category' => 'generic'));
+
+			$archivePnForm->addField(new \PKP\components\forms\FieldArchivingPn('pn', [
+				'label' => __('manager.setup.plnPluginArchiving'),
+				'description' => __('manager.setup.plnDescription'),
+				'terms' => __('manager.setup.plnSettingsDescription'),
+				'options' => [
+					[
+						'value' => true,
+						'label' => __('manager.setup.plnPluginEnable'),
+					],
+				],
+				'value' => (bool) $plnPlugin,
+				'enablePluginUrl' => $pnEnablePluginUrl,
+				'disablePluginUrl' => $pnDisablePluginUrl,
+				'settingsUrl' => $pnSettingsUrl,
+				'csrfToken' => $request->getSession()->getCSRFToken(),
+				'groupId' => 'default',
+				'i18n' => [
+					'enablePluginError' => __('api.submissions.unknownError'),
+					'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
+					'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
+				],
+			]));
+		}
+
+		// Add forms to the existing settings data
+		$settingsData = $templateMgr->getTemplateVars('settingsData');
+		$settingsData['forms'][$accessForm->id] = $accessForm->getConfig();
+		$settingsData['forms'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+		$settingsData['forms'][$archivePnForm->id] = $archivePnForm->getConfig();
+		$templateMgr->assign('settingsData', $settingsData);
+
+		// Hook into the settings templates to add the appropriate tabs
+		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
+			$templateMgr = $args[1];
+			$output = &$args[2];
+			$output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
+			return false;
+		});
+
+		$templateMgr->display('management/distribution.tpl');
 	}
 }
-
-

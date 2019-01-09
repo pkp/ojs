@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Tilknyttede tidsskrifter</message>
 	<message key="admin.settings.journalRedirect">Omdirigering af tidsskrift</message>
 	<message key="admin.settings.journalRedirectInstructions">Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift.</message>
-	<message key="admin.settings.noJournalRedirect">Undlad at omdirigere</message>
 	<message key="admin.languages.primaryLocaleInstructions">Dette er standardsproget for webstedet og alle tilknyttede tidsskrifter.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Vælg alle de landestandarder, der skal understøttes på webstedet. De valgte landestandarder kan benyttes af alle de tidsskrifter, der er tilknyttet webstedet, og vises også i en sprogvalgsmenu, der vises på hver enkelt side på webstedet (kan tilsidesættes på tidsskriftsspecifikke sider). Hvis der ikke vælges flere landestandarder, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke være tilgængelige for tidsskrifter.</message>
 	<message key="admin.languages.confirmUninstall">Er du sikker på, at du vil fjerne denne landestandard? Denne handling kan påvirke alle tilknyttede tidsskrifter, der i øjeblikket benytter landestandarden.</message>
@@ -42,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Stien må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn.</message>
 	<message key="admin.contexts.form.pathExists">Den valgte sti bruges allerede af et andet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Offentliggør dette tidsskrift på webstedet</message>
-	<message key="admin.journals.journalDescription">Tidsskriftsbeskrivelse</message>
+	<message key="admin.contexts.contextDescription">Tidsskriftsbeskrivelse</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnementer</message>
 	<message key="admin.journals.transcode">Omsæt kode for artikelmetadata fra ISO8859-1</message>
@@ -57,18 +56,6 @@
 	<message key="admin.mergeUsers.confirm">Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet "{$newUsername}"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Ingen tilmeldte brugere.</message>
 	<message key="admin.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige</message>
-	<message key="admin.categories">Kategorier</message>
-	<message key="admin.categories.editTitle">Redigér kategori</message>
-	<message key="admin.categories.createTitle">Opret kategori</message>
-	<message key="admin.categories.create">Opret en ny kategori</message>
-	<message key="admin.categories.noneCreated">Der er ikke oprettet nogen kategorier</message>
-	<message key="admin.categories.confirmDelete">Er du sikker på, at du vil slette denne kategori?</message>
-	<message key="admin.categories.name">Navn</message>
-	<message key="admin.categories.nameRequired">Et kategorinavn er påkrævet</message>
-	<message key="admin.categories.enable.description">Websiteadministratoren kan her vælge at definere en række kategorier, så en større samling af tidsskrifter lettere kan overskues. Tidsskriftschefen kan vælge flere kategorier for hvert tidsskrift, og læseren kan browse gennem samlingen via kategorierne.</message>
-	<message key="admin.categories.disableCategories">Undlad at kategorisere tidsskrifterne</message>
-	<message key="admin.categories.enableCategories">Tillad tidsskriftchefer at rubricere tidsskrifterne under kategorier</message>
-	<message key="admin.settings.options">Valgmuligheder</message>
 	<message key="admin.settings.defaultMetricDescription">Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
 		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
 		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</message>
@@ -77,7 +64,6 @@
 	<message key="admin.contexts.form.titleRequired">Titel mangler.</message>
 	<message key="admin.languages.confirmDisable">Er du sikker på, at du vil deaktivere denne landestandard? Det kan påvirke de hostede tidsskrifter, der måtte anvende landestandarden.</message>
 
-	<message key="admin.presses.createInstructions">Du vil automatisk blive indskrevet som chef for dette tidsskrift. Efter at have oprettet et nyt tidsskrift, vil du blive omdirigeret til indstillingsguiden for at afslutte den indledende konfiguration af tidsskriftet.</message>
 	<message key="admin.scheduledTask.reviewReminder">Påmindelse om bedømmelse</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Download af sprogpakker fra Public Knowledge Project's web-server er ikke muligt på nuværende tidspunkt fordi:</p>
 	<ul>

@@ -7,7 +7,7 @@
  *
  * Display the issue's table of contents
  *}
-{help file="issue-management.md#edit-issue-toc" class="pkp_help_tab"}
+{help file="issue-management" section="edit-issue-toc" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.

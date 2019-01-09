@@ -183,7 +183,7 @@ class IssueForm extends Form {
 			$issue = $this->issue;
 		} else {
 			$issue = $issueDao->newDataObject();
-			switch ($journal->getSetting('publishingMode')) {
+			switch ($journal->getData('publishingMode')) {
 				case PUBLISHING_MODE_SUBSCRIPTION:
 				case PUBLISHING_MODE_NONE:
 					$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);

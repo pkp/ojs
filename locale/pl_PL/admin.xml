@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Czasopisma</message>
 	<message key="admin.settings.journalRedirect">Przekieruj na czasopismo</message>
 	<message key="admin.settings.journalRedirectInstructions">Żądania wyświetlenia strony głównej będą przekierowane do wybranego czasopisma.</message>
-	<message key="admin.settings.noJournalRedirect">Bez przekierowań</message>
 	<message key="admin.languages.primaryLocaleInstructions">Domyślny język dla strony oraz wszystkich czasopism</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wybierz wszystkie języki wspierane w obrębie strony.</message>
 	<message key="admin.locale.maybeIncomplete">Zaznaczone języki mogą nie być przetłumaczone w pełni.</message>
@@ -38,7 +37,7 @@
 	<message key="admin.journals.createInstructions">Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po utworzeniu czasopisma, zaloguj się jako administrator w celu dokończenia procesu konfiguracji.</message>
 	<message key="admin.journals.urlWillBe">Krótkie słowo lub akronim identyfikujące czasopismo. Adres będzie miał postać {$sampleUrl}</message>
 	<message key="admin.journals.enableJournalInstructions">Włącz czasopismo aby było widoczne w obrębie całej strony.</message>
-	<message key="admin.journals.journalDescription">Opis czasopisma</message>
+	<message key="admin.contexts.contextDescription">Opis czasopisma</message>
 	<message key="admin.journal.pathImportInstructions">Istniejąca ścieżka czasopisma lub ścieżka do utworzenia (np., "forum").</message>
 	<message key="admin.journals.importSubscriptions">Importuj subskrypcje</message>
 	<message key="admin.journals.transcode">Transkoduj dane artykułu z ISO8859-1</message>
@@ -51,25 +50,7 @@
 	<message key="admin.mergeUsers.from.description">Wybierz jedno lub kilka kont użytkowników w celu ich scalenia. (np. w sytuacji kiedy jedna osoba posiada dwa konta). Konto wybrane jako pierwsze zostanie usunięte a jego wszystkie parametry zostaną przydzielone dla nowego użytkownika.</message>
 	<message key="admin.mergeUsers.allUsers">Wszyscy użytkownicy</message>
 	<message key="admin.mergeUsers.confirm">Potwierdź połączenie użytkownika {$oldAccountCount} z nowym użytkownikiem "{$newUsername}"? Użytkownik {$oldAccountCount} zostanie nieudwracalnie usunięty.</message>
-	<message key="admin.settings.options">Opcje</message>
-	<message key="admin.settings.usePaging">Dla stron z dużą listą czasopism, podziel listę czasopism na strony.</message>
-	<message key="admin.settings.journalsList">Elementy czasopism</message>
-	<message key="admin.settings.journalsList.description">Wybierz jakie elementy zostaną wyświetlone dla każdego czasopisma na stronie głównej</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatura czasopisma</message>
-	<message key="admin.settings.journalsList.showTitle">Tytuł czasopisma</message>
-	<message key="admin.settings.journalsList.showDescription">Opis czasopisma</message>
-	<message key="admin.categories">Kategorie</message>
-	<message key="admin.categories.disableCategories">Nie organizuj czasopism w kategorie.</message>
-	<message key="admin.categories.enableCategories">Pozwól administratorom czasopism na organizowanie ich w kategorie.</message>
-	<message key="admin.categories.editTitle">Edytuj kategorię</message>
-	<message key="admin.categories.createTitle">Utwórz kategorię</message>
-	<message key="admin.categories.create">Utwórz nową kategorię</message>
-	<message key="admin.categories.noneCreated">Żadne kategorie nie zostały utworzone.</message>
-	<message key="admin.categories.confirmDelete">Czy na pewno usunąć kategorię?</message>
-	<message key="admin.categories.name">Nazwa</message>
-	<message key="admin.categories.nameRequired">Nazwa kategorii jest wymagana.</message>
 	<message key="admin.settings.defaultMetricDescription">Twój system jest skonfigurowany do korzystania z więcej niż jednej metryki. Statystyki zostaną wyświetlone w różnych kontekstach. Niektóre zastosowania danych statystycznych umożliwiają wykorzystanie tylko wybranych metryk. Wybierz metrykę która będzie wykorzystywana domyślnie.</message>
-	<message key="admin.categories.enable.description">Administrator strony może zdefiniować kategorie umożliwiające sortowanie czasopism. Administratorzy czasopism mogą zadecydować czy przydzielać swoje czasopisma do kategorii. Kategorie zostaną wyświetlone na stronie głównej.</message>
 	<message key="admin.languages.confirmDisable">Czy na pewno wyłączyć ten język? Twoja decyzja może mieć wpływ na utworzone czasopisma aktualnie wykorzystujące ten język.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Pobieranie plików języka ze strony PKP jest w tej chwili niemożliwe, ponieważ:</p>
 	<ul>
@@ -78,7 +59,6 @@
 	</ul>
 <p>Pliki języka mogą być pobrane ręcznie <a href="http://pkp.sfu.ca">ze strony PKP</a>.</p>]]></message>
 	<message key="admin.mergeUsers.noneEnrolled">Brak przypisanych użytkowników</message>
-	<message key="admin.presses.createInstructions">Zostaniesz automatycznie przypisany jako administrator tego czasopisma. Po utworzeniu nowego czasopisma zostaniesz przekierowany do kreatora ustawień w celu dokończenia jego podstawowej konfiguracji.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Powiadomienie o końcu subskrypcji</message>
 	<message key="admin.scheduledTask.openAccessNotification">Powiadomienie o otwartym dostępie</message>
 	<message key="admin.scheduledTask.reviewReminder">Powiadomienie o recenzji</message>

@@ -34,7 +34,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		$context = $request->getContext();
-		if ($context->getSetting('reviewerAccessKeysEnabled')) {
+		if ($context->getData('reviewerAccessKeysEnabled')) {
 			$this->_validateAccessKey($request);
 		}
 

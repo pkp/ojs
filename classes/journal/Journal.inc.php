@@ -34,7 +34,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedPageHeaderTitle() {
-		$titleArray = $this->getSetting('name');
+		$titleArray = $this->getData('name');
 		$title = null;
 
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
@@ -48,7 +48,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedPageHeaderLogo() {
-		$logoArray = $this->getSetting('pageHeaderLogoImage');
+		$logoArray = $this->getData('pageHeaderLogoImage');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}
@@ -60,7 +60,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedFavicon() {
-		$faviconArray = $this->getSetting('favicon');
+		$faviconArray = $this->getData('favicon');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($faviconArray[$locale])) return $faviconArray[$locale];
 		}
@@ -77,14 +77,6 @@ class Journal extends Context {
 	 */
 	function getAssocType() {
 		return ASSOC_TYPE_JOURNAL;
-	}
-
-	/**
-	 * Get the settings DAO for this context object.
-	 * @return DAO
-	 */
-	static function getSettingsDAO() {
-		return DAORegistry::getDAO('JournalSettingsDAO');
 	}
 
 	/**
@@ -133,7 +125,7 @@ class Journal extends Context {
 	 *   type could be identified.
 	 */
 	function getDefaultMetricType() {
-		$defaultMetricType = $this->getSetting('defaultMetricType');
+		$defaultMetricType = $this->getData('defaultMetricType');
 
 		// Check whether the selected metric type is valid.
 		$availableMetrics = $this->getMetricTypes();

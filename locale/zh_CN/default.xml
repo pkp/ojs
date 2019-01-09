@@ -23,112 +23,23 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编辑）.</message>
-	<message key="default.journalSettings.checklist.fileFormat">投稿文件的文件格式可以是OpenOffice, Microsoft Word, RTF, 或者WordPerfect document.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">在有条件的情况下，提供参考文献的URL.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">该文本为单倍行距;字号大小为12点; 采用斜体, 而不是强调 (除非获得URL 地址); 和所有的插图, 图片,以及表格被放置在文本在适当的位置而不是在结束.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[该文本符合<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到.]]></message>
-	<message key="default.journalSettings.privacyStatement">在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</message>
-	<message key="default.journalSettings.openAccessPolicy">本期刊遵循内容时开放存取原则，促使其研究免费地用于公共全球知识交流.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">在出版之前与之后，作者都被允许和鼓励将投稿到本期刊的文章项目发布到个人的或者所属单位的网站上（同时提供该出版品的图书细目）.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[
-		文字编辑的目的在于改进文章的流畅度、清晰度、文法、用字和格式。作者在这个阶段有最后的机会对文章内容去做出任何实质的修改，而下一阶段则被限制在排印与格式化的校正。
-		<br />要校样的文件得是Word或者.rtf 的格式，因此是可以容易编辑的文字处理文件。这里所显示的一套指南，建立了两个校样的取向。一个取向是基于Microsoft Word的「追踪修订」功能，需要文字编辑、编辑和作者都能使用这个程序。第二种系统，无关乎软件，是经过许可、借用Harvard Educational Review。期刊编辑有权限可以修订这些指南，所以可以提供建议，促进这份期刊的编辑流程。
-		<h4>文字编辑系统</h4>
-		<h5>1. Microsoft Word的追踪修订</h5>
-		在选单工具列的「工具」中，「追踪修订」的功能让文字编辑可以插入（以有颜色的字型）和删除文字（文字外观以有色的删除线标记）。文字编辑可以在检阅方框中插入问题，询问作者（作者问题）和编者（编者问题）两人。接着上传校模板本，并通知编辑。编辑随后审稿文字内容，并通知作者。
-		<br />编辑和作者应该满足这些变更处。如果需要进一步的修订，编辑和作者可以接受初始的插入和删除项目，同时在文章的其他地方进行插入和删除的动作。作者和编辑应该以置放在检阅方框中的内容回应每个对他们提出的问题。
-		在文章内容经过编辑和作者的审稿过后，文字编辑会做出一个最终的版本，接受所有的内容修以转被接受版面和排版样式的阶段。
-		<h5>2. Harvard Educational Review </h5>
-		<strong>电子修订本转换打字稿指南</strong><br />
-		请依循下列的协定将电子修订本转换成您的打字稿。
-		<strong>回应建议的修订</strong><br />
-		<ul>
-		<li>&nbsp; 针对每个您接受的修订处，取消文字的粗体格式。</li>
-		<li>&nbsp; 针对您不接受的每个修订处，重新输入原文并且<strong>改成粗体字</strong>。</li>
-		</ul>
-		<strong>增添与删除内容</strong><br />
-		<ul>
-		<li>&nbsp; 以<strong>粗体字</strong>标明新的文字内容</li>
-		<li>&nbsp; 以<strong>[被删除的文字]</strong>替换删除的栏目</li>
-		<li>&nbsp; 如果您删除了一个句子或更多地方，请以一个注解加以指明，例如：<strong>[删除了 2 个句子]</strong></li>
-		</ul>
-		<strong>回应给作者的问题(QAs)</strong><br />
-		<ul>
-		<li>&nbsp; 保持所有的OAs原封不动，并将文字改成粗体字。不要删除掉它们。</li>
-		<li>&nbsp; 要回应一个QA，请在其后新增一个评论。评论应该要使用中括号画界：<strong>[评论：</strong>]</li>
-		<li>&nbsp;例如，<strong>[评语：补充讨论您所建议的方法论。]</strong></li>
-		</ul>
-		<strong>做评论</strong><br />
-		&nbsp; 使用评论以说明组织上的变更或者主要修订处。
-		&nbsp; 例如：<strong>[评语：将上一段从第五页移至第七页]</strong>
-		&nbsp; 注意，当涉及页数时，请使用寄给您之打字稿的印刷页数。这很重要，因为一份文件在经过电子修订之后页数可能会改变。
-
-		<h4>一份电子修订稿中的图解</h4>
-
-		<strong>原始「打字稿」文件</strong>
-
-		如果要对您的原始打字稿做出重大修改，请先和您的共同编辑人员确认过。当您完成您的修订之后，请重新命名文件，从AuthorNameQA.doc改成AuthorNameQAR.doc（例如：从"李先生QA.doc"改成"李先生QAR.doc"）。请打印出一份原稿的电脑打印槁，并以附上含有完整修订与更名过之文件的软碟或光碟一并寄出。
-
-		<strong>将附有疑问和建议的打字稿返还作者</strong>
-
-		在针对<strong>我们正要返还予您的打字稿</strong>做出重大修改之前，请与和您<strong>共同编辑您负责部分的编者</strong>进行确认。当您完成您的修订之后，请重新命名文件，从AuthorNameQA.doc改成AuthorNameQAR.doc（例如：从"李先生QA.doc"改成"李先生QAR.doc"）。请打印出一份原稿的电脑打印槁，并以附上含有完整修订与更名过之文件的软碟或光碟一并寄出。<strong>[QA：在这个段落中，强调要谨慎遵循指南来进行电子修订的重要性，或许会有点帮助。否则编辑流程可想而知会进行的很慢。]</strong>
-
-		<strong>将修订过的打字稿寄回给HER</strong>
-
-		在针对我们正要返还予您的打字稿做出重大修改之前，请与和您共同编辑您负责部分的编者进行确认。<strong>请务必了解，若没有遵循步骤指南，可能会严重拖慢稿件的出版时程。</strong>
-
-		当您完成您的修订之后，请重新命名文件，从AuthorNameQA.doc改成AuthorNameQAR.doc（例如：从"李先生QA.doc"改成"李先生QAR.doc"）。请打印出一份原稿的电脑打印槁，并以附上含有<strong>[已删除字句]</strong>的修订与更名文件的软碟或光碟一并寄出。<strong>[QA：在这个段落中，强调要谨慎遵循指南来进行电子修订的重要性，或许会有点帮助。否则编辑流程可想而知会进行的很慢。][评语：我增加了一个句子以回应您的建议。]</strong>
-
-		<strong>备注：</strong>
-		&bull; 非粗体的文字表示接受对于原有语句的建议修改。
-		&bull; 附加语句以回应QA。粗体字表示新增的文字内容。
-		&bull; [被删除的文字]表示「全部」删掉。
-		&bull; 评语包含一份对于编者QA的回复。]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[
-		校对阶段的目的在于，找出校模板的拼字、文法和格式上的错误。这个阶段不能再做出比较根本性的修订，除非与栏目编辑讨论过。在「版面」页面，点击「查看校对」以浏览用来出版这个项目的HTML、PDF和其他可用之文件格式。
-
-		<strong>拼字与文法上的错误</strong>
-
-		复制有问题的字词或词组，并贴在「校对修订」文字框里头，并附上「将...改成」的指示给编辑人，如下...
-
-		1. 将...
-		then the others
-		改成...
-		than the others
-
-		2. 将...
-		Malinowsky
-		改成...
-		Malinowski
-
-
-		<strong>格式上的错误</strong>
-
-		在「校对修订」文字框中，在「格式化」的标题下，说明问题的位置和性质，如下...
-
-		3. 格式化
-		表格3的数字在第三列没有对齐。
-
-		4. 格式化
-		以「这个最新主题...」开头的段落没有缩排]]</message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编辑）.</message>
+	<message key="default.contextSettings.checklist.fileFormat">投稿文件的文件格式可以是OpenOffice, Microsoft Word, RTF, 或者WordPerfect document.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">在有条件的情况下，提供参考文献的URL.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">该文本为单倍行距;字号大小为12点; 采用斜体, 而不是强调 (除非获得URL 地址); 和所有的插图, 图片,以及表格被放置在文本在适当的位置而不是在结束.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[该文本符合<a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到.]]></message>
+	<message key="default.contextSettings.privacyStatement">在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</message>
+	<message key="default.contextSettings.openAccessPolicy">本期刊遵循内容时开放存取原则，促使其研究免费地用于公共全球知识交流.</message>
+	<message key="default.contextSettings.emailSignature">________________________________________________________________________
 {$journalName}
-{$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href="{$index Url}/{$journal Path}/user/register">注册</a>链接。完成注册后，读者可以接收到期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。期刊上的<a href="{$index Url}/{$journal Path}/about/submissions#privacyStatement">隐私声明</A>保证读者的姓名和电子邮件地址不会被用于其他用途。]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[
-		对这份期刊感兴趣吗？我们建议您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在进行投稿之前必须在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">注册</a>，而如果已经注册的话，可以简单地<a href="{$indexUrl}/index/login">登入</a>并且开始五个步骤的投稿流程。]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[
+{$indexUrl}{$contextPath}</message>
+	<message key="default.contextSettings.forReaders"><![CDATA[我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href="{$index Url}/{$journal Path}/user/register">注册</a>链接。完成注册后，读者可以接收到期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。期刊上的<a href="{$index Url}/{$journal Path}/about/submissions#privacyStatement">隐私声明</A>保证读者的姓名和电子邮件地址不会被用于其他用途。]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[
+		对这份期刊感兴趣吗？我们建议您看一下<a href="{$indexUrl}{$contextPath}/about">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">作者指引</a>。作者在进行投稿之前必须在本期刊<a href="{$indexUrl}{$contextPath}/user/register">注册</a>，而如果已经注册的话，可以简单地<a href="{$indexUrl}/index/login">登入</a>并且开始五个步骤的投稿流程。]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[
 		我们鼓励图书馆员将这份期刊加入其图书馆的电子期刊数据库之中。同时，这份期刊的开源码出版系统或许会适合图书馆放置他们的职员正在编辑的期刊。(请见<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[
+	<message key="default.contextSettings.lockssLicense"><![CDATA[
 		这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href="http://lockss.stanford.edu/">更多信息...</a>]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[
+	<message key="default.contextSettings.lockssLicense"><![CDATA[
 		这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href="http://lockss.stanford.edu/">更多信息...</a>]]></message>
-	
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">论文出版</message>
-	<message key="default.journalSettings.purchaseArticleFee">购买文章</message>
-	<message key="default.journalSettings.membershipFee">协会会员</message>
-	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
 </locale>

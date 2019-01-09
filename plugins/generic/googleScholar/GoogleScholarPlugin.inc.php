@@ -54,11 +54,11 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$templateMgr->addHeader('googleScholarRevision', '<meta name="gs_meta_revision" content="1.1"/>');
 		$templateMgr->addHeader('googleScholarJournalTitle', '<meta name="citation_journal_title" content="' . htmlspecialchars($journal->getName($journal->getPrimaryLocale())) . '"/>');
 
-		if ($abbreviation = $journal->getSetting('abbreviation', $journal->getPrimaryLocale()) || $abbreviation = $journal->getSetting('acronym', $journal->getPrimaryLocale())) {
+		if ($abbreviation = $journal->getData('abbreviation', $journal->getPrimaryLocale()) || $abbreviation = $journal->getData('acronym', $journal->getPrimaryLocale())) {
 			$templateMgr->addHeader('googleScholarJournalAbbrev', '<meta name="citation_journal_abbrev" content="' . htmlspecialchars($abbreviation) . '"/>');
 		}
 
-		if (($issn = $journal->getSetting('onlineIssn')) || ($issn = $journal->getSetting('printIssn')) || ($issn = $journal->getSetting('issn'))) {
+		if (($issn = $journal->getData('onlineIssn')) || ($issn = $journal->getData('printIssn')) || ($issn = $journal->getData('issn'))) {
 			$templateMgr->addHeader('googleScholarIssn', '<meta name="citation_issn" content="' . htmlspecialchars($issn) . '"/> ');
 		}
 

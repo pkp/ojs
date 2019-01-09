@@ -268,12 +268,8 @@
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem om een permanent archief van het tijdschrift te verzekeren. LOCKSS is open source software, ontwikkeld door Stanford University Library, die bibliotheken in staat stelt om geselecteerde internet-tijdschriften te archiveren door die tijdschriften regelmatig  te onderzoeken op nieuwe inhoud en die dan te archiveren. Ieder archief wordt continue gevalideerd tegen archieven in andere bibliotheken. Verloren of beschadigd materiaal wordt uit de andere archieven hersteld.
-<br /><br />
-Het inrichten van LOCKSS ondersteuning voor Open Journal Systems hoeft pas te gebeuren als publicatie plaatsvindt. Volg dan deze twee stappen:]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
 <h4>1. Concept beleid voor Open Access tijdschriften</h4>
 Auteurs die publiceren bij dit tijdschrift, onderschrijven de volgende voorwaarden:
 <ol type="a">
@@ -579,7 +575,6 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 	<message key="about.delayedOpenAccess">Vertraagde Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">De inhoud van dit tijdschrift zal beschikbaar zijn in een open access formaat</message>
 	<message key="about.delayedOpenAccessDescription2">maand(en) nadat een nummer gepubliceerd is.</message>
-	<message key="about.authorSelfArchive">Zelf-archiveren auteurs</message>
 	<message key="about.archiving">Archiveren</message>
 	<message key="about.subscriptions">Abonnementen</message>
 	<message key="about.subscriptionsContact">Contact voor abonnementen</message>
@@ -742,52 +737,7 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 
 	<message key="log.imported">{$userName} heeft artikel {$submissionId} geïmporteerd.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Leesgereedschap opties</message>
-
-	<message key="rt.admin.settings.description">De leesgereedschappen worden getoond in een frame naast de gepubliceerde items in de secties van het tijdschrift die geïndexeerd worden.  De leesgereedschappen bestaan uit een aantal optionele gereedschappen  die verband houden met het gepubliceerde item, zoals hieronder getoond, en een aantal gereedschappen die toegang bieden tot gerelateerde items, georganiseerd naar veld en discipline.</message>
-	<message key="rt.admin.settings.enableReadingTools">Leesgereedschappen inschakelen in aangewezen secties van het tijdschrift</message>
-	<message key="rt.admin.settings.relatedItems">Veld</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Zie <a href="{$relatedItemsLink}" class="action">Sets gerelateerde items</a> om gerelateerde items voor ieder veld toe te voegen, te corrigeren of te verwijderen.]]></message>
-
-	<message key="rt.admin.options">Tijdschrift-item gereedschappen</message>
-	<message key="rt.admin.relatedItems">Gerelateerde item gereedschappen</message>
-
-	<message key="rt.admin.settings.addComment">Commentaar toevoegen (laat lezers commentaar plaatsen, de tijdschriftbeheerder kan dat verwijderen).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Gebruikers moeten geregistreerd en ingelogd zijn om te plaatsen, anonieme plaatsingen zijn niet toegestaan.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Gebruikers moeten geregistreerd en ingelogd zijn, anonieme plaatsingen zijn toegestaan.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Gebruikers hoeven niet geregistreerd te zijn, anonieme plaatsingen zijn toegestaan.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mogelijk ongeldige URL's van zoeksites worden hieronder getoond.<br />
-Verifieer de als ongeldig gemerkte URL's met de hand, aangezien deze test niet 100% accuraat is.<br />
-Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Schepper</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Autheursnaam, affiliatie, land</message>
-	<message key="rt.metadata.pkp.peerReviewed">Peer reviewed artikel</message>
-	<message key="rt.beNotifiedWhen">Bericht als...</message>
-
-	<message key="rt.thisJournal">Doorzoek tijdschrift</message>
-
-
-	<message key="rt.context.authorTermsDescription">Laat bij items met meer dan één auteur alle namen aangevinkt voor het zoeken naar werk met soortgelijke co-auteurs, of zoek naar één tegelijk door slechts één naam aan te vinken. Klik op OVER voor meer informatie over de doorzochte bronnen. Deze bronnen zijn uitgekozen vanwege hun relevantie en open (gratis) toegang tot alle of een gedeelte van hun inhoud.</message>
-
+	<message key="metadata.pkp.peerReviewed">Peer reviewed artikel</message>
 
 	<!--
 	 *

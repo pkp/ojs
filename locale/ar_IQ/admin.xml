@@ -14,9 +14,7 @@
 <locale name="ar_IQ" full_name="العربية">
 	<message key="admin.hostedJournals">المجلات المستضافة</message>
 	<message key="admin.settings.journalRedirect">إعادة توجيه موقع المجلة</message>
-	<message key="admin.settings.options">خيارات التشغيل</message>
 	<message key="admin.settings.journalRedirectInstructions">إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال</message>
-	<message key="admin.settings.noJournalRedirect">لا تنقل المتصفح إلى وجهة أخرى</message>
 	<message key="admin.settings.defaultMetricDescription">
         هذا النظام قادر على توثيق معطيات إحصائية عن استعماله بعدة معايير، وتلك المعايير يمكن إظهارها بسياقات متعددة. غير أن هناك حالات
         لا بد فيها من اختيار أحد معطيات الاستعمال دون غيرها... منها على سبيل المثال لا الحصر: استعراض قائمة مرتبة هجائياً لأكثر المقالات استعمالاً
@@ -57,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">تسمية المسار متوقع لها أن تتكون من سلسلة حروف إنجليزية وأرقام وشُرط تحتية وواصلات، ولا بد لها أن تبدأ وتنتهي بحرف إنجليزي أو رقم حصراً</message>
 	<message key="admin.contexts.form.pathExists">المسار الذي اخترته سبق وأن استُعمل لمجلة أخرى</message>
 	<message key="admin.journals.enableJournalInstructions">إسمح لهذه المجلة بالظهور علانية في الموقع</message>
-	<message key="admin.journals.journalDescription">وصف المجلة</message>
+	<message key="admin.contexts.contextDescription">وصف المجلة</message>
 	<message key="admin.journal.pathImportInstructions">المسار الحالي للمجلة، أو المسار المزمع إنشاؤه، مثلاً: "ojs"</message>
 	<message key="admin.journals.importSubscriptions">استورد إشتراكات</message>
 	<message key="admin.journals.transcode">حول ترميز البيانات الوصفية من صيغة ISO8859-1</message>
@@ -72,19 +70,6 @@
 	<message key="admin.mergeUsers.confirm">هل أنت متأكد من رغبتك في ضم المستخدمين المحددين البالغ عددهم {$oldAccountCount} ضمن حساب المستخدم ذو اسم الدخول "{$newUsername}"؟ إن جميع تلك الحسابات ستزول من الموقع بعد إتمام هذه العملية والتي لا سبيل إلى التراجع عنها لاحقاً. لاحظ أن عدد الحسابات المعنية بالضم هو {$oldAccountCount}</message>
 	<message key="admin.mergeUsers.noneEnrolled">لا أحد مسجل في الموقع بعد</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">الأصناف</message>
-	<message key="admin.categories.enable.description">مدير الموقع له أن يستحدث هنا عدداً من الأصناف لمساعدة متصفحي الموقع في الوصول إلى المجلات العلمية عندما يكون عددها كبيراً، وعندها يمكن لمديري تلك المجلات وضع مجلاتهم في أي من تلك الأصناف، الأمر الذي يتيح لمستخدمي الموقع الوصول إلى مبتغاهم عبر الرجوع إلى تلك الطريقة من التصنيف</message>
-	<message key="admin.categories.disableCategories">لا تقم بتصنيف المجلات</message>
-	<message key="admin.categories.enableCategories">إسمح لمديري المجلات أن يضعوا مجلاتهم في التصنيفات</message>
-	<message key="admin.categories.editTitle">عدل التصنيف</message>
-	<message key="admin.categories.createTitle">أنشئ تصنيفاً</message>
-	<message key="admin.categories.create">أنشئ تصنيفاً جديداً</message>
-	<message key="admin.categories.noneCreated">ليس هناك تصنيفات بعد</message>
-	<message key="admin.categories.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا التصنيف؟</message>
-	<message key="admin.categories.name">الاسم</message>
-	<message key="admin.categories.nameRequired">اسم التصنيف مطلوب حتماً</message>
-	<message key="admin.presses.createInstructions">سيتم تلقائياً منحك دور رئيس التحرير في هذه المجلة. بعد إنشاء مجلة جديدة، سيتم توجيهك لضبط إعداداتها من أجل إكمال مرحلة التهيئة الأولية.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">منبه انتهاء صلاحية الاشتراك</message>
 	<message key="admin.scheduledTask.openAccessNotification">إشعارات الوصول المفتوح</message>
 	<message key="admin.scheduledTask.reviewReminder">منبه التحكيم</message>

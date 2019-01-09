@@ -30,19 +30,6 @@ define('ASSOC_TYPE_ISSUE_GALLEY',	0x0000105);
 define('CONTEXT_JOURNAL', 1);
 
 class Application extends PKPApplication {
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		parent::__construct();
-
-		// Register custom autoloader function for OJS namespace
-		spl_autoload_register(function($class) {
-			$prefix = 'OJS\\';
-			$rootPath = BASE_SYS_DIR . "/classes";
-			customAutoload($rootPath, $prefix, $class);
-		});
-	}
 
 	/**
 	 * Get the "context depth" of this application, i.e. the number of
@@ -259,5 +246,3 @@ class Application extends PKPApplication {
 		return new OJSPaymentManager($context);
 	}
 }
-
-

@@ -85,7 +85,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		if (!$journal) return false;
 
 		// Make sure announcements and plugin are enabled
-		$announcementsEnabled = $journal->getSetting('enableAnnouncements');
+		$announcementsEnabled = $journal->getData('enableAnnouncements');
 		if (!$announcementsEnabled || !$this->_parentPlugin->getEnabled()) return false;
 
 		// Make sure the feed type is specified and valid

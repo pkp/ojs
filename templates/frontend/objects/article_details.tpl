@@ -56,8 +56,7 @@
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
  * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
- * @uses $copyright string Copyright notice. Only assigned if statement should
- *   be included with published articles.
+ * @uses $licenseTerms string License terms.
  * @uses $copyrightHolder string Name of copyright holder
  * @uses $copyrightYear string Year of copyright
  * @uses $licenseUrl string URL to license. Only assigned if license should be
@@ -232,7 +231,7 @@
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
 							</li>
 						{/foreach}
 					</ul>
@@ -363,7 +362,7 @@
 			{/foreach}
 
 			{* Licensing info *}
-			{if $copyright || $licenseUrl}
+			{if $licenseTerms || $licenseUrl}
 				<div class="item copyright">
 					{if $licenseUrl}
 						{if $ccLicenseBadge}
@@ -381,7 +380,7 @@
 							</a>
 						{/if}
 					{/if}
-					{$copyright}
+					{$licenseTerms}
 				</div>
 			{/if}
 

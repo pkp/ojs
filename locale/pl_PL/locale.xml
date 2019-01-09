@@ -43,7 +43,7 @@
 
 	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
-	
+
 	<!-- review forms end -->
 
 	<!--
@@ -338,7 +338,7 @@
 <p>System nie był w stanie automatycznie nadpisać pliku konfiguracji. Aby zastosować zmiany w konfiguracji musisz otworzyć plik <tt>config.in.php</tt> w edytorze tekstu i zmienić jego zawartość z treścią zamieszczoną w poniższym polu.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Zarządzanie subskrypcją</message>
@@ -368,19 +368,15 @@
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
 
 
 	<message key="manager.setup.reviewProcessEmailDescription">Redaktor przesyła recenzentowi zaproszenie do wykonania recenzji wraz z  załączonym tekstem. W odpowiedzi, recenzent przesyła redaktorowi swoją recenzję oraz rekomendację.  Następnie redaktor wprowadza dane nadesłane przez recenzenta do systemu.</message>
-	<message key="manager.setup.lockssDescription"><![CDATA[LOCKSS jest otwartoźródłowym systemem opracowanym przez Bibliotekę Uniwerytetu Stanford, który umożliwia archiwizowanie wybranych czasopism publikowanych w internecie. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku występienia błędów lub nieciągłości danych.
-<br /><br />
-Konfiguracja LOCKSS dla OJS może zostać przeprowadzona zarówno przed jak i po opublikowaniu treści w czasopiśmie. Możesz włączyć system LOCKSS poniżej:]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Informacje o prawach autorskich zaproponowane przez Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Informacje o prawach autorskich zaproponowane przez Creative Commons</h3>
 <h4>1. Zaproponowana polityka dla czasopisma, które zapewnia otwarty dostęp</h4>
 Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 <ol type="a">
@@ -493,7 +489,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="layoutEditor.galley.replaceGalley">Podmień plik do publikacji</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Prześlij dodatkowy plik</message>
 	<message key="submission.layout.imageInvalid">Niepoprawny format pliku. Akceptowane formaty to .gif, .jpg, oraz .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artykuły w recenzji</message>
 	<message key="reviewer.completedReviews">Ukończone</message>
@@ -688,7 +684,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="site.journalView">Pokaż czasopismo</message>
 	<message key="site.journalRegister">Zarejestruj</message>
 	<message key="site.journalCurrent">Aktualny numer</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Aktualny numer</message>
@@ -724,7 +720,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="about.delayedOpenAccess">Odroczony w czasie wolny dostęp do treści</message>
 	<message key="about.delayedOpenAccessDescription1">Zawartość tego czasopisma będzie dostępna na zasadach open access</message>
 	<message key="about.delayedOpenAccessDescription2">miesięcy od czasu opublikowania numeru.</message>
-	<message key="about.authorSelfArchive">Archiwizowanie dla autorów</message>
 	<message key="about.archiving">Archiwizowanie</message>
 	<message key="about.subscriptions">Subskrypcje</message>
 	<message key="about.subscriptions.individual">Indywidualne subskrypcje</message>
@@ -818,45 +813,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 
 	<message key="log.imported">{$userName} ukończył(a) importowanie artykułu {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Opcje narzędzi dla czytelników</message>
-
-	<message key="rt.admin.settings.description">Opcje narzędzi dla czytelników pojawiają się w ramce obok opublikowanych pozycji w działach czasopisma, które zostały skonfigurowane jako indeksowane. Narzędzia dla czytelników składają się z zestawu opcjonalnych narzędzi wymienionych poznizej.</message>
-	<message key="rt.admin.settings.enableReadingTools">Włącz Narzędzia dla czytelników, dla oznaczonych działów czasopisma.</message>
-	<message key="rt.admin.settings.relatedItems">Dziedzina</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Zobacz <a href="{$relatedItemsLink}" class="action">Ustawienia powiązanych pozycji</a> aby zobaczyć, dodać, poprawić lub usunąć powiązane pozycje dla każdej dziedziny.]]></message>
-	<message key="rt.admin.options">Journal Item Tools</message>
-	<message key="rt.admin.relatedItems">Narzędzia powiązanych pozycji</message>
-	<message key="rt.admin.settings.addComment">Dodaj komentarz (włącza możliwość umieszczania komentarzy przez czytelników, które mogą być usuwane przez Administratora czasopisma).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe nie jest dozwolone. </message>
-	<message key="rt.admin.settings.addComment.anonymous">Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe jest dozwolone.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Użytkownik nie musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe jest dozwolone.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Poniżej wyświetlone są prawdopodobnie niepoprawne adresy URL wyszukiwanych stron.<br/>
-Powinieneś(naś) ręcznie zweryfikować każdy URL i oznaczyć jako poprawny, jako że automatyczne testowanie URL nie zawsze działa w 100%.<br/>
-Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wymagają opublikowania danych formularza.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Autor</message>
-	<message key="rt.metadata.pkp.primaryAuthor">Imię, nazwisko autora, afiliacja, kraj</message>
-	<message key="rt.metadata.pkp.peerReviewed">Recenzowany artykuł</message>
-	<message key="rt.beNotifiedWhen">Powiadom gdy...</message>
-	<message key="rt.thisJournal">Wyszukaj w czasopiśmie</message>
-
+	<message key="metadata.pkp.peerReviewed">Recenzowany artykuł</message>
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Podaj adres e-mail aby otrzymywać powiadomienia o aktualizacjach treści.</message>
@@ -960,9 +917,6 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="search.results.orderDir.asc">Rosnąco</message>
 	<message key="search.results.orderDir.desc">Malejąco</message>
 	<message key="search.results.similarDocuments">podobne dokumenty</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems również wspiera <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) system zapewniający ochronę i stałą archiwizacje czasopisma. CLOCKSS jest oparty na otwartoźródłowym oprogramowaniu LOCKSS, rozwijanym przez Bibliotekę Uniwersytetu Stanforda, który włącza ochronę wybranych stron czasopism poprzez regularne sprawdzanie stron internetowych zarejestrowanych czasopism w zakresie nowo opublikowanych treści i ich archiwizację. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku wystąpienia błędów lub nieciągłości danych.
-<br /><br />
-Skonfigurowanie CLOCKSS w Open Journal Systems nie wymaga posiadania opublikowanych treści na stronie czasopisma.]]></message>
 	<message key="submission.layout.galley.remotelyHostedContent">Pliki do publikacji będą dostępne na zewnętrznej stronie internetowej</message>
 	<message key="submission.layout.galley.remoteURL">Adres URL zawartości opublikowanej na zewnętrznej stronie</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Ustaw lub dopasuj rekomendację.</message>

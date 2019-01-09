@@ -93,7 +93,7 @@ class SectionForm extends PKPSectionForm {
 		$sectionEditorsListData = $this->_getSubEditorsListPanelData($journal->getId(), $request);
 		$templateMgr->assign(array(
 			'hasSubEditors' => !empty($sectionEditorsListData['items']),
-			'subEditorsListData' => json_encode($sectionEditorsListData),
+			'subEditorsListData' => $sectionEditorsListData,
 		));
 
 		return parent::fetch($request);
@@ -164,5 +164,3 @@ class SectionForm extends PKPSectionForm {
 		return parent::execute();
 	}
 }
-
-

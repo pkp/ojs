@@ -372,16 +372,9 @@
 	<message key="plugins.categories.auth.description">Модули авторизации позволяют Open Journal Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
 	<message key="plugins.categories.generic.description">Общие модули используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями модулей.</message>
 
-	<message key="manager.setup.lockssDescription">
-	<![CDATA[Open Journal Systems поддерживает систему LOCKSS (Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для контента журнала. Если ваш журнал принят для архивирования контента в глобальную сеть LOCKSS или участвует в частной сети LOCKSS помимо PKP PN, включите здесь необходимые настройки:
-]]></message>
-
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems также поддерживает систему CLOCKSS (Controlled Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. Если ваш журнал подписал контракт с архивом CLOCKSS, включите здесь необходимые настройки:]]></message>
-
-	<message key="manager.setup.porticoDescription"><![CDATA[Portico — это некоммерческий сервис, предназначенный для сохранения цифровых публикаций, в том числе электронных журналов, книг и оцифрованных исторических коллекций. Если ваш журнал подписал контракт с Portico, включите здесь необходимые настройки:]]></message>
 
 	<!-- Настройка (Шаг 3) -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
 <h4>1. Предлагаемая политика для журналов, предлагающих открытый доступ</h4>
 Авторы, которые публикуются в данном журнале, соглашаются со следующими условиями:
 <ol type="a">
@@ -799,7 +792,6 @@
 	<message key="about.delayedOpenAccess">Отложенный открытый доступ</message>
 	<message key="about.delayedOpenAccessDescription1">Содержимое этого журнала будет опубликовано в открытом доступе через</message>
 	<message key="about.delayedOpenAccessDescription2">месяцев после публикации выпуска.</message>
-	<message key="about.authorSelfArchive">Самостоятельное создание архива автором</message>
 	<message key="about.archiving">Архивация</message>
 	<message key="about.subscriptions">Подписки</message>
 	<message key="about.subscriptions.individual">Индивидуальные подписки</message>
@@ -986,58 +978,7 @@
 
 	<message key="log.imported">Пользователь {$userName} импортировал статью {$submissionId}.</message>
 
-	<!-- Строки для инструментов читателя -->
-
-
-	<!-- Настройки инструментов читателя -->
-	<message key="rt.admin.settings">Настройки инструментов читателя</message>
-
-	<message key="rt.admin.settings.description">Инструменты читателя появляются в области рядом с опубликованными статьями в разделах журнала, которые были указаны для индексирования. Инструменты читателя состоят из нижеперечисленного набора дополнительных инструментов для опубликованного материала, и набора инструментов, осуществляющих доступ к связанным материалам, организованным в соответствии с областью науки и дисциплиной.</message>
-	<message key="rt.admin.settings.enableReadingTools">Включить инструменты читателя для указанных разделов журнала.</message>
-	<message key="rt.admin.settings.relatedItems">Область науки</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Смотрите <a href="{$relatedItemsLink}" class="action">Наборы связанных материалов</a> для просмотра, добавления, изменения и удаления связанных материалов для каждой области.]]></message>
-
-	<message key="rt.admin.options">Инструменты (материалы журнала)</message>
-	<message key="rt.admin.relatedItems">Инструменты (связанные материалы)</message>
-
-	<message key="rt.admin.settings.addComment">Добавить комментарий (позволяет читателям оставлять комментарии, которые управляющий журналом может удалить).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Пользователи должны быть зарегистрированы и войти в систему, чтобы оставить свой комментарий, анонимные комментарии запрещены.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Пользователи должны быть зарегистрированы и войти в систему, чтобы оставить свой комментарий, анонимные комментарии разрешены.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Пользователям не обязательно нужно быть зарегистрированными, чтобы оставить свой комментарий, анонимные комментарии разрешены.</message>
-
-
-	<!-- Версии инструментов читателя -->
-
-	<!-- Контексты инструментов читателя -->
-
-	<!-- Поисковые системы в инструментах читателя -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Ниже показаны потенциально неправильные адреса (URL) сайтов для поиска.<br />
-Вам необходимо вручную проверить все адреса (URL), которые помечены как неправильные, так как этот тест не является точным на 100%.<br />
-Проверка может оказываться неудачной на адресах сайтов для поиска, которые требуют заполнения формы поиска.]]></message>
-
-	<!-- Сущности в инструментах читателя -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Создатель</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Автор, организация, страна</message>
-	<message key="rt.metadata.pkp.peerReviewed">Рецензированная статья</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Получить уведомление, когда...</message>
-
-	<message key="rt.thisJournal">Поиск в журнале</message>
-
-
-	<message key="rt.context.authorTermsDescription">Для материалов с несколькими авторами оставьте отмеченными всех авторов, чтобы найти выполненные этими авторами работы в том же составе соавторов, или проводите поиск по одному автору, отмечая только одно имя в списке. Чтобы узнать больше о ресурсе, на котором проводится поиск, щелкните на «О РЕСУРСЕ». Эти ресурсы были выбраны, поскольку они соответствуют тематике и предоставляют открытый (свободный) доступ ко всему своему контенту.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Рецензированная статья</message>
 
 	<!-- Типы уведомлений -->
 

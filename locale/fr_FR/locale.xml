@@ -270,10 +270,6 @@
 	<message key="plugins.categories.generic.description">Les plugiciels génériques sont utilisés pour étendre les possibilités d'Open Journal Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de plugiciels.</message>
 	<message key="plugins.categories.auth.description">Les plugiciels d'autorisation permettent au Open Journal Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems prend en charge le système <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
-	<br /><br />
-	La configuration de la prise en charge de LOCKSS pour Open Journal Systems n'a pas à être effectuée avant que le processus de publication soit bien enclenché, en quel cas, suivre ces deux étapes :]]></message>
-
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pour que le contenu de cette revue soit indexé dans un système distribué de bases de données de recherche, veuillez lire <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">les étapes pour devenir un fournisseur de données</a> et inscrire votre revue avec le <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">registre Open Archives</a> officiel. Pour vous inscrire, vous aurez besoin de l'URL de base de votre dépôt : <span class="highlight">{$oaiUrl}</span>.
 Par la suite, vous pouvez inscrire votre revue au <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registre UIUC OAI</a> et <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
@@ -510,7 +506,6 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 	<message key="about.delayedOpenAccess">Accès libre différé</message>
 	<message key="about.delayedOpenAccessDescription1">Le contenu de cette revue sera disponible en accès libre.</message>
 	<message key="about.delayedOpenAccessDescription2">mois après la publication d'un numéro.</message>
-	<message key="about.authorSelfArchive">Auto-archivage par l'auteur</message>
 	<message key="about.archiving">Archivage</message>
 	<message key="about.subscriptions">Abonnements</message>
 	<message key="about.subscriptionsContact">Contact des abonnements</message>
@@ -622,34 +617,7 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 
 	<message key="log.imported">{$userName} a importé l'article {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Options pour les outils de lecture</message>
-
-	<message key="rt.admin.settings.description">Les outils de lecture apparaissent dans un cadre à côté des articles publiés dans les rubriques de la revue désignées pour l'indexation. Les outils de lecture comprennent un ensemble d'outils facultatifs reliés à l'article publié, listés ci-dessous, et un ensemble d'outils qui donnent accès à des articles connexes, organisés par champ et par discipline.</message>
-	<message key="rt.admin.settings.enableReadingTools">Activer les outils de lecture pour les rubriques de la revue désignées.</message>
-	<message key="rt.admin.settings.relatedItems">Champ</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Voir <a href="{$relatedItemsLink}" class="action">Ensembles d'éléments connexes</a> pour afficher, ajouter, corriger ou supprimer des éléments connexes pour chaque champ.]]></message>
-
-	<message key="rt.admin.options">Outils pour les articles de la revue</message>
-	<message key="rt.admin.relatedItems">Outils pour les éléments connexes</message>
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Créateur</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nom de l'auteur, affiliation, pays</message>
-	<message key="rt.metadata.pkp.peerReviewed">Article évalué par les pairs</message>
-
-
-
-	<message key="rt.beNotifiedWhen">Être avisé lorsque...</message>
-
-	<message key="rt.thisJournal">Rechercher dans la revue</message>
-
-
-	<message key="rt.context.authorTermsDescription">Pour les articles ayant plus d'un auteur, laisser tous les noms cochés pour rechercher les ouvrages écrits par ces mêmes auteurs en collaboration, ou rechercher un auteur à la fois en cochant seulement un nom. Pour en apprendre plus sur la ressource recherchée, cliquer sur À PROPOS. Ces ressources ont été sélectionnées en raison de leur pertinence et de l'accès libre (gratuit) à une partie ou à la totalité de leur contenu.</message>
-
+	<message key="metadata.pkp.peerReviewed">Article évalué par les pairs</message>
 
 	<!--
 	 *
@@ -673,9 +641,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="installer.databaseSettingsInstructions">OJS nécessite l'accès à une base de données SQL pour stocker ses données. Voir la configuration nécessaire ci-dessus pour une liste des base de données prises en cahrge. Dans les champs ci-dessus, fournir les paramètres à utiliser pour se connecter à la base de données.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} a refusé le cycle {$round} d'évaluation pour la soumission {$submissionId} au nom de {$reviewerName}.</message>
 	<message key="log.editor.decision">Une décision du rédacteur ({$decision}) pour l'article {$submissionId} a été enregistré par {$editorName}.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Les utilisateurs doivent être inscrits et connectés pour publier, et l'anonymat n'est pas autorisé.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Les utilisateurs doivent être inscrits et connectés pour publier, et l'anonymat est autorisé.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Les utilisateurs n'ont pas besoin d'être inscrits pour publier, et l'anonymat est autorisé.</message>
 	<message key="debug.notes.currencyListLoad">Liste des devises chargée "{$filename}" à partir d'un XML</message>
 	<message key="common.payment">Paiement</message>
 	<message key="common.payments">Paiements</message>
@@ -691,7 +656,7 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 		<li>OJS n'est pas capable de modifier le fichier de registre de langues, généralement "registry/locales.xml".</li>
 	</ul>
 <p>Les modules linguistiques peuvent être téléchargés manuellement à partir du <a href="http://pkp.sfu.ca">site Web de PKP</a>.</p>]]></message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Mentions de droit d'auteurs de Creative Commons proposés</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Mentions de droit d'auteurs de Creative Commons proposés</h3>
 <h4>1. Politique proposée pour les revues qui offrent l'accès libre</h4>
 Les auteurs qui publient dans cette revue acceptent les termes suivants :
 <ol type="a">
@@ -750,7 +715,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.membership.ends">Se termine</message>
 	<message key="payment.subscription.renew">Renouveler l'abonnement</message>
 	<message key="payment.subscription.expires">Expire</message>
-	<message key="rt.admin.settings.addComment">Ajouter des commentaires (permet aux lecteurs d'afficher des commentaires, le directeur de la revue pouvant les effacer).</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Veuillez remplir les champs obligatoires.</message>
 	<message key="common.homePageHeader.altText">En-tête de la page d'accueil</message>
 	<message key="common.journalHomepageImage.altText">Image de la page d'accueil de la revue</message>
@@ -855,9 +819,6 @@ Titre du système de classification]]></message>
 	<message key="payment.subscription.purchase">Souscrire à un abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Mettre à jour Open Journal Systems</message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br />
-Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br />
-La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
 	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
 	<message key="notification.type.editing">Événements de révision</message>
 	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
@@ -1014,15 +975,11 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 
 <p>2. Un répertoire pour stocker les fichiers téléchargés doit être créé et accessible en écriture (voir "Paramètres des fichiers" ci-dessous).</p>]]></message>
 	<message key="article.pluginMissing"><![CDATA[*<p>Le fichier PDF sélectionné devrait se s'afficher ici si un plugiciel de lecture de PDF est installé dans votre navigateur (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
-<br /> <br />
-L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Merci de remplir les champs requis.</message>
 	<message key="user.reviewerPrompt.optin">Oui, j'accepte d'évaluer des articles pour ce journal.</message>
 	<message key="subscriptions.status.noSubscription">Vous n'avez pas d'abonnement actif.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>
-	<message key="manager.setup.porticoDescription">Portico est un service non commercial d'archivage. Si votre journal a signé un contrat avec Portico, activez le ici :</message>
 	<message key="user.register.form.emailConsentAllContexts">Oui, je souhaite être notifié pour toutes les nouvelles publications et annonces pour tous les journaux auxquels je suis abonné.</message>
 	<message key="payment.type.publication.required">Le tarif de publication est requis pour le paiement.</message>
 	<message key="payment.requestPublicationFee">Prix de publication  ({$feeAmount})</message>

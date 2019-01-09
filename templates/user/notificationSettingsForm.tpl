@@ -13,9 +13,9 @@
 		{assign var=notFirstJournal value=0}
 		{foreach from=$journals name=journalOpenAccessNotifications key=thisJournalId item=thisJournal}
 			{assign var=thisJournalId value=$thisJournal->getId()}
-			{assign var=publishingMode value=$thisJournal->getSetting('publishingMode')}
-			{assign var=enableOpenAccessNotification value=$thisJournal->getSetting('enableOpenAccessNotification')}
-			{assign var=notificationEnabled value=$user->getSetting('openAccessNotification', $thisJournalId)}
+			{assign var=publishingMode value=$thisJournal->getData('publishingMode')}
+			{assign var=enableOpenAccessNotification value=$thisJournal->getData('enableOpenAccessNotification')}
+			{assign var=notificationEnabled value=$user->getData('openAccessNotification', $thisJournalId)}
 			{if !$notFirstJournal}
 				{assign var=notFirstJournal value=1}
 				<tr>

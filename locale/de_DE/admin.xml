@@ -14,9 +14,7 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
-	<message key="admin.settings.options">Optionen</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
-	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
@@ -57,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Der Zugangspfad darf nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
 	<message key="admin.contexts.form.pathExists">Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet.</message>
 	<message key="admin.journals.enableJournalInstructions">Ermöglichen Sie, dass diese Zeitschrift öffentlich auf der Website auftaucht.</message>
-	<message key="admin.journals.journalDescription">Beschreibung der Zeitschrift</message>
+	<message key="admin.contexts.contextDescription">Beschreibung der Zeitschrift</message>
 	<message key="admin.journal.pathImportInstructions">Existierender oder einzurichtender Zugangspfad zur Zeitschrift (z.B. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Abonnements importieren</message>
 	<message key="admin.journals.transcode">Metadaten des Artikels aus ISO 8859-1 umkodieren</message>
@@ -72,19 +70,6 @@
 	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie die ausgewählten {$oldAccountCount} Konten in dem Konto mit dem Benutzer/innennamen "{$newUsername}" zusammenführen wollen? Die ausgewählten {$oldAccountCount} Konten werden danach nicht mehr existieren. Diese Aktion kann nicht rückgängig gemacht werden.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Keine registrierten Benutzer/innen.</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Kategorien</message>
-	<message key="admin.categories.enable.description">Die Website-Administratorin/der Website-Administrator kann sich dafür entscheiden, eine Menge von Kategorien zu definieren, um die Organisation einer großen Menge von Zeitschriften zu erleichtern. Zeitschriftenverwalter/innen können dann mehrere dieser Kategorien für jede Zeitschrift auswählen, und Leser/innen können Zeitschriftensammlungen nach Kategorien durchsehen.</message>
-	<message key="admin.categories.disableCategories">Zeitschriften nicht in Kategorien organisieren.</message>
-	<message key="admin.categories.enableCategories">Den Zeitschriftenverwalter/innen erlauben, Zeitschriften in Kategorien zu organisieren.</message>
-	<message key="admin.categories.editTitle">Kategorie bearbeiten</message>
-	<message key="admin.categories.createTitle">Kategorie anlegen</message>
-	<message key="admin.categories.create">Eine neue Kategorie anlegen</message>
-	<message key="admin.categories.noneCreated">Es wurden keine Kategorien angelegt.</message>
-	<message key="admin.categories.confirmDelete">Sind Sie sicher, dass Sie diese Kategorie löschen wollen?</message>
-	<message key="admin.categories.name">Name</message>
-	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
-	<message key="admin.presses.createInstructions">Sie werden automatisch als Verwalter/in dieser Zeitschrift eingetragen werden. Nachdem Sie eine neue Zeitschrift angelegt haben, werden Sie automatisch zum Einrichtungsassistenten weitergeleitet, um die Einrichtung der Zeitschrift abzuschließen.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Erinnerung an Abonnement-Ende</message>
 	<message key="admin.scheduledTask.openAccessNotification">Open-Access-Benachrichtigung</message>
 	<message key="admin.scheduledTask.reviewReminder">Erinnerung an Gutachten</message>

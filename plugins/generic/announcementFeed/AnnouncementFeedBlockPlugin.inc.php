@@ -73,7 +73,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
-		if (!$journal->getSetting('enableAnnouncements')) return '';
+		if (!$journal->getData('enableAnnouncements')) return '';
 
 		$displayPage = $this->_parentPlugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = $request->getRequestedPage();

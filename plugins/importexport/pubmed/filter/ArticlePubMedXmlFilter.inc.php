@@ -156,16 +156,16 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	function createJournalNode($doc, $journal, $issue, $submission, $publishedArticle) {
 		$journalNode = $doc->createElement('Journal');
 
-		$publisherNameNode = $doc->createElement('PublisherName', $journal->getSetting('publisherInstitution'));
+		$publisherNameNode = $doc->createElement('PublisherName', $journal->getData('publisherInstitution'));
 		$journalNode->appendChild($publisherNameNode);
 
 		$journalTitleNode = $doc->createElement('JournalTitle', $journal->getName($journal->getPrimaryLocale()));
 		$journalNode->appendChild($journalTitleNode);
 
 		// check various ISSN fields to create the ISSN tag
-		if ($journal->getSetting('printIssn') != '') $issn = $journal->getSetting('printIssn');
-		elseif ($journal->getSetting('issn') != '') $issn = $journal->getSetting('issn');
-		elseif ($journal->getSetting('onlineIssn') != '') $issn = $journal->getSetting('onlineIssn');
+		if ($journal->getData('printIssn') != '') $issn = $journal->getData('printIssn');
+		elseif ($journal->getData('issn') != '') $issn = $journal->getData('issn');
+		elseif ($journal->getData('onlineIssn') != '') $issn = $journal->getData('onlineIssn');
 		else $issn = '';
 		if ($issn != '') $journalNode->appendChild($doc->createElement('Issn', $issn));
 

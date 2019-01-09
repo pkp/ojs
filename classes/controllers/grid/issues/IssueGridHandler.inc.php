@@ -477,7 +477,7 @@ class IssueGridHandler extends GridHandler {
 
 		// If subscriptions with delayed open access are enabled then
 		// update open access date according to open access delay policy
-		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $journal->getSetting('delayedOpenAccessDuration'))) {
+		if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $journal->getData('delayedOpenAccessDuration'))) {
 			$delayYears = (int)floor($delayDuration/12);
 			$delayMonths = (int)fmod($delayDuration,12);
 
@@ -500,7 +500,7 @@ class IssueGridHandler extends GridHandler {
 		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
 		// Send a notification to associated users if selected and journal is publishing content online with OJS
-		if ($request->getUserVar('sendIssueNotification') && $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
+		if ($request->getUserVar('sendIssueNotification') && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = array();

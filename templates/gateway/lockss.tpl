@@ -19,7 +19,7 @@
 
 <ul>
 {iterate from=journals item=journal}
-	{if $journal->getSetting('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getLocalizedName()|escape}</a></li>{/if}
+	{if $journal->getData('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getLocalizedName()|escape}</a></li>{/if}
 {/iterate}
 </ul>
 {else}
@@ -68,20 +68,20 @@
 </tr>
 <tr>
 	<td class="label">Publisher</td>
-	<td class="value"><a href="{$journal->getSetting('publisherUrl')|escape}">{$journal->getSetting('publisherInstitution')|escape}</a></td>
+	<td class="value"><a href="{$journal->getData('publisherUrl')|escape}">{$journal->getData('publisherInstitution')|escape}</a></td>
 </tr>
 <tr>
 	<td class="label">Description</td>
-	<td class="value">{$journal->getLocalizedSetting('searchDescription')|escape}</td>
+	<td class="value">{$journal->getLocalizedData('searchDescription')|escape}</td>
 </tr>
 <tr>
 	<td class="label">Keywords</td>
-	<td class="value">{$journal->getLocalizedSetting('searchKeywords')|escape}</td>
+	<td class="value">{$journal->getLocalizedData('searchKeywords')|escape}</td>
 </tr>
-{if $journal->getSetting('issn')}
+{if $journal->getData('issn')}
 <tr>
 	<td class="label">ISSN</td>
-	<td class="value">{$journal->getSetting('issn')|escape}</td>
+	<td class="value">{$journal->getData('issn')|escape}</td>
 </tr>
 {/if}
 <tr>
@@ -90,18 +90,18 @@
 </tr>
 <tr>
 	<td class="label">Publisher Email</td>
-	<td class="value">{mailto address=$journal->getSetting('contactEmail')|escape encode="hex"}</td>
+	<td class="value">{mailto address=$journal->getData('contactEmail')|escape encode="hex"}</td>
 </tr>
-{if $journal->getLocalizedSetting('copyrightNotice')}
+{if $journal->getLocalizedData('licenseTerms')}
 <tr>
 	<td class="label">Copyright</td>
-	<td class="value">{$journal->getLocalizedSetting('copyrightNotice')|nl2br}</td>
+	<td class="value">{$journal->getLocalizedData('licenseTerms')|nl2br}</td>
 </tr>
 {/if}
-{if $journal->getLocalizedSetting('openAccessPolicy')}
+{if $journal->getLocalizedData('openAccessPolicy')}
 <tr>
 	<td class="label">Rights</td>
-	<td class="value">{$journal->getLocalizedSetting('openAccessPolicy')|nl2br}</td>
+	<td class="value">{$journal->getLocalizedData('openAccessPolicy')|nl2br}</td>
 </tr>
 {/if}
 </table>
@@ -115,13 +115,12 @@
 	<a href="http://www.lockss.org/"><img src="{$baseUrl}/templates/images/lockss.gif" style="border: 0;" alt="LOCKSS" /></a>
 	<br />
 	LOCKSS system has permission to collect, preserve, and serve this Archival Unit.
-		
+
 	<br /><br />
-	
+
 	<a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/lib/pkp/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a>
 	<br />
 	Open Journal Systems was developed by the Public Knowledge Project.
 </div>
 
 {include file="common/footer.tpl"}
-
