@@ -69,16 +69,16 @@ class CrossrefInfoSender extends ScheduledTask {
 			$toBeDepositedIds = array();
 			$notify = false;
 			foreach ($unregisteredArticlesIds as $id => $article) {
-				// first update the status -- some could be manually submitted
-				$plugin->updateDepositStatus($request, $journal, $article);
 				// get the current article status
 				$currentStatus = $article->getData($plugin->getDepositStatusSettingName());
-				// deposit only not submitted articles
-				if (!$currentStatus) {
-					array_push($toBeDepositedIds, $id);
-				}
+				// update the status -- some could be manually submitted
+				$plugin->updateDepositStatus($request, $journal, $article);
 				// check if the new status after the update == failed to notify the users
 				$newStatus = $article->getData($plugin->getDepositStatusSettingName());
+				// deposit only not submitted articles
+				if (!$newStatus) {
+					array_push($toBeDepositedIds, $id);
+				}
 				if (!$notify && $newStatus == CROSSREF_STATUS_FAILED && $currentStatus != CROSSREF_STATUS_FAILED) {
 					$notify = true;
 				}
