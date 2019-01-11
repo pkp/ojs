@@ -386,7 +386,6 @@ class ArticleDAO extends SubmissionDAO {
 	protected function getCompletionConditions($completed) {
 		return ' i.date_published IS ' . ($completed?'NOT ':'') . 'NULL ';
 	}
-
 }
 
 

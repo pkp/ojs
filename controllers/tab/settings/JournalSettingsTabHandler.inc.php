@@ -25,6 +25,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 			'masthead' => 'controllers.tab.settings.masthead.form.MastheadForm',
 			'contact' => 'lib.pkp.controllers.tab.settings.contact.form.ContactForm',
 			'sections' => 'controllers/tab/settings/journal/sections.tpl',
+			'categories' => 'management/categories.tpl',
 		));
 	}
 
