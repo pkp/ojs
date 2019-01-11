@@ -51,8 +51,8 @@
 		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -217,6 +217,11 @@
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<data file="dbscripts/xml/upgrade/3.1.2_update.xml" />
+		<note file="docs/release-notes/README-3.1.2" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
