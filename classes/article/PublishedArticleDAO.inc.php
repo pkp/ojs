@@ -389,6 +389,7 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
 			WHERE	pa.article_id = a.article_id
+				AND a.status <> ' . STATUS_ARCHIVED . '
 				AND a.article_id = ?' .
 				($journalId?' AND a.journal_id = ?':''),
 			$params
@@ -537,6 +538,7 @@ class PublishedArticleDAO extends DAO {
 				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = a.locale)
 			WHERE	pa.article_id = a.article_id
+				AND a.status <> ' . STATUS_ARCHIVED . '
 				AND i.issue_id = pa.issue_id
 				AND i.published = 1
 				AND s.section_id IS NOT NULL' .
@@ -574,6 +576,7 @@ class PublishedArticleDAO extends DAO {
 				JOIN sections s ON s.section_id = a.section_id
 				JOIN issues i ON pa.issue_id = i.issue_id
 			WHERE	i.published = 1
+				AND a.status <> ' . STATUS_ARCHIVED . '
 				' . (isset($journalId)?' AND a.journal_id = ?':'') . '
 			ORDER BY pa.date_published DESC',
 			isset($journalId)?(int) $journalId:false
@@ -600,7 +603,16 @@ class PublishedArticleDAO extends DAO {
 		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result =& $this->$functionName(
-			'SELECT a.article_id FROM published_articles pa, articles a, issues i WHERE pa.issue_id = i.issue_id AND i.published = 1 AND pa.article_id = a.article_id AND a.section_id = ? ORDER BY pa.date_published DESC',
+			'SELECT a.article_id
+			FROM	published_articles pa,
+				articles a,
+				issues i
+			WHERE	pa.issue_id = i.issue_id
+				AND i.published = 1
+				AND pa.article_id = a.article_id
+				AND a.section_id = ?
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY pa.date_published DESC',
 			(int) $sectionId
 		);
 
