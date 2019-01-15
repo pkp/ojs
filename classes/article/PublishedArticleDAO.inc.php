@@ -480,6 +480,7 @@ class PublishedArticleDAO extends DAO {
 			$params[] = (int) $journalId;
 			$sql .= ' AND a.journal_id = ?';
 		}
+		$sql .= ' AND a.status <> ' . STATUS_ARCHIVED;
 		$sql .= ' ORDER BY pa.issue_id, a.article_id';
 		$result =& $this->retrieve($sql, $params);
 
