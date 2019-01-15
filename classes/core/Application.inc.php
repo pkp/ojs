@@ -153,6 +153,13 @@ class Application extends PKPApplication {
 	}
 
 	/**
+	 * Get the published submission DAO.
+	 */
+	static function getPublishedSubmissionDAO() {
+		return DAORegistry::getDAO('PublishedArticleDAO');
+	}
+
+	/**
 	 * Get the section DAO.
 	 * @return SectionDAO
 	 */

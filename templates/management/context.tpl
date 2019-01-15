@@ -42,6 +42,11 @@
 			{capture assign=sectionsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="fetchGrid" escape=false}{/capture}
 			{load_url_in_div id="sectionsGridContainer" url=$sectionsGridUrl}
 		</tab>
+		<tab id="categories" name="{translate key="grid.category.categories"}">
+			{help file="settings" section="context" class="pkp_help_tab"}
+			{capture assign=categoriesUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.category.CategoryCategoryGridHandler" op="fetchGrid" escape=false}{/capture}
+			{load_url_in_div id="categoriesContainer" url=$categoriesUrl}
+		</tab>
 	</tabs>
 </div>
 <script type="text/javascript">
