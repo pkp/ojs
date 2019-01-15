@@ -763,6 +763,9 @@ class DOIExportPlugin extends ImportExportPlugin {
 	 * @return array|boolean
 	*/
 	function canBeExported($foundObject, &$errors) {
+		if (is_a($foundObject, 'PublishedArticle') && (int)$foundObject->getStatus() === STATUS_ARCHIVED) {
+			return false;
+		}
 		return !is_null($foundObject->getPubId('doi'));
 	}
 
