@@ -206,33 +206,24 @@ class CrossRefExportPlugin extends DOIExportPlugin {
 			$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
 			if ($filter == CROSSREF_STATUS_NOT_DEPOSITED) {
 				$allArticles = $publishedArticleDao->getBySetting($this->getDepositStatusSettingName(), null, $journal->getId());
-				$errors = array();
-				foreach ($allArticles as $article) {
-					if(!is_null($article->getPubId('doi'))) {
-						$articles[] = $article;
-					}
-				}
 			} else {
-				$articles = $publishedArticleDao->getBySetting($this->getDepositStatusSettingName(), $filter, $journal->getId());
+				$allArticles = $publishedArticleDao->getBySetting($this->getDepositStatusSettingName(), $filter, $journal->getId());
 			}
 		} else {
 			$allArticles = $this->getAllPublishedArticles($journal);
-			$errors = array();
-			foreach ($allArticles as $article) {
-				if(!is_null($article->getPubId('doi'))) {
-					$articles[] = $article;
-				}
-			}
 		}
 
 		// Retrieve article data.
 		$articleData = array();
-		foreach($articles as $article) {
-			$preparedArticle = $this->_prepareArticleData($article, $journal);
-			// We should always get a prepared article as we've already
-			// filtered non-published articles above.
-			assert(is_array($preparedArticle));
-			$articleData[] = $preparedArticle;
+		$errors = array();
+		foreach($allArticles as $article) {
+			if ($this->canBeExported($article, $errors)) {
+				$preparedArticle = $this->_prepareArticleData($article, $journal);
+				if (is_array($preparedArticle)) {
+					$articleData[] = $preparedArticle;
+					$articles[] = $article;
+				}
+			}
 			unset($article, $preparedArticle);
 		}
 		unset($articles);
