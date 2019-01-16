@@ -27,4 +27,8 @@
 		<query>UPDATE submission_settings SET setting_value='https://creativecommons.org/licenses/by/4.0' WHERE setting_value='http://creativecommons.org/licenses/by/4.0' AND setting_name='licenseUrl'</query>
 		<query>UPDATE submission_settings SET setting_value='http://creativecommons.org/licenses/by-sa/4.0' WHERE setting_value='http://creativecommons.org/licenses/by-sa/4.0' AND setting_name='licenseUrl'</query>
 	</sql>
+	<!-- pkp/pkp-lib#4345 Ensure declined submissions are moved to archive -->
+	<sql>
+		<query>UPDATE submissions SET status=4 WHERE submission_id IN (SELECT e1.submission_id FROM edit_decisions e1 LEFT JOIN edit_decisions e2 ON (e2.submission_id = e1.submission_id AND e2.date_decided > e1.date_decided) WHERE e1.decision IN (4, 9) AND e2.edit_decision_id IS NULL) AND status=1</query><!-- STATUS_DECLINED; SUBMISSION_EDITOR_DECISION_DECLINE; SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE; STATUS_QUEUED -->
+	</sql>
 </data>
