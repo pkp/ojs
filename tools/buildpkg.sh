@@ -98,13 +98,11 @@ lib/pkp/lib/vendor/pimple/pimple/ext/pimple/tests/					\
 lib/pkp/lib/vendor/robloach/component-installer/tests/					\
 lib/pkp/lib/vendor/phpmailer/phpmailer/test/						\
 node_modules										\
-.babelrc										\
 .editorconfig										\
-.eslintignore										\
-.eslintrc.js										\
-.postcssrc.js										\
+babel.config.js										\
+package-lock.json										\
 package.json										\
-webpack.config.js									\
+vue.config.js									\
 lib/ui-library"
 
 
