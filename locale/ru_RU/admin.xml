@@ -13,6 +13,9 @@
 
 <locale name="ru_RU" full_name="Русский">
 	<message key="admin.hostedJournals">Журналы на сайте</message>
+	<message key="admin.settings.appearance.success">Настройки оформления сайта были успешно обновлены.</message>
+	<message key="admin.settings.config.success">Настройки конфигурации сайта были успешно обновлены.</message>
+	<message key="admin.settings.info.success">Информация сайта была успешно обновлена.</message>
 	<message key="admin.settings.journalRedirect">Перенаправление журнала</message>
 	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
 	<message key="admin.settings.defaultMetricDescription">
@@ -52,8 +55,10 @@
 	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. URL-адрес журнала будет {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">Название обязательно.</message>
 	<message key="admin.contexts.form.pathRequired">Путь обязателен.</message>
-	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы и цифры английского алфавита, подчеркивания и дефисы; путь должен начинаться и заканчиваться буквой или цифрой.</message>
-	<message key="admin.contexts.form.pathExists">Выбранный путь уже используется другим журналом.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">Путь может содержать только буквы, цифры и символы _ и -. Путь должен начинаться и заканчиваться буквой или цифрой.</message>
+	<message key="admin.contexts.form.pathExists">Указанный Вами путь уже используется другим журналом.</message>
+	<message key="admin.contexts.form.create.success">{$name} был успешно создан.</message>
+	<message key="admin.contexts.form.edit.success">{$name} был успешно отредактирован.</message>
 	<message key="admin.journals.enableJournalInstructions">Включить показ этого журнала для всех на сайте</message>
 	<message key="admin.contexts.contextDescription">Описание журнала</message>
 	<message key="admin.journal.pathImportInstructions">Существующий путь журнала или новый путь для создания (например, «ojs»).</message>

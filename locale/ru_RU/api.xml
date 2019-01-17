@@ -13,4 +13,12 @@
 
 <locale name="ru_RU" full_name="Русский">
 	<message key="api.submissions.403.unpublishedIssues">У вас нет прав для просмотра неопубликованных выпусков.</message>
+	<message key="api.contexts.403.requestedDisabledContexts">Вы можете просматривать только журналы, к которым был открыт доступ.</message>
+	<message key="api.contexts.403.notAllowed">У вас нет прав для просмотра этого журнала.</message>
+	<message key="api.contexts.403.contextsDidNotMatch">Вы не можете просматривать или редактировать этот журнал, не делая запроса к API журнала или API всего сайта.</message>
+	<message key="api.contexts.403.requiresContext">Вы не можете редактировать этот журнал через API сайта.</message>
+	<message key="api.contexts.403.notAllowedEdit">У вас нет прав для редактирования этого журнала.</message>
+	<message key="api.contexts.403.notAllowedDelete">У вас нет прав на удаление этого журнала.</message>
+	<message key="api.contexts.404.contextNotFound">Запрошенный вами журнал не найден.</message>
+	<message key="api._payments.400.invalidPaymentMethod">Выбранный вами метод оплаты не поддерживается.</message>
 </locale>
