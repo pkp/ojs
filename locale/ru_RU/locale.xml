@@ -1046,4 +1046,7 @@
 
 	<!-- устаревшие строки из OJS 2 для систем, которые были обновлены с OJS 2 -->
 	<message key="log.editor.submissionExpedited">Редактор {$editorName} взялся за процесс редактирования по статье {$submissionId}.</message>
+
+	<message key="catalog.sortBy">Сортировка статей</message>
+	<message key="catalog.sortBy.categoryDescription">Выберите способ сортировки статей в этой категории.</message>
 </locale>
