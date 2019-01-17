@@ -24,6 +24,9 @@ before_install:
   # Check out submodules (this script checks out developer forks if necessary)
   - ./tools/startSubmodulesTRAVIS.sh
 
+  # Update to latest stable version of npm
+  - npm i g -npm
+
   - |
     if [[ "$TEST" != "validation" ]]; then
       # Prepare for unit and integration tests.
@@ -56,6 +59,7 @@ script:
       ./lib/pkp/tools/buildjs.sh -n
       ./lib/pkp/tools/checkHelp.sh
       ./lib/pkp/tools/travis/validate-json.sh
+      npm run lint
     fi
 
 after_script:
