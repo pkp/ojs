@@ -7,7 +7,7 @@
 /**
  * @file classes/payment/ojs/OJSCompletedPayment.inc.php
  *
- * Copyright (c) 2013-2017 Simon Fraser University
+ * Copyright (c) 2013-2019 Simon Fraser University
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *

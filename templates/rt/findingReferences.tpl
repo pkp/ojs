@@ -1,8 +1,8 @@
 {**
  * templates/rt/findingReferences.tpl
  *
- * Copyright (c) 2013-2017 Simon Fraser University
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2013-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article reading tools -- "finding references" page.
