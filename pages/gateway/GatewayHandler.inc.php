@@ -64,17 +64,10 @@ class GatewayHandler extends Handler {
 					$journal->getId()
 				);
 				list($year) = $result->fields;
-				$result = $issueDao->retrieve(
-					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-					array($journal->getId(), $year)
-				);
-				$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
-				$templateMgr->assign('issues', $issues);
 				$templateMgr->assign('showInfo', true);
 			}
 
-			$prevYear = null;
-			$nextYear = null;
+			$prevYear = $nextYear = null;
 			if (isset($year)) {
 				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
@@ -89,10 +82,14 @@ class GatewayHandler extends Handler {
 				list($nextYear) = $result->fields;
 			}
 
-			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('year', $year);
-			$templateMgr->assign('prevYear', $prevYear);
-			$templateMgr->assign('nextYear', $nextYear);
+			$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
+			$templateMgr->assign(array(
+				'journal' => $journal,
+				'year' => $year,
+				'prevYear' => $prevYear,
+				'nextYear' => $nextYear,
+				'issues' => $issues,
+			));
 
 			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
@@ -101,7 +98,6 @@ class GatewayHandler extends Handler {
 				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
 			}
 			$templateMgr->assign('locales', $locales);
-
 		} else {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
 			$journals = $journalDao->getAll(true);
@@ -154,13 +150,14 @@ class GatewayHandler extends Handler {
 					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
 					array($journal->getId(), $year)
 				);
-				$issues = new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
-				$templateMgr->assign('issues', $issues);
-				$templateMgr->assign('showInfo', true);
+				$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
+				$templateMgr->assign(array(
+					'issues' => $issues,
+					'showInfo' => true,
+				));
 			}
 
-			$prevYear = null;
-			$nextYear = null;
+			$prevYear = $nextYear = null;
 			if (isset($year)) {
 				$result = $issueDao->retrieve(
 					'SELECT MAX(year) FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
@@ -175,14 +172,18 @@ class GatewayHandler extends Handler {
 				list($nextYear) = $result->fields;
 			}
 
-			$templateMgr->assign('journal', $journal);
-			$templateMgr->assign('year', $year);
-			$templateMgr->assign('prevYear', $prevYear);
-			$templateMgr->assign('nextYear', $nextYear);
+			$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
+			$templateMgr->assign(array(
+				'journal' => $journal,
+				'year' => $year,
+				'prevYear' => $prevYear,
+				'nextYear' => $nextYear,
+				'issues' => $issues,
+			));
 
-			$locales =& $journal->getSupportedLocaleNames();
+			$locales = $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
-				$localeNames =& AppLocale::getAllLocales();
+				$localeNames = AppLocale::getAllLocales();
 				$primaryLocale = AppLocale::getPrimaryLocale();
 				$locales = array($primaryLocale => $localeNames[$primaryLocale]);
 			}
