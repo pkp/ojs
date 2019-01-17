@@ -12,9 +12,9 @@
  *}
 {strip}
 {assign var="pageTitleTranslated" value="CLOCKSS Publisher Manifest"}
-{include file="common/header.tpl"}
+{include file="frontend/components/header.tpl"}
 {/strip}
-
+<div class="page clockss">
 {if $journals}
 <h3>Archive of Published Issues</h3>
 
@@ -35,7 +35,7 @@
 {/iterate}
 </ul>
 
-{if $showInfo}
+
 <br />
 
 <div class="separator"></div>
@@ -60,40 +60,47 @@
 
 <table class="data">
 <tr>
-	<td class="label">Journal URL</td>
-	<td class="value"><a href="{$journal->getUrl()|escape}">{$journal->getUrl()|escape}</a></td>
+	<td width="15%" class="label">Journal URL</td>
+	<td width="85%" class="value"><a href="{url journal=$journal->getPath()}">{url journal=$journal->getPath()|escape}</a></td>
 </tr>
 <tr>
 	<td class="label">Title</td>
 	<td class="value">{$journal->getLocalizedName()|escape}</td>
 </tr>
+{if $journal->getSetting('publisherInstitution')}
 <tr>
 	<td class="label">Publisher</td>
-	<td class="value"><a href="{$journal->getData('publisherUrl')|escape}">{$journal->getData('publisherInstitution')|escape}</a></td>
+	<td class="value">{$journal->getData('publisherInstitution')|escape}</td>
 </tr>
+{/if}
+{if $journal->getLocalizedSetting('searchDescription')}
 <tr>
 	<td class="label">Description</td>
 	<td class="value">{$journal->getLocalizedData('searchDescription')|escape}</td>
 </tr>
-<tr>
-	<td class="label">Keywords</td>
-	<td class="value">{$journal->getLocalizedData('searchKeywords')|escape}</td>
-</tr>
-{if $journal->getData('issn')}
+{/if}
+{if $journal->getData('onlineIssn')}
 <tr>
 	<td class="label">ISSN</td>
-	<td class="value">{$journal->getData('issn')|escape}</td>
+	<td class="value">{$journal->getData('onlineIssn')|escape}</td>
+</tr>
+{elseif $journal->getData('printIssn')}
+<tr>
+	<td class="label">ISSN</td>
+	<td class="value">{$journal->getData('printIssn')|escape}</td>
 </tr>
 {/if}
 <tr>
 	<td class="label">Language(s)</td>
 	<td class="value">{foreach from=$locales key=localeKey item=localeName}{$localeName|escape} ({$localeKey|escape})<br />{/foreach}</td>
 </tr>
+{if $journal->getSetting('contactEmail')}
 <tr>
 	<td class="label">Publisher Email</td>
 	<td class="value">{mailto address=$journal->getData('contactEmail')|escape encode="hex"}</td>
 </tr>
-{if $journal->getLocalizedData('licenseTerms')}
+{/if}
+{if $journal->getLocalizedData('copyrightNotice')}
 <tr>
 	<td class="label">Copyright</td>
 	<td class="value">{$journal->getLocalizedData('licenseTerms')|nl2br}</td>
@@ -108,20 +115,12 @@
 </table>
 {/if}
 
-{/if}
+<p>CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.</p>
 
-<br /><br />
+<p><a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/lib/pkp/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a></p>
+<p>Open Journal Systems was developed by the Public Knowledge Project.</p>
 
-<div style="text-align: center; width: 250px; margin: 0 auto">
-	<a href="http://clockss.org/"><img src="http://board.clockss.org/images/clockss_logo_114x110.jpg" style="border: 0;" alt="CLOCKSS" /></a>
-	<br />
-	clockss system has permission to ingest, preserve, and serve this Archival Unit.
-
-	<br /><br />
-
-	<a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/lib/pkp/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a>
-	<br />
-	Open Journal Systems was developed by the Public Knowledge Project.
 </div>
 
-{include file="common/footer.tpl"}
+{include file="frontend/components/footer.tpl"}
+
