@@ -146,10 +146,6 @@ class GatewayHandler extends Handler {
 					$journal->getId()
 				);
 				list($year) = $result->fields;
-				$result = $issueDao->retrieve(
-					'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-					array($journal->getId(), $year)
-				);
 				$issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
 				$templateMgr->assign(array(
 					'issues' => $issues,
