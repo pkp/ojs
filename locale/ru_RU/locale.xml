@@ -372,7 +372,6 @@
 	<message key="plugins.categories.auth.description">Модули авторизации позволяют Open Journal Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
 	<message key="plugins.categories.generic.description">Общие модули используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями модулей.</message>
 
-
 	<!-- Настройка (Шаг 3) -->
 	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
 <h4>1. Предлагаемая политика для журналов, предлагающих открытый доступ</h4>

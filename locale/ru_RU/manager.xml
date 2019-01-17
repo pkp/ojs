@@ -12,6 +12,16 @@
   -->
 
 <locale name="ru_RU" full_name="Русский">
+	<message key="manager.distribution.access">Доступ</message>
+	<message key="manager.distribution.copyrightYearBasis.description">Выберите способ определения по умолчанию даты копирайта для статьи. Это значение по умолчанию может быть изменено в каждом конкретном случае. Если вы публикуете статьи «по ходу поступления», не используйте дату публикации выпуска.</message>
+	<message key="manager.distribution.copyrightYearBasis.issue">Использовать дату публикации выпуска</message>
+	<message key="manager.distribution.copyrightYearBasis.submission">Использовать дату публикации статьи</message>
+	<message key="manager.distribution.publication">Публикация</message>
+	<message key="manager.distribution.publishingMode">Режим публикации</message>
+	<message key="manager.distribution.publishingMode.none">OJS не будет использоваться для онлайн-публикации контента журнала.</message>
+	<message key="manager.distribution.publishingMode.openAccess">Журнал будет предоставлять открытый доступ к своему контенту.</message>
+	<message key="manager.distribution.publishingMode.subscription">Журнал будет требовать подписки для доступа к части своего контента или ко всему контенту.</message>
+	<message key="manager.distribution.publishingMode.success">Информация о публикации журнала была обновлена.</message>
 	<message key="manager.website.archiving">Архивирование</message>
 	<message key="manager.emails.confirmResetAll">Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые вы сделали.</message>
 	<message key="manager.files.note">Внимание: файловый менеджер — это дополнительная возможность, которая позволяет напрямую просматривать и управлять файлами и каталогами, связанными с этим журналом.</message>
@@ -44,6 +54,7 @@
 	<message key="manager.payment.options">Параметры</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала.</message>
 	<message key="subscriptionManager.subscription.confirmRemove">Вы уверены, что хотите удалить эту подписку?</message>
+	<message key="manager.payment.success">Настройки платежей были обновлены.</message>
 	<message key="manager.payment.options.enablePayments">Платежи будут включены для этого журнала. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
 	<message key="manager.payment.options.fee">Платеж</message>
 	<message key="manager.payment.options.feeDescription">Описание платежа</message>
@@ -125,19 +136,18 @@
 	<message key="manager.setup.alternateHeader">Альтернативный заголовок</message>
 	<message key="manager.setup.alternateHeaderDescription">В качестве альтернативы, вместо названия и логотипа, в текстовое поле ниже может быть вставлена HTML-версия заголовка. Оставьте текстовое поле пустым, если альтернативный заголовок не нужен.</message>
 	<message key="manager.setup.announcements">Объявления</message>
-	<message key="manager.setup.enableAnnouncements.description">Объявления могут быть опубликованы, чтобы проинформировать читателей о новостях и событиях журнала. Опубликованные объявления будут размещаться на странице «Объявления».</message>
-	<message key="manager.setup.announcementsIntroduction.description">Введите дополнительную информацию, которая будет показана для читателей на странице «Объявления».</message>
+	<message key="manager.setup.announcements.success">Настройки объявлений были обновлены.</message>
+	<message key="manager.setup.announcementsIntroduction">Описание</message>
+	<message key="manager.setup.announcementsIntroduction.description">Введите любую информацию, которая будет показана на странице «Объявления».</message>
 	<message key="manager.setup.appearInAboutJournal">(появится в разделе «О журнале»)</message>
+	<message key="manager.setup.archiving.success">Информация об архивировании для этого журнала была обновлена.</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Требовать от авторов представлять Декларацию о конфликте интересов вместе с отправляемым материалом.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Требовать от рецензентов представлять Декларацию о конфликте интересов с каждой отправляемой рецензией.</message>
 	<message key="manager.setup.history">История журнала</message>
 	<message key="manager.setup.historyDescription">Этот текст появится в разделе «О журнале» на сайте, он может быть использован для описания изменения названий журнала, состава редакции и другой информации, связанной с историей публикации журнала.</message>
-	<message key="manager.setup.metadata.coverage">Охват</message>
-	<message key="manager.setup.metadata.coverage.description">Опишите геопространственное расположение, хронологический или исторический охват и/или характеристики исследуемого объекта.</message>
+	<message key="manager.setup.contact.success">Контактная информация для этого журнала была обновлена.</message>
 	<message key="manager.setup.currentIssue">Текущий выпуск</message>
 	<message key="manager.setup.customizingTheLook">Шаг 5. Настройка внешнего вида</message>
-	<message key="manager.setup.customTags">Теги пользователя</message>
-	<message key="manager.setup.customTagsDescription">Указанные пользователем HTML-теги будут вставлены в тег head каждой страницы (например, теги META).</message>
 	<message key="manager.setup.details">Детали</message>
 	<message key="manager.setup.details.description">Название журнала, ISSN, контакты, спонсоры и поисковые машины.</message>
 	<message key="manager.setup.disableUserRegistration">Управляющий журнала будет регистрировать всех пользователей. Редакторы или редакторы разделов могут регистрировать учетные записи для рецензентов.</message>
@@ -149,11 +159,10 @@
 	<message key="manager.setup.editorDecision">Решение редакции</message>
 	<message key="manager.setup.emailBounceAddress">Адрес для ошибок</message>
 	<message key="manager.setup.emailBounceAddress.description">В случае возникновения проблем с доставкой письма электронной почты сообщение об ошибке будет направлено на этот адрес.</message>
-	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>Обратите внимание:</strong> Для использования этой возможности администратор сайта должен включить параметр <tt>allow_envelope_sender</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS.]]></message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[Чтобы отправлять недоставленные письма на адрес для ошибок, администратор сайта должен включить параметр <code>allow_envelope_sender</code> в конфигурационном файле сайта. Также может потребоваться настройка сервера, описание этой настройки приведено в документации OJS.]]></message>
 	<message key="manager.setup.emails">Идентификация в письме электронной почты</message>
 	<message key="manager.setup.emailSignature">Подпись</message>
 	<message key="manager.setup.emailSignature.description">Подготовленные письма, отправляемые системой от имени журнала, будут содержать следующую подпись, добавленную в конце письма.</message>
-	<message key="manager.setup.enableAnnouncements.enable">Разрешить управляющим журналами добавлять объявления в журналы.</message>
 	<message key="manager.setup.enableUserRegistration">Посетители могут зарегистрировать учетную запись в журнале.</message>
 	<message key="manager.setup.focusAndScope">Концепция журнала</message>
 	<message key="manager.setup.focusAndScope.description">Опишите для авторов, читателей и библиотек диапазон статей и других материалов, которые будет публиковать журнал.</message>
@@ -171,17 +180,20 @@
 	<message key="manager.setup.gettingDownTheDetails">Шаг 1. Подробности о журнале</message>
 	<message key="manager.setup.guidelines">Руководство</message>
 	<message key="manager.setup.guidingSubmissions">Шаг 3. Отправка материалов</message>
+	<message key="manager.setup.identity">Айдентика журнала</message>
 	<message key="manager.setup.includeCreativeCommons">Включить в соответствующий момент лицензию Creative Commons для всех опубликованных работ в журналах, сразу или через некоторое время предоставляющих открытый доступ.</message>
 	<message key="manager.setup.information">Информация</message>
 	<message key="manager.setup.information.description">Краткие описания журнала для библиотек, потенциальных авторов и читателей. Описания будут доступны в боковой панели сайта, когда будет добавлен блок «Информация».</message>
 	<message key="manager.setup.information.forAuthors">Для авторов</message>
 	<message key="manager.setup.information.forLibrarians">Для библиотек</message>
 	<message key="manager.setup.information.forReaders">Для читателей</message>
+	<message key="manager.setup.information.success">Информация для этого журнала была обновлена.</message>
 	<message key="manager.setup.initialIssue">Первый выпуск</message>
 	<message key="manager.setup.initialIssueDescription">В зависимости от выбранного формата укажите выпуск, том и/или год выхода первого выпуска, который будет опубликован с помощью OJS:</message>
 	<message key="manager.setup.institution">Организация</message>
 	<message key="manager.setup.itemsDescription">Элементы панели навигации могут быть добавлены к текущему набору («Главная», «О журнале», «Страница пользователя», и т. д.), который отображается в верхней части страницы.</message>
 	<message key="manager.setup.itemsPerPage">Элементов на странице</message>
+	<message key="manager.setup.itemsPerPage.description">Ограничение количества элементов (например, материалов, пользователей или заданий на редактирование), показываемых в списке. Идущие далее элементы будут показаны на следующей странице.</message>
 	<message key="manager.setup.journalAbbreviation">Аббревиатура названия журнала</message>
 	<message key="manager.setup.journalArchiving">Архивация журнала</message>
 	<message key="manager.setup.contextSummary">Обзор журнала</message>
@@ -207,14 +219,17 @@
 	<message key="manager.setup.journalThumbnail">Миниатюра журнала</message>
 	<message key="manager.setup.journalThumbnail.description">Маленький логотип или обложка журнала, которые могут использоваться в списке журналов.</message>
 	<message key="manager.setup.contextTitle">Название журнала</message>
+	<message key="manager.setup.keyInfo">Ключевая информация</message>
+	<message key="manager.setup.keyInfo.description">Введите краткое описание журнала и укажите редакторов, управляющих и других членов редколлегии.</message>
 	<message key="manager.setup.labelName">Название метки</message>
+	<message key="manager.setup.lists.success">Настройки списков для этого журнала были обновлены.</message>
 	<message key="manager.setup.lists">Списки</message>
-	<message key="manager.setup.plnPluginEnable">Модуль PKP PN включен</message>
+	<message key="manager.setup.plnPluginEnable">Включить модуль PKP PN</message>
 	<message key="manager.setup.plnDescription">Сеть архивирования PKP (PKP Preservation Network, PKP PN) предоставляет бесплатные сервисы архивирования для любых журналов на OJS, удовлетворяющих нескольким базовым критериям.</message>
-	<message key="manager.setup.plnSettingsDescription">Щелкните на ссылке «Настройки», чтобы принять условия использования PKP PN.</message>
+	<message key="manager.setup.plnSettingsDescription"><![CDATA[Посмотрите <button>настройки модуля</button>, чтобы принять условия использования PKP PN.]]></message>
 	<message key="manager.setup.plnPluginArchiving">Сеть архивирования PKP (PKP Preservation Network, PKP PN)</message>
 	<message key="manager.setup.plnPluginNotInstalled">Сеть архивирования PKP (PKP Preservation Network, PKP PN) предоставляет бесплатные сервисы архивирования для любых журналов на OJS, удовлетворяющих нескольким базовым критериям. Модуль PKP PN для OJS 3 сейчас находится в разработке и будет вскоре доступен в галерее модулей.</message>
-	<message key="manager.setup.otherLockss">Альтернативные варианты архивирования</message>
+	<message key="manager.setup.otherLockss">LOCKSS и CLOCKSS</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Включить LOCKSS для хранения и распространения контента журнала по участвующим библиотекам через страницу <a href="{$lockssUrl}" target="_blank">Манифеста издателя</a> LOCKSS.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Лицензия LOCKSS появится в разделе «О журнале» под заголовком «Архивация журнала»: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Лицензия LOCKSS</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Описание лицензии LOCKSS</message>
@@ -232,6 +247,7 @@
 	<message key="manager.setup.managementOfBasicEditorialSteps">Управление основными шагами редакционного процесса</message>
 	<message key="manager.setup.managingPublishingSetup">Управление и настройка процесса публикации</message>
 	<message key="manager.setup.managingTheJournal">Шаг 4. Управление журналом</message>
+	<message key="manager.setup.masthead.success">Выходные данные для этого журнала были обновлены.</message>
 	<message key="manager.setup.navigationBar">Панель навигации</message>
 	<message key="manager.setup.navigationBarDescription">Добавить или удалить дополнительные элементы панели навигации.</message>
 	<message key="manager.setup.navItemIsAbsolute">URL — это абсолютный URL (например, «http://www.example.com»), а не относительный путь на сайте (например, «/manager/setup»)</message>
@@ -241,46 +257,53 @@
 	<message key="manager.setup.note">Примечание</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Обратите внимание:</strong> Отправка письма с подтверждением отправки материала в журнал сейчас отключена. Чтобы использовать эту возможность, включите письмо «Подтверждение отправки» в разделе «Письма электронной почты».]]></message>
 	<message key="manager.setup.numPageLinks">Ссылки на страницы</message>
-	<message key="manager.setup.publishingMode">Доступ к контенту журнала</message>
+	<message key="manager.setup.numPageLinks.description">Ограничение числа ссылок, показываемых на последующих страницах в списке.</message>
 	<message key="manager.setup.onlineIssn">ISSN онлайн-версии</message>
-	<message key="manager.distribution.publishingMode.openAccess">Журнал будет предоставлять открытый доступ к своему контенту.</message>
 	<message key="manager.setup.pageNumberIdentifier">Настройка нумерации страниц</message>
 	<message key="manager.setup.policies">Правила</message>
 	<message key="manager.setup.policies.description">Концепция журнала, рецензирование, разделы, конфиденциальность, безопасность и дополнительная информация о журнале.</message>
 	<message key="manager.setup.printIssn">ISSN печатной версии</message>
+	<message key="manager.setup.privacyStatement.success">Заявление о конфиденциальности было обновлено.</message>
 	<message key="manager.setup.proofingInstructions">Руководство по корректуре</message>
 	<message key="manager.setup.proofingInstructionsDescription">Руководство по корректуре будет доступно корректорам, авторам, верстальщикам и редакторам разделов на этапе редактирования материала. Ниже приведен набор инструкций по умолчанию в формате HTML, который может быть в любой момент изменен или заменен управляющим журнала (в формате HTML или простого текста).</message>
 	<message key="manager.setup.publicationSchedule">Планирование публикаций</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Материалы журнала могут публиковаться вместе, как часть выпуска со своим собственным содержанием. В качестве альтернативы, отдельные материалы могут публиковаться по мере готовности, добавляясь в содержание «текущего» тома. Опишите читателям (на странице «О журнале») систему публикации, которую использует этот журнал, и ожидаемую периодичность публикации.]]></message>
 	<message key="manager.setup.publicationScheduling">Планирование выпусков</message>
 	<message key="manager.setup.publicIdentifier">Идентификация контента журнала</message>
+	<message key="manager.setup.publishing">Информация о публикации журнала</message>
 	<message key="manager.setup.publisher">Издатель</message>
-	<message key="manager.setup.publishingDescription">Название организации, издающей журнал, появится на странице «О журнале».</message>
+	<message key="manager.setup.publishingDescription">Эта информация может быть включена в метаданные, предоставляемые системам архивирования сторонних разработчиков.</message>
 	<message key="manager.setup.referenceLinking">Вставка гиперссылок на источники</message>
 	<message key="manager.setup.restrictArticleAccess">Пользователи должны быть зарегистрированы и войти в систему под своей учетной записью, чтобы просмотреть находящийся в открытом доступе контент.</message>
 	<message key="manager.setup.restrictSiteAccess">Пользователи должны быть зарегистрированы и войти в систему под своей учетной записью, чтобы просматривать сайт журнала.</message>
 	<message key="manager.setup.reviewGuidelines">Руководство для рецензентов</message>
 	<message key="manager.setup.reviewOptions">Параметры рецензирования</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Автоматические напоминания по электронной почте</message>
-	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[Чтобы активировать эти параметры, администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS.]]></message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[Для отправки автоматических писем-напоминаний, администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера, описание настройки приведено в документации OJS.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Слепое рецензирование</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Число недель на выполнение рецензии</message>
 	<message key="manager.setup.reviewOptions.onQuality">Редакторы будут оценивать качество работы рецензентов по пятибалльной шкале после каждой рецензии.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Рецензенты получат доступ к файлу материала только после того, как согласятся дать рецензию.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Ограничить доступ к файлам</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Рецензенты не получат доступ к файлам материала до тех пор, пока не согласятся его рецензировать.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Доступ рецензента</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Включить прямой доступ для рецензента.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Обратите внимание:</strong> Письмо рецензентам с запросом будет содержать специальный URL-адрес (ссылку), по которой рецензенты смогут напрямую попасть на страницу «Рецензирование» материала (доступ ко всем другим страницам будет требовать входа в систему с их учетной записью). Из соображений безопасности, при использовании этой возможности редакторы не могут изменять адреса электронной почты или добавлять адреса для копий (CC) и скрытых копий (BCC) перед отправкой запросов рецензентам.]]></message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Прямой доступ для рецензента</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description">Рецензентам может быть отправлена безопасная ссылка в письме-приглашении, по которой можно получить доступ к рецензированию материала без входа в систему. Для доступа к другим страницам необходимо будет войти в систему.</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.label">Добавить безопасную ссылку в письмо-приглашение для рецензентов.</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Рейтинги рецензентов</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Напоминания рецензентам</message>
 	<message key="manager.setup.reviewPolicy">Правила рецензирования</message>
-	<message key="manager.setup.searchEngineIndexing">Индексация поисковыми машинами</message>
-	<message key="manager.setup.searchEngineIndexing.description">Добавьте краткое описание журнала, которое будут отображать поисковые машины, при показе журнала в своих результатах выдачи.</message>
+	<message key="manager.setup.searchEngineIndexing">Индексация для поиска</message>
+	<message key="manager.setup.searchEngineIndexing.success">Настройки индексации для поиска были обновлены.</message>
+	<message key="manager.setup.searchEngineIndexing.description"><![CDATA[Помогите поисковым машинам вроде Google находить и показывать ваш сайт. Рекомендуется отправить <a href="{$sitemapUrl}" target="_blank">карту вашего сайта</a>.]]></message>
+	<message key="manager.setup.searchDescription.description">Введите краткое описание (50-300 знаков) журнала, которое будут отображать поисковые машины, при показе журнала в своих результатах выдачи.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Разделы и редакторы разделов</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(Если разделы не добавлены, то все отправляемые материалы направляются в раздел «Статьи» по умолчанию.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[Для создания или изменения разделов журнала (например, «Статьи», «Обзоры книг» и т. д.), перейдите в «Управление разделами».<br /><br />Авторы при отправке материалов в журнал смогут выбрать...]]></message>
 	<message key="manager.setup.selectEditorDescription">Редактор журнала, который будет контролировать прохождение материала через редакционный процесс.</message>
 	<message key="manager.setup.selectSectionDescription">Раздел журнала, в котором будет расссматриваться данный материал.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Всегда показывать ссылки на гранки и уведомлять об ограниченном доступе.</message>
+	<message key="manager.setup.siteAccess.view">Доступ к сайту</message>
+	<message key="manager.setup.siteAccess.viewContent">Показывать содержимое статей</message>
 	<message key="manager.setup.stepsToJournalSite">Пять шагов к веб-сайту журнала</message>
 	<message key="manager.setup.subjectExamples">(Например, Фотосинтез; Черные дыры; Проблема четырех красок; Теория Байеса)</message>
 	<message key="manager.setup.subjectKeywordTopic">Ключевые слова</message>
@@ -290,14 +313,15 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">При отправке в журнал авторам будет предложено проверить соответствие материала всем пунктам «Контрольного списка подготовки материала к отправке» и отметить их как выполненные, прежде чем они отправят материал. Этот контрольный список также отображается в «Руководстве для авторов» на странице «О журнале». Список можно отредактировать ниже, но все пункты этого списка должны быть отмечены, прежде чем авторы смогут продолжить отправку материала.</message>
 	<message key="manager.setup.submissions">Отправка материалов</message>
 	<message key="manager.setup.submissions.description">Руководство для авторов, авторские права и индексирование (включая регистрацию).</message>
-	<message key="manager.distribution.publishingMode.subscription">Журнал будет требовать подписок для доступа к части материалов или ко всему своему контенту.</message>
-	<message key="manager.distribution.publishingMode.none">OJS не будет использоваться для публикации контента журнала в сети Интернет.</message>
+	<message key="manager.setup.enableOai">Включить OAI</message>
+	<message key="manager.setup.enableOai.description"><![CDATA[Предоставлять метаданные сервисам индексирования сторонних разработчиков через <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></message>
 	<message key="manager.setup.typeExamples">(Например, Историческая справка; Квазиэкспериментальный; Литературный анализ; Исследование/Опрос)</message>
 	<message key="manager.setup.typeMethodApproach">Тип (метод/подход)</message>
 	<message key="manager.setup.typeProvideExamples">Введите примеры соответствующих типов исследования, методов и подходов для данной области</message>
 	<message key="manager.setup.uniqueIdentifier">Уникальный идентификатор</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Статьи и выпуски могут быть помечены идентификационным номером или строкой, используя такую систему регистрации, как система Digital Object Identifier (DOI).</message>
 	<message key="manager.setup.useEditorialReviewBoard">Журнал будет использовать редакционную коллегию/коллегию рецензентов.</message>
+	<message key="manager.setup.userAccess.success">Информация о доступе пользователей к этому журналу была обновлена.</message>
 	<message key="manager.setup.useThumbnail">Миниатюра</message>
 	<message key="manager.setup.useImageTitle">Изображение заголовка</message>
 	<message key="manager.setup.userRegistration">Регистрация пользователей</message>
@@ -505,7 +529,6 @@
 	<message key="manager.subscriptionTypes.name">Тип подписки</message>
 	<message key="manager.subscriptionTypes.noneCreated">Типы подписки не были созданы.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип подписки успешно создан.</message>
-	<message key="manager.distribution.access">Доступ</message>
 
 	<!-- Элементы навигационного меню -->
 	<message key="manager.navigationMenus.subscriptions.description">Ссылка на страницу, описывающую предлагаемые вами подписки.</message>
@@ -526,7 +549,9 @@
 	<message key="manager.setup.copyrightYearBasis.article">По статье: год по умолчанию будет браться из даты публикации статьи, как в «публикации-по-ходу».</message>
 	<message key="manager.setup.copyrightYearBasis.issue">По выпуску: год по умолчанию будет браться из даты публикации выпуска.</message>
 	<message key="manager.setup.resetPermissions">Сбросить разрешения для статей</message>
-	<message key="manager.setup.resetPermissions.confirm">Вы уверены, что хотите сбросить данные о разрешениях, которые уже заданы статьям?</message>
+	<message key="manager.setup.resetPermissions.confirm">Вы уверены, что хотите сбросить данные о разрешениях для всех статей? Это действие нельзя будет отменить.</message>
+	<message key="manager.setup.resetPermissions.description">Удаляет информацию о копирайте и о лицензии для каждой опубликованной статьи, возвращая их к текущим настройкам по умолчанию для журнала. Это действие навсегда удаляет всю предыдущую информацию о лицензии и копирайте, прикрепленную к статьям. В некоторых случаях у вас может не быть юридических прав изменять лицензию для работы, опубликованной ранее под другой лицензией. Пожалуйста, будьте осторожны, используя этот инструмент, проконсультируйтесь с экспертами-юристами, если вы не уверены в тех правах, которые у вас есть на статьи, опубликованные в вашем журнале.</message>
+	<message key="manager.setup.resetPermissions.success">Разрешения для статей были успешно сброшены.</message>
 
 	<!-- Сетка жанров -->
 	<message key="grid.genres.title.short">Компоненты</message>
