@@ -27,7 +27,7 @@ System Requirements
 -------------------
 Recommended server requirements:
 
-	* PHP >= 4.2.x (including PHP 5.x); Microsoft IIS requires PHP 5.x
+	* PHP 5.x or newer (including PHP 7.x)
 	* MySQL >= 4.1 or PostgreSQL >= 8.0
 	  (including PostgreSQL 8.x)
 	* Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
