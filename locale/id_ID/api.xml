@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/api.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the REST API.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="api.submissions.403.unpublishedIssues">Anda tidak memiliki izin untuk melihat edisi yang belum terbit.</message>
+	<message key="api.contexts.403.requestedDisabledContexts">Anda hanya bisa melihat jurnal yang telah diatur.</message>
+	<message key="api.contexts.403.notAllowed">Anda tidak memiliki izin untuk melihat jurnal ini.</message>
+	<message key="api.contexts.403.contextsDidNotMatch">Anda tidak bisa melihat atau mengubah jurnal ini kecuali anda membuat permintaan pada API jurnal atau API situs.</message>
+	<message key="api.contexts.403.requiresContext">Anda tidak bisa mengubah jurnal ini dari API situs.</message>
+	<message key="api.contexts.403.notAllowedEdit">Anda tidak memiliki izin untuk mengubah jurnal ini.</message>
+	<message key="api.contexts.403.notAllowedDelete">Anda tidak memiliki izin untuk menghapus jurnal ini.</message>
+	<message key="api.contexts.404.contextNotFound">Jurnal yang anda minta tidak ditemukan.</message>
+	<message key="api._payments.400.invalidPaymentMethod">Metode pembayaran yang anda pilih tidak didukung.</message>
+</locale>
