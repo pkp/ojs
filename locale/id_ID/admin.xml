@@ -9,12 +9,25 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
+
+  * Terjemahan oleh Aldian Hudaya
+	* http://t.me/oichidan | +628112163825
+	* Afiliasi:
+	* 1. Asosiasi Profesi Pendidik dan Peneliti Sosiologi Indonesia (AP3SI)
+	* 2. Pusat Kegiatan Belajar Masyarakat (PKBM) Cahaya Kahuripan Bangsa
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="admin.hostedJournals">Jurnal yang Dikelola</message>
+	<message key="admin.settings.appearance.success">Pengaturan penampilan situs telah berhasil diperbaharui.</message>
+	<message key="admin.settings.config.success">Pengaturan konfigurasi situs telah berhasil diperbaharui.</message>
+	<message key="admin.settings.info.success">Informasi situs telah berhasil diperbaharui.</message>
 	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message>
 	<message key="admin.settings.journalRedirectInstructions">Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini berguna jika hanya ada satu jurnal yang dikelola.</message>
+	<message key="admin.settings.defaultMetricDescription">Pemasangan OJS anda diatur untuk merekam lebih dari satu metrik penggunaan. Statistik penggunaan akan ditampilkan dalam beberapa konteks.
+	Terdapat kemungkinan di mana satu statistik penggunaan harus digunakan, misalnya untuk menampilkan daftar terurut artikel yang paling banyak digunakan atau
+	untuk memeringkati hasil pencarian. Mohon pilih salah satu dari metrik bawaan berikut sebagai acuan.
+	</message>
 	<message key="admin.languages.confirmDisable">Anda yakin hendak menonaktifkan bahasa ini? Hal ini dapat mempengaruhi semua jurnal yang menggunakannya.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Saat ini tidak dapat mengunduh paket bahasa dari server Public Knowledge Project karena:</p>
 	<ul>
@@ -27,7 +40,7 @@
 	<message key="admin.languages.supportedLocalesInstructions">Pilih bahasa yang akan didukung situs ini. Bahasa yang dipilih akan dapat digunakan oleh semua jurnal yang dikelola situs ini, dan juga akan tampil dalam menu pilihan bahasa di setiap halaman situs (yang dapat diganti pada halaman spesifik jurnal).  Jika hanya ada satu bahasa, menu pilihan bahasa tidak akan muncul.</message>
 	<message key="admin.locale.maybeIncomplete">Bahasa yang diberi tanda kemungkinan masih belum lengkap.</message>
 	<message key="admin.languages.confirmUninstall">Apakah Anda yakin ingin membatalkan instalasi bahasa ini? Hal ini akan mempengaruhi jurnal yang sedang menggunakannya.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal sebelum dapat digunakan oleh jurnal.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Pilih bahasa tambahan untuk diinstal dalam sistem ini. Bahasa harus diinstal sebelum dapat digunakan oleh jurnal. Rujuk dokumentasi OJS untuk informasi menambahkan dukungan bahasa baru.</message>
 	<message key="admin.languages.downloadFailed">Pengunduhan bahasa gagal. Berikut ini catatan terkait kegagalan unduhan tersebut.</message>
 	<message key="admin.languages.localeInstalled">"{$locale}" telah diinstal.</message>
 	<message key="admin.languages.download">Unduh Bahasa</message>
@@ -50,6 +63,8 @@
 	<message key="admin.contexts.form.pathRequired">Perlu path.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Path hanya dapat berisi karakter alfanumerik, garis bawah, dan tanda hubung, dan harus dimulai dan diakhiri dengan karakter alfanumerik.</message>
 	<message key="admin.contexts.form.pathExists">Path sudah digunakan oleh jurnal lainnya.</message>
+	<message key="admin.contexts.form.create.success">{$name} telah berhasil dibuat.</message>
+	<message key="admin.contexts.form.edit.success">{$name} telah berhasil disunting.</message>
 	<message key="admin.journals.enableJournalInstructions">Tampilkan jurnal kepada publik di situs</message>
 	<message key="admin.contexts.contextDescription">Deskripsi Jurnal</message>
 	<message key="admin.journal.pathImportInstructions">Path jurnal yang sudah ada atau path yang hendak dibuat (contoh: ojs).</message>
@@ -61,9 +76,9 @@
 	<message key="admin.mergeUsers">Gabungkan Pengguna</message>
 	<message key="admin.mergeUsers.mergeUser">Gabungkan Pengguna</message>
 	<message key="admin.mergeUsers.into.description">Pilih pengguna yang akan memperoleh hak kepenulisan pengguna sebelumnya, tugas pengeditan, dll.</message>
-	<message key="admin.mergeUsers.from.description">Pilih pengguna (atau beberapa pengguna) untuk digabungkan ke akun pengguna lainnya (contoh, ketika seseorang mempunyai dua akun).</message>
+	<message key="admin.mergeUsers.from.description">Pilih pengguna (atau beberapa pengguna) untuk digabungkan ke akun pengguna lainnya (contoh, ketika seseorang mempunyai dua akun). Akun-akun yang dipilih pertama akan dihapus dan segala pengiriman, penempatan, dsb. akan diatribusikan pada akun kedua.</message>
 	<message key="admin.mergeUsers.allUsers">Semua Pengguna</message>
-	<message key="admin.mergeUsers.confirm">Apakah Anda hendak menggabungkan akun {$oldAccountCount} ke dalam akun "{$newUsername}"? Akun {$oldAccountCount} tidak akan ditampilkan lagi. Tindakan ini ireversibel.</message>
+	<message key="admin.mergeUsers.confirm">Apakah Anda hendak menggabungkan akun {$oldAccountCount} ke dalam akun "{$newUsername}"? Akun {$oldAccountCount} tidak akan ditampilkan lagi. Setelah dikonfirmasi, tindakan ini tidak bisa dibatalkan.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Tidak ada pengguna yang terdaftar.</message>
 
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Pengingat Masa Berakhir Langganan</message>

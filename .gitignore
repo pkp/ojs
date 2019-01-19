@@ -12,3 +12,4 @@ node_modules
 js/build.js
 js/hot-updates
 styles/build.css
+.vs/
