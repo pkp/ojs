@@ -767,4 +767,17 @@ URL naskah: {$submissionUrl}<br />
 		<body><![CDATA[Silakan tuliskan pesan Anda.]]></body>
 		<description>Pesan default (kosong) yang digunakan di Pengelola Pesan Pusat Notifikasi.</description>
 	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Keputusan Editor</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+Kami telah menarik keputusan terkait pengajuan anda ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Keputusan kami adalah: <b>Menolak Pengajuan</b><br />
+<br />
+{$editorialContactSignature}<br />]]>
+		</body>
+		<description>Email ini dikirim pada penulis jika editor menolak pengajuannya di tahap/fase awal sebelum review.</description>
+	</email_text>
 </email_texts>
