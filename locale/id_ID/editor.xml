@@ -29,12 +29,13 @@
 	<message key="editor.submissionReview.confirmDecision">Apakah Anda ingin merekam keputusan ini?</message>
 	<message key="editor.submissionReview.emailWillArchive">Penyerahan naskah ini akan diarsipkan setelah email Beritahu Penulis telah dikirimkan atau tombol Lewati Email ditekan.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Sebelum mengirimkan naskah ke Copyediting, gunakan tautan Beritahu Penulis untuk memberitahukan keputusan kepada penulis dan pilih versi yang akan dikirim.</message>
+	<message key="editor.notifyUsers">Beritahukan pengguna</message>
 	<message key="editor.notifyUsers.allReaders">Semua Pembaca ({$count} pembaca)</message>
 	<message key="editor.notifyUsers.allAuthors">Semua penulis yang telah terbit naskahnya ({$count} penulis)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Semua pelanggan individu ({$count} pelanggan)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Semua pelanggan institusi ({$count} institusi)</message>
 	<message key="editor.notifyUsers.inProgress">Memberitahu para pengguna...</message>
-	<message key="editor.usersNotified">Para Pengguna telah Diberitahu</message>
+	<message key="editor.usersNotified">Para Pengguna telah diberitahu</message>
 	<message key="editor.notifyUsers.allUsers">Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini ({$count} pengguna)</message>
 	<message key="editor.notifyUsers.interestedUsers">Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini yang telah meminta dikirimi berita terbaru ({$count} pengguna)</message>
 	<message key="editor.notifyUsers.includeToc">Sertakan daftar isi dari terbitan ini:</message>
@@ -116,6 +117,7 @@
 	<message key="grid.action.viewIssue">Lihat</message>
 	<message key="grid.action.previewIssue">Pratinjau</message>
 	<message key="grid.action.addIssueGalley">Buat Galley Terbitan</message>
+	<message key="grid.action.setCurrentIssue">Set Terbitan Terkini</message>
 	<message key="editor.navigation.issueArchive">Terbitan Terdahulu</message>
 	<message key="editor.article.designateReviewVersion">Jadikan file asli sebagai file Versi Review</message>
 	<message key="editor.article.decision">Keputusan</message>
@@ -144,5 +146,6 @@
 	<message key="editor.submission.selectGalleyFiles">Pilih File Galley</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[File draft final di daftar ini telah diubah oleh Copyeditor menjadi versi pasca-copyedit, telah diunggah berikut ini di bawah <span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahkan ke daftar Proofreading dengan menandai check box Include berikut dan klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk diikutsertakan.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Identifier uumum '{$publicIdentifier}' sudah ada untuk objek lain jenis yang sama. Mohon pilih identifier unik untuk objek-objek berjenis sama dalam jurnal Anda.</message>
 	<message key="editor.article.coverImage">Gambar sampul</message>
 </locale>
