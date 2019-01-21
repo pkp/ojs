@@ -198,7 +198,7 @@
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
 	<message key="user.reviewerPrompt">Would you be willing to review submissions to this journal?</message>
 	<message key="user.reviewerPrompt.userGroup">Yes, request the {$userGroup} role.</message>
-	<message key="user.reviewerPrompt.optin">Yes, I would like to be contacted with requests to review submissions to this journal.</message>
+	<message key="user.reviewerPrompt.optin">I agree to be contacted with requests to review submissions to this journal.</message>
 	<message key="user.register.contextsPrompt">Which journals on this site would you like to register with?</message>
 	<message key="user.register.otherContextRoles">Request the following roles.</message>
 	<message key="user.register.noContextReviewerInterests">If you requested to be a reviewer on any journal, please enter your subject interests.</message>
