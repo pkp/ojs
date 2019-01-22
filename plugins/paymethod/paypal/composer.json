@@ -2,5 +2,11 @@
 	"require": {
 		"symfony/event-dispatcher" : "~2.7",
 		"omnipay/paypal": "~2.0"
+	},
+	"config": {
+		"vendor-dir": "lib/vendor",
+		"platform": {
+			"php": "7.0.0"
+		}
 	}
 }
