@@ -27,4 +27,11 @@
 		<query>UPDATE submission_settings SET setting_value='https://creativecommons.org/licenses/by/4.0' WHERE setting_value='http://creativecommons.org/licenses/by/4.0' AND setting_name='licenseUrl'</query>
 		<query>UPDATE submission_settings SET setting_value='http://creativecommons.org/licenses/by-sa/4.0' WHERE setting_value='http://creativecommons.org/licenses/by-sa/4.0' AND setting_name='licenseUrl'</query>
 	</sql>
+	<!-- remove and rename old crossref status settings after the new deposit API integrat -->
+	<sql>
+		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::status' AND setting_value IN ('submitted', 'failed', 'completed')</query>
+		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::statusUrl'</query>
+		<query>UPDATE submission_settings SET setting_value = 'registered' WHERE setting_name = 'crossref::status' AND setting_name = 'found'</query>
+	</sql>
+
 </data>

@@ -33,8 +33,6 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">ملاحظة: الأعداد فقط (وليس مقالاتها) سيتم الأخذ بها هنا عند إجراء التصدير/التسجيل.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">مقدمة</message>
-	<message key="plugins.importexport.crossref.status.completed">مودعة</message>
 	<message key="plugins.importexport.crossref.status.failed">فاشلة</message>
 	<message key="plugins.importexport.crossref.status.registered">فعالة</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">مؤشرة على أنها فاعلة</message>
@@ -43,8 +41,6 @@
 		<p>حالة الإيداع:</p>
 		<p>
 		- غير مودعة: لم تجر أي محاولة إيداع لهذا المكون الرقمي DOI.<br />
-		- مقدم: هذا المكون الرقمي DOI قد تم تقديمه للإيداع.<br />
-		- مودع: هذا المكون الرقمي DOI سبق إيداعه في Crossref، لكنه قد لا يكون فعالاً حتى الآن.<br />
 		- فعال: المكون الرقمي DOI مودع، ومتواجد بشكل صحيح.<br />
 		- فاشل: إيداع المكون الرقمي DOI باء بالفشل.<br />
 		- مؤشر على أنه فعال: تم تأشير المكون الرقمي DOI يدوياً على أنه فعال.
@@ -55,11 +51,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">تنزيل XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">أشره فعالاً</message>
-	<message key="plugins.importexport.crossref.action.register">تقديم</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">تدقيق الحالة</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">مهمة التسجيل التلقائي في CrossRef</message>
-	<message key="plugins.importexport.crossref.notification.failed">لقد فشلت عملية تسجيل المكون الرقمي DOI. لطفاً، إذهب إلى الأدوات / استيراد/تصدير / إضافة تصدير CrossRef XML لمعاينة المستودعات التي حدث فيها الفشل.</message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
@@ -70,8 +63,6 @@
 	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">التقديم لم ينجح! ملقم تسجيل DOI أرجع الخطأ: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">نجح التقديم!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">لا يوجد عدد يطابق العدد المحدد بالرمز "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">لا توجد مقالة تطابق المقالة المحددة بالرمز "{$articleId}".</message>
 

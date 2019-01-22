@@ -35,16 +35,12 @@
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS uloží přiřazené DOI automaticky do CrossRef. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny neregistrované DOI.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Použijte testovací rozhraní API CrossRef (zkušební prostředí) pro vklad DOI. Nezapomeňte tuto možnost odstranit před reálným používání časopisu.</message>
 	<message key="plugins.importexport.crossref.issues.description">Poznámka: Pro účely exportu/registrace zde budou zohledněny pouze čísla (a nikoliv jejich články).</message>
-	<message key="plugins.importexport.crossref.status.submitted">Odesláno</message>
-	<message key="plugins.importexport.crossref.status.completed">Uloženo</message>
 	<message key="plugins.importexport.crossref.status.failed">Selhalo</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktivní</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Označeno jako aktivní</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Stav ukládání:</p>
 <p>
 - Není uloženo: pro tento DOI nebyl proveden žádný pokus o uložení. <br/>
-- Odesláno: tento DOI byl odeslán k uložení. <br/>
-- Uloženo: DOI byl uložen v Crossref, ale možná ještě není aktivní. <br/>
 - Aktivní: DOI byl uložen a je aktivní. <br/>
 - Selhalo: vklad DOI selhal. <br/>
 - Označeno jako aktivní: DOI byl ručně označen jako aktivní.
@@ -53,12 +49,7 @@
 <P> Pokud uložení selhalo, vyřešte problém a pokuste se znovu zaregistrovat DOI. </p>]]></message>
 	<message key="plugins.importexport.crossref.action.export">Stáhnout XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Označit jako aktivní</message>
-	<message key="plugins.importexport.crossref.action.register">Podat</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Zkontrolovat status</message>
 	<message key="plugins.importexport.crossref.senderTask.name">Úloha automatické registrace CrossRef</message>
-	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[DOI se nepodařilo zaregistrovat. Přejděte prosím do nabídky Nástroje> Import/Export> Plugin pro export XML CrossRef, abyste viděli neúspěšná uložení.]]></message>
-	<message key="plugins.importexport.crossref.register.error.mdsError">Odeslání nebylo úspěšné! Registrační server DOI vrátil chybu: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Odeslání bylo úspěšné!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Žádné číslo neodpovídá tomuto ID čísla: "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">¨Žádný článek neodpovídá tomuto ID článku "{$articleId}".</message>
 </locale>
