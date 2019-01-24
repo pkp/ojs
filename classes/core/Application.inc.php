@@ -30,7 +30,6 @@ define('ASSOC_TYPE_ISSUE_GALLEY',	0x0000105);
 define('CONTEXT_JOURNAL', 1);
 
 class Application extends PKPApplication {
-
 	/**
 	 * Get the "context depth" of this application, i.e. the number of
 	 * parts of the URL after index.php that represent the context of
@@ -54,7 +53,7 @@ class Application extends PKPApplication {
 	 * Get the symbolic name of this application
 	 * @return string
 	 */
-	function getName() {
+	static function getName() {
 		return 'ojs2';
 	}
 
