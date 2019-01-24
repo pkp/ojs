@@ -21,13 +21,11 @@ define('CROSSREF_STATUS_FAILED', 'failed');
 
 define('CROSSREF_API_DEPOSIT_OK', 200);
 
-//define('CROSSREF_API_URL', 'https://api.crossref.org/v2/deposits');
-define('CROSSREF_API_URL', 'https://test.crossref.org/v2/deposits');
+define('CROSSREF_API_URL', 'https://api.crossref.org/v2/deposits');
 //TESTING
 define('CROSSREF_API_URL_DEV', 'https://test.crossref.org/v2/deposits');
 
-//define('CROSSREF_API_STAUTS_URL', 'https://api.crossref.org/servlet/submissionDownload');
-define('CROSSREF_API_STAUTS_URL', 'https://test.crossref.org/servlet/submissionDownload');
+define('CROSSREF_API_STAUTS_URL', 'https://api.crossref.org/servlet/submissionDownload');
 //TESTING
 define('CROSSREF_API_STAUTS_URL_DEV', 'https://test.crossref.org/servlet/submissionDownload');
 
