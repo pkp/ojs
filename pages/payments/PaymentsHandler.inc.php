@@ -115,11 +115,7 @@ class PaymentsHandler extends Handler {
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
-		if ($subscriptionPolicyForm->isLocaleResubmit()) {
-			$subscriptionPolicyForm->readInputData();
-		} else {
-			$subscriptionPolicyForm->initData();
-		}
+		$subscriptionPolicyForm->initData();
 		return new JSONMessage(true, $subscriptionPolicyForm->fetch($request));
 	}
 
@@ -157,11 +153,7 @@ class PaymentsHandler extends Handler {
 		import('classes.subscription.form.PaymentTypesForm');
 
 		$paymentTypesForm = new PaymentTypesForm();
-		if ($paymentTypesForm->isLocaleResubmit()) {
-			$paymentTypesForm->readInputData();
-		} else {
-			$paymentTypesForm->initData();
-		}
+		$paymentTypesForm->initData();
 		return new JSONMessage(true, $paymentTypesForm->fetch($request));
 	}
 
