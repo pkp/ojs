@@ -69,7 +69,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getTitle($article->getLocale())) . '"/>');
+		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getFullTitle($article->getLocale())) . '"/>');
 
 		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . strftime('%Y/%m/%d', strtotime($datePublished)) . '"/>');
