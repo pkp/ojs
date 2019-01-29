@@ -104,8 +104,8 @@
 	<message key="section.policy">Правила раздела</message>
 
 	<!-- Общие термины статьи -->
-	<message key="article.article">Статья</message>
-	<message key="article.articles">Статьи</message>
+	<message key="common.publishedSubmission">Статья</message>
+	<message key="common.publishedSubmissions">Статьи</message>
 	<message key="article.submissionId">ID материала</message>
 	<message key="article.title">Название</message>
 	<message key="article.authors">Авторы</message>

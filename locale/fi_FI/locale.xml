@@ -101,8 +101,8 @@
 	<message key="section.abbreviation.example">(Esimerkiksi: artikkelit = ART)</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Artikkeli</message>
-	<message key="article.articles">Artikkelit</message>
+	<message key="common.publishedSubmission">Artikkeli</message>
+	<message key="common.publishedSubmissions">Artikkelit</message>
 	<message key="article.submissionId">Käsikirjoituksen tunniste</message>
 	<message key="article.title">Otsikko</message>
 	<message key="article.authors">Kirjoittajat</message>

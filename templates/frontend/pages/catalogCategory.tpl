@@ -63,12 +63,12 @@
 	{* No published titles in this category *}
 	{if empty($publishedSubmissions)}
 		<h2>
-			{translate key="article.articles"}
+			{translate key="common.publishedSubmissions"}
 		</h2>
 		<p>{translate key="catalog.noTitlesSection"}</p>
 
 	{else}
-		{include file="frontend/components/articleList.tpl" articles=$publishedSubmissions titleKey="article.articles"}
+		{include file="frontend/components/articleList.tpl" articles=$publishedSubmissions titleKey="common.publishedSubmissions"}
 
 		{* Pagination *}
 		{if $prevPage > 1}

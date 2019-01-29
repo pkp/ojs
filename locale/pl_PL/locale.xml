@@ -111,8 +111,8 @@
 	<message key="section.abbreviation.example">(np. artykuły=ART)</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Artykuł</message>
-	<message key="article.articles">Artykuły</message>
+	<message key="common.publishedSubmission">Artykuł</message>
+	<message key="common.publishedSubmissions">Artykuły</message>
 	<message key="article.submissionId">Identyfikator zgłoszenia</message>
 	<message key="article.title">Tytuł</message>
 	<message key="article.authors">Autor</message>

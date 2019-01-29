@@ -107,8 +107,8 @@
 	<message key="section.abbreviation.example">(Například články=ČL)</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Článek</message>
-	<message key="article.articles">Články</message>
+	<message key="common.publishedSubmission">Článek</message>
+	<message key="common.publishedSubmissions">Články</message>
 	<message key="article.submissionId">ID příspěvku</message>
 	<message key="article.title">Název</message>
 	<message key="article.authors">Autoři</message>

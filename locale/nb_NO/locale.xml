@@ -83,7 +83,7 @@
 	<message key="section.abbreviation">Forkortelse</message>
 	<message key="section.abbreviation.example">(Eksempel: Artikler=ART)</message>
 	<!-- Common Article Terms -->
-	<message key="article.articles">Artikler</message>
+	<message key="common.publishedSubmissions">Artikler</message>
 	<message key="article.submissionId">Manus-ID</message>
 	<message key="article.title">Tittel</message>
 	<message key="article.authors">Forfattere</message>
@@ -892,7 +892,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates ikke.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
-	<message key="article.article">Artikkel</message>
+	<message key="common.publishedSubmission">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">år</message>

@@ -104,8 +104,8 @@
 	<message key="section.policy">Richtlinien der Rubrik</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Artikel</message>
-	<message key="article.articles">Artikel</message>
+	<message key="common.publishedSubmission">Artikel</message>
+	<message key="common.publishedSubmissions">Artikel</message>
 	<message key="article.submissionId">Beitrags-ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Autor/innen</message>

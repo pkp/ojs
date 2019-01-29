@@ -103,8 +103,8 @@
 	<message key="section.abbreviation.example">(Till exempel Artiklar=ART)</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Artikel</message>
-	<message key="article.articles">Artiklar</message>
+	<message key="common.publishedSubmission">Artikel</message>
+	<message key="common.publishedSubmissions">Artiklar</message>
 	<message key="article.submissionId">Bidragets ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Författare</message>

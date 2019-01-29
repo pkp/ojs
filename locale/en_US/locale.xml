@@ -104,8 +104,8 @@
 	<message key="section.policy">Section Policy</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Article</message>
-	<message key="article.articles">Articles</message>
+	<message key="common.publishedSubmission">Article</message>
+	<message key="common.publishedSubmissions">Articles</message>
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
 	<message key="article.authors">Authors</message>

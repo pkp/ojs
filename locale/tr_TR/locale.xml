@@ -103,8 +103,8 @@
 	<message key="section.abbreviation.example">(Örneğin, Makaleler=MAK)</message>
 
 	<!-- Common Article Terms -->
-	<message key="article.article">Makale</message>
-	<message key="article.articles">Makaleler</message>
+	<message key="common.publishedSubmission">Makale</message>
+	<message key="common.publishedSubmissions">Makaleler</message>
 	<message key="article.submissionId">Gönderi ID'si</message>
 	<message key="article.title">Başlık</message>
 	<message key="article.authors">Yazarlar</message>

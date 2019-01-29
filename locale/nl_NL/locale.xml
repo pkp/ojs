@@ -80,7 +80,7 @@
 	<message key="section.abbreviation">Afkorting</message>
 	<message key="section.abbreviation.example">(Bijvoorbeeld: Artikelen=ART)</message>
 	<!-- Common Article Terms -->
-	<message key="article.articles">Artikelen</message>
+	<message key="common.publishedSubmissions">Artikelen</message>
 	<message key="article.submissionId">Inzending ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Auteurs</message>
@@ -831,7 +831,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="user.noRoles.regReviewerClosed">Registreren als reviewer: registratie is momenteel uitgeschakeld.</message>
 	<message key="issue.coverPage.altText">Omslag</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="article.article">Artikel</message>
+	<message key="common.publishedSubmission">Artikel</message>
 	<message key="user.manageMySubscriptions">Mijn abonnementen beheren</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">jaar</message>
