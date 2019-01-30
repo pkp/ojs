@@ -15,7 +15,7 @@
 	<type>core</type>
 	<release>2.4.8.4</release>
 	<tag>ojs-2_4_8-4</tag>
-	<date>2019-01-17</date>
+	<date>2019-01-30</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-2.4.8-4.tar.gz</package>
 	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.4.8-4.patch.gz</patch>
@@ -57,5 +57,5 @@
 	<patch from="2.4.8.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.4.8_to_2.4.8-4.patch.gz</patch>
 	<patch from="2.4.8.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.4.8-1_to_2.4.8-4.patch.gz</patch>
 	<patch from="2.4.8.2">http://pkp.sfu.ca/ojs/download/patch/ojs-2.4.8-2_to_2.4.8-4.patch.gz</patch>
-	<patch from="2.4.8.3">http://pkp.sfu.ca/ojs/download/patch/ojs-2.4.8-2_to_2.4.8-4.patch.gz</patch>
+	<patch from="2.4.8.3">http://pkp.sfu.ca/ojs/download/patch/ojs-2.4.8-3_to_2.4.8-4.patch.gz</patch>
 </version>
