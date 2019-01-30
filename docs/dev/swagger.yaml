@@ -26,6 +26,7 @@ tags:
   - name: "Issues"
   - name: "Users"
     description: Only admins, journal editors, and subeditors can access these endpoints.
+  - name: "Statistics"
   - name: "Backend"
     description: "Private endpoints for OJS UI."
 definitions:
@@ -593,6 +594,40 @@ definitions:
         type: integer
       interest:
         type: string
+  ArticleStatisticsSummary:
+    type: object
+    properties:
+      total:
+        type: integer
+      abstractViews:
+        type: integer
+      totalFileViews:
+        type: integer
+      pdf:
+        type: integer
+      html:
+        type: integer
+      other:
+        type: integer
+      timeSegments:
+        type: array
+        items:
+          $ref: '#/definitions/StatisticsTimeSegment'
+      object:
+        $ref: '#/definitions/SubmissionSummary'
+  StatisticsTimeSegment:
+    type: object
+    properties:
+      date:
+        type: string
+      dateLabel:
+        type: string
+      total:
+        type: integer
+      abstractViews:
+        type: integer
+      totalFileViews:
+        type: integer
   LocaleObject:
     type: object
     description: Key/value pairs containing strings by locale key.
@@ -1104,6 +1139,133 @@ paths:
                   $ref: '#/definitions/ReviewerSummary'
         '403':
           description: Only administrators, journal managers and editors are allowed to access users on this site.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+  '/stats/publishedSubmissions':
+    get:
+      tags:
+        - Statistics
+      summary: Get abstract and galley view statistics for articles.
+      parameters:
+        - name: dateStart
+          description: Return results after this date. Expects the format `YYYY-MM-DD`.
+          in: query
+          required: false
+          type: string
+        - name: dateEnd
+          description: Return results before this date. Expects the format `YYYY-MM-DD`.
+          in: query
+          required: false
+          type: string
+        - name: timeSegment
+          description: Return the total counts for all records by day or month. Expects `day` or `month`. The `day` value is not valid if your `dateStart` is more than 90 days ago. Default is `month`.
+          in: query
+          required: false
+          type: string
+        - name: sectionIds
+          description: Filter the results by articles assigned to a section.
+          in: query
+          required: false
+          type: string
+        - name: count
+          description: How many results to return in a single request. Default is `30`. Max is `100`.
+          in: query
+          required: false
+          type: integer
+        - name: offset
+          description: Offset the results returned. Use this to receive subsequent pages of requests. A `count` of `10` and `offset` of `15` will return results `15` to `25`.
+          in: query
+          required: false
+          type: integer
+        - name: orderBy
+          description: Order the results returned. Only accepts `total`. Default is `total`.
+          in: query
+          required: false
+          type: string
+        - name: orderDirection
+          description: Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.
+          in: query
+          required: false
+          type: string
+        - name: searchPhrase
+          description: Filter the results by a search phrase matched against the title and contributors.
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Total usage statistics and breakdowns by article and time segment.
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+                description: Total abstract and file views for all articles matching the request params.
+              abstractViews:
+                type: integer
+                description: Total abstract views for all articles matching the request params.
+              totalFileViews:
+                type: integer
+                description: Total file views for all articles matching the request params.
+              timeSegments:
+                type: array
+                description: Daily or monthly totals for all articles matching the request params.
+                items:
+                  $ref: '#/definitions/StatisticsTimeSegment'
+              itemsMax:
+                type: integer
+                description: The total number of articles matching the request params.
+              items:
+                type: array
+                description: Abstract and file views for each article.
+                items:
+                  $ref: '#/definitions/ArticleStatisticsSummary'
+        '400':
+          description: Your request was not valid. This can happen if `dateRange` or `timeSegment` is not valid. The response will contain details about the error.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: You do not have permission to access article statistics.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+  '/stats/publishedSubmissions/{submissionId}':
+    get:
+      tags:
+        - Statistics
+      summary: Get abstract and galley view statistics for one article.
+      parameters:
+        - name: submissionId
+          in: path
+          required: true
+          type: string
+        - name: dateStart
+          description: Return results after this date. Expects the format `YYYY-MM-DD`.
+          in: query
+          required: false
+          type: string
+        - name: dateEnd
+          description: Return results before this date. Expects the format `YYYY-MM-DD`.
+          in: query
+          required: false
+          type: string
+        - name: timeSegment
+          description: Return the total counts for all records by day or month. Expects `day` or `month`. The `day` value is not valid if your `dateStart` is more than 90 days ago. Default is `month`.
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Total usage statistics and breakdowns by time segment.
+          schema:
+            $ref: '#/definitions/ArticleStatisticsSummary'
+        '403':
+          description: You do not have permission to access statistics for this article.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '404':
+          description: The requested article could not be found.
           schema:
             $ref: '#/definitions/ErrorResponse'
 
