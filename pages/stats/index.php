@@ -16,5 +16,5 @@
  *
  */
 
-import('lib.pkp.pages.stats.PKPStatsHandler');
-define('HANDLER_CLASS', 'PKPStatsHandler');
+import('pages.stats.StatsHandler');
+define('HANDLER_CLASS', 'StatsHandler');

@@ -613,5 +613,6 @@
 
 	<!-- Statistics -->
 	<message key="stats.publishedSubmissions.details">Article Details</message>
+	<message key="stats.publishedSubmissions.none">No articles were found.</message>
 	<message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Total abstract views for each article by date</message>
 </locale>

@@ -16,5 +16,5 @@
  *
  */
 
-import('api.v1.stats.StatsHandler');
-return new StatsHandler();
+import('lib.pkp.api.v1.stats.PKPStatsHandler');
+return new PKPStatsHandler();
