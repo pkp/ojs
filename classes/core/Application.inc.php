@@ -29,6 +29,9 @@ define('ASSOC_TYPE_ISSUE_GALLEY',	0x0000105);
 
 define('CONTEXT_JOURNAL', 1);
 
+define('LANGUAGE_PACK_DESCRIPTOR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/locales.xml');
+define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');
+
 class Application extends PKPApplication {
 	/**
 	 * Get the "context depth" of this application, i.e. the number of
