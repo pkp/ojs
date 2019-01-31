@@ -163,6 +163,9 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			$contents
 		);
 
+		$templateMgr = TemplateManager::getManager($request);
+		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
+
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getByArticleId($galley->getSubmissionId());
@@ -180,8 +183,6 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		foreach ($paramArray as $key => $value) {
 			$contents = str_replace('{$' . $key . '}', $value, $contents);
 		}
-		
-		HookRegistry::call('HtmlArticleGalleyPlugin::htmlGalleyContent', array($galley, &$contents, $submissionFile, $embeddableFiles));
 
 		return $contents;
 	}
@@ -258,5 +259,3 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		return $matchArray[1] . $url . $matchArray[3];
 	}
 }
-
-
