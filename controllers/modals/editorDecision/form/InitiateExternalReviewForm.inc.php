@@ -43,7 +43,7 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 
 		// Record the decision.
 		import('classes.workflow.EditorDecisionActionsManager');
-		$actionLabels = EditorDecisionActionsManager::getActionLabels($request->getContext(), $this->getStageId(), array($this->_decision));
+		$actionLabels = (new EditorDecisionActionsManager())->getActionLabels($request->getContext(), $this->getStageId(), array($this->_decision));
 
 		import('lib.pkp.classes.submission.action.EditorAction');
 		$editorAction = new EditorAction();
