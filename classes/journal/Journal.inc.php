@@ -75,7 +75,7 @@ class Journal extends Context {
 	 * Get the association type for this context.
 	 * @return int
 	 */
-	function getAssocType() {
+	public function getAssocType() {
 		return ASSOC_TYPE_JOURNAL;
 	}
 

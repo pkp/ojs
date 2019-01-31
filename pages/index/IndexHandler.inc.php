@@ -13,10 +13,12 @@
  * @brief Handle site index requests.
  */
 
-import('classes.handler.Handler');
+import('lib.pkp.pages.index.PKPIndexHandler');
 
-class IndexHandler extends Handler {
-
+class IndexHandler extends PKPIndexHandler {
+	//
+	// Public handler operations
+	//
 	/**
 	 * If no journal is selected, display list of journals.
 	 * Otherwise, display the index page for the selected journal.
@@ -59,14 +61,7 @@ class IndexHandler extends Handler {
 				IssueHandler::_setupIssueTemplate($request, $issue);
 			}
 
-			$enableAnnouncements = $journal->getData('enableAnnouncements');
-			$numAnnouncementsHomepage = $journal->getData('numAnnouncementsHomepage');
-			if ($enableAnnouncements && $numAnnouncementsHomepage) {
-				$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
-				$announcements =& $announcementDao->getNumAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId(), $numAnnouncementsHomepage);
-				$templateMgr->assign('announcements', $announcements->toArray());
-				$templateMgr->assign('numAnnouncementsHomepage', $numAnnouncementsHomepage);
-			}
+			$this->_setupAnnouncements($journal, $templateMgr);
 
 			$templateMgr->display('frontend/pages/indexJournal.tpl');
 		} else {
@@ -77,14 +72,13 @@ class IndexHandler extends Handler {
 				$request->redirect($journal->getPath());
 			}
 
-			$templateMgr->assign('pageTitleTranslated', $site->getLocalizedTitle());
-			$templateMgr->assign('about', $site->getLocalizedAbout());
-			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
-
-			$journals = $journalDao->getAll(true);
-			$templateMgr->assign('journals', $journals);
-			$templateMgr->assign('site', $site);
-
+			$templateMgr->assign(array(
+				'pageTitleTranslated' => $site->getLocalizedTitle(),
+				'about' => $site->getLocalizedAbout(),
+				'journalFilesPath' => $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/',
+				'journals' => $journalDao->getAll(true),
+				'site' => $site,
+			));
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('frontend/pages/indexSite.tpl');
 		}
