@@ -1,15 +1,26 @@
 # Configure the build matrix
+matrix:
+  include:
+  # Validation
+  - env: TEST=validation
+    php: 7.2
+  # PostgreSQL / various PHP
+  - env: TEST=pgsql
+    php: 7.1
+  - env: TEST=pgsql
+    php: 7.2
+  # MySQL / various PHP
+  - env: TEST=mysql
+    php: 7.1
+  - env: TEST=mysql
+    php: 7.2
+  # Path info disabled
+  - env: TEST=mysql DISABLE_PATH_INFO=1
+    php: 7.2
 env:
-  matrix:
-  - TEST=validation # Validation tests: lint the XML, minify the Javascript, etc
-  - TEST=pgsql # Integration tests using PostgreSQL
-  - TEST=mysql # Integration tests using MySQL/MariaDB
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
-php:
-  - 7.1
-  - 7.2
 dist: trusty
 python:
   - 3.3 # Required by Javascript linter/builder
