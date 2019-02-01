@@ -32,6 +32,7 @@ python:
 git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
+cache: npm
 addons:
   firefox: "45.9.0esr"
   apt:
