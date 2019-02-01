@@ -14,60 +14,16 @@
  * @brief UserAction class.
  */
 
-class UserAction {
+import('lib.pkp.classes.user.PKPUserAction');
 
+class UserAction extends PKPUserAction {
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-	}
-
-	/**
-	 * Actions.
-	 */
-
-	/**
-	 * Merge user accounts, including attributed articles etc.
+	 * Merge user accounts and delete the old user account.
+	 * @param $oldUserId int The user ID to remove
+	 * @param $newUserId int The user ID to receive all "assets" (i.e. submissions) from old user
 	 */
 	function mergeUsers($oldUserId, $newUserId) {
-		// Need both user ids for merge
-		if (empty($oldUserId) || empty($newUserId)) {
-			return false;
-		}
-
-		HookRegistry::call('UserAction::mergeUsers', array(&$oldUserId, &$newUserId));
-
-		$noteDao = DAORegistry::getDAO('NoteDAO');
-		$notes = $noteDao->getByUserId($oldUserId);
-		while ($note = $notes->next()) {
-			$note->setUserId($newUserId);
-			$noteDao->updateObject($note);
-		}
-
-		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
-		$editDecisionDao->transferEditorDecisions($oldUserId, $newUserId);
-
-		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-		foreach ($reviewAssignmentDao->getByUserId($oldUserId) as $reviewAssignment) {
-			$reviewAssignment->setReviewerId($newUserId);
-			$reviewAssignmentDao->updateObject($reviewAssignment);
-		}
-
-		$articleEmailLogDao = DAORegistry::getDAO('SubmissionEmailLogDAO');
-		$articleEmailLogDao->changeUser($oldUserId, $newUserId);
-		$articleEventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
-		$articleEventLogDao->changeUser($oldUserId, $newUserId);
-
-		$submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
-		$submissionComments = $submissionCommentDao->getByUserId($oldUserId);
-
-		while ($submissionComment = $submissionComments->next()) {
-			$submissionComment->setAuthorId($newUserId);
-			$submissionCommentDao->updateObject($submissionComment);
-		}
-
-		$accessKeyDao = DAORegistry::getDAO('AccessKeyDAO');
-		$accessKeyDao->transferAccessKeys($oldUserId, $newUserId);
+		if (!parent::mergeUsers($oldUserId, $newUserId)) return false;
 
 		// Transfer old user's individual subscriptions for each journal if new user
 		// does not have a valid individual subscription for a given journal.
@@ -115,47 +71,7 @@ class UserAction {
 			$paymentDao->updateObject($payment);
 		}
 
-		// Delete the old user and associated info.
-		$sessionDao = DAORegistry::getDAO('SessionDAO');
-		$sessionDao->deleteByUserId($oldUserId);
-		$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
-		$temporaryFileDao->deleteByUserId($oldUserId);
-		$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
-		$userSettingsDao->deleteSettings($oldUserId);
-		$subEditorsDao = DAORegistry::getDAO('SubEditorsDAO');
-		$subEditorsDao->deleteByUserId($oldUserId);
-
-		// Transfer old user's roles
-		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-		$userGroups = $userGroupDao->getByUserId($oldUserId);
-		while(!$userGroups->eof()) {
-			$userGroup = $userGroups->next();
-			if (!$userGroupDao->userInGroup($newUserId, $userGroup->getId())) {
-				$userGroupDao->assignUserToGroup($newUserId, $userGroup->getId());
-			}
-		}
-		$userGroupDao->deleteAssignmentsByUserId($oldUserId);
-
-		// Transfer stage assignments.
-		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-		$stageAssignments = $stageAssignmentDao->getByUserId($oldUserId);
-		while ($stageAssignment = $stageAssignments->next()) {
-			$duplicateAssignments = $stageAssignmentDao->getBySubmissionAndStageId($stageAssignment->getSubmissionId(), null, $stageAssignment->getUserGroupId(), $newUserId);
-			if (!$duplicateAssignments->next()) {
-				// If no similar assignments already exist, transfer this one.
-				$stageAssignment->setUserId($newUserId);
-				$stageAssignmentDao->updateObject($stageAssignment);
-			} else {
-				// There's already a stage assignment for the new user; delete.
-				$stageAssignmentDao->deleteObject($stageAssignment);
-			}
-		}
-
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$userDao->deleteUserById($oldUserId);
-
 		return true;
 	}
 }
-
 
