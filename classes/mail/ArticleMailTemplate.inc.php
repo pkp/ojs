@@ -16,7 +16,7 @@
  */
 
 import('lib.pkp.classes.mail.SubmissionMailTemplate');
-import('classes.log.SubmissionEmailLogEntry'); // Bring in log constants
+import('lib.pkp.classes.log.SubmissionEmailLogEntry'); // Bring in log constants
 
 class ArticleMailTemplate extends SubmissionMailTemplate {
 	/**
