@@ -16,6 +16,7 @@ python:
 git:
   # Inhibit automatic submodule checkout (see below)
   submodules: false
+cache: npm
 addons:
   firefox: "45.9.0esr" # Required by Selenium tests
   apt:
