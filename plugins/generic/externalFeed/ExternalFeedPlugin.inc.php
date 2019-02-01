@@ -80,7 +80,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		} else {
 			import('classes.file.PublicFileManager');
 			$fileManager = new PublicFileManager();
-			return $fileManager->getJournalFilesPath($journalId) . '/' . $styleSheet['uploadName'];
+			return $fileManager->getContextFilesPath($journalId) . '/' . $styleSheet['uploadName'];
 		}
 	}
 

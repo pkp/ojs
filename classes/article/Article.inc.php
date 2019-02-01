@@ -256,7 +256,7 @@ class Article extends Submission {
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
-		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getContextId()) . '/' . $coverImage;
+		return $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($this->getContextId()) . '/' . $coverImage;
 	}
 
 	/**
@@ -277,7 +277,7 @@ class Article extends Submission {
 		$urls = array();
 
 		foreach ($coverImages as $locale => $coverImage) {
-			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getJournalFilesPath($this->getJournalId()), $coverImage);
+			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getContextFilesPath($this->getJournalId()), $coverImage);
 		}
 
 		return $urls;

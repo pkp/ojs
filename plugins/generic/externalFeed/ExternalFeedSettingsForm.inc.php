@@ -90,7 +90,7 @@ class ExternalFeedSettingsForm extends Form {
 			}
 
 			$uploadName = $plugin->getPluginPath() . '/' . $settingName . '.css';
-			if($fileManager->uploadJournalFile($journalId, $settingName, $uploadName)) {			
+			if($fileManager->uploadContextFile($journalId, $settingName, $uploadName)) {
 				$value = array(
 					'name' => $fileManager->getUploadedFileName($settingName),
 					'uploadName' => $uploadName,
@@ -118,7 +118,7 @@ class ExternalFeedSettingsForm extends Form {
 		import('classes.file.PublicFileManager');
 		$fileManager = new PublicFileManager();
 
-		if ($fileManager->removeJournalFile($journalId, $setting['uploadName'])) {
+		if ($fileManager->removeContextFile($journalId, $setting['uploadName'])) {
 			$plugin->updateSetting($journalId, $settingName, null);
 			return true;
 		} else {

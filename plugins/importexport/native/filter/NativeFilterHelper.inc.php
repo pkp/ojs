@@ -69,7 +69,7 @@ class NativeFilterHelper {
 
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $object->getJournalId()) . '/' . $coverImage;
+				$filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
 				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 				$embedNode->setAttribute('encoding', 'base64');
 				$coverNode->appendChild($embedNode);
@@ -121,7 +121,7 @@ class NativeFilterHelper {
 					case 'embed':
 						import('classes.file.PublicFileManager');
 						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $context->getId()) . '/' . $object->getCoverImage($locale);
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
 					default:

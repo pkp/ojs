@@ -232,7 +232,7 @@ class IssueForm extends Form {
 			$publicFileManager = new PublicFileManager();
 			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$publicFileManager->copyContextFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
 			$issue->setCoverImage($newFileName, $locale);
 			$issueDao->updateObject($issue);
 		}

@@ -18,9 +18,7 @@ import('lib.pkp.classes.user.PKPUserAction');
 
 class UserAction extends PKPUserAction {
 	/**
-	 * Merge user accounts and delete the old user account.
-	 * @param $oldUserId int The user ID to remove
-	 * @param $newUserId int The user ID to receive all "assets" (i.e. submissions) from old user
+	 * @copydoc PKPUserAction::mergeUsers()
 	 */
 	function mergeUsers($oldUserId, $newUserId) {
 		if (!parent::mergeUsers($oldUserId, $newUserId)) return false;

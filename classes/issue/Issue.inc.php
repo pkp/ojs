@@ -403,7 +403,7 @@ class Issue extends DataObject {
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 
-		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getJournalId()) . '/' . $coverImage;
+		return $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($this->getJournalId()) . '/' . $coverImage;
 	}
 
 	/**
@@ -424,7 +424,7 @@ class Issue extends DataObject {
 		$urls = array();
 
 		foreach ($coverImages as $locale => $coverImage) {
-			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getJournalFilesPath($this->getJournalId()), $coverImage);
+			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getContextFilesPath($this->getJournalId()), $coverImage);
 		}
 
 		return $urls;

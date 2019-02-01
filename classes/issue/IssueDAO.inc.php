@@ -470,7 +470,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		if (is_array($issue->getCoverImage(null))) {
 			foreach ($issue->getCoverImage(null) as $coverImage) {
 				if ($coverImage != '') {
-					$publicFileManager->removeJournalFile($issue->getJournalId(), $coverImage);
+					$publicFileManager->removeContextFile($issue->getJournalId(), $coverImage);
 				}
 			}
 		}

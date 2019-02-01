@@ -81,7 +81,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		// Remove the file
 		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->removeJournalFile($submission->getJournalId(), $file)) {
+		if ($publicFileManager->removeContextFile($submission->getJournalId(), $file)) {
 			$json = new JSONMessage(true);
 			$json->setEvent('fileDeleted');
 			return $json;

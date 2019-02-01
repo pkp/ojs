@@ -70,7 +70,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign(array(
 					'currentJournal' => $context,
 					'siteTitle' => $context->getLocalizedName(),
-					'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()),
+					'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId()),
 					'primaryLocale' => $context->getPrimaryLocale(),
 					'supportedLocales' => $context->getSupportedLocaleNames(),
 					'displayPageHeaderTitle' => $context->getLocalizedPageHeaderTitle(),
@@ -85,7 +85,7 @@ class TemplateManager extends PKPTemplateManager {
 				// Assign meta tags
 				$favicon = $context->getLocalizedFavicon();
 				if (!empty($favicon)) {
-					$faviconDir = $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId());
+					$faviconDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
 					$this->addHeader('favicon', '<link rel="icon" href="' . $faviconDir . '/' . $favicon['uploadName'] . '">');
 				}
 

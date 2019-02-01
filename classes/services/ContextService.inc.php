@@ -129,7 +129,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new \PublicFileManager();
-		$publicFileManager->rmtree($publicFileManager->getJournalFilesPath($context->getId()));
+		$publicFileManager->rmtree($publicFileManager->getContextFilesPath($context->getId()));
 	}
 
 	/**

@@ -212,7 +212,7 @@ class IssueGridHandler extends GridHandler {
 
 		// Remove the file
 		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->removeJournalFile($issue->getJournalId(), $file)) {
+		if ($publicFileManager->removeContextFile($issue->getJournalId(), $file)) {
 			$json = new JSONMessage(true);
 			$json->setEvent('fileDeleted');
 			return $json;

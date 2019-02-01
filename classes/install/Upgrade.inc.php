@@ -1784,8 +1784,8 @@ class Upgrade extends Installer {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$oldFileName = $row['setting_value'];
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
-				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
 			}
 			$issueDao->update('DELETE FROM issue_settings WHERE issue_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $row['issue_id'], $oldFileName));
 			$result->MoveNext();
@@ -1806,9 +1806,9 @@ class Upgrade extends Installer {
 			$row = $result->GetRowAssoc(false);
 			$oldFileName = $row['setting_value'];
 			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
-				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName, $newFileName);
-				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
 			}
 			$result->MoveNext();
 		}
@@ -1877,8 +1877,8 @@ class Upgrade extends Installer {
 			$row = $result->GetRowAssoc(false);
 			$submissionId = $row['submission_id'];
 			$oldFileName = $row['setting_value'];
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldFileName)) {
-				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['context_id']) . '/' . $oldFileName)) {
+				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
 			}
 			$articleDao->update('DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = \'fileName\' AND setting_value = ?', array((int) $submissionId, $oldFileName));
 			$result->MoveNext();
@@ -1899,9 +1899,9 @@ class Upgrade extends Installer {
 			$row = $result->GetRowAssoc(false);
 			$oldFileName = $row['setting_value'];
 			$newFileName = str_replace('.', '_' . $row['primary_locale'] . '.', $oldFileName);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName)) {
-				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldFileName, $newFileName);
-				$publicFileManager->removeJournalFile($row['journal_id'], $oldFileName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName)) {
+				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldFileName, $newFileName);
+				$publicFileManager->removeContextFile($row['journal_id'], $oldFileName);
 			}
 			$result->MoveNext();
 		}
@@ -2691,9 +2691,9 @@ class Upgrade extends Installer {
 			$arraySettingValue = $journalSettingsDao->getSetting($row['journal_id'], $row['setting_name'], $newLocale);
 			$oldUploadName = $arraySettingValue['uploadName'];
 			$newUploadName = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldUploadName);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldUploadName)) {
-				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldUploadName, $newUploadName);
-				$publicFileManager->removeJournalFile($row['journal_id'], $oldUploadName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldUploadName)) {
+				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldUploadName, $newUploadName);
+				$publicFileManager->removeContextFile($row['journal_id'], $oldUploadName);
 			}
 			$arraySettingValue['uploadName'] = $newUploadName;
 			$newArraySettingValue[$newLocale] = $arraySettingValue;
@@ -2709,9 +2709,9 @@ class Upgrade extends Installer {
 			$row = $settingValueResult->getRowAssoc(false);
 			$oldCoverImage = $row['setting_value'];
 			$newCoverImage = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldCoverImage);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldCoverImage)) {
-				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldCoverImage, $newCoverImage);
-				$publicFileManager->removeJournalFile($row['journal_id'], $oldCoverImage);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldCoverImage)) {
+				$publicFileManager->copyContextFile($row['journal_id'], $publicFileManager->getContextFilesPath($row['journal_id']) . '/' . $oldCoverImage, $newCoverImage);
+				$publicFileManager->removeContextFile($row['journal_id'], $oldCoverImage);
 			}
 			$journalSettingsDao->update('UPDATE issue_settings SET setting_value = ? WHERE issue_id = ? AND setting_name = \'fileName\' AND locale = ?', array($newCoverImage, (int) $row['issue_id'], $newLocale));
 			$settingValueResult->MoveNext();
@@ -2725,9 +2725,9 @@ class Upgrade extends Installer {
 			$row = $settingValueResult->getRowAssoc(false);
 			$oldCoverImage = $row['setting_value'];
 			$newCoverImage = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldCoverImage);
-			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldCoverImage)) {
-				$publicFileManager->copyJournalFile($row['context_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldCoverImage, $newCoverImage);
-				$publicFileManager->removeJournalFile($row['context_id'], $oldCoverImage);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row['context_id']) . '/' . $oldCoverImage)) {
+				$publicFileManager->copyContextFile($row['context_id'], $publicFileManager->getContextFilesPath($row['context_id']) . '/' . $oldCoverImage, $newCoverImage);
+				$publicFileManager->removeContextFile($row['context_id'], $oldCoverImage);
 			}
 			$journalSettingsDao->update('UPDATE submission_settings SET setting_value = ? WHERE submission_id = ? AND setting_name = \'fileName\' AND locale = ?', array($newCoverImage, (int) $row['submission_id'], $newLocale));
 			$settingValueResult->MoveNext();

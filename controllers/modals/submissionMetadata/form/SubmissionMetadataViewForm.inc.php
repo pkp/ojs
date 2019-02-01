@@ -128,7 +128,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 			$publicFileManager = new PublicFileManager();
 			$newFileName = 'article_' . $submission->getId() . '_cover_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$publicFileManager->copyContextFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
 			$submission->setCoverImage($newFileName, $locale);
 		}
 
