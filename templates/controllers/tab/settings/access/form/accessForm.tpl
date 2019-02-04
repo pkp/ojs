@@ -26,6 +26,7 @@
 			{fbvElement type="radio" id="publishingMode-0" name="publishingMode" value=$smarty.const.PUBLISHING_MODE_OPEN checked=$publishingMode|compare:$smarty.const.PUBLISHING_MODE_OPEN label="manager.setup.openAccess"}
 			{fbvElement type="radio" id="publishingMode-1" name="publishingMode" value=$smarty.const.PUBLISHING_MODE_SUBSCRIPTION checked=$publishingMode|compare:$smarty.const.PUBLISHING_MODE_SUBSCRIPTION label="manager.setup.subscription"}
 			{fbvElement type="radio" id="publishingMode-2" name="publishingMode" value=$smarty.const.PUBLISHING_MODE_NONE checked=$publishingMode|compare:$smarty.const.PUBLISHING_MODE_NONE label="manager.setup.noPublishing"}
+			{fbvElement type="checkbox" id="enableOai" name="enableOai" value=1 checked=$enableOai label="manager.setup.enableOai"}
 		{/fbvFormSection}
 	{/fbvFormArea}
 

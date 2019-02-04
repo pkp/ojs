@@ -25,6 +25,7 @@ class AccessForm extends ContextSettingsForm {
 		parent::__construct(
 			array(
 				'publishingMode' => 'int',
+				'enableOai' => 'int',
 			),
 			'controllers/tab/settings/access/form/accessForm.tpl',
 			$wizardMode

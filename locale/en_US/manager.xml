@@ -325,6 +325,7 @@
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
 	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.noPublishing">OJS will not be used to publish the journal's contents online.</message>
+	<message key="manager.setup.enableOai">Enable OAI access to content</message>
 	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
 	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>
