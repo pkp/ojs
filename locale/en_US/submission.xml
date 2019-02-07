@@ -80,4 +80,7 @@
 	<message key="section.any">Any Section</message>
 
 	<message key="submission.sectionOptions">Section Options</message>
+	<!-- categories -->
+	<message key="catalog.browseTitles">{$numTitles} Items</message>
+	<message key="catalog.category.heading">All Items</message>
 </locale>

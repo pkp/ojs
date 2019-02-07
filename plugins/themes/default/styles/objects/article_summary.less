@@ -54,7 +54,17 @@
 	}
 
 	.galleys_links {
+		&:extend(.pkp_unstyled_list);
 		margin-top: @base;
+
+		li {
+			display: inline-block;
+			margin-right: 1em;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 
 	@media(min-width: @screen-tablet) {
@@ -73,12 +83,9 @@
 		.cover {
 			float: left;
 			width: 25%;
+			height: auto;
+			max-height: none;
 			margin-right: @double;
-
-			img {
-				height: auto;
-				max-height: none;
-			}
 		}
 	}
 
@@ -87,6 +94,10 @@
 		.cover {
 			margin-right: @triple;
 			margin-bottom: @triple;
+
+			img {
+				max-height: none;
+			}
 		}
 	}
 }
