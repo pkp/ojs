@@ -18,6 +18,8 @@ define('SESSION_DISABLE_INIT', 1); // FIXME?
 import('classes.oai.ojs.JournalOAI');
 import('classes.handler.Handler');
 
+use \Firebase\JWT\JWT;
+
 class OAIHandler extends Handler {
 
 	/**
@@ -25,7 +27,7 @@ class OAIHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
-		$this->validate();
+		$this->validate($request);
 
 		PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
@@ -39,13 +41,23 @@ class OAIHandler extends Handler {
 
 	/**
 	 * Validate the request
+	 * @param $request PKPRequest
 	 */
-	function validate() {
+	function validate($request) {
 		// Site validation checks not applicable
 		//parent::validate();
 
 		if (!Config::getVar('oai', 'oai')) {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
+		}
+
+		// Permit the use of the Authorization header and an API key for access to unpublished content (article URLs)
+		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
+			list($bearer, $jwt) = explode(' ', $header);
+			if (strcasecmp($bearer, 'Bearer')==0) {
+				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
+				$this->setApiToken($apiToken);
+			}
 		}
 	}
 
