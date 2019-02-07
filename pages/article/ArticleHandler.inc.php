@@ -16,6 +16,8 @@
 
 import('classes.handler.Handler');
 
+use \Firebase\JWT\JWT;
+
 class ArticleHandler extends Handler {
 	/** journal associated with the request **/
 	var $journal;
@@ -34,6 +36,15 @@ class ArticleHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
+		// Permit the use of the Authorization header and an API key for access to unpublished/subscription content
+		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
+			list($bearer, $jwt) = explode(' ', $header);
+			if (strcasecmp($bearer, 'Bearer')==0) {
+				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
+				$this->setApiToken($apiToken);
+			}
+		}
+
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
 		$this->addPolicy(new ContextRequiredPolicy($request));
 
