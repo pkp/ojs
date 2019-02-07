@@ -27,7 +27,7 @@ class OAIHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
-		$this->validate($request);
+		$this->validate(null, $request);
 
 		PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
@@ -40,12 +40,11 @@ class OAIHandler extends Handler {
 	}
 
 	/**
-	 * Validate the request
-	 * @param $request PKPRequest
+	 * @copydoc PKPHandler::validate()
 	 */
-	function validate($request) {
+	function validate($requiredContexts = null, $request = null) {
 		// Site validation checks not applicable
-		//parent::validate();
+		//parent::validate($requiredContexts, $request);
 
 		if (!Config::getVar('oai', 'oai')) {
 			$request->redirect(null, 'index');
@@ -54,7 +53,7 @@ class OAIHandler extends Handler {
 		// Permit the use of the Authorization header and an API key for access to unpublished content (article URLs)
 		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
 			list($bearer, $jwt) = explode(' ', $header);
-			if (strcasecmp($bearer, 'Bearer')==0) {
+			if (strcasecmp($bearer, 'Bearer') == 0) {
 				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
 				$this->setApiToken($apiToken);
 			}
