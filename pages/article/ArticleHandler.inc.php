@@ -39,7 +39,7 @@ class ArticleHandler extends Handler {
 		// Permit the use of the Authorization header and an API key for access to unpublished/subscription content
 		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
 			list($bearer, $jwt) = explode(' ', $header);
-			if (strcasecmp($bearer, 'Bearer')==0) {
+			if (strcasecmp($bearer, 'Bearer') == 0) {
 				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
 				$this->setApiToken($apiToken);
 			}
