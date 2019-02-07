@@ -46,7 +46,7 @@
 	{if !$subcategories->wasEmpty()}
 	<nav class="subcategories" role="navigation">
 		<h2>
-			{translate key="catalog.subcategories"}
+			{translate key="catalog.category.subcategories"}
 		</h2>
 		<ul>
 			{iterate from=subcategories item=subcategory}
@@ -60,15 +60,21 @@
 	</nav>
 	{/if}
 
+	<h2 class="title">
+		{translate key="catalog.category.heading"}
+	</h2>
+
 	{* No published titles in this category *}
 	{if empty($publishedSubmissions)}
-		<h2>
-			{translate key="article.articles"}
-		</h2>
-		<p>{translate key="catalog.noTitlesSection"}</p>
-
+		<p>{translate key="catalog.category.noItems"}</p>
 	{else}
-		{include file="frontend/components/articleList.tpl" articles=$publishedSubmissions titleKey="article.articles"}
+		<ul class="cmp_article_list articles">
+			{foreach from=$publishedSubmissions item=article}
+				<li>
+					{include file="frontend/objects/article_summary.tpl"}
+				</li>
+			{/foreach}
+		</ul>
 
 		{* Pagination *}
 		{if $prevPage > 1}
