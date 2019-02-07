@@ -148,8 +148,12 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Identifier: URL
-		if (is_a($article, 'PublishedArticle') && $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
-			$dc11Description->addStatement('dc:identifier', Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId())));
+		import('classes.issue.IssueAction');
+		$issueAction = new IssueAction();
+		$request = Application::getRequest();
+		$includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
+		if (is_a($article, 'PublishedArticle') && $includeUrls) {
+			$dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId())));
 		}
 
 		// Source (journal title, issue id and pages)
@@ -195,8 +199,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Relation
 		// full text URLs
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) foreach ($galleys as $galley) {
-			$relation = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId()));
+		if ($includeUrls) foreach ($galleys as $galley) {
+			$relation = $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId()));
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
 		}
