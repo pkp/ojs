@@ -59,7 +59,11 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		// Coverage
 		$coverage = $article->getCoverage(null);
 
-		$url = Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
+		import('classes.issue.IssueAction');
+		$issueAction = new IssueAction();
+		$request = Application::getRequest();
+		$url = $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
+		$includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
 		$response = "<rfc1807\n" .
 			"\txmlns=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\"\n" .
 			"\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
@@ -76,7 +80,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('author', $creators) .
 			($article->getDatePublished()?$this->formatElement('date', $article->getDatePublished()):'') .
 			$this->formatElement('copyright', strip_tags($journal->getLocalizedData('licenseTerms'))) .
-			($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE?$this->formatElement('other_access', "url:$url"):'') .
+			(($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $includeUrls)?$this->formatElement('other_access', "url:$url"):'') .
 			$this->formatElement('keyword', $subject) .
 			$this->formatElement('period', $coverage) .
 			$this->formatElement('monitoring', $article->getLocalizedSponsor()) .
