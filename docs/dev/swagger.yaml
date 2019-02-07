@@ -594,7 +594,7 @@ definitions:
         type: integer
       interest:
         type: string
-  ArticleStatisticsSummary:
+  PublishedSubmissionStatisticsSummary:
     type: object
     properties:
       total:
@@ -1189,7 +1189,7 @@ paths:
           required: false
           type: string
         - name: searchPhrase
-          description: Filter the results by a search phrase matched against the title and contributors.
+          description: Filter the results by a search phrase matched against the title, contributors and ID.
           in: query
           required: false
           type: string
@@ -1220,7 +1220,7 @@ paths:
                 type: array
                 description: Abstract and file views for each article.
                 items:
-                  $ref: '#/definitions/ArticleStatisticsSummary'
+                  $ref: '#/definitions/PublishedSubmissionStatisticsSummary'
         '400':
           description: Your request was not valid. This can happen if `dateRange` or `timeSegment` is not valid. The response will contain details about the error.
           schema:
@@ -1259,7 +1259,7 @@ paths:
         '200':
           description: Total usage statistics and breakdowns by time segment.
           schema:
-            $ref: '#/definitions/ArticleStatisticsSummary'
+            $ref: '#/definitions/PublishedSubmissionStatisticsSummary'
         '403':
           description: You do not have permission to access statistics for this article.
           schema:

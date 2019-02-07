@@ -20,7 +20,7 @@
 	{if $section}
 		{include file="frontend/components/breadcrumbs_article.tpl" currentTitle=$section->getLocalizedTitle()}
 	{else}
-		{include file="frontend/components/breadcrumbs_article.tpl" currentTitleKey="common.publishedSubmission"}
+		{include file="frontend/components/breadcrumbs_article.tpl" currentTitleKey="article.article"}
 	{/if}
 
 	{* Show article overview *}
