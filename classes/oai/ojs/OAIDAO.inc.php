@@ -62,7 +62,7 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function &getJournal($journalId) {
 		if (!isset($this->journalCache[$journalId])) {
-			$this->journalCache[$journalId] =& $this->journalDao->getById($journalId);
+			$this->journalCache[$journalId] = $this->journalDao->getById($journalId);
 		}
 		return $this->journalCache[$journalId];
 	}
