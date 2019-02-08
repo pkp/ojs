@@ -223,7 +223,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockArticleSearchDAO() {
 		// Mock an ArticleSearchDAO.
-		$articleSearchDAO = $this->getMock('ArticleSearchDAO', array('getPhraseResults'), array(), '', false);
+		$articleSearchDAO = $this->getMockBuilder(ArticleSearchDAO::class)
+			->setMethods(array('getPhraseResults'))
+			->getMock();
 
 		// Mock a result set.
 		$searchResult = array(
@@ -250,7 +252,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockArticleDAO() {
 		// Mock an ArticleDAO.
-		$articleDAO = $this->getMock('ArticleDAO', array('getArticle'), array(), '', false);
+		$articleDAO = $this->getMockBuilder(ArticleDAO::class)
+			->setMethods(array('getArticle'))
+			->getMock();
 
 		// Mock an article.
 		$article = new Article();
@@ -270,7 +274,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockPublishedArticleDAO() {
 		// Mock a PublishedArticleDAO.
-		$publishedArticleDAO = $this->getMock('PublishedArticleDAO', array('getByArticleId'), array(), '', false);
+		$publishedArticleDAO = $this->getMockBuilder(PublishedArticleDAO::class)
+			->setMethods(array('getByArticleId'))
+			->getMock();
 
 		// Mock a published article.
 		$publishedArticle = new PublishedArticle();
@@ -290,7 +296,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockIssueDAO($published = true) {
 		// Mock an IssueDAO.
-		$issueDAO = $this->getMock('IssueDAO', array('getById'), array(), '', false);
+		$issueDAO = $this->getMockBuilder(IssueDAO::class)
+			->setMethods(array('getById'))
+			->getMock();
 
 		// Mock an issue.
 		$issue = $issueDAO->newDataObject();
@@ -311,7 +319,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockJournalDAO() {
 		// Mock a JournalDAO.
-		$journalDAO = $this->getMock('JournalDAO', array('getById'), array(), '', false);
+		$journalDAO = $this->getMockBuilder(JournalDAO::class)
+			->setMethods(array('getById'))
+			->getMock();
 
 		// Mock a journal.
 		$journal = new Journal();
@@ -331,7 +341,9 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	private function registerMockSectionDAO() {
 		// Mock a SectionDAO.
-		$sectionDAO = $this->getMock('SectionDAO', array('getSection'), array(), '', false);
+		$sectionDAO = $this->getMockBuilder(SectionDAO::class)
+			->setMethods(array('getSection'))
+			->getMock();
 
 		// Mock a section.
 		$section = new Section();
