@@ -16,7 +16,7 @@
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites-Plugin</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Integration von OJS mit phpMyVisites, einer Open-Source-Applikation zur Traffic- und Nutzungsanalyse. Voraussetzung ist, dass phpMyVisites bereits installiert ist. Siehe <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> für weitere Informationen.]]></message>
-	<!-- phpMyVisites-Einstellungen verwalten -->
+	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Einstellungen</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites-Einstellungen</message>
 	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Mittels Dieses Plugins können Traffic- und Nutzungsdaten für diese Zeitschrift erhoben und analysiert werden. Bitte beachten Sie, dass phpMyVisites bereits installiert sein muss. Siehe <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> für weitere Informationen.</p>]]></message>
