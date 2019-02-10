@@ -72,4 +72,4 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster verwendet wird.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} wurde zugewiesen.</message>
- </locale>
+</locale>

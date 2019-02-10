@@ -38,6 +38,7 @@
 	<message key="plugins.importexport.crossref.status.failed">Fehlgeschlagen</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktiv</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Als aktiv markiert</message>
+	<message key="plugins.importexport.crossref.action.register">Ablieferung</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
 		<p>Ablieferungsstatus:</p>
 		<p>
@@ -66,8 +67,8 @@
 ]]></message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">Übermittlung war nicht erfolgreich! Der DOI-Registrierungsserver lieferte einen Fehler zurück: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Übermittlung erfolgreich!</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver gab einen Fehler zurück.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">Registrierung war erfolgreich, aber die folgende Warnung wurde ausgegeben: '{$param}'.</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Angegebene Ausgabenkennung "{$issueId}" passt zu keiner Ausgabe.</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Angegebene Artikelkennung "{$articleId}" passt zu keinem Artikel.</message>
 
