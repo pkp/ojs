@@ -292,6 +292,7 @@
 	<message key="manager.setup.submissions.description">Richtlinien für Autor/innen, Copyright und Indizierung (einschließlich Registrierung).</message>
 	<message key="manager.distribution.publishingMode.subscription">Einige oder alle Inhalte der Zeitschrift sind nur für Abonnent/innen zugänglich.</message>
 	<message key="manager.distribution.publishingMode.none">OJS wird nicht verwendet, um die Zeitschrifteninhalte online zu veröffentlichen.</message>
+	<message key="manager.setup.enableOai">OAI-Zugang zu den Inhalten aktivieren</message>
 	<message key="manager.setup.typeExamples">(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; Umfrage/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
@@ -412,6 +413,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Wählen Sie ein gültiges Anfangsdatum des Abonnements.</message>
 	<message key="manager.subscriptions.form.dateEnd">Enddatum</message>
 	<message key="manager.subscriptions.form.dateEndRequired">Ein Enddatum des Abonnements ist erforderlich.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Startdatum an.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Enddatum an.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Wählen Sie ein gültiges Enddatum des Abonnements.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Hinweis: Alle unten stehenden Veränderungen betreffen Nutzer/innenprofil systemweit.</message>
 	<message key="manager.subscriptions.form.userId">Benutzer/in</message>

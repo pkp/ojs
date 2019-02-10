@@ -668,6 +668,9 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 	<message key="user.register.form.emailConsentAllContexts">Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Ja, ich stimme der Erfassung und Speicherung gemäß der <a href="{$privacyUrl}" target="_blank">Datenschutzerklärung</a> dieser Zeitschrift zu.]]></message>
+	<message key="user.register.form.missingContextConsent">Sie müssen der Datenschutzerklärung jeder Zeitschrift, bei der Sie sich registrieren, zustimmen.</message>
+	<message key="user.register.form.missingSiteConsent">Sie müssen der Datenschutzerklärung dieser Website zustimmen.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -771,6 +774,7 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="about.onlineSubmissions.register">Registrieren</message>
 	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein. In einen existierenden Account {$login} oder einen neuen Account {$register}.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} oder {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Eine neue Einreichung in Rubrik <a href="{$url}">{$name}</a> machen.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Neuen Beitrag einreichen</message>
 	<message key="about.onlineSubmissions.viewSubmissions">Beiträge in Bearbeitung ansehen</message>
 	<message key="about.authorGuidelines">Richtlinien für Autor/innen</message>
@@ -1043,4 +1047,7 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für die Einreichung {$submissionId} übernommen.</message>
+
+	<message key="catalog.sortBy">Artikelreihenfolge</message>
+	<message key="catalog.sortBy.categoryDescription">Wählen Sie, wie Artikel in dieser Kategorie sortiert sein sollen.</message>
 </locale>
