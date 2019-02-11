@@ -10,11 +10,11 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
- 
+
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.recommendByAuthor.displayName">Artikel anhand Autor/in empfehlen</message>
 	<message key="plugins.generic.recommendByAuthor.description">Dieses Plugin ergänzt eine Liste von Artikeln des/der gleichen Autor/in auf der Artikel-Abstractseite.</message>
-    
-    <message key="plugins.generic.recommendByAuthor.heading">Am häufigsten gelesenen Artikel dieser/dieses Autor/in</message>
-    <message key="plugins.generic.recommendByAuthor.noMetric">Bitte beachten Sie: Dieses Plugin erfordert, dass mindestens ein Statistik/Berichts-Plugin aktiviert ist. Wenn Ihr Statistik-Plugin mehr als eine Metrik unterstütztzt, wählen Sie bitte eine Hauptmetrik auf den Seiten des/der Adminsitrator/in oder Zeitschriftenverwalter/in aus.</message>
+
+	<message key="plugins.generic.recommendByAuthor.heading">Am häufigsten gelesenen Artikel dieser/dieses Autor/in</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Bitte beachten Sie: Dieses Plugin erfordert, dass mindestens ein Statistik/Berichts-Plugin aktiviert ist. Wenn Ihr Statistik-Plugin mehr als eine Metrik unterstütztzt, wählen Sie bitte eine Hauptmetrik auf den Seiten des/der Adminsitrator/in oder Zeitschriftenverwalter/in aus.</message>
 </locale>
