@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+  * locale/en_US/editor.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  *
+  * Edited by National Documentation Center (EKT) team, 2019
+  *
+  -->
+
+<locale full_name="Ελληνικά (Greek)" name="el_GR">
+	<message key="editor.home">Αρχική σελίδα Επιμελητή περιοδικού</message>
+	<message key="editor.reassign">Aνάθεση εκ νέου</message>
+	<message key="editor.submissionsAndPublishing">Υποβολές και δημοσίευση</message>
+	<message key="editor.submissionQueue">Υποβολές σε αναμονή</message>
+	<message key="editor.submissionArchive">Αρχείο υποβολών</message>
+	<message key="editor.publishing">Δημοσίευση</message>
+	<message key="editor.publishedIssues">Δημοσιευμένα τεύχη</message>
+	<message key="editor.allSections">Όλες οι ενότητες</message>
+	<message key="editor.allEditors">Όλοι οι Επιμελητές</message>
+	<message key="editor.me">Εγώ</message>
+	<message key="editor.publicIdentificationExists">Το δημόσιο αναγνωριστικό '{$publicIdentifier}' έχει αποδοθεί ήδη σε άλλο αντικείμενο (τεύχος, άρθρο, τυπογραφικό δοκίμιο ή αρχείο). Παρακαλούμε επιλέγετε μοναδικά αναγνωριστικά εντός του περιοδικού σας.</message>
+	<message key="editor.submissionArchive.noSubmissions">Δεν υπάρχουν καταχωρήσεις στο αρχείο υποβολών.</message>
+	<message key="editor.submissionArchive.saveChanges">Να αποθηκευτούν οι αλλαγές στις αρχειοθετημένες υποβολές; Οι υποβολές που έχουν επισημανθεί για διαγραφή θα διαγραφούν οριστικά από το σύστημα.</message>
+	<message key="editor.submissionArchive.confirmDelete">Επιβεβαιώνετε την οριστική διαγραφή της συγκεκριμένης υποβολής;</message>
+	<message key="editor.submissionReview.confirmDecision">Επιβεβαιώνετε την καταχώρηση της συγκεκριμένης απόφασης;</message>
+	<message key="editor.submissionReview.emailWillArchive">Η υποβολή αυτή θα αρχειοθετηθεί αφού αποσταλεί το μήνυμα "Ειδοποίηση Συγγραφέα" ή επιλέξετε "Παράλειψη μηνύματος".</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Πριν προωθήσετε μία υποβολή στο στάδιο επιμέλειας, επιλέξτε τον σύνδεσμο "Ειδοποίηση Συγγραφέα", καθώς και την έκδοση του άρθρου που θα αποσταλεί προς επιμέλεια.</message>
+	<message key="editor.notifyUsers">Ενημέρωση Χρηστών</message>
+	<message key="editor.notifyUsers.allReaders">Όλοι οι Αναγνώστες ({$count} Χρήστες)</message>
+	<message key="editor.notifyUsers.allAuthors">Όλοι οι Συγγραφείς με δημοσιεύσεις ({$count} Χρήστες)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Όλοι οι Χρήστες με συνδρομή ({$count} Χρήστες)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Όλοι οι φορείς με συνδρομή ({$count})</message>
+	<message key="editor.notifyUsers.inProgress">Ενημέρωση Χρηστών</message>
+	<message key="editor.usersNotified">Οι Χρήστες ενημερώθηκαν.</message>
+	<message key="editor.notifyUsers.allUsers">Αποστολή του μηνύματος σε όλους τους Χρήστες του περιοδικού ({$count} Χρήστες)</message>
+	<message key="editor.notifyUsers.interestedUsers">Αποστολή του μηνύματος στους Χρήστες του περιοδικού που έχουν δηλώσει ότι επιθυμούν να λαμβάνουν ενημερώσεις ({$count} Χρήστες).</message>
+	<message key="editor.notifyUsers.includeToc">Συμπεριλάβετε τον πίνακα περιεχομένων του τεύχους:</message>
+	<message key="editor.editorAdministration">Διαχείριση Επιμελητή</message>
+	<message key="editor.issues.createIssue">Δημιουργία τεύχους</message>
+	<message key="editor.issues.editIssue">Διαχείριση τεύχους: {$issueIdentification}</message>
+	<message key="editor.issues.currentIssue">Τρέχον τεύχος</message>
+	<message key="editor.issues.numArticles">Άρθρα</message>
+	<message key="editor.issues.noArticles">Επί του παρόντος, δεν υπάρχουν άρθρα προγραμματισμένα για δημοσίευση στο συγκεκριμένο τεύχος.</message>
+	<message key="editor.issues.confirmDelete">Επιβεβαιώνετε την οριστική διαγραφή του συγκεκριμένου τεύχους;</message>
+	<message key="editor.issues.published">Δημοσιευμένα</message>
+	<message key="editor.issues.unpublished">Μη δημοσιευμένα</message>
+	<message key="editor.issues.datePublished">Ημερομηνία δημοσίευσης</message>
+	<message key="editor.issues.volumeRequired">Απαιτείται η εισαγωγή τόμου.</message>
+	<message key="editor.issues.numberRequired">Απαιτείται εισαγωγή αρίθμησης.</message>
+	<message key="editor.issues.yearRequired">Απαιτείται η εισαγωγή έτους.</message>
+	<message key="editor.issues.titleRequired">Απαιτείται τίτλος για το τεύχος.</message>
+	<message key="editor.issues.issueIdentificationRequired">Απαιτείται αναγνωριστικό τεύχους. Παρακαλούμε επιλέξτε τουλάχιστον μία από τις υπάρχουσες επιλογές αναγνωριστικών τεύχους.</message>
+	<message key="editor.issues.issueIdentification">Αναγνωριστικό τεύχους</message>
+	<message key="editor.issues.publicIssueIdentifier">Δημόσιο αναγνωριστικό τεύχους</message>
+	<message key="editor.issues.description">Περιγραφή</message>
+	<message key="editor.issues.accessStatus">Συνθήκες πρόσβασης</message>
+	<message key="editor.issues.accessDate">Ημερομηνία ενεργοποίησης ανοιχτής πρόσβασης</message>
+	<message key="editor.issues.enableOpenAccessDate">Ενεργοποίηση καθυστερημένης ανοικτής πρόσβασης</message>
+	<message key="editor.issues.coverPage">Εικόνα εξωφύλλου</message>
+	<message key="editor.issues.coverPageInstructions">(Επιτρεπόμενοι τύποι αρχείου: .gif, .jpg ή .png)</message>
+	<message key="editor.issues.uploaded">Μεταφορτώθηκε</message>
+	<message key="editor.issues.remove">Αφαίρεση</message>
+	<message key="editor.issues.proofed">Διορθωμένο</message>
+	<message key="editor.issues.removeCoverPage">Αφαίρεση εικόνας εξωφύλλου;</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">Η εικόνα εξωφύλλου που αιτηθήκατε να διαγραφεί δεν ταιριάζει με την εικόνα εξωφύλλου αυτού του τεύχους. Παρακαλούμε επαναφορτώστε τη σελίδα και δοκιμάστε ξανά.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Η εικόνα εξωφύλλου που αιτηθήκατε να διαγραφεί δεν βρέθηκε. Πιθανόν να έχει ήδη διαγραφεί. Παρακαλούμε, δοκιμάστε να επαναφορτώσετε τη σελίδα.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Μη έγκυρος τύπος αρχείου εξωφύλλου. Οι αποδεκτοί τύποι είναι .gif, .jpg ή .png.</message>
+	<message key="editor.issues.styleFile">Αρχείο μορφοποίησης</message>
+	<message key="editor.issues.invalidStyleFormat">Μη έγκυρη μορφή αρχείου μορφοποίησης. Βεβαιωθείτε ότι το αρχείο που έχει υποβληθεί είναι ένα έγκυρο CSS αρχείο (λάβετε υπόψη ότι τα αρχεία μορφοποίησης με σχόλια ενδέχεται να απορριφθούν.)</message>
+	<message key="editor.issues.removeStyleFile">Αφαίρεση αρχείου μορφοποίησης;</message>
+	<message key="editor.issues.coverPageCaption">Λεζάντα εξωφύλλου</message>
+	<message key="editor.issues.showCoverPage">Δημιουργία εξωφύλλου για το τεύχος αυτό με τα ακόλουθα στοιχεία</message>
+	<message key="editor.issues.coverPageDisplay">Εμφάνιση</message>
+	<message key="editor.issues.openAccess">Ανοικτή πρόσβαση</message>
+	<message key="editor.issues.subscription">Συνδρομή</message>
+	<message key="editor.issues.identification">Αναγνώριση</message>
+	<message key="editor.issues.access">Πρόσβαση</message>
+	<message key="editor.issues.cover">Εξώφυλλο</message>
+	<message key="editor.issues.confirmIssueDelete">Όλα τα άρθρα θα επιστραφούν στη σειρά αναμονής για επιμέλεια και όλα τα σχετικά αρχεία θα αφαιρεθούν οριστικά. Επιβεβαιώνετε τη διαγραφή αυτού του τεύχους;</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Το περιοδικό αυτό χρησιμοποιεί προσαρμοσμένη διάταξη τευχών. <a href="{$url}" class="action">Επαναφορά στις προεπιλεγμένες ρυθμίσεις</a>]]></message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Το περιοδικό αυτό χρησιμοποιεί προσαρμοσμένη διάταξη ενοτήτων.  <a href="{$url}" class="action">Επαναφορά στις προεπιλεγμένες ρυθμίσεις</a>]]></message>
+	<message key="editor.issues.issueData">Δεδομένα τεύχους</message>
+	<message key="editor.issues.saveChanges">Να αποθηκευτούν οι αλλαγές στον πίνακα περιεχομένων;</message>
+	<message key="editor.issues.default">Προεπιλεγμένες ρυθμίσεις</message>
+	<message key="editor.issues.order">Διάταξη</message>
+	<message key="editor.issues.publicId">Δημόσιο αναγνωριστικό</message>
+	<message key="editor.issues.publishIssue">Δημοσίευση τεύχους</message>
+	<message key="editor.issues.unpublishIssue">Αποδημοσίευση τεύχους</message>
+	<message key="editor.issues.previewIssue">Προεπισκόπηση τεύχους</message>
+	<message key="editor.issues.preview">Προεπισκόπηση</message>
+	<message key="editor.issues.confirmPublish">Επιβεβαιώνετε τη δημοσίευση του νέου τεύχους;</message>
+	<message key="editor.issues.confirmUnpublish">Επιβεβαιώνετε την αποδημοσίευση του συγκεκριμένου τεύχους;</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Επιβεβαιώνετε τον ορισμό του συγκεκριμένου τεύχους ως τρέχοντος;</message>
+	<message key="editor.issues.publicArticleIdExists">Δεν ήταν δυνατή η αποθήκευση δημόσιου αναγνωριστικού για το άρθρο:</message>
+	<message key="editor.issues.noLiveIssues">Δεν υπάρχουν ενεργά τεύχη</message>
+	<message key="editor.issues.open">Άνοιγμα</message>
+	<message key="editor.issues.pages">Σελίδες</message>
+	<message key="editor.issues.galleys">Τυπογραφικά δοκίμια τεύχους</message>
+	<message key="editor.issues.galley">Τυπογραφικό δοκίμιο τεύχους</message>
+	<message key="editor.issues.viewingGalley">Προβολή τυπογραφικού δοκιμίου τεύχους</message>
+	<message key="editor.issues.issueGalleysDescription">Δημοσίευση τυπογραφικών δοκιμίων με το περιεχόμενο όλου του τεύχους</message>
+	<message key="editor.issues.noneIssueGalleys">Δεν έχουν δημοσιευτεί τυπογραφικά δοκίμια τεύχους.</message>
+	<message key="editor.issues.galleyLabelRequired">Απαιτείται μία ετικέτα του τυπογραφικού δοκιμίου τεύχους.</message>
+	<message key="editor.issues.galleyLocaleRequired">Απαιτείται η εισαγωγή της γλώσσας του τυπογραφικού δοκιμίου τεύχους.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Το δημόσιο αναγνωριστικό του τυπογραφικού δοκιμίου τεύχους υπάρχει ήδη.</message>
+	<message key="editor.issues.backToIssueGalleys">Πίσω στα τυπογραφικά δοκίμια του τεύχους</message>
+	<message key="editor.issues.confirmDeleteGalley">Επιβεβαιώνετε τη διαγραφή του τυπογραφικού δοκιμίου αυτού του τεύχους;</message>
+	<message key="editor.issues.identifiers">Αναγνωριστικά</message>
+	<message key="editor.navigation.futureIssues">Μελλοντικά τεύχη</message>
+	<message key="grid.action.addGalley">Προσθήκη τυπογραφικού δοκιμίου</message>
+	<message key="grid.action.publish">Δημοσίευση τεύχους</message>
+	<message key="grid.action.addIssue">Δημιουργία τεύχους</message>
+	<message key="grid.action.viewIssue">Προβολή</message>
+	<message key="grid.action.previewIssue">Προεπισκόπηση</message>
+	<message key="grid.action.addIssueGalley">Δημιουργία τυπογραφικού δοκιμίου τεύχους</message>
+	<message key="grid.action.setCurrentIssue">Ορισμός τρέχοντος τεύχους</message>
+	<message key="editor.navigation.issueArchive">Παλαιά τεύχη</message>
+	<message key="editor.article.designateReviewVersion">Καθορισμός του πρωτότυπου αρχείου ως έκδοση αξιολόγησης</message>
+	<message key="editor.article.decision">Απόφαση</message>
+	<message key="editor.submissions.showBy">Προβολή κατά</message>
+	<message key="editor.submissions.submitMMDD">Υποβολή MM-ΗΗ</message>
+	<message key="editor.submissions.activeAssignments">Ενεργές αναθέσεις</message>
+	<message key="editor.submissions.invite">Πρόσκληση</message>
+	<message key="editor.submissions.accept">Αποδοχή</message>
+	<message key="editor.submissions.noSubmissions">Δεν υπάρχουν υποβολές</message>
+	<message key="editor.submissions.lastAssigned">Πιο πρόσφατη</message>
+	<message key="editor.submissions.averageTime">Εβδομάδες</message>
+	<message key="editor.submissions.lastCompleted">Τελευταία ολοκληρωμένη</message>
+	<message key="editor.submissions.assignedTo">Ανάθεση σε</message>
+	<message key="editor.submissions.inSection">Στην ενότητα</message>
+	<message key="editor.article.schedulePublication">Πρόγραμματισμός δημοσίευσης</message>
+	<message key="editor.article.scheduleForPublication">Πρόγραμματισμός δημοσίευσης στο</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">Προς ανάθεση</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Η εισφορά για τη δημοσίευση δεν έχει καταβληθεί. Για να προγραμματιστεί η δημοσίευση του άρθρου, ειδοποιήστε τον Συγγραφέα να καταβάλει την εισφορά ή να ζητήσει απαλλαγή από την εισφορά.</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Η εικόνα εξωφύλλου που ζητήσατε να διαγραφεί δε βρέθηκε. Πιθανόν να έχει ήδη διαγραφεί. Δοκιμάστε να επαναφορτώσετε τη σελίδα.</message>
+	<message key="grid.action.removeArticle">Αφαίρεση άρθρου από το τεύχος</message>
+	<message key="editor.article.remove">Αφαίρεση</message>
+	<message key="editor.article.remove.confirm">Είστε βέβαιοι ότι επιθυμείτε την αφαίρεση αυτού του άρθρου από το τεύχος; Το άρθρο θα είναι διαθέσιμο για δημοσίευση σε άλλο τεύχος.</message>
+	<message key="editor.issues.invalidAccessDate">Η ημερομηνία πρόσβασης δεν είναι έγκυρη.</message>
+	<message key="editor.issues.editIssueGalley">Επιμέλεια τυπογραφικού δοκιμίου τεύχους</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Ο Επιμελητής Διάταξης προετοιμάζει τα αρχεία κάθε τυπογραφικού δοκίμιου και κατόπιν τα μεταφορτώνει στις κατάλληλες <span class="pkp_help_title">Διορθώσεις</span> για περαιτέρω επεξεργασία.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Επιλογή των αρχείων του τυπογραφικού δοκιμίου</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Τα τελικά προσχέδια των αρχείων σε αυτόν τον κατάλογο μετατρέπονται από έναν Επιμελητή Κειμένου σε εκδόσεις επιμελημένου κειμένου, που μεταφορτώνονται παρακάτω, στο <span class="pkp_help_title">Επιμέλεια κειμένου</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Αρχεία που έχουν ήδη μεταφορτωθεί σε οποιοδήποτε στάδιο υποβολής μπορούν να προστεθούν στον κατάλογο για διόρθωση τυπογραφικών δοκιμίων, επιλέγοντας το πλαίσιο ελέγχου "Συμπερίληψη" παρακάτω και πατώντας Αναζήτηση</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Το δημόσιο αναγνωριστικό '{$publicIdentifier}' υπάρχει ήδη για ένα άλλο αντικείμενο της ίδιας κατηγορίας. Παρακαλούμε επιλέγετε μοναδικά αναγνωριστικά για τα αντικείμενα της ίδιας κατηγορίας.</message>
+	<message key="editor.article.coverImage">Εικόνα εξωφύλλου</message>
+</locale>
