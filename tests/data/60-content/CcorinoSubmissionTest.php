@@ -49,7 +49,7 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 		$username = 'minoue';
 		$password = $username . $username;
 		$this->logIn($username, $password);
-		$xpath = '//div[contains(text(),' . $this->quoteXPath($title) . ')]';
+		$xpath = '//div[contains(text(),' . $this->quoteXpath($title) . ')]';
 		$this->waitForElementPresent($xpath);
 		$this->click($xpath);
 		// Recommend
@@ -57,7 +57,7 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 		$this->logOut();
 		// Log in as editor and see the existing recommendation
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->waitForText('css=div.pkp_workflow_recommendations', 'Recommendations: Accept Submission');
+		$this->waitForElementPresent('//div[contains(@class,"pkp_workflow_recommendations") and contains(text(),"Recommendations: Accept Submission")]');
 		$this->logOut();
 	}
 }

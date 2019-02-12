@@ -15,6 +15,11 @@
 
 import('lib.pkp.tests.PKPContentBaseTestCase');
 
+use Facebook\WebDriver\WebDriverBy;
+use Facebook\WebDriver\Interactions\WebDriverActions;
+use Facebook\WebDriver\WebDriverExpectedCondition;
+use Facebook\WebDriver\WebDriverSelect;
+
 class ContentBaseTestCase extends PKPContentBaseTestCase {
 	/**
 	 * Handle any section information on submission step 1
@@ -27,14 +32,6 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		// Page 1
 		$this->waitForElementPresent('id=sectionId');
 		$this->select('id=sectionId', 'label=' . $this->escapeJS($section));
-	}
-
-	/**
-	 * Get the number of items in the default submission checklist
-	 * @return int
-	 */
-	protected function _getChecklistLength() {
-		return 5;
 	}
 
 	/**
@@ -54,6 +51,6 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		$this->waitForElementPresent('//form[@id=\'initiateReview\']//input[@type=\'checkbox\']');
 		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//button[contains(., \'Send to Review\')]');
 		$this->click($selector);
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 	}
 }

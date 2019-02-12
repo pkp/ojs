@@ -15,6 +15,10 @@
 
 import('lib.pkp.tests.WebTestCase');
 
+use Facebook\WebDriver\Interactions\WebDriverActions;
+use Facebook\WebDriver\WebDriverExpectedCondition;
+use Facebook\WebDriver\WebDriverBy;
+
 class IssuesTest extends WebTestCase {
 	/**
 	 * Configure section editors
@@ -23,10 +27,14 @@ class IssuesTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		// Management > Issues
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector='link=Future Issues');
-		$this->click($selector);
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Issues"]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Future Issues"]'))
+			->perform();
 
 		// Create issue
 		$this->waitForElementPresent($selector='css=[id^=component-grid-issues-futureissuegrid-addIssue-button-]');
@@ -37,14 +45,15 @@ class IssuesTest extends WebTestCase {
 		$this->type('css=[id^=year-]', '2014');
 		$this->click('id=showTitle');
 		$this->click('//button[text()=\'Save\']');
-		$this->waitJQuery();
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel'); // pkp/pkp-lib#655
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 
 		// Publish first issue
+		$this->waitForElementPresent($selector = 'css=a.show_extras');
+		$this->click($selector);
 		$this->waitForElementPresent($selector='//a[text()=\'Publish Issue\']');
 		$this->click($selector);
 		$this->waitForElementPresent($selector='css=[id^=submitFormButton-]');
 		$this->click($selector);
-		$this->waitJQuery();
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 	}
 }

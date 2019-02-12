@@ -62,7 +62,7 @@ class WebFeedPlugin extends GenericPlugin {
 	 */
 	public function callbackAddLinks($hookName, $args) {
 		// Only page requests will be handled
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 
 		$templateManager =& $args[0];

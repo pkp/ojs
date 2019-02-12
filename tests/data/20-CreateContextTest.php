@@ -15,6 +15,8 @@
 
 import('lib.pkp.tests.data.PKPCreateContextTest');
 
+use Facebook\WebDriver\Interactions\WebDriverActions;
+
 class CreateContextTest extends PKPCreateContextTest {
 	/** @var array */
 	public $contextName = [
@@ -57,8 +59,10 @@ class CreateContextTest extends PKPCreateContextTest {
 	function testSettingsWizard() {
 		parent::settingsWizard();
 
+		self::$driver->executeScript('window.scrollTo(0,0);'); // Scroll to top of page
+		$this->click('//a[text()="Journal"]');
 		$this->setInputValue('[name="abbreviation-en_US"]', 'publicknowledge');
-		$this->click('css=#journal button:contains(\'Save\')');
+		$this->click('//*[@id="journal"]//button[contains(text(),"Save")]');
 		$this->waitForTextPresent($this->contextName['en_US'] . ' was edited successfully.');
 	}
 
@@ -69,40 +73,33 @@ class CreateContextTest extends PKPCreateContextTest {
 		$this->open(self::$baseUrl);
 
 		// Settings > Journal > Masthead
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
-		$this->clickAndWait($selector);
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
+			->perform();
 		$this->setInputValue('[name="abbreviation-en_US"]', 'J Pub Know');
 		$this->setInputValue('[name="acronym-en_US"]', 'PK');
 		$this->setInputValue('[name="publisherInstitution"]', 'Public Knowledge Project');
 
 		// Invalid onlineIssn
 		$this->setInputValue('[name="onlineIssn"]', '0378-5955x');
-		$this->click('css=#masthead button:contains(\'Save\')');
-		$this->waitForElementPresent('css=#masthead-onlineIssn-error:contains(\'This is not a valid ISSN.\')');
+		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
+		$this->waitForElementPresent('//*[@id="masthead-onlineIssn-error"]//*[contains(text(),"This is not a valid ISSN.")]');
 		$this->setInputValue('[name="onlineIssn"]', '0378-5955');
 
 		// Invalid printIssn
 		$this->setInputValue('[name="printIssn"]', '03785955');
-		$this->click('css=#masthead button:contains(\'Save\')');
-		$this->waitForElementPresent('css=#masthead-printIssn-error:contains(\'This is not a valid ISSN.\')');
+		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
+		$this->waitForElementPresent('//*[@id="masthead-printIssn-error"]//*[contains(text(),"This is not a valid ISSN.")]');
 		$this->setInputValue('[name="printIssn"]', '0378-5955');
 
-		$this->click('css=#masthead button:contains(\'Save\')');
+		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
 		$this->waitForTextPresent('The masthead details for this journal have been updated.');
 
 		$this->contactSettings();
-	}
-
-	/**
-	 * Helper function to go to the hosted journals page
-	 */
-	function goToHostedContexts() {
-		$this->open(self::$baseUrl);
-		$this->waitForElementPresent('link=Administration');
-		$this->click('link=Administration');
-		$this->waitForElementPresent('link=Hosted Journals');
-		$this->click('link=Hosted Journals');
 	}
 }

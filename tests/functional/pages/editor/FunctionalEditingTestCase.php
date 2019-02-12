@@ -108,14 +108,10 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		foreach($examples as $example) {
 			// Identify the test galley in the sample
 			// document format.
-			try {
-				// Go to the galley upload page and
-				// upload a galley.
-				$galleyUri = $this->_getTestFileUri($example);
-				$this->uploadGalley($this->_articleId, $galleyUri, $example);
-			} catch (Exception $e) {
-				throw $this->improveException($e, "example $example");
-			}
+			// Go to the galley upload page and
+			// upload a galley.
+			$galleyUri = $this->_getTestFileUri($example);
+			$this->uploadGalley($this->_articleId, $galleyUri, $example);
 		}
 
 		// Check that the galleys have been indexed.
@@ -140,12 +136,8 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 					$docFormat = $example;
 			}
 			$fieldName = "galleyFullText_${docFormat}_en_US";
-			try {
-				$this->assertArrayHasKey($fieldName, $indexDocument);
-				$this->assertContains("${example}testarticle", $indexDocument[$fieldName]);
-			} catch (Exception $e) {
-				throw $this->improveException($e, "checking indexed document for $example field");
-			}
+			$this->assertArrayHasKey($fieldName, $indexDocument);
+			$this->assertContains("${example}testarticle", $indexDocument[$fieldName]);
 		}
 	}
 
