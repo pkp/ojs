@@ -137,6 +137,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			'showToc' => true,
 		));
 
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.copyrightStatement
+
 		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
 
 		return true;
