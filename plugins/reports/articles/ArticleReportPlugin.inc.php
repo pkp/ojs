@@ -64,35 +64,19 @@ class ArticleReportPlugin extends ReportPlugin {
 		header('content-disposition: attachment; filename=articles-' . $acronym . '-' . date('Ymd') . '.csv');
 
 		$articleReportDao = DAORegistry::getDAO('ArticleReportDAO');
-		list($articlesIterator, $authorsIterator, $decisionsIteratorsArray) = $articleReportDao->getArticleReport($journal->getId());
+		list($articlesIterator, $authorsIterator, $editorsIterator, $decisionsIterator) = $articleReportDao->getArticleReport($journal->getId());
 
-		$maxAuthors = $this->getMaxAuthorCount($authorsIterator);
-
-		$decisions = array();
-		foreach ($decisionsIteratorsArray as $decisionsIterator) {
-			while ($row = $decisionsIterator->next()) {
-				$decisions[$row['submission_id']] = $row['decision'];
-			}
+		$maxAuthors = $this->getMaxCount($authorsIterator);
+		$maxEditors = $this->getMaxCount($editorsIterator);
+		$maxDecisions = 0;
+		foreach ($decisionsIterator as $decisionsIteratorForArticle) {
+			$maxDecisionsForArticle = $this->getMaxCount($decisionsIteratorForArticle);
+			if ($maxDecisionsForArticle > $maxDecisions) $maxDecisions = $maxDecisionsForArticle;
 		}
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
 
 		import('classes.article.Article');
-		import('classes.workflow.EditorDecisionActionsManager');
-		$decisionMessages = array(
-			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.submission.decision.accept'),
-			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.submission.decision.requestRevisions'),
-			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.submission.decision.resubmit'),
-			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.submission.decision.decline'),
-			SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION => __('editor.submission.decision.sendToProduction'),
-			SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW => __('editor.submission.decision.sendExternalReview'),
-			SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => __('editor.submission.decision.decline'),
-			SUBMISSION_EDITOR_RECOMMEND_ACCEPT => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.accept'))),
-			SUBMISSION_EDITOR_RECOMMEND_DECLINE => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.decline'))),
-			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.requestRevisions'))),
-			SUBMISSION_EDITOR_RECOMMEND_RESUBMIT => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.resubmit'))),
-			null => __('plugins.reports.articles.nodecision')
-		);
 
 		$columns = array(
 			'submission_id' => __('article.submissionId'),
@@ -104,6 +88,7 @@ class ArticleReportPlugin extends ReportPlugin {
 			$columns = array_merge($columns, array(
 				'author_given' . $a => __('user.givenName') . " (" . __('user.role.author') . " $a)",
 				'author_family' . $a => __('user.familyName') . " (" . __('user.role.author') . " $a)",
+				'orcid' . $a => __('user.orcid') . " (" . __('user.role.author') . " $a)",
 				'country' . $a => __('common.country') . " (" . __('user.role.author') . " $a)",
 				'affiliation' . $a => __('user.affiliation') . " (" . __('user.role.author') . " $a)",
 				'email' . $a => __('user.email') . " (" . __('user.role.author') . " $a)",
@@ -123,11 +108,31 @@ class ArticleReportPlugin extends ReportPlugin {
 			'disciplines' => __('rt.metadata.pkp.discipline'),
 			'keywords' => __('rt.metadata.pkp.subject'),
 			'agencies' => __('submission.supportingAgencies'),
-			'editor_decision' => __('submission.editorDecision'),
 			'status' => __('common.status'),
 			'url' => __('common.url'),
 			'doi' => __('metadata.property.displayName.doi'),
+			'date_submitted' => __('common.dateSubmitted'),
+			'last_modified' => __('submission.lastModified'),
 		));
+
+		for ($e = 1; $e <= $maxEditors; $e++) {
+			$columns = array_merge($columns, array(
+					'editor_given' . $e => __('user.givenName') . " (" . __('user.role.editor') . " $e)",
+					'editor_family' . $e => __('user.familyName') . " (" . __('user.role.editor') . " $e)",
+					'editor_orcid' . $e => __('user.orcid') . " (" . __('user.role.editor') . " $e)",
+					'editor_email' . $e => __('user.email') . " (" . __('user.role.editor') . " $e)",
+					//'editor_country' . $e => __('common.country') . " (" . __('user.role.editor') . " $e)",
+					//'editor_affiliation' . $e => __('user.affiliation') . " (" . __('user.role.editor') . " $e)",
+					//'editor_url' . $e => __('user.url') . " (" . __('user.role.editor') . " $e)",
+					//'editor_biography' . $e => __('user.biography') . " (" . __('user.role.editor') . " $e)"
+			));
+			for ($d = 1; $d <= $maxDecisions; $d++) {
+				$columns = array_merge($columns, array(
+						'editor_decision' . $e . $d => __('submission.editorDecision') . " $d " . " (" . __('user.role.editor') . " $e)",
+						'editor_decision_date' . $e . $d => __('common.dateDecided') . " $d " . " (" . __('user.role.editor') . " $e)"
+				));
+			}
+		}
 
 		$fp = fopen('php://output', 'wt');
 		//Add BOM (byte order mark) to fix UTF-8 in Excel
@@ -146,17 +151,20 @@ class ArticleReportPlugin extends ReportPlugin {
 		while ($article = $articlesIterator->next()) {
 			if ($article->getSubmissionProgress()) continue; // Incomplete submission
 			$authors = $this->mergeAuthors($authorsIterator[$article->getId()]->toArray());
+			$editors = array();
+			if (array_key_exists($article->getId(), $editorsIterator)) {
+				$decisionsIteratorForArticle = null;
+				if (array_key_exists($article->getId(), $decisionsIterator)) $decisionsIteratorForArticle = $decisionsIterator[$article->getId()];
+				$editors = $this->mergeEditors($editorsIterator[$article->getId()]->toArray(), $decisionsIteratorForArticle);
+			}
 
 			foreach ($columns as $index => $junk) switch(true) {
-				case $index == 'editor_decision':
-					if (isset($decisions[$article->getId()])) {
-						$columns[$index] = $decisionMessages[$decisions[$article->getId()]];
-					} else {
-						$columns[$index] = $decisionMessages[null];
-					}
-					break;
 				case $index == 'status':
-					$columns[$index] = __($statusMap[$article->getStatus()]);
+					if ($article->getStatus() == STATUS_QUEUED) {
+						$columns[$index] = $this->getStageLabel($article->getStageId());
+					} else {
+						$columns[$index] = __($statusMap[$article->getStatus()]);
+					}
 					break;
 				case $index == 'abstract':
 					$columns[$index] = html_entity_decode(strip_tags($article->getLocalizedAbstract()));
@@ -195,7 +203,10 @@ class ArticleReportPlugin extends ReportPlugin {
 					$agencies = $submissionAgencyDao->getAgencies($article->getId(), array($article->getLocale()));
 					$columns[$index] = join(', ', $agencies[$article->getLocale()]);
 					break;
+				case $index == 'date_submitted': $columns[$index] = $article->getDateSubmitted(); break;
+				case $index == 'last_modified': $columns[$index] = $article->getLastModified(); break;
 				case isset($authors[$index]): $columns[$index] = $authors[$index]; break;
+				case isset($editors[$index]): $columns[$index] = $editors[$index]; break;
 				default: $columns[$index] = '';
 			}
 			fputcsv($fp, $columns);
@@ -206,16 +217,16 @@ class ArticleReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * Get the highest author count for any article (to determine how many columns to set)
-	 * @param $authorsIterator DBRowIterator
+	 * Get the highest authors and editors count for any article (to determine how many columns to set)
+	 * @param $iterator DBRowIterator
 	 * @return int
 	 */
-	function getMaxAuthorCount($authorsIterator) {
-		$maxAuthors = 0;
-		foreach ($authorsIterator as $authorIterator) {
-			$maxAuthors = $authorIterator->getCount() > $maxAuthors ? $authorIterator->getCount() : $maxAuthors;
+	function getMaxCount($iterator) {
+		$maxCount = 0;
+		foreach ($iterator as $iteratorItem) {
+			$maxCount = $iteratorItem->getCount() > $maxCount ? $iteratorItem->getCount() : $maxCount;
 		}
-		return $maxAuthors;
+		return $maxCount;
 	}
 
 	/**
@@ -236,8 +247,94 @@ class ArticleReportPlugin extends ReportPlugin {
 			$returner['country' . $seq] = isset($author['country']) ? $author['country'] : '';
 			$returner['url' . $seq] = isset($author['url']) ? $author['url'] : '';
 			$returner['biography' . $seq] = isset($author['biography']) ? $author['biography'] : '';
+			$returner['orcid' . $seq] = isset($author['orcid']) ? $author['orcid'] : '';
 		}
 		return $returner;
+	}
+
+	/**
+	 * Flatten an array of editor information into one array and append author sequence to each key
+	 * @param $editors array
+	 * @param $decisionsIterator array (editor ID => decisions iterator)
+	 * @return array
+	 */
+	function mergeEditors($editors, $decisionsIterator = null) {
+		$returner = array();
+		$eSeq = $dSeq = 0;
+		foreach($editors as $editor) {
+			$eSeq++;
+			$returner['editor_given' . $eSeq] = isset($editor['user_given']) ? $editor['user_given'] : '';
+			$returner['editor_family' . $eSeq] = isset($editor['user_family']) ? $editor['user_family'] : '';
+			$returner['editor_orcid' . $eSeq] = isset($editor['orcid']) ? $editor['orcid'] : '';
+			$returner['editor_email' . $eSeq] = isset($editor['email']) ? $editor['email'] : '';
+			//$returner['editor_affiliation' . $eSeq] = isset($editor['affiliation']) ? $editor['affiliation'] : '';
+			//$returner['editor_country' . $eSeq] = isset($editor['country']) ? $editor['country'] : '';
+			//$returner['editor_url' . $eSeq] = isset($editor['url']) ? $editor['url'] : '';
+			//$returner['editor_biography' . $eSeq] = isset($editor['biography']) ? $editor['biography'] : '';
+			if ($decisionsIterator && array_key_exists($editor['editor_id'], $decisionsIterator)) {
+				$decisions = $decisionsIterator[$editor['editor_id']]->toArray();
+				foreach ($decisions as $decision) {
+					$dSeq++;
+					$returner['editor_decision' . $eSeq . $dSeq] = isset($decision['decision']) ? $this->getDecisionMessage($decision['decision']) : '';
+					$returner['editor_decision_date' . $eSeq . $dSeq] = isset($decision['date_decided']) ? $decision['date_decided'] : '';
+				}
+			}
+		}
+		return $returner;
+	}
+
+	/**
+	 * Get stage label
+	 * @param $stageId int
+	 * @return string
+	 */
+	function getStageLabel($stageId) {
+		switch ($stageId) {
+			case WORKFLOW_STAGE_ID_SUBMISSION:
+				return __('submission.submission');
+			case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
+				return __('submission.review');
+			case WORKFLOW_STAGE_ID_EDITING:
+				return __('submission.copyediting');
+			case WORKFLOW_STAGE_ID_PRODUCTION:
+				return __('submission.production');
+		}
+		return '';
+	}
+
+	/**
+	 * Get decision message
+	 * @param $decision int
+	 * @return string
+	 */
+	function getDecisionMessage($decision) {
+		import('classes.workflow.EditorDecisionActionsManager'); // SUBMISSION_EDITOR_...
+		switch ($decision) {
+			case SUBMISSION_EDITOR_DECISION_ACCEPT:
+				return __('editor.submission.decision.accept');
+			case SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
+				return __('editor.submission.decision.requestRevisions');
+			case SUBMISSION_EDITOR_DECISION_RESUBMIT:
+				return __('editor.submission.decision.resubmit');
+			case SUBMISSION_EDITOR_DECISION_DECLINE:
+				return __('editor.submission.decision.decline');
+			case SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION:
+				return __('editor.submission.decision.sendToProduction');
+			case SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW:
+				return __('editor.submission.decision.sendExternalReview');
+			case SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
+				return __('editor.submission.decision.decline');
+			case SUBMISSION_EDITOR_RECOMMEND_ACCEPT:
+				return __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.accept')));
+			case SUBMISSION_EDITOR_RECOMMEND_DECLINE:
+				return __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.decline')));
+			case SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS:
+				return __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.requestRevisions')));
+			case SUBMISSION_EDITOR_RECOMMEND_RESUBMIT:
+				return __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.resubmit')));
+			default:
+				return '';
+		}
 	}
 
 }
