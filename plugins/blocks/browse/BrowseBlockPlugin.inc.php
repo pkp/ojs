@@ -38,6 +38,9 @@ class BrowseBlockPlugin extends BlockPlugin {
 	 */
 	function getContents($templateMgr, $request = null) {
 		$context = $request->getContext();
+		if (!$context) {
+			return '';
+		}
 		$categoryDao = DAORegistry::getDAO('CategoryDAO');
 		$router = $request->getRouter();
 
@@ -51,4 +54,3 @@ class BrowseBlockPlugin extends BlockPlugin {
 		return parent::getContents($templateMgr);
 	}
 }
-
