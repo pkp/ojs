@@ -592,4 +592,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="plugins.importexport.common.error.unknownJournal">Den angivne tidsskriftssti, "{$journalPath}", findes ikke.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Det angivne objekt blev ikke fundet.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact"><![CDATA[Send en kopi til den primære kontaktperson iregistreret under Indstillinger > Konfiguration.]]></message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Dette er en ikke-udløbende abonnementstype; angiv derfor ikke startdato.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Dette er en ikke-udløbende abonnementstype; angiv derfor ikke slutdato.</message>
 </locale>
