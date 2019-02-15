@@ -50,7 +50,7 @@
 		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
 	{/fbvFormArea}
 
-	{fbvFormArea id="indexingInfo" title="submission.indexing"}
+	{fbvFormArea id="indexingInfo" title="submission.sectionOptions"}
 		{fbvFormSection list=true}
 			{fbvElement type="checkbox" id="metaReviewed" checked=$metaReviewed label="manager.sections.submissionReview"}
 			{fbvElement type="checkbox" id="abstractsNotRequired" checked=$abstractsNotRequired label="manager.sections.abstractsNotRequired"}
