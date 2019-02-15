@@ -23,6 +23,7 @@ class SectionForm extends PKPSectionForm {
 	 * @param $sectionId int optional
 	 */
 	function __construct($request, $sectionId = null) {
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION); 
 		parent::__construct(
 			$request,
 			'controllers/grid/settings/sections/form/sectionForm.tpl',
