@@ -115,10 +115,4 @@
 	  <message key="author.article.copyeditedFile">Bestand na tekstredactie</message>
 	  <message key="author.article.authorRevisedFile">Auteursbestand</message>
 	  <message key="author.submit.authorSubmitLoginMessage">U heeft een account nodig om in te kunnen zenden bij dit tijdschrift. Dit geeft onze redacteurs de mogelijkheid om uw inzendingen te volgen en contact met u op te nemen als de status van uw inzending verandert of als er bijkomende informatie van u nodig is.</message>
-	
-   <!--possibly superfluous terms-->
-	 <message key="author.submit.howToSubmit"><![CDATA[Problemen? Neem contact op met <a href="mailto:{$supportEmail}">{$supportName}</a> voor assistentie ({$supportPhone}).]]></message>
-   <message key="author.submit.howToSubmitNoPhone"><![CDATA[Problemen? Neem contact op met <a href="mailto:{$supportEmail}">{$supportName}</a> voor assistentie.]]></message>
-   <message key="submission.submit.selectSection">Kies een sectie...</message>
-   <message key="author.submit.submissionChecklist">Checklist voor inzending</message>
 </locale>

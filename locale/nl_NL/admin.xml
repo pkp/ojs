@@ -76,22 +76,4 @@
 	  <message key="admin.scheduledTask.subscriptionExpiryReminder">Herinnering voor verlopen van abonnement</message>
 	  <message key="admin.scheduledTask.openAccessNotification">Open Access verwittiging</message>
 	  <message key="admin.scheduledTask.reviewReminder">Review herinnering</message>
-	
-   <!--possibly superfluous terms-->
-	 <message key="admin.contexts.confirmDelete">Weet u zeker dat u dit tijdschrift en de inhoud daarvan wilt verwijderen?</message>
-   <message key="admin.settings.options">Opties</message>
-   <message key="admin.settings.noJournalRedirect">Stuur bezoekers van de hoofdsite niet door naar het tijdschrift</message>
-   <message key="admin.journals.journalDescription">Beschrijving van het tijdschrift</message>
-   <message key="admin.categories">Categorieën</message>
-   <message key="admin.categories.enable.description">De websitebeheerder kan een aantal categorieën definiëren om tijdschriften mee te organiseren. Tijdschriftbeheerders kunnen dan kiezen uit deze categorieën om elk tijdschrift mee aan te duiden, en lezers kunnen tijdschriften doorbladeren op categorie.</message>
-   <message key="admin.categories.disableCategories">Organiseer tijdschriften niet in categorie¨ën.</message>
-   <message key="admin.categories.enableCategories">Laat tijdschriftbeheerders toe om tijdschriften in categorieën te organiseren.</message>
-   <message key="admin.categories.editTitle">Bewerk categorie</message>
-   <message key="admin.categories.createTitle">Maak nieuwe categorie</message>
-   <message key="admin.categories.create">Maak nieuwe categorie</message>
-   <message key="admin.categories.noneCreated">Er werden geen categorieën gemaakt.</message>
-   <message key="admin.categories.confirmDelete">Weet u zeker dat u deze categorie wilt verwijderen?</message>
-   <message key="admin.categories.name">Naam</message>
-   <message key="admin.categories.nameRequired">Vul een naam in.</message>
-   <message key="admin.presses.createInstructions">U zal automatisch worden geregistreerd als tijdschriftbeheerder. Na de aanmaak van een  nieuw tijdschrift kan u de gegevens voor het tijdschrift instellen.</message>
 </locale>

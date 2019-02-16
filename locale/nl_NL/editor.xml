@@ -148,11 +148,4 @@
 	  <message key="editor.submission.proof.manageProofFilesDescription">Bestanden die al waren opgeladen voor eender welke fase in het redactieproces kunnen worden toegevoegd aan de lijst voor proeflezing door de optie "Opnemen" hieronder aan te vinken en op Zoeken te klikken: alle beschikbare bestanden worden dan opgelijst en kunnen worden opgenomen voor proeflezing.</message>
 	  <message key="editor.publicIdentificationExistsForTheSameType">De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object van hetzelfde type. Kies een unieke identificatie voor objecten van hetzelfde type binnen uw tijdschrift.</message>
 	  <message key="editor.article.coverImage">Omslagafbeelding</message>
-	
-   <!--possibly superfluous terms-->
-	 <message key="editor.issues.hideCoverPageArchives">De verkleinde kaft niet tonen in de lijst nummers.</message>
-   <message key="editor.issues.hideCoverPageCover">Toon omslag niet eerder dan de inhoudsopgave</message>
-   <message key="editor.article.showCoverPage">Maak een omslag voor dit artikel met de volgende elementen.</message>
-   <message key="editor.article.hideCoverPageToc">Omslagafbeelding niet tonen in de inhoudsopgave</message>
-   <message key="editor.article.hideCoverPageAbstract">Omslagafbeelding niet tonen in de samenvatting van artikels</message>
 </locale>
