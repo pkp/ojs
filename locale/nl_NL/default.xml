@@ -7,34 +7,67 @@
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
-
 <locale name="nl_NL" full_name="Nederlands">
 	<!-- Section default -->
-	<message key="section.default.title">Artikelen</message>
-	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy"></message>
+	  <message key="section.default.title">Artikels</message>
+	  <message key="section.default.abbrev">ART</message>
+	  <message key="section.default.policy">Standaard sectiebeleid</message>
 
-	<!--
+	  <message key="default.genres.article">Artikeltekst</message>
+
+	  <!--
 	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.contextSettings.checklist.notPreviouslyPublished">De inzending is niet eerder gepubliceerd en is ook niet in overweging bij een ander tijdschrift (tenzij een uitleg is gegeven bij Opmerkingen voor de redacteur).</message>
-	<message key="default.contextSettings.checklist.fileFormat">Het ingezonden bestand is in OpenOffice, Microsoft Word, RTF of WordPerfect document bestandsformaat.</message>
-	<message key="default.contextSettings.checklist.addressesLinked">Waar beschikbaar zijn URLs voor de referenties toegevoegd</message>
-	<message key="default.contextSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettergrootte, gebruikt schuingedrukte tekst in plaats van onderstreepte (behalve bij URL adressen) en alle illustraties, figuren en tabellen staan op de juiste plek in de tekst en niet aan het einde.</message>
-	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals geformuleerd in <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, te vinden bij Over dit tijdschrift.]]></message>
-	<message key="default.contextSettings.privacyStatement">Namen en e-mailadressen die in dit tijdschrift worden ingevoerd, zullen alleen worden gebruikt voor de in dit tijdschrift genoemde doeleinden. Ze zullen niet worden gebruikt voor andere doeleinden of door andere partijen</message>
-	<message key="default.contextSettings.openAccessPolicy">Dit tijdschrift is vrij toegankelijk en gaat uit van het idee dat het vrij en onmiddellijk beschikbaar stellen van wetenschappelijk onderzoek voor het publiek de kennisuitwisseling wereldwijd beter ondersteunt.</message>
-	<message key="default.contextSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}{$contextPath}</message>
-	<message key="default.contextSettings.forReaders"><![CDATA[We moedigen onze lezers aan om zich aan te melden voor het ontvangen van bericht van publicatie. Gebruik hiervoor de knop <a href="{$indexUrl}{$contextPath}/user/register">Registreren</a> in de balk bovenaan de homepage van het tijdschrift. Na registratie ontvangt u per e-mail de inhoudsopgave van elk nieuw nummer. Daarnaast stelt u het tijdschrift in staat zich te beroepen op een zekere achterban. Zie de <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy verklaring</a> van het tijdschrift waarin de lezers wordt verzekerd dat hun naam en e-mailadres niet voor andere doeleinden zullen worden gebruikt.]]></message>
-	<message key="default.contextSettings.forAuthors"><![CDATA[Bent u geïnteresseerd in het aanleveren van artikelen? Dan raden we u aan de pagina <a href="{$indexUrl}{$contextPath}/about">Over het tijdschrift</a> te bekijken dat informatie biedt over het publicatiebeleid van de verschillende secties. Lees ook vooraf de pagina <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Auteursrichtlijnen<a>. Auteurs moeten zich <a href="{$indexUrl}{$contextPath}/user/register">registreren</a> in het tijdschrift voordat ze artikelen kunnen inzenden. Als u al bent ingeschreven hoeft u alleen nog <a href="{$indexUrl}{$contextPath}/login">in te loggen</a> en kunt u beginnen met de vijf stappen procedure. Indien u wel geregistreerd bent als lezer of reviewer maar nog niet als auteur, ga dan naar Mijn profiel in de rechter kolom en voeg de rol van auteur aan uw profiel toe.]]></message>
-	<message key="default.contextSettings.forLibrarians"><![CDATA[We moedigen bibliothecarissen van onderzoeksbibliotheken aan om dit tijdschrift op te nemen in hun digitale tijdschriftcollectie. Ook wijzen we u erop dat het open source systeem dat dit tijdschrift gebruikt om te publiceren, gehost kan worden door bibliotheken ter ondersteuning van hun bij de redactie van elektronische tijdschriften betrokken faculteitsmedewerkers. (zie <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.contextSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
+	  <message key="default.contextSettings.checklist.notPreviouslyPublished">De inzending is niet eerder gepubliceerd en is ook niet in overweging bij een ander tijdschrift (tenzij een uitleg is gegeven bij Opmerkingen voor de redacteur).</message>
+	  <message key="default.contextSettings.checklist.fileFormat">Het ingezonden bestand is in OpenOffice, Microsoft Word, RTF of WordPerfect document bestandsformaat.</message>
+	  <message key="default.contextSettings.checklist.addressesLinked">Waar beschikbaar zijn URLs voor de referenties toegevoegd</message>
+	  <message key="default.contextSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettergrootte, gebruikt schuingedrukte tekst in plaats van onderstreepte (behalve bij URL adressen) en alle illustraties, figuren en tabellen staan op de juiste plek in de tekst en niet aan het einde.</message>
+	  <message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals geformuleerd in <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, te vinden bij Over dit tijdschrift.]]></message>
+	  <message key="default.contextSettings.privacyStatement">Namen en e-mailadressen die in dit tijdschrift worden ingevoerd, zullen alleen worden gebruikt voor de in dit tijdschrift genoemde doeleinden. Ze zullen niet worden gebruikt voor andere doeleinden of door andere partijen</message>
+	  <message key="default.contextSettings.openAccessPolicy">Dit tijdschrift is vrij toegankelijk en gaat uit van het idee dat het vrij en onmiddellijk beschikbaar stellen van wetenschappelijk onderzoek voor het publiek de kennisuitwisseling wereldwijd beter ondersteunt.</message>
+
+	  <message key="default.contextSettings.forReaders"><![CDATA[We moedigen onze lezers aan om zich aan te melden voor het ontvangen van bericht van publicatie. Gebruik hiervoor de knop <a href="{$indexUrl}{$contextPath}/user/register">Registreren</a> in de balk bovenaan de homepage van het tijdschrift. Na registratie ontvangt u per e-mail de inhoudsopgave van elk nieuw nummer. Daarnaast stelt u het tijdschrift in staat zich te beroepen op een zekere achterban. Zie de <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy verklaring</a> van het tijdschrift waarin de lezers wordt verzekerd dat hun naam en e-mailadres niet voor andere doeleinden zullen worden gebruikt.]]></message>
+	  <message key="default.contextSettings.forAuthors"><![CDATA[Bent u geïnteresseerd in het aanleveren van artikels? Dan raden we u aan de pagina <a href="{$indexUrl}{$contextPath}/about">Over het tijdschrift</a> te bekijken dat informatie biedt over het publicatiebeleid van de verschillende secties. Lees ook vooraf de pagina <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Auteursrichtlijnen<a>. Auteurs moeten zich <a href="{$indexUrl}{$contextPath}/user/register">registreren</a> in het tijdschrift voordat ze artikels kunnen inzenden. Als u al bent ingeschreven hoeft u alleen nog <a href="{$indexUrl}{$contextPath}/login">in te loggen</a> en kunt u beginnen met de vijf stappen procedure. Indien u wel geregistreerd bent als lezer of reviewer maar nog niet als auteur, ga dan naar Mijn profiel in de rechter kolom en voeg de rol van auteur aan uw profiel toe.]]></message>
+	  <message key="default.contextSettings.forLibrarians"><![CDATA[We moedigen bibliothecarissen van onderzoeksbibliotheken aan om dit tijdschrift op te nemen in hun digitale tijdschriftcollectie. Ook wijzen we u erop dat het open source systeem dat dit tijdschrift gebruikt om te publiceren, gehost kan worden door bibliotheken ter ondersteuning van hun bij de redactie van elektronische tijdschriften betrokken faculteitsmedewerkers. (zie <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	  <message key="default.contextSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
+	  <message key="default.contextSettings.clockssLicense"><![CDATA[Dit tijdschrift gebruikt het CLOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://clockss.org/">Meer...</a>]]></message>
+
+	  <!-- Group defaults -->
+	  <message key="default.groups.name.manager">Tijdschriftbeheerder</message>
+	  <message key="default.groups.plural.manager">Tijdschriftbeheerders</message>
+	  <message key="default.groups.abbrev.manager">TB</message>
+	  <message key="default.groups.name.editor">Tijdschriftredacteur</message>
+	  <message key="default.groups.plural.editor">Tijdschriftredacteurs</message>
+	  <message key="default.groups.abbrev.editor">TR</message>
+	  <message key="default.groups.name.guestEditor">Gastredacteur</message>
+	  <message key="default.groups.plural.guestEditor">Gastredacteurs</message>
+	  <message key="default.groups.abbrev.guestEditor">GR</message>
+	  <message key="default.groups.name.sectionEditor">Sectieredacteur</message>
+	  <message key="default.groups.plural.sectionEditor">Sectieredacteurs</message>
+	  <message key="default.groups.abbrev.sectionEditor">SR</message>
+	  <message key="default.groups.name.subscriptionManager">Abonnementenbeheerder</message>
+	  <message key="default.groups.plural.subscriptionManager">Abonnementenbeheerders</message>
+	  <message key="default.groups.abbrev.subscriptionManager">AB</message>
+
+	  <!-- Genre Defaults -->
+	  <message key="default.genres.researchInstrument">Onderzoeksinstrument</message>
+	  <message key="default.genres.researchMaterials">Onderzoeksmateriaal</message>
+	  <message key="default.genres.researchResults">Onderzoeksresultaten</message>
+	  <message key="default.genres.transcripts">Transcripties</message>
+	  <message key="default.genres.dataAnalysis">Data-analyse</message>
+	  <message key="default.genres.dataSet">Dataverzameling</message>
+	  <message key="default.genres.sourceTexts">Brontekst</message>
+
+	  <message key="default.groups.name.externalReviewer">Reviewer</message>
+	  <message key="default.groups.plural.externalReviewer">Reviewers</message>
+	  <message key="default.groups.abbrev.externalReviewer">R</message>
+	  <message key="default.contextSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

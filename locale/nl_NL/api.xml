@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/api.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the REST API.
+  * Localization strings for the nl_NL (Nederlands) locale.
+  -->
+<locale name="nl_NL" full_name="Nederlands">
+	  <message key="api.submissions.403.unpublishedIssues">U heeft geen rechten om ongepubliceerde nummers te bekijken.</message>
+	  <message key="api.contexts.403.requestedDisabledContexts">U kan uitsluitend tijdschriften bekijken die ingeschakeld zijn.</message>
+	  <message key="api.contexts.403.notAllowed">U heeft geen rechten om dit tijdschrift te bekijken.</message>
+	  <message key="api.contexts.403.contextsDidNotMatch">U kan dit tijdschrift alleen bekijken of bewerken via de API van het tijdschrift of de hele site.</message>
+	  <message key="api.contexts.403.requiresContext">U kan dit tijdschrift niet bewerken via de API voor de hele site.</message>
+	  <message key="api.contexts.403.notAllowedEdit">U heeft geen rechten om dit tijdschrift te bewerken.</message>
+	  <message key="api.contexts.403.notAllowedDelete">U heeft geen rechten om dit tijdschrift te verwijderen.</message>
+	  <message key="api.contexts.404.contextNotFound">Het tijdschrift werd niet gevonden.</message>
+	  <message key="api._payments.400.invalidPaymentMethod">De betaalwijze die u selecteerde wordt niet ondersteund.</message>
+</locale>
