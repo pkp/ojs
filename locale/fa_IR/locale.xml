@@ -84,6 +84,8 @@
 	<message key="section.abbreviation">اختصار</message>
 	<message key="section.abbreviation.example">(برای مثال م ق = مقاله)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">مقاله</message>
+	<message key="article.articles">مقالات</message>
 	<message key="common.publishedSubmission">مقاله</message>
 	<message key="common.publishedSubmissions">مقالات</message>
 	<message key="article.submissionId">شناسه مقاله ارسالی</message>

@@ -103,6 +103,8 @@
 	<message key="section.abbreviation.example">(مثلاً، مقالات = مقل)</message>
 
 	<!-- Common Article Terms -->
+	<message key="article.article">مقالة</message>
+	<message key="article.articles">مقالات</message>
 	<message key="common.publishedSubmission">مقالة</message>
 	<message key="common.publishedSubmissions">مقالات</message>
 	<message key="article.submissionId">الرمز التعريفي للطلب</message>
