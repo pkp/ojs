@@ -10,7 +10,7 @@
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Dutch_(nl_NL)
   *
-  * Localization strings.
+  * Localization strings for the nl_NL (Nederlands) locale.
   -->
 
 <locale name="nl_NL" full_name="Nederlands">
@@ -22,4 +22,6 @@
 	<message key="plugins.block.subscription.comingFromIP">Komend van IP: {$ip}</message>
 	<message key="plugins.block.subscription.about">Abonnementen</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Log in om uw abonnement te verifiëren</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Een abonnement is vereist om sommige inhoud te kunnen bekijken.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Meer informatie</message>
 </locale>

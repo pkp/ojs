@@ -13,11 +13,11 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.announcementfeed.displayName">Mededelingenfeed Plugin</message>
 	<message key="plugins.generic.announcementfeed.description">Deze plugin produceert RSS/Atom feeds voor mededelingen van het tijdschrift.</message>
-
+	
 	<message key="plugins.generic.announcementfeed.settings">Instellingen</message>
 	<message key="plugins.generic.announcementfeed.settings.all">Toon feed links op alle pagina's van het tijdschrift.</message>
 	<message key="plugins.generic.announcementfeed.settings.homepage">Toon feed links alleen op de startpagina en de mededelingenpagina.</message>
