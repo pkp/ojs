@@ -12,18 +12,17 @@
   *
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.paymethod.manual.displayName">Handmatige betalingsverwerking</message>
 	<message key="plugins.paymethod.manual.description">De beheerder zal de ontvangst van betalingen handmatig verwerken (buiten deze software).</message>
 	<message key="plugins.paymethod.manual">Handmatige betalingsverwerking</message>
 	<message key="plugins.paymethod.manual.settings">Handmatige betalingsverwerking instellingen</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Instructies</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Betalingsinstructies voor gebruikers die kiezen voor handmatige betaling</message>
-	
-	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
-	<message key="plugins.paymethod.manual.purchase.fee">Bedrag</message>	
+
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Stuur betalingsbevestiging</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Betalingsbevestiging</message>
 	<message key="plugins.paymethod.manual.notificationSent">Betalingsbevestiging verstuurd</message>
+
+	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Bedrag</message>
 </locale>

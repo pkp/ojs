@@ -19,7 +19,6 @@
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites Plugin</message>
 	<message key="plugins.generic.phpmv.description"><![CDATA[Integreer OJS met phpMyVisites, een gratis en open source websitegebruik analyse applicatie. Vereist dat phpMyVisites al is geïnstalleerd. Zie de <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> voor meer informatie.]]></message>
-
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Instellingen</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites instellingen</message>
