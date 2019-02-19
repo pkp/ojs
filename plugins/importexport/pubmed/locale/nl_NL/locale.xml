@@ -21,11 +21,11 @@
 	<message key="plugins.importexport.pubmed.export">Exporteer data</message>
 	<message key="plugins.importexport.pubmed.export.issues">Problemen met de export</message>
 	<message key="plugins.importexport.pubmed.export.selectIssue">Kies het te exporteren nummer.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Exporteer artikelen</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Kies de te exporteren artikelen.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Exporteer artikels</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Kies de te exporteren artikels.</message>
 	
 	<message key="plugins.importexport.pubmed.cliUsage">Gebruik: 
-{$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
+{$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikels [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlBestandsNaam] [tijdschrift_pad] nummer [nummerId]</message>
 	<message key="plugins.importexport.pubmed.cliError">FOUT:</message>
 
