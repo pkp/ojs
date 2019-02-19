@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/rfc1807/locale/nl_NL/locale.xml
+  * plugins/blocks/browse/locale/nl_NL/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -11,8 +11,10 @@
   * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Formaat</message>
-	<message key="plugins.OAIMetadata.rfc1807.description">Structureert metadata volgens het RFC1807 formaat.</message>
+	<message key="plugins.block.browse">Bladeren</message>
+	<message key="plugins.block.browse.displayName">Bladeren blok</message>
+	<message key="plugins.block.browse.description">Deze plugin voegt hulpmiddelen voor "bladeren" toe in de sidebar.</message>
+	<message key="plugins.block.browse.category">Categorieën</message>
 </locale>

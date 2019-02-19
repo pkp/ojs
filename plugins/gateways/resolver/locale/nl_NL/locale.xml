@@ -13,7 +13,7 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.gateways.resolver.displayName">Resolver plugin</message>
 	<message key="plugins.gateways.resolver.description">Deze plugin zoekt uitgaven en artikelen op grond van citatie-informatie.</message>

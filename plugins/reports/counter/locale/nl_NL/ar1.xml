@@ -2,17 +2,14 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/marc/locale/nl_NL/locale.xml
+  * plugins/reports/counter/locale/nl_NL/ar1.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the nl_NL (Nederlands) locale.
-  *
+  * Localization strings for the nl_NL (Nederlands)) locale.
   -->
  
 <locale name="nl_NL" full_name="Nederlands">
-	<message key="plugins.OAIMetadata.marc.displayName">MARC Metadata Formaat</message>
-	<message key="plugins.OAIMetadata.marc.description">Structureert metadata volgens het MARC formaat.</message>
+	<message key="plugins.reports.counter.ar1.title">Artikels rapport 1</message>
 </locale>

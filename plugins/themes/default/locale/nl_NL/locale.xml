@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/default/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.themes.default.name">Standaard stijl</message>
+	<message key="plugins.themes.default.description">Deze stijl is de standaard weergave.</message>
+
+	<!-- Theme options -->
+	<message key="plugins.themes.default.option.typography.label">Lettertype</message>
+	<message key="plugins.themes.default.option.typography.description">Kies een combinatie van fonts voor het tijdschrift.</message>
+	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: een zuiver digitale font, ontworpen door Google, met uitgebreide dekking van talen.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif">Noto Serif: een serif variant van Google's zuiver digitale font.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif_notoSans">Noto Serif/Noto Sans: een combinatie van serif voor titels en sans-serif voor lopende tekst.</message>
+	<message key="plugins.themes.default.option.typography.notoSans_notoSerif">Noto Sans/Noto Serif: een combinatie van sans-serif voor titels en serif voor lopende tekst.</message>
+	<message key="plugins.themes.default.option.typography.lato">Lato: een populaire moderne sans-serif font.</message>
+	<message key="plugins.themes.default.option.typography.lora">Lora: een brede serif font die makkelijk leesbaar is online.</message>
+	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: een combinatie van serif voor titels en sans-serif voor lopende tekst.</message>
+	<message key="plugins.themes.default.option.colour.label">Kleur</message>
+	<message key="plugins.themes.default.option.colour.description">Kies een kleur voor de header.</message>
+</locale>

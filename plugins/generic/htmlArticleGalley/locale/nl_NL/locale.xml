@@ -2,17 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/rfc1807/locale/nl_NL/locale.xml
+  * plugins/generic/htmlArticleGalley/locale/nl_NL/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
-  *
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Formaat</message>
-	<message key="plugins.OAIMetadata.rfc1807.description">Structureert metadata volgens het RFC1807 formaat.</message>
+	<message key="plugins.generic.htmlArticleGalley.displayName">HTML proefbestanden</message>
+	<message key="plugins.generic.htmlArticleGalley.description">Met deze plugin kunnen HTML proefbestanden voor een artikel worden getoond.</message>
 </locale>
