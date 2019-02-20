@@ -17,6 +17,7 @@ namespace APP\Services;
 
 use \Pimple\Container;
 use \PKP\Services\PKPAuthorService;
+use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
 use \PKP\Services\PKPSiteService;
 use \APP\Services\UserService;
@@ -72,6 +73,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// Site service
 		$pimple['site'] = function() {
 			return new PKPSiteService();
+		};
+
+		// Email Templates service
+		$pimple['emailTemplate'] = function() {
+			return new PKPEmailTemplateService();
 		};
 
 		// Schema service

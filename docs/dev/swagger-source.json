@@ -32,6 +32,10 @@
 			"description": "Only admins can access these endpoints, which should be accessed using `*` instead of the journal path."
 		},
 		{
+			"name": "Email Templates",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
 			"name": "Temporary Files",
 			"description": "A special endpoint to be used for handling file uploads. See the [API Usage Guide](/dev/api) for more information."
 		},
@@ -55,6 +59,7 @@
 				}
 			}
 		},
+		"EmailTemplate": "emailTemplate",
 		"Galley": "galley",
 		"InvalidParametersResponse": {
 			"type": "object",
@@ -1196,6 +1201,232 @@
 						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					}
+				}
+			}
+		},
+		"/emailTemplates": {
+			"get": {
+				"tags": [
+					"Email Templates"
+				],
+				"summary": "Get a list of email templates.",
+				"parameters": [
+					{
+						"name": "isEnabled",
+						"description": "Filter results by enabled/disabled email templates. Any truthy or falsey value will get enabled/disabled email templates. Leave this parameter out to get all email templates.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "fromRoleIds",
+						"description": "Filter results by email templates sent by one or more role IDs. Separate role IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "toRoleIds",
+						"description": "Filter results by email templates received by one or more role IDs. Separate role IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by a search phrase matched against the `key`, `subject`, `body`, or `description`.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many results to return in a single request. Default is `30`. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "type"
+					},
+					{
+						"name": "offset",
+						"description": "Offset the results returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses":  {
+					"200": {
+						"description": "List of email templates.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"itemsMax": {
+									"type": "integer"
+								},
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/EmailTemplateSummary"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"description": "You do not have permission to view email templates.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post":  {
+				"tags": [
+					"Email Templates"
+				],
+				"summary": "Create a new email template.",
+				"parameters": [
+					{
+						"description": "Details about the email template that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/EmailTemplateEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the email template that was just added.",
+						"schema": {
+							"$ref": "#/definitions/EmailTemplate"
+						}
+					},
+					"400": {
+						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					}
+				}
+			}
+		},
+		"/emailTemplates/{key}": {
+			"get": {
+				"tags": [
+					"Email Templates"
+				],
+				"summary": "Get an email template by they the email key.",
+				"parameters": [
+					{
+						"name": "key",
+						"description": "Email template key",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Email template details.",
+						"schema": {
+							"$ref": "#/definitions/EmailTemplate"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to view this email template.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested email template could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Email Templates"
+				],
+				"summary": "Edit an email template.",
+				"parameters": [
+					{
+						"name": "key",
+						"description": "Email template key",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The details about the email template that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/EmailTemplateEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The email template that was just edited with the current values after the edit has occurred.",
+						"schema": {
+							"$ref": "#/definitions/EmailTemplate"
+						}
+					},
+					"400": {
+						"description": "The information you submitted did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"description": "There are two possible conditions that will result in a `403` response. 1. You do not have permission to edit this email template. 2. You are an admin and you submitted changes for an email template in one context from the API endpoint of another context. To edit an email template, you must make a request to the API endpoint of that email template's context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested email template could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Email Templates"
+				],
+				"summary": "Delete an email template.",
+				"parameters": [
+					{
+						"name": "key",
+						"description": "Email template key",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Details of the email template that was just deleted.",
+						"schema": {
+							"$ref": "#/definitions/EmailTemplate"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to delete this email template.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested email template could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
 						}
 					}
 				}
