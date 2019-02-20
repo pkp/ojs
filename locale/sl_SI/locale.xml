@@ -99,6 +99,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Prispevek</message>
 	<message key="article.articles">Prispevki</message>
+	<message key="common.publishedSubmission">Prispevek</message>
+	<message key="common.publishedSubmissions">Prispevki</message>
 	<message key="article.submissionId">ID prispevka</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Avtorji</message>

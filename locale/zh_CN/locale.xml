@@ -110,6 +110,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">文章</message>
 	<message key="article.articles">文章</message>
+	<message key="common.publishedSubmission">文章</message>
+	<message key="common.publishedSubmissions">文章</message>
 	<message key="article.submissionId">投稿ID</message>
 	<message key="article.title">标题</message>
 	<message key="article.authors">作者</message>

@@ -30,7 +30,7 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 			}
 			$config['filters']['sectionIds'] = array(
 				'heading' => __('section.sections'),
-				'filters' => $this->getSectionFilters(),
+				'filters' => self::getSectionFilters(),
 			);
 		}
 
@@ -70,7 +70,7 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 	 *
 	 * @return array
 	 */
-	public function getSectionFilters() {
+	static function getSectionFilters() {
 		$request = Application::getRequest();
 		$context = $request->getContext();
 

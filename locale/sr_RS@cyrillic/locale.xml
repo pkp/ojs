@@ -72,6 +72,7 @@
 
 
 	<!--  Common Article Terms  --><message key="article.articles">Чланци</message>
+	<message key="common.publishedSubmissions">Чланци</message>
 	<message key="article.submissionId">ID поднеска чланка</message>
 	<message key="article.title">Наслов</message>
 	<message key="article.authors">Аутори</message>
@@ -744,6 +745,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="payment.type.purchaseArticle">Цена приступа појединим чланцима</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Чланак</message>
+	<message key="common.publishedSubmission">Чланак</message>
 	<message key="user.manageMySubscriptions">Управљање мојим претплатама</message>
 	<message key="subscriptionTypes.currency">Валута</message>
 	<message key="subscriptionTypes.year">година</message>

@@ -43,7 +43,7 @@
 
 	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
-	
+
 	<!-- review forms end -->
 
 	<!--
@@ -113,6 +113,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artykuł</message>
 	<message key="article.articles">Artykuły</message>
+	<message key="common.publishedSubmission">Artykuł</message>
+	<message key="common.publishedSubmissions">Artykuły</message>
 	<message key="article.submissionId">Identyfikator zgłoszenia</message>
 	<message key="article.title">Tytuł</message>
 	<message key="article.authors">Autor</message>
@@ -338,7 +340,7 @@
 <p>System nie był w stanie automatycznie nadpisać pliku konfiguracji. Aby zastosować zmiany w konfiguracji musisz otworzyć plik <tt>config.in.php</tt> w edytorze tekstu i zmienić jego zawartość z treścią zamieszczoną w poniższym polu.</p>]]></message>
 
 
-	<!-- Site Administrator Merge Users -->	
+	<!-- Site Administrator Merge Users -->
 
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Zarządzanie subskrypcją</message>
@@ -368,7 +370,7 @@
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
-	
+
 	<!-- Setup Step 1 -->
 
 	<!-- Setup Step 2 -->
@@ -493,7 +495,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="layoutEditor.galley.replaceGalley">Podmień plik do publikacji</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Prześlij dodatkowy plik</message>
 	<message key="submission.layout.imageInvalid">Niepoprawny format pliku. Akceptowane formaty to .gif, .jpg, oraz .png.</message>
-	
+
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artykuły w recenzji</message>
 	<message key="reviewer.completedReviews">Ukończone</message>
@@ -688,7 +690,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="site.journalView">Pokaż czasopismo</message>
 	<message key="site.journalRegister">Zarejestruj</message>
 	<message key="site.journalCurrent">Aktualny numer</message>
-	
+
 
 	<!-- Current index -->
 	<message key="current.current">Aktualny numer</message>

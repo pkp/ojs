@@ -66,5 +66,10 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		$pimple['user'] = function() {
 			return new UserService();
 		};
+
+		// Statistics service
+		$pimple['stats'] = function() {
+			return new \PKP\Services\PKPStatsService();
+		};
 	}
 }
