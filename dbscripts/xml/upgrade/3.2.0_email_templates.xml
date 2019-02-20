@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_email_templates.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Update the email templates tables to remove unused columns and add a new
+	* email_id column and primary key.
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			ALTER TABLE email_templates_data
+			ADD email_id BIGINT NOT NULL
+		</query>
+		<query>
+			UPDATE email_templates_data as etd
+			SET email_id = (
+				SELECT email_id
+				FROM email_templates as et
+				WHERE etd.email_key = et.email_key
+					AND etd.assoc_type = et.assoc_type
+					AND etd.assoc_id = et.assoc_id
+			)
+		</query>
+		<query>
+			ALTER TABLE email_templates_data
+			DROP INDEX email_templates_data_pkey
+		</query>
+		<query>
+			ALTER TABLE email_templates_data
+			DROP COLUMN email_key,
+			DROP COLUMN assoc_type,
+			DROP COLUMN assoc_id;
+		</query>
+		<query>
+			ALTER TABLE email_templates_data
+			ADD PRIMARY KEY (email_id, locale)
+		</query>
+	</sql>
+</data>

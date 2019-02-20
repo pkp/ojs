@@ -238,6 +238,7 @@
 		<code function="migrateSiteStylesheet" />
 		<code function="migrateMetadataSettings" />
 		<code function="createLicenseTerms" />
+		<data file="dbscripts/xml/upgrade/3.2.0_email_templates.xml" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
