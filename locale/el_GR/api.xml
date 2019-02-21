@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/en_US/api.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the REST API.
+  *
+  * Edited by National Documentation Center (EKT) team, 2019
+  *
+  -->
+
+<locale name="el_GR" full_name="Ελληνικά (Greek)">
+	<message key="api.submissions.403.unpublishedIssues">Δεν έχετε άδεια να δείτε μη δημοσιευμένα τεύχη.</message>
+</locale>
