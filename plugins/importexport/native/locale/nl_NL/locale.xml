@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/native/locale/nl_NL/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -30,7 +30,8 @@ Commando's:
 	export [xmlBestandsNaam] [tijdschriftPad] issues [nummerId1] [nummerId2] ...
 	export [xmlBestandsNaam] [tijdschriftPad] issue [nummerId]
 
-Om data te importeren zijn bijkomende parameters nodig, afhankelijk van het hoofdelement van het XML document.
+Om data te importeren zijn bijkomende parameters nodig, afhankelijk van het 
+hoofdelement van het XML document.
 
 Als het hoofdelement <article> of <articles> is, zijn bijkomende parameters vereist. 
 Volgende formaten worden geaccepteerd:
@@ -42,7 +43,8 @@ Volgende formaten worden geaccepteerd:
 	issue_id [nummerId] section_name [naam]
 
 {$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad]
-	issue_id [nummerId] section_abbrev [afkorting]]]></message>
+	issue_id [nummerId] section_abbrev [afkorting]
+]]></message>
 	<message key="plugins.importexport.native.error.unknownSection">Onbekende sectie {$param}</message>
 	<message key="plugins.importexport.native.error.unknownUser">De opgegeven gebruiker "{$userName} bestaat niet.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">De sectietitels van "{$section1Title}" en "{$section2Title}" in  het nummer "{$issueTitle}" komen overeen met de verschillende secties in het tijdschrift.</message>

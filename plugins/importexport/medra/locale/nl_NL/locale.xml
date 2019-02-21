@@ -15,12 +15,15 @@
 	<message key="plugins.importexport.medra.displayName">mEDRA export/registratie plugin</message>
 	<message key="plugins.importexport.medra.description">Exporteer nummer, artikel en proef-metadata in Onix for DOI (O4DOI) formaat en registreer DOI's bij de mEDRA organisatie.</message>
 
-	<message key="plugins.importexport.medra.intro"><![CDATA[Als u DOI's bij mEDRA wilt registreren, volg dan de aanwijzingen op de
+	<message key="plugins.importexport.medra.intro"><![CDATA[
+		Als u DOI's bij mEDRA wilt registreren, volg dan de aanwijzingen op de
 		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA homepage</a>
-		om een gebruikersnaam en een wachtwoord te verkrijgen. Als u geen eigen gebruikersnaam en wachtwoord heeft, kunt u nog steeds exporteren naar het mEDRA XML formaat (Onix for DOI)
+		om een gebruikersnaam en een wachtwoord te verkrijgen. Als u geen eigen gebruikersnaam en 
+		wachtwoord heeft, kunt u nog steeds exporteren naar het mEDRA XML formaat (Onix for DOI)
 		maar u kunt uw DOI's niet registreren bij mEDRA vanuit OJS. 
 		Merk op dat het wachtwoord als gewone tekst wordt opgeslagen, dus niet versleuteld. Dit vanwege
-		de mEDRA registratie vereisten.]]></message>
+		de mEDRA registratie vereisten.
+	]]></message>
 	
 	<message key="plugins.importexport.medra.settings.form.description">Configureer de mEDRA export plugin:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Gebruikersnaam</message>
@@ -46,8 +49,8 @@
 
 	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatische registratietaak</message>
 
-	<message key="plugins.importexport.medra.cliUsage">Gebruik:
+	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Gebruik:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-</message>
+]]></message>
 </locale>

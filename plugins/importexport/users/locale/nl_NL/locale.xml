@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/users/locale/nl_NL/locale.xml
+  * locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -15,11 +15,12 @@
 	<message key="plugins.importexport.users.displayName">Gebruikers XML plugin</message>
 	<message key="plugins.importexport.users.description">Importeer en exporteer gebruikers</message>
 
-	<message key="plugins.importexport.users.cliUsage">Gebruik: {$scriptName} {$pluginName} [commando] ...
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Gebruik: {$scriptName} {$pluginName} [commando] ...
 Commando's:
 	import [xmlBestandsNaam] [tijdschriftPad]
 	export [xmlBestandsNaam] [tijdschriftPad]
-	export [xmlBestandsNaam] [tijdschriftPad] [gebruikersId1] [gebruikersId2] ...</message>
+	export [xmlBestandsNaam] [tijdschriftPad] [gebruikersId1] [gebruikersId2] ...
+]]></message>
 	<message key="plugins.importexport.users.cliUsage.examples">Voorbeelden:
 	Importeer gebruikers in mijnTijdschrift van mijnImporteerBestand.xml:
 	{$scriptName} {$pluginName} import mijnImporteerBestand.xml mijnTijdschrift
@@ -28,7 +29,8 @@ Commando's:
 	{$scriptName} {$pluginName} export mijnExporteerBestand.xml mijnTijdschrift
 
 	Exporteer gebruikers met een speciefieke ID:
-	{$scriptName} {$pluginName} export mijnExporteerBestand.xml mijnTijdschrift 1 2</message>
+	{$scriptName} {$pluginName} export mijnExporteerBestand.xml mijnTijdschrift 1 2
+]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Importeer gebruikers</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Selecteer een XML bestand met gebruikergegevevens om in dit tijdschrift te importeren. Raadpleeg het hulpsysteem van het tijdschrift voor details over het formaat van dit bestand.<br /><br />Merk op dat als het geïmporteerde bestand reeds bestaande gebruikersnamen of e-mailadressen bevat, de gegevens voor die gebruikers niet zullen worden geïmporteerd, en alle nieuwe rollen zullen worden toegekend aan de reeds bestaande gebruikers.]]></message>
 	<message key="plugins.importexport.users.import.dataFile">Gebruikers gegevensbestand</message>

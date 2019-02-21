@@ -9,9 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
-  *
-  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
-  *
   -->
 
 <locale name="nl_NL" full_name="Nederlands">
@@ -41,7 +38,8 @@
 	<message key="plugins.importexport.crossref.status.failed">Mislukt</message>
 	<message key="plugins.importexport.crossref.status.registered">Actief</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Als actief gemarkeerd</message>
-	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Deposit status:</p>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
+		<p>Deposit status:</p>
 		<p>
 		- Niet gedeponeerd: er werd nog geen deposit geprobeerd voor deze DOI.<br />
 		- Ingediend: deze DOI werd ingediend voor deposit.<br />
@@ -62,9 +60,10 @@
 	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Het registreren van een DOI is mislukt. Ga naar Hulpmiddelen > Import/export > CrossRef XML Export Plugin om de mislukte deposits te bekijken.]]></message>
 
 	<!-- CLI -->
-	<message key="plugins.importexport.crossref.cliUsage">Gebruik:
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebruik:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...</message>
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+</message>
 
 	<!--  notifications -->
 	<message key="plugins.importexport.crossref.register.error.mdsError">Inzending is niet geslaagd! De DOI registratieserver meldde een fout: '{$param}'.</message>

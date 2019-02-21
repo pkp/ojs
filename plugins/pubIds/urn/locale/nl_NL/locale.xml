@@ -78,4 +78,5 @@
 	<message key="plugins.pubIds.urn.editor.assignURN.assigned">De URN {$pubId} werd toegekend.</message>
 	<!-- errors -->
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Het controlegetal ontbreekt.</message>
+
 </locale>
