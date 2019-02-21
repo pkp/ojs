@@ -16,15 +16,18 @@
 	<message key="plugins.importexport.datacite.description">Exporteer of registreer metadata van nummers, artikels, proeven en aanvullende bestanden in DataCite formaat.</message>
 
 	<message key="plugins.importexport.datacite.settings.description">Configureer de DataCite export plugin voor u ze voor het eerst gebruikt.</message>
-	<message key="plugins.importexport.datacite.intro"><![CDATA[Als u DOI's wilt registreren bij DataCite,  neem dan contact op met de Managing
+	<message key="plugins.importexport.datacite.intro"><![CDATA[
+		Als u DOI's wilt registreren bij DataCite,  neem dan contact op met de Managing
 		Agent via de <a href="http://datacite.org/contact" target="_blank">DataCite
 		homepage</a>. Die zal u in contact brengen met uw lokale DataCite vertegenwoordiger. Zodra u een
 		relatie met hen heeft , krijgt u 
 		toegang tot DataCite voor het maken van persistente identificaties (DOI's)
 		en het registreren van de bijbehorende metadata. Al u geen eigen gebruikersnaam en
-		wachtwoord hebt kunt u nog steeds exporteren naar het DataCite XML formaat maar u kunt uw DOI's niet registreren bij DataCite vanuit OJS.
+		wachtwoord hebt kunt u nog steeds exporteren naar het DataCite XML formaat maar u 
+		kunt uw DOI's niet registreren bij DataCite vanuit OJS.
 		Merk op dat het wachtwoord als leesbare tekst opgeslagen wordt, bus niet versleuteld, vanwege
-		de vereisten van de DataCite registratie dienst.]]></message>
+		de vereisten van de DataCite registratie dienst.
+	]]></message>
 
 	<message key="plugins.importexport.datacite.settings.form.username">Gebruikersnaam (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Geef de gebruikersnaam (symbool) die u van DataCite hebt gekregen. De gebruikersnaam mag geen dubbele punt bevatten.</message>
@@ -33,8 +36,8 @@
 
 	<message key="plugins.importexport.datacite.senderTask.name">Automatische registratie bij DataCite</message>
 
-	<message key="plugins.importexport.datacite.cliUsage">Gebruik:
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Gebruik:
 {$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-</message>
+]]></message>
 </locale>
