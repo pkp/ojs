@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
-  * locale/en_US/editor.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/editor.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -11,7 +14,7 @@
   *
   -->
 
-<locale full_name="Ελληνικά (Greek)" name="el_GR">
+<locale name="el_GR" full_name="Ελληνικά (Greek)">
 	<message key="editor.home">Αρχική σελίδα Επιμελητή περιοδικού</message>
 	<message key="editor.reassign">Aνάθεση εκ νέου</message>
 	<message key="editor.submissionsAndPublishing">Υποβολές και δημοσίευση</message>
