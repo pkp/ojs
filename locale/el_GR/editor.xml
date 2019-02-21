@@ -14,7 +14,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="editor.home">Αρχική σελίδα Επιμελητή περιοδικού</message>
 	<message key="editor.reassign">Aνάθεση εκ νέου</message>
 	<message key="editor.submissionsAndPublishing">Υποβολές και δημοσίευση</message>

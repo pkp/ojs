@@ -14,7 +14,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="author.submit">Νέα υποβολή</message>
 	<message key="author.track">Ενεργές υποβολές</message>
 	<message key="author.competingInterests"><![CDATA[Αντικρουόμενα&nbsp;συμφέροντα &lt;a target="_new" class="action" href="{$competingInterestGuidelinesUrl}"&gt;Πολιτική&nbsp;Αντικρεούμενων&nbsp;Συμφερόντων&lt;/a&gt;]]></message>
