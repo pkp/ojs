@@ -8,10 +8,10 @@
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings.
+  * Localization strings for the nl_NL (Nederlands) locale.
   -->
 
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Artikel-adapter</message>
-	<message key="plugins.metadata.mods34.articleAdapter.description">Extraheer/injecteer metadata uit/in artikelen.</message>
+	<message key="plugins.metadata.mods34.articleAdapter.description">Extraheer/injecteer metadata uit/in artikels.</message>
 </locale>

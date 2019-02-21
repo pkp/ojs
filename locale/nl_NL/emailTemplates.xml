@@ -7,12 +7,23 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localized email templates XML file.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localized email templates XML file for the nl_NL (Nederlands) locale.
   *
   -->
-
+	
 <email_texts locale="nl_NL">
+	<email_text key="NOTIFICATION">
+		<subject>Nieuw bericht van {$siteTitle}</subject>
+		<body><![CDATA[U heeft een nieuw bericht van {$siteTitle}:<br />
+<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Deze e-mail wordt gestuurd naar een geregistreerde gebruiker die zich heeft ingeschreven voor dit type van berichten.</description>
+	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Bevestiging wachtwoord herstellen</subject>
 		<body><![CDATA[We hebben een verzoek van u ontvangen om uw wachtwoord voor de website {$siteTitle} te herstellen.<br />
@@ -76,7 +87,7 @@ Dank u,<br />
 		<subject>Nieuw nummer gepubliceerd</subject>
 		<body><![CDATA[Lezers:<br />
 <br />
-{$contextName} heeft zijn nieuwste nummer gepubliceerd op {$contextUrl}. We nodigen u uit om de inhoudsopgave te bekijken en de website te bezoeken voor het bekijken van de artikelen en andere interessante items.<br />
+{$contextName} heeft zijn nieuwste nummer gepubliceerd op {$contextUrl}. We nodigen u uit om de inhoudsopgave te bekijken en de website te bezoeken voor het bekijken van de artikels en andere interessante items.<br />
 <br />
 Dank voor uw interesse in ons werk,<br />
 {$editorialContactSignature}]]></body>
@@ -128,23 +139,16 @@ Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar een auteur als die de inzendprocedure van een manuscript bij het tijdschrift voltooit. Er wordt informatie gegeven over het volgen van de inzending door het proces en de auteur wordt bedankt voor de inzending.</description>
 	</email_text>
-	<email_text key="SUBMISSION_COMMENT">
-		<subject>Opmerking bij inzending</subject>
-		<body><![CDATA[{$name}:<br />
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Bevestiging van inzending</subject>
+		<body><![CDATA[Beste,<br />
 <br />
-{$commentName} heeft een opmerking geplaatst bij de inzending, &quot;{$submissionTitle}&quot; in {$contextName}:<br />
+{$submitterName} heeft het manuscript &quot;{$submissionTitle}&quot; ingezonden voor {$contextName}. <br />
 <br />
-{$comments}]]></body>
-		<description>Deze E-mail bericht de verschillende personen die betrokken zijn bij het redactieproces van een inzending dat een nieuwe opmerking is geplaatst.</description>
-	</email_text>
-	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Beslissing over "{$submissionTitle}"</subject>
-		<body><![CDATA[Als een van de reviewers van inzending &quot;{$submissionTitle}&quot; bij {$contextName}, stuur ik u de reviews en de redactionele beslissing die naar de auteur van dit stuk is gestuurd. Nogmaals dank voor uw belangrijke bijdrage aan dit proces.<br />
+Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van dit tijdschrift als podium voor u werk.<br />
 <br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Deze e-mail bericht de reviewers van een inzending dat het reviewproces is afgerond. Het bevat informatie over het artikel en de beslissing en bedankt de reviewers voor hun bijdragen.</description>
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar de andere auteurs die niet geregistreerd zijn als gebruikers van OJS..</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Redactietaak</subject>
@@ -184,6 +188,30 @@ Dank u voor het overwegen van dit verzoek.<br />
 {$submissionAbstract}]]></body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Article Review Request</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+We willen u vriendelijk herinneren aan ons verzoek voor een review van het manuscript &quot;{$submissionTitle},&quot; voor {$contextName}. We verwachtten uw antwoord voor {$responseDueDate}; dit bericht werd automatisch verstuurd na het verstrijken van die datum. 
+<br />
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.<br />
+<br />
+Wilt u inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$contextUrl}<br />
+<br />
+Het review wordt verwacht op {$reviewDueDate}.<br />
+<br />
+Als u uw gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}<br />
+<br />
+URL inzending: {$submissionReviewUrl}<br />
+<br />
+Dank u voor het overwegen van dit verzoek.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Deze e-mail wordt automatisch verzonden wanneer de datum voor de bevestiging van een reviewopdracht verstreken is (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand).</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Artikel review verzoek</subject>
 		<body><![CDATA[{$reviewerName}:<br />
@@ -207,6 +235,28 @@ Dank u voor het overwegen van dit verzoek.<br />
 {$submissionAbstract}]]></body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift en de een-klik toegang voor de reviewer is ingeschakeld.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Artikel review verzoek</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+We willen u vriendelijk herinneren aan ons verzoek voor een review van het manuscript &quot;{$submissionTitle},&quot; voor {$contextName}. We verwachtten uw antwoord voor {$responseDueDate}; dit bericht werd automatisch verstuurd na het verstrijken van die datum. 
+<br />
+Ik geloof dat u een excellente reviewer zou zijn voor het manuscript. De samenvatting van de inzending staat hieronder. Ik hoop dat u wilt overwegen deze belangrijke taak voor ons uit te voeren.<br />
+<br />
+Wilt u inloggen op de website van het tijdschrift om aan te geven of u de review al of niet doet. Daar kunt u ook de inzending vinden en uw review en aanbeveling vastleggen. De website is {$contextUrl}<br />
+<br />
+Het review wordt verwacht op {$reviewDueDate}.<br />
+<br />
+URL inzending: {$submissionReviewUrl}<br />
+<br />
+Dank u voor het overwegen van dit verzoek.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Deze e-mail wordt automatisch verzonden wanneer de datum voor de bevestiging van een reviewopdracht verstreken is (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is ingeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand).</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Artikel review verzoek</subject>
 		<body><![CDATA[{$reviewerName}:<br />
@@ -224,503 +274,6 @@ Review richtlijnen<br />
 <br />
 {$reviewGuidelines}]]></body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. De inzending wordt als bijlage meegestuurd. Dit bericht word gebruikt wanneer het e-mail attachment reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)</description>
-	</email_text>
-	<email_text key="REVIEW_CANCEL">
-		<subject>Reviewverzoek ingetrokken</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-We hebben besloten om ons verzoek aan u om de inzending &quot;{$submissionTitle}&quot; voor {$contextName}in te trekken. We verontschuldigen ons voor enig ongemak dat we daarmee veroorzaken en hopen dat we u in de toekomst mogen vragen om een bijdrage aan het reviewproces van dit tijdschrift.<br />
-<br />
-Als u nog vragen heeft, kunt u contact met mij opnemen.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt door de sectieredacteur verstuurd naar een reviewer die een inzending aan het reviewen is om die op de hoogte te stellen dat de review is afgeblazen.</description>
-	</email_text>
-	<email_text key="REVIEW_CONFIRM">
-		<subject>Review mogelijk</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ik ben bereid en in staat om een review te doen van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft. Ik verwacht de review gereed te hebben op of voor de afloopdatum, {$reviewDueDate}.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Deze e-mail wordt door een reviewer naar de sectieredacteur gestuurd als reactie op een review-verzoek dat geaccepteerd is en zal worden voltooid voor de gevraagde datum.</description>
-	</email_text>
-	<email_text key="REVIEW_DECLINE">
-		<subject>Review niet mogelijk</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.<br />
-<br />
-{$reviewerName}]]></body>
-		<description>Deze e-mail wordt door de reviewer verstuurd naar de sectieredacteur als reactie op een review-verzoek om te laten weten dat het verzoek wordt afgewezen.</description>
-	</email_text>
-	<email_text key="REVIEW_ACK">
-		<subject>Artikel review bevestiging</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Dank u voor uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt door de sectieredacteur verstuurd om de ontvangst van een review te bevestigen en de reviewer te bedanken voor zijn bijdrage.</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND">
-		<subject>Review herinnering</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
-<br />
-Als u de gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}<br />
-<br />
-URL inzending: {$submissionReviewUrl}<br />
-<br />
-Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te herinneren dat een review over tijd is</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Inzendingsreview herinnering</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
-<br />
-URL inzending: {$submissionReviewUrl}<br />
-<br />
-Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te herinneren dat een review over tijd is</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Geautomatiseerde review herinnering</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
-<br />
-Als u de gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}<br />
-<br />
-URL inzending: {$submissionReviewUrl}<br />
-<br />
-Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt automatisch verstuurd als de einddatum van een review verloopt (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand).</description>
-	</email_text>
-	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Geautomatiseerde review herinnering</subject>
-		<body><![CDATA[{$reviewerName}:<br />
-<br />
-Slechts een vriendelijke herinnering aan ons verzoek om uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We hoopten dit review te hebben op {$reviewDueDate}. Deze e-mail is automatisch gegenereerd bij het verstrijken van die datum. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
-<br />
-Inzendings-URL: {$submissionReviewUrl}<br />
-<br />
-Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt automatisch verzonden als de einddatum van een review verloopt (zie review opties onder Tijdschrift inrichten, stap 2) en een-klik toegang voor de reviewer is ingeschakeld. Scheduled tasks moeten ingeschakeld en geconfigureerd zijn (zie het configuratiebestand van de site)</description>
-	</email_text>
-	<email_text key="COPYEDIT_REQUEST">
-		<subject>Tekstredactie verzoek</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submissionTitle}&quot; voor {$contextName} door deze stappen te volgen.<br />
-1. Klik op de inzendings-URL hieronder.<br />
-2. Log in bij het tijdschrift en klik op het bestand dat verschijnt bij Stap 1.<br />
-3. Raadpleeg de tekstredactie-instructies die op de webpagina staan.<br />
-4. Open het gedownloade bestand en doe de tekstredactie. Voeg auteursvragen toe waar nodig.<br />
-5. Bewaar het bewerkte bestand en laad het bij stap 1 van Tekstredactie.<br />
-6. Stuur de GEREED e-mail naar de redacteur.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-URL inzending: {$submissionUrl}<br />
-Gerbruikersnaam: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt door de sectieredacteur naar de tekstredacteur van een inzending gestuurd om te vragen het redactieproces te starten. Het bevat informatie over de inzending en hoe die te benaderen</description>
-	</email_text>
-	<email_text key="LAYOUT_REQUEST">
-		<subject>Verzoek aanmaken proeven</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunnen aangemaakt worden door de volgende stappen te doorlopen.<br />
-1. Klik op de inzendings-URL hieronder.<br />
-2. Log in bij het tijdschrift en gebruik het Layout versie bestand om de proeven aan te maken conform de regels van het tijdschrift.<br />
-3. Stuur de GEREED e-mail naar de redacteur.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-URL inzending: {$submissionLayoutUrl}<br />
-Gebruikersnaam: {$participantUsername}<br />
-<br />
-Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur meldt de toekenning van de taak om de opmaak van een inzending uit te voeren. Het bevat informatie over de inzending en hoe die te benaderen</description>
-	</email_text>
-	<email_text key="LAYOUT_COMPLETE">
-		<subject>Proeven gereed</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-De proeven voor manuscript &quot;{$submissionTitle}&quot; voor {$contextName} zijn gereed voor proeflezen.<br />
-<br />
-Neemt u alstublieft contact met me op als u vragen heeft.<br />
-<br />
-{$participantName}]]></body>
-		<description>Deze e-mail van de opmaakredacteur aan de sectieredacteur bericht dat het opmaakproces is voltooid.</description>
-	</email_text>
-	<email_text key="LAYOUT_ACK">
-		<subject>Bevestiging opmaak</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Dank u voor het maken van de proeven van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit is een belangrijke bijdrage aan het publicatieproces.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur bevestigt de voltooiing van de opmaak en bedankt de opmaakredacteur voor zijn bijdrage.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Verzoek voor proeflezen (auteur)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Uw inzending &quot;{$submissionTitle}&quot; voor {$contextName} kan proefgelezen worden door de volgende stappen te volgen.<br />
-1. Klik op de URL van de inzending hieronder.<br />
-2. Log in op het tijdschrift en bekijk PROEFLEESINSTRUCTIES.<br />
-3. Klik op BEKIJK PROEF in Opmaak en beoordeel de proeven in de gebruikte formaaten.<br />
-4. Geef de correcties (typografisch en opmaak) op bij Proefleescorrecties.<br />
-5. Bewaar en e-mail de correcties naar de opmaakredacteur en proeflezer.<br />
-6. Stuur de GEREED e-mail naar de redacteur.<br />
-<br />
-URL inzending: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de auteur vraagt om het proeflezen van de proeven van een artikel. Het levert informatie over het artikel en hoe het te benaderen.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Proeflezen gereed (auteur)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ik heb het proeflezen van de proeven van mijn manuscript &quot;{$submissionTitle}&quot; voor {$contextName} voltooid. De proeven zijn nu gereed voor de laatste correcties door de proeflezer en de opmaakredacteur.<br />
-<br />
-{$authorName}]]></body>
-		<description>Deze e-mail van de auteur aan de proeflezer en redacteur meldt dat de auteur het proeflezen heeft voltooid en dat details daarover in de commentaren van het artikel staan</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Bevestiging proeflezen (auteur)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Dank u voor het proeflezen van de proeven van uw manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. We kijken er naar uit uw werk binnenkort te publiceren.<br />
-<br />
-Als u geabonneerd bent op de berichtendienst krijgt u een e-mail met de inhoudsopgave zodra het gepubliceerd is. Als nog vragen heeft, neem dan contact met me op.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de auteur beverstigt de voltooiing van het proefleesproces en bedankt hem voor zijn bijdrage.</description>
-	</email_text>
-	<email_text key="PROOFREAD_REQUEST">
-		<subject>Verzoek voor proeflezen</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-De inzending &quot;{$submissionTitle}&quot; voor {$contextName} kan proefgelezen worden door de volgende stappen te volgen.<br />
-1. Klik op de URL van de inzending hieronder.<br />
-2. Log in op het tijdschrift en bekijk PROEFLEESINSTRUCTIES.<br />
-3. Klik op BEKIJK PROEF in Opmaak en beoordeel de proeven in de gebruikte formaaten.<br />
-4. Geef de correcties (typografisch en opmaak) op bij Proefleescorrecties.<br />
-5. Bewaar en e-mail de correcties naar de opmaakredacteur.<br />
-6. Stuur de GEREED e-mail naar de redacteur.<br />
-<br />
-Manuscript URL: {$submissionUrl}<br />
-Gebruikersnaam: {$proofreaderUsername}<br />
-<br />
-Als momenteel u niet in staat ben om dit werk uit te voeren of als u vragen heeft, neem dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de proeflezer vraagt om het proeflezen van de proeven van een artikel. Het levert informatie over het artikel en hoe het te benaderen.</description>
-	</email_text>
-	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Proeflezen gereed</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ik heb het proeflezen van de proeven van manuscript &quot;{$submissionTitle}&quot; voor {$contextName} voltooid. De opmaakredacteur kan nu de laatste correcties aanbrengen.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Deze e-mail van de proeflezer aan de sectieredacteur meldt dat de proeflezer het proeflezen voltooid heeft.</description>
-	</email_text>
-	<email_text key="PROOFREAD_ACK">
-		<subject>Bevestiging proeflezen</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Dank u voor het proeflezen van de proeven van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit werk is een belangrijke bijdrage aan de kwaliteit van dit tijdschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de proeflezer bevestigt de voltooiing van het proefleesproces en bedankt de proeflezer voor zijn bijdrage.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Verzoek voor proeflezen (opmaakredacteur)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-De inzending &quot;{$submissionTitle}&quot; bij {$contextName} is proefgelezen door auteur en proeflezer. Correcties kunnen nu aangebracht worden door de volgende stapen te volgen.<br />
-1. Klik op de URL van de inzending hieronder.<br />
-2. Log in bij het tijdschrift en bebijk Proefleescorrecties om gecorrigeerde proeven te maken.<br />
-3. Laad de herziene proeven.<br />
-4. Stuur de GEREED e-mail in Proeflezen stap 3 naar de redacteur.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-URL inzending: {$submissionUrl}<br />
-Gebruikersnaam: {$participantUsername}<br />
-<br />
-Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen heeft, neemt u dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur naar de opmaakredacteur meldt dat de proeven gereed zijn voor de laatste proefleesronde. Het geeft informatie over het artikel en hoe het te bereiken.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Proeflezen gereed (opmaakredacteur)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-De proeven zijn gecorrigeerd na het proeflezen van het manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit stuk is gereed voor publicatie.<br />
-<br />
-{$participantName}]]></body>
-		<description>Deze e-mail van de opmaakredacteur aan de sectieredacteur meldt dat het laatste stadium van proeflezen is voltooid en dat het artikel gereed is voor publicatie.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Bevestiging proeflezen (opmaakredacteur)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Dank u voor het voltooien van de proeflees-correcties voor de proeven van manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Dit vertegenwoordigt een belangrijke bijdrage aan het werk van dit tijdschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur bevestigt de voltooiing van het laatste stadium van proeflezen en bedankt voor de bijdrage</description>
-	</email_text>
-	<email_text key="EMAIL_LINK">
-		<subject>Mogelijk interessant artikel</subject>
-		<body><![CDATA[Ik denk dat u mogelijk geïnteresseerd bent in &quot;{$submissionTitle}&quot; door {$authorName} gepubliceerd in Vol {$volume}, No {$number} ({$year}) van {$contextName} op &quot;{$articleUrl}&quot;.]]></body>
-		<description>Deze e-mail sjabloon geeft een lezer de mogelijkheid om informatie over een artikel naar iemand te sturen die daar mogelijk in geïnteresseerd is. Het is beschikbaar via de leesgereedschappen en moet ingeschakeld worden door de tijdschriftbeheerder (leesgereedschappen beheer pagina)</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Bevestiging abonnement</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-U bent in ons online tijdschriftsysteem geregistreerd als abonnee van {$contextName} met het volgende abonnement:<br />
-<br />
-{$subscriptionType}<br />
-<br />
-Om toegang te krijgen tot de inhoud die is voorbehouden aan abonnees kunt u inloggen in het systeem met uw gebruikersnaam, &quot;{$username}&quot;.<br />
-<br />
-Eenmaal ingelogd op het systeem kunt u uw profielgegevens en wachtwoord op ieder gewenst moment veranderen.<br />
-<br />
-Merk op dat in het geval van een institutioneel abonnement gebruikers niet in hoeven te loggen, het systeem zal verzoeken automatisch authenticeren.<br />
-<br />
-Als vragen heeft, neemt u dan alstublieft contact met me op.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Deze e-mail bericht een geregistreerde lezer dat de beheerder een abonnement heeft gecreëerd. Het bevat de URL van het tijdschrift en instructies om toegang te krijgen.</description>
-	</email_text>
-	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Nummer nu Open Access</subject>
-		<body><![CDATA[Lezers:<br />
-<br />
-{$contextName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken ({$contextUrl}) voor de items en artikelen die u interesseren.<br />
-<br />
-Bedankt voor de interesse in ons werk,<br />
-{$editorialContactSignature}]]></body>
-		<description>Deze e-mail wordt verstuurd naar geregistreerde gebruikers die aangegeven hebben een e-mail te willen ontvangen als een nummer open access wordt.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Bericht van aflopen abonnement</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Uw abonnement op {$contextName} verloopt binnenkort.<br />
-<br />
-{$subscriptionType}<br />
-Afloopdatum: {$expiryDate}<br />
-<br />
-Om de continuïteit van uw toegang tot het tijdschrift te verzekeren kunt u uw abonnement verlengen op de website van het tijdschrift. U kunt inloggen op de website van het tijdschrift met uw gebruikersnaam &quot;{$username}&quot;.<br />
-<br />
-Aarzel niet om contact met me op te nemen als u vragen heeft.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Deze e-mail bericht een abonnee dat zijn abonnement binnenkort verloopt. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Abonnement verlopen - laatste herinnering</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Uw abonnement op {$contextName} is verlopen.<br />
-<br />
-{$subscriptionType}<br />
-Afloopdatum: {$expiryDate}<br />
-<br />
-Om uw abonnement te verlengen kunt u inloggen op de website van het tijdschrift met uw gebruikersnaam &quot;{$username}&quot;.<br />
-<br />
-Aarzel niet om contact met me op te nemen als u vragen heeft.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Deze e-mail bericht een abonnee dat zijn abonnement is verlopen. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Abonnement verlopen - laatste herinnering</subject>
-		<body><![CDATA[{$subscriberName}:<br />
-<br />
-Uw abonnement op {$contextName} is verlopen.<br />
-Dit is de laatste herinnering die naar u wordt verstuurd.<br />
-<br />
-{$subscriptionType}<br />
-Afloopdatum: {$expiryDate}<br />
-<br />
-Om uw abonnement te verlengen, kunt u naar de website van het tijdschrift gaan en inloggen met uw gebruikersnaam: &quot;{$username}&quot;.<br />
-<br />
-Aarzel niet om contact met mij op te nemen als u vragen heeft.<br />
-<br />
-{$subscriptionContactSignature}]]></body>
-		<description>Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De URL van het tijdschrift en instructies voor toegang worden meegeleverd.</description>
-	</email_text>
-	<email_text key="NOTIFICATION">
-		<subject>Nieuw bericht van {$siteTitle}</subject>
-		<body><![CDATA[U heeft een nieuw bericht van {$siteTitle}:<br />
-<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>Redacteursbeslissing</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-Onze beslissing is:<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
-	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>Redacteursbeslissing</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-Onze beslissing is:<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
-	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>Redacteursbeslissing</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-Onze beslissing is:<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
-	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Redacteursbeslissing</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
-<br />
-Onze beslissing is:<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Aankoop abonnement: individueel</subject>
-		<body><![CDATA[Een individueel abonnement met de volgende details is online aangeschaft voor {$contextName}.<br />
-<br />
-Abonnementsoort:<br />
-{$subscriptionType}<br />
-<br />
-Gebruiker:<br />
-{$userDetails}<br />
-<br />
-Lidmaatschapsinformatie (indien opgegeven):<br />
-{$membership}<br />
-<br />
-Gebruik de volgende URL om dit abonnement te bekijken of te wijzigen.<br />
-<br />
-Abonnement URL: {$subscriptionUrl}]]></body>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Aankoop abonnement: institutioneel</subject>
-		<body><![CDATA[Er is online een institutioneel abonnement gekocht voor {$contextName} met de volgende details. Gebruik de abonnement-url om dit abonnement te activeren. Zet de status van het abonnement op 'Actief'.<br />
-<br />
-Abonnementsoort:<br />
-{$subscriptionType}<br />
-<br />
-Instituut:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Domein (indien opgegeven):<br />
-{$domain}<br />
-<br />
-IP reeksen (indien opgegeven):<br />
-{$ipRanges}<br />
-<br />
-Contactpersoon:<br />
-{$userDetails}<br />
-<br />
-Lidmaatschapsinformatie (indien opgegeven):<br />
-{$membership}<br />
-<br />
-Gebruik de volgende URL om het abonnement te bekijken of te bewerken.<br />
-<br />
-Abonnement URL: {$subscriptionUrl}]]></body>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Verlenging abonnement: individueel</subject>
-		<body><![CDATA[Een individueel abonnement is met de volgende details online verlengd voor {$contextName}.<br />
-<br />
-Abonnementsoort:<br />
-{$subscriptionType}<br />
-<br />
-Gebruiker:<br />
-{$userDetails}<br />
-<br />
-Lidmaatschapsinformatie (indien opgegeven):<br />
-{$membership}<br />
-<br />
-Gebruik de volgende URL om het abonnement te bekijken of bewerken.<br />
-<br />
-Abonnement URL: {$subscriptionUrl}]]></body>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Verlenging abonnement: institutioneel</subject>
-		<body><![CDATA[Een institutioneell abonnement voor {$contextName} is met de volgende gegevens online verlengd.<br />
-<br />
-Abonnementsoort:<br />
-{$subscriptionType}<br />
-<br />
-Instituut:<br />
-{$institutionName}<br />
-{$institutionMailingAddress}<br />
-<br />
-Domein (indien opgegeven):<br />
-{$domain}<br />
-<br />
-IP reeksen (indien opgegeven):<br />
-{$ipRanges}<br />
-<br />
-Contactpersoon:<br />
-{$userDetails}<br />
-<br />
-Lidmaatschapsinformatie (indien opgegeven):<br />
-{$membership}<br />
-<br />
-Gebruik de volgende URL om dit abonnement te bekijken of bewerken.<br />
-<br />
-Abonnement URL: {$subscriptionUrl}]]></body>
-	</email_text>
-	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Citatie redactie</subject>
-		<body><![CDATA[{$authorFirstName},<br />
-<br />
-Kunt u de juiste citatie van de volgende referentie uit uw artikel {$submissionTitle} verifiëren of verschaffen:<br />
-<br />
-{$rawCitation}<br />
-<br />
-Dank!<br />
-<br />
-{$userFirstName}<br />
-Tekstredacteur, {$contextName}]]></body>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Verzoek tot reviewen van een artikel</subject>
@@ -795,6 +348,417 @@ Review richtlijnen<br />
 {$reviewGuidelines}]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur aan een reviewer verstuurd om te vragen of die een review voor de tweede of latere ronde van een inzending wil doen. De inzending wordt als bijlage meegestuurd. Dit bericht wordt gebruikt als het e-mail reviewproces wordt geselecteerd in stap 2 van het instellen. (Zie verder REVIEW_REQUEST_SUBSEQUENT)</description>
 	</email_text>
+	<email_text key="REVIEW_CANCEL">
+		<subject>Reviewverzoek ingetrokken</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We hebben besloten om ons verzoek aan u om de inzending &quot;{$submissionTitle}&quot; voor {$contextName}in te trekken. We verontschuldigen ons voor enig ongemak dat we daarmee veroorzaken en hopen dat we u in de toekomst mogen vragen om een bijdrage aan het reviewproces van dit tijdschrift.<br />
+<br />
+Als u nog vragen heeft, kunt u contact met mij opnemen.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt door de sectieredacteur verstuurd naar een reviewer die een inzending aan het reviewen is om die op de hoogte te stellen dat de review is afgeblazen.</description>
+	</email_text>
+	<email_text key="REVIEW_CONFIRM">
+		<subject>Review mogelijk</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Ik ben bereid en in staat om een review te doen van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft. Ik verwacht de review gereed te hebben op of voor de afloopdatum, {$reviewDueDate}.<br />
+<br />
+{$reviewerName}]]></body>
+		<description>Deze e-mail wordt door een reviewer naar de sectieredacteur gestuurd als reactie op een review-verzoek dat geaccepteerd is en zal worden voltooid voor de gevraagde datum.</description>
+	</email_text>
+	<email_text key="REVIEW_DECLINE">
+		<subject>Review niet mogelijk</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.<br />
+<br />
+{$reviewerName}]]></body>
+		<description>Deze e-mail wordt door de reviewer verstuurd naar de sectieredacteur als reactie op een reviewverzoek om te laten weten dat het verzoek wordt afgewezen.</description>
+	</email_text>
+	<email_text key="REVIEW_ACK">
+		<subject>Artikel review bevestiging</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Dank u voor uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt door de sectieredacteur verstuurd om de ontvangst van een review te bevestigen en de reviewer te bedanken voor zijn bijdrage.</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND">
+		<subject>Review herinnering</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We willen u vriendelijk herinneren aan ons verzoek om de inzending &quot;{$submissionTitle}&quot; voor {$contextName} te reviewen. We verwachtten uw review op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
+<br />
+Als u de gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}<br />
+<br />
+URL inzending: {$submissionReviewUrl}<br />
+<br />
+Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te herinneren dat de afgesproken reviewperiode verstreken is</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_ONECLICK">
+		<subject>Herinnering review</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We willen u vriendelijk herinneren aan ons verzoek om de inzending &quot;{$submissionTitle}&quot; voor {$contextName} te reviewen. We verwachtten uw review op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
+<br />
+URL inzending: {$submissionReviewUrl}<br />
+<br />
+Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te herinneren dat de afgesproken reviewperiode verstreken is</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO">
+		<subject>Geautomatiseerde review herinnering</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We willen u vriendelijk herinneren aan ons verzoek om de inzending &quot;{$submissionTitle}&quot; voor {$contextName} te reviewen. We verwachtten uw review op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
+<br />
+Als u de gebruikersnaam en het wachtwoord van de website van het tijdschrift niet heeft, kunt u deze link gebruiken voor het herstellen van uw wachtwoord (dat samen met uw gebruikersnaam in een e-mail naar u verstuurd wordt). {$passwordResetUrl}<br />
+<br />
+URL inzending: {$submissionReviewUrl}<br />
+<br />
+Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt automatisch verstuurd als de afgesproken reviewperiode verstrijkt (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand).</description>
+	</email_text>
+	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
+		<subject>Geautomatiseerde review herinnering</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We willen u vriendelijk herinneren aan ons verzoek om de inzending &quot;{$submissionTitle}&quot; voor {$contextName} te reviewen. We verwachtten uw review op {$reviewDueDate}. Deze e-mail is automatisch gegenereerd bij het verstrijken van die datum. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />
+<br />
+Inzendings-URL: {$submissionReviewUrl}<br />
+<br />
+Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt automatisch verzonden als de afgesproken reviewperiode verstrijkt (zie review opties onder Tijdschrift inrichten, stap 2) en een-klik toegang voor de reviewer is ingeschakeld. Scheduled tasks moeten ingeschakeld en geconfigureerd zijn (zie het configuratiebestand van de site)</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Onze beslissing is: Accepteer inzending<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt aanvaard.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Onze belissing is: Doorsturen aan reviewer</br />
+<br />
+URL inzending: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt doorgestuurd aan een reviewer.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+De redactie van uw inzending, &quot;{$submissionTitle},&quot; is afgerond. We geven uw inzending nu in productie.<br />
+<br />
+URL inzending: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending in productie wordt gegeven.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Onze beslissing is: Revisies benodigd<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat bijkomende revisies worden verwacht voor een inzending.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Onze beslissing is: Opnieuw indienen voor review<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending opnieuw moet worden ingediend voor review.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Onze beslissing is: Weiger inzending<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt geweigerd.</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Redacteursaanbeveling</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+De aanbeveling voor de inzending voor {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Deze e-mail van de aanbevelende redacteur of sectieredacteur brengt de beslissende redacteurs of sectieredacteurs op de hoogte van een aanbeveling over de inzending.</description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
+		<subject>Tekstredactie verzoek</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submissionTitle}&quot; voor {$contextName} door deze stappen te volgen.<br />
+1. Klik op de inzendings-URL hieronder.<br />
+2. Log in bij het tijdschrift en klik op het bestand dat verschijnt bij Stap 1.<br />
+3. Raadpleeg de tekstredactie-instructies die op de webpagina staan.<br />
+4. Open het gedownloade bestand en doe de tekstredactie. Voeg auteursvragen toe waar nodig.<br />
+5. Bewaar het bewerkte bestand en laad het bij stap 1 van Tekstredactie.<br />
+6. Stuur de GEREED e-mail naar de redacteur.<br />
+<br />
+{$contextName} URL: {$contextUrl}<br />
+URL inzending: {$submissionUrl}<br />
+Gerbruikersnaam: {$participantUsername}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt door de sectieredacteur naar de tekstredacteur van een inzending gestuurd om te vragen het redactieproces te starten. Het bevat informatie over de inzending en hoe die te benaderen</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>Verzoek aanmaken proeven</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunnen aangemaakt worden door de volgende stappen te doorlopen.<br />
+1. Klik op de inzendings-URL hieronder.<br />
+2. Log in bij het tijdschrift en gebruik het Layout versie bestand om de proeven aan te maken conform de regels van het tijdschrift.<br />
+3. Stuur de GEREED e-mail naar de redacteur.<br />
+<br />
+{$contextName} URL: {$contextUrl}<br />
+URL inzending: {$submissionLayoutUrl}<br />
+Gebruikersnaam: {$participantUsername}<br />
+<br />
+Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur meldt de toekenning van de taak om de opmaak van een inzending uit te voeren. Het bevat informatie over de inzending en hoe die te benaderen</description>
+	</email_text>
+	<email_text key="LAYOUT_COMPLETE">
+		<subject>Proeven gereed</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+De proeven voor manuscript &quot;{$submissionTitle}&quot; voor {$contextName} zijn gereed voor proeflezen.<br />
+<br />
+Neemt u alstublieft contact met me op als u vragen heeft.<br />
+<br />
+{$participantName}]]></body>
+		<description>Deze e-mail van de opmaakredacteur aan de sectieredacteur bericht dat het opmaakproces is voltooid.</description>
+	</email_text>
+	<email_text key="EMAIL_LINK">
+		<subject>Mogelijk interessant artikel</subject>
+		<body><![CDATA[Ik denk dat u mogelijk geïnteresseerd bent in &quot;{$submissionTitle}&quot; door {$authorName} gepubliceerd in Vol {$volume}, No {$number} ({$year}) van {$contextName} op &quot;{$articleUrl}&quot;.]]></body>
+		<description>Deze e-mail sjabloon geeft een lezer de mogelijkheid om informatie over een artikel naar iemand te sturen die daar mogelijk in geïnteresseerd is. Het is beschikbaar via de leesgereedschappen en moet ingeschakeld worden door de tijdschriftbeheerder (leesgereedschappen beheer pagina)</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_NOTIFY">
+		<subject>Bevestiging abonnement</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+U bent in ons online tijdschriftsysteem geregistreerd als abonnee van {$contextName} met het volgende abonnement:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+Om toegang te krijgen tot de inhoud die is voorbehouden aan abonnees kunt u inloggen in het systeem met uw gebruikersnaam, &quot;{$username}&quot;.<br />
+<br />
+Eenmaal ingelogd op het systeem kunt u uw profielgegevens en wachtwoord op ieder gewenst moment veranderen.<br />
+<br />
+Merk op dat in het geval van een institutioneel abonnement gebruikers niet in hoeven te loggen, het systeem zal verzoeken automatisch authenticeren.<br />
+<br />
+Als vragen heeft, neemt u dan alstublieft contact met me op.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>Deze e-mail bericht een geregistreerde lezer dat de beheerder een abonnement heeft gecreëerd. Het bevat de URL van het tijdschrift en instructies om toegang te krijgen.</description>
+	</email_text>
+	<email_text key="OPEN_ACCESS_NOTIFY">
+		<subject>Nummer nu Open Access</subject>
+		<body><![CDATA[Lezers:<br />
+<br />
+{$contextName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken ({$contextUrl}) voor de items en artikels die u interesseren.<br />
+<br />
+Bedankt voor de interesse in ons werk,<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt verstuurd naar geregistreerde gebruikers die aangegeven hebben een e-mail te willen ontvangen als een nummer open access wordt.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
+		<subject>Bericht van aflopen abonnement</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Uw abonnement op {$contextName} verloopt binnenkort.<br />
+<br />
+{$subscriptionType}<br />
+Afloopdatum: {$expiryDate}<br />
+<br />
+Om de continuïteit van uw toegang tot het tijdschrift te verzekeren kunt u uw abonnement verlengen op de website van het tijdschrift. U kunt inloggen op de website van het tijdschrift met uw gebruikersnaam &quot;{$username}&quot;.<br />
+<br />
+Aarzel niet om contact met me op te nemen als u vragen heeft.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>Deze e-mail bericht een abonnee dat zijn abonnement binnenkort verloopt. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
+		<subject>Abonnement verlopen - laatste herinnering</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Uw abonnement op {$contextName} is verlopen.<br />
+<br />
+{$subscriptionType}<br />
+Afloopdatum: {$expiryDate}<br />
+<br />
+Om uw abonnement te verlengen kunt u inloggen op de website van het tijdschrift met uw gebruikersnaam &quot;{$username}&quot;.<br />
+<br />
+Aarzel niet om contact met me op te nemen als u vragen heeft.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>Deze e-mail bericht een abonnee dat zijn abonnement is verlopen. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
+		<subject>Abonnement verlopen - laatste herinnering</subject>
+		<body><![CDATA[{$subscriberName}:<br />
+<br />
+Uw abonnement op {$contextName} is verlopen.<br />
+Dit is de laatste herinnering die naar u wordt verstuurd.<br />
+<br />
+{$subscriptionType}<br />
+Afloopdatum: {$expiryDate}<br />
+<br />
+Om uw abonnement te verlengen, kunt u naar de website van het tijdschrift gaan en inloggen met uw gebruikersnaam: &quot;{$username}&quot;.<br />
+<br />
+Aarzel niet om contact met mij op te nemen als u vragen heeft.<br />
+<br />
+{$subscriptionContactSignature}]]></body>
+		<description>Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De URL van het tijdschrift en instructies voor toegang worden meegeleverd.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Aankoop abonnement: individueel</subject>
+		<body><![CDATA[Een individueel abonnement met de volgende details is online aangeschaft voor {$contextName}.<br />
+<br />
+Abonnementsoort:<br />
+{$subscriptionType}<br />
+<br />
+Gebruiker:<br />
+{$userDetails}<br />
+<br />
+Lidmaatschapsinformatie (indien opgegeven):<br />
+{$membership}<br />
+<br />
+Gebruik de volgende URL om dit abonnement te bekijken of te wijzigen.<br />
+<br />
+Abonnement URL: {$subscriptionUrl}]]></body>
+		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Aankoop abonnement: institutioneel</subject>
+		<body><![CDATA[Er is online een institutioneel abonnement gekocht voor {$contextName} met de volgende details. Gebruik de abonnement-url om dit abonnement te activeren. Zet de status van het abonnement op 'Actief'.<br />
+<br />
+Abonnementsoort:<br />
+{$subscriptionType}<br />
+<br />
+Instituut:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domein (indien opgegeven):<br />
+{$domain}<br />
+<br />
+IP reeksen (indien opgegeven):<br />
+{$ipRanges}<br />
+<br />
+Contactpersoon:<br />
+{$userDetails}<br />
+<br />
+Lidmaatschapsinformatie (indien opgegeven):<br />
+{$membership}<br />
+<br />
+Gebruik de volgende URL om het abonnement te bekijken of te bewerken.<br />
+<br />
+Abonnement URL: {$subscriptionUrl}]]></body>
+		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Verlenging abonnement: individueel</subject>
+		<body><![CDATA[Een individueel abonnement is met de volgende details online verlengd voor {$contextName}.<br />
+<br />
+Abonnementsoort:<br />
+{$subscriptionType}<br />
+<br />
+Gebruiker:<br />
+{$userDetails}<br />
+<br />
+Lidmaatschapsinformatie (indien opgegeven):<br />
+{$membership}<br />
+<br />
+Gebruik de volgende URL om het abonnement te bekijken of bewerken.<br />
+<br />
+Abonnement URL: {$subscriptionUrl}]]></body>
+		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Verlenging abonnement: institutioneel</subject>
+		<body><![CDATA[Een institutioneell abonnement voor {$contextName} is met de volgende gegevens online verlengd.<br />
+<br />
+Abonnementsoort:<br />
+{$subscriptionType}<br />
+<br />
+Instituut:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domein (indien opgegeven):<br />
+{$domain}<br />
+<br />
+IP reeksen (indien opgegeven):<br />
+{$ipRanges}<br />
+<br />
+Contactpersoon:<br />
+{$userDetails}<br />
+<br />
+Lidmaatschapsinformatie (indien opgegeven):<br />
+{$membership}<br />
+<br />
+Gebruik de volgende URL om dit abonnement te bekijken of bewerken.<br />
+<br />
+Abonnement URL: {$subscriptionUrl}]]></body>
+		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Citatie redactie</subject>
+		<body><![CDATA[{$authorFirstName},<br />
+<br />
+Kunt u de juiste citatie van de volgende referentie uit uw artikel {$submissionTitle} verifiëren of verschaffen:<br />
+<br />
+{$rawCitation}<br />
+<br />
+Dank!<br />
+<br />
+{$userFirstName}<br />
+Tekstredacteur, {$contextName}]]></body>
+		<description>Met deze e-mail kunnen tekstredacteurs auteurs vragen om bijkomende informatie te geven over de bronverwijzing van citaten in hun artikel.</description>
+	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Herziene versie geladen</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -805,5 +769,21 @@ URL van de inzending: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail wordt automatisch verstuurd naar de redacteur als de auteur een herziene versie van een artikel laadt.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>Een bericht over {$contextName}</subject>
+		<body><![CDATA[Voeg hier uw boodschap in.]]></body>
+		<description>De standaard (lege) berichttekst die wordt gebruikt in het Notification Center Message Listbuilder.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Redacteursbeslissing</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Onze beslissing is: Weiger inzending<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Deze e-mail wordt aan een auteur verzonden wanneer de redacteur de inzending weigert nog voor die aan een reviewer werd bezorgd.</description>
 	</email_text>
 </email_texts>

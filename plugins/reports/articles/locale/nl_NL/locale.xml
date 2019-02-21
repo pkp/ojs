@@ -9,13 +9,10 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
-  *
-  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
-  *
   -->
 
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.reports.articles.displayName">Artikelrapport</message>
-	<message key="plugins.reports.articles.description">Deze plugin implementeert een  CSV rapport met een lijst artikelen en hun info.</message>
+	<message key="plugins.reports.articles.description">Deze plugin implementeert een  CSV rapport met een lijst artikels en hun info.</message>
 	<message key="plugins.reports.articles.nodecision">Geen beslissing</message>
 </locale>

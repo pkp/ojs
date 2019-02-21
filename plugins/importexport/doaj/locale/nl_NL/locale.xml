@@ -9,15 +9,21 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
-  *
-  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
-  *
   -->
 
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
 	<message key="plugins.importexport.doaj.description">Exporteer  het tijdschrift voor DOAJ en e-mail de tijdschriftinformatie naar de DOAJ vertegenwoordiger</message>
-	<message key="plugins.importexport.doaj.export.contact">Vraag opnamen in de DOAJ aan</message>
+	<message key="plugins.importexport.doaj.export.contact">Vraag opname in de DOAJ aan</message>
+	<message key="plugins.importexport.doaj.registrationIntro">Registreer uw DOAJ API sleutel om artikels te registreren via OJS. Zoniet kan u nog steeds exporteren naar het DOAJ XML formaat, maar kan u de DOI's niet via OJS registreren bij DOAJ.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">DOAJ API sleutel</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">U vindt uw API sleutel op uw DOAJ gebruikerspagina.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS zal artikels na publicatie automatisch deponeren bij DOAJ. Dit kan even duren (bv. afhankelijk van uw cronjob instellingen). U kan alle ongeregistreerde artikels bekijken.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Gebruik de DOAJ test API (testomgeving) voor de registratie. Vergeet deze test-optie niet te verwijderen voor de uiteindelijke publicatie.</message>
+
+	<message key="plugins.importexport.doaj.senderTask.name">Automatische registratie bij DOAJ</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">Deposit is niet geslaagd! De DOAJ API meldde een fout: '{$param}'.</message>
+	
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Gebruik:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 ]]></message>

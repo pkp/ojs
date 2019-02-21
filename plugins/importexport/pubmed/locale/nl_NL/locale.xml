@@ -9,9 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
-  *
-  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
-  *
   -->
  
 <locale name="nl_NL" full_name="Nederlands">
@@ -21,12 +18,13 @@
 	<message key="plugins.importexport.pubmed.export">Exporteer data</message>
 	<message key="plugins.importexport.pubmed.export.issues">Problemen met de export</message>
 	<message key="plugins.importexport.pubmed.export.selectIssue">Kies het te exporteren nummer.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Exporteer artikelen</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Kies de te exporteren artikelen.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Exporteer artikels</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Kies de te exporteren artikels.</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage">Gebruik: 
-{$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikelen [artikelId1] [artikelId2] ...
-{$scriptName} {$pluginName} [xmlBestandsNaam] [tijdschrift_pad] nummer [nummerId]</message>
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Gebruik: 
+{$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikels [artikelId1] [artikelId2] ...
+{$scriptName} {$pluginName} [xmlBestandsNaam] [tijdschrift_pad] nummer [nummerId]
+]]</message>
 	<message key="plugins.importexport.pubmed.cliError">FOUT:</message>
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Het opgegeven nummer-ID bestaat niet "{$issueId}".</message>

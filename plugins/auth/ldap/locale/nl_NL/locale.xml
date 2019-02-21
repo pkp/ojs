@@ -7,13 +7,10 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * LDAP authentication plugin localization strings for the nl_NL (Nederlands) locale.
-  *
-  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Deze plugin verzorgt authenticatie bij, en synchronisatie van, user accounts met een externe LDAP directory.</message>
@@ -29,13 +26,15 @@
 	<message key="plugins.auth.ldap.settings.managerdn.description">Bv. "cn=Manager,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerpwd">Beheerderswachtwoord</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">Beheerder DN en wachtwoord zijn alleen nodig als de gebruikersprofiel/wachtwoord synchronisatie of gebruikers creatie opties ingeschakeld zijn. Ze kunnen overgeslagen worden als LDAP alleen voor authenticatie wordt gebruikt.</message>
+	<message key="plugins.auth.ldap.settings.uid">Accountnaam attribuut</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Het attribuut dat het gebruikersobject uniek identificeert, zoals uid of cn of sAMAccountName</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Wachtwoordencryptie</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Hash formaat voor wachtwoorden die op de server worden bewaard. SSHA wordt aanbevolen.</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL Instellingen (optioneel)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Gebruik SASL in plaats van eenvoudige authenticatie</message>
 	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanisme</message>
 	<message key="plugins.auth.ldap.settings.saslmech.description">Bijvoorbeeld "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Domein</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Gevraagd authorisatie ID</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASL beveiligingseigenschappen</message>
-	<message key="plugins.auth.ldap.settings.uid">Accountnaam attribuut</message>
-	<message key="plugins.auth.ldap.settings.uid.description">Het attribuut dat het gebruikersobject uniek identificeert, zoals uid of cn of sAMAccountName</message>
 </locale>
