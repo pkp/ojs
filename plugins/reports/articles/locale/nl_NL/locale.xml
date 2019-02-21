@@ -16,6 +16,6 @@
 
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.reports.articles.displayName">Artikelrapport</message>
-	<message key="plugins.reports.articles.description">Deze plugin implementeert een  CSV rapport met een lijst artikelen en hun info.</message>
+	<message key="plugins.reports.articles.description">Deze plugin implementeert een  CSV rapport met een lijst artikels en hun info.</message>
 	<message key="plugins.reports.articles.nodecision">Geen beslissing</message>
 </locale>

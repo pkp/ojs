@@ -11,7 +11,7 @@
   * Localized email templates XML file for the nl_NL (Nederlands) locale.
   *
   -->
-
+	
 <email_texts locale="nl_NL">
 	<email_text key="NOTIFICATION">
 		<subject>Nieuw bericht van {$siteTitle}</subject>

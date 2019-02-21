@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
   * plugins/paymethod/paypal/locale/nl_NL/emailTemplateData.xml
   *
@@ -9,6 +10,7 @@
   *
   * Localized email templates XML file.
   -->
+	
 <email_texts locale="nl_NL">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Ongebruikelijke PayPal activiteit</subject>
@@ -24,5 +26,6 @@ Additionele informatie (indien opgegeven):<br />
 <br />
 Server variabelen:<br />
 {$serverVars}]]></body>
+		<description>Dit e-mail sjabloon wordt gebruikt om de eerste contactpersoon van een tijdschrift te verwittigen dat de PayPal plugin ongebruikelijke activiteit werd geconstateerd, die handmatige interventie vereist.</description>
 	</email_text>
 </email_texts>

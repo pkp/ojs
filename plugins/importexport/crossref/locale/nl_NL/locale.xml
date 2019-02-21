@@ -17,18 +17,59 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Exporteer metadata in CrossRef XML formaat.</message>
-
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebruik:
-{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
-]]></message>
-	<message key="plugins.importexport.crossref.settings.form.username">Gebruikersnaam</message>
-	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Geeft de gebruikersnaam die u van CrossRefe kreeg.</message>
+	<!-- settings -->
+	<message key="plugins.importexport.crossref.requirements">Vereist</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Niet aan alle vereisten is voldaan</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Er werd geen uitgever ingesteld voor dit tijdschrift! Voeg een uitgever toe op de  <a href="{$journalSettingsUrl}" target="_blank">Tijdschriftinstellingen</a> pagina.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[Er werd geen ISSN ingesteld voor dit tijdschrift! Voeg een ISSN toe op de <a href="{$journalSettingsUrl}" target="_blank">Tijdschriftinstellingen</a> pagina.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Er werden geen artikels geselecteerd voor toewijzing van een DOI in de DOI publieke identificatie plugin. Daardoor kan deze plugin ook geen data deponeren of exporteren.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Geef de naam en het e-mailadres van degene die verantwoordlijk is voor de CrossRef DOI deposit.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Depositor naam</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">E-mail depositor</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Geef de naam van de depositor.</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Geef het e-mail adres van de deposito.</message>
-	<message key="plugins.importexport.crossref.requirements">Vereist</message>
-	<message key="plugins.importexport.crossref.requirements.satisfied">Niet aan alle vereisten is voldaan</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Geef het e-mail adres van de depositor.</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[U kan via deze plugin ook rechtstreeks Digitale Object Identificatiecodes (DOI's) laten registreren bij CrossRef. Daarvoor heeft u een gebruikersnaam en wachtwoord (beschikbaar van <a href="http://www.crossref.org" target="_blank">CrossRef</a>) nodig. Als u geen gebruikersnaam en wachtwoord heeft, kan u nog steeds exporteren naar het Crossref XML formaat, maar kan u de DOI's niet via OJS registreren bij CrossRef.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.username">Gebruikersnaam</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Geeft de gebruikersnaam die u van CrossRefe kreeg.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS zal toegewezen DOI's na publicatie automatisch deponeren bij CrossRef. Dit kan even duren (bv. afhankelijk van uw cronjob instellingen). U kan alle ongeregistreerde DOI's bekijken.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">Gebruik de CrossRef test API (testomgeving) voor de DOI deposit. Vergeet deze test-optie niet te verwijderen voor de uiteindelijke publicatie.</message>
+	<!-- descriptions -->
+	<message key="plugins.importexport.crossref.issues.description">Opmerking: Alleen nummers (en niet hun artikels) zullen hier worden geëxporteerd/geregistreerd.</message>
+	<!-- statuses -->
+	<message key="plugins.importexport.crossref.status.submitted">Ingediend</message>
+	<message key="plugins.importexport.crossref.status.completed">Gedeponeerd</message>
+	<message key="plugins.importexport.crossref.status.failed">Mislukt</message>
+	<message key="plugins.importexport.crossref.status.registered">Actief</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Als actief gemarkeerd</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Deposit status:</p>
+		<p>
+		- Niet gedeponeerd: er werd nog geen deposit geprobeerd voor deze DOI.<br />
+		- Ingediend: deze DOI werd ingediend voor deposit.<br />
+		- Gedeponeerd: de DOI is gedeponeerd bij Crossref, maar is mogelijk nog niet actief.<br />
+		- Actief: de DOI werd gedeponeerd en kan correct worden opgelost.<br />
+		- Mislukt: de DOI deposit is mislukt.<br />
+		- Als actief gemarkeerd: de DOI werd manueel als actief gemarkeerd.
+		</p>
+		<p>Alleen de status van de laatste depostitpoging wordt getoond.</p>
+		<p>Als een deposit mislukt is, los het probleem dan op en probeer de DOI opnieuw te registreren.</p>]]></message>
+	<!-- actions -->
+	<message key="plugins.importexport.crossref.action.export">Download XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Markeer als actief</message>
+	<message key="plugins.importexport.crossref.action.register">Dien in</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Controleer status</message>
+	<!-- scheduled task -->
+	<message key="plugins.importexport.crossref.senderTask.name">Automatische registratie bij CrossRef</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Het registreren van een DOI is mislukt. Ga naar Hulpmiddelen > Import/export > CrossRef XML Export Plugin om de mislukte deposits te bekijken.]]></message>
+
+	<!-- CLI -->
+	<message key="plugins.importexport.crossref.cliUsage">Gebruik:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...</message>
+
+	<!--  notifications -->
+	<message key="plugins.importexport.crossref.register.error.mdsError">Inzending is niet geslaagd! De DOI registratieserver meldde een fout: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Inzending geslaagd!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Er komt geen nummer overeen met de opgegeven ID "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Er komt geen artikel overeen met de opgegeven ID "{$articleId}".</message>
+
 </locale>

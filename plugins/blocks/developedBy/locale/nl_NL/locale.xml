@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/developedBy/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings for the nl_NL (Nederlands) locale.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.block.developedBy.displayName">"Ontwikkeld door" blok</message>
+	<message key="plugins.block.developedBy.description">Deze plugin voegt een "Ontwikkeld door" link toe in de sidebar.</message>
+</locale>

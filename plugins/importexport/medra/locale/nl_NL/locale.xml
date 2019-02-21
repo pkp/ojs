@@ -8,7 +8,7 @@
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings
+  * Localization strings for the nl_NL (Nederlands) locale.
   -->
  
 <locale name="nl_NL" full_name="Nederlands">
@@ -21,7 +21,7 @@
 		maar u kunt uw DOI's niet registreren bij mEDRA vanuit OJS. 
 		Merk op dat het wachtwoord als gewone tekst wordt opgeslagen, dus niet versleuteld. Dit vanwege
 		de mEDRA registratie vereisten.]]></message>
-
+	
 	<message key="plugins.importexport.medra.settings.form.description">Configureer de mEDRA export plugin:</message>
 	<message key="plugins.importexport.medra.settings.form.username">Gebruikersnaam</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Voer uw mEDRA gebruikersnaam in. De naam mag geen dubbele punt bevatten.</message>
@@ -33,16 +33,21 @@
 	<message key="plugins.importexport.medra.settings.form.fromName">Contactpersoon</message>
 	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Geef de technische contactpersoon.</message>
 	<message key="plugins.importexport.medra.settings.form.fromEmail">E-mail</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Geeg een geldig e-mail adres voor de techische contactpersoon.</message>
-	<message key="plugins.importexport.medra.settings.form.publicationCountry">geef het land dat geinformeerd moet worden als 'publication country' voor mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Geef een geldig e-mailadres voor de technische contactpersoon.</message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Geef het land dat geïnformeerd moet worden als 'publication country' voor mEDRA.</message>
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Kies of u nummers wilt exporteren als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' of 'manifestations'</a>.]]></message>
-	<message key="plugins.importexport.medra.settings.form.work">work</message>	
-	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
+	<message key="plugins.importexport.medra.settings.form.work">werk</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">manifestatie</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Exporteer nummers als</message>	
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS zal toegekende DOI's na publicatie automatisch registreren bij mEDRA. Dit kan even duren (bv. afhankelijk van uw cronjob instellingen). U kan alle ongeregistreerde DOI's bekijken.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Gebruik de mEDRA test API (testomgeving) voor de registratie van DOI's. Vergeet deze test-optie niet te verwijderen voor de uiteindelijke publicatie.</message>
 
-	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI's die aan artikelen zijn toegekend zullen naar mEDRA geëxporteerd worden als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOI's toegekend aan proeven worden geëxporteerd als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
-		
-	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Gebruik:
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI's die aan artikels zijn toegekend zullen naar mEDRA geëxporteerd worden als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOI's toegekend aan proeven worden geëxporteerd als <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
+
+	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatische registratietaak</message>
+
+	<message key="plugins.importexport.medra.cliUsage">Gebruik:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-]]></message>
+</message>
 </locale>
