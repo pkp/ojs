@@ -14,7 +14,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="manager.website.archiving">Αρχειοθέτηση</message>
 	<message key="manager.emails.confirmResetAll">Επιβεβαιώνετε την επαναφορά στην αρχική μορφή όλων των προτύπων μηνυμάτων στο συγκεκριμένο περιοδικό; Όλες οι αλλαγές που έχετε πραγματοποιήσει θα χαθούν.</message>
 	<message key="manager.files.note">Σημείωση: O Περιηγητής Αρχείων αποτελεί μια προηγμένη λειτουργία που επιτρέπει την άμεση προβολή και διαχείριση των αρχείων και καταλόγων που σχετίζονται με κάποιο περιοδικό.</message>

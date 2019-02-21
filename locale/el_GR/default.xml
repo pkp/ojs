@@ -14,7 +14,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<!-- Section default -->
 	<message key="section.default.title">Άρθρα</message>
 	<message key="section.default.abbrev">ΑΡΘ</message>

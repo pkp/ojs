@@ -14,7 +14,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="admin.hostedJournals">Φιλοξενούμενα περιοδικά</message>
 	<message key="admin.settings.journalRedirect">Προώθηση σε περιοδικό</message>
 	<message key="admin.settings.options">Επιλογές</message>
