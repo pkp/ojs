@@ -4,7 +4,7 @@
 <!--
   * plugins/importexport/crossref/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2014-2019 Simon Fraser University
   * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -36,11 +36,10 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Opmerking: Alleen nummers (en niet hun artikels) zullen hier worden geëxporteerd/geregistreerd.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Ingediend</message>
-	<message key="plugins.importexport.crossref.status.completed">Gedeponeerd</message>
 	<message key="plugins.importexport.crossref.status.failed">Mislukt</message>
 	<message key="plugins.importexport.crossref.status.registered">Actief</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Als actief gemarkeerd</message>
+	<message key="plugins.importexport.crossref.action.register">Dien in</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Deposit status:</p>
 		<p>
 		- Niet gedeponeerd: er werd nog geen deposit geprobeerd voor deze DOI.<br />
@@ -55,11 +54,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">Download XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Markeer als actief</message>
-	<message key="plugins.importexport.crossref.action.register">Dien in</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Controleer status</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">Automatische registratie bij CrossRef</message>
-	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Het registreren van een DOI is mislukt. Ga naar Hulpmiddelen > Import/export > CrossRef XML Export Plugin om de mislukte deposits te bekijken.]]></message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage">Gebruik:
@@ -68,7 +64,7 @@
 
 	<!--  notifications -->
 	<message key="plugins.importexport.crossref.register.error.mdsError">Inzending is niet geslaagd! De DOI registratieserver meldde een fout: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Inzending geslaagd!</message>
+	<message key="plugins.importexport.crossref.register.success.warning">Registratie is geslaagd, maar volgende waarschuwing werd gemeld: '{$param}'.</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Er komt geen nummer overeen met de opgegeven ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Er komt geen artikel overeen met de opgegeven ID "{$articleId}".</message>
 
