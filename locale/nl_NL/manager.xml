@@ -595,7 +595,7 @@
 	<message key="plugins.importexport.common.action.markRegistered">Duid aan als geregistreerd</message>
 	<message key="plugins.importexport.common.action.register">Registreer</message>
 	<message key="plugins.importexport.common.validation">Valideer XML alvorens te exporteren en registreren.</message>
-	<!-- notifications and errors -->
+	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">Geen objecten geselecteerd.</message>
 	<message key="plugins.importexport.common.error.validation">Geselecteerde objecten konden niet worden geconverteerd.</message>
 	<message key="plugins.importexport.common.invalidXML">Ongeldige XML:</message>
@@ -608,4 +608,8 @@
 	<message key="plugins.importexport.common.error.unknownJournal">Het opgegeven pad "{$journalPath}" bestaat niet.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">De opgegeven objecten konden niet worden gevonden.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Stuur een kopie naar het hoofdcontact voor het tijdschrift, zoals vastgelegd in de instellingen voor het tijdschrift.</message>
+<!-- Statistics -->
+	<message key="stats.publishedSubmissions.details">Artikel gegevens</message>
+	<message key="stats.publishedSubmissions.none">Er werden geen artikels gevonden.</message>
+	<message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Totaal aantal bekeken samenvattingen voor elk artikel per datum.</message>
 </locale>

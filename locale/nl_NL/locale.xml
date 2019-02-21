@@ -107,13 +107,10 @@
 	<message key="section.policy">Sectie beleid</message>
 
 	<!-- Common Article Terms -->
-<<<<<<< HEAD
-	<message key="article.articles">Artikelen</message>
-	<message key="common.publishedSubmissions">Artikelen</message>
-=======
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikels</message>
->>>>>>> fixed indentation
+	<message key="common.publishedSubmission">Artikel</message>
+	<message key="common.publishedSubmissions">Artikels</message>
 	<message key="article.submissionId">Inzending ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Auteurs</message>
@@ -1097,160 +1094,8 @@ Validatie kan mislukken voor zoek URL's die invoer van formulieren verwachten.]]
 	<message key="navigation.subscriptions">Abonnementen</message>
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
-	<message key="log.editor.submissionExpedited">{$editorName} heeft de redactie voor het artikel {$submissionId} aanvaard.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} heeft de redactie voor het artikel {$submissionId} aanvaard.</message>	
 
-<<<<<<< HEAD
-	<!--
-	 *
-	 * DEFAULT - Default settings for setup items.
-	 *
-	-->
-	<!-- Default settings for payment items. -->
-	<message key="about.aboutThisPublishingSystem.altText">OJS Redactie- en publicatieproces</message>
-	<message key="help.searchReturnResults">Terug naar zoekresultaten</message>
-	<message key="payment.type.purchaseArticle">Prijs van dit artikel</message>
-	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
-	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
-	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
-	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
-	<message key="common.homePageHeader.altText">Home-pagina kop</message>
-	<message key="common.journalHomepageImage.altText">Tijdschrift home-pagina afbeelding</message>
-	<message key="article.coverPage.altText">Omslagafbeelding</message>
-	<message key="article.accessLogoOpen.altText">Vrije toegang</message>
-	<message key="article.accessLogoRestricted.altText">Beperkte toegang</message>
-	<message key="article.comments.sectionDefault">Standaard</message>
-	<message key="article.comments.disable">Uitschakelen</message>
-	<message key="article.comments.enable">Inschakelen</message>
-	<message key="article.fontSize">Tekstgrootte</message>
-	<message key="article.fontSize.small.altText">Klein</message>
-	<message key="article.fontSize.medium.altText">Middel</message>
-	<message key="article.fontSize.large.altText">Groot</message>
-	<message key="user.noRoles.chooseJournal">Uw profiel is niet aan een tijdschrift gekoppeld. Kies een tijdschrift:</message>
-	<message key="user.noRoles.noRolesForJournal">Uw profiel heeft geen rollen voor dit tijdschrift. Kies uit de acties hieronder:</message>
-	<message key="user.noRoles.submitArticle">Zend een voorstel in</message>
-	<message key="user.noRoles.submitArticleRegClosed">Zend een artikel in: registratie van auteurs is momenteel uitgeschakeld.</message>
-	<message key="user.noRoles.regReviewer">Registreren als reviewer</message>
-	<message key="user.noRoles.regReviewerClosed">Registreren als reviewer: registratie is momenteel uitgeschakeld.</message>
-	<message key="issue.coverPage.altText">Omslag</message>
-	<message key="journal.issn">ISSN</message>
-	<message key="article.article">Artikel</message>
-	<message key="common.publishedSubmission">Artikel</message>
-	<message key="user.manageMySubscriptions">Mijn abonnementen beheren</message>
-	<message key="subscriptionTypes.currency">Valuta</message>
-	<message key="subscriptionTypes.year">jaar</message>
-	<message key="subscriptionTypes.years">jaren</message>
-	<message key="subscriptionTypes.month">maand</message>
-	<message key="subscriptionTypes.months">maanden</message>
-	<message key="subscriptionTypes.format">Formaat</message>
-	<message key="subscriptionTypes.format.online">Online</message>
-	<message key="subscriptionTypes.format.print">Gedrukt</message>
-	<message key="subscriptionTypes.format.printOnline">Gedrukt en online</message>
-	<message key="subscriptionTypes.nonExpiring">Niet-verlopend</message>
-	<message key="subscriptions.inactive">Inactief</message>
-	<message key="subscriptions.status">Status</message>
-	<message key="subscriptions.status.active">Actief</message>
-	<message key="subscriptions.status.needsInformation">Informatie nodig</message>
-	<message key="subscriptions.status.needsApproval">Goedkeuring nodig</message>
-	<message key="subscriptions.status.awaitingManualPayment">Wacht op handmatige betaling</message>
-	<message key="subscriptions.status.awaitingOnlinePayment">Wacht op online betaling</message>
-	<message key="subscriptions.status.other">Overige, zie opmerkingen</message>
-	<message key="subscriptionManager.individualSubscriptions">Individuele abonnementen</message>
-	<message key="subscriptionManager.institutionalSubscriptions">Institutionele abonnementen</message>
-	<message key="subscriptionManager.subscriptionTypes">Abonnementsoorten</message>
-	<message key="subscriptions.individualDescription">Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de inhoud.</message>
-	<message key="subscriptions.institutionalDescription">Voor institutionele abonnementen is inloggen niet nodig.Toegang tot de inhoud wordt geregeld aan de hand van het domein en/of het IP-adres van de gebruiker.</message>
-	<message key="user.subscriptions.mySubscriptions">Mijn abonnementen</message>
-	<message key="user.subscriptions.individualSubscriptions">Individueel abonnement</message>
-	<message key="user.subscriptions.institutionalSubscriptions">Institutionele abonnementen</message>
-	<message key="user.subscriptions.renew">Vernieuwen</message>
-	<message key="user.subscriptions.purchase">Koop</message>
-	<message key="user.subscriptions.purchaseNewSubscription">Koop nieuw abonnement</message>
-	<message key="user.subscriptions.purchaseIndividualSubscription">Koop individueel abonnement</message>
-	<message key="user.subscriptions.purchaseInstitutionalSubscription">Koop institutioneel abonnement</message>
-	<message key="user.subscriptions.expires">Verloopt</message>
-	<message key="user.subscriptions.expired">Verlopen</message>
-	<message key="user.subscriptions.viewSubscriptionTypes">Bekijk beschikbare abonnementsoorten</message>
-	<message key="user.subscriptions.form.typeId">Abonnementsoort</message>
-	<message key="user.subscriptions.form.membership">Lidmaatschap</message>
-	<message key="user.subscriptions.form.typeIdValid">Kies een geldige abonnementsoort</message>
-	<message key="user.subscriptions.form.institutionName">Naam van het instituut</message>
-	<message key="user.subscriptions.form.institutionNameRequired">De naam van het instituut is verplicht</message>
-	<message key="user.subscriptions.form.institutionMailingAddress">Postadres</message>
-	<message key="user.subscriptions.form.domain">Domein</message>
-	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Als hier een domeinnaam wordt opgegeven, zijn IP-reeksen optioneel.<br />Geldige waarden zijn domeinnamen (bv. lib.sfu.ca).]]></message>
-	<message key="user.subscriptions.form.domainValid">Geef een geldige domeinnaam</message>
-	<message key="user.subscriptions.form.ipRange">IP reeksen</message>
-	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
-	<message key="user.subscriptions.form.deleteIpRange">Verwijder</message>
-	<message key="user.subscriptions.form.addIpRange">Voeg toe</message>
-	<message key="about.subscriptionTypes.name">Naam</message>
-	<message key="about.subscriptionTypes.format">Formaat</message>
-	<message key="about.subscriptionTypes.duration">Duur</message>
-	<message key="about.subscriptionTypes.cost">Kosten</message>
-	<message key="payment.subscription.purchase">Koop abonnement</message>
-	<message key="installer.installApplication">Installeer Open Journal Systems</message>
-	<message key="installer.upgradeApplication">Upgrade Open Journal Systems</message>
-	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Noot:</strong> Institutionele abonnementen die online gekocht ziijn, worden pas actief na goedkeuring van het domein en de IP-reeksen.]]></message>
-	<message key="user.subscriptions.form.membershipRequired">De gekozen abonnementsoort vereist lidmaatschapsinformatie.</message>
-	<message key="user.subscriptions.form.subscriptionExists">Deze gebruiker heeft al een individueel abonnement.</message>
-	<message key="user.subscriptions.form.membershipInstructions">Lidmaatschapsinformatie indien vereist voor de gekozen abonnementsoort.</message>
-	<message key="user.subscriptions.form.domainIPRangeRequired">De gekozen abonnementsoort vereist een domein en/of IP-reeks voor de authenticatie van het abonenment.</message>
-	<message key="user.subscriptions.form.ipRangeValid">Geef een geldige IP-reeks.</message>
-	<message key="about.history">Geschiedenis van het tijdschrift</message>
-	<message key="about.subscriptions.individual">Individuele abonnementen</message>
-	<message key="about.subscriptions.institutional">Institutionele abonnementen</message>
-	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[als hier IP reeksen opgegeven worden is het domein optioneel.<br />Geldige waarden zijn een IP adres (bv. 142.58.103.1), IP reeks (bv. 142.58.103.1 - 142.58.103.4), een IP reeks met wildcard '*' (bv. 142.58.*.*), en een IP reeks mets CIDR (e.g. 142.58.100.0/24).]]></message>
-	<message key="notification.type.editorDecisionComment">Er is een commentaar achtergelaten op de redacteursbeslissing van "{$title}".</message>
-	<message key="notification.type.galleyModified">Een proef van "{$title}" gewijzigd.</message>
-	<message key="notification.type.issuePublished">Er is een nieuw nummer gepubliceerd</message>
-	<message key="notification.type.reviewing">Nieuws over reviews</message>
-	<message key="notification.type.site">Nieuws over de site</message>
-	<message key="notification.type.submissions">Nieuws over inzendingen</message>
-	<message key="notification.type.newAnnouncement">Er is een nieuw nieuwsbericht gemaakt.</message>
-	<message key="notification.type.reviewerFormComment">Er is een reviewformulier ingediend voor "{$title}".</message>
-	<message key="notification.type.submissionComment">Een redacteur heeft "{$title}" van commentaar voorzien.</message>
-	<message key="reviewer.article.reviewGuidelinesDescription">De richtlijnen voor review geven reviewers criteria voor het beoordelen van de geschiktheid van een inzending voor publicatie in het tijdschrift. Ze kunnen instructies bevatten voor het maken een effectief en behulpzaam review. Bij het uitvoeren van een review krijgen reviewers twee tekstvelden, de eerste "voor redacteur en auteur" en de tweede "voor redacteur". De tijdschriftbeheerder kan ook een peer review formulier aanmaken bij revieuwformulieren, In alle gevallen hebben de redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
-	<message key="notification.type.editing">Redactieberichten</message>
-	<message key="notification.type.userComment">Een lezer heeft een opmerking geplaatst bij "{$title}"</message>
-	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
-	<message key="user.subscriptions.statusDescription">Beschrijving</message>
-	<message key="user.subscriptions.status">Status</message>
-	<message key="user.subscriptions.status.needsInformationDescription">Er is additionele informatie nodig voordat het abonnement geactiveerd kan worden</message>
-	<message key="user.subscriptions.status.needsApprovalDescription">Het abonnement moet beoordeeld worden voor het geactiveerd kan worden</message>
-	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Handmatige betaling is gestart, maar nog niet ontvangen</message>
-	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Een online betaling is gestart, maar gestopt of niet voltooid</message>
-	<message key="user.subscriptions.statusInformation">Actieve en verlopen abonnementen worden hieronder met hun afloopdatum getoond. De volgende aanvullende informatie kan bij de abonnementen opgenomen worden.</message>
-	<message key="payment.authorFees">Kosten auteurs</message>
-	<message key="user.register.reviewerInterests">Geef review-interesses (kennisgebieden en onderzoeksmethodes)</message>
-	<message key="site.upgradeAvailable.admin"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Bezoek <a href="http://pkp.sfu.ca/ojs_download" target="_new">deze pagina</a> om de meest recente versie op te halen en voor installatieinstructies.]]></message>
-	<message key="site.upgradeAvailable.manager"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Neem contact op met uw sitebeheerder ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) om die te wijzen op de nieuwe versie. Meer informatie <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a>.]]></message>
-	<message key="user.authorization.copyeditorAssignmentMissing">Geen toegang! U bent niet de tekstredacteur voor dit artikel.</message>
-	<message key="user.authorization.sectionAssignment">U probeert een artikel uit een andere sectie te benaderen</message>
-	<message key="payment.loginRequired.forIssue">Een abonnement of kopen van het nummer is nodig om dit item te kunnen benaderen. Om uw abonnement  te verifiëren, een eerdere aankoop te benaderen of een nummer te kopen, moet u inloggen.</message>
-	<message key="payment.type.purchaseIssue">Prijs voor het kopen van een nummer</message>
-	<message key="installer.allowFileUploads"><![CDATA[Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>]]></message>
-	<message key="installer.maxFileUploadSize"><![CDATA[Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>]]></message>
-	<message key="user.authorization.invalidCopyditorSubmission">Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!</message>
-	<message key="navigation.categories">Categorieën</message>
-	<message key="navigation.categories.browse">Bladeren</message>
-	<message key="issue.fullIssue">Heel nummer</message>
-	<message key="issue.nonpdf.title">Nummer downloaden</message>
-	<message key="issue.viewIssue">Bekijk nummer</message>
-	<message key="site.noJournals">Er zijn geen tijdschriften beschikbaar</message>
-	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
-	<![CDATA[<ol>
-	<li>Gemarkeerde items hebben de aandacht van een redacteur nodig. De markering is als volgt:
-		<ul>
-			<li class="highlightCopyediting">Er is actie nodig bij de tekstredactie</li>
-			<li class="highlightLayoutEditing">Er is actie nodig bij de eindredactie</li>
-			<li class="higlightProofreading">Er is actie nodig bij het proeflezen</li>
-		</ul>
-	</li>
-</ol>]]></message>
-	<message key="user.profile.profileImage">Profielafbeelding</message>
-</locale>
-=======
 	<message key="catalog.sortBy">Artikels sorteren op</message>
 	<message key="catalog.sortBy.categoryDescription">Kies hoe artikels in deze categorie worden geordend.</message>
 </locale>
->>>>>>> fixed indentation
