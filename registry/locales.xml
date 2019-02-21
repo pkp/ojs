@@ -32,7 +32,7 @@
 	<locale key="id_ID" complete="false" name="Bahasa Indonesia" iso639-2b="ind" iso639-3="ind" />
 	<locale key="it_IT" complete="false" name="Italiano" iso639-2b="ita" iso639-3="ita" />
 	<locale key="nb_NO" complete="false" name="Norsk Bokmål" iso639-2b="nor" iso639-3="nor" />
-	<locale key="nl_NL" complete="false" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
+	<locale key="nl_NL" complete="true" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
 	<locale key="pl_PL" complete="false" name="Język Polski" iso639-2b="pol" iso639-3="pol" />
 	<locale key="pt_BR" complete="true"  name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
 	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
