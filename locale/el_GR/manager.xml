@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
   * locale/en_US/manager.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
@@ -11,7 +14,7 @@
   *
   -->
 
-<locale full_name="Ελληνικά (Greek)" name="el_GR">
+<locale name="el_GR" full_name="Ελληνικά (Greek)">
 	<message key="manager.website.archiving">Αρχειοθέτηση</message>
 	<message key="manager.emails.confirmResetAll">Επιβεβαιώνετε την επαναφορά στην αρχική μορφή όλων των προτύπων μηνυμάτων στο συγκεκριμένο περιοδικό; Όλες οι αλλαγές που έχετε πραγματοποιήσει θα χαθούν.</message>
 	<message key="manager.files.note">Σημείωση: O Περιηγητής Αρχείων αποτελεί μια προηγμένη λειτουργία που επιτρέπει την άμεση προβολή και διαχείριση των αρχείων και καταλόγων που σχετίζονται με κάποιο περιοδικό.</message>

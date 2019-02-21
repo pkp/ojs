@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
-  * locale/en_US/default.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/default.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -11,7 +14,7 @@
   *
   -->
 
-<locale full_name="Ελληνικά (Greek)" name="el_GR">
+<locale name="el_GR" full_name="Ελληνικά (Greek)">
 	<!-- Section default -->
 	<message key="section.default.title">Άρθρα</message>
 	<message key="section.default.abbrev">ΑΡΘ</message>
