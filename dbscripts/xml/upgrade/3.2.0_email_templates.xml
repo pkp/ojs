@@ -43,5 +43,27 @@
 			ALTER TABLE email_templates_data
 			ADD PRIMARY KEY (email_id, locale)
 		</query>
+		<query>
+			CREATE TABLE IF NOT EXISTS email_templates_settings (
+				email_id BIGINT NOT NULL,
+				locale VARCHAR(14) NOT NULL,
+				setting_name VARCHAR(255) NOT NULL,
+				setting_value TEXT,
+				PRIMARY KEY (email_id, locale, setting_name)
+			)
+		</query>
+		<query>
+			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
+			SELECT email_id, locale, subject, 'subject'
+			FROM email_templates_data
+		</query>
+		<query>
+			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
+			SELECT email_id, locale, body, 'body'
+			FROM email_templates_data
+		</query>
+		<query>
+			DROP TABLE email_templates_data
+		</query>
 	</sql>
 </data>
