@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale/en_US/submission.xml
+  * locale/el_GR/submission.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -14,7 +14,7 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<!-- Submission wizard -->
 	<message key="submission.submit.title">Υποβολή άρθρου</message>
 	<message key="submission.submit.userGroup">Υποβολή με τον ρόλο μου ως:</message>

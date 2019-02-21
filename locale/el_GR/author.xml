@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
-  * locale/en_US/author.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/author.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -11,7 +14,7 @@
   *
   -->
 
-<locale full_name="Ελληνικά (Greek)" name="el_GR">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="author.submit">Νέα υποβολή</message>
 	<message key="author.track">Ενεργές υποβολές</message>
 	<message key="author.competingInterests"><![CDATA[Αντικρουόμενα&nbsp;συμφέροντα &lt;a target="_new" class="action" href="{$competingInterestGuidelinesUrl}"&gt;Πολιτική&nbsp;Αντικρεούμενων&nbsp;Συμφερόντων&lt;/a&gt;]]></message>

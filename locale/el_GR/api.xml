@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale/en_US/api.xml
+  * locale/el_GR/api.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2000-2018 John Willinsky
@@ -14,6 +14,6 @@
   *
   -->
 
-<locale name="el_GR" full_name="Ελληνικά (Greek)">
+<locale name="el_GR" full_name="ελληνικά">
 	<message key="api.submissions.403.unpublishedIssues">Δεν έχετε άδεια να δείτε μη δημοσιευμένα τεύχη.</message>
 </locale>
