@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -13,6 +13,7 @@
   * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
   *
   -->
+
 <locale name="nl_NL" full_name="Nederlands">
 	<!--
 	 * This file is organized into several major sections, separated
@@ -160,7 +161,7 @@
 	<message key="submission.copyedit">Tekstredactie</message>
 	<message key="submission.proofreading">Proeflezen</message>
 	<message key="submission.scheduling">Inplannen</message>
-	<message key="submission.scheduledIn">Ingepland voor publicatie in  {$issueName}.</message>
+	<message key="submission.scheduledIn">Ingepland voor publicatie in {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
@@ -344,7 +345,7 @@
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Een standaard authenticatiesysteem anders dan OJS heeft de volgende effecten:</p>
 <ul>
-	<li>Wanneer een gebruiker een nieuw account probeert te registreren  met een gebruikersnaam die al bestaat in het externe systeem (maar niet in OJS), zal de registratie alleen lukken als het wachtwoord geldig is voor dat account.</li>
+	<li>Wanneer een gebruiker een nieuw account probeert te registreren met een gebruikersnaam die al bestaat in het externe systeem (maar niet in OJS), zal de registratie alleen lukken als het wachtwoord geldig is voor dat account.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
@@ -374,8 +375,14 @@
 	<message key="plugins.categories.auth.description">Authenticatie plugins stellen Open Journal Systems in staat om authenticatie van gebruikers uit te besteden aan andere systemen zoals LDAP servers.</message>
 	<message key="plugins.categories.generic.description">Generieke plugins worden gebruikt om Open Journal Systems uit te breiden op manieren die niet ondersteund worden in de andere plugin-categorieën.</message>
 
+	<message key="manager.setup.lockssDescription">Open Journal Systems ondersteunt het LOCKSS (Lots of Copies Keep Stuff Safe) systeem om een veilige en permanente archivering van tijdschriftinhoud te garanderen. Als uw tijdschrift werd aanvaard om inhoud te archiveren in het Global LOCKSS Network of deelneemt aan een Private LOCKSS Network (behalve het PKP PN), schakel LOCKSS dan hier in:</message>
+
+	<message key="manager.setup.clockssDescription">Open Journal Systems ondersteunt het cLOCKSS (Controlled Lots of Copies Keep Stuff Safe) systeem om een veilige en permanente archivering van tijdschriftinhoud te garanderen. Als u een contract heeft met het CLOCKSS Archive voor archivering van uw tijdschrift, schakel CLOCKSS dan hier in:</message>
+
+	<message key="manager.setup.porticoDescription">Portico is een niet-commeciële archiveringsdienst voor digitale publicaties, waaronder e-tijdschriften, e-books en gedigitaliseerde historische collecties. Als u een contract heeft met Portico voor archivering van uw tijdschrift, schakel Portico dan hier in:</message>
+	
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Voorgestelde Creative Commons auteursrecht verklaringen</h3>
 <h4>1. Concept beleid voor Open Access tijdschriften</h4>
 Auteurs die publiceren bij dit tijdschrift, onderschrijven de volgende voorwaarden:
 <ol type="a">
@@ -442,7 +449,7 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 	<!-- Editor -->
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Onderdelen worden geaccentueerd als de redacteur actie moet ondernemen.</li>
-	<li>"Verloopt"  is ingevuld als de reviewer het verzoek tot beoordelen accepteert, het geeft het aantal weken aan voordat de review binnen moet zijn of  (-) het aantal weken dat die overtijd is.</li>
+	<li>"Verloopt" is ingevuld als de reviewer het verzoek tot beoordelen accepteert, het geeft het aantal weken aan voordat de review binnen moet zijn of (-) het aantal weken dat die overtijd is.</li>
 </ol>]]></message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 		<![CDATA[<ol>
@@ -719,7 +726,7 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 <li>Gebruik haakjes om complexere vragen te maken, bv. <i>archief ((tijdschrift OF conferentie) NIET thesis)</i></li>
 <li>Zoek naar een exacte frase door die tussen aanhalingstekens te zetten, bv. <i>"open access publishing"</i></li>
 <li>Sluit een woord uit door het vooraf te laten gaan door <b>-</b> of <i>NIET</i>, bv <i>online -politiek</i> of <i>online NIET politiek</i></li>
-<li>Gebruik <b>*</b> in een zoekterm als joker voor een willekeurige reeks tekens. bv. <i>soci* moraal</i> vindt documenten met  "sociologisch" of "sociaal"</li>
+<li>Gebruik <b>*</b> in een zoekterm als joker voor een willekeurige reeks tekens. bv. <i>soci* moraal</i> vindt documenten met "sociologisch" of "sociaal"</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
@@ -781,6 +788,7 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 	<message key="about.delayedOpenAccess">Vertraagde Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">De inhoud van dit tijdschrift zal beschikbaar zijn in een open access formaat</message>
 	<message key="about.delayedOpenAccessDescription2">maand(en) nadat een nummer gepubliceerd is.</message>
+	<message key="about.authorSelfArchive">Zelfarchivering door auteur</message>
 	<message key="about.archiving">Archiveren</message>
 	<message key="about.subscriptions">Abonnementen</message>
 	<message key="about.subscriptions.individual">Individuele abonnementen</message>
@@ -871,7 +879,7 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 
 <p>Aangezien PKP niet de middelen heeft om iedere combinatie van softwareversies en platforms te testen, impliceert dit geen garanties voor correcte werking of ondersteuning.</p>
 
-<p>Deze instellingen kunnen na installatie gewijzigd worden door het bestand <tt>config.inc.php</tt> in de  OJS map aan te passen of met de sitebeheer web interface.</p>
+<p>Deze instellingen kunnen na installatie gewijzigd worden door het bestand <tt>config.inc.php</tt> in de OJS map aan te passen of met de sitebeheer web interface.</p>
 
 <h4>Ondersteunde database systemen</h4>
 
@@ -893,19 +901,19 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 
 <h4>Handmatige installatie</h4>
 
-<p>Kies <strong>Handmatige installatie</strong> om de  SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>]]></message>
+<p>Kies <strong>Handmatige installatie</strong> om de SQL commando's te tonen voor het aanmaken van het OJS database schema en de initiële gegevens zodat de database installatie met de hand uitgevoerd kan worden. Deze optie is handig voor het localiseren van installatieproblemen, in het bijzonder op niet-ondersteunde platforms. Merk op dat deze installatie niet probeert om de database of tabellen aan te maken, hoewel het configuratiebestand met de opgegeven database instellingen wel wordt weggeschreven.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Versie {$version}</h4>
 
-<p>Dank u voor het downloaden van  Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README.md">README</a> en <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten  en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Dank u voor het downloaden van Public Knowledge Project's <strong>Open Journal Systems</strong>. Lees voor u verdergaat de <a href="{$baseUrl}/docs/README.md">README</a> en <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> bestanden bij deze software. Bezoek voor meer informatie over het Public Knowledge Project en zijn software projecten de <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. Voor het melden van fouten en het verkrijgen van technische ondersteuning voor Open Journal Systems kunt u terecht op het <a href="http://forum.pkp.sfu.ca">support forum</a> of bezoek PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">fout rapportage systeem</a>. Hoewel het forum de voorkeur heeft kunt u het team ook e-mailen op <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Het is <strong>sterk aanbevolen</strong> dat u een backup maakt van uw databank, bestanden-map en OJS installatiemap voor u verder gaat.</p>
 <p>Als u draait in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, verzeker u er dan van dat de max_execution_timeout in uw php.ini op een hoge waarde staat. Als deze of een andere tijdslimiet (bv. Apache's "Timeout" waarde) bereikt wordt en het upgrade proces onderbroken wordt, is handmatige interventie noodzakelijk.</p>]]></message>
-	<message key="installer.localeSettingsInstructions"><![CDATA[Kies UTF-8 voor alle karakterset-instellingen als u volledige Unicode (UTF-8) ondersteuning wilt. Merk op dat dit momenteel een MySQL >= 4.1.1 of PostgreSQL >= 7.1 database vereist. Merk ook op dat volledige Unicode ondersteuning  PHP >= 4.3.0 gecompileerd met ondersteuning van de <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> bibliotheek vereist (standaard ingeschakeld in de meeste recente PHP installaties). Als uw server niet aan deze eisen voldoet kunnen er problemen ontstaan met het gebruik van uitgebreide karaktersets.
+	<message key="installer.localeSettingsInstructions"><![CDATA[Kies UTF-8 voor alle karakterset-instellingen als u volledige Unicode (UTF-8) ondersteuning wilt. Merk op dat dit momenteel een MySQL >= 4.1.1 of PostgreSQL >= 7.1 database vereist. Merk ook op dat volledige Unicode ondersteuning PHP >= 4.3.0 gecompileerd met ondersteuning van de <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> bibliotheek vereist (standaard ingeschakeld in de meeste recente PHP installaties). Als uw server niet aan deze eisen voldoet kunnen er problemen ontstaan met het gebruik van uitgebreide karaktersets.
 <br /><br />
 Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="installer.localeInstructions">De primaire taal voor gebruik in dit systeem. Zie de OJS documentatie voor ondersteuning van hier niet genoemde talen.</message>
-	<message key="installer.additionalLocalesInstructions">Selecteer de bijkomende talen voor gebruik in dit systeem. Deze talen kunnen gebruikt worden door de tijdschriften in deze site. Bijkomende talen kunnen op ieder gewenst moment  geïnstalleerd worden bij sitebeheer.</message>
+	<message key="installer.additionalLocalesInstructions">Selecteer de bijkomende talen voor gebruik in dit systeem. Deze talen kunnen gebruikt worden door de tijdschriften in deze site. Bijkomende talen kunnen op ieder gewenst moment geïnstalleerd worden bij sitebeheer.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Geef het volledige pad naar een bestaande map waar geladen bestanden bewaard moeten worden. Deze map moet niet direct vanaf het web benaderbaar zijn. <strong>Verzeker u ervan dat de map bestaat en erin geschreven mag worden.</strong> Gebruik voor Windows pad-namen voorwaartse schuine strepen, bv. "C:/myjournal/files".]]></message>
 	<message key="installer.databaseSettingsInstructions">OJS gebruikt een SQL database voor het opslaan van gegevens. Zie de systeemvereisten hierboven voor de lijst van ondersteunde databases. Geef in de velden hieronder de instellingen om de connectie met de database te maken.</message>
 	<message key="installer.installApplication">Installeer Open Journal Systems</message>
@@ -918,7 +926,7 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 <p>Als u nieuws en updates wilt ontvangen, <strong>registreer u dan op <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Als u vragen of opmerkingen heeft, bezoek dan het <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Opwaarderen van OJS naar versie {$version} is succesvol afgerond.</p>
 <p>Vergeet niet om de "installed" instelling in uw config.inc.php bestand terug te zetten op <i>On</i>.</p>
-<p>Als u nog niet geregistreerd bent en nieuws en updates wenst te ontvangen, <strong>registreeru dan op <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong>  Als u vragen of opmerkingen heeft, bezoek dan het <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
+<p>Als u nog niet geregistreerd bent en nieuws en updates wenst te ontvangen, <strong>registreeru dan op <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Als u vragen of opmerkingen heeft, bezoek dan het <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
 	<message key="site.upgradeAvailable.admin"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Bezoek <a href="http://pkp.sfu.ca/ojs_download" target="_new">deze pagina</a> om de meest recente versie op te halen en voor installatieinstructies.]]></message>
@@ -938,14 +946,14 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="log.review.reviewDeclined">{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geweigerd.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} heeft de review voor ronde {$round} van inzending {$submissionId} geaccepteerd.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} heeft de review voor ronde {$round} van inzending {$submissionId} namens {$reviewerName} geweigerd.</message>
-	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde  {$round} van inzending {$submissionId} namens {$reviewerName} geaccepteerd.</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} heeft de review voor ronde {$round} van inzending {$submissionId} namens {$reviewerName} geaccepteerd.</message>
 	<message key="log.review.reviewFileByProxy">Redacteur, {$userName}, heeft een reviewbestand geladen voor ronde {$round} van inzending {$submissionId} namens reviewer {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Een reviewbestand is geladen.</message>
 	<message key="log.editor.decision">Een redacteursbeslissing ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}.</message>
 	<message key="log.editor.recommendation">Een redacteursaanbeveling ({$decision}) voor artikel {$submissionId} is vastgelegd door {$editorName}.</message>
 
 
-	<message key="log.copyedit.initiate">Tekstredactie voor inzending  {$submissionId} is gestart door {$copyeditorName}.</message>
+	<message key="log.copyedit.initiate">Tekstredactie voor inzending {$submissionId} is gestart door {$copyeditorName}.</message>
 	<message key="log.copyedit.copyeditFileSet">Het standaard tekstredactiebestand is gekozen.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} heeft de initiële tekstredactie van inzending {$submissionId} voltooid.</message>
 	<message key="log.copyedit.finalEditComplete">{$copyeditorName} heeft de definitieve tekstredactie van inzending {$submissionId} voltooid.</message>
@@ -968,7 +976,56 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 
 	<message key="log.imported">{$userName} heeft artikel {$submissionId} geïmporteerd.</message>
 
-	<message key="metadata.pkp.peerReviewed">Peer reviewed artikel</message>
+	<!-- Reading Tools entries -->
+
+
+	<!-- RT Settings -->
+	<message key="rt.admin.settings">Opties voor leeshulpmiddelen</message>
+
+	<message key="rt.admin.settings.description">De leeshulpmiddelen verschijnen in een kader naast de secties van het tijdschrift die worden geïndexeerd. De leeshulpmiddelen bevatten een verzameling optionele hulpmiddelen voor het gepubliceerde item zelf (zie het overzicht hieronder), en een verzameling hulpmiddelen die toegang bieden tot verwante items, georganiseerd per onderzoeksveld en discipline.</message>
+	<message key="rt.admin.settings.enableReadingTools">Schakel leeshulpmiddelen in voor de geselecteerde tijdschriftsecties.</message>
+	<message key="rt.admin.settings.relatedItems">Veld</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Zie <a href="{$relatedItemsLink}" class="action">Verwante items</a> om verwante items voor elk veld te bekijken, toe te voegen, te verbeteren of te verwijderen.]]></message>
+	<message key="rt.admin.options">Tijdschrift nummer hulpmiddelen</message>
+	<message key="rt.admin.relatedItems">Verwante items hulpmiddelen</message>
+	<message key="rt.admin.settings.addComment">Voeg opmerking toe (laat lezers toe om opmerkingen te posten, die de tijdschriftbeheerder kan verwijderen).</message>
+	<message key="rt.admin.settings.addComment.authenticated">Gebruikers moeten geregistreerd en ingelogd zijn om te posten. Anoniem posten is niet toegestaan.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Gebruikers moeten geregistreerd en ingelogd zijn om te posten. Anoniem posten is toegestaan.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Gebruikers hoeven niet geregistreerd te zijn om te posten. Anoniem posten is toegestaan.</message>
+	
+
+	<!-- RT Versions -->
+
+	<!-- RT Contexts -->
+
+	<!-- RT Searches -->
+
+	<message key="rt.admin.validateUrls.description"><![CDATA[Hieronder wordt een overzicht van mogelijk ongeldige URL's voor zoeksites gegeven<br/><br/>
+Verifeer handmatig elke URL die als ongeldig wordt aangeduid, want deze test is niet 100% accuraat.<br/>
+Validatie kan mislukken voor zoek URL's die invoer van formulieren verwachten.]]></message>
+
+	<!-- RT Entities -->
+
+
+
+
+	<message key="rt.metadata.dublinCore.primaryAuthor">Oorspronkelijke auteur</message>
+
+	<message key="rt.metadata.pkp.primaryAuthor">Naam, affiliatie, land van de auteur</message>
+	<message key="rt.metadata.pkp.peerReviewed">Peer-reviewed artikel</message>
+
+
+
+
+
+	<message key="rt.beNotifiedWhen">Houd me op de hoogte als...</message>
+
+	<message key="rt.thisJournal">Zoek in tijdschrift</message>
+
+
+	<message key="rt.context.authorTermsDescription">Selecteer de namen van alle auteurs om te zoeken naar gelijkaardige gezamenlijk gepubliceerde werken, of zoek voor elke auteur apart door slechts een enkele naam te selecteren. Klik op Over om meer te weten te komen over de bron die wordt doorzocht. Deze bronnen werden geselecteerd vanwege hun relevantie en volledige open (gratis) toegang.</message>
+
+
 
 	<!-- Notification Types -->
 
