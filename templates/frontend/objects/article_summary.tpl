@@ -39,7 +39,7 @@
 	<div class="meta">
 		{if $showAuthor}
 		<div class="authors">
-			{$article->getAuthorString()}
+			{$article->getAuthorString()|escape}
 		</div>
 		{/if}
 

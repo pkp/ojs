@@ -45,7 +45,7 @@
 			</script>
 				<select name="sectionIds[]" class="selectMenu" multiple="multiple" size="5">
 					{foreach from=$sections item=section}
-						<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()}</option>
+						<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()|escape}</option>
 					{/foreach}
 				</select><br/>&nbsp;<br/>
 				<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>
