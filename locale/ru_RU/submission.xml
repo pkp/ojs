@@ -78,4 +78,6 @@
 
 	<message key="submission.metadataDescription">Эти спецификации основаны на наборе метаданных Dublin Core — международном стандарте, используемом для описания контента журнала.</message>
 	<message key="section.any">Любой раздел</message>
+
+	<message key="submission.sectionOptions">Параметры раздела</message>
 </locale>
