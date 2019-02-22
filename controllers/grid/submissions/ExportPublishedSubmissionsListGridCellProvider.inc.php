@@ -58,7 +58,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 						new RedirectAction(
 							ServicesContainer::instance()->get('submission')->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
-						$title
+						htmlspecialchars($title)
 					)
 				);
 			case 'issue':
@@ -77,7 +77,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
 							__('plugins.importexport.common.settings.DOIPluginSettings')
 						),
-						$issue->getIssueIdentification(),
+						htmlspecialchars($issue->getIssueIdentification()),
 						null
 					)
 				);
@@ -94,7 +94,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 								$statusActions[$status],
 								'_blank'
 							),
-							$statusNames[$status]
+							htmlspecialchars($statusNames[$status])
 						)
 					);
 				}
