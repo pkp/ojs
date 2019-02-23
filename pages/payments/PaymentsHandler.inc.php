@@ -43,6 +43,10 @@ class PaymentsHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
+		// Ensure a logged in user is available
+		import('lib.pkp.classes.security.authorization.UserRequiredPolicy');
+		$this->addPolicy(new UserRequiredPolicy($request, 'user.authorization.loginRequired'));
+		
 		import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
 		$this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
 		return parent::authorize($request, $args, $roleAssignments);
