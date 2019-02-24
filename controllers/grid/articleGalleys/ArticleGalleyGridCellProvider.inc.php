@@ -20,13 +20,16 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	/** @var Submission **/
 	var $_submission;
 
+	var $_isEditable;
+
 	/**
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function __construct($submission) {
+	function __construct($submission, $isEditable) {
 		parent::__construct();
 		$this->_submission = $submission;
+		$this->_isEditable = $isEditable;
 	}
 
 	//
@@ -59,6 +62,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	function getRequestArgs($row) {
 		return array(
 			'submissionId' => $this->_submission->getId(),
+			'submissionVersion' => $this->getSubmission()->getSubmissionVersion(),
 		);
 	}
 

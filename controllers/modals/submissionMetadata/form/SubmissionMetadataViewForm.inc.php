@@ -139,7 +139,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		if ($reorder) {
 			// see if it is a published article
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
+			$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
 			if ($publishedArticle) {
 				// Resequence the articles.
 				$publishedArticle->setSequence(REALLY_BIG_NUMBER);

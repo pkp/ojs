@@ -69,7 +69,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		}
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId());
+		$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId());
 		$publishedArticle ? $submissionNode->setAttribute('seq', $publishedArticle->getSequence()) : $submissionNode->setAttribute('seq', '0');
 		$publishedArticle ? $submissionNode->setAttribute('access_status', $publishedArticle->getAccessStatus()) : $submissionNode->setAttribute('access_status', '0');
 		// if this is a published article and not part/subelement of an issue element

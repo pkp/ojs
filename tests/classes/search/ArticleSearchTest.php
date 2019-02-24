@@ -281,9 +281,9 @@ class ArticleSearchTest extends PKPTestCase {
 		// Mock a published article.
 		$publishedArticle = new PublishedArticle();
 
-		// Mock the getByArticleId() method.
+		// Mock the getBySubmissionId() method.
 		$publishedArticleDAO->expects($this->any())
-		                    ->method('getByArticleId')
+		                    ->method('getBySubmissionId')
 		                    ->will($this->returnValue($publishedArticle));
 
 		// Register the mock DAO.

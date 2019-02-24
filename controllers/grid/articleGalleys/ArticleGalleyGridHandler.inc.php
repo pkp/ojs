@@ -24,6 +24,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	/** @var PKPRequest */
 	var $_request;
 
+	var $_canEdit;
+
 	/**
 	 * Constructor
 	 */
@@ -100,8 +102,14 @@ class ArticleGalleyGridHandler extends GridHandler {
 			LOCALE_COMPONENT_APP_EDITOR
 		);
 
+		$this->_canEdit = true;
+
+		if ($this->getSubmission()->getSubmissionVersion() != $this->getSubmission()->getCurrentSubmissionVersion()) {
+			$this->_canEdit = false;
+		}
+
 		import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
-		$cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission());
+		$cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->_canEdit);
 
 		// Columns
 		$this->addColumn(new GridColumn(
@@ -112,19 +120,21 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$cellProvider
 		));
 
-		$router = $request->getRouter();
-		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-		if (0 != count(array_intersect($userRoles, array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT)))) {
-			$this->addAction(new LinkAction(
-				'addGalley',
-				new AjaxModal(
-					$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
-					__('submission.layout.newGalley'),
-					'modal_add_item'
-				),
-				__('grid.action.addGalley'),
-				'add_item'
-			));
+		if ($this->_canEdit) {
+			$router = $request->getRouter();
+			$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+			if (0 != count(array_intersect($userRoles, array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT)))) {
+				$this->addAction(new LinkAction(
+					'addGalley',
+					new AjaxModal(
+						$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
+						__('submission.layout.newGalley'),
+						'modal_add_item'
+					),
+					__('grid.action.addGalley'),
+					'add_item'
+				));
+			}
 		}
 	}
 
@@ -135,8 +145,12 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @copydoc GridHandler::initFeatures()
 	 */
 	function initFeatures($request, $args) {
-		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
-		return array(new OrderGridItemsFeature());
+		if ($this->_canEdit) {
+			import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+			return array(new OrderGridItemsFeature());
+		}
+
+		return array();
 	}
 
 	/**
@@ -180,6 +194,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function getRequestArgs() {
 		return array(
 			'submissionId' => $this->getSubmission()->getId(),
+			'submissionVersion' => $this->getSubmission()->getSubmissionVersion(),
 		);
 	}
 
@@ -188,7 +203,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 */
 	function loadData($request, $filter = null) {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		return $galleyDao->getBySubmissionId($this->getSubmission()->getId());
+		return $galleyDao->getBySubmissionId($this->getSubmission()->getId(), null, $this->getSubmission()->getSubmissionVersion());
 	}
 
 	//

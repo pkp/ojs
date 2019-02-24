@@ -545,7 +545,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			FROM	issues i,
 				published_submissions pa,
 				submissions a
-			WHERE	i.issue_id = pa.issue_id AND
+			WHERE	i.issue_id = pa.issue_id AND pa.is_current_submission_version = 1 AND
 				pa.submission_id = ? AND
 				pa.submission_id = a.submission_id AND
 				a.context_id = i.journal_id' .
@@ -657,7 +657,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return int
 	 */
 	function getNumArticles($issueId) {
-		$result = $this->retrieve('SELECT COUNT(*) FROM published_submissions WHERE issue_id = ?', (int) $issueId);
+		$result = $this->retrieve('SELECT COUNT(*) FROM published_submissions WHERE is_current_submission_version = 1 AND issue_id = ?', (int) $issueId);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 		$result->Close();
 		return $returner;

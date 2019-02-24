@@ -40,7 +40,7 @@ class IssueEntryHandler extends PublicationEntryHandler {
 
 		// load in any galley formats assigned to this published article
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$articleGalleys = $galleyDao->getBySubmissionId($submission->getId());
+		$articleGalleys = $galleyDao->getBySubmissionId($submission->getId(), null, $submission->getSubmissionVersion());
 
 		$templateMgr->assign('galleys', $articleGalleys->toArray());
 
@@ -48,10 +48,10 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		$router = $request->getRouter();
 		$dispatcher = $router->getDispatcher();
 
-		$tabsUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'modals.submissionMetadata.IssueEntryHandler', 'fetchFormatInfo', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId()));
+		$tabsUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'modals.submissionMetadata.IssueEntryHandler', 'fetchFormatInfo', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId(), 'submissionVersion' => $submission->getSubmissionVersion()));
 		$templateMgr->assign('tabsUrl', $tabsUrl);
 
-		$tabContentUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'tab.issueEntry.IssueEntryTabHandler', 'galleyMetadata', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId()));
+		$tabContentUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'tab.issueEntry.IssueEntryTabHandler', 'galleyMetadata', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId(), 'submissionVersion' => $submission->getSubmissionVersion()));
 		$templateMgr->assign('tabContentUrl', $tabContentUrl);
 
 		return $templateMgr->fetchJson('controllers/modals/submissionMetadata/issueEntryTabs.tpl');
@@ -67,7 +67,7 @@ class IssueEntryHandler extends PublicationEntryHandler {
 	function fetchFormatInfo($args, $request) {
 		$submission = $this->getSubmission();
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys = $galleyDao->getBySubmissionId($submission->getId());
+		$galleys = $galleyDao->getBySubmissionId($submission->getId(), null, $submission->getSubmissionVersion());
 		$formats = array();
 		while ($galley = $galleys->next()) {
 			$formats[$galley->getId()] = $galley->getLocalizedName();

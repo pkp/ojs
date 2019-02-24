@@ -7,6 +7,18 @@
  *
  * Production workflow stage
  *}
+<script type="text/javascript">
+	// Attach the JS file tab handler.
+	$(function() {ldelim}
+		$('#submissionVersions').pkpHandler(
+			'$.pkp.controllers.TabHandler',
+			{ldelim}
+				{assign var=selectedTabIndex value=$currentSubmissionVersion - 1}
+				selected: {$selectedTabIndex}
+			{rdelim}
+		);
+	{rdelim});
+</script>
 
 {* Help tab *}
 {help file="editorial-workflow/production" class="pkp_help_tab"}
@@ -14,25 +26,21 @@
 <div id="production">
 {include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions refreshOn="stageStatusUpdated"}
 
-	<div class="pkp_context_sidebar">
-		{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), (array)$userRoles)}
-			<div id="schedulePublicationDiv" class="pkp_tab_actions">
-				<ul class="pkp_workflow_decisions">
-					<li>{include file="linkAction/linkAction.tpl" action=$schedulePublicationLinkAction}</li>
-				</ul>
-			</div>
+	<div id="submissionVersions" class="pkp_controllers_tab">
+	  <ul>
+		{foreach from=$submissionVersions item=submissionVersion}
+		  <li>
+			<a href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.workflow.VersioningTabHandler" op="versioning" submissionId=$submission->getId() stageId=$stageId submissionVersion=$submissionVersion}">{translate key="submission.production.version" submissionVersion=$submissionVersion}</a>
+		  </li>
+		{/foreach}
+		{if $newVersionAction}
+		  <li>
+			{include file="linkAction/linkAction.tpl" image="add_item" action=$newVersionAction contextId="newVersionTabContainer"}
+		  </li>
 		{/if}
-		{include file="controllers/tab/workflow/stageParticipants.tpl"}
+	  </ul>
 	</div>
 
-	<div class="pkp_content_panel">
-		{capture assign=productionReadyFilesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.files.productionReady.ProductionReadyFilesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
-		{load_url_in_div id="productionReadyFilesGridDiv" url=$productionReadyFilesGridUrl}
-
-		{capture assign=queriesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.queries.QueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
-		{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
-
-		{capture assign=representationsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.articleGalleys.ArticleGalleyGridHandler" op="fetchGrid" submissionId=$submission->getId() escape=false}{/capture}
-		{load_url_in_div id="formatsGridContainer"|uniqid url=$representationsGridUrl}
-	</div>
+	{capture assign=queriesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.queries.QueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
+	{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
 </div>

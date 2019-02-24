@@ -25,14 +25,14 @@
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>
-			<a name="submission" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="submission" op="submissionMetadata" submissionId=$submissionId stageId=$stageId tabPos="0"}">{translate key="submission.issueEntry.submissionMetadata"}</a>
+			<a name="submission" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="submission" op="submissionMetadata" submissionId=$submissionId stageId=$stageId submissionVersion=$submissionVersion tabPos="0"}">{translate key="submission.issueEntry.submissionMetadata"}</a>
 		</li>
 		<li>
-			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.identifiers"}</a>
+			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId stageId=$stageId submissionVersion=$submissionVersion tabPos="1"}">{translate key="submission.identifiers"}</a>
 		</li>
 		{if $citationsEnabled}
 			<li>
-				<a name="citations" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="citations" op="citations" submissionId=$submissionId stageId=$stageId tabPos="2"}">{translate key="submission.citations"}</a>
+				<a name="citations" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="citations" op="citations" submissionId=$submissionId stageId=$stageId submissionVersion=$submissionVersion tabPos="2"}">{translate key="submission.citations"}</a>
 			</li>
 		{/if}
 </ul>

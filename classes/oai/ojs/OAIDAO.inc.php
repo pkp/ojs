@@ -183,7 +183,7 @@ class OAIDAO extends PKPOAIDAO {
 		$record->sets = array(urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev()));
 
 		if ($isRecord) {
-			$publishedArticle = $this->publishedArticleDao->getByArticleId($articleId);
+			$publishedArticle = $this->publishedArticleDao->getBySubmissionId($articleId);
 			$issue = $this->getIssue($row['issue_id']);
 			$galleys = $this->articleGalleyDao->getBySubmissionId($articleId)->toArray();
 
@@ -238,8 +238,8 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN issues i ON (i.issue_id = pa.issue_id)
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-				JOIN journal_settings jsoai ON (jsoai.journal_id = j.journal_id AND jsoai.setting_name=? AND jsoai.setting_value=1)
-			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ?
+				LEFT JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
+			WHERE pa.is_current_submission_version = 1 AND	i.published = 1 AND j.enabled = 1 AND (jsl.setting_value IS NULL OR jsl.setting_value <> ?) AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '

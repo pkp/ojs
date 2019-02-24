@@ -59,7 +59,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	r.review_id = ?',
+			WHERE ps.is_current_submission_version = 1 AND	r.review_id = ?',
 			array(
 				'title', $primaryLocale, // Section title
 				'title', $locale, // Section title

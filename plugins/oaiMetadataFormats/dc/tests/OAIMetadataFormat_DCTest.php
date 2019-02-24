@@ -203,7 +203,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 			->getMethods(array('getByArticleId'))
 			->getMock();
 		$articleDao->expects($this->any())
-		            ->method('getByArticleId')
+		            ->method('getBySubmissionId')
 		            ->will($this->returnValue($article));
 		DAORegistry::registerDAO('PublishedArticleDAO', $articleDao);
 
