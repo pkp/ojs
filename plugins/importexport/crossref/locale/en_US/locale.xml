@@ -30,6 +30,7 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Please enter the username you got from CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS will deposit assigned DOIs automatically to CrossRef. Please note that this may take a short amount of time after publication to process  (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Use the CrossRef test API (testing environment) for the DOI deposit. Please do not forget to remove this option for the production.</message>
+	<message key="plugins.importexport.crossref.settings.form.validation">Validate XML. Use this option for the XML download for the manual DOI registration.</message>
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Note: Only issues (and not their articles) will be considered for export/registration here.</message>
 	<!-- statuses -->
