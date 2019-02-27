@@ -14,9 +14,13 @@
  */
 namespace APP\components\forms\context;
 use \PKP\components\forms\FormComponent;
+use \PKP\components\forms\FieldSelect;
 use \PKP\components\forms\FieldOptions;
+use \PKP\components\forms\FieldRichTextarea;
 
 define('FORM_ACCESS', 'access');
+define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');
+define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
 
 class AccessForm extends FormComponent {
 	/** @copydoc FormComponent::$id */
@@ -37,7 +41,19 @@ class AccessForm extends FormComponent {
 		$this->successMessage = __('manager.distribution.publishingMode.success');
 		$this->locales = $locales;
 
-		$this->addField(new FieldOptions('publishingMode', [
+		$validDelayedOpenAccessDuration[] = ['value' => 0, 'label' => __('common.disabled')]; 
+		for ($i=SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN; $i<=SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX; $i++) {
+			$validDelayedOpenAccessDuration[] = [
+				'value' => $i,
+				'label' => __('manager.subscriptionPolicies.xMonths', array('x' => $i)),
+			];
+		}
+
+		$this->addGroup([
+				'id' => 'publishingMode',
+				'label' => __('manager.distribution.publishingMode'),
+			])
+			->addField(new FieldOptions('publishingMode', [
 				'label' => __('manager.distribution.publishingMode'),
 				'type' => 'radio',
 				'options' => [
@@ -45,8 +61,32 @@ class AccessForm extends FormComponent {
 					['value' => PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
 					['value' => PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
 				],
+				'groupId' => 'publishingMode',
 				'value' => $context->getData('publishingMode'),
 			]))
+			->addGroup([
+				'id' => 'delayedOpenAccess',
+				'label' => __('about.delayedOpenAccess'),
+				'description' => __('manager.subscriptionPolicies.delayedOpenAccessDescription'),
+				'showWhen' => ['publishingMode', PUBLISHING_MODE_SUBSCRIPTION],
+			])
+			->addField(new FieldSelect('delayedOpenAccessDuration', [
+				'label' => __('manager.subscriptionTypes.duration'),
+				'options' => $validDelayedOpenAccessDuration,
+				'groupId' => 'delayedOpenAccess',
+				'value' => $context->getData('delayedOpenAccessDuration'),
+			]))
+			->addField(new FieldRichTextarea('delayedOpenAccessPolicy', [
+				'label' => __('about.delayedOpenAccess'),
+				'description' => __('manager.subscriptionPolicies.delayedOpenAccessPolicyDescription'),
+				'isMultilingual' => true,
+				'groupId' => 'delayedOpenAccess',
+				'value' => $context->getData('delayedOpenAccessPolicy'),
+			]))		
+			->addGroup([
+				'id' => 'enableOai',
+				'label' => __('manager.setup.enableOai'),
+			])		
 			->addField(new FieldOptions('enableOai', [
 				'label' => __('manager.setup.enableOai'),
 				'description' => __('manager.setup.enableOai.description'),
@@ -55,6 +95,7 @@ class AccessForm extends FormComponent {
 					['value' => true, 'label' => __('common.enable')],
 					['value' => false, 'label' => __('common.disable')],
 				],
+				'groupId' => 'enableOai',
 				'value' => $context->getData('enableOai'),
 			]));
 	}
