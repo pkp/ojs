@@ -30,20 +30,18 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Please enter the username you got from CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS will deposit assigned DOIs automatically to CrossRef. Please note that this may take a short amount of time after publication to process  (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Use the CrossRef test API (testing environment) for the DOI deposit. Please do not forget to remove this option for the production.</message>
+	<message key="plugins.importexport.crossref.settings.form.validation">Validate XML. Use this option for the XML download for the manual DOI registration.</message>
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Note: Only issues (and not their articles) will be considered for export/registration here.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Submitted</message>
-	<message key="plugins.importexport.crossref.status.completed">Deposited</message>
 	<message key="plugins.importexport.crossref.status.failed">Failed</message>
 	<message key="plugins.importexport.crossref.status.registered">Active</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Marked active</message>
+	<message key="plugins.importexport.crossref.action.register">Deposit</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
 		<p>Deposit status:</p>
 		<p>
 		- Not deposited: no deposit attempt has been made for this DOI.<br />
-		- Submitted: this DOI has been submitted for the deposit.<br />
-		- Deposited: the DOI has been deposited to Crossref, but may not be active yet.<br />
 		- Active: the DOI has been deposited, and is resolving correctly.<br />
 		- Failed: the DOI deposit has failed.<br />
 		- Marked active: the DOI was manually marked as active.
@@ -53,11 +51,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">Download XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Mark active</message>
-	<message key="plugins.importexport.crossref.action.register">Submit</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Check status</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatic registration task</message>
-	<message key="plugins.importexport.crossref.notification.failed">A DOI has failed to register. Please go to Tools > Import/Export > CrossRef XML Export Plugin to see the failed deposits.</message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage:
@@ -66,8 +61,8 @@
 ]]></message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">Submission was not successful! The DOI registration server returned an error: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Submission successful!</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Registration was not fully successful! The DOI registration server returned an error.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">Registration was successful but the following warning occurred: '{$param}'.</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">No issue matched the specified issue ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
 

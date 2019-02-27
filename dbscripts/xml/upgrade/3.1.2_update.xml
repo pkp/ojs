@@ -31,4 +31,11 @@
 	<sql>
 		<query>UPDATE submissions SET status=4 WHERE submission_id IN (SELECT e1.submission_id FROM edit_decisions e1 LEFT JOIN edit_decisions e2 ON (e2.submission_id = e1.submission_id AND e2.date_decided > e1.date_decided) WHERE e1.decision IN (4, 9) AND e2.edit_decision_id IS NULL) AND status=1</query><!-- STATUS_DECLINED; SUBMISSION_EDITOR_DECISION_DECLINE; SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE; STATUS_QUEUED -->
 	</sql>
+	<!-- remove and rename old crossref status settings after the new deposit API integrat -->
+	<sql>
+		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::status' AND setting_value IN ('submitted', 'failed', 'completed')</query>
+		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::statusUrl'</query>
+		<query>UPDATE submission_settings SET setting_value = 'registered' WHERE setting_name = 'crossref::status' AND setting_name = 'found'</query>
+	</sql>
+
 </data>

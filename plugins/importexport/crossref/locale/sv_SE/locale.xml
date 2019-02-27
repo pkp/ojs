@@ -33,8 +33,6 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Observera: Bara nummer (inte deras artiklar) kommer att exporteras/registreras här.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Inskickat</message>
-	<message key="plugins.importexport.crossref.status.completed">Deponerat</message>
 	<message key="plugins.importexport.crossref.status.failed">Misslyckades</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktiv</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Markerad som aktiv</message>
@@ -42,8 +40,6 @@
 		<p>Deposit status:</p>
 		<p>
 		- Inte deponerad: inget deponeringsförsök har gjorts för detta DOI.<br />
-		- Inskickad: det här DOI:t har skickats in för deponering.<br />
-		- Deponerat: ett DOI har deponerats till Crossref, men är kanske inte aktivt ännu.<br />
 		- Aktiv: ett DOI har deponerats och är korrekt.<br />
 		- Misslyckats: deponeringen av DOI har misslyckats.<br />
 		- Markerad som aktiv: DOI har manuellt markerats som aktiv.
@@ -53,11 +49,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">Ladda ner XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Markera som aktiv</message>
-	<message key="plugins.importexport.crossref.action.register">Skicka in</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Kontrollera status</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRefs automatiska registreringsfunktion</message>
-	<message key="plugins.importexport.crossref.notification.failed">Ett DOI har misslyckats att registreras. Gå till Verktyg > Importera/Exportera > Plugin för export av CrossRef-XML för att se vad som orsakade den misslyckade deponeringen.</message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Användning:
@@ -66,8 +59,6 @@
 ]]></message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">Registreringen gick inte att skicka in! Registreringsservern för DOI:er gav ett felmeddelande: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Registreringen lyckades!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Inga nummer motsvarade det här numrets ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Inga artiklar motsvarade den här artikelns ID "{$articleId}".</message>
 
