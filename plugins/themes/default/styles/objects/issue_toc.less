@@ -18,17 +18,6 @@
 		line-height: @double - 2; // Adjust for border
 	}
 
-	.cover {
-		display: block;
-		margin-bottom: @double;
-
-		img {
-			display: block;
-			max-height: 250px;
-			width: auto;
-		}
-	}
-
 	.description {
 
 		> *:first-child {
@@ -56,21 +45,8 @@
 		}
 	}
 
-	.articles,
-	.galleys_links {
+	.articles {
 		&:extend(.pkp_unstyled_list);
-	}
-
-	.galleys_links {
-
-		li {
-			display: inline-block;
-			margin-right: 1em;
-
-			&:last-child {
-				margin-right: 0;
-			}
-		}
 	}
 
 	.sections:not(:first-child) {
@@ -85,14 +61,6 @@
 
 		.heading {
 			.pkp_helpers_clear;
-		}
-
-		.cover {
-			float: left;
-			width: 25%;
-			height: auto;
-			max-height: none;
-			margin-right: @double;
 		}
 
 		.galleys,
@@ -129,15 +97,6 @@
 		.galleys,
 		.section {
 			margin: @triple -@triple;
-		}
-
-		.cover {
-			margin-right: @triple;
-			margin-bottom: @triple;
-
-			img {
-				max-height: none;
-			}
 		}
 	}
 }

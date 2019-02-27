@@ -78,4 +78,8 @@
 
 	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</message>
 	<message key="section.any">Any Section</message>
+
+	<!-- categories -->
+	<message key="catalog.browseTitles">{$numTitles} Items</message>
+	<message key="catalog.category.heading">All Items</message>
 </locale>
