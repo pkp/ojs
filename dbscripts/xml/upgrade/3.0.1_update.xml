@@ -11,10 +11,6 @@
   * 3.0.1.0 general updates.
   -->
 <data>
-	<sql><!-- Enable new metadata injection plugins -->
-		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'googlescholarplugin', 'enabled', '1', 'bool', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT ps.plugin_name FROM plugin_settings ps WHERE ps.plugin_name = 'googlescholarplugin' AND ps.context_id = j.journal_id)</query>
-		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'dublincoremetaplugin', 'enabled', '1', 'bool', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT ps.plugin_name FROM plugin_settings ps WHERE ps.plugin_name = 'dublincoremetaplugin' AND ps.context_id = j.journal_id)</query>
-	</sql>
 	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>

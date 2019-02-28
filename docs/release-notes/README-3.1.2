@@ -4,6 +4,11 @@ CVS tag: ojs-3_1_2-0
 Release date: Feb 28, 2019
 ==========================
 
+NOTE: The Google Scholar and Dublin Core metadata plugins are enabled
+automatically during the upgrade process. If these are intentionally
+disabled, please disable them again following the upgrade process. (This is a
+resolution for pkp/pkp-lib#4561.)
+
 New Features
 ------------
 	#1922: Add support for catalog paging
@@ -234,4 +239,5 @@ Bug Fixes
 	#4522: Correct missing escaping of template variable
 	#4542: Public URL Identifier breaks with a slash character
 	#4547: "Create Reviewer" reviewer selection option breaks email template
+	#4561: Fix Google Scholar plugin enabling on upgrade
 
