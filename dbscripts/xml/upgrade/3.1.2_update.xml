@@ -37,5 +37,8 @@
 		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::statusUrl'</query>
 		<query>UPDATE submission_settings SET setting_value = 'registered' WHERE setting_name = 'crossref::status' AND setting_name = 'found'</query>
 	</sql>
-
+	<sql><!-- pkp/pkp-lib#4561 Enable new metadata injection plugins -->
+		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'googlescholarplugin', 'enabled', '1', 'bool', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT ps.plugin_name FROM plugin_settings ps WHERE ps.plugin_name = 'googlescholarplugin' AND ps.context_id = j.journal_id)</query>
+		<query>INSERT INTO plugin_settings (plugin_name, setting_name, setting_value, setting_type, context_id) SELECT 'dublincoremetaplugin', 'enabled', '1', 'bool', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT ps.plugin_name FROM plugin_settings ps WHERE ps.plugin_name = 'dublincoremetaplugin' AND ps.context_id = j.journal_id)</query>
+	</sql>
 </data>
