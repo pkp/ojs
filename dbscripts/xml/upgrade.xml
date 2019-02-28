@@ -222,6 +222,10 @@
 		<note file="docs/release-notes/README-3.1.2" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.4">
+		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
@@ -233,10 +237,6 @@
 		<code function="migrateMetadataSettings" />
 		<code function="createLicenseTerms" />
 		<note file="docs/release-notes/README-3.2.0" />
-	</upgrade>
-
-	<upgrade minversion="2.4.0.0" maxversion="3.1.1.4">
-		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
