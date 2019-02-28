@@ -19,13 +19,17 @@ class ArticleGalleyGridRow extends GridRow {
 	/** @var Submission **/
 	var $_submission;
 
+	/** @var array */
+	var $_userRoles;
+
 	/**
 	 * Constructor
 	 * @param $submission Submission
+	 * @param $userRoles array
 	 */
-	function __construct($submission) {
+	function __construct($submission, $userRoles) {
 		$this->_submission = $submission;
-
+		$this->_userRoles = $userRoles;
 		parent::__construct();
 	}
 
@@ -47,42 +51,45 @@ class ArticleGalleyGridRow extends GridRow {
 			$actionArgs = $this->getRequestArgs();
 			$actionArgs['representationId'] = $rowId;
 
-			// Add row-level actions
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(new LinkAction(
-				'editGalley',
-				new AjaxModal(
-					$router->url($request, null, null, 'editGalley', null, $actionArgs),
-					__('submission.layout.editGalley'),
-					'modal_edit'
-				),
-				__('grid.action.edit'),
-				'edit'
-			));
+			// Authors should not see these links
+			if (array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT), $this->_userRoles)) {
+				// Add row-level actions
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
+				$this->addAction(new LinkAction(
+					'editGalley',
+					new AjaxModal(
+						$router->url($request, null, null, 'editGalley', null, $actionArgs),
+						__('submission.layout.editGalley'),
+						'modal_edit'
+					),
+					__('grid.action.edit'),
+					'edit'
+				));
 
-			$galley = $this->getData();
-			if ($galley->getRemoteUrl() == '') {
-				import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
-				import('lib.pkp.classes.submission.SubmissionFile'); // Constants
-				$this->addAction(new AddFileLinkAction(
-					$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
-					array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-					SUBMISSION_FILE_PROOF, ASSOC_TYPE_REPRESENTATION, $rowId,
-					null, $galley->getFileId()
+				$galley = $this->getData();
+				if ($galley->getRemoteUrl() == '') {
+					import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
+					import('lib.pkp.classes.submission.SubmissionFile'); // Constants
+					$this->addAction(new AddFileLinkAction(
+						$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
+						array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
+						SUBMISSION_FILE_PROOF, ASSOC_TYPE_REPRESENTATION, $rowId,
+						null, $galley->getFileId()
+					));
+				}
+
+				import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+				$this->addAction(new LinkAction(
+					'deleteGalley',
+					new RemoteActionConfirmationModal(
+						$request->getSession(),
+						__('common.confirmDelete'),
+						__('grid.action.delete'),
+						$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),
+					__('grid.action.delete'),
+					'delete'
 				));
 			}
-
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$this->addAction(new LinkAction(
-				'deleteGalley',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('common.confirmDelete'),
-					__('grid.action.delete'),
-					$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),
-				__('grid.action.delete'),
-				'delete'
-			));
 		}
 	}
 

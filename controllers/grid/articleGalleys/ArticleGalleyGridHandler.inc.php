@@ -167,7 +167,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function getRowInstance() {
 		import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
 		return new ArticleGalleyGridRow(
-			$this->getSubmission()
+			$this->getSubmission(),
+			$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
 		);
 	}
 
