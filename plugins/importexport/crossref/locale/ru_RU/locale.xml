@@ -30,12 +30,14 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Пожалуйста, введите имя пользователя, которое вы получили от CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS будет депонировать присвоенные DOI автоматически в CrossRef. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные DOI.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Использовать тестовый API CrossRef (среда тестирования) для депонирования DOI. Пожалуйста, не забудьте убрать этот параметр для реальной работы.</message>
+	<message key="plugins.importexport.crossref.settings.form.validation">Проверка XML. Используйте этот параметр, чтобы скачать XML для ручной регистрации DOI.</message>
 	<!-- описания -->
 	<message key="plugins.importexport.crossref.issues.description">Примечание: Здесь для экспорта/регистрации будут рассматриваться только выпуски (а не статьи в этих выпусках).</message>
 	<!-- статусы -->
 	<message key="plugins.importexport.crossref.status.failed">Ошибка</message>
 	<message key="plugins.importexport.crossref.status.registered">Активный</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Отмечен как активный</message>
+	<message key="plugins.importexport.crossref.action.register">Депонировать</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
 		<p>Статус депонирования:</p>
 		<p>
@@ -59,6 +61,8 @@
 ]]></message>
 
 	<!--  уведомления -->
+	<message key="plugins.importexport.crossref.register.error.mdsError">Регистрация не была полностью успешной! Сервер регистрации DOI вернул ошибку.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">Регистрация прошла успешно, но было получено следующее предупреждение: «{$param}».</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Нет выпуска, соответствующего указанному ID выпуска «{$issueId}».</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Нет статьи, соответствующей указанному ID статьи «{$articleId}».</message>
 
