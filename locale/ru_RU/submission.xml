@@ -80,4 +80,7 @@
 	<message key="section.any">Любой раздел</message>
 
 	<message key="submission.sectionOptions">Параметры раздела</message>
+	<!-- категории -->
+	<message key="catalog.browseTitles">Число категорий: {$numTitles}</message>
+	<message key="catalog.category.heading">Все категории</message>
 </locale>
