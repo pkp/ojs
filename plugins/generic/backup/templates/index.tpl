@@ -10,7 +10,8 @@
 {assign var="pageTitle" value="plugins.generic.backup.link"}
 {include file="common/header.tpl"}
 
-{translate key="plugins.generic.backup.longdescription"}
+<div class="pkp_page_content pkp_page_backup">
+<div>{translate key="plugins.generic.backup.longdescription" class="notice"}</div>
 
 {assign var=footNoteNum value=1}
 <ul>
@@ -24,4 +25,5 @@
 
 <a href="{url page="admin"}">{translate key="admin.siteAdmin"}</a>
 
+</div>
 {include file="common/footer.tpl"}
