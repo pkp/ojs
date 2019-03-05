@@ -232,6 +232,7 @@
 		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
 		<code function="migrateSiteLocales" />
 		<code function="migrateSidebarBlocks" />
 		<code function="migrateSiteStylesheet" />
