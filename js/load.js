@@ -11,8 +11,7 @@
 import PkpLoad from '../lib/pkp/js/load.js';
 
 // Import controllers used by OJS
-import Container from '@/components/SettingsContainer/SettingsContainer.vue';
-import SubmissionsListPanel from '@/components/ListPanel/submissions/SubmissionsListPanel.vue';
+import Container from '@/components/Container/Container.vue';
 import SelectListPanel from '@/components/SelectListPanel/SelectListPanel.vue';
 import SelectSubmissionsListPanel from '@/components/SelectListPanel/submissions/SelectSubmissionsListPanel.vue';
 import SelectReviewerListPanel from '@/components/SelectListPanel/users/SelectReviewerListPanel.vue';
@@ -21,7 +20,6 @@ import SelectReviewerListPanel from '@/components/SelectListPanel/users/SelectRe
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
 		Container,
-		SubmissionsListPanel,
 		SelectListPanel,
 		SelectSubmissionsListPanel,
 		SelectReviewerListPanel

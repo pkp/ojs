@@ -16,18 +16,14 @@
 			<tabs :options="{ useUrlFragment: false }" class="tabs-component--side">
 				<tab name="{translate key="admin.settings"}">
 					<pkp-form
-						v-bind="forms.{$smarty.const.FORM_SITE_CONFIG}"
-						@set-fields="setFormFields"
-						@set-errors="setFormErrors"
-						@set-visible-locales="setFormVisibleLocales"
+						v-bind="components.{$smarty.const.FORM_SITE_CONFIG}"
+						@set="set"
 					/>
 				</tab>
 				<tab name="{translate key="manager.setup.information"}">
 					<pkp-form
-						v-bind="forms.{$smarty.const.FORM_SITE_INFO}"
-						@set-fields="setFormFields"
-						@set-errors="setFormErrors"
-						@set-visible-locales="setFormVisibleLocales"
+						v-bind="components.{$smarty.const.FORM_SITE_INFO}"
+						@set="set"
 					/>
 				</tab>
 				<tab name="{translate key="common.languages"}">
@@ -47,18 +43,14 @@
 			<tabs :options="{ useUrlFragment: false }" class="tabs-component--side">
 				<tab name="{translate key="manager.setup.theme"}">
 					<theme-form
-						v-bind="forms.{$smarty.const.FORM_THEME}"
-						@set-fields="setFormFields"
-						@set-errors="setFormErrors"
-						@set-visible-locales="setFormVisibleLocales"
+						v-bind="components.{$smarty.const.FORM_THEME}"
+						@set="set"
 					/>
 				</tab>
 				<tab name="{translate key="navigation.setup"}">
 					<pkp-form
-						v-bind="forms.{$smarty.const.FORM_SITE_APPEARANCE}"
-						@set-fields="setFormFields"
-						@set-errors="setFormErrors"
-						@set-visible-locales="setFormVisibleLocales"
+						v-bind="components.{$smarty.const.FORM_SITE_APPEARANCE}"
+						@set="set"
 					/>
 				</tab>
 				{call_hook name="Template::Settings::admin::appearance"}

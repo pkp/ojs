@@ -28,7 +28,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 			if (!isset($config['filters'])) {
 				$config['filters'] = array();
 			}
-			$config['filters']['sectionIds'] = array(
+			$config['filters'][] = array(
 				'heading' => __('section.sections'),
 				'filters' => $this->getSectionFilters(),
 			);
@@ -46,22 +46,22 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 		return array(
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_SUBMISSION,
+				'value' => WORKFLOW_STAGE_ID_SUBMISSION,
 				'title' => __('manager.publication.submissionStage'),
 			),
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
+				'value' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
 				'title' => __('manager.publication.reviewStage'),
 			),
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_EDITING,
+				'value' => WORKFLOW_STAGE_ID_EDITING,
 				'title' => __('submission.copyediting'),
 			),
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_PRODUCTION,
+				'value' => WORKFLOW_STAGE_ID_PRODUCTION,
 				'title' => __('manager.publication.productionStage'),
 			),
 		);
@@ -86,7 +86,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 		return array_map(function($section) {
 			return array(
 				'param' => 'sectionIds',
-				'val' => $section['id'],
+				'value' => $section['id'],
 				'title' => $section['title'],
 			);
 		}, $sections);
