@@ -82,7 +82,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	function createJournalArticleNode($doc, $submission) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		// Issue shoulld be set by now
 		$issue = $deployment->getIssue();
 
@@ -244,7 +244,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	function appendAsCrawledCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		if (empty($galleys)) {
 			$crawlerBasedCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
@@ -274,7 +274,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	function appendTextMiningCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		// start of the text-mining collection element
 		$textMiningCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
@@ -301,7 +301,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	function createComponentListNode($doc, $submission, $componentGalleys) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		// Create the base node
 		$componentListNode =$doc->createElementNS($deployment->getNamespace(), 'component_list');

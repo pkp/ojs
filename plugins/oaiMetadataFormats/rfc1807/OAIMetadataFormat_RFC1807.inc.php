@@ -61,7 +61,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$url = $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()));
 		$includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
 		$response = "<rfc1807\n" .

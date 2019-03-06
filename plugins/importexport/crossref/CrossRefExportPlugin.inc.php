@@ -78,7 +78,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @copydoc PubObjectsExportPlugin::getStatusActions()
 	 */
 	function getStatusActions($pubObject) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$dispatcher = $request->getDispatcher();
 		return array(
 			CROSSREF_STATUS_FAILED =>

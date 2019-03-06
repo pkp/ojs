@@ -119,7 +119,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the article, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
-			$request = Application::getRequest();
+			$request = Application::get()->getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());

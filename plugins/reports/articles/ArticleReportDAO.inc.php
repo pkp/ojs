@@ -44,7 +44,7 @@ class ArticleReportDAO extends DAO {
 			)
 		);
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$site = Application::getRequest()->getSite();
+		$site = Application::get()->getRequest()->getSite();
 		$sitePrimaryLocale = $site->getPrimaryLocale();
 		$authorsReturner = $editorsReturner = $decisionsReturner = array();
 		$index = 1;

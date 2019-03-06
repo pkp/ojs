@@ -155,7 +155,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 			if (!$mail->send()) {
 				import('classes.notification.NotificationManager');
 				$notificationMgr = new NotificationManager();
-				$request = Application::getRequest();
+				$request = Application::get()->getRequest();
 				$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
 			}
 		} 

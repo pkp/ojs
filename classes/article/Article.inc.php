@@ -251,7 +251,7 @@ class Article extends Submission {
 			return '';
 		}
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -270,7 +270,7 @@ class Article extends Submission {
 			return array();
 		}
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 

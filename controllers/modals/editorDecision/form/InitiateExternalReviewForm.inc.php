@@ -36,7 +36,7 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 	 * Execute the form.
 	 */
 	function execute() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		// Retrieve the submission.
 		$submission = $this->getSubmission();

@@ -275,7 +275,7 @@ class ArticleSearch extends SubmissionSearch {
 					$issueCache[$issueId] = $issue;
 					import('classes.issue.IssueAction');
 					$issueAction = new IssueAction();
-					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $journalCache[$journalId]) || $issueAction->subscribedUser($user, $journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::getRequest(), $journalCache[$journalId], $issueId, $articleId);
+					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $journalCache[$journalId]) || $issueAction->subscribedUser($user, $journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::get()->getRequest(), $journalCache[$journalId], $issueId, $articleId);
 				}
 
 				// Only display articles from published issues.

@@ -60,7 +60,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function clearCssCache() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->clearCssCache();
 		return true;
@@ -2336,7 +2336,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function repairKeywordsAndSubjects() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$site = $request->getSite();
 		$installedLocales = $site->getInstalledLocales();
 		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
@@ -2903,7 +2903,6 @@ class Upgrade extends Installer {
 	 * exists
 	 */
 	function migrateSiteStylesheet() {
-		$request = Application::getRequest();
 		$siteDao = DAORegistry::getDAO('SiteDAO');
 
 		import('classes.file.PublicFileManager');

@@ -40,7 +40,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$journal = $journalDao->getById($journalId);
 			$supportedLocales = $journal->getSupportedLocales();
 		} else {
-			$site = Application::getRequest()->getSite();
+			$site = Application::get()->getRequest()->getSite();
 			$supportedLocales = $site->getSupportedLocales();;
 		}
 		$supportedLocalesCount = count($supportedLocales);
@@ -136,7 +136,7 @@ class AuthorDAO extends PKPAuthorDAO {
 			$journal = $journalDao->getById($journalId);
 			$supportedLocales = $journal->getSupportedLocales();
 		} else {
-			$site = Application::getRequest()->getSite();
+			$site = Application::get()->getRequest()->getSite();
 			$supportedLocales = $site->getSupportedLocales();;
 		}
 		$supportedLocalesCount = count($supportedLocales);

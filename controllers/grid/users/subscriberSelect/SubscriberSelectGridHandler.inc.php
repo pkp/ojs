@@ -198,7 +198,7 @@ class SubscriberSelectGridHandler extends GridHandler {
 	 * @copydoc GridHandler::getRequestArgs()
 	 */
 	function getRequestArgs() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		return array_merge(parent::getRequestArgs(), array(
 			'userId' => $request->getUserVar('userId'),
 		));

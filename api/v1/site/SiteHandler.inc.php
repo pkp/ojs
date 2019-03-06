@@ -215,7 +215,7 @@ class SiteHandler extends APIHandler {
 		}
 
 		// Clear the template cache so that new settings can take effect
-		$templateMgr = TemplateManager::getManager(Application::getRequest());
+		$templateMgr = TemplateManager::getManager(Application::get()->getRequest());
 		$templateMgr->clearTemplateCache();
 		$templateMgr->clearCssCache();
 

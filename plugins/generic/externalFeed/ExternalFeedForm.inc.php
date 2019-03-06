@@ -63,7 +63,7 @@ class ExternalFeedForm extends Form {
 	 */
 	function display($request = null, $template = null) {
 		$plugin = $this->plugin;
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('feedId', $this->feedId);
 
