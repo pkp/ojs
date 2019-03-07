@@ -71,7 +71,7 @@
 	<message key="navigation.browseByAuthor">Yazarlara Göre</message>
 	<message key="navigation.infoForAuthors">Yazarlar İçin</message>
 	<message key="navigation.infoForLibrarians">Kütüphaneciler İçin</message>
-	<message key="navigation.competingInterestGuidelines">Çıkar Çelişkisi Rehberi</message>
+	<message key="navigation.competingInterestGuidelines">Çıkar Çatışması Rehberi</message>
 	<message key="navigation.infoForAuthors.long">Yazarlar İçin Bilgi</message>
 	<message key="navigation.infoForLibrarians.long">Kütüphaneciler İçin Bilgi</message>
 	<!-- Article Queues -->
