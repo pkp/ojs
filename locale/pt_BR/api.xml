@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/api.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the REST API.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="api.submissions.403.unpublishedIssues">Você não tem permissões suficientes para acessar edições não publicadas.</message>
+	<message key="api.contexts.403.requestedDisabledContexts">Você só pode acessar revistas habilitadas.</message>
+	<message key="api.contexts.403.notAllowed">Você não tem permissões suficientes para acessar esta revista.</message>
+	<message key="api.contexts.403.contextsDidNotMatch">Você não pode visualizar ou editar esta revista a não ser que faça uma solicitação à API da revista ou à API de todo o portal.</message>
+	<message key="api.contexts.403.requiresContext">Você não pode editar esta revista pela API do portal.</message>
+	<message key="api.contexts.403.notAllowedEdit">Você não tem permissões suficientes para editar esta revista.</message>
+	<message key="api.contexts.403.notAllowedDelete">Você não tem permissões suficientes para deletar esta revista.</message>
+	<message key="api.contexts.404.contextNotFound">A revista solicitada não foi encontrada.</message>
+	<message key="api._payments.400.invalidPaymentMethod">O método de pagamento solicitado é incompatível.</message>
+</locale>
