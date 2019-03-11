@@ -82,6 +82,15 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			case 'index':
 				$form->initData();
 				return new JSONMessage(true, $form->fetch($request));
+			case 'statusMessage':
+				$statusMessage = $this->getStatusMessage($request);
+				if ($statusMessage) {
+					$templateMgr = TemplateManager::getManager($request);
+					$templateMgr->assign(array(
+						'statusMessage' => htmlentities($statusMessage),
+					));
+					return new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('statusMessage.tpl')));
+				}
 		}
 		return parent::manage($args, $request);
 	}
@@ -240,6 +249,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return boolean Whether the XML document has been registered
 	 */
 	abstract function depositXML($objects, $context, $filename);
+
+	/**
+	 * Get detailed message of the object status i.e. failure messages.
+	 * Parameters needed have to be in the request object.
+	 * @param $request PKPRequest
+	 * @return string Preformatted text that will be displayed in a div element in the modal
+	 */
+	function getStatusMessage($request) {
+		return null;
+	}
 
 	/**
 	 * Get the submission filter.

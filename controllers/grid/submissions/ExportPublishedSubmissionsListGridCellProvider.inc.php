@@ -87,16 +87,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
 				if ($status && array_key_exists($status, $statusActions)) {
 					assert(array_key_exists($status, $statusNames));
-					return array(
-						new LinkAction(
-							'edit',
-							new RedirectAction(
-								$statusActions[$status],
-								'_blank'
-							),
-							$statusNames[$status]
-						)
-					);
+					return array($statusActions[$status]);
 				}
 		}
 		return parent::getCellActions($request, $row, $column, $position);

@@ -39,33 +39,19 @@
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS vil deponere tildelte DOI'er automatisk hos CrossRef. Bemærk, at der kan gå kort tid mellem publicering og endelig færdigbehandling. Alle ikke-registrerede DOI'er kan fremfindes.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Brug CrossRef test-API til DOI-deponering (testopstilling). Glem ikke at fjerne denne mulighed under produktionen.</message>
 	<message key="plugins.importexport.crossref.issues.description">Bemærk: Kun numre (og ikke deres artikler) vil her blive taget i betragtning ved eksport/registrering.</message>
-	<message key="plugins.importexport.crossref.status.submitted">Indsendt</message>
-	<message key="plugins.importexport.crossref.status.completed">Deponeret</message>
 	<message key="plugins.importexport.crossref.status.failed">Fejlet</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktiv</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Markeret aktiv</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Indsendelsesstatus:</p>
 		<p>
 		- Ikke deponeret: ingen forsøg på indlevering er foretaget mht. denne DOI.<br />
-		- Indleveret: denne DOI er blevet indleveret til deponering.<br />
-		- Deponeret: denne DOI er blevet indleveret til Crossref, men er måske endnu ikke aktiv.<br />
 		- Aktiv: denne DOI er blevet indleveret og korrekt deponeret.<br />
 		- Fejlet: denne DOI-indlevering fejlede.<br />
 		- Markerede registeret: denne DOI blev manuelt markeret som værende registreret. 
 		</p>
 		<p>Kun de seneste indsendelsesforsøg er registreret.</p>
 		<p>Hvis der er sket en fejldeponering, bedes du løse problemet og foretage et nyt registreringsforsøg.</p>]]></message>
-	<message key=""><![CDATA[]]></message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Markér aktiv</message>
-	<message key="plugins.importexport.crossref.action.register">Indsend</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Tjek status</message>
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatiske registreringsopgave</message>
-	<message key=""><![CDATA[]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[En DOI blev ikke registreret. Gå til Værktøjer > Importér/Eksportér > CrossRef XML Export Plugin for at se den fejlbehæftede deponering.]]></message>
-	<message key=""><![CDATA[]]></message>
-	<message key="plugins.importexport.crossref.register.error.mdsError">Indsendelsen lykkedes ikke! DOI-registreringsserveren sendte en fejlmelding: '{$param}'.</message>
-	<message key=""><![CDATA[]]></message>
-	<message key="plugins.importexport.crossref.register.success">Indsendelsen gennemført!</message>
 	<message key="plugins.importexport.crossref.action.export">Download XML</message>
 </locale>

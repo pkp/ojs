@@ -33,8 +33,6 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Nota: Somente as edições (e não seus artigos) serão considerados para exportação/registro aqui.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Enviado</message>
-	<message key="plugins.importexport.crossref.status.completed">Depositado</message>
 	<message key="plugins.importexport.crossref.status.failed">Falhou</message>
 	<message key="plugins.importexport.crossref.status.registered">Ativo</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Marcar como Ativo</message>
@@ -42,8 +40,6 @@
 		<p> Estado do depósito: </p>
 		<p>
 		- Não depositado: nenhuma tentativa de depósito foi feita para este DOI. <br/>
-		- Enviado: este DOI foi enviado para o depósito. <br />
-		- Depositado: o DOI foi depositado em Crossref, mas pode não estar ativo ainda. <br />
 		- Ativo: o DOI foi depositado e está resolvendo corretamente. <br />
 		- Falha: o depósito DOI falhou. <br />
 		- Marcado ativo: o DOI foi marcado manualmente como ativo.
@@ -53,11 +49,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">Download XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Marcar como Ativo</message>
-	<message key="plugins.importexport.crossref.action.register">Enviar</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Verificar Status</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">Dados CrossRef do remetente</message>
-	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Um DOI não conseguiu ser registrado. Por favor, vá para Ferramentas> Importar / Exportar> CrossRef XML Export Plugin para ver os depósitos com falha.]]></message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uso:
@@ -66,8 +59,6 @@
 ]]></message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">O envio não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Enviado com sucesso!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhuma edição correspondeu ao ID de edição especificado "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo correspondeu ao ID do artigo especificado "{$articleId}".</message>
 
