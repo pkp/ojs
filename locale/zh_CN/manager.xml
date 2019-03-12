@@ -287,11 +287,6 @@
 	<message key="manager.statistics.statistics.subscriptions">订阅</message>
 	<message key="manager.subscriptionPolicies">订阅规定</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">稍后开放阅读</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">在稍后开放阅读的时候，编辑仍能够指定某一期期刊中的特定文章能够直接开放阅读。</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">将被以开发存取的格式被使用，在</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">个月以后</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">请选择一个有效的时间长度</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">下列的说明会发布在「期刊介绍」之中的「稍后开放阅读」下面</message>
 	<message key="manager.subscriptionPolicies.expiry">订阅到期</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">订阅期满后，读者可能会被拒绝进入所有订阅内容或可继续保留访问前发表的订阅内容到订阅的终止日期。</message>
 	<message key="manager.subscriptionPolicies.expiryFull">全部到期</message>

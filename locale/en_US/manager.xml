@@ -363,11 +363,6 @@
 
 	<message key="manager.subscriptionPolicies">Subscription Policies</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">With delayed open access, editors are still able to designate specific articles within an issue for immediate open access.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">The back issues of this journal will be available in an open access format</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Please select a valid duration length.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">The following Delayed Open Access Policy will be posted in About the Journal under Policies.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.expiry">Subscription Expiry</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</message>

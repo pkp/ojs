@@ -282,11 +282,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Abonnements</message>
 	<message key="manager.subscriptionPolicies">Politiques d'abonnement</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Accès libre différé</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Avec un accès libre différé, les rédacteurs sont quand même en mesure de désigner des articles particuliers dans une revue pour les rendre en accès libre immédiatement.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Rendre les numéros rétrospectifs de cette revue disponible en accès libre</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mois après la publication du numéro.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Veuillez sélectionner une durée valide.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La politique d'Accès libre différé suivante sera affichée dans À propos de la revue sous Politiques.</message>
 	<message key="manager.subscriptionPolicies.expiry">Échéance de l'abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">À l'échéance de l'abonnement, les lecteurs peuvent se voir refuser l'accès à tout contenu restreint ou peuvent conserver l'accès au contenu publié avant la date d'échéance de l'abonnement.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Échéance complète</message>

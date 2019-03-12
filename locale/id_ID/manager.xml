@@ -331,11 +331,6 @@
 
 	<message key="manager.subscriptionPolicies">Kebijakan Langganan</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Dengan Delayed Open Access, editor masih bisa mengangkat artikel spesifik dalam sebuah terbitan untuk langsung dijadikan Open Access.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Terbitan terdahulu jurnal ini akan menjadi Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">bulan setelah terbitan diterbitkan.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Pilih panjang durasi yang valid.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Kebijakan Delayed Open Access berikut ini akan ditampilkan di Tentang Jurnal di bawah Kebijakan.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Silakan gunakan checkbox yang disediakan.</message>
 	<message key="manager.subscriptionPolicies.expiry">Masa Berlaku Langganan</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Saat langganannya berakhir, pembaca dapat dihentikan aksesnya ke semua isi langganan atau masih diperbolehkan bisa mengakses ke isi langganan yang diterbitkan sebelum tanggal berakhir langganan.</message>

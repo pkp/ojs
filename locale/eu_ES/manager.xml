@@ -279,11 +279,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Harpidetzak</message>
 	<message key="manager.subscriptionPolicies">Harpidetza-politikak</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Sarrera libre geroratua</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Sarrera libre geroratua eduki arren, zenbaki bateko artikulu jakin bati berehalako sarrera librea eman diezaiokete editoreek.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Aldizkari honen zenbakiak, argitaratu eta handik</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">hilabetera egongo dira erabilgarri sarrera libreko formatuan.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Hautatu baliozko denbora bat.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Ondorengo Sarrera libre geroratuko politika hau azalduko da Aldizkariari buruz orrian, Politikak izenburuan .</message>
 	<message key="manager.subscriptionPolicies.expiry">Harpidetzaren amaiera</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Harpidetza amaitutakoan, irakurleek ez dute inolako aukerarik izango harpidetza bidezko edukia ikusteko, edo harpidetza amaitu baino lehenago argitaratutako lanak ikusteko aukera izango dute.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Erabat amaitu harpidetza</message>

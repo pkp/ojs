@@ -305,11 +305,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Subscripcions</message>
 	<message key="manager.subscriptionPolicies">Polítiques de subscripció</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Accés obert diferit</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Amb l’accés obert diferit, els editors/ores mantenen la possibilitat d’oferir accés lliure immediat a determinats articles d’un número.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Els números anteriors d’aquesta revista estaran disponibles en format d’accés obert</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mes/os després de la publicació d’un número.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Seleccioneu una durada vàlida.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La següent política per a l’accés obert diferit es publica a la secció «Polítiques» de la pàgina «Sobre la revista».</message>
 	<message key="manager.subscriptionPolicies.expiry">Venciment de la subscripció</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Després que venci la subscripció, podeu denegar l’accés als lectors/ores a tot el contingut que requereix subscripció, o bé podeu triar que hi continuïn tenint accés si els continguts s'han publicat abans de la data de venciment.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Venciment total</message>

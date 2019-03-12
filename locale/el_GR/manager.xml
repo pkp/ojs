@@ -377,11 +377,6 @@
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Πολιτική Αυτοαρχειοθέτησης Συγγραφέων</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Η Πολιτική Αυτοαρχειοθέτησης θα συμπεριληφθεί στην ενότητα "Πολιτικές" στη σελίδα "Σχετικά με το περιοδικό".</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Καθυστερημένη Ανοικτή Πρόσβαση</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Με την επιλογή της «Καθυστερημένης Ανοικτής Πρόσβασης», οι Επιμελητές εξακολουθούν να έχουν τη δυνατότητα απόδοσης άμεσης πρόσβασης σε συγκεκριμένα άρθρα ενός τεύχους.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Τα παλαιά τεύχη του περιοδικού θα είναι διαθέσιμα με ανοικτή πρόσβαση</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">μήνας(-ες) μετά από τη δημοσίευση ενός τεύχους</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Παρακαλούμε, επιλέξτε μία έγκυρη χρονική περίοδο.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Η ακόλουθη Πολιτική Καθυστερημένης Ανοικτής Πρόσβασης θα καταχωρηθεί στην ενότητα "Πολιτικές" στη σελίδα "Σχετικά με το περιοδικό".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Παρακαλούμε, χρησιμοποιήστε το πλαίσιο ελέγχου που διατίθεται.</message>
 	<message key="manager.subscriptionPolicies.expiry">Λήξη συνδρομής</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Με τη λήξη της συνδρομής, υπάρχει η δυνατότητα να αφαιρεθεί από τους Αναγνώστες το δικαίωμα πρόσβασης σε όλο το περιεχόμενο της συνδρομής, ή να διατηρηθεί το δικαίωμα πρόσβασης στο περιεχόμενο που δημοσιεύτηκε πριν την ημερομηνία λήξης της συνδρομής.</message>

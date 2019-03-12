@@ -66,15 +66,8 @@
 			<span>{translate key="manager.subscriptionPolicies.onlinePaymentDisabled"}<span>
 		{/if}
 	{/fbvFormSection}
-
 	{fbvFormSection label="manager.subscriptionPolicies.openAccessOptions" list=true}
-		<p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
-
-		{fbvElement type="select" id="delayedOpenAccessDuration" name="delayedOpenAccessDuration" selected=$delayedOpenAccessDuration from=$validDuration label="manager.subscriptionPolicies.delayedOpenAccessDescription" size=$fbvStyles.size.MEDIUM translate=false}
 		{fbvElement type="checkbox" id="enableOpenAccessNotification" name="enableOpenAccessNotification" value=1 checked=$enableOpenAccessNotification label="manager.subscriptionPolicies.openAccessNotificationDescription" disabled=$scheduledTasksEnabled|compare:0}
-
-		<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>
-		{fbvElement type="textarea" id="delayedOpenAccessPolicy" value=$delayedOpenAccessPolicy rich=true label="about.delayedOpenAccess" multilingual=true}
 	{/fbvFormSection}
 
 	{fbvFormButtons hideCancel=true submitText="common.save"}

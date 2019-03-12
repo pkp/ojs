@@ -338,11 +338,6 @@
 	<message key="manager.subscriptionPolicies">Prenumerationspolicyer</message>
 
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Fördröjd open access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Även om tidskriften använder sig av fördröjd open access kan redaktören ändå publicera enskilda artiklar som open access i numret direkt.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Äldre nummer av tidskriften kommer vara tillgängligt som open access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">månad(er) efter att ett nummer har publicerats.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Välj en giltlig tidsperiod.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Följande fördröjd open access-policy kommer att visas under Policyer under Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Använd den kryssruta som finns.</message>
 	<message key="manager.subscriptionPolicies.expiry">Prenumerationen förfaller</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">När prenumerationen förfaller kan läsarna nekas tillgång till allt innehåll i prenumerationen eller ha fortsatt tillgång till prenumerationens innehåll som har publicerats innan det datum då prenumerationen upphörde.</message>

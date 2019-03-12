@@ -284,11 +284,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Předplatné</message>
 	<message key="manager.subscriptionPolicies">Pravidla předplatného</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Zpožděný otevřený přístup</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">I při zpožděném otevřeném přístupu mohou editoři vyhradit určité články v rámci jednoho čísla pro okamžitý otevřený přístup.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Dřívější čísla tohoto časopisu budou dostupná ve formátu otevřeného přístupu</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">měsíc(ů) poté, co bylo číslo publikováno.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vyberte prosím platnou dobu trvání.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Následující Pravidla zpožděného otevřeného přístupu budou uvedena na stránce O časopisu pod Pravidly.</message>
 	<message key="manager.subscriptionPolicies.expiry">Vypršení předplatného</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Po vypršení předplatného může být čtenářům zamítnut přístup k veškerému placenému obsahu nebo si mohou zachovat přístup k předplacenému obsahu, který byl publikován před vypršením předplatného.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Úplné vypršení</message>

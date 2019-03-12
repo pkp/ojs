@@ -477,11 +477,6 @@
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Број прегледа Садржаја</message>
 	<message key="manager.subscriptionPolicies">Политике претплате</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Одгођени отворен приступ</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">У одгођеном отвореном приступу уредници могу неке чланке унутар броја поставити за непосредан отворен приступ.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Прошли бројеви овог часописа ће бити доступни у отвореном приступу.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">месец(и) након што је број објављен.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Одаберите исправну дужину трајања.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Следећа Одгођени отворени приступ политика ће бити објављена у страници О часопису.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Користите кутијице за означавање.</message>
 	<message key="manager.subscriptionPolicies.expiry">Истек претплате</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Након истека претплате читаоцима може бити онемогућен приступ на садржај који је у претплати или се може задржати приступ претплати за садржај који је објављен пре истека претплате.</message>

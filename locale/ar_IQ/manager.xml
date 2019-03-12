@@ -340,11 +340,6 @@
 
 	<message key="manager.subscriptionPolicies">سياسات الاشتراك</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">الوصول المفتوح المؤجل</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">مع الوصول المفتوح المؤجل، لا يزال بإمكان المحررين تعيين بعض المؤلَّفات ضمن إصدار معين للوصول المفتوح المباشر.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">إن الأعداد السابقة من هذه المجلة ستكون متاحة للوصول المفتوح</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">شهر/أشهر بعد نشر العدد.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">لطفاً، إختر مدة زمنية صحيحة.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">سيتم إدراج سياسة الوصول المفتوح المؤجل الآتية في (عن المجلة) ضمن بند السياسات.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">لطفاً، استعمل خانة التأشير.</message>
 	<message key="manager.subscriptionPolicies.expiry">انتهاء صلاحية الاشتراك</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">عند انتهاء صلاحية الاشتراك، قد يفقد القراء إمكانية الوصول لكل المحتوى المتعلق بالاشتراك، أو قد يبقى بإمكانهم الوصول إلى المحتوى المنشور قبل انتهاء صلاحيته فقط.</message>

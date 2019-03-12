@@ -299,11 +299,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Abonnement</message>
 	<message key="manager.subscriptionPolicies">Abonnementsregler</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Utsatt Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Med utsatt Open Access kan redaktøren likevel peke ut enkeltartikler innen en utgave for umiddelbar Open Access.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Tidligere utgaver av dette tidsskriftet vil bli tilgjengelig i Open Access-format</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">måned(er) etter en utgave er publisert.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vennligst velg en gyldig varighet.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Følgende erklæring vil bli skrevet inn i 'Om' tidsskriftet under Utsatt Open Access.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Vennligst bruk avkrysningsboksen.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Send beskjed til abonnenter med e-post</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">måned(er) etter at abonnementet utløper.</message>

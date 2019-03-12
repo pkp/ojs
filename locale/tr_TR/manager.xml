@@ -292,11 +292,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Abonelik:</message>
 	<message key="manager.subscriptionPolicies">Abonelik Politikası</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Gecikmiş Açık Erişim</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Gecikmiş açık erişim seçildiğinde, editörler seçtikleri makaleler için gecikmeden açık erişime izin verebilirler.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Bu derginin eski sayılarına açık erişim vardır. Yayınlandıktan</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ay sonra açık erişime sunulur.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Lütfen geçerli bir gecikme süresi seçiniz.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Aşağıdaki Geciktirilmiş Açık Erişim Politikası Dergi Hakkında sayfasında Politikalar altında yer alacaktır.</message>
 	<message key="manager.subscriptionPolicies.expiry">Abonelik Sonu</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi korunabilir.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Tümünü Sonladır</message>

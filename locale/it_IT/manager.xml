@@ -291,11 +291,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.statistics.statistics.subscriptions">Abbonamenti</message>
 	<message key="manager.subscriptionPolicies">Politiche di abbonamento</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Accesso aperto posticipato (delayed)</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Pur posticipando l'accesso aperto dell'intero fascicolo, gli editor possono decidere quali articoli all'interno di un fascicolo siano immediatamente disponibili in OA.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">I contenuti di questa rivista saranno liberamente disponibili</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mese(i) dopo la pubblicazione di un fascicolo.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Seleziona un periodo valido.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La seguente dichiarazione sarà inserita tra le informazioni sulla rivista, sotto Politiche</message>
 	<message key="manager.subscriptionPolicies.expiry">Scadenza dell'abbonamento</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">È possibile decidere se, alla scadenza dell'abbonamento, i lettori perdano completamente l'accesso ai contenuti riservati o se mantengano il diritto di accedere al contenuto pubblicato prima della data di scadenza dell'abbonamento stesso.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Scadenza totale</message>
