@@ -366,11 +366,6 @@
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Politika avtorjevega samo-arhiviranja</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Spodnja politika avtorjevega samo-arhiviranja bo objavljena na strani O reviji pod Politikami.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Prost dostop z zamikom</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Kljub politiki prostega dostopa z zamikom lahko uredniki določijo specifične prispevke v posamezni številki revije, ki imajo takojšen prost dostop.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Predhodne številke revije bodo na voljo preko prostega dostopa</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mesecev po izdaji številke.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Izberite veljavno dolžino trajanja.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Spodnja politika prostega dostopa z zamikom bo objavljena na strani O reviji pod Politikami.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Prosimo izberite določeno potrditveno polje.</message>
 	<message key="manager.subscriptionPolicies.expiry">Iztek naročnine</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Po izteku naročnine je bralcem lahko zavrnjen dostop do vseh naročenih vsebin ali pa ohranijo dostop do vsebin, ki so mu bile na voljo pred iztekom naročnine.</message>

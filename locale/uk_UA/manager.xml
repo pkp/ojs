@@ -338,11 +338,6 @@
 	<message key="manager.statistics.reports.filters.byObject.description">Фільтрувати результати за типом об'єкта (журнал, випуск, стаття, типи файлів) і/або по одному або декільком ID об'єктів.</message>
 	<message key="manager.subscriptionPolicies">Політика передплат</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Відстрочений відкритий доступ</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Відстрочений відкритий доступ не забороняє редакторам робити виключення і публікувати окремі статті у випусках на умовах миттєвого відкритого доступу до них.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Архівні випуски журналу ставатимуть доступними на умовах відкритого доступу через</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">місяців після дати публікації випуску.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Будь ласка, визначте коректний період.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Викладене нижче положення щодо відстроченого відкритого доступу буде розміщене у розділі "Політика" сторінки "Про журнал".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Будь ласка, поставте галочку.</message>
 	<message key="manager.subscriptionPolicies.expiry">Завершення передплати</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Після завершення передплати читачі можуть втратити доступ до всього передплатного контенту або можуть мати доступ до змісту, опублікованого до дати завершення передплати.</message>

@@ -281,11 +281,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Abonnementer</message>
 	<message key="manager.subscriptionPolicies">Abonnementspolitikker</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Forsinket Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Ved hjælp af forsinket Open Access kan redaktører stadig udpege specifikke artikler i et nummer, der skal være øjeblikkelig Open Access til.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Tidligere numre af dette tidsskrift er tilgængelige i et Open Access-format</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">måned(er) efter publiceringen af et nummer.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Vælg en gyldig varighedslængde.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Følgende politik for forsinket Open Access findes under Om tidsskriftet under Politikker.</message>
 	<message key="manager.subscriptionPolicies.expiry">Udløb af subskription</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Læsere kan blive nægtet adgang til alle subskriptioner ved subskriptionens udløb eller alternativt beholde adgang til subskriptionskrævende indhold, som er publiceret før subskriptionens udløb.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Fuldstændigt udløb</message>

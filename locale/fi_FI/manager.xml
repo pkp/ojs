@@ -332,11 +332,6 @@ Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötila
 
 	<message key="manager.subscriptionPolicies">Tilauskäytännöt</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Viiveellinen avoin saatavuus</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Viiveellisen avoimen saatavuuden yhteydessä, toimittajat voivat kuitenkin määrätä numeron tiettyjä artikkeleita välittömästi avoimesti saataville.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Tämän julkaisun aiemmat numerot tulevat avoimesti saataville</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">kuukautta numeron julkaisemisen jälkeen.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Valitse kelvollinen keston pituus.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Seuraava viiveellisen avoimen saatavuuden periaate tulee Tietoa julkaisusta -sivun Toimintaperiaatteet-kohtaan.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Käytä valintaruutua.</message>
 	<message key="manager.subscriptionPolicies.expiry">Tilauksen päättyminen</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Tilauksen päättyessä lukijoilta voidaan evätä pääsy kaikkeen tilauksen sisältöön tai he voivat säilyttää edelleen pääsyn tilauksen päättymispäivää ennen julkaistuun sisältöön.</message>

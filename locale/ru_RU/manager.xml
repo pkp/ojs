@@ -363,11 +363,6 @@
 
 	<message key="manager.subscriptionPolicies">Правила подписки</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Отложенный открытый доступ</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">При отложенном открытом доступе редакторы, тем не менее, могут дать немедленный открытый доступ к конкретным статьям в выпуске.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Прошлые выпуски этого журнала будут доступны в формате открытого доступа через</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">месяцев с момента публикации.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Пожалуйста, введите правильное значение продолжительности.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Следующие Правила отложенного открытого доступа появятся на странице «О журнале» в разделе «Правила».</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Пожалуйста, поставьте галочку.</message>
 	<message key="manager.subscriptionPolicies.expiry">Окончание срока подписки</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">По окончании срока подписки читателям может быть запрещен доступ ко всему контенту, предоставляемому по подписке, или доступ может быть сохранен только к предоставляемому по подписке контенту, который был опубликован до даты окончания срока подписки.</message>

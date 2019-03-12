@@ -309,11 +309,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Suscripciones</message>
 	<message key="manager.subscriptionPolicies">Políticas de suscripción</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Acceso abierto diferido</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Por medio de esta opción, los editores/as pueden especificar qué artículos de una publicación van a disponer de acceso abierto inmediato.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Los números anteriores serán de acceso abierto</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mes(es) después de la publicación de un número.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Especifique una duración válida.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">La siguiente Política de acceso abierto diferido se incluirá en el apartado Políticas de la sección Acerca de la revista.</message>
 	<message key="manager.subscriptionPolicies.expiry">Vencimiento de la suscripción</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">A partir del vencimiento de la suscripción, los lectores/as podrían no tener acceso al contenido total de la suscripción, aunque es posible que sí puedan tener acceso al contenido de dicha suscripción que se haya publicado antes de la fecha de vencimiento.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Vencimiento total</message>

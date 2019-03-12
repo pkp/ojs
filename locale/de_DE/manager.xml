@@ -340,11 +340,6 @@
 
 	<message key="manager.subscriptionPolicies">Abonnementrichtlinien</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Verzögerter Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Auch bei verzögertem Open Access können Redakteur/innen einzelne Beiträge unmittelbar frei zugänglich machen.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Die zurückliegenden Ausgaben der Zeitschrift sind</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">Monat(e) nach Erscheinen frei zugänglich</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Bitte wählen Sie eine gültige Frist.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Die folgenden Richtlinien zu verzögertem Open Access erscheinen im "Über uns" unter "Zur Zeitschrift".</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Bitte nutzen Sie die vorgesehene Checkbox.</message>
 	<message key="manager.subscriptionPolicies.expiry">Ende des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden.</message>

@@ -361,11 +361,6 @@
 
 	<message key="manager.subscriptionPolicies">Abonnementenbeleid</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Vertraagde Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">In het geval van vertraagde open access kunnen redacteurs specifieke artikels binnen een nummer aanwijzen als open access.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Oude nummers van dit tijdschrift zullen beschikbaar komen in een open access formaat</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">maand(en) nadat een nummer is gepubliceerd.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Kies een geldige duur.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">De volgende open access verklaring wordt geplaatst in Over dit tijdschrift onder Verklaringen</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Gebruik de voorziene checkbox.</message>
 	<message key="manager.subscriptionPolicies.expiry">Afloop van het abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Als het abonnement afloopt kunnen gebruikers de toegang tot alle inhoud verliezen of toegang houden tot de de inhoud voorafgaand aan de afloopdatum.</message>

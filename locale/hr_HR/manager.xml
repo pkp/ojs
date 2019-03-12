@@ -271,11 +271,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Pretplata</message>
 	<message key="manager.subscriptionPolicies">Politika pretplate</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Odgođeni otvoreni pristup</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Ukoliko koriste odgođeni otvoreni pristup, urednici su u mogućnosti da odrede pojedine članke unutar broja časopisa za puni i trenutni otvoreni pristup.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Prijašnji brojevi ovoga časopisa bit će dostupni u formatu otvorenog pristupa</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mjesec(i) nakon što je broj časopisa objavljen.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Molimo odaberite ispravnu duljinu trajanja.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Sljedeća izjava o odgođenom otvorenom pristupu bit će postavljena u rubrici "uređivačka politika" pod poveznicom "o časopisu".</message>
 	<message key="manager.subscriptionPolicies.expiry">Istek pretplate</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Nakon isteka pretplate, čitatelju može biti uskraćen pristup cjelokupnom pretplatničkom sadržaju ili može zadržati pristup pretplatničkom sadržaju na koji je objavljen prije isteka pretplate.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Potpuni istek</message>

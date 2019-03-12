@@ -280,11 +280,6 @@
 	<message key="manager.statistics.statistics.subscriptions">Subscrições</message>
 	<message key="manager.subscriptionPolicies">Políticas de Subscrições</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Acesso Livre Adiado</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Com Acesso Livre adiado, os editores poderão escolher artigos de qualquer edição para Acesso Livre imediato.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">As edições passadas desta revistas estarão disponíveis para Acesso Livre</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mês(es) após a pulicação da edição.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Escolha um tempo de duração válido.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">O texto a seguir será exibido em Sobre a Revista, no item Acesso Livre Adiado.</message>
 	<message key="manager.subscriptionPolicies.expiry">Expiração de Subscrição</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Leitores podem perder acesso ao conteúdo exclusivo a subscritores no momento da expiração da subscrição, ou podem manter acesso a conteúdo publicado anteriormente à expiração.</message>
 	<message key="manager.subscriptionPolicies.expiryFull">Expiração total</message>
