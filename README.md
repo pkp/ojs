@@ -31,7 +31,7 @@ If your PHP version supports built-in development server :
 
     php -S localhost:8000
 
-See [Wiki][wiki-dev] for more complete development guide.
+See the [Documentation Hub][doc-hub] for a more complete development guide.
 
 ## Running Tests
 
@@ -59,8 +59,8 @@ Third parties are welcome to modify and redistribute OJS in entirety or parts
 according to the terms of this license. PKP also welcomes patches for
 improvements or bug fixes to the software.
 
-[pkp]: http://pkp.sfu.ca/
+[pkp]: https://pkp.sfu.ca/
 [readme]: docs/README.md
-[wiki-dev]: http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
-[php-unit]: http://phpunit.de/
+[doc-hub]: https://docs.pkp.sfu.ca/
+[php-unit]: https://phpunit.de/
 [gpl-licence]: docs/COPYING
