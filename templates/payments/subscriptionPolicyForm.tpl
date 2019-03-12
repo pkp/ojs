@@ -66,7 +66,6 @@
 			<span>{translate key="manager.subscriptionPolicies.onlinePaymentDisabled"}<span>
 		{/if}
 	{/fbvFormSection}
-
 	{fbvFormSection label="manager.subscriptionPolicies.openAccessOptions" list=true}
 		{fbvElement type="checkbox" id="enableOpenAccessNotification" name="enableOpenAccessNotification" value=1 checked=$enableOpenAccessNotification label="manager.subscriptionPolicies.openAccessNotificationDescription" disabled=$scheduledTasksEnabled|compare:0}
 	{/fbvFormSection}
