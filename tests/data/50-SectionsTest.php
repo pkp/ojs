@@ -45,10 +45,10 @@ class SectionsTest extends WebTestCase {
 		$this->click($selector);
 
 		// Add Section Editors (David Buskins and Stephanie Berardo)
-		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
-		$this->click($selector);
-		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"Stephanie Berardo")]');
-		$this->click($selector);
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem:contains(\'David Buskins\')');
+		$this->clickAt($selector);
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem:contains(\'Stephanie Berardo\')');
+		$this->clickAt($selector);
 
 		// Save changes
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
@@ -67,8 +67,8 @@ class SectionsTest extends WebTestCase {
 		$this->click('id=abstractsNotRequired');
 
 		// Add a Section Editor (Minoti Inoue)
-		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
-		$this->click($selector);
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem:contains(\'Minoti Inoue\')');
+		$this->clickAt($selector);
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 	}
