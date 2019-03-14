@@ -74,7 +74,6 @@ class PubMedExportPlugin extends ImportExportPlugin {
 						),
 						'canSelect' => true,
 						'canSelectAll' => true,
-						'count' => 2,
 						'lazyLoad' => true,
 						'selectorName' => 'selectedSubmissions[]',
 					]
