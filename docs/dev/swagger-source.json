@@ -1221,6 +1221,13 @@
 						"type": "string"
 					},
 					{
+						"name": "isCustom",
+						"description": "Filter results by those with or without a default template. A truthy value will return only templates with a key that does not match one of the default templates. A falsey value will return only templates with a key that matches on of the default templates. Note that a default template may be customized, but this does not qualify for `isCustom`. Only completely custom templates, without no system default, will be returned when `isCustom` is `true`. Leave this parameter out to get all email templates.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
 						"name": "fromRoleIds",
 						"description": "Filter results by email templates sent by one or more role IDs. Separate role IDs with a comma.",
 						"in": "query",
