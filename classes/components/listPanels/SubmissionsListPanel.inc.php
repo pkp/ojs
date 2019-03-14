@@ -1,13 +1,13 @@
 <?php
 /**
- * @file components/listPanels/submissions/SubmissionsListPanel.inc.php
+ * @file components/listPanels/SubmissionsListPanel.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionsListPanel
- * @ingroup controllers_list
+ * @ingroup classes_components_listPanels
  *
  * @brief Instantiates and manages a UI component to list submissions.
  */
