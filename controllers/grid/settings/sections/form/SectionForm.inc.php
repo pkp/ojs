@@ -23,7 +23,7 @@ class SectionForm extends PKPSectionForm {
 	 * @param $sectionId int optional
 	 */
 	function __construct($request, $sectionId = null) {
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION); 
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION);
 		parent::__construct(
 			$request,
 			'controllers/grid/settings/sections/form/sectionForm.tpl',
@@ -88,11 +88,15 @@ class SectionForm extends PKPSectionForm {
 		}
 		$templateMgr->assign('reviewFormOptions', $reviewFormOptions);
 
-		// Series Editors
-		$sectionEditorsListData = $this->_getSubEditorsListPanelData($journal->getId(), $request);
+		// Section/Series Editors
+		$subEditorsListPanel = $this->_getSubEditorsListPanel($journal->getId(), $request);
 		$templateMgr->assign(array(
-			'hasSubEditors' => !empty($sectionEditorsListData['items']),
-			'subEditorsListData' => $sectionEditorsListData,
+			'hasSubEditors' => !empty($subEditorsListPanel->items),
+			'subEditorsListData' => [
+				'components' => [
+					'subeditors' => $subEditorsListPanel->getConfig(),
+				]
+			]
 		));
 
 		return parent::fetch($request, $template, $display);

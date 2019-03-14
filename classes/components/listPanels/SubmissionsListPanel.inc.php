@@ -11,9 +11,9 @@
  *
  * @brief Instantiates and manages a UI component to list submissions.
  */
-import('lib.pkp.classes.components.listPanels.submissions.PKPSubmissionsListPanel');
-import('lib.pkp.classes.db.DBResultRange');
-import('lib.pkp.classes.submission.Submission');
+
+namespace APP\components\listPanels;
+use \PKP\components\listPanels\PKPSubmissionsListPanel;
 
 class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
@@ -25,13 +25,10 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
 		$request = Application::get()->getRequest();
 		if ($request->getContext()) {
-			if (!isset($config['filters'])) {
-				$config['filters'] = array();
-			}
-			$config['filters'][] = array(
+			$config['filters'][] = [
 				'heading' => __('section.sections'),
 				'filters' => $this->getSectionFilters(),
-			);
+			];
 		}
 
 		return $config;
@@ -77,18 +74,17 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 		$context = $request->getContext();
 
 		if (!$context) {
-			return array();
+			return [];
 		}
 
-		import('classes.core.Services');
-		$sections = Services::get('section')->getSectionList($context->getId());
+		$sections = \Services::get('section')->getSectionList($context->getId());
 
 		return array_map(function($section) {
-			return array(
+			return [
 				'param' => 'sectionIds',
 				'value' => $section['id'],
 				'title' => $section['title'],
-			);
+			];
 		}, $sections);
 	}
 }
