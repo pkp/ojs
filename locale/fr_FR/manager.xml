@@ -616,4 +616,9 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Ce lien ne sera visible que lorsque un utilisateur est loggué.</message>
 	<message key="plugins.importexport.common.validation">Valider le XML avec l'export.</message>
 	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Le fichier {$param} n'est pas lisible.</message>
+
+	<!-- Statistics -->
+	<message key="stats.publishedSubmissions.details">Détails de l'article</message>
+	<message key="stats.publishedSubmissions.none">Aucun article n'a été trouvé.</message>
+	<message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Nombre total de vues des résumés pour chaque article par date</message>
 </locale>

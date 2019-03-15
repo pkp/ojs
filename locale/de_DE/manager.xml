@@ -610,4 +610,9 @@
 	<message key="plugins.importexport.common.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Die angegebenen Objekte konnten nicht gefunden werden.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten Hauptkontakt senden.</message>
+
+	<!-- Statistics -->
+  <message key="stats.publishedSubmissions.details">Artikeldetails</message>
+  <message key="stats.publishedSubmissions.none">Es wurden keine Artikel gefunden.</message>
+  <message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Gesamtzahl der Ansichten der Abstracts für jeden Artikel nach Datum</message>
 </locale>
