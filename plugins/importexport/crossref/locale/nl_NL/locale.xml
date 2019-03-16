@@ -63,7 +63,7 @@
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebruik:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
-</message>
+]]></message>
 
 	<!--  notifications -->
 	<message key="plugins.importexport.crossref.register.error.mdsError">Inzending is niet geslaagd! De DOI registratieserver meldde een fout: '{$param}'.</message>

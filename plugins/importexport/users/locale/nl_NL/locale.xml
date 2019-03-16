@@ -30,7 +30,7 @@ Commando's:
 
 	Exporteer gebruikers met een speciefieke ID:
 	{$scriptName} {$pluginName} export mijnExporteerBestand.xml mijnTijdschrift 1 2
-]]></message>
+</message>
 	<message key="plugins.importexport.users.import.importUsers">Importeer gebruikers</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Selecteer een XML bestand met gebruikergegevevens om in dit tijdschrift te importeren. Raadpleeg het hulpsysteem van het tijdschrift voor details over het formaat van dit bestand.<br /><br />Merk op dat als het geïmporteerde bestand reeds bestaande gebruikersnamen of e-mailadressen bevat, de gegevens voor die gebruikers niet zullen worden geïmporteerd, en alle nieuwe rollen zullen worden toegekend aan de reeds bestaande gebruikers.]]></message>
 	<message key="plugins.importexport.users.import.dataFile">Gebruikers gegevensbestand</message>

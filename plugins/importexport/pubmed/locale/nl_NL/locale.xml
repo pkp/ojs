@@ -24,7 +24,7 @@
 	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Gebruik: 
 {$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikels [artikelId1] [artikelId2] ...
 {$scriptName} {$pluginName} [xmlBestandsNaam] [tijdschrift_pad] nummer [nummerId]
-]]</message>
+]]></message>
 	<message key="plugins.importexport.pubmed.cliError">FOUT:</message>
 
 	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Het opgegeven nummer-ID bestaat niet "{$issueId}".</message>
