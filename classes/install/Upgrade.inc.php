@@ -2203,7 +2203,8 @@ class Upgrade extends Installer {
 				$groupUsers = array();
 				$groupPrimaryLocaleTitles = array();
 				// get groups sorted by context -- that accords to the order they are displayed on the about page
-				$allGroupsResult = $roleDao->retrieve('SELECT * FROM groups WHERE assoc_type = ? AND assoc_id = ? AND about_displayed = 1 ORDER BY context, seq', array((int) ASSOC_TYPE_JOURNAL, (int) $journal->getId()));
+				$dataSource = $roleDao->getDataSource();
+				$allGroupsResult = $roleDao->retrieve('SELECT * FROM ' . $dataSource->nameQuote . 'groups' . $dataSource->nameQuote . ' WHERE assoc_type = ? AND assoc_id = ? AND about_displayed = 1 ORDER BY context, seq', array((int) ASSOC_TYPE_JOURNAL, (int) $journal->getId()));
 				while (!$allGroupsResult->EOF) {
 					$groupRow = $allGroupsResult->getRowAssoc(false);
 					$groupMembershipsResult = $roleDao->retrieve('SELECT * FROM group_memberships WHERE group_id = ? AND about_displayed = 1 ORDER BY seq', $groupRow['group_id']);
