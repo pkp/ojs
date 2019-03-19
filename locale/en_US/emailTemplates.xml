@@ -787,6 +787,6 @@ We have reached a decision regarding your submission to {$contextName}, &quot;{$
 Our decision is to: Decline Submission<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
+		<description>This email is sent to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
 </email_texts>
