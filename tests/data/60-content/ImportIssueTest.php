@@ -25,7 +25,7 @@ class ImportIssueTest extends ContentBaseTestCase {
 		$this->logIn('dbarnes');
 
 		$actions = new WebDriverActions(self::$driver);
-		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Tools"]'))
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Tools"]'))
 			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Import/Export"]'))
 			->perform();
 

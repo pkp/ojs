@@ -74,11 +74,11 @@ class CreateContextTest extends PKPCreateContextTest {
 
 		// Settings > Journal > Masthead
 		$actions = new WebDriverActions(self::$driver);
-		$actions->click($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
 			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
 			->perform();
 		$actions = new WebDriverActions(self::$driver);
-		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
 			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
 			->perform();
 		$this->setInputValue('[name="abbreviation-en_US"]', 'J Pub Know');

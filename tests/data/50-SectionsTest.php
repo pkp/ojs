@@ -26,13 +26,13 @@ class SectionsTest extends WebTestCase {
 	function testConfigureSections() {
 		$this->open(self::$baseUrl);
 		$actions = new WebDriverActions(self::$driver);
-		$actions->click($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
 			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
 			->perform();
 
 		// Section settings
 		$actions = new WebDriverActions(self::$driver);
-		$actions->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
 			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
 			->perform();
 		$this->waitForElementPresent($selector='link=Sections');
