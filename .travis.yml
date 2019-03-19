@@ -81,5 +81,6 @@ after_script:
   # Print logs and outputs for debugging.
   - tail -n 200 error.log
   - cat ./lib/pkp/tests/results/error.log
-#  - sudo apt-get install sharutils
-#  - test "$(ls -A lib/pkp/tests/results | grep .png)" && (tar cz lib/pkp/tests/results/*.png | uuencode /dev/stdout)
+after_failure:
+  - sudo apt-get install sharutils
+  - tar cz lib/pkp/tests/results | uuencode /dev/stdout
