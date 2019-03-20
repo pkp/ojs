@@ -14,9 +14,9 @@ matrix:
     php: 7.1
   - env: TEST=mysql
     php: 7.2
-  # Path info disabled
-  - env: TEST=mysql DISABLE_PATH_INFO=1
-    php: 7.2
+  # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
+  # - env: TEST=mysql DISABLE_PATH_INFO=1
+  #   php: 7.2
 env:
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
