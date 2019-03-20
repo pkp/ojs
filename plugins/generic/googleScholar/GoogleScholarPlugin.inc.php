@@ -117,6 +117,24 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
+		// Citations
+		$outputReferences = array();
+		$citationDao = DAORegistry::getDAO('CitationDAO');
+		$parsedCitations = $citationDao->getBySubmissionId($article->getId());
+		if ($parsedCitations->getCount()){
+			while ($citation = $parsedCitations->next()) {
+				$outputReferences[] = $citation->getRawCitation();
+			}
+		}
+		HookRegistry::call('GoogleScholarPlugin::references', array(&$outputReferences, $article->getId()));
+
+		if (!empty($outputReferences)){
+			$i=0;
+			foreach ($outputReferences as $outputReference) {
+				$templateMgr->addHeader('googleScholarReference' . $i++, '<meta name="citation_reference" content="' . htmlspecialchars($outputReference) . '"/>');
+			}
+		}
+
 		return false;
 	}
 
