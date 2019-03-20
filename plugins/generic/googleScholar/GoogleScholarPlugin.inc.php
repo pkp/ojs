@@ -117,7 +117,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
-		// Citations
+		// citation_refence
 		$outputReferences = array();
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$parsedCitations = $citationDao->getBySubmissionId($article->getId());
