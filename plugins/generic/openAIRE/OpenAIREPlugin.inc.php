@@ -114,12 +114,15 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function metadataExecute($hookName, $params) {
 		$form =& $params[0];
-		if (get_class($form) == 'SubmissionSubmitStep3Form') {
-			$article =& $params[1];
-		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
-			$article = $form->getSubmission();
-		} elseif (get_class($form) == 'QuickSubmitForm') {
-			$article = $form->submission;
+		switch (get_class($form)) {
+			case 'SubmissionSubmitStep3Form':
+			case 'QuickSubmitForm':
+				$article = $form->submission;
+				break;
+			case 'IssueEntrySubmissionReviewForm':
+				$article = $form->getSubmission();
+				break;
+			default: throw new Exception('Unknown class form ' . get_class($form));
 		}
 		$formProjectID = $form->getData('projectID');
 		$article->setData('projectID', $formProjectID);
