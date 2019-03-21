@@ -40,13 +40,13 @@
 	<email key="REVIEW_REMIND_ONECLICK" can_edit="1" can_disable="0" from_role_id="16" to_role_id="4096"/>
 	<email key="REVIEW_REMIND_AUTO_ONECLICK" can_edit="1" can_disable="0" to_role_id="4096"/>
 	<email key="EDITOR_DECISION_ACCEPT" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
-	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" can_edit="1" can_disable="0" from_role_id="17" to_role_id="65536"/>
-	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" can_edit="1" can_disable="0" from_role_id="17" to_role_id="65536"/>
+	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
+	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_REVISIONS" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_RESUBMIT" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_DECLINE" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_INITIAL_DECLINE" can_edit="1" can_disable="0" from_role_id="16" to_role_id="65536"/>
-	<email key="EDITOR_RECOMMENDATION" can_edit="1" can_disable="0" from_role_id="17" to_role_id="16"/>
+	<email key="EDITOR_RECOMMENDATION" can_edit="1" can_disable="0" from_role_id="16" to_role_id="16"/>
 	<email key="COPYEDIT_REQUEST" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4097"/>
 	<email key="LAYOUT_REQUEST" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4097"/>
 	<email key="LAYOUT_COMPLETE" can_edit="1" can_disable="1" from_role_id="4097" to_role_id="16"/>

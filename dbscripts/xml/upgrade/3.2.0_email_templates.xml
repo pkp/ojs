@@ -64,12 +64,12 @@
 		<query>
 			UPDATE email_templates_default
 			SET from_role_id=16
-			WHERE from_role_id=256 OR from_role_id=512
+			WHERE from_role_id=17 OR from_role_id=256 OR from_role_id=512
 		</query>
 		<query>
 			UPDATE email_templates_default
 			SET to_role_id=16
-			WHERE to_role_id=256 OR to_role_id=512
+			WHERE to_role_id=17 OR to_role_id=256 OR to_role_id=512
 		</query>
 		<query>
 			UPDATE email_templates_default
