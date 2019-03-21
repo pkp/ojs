@@ -86,7 +86,7 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		$context = $deployment->getContext();
 		$cache = $deployment->getCache();
 		$plugin = $deployment->getPlugin();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 
 		$issueNodeName = $this->isWork($context, $plugin) ? 'DOISerialIssueWork' : 'DOISerialIssueVersion';

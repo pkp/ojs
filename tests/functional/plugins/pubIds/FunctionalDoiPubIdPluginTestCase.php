@@ -431,54 +431,48 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 		// Go through all object types.
 		foreach($this->objectTypes as $objectType) {
-			try {
-				// Assign the URL suffix "doitest" to an object
-				// with the given object type. Again, this is not
-				// to test the DOI so we do it directly in the
-				// database.
-				$dao = DAORegistry::getDAO($daos[$objectType][0]);
-				// Retrieve the object.
-				$object = $dao->$daos[$objectType][1](1);
-				// Set its URL suffix to 'doitest'.
-				$object->setStoredPubId('publisher-id', 'doitest');
-				// Due to the 'unconventional' implementation of the article
-				// DAOs we have to manually change our DAO for article update.
-				if (is_a($object, 'PublishedArticle')) $dao = $dao->articleDao;
-				// Update the object.
-				$dao->$daos[$objectType][2]($object);
+			// Assign the URL suffix "doitest" to an object
+			// with the given object type. Again, this is not
+			// to test the DOI so we do it directly in the
+			// database.
+			$dao = DAORegistry::getDAO($daos[$objectType][0]);
+			// Retrieve the object.
+			$object = $dao->$daos[$objectType][1](1);
+			// Set its URL suffix to 'doitest'.
+			$object->setStoredPubId('publisher-id', 'doitest');
+			// Due to the 'unconventional' implementation of the article
+			// DAOs we have to manually change our DAO for article update.
+			if (is_a($object, 'PublishedArticle')) $dao = $dao->articleDao;
+			// Update the object.
+			$dao->$daos[$objectType][2]($object);
 
-				// Navigate to the meta-data page given in the example
-				// and enter the (duplicate) URL suffix "doitest" and
-				// try to save the form.
-				$targetObjectType = $examples[$objectType];
-				$this->setUrlSuffix(strtolower_codesafe($targetObjectType), 'doitest');
+			// Navigate to the meta-data page given in the example
+			// and enter the (duplicate) URL suffix "doitest" and
+			// try to save the form.
+			$targetObjectType = $examples[$objectType];
+			$this->setUrlSuffix(strtolower_codesafe($targetObjectType), 'doitest');
 
-				// Check that the form is being redisplayed with an error.
-				$expectedErrorMessage = "The public identifier 'doitest' already exists.*";
-				if ($targetObjectType == 'Article') {
-					// We expect a notification in the case of article
-					// URL suffixes as they are edited in the issue toc
-					// which is not a form.
-					$this->waitForLocation(
-						'exact:'.str_replace('%id', '1', $this->pages['metadata-article']['urlSuffixPage'])
-					);
-					$this->waitForText('css=.ui-pnotify-text', $expectedErrorMessage);
-				} else {
-					// All other target objects are edited in forms and should
-					// produce a form error.
-					$metadataPage = 'metadata-' . strtolower_codesafe($targetObjectType);
-					$this->assertText(
-						str_replace(
-							'%id', "public${targetObjectType}Id",
-							$this->pages[$metadataPage]['formError']
-						),
-						$expectedErrorMessage
-					);
-				}
-			} catch(Exception $e) {
-				$objectType = strtolower_codesafe($objectType);
-				$targetObjectType = strtolower_codesafe($targetObjectType);
-				throw $this->improveException($e, "example $objectType / $targetObjectType");
+			// Check that the form is being redisplayed with an error.
+			$expectedErrorMessage = "The public identifier 'doitest' already exists.*";
+			if ($targetObjectType == 'Article') {
+				// We expect a notification in the case of article
+				// URL suffixes as they are edited in the issue toc
+				// which is not a form.
+				$this->waitForLocation(
+					'exact:'.str_replace('%id', '1', $this->pages['metadata-article']['urlSuffixPage'])
+				);
+				$this->waitForElementPresent('//*[contains(@class,"ui-pnotify-text") and contains(text(),' . $this->quoteXpath($expectedErrorMessage) . ')]');
+			} else {
+				// All other target objects are edited in forms and should
+				// produce a form error.
+				$metadataPage = 'metadata-' . strtolower_codesafe($targetObjectType);
+				$this->assertText(
+					str_replace(
+						'%id', "public${targetObjectType}Id",
+						$this->pages[$metadataPage]['formError']
+					),
+					$expectedErrorMessage
+				);
 			}
 		}
 	}
@@ -870,41 +864,37 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	private function checkDoiDisplay($objectType, $expectedDoi) {
 		$url = $this->getUrl($objectType, 1);
 		$this->verifyAndOpen($url);
-		try {
-			if ($expectedDoi === false) {
-				$visibleElement = $this->pages[$objectType]['visible'];
-				if (strpos($objectType, 'citations') !== false) {
-					$this->assertNotText($visibleElement, 'doi');
-				} else {
-					$this->assertElementNotPresent($visibleElement);
-				}
-				foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
-					if (isset($this->pages[$objectType][$doiMetaAttribute])) {
-						$doiMetaElement = PKPString::regexp_replace(
-							'/@[^@]+$/', '',
-							$this->pages[$objectType][$doiMetaAttribute]
-						);
-						$this->assertElementNotPresent($doiMetaElement);
-					}
-				}
+		if ($expectedDoi === false) {
+			$visibleElement = $this->pages[$objectType]['visible'];
+			if (strpos($objectType, 'citations') !== false) {
+				$this->assertNotText($visibleElement, 'doi');
 			} else {
-				$expectedDoiPattern = "(^|.* )$expectedDoi($| .*)";
-				$doiText = $this->getText($this->pages[$objectType]['visible']);
-				if ($expectedDoi == '10.1234/t.v1i1.1') {
-					$fata = 'morgana';
-				}
-				$this->assertText($this->pages[$objectType]['visible'], $expectedDoiPattern);
-				foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
-					if (isset($this->pages[$objectType][$doiMetaAttribute])) {
-						$this->assertAttribute(
-							$this->pages[$objectType][$doiMetaAttribute],
-							$expectedDoiPattern
-						);
-					}
+				$this->assertElementNotPresent($visibleElement);
+			}
+			foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
+				if (isset($this->pages[$objectType][$doiMetaAttribute])) {
+					$doiMetaElement = PKPString::regexp_replace(
+						'/@[^@]+$/', '',
+						$this->pages[$objectType][$doiMetaAttribute]
+					);
+					$this->assertElementNotPresent($doiMetaElement);
 				}
 			}
-		} catch(Exception $e) {
-			throw $this->improveException($e, $objectType);
+		} else {
+			$expectedDoiPattern = "(^|.* )$expectedDoi($| .*)";
+			$doiText = $this->getText($this->pages[$objectType]['visible']);
+			if ($expectedDoi == '10.1234/t.v1i1.1') {
+				$fata = 'morgana';
+			}
+			$this->assertText($this->pages[$objectType]['visible'], $expectedDoiPattern);
+			foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
+				if (isset($this->pages[$objectType][$doiMetaAttribute])) {
+					$this->assertAttribute(
+						$this->pages[$objectType][$doiMetaAttribute],
+						$expectedDoiPattern
+					);
+				}
+			}
 		}
 	}
 
@@ -915,23 +905,19 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 * @param $expectedDoi string
 	 */
 	private function checkMetadataPage($objectType, $editable = false, $expectedDoi = null, $objectId = 1, $isPreview = false) {
-		try {
-			$objectType = strtolower_codesafe($objectType);
-			$metadataPage = "metadata-$objectType";
-			$url = $this->getUrl($metadataPage, $objectId);
-			$this->verifyAndOpen($url);
-			$doiText = $this->getText($this->pages[$metadataPage]['doi']);
-			if ($editable) {
-				if (!is_null($expectedDoi)) $this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
-			} else {
-				$this->assertElementNotPresent($this->pages[$metadataPage]['doiInput']);
-				if (!is_null($expectedDoi)) $this->assertContains("DOI $expectedDoi", $doiText);
-			}
-			if ($isPreview) {
-				$this->assertContains('What you see is a preview', $doiText);
-			}
-		} catch(Exception $e) {
-			throw $this->improveException($e, $objectType);
+		$objectType = strtolower_codesafe($objectType);
+		$metadataPage = "metadata-$objectType";
+		$url = $this->getUrl($metadataPage, $objectId);
+		$this->verifyAndOpen($url);
+		$doiText = $this->getText($this->pages[$metadataPage]['doi']);
+		if ($editable) {
+			if (!is_null($expectedDoi)) $this->assertValue($this->pages[$metadataPage]['doiInput'], $expectedDoi);
+		} else {
+			$this->assertElementNotPresent($this->pages[$metadataPage]['doiInput']);
+			if (!is_null($expectedDoi)) $this->assertContains("DOI $expectedDoi", $doiText);
+		}
+		if ($isPreview) {
+			$this->assertContains('What you see is a preview', $doiText);
 		}
 	}
 

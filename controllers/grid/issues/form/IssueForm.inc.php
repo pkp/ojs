@@ -99,7 +99,7 @@ class IssueForm extends Form {
 	 */
 	function validate($callHooks = true) {
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
-			$request = Application::getRequest();
+			$request = Application::get()->getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
@@ -174,7 +174,7 @@ class IssueForm extends Form {
 	 * Save issue settings.
 	 */
 	function execute() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');

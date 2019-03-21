@@ -15,38 +15,48 @@
 
 import('lib.pkp.tests.WebTestCase');
 
+use Facebook\WebDriver\Interactions\WebDriverActions;
+use Facebook\WebDriver\WebDriverExpectedCondition;
+use Facebook\WebDriver\WebDriverBy;
+
 class SectionsTest extends WebTestCase {
 	/**
 	 * Configure section editors
 	 */
 	function testConfigureSections() {
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
-		$this->clickAndWait($selector);
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
 
 		// Section settings
-		$this->waitForElementPresent($selector='link=Journal');
-		$this->click($selector);
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
+			->perform();
 		$this->waitForElementPresent($selector='link=Sections');
 		$this->click($selector);
 
 		// Edit Section (default "Articles")
+		$this->waitForElementPresent($selector = 'css=a.show_extras');
+		$this->click($selector);
 		$this->waitForElementPresent($selector='css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]');
 		$this->click($selector);
 
 		// Add Section Editors (David Buskins and Stephanie Berardo)
-		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'David Buskins\')');
-		$this->clickAt($selector);
-		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'Stephanie Berardo\')');
-		$this->clickAt($selector);
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"Stephanie Berardo")]');
+		$this->click($selector);
 
 		// Save changes
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 
 		// Verify resulting grid row
-		$this->assertEquals('Stephanie Berardo, David Buskins', $this->getText('css=#cell-1-editors > span'));
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
+		$this->waitForElementPresent('//*[@id="cell-1-editors"]//span[contains(text(),"Stephanie Berardo, David Buskins")]');
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 
 		// Create a new "Reviews" section
 		$this->click('css=[id^=component-grid-settings-sections-sectiongrid-addSection-button-]');
@@ -57,9 +67,9 @@ class SectionsTest extends WebTestCase {
 		$this->click('id=abstractsNotRequired');
 
 		// Add a Section Editor (Minoti Inoue)
-		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'Minoti Inoue\')');
-		$this->clickAt($selector);
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
+		$this->click($selector);
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 	}
 }

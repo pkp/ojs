@@ -155,7 +155,7 @@ class DefaultThemePlugin extends ThemePlugin {
 			$this->modifyStyle('stylesheet', array('addLessVariables' => join($additionalLessVariables)));
 		}
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		// Load icon font FontAwesome - http://fontawesome.io/
 		if (Config::getVar('general', 'enable_cdn')) {

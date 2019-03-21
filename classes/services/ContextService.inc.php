@@ -152,7 +152,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 
 		// If a journal thumbnail is passed, check that the temporary file exists
 		// and the current user owns it
-		$user = \Application::getRequest()->getUser();
+		$user = \Application::get()->getRequest()->getUser();
 		$userId = $user ? $user->getId() : null;
 		import('lib.pkp.classes.file.TemporaryFileManager');
 		$temporaryFileManager = new \TemporaryFileManager();

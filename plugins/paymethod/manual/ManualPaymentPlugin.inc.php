@@ -61,7 +61,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 			return;
 		}
 
-		$context = Application::getRequest()->getContext();
+		$context = Application::get()->getRequest()->getContext();
 		if (!$context) {
 			return;
 		}

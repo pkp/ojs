@@ -246,13 +246,9 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 */
 	public function testWorkProductExplanation() {
 		$this->logIn();
-		try {
-			foreach(array('index', 'articles', 'galleys', 'all') as $pageName) {
-				$this->open($this->pages[$pageName]);
-				$this->assertElementPresent('//a[@href="http://www.medra.org/en/metadata_td.htm"]');
-			}
-		} catch(Exception $e) {
-			throw $this->improveException($e, "$pageName page");
+		foreach(array('index', 'articles', 'galleys', 'all') as $pageName) {
+			$this->open($this->pages[$pageName]);
+			$this->assertElementPresent('//a[@href="http://www.medra.org/en/metadata_td.htm"]');
 		}
 	}
 

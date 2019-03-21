@@ -152,7 +152,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	function getLinkActions($pubObject) {
 		$linkActions = array();
 		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$userVars = $request->getUserVars();
 		$userVars['pubIdPlugIn'] = get_class($this);
 		// Clear object pub id

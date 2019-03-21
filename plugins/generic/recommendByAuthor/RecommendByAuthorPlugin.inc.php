@@ -105,7 +105,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$orderedResults = array_merge($orderedResults, $remainingResults);
 
 		// Pagination.
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$rangeInfo = Handler::getRangeInfo($request, 'articlesBySameAuthor');
 		if ($rangeInfo && $rangeInfo->isValid()) {
 			$page = $rangeInfo->getPage();

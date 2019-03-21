@@ -215,7 +215,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 	function execute() {
 		parent::execute();
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$submission = $this->getSubmission();
 		$context = $request->getContext();
 

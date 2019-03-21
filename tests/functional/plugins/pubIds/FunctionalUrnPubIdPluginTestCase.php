@@ -720,8 +720,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 						$this->assertAttribute($page[$urnMetaAttribute], $expectedURN);
 					}
 				}
-			} catch(Exception $e) {
-				throw $this->improveException($e, $objectType);
 			}
 		}
 	}
@@ -733,22 +731,20 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 * @param $expectedURN string
 	 */
 	private function checkMetadataPage($objectType, $editable = false, $expectedURN = null) {
-			try {
-				$objectType = strtolower_codesafe($objectType);
-				$metadataPage = "metadata-$objectType";
-				$this->verifyLocation('exact:'.$this->getUrl($this->pages[$metadataPage], 1));
-				if (!$this->verified()) {
-					$this->open($this->getUrl($this->pages[$metadataPage], 1));
-				}
-				if ($editable) {
-					$this->assertElementPresent($this->pages[$metadataPage]['urnInput']);
-				} else {
-					$this->assertElementNotPresent($this->pages[$metadataPage]['urnInput']);
-					$this->assertText($this->pages[$metadataPage]['urn'], $expectedURN);
-				}
-			} catch(Exception $e) {
-				throw $this->improveException($e, $objectType);
+		try {
+			$objectType = strtolower_codesafe($objectType);
+			$metadataPage = "metadata-$objectType";
+			$this->verifyLocation('exact:'.$this->getUrl($this->pages[$metadataPage], 1));
+			if (!$this->verified()) {
+				$this->open($this->getUrl($this->pages[$metadataPage], 1));
 			}
+			if ($editable) {
+				$this->assertElementPresent($this->pages[$metadataPage]['urnInput']);
+			} else {
+				$this->assertElementNotPresent($this->pages[$metadataPage]['urnInput']);
+				$this->assertText($this->pages[$metadataPage]['urn'], $expectedURN);
+			}
+		}
 	}
 
 	/**

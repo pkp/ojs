@@ -88,7 +88,7 @@ class SubmissionHandler extends APIHandler {
 	 * @return Response
 	 */
 	public function getMany($slimRequest, $response, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$currentUser = $request->getUser();
 		$context = $request->getContext();
 		$submissionService = Services::get('submission');
@@ -138,7 +138,7 @@ class SubmissionHandler extends APIHandler {
 	public function get($slimRequest, $response, $args) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
 		$data = Services::get('submission')->getFullProperties($submission, array(
@@ -159,7 +159,7 @@ class SubmissionHandler extends APIHandler {
 	 * @return Response
 	 */
 	public function getGalleys($slimRequest, $response, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
@@ -207,7 +207,7 @@ class SubmissionHandler extends APIHandler {
 	 * @return Response
 	 */
 	public function getParticipants($slimRequest, $response, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$stageId = isset($args['stageId']) ? $args['stageId'] : null;
@@ -248,7 +248,7 @@ class SubmissionHandler extends APIHandler {
 	 */
 	private function _buildListRequestParams($slimRequest) {
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$currentUser = $request->getUser();
 
 		// Merge query params over default params

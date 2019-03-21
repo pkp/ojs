@@ -92,7 +92,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$context = $deployment->getContext();
 		$cache = $deployment->getCache();
 		$plugin = $deployment->getPlugin();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 
 		assert ((is_a($pubObject, 'PublishedArticle') && $this->isWork($context, $plugin)) ||

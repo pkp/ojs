@@ -74,9 +74,9 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 	function getDisplayStatusCallback($hookName, $args) {
 		$navigationMenuItem =& $args[0];
 
-		$request = \Application::getRequest();
+		$request = \Application::get()->getRequest();
 		$dispatcher = $request->getDispatcher();
-		$templateMgr = \TemplateManager::getManager(\Application::getRequest());
+		$templateMgr = \TemplateManager::getManager(\Application::get()->getRequest());
 
 		$isUserLoggedIn = \Validation::isLoggedIn();
 		$isUserLoggedInAs = \Validation::isLoggedInAs();

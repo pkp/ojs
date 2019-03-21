@@ -398,7 +398,7 @@ class Issue extends DataObject {
 			return '';
 		}
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -417,7 +417,7 @@ class Issue extends DataObject {
 			return array();
 		}
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
 

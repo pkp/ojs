@@ -251,80 +251,76 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$this->removeRegisteredDois($pluginName);
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		foreach($objectTypes as $objectType) {
-			try {
-				// Navigate to the object's export page (in test mode).
-				$pageUrl = $this->pages[$objectType.'s'] . '?testMode=1';
-				$this->open($pageUrl);
+			// Navigate to the object's export page (in test mode).
+			$pageUrl = $this->pages[$objectType.'s'] . '?testMode=1';
+			$this->open($pageUrl);
 
-				// Single object:
-				// - Export.
-				// We do not actually export as this is already being tested elsewhere.
-				$buttonLocator = 'css=a.action[href="'.$this->pages['index'].'/%action'.ucfirst($objectType).'/1?testMode=1"]';
-				$exportButton = str_replace('%action', 'export', $buttonLocator);
-				$this->assertText($exportButton, 'Export');
+			// Single object:
+			// - Export.
+			// We do not actually export as this is already being tested elsewhere.
+			$buttonLocator = 'css=a.action[href="'.$this->pages['index'].'/%action'.ucfirst($objectType).'/1?testMode=1"]';
+			$exportButton = str_replace('%action', 'export', $buttonLocator);
+			$this->assertText($exportButton, 'Export');
 
-				// - Register.
-				$registerButton = str_replace('%action', 'register', $buttonLocator);
+			// - Register.
+			$registerButton = str_replace('%action', 'register', $buttonLocator);
+			$this->assertText($registerButton, 'Register');
+			$this->clickAndWait($registerButton);
+			// When registration was successful then we should be
+			// redirected to the index page and see a notification
+			// "Registration Successful".
+			$this->setTimeout(120000); // Registering can take a long time.
+			$this->waitForElementPresent('css=.ui-pnotify-text');
+			$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
+			$this->setTimeout(30000);
+
+			// Make sure that the button for the registered object now reads "Update"
+			// rather than "Register".
+			$this->assertText($registerButton, 'Update');
+
+			// Test the reset button.
+			if ($testReset) {
+				// There should be a "Reset" button for already registered objects.
+				$resetButton = str_replace('%action', 'reset', $buttonLocator);
+				$this->assertElementPresent($resetButton);
+				$this->assertText($resetButton, 'Reset');
+				// When I reset the object ...
+				$this->clickAndWait($resetButton);
+				$this->waitForLocation('exact:'.$pageUrl);
+				$this->waitForElementPresent($registerButton);
+				// ... then the registration button reads "Register" again ...
 				$this->assertText($registerButton, 'Register');
-				$this->clickAndWait($registerButton);
-				// When registration was successful then we should be
-				// redirected to the index page and see a notification
-				// "Registration Successful".
-				$this->setTimeout(120000); // Registering can take a long time.
-				$this->waitForElementPresent('css=.ui-pnotify-text');
-				$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
-				$this->setTimeout(30000);
-
-				// Make sure that the button for the registered object now reads "Update"
-				// rather than "Register".
-				$this->assertText($registerButton, 'Update');
-
-				// Test the reset button.
-				if ($testReset) {
-					// There should be a "Reset" button for already registered objects.
-					$resetButton = str_replace('%action', 'reset', $buttonLocator);
-					$this->assertElementPresent($resetButton);
-					$this->assertText($resetButton, 'Reset');
-					// When I reset the object ...
-					$this->clickAndWait($resetButton);
-					$this->waitForLocation('exact:'.$pageUrl);
-					$this->waitForElementPresent($registerButton);
-					// ... then the registration button reads "Register" again ...
-					$this->assertText($registerButton, 'Register');
-					// ... and the "Reset" button should have disappeared.
-					$this->assertElementNotPresent($resetButton);
-				}
-
-				// Several objects:
-				// - Export.
-				// We do not actually export as this is being tested elsewhere.
-				$this->assertElementPresent('css=form[id="'.$objectType.'sForm"][action="'.$this->pages['index'].'/export'.ucfirst($objectType).'s"]');
-				$this->assertElementPresent('css=input[name="'.$objectType.'Id[]"]');
-				$this->assertElementPresent('css=input.button[name="export"]');
-
-				// -Register.
-				$this->click('css=input.button[value="Select All"]');
-				$this->clickAndWait('css=input.button[name="register"]');
-				$this->setTimeout(120000); // Registering can take a long time.
-				$this->waitForElementPresent('css=.ui-pnotify-text');
-				$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
-				$this->setTimeout(30000);
-
-				// Export without registration account:
-				// Delete the account setting.
-				$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', '');
-				// Reload the page.
-				$this->open($pageUrl);
-				// Check that only export buttons are visible now.
-				$this->assertElementPresent($exportButton);
-				$this->assertElementNotPresent($registerButton);
-				$this->assertElementPresent('css=input.button[name="export"]');
-				$this->assertElementNotPresent('css=input.button[name="register"]');
-				// Reconfigure the account setting.
-				$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', $testAccount);
-			} catch(Exception $e) {
-				throw $this->improveException($e, $objectType);
+				// ... and the "Reset" button should have disappeared.
+				$this->assertElementNotPresent($resetButton);
 			}
+
+			// Several objects:
+			// - Export.
+			// We do not actually export as this is being tested elsewhere.
+			$this->assertElementPresent('css=form[id="'.$objectType.'sForm"][action="'.$this->pages['index'].'/export'.ucfirst($objectType).'s"]');
+			$this->assertElementPresent('css=input[name="'.$objectType.'Id[]"]');
+			$this->assertElementPresent('css=input.button[name="export"]');
+
+			// -Register.
+			$this->click('css=input.button[value="Select All"]');
+			$this->clickAndWait('css=input.button[name="register"]');
+			$this->setTimeout(120000); // Registering can take a long time.
+			$this->waitForElementPresent('css=.ui-pnotify-text');
+			$this->assertText('css=.ui-pnotify-text', 'Registration successful!');
+			$this->setTimeout(30000);
+
+			// Export without registration account:
+			// Delete the account setting.
+			$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', '');
+			// Reload the page.
+			$this->open($pageUrl);
+			// Check that only export buttons are visible now.
+			$this->assertElementPresent($exportButton);
+			$this->assertElementNotPresent($registerButton);
+			$this->assertElementPresent('css=input.button[name="export"]');
+			$this->assertElementNotPresent('css=input.button[name="register"]');
+			// Reconfigure the account setting.
+			$pluginSettingsDao->updateSetting(1, $this->pluginId . 'exportplugin', 'username', $testAccount);
 		}
 	}
 
@@ -439,16 +435,12 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		}
 
 		foreach($exportPages as $exportPage) {
-			try {
-				// Check that the object does not appear on the export page.
-				$this->open($this->pages[$exportPage]);
+			// Check that the object does not appear on the export page.
+			$this->open($this->pages[$exportPage]);
 
-				// Check that we get an empty list. This implicitly tests
-				// that the "no data" marker is correctly displayed.
-				$this->assertElementPresent('css=td.nodata');
-			} catch(Exception $e) {
-				throw $this->improveException($e, "$exportPage page");
-			}
+			// Check that we get an empty list. This implicitly tests
+			// that the "no data" marker is correctly displayed.
+			$this->assertElementPresent('css=td.nodata');
 		}
 	}
 
@@ -580,53 +572,45 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$outputFile = Config::getVar('files', 'files_dir') . '/test';
 		$journalPath = 'test';
 
-		try {
-			// Construct the command line arguments.
-			$args = array($command);
-			if ($command == 'export') {
-				$args[] = $outputFile;
+		// Construct the command line arguments.
+		$args = array($command);
+		if ($command == 'export') {
+			$args[] = $outputFile;
+		}
+		$args = array_merge($args, array($journalPath, $exportObjectType), explode(' ', $objectIds));
+
+		// Call the CLI.
+		$result = $this->executeCli($exportPlugin, $args);
+
+		if ($command == 'export') {
+			// Check that we didn't get any error messages.
+			$this->assertEquals('', $result);
+		} else {
+			// We should get feedback that the registration was successful.
+			$this->assertRegExp('/##plugins.importexport.common.register.success##/', $result);
+		}
+
+		if ($command == 'export') {
+			// Check the existence of the output file.
+			$realOutputFiles = glob("$outputFile.{xml,tar.gz}", GLOB_BRACE);
+			try {
+				self::assertEquals(1, count($realOutputFiles));
+			} catch (Exception $e) {
+				foreach($realOutputFiles as $realOutputFile) {
+					unlink($realOutputFile);
+				}
+				throw $e;
 			}
-			$args = array_merge($args, array($journalPath, $exportObjectType), explode(' ', $objectIds));
+			$realOutputFile = realpath(array_pop($realOutputFiles));
 
-			// Call the CLI.
-			$result = $this->executeCli($exportPlugin, $args);
-
-			if ($command == 'export') {
-				// Check that we didn't get any error messages.
-				$this->assertEquals('', $result);
+			// Check the XML.
+			if (pathinfo($realOutputFile, PATHINFO_EXTENSION) == 'xml') {
+				$exportedXml = file_get_contents($realOutputFile);
 			} else {
-				// We should get feedback that the registration was successful.
-				$this->assertRegExp('/##plugins.importexport.common.register.success##/', $result);
+				$exportedXml = $this->extractTarFile($realOutputFile);
 			}
-
-			if ($command == 'export') {
-				// Check the existence of the output file.
-				$realOutputFiles = glob("$outputFile.{xml,tar.gz}", GLOB_BRACE);
-				try {
-					self::assertEquals(1, count($realOutputFiles));
-				} catch (Exception $e) {
-					foreach($realOutputFiles as $realOutputFile) {
-						unlink($realOutputFile);
-					}
-					throw $e;
-				}
-				$realOutputFile = realpath(array_pop($realOutputFiles));
-
-				// Check the XML.
-				if (pathinfo($realOutputFile, PATHINFO_EXTENSION) == 'xml') {
-					$exportedXml = file_get_contents($realOutputFile);
-				} else {
-					$exportedXml = $this->extractTarFile($realOutputFile);
-				}
-				$this->assertXml($xmlFiles, $exportedXml);
-				unlink($realOutputFile);
-			}
-		} catch(Exception $e) {
-			$commandLine = "'php tools/importExport.php $exportPlugin $command "
-				. ($command == 'export' ? 'files/test.xml ' : '')
-				. "test $exportObjectType "
-				. "$objectIds'";
-			throw $this->improveException($e, $commandLine);
+			$this->assertXml($xmlFiles, $exportedXml);
+			unlink($realOutputFile);
 		}
 	}
 
@@ -886,15 +870,11 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 
 		// Make sure that (no) export links are present.
 		foreach ($exportPages as $page) {
-			try {
-				$locator = 'css=a[href="'.$this->pages[$page].'"]';
-				if (is_null($expectedErrorMessage)) {
-					$this->assertElementPresent($locator);
-				} else {
-					$this->assertElementNotPresent($locator);
-				}
-			} catch(Exception $e) {
-				throw $this->improveException($e, "$page page");
+			$locator = 'css=a[href="'.$this->pages[$page].'"]';
+			if (is_null($expectedErrorMessage)) {
+				$this->assertElementPresent($locator);
+			} else {
+				$this->assertElementNotPresent($locator);
 			}
 		}
 	}

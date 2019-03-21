@@ -164,7 +164,9 @@ class ArticleSearchIndexTest extends PKPTestCase {
 
 		// Mock an article so that the authors are not
 		// being retrieved from the database.
-		$article = $this->getMock('Article', array('getAuthors'));
+		$article = $this->getMockBuilder(Article::class)
+			->setMethods(array('getAuthors'))
+			->getMock();
 		$article->expects($this->any())
 		        ->method('getAuthors')
 		        ->will($this->returnValue(array()));
@@ -331,7 +333,9 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	private function registerMockArticleSearchDAO($clearIndexExpected, $deleteArticleExpected) {
 		// Mock an ArticleSearchDAO.
-		$articleSearchDao = $this->getMock('ArticleSearchDAO', array('clearIndex', 'deleteSubmissionKeywords'), array(), '', false);
+		$articleSearchDao = $this->getMockBuilder(ArticleSearchDAO::class)
+			->setMethods(array('clearIndex', 'deleteSubmissionKeywords'))
+			->getMock();
 
 		// Test the clearIndex() method.
 		$articleSearchDao->expects($clearIndexExpected)
@@ -353,7 +357,9 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	private function registerMockJournalDAO() {
 		// Mock a JournalDAO.
-		$journalDao = $this->getMock('JournalDAO', array('getAll'), array(), '', false);
+		$journalDao = $this->getMockBuilder(JournalDAO::class)
+			->setMethods(array('getAll'))
+			->getMock();
 
 		// Mock an empty result set.
 		$journals = array();
@@ -374,7 +380,9 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	 */
 	private function registerFileDAOs($expectMethodCall) {
 		// Mock file DAOs.
-		$articleGalleyDao = $this->getMock('ArticleGalleyDAO', array('getBySubmissionId'), array(), '', false);
+		$articleGalleyDao = $this->getMockBuilder(ArticleGalleyDAO::class)
+			->setMethods(array('getBySubmissionId'))
+			->getMock();
 
 		// Make sure that the DAOs are being called.
 		if ($expectMethodCall) {
@@ -396,7 +404,9 @@ class ArticleSearchIndexTest extends PKPTestCase {
 	private function getMockArticleSearchIndex($expectedCall) {
 		// Mock ArticleSearchIndex.
 		/* @var $articleSearchIndex ArticleSearchIndex */
-		$articleSearchIndex = $this->getMock('ArticleSearchIndex', array('_updateTextIndex'));
+		$articleSearchIndex = $this->getMockBuilder(ArticleSearchIndex::class)
+			->setMethods(array('_updateTextIndex'))
+			->getMock();
 
 		// Check for _updateTextIndex() calls.
 		$articleSearchIndex->expects($expectedCall)

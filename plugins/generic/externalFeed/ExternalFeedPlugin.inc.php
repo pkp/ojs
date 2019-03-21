@@ -28,7 +28,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$externalFeedDao = new ExternalFeedDAO($this->getName());
 			DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
-			$request = Application::getRequest();
+			$request = Application::get()->getRequest();
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addStyleSheet('externalFeed', $request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
@@ -70,7 +70,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * Get the filename of the CSS stylesheet for this plugin.
 	 */
 	function getStyleSheetFile() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
@@ -130,7 +130,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function displayHomepage($hookName, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 

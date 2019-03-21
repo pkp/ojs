@@ -55,7 +55,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * @return boolean Hook processing status
 	 */
 	public function callbackAddLinks($hookName, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
 			$templateManager = $args[0];
 			$currentJournal = $templateManager->getTemplateVars('currentJournal');

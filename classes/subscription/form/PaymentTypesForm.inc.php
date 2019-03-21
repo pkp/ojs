@@ -55,7 +55,7 @@ class PaymentTypesForm extends Form {
 	 * Initialize form data from current group group.
 	 */
 	function initData() {
-		$journal = Application::getRequest()->getContext();
+		$journal = Application::get()->getRequest()->getContext();
 		foreach (array_keys($this->settings) as $settingName) {
 			$this->setData($settingName, $journal->getData($settingName));
 		}
@@ -72,7 +72,7 @@ class PaymentTypesForm extends Form {
 	 * Save settings
 	 */
 	function execute() {
-		$journal = Application::getRequest()->getJournal();
+		$journal = Application::get()->getRequest()->getJournal();
 		foreach (array_keys($this->settings) as $settingName) {
 			$journal->updateSetting($settingName, $this->getData($settingName));
 		}
