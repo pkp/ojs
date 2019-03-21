@@ -466,10 +466,9 @@ class Upgrade extends Installer {
 
 				// Copyeditors.  Pull from the signoffs for SIGNOFF_COPYEDITING_INITIAL.
 				// there should only be one (or no) copyeditor for each submission.
-				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
 
 				$copyEditorResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
-								array(257, $submissionId, 'SIGNOFF_COPYEDITING_INITIAL'));
+								array(ASSOC_TYPE_SUBMISSION, $submissionId, 'SIGNOFF_COPYEDITING_INITIAL'));
 
 				if ($copyEditorResult->NumRows() == 1) { // the signoff exists.
 					$copyEditorRow = $copyEditorResult->GetRowAssoc(false);
@@ -481,10 +480,9 @@ class Upgrade extends Installer {
 
 				// Layout editors.  Pull from the signoffs for SIGNOFF_LAYOUT.
 				// there should only be one (or no) layout editor for each submission.
-				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
 
 				$layoutEditorResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
-						array(257, $submissionId, 'SIGNOFF_LAYOUT'));
+						array(ASSOC_TYPE_SUBMISSION, $submissionId, 'SIGNOFF_LAYOUT'));
 
 				if ($layoutEditorResult->NumRows() == 1) { // the signoff exists.
 					$layoutEditorRow = $layoutEditorResult->GetRowAssoc(false);
@@ -496,10 +494,9 @@ class Upgrade extends Installer {
 
 				// Proofreaders.  Pull from the signoffs for SIGNOFF_PROOFREADING_PROOFREADER.
 				// there should only be one (or no) layout editor for each submission.
-				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
 
 				$proofreaderResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
-						array(257, $submissionId, 'SIGNOFF_PROOFREADING_PROOFREADER'));
+						array(ASSOC_TYPE_SUBMISSION, $submissionId, 'SIGNOFF_PROOFREADING_PROOFREADER'));
 
 				if ($proofreaderResult->NumRows() == 1) { // the signoff exists.
 					$proofreaderRow = $proofreaderResult->GetRowAssoc(false);
