@@ -1439,6 +1439,25 @@
 				}
 			}
 		},
+		"/emailTemplates/restoreDefaults": {
+			"delete": {
+				"tags": [
+					"Email Templates"
+				],
+				"summary": "Delete custom templates and reset all templates to their default settings.",
+				"responses": {
+					"200": {
+						"description": "A list of template keys which were deleted or reset.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
 		"/temporaryFiles": {
 			"options": {
 				"tags": [

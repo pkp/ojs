@@ -12,10 +12,12 @@ import PkpLoad from '../lib/pkp/js/load.js';
 
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
+import SettingsContainer from '@/components/Container/SettingsContainer.vue';
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
-		Container
+		Container,
+		SettingsContainer
 	}
 });
