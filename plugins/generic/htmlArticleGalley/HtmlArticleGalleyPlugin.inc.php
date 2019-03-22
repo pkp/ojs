@@ -173,6 +173,9 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			$contents
 		);
 
+		$templateMgr = TemplateManager::getManager($request);
+		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
+
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getByArticleId($galley->getSubmissionId());
