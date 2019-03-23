@@ -84,6 +84,5 @@ after_script:
 
 after_failure:
   - sudo apt-get install sharutils
-  - tar cz lib/pkp/tests/results | uuencode /dev/stdout
   - import -window root screenshot.png
   - tar cz screenshot.png | uuencode /dev/stdout
