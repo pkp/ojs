@@ -154,7 +154,8 @@ class SubscriptionTypeForm extends Form {
 			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		}
 
-		$journal = Request::getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 		$subscriptionType->setJournalId($journal->getId());
 		$subscriptionType->setName($this->getData('name'), null); // Localized
 		$subscriptionType->setDescription($this->getData('description'), null); // Localized

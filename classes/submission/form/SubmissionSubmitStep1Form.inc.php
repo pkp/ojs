@@ -25,9 +25,9 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	}
 
 	/**
-	 * Fetch the form.
+	 * @copydoc SubmissionSubmitForm::fetch
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$user = $request->getUser();
 		$canSubmitAll = $roleDao->userHasRole($this->context->getId(), $user->getId(), ROLE_ID_MANAGER) ||
@@ -52,7 +52,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 
 		$templateMgr->assign('sectionPolicies', $sectionPolicies);
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**

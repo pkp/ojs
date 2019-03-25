@@ -113,9 +113,10 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 			$article['bibjson']['end_page'] = $endPage;
 		}
 		// FullText URL
+		$request = Application::get()->getRequest();
 		$article['bibjson']['link'] = array();
 		$article['bibjson']['link'][] = array(
-			'url' => Request::url($context->getPath(), 'article', 'view', $pubObject->getId()),
+			'url' => $request->url($context->getPath(), 'article', 'view', $pubObject->getId()),
 			'type' => 'fulltext',
 			'content_type' => 'html'
 		);

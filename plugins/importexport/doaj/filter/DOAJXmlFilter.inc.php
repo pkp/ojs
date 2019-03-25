@@ -157,7 +157,8 @@ class DOAJXmlFilter extends NativeExportFilter {
 				}
 			}
 			// FullText URL
-			$recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars(Request::url(null, 'article', 'view', $pubObject->getId()), ENT_COMPAT, 'UTF-8')));
+			$request = Application::get()->getRequest();
+			$recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->url(null, 'article', 'view', $pubObject->getId()), ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('format', 'html');
 			// Keywords
 			$supportedLocales = array_keys(AppLocale::getSupportedFormLocales());

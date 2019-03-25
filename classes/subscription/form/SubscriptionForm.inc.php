@@ -169,7 +169,8 @@ class SubscriptionForm extends Form {
 		// If notify email is requested, ensure subscription contact name and email exist.
 		if ($this->_data['notifyEmail'] == 1) {
 			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function() {
-				$journal = Request::getJournal();
+				$request = Application::get()->getRequest();
+				$journal = $request->getJournal();
 				$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 				$subscriptionName = $journalSettingsDao->getSetting($journal->getId(), 'subscriptionName');
 				$subscriptionEmail = $journalSettingsDao->getSetting($journal->getId(), 'subscriptionEmail');
@@ -182,7 +183,8 @@ class SubscriptionForm extends Form {
 	 * Save subscription.
 	 */
 	function execute() {
-		$journal = Request::getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 		$subscription =& $this->subscription;
 
 		$subscription->setJournalId($journal->getId());
@@ -210,7 +212,8 @@ class SubscriptionForm extends Form {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
-		$journal = Request::getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 		$journalName = $journal->getLocalizedTitle();
 		$journalId = $journal->getId();
 		$user = $userDao->getById($this->subscription->getUserId());
