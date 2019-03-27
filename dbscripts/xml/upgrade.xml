@@ -55,6 +55,10 @@
 		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/log.xml" />
@@ -228,8 +232,7 @@
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
+		<!-- <data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" /> -->
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
@@ -238,7 +241,6 @@
 		<code function="migrateSiteStylesheet" />
 		<code function="migrateMetadataSettings" />
 		<code function="createLicenseTerms" />
-		<data file="dbscripts/xml/upgrade/3.2.0_email_templates.xml" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
