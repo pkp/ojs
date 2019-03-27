@@ -1215,14 +1215,14 @@
 				"parameters": [
 					{
 						"name": "isEnabled",
-						"description": "Filter results by enabled/disabled email templates. Any truthy or falsey value will get enabled/disabled email templates. Leave this parameter out to get all email templates.",
+						"description": "Filter results by enabled/disabled email templates. Any truthy or falsey value will get enabled/disabled email templates.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "isCustom",
-						"description": "Filter results by those with or without a default template. A truthy value will return only templates with a key that does not match one of the default templates. A falsey value will return only templates with a key that matches on of the default templates. Note that a default template may be customized, but this does not qualify for `isCustom`. Only completely custom templates, without no system default, will be returned when `isCustom` is `true`. Leave this parameter out to get all email templates.",
+						"description": "Filter results by those with or without a default template. A truthy value will return only templates with a key that does not match one of the default templates. A falsey value will return only templates with a key that matches one of the default templates. Note that a default template may be customized, but this does not qualify for `isCustom`. Only completely custom templates, not a customization of a default template, will be returned when `isCustom` is `true`.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -1324,7 +1324,7 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Get an email template by they the email key.",
+				"summary": "Get an email template by its email key.",
 				"parameters": [
 					{
 						"name": "key",
@@ -1342,7 +1342,7 @@
 						}
 					},
 					"403": {
-						"description": "You do not have permission to view this email template.",
+						"description": "You do not have permission to view email templates.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -1407,7 +1407,7 @@
 				"tags": [
 					"Email Templates"
 				],
-				"summary": "Delete an email template.",
+				"summary": "Delete an email template. Default templates that have not been modified can not be deleted.",
 				"parameters": [
 					{
 						"name": "key",
@@ -1431,7 +1431,7 @@
 						}
 					},
 					"404": {
-						"description": "The requested email template could not be found.",
+						"description": "The requested email template could not be found. This will be returned if you try to delete a default email template that has not been modified.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -1457,7 +1457,7 @@
 					}
 				}
 			}
-		}
+		},
 		"/temporaryFiles": {
 			"options": {
 				"tags": [
