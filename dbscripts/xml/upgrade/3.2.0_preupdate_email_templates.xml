@@ -22,12 +22,21 @@
 		</query>
 		<query>
 			UPDATE email_templates_data as etd
-			SET email_id = (
-				SELECT email_id
+			SET etd.email_id = (
+				SELECT et.email_id
 				FROM email_templates as et
 				WHERE etd.email_key = et.email_key
 					AND etd.assoc_type = et.assoc_type
 					AND etd.assoc_id = et.assoc_id
+			)
+		</query>
+		<query>
+			CREATE TABLE email_templates_settings (
+				email_id INT,
+				locale VARCHAR(14) NOT NULL DEFAULT "",
+				setting_name VARCHAR(255) NOT NULL,
+				setting_value text NULL,
+				PRIMARY KEY (email_id,locale,setting_name)
 			)
 		</query>
 		<query>
