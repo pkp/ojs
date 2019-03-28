@@ -23,7 +23,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	public function getConfig() {
 		$config = parent::getConfig();
 
-		$request = Application::get()->getRequest();
+		$request = \Application::get()->getRequest();
 		if ($request->getContext()) {
 			$config['filters'][] = [
 				'heading' => __('section.sections'),
@@ -70,7 +70,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	 * @return array
 	 */
 	public function getSectionFilters() {
-		$request = Application::get()->getRequest();
+		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
 		if (!$context) {
