@@ -294,7 +294,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Opozorilo:</strong> E-poštna povabila recenzentom vsebujejo posebne URL povezave, ki vodijo recenzente direktno na stran za opravljanje recenzije prispevka (za dostop do drugih strani se morajo najprej prijaviti). Iz varnostnih razlogov uredniki ne morejo spreminjati e-poštnega naslova ali dodati kopijo ali skrito kopijo e-poštnega naslova pred pošiljanjem e-pošte recenzentom.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ocene recenzentov</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Opomniki recenzentom</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Prikaži povezavo na <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Kako zagotoviti anonimnost recenzije</a> na straneh, kjer avtorji in recenzenti nalagajo svoje datoteke.]]></message>
 	<message key="manager.setup.reviewPolicy">Recenzijska politika</message>
 	<message key="manager.setup.searchEngineIndexing">Indeksiranje revije za iskalnike</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Opišite na kratko revijo in relevantne ključne besede (ločene s podpičji), ki bodo pomagali uporabnikom raznih iskalnikov najti to revijo.</message>
@@ -594,4 +593,10 @@
 	<message key="manager.navigationMenus.mySubscriptions.description">Povezava do strani, kjer so opisane vse naročnine uporabnika, sedanja in pretekle.</message>
 	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Povezava bo prikazana le, ko bo uporabnik prijavljen.</message>
 	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Vhodna datoteka {$param} ni berljiva.</message>
+	<message key="manager.setup.enableOai">Omogoči OAI dostop do vsebin</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">To je časovno neomejena naročnina; prosimo ne določite začetnega datuma.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">To je časovno neomejena naročnina; prosimo ne določite končnega datuma.</message>
+	<message key="stats.publishedSubmissions.details">Podrobnosti članka</message>
+	<message key="stats.publishedSubmissions.none">Najdenih ni bilo nobenih člankov.</message>
+	<message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Skupno število vpogledov v povzetek posameznega članka po datumih</message>
 </locale>

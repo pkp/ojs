@@ -16,7 +16,7 @@
 	<message key="submission.submit.title">Oddaj prispevek</message>
 	<message key="submission.submit.userGroup">Oddaj v moji vlogi...</message>
 	<message key="submission.submit.userGroupDescription">Izberite v kakšni vlogi oddajate ta prispevek.</message>
-	<message key="submission.upload.selectComponent">Izberite komponteno prispevka</message>
+	<message key="submission.upload.selectComponent">Izberite komponento prispevka</message>
 	<message key="submission.title">Naslov prispevka</message>
 	<message key="submission.title.tip"><![CDATA[Tip prispevka je običajno eno od 'slika', 'besedilo', ali drug multimedijski tip vključno s 'programska oprema' ali 'interaktivno'. Prosimo, izberite najbolj relevantno možnost. Primere lahko najdete na <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
 	<message key="submission.submit.newSubmissionMultiple">Začni z oddajo prispevka za</message>
@@ -78,4 +78,6 @@
 	<message key="submission.metadataDescription">Te specifikacije temljijo na Dublin Core standardu metapodatkov za opis vsebine revije.</message>
 	<message key="section.any">Katerakoli rubrika</message>
 	<message key="submission.submit.form.wordCountAlert">Vaš izvleček je predolg. Prosimo skrajšajte ga na spodaj zapisano omejitev dolžino.</message>
+	<message key="catalog.browseTitles">{$numTitles} postavk</message>
+	<message key="catalog.category.heading">Vse postavke</message>
 </locale>

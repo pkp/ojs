@@ -939,7 +939,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="metadata.pkp.peerReviewed">Strokovno recenziran prispevek</message>
 
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">Nov prispevek, "{$title}", je bil dodan.</message>
 	<message key="notification.type.editing">Uredi dogodke</message>
 	<message key="notification.type.submissionSubmitted">ANov prispevek, "{$title}", je bil dodan.</message>
 	<message key="notification.type.editorDecisionComment">Na uredniško odločitev za "{$title}" je bil dodan komentar.</message>
@@ -1014,4 +1013,11 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="payment.requestPublicationFee">Zahtevajte naročnino v višini ({$feeAmount})</message>
 	<message key="payment.notFound">Plačilo je bilo zahtevano, a je zahteva že zapadla. Obrnite se na administratorja revije.</message>
 	<message key="log.editor.recommendation">Urednik {$editorName} je oddal priporočilo ({$decision}) za prispevek {$submissionId}.</message>
+	<message key="section.policy">Politika rubrike</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Da, strinjam se z zbiranjem in hranjenjem mojih podatkov pri tej reviji v skladu z <a href="{$privacyUrl}" target="_blank">izjavo o varovanju podatkov</a>.]]></message>
+	<message key="user.register.form.missingContextConsent">Če se želite registrirati pri reviji, se morate strinjat z izjavo o varovanju podatkov.</message>
+	<message key="user.register.form.missingSiteConsent">Strinjati se morate z izjavo o varovanju podatkov.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Oddaj nov prispevek v rubriko  <a href="{$url}">{$name}</a> .]]></message>
+	<message key="catalog.sortBy">Vrstni red člankov</message>
+	<message key="catalog.sortBy.categoryDescription">Izberite način ureditve člankov v tej kategoriji.</message>
 </locale>

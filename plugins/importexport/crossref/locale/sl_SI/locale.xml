@@ -33,8 +33,6 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Opozorilo: Samo številke (in ne vsebovani prispevki) bodo upoštevane za izvoz/depozit.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Oddano</message>
-	<message key="plugins.importexport.crossref.status.completed">Depozit uspešen</message>
 	<message key="plugins.importexport.crossref.status.failed">Neuspelo</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktivno</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Označeno aktivno</message>
@@ -54,11 +52,8 @@
 	<message key="plugins.importexport.crossref.action.export">Prenesi XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Označi aktivno</message>
 	<message key="plugins.importexport.crossref.action.register">Oddaj</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Preveri status</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">Opravilo avtomatske registracije pri CrossRef</message>
-	<message key="plugins.importexport.crossref.notification.failed">DOI ni bil uspešno registriran. Prosimo, pojdite v Orodja > Uvoz/izvoz > Vtičnik za CrossRef XML izvoz, da boste videli neuspešne depozite.</message>
-
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uporaba:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
@@ -67,8 +62,9 @@
 
 	<!--  notifications -->
 	<message key="plugins.importexport.crossref.register.error.mdsError">Oddaja ni bila uspešna! DOI registracijski strežnik je vrnil napako: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Oddaja je bila uspešna!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nobena številka ne odgovarja ID-ju številke "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Noben prispevek ne odgovarja ID-ju prispevka "{$articleId}".</message>
 
+	<message key="plugins.importexport.crossref.settings.form.validation">Validacija XML. To opcijo uporabite za prenos XML datoteke za ročno DOI registracijo.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">Registracija je bila uspešna z naslednjim opozorilom: '{$param}'.</message>
 </locale>
