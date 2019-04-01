@@ -45,10 +45,10 @@ class SectionsTest extends WebTestCase {
 		$this->click($selector);
 
 		// Add Section Editors (David Buskins and Stephanie Berardo)
-		$this->waitForElementPresent($selector='css=div.pkpListPanelItem:contains(\'David Buskins\')');
-		$this->clickAt($selector);
-		$this->waitForElementPresent($selector='css=div.pkpListPanelItem:contains(\'Stephanie Berardo\')');
-		$this->clickAt($selector);
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"Stephanie Berardo")]');
+		$this->click($selector);
 
 		// Save changes
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
