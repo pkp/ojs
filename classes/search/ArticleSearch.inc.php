@@ -154,6 +154,7 @@ class ArticleSearch extends SubmissionSearch {
 			'abstract' => $request->getUserVar('abstract'),
 			'authors' => $request->getUserVar('authors'),
 			'title' => $request->getUserVar('title'),
+			'subtitle' => $request->getUserVar('subtitle'),
 			'galleyFullText' => $request->getUserVar('galleyFullText'),
 			'discipline' => $request->getUserVar('discipline'),
 			'subject' => $request->getUserVar('subject'),
@@ -328,6 +329,7 @@ class ArticleSearch extends SubmissionSearch {
 		return array(
 			SUBMISSION_SEARCH_AUTHOR => 'authors',
 			SUBMISSION_SEARCH_TITLE => 'title',
+			SUBMISSION_SEARCH_SUBTITLE => 'subtitle',
 			SUBMISSION_SEARCH_ABSTRACT => 'abstract',
 			SUBMISSION_SEARCH_GALLEY_FILE => 'galleyFullText',
 			SUBMISSION_SEARCH_DISCIPLINE => 'discipline',
