@@ -67,7 +67,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			// Update search index
 			$articleId = $article->getId();
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_AUTHOR, $authorText);
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TITLE, $article->getTitle(null));
+			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TITLE, $article->getFullTitle(null));
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_ABSTRACT, $article->getAbstract(null));
 
 			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
