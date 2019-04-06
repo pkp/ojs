@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.usageStats.settings.logging">Instellingen voor toegangslogs</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Maak logbestanden</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Als deze instelling wordt ingeschakeld, zal deze plugin toegangslogbestanden opslaan in de "files" folder. Deze bestanden worden gebruikt om gebruiksstatistieken te genereren. Als u geen extra logbestanden wilt laten maken, kunt u deze optie uitschakelen en en de logbestanden van uw eigen server gebruiken.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Reguliere expressie voor analyse van de logbestanden</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">De standaard reguliere expressie kan apache toegangslogs analyseren in gecombineerd formaat, en ook de eigen logbestanden van de plugin. Als uw toegangslogs een ander formaat hebben, kunt u hier een reguliere expressie opgeven die dat formaat kan analyseren en de verwachte waarden kan ophalen. Zie UsageStatsLoader::_getDataFromLogEntry() voor meer informatie.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Instellingen voor gebruiksstatistieken plugin opgeslagen</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Privacy instellingen</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Pad voor de anonymiserende salt codes</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Het bestand voor salt codes bestand is niet schrijfbaar.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Om de vertrouwelijkheid van de gegevens te verzekeren, moet u een lees- en schrijfbaar bestand opgeven waar de webserver een willekeurig gegenereerde 'salt' code kan opslaan. Om de vertrouwelijkheid te garanderen, mag dit bestand mag NIET worden geback-upt. De salt code wordt random gegenereerd met ofwel: de mcrypt_create_iv functie (vereist de PHP mcrypt module); de openssl_random_pseudo_bytes functie (vereist de PHP openssl module); het bestand /dev/urandom (alleen beschikbaar op *nix systemen); of de mt_rand functie, die echter niet cryptografisch veilig is. Als u een Windows server gebruikt, zorg er dan voor dat ofwel de PHP module mcrypt of openssl is ingeschakeld om een cryptografisch veilige salt code te genereren.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activeer deze optie om een versie van de plugin te gebruiken die privacy wetgeving respecteert, door alleen gehashte IP adressen te loggen, gebruikers te informeren over de tracking en hen een opt-out optie aan te bieden. Opmerking: met deze instelling kunnen de geo mogelijkheden van deze plugin niet worden gebruikt.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Inschakelen van gegevensbescherming vereist een bestand voor salt codes.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Inschakelen van gegevensbescherming maakt het onmogelijk om de optionele variabele Stad te loggen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Inschakelen van gegevensbescherming maakt het onmogelijk om de optionele variabele Regio te loggen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respecteer vertrouwelijkheid van gegevens</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Optionele statistische informatie</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Schakel de verzameling van volgende optionele gegevens in of uit. Dit heeft een invloed op de rapporten voor gebruiksstatistieken die kunnen worden gegenereed, en op de omvang van de database. WIJZIG DEZE INSTELLING NIET tenzij u helemaal begrijpt wat de gevolgen zijn.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">De optionele kolom "Stad" vereist de optionele kolom "Regio".</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archieven</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Activeer deze optie om gearchiveerde logbestanden te comprimeren met gzip (instellingen voor gzip moeten worden geconfigureerd in config.inc.php). Deze compressie kan veel schijfruimte besparen voor de logs van websites met veel bezoekers.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Comprimeer archief</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions">Weergave-instellingen voor statistieken</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.contextWide">Deze instellingen zijn alleen van toepassing voor gebruiksstatistieken van {$contextName}.</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.display">Toon grafiek van de inzendingenstatistiek aan de lezer</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType">Kies het type van grafiek voor de weergave van de downloadstatistieken</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.bar">Balk</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.line">Lijn</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.datasetMaxCount">Bepaal het maximum aantal gegevens dat gelijktijdig wordt getoond op een bepaald punt op de x-as. Een hogere waarde kan moeilijk leesbare grafieken opleveren. Een waarde tussen 3 en 5 is doorgaans veilig.</message>
+
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Taak voor het laden van bestanden met gebruiksstatistieken</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Het bestand {$file} kon niet worden geopend en is niet opgenomen.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">Het regelnummer {$lineNumber} in het bestand {$file} bevat geen geldige log-ingang; het bestand is niet opgenomen.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Het regelnummer {$lineNumber} in het bestand {$file} bevat een URL waarin de basis URL niet voorkomt.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Er konden geen gegevens worden geladen die uit het bestand {$file} werden opgehaald. Het bestand is weer naar de voorbereidingsfolder verplaatst.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">De gebruiksstatistieken plugin is uitgeschakeld. Er worden geen logbestanden verwerkt.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">De folder {$folder} is niet leeg. Dit kan erop wijzen dat een eerder proces dat mislukt is, of dat een ander proces gelijktijdig loopt. Dit bestand zal automatisch worden bijgewerkt als u ook scheduledTasksAutoStage.xml gebruikt. Zoniet moet u handmatig alle achtergelaten en ongebruikte bestanden in de verwerkingsfolder opnieuw naar de voorbereidingsfolder verplaatsen.</message>
+	<message key="plugins.generic.usageStats.displayName">Gebruiksstatistieken</message>
+	<message key="plugins.generic.usageStats.description">Toon gebruiksstatistieken voor data objecten. Logbestanden van de server kunnen worden gebruikt om statistieken op te halen.</message>
+
+	<message key="plugins.reports.usageStats.report.displayName">Rapport met PKP gebruiksstatistieken</message>
+	<message key="plugins.reports.usageStats.report.description">Standaardrapport met PKP gebruiksstaistieken (compatibel met COUNTER)</message>
+
+	<message key="plugins.generic.usageStats.optout.displayName">Privacy informatie voor gebruiksstatistieken</message>
+	<message key="plugins.generic.usageStats.optout.description">Privacy informatie voor gebruiksstatistieken</message>
+	<message key="plugins.generic.usageStats.optout.title">Informatie over gebruiksstatistieken</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[We loggen anonieme gebruiksstatistieken. Lees <a href="{$privacyInfo}">privacy informatie</a> voor meer details.]]></message>
+
+	<message key="plugins.generic.usageStats.optout.done"><![CDATA[
+		<p>U heeft zich met succes uitgeschreven voor het verzamelen van uw gebruiksstatistieken. Er worden geen gegevens meer opgeslagen over uw gebruik van deze website. Klik op onderstaande knop om uw beslissing ongedaan te maken.</p>]]></message>
+	<message key="plugins.generic.usageStats.optin">Inschrijven</message>
+	<message key="plugins.generic.usageStats.optout">Uitschrijven</message>
+	<message key="plugins.generic.usageStats.optout.cookie"><![CDATA[
+		<p>U kan zich uitschrijven voor de verzameling van uw gebruiksstatistieken door op onderstaande uitschrijfknop te klikken. Wanneer u op de uitschrijfknop klikt, wordt die beslissing via een <em>cookie</em> op uw computer opgeslagen. Als de privacy-instellingen van uw browser zo zijn ingesteld dat cookies automatisch worden verwijderd, zal u zich ook bij een volgend bezoek aan deze website moeten uitschrijven voor gegevensverzameling. De cookie is enkel geldig voor één browser. Als u een andere browser gebruikt, zal u zich opnieuw moeten uitschrijven. Er worden geen individuele gegevens opgeslagen in deze cookie. De cookie blijft geldig gedurende één jaar na uw laatste bezoek aan de website.</p>
+		<p>Houd er rekening mee dat deze beslissing geen invloed heeft op algemene serverlogs. Zie onze algemene <a href="{$privacyStatementUrl}">privacy verklaring</a> voor meer informatie.</p>]]></message>
+
+	<message key="plugins.reports.usageStats.metricType">PKP/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Public Knowledge Project statisitieken (compatibel met COUNTER)</message>
+	<message key="plugins.generic.usageStats.statsSum">Totaal van alle downloads</message>
+	<message key="plugins.generic.usageStats.noStats">Downloadgegevens zijn nog niet beschikbaar.</message>
+	<message key="plugins.generic.usageStats.monthInitials">Jan Feb Maa Apr Mei Jun Jul Aug Sep Okt Nov Dec</message>
+	<message key="plugins.generic.usageStats.downloads">Downloads</message>
+	<!-- application specific locales -->
+	<!-- OJS -->
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide.ojs2">Deze instellingen kunnen voor elk tijdschrift worden aangepast op de plugins pagina.</message>
+	<message key="plugins.generic.usageStats.optout.description.long.ojs2"><![CDATA[<h3>Algemene privacy verklaring</h3>
+<p>Zie onze algemene <a href="{$privacyStatementUrl}">privacy verklaring</a>.</p>
+<h3>Gebruiksstatistieken</h3>
+<p>Om gebruik en impact van ons tijdschrift en de gepubliceerde artikels te kunnen analyseren, wordt de toegang tot de homepage, nummers, artikels, proeven en bijkomende bestanden gelogd. Hiervoor worden alle gegevens geanonymiseerd. Er worden geen persoonlijke gegevens opgeslagen. IP adressen worden anoniem gemaakt door hashing (met <em>SHA 256</em>), in combinatie met een <em>veilige 64 karakters salt</em> die automatisch <em>random word gegenereerd en dagelijks wordt vernieuwd</em>. Daardoor kunnen IP adressen niet worden gereconstrueerd.</p>
+<p>Behalve de geanonymiseerde IP adressen worden volgende gegevens verzameld:</p>
+<ul>
+  <li>Type van toegang (bv. administratief)</li>
+  <li>Tijdstip van het bezoek</li>
+  <li>Opgevraagde URL</li>
+  <li>HTTP status code</li>
+  <li>Browser</li>
+</ul>
+<p>De verzamelde gegevens worden uitsluitend gebruikt voor analyse. Er worden geen IP adressen gekoppeld aan gebruikers ID's. Het is technisch niet mogelijk om een specifieke verzameling van gegevens te herleiden tot een specifiek IP adres.</p>]]></message>
+	<!-- OMP -->
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide.omp">Deze instellingen kunnen voor elke uitgever worden aangepast op de plugins pagina.</message>
+	<message key="plugins.generic.usageStats.optout.description.long.omp"><![CDATA[<h3>Algemene privacy verklaring</h3>
+<p>Zie onze algemene <a href="{$privacyStatementUrl}">privacy verklaring</a>.</p>
+<h3>Gebruiksstatistieken</h3>
+<p>Om gebruik en impact van onze publicaties te kunnen analyseren, wordt de toegang tot de homepage, categorieën, reeksen, boeken en bestanden gelogd. Hiervoor worden alle gegevens geanonymiseerd. Er worden geen persoonlijke gegevens opgeslagen. IP adressen worden anoniem gemaakt door hashing (met <em>SHA 256</em>), in combinatie met een <em>veilige 64 karakters salt</em> die automatisch <em>random word gegenereerd en dagelijks wordt vernieuwd</em>. Daardoor kunnen IP adressen niet worden gereconstrueerd.</p>
+<p>Behalve de geanonymiseerde IP adressen worden volgende gegevens verzameld:</p>
+<ul>
+  <li>Type van toegang (bv. administratief)</li>
+  <li>Tijdstip van het bezoek</li>
+  <li>Opgevraagde URL</li>
+  <li>HTTP status code</li>
+  <li>Browser</li>
+</ul>
+<p>De verzamelde gegevens worden uitsluitend gebruikt voor analyse. Er worden geen IP adressen gekoppeld aan gebruikers ID's. Het is technisch niet mogelijk om een specifieke verzameling van gegevens te herleiden tot een specifiek IP adres.</p>]]></message>
+</locale>
