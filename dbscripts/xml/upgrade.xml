@@ -55,7 +55,7 @@
 		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
 	</upgrade>
 
@@ -231,7 +231,7 @@
 		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />

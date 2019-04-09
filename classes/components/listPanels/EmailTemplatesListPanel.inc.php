@@ -2,8 +2,8 @@
 /**
  * @file components/listPanels/EmailTemplatesListPanel.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EmailTemplatesListPanel
@@ -20,12 +20,12 @@ class EmailTemplatesListPanel extends PKPEmailTemplatesListPanel {
 	 * @copydoc ListPanel::getConfig()
 	 */
 	public function getConfig() {
-    $config = parent::getConfig();
-    $config['filters'][count($config['filters']) - 1]['filters'][] = [
-      'param' => 'toRoleIds',
-      'title' => __('default.groups.name.subscriptionManager'),
-      'value' => ROLE_ID_SUBSCRIPTION_MANAGER,
-    ];
-    return $config;
-  }
+		$config = parent::getConfig();
+		$config['filters'][count($config['filters']) - 1]['filters'][] = [
+			'param' => 'toRoleIds',
+			'title' => __('default.groups.name.subscriptionManager'),
+			'value' => ROLE_ID_SUBSCRIPTION_MANAGER,
+		];
+		return $config;
+	}
 }
