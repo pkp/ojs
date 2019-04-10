@@ -58,12 +58,15 @@
 				</label>
 				<input type="text" for="authors" name="authors" value="{$authors|escape}">
 			</div>
+			{call_hook name="Templates::Search::SearchResults::AdditionalFilters"}
 		</fieldset>
 
 		<div class="submit">
 			<button class="submit" type="submit">{translate key="common.search"}</button>
 		</div>
 	</form>
+
+	{call_hook name="Templates::Search::SearchResults::PreResults"}
 
 	{* Search results, finally! *}
 	<div class="search_results">
