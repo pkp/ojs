@@ -76,6 +76,17 @@ class DefaultThemePlugin extends ThemePlugin {
 			'default' => '#1E6292',
 		]);
 
+		$this->addOption('showDescriptionInJournalIndex', 'FieldOptions', [
+		  'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.label'),
+		  'options' => [
+		    [
+		      'value' => true,
+		      'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
+		    ],
+		  ],
+		  'default' => false,
+		]);
+
 		// Load primary stylesheet
 		$this->addStyle('stylesheet', 'styles/index.less');
 

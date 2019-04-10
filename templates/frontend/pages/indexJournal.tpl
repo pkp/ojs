@@ -28,11 +28,13 @@
 		</div>
 	{/if}
 
-    {* Journal Description *}
-    {if $currentContext->getLocalizedData('description')}
-        <h2>{translate key="about.aboutContext"}</h2>
-        {$currentContext->getLocalizedData('description')}
-    {/if}
+	{* Journal Description *}
+	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
+		<div class="homepage_about">
+			<h2>{translate key="about.aboutContext"}</h2>
+			{$currentContext->getLocalizedData('description')}
+		</div>
+	{/if}
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
