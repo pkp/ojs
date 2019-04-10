@@ -82,7 +82,7 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Get open archive setting of section.
+	 * Get "will/will not be indexed" setting of section.
 	 * @return boolean
 	 */
 	function getMetaIndexed() {
@@ -90,7 +90,7 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Set open archive setting of section.
+	 * Set "will/will not be indexed" setting of section.
 	 * @param $metaIndexed boolean
 	 */
 	function setMetaIndexed($metaIndexed) {
