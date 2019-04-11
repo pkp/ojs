@@ -163,6 +163,10 @@
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignature.description">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</message>
+	<message key="manager.setup.enableAnnouncements.enable">Enable announcements</message>
+	<message key="manager.setup.enableAnnouncements.description">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
+	<message key="manager.setup.numAnnouncementsHomepage">Display on Homepage</message>
+	<message key="manager.setup.numAnnouncementsHomepage.description">How many announcements to display on the homepage. Leave this empty to display none.</message>
 	<message key="manager.setup.enableUserRegistration">Visitors can register a user account with the journal.</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
 	<message key="manager.setup.focusAndScope.description">Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</message>
