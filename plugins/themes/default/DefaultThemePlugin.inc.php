@@ -77,14 +77,14 @@ class DefaultThemePlugin extends ThemePlugin {
 		]);
 
 		$this->addOption('showDescriptionInJournalIndex', 'FieldOptions', [
-		  'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.label'),
-		  'options' => [
-		    [
-		      'value' => true,
-		      'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
-		    ],
-		  ],
-		  'default' => false,
+			'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.label'),
+				'options' => [
+				[
+					'value' => true,
+			  		'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
+				],
+		  	],
+		  	'default' => false,
 		]);
 
 		// Load primary stylesheet

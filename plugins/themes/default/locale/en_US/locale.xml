@@ -27,6 +27,6 @@
 	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: A complimentary pairing with serif headings and sans-serif body text.</message>
 	<message key="plugins.themes.default.option.colour.label">Colour</message>
 	<message key="plugins.themes.default.option.colour.description">Choose a colour for the header.</message>
-    <message key="plugins.themes.default.option.showDescriptionInJournalIndex.label">Journal Description</message>
-    <message key="plugins.themes.default.option.showDescriptionInJournalIndex.option">Show the journal description on the homepage</message>
+	<message key="plugins.themes.default.option.showDescriptionInJournalIndex.label">Journal Description</message>
+	<message key="plugins.themes.default.option.showDescriptionInJournalIndex.option">Show the journal description on the homepage.</message>
 </locale>
