@@ -32,22 +32,27 @@
 
 	{* List issues *}
 	{else}
-		<ul class="issues_archive">
-			{foreach from=$issues item="issue"}
-				<li>
-					{include file="frontend/objects/issue_summary.tpl"}
-				</li>
-			{/foreach}
-		</ul>
+
+	  <ul class="issues_archive">
+	  	{foreach from=$issues item="issue"}
+	  		{if $issue->getYear() != $lastYear}
+	  			<li><h3>{$issue->getYear()|escape}</h3></li>
+	  			{assign var=lastYear value=$issue->getYear()}
+	  		{/if}
+	  		<li>
+	  			{include file="frontend/objects/issue_summary.tpl"}
+	  		</li>
+	  	{/foreach}
+	  </ul>
 
 		{* Pagination *}
 		{if $prevPage > 1}
-			{capture assign=prevUrl}{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive" path=$prevPage}{/capture}
+			{url|assign:"prevUrl" router=$smarty.const.ROUTE_PAGE page="issue" op="archive" path=$prevPage}
 		{elseif $prevPage === 1}
-			{capture assign=prevUrl}{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}{/capture}
+			{url|assign:"prevUrl" router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}
 		{/if}
 		{if $nextPage}
-			{capture assign=nextUrl}{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive" path=$nextPage}{/capture}
+			{url|assign:"nextUrl" router=$smarty.const.ROUTE_PAGE page="issue" op="archive" path=$nextPage}
 		{/if}
 		{include
 			file="frontend/components/pagination.tpl"
