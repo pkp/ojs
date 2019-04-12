@@ -16,6 +16,31 @@
 import('classes.handler.Handler');
 
 class GatewayHandler extends Handler {
+
+	var $plugin;
+
+	/**
+	 * Constructor
+	 *
+	 * @param $request PKPRequest
+	 */
+	function __construct($request) {
+		parent::__construct();
+		$op = $request->getRouter()->getRequestedOp($request);
+		if ($op == 'plugin') {
+			$args = $request->getRouter()->getRequestedArgs($request);
+			$pluginName = array_shift($args);
+			$plugins = PluginRegistry::loadCategory('gateways');
+			if (!isset($plugins[$pluginName])) {
+				$request->getDispatcher()->handle404();
+			}
+			$this->plugin = $plugins[$pluginName];
+			foreach ($this->plugin->getPolicies($request) as $policy) {
+				$this->addPolicy($policy);
+			}
+		}
+	}
+
 	/**
 	 * Index handler.
 	 * @param $args array
@@ -201,12 +226,8 @@ class GatewayHandler extends Handler {
 	 */
 	function plugin($args, $request) {
 		$this->validate();
-		$pluginName = array_shift($args);
-
-		$plugins = PluginRegistry::loadCategory('gateways');
-		if (isset($pluginName) && isset($plugins[$pluginName])) {
-			$plugin = $plugins[$pluginName];
-			if (!$plugin->fetch($args, $request)) {
+		if (isset($this->plugin)) {
+			if (!$this->plugin->fetch(array_slice($args, 1), $request)) {
 				$request->redirect(null, 'index');
 			}
 		} else {
@@ -214,4 +235,3 @@ class GatewayHandler extends Handler {
 		}
 	}
 }
-
