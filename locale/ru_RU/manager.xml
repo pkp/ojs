@@ -163,6 +163,10 @@
 	<message key="manager.setup.emails">Идентификация в письме электронной почты</message>
 	<message key="manager.setup.emailSignature">Подпись</message>
 	<message key="manager.setup.emailSignature.description">Подготовленные письма, отправляемые системой от имени журнала, будут содержать следующую подпись, добавленную в конце письма.</message>
+	<message key="manager.setup.enableAnnouncements.enable">Включить объявления</message>
+	<message key="manager.setup.enableAnnouncements.description">Объявления можно публиковать, чтобы информировать читателей о новостях и событиях журнала. Опубликованные объявления будут появляться на странице «Объявления».</message>
+	<message key="manager.setup.numAnnouncementsHomepage">Показывать на главной странице</message>
+	<message key="manager.setup.numAnnouncementsHomepage.description">Сколько объявлений показывать на главной странице. Оставьте поле пустым, если вы не хотите показывать объявления на главной странице.</message>
 	<message key="manager.setup.enableUserRegistration">Посетители могут зарегистрировать учетную запись в журнале.</message>
 	<message key="manager.setup.focusAndScope">Концепция журнала</message>
 	<message key="manager.setup.focusAndScope.description">Опишите для авторов, читателей и библиотек диапазон статей и других материалов, которые будет публиковать журнал.</message>
