@@ -35,7 +35,7 @@
 	<div class="about_section{if $image} has_image{/if}{if $description} has_description{/if}">
 		{if $image}
 			<div class="cover" href="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="fullSize" type="category" id=$category->getId()}">
-				<img src="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="thumbnail" type="category" id=$category->getId()}" alt="{$category->getLocalizedTitle()|default:'null'}" />
+				<img src="{url router=$smarty.const.ROUTE_PAGE page="catalog" op="thumbnail" type="category" id=$category->getId()}" alt="null" />
 			</div>
 		{/if}
 		<div class="description">
