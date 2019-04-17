@@ -79,13 +79,13 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
 		$isExistingEntry = $publishedArticle?true:false;
 
+		$submissionDao->updateObject($submission);
+
 		if ($isExistingEntry) {
 			// Update the search index for this published article.
 			import('classes.search.ArticleSearchIndex');
 			ArticleSearchIndex::articleMetadataChanged($submission);
 		}
-
-		$submissionDao->updateObject($submission);
 	}
 }
 
