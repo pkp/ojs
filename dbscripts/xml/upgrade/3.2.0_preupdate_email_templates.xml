@@ -18,7 +18,7 @@
 	<sql>
 		<query>
 			ALTER TABLE email_templates_data
-			ADD email_id BIGINT NOT NULL
+			ADD email_id BIGINT
 		</query>
 		<query>
 			UPDATE email_templates_data as etd
