@@ -172,9 +172,7 @@ Us ha estat assignada la tramesa &quot;{$submissionTitle}&quot; per a la revista
 URL de la tramesa: {$submissionUrl}<br />
 Nom d'usuari: {$editorUsername}<br />
 <br />
-Moltes gràcies,<br />
-<br />
-{$editorialContactSignature}]]></body>
+Moltes gràcies.]]></body>
 		<description>Aquest missatge de correu electrònic notifica a l'editor de secció que l'editor li ha assignat la tasca de supervisar el procés editorial d'una tramesa. Proporciona informació sobre la tramesa i indica com s'ha d'accedir al lloc web de la revista.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -249,9 +247,7 @@ Indicacions per a la revisió<br />
 <br />
 Hem decidit cancel·lar la nostra sol·licitud perquè reviseu la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Lamentem les molèsties que us pugui causar aquesta decisió i confiem tornar a sol·licitar els vostres serveis de revisió per a aquesta revista en el futur.<br />
 <br />
-Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.]]></body>
 		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un revisor que estigui revisant una tramesa per a notificar-li que aquesta tasca ha estat cancel·lada.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -276,9 +272,7 @@ Lamento comunicar-vos que en aquesta ocasió no em podré encarregar de la revis
 		<subject>Justificant de recepció de la revisió de l'article</subject>
 		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
 <br />
-Us agraïm que hàgiu revisat la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Valorem la vostra contribució a la qualitat de les obres que publiquem.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Us agraïm que hàgiu revisat la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Valorem la vostra contribució a la qualitat de les obres que publiquem.]]></body>
 		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia al revisor per a confirmar-li la recepció d'una revisió completada i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -352,9 +346,7 @@ M'agradaria demanar-vos que us encarreguéssiu de la revisió de &quot;{$submiss
 <br />
 URL de {$contextName}: {$contextUrl}<br />
 URL de la tramesa: {$submissionUrl}<br />
-Nom d'usuari: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Nom d'usuari: {$participantUsername}]]></body>
 		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia al possible corrector d'una tramesa per a sol·licitar-li que comenci el procés de correcció. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -373,9 +365,7 @@ Nom d'usuari: {$participantUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
 <br />
-Gràcies per la vostra contribució a aquesta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Gràcies per la vostra contribució a aquesta revista.]]></body>
 		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al maquetador per a notificar-li que ha estat assignat per a encarregar-se de la maquetació d'una tramesa. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -476,28 +466,6 @@ Gràcies per haver fet la correcció de proves de les galerades per al manuscrit
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector de proves per a notificar-li que ha completat el procés correcció de proves i agrair-li la seva contribució.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Sol·licitud de correcció de proves (maquetista)</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-L'autor i el corrector de proves ja han fet la correcció de proves de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName} i, per tant, ara us hauríeu d'encarregar de corregir-la seguint els passos següents:<br />
-<br />
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.<br />
-2. Inicieu la sessió a la revista i consulteu les instruccions per a crear unes galerades corregides.<br />
-3. Pengeu les galerades revisades.<br />
-4. Envieu el missatge de correu electrònic COMPLET del pas 3 de la correcció de proves a l'editor.<br />
-<br />
-URL de {$contextName}: {$contextUrl}<br />
-URL de la tramesa: {$submissionUrl}<br />
-Nom d'usuari: {$participantUsername}<br />
-<br />
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
-<br />
-Gràcies per la vostra contribució a aquesta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al maquetista per a notificar-li que les galerades d'un article ja són a punt per a fer-hi la correcció de proves final. Proporciona informació sobre l'article i com accedir-hi.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Correcció de proves completada (maquetista)</subject>

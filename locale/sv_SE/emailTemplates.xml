@@ -158,8 +158,7 @@ Som sektionsredaktör hos {$contextName} har du fått i uppdrag att föra bidrag
 Bidragets URL: {$submissionUrl}<br />
 Användarnamn: {$editorUsername}<br />
 <br />
-Tack och med vänliga hälsningar,<br />
-{$editorialContactSignature}]]></body>
+Tack och med vänliga hälsningar.]]></body>
 		<description>Det här e-postmeddelandet meddelar en sektionsredaktör att redaktören utsett hen att ansvara för ett bidrag genom den redaktionella processen. Det innehåller även information om bidraget och hur man loggar in på tidskriftens webbplats.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -348,9 +347,7 @@ Riktlinjer för granskare<br />
 <br />
 Vi har beslutat att återkalla vår förfrågan till dig om att granska bidraget &quot;{$submissionTitle},&quot; för {$contextName}. Vi ber om ursäkt för besväret och hoppas att vi även i framtiden kan fråga dig om granskningsuppdrag för tidskriftens räkning.<br />
 <br />
-Om du har några frågor, vänligen kontakta mig.
-<br />
-{$editorialContactSignature}]]></body>
+Om du har några frågor, vänligen kontakta mig.]]></body>
 		<description>Det här e-postmeddelandet skickas från sektionsredaktören till en granskare med en pågående granskning av ett bidrag, för att meddela hen att granskningen blivit återkallad.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -375,9 +372,7 @@ Tyvärr har jag inte möjlighet i nuläget att granska bidraget &quot;{$submissi
 		<subject>Bekräftelse på granskning av artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Tack för att du genomfört granskningen av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi uppskattar ditt arbete din roll i att bibehålla tidskriftens kvalitet.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Tack för att du genomfört granskningen av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi uppskattar ditt arbete din roll i att bibehålla tidskriftens kvalitet.]]></body>
 		<description>Det här e-postmeddelandet skickas från en sektionsredaktör för att bekräfta att en färdig granskning inkommit och för att tacka granskaren för utfört arbete.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -442,10 +437,7 @@ Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdr
 <br />
 Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vårt beslut är att: Acceptera bidraget<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Vårt beslut är att: Acceptera bidraget]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Acceptera bidrag" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -456,10 +448,7 @@ Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$subm
 <br />
 Vårt beslut är att: Skicka till granskning<br />
 <br />
-Bidragets URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Bidragets URL: {$submissionUrl}]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att hens bidrag skickas till extern granskning.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -468,10 +457,7 @@ Bidragets URL: {$submissionUrl}<br />
 <br />
 Redigeringen av ditt bidrag &quot;{$submissionTitle}&quot; är färdig. Vi skickar det nu vidare till produktion.<br />
 <br />
-Bidragets URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Bidragets URL: {$submissionUrl}]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att hens bidrag sänds vidare till produktion.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -480,10 +466,7 @@ Bidragets URL: {$submissionUrl}<br />
 <br />
 Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vårt beslut är att: Bearbetning krävs<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Vårt beslut är att: Bearbetning krävs]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Bearbetning krävs" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -492,10 +475,7 @@ Vårt beslut är att: Bearbetning krävs<br />
 <br />
 Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vårt beslut är att: Skicka in igen för ny granskning<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Vårt beslut är att: Skicka in igen för ny granskning]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Skicka in igen för ny granskning" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -504,20 +484,14 @@ Vårt beslut är att: Skicka in igen för ny granskning<br />
 <br />
 Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vårt beslut är att: Refusera bidrag<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Vårt beslut är att: Refusera bidrag]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Refusera bidrag" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 	  <subject>Redaktörsrekommendation</subject>
 	  <body><![CDATA[{$editors}:<br />
 <br />
-Rekommendationen angående bidraget &quot;{$submissionTitle}&quot; till {$contextName} är: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Rekommendationen angående bidraget &quot;{$submissionTitle}&quot; till {$contextName} är: {$recommendation}]]></body>
 	  <description>Det här e-postmeddelandet från den rekommenderande redaktören eller sektionsredaktören till ansvariga redaktörer eller sektionsredaktörer meddelar dem en slutgiltig rekommendation för bidraget.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -532,9 +506,7 @@ Jag skulle vilja be dig om att genomföra manusredigering av &quot;{$submissionT
 <br />
 {$contextName} URL: {$contextUrl}<br />
 Bidragets URL: {$submissionUrl}<br />
-Användarnamn: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Användarnamn: {$participantUsername}]]></body>
 		<description>Det här e-postmeddelandet skickas från sektionsredaktören till ett bidrags manusredaktör för att be hen att påbörja manusredigeringsprocessen. Det innehåller information om bidraget och hur man får tillgång till det.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -551,9 +523,7 @@ Bidraget &quot;{$submissionTitle}&quot; till {$contextName} behöver nu få publ
 Bidragets URL: {$submissionLayoutUrl}<br />
 Användarnamn: {$participantUsername}<br />
 <br />
-Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften.]]></body>
 		<description>Det här e-postmeddelandet från sektionsredaktören till layoutredaktören för att meddela att hen har blivit tilldelad uppgiften att vara layoutredaktör för ett bidrag. Det innehåller information om bidraget och hur man får tillgång till det.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -779,9 +749,7 @@ Bidragets URL: {$submissionUrl}<br />
 <br />
 Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vårt beslut är att: Refusera bidrag<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Vårt beslut är att: Refusera bidrag]]></body>
 		<description>Det här e-postmeddelandet skickas till författaren of redaktören refuserar bidraget direkt, innan granskningssteget.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">

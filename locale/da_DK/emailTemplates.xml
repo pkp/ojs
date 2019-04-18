@@ -155,7 +155,7 @@ Som sektionsredaktør har du fået tildelt manuskriptet &quot;{$submissionTitle}
 <br />
 Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$editorUsername}<br />
 <br />
-Tak. {$editorialContactSignature}]]></body>
+Tak.]]></body>
 		<description>Denne e-mail underretter en sektionsredaktør om, at redaktøren har tildelt vedkommende opgaven med at følge et manuskript igennem redigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til tidsskriftets websted.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -231,9 +231,7 @@ Retningslinjer for bedømmelser<br />
 <br />
 På nuværende tidspunkt har vi valgt at annullere vores forespørgsel til dig om at bedømme manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi beklager den ulejlighed, dette eventuelt måtte forårsage, og vi håber, at vi må henvende os til dig i fremtiden og bede om din assistance i forbindelse med dette tidsskrifts bedømmelsesproces.<br />
 <br />
-Hvis du har spørgsmål, er du velkommen til at kontakte mig.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Hvis du har spørgsmål, er du velkommen til at kontakte mig.]]></body>
 		<description>Denne e-mail sendes af sektionsredaktøren til en bedømmer, som er ved at bedømme et manuskript, og underretter vedkommende om, at bedømmelsen er blevet annulleret.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -258,9 +256,7 @@ Jeg beklager, at jeg på nuværende tidspunkt ikke kan bedømme manuskriptet &qu
 		<subject>Bekræftelse af bedømmelse af artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Tak, fordi du har fuldført bedømmelsen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi påskønner dit bidrag til kvaliteten af de artikler, vi publicerer.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Tak, fordi du har fuldført bedømmelsen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi påskønner dit bidrag til kvaliteten af de artikler, vi publicerer.]]></body>
 		<description>Denne e-mail sendes af sektionsredaktøren for at bekræfte modtagelsen af en fuldført bedømmelse og takker bedømmeren for sit bidrag.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -331,9 +327,7 @@ Jeg vil bede dig om at foretage manuskriptredigering af &quot;{$submissionTitle}
 <br />
 {$contextName} URL: {$contextUrl}<br />
 Submission URL: {$submissionUrl}<br />
-Username: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Username: {$participantUsername}]]></body>
 		<description>Denne e-mail sendes af en sektionsredaktør til manuskriptredaktøren for et manuskript og beder vedkommende om at påbegynde manuskriptredigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til det.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -351,9 +345,7 @@ Submission URL: {$submissionLayoutUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
-Tak for dit bidrag til dette tidsskrift <br />
-<br />
-{$editorialContactSignature}]]></body>
+Tak for dit bidrag til dette tidsskrift]]></body>
 		<description>Denne e-mail fra sektionsredaktøren til layoutredaktøren underretter layoutredaktøren om, at han/hun har fået til opgave at foretage layoutredigering af et manuskript. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til det.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -437,19 +429,6 @@ Tak, fordi du har læst korrektur på satsskibene for manuskriptet &quot;{$submi
 <br />
 {$editorialContactSignature}]]></body>
 		<description>I denne e-mail fra sektionsredaktøren til korrekturlæseren bekræftes fuldførelsen af korrekturlæserens korrekturlæsningsproces, og sektionsredaktøren takker korrekturlæseren for sit bidrag.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Forespørgsel om korrekturlæsning (layoutredaktør)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Manuskriptet &quot;{$submissionTitle}&quot; til {$contextName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.<br />
-<br />
-{$contextName} URL-adresse: {$contextUrl} Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$participantUsername}<br />
-<br />
-Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
- Tak for dit bidrag til dette tidsskrift.<br />
-{$editorialContactSignature}]]></body>
-		<description>Denne e-mail fra sektionsredaktøren til layoutredaktøren underretter layoutredaktøren om, at en artikels satsskibe er klar til den sidste korrekturlæsning. Den indeholder oplysninger om artiklen og om, hvordan der oprettes adgang til den.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Korrekturlæsningen er fuldført (layoutredaktør)</subject>
@@ -564,9 +543,7 @@ Link: {$url}<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet at: Acceptere manuskript<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vi har besluttet at: Acceptere manuskript]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -575,9 +552,7 @@ Vi har besluttet at: Acceptere manuskript<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet følgende: Rettelser er påkrævet<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vi har besluttet følgende: Rettelser er påkrævet]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -586,9 +561,7 @@ Vi har besluttet følgende: Rettelser er påkrævet<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet følgende: Fremsend igen til bedømmelse<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vi har besluttet følgende: Fremsend igen til bedømmelse]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -597,9 +570,7 @@ Vi har besluttet følgende: Fremsend igen til bedømmelse<br />
 <br />
 Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vi har besluttet at: Afvise manuskript<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vi har besluttet at: Afvise manuskript]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter er en meddelelse om den endelige afgørelse vedrørende deres bidrag.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
@@ -716,9 +687,7 @@ Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &q
 <br />
 Vi har besluttet følgende: Fremsendes til bedømmelse<br />
 <br />
-Submission URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Submission URL: {$submissionUrl}]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til forfatteren meddeler at indsendelsen videresendes til ekstern bedømmelse.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -727,9 +696,7 @@ Submission URL: {$submissionUrl}<br />
 <br />
 Vi har færdiggjort redigeringen af din indsendelse, &quot;{$submissionTitle}.  Den vil nu blive sendt til publicering.<br />
 <br />
-Submission URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Submission URL: {$submissionUrl}]]></body>
 		<description>Denne e-mail fra redaktøren eller sektionsredaktøren til forfatteren meddeler at indsendelsen nu sendes til publicering</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
@@ -879,9 +846,7 @@ Vi har besluttet at: Afvise manuskriptet<br />
 		<subject>Redaktøranbefaling</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-Anbefalingen med hensyn til {$contextName}, &quot;{$submissionTitle}&quot; er: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Anbefalingen med hensyn til {$contextName}, &quot;{$submissionTitle}&quot; er: {$recommendation}]]></body>
 		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">

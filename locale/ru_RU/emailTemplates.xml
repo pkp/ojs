@@ -158,8 +158,7 @@ URL материала: {$submissionUrl}<br />
 URL материала: {$submissionUrl}<br />
 Имя пользователя: {$editorUsername}<br />
 <br />
-С уважением,<br />
-{$editorialContactSignature}]]></body>
+С уважением.]]></body>
 		<description>Это письмо уведомляет редактора раздела о том, что редактор поручил ему контроль прохождения материала через редакционный процесс. В письме содержится информация о материале и о том, как войти на сайт журнала.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -348,9 +347,7 @@ URL материала: {$submissionReviewUrl}<br />
 <br />
 На данный момент мы решили отменить наш запрос на рецензирование Вами материала «{$submissionTitle}» для журнала «{$contextName}». Мы приносим свои извинения за причиненное Вам беспокойство и надеемся, что в будущем мы сможем к Вам обратиться за помощью в рецензировании материалов для нашего журнала.<br />
 <br />
-Если у Вас есть вопросы, пожалуйста, свяжитесь со мной.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Если у Вас есть вопросы, пожалуйста, свяжитесь со мной.]]></body>
 		<description>Это письмо редактора раздела, отправляемое рецензенту, который начал рецензировать материал, с уведомлением о том, что рецензирование отменено.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -375,9 +372,7 @@ URL материала: {$submissionReviewUrl}<br />
 		<subject>Подтверждение получения рецензии</subject>
 		<body><![CDATA[Здравствуйте, {$reviewerName}!<br />
 <br />
-Благодарю Вас за рецензию на материал «{$submissionTitle}» для журнала «{$contextName}». Мы ценим Ваш вклад в качество работы, которую мы публикуем.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Благодарю Вас за рецензию на материал «{$submissionTitle}» для журнала «{$contextName}». Мы ценим Ваш вклад в качество работы, которую мы публикуем.]]></body>
 		<description>Это письмо отправляется редактором раздела в качестве подтверждения получения рецензии на статью и благодарности рецензенту за его вклад.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -442,10 +437,7 @@ URL материала: {$submissionReviewUrl}<br />
 <br />
 Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
 <br />
-Наше решение: Принять материал<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Наше решение: Принять материал]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Принять материал» относительно присланного материала.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -456,10 +448,7 @@ URL материала: {$submissionReviewUrl}<br />
 <br />
 Наше решение: Отправить на рецензирование<br />
 <br />
-URL материала: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL материала: {$submissionUrl}]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об отправке материала на внешнее рецензирование.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -468,10 +457,7 @@ URL материала: {$submissionUrl}<br />
 <br />
 Редактирование Вашего материала «{$submissionTitle}» завершено. Теперь мы запускаем его в производство.<br />
 <br />
-URL материала: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL материала: {$submissionUrl}]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его о запуске материала в производство.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -480,10 +466,7 @@ URL материала: {$submissionUrl}<br />
 <br />
 Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
 <br />
-Наше решение: Требуется корректировка<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Наше решение: Требуется корректировка]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Требуется корректировка» относительно присланного материала.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -492,10 +475,7 @@ URL материала: {$submissionUrl}<br />
 <br />
 Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
 <br />
-Наше решение: Отправить на рецензирование повторно<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Наше решение: Отправить на рецензирование повторно]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Отправить на рецензирование повторно» относительно присланного материала.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -504,20 +484,14 @@ URL материала: {$submissionUrl}<br />
 <br />
 Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
 <br />
-Наше решение: Отклонить материал<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Наше решение: Отклонить материал]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Отклонить материал» относительно присланного материала.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Рекомендация редактора</subject>
 		<body><![CDATA[Здравствуйте, {$editors}!<br />
 <br />
-По материалу «{$submissionTitle}», отправленному в «{$contextName}», могу рекомендовать следующее: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+По материалу «{$submissionTitle}», отправленному в «{$contextName}», могу рекомендовать следующее: {$recommendation}]]></body>
 		<description>Это письмо рекомендующего редактора или редактора раздела редакторам или редакторам раздела, принимающим решение, чтобы уведомить их об итоговой рекомендации относительного присланного материала.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -532,9 +506,7 @@ URL материала: {$submissionUrl}<br />
 <br />
 URL журнала «{$contextName}»: {$contextUrl}<br />
 URL материала: {$submissionUrl}<br />
-Имя пользователя: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Имя пользователя: {$participantUsername}]]></body>
 		<description>Это письмо редактора раздела, отправляемое литературному редактору материала с запросом начала процесса литературного редактирования. В письме содержится информация о материале и о том, как получить к нему доступ.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -551,9 +523,7 @@ URL журнала «{$contextName}»: {$contextUrl}<br />
 URL материала: {$submissionLayoutUrl}<br />
 Имя пользователя: {$participantUsername}<br />
 <br />
-Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной. Спасибо за Ваш вклад в наш журнал.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Если Вы не можете выполнить эту работу сейчас или у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной. Спасибо за Ваш вклад в наш журнал.]]></body>
 		<description>Это письмо редактора раздела, отправляемое верстальщику с уведомлением о том, что ему поручено выполнить верстку материала. В письме содержится информация о материале и о том, как получить к нему доступ.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -785,9 +755,7 @@ URL материала: {$submissionUrl}<br />
 <br />
 Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
 <br />
-Наше решение: Отклонить материал<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Наше решение: Отклонить материал]]></body>
 		<description>Это письмо отправляется автору, если редактор решает отклонить его материал на начальной стадии, до этапа рецензирования</description>
 	</email_text>
 </email_texts>

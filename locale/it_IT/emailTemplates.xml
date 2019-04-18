@@ -169,8 +169,7 @@ La submission, &quot;{$submissionTitle},&quot; a {$contextName} ti è stata asse
 Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
-Grazie,<br />
-{$editorialContactSignature}]]></body>
+Grazie.]]></body>
 		<description>Questa email notifica ai section editor che l'editor ha assegnato loro il compito di supervisionare una submission attraverso il processo editoriale. Questa fornisce informazioni sulla submission e su come accedere al sito del journal.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -254,9 +253,7 @@ Abbiamo deciso di cancellare la nostra richiesta di revisione della proposta, &q
 <br />
 Ci scusiamo per qualsiasi disturbo possiamo aver causato speriamo di poter contare su di te in una prossima occasione.<br />
 <br />
-Se hai qualche domanda, ti prego di contattarmi.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Se hai qualche domanda, ti prego di contattarmi.]]></body>
 		<description>Questa email viene inviata dal section editor al revisore che ha una  revisione di una proposta in corso per fargli sapere che la revisione è stata cancellata.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -284,9 +281,7 @@ Sono spiacente di non poter revisionare la proposta, &quot;{$submissionTitle},&q
 <br />
 Grazie per aver completato la revisione della proposta, &quot;{$submissionTitle},&quot; per {$contextName}.<br />
 <br />
-Apprezziamo il tuo contributo nel mantenere alta la qualità della rivista.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Apprezziamo il tuo contributo nel mantenere alta la qualità della rivista.]]></body>
 		<description>Questa email viene inviata dal section editor per confermare la ricezione di una revisione completata e per ringraziare i revisori per i loro contributi.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -360,9 +355,7 @@ Il documento si trova su sito web della rivista, insieme alle istruzioni per il 
 URL Manoscritto: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
-Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi.]]></body>
 		<description>Questa email viene mandata dal section editor al copyeditor della submission per richiedere che comincino con il processo di copyedit. Questa fornisce informazioni sulla submission e su come accedervi.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -375,9 +368,7 @@ Vorrei chiederti di preparare le bozze per il manoscritto &quot;{$submissionTitl
 URL manoscritto: {$submissionLayoutUrl}<br />
 Username: {$participantUsername}<br />
 <br />
-Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.]]></body>
 		<description>Questa email dal section editor al layout editor notifica che è stato assegnato loro il compito di curare il layout di una submission. Questa fornisce informazioni sulla submission e su come accedervi.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -476,26 +467,6 @@ Grazie per la correzione delle bozze per il manoscritto, &quot;{$submissionTitle
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Questa email dal section editor al correttore di bozze conferma il completamento del processo di correzione do bozze e ringrazia per il contributo.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Modifiche da apportare alle bozze</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Le bozze del manoscritto &quot;{$submissionTitle}&quot; per {$contextName} sono state corrette dall'autore e dai correttori di bozze. Per apportare le correzioni segui queste istruzioni:<br />
-<br />
-1. Clicca sulla URL del manoscritto<br />
-2. Entra nella rivista e consulta le 'Correzioni delle bozze'<br />
-3. Apporta le correzioni alle bozze<br />
-3. Carica i file corretti<br />
-4. Invia all'editor la comunicazione di aver completato l'incarico, dal Passo n. 3 della correzione.<br />
-<br />
-URL manoscritto: {$submissionUrl}<br />
-Username: {$participantUsername}<br />
-<br />
-Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Questa email dal section editor al curatore di layout  informa che le bozze di un articolo sono pronte per la correzione finale. Fornisce informazioni sull'articolo su come accedervi.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Modifica alle bozze completata</subject>
@@ -660,9 +631,7 @@ Se non vuoi ricevere email di notifica, vai alla pagina {$unsubscribeLink} per c
 <br />
 Abbiamo raggiunto una decisione riguardo alla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-La decisione è di accettare la proposta<br />
-<br />
-{$editorialContactSignature}]]&gt;]]></body>
+La decisione è di accettare la proposta]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -671,9 +640,7 @@ La decisione è di accettare la proposta<br />
 <br />
 Abbiamo raggiunto una decisione sulla Sua proposta a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-La nostra decisione: è necessaria ciclo di peer-review<br />
-<br />
-{$editorialContactSignature}]]&gt;]]></body>
+La nostra decisione: è necessaria ciclo di peer-review]]></body>
 		<description>Questa mail è inviata dall'editor o dall'editor di sezione all'autore quando una proposta deve passare un ciclo di revisione</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
@@ -767,9 +734,7 @@ Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: {$subscrip
 <br />
 Abbiamo raggiunto una decisione riguardo alla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-La decisione è: mandarla di nuovo in revisione<br />
-<br />
-{$editorialContactSignature}]]></body>
+La decisione è: mandarla di nuovo in revisione]]></body>
 		<description>Messaggio dell'editor all'autore per informarlo della decisione conclusiva sulla proposta inviata.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -778,9 +743,7 @@ La decisione è: mandarla di nuovo in revisione<br />
 <br />
 Abbiamo raggiunto una decisione riguardo alla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-La decisione è di non accettare la proposta </br>
-<br/>
-{$editorialContactSignature}]]></body>
+La decisione è di non accettare la proposta]]></body>
 		<description>Questa mail è inviata dall'editor o dall'editor di sezione all'autore per non accettare una proposta.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -885,9 +848,7 @@ Linee guida sulla revisione<br />
 <br />
 Abbiamo preso una decisione circa la sua proposta dal titolo &quot;{$submissionTitle}&quot; giunta a {$contextName} .<br />
 <br />
-Si è deciso di non accettare la proposta.<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Si è deciso di non accettare la proposta.]]></body>
 		<description>Questa mail viene mandata all'autore se la proposta subito non viene accettata dall'editor</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -898,9 +859,7 @@ Abbiamo preso una decisione circa la tua proposta a {$contextName}, &quot;{$subm
 <br />
 La nostra decisione: invio a un revisore esterno<br />
 <br />
-Submission URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Submission URL: {$submissionUrl}]]></body>
 		<description>Questa mail è inviata dall'editor o dall'editor di sezione all'autore quando una proposta viene rivista da un esterno</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -909,18 +868,14 @@ Submission URL: {$submissionUrl}<br />
 <br />
 La lavorazione editoriale della sua proposta, &quot;{$submissionTitle},&quot; è completa.  Ora viene preparata per l'uscita sulla rivista.<br />
 <br />
-URL proposta: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+URL proposta: {$submissionUrl}]]></body>
 		<description>Questa mail è inviata dall'editor o dall'editor di sezione all'autore quando una proposta è stata sistemata dal punto di vista editoriale.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Raccomandazione dell'editor</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-La raccomandazione riguardo la proposta &quot;{$submissionTitle}&quot;, giunta per  {$contextName}, è: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+La raccomandazione riguardo la proposta &quot;{$submissionTitle}&quot;, giunta per  {$contextName}, è: {$recommendation}]]></body>
 		<description>Mail che l'editor invia al responsabile contenente la raccomandazione su cosa fare di una certa proposta.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">

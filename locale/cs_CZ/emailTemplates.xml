@@ -161,8 +161,7 @@ Byl Vám přidělen příspěvek &quot;{$submissionTitle}&quot; do {$contextName
 URL příspěvku: {$submissionUrl}<br />
 Uživatelské jméno: {$editorUsername}<br />
 <br />
-Děkujeme,<br />
-{$editorialContactSignature}]]></body>
+Děkujeme.]]></body>
 		<description>Tento email informuje editora sekce, že mu editor přidělil úkol dohlížet na příspěvek během redakčního zpracování. Obsahuje informace o příspěvku a přístupu na stránky časopisu.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -238,9 +237,7 @@ Instrukce pro zpracování recenze<br />
 <br />
 V tomto bodě jsme se rozhodli odvolat naši žádost, abyste pro nás zpracoval recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Omlouváme se za veškeré nepříjemnosti, které by Vám to mohlo způsobit, a doufáme, že Vás budeme moci oslovit ohledně recenzních řízení tohoto časopisu v budoucnu.<br />
 <br />
-V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte.<br />
-<br />
-{$editorialContactSignature}]]></body>
+V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte.]]></body>
 		<description>Tento email zasílá editor sekce recenzentovi, který má rozpracovanou recenzi, aby mu oznámil, že požadavek na zpracování recenze byl zrušen.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -265,9 +262,7 @@ Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;
 		<subject>Poděkování za zpracování recenze článku</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Děkujeme za dokončení recenze příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Vážíme si Vaší práce vedoucí ke zkvalitnění článků, které publikujeme.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Děkujeme za dokončení recenze příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Vážíme si Vaší práce vedoucí ke zkvalitnění článků, které publikujeme.]]></body>
 		<description>Tento email posílá editor sekce, aby potvrdil přijetí zpracované recenze a poděkoval recenzentovi za jeho práci.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -340,9 +335,7 @@ Chtěl bych vás požádat, abyste zredigoval článek &quot;{$submissionTitle}&
 <br />
 {$contextName} URL: {$contextUrl}<br />
 URL příspěvku: {$submissionUrl}<br />
-Uživatelské jméno: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Uživatelské jméno: {$participantUsername}]]></body>
 		<description>Tento email posílá editor sekce redaktorovi, aby ho požádal o zahájení procesu redigování. Obsahuje informace o příspěvku a jek se k němu dostat.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
@@ -468,9 +461,7 @@ Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} je nyní třeba p
 URL příspěvku: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Uživatelské jméno: {$participantUsername}<br />
 <br />
-Pokud nyní nemůžete tento úkol provést nebo máte nějaké dotazy, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Pokud nyní nemůžete tento úkol provést nebo máte nějaké dotazy, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.]]></body>
 		<description>Tento email posílá editor sekce typografovi, aby mu oznámil, že mu byl přidělen úkol provést typografické úpravy příspěvku. Obsahuje informace o příspěvku a přístupu k němu.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -567,25 +558,6 @@ Děkujeme za korektury sazebnic příspěvku &quot;{$submissionTitle}&quot; pro 
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce korektorovi, aby potvrdil dokončení procesu korektur a poděkoval mu za jeho pomoc.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Žádost o korektury (pro typografa)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-U příspěvku &quot;{$submissionTitle}&quot; pro {$contextName} byly provedeny korektury autorem a korektorem a nyní je třeba podle následujících instrukcí udělat potřebné opravy:<br />
-1. klikněte níže na URL příspěvku.<br />
-2. Přihlaste se do časopisu a podle Korekčních úprav vytvořte opravené sazebnice.<br />
-3. Nahrajte opravené sazebnice.<br />
-4. Pošlete editorovi email DOKONČENO v Korekturách v Kroku 3.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-URL příspěvku: {$submissionUrl}<br />
-Uživatelské jméno: {$participantUsername}<br />
-<br />
-Pokud nyní nemůžete tento úkol udělat nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Tento email posílá editor sekce typografovi, aby mu oznámil, že sazebnice příspěvku jsou připraveny pro finální korekturu. Obsahuje informaci o příspěvku a přístupu k němu.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Korektury dokončeny (od typografa)</subject>
@@ -730,9 +702,7 @@ Vaše heslo pro zakázání informačních emailů je: {$password}<br />
 <br />
 Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Naše rozhodnutí je:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Naše rozhodnutí je:]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Rozhodnutí editora</subject>
@@ -740,9 +710,7 @@ Naše rozhodnutí je:<br />
 <br />
 Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Naše rozhodnutí je:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Naše rozhodnutí je:]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Rozhodnutí editora</subject>
@@ -750,9 +718,7 @@ Naše rozhodnutí je:<br />
 <br />
 Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Naše rozhodnutí je:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Naše rozhodnutí je:]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Rozhodnutí editora</subject>
@@ -760,9 +726,7 @@ Naše rozhodnutí je:<br />
 <br />
 Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Naše rozhodnutí je:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Naše rozhodnutí je:]]></body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Zakoupení předplatného: Individuální</subject>
@@ -874,9 +838,7 @@ Dosáhli jsme rozhodnutí, které se týká vašeho příspěvku do {$contextNam
 <br />
 Naše rozhodnutí je: Poslat k recenzi<br />
 <br />
-Webová adresa příspěvku: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Webová adresa příspěvku: {$submissionUrl}]]></body>
 		<description>Tento email od editora nebo editora sekce autorovi sděluje, že jejich příspěvek je odesílán k externí recenzi.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -885,9 +847,7 @@ Webová adresa příspěvku: {$submissionUrl}<br />
 <br />
 Editace vašeho příspěvku, &quot;{$submissionTitle},&quot; je hotová.  Posíláme ho nyní do produkční fáze.<br />
 <br />
-Webová adresa příspěvku: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Webová adresa příspěvku: {$submissionUrl}]]></body>
 		<description>Tento e-mail od editora nebo editora sekce autorovi oznamuje, že jejich podání je odesláno do produkční fáze.</description>
 	</email_text>
 	<email_text key="GIFT_AVAILABLE">
@@ -1096,18 +1056,14 @@ Děkujeme mnohokrát za spolupráci.<br />
 <br />
 Dosáhli jsme rozhodnutí ohledně vašeho příspěvku pro {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Naše rozhodnutí je: Odmítnout příspěvek <br />
-<br />
-{$editorialContactSignature} <br />]]></body>
+Naše rozhodnutí je: Odmítnout příspěvek]]></body>
 		<description>Tento e-mail se pošle autorovi, pokud redaktor odmítne příspěvek již před recenzním řízením</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Doporučení redaktora</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-Doporučení k příspěvku {$contextName}, &quot;{$submissionTitle}&quot; je: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Doporučení k příspěvku {$contextName}, &quot;{$submissionTitle}&quot; je: {$recommendation}]]></body>
 		<description>Tento e-mail je od redaktora nebo redaktora sekce pro odpovědného redaktora nebo pro redaktory sekcí - informuje o konečném doporučení ohledně příspěvku.</description>
 	</email_text>
 </email_texts>
