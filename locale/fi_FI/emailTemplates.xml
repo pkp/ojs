@@ -161,8 +161,7 @@ Käsikirjoitus &quot;{$submissionTitle},&quot; julkaisuun {$contextName} on anne
 Käsikirjoituksen URL: {$submissionUrl}<br />
 Käyttäjätunnus: {$editorUsername}<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
+Ystävällisin terveisin.]]></body>
 		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -362,8 +361,7 @@ Olemme tässä vaiheessa päättäneet perua pyyntömme käsikirjoituksen &quot;
 <br />
 Mikäli teillä on kysyttävää, otattehan yhteyttä minuun.<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
+Ystävällisin terveisin.]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -390,8 +388,7 @@ En valitettavasti voi tällä kertaa suorittaa käsikirjoituksen &quot;{$submiss
 <br />
 Kiitos käsikirjoituksen &quot;{$submissionTitle}&quot; arvioinnin suorittamisesta julkaisulle {$contextName}. Arvostamme panostanne julkaisemamme työn laadun hyväksi.<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
+Ystävällisin terveisin.]]></body>
 		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -462,9 +459,7 @@ Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikir
 <br />
 Päätöksemme on: Käsikirjoitus on hyväksytty<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "accept submission" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -477,9 +472,7 @@ Päätöksemme on: Lähetetään arvioitavaksi<br />
 <br />
 Käsikirjoituksen URL: {$submissionUrl}<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them that their submission is being sent to an external review.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -490,9 +483,7 @@ Käsikirjoituksenne &quot;{$submissionTitle},&quot; on nyt toimitettu ja lähet�
 <br />
 Käsikirjoituksen URL: {$submissionUrl}<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them that their submission is being sent to production.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -503,9 +494,7 @@ Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikir
 <br />
 Päätöksemme on: Vaatii korjauksia<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "revisions required" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -516,9 +505,7 @@ Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikir
 <br />
 Päätöksemme on: Lähetetään uudelleen arvioitavaksi<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "resubmit" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -529,9 +516,7 @@ Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikir
 <br />
 Päätöksemme on: Käsikirjoitus on hylätty<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -548,8 +533,7 @@ Pyytäisin teitä toimittamaan teknisesti käsikirjoituksen &quot;{$submissionTi
 Käsikirjoituksen URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Käyttäjätunnus: {$participantUsername}<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -568,8 +552,7 @@ Käyttäjätunnus: {$participantUsername}<br />
 <br />
 Mikäli ette voi ryhtyä tähän tehtävään juuri nyt, tai  jos teillä on kysyttävää, otattehan minuun yhteyttä. Kiitos panoksestanne tämän julkaisun hyväksi.<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -807,9 +790,7 @@ Ystävällisin terveisin,<br />
 <br />
 Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
 <br />
-Päätöksemme on: Käsikirjoitus on hylätty<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Päätöksemme on: Käsikirjoitus on hylätty]]></body>
 		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
@@ -818,8 +799,7 @@ Päätöksemme on: Käsikirjoitus on hylätty<br />
 <br />
 Julkaisun {$contextName} käsikirjoitusta &quot;{$submissionTitle}&quot; koskeva suositus on: {$recommendation}<br />
 <br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
+Ystävällisin terveisin,]]></body>
 		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
 	</email_text>
 </email_texts>

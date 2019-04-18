@@ -14,5 +14,9 @@
 	<sql><!-- pkp/pkp-lib#4573 Enable OAI interface by default -->
 		<query>INSERT INTO journal_settings (setting_name, setting_value, journal_id) SELECT 'enableOai', '1', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT js.setting_name FROM journal_settings js WHERE js.setting_name = 'enableOai' AND js.journal_id = j.journal_id)</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#3248 Correct duplication of email signatures -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$editorialContactSignature}', '') WHERE email_key IN ('EDITOR_ASSIGN', 'REVIEW_CANCEL', 'REVIEW_ACK', 'EDITOR_DECISION_ACCEPT', 'EDITOR_DECISION_SEND_TO_EXTERNAL', 'EDITOR_DECISION_SEND_TO_PRODUCTION', 'EDITOR_DECISION_REVISIONS', 'EDITOR_DECISION_RESUBMIT', 'EDITOR_DECISION_DECLINE', 'EDITOR_DECISION_INITIAL_DECLINE', 'EDITOR_RECOMMENDATION', 'COPYEDIT_REQUEST', 'LAYOUT_REQUEST', 'PROOFREAD_LAYOUT_REQUEST')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$editorialContactSignature}', '') WHERE email_key IN ('EDITOR_ASSIGN', 'REVIEW_CANCEL', 'REVIEW_ACK', 'EDITOR_DECISION_ACCEPT', 'EDITOR_DECISION_SEND_TO_EXTERNAL', 'EDITOR_DECISION_SEND_TO_PRODUCTION', 'EDITOR_DECISION_REVISIONS', 'EDITOR_DECISION_RESUBMIT', 'EDITOR_DECISION_DECLINE', 'EDITOR_DECISION_INITIAL_DECLINE', 'EDITOR_RECOMMENDATION', 'COPYEDIT_REQUEST', 'LAYOUT_REQUEST', 'PROOFREAD_LAYOUT_REQUEST')</query>
+	</sql>
 </data>
 

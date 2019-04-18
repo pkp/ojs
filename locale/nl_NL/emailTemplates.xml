@@ -159,8 +159,7 @@ De inzending &quot;{$submissionTitle}&quot; voor {$contextName} is aan u toegewe
 URL inzending: {$submissionUrl}<br />
 Gebruikersnaam: {$editorUsername}<br />
 <br />
-Dank u,<br />
-{$editorialContactSignature}]]></body>
+Dank u.]]></body>
 		<description>Deze e-mail bericht een sectieredacteur dat de redacteur een inzending heeft toegewezen om door het redactieproces te leiden. Het geeft informatie over de inzending en hoe de tijdschrift-website te benaderen</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -354,9 +353,7 @@ Review richtlijnen<br />
 <br />
 We hebben besloten om ons verzoek aan u om de inzending &quot;{$submissionTitle}&quot; voor {$contextName}in te trekken. We verontschuldigen ons voor enig ongemak dat we daarmee veroorzaken en hopen dat we u in de toekomst mogen vragen om een bijdrage aan het reviewproces van dit tijdschrift.<br />
 <br />
-Als u nog vragen heeft, kunt u contact met mij opnemen.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Als u nog vragen heeft, kunt u contact met mij opnemen.]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur verstuurd naar een reviewer die een inzending aan het reviewen is om die op de hoogte te stellen dat de review is afgeblazen.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -381,9 +378,7 @@ Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inz
 		<subject>Artikel review bevestiging</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Dank u voor uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Dank u voor uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren.]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur verstuurd om de ontvangst van een review te bevestigen en de reviewer te bedanken voor zijn bijdrage.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -448,9 +443,7 @@ Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijd
 <br />
 We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Onze beslissing is: Accepteer inzending<br />
-<br />
-{$editorialContactSignature}]]></body>
+Onze beslissing is: Accepteer inzending]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt aanvaard.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -461,10 +454,7 @@ We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$
 <br />
 Onze belissing is: Doorsturen aan reviewer</br />
 <br />
-URL inzending: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL inzending: {$submissionUrl}]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt doorgestuurd aan een reviewer.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -473,10 +463,7 @@ URL inzending: {$submissionUrl}<br />
 <br />
 De redactie van uw inzending, &quot;{$submissionTitle},&quot; is afgerond. We geven uw inzending nu in productie.<br />
 <br />
-URL inzending: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL inzending: {$submissionUrl}]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending in productie wordt gegeven.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -485,9 +472,7 @@ URL inzending: {$submissionUrl}<br />
 <br />
 We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Onze beslissing is: Revisies benodigd<br />
-<br />
-{$editorialContactSignature}]]></body>
+Onze beslissing is: Revisies benodigd]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat bijkomende revisies worden verwacht voor een inzending.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -496,9 +481,7 @@ Onze beslissing is: Revisies benodigd<br />
 <br />
 We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Onze beslissing is: Opnieuw indienen voor review<br />
-<br />
-{$editorialContactSignature}]]></body>
+Onze beslissing is: Opnieuw indienen voor review]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending opnieuw moet worden ingediend voor review.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -507,19 +490,14 @@ Onze beslissing is: Opnieuw indienen voor review<br />
 <br />
 We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Onze beslissing is: Weiger inzending<br />
-<br />
-{$editorialContactSignature}]]></body>
+Onze beslissing is: Weiger inzending]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt geweigerd.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Redacteursaanbeveling</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-De aanbeveling voor de inzending voor {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+De aanbeveling voor de inzending voor {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}]]></body>
 		<description>Deze e-mail van de aanbevelende redacteur of sectieredacteur brengt de beslissende redacteurs of sectieredacteurs op de hoogte van een aanbeveling over de inzending.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -536,9 +514,7 @@ Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submission
 <br />
 {$contextName} URL: {$contextUrl}<br />
 URL inzending: {$submissionUrl}<br />
-Gerbruikersnaam: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Gerbruikersnaam: {$participantUsername}]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur naar de tekstredacteur van een inzending gestuurd om te vragen het redactieproces te starten. Het bevat informatie over de inzending en hoe die te benaderen</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -554,9 +530,7 @@ De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunne
 URL inzending: {$submissionLayoutUrl}<br />
 Gebruikersnaam: {$participantUsername}<br />
 <br />
-Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op.]]></body>
 		<description>Deze e-mail van de sectieredacteur aan de opmaakredacteur meldt de toekenning van de taak om de opmaak van een inzending uit te voeren. Het bevat informatie over de inzending en hoe die te benaderen</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -781,9 +755,7 @@ URL van de inzending: {$submissionUrl}<br />
 <br />
 We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Onze beslissing is: Weiger inzending<br />
-<br />
-{$editorialContactSignature}]]></body>
+Onze beslissing is: Weiger inzending]]></body>
 		<description>Deze e-mail wordt aan een auteur verzonden wanneer de redacteur de inzending weigert nog voor die aan een reviewer werd bezorgd.</description>
 	</email_text>
 </email_texts>
