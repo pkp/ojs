@@ -24,7 +24,7 @@
 
 	{if $homepageImage}
 		<div class="homepage_image">
-			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|default:'null'}">
+			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImage.altText|default:'null'}">
 		</div>
 	{/if}
 

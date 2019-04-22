@@ -24,7 +24,7 @@
 	{if $article->getLocalizedCoverImage()}
 		<div class="cover">
 			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
-				<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText() != ''} alt="{$article->getLocalizedCoverImageAltText()|default:'null'}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
+				<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText() != ''} alt="{$article->getLocalizedCoverImageAltText()|default:'null'}"{else} alt="{translate key="article.coverPage.altText"|default:'null'}"{/if}>
 			</a>
 		</div>
 	{/if}
