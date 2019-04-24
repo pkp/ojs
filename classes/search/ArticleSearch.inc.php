@@ -250,7 +250,7 @@ class ArticleSearch extends SubmissionSearch {
 		foreach ($results as $articleId) {
 			// Get the article, storing in cache if necessary.
 			if (!isset($articleCache[$articleId])) {
-				$publishedArticleCache[$articleId] = $publishedArticleDao->getByArticleId($articleId);
+				$publishedArticleCache[$articleId] = $publishedArticleDao->getBySubmissionId($articleId);
 				$articleCache[$articleId] = $articleDao->getById($articleId);
 			}
 			$article = $articleCache[$articleId];
@@ -311,7 +311,7 @@ class ArticleSearch extends SubmissionSearch {
 		if ($result === false) {
 			// Retrieve the article.
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-			$article = $publishedArticleDao->getByArticleId($submissionId);
+			$article = $publishedArticleDao->getBySubmissionId($submissionId);
 			if (is_a($article, 'PublishedArticle')) {
 				// Retrieve keywords (if any).
 				$searchTerms = $article->getLocalizedSubject();

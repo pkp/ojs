@@ -45,7 +45,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 		assert(is_a($publishedSubmissionGalley, 'ArticleGalley') && !empty($columnId));
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedSubmission = $publishedArticleDao->getByArticleId($publishedSubmissionGalley->getSubmissionId());
+		$publishedSubmission = $publishedArticleDao->getBySubmissionId($publishedSubmissionGalley->getSubmissionId());
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
 			case 'title':

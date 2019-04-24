@@ -465,6 +465,10 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/><!-- WORKFLOW_STAGE_ID_SUBMISSION -->
 		</field>
+		<field name="submission_version" type="I8">
+      <NOTNULL/>
+      <DEFAULT VALUE="1" />
+    </field>
 		<descr>Submissions</descr>
 		<index name="submissions_journal_id">
 			<col>journal_id</col>
@@ -495,12 +499,17 @@
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
+		<field name="submission_version" type="I8">
+			<NOTNULL />
+			<DEFAULT VALUE="1"/>
+		</field>
 		<descr>Submission metadata</descr>
 		<index name="submission_settings_submission_id">
 			<col>submission_id</col>
 		</index>
 		<index name="submission_settings_pkey">
 			<col>submission_id</col>
+			<col>submission_version</col>
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
@@ -532,10 +541,18 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="published_submission_version" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1" />
+		</field>
+		<field name="prev_ver_id" type="I8" />
+		<field name="is_current_submission_version" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="1" />
+		</field>
 		<descr>Published submissions</descr>
 		<index name="published_submissions_submission_id">
 			<col>submission_id</col>
-			<UNIQUE/>
 		</index>
 		<index name="published_submissions_issue_id">
 			<col>issue_id</col>
@@ -566,6 +583,15 @@
 		<field name="is_approved" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="submission_version" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1" />
+		</field>
+		<field name="prev_ver_id" type="I8" />
+		<field name="is_current_submission_version" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="1" />
 		</field>
 		<descr>Submission galleys</descr>
 		<index name="submission_galleys_submission_id">

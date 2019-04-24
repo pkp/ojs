@@ -132,6 +132,14 @@ class PublishedArticle extends Article {
 	function setGalleys($galleys) {
 		return $this->setData('galleys', $galleys);
 	}
+
+	function getIsCurrentSubmissionVersion() {
+		return $this->getData('isCurrentSubmissionVersion');
+	}
+
+	function setIsCurrentSubmissionVersion($isCurrentSubmissionVersion) {
+		return $this->setData('isCurrentSubmissionVersion', $isCurrentSubmissionVersion);
+	}
 }
 
 

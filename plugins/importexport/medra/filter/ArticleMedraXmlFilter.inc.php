@@ -113,7 +113,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 				$article = $cache->get('articles', $galley->getSubmissionId());
 			} else {
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-				$article = $publishedArticleDao->getByArticleId($galley->getSubmissionId());
+				$article = $publishedArticleDao->getBySubmissionId($galley->getSubmissionId());
 				if ($article) $cache->add($article, null);
 			}
 			$articleNodeName = 'DOISerialArticleVersion';

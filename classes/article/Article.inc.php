@@ -67,7 +67,7 @@ class Article extends Submission {
 
 				// Override based on context settings
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticle = $publishedArticleDao->getByArticleId($this->getId());
+				$publishedArticle = $publishedArticleDao->getBySubmissionId($this->getId());
 				if ($publishedArticle) {
 					switch($context->getData('copyrightYearBasis')) {
 						case 'submission':
