@@ -133,6 +133,10 @@
 	<message key="editor.submissions.assignedTo">Assigned To</message>
 	<message key="editor.submissions.inSection">In Section</message>
 	<message key="editor.article.schedulePublication">Schedule For Publication</message>
+	<message key="editor.article.showPublicationVersion">Show Scheduled Publication</message>
+	<message key="editor.article.publishVersion">Publish Version</message>
+	<message key="editor.article.viewMetadata">View Version Metadata</message>
+	<message key="editor.article.editMetadata">Edit Version Metadata</message>
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</message>

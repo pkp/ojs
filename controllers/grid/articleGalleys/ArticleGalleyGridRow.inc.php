@@ -21,15 +21,18 @@ class ArticleGalleyGridRow extends GridRow {
 
 	/** @var array */
 	var $_userRoles;
+	var $_isEditable;
 
 	/**
 	 * Constructor
 	 * @param $submission Submission
 	 * @param $userRoles array
 	 */
-	function __construct($submission, $userRoles) {
+	function __construct($submission, $isEditable) {
 		$this->_submission = $submission;
 		$this->_userRoles = $userRoles;
+		$this->_isEditable = $isEditable;
+
 		parent::__construct();
 	}
 
@@ -51,8 +54,7 @@ class ArticleGalleyGridRow extends GridRow {
 			$actionArgs = $this->getRequestArgs();
 			$actionArgs['representationId'] = $rowId;
 
-			// Authors should not see these links
-			if (array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT), $this->_userRoles)) {
+			if ($this->_isEditable) {
 				// Add row-level actions
 				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				$this->addAction(new LinkAction(
@@ -108,6 +110,7 @@ class ArticleGalleyGridRow extends GridRow {
 	function getRequestArgs() {
 		return array(
 			'submissionId' => $this->getSubmission()->getId(),
+			'submissionVersion' => $this->getSubmission()->getSubmissionVersion(),
 		);
 	}
 }
