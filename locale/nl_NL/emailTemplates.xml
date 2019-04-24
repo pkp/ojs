@@ -49,7 +49,9 @@ Wachtwoord: {$password}<br />
 		<subject>Tijdschriftregistratie</subject>
 		<body><![CDATA[{$userFullName}<br />
 <br />
-U bent nu geregistreerd als gebruiker bij {$contextName}. We hebben uw gebruikersnaam en wachtwoord in deze e-mail opgenomen. U heeft die nodig om met het tijdschrift te werken. U kunt op ieder gewenst moment verwijderd worden van de lijst gebruikers van dit tijdschrift door contact met mij op te nemen<br />
+U bent nu geregistreerd als gebruiker bij {$contextName}. We hebben uw gebruikersnaam en wachtwoord in deze e-mail opgenomen. U heeft die nodig om met het tijdschrift te werken. U kunt op ieder gewenst moment verwijderd worden van de lijst gebruikers van dit tijdschrift door contact met mij op te nemen</p>
+<p>U kunt via <a href="{$contextUrl}/login">deze link</a> inloggen met volgende gegevens:
+<br />
 <br />
 Gebruikersnaam: {$username}<br />
 Wachtwoord: {$password}<br />
@@ -181,8 +183,6 @@ Dank u voor het overwegen van dit verzoek.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
-<br />
-<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
@@ -228,8 +228,6 @@ Dank u voor het overwegen van dit verzoek.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
-<br />
-<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
@@ -272,7 +270,8 @@ Dank u voor het overwegen van dit verzoek.<br />
 <br />
 Review richtlijnen<br />
 <br />
-{$reviewGuidelines}]]></body>
+{$reviewGuidelines}<br />
+]]></body>
 		<description>Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. De inzending wordt als bijlage meegestuurd. Dit bericht word gebruikt wanneer het e-mail attachment reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
@@ -285,7 +284,7 @@ Na de review van een vorige versie van hun manuscript hebben de auteurs een gere
 <br />
 Gelieve in te loggen op de website van het tijdschrift vóór {$responseDueDate} om aan te geven of u deze review wilt doen of niet, alsmede om toegang te krijgen tot de inzending en uw bevindingen en aanbeveling vast te leggen. De website is {$contextUrl}<br />
 <br />
-De revieuw moet gereed zijn op {$reviewDueDate}.<br />
+De review moet gereed zijn op {$reviewDueDate}.<br />
 <br />
 Als u uw gebruikersnaam en wachtwoord niet meer heeft, kunt u deze link gebruiken om uw wachtwoord terug te zetten (dat u met uw gebruikersnaam in een e-mail zult ontvangen). {$passwordResetUrl}<br />
 <br />
@@ -294,8 +293,6 @@ URL van de inzending: {$submissionReviewUrl}<br />
 Hartelijk dank voor het overwegen van dit verzoek.<br />
 <br />
 {$editorialContactSignature}<br />
-<br />
-<br />
 <br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
@@ -315,11 +312,9 @@ Log in op de website van het tijdschrift vóór {$responseDueDate} om aan te gev
 Het review moet binnen zijn op {$reviewDueDate}.<br />
 URL van de inzending: {$submissionReviewUrl}<br />
 <br />
-Dan ku voor het overwegen van dit verzoek.<br />
+Hartelijk dank voor het overwegen van dit verzoek.<br />
 <br />
 {$editorialContactSignature}<br />
-<br />
-<br />
 <br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
@@ -345,7 +340,8 @@ Dank u voor het overwegen van dit verzoek.<br />
 <br />
 Review richtlijnen<br />
 <br />
-{$reviewGuidelines}]]></body>
+{$reviewGuidelines}<br />
+]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur aan een reviewer verstuurd om te vragen of die een review voor de tweede of latere ronde van een inzending wil doen. De inzending wordt als bijlage meegestuurd. Dit bericht wordt gebruikt als het e-mail reviewproces wordt geselecteerd in stap 2 van het instellen. (Zie verder REVIEW_REQUEST_SUBSEQUENT)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
@@ -361,7 +357,7 @@ Als u nog vragen heeft, kunt u contact met mij opnemen.<br />
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Review mogelijk</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Beste redacteur,<br />
 <br />
 Ik ben bereid en in staat om een review te doen van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft. Ik verwacht de review gereed te hebben op of voor de afloopdatum, {$reviewDueDate}.<br />
 <br />
@@ -370,9 +366,9 @@ Ik ben bereid en in staat om een review te doen van de inzending &quot;{$submiss
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Review niet mogelijk</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Beste redacteur,<br />
 <br />
-Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.<br />
+Ik ben op dit moment niet in staat om een review te doen van inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.<br />
 <br />
 {$reviewerName}]]></body>
 		<description>Deze e-mail wordt door de reviewer verstuurd naar de sectieredacteur als reactie op een reviewverzoek om te laten weten dat het verzoek wordt afgewezen.</description>
@@ -450,7 +446,8 @@ We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$
 <br />
 Onze beslissing is: Accepteer inzending<br />
 <br />
-{$editorialContactSignature}]]></body>
+{$editorialContactSignature}<br />
+]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt aanvaard.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -487,7 +484,8 @@ We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$
 <br />
 Onze beslissing is: Revisies benodigd<br />
 <br />
-{$editorialContactSignature}]]></body>
+{$editorialContactSignature}<br />
+]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat bijkomende revisies worden verwacht voor een inzending.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -498,7 +496,8 @@ We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$
 <br />
 Onze beslissing is: Opnieuw indienen voor review<br />
 <br />
-{$editorialContactSignature}]]></body>
+{$editorialContactSignature}<br />
+]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending opnieuw moet worden ingediend voor review.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -509,7 +508,8 @@ We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$
 <br />
 Onze beslissing is: Weiger inzending<br />
 <br />
-{$editorialContactSignature}]]></body>
+{$editorialContactSignature}<br />
+]]></body>
 		<description>Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt geweigerd.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
@@ -572,7 +572,7 @@ Neemt u alstublieft contact met me op als u vragen heeft.<br />
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Mogelijk interessant artikel</subject>
-		<body><![CDATA[Ik denk dat u mogelijk geïnteresseerd bent in &quot;{$submissionTitle}&quot; door {$authorName} gepubliceerd in Vol {$volume}, No {$number} ({$year}) van {$contextName} op &quot;{$articleUrl}&quot;.]]></body>
+		<body><![CDATA[Ik denk dat u mogelijk geïnteresseerd bent in &quot;{$submissionTitle}&quot; door {$authorName} gepubliceerd in Volume {$volume}, nummer {$number} ({$year}) van {$contextName} op &quot;{$articleUrl}&quot;.]]></body>
 		<description>Deze e-mail sjabloon geeft een lezer de mogelijkheid om informatie over een artikel naar iemand te sturen die daar mogelijk in geïnteresseerd is. Het is beschikbaar via de leesgereedschappen en moet ingeschakeld worden door de tijdschriftbeheerder (leesgereedschappen beheer pagina)</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -668,7 +668,8 @@ Lidmaatschapsinformatie (indien opgegeven):<br />
 <br />
 Gebruik de volgende URL om dit abonnement te bekijken of te wijzigen.<br />
 <br />
-Abonnement URL: {$subscriptionUrl}]]></body>
+Abonnement URL: {$subscriptionUrl}<br />
+]]></body>
 		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
@@ -696,7 +697,8 @@ Lidmaatschapsinformatie (indien opgegeven):<br />
 <br />
 Gebruik de volgende URL om het abonnement te bekijken of te bewerken.<br />
 <br />
-Abonnement URL: {$subscriptionUrl}]]></body>
+Abonnement URL: {$subscriptionUrl}<br />
+]]></body>
 		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
@@ -714,7 +716,8 @@ Lidmaatschapsinformatie (indien opgegeven):<br />
 <br />
 Gebruik de volgende URL om het abonnement te bekijken of bewerken.<br />
 <br />
-Abonnement URL: {$subscriptionUrl}]]></body>
+Abonnement URL: {$subscriptionUrl}<br />
+]]></body>
 		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
@@ -742,7 +745,8 @@ Lidmaatschapsinformatie (indien opgegeven):<br />
 <br />
 Gebruik de volgende URL om dit abonnement te bekijken of bewerken.<br />
 <br />
-Abonnement URL: {$subscriptionUrl}]]></body>
+Abonnement URL: {$subscriptionUrl}<br />
+]]></body>
 		<description>Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -756,12 +760,13 @@ Kunt u de juiste citatie van de volgende referentie uit uw artikel {$submissionT
 Dank!<br />
 <br />
 {$userFirstName}<br />
-Tekstredacteur, {$contextName}]]></body>
+Tekstredacteur, {$contextName}<br />
+]]></body>
 		<description>Met deze e-mail kunnen tekstredacteurs auteurs vragen om bijkomende informatie te geven over de bronverwijzing van citaten in hun artikel.</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Herziene versie geladen</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Beste redacteur,<br />
 <br />
 Een herziene versie van &quot;{$submissionTitle}&quot; is geladen door de auteur {$authorName}.<br />
 <br />
@@ -783,7 +788,7 @@ We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$
 <br />
 Onze beslissing is: Weiger inzending<br />
 <br />
-{$editorialContactSignature}]]></body>
+{$editorialContactSignature}<br />]]></body>
 		<description>Deze e-mail wordt aan een auteur verzonden wanneer de redacteur de inzending weigert nog voor die aan een reviewer werd bezorgd.</description>
 	</email_text>
 </email_texts>
