@@ -15,15 +15,6 @@
 import('plugins.reports.counter.classes.CounterReport');
 
 class CounterReportJR1 extends CounterReport {
-
-	/**
-	 * Constructor
-	 * @param string $release
-	 */
-	function CounterReportJR1($release) {
-		parent::CounterReport($release);
-	}
-
 	/**
 	 * Get the report title
 	 * @return $string
