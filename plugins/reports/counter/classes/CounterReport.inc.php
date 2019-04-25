@@ -46,7 +46,7 @@ class CounterReport {
 	 * Constructor
 	 * @param string $release
 	 */
-	function CounterReport($release) {
+	function __construct($release) {
 		$this->_release = $release;
 	}
 
