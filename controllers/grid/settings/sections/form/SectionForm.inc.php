@@ -72,11 +72,9 @@ class SectionForm extends PKPSectionForm {
 	}
 
 	/**
-	 * Fetch form contents
-	 * @param $request Request
-	 * @see Form::fetch()
+	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionId', $this->getSectionId());
 
@@ -97,7 +95,7 @@ class SectionForm extends PKPSectionForm {
 			'subEditorsListData' => $sectionEditorsListData,
 		));
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**

@@ -62,7 +62,7 @@ class IssueForm extends Form {
 	/**
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		if ($this->issue) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
@@ -92,7 +92,7 @@ class IssueForm extends Form {
 			);
 		}
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
