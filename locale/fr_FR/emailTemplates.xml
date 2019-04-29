@@ -592,10 +592,10 @@ Notre décision est d'accepter votre soumission.<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de vous demander une nouvelle version de votre soumission.<br />
+Notre décision est d'accepter votre soumission sous réserve des corrections. <br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «révision requise» concernant leur soumission.</description>
+		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision de «révision requise» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Décision du rédacteur</subject>
@@ -603,7 +603,7 @@ Notre décision est de vous demander une nouvelle version de votre soumission.<b
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est d'accepter votre soumission sous réserve des corrections. <br />
+Notre décision est de vous demander une nouvelle version de votre soumission.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission à redéposer» concernant leur soumission.</description>
@@ -892,5 +892,14 @@ Notre décision est de refuser votre soumission<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ce mail est envoyé à l'auteur si le rédacteur refuse la soumission avant même de la faire évaluer</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Recommandation d'un rédacteur</subject>
+		<body><![CDATA[{$editors} :<br />
+<br />
+La recommandation concernant la soumission de  {$contextName}, &quot;{$submissionTitle}&quot; est : {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Mail avertissant les rédacteurs ou rédacteurs de rubrique q'une recommandation finale a été faite pour la soumission</description>
 	</email_text>
 </email_texts>
