@@ -133,6 +133,10 @@
 	<message key="editor.submissions.assignedTo">Кому назначено</message>
 	<message key="editor.submissions.inSection">В разделе</message>
 	<message key="editor.article.schedulePublication">Запланировать для публикации</message>
+	<message key="editor.article.showPublicationVersion">Показать запланированную публикацию</message>
+	<message key="editor.article.publishVersion">Опубликовать версию</message>
+	<message key="editor.article.viewMetadata">Показать метаданные версии</message>
+	<message key="editor.article.editMetadata">Редактировать метаданные версии</message>
 	<message key="editor.article.scheduleForPublication">Запланировать для публикации в</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Будет назначено позже</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Не поступила плата за публикацию. Чтобы запланировать материал к публикации уведомите автора о необходимости внести плату или отмените платеж.</message>
