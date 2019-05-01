@@ -86,6 +86,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">مقاله</message>
 	<message key="article.articles">مقالات</message>
+	<message key="common.publication">مقاله</message>
+	<message key="common.publications">مقالات</message>
 	<message key="article.submissionId">شناسه مقاله ارسالی</message>
 	<message key="article.title">عنوان</message>
 	<message key="article.authors">نویسندگان</message>

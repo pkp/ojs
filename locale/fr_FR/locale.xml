@@ -83,7 +83,10 @@
 	<message key="section.abbreviation">Abréviation</message>
 	<message key="section.abbreviation.example">(Par exemple, Articles=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Article</message>
 	<message key="article.articles">Articles</message>
+	<message key="common.publication">Article</message>
+	<message key="common.publications">Articles</message>
 	<message key="article.submissionId">ID de la soumission</message>
 	<message key="article.title">Titre</message>
 	<message key="article.authors">Auteurs</message>
@@ -740,7 +743,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="about.aboutThisPublishingSystem.altText">Processus éditorial et d'édition d'OJS</message>
 	<message key="payment.type.purchaseArticle">Frais d'achat de l'article</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="article.article">Article</message>
 	<message key="user.manageMySubscriptions">Gérer Mes abonnements</message>
 	<message key="subscriptionTypes.currency">Devise</message>
 	<message key="subscriptionTypes.year">année</message>

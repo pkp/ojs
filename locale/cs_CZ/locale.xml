@@ -109,6 +109,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Článek</message>
 	<message key="article.articles">Články</message>
+	<message key="common.publication">Článek</message>
+	<message key="common.publications">Články</message>
 	<message key="article.submissionId">ID příspěvku</message>
 	<message key="article.title">Název</message>
 	<message key="article.authors">Autoři</message>

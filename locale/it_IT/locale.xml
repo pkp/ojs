@@ -109,6 +109,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Articolo</message>
 	<message key="article.articles">Articoli</message>
+	<message key="common.publication">Articolo</message>
+	<message key="common.publications">Articoli</message>
 	<message key="article.submissionId">ID della proposta</message>
 	<message key="article.title">Titolo</message>
 	<message key="article.authors">Autori</message>

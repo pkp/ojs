@@ -69,7 +69,10 @@
 
 
 	<!--  Common Article Terms  -->
+	<message key="article.article">Članak</message>
 	<message key="article.articles">Članci</message>
+	<message key="common.publication">Članak</message>
+	<message key="common.publications">Članci</message>
 	<message key="article.submissionId">ID prijave članka</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Autori</message>
@@ -686,7 +689,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="help.searchReturnResults">Povratak na rezultate pretraživanja</message>
 	<message key="payment.type.purchaseArticle">Cena pristupa pojedinim člancima</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="article.article">Članak</message>
 	<message key="user.manageMySubscriptions">Upravljanje mojim pretplatama</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">godina</message>

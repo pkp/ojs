@@ -83,7 +83,10 @@
 	<message key="section.abbreviation">Forkortelse</message>
 	<message key="section.abbreviation.example">(Eksempel: Artikler=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikkel</message>
 	<message key="article.articles">Artikler</message>
+	<message key="common.publication">Artikkel</message>
+	<message key="common.publications">Artikler</message>
 	<message key="article.submissionId">Manus-ID</message>
 	<message key="article.title">Tittel</message>
 	<message key="article.authors">Forfattere</message>
@@ -839,7 +842,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="installer.databaseSettingsInstructions">OJS krever tilgang til en SQL-database for lagring av data. Se listen over databaser som støttes i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$submissionId} på vegne av {$reviewerName}.</message>
 	<message key="log.editor.decision">Redaktørbeslutningen ({$decision}) for artikkelen {$submissionId} ble journalført av {$editorName}.</message>
-	<message key="article.article">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">år</message>

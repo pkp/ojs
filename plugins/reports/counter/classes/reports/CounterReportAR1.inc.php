@@ -76,7 +76,7 @@ class CounterReportAR1 extends CounterReport {
 			$this->setError(new Exception(__('plugins.reports.counter.exception.filter'), COUNTER_EXCEPTION_WARNING | COUNTER_EXCEPTION_BAD_FILTERS));
 		}
 		// Metric type is ojs::counter
-		$metricType = OJS_METRIC_TYPE_COUNTER;
+		$metricType = METRIC_TYPE_COUNTER;
 		// Ordering must be by Journal (ReportItem), and by Month (ItemPerformance) for JR1
 		$validOrder = array(STATISTICS_DIMENSION_SUBMISSION_ID => STATISTICS_ORDER_DESC, STATISTICS_DIMENSION_MONTH => STATISTICS_ORDER_ASC);
 		// TODO: range

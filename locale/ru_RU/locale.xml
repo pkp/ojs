@@ -106,6 +106,8 @@
 	<!-- Общие термины статьи -->
 	<message key="article.article">Статья</message>
 	<message key="article.articles">Статьи</message>
+	<message key="common.publication">Статья</message>
+	<message key="common.publications">Статьи</message>
 	<message key="article.submissionId">ID материала</message>
 	<message key="article.title">Название</message>
 	<message key="article.authors">Авторы</message>

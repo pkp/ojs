@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">مقالة</message>
 	<message key="article.articles">مقالات</message>
+	<message key="common.publication">مقالة</message>
+	<message key="common.publications">مقالات</message>
 	<message key="article.submissionId">الرمز التعريفي للطلب</message>
 	<message key="article.title">العنوان</message>
 	<message key="article.authors">المؤلفون</message>

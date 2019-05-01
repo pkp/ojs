@@ -103,6 +103,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikkeli</message>
 	<message key="article.articles">Artikkelit</message>
+	<message key="common.publication">Artikkeli</message>
+	<message key="common.publications">Artikkelit</message>
 	<message key="article.submissionId">Käsikirjoituksen tunniste</message>
 	<message key="article.title">Otsikko</message>
 	<message key="article.authors">Kirjoittajat</message>

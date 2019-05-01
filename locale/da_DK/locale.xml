@@ -88,7 +88,10 @@
 	<message key="section.abbreviation">Forkortelse</message>
 	<message key="section.abbreviation.example">(F.eks. Artikler = ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikler</message>
+	<message key="common.publication">Artikel</message>
+	<message key="common.publications">Artikler</message>
 	<message key="article.submissionId">Manuskript-id</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Forfattere</message>
@@ -755,7 +758,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="about.aboutThisPublishingSystem.altText">OJS redaktions- og publikationsproces</message>
 	<message key="help.searchReturnResults">Tilbage til søgeresultater</message>
 	<message key="payment.type.purchaseArticle">Gebyr for køb af artikel</message>
-	<message key="article.article">Artikel</message>
 	<message key="journal.issn">ISSN-nummer</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
