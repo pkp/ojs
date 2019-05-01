@@ -67,7 +67,7 @@ class SearchHandler extends Handler {
 			$day = $request->getUserVar("date${fromTo}Day");
 			$year = $request->getUserVar("date${fromTo}Year");
 			if (empty($year)) {
-				$date = '--';
+				$date = NULL;
 				$hasEmptyFilters = true;
 			} else {
 				$defaultMonth = ($fromTo == 'From' ? 1 : 12);
