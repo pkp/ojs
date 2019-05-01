@@ -20,5 +20,6 @@
 	<message key="api.contexts.403.notAllowedEdit">You do not have permission to edit this journal.</message>
 	<message key="api.contexts.403.notAllowedDelete">You do not have permission to delete this journal.</message>
 	<message key="api.contexts.404.contextNotFound">The journal you requested was not found.</message>
+	<message key="api.emailTemplates.403.notAllowedChangeContext">You do not have permission to move this email template to another journal.</message>
 	<message key="api._payments.400.invalidPaymentMethod">The payment method you selected is not supported.</message>
 </locale>

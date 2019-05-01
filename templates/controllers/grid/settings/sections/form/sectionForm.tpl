@@ -69,10 +69,14 @@
 		{fbvFormSection}
 			{assign var="uuid" value=""|uniqid|escape}
 			<div id="subeditors-{$uuid}">
-				<script type="text/javascript">
-					pkp.registry.init('subeditors-{$uuid}', 'SelectListPanel', {$subEditorsListData|json_encode});
-				</script>
+				<list-panel
+					v-bind="components.subeditors"
+					@set="set"
+				/>
 			</div>
+			<script type="text/javascript">
+				pkp.registry.init('subeditors-{$uuid}', 'Container', {$subEditorsListData|json_encode});
+			</script>
 		{/fbvFormSection}
 	{/if}
 

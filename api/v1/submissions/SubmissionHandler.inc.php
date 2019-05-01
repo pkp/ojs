@@ -317,7 +317,7 @@ class SubmissionHandler extends APIHandler {
 			}
 		}
 
-		$returnParams['contextId'] = $context->getId();
+		$returnParams['contextId'] = $request->getContext()->getId();
 
 		\HookRegistry::call('API::submissions::params', array(&$returnParams, $slimRequest));
 

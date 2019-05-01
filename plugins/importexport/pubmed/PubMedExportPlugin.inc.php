@@ -58,17 +58,31 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	function display($args, $request) {
 		parent::display($args, $request);
 		$templateMgr = TemplateManager::getManager($request);
-		$journal = $request->getJournal();
+		$context = $request->getContext();
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				import('lib.pkp.classes.components.listPanels.submissions.SelectSubmissionsListPanel');
-				$exportSubmissionsListPanel = new SelectSubmissionsListPanel(array(
-					'title' => 'plugins.importexport.native.exportSubmissionsSelect',
-					'count' => 100,
-					'inputName' => 'selectedSubmissions[]',
-				));
-				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListPanel->getConfig()));
+				$exportSubmissionsListPanel = new \PKP\components\listPanels\PKPSelectSubmissionsListPanel(
+					'exportSubmissionsListPanel',
+					__('plugins.importexport.native.exportSubmissionsSelect'),
+					[
+						'apiUrl' => $request->getDispatcher()->url(
+							$request,
+							ROUTE_API,
+							$context->getPath(),
+							'_submissions'
+						),
+						'canSelect' => true,
+						'canSelectAll' => true,
+						'lazyLoad' => true,
+						'selectorName' => 'selectedSubmissions[]',
+					]
+				);
+				$templateMgr->assign('exportSubmissionsListData', [
+					'components' => [
+						'exportSubmissionsListPanel' => $exportSubmissionsListPanel->getConfig()
+					]
+				]);
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 			case 'exportSubmissions':
@@ -79,7 +93,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $journal, '.xml');
+				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context, '.xml');
 				$fileManager->writeFile($exportFileName, $exportXml);
 				$fileManager->downloadByPath($exportFileName);
 				$fileManager->deleteByPath($exportFileName);
@@ -92,7 +106,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $journal, '.xml');
+				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context, '.xml');
 				$fileManager->writeFile($exportFileName, $exportXml);
 				$fileManager->downloadByPath($exportFileName);
 				$fileManager->deleteByPath($exportFileName);

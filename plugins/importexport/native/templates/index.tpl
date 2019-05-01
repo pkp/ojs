@@ -68,11 +68,15 @@
 			{fbvFormArea id="submissionsXmlForm"}
 				{fbvFormSection}
 					{assign var="uuid" value=""|uniqid|escape}
-					<div id="export-submissions-list-handler-{$uuid}">
-						<script type="text/javascript">
-							pkp.registry.init('export-submissions-list-handler-{$uuid}', 'SelectSubmissionsListPanel', {$exportSubmissionsListData});
-						</script>
+					<div id="export-submissions-{$uuid}">
+						<select-submissions-list-panel
+							v-bind="components.exportSubmissionsListPanel"
+							@set="set"
+						/>
 					</div>
+					<script type="text/javascript">
+						pkp.registry.init('export-submissions-{$uuid}', 'Container', {$exportSubmissionsListData|json_encode});
+					</script>
 				{/fbvFormSection}
 				{fbvFormButtons submitText="plugins.importexport.native.exportSubmissions" hideCancel="true"}
 			{/fbvFormArea}

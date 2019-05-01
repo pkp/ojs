@@ -22,19 +22,15 @@
 		<tab id="masthead" name="{translate key="manager.setup.masthead"}">
 			{help file="settings" section="context" class="pkp_help_tab"}
 			<pkp-form
-				v-bind="forms.{$smarty.const.FORM_MASTHEAD}"
-				@set-fields="setFormFields"
-				@set-errors="setFormErrors"
-				@set-visible-locales="setFormVisibleLocales"
+				v-bind="components.{$smarty.const.FORM_MASTHEAD}"
+				@set="set"
 			/>
 		</tab>
 		<tab id="contact" name="{translate key="about.contact"}">
 			{help file="settings" section="context" class="pkp_help_tab"}
 			<pkp-form
-				v-bind="forms.{$smarty.const.FORM_CONTACT}"
-				@set-fields="setFormFields"
-				@set-errors="setFormErrors"
-				@set-visible-locales="setFormVisibleLocales"
+				v-bind="components.{$smarty.const.FORM_CONTACT}"
+				@set="set"
 			/>
 		</tab>
 		<tab name="{translate key="section.sections"}">
@@ -50,7 +46,7 @@
 	</tabs>
 </div>
 <script type="text/javascript">
-	pkp.registry.init('settings-context-{$uuid}', 'Container', {$settingsData|json_encode});
+	pkp.registry.init('settings-context-{$uuid}', 'SettingsContainer', {$settingsData|json_encode});
 </script>
 
 {include file="common/footer.tpl"}
