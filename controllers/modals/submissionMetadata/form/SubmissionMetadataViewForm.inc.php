@@ -151,8 +151,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		}
 
 		if ($submission->getDatePublished()) {
-			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::articleMetadataChanged($submission);
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
+			$articleSearchIndex->submissionMetadataChanged($submission);
 		}
 	}
 }

@@ -213,10 +213,9 @@ class ArticleDAO extends SubmissionDAO {
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$citationDao->deleteBySubmissionId($submissionId);
 
-		import('classes.search.ArticleSearchIndex');
-		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->articleDeleted($submissionId);
-		$articleSearchIndex->articleChangesFinished();
+		$articleSearchIndex->submissionChangesFinished();
 
 		$this->flushCache();
 	}

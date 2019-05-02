@@ -285,10 +285,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 				}
 			}
 
-			import('classes.search.ArticleSearchIndex');
-			$articleSearchIndex = new ArticleSearchIndex();
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
 			$submissionFilesChanged = false;
-			$articleMetadataChanged = false;
+			$submissionMetadataChanged = false;
 
 			// define the access status for the article if none is set.
 			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
@@ -309,7 +308,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
 					// article metadata must be reindexed
-					$articleMetadataChanged = true;
+					$submissionMetadataChanged = true;
 				} else {
 					$publishedArticle = $publishedArticleDao->newDataObject();
 					$publishedArticle->setId($submission->getId());
@@ -340,7 +339,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					}
 
 					// Index the published article metadata and files for the first time.
-					$articleMetadataChanged = true;
+					$submissionMetadataChanged = true;
 					$submissionFilesChanged = true;
 				}
 
@@ -388,12 +387,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$articleSearchIndex->submissionFilesChanged($publishedArticle);
 				}
 
-				if ($articleMetadataChanged) {
-					$articleSearchIndex->articleMetadataChanged($publishedArticle);
+				if ($submissionMetadataChanged) {
+					$articleSearchIndex->submissionMetadataChanged($publishedArticle);
 				}
 			}
 
-			$articleSearchIndex->articleChangesFinished();
+			$articleSearchIndex->submissionChangesFinished();
 		}
 	}
 }

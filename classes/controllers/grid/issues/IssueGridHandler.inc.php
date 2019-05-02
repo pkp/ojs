@@ -460,10 +460,9 @@ class IssueGridHandler extends GridHandler {
 					$article->stampStatusModified();
 					$articleDao->updateObject($article);
 					if (!$articleSearchIndex) {
-						import('classes.search.ArticleSearchIndex');
-						$articleSearchIndex = new ArticleSearchIndex();
+						$articleSearchIndex = Application::getSubmissionSearchIndex();
 					}
-					$articleSearchIndex->articleMetadataChanged($publishedArticle);
+					$articleSearchIndex->submissionMetadataChanged($publishedArticle);
 				}
 				// delete article tombstone
 				$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
@@ -497,7 +496,7 @@ class IssueGridHandler extends GridHandler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrent($journalId,$issue);
 
-		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
+		if ($articleSearchIndex) $articleSearchIndex->submissionChangesFinished();
 
 		// Send a notification to associated users if selected and journal is publishing content online with OJS
 		if ($request->getUserVar('sendIssueNotification') && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {

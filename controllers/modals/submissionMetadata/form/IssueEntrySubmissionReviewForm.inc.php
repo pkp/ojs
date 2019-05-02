@@ -83,8 +83,8 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 
 		if ($isExistingEntry) {
 			// Update the search index for this published article.
-			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::articleMetadataChanged($submission);
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
+			$articleSearchIndex->submissionMetadataChanged($submission);
 		}
 	}
 }

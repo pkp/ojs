@@ -324,10 +324,9 @@ class ArticleGalleyGridHandler extends GridHandler {
 		}
 
 		//inform search index that file has been deleted
-		import('classes.search.ArticleSearchIndex');
-		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->submissionFileDeleted($galley->getSubmissionId());
-		$articleSearchIndex->articleChangesFinished();
+		$articleSearchIndex->submissionChangesFinished();
 
 		return DAO::getDataChangedEvent($galley->getId());
 	}

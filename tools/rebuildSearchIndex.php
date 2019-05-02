@@ -15,17 +15,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('classes.search.ArticleSearchIndex');
-
 class rebuildSearchIndex extends CommandLineTool {
-	/**
-	 * Constructor
-	 * @param $argv array
-	 */
-	function __construct($argv) {
-		parent::__construct($argv);
-	}
-
 	/**
 	 * Print command usage information.
 	 */
@@ -65,7 +55,7 @@ class rebuildSearchIndex extends CommandLineTool {
 		HookRegistry::register('Request::getBaseUrl', array($this, 'callbackBaseUrl'));
 
 		// Let the search implementation re-build the index.
-		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->rebuildIndex(true, $journal, $switches);
 	}
 

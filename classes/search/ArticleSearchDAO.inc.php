@@ -18,7 +18,6 @@ import('classes.search.ArticleSearch');
 import('lib.pkp.classes.search.SubmissionSearchDAO');
 
 class ArticleSearchDAO extends SubmissionSearchDAO {
-
 	/**
 	 * Retrieve the top results for a phrases with the given
 	 * limit (default 500 results).

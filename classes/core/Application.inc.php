@@ -178,6 +178,14 @@ class Application extends PKPApplication {
 	}
 
 	/**
+	 * Get a SubmissionSearchIndex instance.
+	 */
+	static function getSubmissionSearchIndex() {
+		import('classes.search.ArticleSearchIndex');
+		return new ArticleSearchIndex();
+	}
+
+	/**
 	 * Returns the name of the context column in plugin_settings
 	 * @return string
 	 */
