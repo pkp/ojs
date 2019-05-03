@@ -19,7 +19,7 @@
 
 	{if $issueCover}
 		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-			<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|default:'null'}">
+			<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
 		</a>
 	{/if}
 
