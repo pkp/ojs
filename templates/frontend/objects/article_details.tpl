@@ -215,10 +215,10 @@
 				<div class="item cover_image">
 					<div class="sub_item">
 						{if $article->getLocalizedCoverImage()}
-							<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|default:'null'}">
+							<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|escape|default:'null'}">
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|default:'null'}">
+								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
 							</a>
 						{/if}
 					</div>
