@@ -54,7 +54,8 @@
         {
           "bracketSpacing": false,
           "singleQuote": true,
-          "useTabs": true
+          "useTabs": true,
+          "htmlWhitespaceSensitivity": "ignore"
         }
       ],
       "no-unused-vars": [
