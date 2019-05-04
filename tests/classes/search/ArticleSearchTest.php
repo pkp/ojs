@@ -58,7 +58,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$this->registerMockJournalDAO();
 		$this->registerMockSectionDAO();
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		if (is_null($request->getRouter())) {
 			$router = new PKPRouter();
 			$request->setRouter($router);
@@ -91,7 +91,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$keywords = array(null => 'test');
 		$articleSearch = new ArticleSearch();
 		$error = '';
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
 
 		// Test whether the result from the mocked DAOs is being returned.
@@ -134,7 +134,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$testToDate = date('Y-m-d H:i:s', strtotime('2012-03-15 18:30:00'));
 		$error = '';
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		foreach($testCases as $testCase) {
 			// Test a simple search with the simulated callback.

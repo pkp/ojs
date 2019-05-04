@@ -40,7 +40,7 @@ class Application extends PKPApplication {
 	 * Scheduled Conference [2]).
 	 * @return int
 	 */
-	function getContextDepth() {
+	public function getContextDepth() {
 		return 1;
 	}
 
@@ -48,7 +48,7 @@ class Application extends PKPApplication {
 	 * Get the list of context elements.
 	 * @return array
 	 */
-	function getContextList() {
+	public function getContextList() {
 		return array('journal');
 	}
 
@@ -56,7 +56,7 @@ class Application extends PKPApplication {
 	 * Get the symbolic name of this application
 	 * @return string
 	 */
-	static function getName() {
+	public static function getName() {
 		return 'ojs2';
 	}
 
@@ -64,7 +64,7 @@ class Application extends PKPApplication {
 	 * Get the locale key for the name of this application.
 	 * @return string
 	 */
-	function getNameKey() {
+	public function getNameKey() {
 		return('common.openJournalSystems');
 	}
 
@@ -73,7 +73,7 @@ class Application extends PKPApplication {
 	 * application.
 	 * @return string
 	 */
-	function getVersionDescriptorUrl() {
+	public function getVersionDescriptorUrl() {
 		return('http://pkp.sfu.ca/ojs/xml/ojs-version.xml');
 	}
 
@@ -81,7 +81,7 @@ class Application extends PKPApplication {
 	 * Get the map of DAOName => full.class.Path for this application.
 	 * @return array
 	 */
-	function getDAOMap() {
+	public function getDAOMap() {
 		return array_merge(parent::getDAOMap(), array(
 			'ArticleDAO' => 'classes.article.ArticleDAO',
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
@@ -109,7 +109,7 @@ class Application extends PKPApplication {
 	 * Get the list of plugin categories for this application.
 	 * @return array
 	 */
-	function getPluginCategories() {
+	public function getPluginCategories() {
 		return array(
 			// NB: Meta-data plug-ins are first in the list as this
 			// will make them load (and install) first.
@@ -134,7 +134,7 @@ class Application extends PKPApplication {
 	 * Get the top-level context DAO.
 	 * @return ContextDAO
 	 */
-	static function getContextDAO() {
+	public static function getContextDAO() {
 		return DAORegistry::getDAO('JournalDAO');
 	}
 
@@ -142,7 +142,7 @@ class Application extends PKPApplication {
 	 * Get the context settings DAO.
 	 * @return SettingsDAO
 	 */
-	static function getContextSettingsDAO() {
+	public static function getContextSettingsDAO() {
 		return DAORegistry::getDAO('JournalSettingsDAO');
 	}
 
@@ -150,14 +150,14 @@ class Application extends PKPApplication {
 	 * Get the submission DAO.
 	 * @return SubmissionDAO
 	 */
-	static function getSubmissionDAO() {
+	public static function getSubmissionDAO() {
 		return DAORegistry::getDAO('ArticleDAO');
 	}
 
 	/**
 	 * Get the published submission DAO.
 	 */
-	static function getPublishedSubmissionDAO() {
+	public static function getPublishedSubmissionDAO() {
 		return DAORegistry::getDAO('PublishedArticleDAO');
 	}
 
@@ -165,7 +165,7 @@ class Application extends PKPApplication {
 	 * Get the section DAO.
 	 * @return SectionDAO
 	 */
-	static function getSectionDAO() {
+	public static function getSectionDAO() {
 		return DAORegistry::getDAO('SectionDAO');
 	}
 
@@ -173,14 +173,14 @@ class Application extends PKPApplication {
 	 * Get the representation DAO.
 	 * @return RepresentationDAO
 	 */
-	static function getRepresentationDAO() {
+	public static function getRepresentationDAO() {
 		return DAORegistry::getDAO('ArticleGalleyDAO');
 	}
 
 	/**
 	 * Get a SubmissionSearchIndex instance.
 	 */
-	static function getSubmissionSearchIndex() {
+	public static function getSubmissionSearchIndex() {
 		import('classes.search.ArticleSearchIndex');
 		return new ArticleSearchIndex();
 	}
@@ -189,7 +189,7 @@ class Application extends PKPApplication {
 	 * Returns the name of the context column in plugin_settings
 	 * @return string
 	 */
-	static function getPluginSettingsContextColumnName() {
+	public static function getPluginSettingsContextColumnName() {
 		if (defined('SESSION_DISABLE_INIT')) {
 			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
 			$driver = $pluginSettingsDao->getDriver();
@@ -221,7 +221,7 @@ class Application extends PKPApplication {
 	 * Get the stages used by the application.
 	 * @return array
 	 */
-	static function getApplicationStages() {
+	public static function getApplicationStages() {
 		// We leave out WORKFLOW_STAGE_ID_PUBLISHED since it technically is not a 'stage'.
 		return array(
 				WORKFLOW_STAGE_ID_SUBMISSION,
@@ -235,21 +235,21 @@ class Application extends PKPApplication {
 	 * Returns the context type for this application.
 	 * @return int ASSOC_TYPE_...
 	 */
-	static function getContextAssocType() {
+	public static function getContextAssocType() {
 		return ASSOC_TYPE_JOURNAL;
 	}
 
 	/**
 	 * Get the file directory array map used by the application.
 	 */
-	static function getFileDirectories() {
+	public static function getFileDirectories() {
 		return array('context' => '/journals/', 'submission' => '/articles/');
 	}
 
 	/**
 	 * @copydoc PKPApplication::getRoleNames()
 	 */
-	static function getRoleNames($contextOnly = false, $roleIds = null) {
+	public static function getRoleNames($contextOnly = false, $roleIds = null) {
 		$roleNames = parent::getRoleNames($contextOnly, $roleIds);
 		if (!$roleIds || !in_array(ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
 			$roleNames[ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
@@ -262,7 +262,7 @@ class Application extends PKPApplication {
 	 * @param $context Context
 	 * @return OJSPaymentManager
 	 */
-	static function getPaymentManager($context) {
+	public static function getPaymentManager($context) {
 		import('classes.payment.ojs.OJSPaymentManager');
 		return new OJSPaymentManager($context);
 	}
