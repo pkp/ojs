@@ -19,7 +19,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	/**
 	 * Print command usage information.
 	 */
-	function usage() {
+	public function usage() {
 		echo "Script to rebuild article search index\n"
 			. "Usage: {$this->scriptName} [options] [journal_path]\n\n"
 			. "options: The standard index implementation does\n"
@@ -32,7 +32,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	/**
 	 * Rebuild the search index for all articles in all journals.
 	 */
-	function execute() {
+	public function execute() {
 		// Check whether we have (optional) switches.
 		$switches = array();
 		while (count($this->argv) && substr($this->argv[0], 0, 1) == '-') {
@@ -64,7 +64,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * when constructing galley/supp file download URLs.
 	 * @see PKPRequest::getBaseUrl()
 	 */
-	function callbackBaseUrl($hookName, &$params) {
+	public function callbackBaseUrl($hookName, &$params) {
 		$baseUrl =& $params[0];
 		$baseUrl = Config::getVar('general', 'base_url');
 		return true;
