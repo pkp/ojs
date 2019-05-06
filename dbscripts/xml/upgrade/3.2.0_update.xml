@@ -11,6 +11,10 @@
   * 3.2.0.0 general updates.
   -->
 <data>
+	<sql><!-- pkp/pkp-lib#2160/4726: Clean up editorial history -->
+		<query>UPDATE event_log_settings SET setting_name='submissionId' WHERE setting_name='articleId'</query>
+		<query>UPDATE event_log_settings SET setting_name='submissionId' WHERE setting_name='submission_id'</query>
+	</sql>
 	<sql><!-- pkp/pkp-lib#4573 Enable OAI interface by default -->
 		<query>INSERT INTO journal_settings (setting_name, setting_value, journal_id) SELECT 'enableOai', '1', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT js.setting_name FROM journal_settings js WHERE js.setting_name = 'enableOai' AND js.journal_id = j.journal_id)</query>
 	</sql>

@@ -12,7 +12,7 @@
   -->
 <data>
 	<sql><!-- pkp/pkp-lib#2160: Clean up editorial history -->
-		<query>UPDATE event_log_settings SET setting_name='submission_id' WHERE setting_name='article_id'</query>
+		<query>UPDATE event_log_settings SET setting_name='submissionId' WHERE setting_name='articleId'</query>
 	</sql>
 	<sql><!-- #2173 set the missing response due dates to review due dates -->
 		<query>UPDATE review_assignments SET date_response_due = date_due WHERE date_response_due IS NULL</query>
