@@ -11,6 +11,10 @@
   * 3.1.2.0 general updates.
   -->
 <data>
+	<sql><!-- pkp/pkp-lib#2160/4726: Clean up editorial history -->
+		<query>UPDATE event_log_settings SET setting_name='submissionId' WHERE setting_name='articleId'</query>
+		<query>UPDATE event_log_settings SET setting_name='submissionId' WHERE setting_name='submission_id'</query>
+	</sql>
 	<!-- pkp/pkp-lib#2894 pkp/pkp-lib#4036 Set 0 review ratings to NULL -->
 	<sql>
 		<query>UPDATE review_assignments SET quality = NULL WHERE quality = 0</query>
