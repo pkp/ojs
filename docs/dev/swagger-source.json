@@ -36,6 +36,10 @@
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
+			"name": "Statistics",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
 			"name": "Temporary Files",
 			"description": "A special endpoint to be used for handling file uploads. See the [API Usage Guide](/dev/api) for more information."
 		},
@@ -80,6 +84,50 @@
 			"example": {
 				"en_US": "Filename",
 				"fr_CA": "Nom de fichier"
+			}
+		},
+		"PublicationStats": {
+			"type": "object",
+			"description": "The total abstract and galley views for a published submission.",
+			"properties": {
+				"abstractViews": {
+					"type": "integer"
+				},
+				"galleyViews": {
+					"type": "integer"
+				},
+				"pdfViews": {
+					"type": "integer"
+				},
+				"htmlViews": {
+					"type": "integer"
+				},
+				"otherViews": {
+					"type": "integer"
+				},
+				"publication": {
+					"type": "object",
+					"properties": {
+						"_href": {
+							"type": "string"
+						},
+						"fullTitle": {
+							"$ref": "#/definitions/LocaleObject"
+						},
+						"id": {
+							"type": "integer"
+						},
+						"shortAuthorString": {
+							"type": "string"
+						},
+						"urlPublished": {
+							"type": "string"
+						},
+						"urlWorkflow": {
+							"type": "string"
+						}
+					}
+				}
 			}
 		},
 		"ReviewRound": "reviewRound",
@@ -153,6 +201,20 @@
 				},
 				"...": {
 					"type": "string"
+				}
+			}
+		},
+		"TimelineInterval": {
+			"type": "object",
+			"properties": {
+				"date": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"value": {
+					"type": "integer"
 				}
 			}
 		},
@@ -1456,6 +1518,439 @@
 							"items": {
 								"type": "string"
 							}
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get total views for a set of publications.",
+				"description": "Returns a list of publications ordered by their total abstract views. Includes total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections. Separate section IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these publications. Separate submission IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many publications to return in a single request. Default is `30`. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "type"
+					},
+					{
+						"name": "offset",
+						"description": "Offset the publications returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Order the results in `ASC` or `DESC` order. Default is `DESC`.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of publications with their total stats during the requested period.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PublicationStats"
+							}
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/abstract": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get total abstract views in a timeline.",
+				"description": "Returns a monthly or daily timeline of abstract views for the publications which match the request parameters.",
+				"parameters": [
+					{
+						"name": "timelineInterval",
+						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections. Separate section IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these publications. Separate submission IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/galley": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get total galleys views in a timeline.",
+				"description": "Returns a monthly or daily timeline of galley views for the publications which match the request parameters.",
+				"parameters": [
+					{
+						"name": "timelineInterval",
+						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections. Separate section IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these publications. Separate submission IDs with a comma.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/{submissionId}": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get the total views of one publication.",
+				"description": "Returns a publication's total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The total stats for the publication during the period requested.",
+						"schema": {
+							"$ref": "#/definitions/PublicationStats"
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/{submissionId}/abstract": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get the abstract views of one publication in a timeline.",
+				"description": "Returns a monthly or daily timeline of abstract views for the requested publication.",
+				"parameters": [
+					{
+						"name": "timelineInterval",
+						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/{submissionId}/galley": {
+			"get": {
+				"tags": [
+					"Statistics"
+				],
+				"summary": "Get the galleys views of one publication in a timeline.",
+				"description": "Returns a monthly or daily timeline of galley views for the requested publication.",
+				"parameters": [
+					{
+						"name": "timelineInterval",
+						"description": "Return a timeline by `month` or `day`. Default is `month`.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"description": "You do not have permission to access statistics for this journal or press.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
 						}
 					}
 				}
