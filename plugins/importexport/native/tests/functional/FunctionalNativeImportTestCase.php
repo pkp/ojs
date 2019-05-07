@@ -47,7 +47,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	protected function setUp() {
 		parent::setUp();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		if (is_null($request->getRouter())) {
 			$router = new PKPRouter();
 			$request->setRouter($router);
@@ -83,7 +83,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		self::assertRegExp('/##plugins.importexport.native.import.error.duplicatePubId##/', $result);
 
 		// Delete inserted article files from the filesystem.
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		import('lib.pkp.classes.file.SubmissionFileManager');
 		$submissionFileManager = new SubmissionFileManager($context->getId(), $articleId);

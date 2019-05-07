@@ -80,13 +80,13 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$importedObjects =& parent::process($document);
 
 		// Index imported content
-		import('classes.search.ArticleSearchIndex');
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		foreach ($importedObjects as $submission) {
 			assert(is_a($submission, 'Submission'));
-			ArticleSearchIndex::articleMetadataChanged($submission);
-			ArticleSearchIndex::submissionFilesChanged($submission);
+			$articleSearchIndex->submissionMetadataChanged($submission);
+			$articleSearchIndex->submissionFilesChanged($submission);
 		}
-		ArticleSearchIndex::articleChangesFinished();
+		$articleSearchIndex->submissionChangesFinished();
 
 		return $importedObjects;
 	}

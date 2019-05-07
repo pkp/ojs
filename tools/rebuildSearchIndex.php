@@ -15,21 +15,11 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('classes.search.ArticleSearchIndex');
-
 class rebuildSearchIndex extends CommandLineTool {
-	/**
-	 * Constructor
-	 * @param $argv array
-	 */
-	function __construct($argv) {
-		parent::__construct($argv);
-	}
-
 	/**
 	 * Print command usage information.
 	 */
-	function usage() {
+	public function usage() {
 		echo "Script to rebuild article search index\n"
 			. "Usage: {$this->scriptName} [options] [journal_path]\n\n"
 			. "options: The standard index implementation does\n"
@@ -42,7 +32,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	/**
 	 * Rebuild the search index for all articles in all journals.
 	 */
-	function execute() {
+	public function execute() {
 		// Check whether we have (optional) switches.
 		$switches = array();
 		while (count($this->argv) && substr($this->argv[0], 0, 1) == '-') {
@@ -65,7 +55,7 @@ class rebuildSearchIndex extends CommandLineTool {
 		HookRegistry::register('Request::getBaseUrl', array($this, 'callbackBaseUrl'));
 
 		// Let the search implementation re-build the index.
-		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->rebuildIndex(true, $journal, $switches);
 	}
 
@@ -74,7 +64,7 @@ class rebuildSearchIndex extends CommandLineTool {
 	 * when constructing galley/supp file download URLs.
 	 * @see PKPRequest::getBaseUrl()
 	 */
-	function callbackBaseUrl($hookName, &$params) {
+	public function callbackBaseUrl($hookName, &$params) {
 		$baseUrl =& $params[0];
 		$baseUrl = Config::getVar('general', 'base_url');
 		return true;
