@@ -355,7 +355,7 @@ class Issue extends DataObject {
 	/**
 	 * Get issue cover image file name
 	 * @param $locale string
-	 * @return string
+	 * @return string|array
 	 */
 	function getCoverImage($locale) {
 		return $this->getData('coverImage', $locale);
@@ -363,7 +363,7 @@ class Issue extends DataObject {
 
 	/**
 	 * Set issue cover image file name
-	 * @param $coverImage string
+	 * @param $coverImage string|array
 	 * @param $locale string
 	 */
 	function setCoverImage($coverImage, $locale) {
