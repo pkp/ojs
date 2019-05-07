@@ -39,7 +39,6 @@ lib/pkp/plugins/*/*/tests								\
 plugins/*/*/tests									\
 plugins/auth/ldap									\
 plugins/generic/announcementFeed							\
-plugins/generic/browse									\
 plugins/generic/coins									\
 plugins/generic/cookiesAlert								\
 plugins/generic/counter									\
