@@ -601,5 +601,8 @@
 	<message key="stats.publications.details">Article Details</message>
 	<message key="stats.publications.none">No articles were found with usage statistics matching these parameters.</message>
 	<message key="stats.publications.totalAbstractViews.timelineInterval">Total abstract views by date</message>
+	<message key="stats.publications.totalGalleyViews.timelineInterval">Total galley views by date</message>
 	<message key="stats.publications.countOfTotal">{$count} of {$total} articles</message>
+	<message key="stats.publications.abstracts">Abstracts</message>
+	<message key="stats.publications.galleys">Galleys</message>
 </locale>
