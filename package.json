@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^1.1.0",
+    "chart.js": "^2.8.0",
     "debounce": "^1.2.0",
     "tinymce": "^4.9.4",
     "v-tooltip": "^2.0.2",
     "vue": "^2.6.10",
+    "vue-chartjs": "^3.4.2",
     "vue-color": "^2.7.0",
     "vue-scrollto": "^2.15.0",
     "vue-slider-component": "^2.8.16",

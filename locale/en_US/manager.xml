@@ -596,4 +596,10 @@
 	<message key="plugins.importexport.common.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">The specified objects could not be found.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the primary contact, identified in the Journal Settings.</message>
+
+	<!-- Statistics -->
+	<message key="stats.publications.details">Article Details</message>
+	<message key="stats.publications.none">No articles were found with usage statistics matching these parameters.</message>
+	<message key="stats.publications.totalAbstractViews.timelineInterval">Total abstract views by date</message>
+	<message key="stats.publications.countOfTotal">{$count} of {$total} articles</message>
 </locale>
