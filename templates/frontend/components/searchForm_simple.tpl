@@ -12,7 +12,12 @@
 {if !$currentJournal || $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post" role="search">
 		{csrf}
-		<input name="query" value="{$searchQuery|escape}" type="text" aria-label="{translate|escape key="common.searchQuery"}">
+		{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="simpleQuery" filterValue=$query}{/capture}
+		{if empty($queryFilter)}
+			<input name="query" value="{$searchQuery|escape}" type="text" aria-label="{translate|escape key="common.searchQuery"}">
+		{else}
+			{$queryFilter}
+		{/if}
 		<button type="submit">
 			{translate key="common.search"}
 		</button>
