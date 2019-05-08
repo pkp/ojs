@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @defgroup api_v1_stats Publicaion statistics API requests
+ * @defgroup api_v1_stats Publication statistics API requests
  */
 
 /**

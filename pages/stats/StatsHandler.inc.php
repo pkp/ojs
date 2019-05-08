@@ -41,8 +41,8 @@ class StatsHandler extends PKPStatsHandler {
 		}
 
 		$statsComponent = $templateMgr->getTemplateVars('statsComponent');
-		$statsComponent->_filters = [
-			'sectionIds' => [
+		$statsComponent->filters = [
+			[
 				'heading' => __('section.sections'),
 				'filters' => APP\components\listPanels\SubmissionsListPanel::getSectionFilters(),
 			],
