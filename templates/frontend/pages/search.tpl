@@ -31,7 +31,12 @@
 			<label class="pkp_screen_reader" for="query">
 				{translate key="search.searchFor"}
 			</label>
-			<input type="text" id="query" name="query" value="{$query|escape}" class="query" placeholder="{translate|escape key="common.search"}">
+			{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="query" filterValue=$query}{/capture}
+			{if empty($queryFilter)}
+				<input type="text" id="query" name="query" value="{$query|escape}" class="query" placeholder="{translate|escape key="common.search"}">
+			{else}
+				{$queryFilter}
+			{/if}
 		</div>
 
 		<fieldset class="search_advanced">
@@ -56,7 +61,12 @@
 				<label class="label" for="authors">
 					{translate key="search.author"}
 				</label>
-				<input type="text" for="authors" name="authors" value="{$authors|escape}">
+				{capture assign="queryAuthors"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="authors" filterValue=$authors}{/capture}
+				{if empty($queryAuthors)}
+					<input type="text" for="authors" name="authors" value="{$authors|escape}">
+				{else}
+					{$queryAuthors}
+				{/if}
 			</div>
 			{call_hook name="Templates::Search::SearchResults::AdditionalFilters"}
 		</fieldset>
