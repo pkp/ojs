@@ -115,7 +115,7 @@
 	<message key="manager.setup.currentIssue">Edição Atual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da revista</message>
 	<message key="manager.setup.customTags">Tags META personalizadas</message>
-	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.</message>
+	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.]]></message>
 	<message key="manager.setup.details">Detalhes</message>
 	<message key="manager.setup.details.description">Nome da revista, ISSN, contatos, editora e patrocinadores e sistemas de busca.</message>
 	<message key="manager.setup.disableUserRegistration">O Gerente da Revista é responsável por cadastrar todos os usuários, permitindo a editores e editores de seção cadastrar avaliadores.</message>
