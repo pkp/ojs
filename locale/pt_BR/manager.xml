@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -115,7 +115,7 @@
 	<message key="manager.setup.currentIssue">Edição Atual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da revista</message>
 	<message key="manager.setup.customTags">Tags META personalizadas</message>
-	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.</message>
+	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.]]></message>
 	<message key="manager.setup.details">Detalhes</message>
 	<message key="manager.setup.details.description">Nome da revista, ISSN, contatos, editora e patrocinadores e sistemas de busca.</message>
 	<message key="manager.setup.disableUserRegistration">O Gerente da Revista é responsável por cadastrar todos os usuários, permitindo a editores e editores de seção cadastrar avaliadores.</message>
