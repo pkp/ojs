@@ -31,12 +31,10 @@
 			<label class="pkp_screen_reader" for="query">
 				{translate key="search.searchFor"}
 			</label>
-			{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="query" filterValue=$query}{/capture}
-			{if empty($queryFilter)}
+			{block name=searchQuery}
 				<input type="text" id="query" name="query" value="{$query|escape}" class="query" placeholder="{translate|escape key="common.search"}">
-			{else}
-				{$queryFilter}
-			{/if}
+			{/block}
+
 		</div>
 
 		<fieldset class="search_advanced">
@@ -61,12 +59,10 @@
 				<label class="label" for="authors">
 					{translate key="search.author"}
 				</label>
-				{capture assign="queryAuthors"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="authors" filterValue=$authors}{/capture}
-				{if empty($queryAuthors)}
+				{block name=searchAuthors}
 					<input type="text" for="authors" name="authors" value="{$authors|escape}">
-				{else}
-					{$queryAuthors}
-				{/if}
+				{/block}
+
 			</div>
 			{call_hook name="Templates::Search::SearchResults::AdditionalFilters"}
 		</fieldset>
@@ -93,7 +89,7 @@
 			{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
 		{/if}
 
-	{* Results pagination *}
+		{* Results pagination *}
 	{else}
 		<div class="cmp_pagination">
 			{page_info iterator=$results}

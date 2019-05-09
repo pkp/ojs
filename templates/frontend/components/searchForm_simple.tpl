@@ -9,15 +9,13 @@
  *
  * @uses $searchQuery string Previously input search query
  *}
-{if !$currentJournal || $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post" role="search">
 		{csrf}
-		{capture assign="queryFilter"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName="simpleQuery" filterValue=$query}{/capture}
-		{if empty($queryFilter)}
+		{block name=searchQuerySimple}
 			<input name="query" value="{$searchQuery|escape}" type="text" aria-label="{translate|escape key="common.searchQuery"}">
-		{else}
-			{$queryFilter}
-		{/if}
+		{/block}
+
 		<button type="submit">
 			{translate key="common.search"}
 		</button>
@@ -28,5 +26,5 @@
 			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
 			<span class="search_loading" aria-hidden="true"></span>
 		</div>
-</form>
+	</form>
 {/if}
