@@ -12,7 +12,10 @@
 {if !$currentJournal || $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	<form class="pkp_search" action="{url page="search" op="search"}" method="post" role="search">
 		{csrf}
-		<input name="query" value="{$searchQuery|escape}" type="text" aria-label="{translate|escape key="common.searchQuery"}">
+		{block name=searchQuerySimple}
+			<input name="query" value="{$searchQuery|escape}" type="text" aria-label="{translate|escape key="common.searchQuery"}">
+		{/block}
+
 		<button type="submit">
 			{translate key="common.search"}
 		</button>
@@ -23,5 +26,5 @@
 			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
 			<span class="search_loading" aria-hidden="true"></span>
 		</div>
-</form>
+	</form>
 {/if}
