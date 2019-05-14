@@ -193,7 +193,7 @@ class DefaultThemePlugin extends ThemePlugin {
 
 		// Get homepage image and use as header background if useAsHeader is true
 		$context = Application::get()->getRequest()->getContext();
-		if ($context && $this->getOption('useAsHeader')) {
+		if ($context && $this->getOption('useHomepageImageAsHeader')) {
 
 			$publicFileManager = new PublicFileManager();
 			$publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
