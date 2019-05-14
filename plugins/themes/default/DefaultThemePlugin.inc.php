@@ -81,10 +81,10 @@ class DefaultThemePlugin extends ThemePlugin {
 				'options' => [
 				[
 					'value' => true,
-			  		'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
+					'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
 				],
-		  	],
-		  	'default' => false,
+			],
+			'default' => false,
 		]);
 		$this->addOption('useHomepageImageAsHeader', 'FieldOptions', [
 			'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.label'),
@@ -92,10 +92,10 @@ class DefaultThemePlugin extends ThemePlugin {
 				'options' => [
 				[
 					'value' => true,
-			  		'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.option')
+					'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.option')
 				],
-		  	],
-		  	'default' => false,
+			],
+			'default' => false,
 		]);
 
 		// Load primary stylesheet
@@ -192,22 +192,22 @@ class DefaultThemePlugin extends ThemePlugin {
 		);
 
 		// Get homepage image and use as header background if useAsHeader is true
-	    $context = Application::get()->getRequest()->getContext();
-	    if ($context && $this->getOption('useAsHeader')) {
+		$context = Application::get()->getRequest()->getContext();
+		if ($context && $this->getOption('useAsHeader')) {
 
-	        $publicFileManager = new PublicFileManager();
-	        $publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
-	        
-	        $homepageImage = $context->getLocalizedData('homepageImage');
+			$publicFileManager = new PublicFileManager();
+			$publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
+			
+			$homepageImage = $context->getLocalizedData('homepageImage');
 
-	        $homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];
+			$homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];
 
-	        $this->addStyle(
-	            'homepageImage', 
-	            '.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '"); }',
-	            ['inline' => true]
-	        );
-	    }
+			$this->addStyle(
+				'homepageImage',
+				'.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '"); }',
+				['inline' => true]
+			);
+		}
 
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
 		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';
