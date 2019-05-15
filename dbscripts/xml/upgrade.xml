@@ -245,6 +245,8 @@
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
+	<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
