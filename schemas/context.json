@@ -20,8 +20,9 @@
 		},
 		"copyrightYearBasis": {
 			"type": "string",
+			"default": "issue",
 			"validation": [
-				"nullable"
+				"in:issue,article"
 			]
 		},
 		"delayedOpenAccessDuration": {
