@@ -47,6 +47,10 @@
 		<name>openAccessPolicy</name>
 		<value>{translate key="default.journalSettings.openAccessPolicy"}</value>
 	</setting>
+	<setting type="string" locale="0">
+		<name>copyrightYearBasis</name>
+		<value>issue</value>
+	</setting>
 	<setting type="string" locale="1">
 		<name>authorSelfArchivePolicy</name>
 		<value>{translate key="default.journalSettings.authorSelfArchivePolicy"}</value>
