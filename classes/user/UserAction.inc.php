@@ -20,7 +20,7 @@ class UserAction extends PKPUserAction {
 	/**
 	 * @copydoc PKPUserAction::mergeUsers()
 	 */
-	function mergeUsers($oldUserId, $newUserId) {
+	public function mergeUsers($oldUserId, $newUserId) {
 		if (!parent::mergeUsers($oldUserId, $newUserId)) return false;
 
 		// Transfer old user's individual subscriptions for each journal if new user
