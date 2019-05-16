@@ -258,6 +258,23 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
+	 * Get the cancelled value.
+	 * @return boolean
+	 */
+	function getCancelled() {
+		return $this->getData('cancelled');
+	}
+
+	/**
+	 * Set the reviewer's cancelled value.
+	 * @param $cancelled boolean
+	 */
+	function setCancelled($cancelled) {
+		return $this->setData('cancelled', $cancelled);
+	}
+
+	/**
+	/**
 	 * Get quality.
 	 * @return int|null
 	 */
