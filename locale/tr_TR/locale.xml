@@ -834,8 +834,6 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} {$submissionId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} {$submissionId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu).</message>
 	<message key="log.review.reviewInitiated">{$submissionId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından başlatıldı.</message>
-	<message key="log.review.reviewReinitiated">{$submissionId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından yeniden başlatıldı.</message>
-	<message key="log.review.reviewCleared">{$submissionId} numaralı gönderinin {$round}. tur değerlendirmesi {$reviewerName} tarafından kaldırıldı.</message>
 	<message key="log.review.reviewerRated">{$reviewerName}, {$submissionId} numaralı gönderi için {$round}. tur değerlendirmesi ile puanlandı.</message>
 	<message key="log.review.reviewDueDateSet">{$reviewerName} adlı hakeme {$submissionId} numaralı makalenin {$round}. turdaki değerlendirmesi için son tarih {$dueDate} olarak belirlendi.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} adlı hakeme {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesi için öneri gönderildi.</message>

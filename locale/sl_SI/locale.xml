@@ -897,8 +897,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.author.documentRevised">{$authorName} je popravil prispevek {$submissionId}. Nov ID datoteke je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je bil razrešen(a) za recenzijo prispevka {$submissionId} za  {$round}. recenzijski krog</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} je začel(a) {$round}. krog recenzije  prispevka {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} je ponovno začel(a) {$round}. krog recenzije  prispevka {$submissionId}.</message>
-	<message key="log.review.reviewCleared">Recenzija {$round}. kroga recenzije recenzenta {$reviewerName} za prispevek {$submissionId} je bila zbrisana.</message>
 	<message key="log.review.reviewerRated">{$reviewerName}je bil ocenjen za {$round}. krog recenzije prispevka {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Končni datum za {$round}. krog recenzije prispevka {$submissionId} recenzenta {$reviewerName} je bil postavljen na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Recenzent {$reviewerName} je  oddal priporočilo za {$round}. krog recenzije za prispevek {$submissionId}.</message>

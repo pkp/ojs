@@ -855,8 +855,6 @@
 	<message key="log.author.documentRevised">{$authorName}已经修改过文章{$submissionId}。新文件的 ID为{$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName}已经被取消指派对稿件{$submissionId}进行{$round}审.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经开始进行.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经重新开始进行.</message>
-	<message key="log.review.reviewCleared">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经被清除.</message>
 	<message key="log.review.reviewerRated">{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经受到评分.</message>
 	<message key="log.review.reviewDueDateSet">{$reviewerName}对稿件{$submissionId}进行{$round}审工作的截止期限日期已经被配置为{$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName}已经对稿件{$submissionId}的{$round}审工作做出建议 .</message>

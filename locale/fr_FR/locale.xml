@@ -579,9 +579,7 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="log.author.documentRevised">{$authorName} a révisé l'article {$submissionId}. Le nouvel ID du fichier est {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} n'a pas été assigné à l'évaluation de la soumission {$submissionId} pour le cycle d'évaluation {$round}.</message>
 	<message key="log.review.reviewInitiated">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$submissionId} a été commencé.</message>
-	<message key="log.review.reviewReinitiated">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$submissionId} a été recommencé.</message>
 	<message key="log.review.reviewCancelled">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$submissionId} a été annulé.</message>
-	<message key="log.review.reviewCleared">Le cycle {$round} d'évaluation par {$reviewerName} pour la soumission {$submissionId} a été effacé.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} a été classé pour le cycle {$round} d'évaluation de la soumission {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">La date d'échéance pour le cycle {$round} d'évaluation de la soumission {$submissionId} par {$reviewerName} a été établie à {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">La recommandation pour le cycle {$round} d'évaluation de la soumission {$submissionId} par {$reviewerName} a été établie.</message>

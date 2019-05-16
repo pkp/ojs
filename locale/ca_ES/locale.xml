@@ -784,8 +784,6 @@
 	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$submissionId}. El nou identificador per al fitxer és {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} s'ha desassignat de la tramesa de revisió {$submissionId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">S’ha reiniciat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
-	<message key="log.review.reviewCleared">S’ha esborrat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
 	<message key="log.review.reviewerRated">.{$reviewerName} s'ha puntuat per a la ronda {$round} de revisió de la tramesa {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">S’ha definit la data de venciment per a la ronda {$round} de revisió de la tramesa {$submissionId} feta per {$reviewerName}: {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">S’ha definit la recomanació per a la ronda {$round} de revisió de la tramesa {$submissionId} feta per {$reviewerName}.</message>

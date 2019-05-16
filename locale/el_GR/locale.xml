@@ -938,8 +938,6 @@
 	<message key="log.author.documentRevised">O/H {$authorName} αναθεώρησε την υποβολή {$submissionId}. Το νέο ID του αρχείου είναι {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Έχει ακυρωθεί η ανάθεση της αξιολόγησης {$submissionId} στον/ην {$reviewerName} για τον γύρο αξιολόγησης {$round}.</message>
 	<message key="log.review.reviewInitiated">Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">Ξεκίνησε εκ νέου ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}.</message>
-	<message key="log.review.reviewCleared">Εκκαθαρίστηκε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}.</message>
 	<message key="log.review.reviewerRated">Ο/Η {$reviewerName} βαθμολογήθηκε για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Ως ημερομηνία λήξης για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον/την {$reviewerName} έχει οριστεί η {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον/την {$reviewerName} έχει καταχωρηθεί.</message>

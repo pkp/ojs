@@ -923,8 +923,6 @@ Palvelimesi tukee tällä hetkellä mbstringiä: <strong>{$supportsMBString}</st
 	<message key="log.author.documentRevised">{$authorName} on korjannut artikkelia {$submissionId}. Uusi tiedostotunniste on {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} on poistettu käsikirjoituksen {$submissionId} arvioinnista arviointikierroksella {$round}.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} on aloittanut käsikirjoituksen {$submissionId} arvioinnin kierroksella {$round}.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} on aloittanut uudelleen käsikirjoituksen {$submissionId} arvioinnin kierroksella {$round}.</message>
-	<message key="log.review.reviewCleared">{$reviewerName}:n arviointi käsikirjoituksesta {$submissionId} kierroksella {$round} on poistettu.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} on arvosteltu käsikirjoituksen {$submissionId} arvioinnista kierroksella {$round}.</message>
 	<message key="log.review.reviewDueDateSet">Kierroksen {$round} määräpäivä {$reviewerName}:n arvioinnille käsikirjoituksesta {$submissionId} on {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} on antanut suosituksen kierroksen {$round} arvioinnista käsikirjoitusta {$submissionId} koskien.</message>

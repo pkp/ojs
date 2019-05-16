@@ -934,8 +934,6 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} har arbetat om artikel {$submissionId}. Nytt fil-ID är {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} har tagits bort som granskare för bidrag {$submissionId}, granskningsomgång {$round}.</message>
 	<message key="log.review.reviewInitiated">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har påbörjats.</message>
-	<message key="log.review.reviewReinitiated">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har börjat om på nytt.</message>
-	<message key="log.review.reviewCleared">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har tagits bort.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} har betygsatts för sin granskning av bidraget {$submissionId}, omgång {$round}.</message>
 	<message key="log.review.reviewDueDateSet">Deadline för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har satts till {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Rekommendation för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har registrerats.</message>

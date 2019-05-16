@@ -937,8 +937,6 @@
 	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$submissionId}. رمز الملف الجديد ID {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} قد تم فكه من تحكيم طلب النشر {$submissionId} خلال جولة التحكيم {$round}.</message>
 	<message key="log.review.reviewInitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد بوشر بها.</message>
-	<message key="log.review.reviewReinitiated">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد أعيد الشروع بها.</message>
-	<message key="log.review.reviewCleared">جولة التحكيم {$round} من قبل {$reviewerName} للمؤلَّف {$submissionId} قد إزيلت.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} قد تم تقييمه خلال الجولة {$round} من تحكيم المؤلَّف {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">تأريخ استيجاب التحكيم للجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل {$reviewerName}تم ضبطها إلى {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">تم وضع توصية التحكيم في الجولة {$round} من تحكيم المؤلَّف {$submissionId} من قبل {$reviewerName}.</message>

@@ -684,8 +684,6 @@
 	<message key="log.author.documentRevised">{$authorName} مقاله  {$submissionId} را اصلاح کرد. شناسه فایل جدید  {$fileId} می‌باشد.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} از داوری مقاله {$submissionId} برای دور  {$round} معزول شد.</message>
 	<message key="log.review.reviewInitiated">دور  {$round} داوری {$reviewerName} برای مقاله  {$submissionId} شروع شد.</message>
-	<message key="log.review.reviewReinitiated">دور {$round} داوری {$reviewerName} برای مقاله  {$submissionId} از نو شروع شد.</message>
-	<message key="log.review.reviewCleared">دور {$round} داوری {$reviewerName} برای مقاله {$submissionId} پاک شد.</message>
 	<message key="log.review.reviewerRated">{$reviewerName}  امتیاز دور  {$round} داوری مقاله {$submissionId} را وارد نمود.</message>
 	<message key="log.review.reviewDueDateSet">مهلت داوری دور  {$round} مقاله  {$submissionId} توسط {$reviewerName} به  {$dueDate} تغییر یافت.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} دور {$round} داوری برای مقاله  {$submissionId} را توصیه کرد.</message>
