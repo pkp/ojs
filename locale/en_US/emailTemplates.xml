@@ -348,6 +348,15 @@ Review Guidelines<br />
 We have decided at this point to cancel our request for you to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.<br />
 <br />
 If you have any questions, please contact me.]]></body>
+		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that a cancelled review has been reinstated.</description>
+	</email_text>
+	<email_text key="REVIEW_REINSTATE">
+		<subject>Request for Review Reinstated</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+We would like to reinstate our request for you to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We hope that you will be able to assist with this journal's review process.<br />
+<br />
+If you have any questions, please contact me.]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">

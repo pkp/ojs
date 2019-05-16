@@ -24,6 +24,7 @@
 	<email key="SUBMISSION_ACK_NOT_USER" can_edit="1" can_disable="1" to_role_id="65536"/>
 	<email key="EDITOR_ASSIGN" can_edit="1" can_disable="1" from_role_id="16" to_role_id="16"/>
 	<email key="REVIEW_CANCEL" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4096"/>
+	<email key="REVIEW_REINSTATE" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST_SUBSEQUENT" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST_ONECLICK" can_edit="1" can_disable="1" from_role_id="16" to_role_id="4096"/>
