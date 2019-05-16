@@ -28,7 +28,7 @@
 	<message key="default.journalSettings.checklist.addressesLinked">在有条件的情况下，提供参考文献的URL.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">该文本为单倍行距;字号大小为12点; 采用斜体, 而不是强调 (除非获得URL 地址); 和所有的插图, 图片,以及表格被放置在文本在适当的位置而不是在结束.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[该文本符合<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到.]]></message>
-	<message key="default.journalSettings.privacyStatement">在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</message>
+	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</p>]]></message>
 	<message key="default.journalSettings.openAccessPolicy">本期刊遵循内容时开放存取原则，促使其研究免费地用于公共全球知识交流.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">在出版之前与之后，作者都被允许和鼓励将投稿到本期刊的文章项目发布到个人的或者所属单位的网站上（同时提供该出版品的图书细目）.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[
@@ -125,7 +125,7 @@
 		这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href="http://lockss.stanford.edu/">更多信息...</a>]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[
 		这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href="http://lockss.stanford.edu/">更多信息...</a>]]></message>
-	
+
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">论文出版</message>
 	<message key="default.journalSettings.purchaseArticleFee">购买文章</message>

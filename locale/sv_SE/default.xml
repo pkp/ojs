@@ -18,7 +18,7 @@
 	<message key="section.default.policy"></message>
 
 	<message key="default.genres.article">Artikeltext</message>
-	
+
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
@@ -29,7 +29,7 @@
 	<message key="default.journalSettings.checklist.addressesLinked">URL:er har angivits för de referenser där det är möjligt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Texten är satt med enkelt radavstånd, använder 12 punkters typsnittsstorlek, kursiverad text istället för understruken (utom när det gäller URL:er). Alla illustrationer, figurer och tabeller är också inbäddade i texten och inte förlagda till slutet.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements">Texten följer de stilmässiga och bibliografiska regler som beskrivs i Riktlinjer för författare.</message>
-	<message key="default.journalSettings.privacyStatement">De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</message>
+	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</p>]]></message>
 	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften gör sitt innehåll fritt tillgängligt omedelbart vid publicering enligt open access-principen om att det främjar ett ökat kunskapsutbyte världen över om forskning är fritt tillgänglig.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Den här tidskriften tillåter och uppmuntrar författare att publicera bidrag insända till tidskriften på sina personliga hemsidor eller i institutionella arkiv både före och efter publicering, så länge bibliografiska detaljer medföljer som anger att bidraget publicera(t)s i den här tidskriften.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manusredigerings-stadiet är till för att förbättra artikeltextens flyt, tydlighet, grammatik, ordval och formatering. Det utgör sista chansen för författaren att göra större ändringar i texten eftersom de korrigeringar som görs i nästa steg endast avser stavfel och justeringar gällande formatering.
@@ -65,7 +65,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 
 <strong>Att svara på Frågor till författaren (QAs).</strong>
 &nbsp; Behåll alla QAs intakta och fetade i texten. Ta inte bort dem.
-&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt 
+&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt
 <strong>[Kommentar:]</strong>
 &nbsp; t.ex., <strong>[Kommentar: Utvecklade metoddiskussion enligt ditt förslag]</strong>.
 
@@ -142,7 +142,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<message key="default.journalSettings.purchaseArticleFee">Köp av enstaka artikel</message>
 	<message key="default.journalSettings.purchaseIssueFee">Köp av enstaka nummer</message>
 	<message key="default.journalSettings.membershipFee">Medlemskap</message>
-	
+
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Tidskriftsansvarig</message>
 	<message key="default.groups.plural.manager">Tidskriftsansvariga</message>
