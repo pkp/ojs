@@ -28,7 +28,7 @@
 	<message key="default.contextSettings.checklist.addressesLinked">Der er angivet URL-adresser til referencerne, hvor de er tilgængelige.</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">Teksten er skrevet med enkelt linjeafstand, benytter en 12-punktsskrifttype og anvender kursiv i stedet for understregning (med undtagelse af URL-adresser), og alle illustrationer, figurer og tabeller er placeret i teksten på passende steder i stedet for til sidst.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Teksten opfylder de stilistiske og bibliografiske krav, der er beskrevet under <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new"> Retningslinjer for forfattere </a>, som findes under Om tidsskriftet.]]></message>
-	<message key="default.contextSettings.privacyStatement">De navne og adresser, der angives på dette tidsskrifts websted, vil udelukkende blive anvendt til tidsskriftets angivne formål og vil ikke blive gjort tilgængelige til andre formål eller for andre parter.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>De navne og adresser, der angives på dette tidsskrifts websted, vil udelukkende blive anvendt til tidsskriftets angivne formål og vil ikke blive gjort tilgængelige til andre formål eller for andre parter.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Dette tidsskrift tilbyder øjeblikkelig Open Access til tidsskriftets indhold på baggrund af princippet om, at gratis offentlig adgang til forskning understøtter en større global udveksling af viden.</message>
 
 	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>

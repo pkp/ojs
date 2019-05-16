@@ -20,7 +20,7 @@
 	<message key="default.contextSettings.checklist.submissionAppearance">Tekst sadrži jednostruki razmak; koristi se font 12; preferira se kurziv(italic), radije nego podcrtavanje (prihvaća se za URL adrese); i sve ilustracije, slike i tablice su smještene na prikladnim mjestima u tekstu, radije nego na njegovom kraju.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Tekst ispunjava stilske i bibliografske zahtjeve navedene u <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Smjernice za autore</a>, koje se nalaze u rubrici "o časopisu".]]></message>
 
-	<message key="default.contextSettings.privacyStatement">Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Imena i adrese e-pošte registrirane na ovim stranicama koristit će se isključivo u navedene svrhe časopisa i neće biti dostupne niti jednoj drugoj stranci.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Ovaj časopis omogućuje trenutni otvoren pristup svojem cjelokupnom sadržaju u skladu s uvjerenjem kako javna dostupnost istraživačkih spoznaja potiče veću razmjenu znanja i ideja.</message>
 	<message key="default.contextSettings.emailSignature">________________________________________________________________________
 {$journalName}

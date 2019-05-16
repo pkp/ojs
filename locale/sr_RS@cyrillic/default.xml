@@ -28,7 +28,7 @@
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Текст са упутствима везаним за стил и библиографске захтевиме је у <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Упутства за ауторе</a>, која се налазе у секцији "О часопису".]]></message>
 	<message key="section.default.policy">Правила за рубрику</message>
 
-	<message key="default.contextSettings.privacyStatement">Имена и имејл адресе унете на овом сајту биће коришћене искључиво за наведене потребе овог часописа и неће бити доступни ни за једну другу сврху или некој другој страни.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Имена и имејл адресе унете на овом сајту биће коришћене искључиво за наведене потребе овог часописа и неће бити доступни ни за једну другу сврху или некој другој страни.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Овај часопис пружа отворени приступ садржају по принципу који омогућује истраживачки рад бесплатно доступан јавности, а све у циљу веће глобалне размене знања.</message>
 	<message key="default.groups.name.manager">Технички секретар</message>
 	<message key="default.groups.plural.manager">Технички секретари</message>

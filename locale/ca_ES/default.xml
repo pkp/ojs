@@ -28,7 +28,7 @@
 	<message key="default.contextSettings.checklist.addressesLinked">Sempre que ha estat possible s'han proporcionat els URL per a les referències.</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">El text utilitza un espaiat senzill, lletra de mida 12 i en cursiva, més que no pas subratllat, excepte a les adreces URL. Pel que fa a totes les il·lustracions, figures i taules, es col·loquen al lloc corresponent del text i no al final.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[El text compleix els requisits estilístics i bibliogràfics descrits a les instruccions de l'autor/a a <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Indicacions de l’autor/a</a>, que es troben a «Sobre la revista».]]></message>
-	<message key="default.contextSettings.privacyStatement">Els noms i les adreces de correu electrònic que hi ha al lloc web de la revista només s'utilitzaran per als usos indicats en aquesta revista i no estaran disponibles per cap altre ús ni per terceres parts.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Els noms i les adreces de correu electrònic que hi ha al lloc web de la revista només s'utilitzaran per als usos indicats en aquesta revista i no estaran disponibles per cap altre ús ni per terceres parts.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">La revista proporciona accés lliure immediat al contingut basant-se en el principi que fer que la cerca estigui disponible al públic facilita un intercanvi de coneixement més ampli i global.</message>
 
 	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>

@@ -27,7 +27,7 @@
 	<message key="default.contextSettings.checklist.addressesLinked">URL odkazy na reference jsou uvedeny všude, kde to bylo možné.</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">Text má jednoduché řádkování; písmo má velikost 12; je použita spíše kurzíva a ne podtržení (kromě url adres); všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Pokynech pro autory</a>, které se nachází na stránce O časopisu.]]></message>
-	<message key="default.contextSettings.privacyStatement">Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Tento časopis poskytuje okamžitý otevřený přístup ke svému obsahu na principu, podle kterého volné zpřístupnění výsledků výzkumu podporuje větší celosvětovou výměnu poznatků.</message>
 	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>

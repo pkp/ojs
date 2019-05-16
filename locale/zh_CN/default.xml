@@ -28,7 +28,7 @@
 	<message key="default.contextSettings.checklist.addressesLinked">在有条件的情况下，提供参考文献的URL.</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">该文本为单倍行距;字号大小为12点; 采用斜体, 而不是强调 (除非获得URL 地址); 和所有的插图, 图片,以及表格被放置在文本在适当的位置而不是在结束.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[该文本符合<a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到.]]></message>
-	<message key="default.contextSettings.privacyStatement">在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">本期刊遵循内容时开放存取原则，促使其研究免费地用于公共全球知识交流.</message>
 	<message key="default.contextSettings.emailSignature">________________________________________________________________________
 {$journalName}
