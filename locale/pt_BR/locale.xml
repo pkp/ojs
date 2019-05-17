@@ -994,6 +994,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="notification.type.submissionComment">Um editor fez comentários sobre "{$title}".</message>
 	<message key="notification.type.submissions">Eventos da Submissão</message>
 	<message key="notification.type.userComment">Um leitor comentou sobre "{$title}".</message>
+	<message key="notification.type.public">Anúncios Públicos</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Um pagamento manual foi iniciado, mas não foi recebido ainda</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Um pagamento online foi iniciado, mas não foi concluído.</message>
 	<message key="payment.authorFees">Taxas para autores</message>
