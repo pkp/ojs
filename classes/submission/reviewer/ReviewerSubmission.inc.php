@@ -45,7 +45,7 @@ class ReviewerSubmission extends Article {
 	 * @param $competingInterests string
 	 */
 	function setCompetingInterests($competingInterests) {
-		return $this->setData('competingInterests', $competingInterests);
+		$this->setData('competingInterests', $competingInterests);
 	}
 
 	/**
@@ -61,7 +61,7 @@ class ReviewerSubmission extends Article {
 	 * @param $reviewId int
 	 */
 	function setReviewId($reviewId) {
-		return $this->setData('reviewId', $reviewId);
+		$this->setData('reviewId', $reviewId);
 	}
 
 	/**
@@ -77,7 +77,7 @@ class ReviewerSubmission extends Article {
 	 * @param $reviewerId int
 	 */
 	function setReviewerId($reviewerId) {
-		return $this->setData('reviewerId', $reviewerId);
+		$this->setData('reviewerId', $reviewerId);
 	}
 
 	/**
@@ -93,7 +93,7 @@ class ReviewerSubmission extends Article {
 	 * @param $reviewerFullName string
 	 */
 	function setReviewerFullName($reviewerFullName) {
-		return $this->setData('reviewerFullName', $reviewerFullName);
+		$this->setData('reviewerFullName', $reviewerFullName);
 	}
 
 	/**
@@ -126,7 +126,7 @@ class ReviewerSubmission extends Article {
 	 * @param $recommendation string
 	 */
 	function setRecommendation($recommendation) {
-		return $this->setData('recommendation', $recommendation);
+		$this->setData('recommendation', $recommendation);
 	}
 
 	/**
@@ -142,7 +142,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateAssigned string
 	 */
 	function setDateAssigned($dateAssigned) {
-		return $this->setData('dateAssigned', $dateAssigned);
+		$this->setData('dateAssigned', $dateAssigned);
 	}
 
 	/**
@@ -158,7 +158,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateNotified string
 	 */
 	function setDateNotified($dateNotified) {
-		return $this->setData('dateNotified', $dateNotified);
+		$this->setData('dateNotified', $dateNotified);
 	}
 
 	/**
@@ -174,7 +174,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateConfirmed string
 	 */
 	function setDateConfirmed($dateConfirmed) {
-		return $this->setData('dateConfirmed', $dateConfirmed);
+		$this->setData('dateConfirmed', $dateConfirmed);
 	}
 
 	/**
@@ -190,7 +190,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateCompleted string
 	 */
 	function setDateCompleted($dateCompleted) {
-		return $this->setData('dateCompleted', $dateCompleted);
+		$this->setData('dateCompleted', $dateCompleted);
 	}
 
 	/**
@@ -206,7 +206,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateAcknowledged string
 	 */
 	function setDateAcknowledged($dateAcknowledged) {
-		return $this->setData('dateAcknowledged', $dateAcknowledged);
+		$this->setData('dateAcknowledged', $dateAcknowledged);
 	}
 
 	/**
@@ -222,7 +222,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateDue string
 	 */
 	function setDateDue($dateDue) {
-		return $this->setData('dateDue', $dateDue);
+		$this->setData('dateDue', $dateDue);
 	}
 
 	/**
@@ -238,7 +238,7 @@ class ReviewerSubmission extends Article {
 	 * @param $dateResponseDue string
 	 */
 	function setDateResponseDue($dateResponseDue) {
-		return $this->setData('dateResponseDue', $dateResponseDue);
+		$this->setData('dateResponseDue', $dateResponseDue);
 	}
 
 	/**
@@ -254,7 +254,7 @@ class ReviewerSubmission extends Article {
 	 * @param $declined boolean
 	 */
 	function setDeclined($declined) {
-		return $this->setData('declined', $declined);
+		$this->setData('declined', $declined);
 	}
 
 	/**
@@ -270,7 +270,7 @@ class ReviewerSubmission extends Article {
 	 * @param $cancelled boolean
 	 */
 	function setCancelled($cancelled) {
-		return $this->setData('cancelled', $cancelled);
+		$this->setData('cancelled', $cancelled);
 	}
 
 	/**
@@ -287,7 +287,7 @@ class ReviewerSubmission extends Article {
 	 * @param $quality int|null
 	 */
 	function setQuality($quality) {
-		return $this->setData('quality', $quality);
+		$this->setData('quality', $quality);
 	}
 
 	/**
@@ -303,7 +303,7 @@ class ReviewerSubmission extends Article {
 	 * @param $stageId int
 	 */
 	function setStageId($stageId) {
-		return $this->setData('stageId', $stageId);
+		$this->setData('stageId', $stageId);
 	}
 
 	/**
@@ -319,7 +319,7 @@ class ReviewerSubmission extends Article {
 	 * @param $method int
 	 */
 	function setReviewMethod($method) {
-		return $this->setData('reviewMethod', $method);
+		$this->setData('reviewMethod', $method);
 	}
 
 	/**
@@ -335,7 +335,7 @@ class ReviewerSubmission extends Article {
 	 * @param $round int
 	 */
 	function setRound($round) {
-		return $this->setData('round', $round);
+		$this->setData('round', $round);
 	}
 
 	/**
@@ -351,7 +351,7 @@ class ReviewerSubmission extends Article {
 	 * @param $status int
 	 */
 	function setStep($step) {
-		return $this->setData('step', $step);
+		$this->setData('step', $step);
 	}
 
 	//
@@ -371,7 +371,7 @@ class ReviewerSubmission extends Article {
 	 * @param $peerReviewComment SubmissionComment
 	 */
 	function setMostRecentPeerReviewComment($peerReviewComment) {
-		return $this->setData('peerReviewComment', $peerReviewComment);
+		$this->setData('peerReviewComment', $peerReviewComment);
 	}
 }
 
