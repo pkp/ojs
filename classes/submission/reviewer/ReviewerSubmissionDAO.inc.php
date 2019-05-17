@@ -96,9 +96,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$reviewerSubmission = parent::_fromRow($row);
 		$reviewer = $this->userDao->getById($row['reviewer_id']);
 
-		// Comments
-		$reviewerSubmission->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
-
 		// Editor Decisions
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		$decisions = $editDecisionDao->getEditorDecisions($row['submission_id']);
