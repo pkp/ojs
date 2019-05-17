@@ -89,11 +89,12 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	/**
 	 * Internal function to return a ReviewerSubmission object from a row.
 	 * @param $row array
+	 * @param $submissionVersion
 	 * @return ReviewerSubmission
 	 */
-	function _fromRow($row) {
+	function _fromRow($row, $submissionVersion = null) {
 		// Get the ReviewerSubmission object, populated with submission data
-		$reviewerSubmission = parent::_fromRow($row);
+		$reviewerSubmission = parent::_fromRow($row, $submissionVersion);
 		$reviewer = $this->userDao->getById($row['reviewer_id']);
 
 		// Editor Decisions

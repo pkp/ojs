@@ -73,6 +73,7 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
+	 * @param $submissionVersion
 	 * @return Article
 	 */
 	function _fromRow($row, $submissionVersion = null) {
