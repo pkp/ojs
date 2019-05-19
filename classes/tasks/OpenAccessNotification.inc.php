@@ -3,8 +3,8 @@
 /**
  * @file classes/tasks/OpenAccessNotification.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OpenAccessNotification
@@ -34,9 +34,10 @@ class OpenAccessNotification extends ScheduledTask {
 			$email->setReplyTo(null);
 			$email->addRecipient($journal->getData('contactEmail'), $journal->getData('contactName'));
 
+			$request = Application::get()->getRequest();
 			$paramArray = array(
 				'journalName' => $journal->getLocalizedName(),
-				'journalUrl' => Request::url($journal->getPath()),
+				'journalUrl' => $request->url($journal->getPath()),
 				'editorialContactSignature' => $journal->getData('contactName') . "\n" . $journal->getLocalizedName()
 			);
 			$email->assignParams($paramArray);

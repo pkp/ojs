@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+	* dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml
+	*
+	* Copyright (c) 2013-2019 Simon Fraser University
+	* Copyright (c) 2003-2019 John Willinsky
+	* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+	*
+	* Update the email templates tables to remove unused columns, add a new
+	* email_id column and primary key, and update outdated role ids for the
+	* default templates.
+	*
+	-->
+
+<data>
+	<sql>
+		<query>
+			ALTER TABLE email_templates_data
+			ADD email_id BIGINT
+		</query>
+		<query>
+			UPDATE email_templates_data as etd
+			SET etd.email_id = (
+				SELECT et.email_id
+				FROM email_templates as et
+				WHERE etd.email_key = et.email_key
+					AND etd.assoc_type = et.assoc_type
+					AND etd.assoc_id = et.assoc_id
+			)
+		</query>
+		<query>
+			CREATE TABLE email_templates_settings (
+				email_id INT,
+				locale VARCHAR(14) NOT NULL DEFAULT '',
+				setting_name VARCHAR(255) NOT NULL,
+				setting_value text NULL,
+				PRIMARY KEY (email_id,locale,setting_name)
+			)
+		</query>
+		<query>
+			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
+			SELECT email_id, locale, subject, 'subject'
+			FROM email_templates_data
+		</query>
+		<query>
+			INSERT INTO email_templates_settings (email_id, locale, setting_value, setting_name)
+			SELECT email_id, locale, body, 'body'
+			FROM email_templates_data
+		</query>
+		<query>
+			DROP TABLE email_templates_data
+		</query>
+		<query>
+			ALTER TABLE email_templates
+			ADD context_id BIGINT
+		</query>
+		<query>
+			UPDATE email_templates SET context_id = assoc_id
+			WHERE assoc_type=256 AND assoc_id IS NOT NULL
+		</query>
+		<query>
+			ALTER TABLE email_templates
+			DROP INDEX email_templates_assoc,
+			DROP INDEX email_templates_email_key
+		</query>
+		<query>
+			ALTER TABLE email_templates
+			DROP COLUMN assoc_type,
+			DROP COLUMN assoc_id
+		</query>
+		<!-- 16 = ROLE_ID_MANAGER, 17 = ROLE_ID_SUB_EDITOR, 256 and 512 = unused role ids -->
+		<query>
+			UPDATE email_templates_default
+			SET from_role_id=16
+			WHERE from_role_id=17 OR from_role_id=256 OR from_role_id=512
+		</query>
+		<!-- 16 = ROLE_ID_MANAGER, 17 = ROLE_ID_SUB_EDITOR, 256 and 512 = unused role ids -->
+		<query>
+			UPDATE email_templates_default
+			SET to_role_id=16
+			WHERE to_role_id=17 OR to_role_id=256 OR to_role_id=512
+		</query>
+		<!-- 4097 = ROLE_ID_ASSISTANT, 768 and 8192 = unused role ids -->
+		<query>
+			UPDATE email_templates_default
+			SET from_role_id=4097
+			WHERE from_role_id=768 OR from_role_id=8192
+		</query>
+		<!-- 4097 = ROLE_ID_ASSISTANT, 768 and 8192 = unused role ids -->
+		<query>
+			UPDATE email_templates_default
+			SET to_role_id=4097
+			WHERE to_role_id=768 OR to_role_id=8192
+		</query>
+	</sql>
+</data>

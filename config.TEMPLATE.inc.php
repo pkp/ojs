@@ -7,8 +7,8 @@
 ;
 ; config.TEMPLATE.inc.php
 ;
-; Copyright (c) 2014-2018 Simon Fraser University
-; Copyright (c) 2003-2018 John Willinsky
+; Copyright (c) 2014-2019 Simon Fraser University
+; Copyright (c) 2003-2019 John Willinsky
 ; Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 ;
 ; OJS Configuration settings.
@@ -195,10 +195,6 @@ client_charset = utf-8
 ; If enabled, must be the same character set as "client_charset"
 ; (although the actual name may differ slightly depending on the server)
 connection_charset = Off
-
-; Database storage character set
-; Must be set to "Off" if not supported by the database server
-database_charset = Off
 
 
 ;;;;;;;;;;;;;;;;;

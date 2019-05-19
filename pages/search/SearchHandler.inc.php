@@ -3,8 +3,8 @@
 /**
  * @file pages/search/SearchHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SearchHandler
@@ -67,7 +67,7 @@ class SearchHandler extends Handler {
 			$day = $request->getUserVar("date${fromTo}Day");
 			$year = $request->getUserVar("date${fromTo}Year");
 			if (empty($year)) {
-				$date = '--';
+				$date = NULL;
 				$hasEmptyFilters = true;
 			} else {
 				$defaultMonth = ($fromTo == 'From' ? 1 : 12);

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridCellProvider.inc.php
  *
- * Copyright (c) 2016-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2016-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridCellProvider
@@ -20,13 +20,16 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	/** @var Submission **/
 	var $_submission;
 
+	var $_isEditable;
+
 	/**
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function __construct($submission) {
+	function __construct($submission, $isEditable) {
 		parent::__construct();
 		$this->_submission = $submission;
+		$this->_isEditable = $isEditable;
 	}
 
 	//
@@ -59,6 +62,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	function getRequestArgs($row) {
 		return array(
 			'submissionId' => $this->_submission->getId(),
+			'submissionVersion' => $this->getSubmission()->getSubmissionVersion(),
 		);
 	}
 

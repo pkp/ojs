@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/IssueEntrySubmissionReviewForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CatalogEntrySubmissionReviewForm
@@ -76,16 +76,16 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 
 		$submissionDao = Application::getSubmissionDAO();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
+		$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false);
 		$isExistingEntry = $publishedArticle?true:false;
+
+		$submissionDao->updateObject($submission);
 
 		if ($isExistingEntry) {
 			// Update the search index for this published article.
-			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::articleMetadataChanged($submission);
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
+			$articleSearchIndex->submissionMetadataChanged($submission);
 		}
-
-		$submissionDao->updateObject($submission);
 	}
 }
 

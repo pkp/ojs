@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localized email templates XML file.
@@ -189,8 +189,7 @@ tekst "{$submissionTitle}" zgłoszony do czasopisma "{$contextName}", został pr
 WWW tekstu: {$submissionUrl}<br />
 Nazwa użytkownika: {$editorUsername}<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku.]]></body>
 		<description>Powiadomienie wysyłane do redaktora prowadzącego (np. redaktora działu) o przypisaniu go do zgłoszenia.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -304,8 +303,7 @@ bardzo nam przykro, ale zostaliśmy zmuszeni do anulowania naszej prośby o wyko
 <br />
 W razie dodatkowych pytań proszę o kontakt.<br />
 <br />
-Z wyrazami szacunku, <br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku.]]></body>
 		<description>Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera informacje o anulowaniu prośby o wykonanie recenzji.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -334,8 +332,7 @@ Z wyrazami szacunku, <br />
 <br />
 dziękujemy za wykonanie recenzji tekstu "{$submissionTitle}", zgłoszonego do czasopisma "{$contextName}". Doceniamy Pani/ Pana wkład w budowanie jakości naszego czasopisma.<br />
 <br />
-Z wyrazami szacunku, <br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest przesyłana przez redaktora prowadzącego do recenzenta. Zawiera potwierdzenie otrzymania recenzji i podziękowanie za wykonaną pracę.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -406,8 +403,7 @@ podjęllśmy decyzję w sprawie tekstu „{$submissionTitle}", zgłoszonego do c
 <br />
 Decyzja redakcji: Akceptacja zgłoszonego tekstu<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o decyzji w sprawie zgłoszonego tekstu.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -418,8 +414,7 @@ podjęllśmy decyzję w sprawie tekstu "{$submissionTitle}", zgłoszonego do cza
 <br />
 Decyzja redakcji: Wymagane poprawki<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o "Wymaganych poprawkach" (drobne poprawki) zgłoszonego tekstu.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -430,8 +425,7 @@ podjęllśmy decyzję w sprawie tekstu „{$submissionTitle}”, zgłoszonego do
 <br />
 Decyzja redakcji: Wymagane poprawki i ponowna recenzja<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o "Wymaganych poprawkach i ponownej recenzji" (gruntowne poprawki) zgłoszonego tekstu.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -442,8 +436,7 @@ podjęllśmy decyzję w sprawie tekstu "{$submissionTitle}", zgłoszonego do cza
 <br />
 Decyzja redakcji: Odrzucenie zgłoszonego tekstu<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o odrzuceniu zgłoszonego tekstu.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -462,8 +455,7 @@ WWW {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 WWW tekstu: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Nazwa użytkownika: {$participantUsername}<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana przez redaktora prowadzącego do korektora i zawiera prośbę o wykonanie korekty wraz z informacją o lokalizacji plików do korekty.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
@@ -630,8 +622,7 @@ Nazwa użytkownika: {$participantUsername}<br />
 <br />
 Jeżeli nie jest możliwe wykonanie składu w podanym terminie proszę o kontakt.<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Wiadomość jest wysyłana przez redaktora prowadzącego do składacza. Zawiera prośbę o wykonanie składu tekstu.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -768,31 +759,6 @@ Pani/Pana praca ma istotny wpływ na jakość naszego czasopisma.
 Z wyrazami szacunku,
 {$editorialContactSignature}</body>
 		<description>Wiadomość wysyłana przez redaktora działu do korektora, zawiera podziękowanie za wykonanie korekty.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Proofreading Request (Layout Editor)</subject>
-		<body>Do: {$layoutEditorName}
-
-Szanowna Pani / Szanowny Panie,
-
-Tekst "{$articleTitle}" jest gotowy do opublikowania w czasopiśmie {$journalName}. Został sprawdzony przez autora i korektora. Aby odczytać uwagi należy postępować wg następujących kroków:
-
-1. Kliknij na link do zgłoszonego tekstu.
-2. Zaloguj się na stronie czasopisma i przejdź do zakładki moje konto. Zapoznaj się z uwagami od korektora i autora. Przygotuj poprawioną wersję.
-3. Prześlij zaktualizowane pliki.
-4. Wyślij informację o Ukończeniu zadania (korekta, krok 3) do redaktora.
-
-Adres WWW czasopisma {$journalName}: {$journalUrl}
-Adres WWW tekstu: {$submissionUrl}
-Nazwa użytkownika: {$layoutEditorUsername}
-
-Jeśli nie może Pani/Pan wykonać opisanego wyżej zadania w terminie lub ma dodatkowe pytania, proszę o kontakt. 
-
-Dziękuję za Pani/Pana wkład w budowanie czasopisma.
-
-Z wyrazami szacunku,
-{$editorialContactSignature}</body>
-		<description>Wiadomość wysyłana przez redaktora działu do specjalisty DTP, zawiera prośbę o zapoznanie się z uwagami korektora i autora na temat końcowej wersji, przygotowanie i przesłanie zaktualizowanej wersji (do opublikowania na stronę czasopisma).</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Tekst w wersji finalnej sprawdzony przez specjalistę DTP</subject>
@@ -946,8 +912,7 @@ Decyzja redaktora: Przesłane do recenzji<br />
 <br />
 WWW tekstu: {$submissionUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o przesłaniu zgłoszonego tekstu do recenzji.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -958,8 +923,7 @@ korekta tekstu "{$submissionTitle}". Tekst został przekazany do składu.<br />
 <br />
 WWW tekstu: {$submissionUrl}<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o ukończeniu korekty i przekazaniu tekstu do etapu realizacji.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
@@ -986,8 +950,7 @@ podjęllśmy decyzję w sprawie tekstu "{$submissionTitle}", zgłoszonego do cza
 <br />
 Decyzja redakcji: Odrzucenie zgłoszonego tekstu<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o odrzuceniu zgłoszonego tekstu po ocenie wstępnej (przed procesem recenzji).</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
@@ -996,8 +959,7 @@ Z wyrazami szacunku,<br />
 <br />
 przesyłam rekomendację w sprawie tekstu "{$submissionTitle}", zgłoszonego do czasopisma "{$contextName}": {$recommendation}<br />
 <br />
-Z wyrazami szacunku,<br />
-{$editorialContactSignature}<br />]]></body>
+Z wyrazami szacunku,]]></body>
 		<description>Ta wiadomość jest wysyłana od redaktora przypisanego do tekstu do redaktora czasopisma. Zawiera powiadomienie o rekomendacji w sprawie tekstu.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">

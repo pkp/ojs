@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -71,7 +71,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		$rootNode = $doc->createElement('ArticleSet');
 		foreach ($submissions as $submission) {
 			// Fetch associated objects
-			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId());
+			$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId());
 			if (!$journal || $journal->getId() != $submission->getContextId()) {
 				$journal = $journalDao->getById($submission->getContextId());
 			}

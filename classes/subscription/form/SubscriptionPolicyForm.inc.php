@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionPolicyForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionPolicyForm
@@ -109,7 +109,8 @@ class SubscriptionPolicyForm extends Form {
 	 */
 	function initData() {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$journal = Request::getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		$this->_data = array(
@@ -156,7 +157,8 @@ class SubscriptionPolicyForm extends Form {
 	 */
 	function execute() {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$journal = Request::getJournal();
+		$request = Application::get()->getRequest();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionName', $this->getData('subscriptionName'), 'string');

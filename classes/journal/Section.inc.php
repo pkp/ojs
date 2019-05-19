@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/Section.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Section
@@ -82,7 +82,7 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Get open archive setting of section.
+	 * Get "will/will not be indexed" setting of section.
 	 * @return boolean
 	 */
 	function getMetaIndexed() {
@@ -90,7 +90,7 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Set open archive setting of section.
+	 * Set "will/will not be indexed" setting of section.
 	 * @param $metaIndexed boolean
 	 */
 	function setMetaIndexed($metaIndexed) {

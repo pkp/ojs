@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/driver/DRIVERPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DRIVERPlugin
@@ -135,7 +135,7 @@ class DRIVERPlugin extends GenericPlugin {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($row['journal_id']);
-			$article = $publishedArticleDao->getByArticleId($row['submission_id']);
+			$article = $publishedArticleDao->getBySubmissionId($row['submission_id']);
 			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access
@@ -187,7 +187,7 @@ class DRIVERPlugin extends GenericPlugin {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($journalId);
-			$article = $publishedArticleDao->getByArticleId($articleId);
+			$article = $publishedArticleDao->getBySubmissionId($articleId);
 			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access

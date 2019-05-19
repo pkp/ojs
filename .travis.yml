@@ -32,7 +32,6 @@ cache:
   directories:
     - $HOME/.composer/cache
 addons:
-  firefox: "45.9.0esr" # Required by Selenium tests
   apt:
     update: true
 before_install:

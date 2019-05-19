@@ -3,8 +3,8 @@
 /**
  * @file classes/article/AuthorDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AuthorDAO
@@ -104,7 +104,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
-			$publishedArticle = $publishedArticleDao->getByArticleId($row['submission_id']);
+			$publishedArticle = $publishedArticleDao->getBySubmissionId($row['submission_id']);
 			if ($publishedArticle) {
 				$publishedArticles[] = $publishedArticle;
 			}
@@ -198,7 +198,7 @@ class AuthorDAO extends PKPAuthorDAO {
 					JOIN published_submissions ps ON (ps.submission_id = ss.submission_id)
 					JOIN issues i ON (ps.issue_id = i.issue_id AND i.published = 1)
 					' . $sqlJoinAuthorSettings . '
-					WHERE j.enabled = 1 AND
+					WHERE ps.is_current_submission_version = 1 AND aa.is_current_submission_version = 1 AND j.enabled = 1 AND
 					' . (isset($journalId) ? 'j.journal_id = ?' : '')
 					. $initialSql .'
 					GROUP BY names

@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localized email templates XML file.
@@ -158,8 +158,7 @@ der Beitrag &quot;{$submissionTitle}&quot; für {$contextName} wird Ihnen zur Du
 URL des Beitrags: {$submissionUrl}<br />
 Benutzer/innenname: {$editorUsername}<br />
 <br />
-Vielen Dank,<br />
-{$editorialContactSignature}]]></body>
+Vielen Dank.]]></body>
 		<description>Diese E-Mail benachrichtigt eine/n Rubrikredakteur/in, dass die Redakteurin/der Redakteur ihr/ihm die Aufgabe übertragen hat, eine Einreichung durch den Redaktionsprozess hindurch zu betreuen. Sie liefert Informationen zu der Einreichung und darüber, wie auf die Zeitschriftenseite zugegriffen werden kann.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -348,9 +347,7 @@ Begutachtungsrichtlinien<br />
 <br />
 wir haben uns entschieden, unsere Anfrage nach einem Gutachten für den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zurückzuziehen. Verzeihen Sie bitte die Ihnen dadurch evtl. entstandenen Unannehmlichkeiten. Wir hoffen, dass wir weiterhin auf Ihre Hilfe als Gutachter/in für die Zeitschrift zählen können.<br />
 <br />
-Falls Sie Fragen haben, können Sie sich gerne an mich wenden.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Falls Sie Fragen haben, können Sie sich gerne an mich wenden.]]></body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, die an einem Gutachten arbeiten, um sie darüber zu informieren, dass das Gutachten abgesagt worden ist.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -375,9 +372,7 @@ leider kann ich gegenwärtig die Begutachtung des Beitrags &quot;{$submissionTit
 		<subject>Eingangsbestätigung für ein Gutachten</subject>
 		<body><![CDATA[{$reviewerName},<br />
 <br />
-vielen Dank für Ihr Gutachten zum Beitrag &quot;{$submissionTitle}&quot; für {$contextName}. Ihre Stellungnahme ist eine wichtige Unterstützung für unsere Bemühungen um die Qualität der von uns veröffentlichten Arbeiten.<br />
-<br />
-{$editorialContactSignature}]]></body>
+vielen Dank für Ihr Gutachten zum Beitrag &quot;{$submissionTitle}&quot; für {$contextName}. Ihre Stellungnahme ist eine wichtige Unterstützung für unsere Bemühungen um die Qualität der von uns veröffentlichten Arbeiten.]]></body>
 		<description>Diese E-Mail wird von eine/r Rubrikredakteur/in gesendet, um den Empfang eines abgeschlossenen Gutachtens zu bestätigen und um der Gutachterin/dem Gutachter für die Mitwirkung zu danken.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -442,10 +437,7 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 <br />
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Unsere Entscheidung lautet: Beitrag annehmen<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Unsere Entscheidung lautet: Beitrag annehmen]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -456,10 +448,7 @@ Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName
 <br />
 Wir haben entschieden, ein Gutachten anzufordern.<br />
 <br />
-URL des Beitrags: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL des Beitrags: {$submissionUrl}]]></body>
 		<description>Diese E-Mail von Redakteur/in oder Rubrikredakteur/in benachrichtigt die/den Autor/in darüber, dass ein externes Gutachten angefordert wird.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -468,10 +457,7 @@ URL des Beitrags: {$submissionUrl}<br />
 <br />
 Das Lektorat Ihrer Einreichung &quot;{$submissionTitle}&quot; ist beendet. Wir leiten den Beitrag jetzt zur Herstellung weiter.<br />
 <br />
-URL des Beitrags: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL des Beitrags: {$submissionUrl}]]></body>
 		<description>Diese E-Mail von Redakteur/in oder Rubrikredakteur/in informiert die/den Autor/in darüber, dass deren Beitrag in die Herstellung weitergeleitet worden ist.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -480,10 +466,7 @@ URL des Beitrags: {$submissionUrl}<br />
 <br />
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Unsere Entscheidung lautet:<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Unsere Entscheidung lautet:]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -492,10 +475,7 @@ Unsere Entscheidung lautet:<br />
 <br />
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Unsere Entscheidung lautet:<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Unsere Entscheidung lautet:]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -504,20 +484,14 @@ Unsere Entscheidung lautet:<br />
 <br />
 wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Unsere Entscheidung lautet: Beitrag ablehnen<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Unsere Entscheidung lautet: Beitrag ablehnen]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-Die Empfehlung hinsichtlich der Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; ist: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Die Empfehlung hinsichtlich der Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; ist: {$recommendation}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -532,9 +506,7 @@ ich bitte Sie, das Manuskript &quot;{$submissionTitle}&quot; für {$contextName}
 <br />
 URL {$contextName}: {$contextUrl}<br />
 URL des Beitrags: {$submissionUrl}<br />
-Benutzer/innenname: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Benutzer/innenname: {$participantUsername}]]></body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Lektor einer Einreichung gesendet, um diese/n zu bitten, mit dem Lektorat zu beginnen. Sie liefert Informationen über die Einreichung und darüber, wie auf sie zuzugreifen ist.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -551,9 +523,7 @@ URL {$contextName}: {$contextUrl}<br />
 URL des Beitrags: {$submissionLayoutUrl}<br />
 Benutzer/innenname: {$participantUsername}<br />
 <br />
-Falls Sie zur Zeit nicht in der Lage sein sollten, die Arbeit zu übernehmen, oder Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihre Unterstützung dieser Zeitschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Falls Sie zur Zeit nicht in der Lage sein sollten, die Arbeit zu übernehmen, oder Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihre Unterstützung dieser Zeitschrift.]]></body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in benachrichtigt diese/n, dass ihr/ihm die Aufgabe zugewiesen wird, einen Beitrag zu layouten. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -784,9 +754,7 @@ URL des Beitrags: {$submissionUrl}<br />
 <br />
 Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Wir haben entschieden, Ihre Einreichung abzulehnen.<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Wir haben entschieden, Ihre Einreichung abzulehnen.]]></body>
 		<description></description>
 	</email_text>
 </email_texts>

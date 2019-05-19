@@ -3,8 +3,8 @@
 /**
  * @file classes/issue/IssueAction.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueAction
@@ -92,7 +92,7 @@ class IssueAction {
 	function subscribedUser($user, $journal, $issueId = null, $articleId = null) {
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($articleId, null, true);
+		$publishedArticle = $publishedArticleDao->getBySubmissionId($articleId, null, true);
 		$result = false;
 		if (isset($user) && isset($journal)) {
 			if ($publishedArticle && $this->allowedPrePublicationAccess($journal, $publishedArticle, $user)) {
@@ -142,7 +142,7 @@ class IssueAction {
 			if (!$result && $journal->getData('subscriptionExpiryPartial')) {
 				if (isset($articleId)) {
 					$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-					$publishedArticle = $publishedArticleDao->getByArticleId($articleId, null, true);
+					$publishedArticle = $publishedArticleDao->getBySubmissionId($articleId, null, true);
 					if (isset($publishedArticle)) {
 						import('classes.subscription.SubscriptionDAO');
 						$result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());

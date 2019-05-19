@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearchIndex.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
@@ -18,24 +18,13 @@ import('lib.pkp.classes.search.SubmissionSearchIndex');
 class ArticleSearchIndex extends SubmissionSearchIndex {
 
 	/**
-	 * Signal to the indexing back-end that the metadata of an
-	 * article changed.
-	 *
-	 * Push indexing implementations will try to immediately update
-	 * the index to reflect the changes. Pull implementations will
-	 * mark articles as "changed" and let the indexing back-end decide
-	 * the best point in time to actually index the changed data.
-	 *
-	 * @see http://pkp.sfu.ca/wiki/index.php/OJSdeSearchConcept#Push_vs._Pull
-	 * for a discussion of push vs. pull indexing.
-	 *
-	 * @param $article Article
+	 * @copydoc SubmissionSearchIndex::submissionMetadataChanged()
 	 */
-	static function articleMetadataChanged($article) {
+	public function submissionMetadataChanged($submission) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::articleMetadataChanged',
-			array($article)
+			array($submission)
 		);
 
 		// If no search plug-in is activated then fall back to the
@@ -43,7 +32,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			// Build author keywords
 			$authorText = array();
-			$authors = $article->getAuthors();
+			$authors = $submission->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				$author = $authors[$i];
 				$givenNames = $author->getGivenName(null);
@@ -65,17 +54,25 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			}
 
 			// Update search index
-			$articleId = $article->getId();
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_AUTHOR, $authorText);
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TITLE, $article->getTitle(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_ABSTRACT, $article->getAbstract(null));
+			$submissionId = $submission->getId();
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_AUTHOR, $authorText);
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TITLE, $submission->getFullTitle(null));
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_ABSTRACT, $submission->getAbstract(null));
 
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_SUBJECT, (array) $article->getSubject(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_TYPE, $article->getType(null));
-			self::_updateTextIndex($articleId, SUBMISSION_SEARCH_COVERAGE, (array) $article->getCoverage(null));
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_DISCIPLINE, (array) $submission->getDiscipline(null));
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_SUBJECT, (array) $submission->getSubject(null));
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_TYPE, $submission->getType(null));
+			$this->_updateTextIndex($submissionId, SUBMISSION_SEARCH_COVERAGE, (array) $submission->getCoverage(null));
 			// FIXME Index sponsors too?
 		}
+	}
+
+	/**
+	 * @copydoc SubmissionSearchIndex::submissionMetadataChanged()
+	 */
+	public function articleMetadataChanged($article) {
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated call to articleMetadataChanged. Use submissionMetadataChanged instead.');
+		$this->submissionMetadataChanged($article);
 	}
 
 	/**
@@ -84,7 +81,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $type int optional
 	 * @param $assocId int optional
 	 */
-	static function deleteTextIndex($articleId, $type = null, $assocId = null) {
+	public function deleteTextIndex($articleId, $type = null, $assocId = null) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
 	}
@@ -92,14 +89,14 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	/**
 	 * Signal to the indexing back-end that an article file changed.
 	 *
-	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * @see ArticleSearchIndex::submissionMetadataChanged() above for more
 	 * comments.
 	 *
 	 * @param $articleId int
 	 * @param $type int
 	 * @param $fileId int
 	 */
-	static function submissionFileChanged($articleId, $type, $fileId) {
+	public function submissionFileChanged($articleId, $type, $fileId) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFileChanged',
@@ -121,7 +118,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				$position = 0;
 				while(($text = $parser->read()) !== false) {
-					self::_indexObjectKeywords($objectId, $text, $position);
+					$this->_indexObjectKeywords($objectId, $text, $position);
 				}
 				$parser->close();
 			}
@@ -132,12 +129,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * Signal to the indexing back-end that all files (supplementary
 	 * and galley) assigned to an article changed and must be re-indexed.
 	 *
-	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * @see ArticleSearchIndex::submissionMetadataChanged() above for more
 	 * comments.
 	 *
 	 * @param $article Article
 	 */
-	static function submissionFilesChanged($article) {
+	public function submissionFilesChanged($article) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFilesChanged',
@@ -155,12 +152,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			);
 			foreach ($files as $file) {
 				if ($file->getFileId()) {
-					self::submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
+					$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_GALLEY_FILE, $file->getFileId());
 					// Index dependent files associated with any galley files.
 					$dependentFiles = $fileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $article->getId(), SUBMISSION_FILE_DEPENDENT);
 					foreach ($dependentFiles as $depFile) {
 						if ($depFile->getFileId()) {
-							self::submissionFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
+							$this->submissionFileChanged($article->getId(), SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $depFile->getFileId());
 						}
 					}
 				}
@@ -171,14 +168,14 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	/**
 	 * Signal to the indexing back-end that a file was deleted.
 	 *
-	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * @see ArticleSearchIndex::submissionMetadataChanged() above for more
 	 * comments.
 	 *
 	 * @param $articleId int
 	 * @param $type int optional
 	 * @param $assocId int optional
 	 */
-	static function submissionFileDeleted($articleId, $type = null, $assocId = null) {
+	public function submissionFileDeleted($articleId, $type = null, $assocId = null) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::submissionFileDeleted',
@@ -197,12 +194,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * Signal to the indexing back-end that the metadata of
 	 * a supplementary file changed.
 	 *
-	 * @see ArticleSearchIndex::articleMetadataChanged() above for more
+	 * @see ArticleSearchIndex::submissionMetadataChanged() above for more
 	 * comments.
 	 *
 	 * @param $articleId integer
 	 */
-	static function articleDeleted($articleId) {
+	public function articleDeleted($articleId) {
 		// Trigger a hook to let the indexing back-end know that
 		// an article was deleted.
 		HookRegistry::call(
@@ -215,10 +212,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	}
 
 	/**
-	 * Let the indexing back-end know that the current transaction
-	 * finished so that the index can be batch-updated.
+	 * @copydoc SubmissionSearchIndex::submissionChangesFinished()
 	 */
-	static function articleChangesFinished() {
+	public function submissionChangesFinished() {
 		// Trigger a hook to let the indexing back-end know that
 		// the index may be updated.
 		HookRegistry::call(
@@ -227,6 +223,14 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 		// The default indexing back-end works completely synchronously
 		// and will therefore not do anything here.
+	}
+
+	/**
+	 * @copydoc SubmissionSearchIndex::submissionChangesFinished()
+	 */
+	public function articleChangesFinished() {
+		if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated call to articleChangesFinished. Use submissionChangesFinished instead.');
+		$this->submissionChangesFinished();
 	}
 
 	/**
@@ -240,7 +244,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 *  as index data is not partitioned by journal.
 	 * @param $switches array Optional index administration switches.
 	 */
-	static function rebuildIndex($log = false, $journal = null, $switches = array()) {
+	public function rebuildIndex($log = false, $journal = null, $switches = array()) {
 		// Check whether a search plug-in jumps in.
 		$hookResult = HookRegistry::call(
 			'ArticleSearchIndex::rebuildIndex',
@@ -276,11 +280,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 				$articles = $articleDao->getByContextId($journal->getId());
 				while ($article = $articles->next()) {
 					if ($article->getSubmissionProgress() == 0) { // Not incomplete
-						self::articleMetadataChanged($article);
-						self::submissionFilesChanged($article);
+						$this->submissionMetadataChanged($article);
+						$this->submissionFilesChanged($article);
 						$numIndexed++;
 					}
 				}
+				$this->submissionChangesFinished();
 
 				if ($log) echo __('search.cli.rebuildIndex.result', array('numIndexed' => $numIndexed)) . "\n";
 			}
@@ -297,9 +302,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $text string
 	 * @param $position int
 	 */
-	static function _indexObjectKeywords($objectId, $text, &$position) {
+	protected function _indexObjectKeywords($objectId, $text, &$position) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
-		$keywords = self::filterKeywords($text);
+		$keywords = $this->filterKeywords($text);
 		for ($i = 0, $count = count($keywords); $i < $count; $i++) {
 			if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
 				$position += 1;
@@ -314,11 +319,11 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	 * @param $text string
 	 * @param $assocId int optional
 	 */
-	static function _updateTextIndex($articleId, $type, $text, $assocId = null) {
+	protected function _updateTextIndex($articleId, $type, $text, $assocId = null) {
 		$searchDao = DAORegistry::getDAO('ArticleSearchDAO');
 		$objectId = $searchDao->insertObject($articleId, $type, $assocId);
 		$position = 0;
-		self::_indexObjectKeywords($objectId, $text, $position);
+		$this->_indexObjectKeywords($objectId, $text, $position);
 	}
 }
 

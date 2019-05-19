@@ -1,19 +1,19 @@
 <?php
 /**
- * @file components/listPanels/submissions/SubmissionsListPanel.inc.php
+ * @file components/listPanels/SubmissionsListPanel.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionsListPanel
- * @ingroup controllers_list
+ * @ingroup classes_components_listPanels
  *
  * @brief Instantiates and manages a UI component to list submissions.
  */
-import('lib.pkp.classes.components.listPanels.submissions.PKPSubmissionsListPanel');
-import('lib.pkp.classes.db.DBResultRange');
-import('lib.pkp.classes.submission.Submission');
+
+namespace APP\components\listPanels;
+use \PKP\components\listPanels\PKPSubmissionsListPanel;
 
 class SubmissionsListPanel extends PKPSubmissionsListPanel {
 
@@ -23,15 +23,12 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	public function getConfig() {
 		$config = parent::getConfig();
 
-		$request = Application::get()->getRequest();
+		$request = \Application::get()->getRequest();
 		if ($request->getContext()) {
-			if (!isset($config['filters'])) {
-				$config['filters'] = array();
-			}
-			$config['filters']['sectionIds'] = array(
+			$config['filters'][] = [
 				'heading' => __('section.sections'),
 				'filters' => $this->getSectionFilters(),
-			);
+			];
 		}
 
 		return $config;
@@ -46,22 +43,22 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 		return array(
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_SUBMISSION,
+				'value' => WORKFLOW_STAGE_ID_SUBMISSION,
 				'title' => __('manager.publication.submissionStage'),
 			),
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
+				'value' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
 				'title' => __('manager.publication.reviewStage'),
 			),
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_EDITING,
+				'value' => WORKFLOW_STAGE_ID_EDITING,
 				'title' => __('submission.copyediting'),
 			),
 			array(
 				'param' => 'stageIds',
-				'val' => WORKFLOW_STAGE_ID_PRODUCTION,
+				'value' => WORKFLOW_STAGE_ID_PRODUCTION,
 				'title' => __('manager.publication.productionStage'),
 			),
 		);
@@ -73,22 +70,21 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel {
 	 * @return array
 	 */
 	public function getSectionFilters() {
-		$request = Application::get()->getRequest();
+		$request = \Application::get()->getRequest();
 		$context = $request->getContext();
 
 		if (!$context) {
-			return array();
+			return [];
 		}
 
-		import('classes.core.Services');
-		$sections = Services::get('section')->getSectionList($context->getId());
+		$sections = \Services::get('section')->getSectionList($context->getId());
 
 		return array_map(function($section) {
-			return array(
+			return [
 				'param' => 'sectionIds',
-				'val' => $section['id'],
+				'value' => $section['id'],
 				'title' => $section['title'],
-			);
+			];
 		}, $sections);
 	}
 }

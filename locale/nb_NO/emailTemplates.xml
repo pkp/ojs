@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -128,8 +128,7 @@ Som seksjonsredaktør i {$contextName} er du herved oppnevnt til å lede det inn
 Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$editorUsername}<br />
 <br />
-Vennlig hilsen,<br />
-{$editorialContactSignature}]]></body>
+Vennlig hilsen.]]></body>
 		<description>Denne e-posten varsler en Seksjonsredaktør om at Ansvarlig redaktør har oppnevnt seksjonsredaktøren til å føre et innsendt manuskript gjennom den redaksjonelle prosessen. E-posten gir informasjon om det innsendte manuskriptet, og om tilgangen til tidsskriftets nettsted.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -205,9 +204,7 @@ Retningslinjer for fagvurdering<br />
 <br />
 Vi vil med dette avlyse vurderingsoppdraget vi tidligere har bedt deg om å påta deg for {$contextName}, for manuskriptet &quot;{$submissionTitle}&quot;. Redaksjonen har bestemt at vi likevel ikke behøver din innsats i denne omgang. Vi beklager bryderiet, men håper at vi fortsatt kan be deg om å ta på deg vurderingsoppdrag for oss i fremtiden.<br />
 <br />
-Vennligst ta kontakt med meg, hvis du har spørsmål.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vennligst ta kontakt med meg, hvis du har spørsmål.]]></body>
 		<description>I denne e-posten fra Seksjonsredaktøren til en Fagkonsulent avlyses et vurderingsoppdrag som tidligere er bestilt.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -232,9 +229,7 @@ Dessverre kan jeg ikke påta meg oppdraget med å vurdere manuskriptet &quot;{$s
 		<subject>Bekrefter at du har fullført vurderingsoppdrag</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Takk for at du har fullført fagfellevurderingen din av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Vi setter stor pris på at du på denne måten bidrar til å sikre den faglige kvaliteten i våre publikasjoner.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Takk for at du har fullført fagfellevurderingen din av manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}. Vi setter stor pris på at du på denne måten bidrar til å sikre den faglige kvaliteten i våre publikasjoner.]]></body>
 		<description>Denne e-posten sendes av en Seksjonsredaktør for å bekrefte at fagfellevurderingen er mottatt, og takke Fagkonsulenten for innsatsen.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -302,9 +297,7 @@ Jeg vil med dette be om at du påtar deg manusredigering av manuskriptet &quot;{
 Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$participantUsername}<br />
 <br />
-Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil dessuten benytte denne anledningen til å takke deg for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil dessuten benytte denne anledningen til å takke deg for at du har sagt deg villig til å bidra til arbeidet vårt.]]></body>
 		<description>Denne e-posten sendes av en Seksjonsredaktør til en Manusredaktør for å sette i gang arbeidet med manusredigeringen. E-posten gir informasjon om manuskriptet, og om hvordan manusredaktøren får tilgang til det.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -316,9 +309,7 @@ Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet &qu
 Manuskript URL: {$submissionLayoutUrl}<br />
 Brukernavn: {$participantUsername}<br />
 <br />
-Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.]]></body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren bestiller layoutredigering av et manuskript. E-posten gir informasjon om manuskriptet, og om hvordan layoutredaktøren får tilgang til det.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -405,20 +396,6 @@ Takk for at du har gjennomført korrektur av manuskriptet &quot;{$submissionTitl
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-posten fra Seksjonsredaktøren til Korrekturleseren bekrefter at korrekturen er gjennomført, og takker for innsatsen.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Forespørsel om korrektur (Layoutredaktør)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Vi ber med dette om at du utfører de rettelsene korrekturlesningen har påpekt behov for, i manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
-<br />
-Manuskript URL: {$submissionUrl}<br />
-Brukernavn: {$participantUsername}<br />
-<br />
-Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Denne e-posten fra Seksjonsredaktøren til Layoutredaktøren varsler om at manuskriptfilen er klar for siste feilretting etter korrekturlesningen. E-posten gir informasjon om manuskriptfilen, og om hvordan layoutredaktøren får tilgang til den.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Korrektur ferdigstilt (Layoutredaktør)</subject>
@@ -562,9 +539,7 @@ Lenke: {$url}<br />
 <br />
 Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vår beslutning er:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vår beslutning er:]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Redaktørens beslutning</subject>
@@ -572,9 +547,7 @@ Vår beslutning er:<br />
 <br />
 Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vår beslutning er:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vår beslutning er:]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Redaktørens beslutning</subject>
@@ -582,9 +555,7 @@ Vår beslutning er:<br />
 <br />
 Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vår beslutning er:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vår beslutning er:]]></body>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Redaktørens beslutning</subject>
@@ -592,9 +563,7 @@ Vår beslutning er:<br />
 <br />
 Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Vår beslutning er:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Vår beslutning er:]]></body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Abonnementskjøp: Individuelt abonnement</subject>

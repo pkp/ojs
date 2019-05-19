@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/ArticleMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleMedraXmlFilter
@@ -113,7 +113,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 				$article = $cache->get('articles', $galley->getSubmissionId());
 			} else {
 				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-				$article = $publishedArticleDao->getByArticleId($galley->getSubmissionId());
+				$article = $publishedArticleDao->getBySubmissionId($galley->getSubmissionId());
 				if ($article) $cache->add($article, null);
 			}
 			$articleNodeName = 'DOISerialArticleVersion';

@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -155,8 +155,7 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$editorUsername}<br />
 <br />
-Eskerrik asko,<br />
-{$editorialContactSignature}]]></body>
+Eskerrik asko.]]></body>
 		<description>Mezu honek Ataleko editore bati jakinarazten dio Editoreak bidalketa baten edizio-prozesua gainbegiratzeko izendatu duela. Artikuluari buruzko informazioa eta aldizkariaren gunean sartzeko datuak ematen ditu.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -232,9 +231,7 @@ Ebaluazioa egiteko gidalerroak<br />
 <br />
 {$contextName} aldizkarirako {$submissionTitle} artikulua ebaluatzeko egin genizun eskaera bertan behera uztea erabaki dugu. Sentitzen dugu eta barkamena eskatzen dizugu erabaki honek sor ditzakeen endredoengatik, eta espero dugu aurrerantzean ere gure aldizkariko ebaluatzaileen artean izango zaitugula.<br />
 <br />
-Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.]]></body>
 		<description>Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio artikulu baten ebaluazioa egiten hasita dagoenean, ebaluazioa bertan behera utzi dela jakinarazteko.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -259,9 +256,7 @@ Sentitzen dut, baina oraingoan ezingo dut egin {$contextName} aldizkarirako &quo
 		<subject>Artikuluaren ebaluazioaren hartu-agiria</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa egiteagatik. Zinez estimatzen dugu argitaratzen ditugun lanen kalitatea hobetzeko egiten diguzun ekarpena.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa egiteagatik. Zinez estimatzen dugu argitaratzen ditugun lanen kalitatea hobetzeko egiten diguzun ekarpena.]]></body>
 		<description>Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazio-txostena jaso duela esateko eta eskerrak emateko.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -320,7 +315,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau automatikoki bidaltzen da ebaluatzaile baten epea amaitu eta erantzun ez duenean (ikus Konfigurazioko 2. urratseko Ebaluazio-aukerak) eta klik bakarreko ebaluatzaile-sarbidea gaituta dagoenean. Programatutako atazak (scheduled_tasks) gaituta eta konfiguratuta egon behar dute (ikus konfigurazio-fitxategia).</description>
 	</email_text>
-		<email_text key="COPYEDIT_REQUEST">
+	<email_text key="COPYEDIT_REQUEST">
 		<subject>Zuzenketa egiteko eskaera</subject>
 		<body><![CDATA[{$participantName}:<br />
 <br />
@@ -334,9 +329,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 <br />
 {$contextName} aldizkariaren URLa: {$contextUrl}<br />
 Artikuluaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Erabiltzaile-izena: {$participantUsername}]]></body>
 		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, artikuluaren zuzenketa-prozesua egin dezala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -352,9 +345,7 @@ Erabiltzaile-izena: {$participantUsername}<br />
 Artikuluaren URLa: {$submissionLayoutUrl}<br />
 Erabiltzaile-izena: {$participantUsername}<br />
 <br />
-Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.]]></body>
 		<description>Mezu hau Ataleko editoreak Maketatzaileari bidaltzen dio, artikuluaren maketazioa egin dezala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -451,25 +442,6 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau Ataleko editoreak Proba-zuzentzaileari bidaltzen dio, proba-zuzenketa bukatu izanaren berri hartu duela jakinarazteko eta egindako lana eskertzeko.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Probak zuzentzeko eskaera (Maketatzaileari)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren probak zuzendu dituzte egileak eta proba-zuzentzaileak; hauek dira proposatutako zuzenketak egiteko urratsak:<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta kontsultatu &quot;Proba-zuzenketako zuzenketak&quot; galerada berriak prestatzeko.<br />
-3. Kargatu berrikusitako galeradak.<br />
-3. Bidali Proba-zuzenketako 3. urratsa BUKATU duzula adierazteko mezua editoreari.<br />
-<br />
-{$contextName} aldizkariaren URLa: {$contextUrl}<br />
-Artikuluaren URLa: {$submissionUrl}<br />
-Erabiltzaile-izena: {$participantUsername}<br />
-<br />
-Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Maketatzaileari bidaltzen dio galeraden azken zuzenketak egiten has daitekeela jakinarazteko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Proba-zuzenketa eginda (Maketatzaileak)</subject>
@@ -593,9 +565,7 @@ Esteka: {$url}<br />
 <br />
 Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
-Gure erabakia:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Gure erabakia:]]></body>
 		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -604,9 +574,7 @@ Gure erabakia:<br />
 <br />
 Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
-Gure erabakia:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Gure erabakia:]]></body>
 		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -615,9 +583,7 @@ Gure erabakia:<br />
 <br />
 Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
-Gure erabakia:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Gure erabakia:]]></body>
 		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -626,9 +592,7 @@ Gure erabakia:<br />
 <br />
 Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko erabakia.<br />
 <br />
-Gure erabakia:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Gure erabakia:]]></body>
 		<description>Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">

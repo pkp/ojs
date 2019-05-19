@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -158,8 +158,7 @@
 رابط الطلب: {$submissionUrl}<br />
 اسم الدخول: {$editorUsername}<br />
 <br />
-شكراً لك.<br />
-{$editorialContactSignature}]]></body>
+شكراً لك.]]></body>
 		<description>هذه الرسالة تبلغ أحد المحررين في قسم ما من المجلة بإحالة مهمة تحرير أحد طلبات التقديم المرسلة إلى ذلك القسم من المجلة إليه، وتقدم له رابط الشروع بالتحرير عبر موقع المجلة.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -348,9 +347,7 @@
 <br />
 حالياً، قررنا إلغاء إلتماسنا لكم بتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نعتذر عن أي إزعاج قد يسببه ذلك لحضرتكم، ونأمل التواصل معكم مستقبلاً فيما يتعلق بتحكيم طلبات النشر المرسلة إلى هذه المجلة العلمية.<br />
 <br />
-إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.<br />
-<br />
-{$editorialContactSignature}]]></body>
+إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.<br />]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بانتفاء الحاجة إلى تقييمه.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -375,9 +372,7 @@
 		<subject>إشعار تحكيم المؤلَّف</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-نشكر إكمالك لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. إننا نقدر لك مشاركتك في ترصين الأعمال التي تنشرها مجلتنا.<br />
-<br />
-{$editorialContactSignature}]]></body>
+نشكر إكمالك لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. إننا نقدر لك مشاركتك في ترصين الأعمال التي تنشرها مجلتنا.]]></body>
 		<description>هذه الرسالة يصدرها محرر القسم لتأكيد استلامه لتقييمات وملاحظات المحكم الكاملة، وليشكره على مساهمته في عملية التحكيم.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -442,10 +437,7 @@
 <br />
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-قرارنا هو: قبول طلب النشر<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+قرارنا هو: قبول طلب النشر]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بقبول هيئة التحرير لطلبه.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -456,10 +448,7 @@
 <br />
 قرارنا هو: إرسال طلبك إلى التحكيم<br />
 <br />
-رابط الطلب: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+رابط الطلب: {$submissionUrl}]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بقرار هيئة التحرير بأن طلبه قد أرسل إلى محكم خارجي.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -468,10 +457,7 @@
 <br />
 إن متعلقات تحرير مؤلَّفك الموسوم &quot;{$submissionTitle},&quot; قد اكتملت. نحن الآن نرسله إلى مرحلة الإنتاج.<br />
 <br />
-رابط الطلب: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+رابط الطلب: {$submissionUrl}]]></body>
 		<description>هذه الرسالة يعنونها مدير التحرير أو محرر القسم إلى المؤلف لإبلاغه بأن عمله قد تم إرساله إلى مرحلة الإنتاج.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -514,10 +500,7 @@
 		<subject>توصيات المحرر</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-إن التوصيات المتعلقة بطلب النشر في {$contextName}، &quot;{$submissionTitle}&quot; هي: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+إن التوصيات المتعلقة بطلب النشر في {$contextName}، &quot;{$submissionTitle}&quot; هي: {$recommendation}]]></body>
 		<description>هذه الرسالة يعنونها المحرر المشارك في تقديم التوصيات أو محرر القسم إلى جهة التحرير المعنية باتخاذ القرار لإشعارها بالتوصية النهائية الخاصة بطلب نشر مقدم إلى المجلة.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -532,9 +515,7 @@
 <br />
 رابط {$contextName}: {$contextUrl}<br />
 رابط الطلب: {$submissionUrl}<br />
-اسم الدخول: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+اسم الدخول: {$participantUsername}]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى مدقق القسم مطالباً إياه بالشروع في عملية معالجة نسخة المؤلَّف قيد المعالجة، وهي توفر له معلومات عن طلب النشر وكيفية الوصول إليه ضمن موقع المجلة.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -551,9 +532,7 @@
 رابط الطلب: {$submissionLayoutUrl}<br />
 اسم الدخول: {$participantUsername}<br />
 <br />
-لو تعذر عليك تولي هذه المهمة حالياً أو كان لديك أية أسئلة، لطفاً لا تترد في مراسلتي. نشكر لك مساهمتك في هذه المجلة.<br />
-<br />
-{$editorialContactSignature}]]></body>
+لو تعذر عليك تولي هذه المهمة حالياً أو كان لديك أية أسئلة، لطفاً لا تترد في مراسلتي. نشكر لك مساهمتك في هذه المجلة.]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى المصمم الطباعي معلماً إياه بتعيينه لمهمة التصميم الطباعي لمؤلَّفٍ معين، وهي توفر له رابط الوصول إلى الملف المعني في موقع المجلة.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">

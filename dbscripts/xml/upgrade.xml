@@ -3,8 +3,8 @@
 <!--
   * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
@@ -53,6 +53,10 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
 		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -227,12 +231,12 @@
 		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.1.2.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_navigation_menu_items_locale_change.xml" />
 		<code function="migrateSiteLocales" />
 		<code function="migrateSidebarBlocks" />
 		<code function="migrateSiteStylesheet" />

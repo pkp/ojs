@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/ArticleNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleNativeXmlFilter
@@ -69,7 +69,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 		}
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId());
+		$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId());
 		$publishedArticle ? $submissionNode->setAttribute('seq', $publishedArticle->getSequence()) : $submissionNode->setAttribute('seq', '0');
 		$publishedArticle ? $submissionNode->setAttribute('access_status', $publishedArticle->getAccessStatus()) : $submissionNode->setAttribute('access_status', '0');
 		// if this is a published article and not part/subelement of an issue element

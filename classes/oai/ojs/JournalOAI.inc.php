@@ -3,8 +3,8 @@
 /**
  * @file classes/oai/ojs/JournalOAI.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalOAI
@@ -39,8 +39,9 @@ class JournalOAI extends OAI {
 	function __construct($config) {
 		parent::__construct($config);
 
-		$this->site = Request::getSite();
-		$this->journal = Request::getJournal();
+		$request = Application::get()->getRequest();
+		$this->site = $request->getSite();
+		$this->journal = $request->getJournal();
 		$this->journalId = isset($this->journal) ? $this->journal->getId() : null;
 		$this->dao = DAORegistry::getDAO('OAIDAO');
 		$this->dao->setOAI($this);

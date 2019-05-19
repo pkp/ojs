@@ -4,8 +4,8 @@
 <!--
   * locale/fa_IR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -145,8 +145,7 @@
 آدرس مقاله: {$submissionUrl}<br />
 نام کاربری: {$editorUsername}<br />
 <br />
-متشکرم<br />
-{$editorialContactSignature}]]></body>
+متشکرم]]></body>
 		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -216,9 +215,7 @@
 <br />
 در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$contextName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.<br />
 <br />
-لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید.<br />
-<br />
-{$editorialContactSignature}]]></body>
+لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید.]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -244,9 +241,7 @@
 		<subject>قدردانی بخاطر بررسی مقاله</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-برای بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم.<br />
-<br />
-{$editorialContactSignature}]]></body>
+برای بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم.]]></body>
 		<description>This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
@@ -299,10 +294,7 @@
 <br />
 از شما درخواست می شود که امور ویراستاری مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.<br />
 <br />
-چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا سوالی در این زمینه دارید، لطفا با من تماس بگیرید. پیشاپیش از قبول انجام امور ویراستاری برای این مجله سپاسگزارم.<br />
-<br />
-<br />
-{$editorialContactSignature}]]></body>
+چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا سوالی در این زمینه دارید، لطفا با من تماس بگیرید. پیشاپیش از قبول انجام امور ویراستاری برای این مجله سپاسگزارم.]]></body>
 		<description>This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
@@ -352,9 +344,7 @@
 آدرس مقاله: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 نام کاربری: {$participantUsername}<br />
 <br />
-چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.<br />
-<br />
-{$editorialContactSignature}]]></body>
+چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.]]></body>
 		<description>This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -438,21 +428,6 @@
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>درخواست بررسی نهایی از صفحه آرا</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-از شما درخواست میگردد که براساس نتایج بررسی های نهایی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName}، اصلاحات لازم را ایجاد نمایید.<br />
-<br />
-آدرس مقاله: {$submissionUrl}<br />
-نام کاربری: {$participantUsername}<br />
-<br />
-چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا جهت طرح سوالات خود، با من تماس بگیرید.<br />
-<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>This email from the Section Editor to the Layout Editor notifies them that an article's galleys are ready for final proofreading. It provides information on the article and how to access it.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>اتمام بررسی نهایی (از طرف صفحه آرا)</subject>
@@ -681,9 +656,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 <br />
 در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
-تصمیم نهایی: پذیرش مقاله ارسالی<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+تصمیم نهایی: پذیرش مقاله ارسالی]]></body>
 		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از پذیرش مقاله</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -692,9 +665,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 <br />
 در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
-تصمیم : مقاله ارسالی نیاز به انجام اصلاحات دارد<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+تصمیم : مقاله ارسالی نیاز به انجام اصلاحات دارد]]></body>
 		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع ازنیازمندی مقاله به اعمال مجموعه ای از اصلاحات</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -703,9 +674,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 <br />
 در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
-تصمیم نهایی: ارسال دوباره برای داوری<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+تصمیم نهایی: ارسال دوباره برای داوری]]></body>
 		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال دوباره مقاله برای داوری</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -714,9 +683,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 <br />
 در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
-تصمیم نهایی: عدم پذیرش مقاله ارسالی<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+تصمیم نهایی: عدم پذیرش مقاله ارسالی]]></body>
 		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از عدم پدیرش پذیرش مقاله</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
@@ -826,9 +793,7 @@ Subscription Type:<br />
 <br />
 در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
-تصمیم نهایی: عدم پذیرش<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+تصمیم نهایی: عدم پذیرش]]></body>
 		<description>این پیام زمان یارسال می شود که دبیر مقاله ارسالی را در اغاز رد می کند، بدون انکه وارد مرحله داوری شود</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -839,9 +804,7 @@ Subscription Type:<br />
 <br />
 تصمیم : ارسال به داور خارجی<br />
 <br />
-مشاهده وضعیت مقاله ارسالی: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+مشاهده وضعیت مقاله ارسالی: {$submissionUrl}]]></body>
 		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال مقاله برای داوری توسط یک داور خارجی</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -850,18 +813,14 @@ Subscription Type:<br />
 <br />
  روند داوری مقاله ارسالی شما (&quot;{$submissionTitle}&quot;)  تکمیل شده و به واحد انتشار ارسال شده است.<br />
 <br />
-مشاهده وضعیت مقاله ارسالی: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+مشاهده وضعیت مقاله ارسالی: {$submissionUrl}]]></body>
 		<description>ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال مقاله برای چاپ</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>توصیه دبیر</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-توصیه اینجانب در مورد مقاله ارسالی (&quot;{$submissionTitle}&quot;) در {$contextName} ، {$recommendation} می باشد.<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+توصیه اینجانب در مورد مقاله ارسالی (&quot;{$submissionTitle}&quot;) در {$contextName} ، {$recommendation} می باشد.]]></body>
 		<description>ایمیلی از طرف دبیر یا دبیر بخش به دبیر نهایی تصمیم گیرنده برای اطلاع از توصیه برای مقاله ارسالی</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">

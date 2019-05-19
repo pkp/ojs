@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -158,8 +158,7 @@ Naskah, &quot;{$submissionTitle},&quot; di {$contextName} telah ditugaskan kepad
 URL Naskah: {$submissionUrl}<br />
 Nama pengguna: {$editorUsername}<br />
 <br />
-Terimakasih,<br />
-{$editorialContactSignature}]]></body>
+Terimakasih.]]></body>
 		<description>Email ini memberitahu Editor Bagian bahwa Editor telah memberikan tugas untuk mengawasi suatu naskah dalam menyelesaikan proses editorial. Email ini memberikan informasi mengenai naskah dan cara mengaksesnya di website jurnal.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -348,9 +347,7 @@ Panduan Review<br />
 <br />
 Kami memutuskan untuk membatalkan permohonan review kami kepada Anda untuk naskah, &quot;{$submissionTitle},&quot; di {$contextName}. Kami mohon maaf sebesar-besarnya untuk ketidaknyamanan ini dan kami harap di masa mendatang Anda dapat membantu proses review di jurnal ini.<br />
 <br />
-Jika ada pertanyaan, silakan hubungi kami.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Jika ada pertanyaan, silakan hubungi kami.]]></body>
 		<description>Email ini dikirimkan Editor Bagian kepada Reviewer yang sedang melakukan review untuk memberitahukan pembatalan review.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -375,9 +372,7 @@ Mohon maaf saat ini saya tidak dapat melakukan review terhadap naskah, &quot;{$s
 		<subject>Ucapan Terimakasih atas Review Artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Terimakasih telah menyelesaikan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami sangat menghargai kontribusi Anda terhadap kualitas karya yang kami publikasikan.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Terimakasih telah menyelesaikan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami sangat menghargai kontribusi Anda terhadap kualitas karya yang kami publikasikan.]]></body>
 		<description>Email ini dikirimkan Editor Bagian untuk mengkonfirmasi penerimaan review dan mengucapkan terimakasih atas kontribusinya.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -442,10 +437,7 @@ Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  K
 <br />
 Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Keputusan kami adalah: Naskah Diterima<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Keputusan kami adalah: Naskah Diterima]]></body>
 		<description>Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan keputusan final "Naskah Diterima".</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -456,10 +448,7 @@ Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}
 <br />
 Keputusan kami adalah: Dikirimkan ke Reviewer Eksternal<br />
 <br />
-URL Naskah: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL Naskah: {$submissionUrl}]]></body>
 		<description>Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan bahwa naskah dikirimkan ke reviewer eksternal.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -468,10 +457,7 @@ URL Naskah: {$submissionUrl}<br />
 <br />
 Proses editing naskah Anda, &quot;{$submissionTitle},&quot; telah selesai.  Kami sekarang mengirimkannya ke produksi.<br />
 <br />
-URL Naskah: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL Naskah: {$submissionUrl}]]></body>
 		<description>Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan bahwa naskah dikirim ke produksi.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -480,10 +466,7 @@ URL Naskah: {$submissionUrl}<br />
 <br />
 Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Keputusan kami adalah: Perlu Revisi<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Keputusan kami adalah: Perlu Revisi]]></body>
 		<description>Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan keputusan final "Perlu Revisi".</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -492,10 +475,7 @@ Keputusan kami adalah: Perlu Revisi<br />
 <br />
 Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Keputusan kami adalah: Kirim Ulang untuk Review<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Keputusan kami adalah: Kirim Ulang untuk Review]]></body>
 		<description>Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan bahwa Penulis perlu mengirim ulang naskahnya.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -504,10 +484,7 @@ Keputusan kami adalah: Kirim Ulang untuk Review<br />
 <br />
 Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Keputusan kami adalah: Naskah Ditolak<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Keputusan kami adalah: Naskah Ditolak]]></body>
 		<description>Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan keputusan final "Naskah Ditolak".</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -522,9 +499,7 @@ Kami meminta Anda melakukan copyediting terhadap &quot;{$submissionTitle}&quot; 
 <br />
 {$contextName} URL: {$contextUrl}<br />
 URL Naskah: {$submissionUrl}<br />
-Nama pengguna: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Nama pengguna: {$participantUsername}]]></body>
 		<description>Email ini dari Editor Bagian ke Copyeditor naskah agar memulai proses copyediting.  Email ini memuat informasi terkait penyerahan naskah dan bagaimana mengaksesnya.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -541,9 +516,7 @@ Naskah &quot;{$submissionTitle}&quot; di {$contextName} memerlukan pembuatan gal
 URL Naskah: {$submissionLayoutUrl}<br />
 Nama pengguna: {$participantUsername}<br />
 <br />
-Jika Anda tidak dapat melakukan tugas ini saat ini atau mempunyai pertanyaan, silakan hubungi kami.  Terimakasih atas kontribusi Anda ke jurnal ini.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Jika Anda tidak dapat melakukan tugas ini saat ini atau mempunyai pertanyaan, silakan hubungi kami.  Terimakasih atas kontribusi Anda ke jurnal ini.]]></body>
 		<description>Email dari Editor Bagian kepada Layout Editor memberitahukan bahwa mereka telah ditugaskan untuk melakukan layout editing terhadap suatu naskah.  Email ini memuat informasi terkait penyerahan naskah dan bagaimana mengaksesnya.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">

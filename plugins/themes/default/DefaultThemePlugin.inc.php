@@ -3,8 +3,8 @@
 /**
  * @file plugins/themes/default/DefaultThemePlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DefaultThemePlugin
@@ -74,6 +74,28 @@ class DefaultThemePlugin extends ThemePlugin {
 			'label' => __('plugins.themes.default.option.colour.label'),
 			'description' => __('plugins.themes.default.option.colour.description'),
 			'default' => '#1E6292',
+		]);
+
+		$this->addOption('showDescriptionInJournalIndex', 'FieldOptions', [
+			'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.label'),
+				'options' => [
+				[
+					'value' => true,
+					'label' => __('plugins.themes.default.option.showDescriptionInJournalIndex.option'),
+				],
+			],
+			'default' => false,
+		]);
+		$this->addOption('useHomepageImageAsHeader', 'FieldOptions', [
+			'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.label'),
+			'description' => __('plugins.themes.default.option.useHomepageImageAsHeader.description'),
+				'options' => [
+				[
+					'value' => true,
+					'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.option')
+				],
+			],
+			'default' => false,
 		]);
 
 		// Load primary stylesheet
@@ -168,6 +190,24 @@ class DefaultThemePlugin extends ThemePlugin {
 			$url,
 			array('baseUrl' => '')
 		);
+
+		// Get homepage image and use as header background if useAsHeader is true
+		$context = Application::get()->getRequest()->getContext();
+		if ($context && $this->getOption('useHomepageImageAsHeader')) {
+
+			$publicFileManager = new PublicFileManager();
+			$publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
+			
+			$homepageImage = $context->getLocalizedData('homepageImage');
+
+			$homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];
+
+			$this->addStyle(
+				'homepageImage',
+				'.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '"); }',
+				['inline' => true]
+			);
+		}
 
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
 		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';

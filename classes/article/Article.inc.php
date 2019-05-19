@@ -9,8 +9,8 @@
 /**
  * @file classes/article/Article.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Article
@@ -67,7 +67,7 @@ class Article extends Submission {
 
 				// Override based on context settings
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticle = $publishedArticleDao->getByArticleId($this->getId());
+				$publishedArticle = $publishedArticleDao->getBySubmissionId($this->getId());
 				if ($publishedArticle) {
 					switch($context->getData('copyrightYearBasis')) {
 						case 'submission':

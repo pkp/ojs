@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleDAO
@@ -48,7 +48,7 @@ class ArticleDAO extends SubmissionDAO {
 		$sql = 'SELECT s.*, ps.date_published,
 				' . $this->getFetchColumns() . '
 			FROM	submissions s
-				LEFT JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
+				LEFT JOIN published_submissions ps ON (s.submission_id = ps.submission_id) and (ps.published_submission_version = s.submission_version) and ps.is_current_submission_version = 1
 				' . $this->getFetchJoins() . ' ';
 
 		if (is_null($settingValue)) {
@@ -59,6 +59,7 @@ class ArticleDAO extends SubmissionDAO {
 			$sql .= 'INNER JOIN submission_settings sst ON s.submission_id = sst.submission_id
 				WHERE	sst.setting_name = ? AND sst.setting_value = ?';
 		}
+
 		if ($journalId) {
 			$params[] = (int) $journalId;
 			$sql .= ' AND s.context_id = ?';
@@ -74,8 +75,8 @@ class ArticleDAO extends SubmissionDAO {
 	 * @param $row array
 	 * @return Article
 	 */
-	function _fromRow($row) {
-		$article = parent::_fromRow($row);
+	function _fromRow($row, $submissionVersion = null) {
+		$article = parent::_fromRow($row, $submissionVersion);
 
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
@@ -85,6 +86,7 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setHideAuthor($row['hide_author']);
 
 		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
+
 		return $article;
 	}
 
@@ -104,9 +106,9 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO submissions
-				(locale, context_id, section_id, stage_id, language, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, pages, hide_author)
+				(locale, context_id, section_id, stage_id, language, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, pages, hide_author, submission_version)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -119,6 +121,7 @@ class ArticleDAO extends SubmissionDAO {
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
 				$article->getPages(),
 				(int) $article->getHideAuthor(),
+				(int) $article->getCurrentSubmissionVersion(),
 			)
 		);
 
@@ -154,7 +157,8 @@ class ArticleDAO extends SubmissionDAO {
 					status = ?,
 					submission_progress = ?,
 					pages = ?,
-					hide_author = ?
+					hide_author = ?,
+					submission_version = ?
 				WHERE submission_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
@@ -167,6 +171,7 @@ class ArticleDAO extends SubmissionDAO {
 				(int) $article->getSubmissionProgress(),
 				$article->getPages(),
 				(int) $article->getHideAuthor(),
+				(int) $article->getSubmissionVersion(),
 				(int) $article->getId()
 			)
 		);
@@ -208,10 +213,9 @@ class ArticleDAO extends SubmissionDAO {
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 		$citationDao->deleteBySubmissionId($submissionId);
 
-		import('classes.search.ArticleSearchIndex');
-		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->articleDeleted($submissionId);
-		$articleSearchIndex->articleChangesFinished();
+		$articleSearchIndex->submissionChangesFinished();
 
 		$this->flushCache();
 	}
@@ -385,6 +389,17 @@ class ArticleDAO extends SubmissionDAO {
 	 */
 	protected function getCompletionConditions($completed) {
 		return ' i.date_published IS ' . ($completed?'NOT ':'') . 'NULL ';
+	}
+
+	function newVersion($submissionId) {
+		parent::newVersion($submissionId);
+	}
+
+	function versioningRelatedEntityDaos() {
+		return array_merge(
+			parent::versioningRelatedEntityDaos(),
+			array('ArticleGalleyDAO')
+		);
 	}
 }
 

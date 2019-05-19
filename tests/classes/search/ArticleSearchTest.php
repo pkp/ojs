@@ -3,8 +3,8 @@
 /**
  * @file tests/classes/search/ArticleSearchTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchTest
@@ -58,7 +58,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$this->registerMockJournalDAO();
 		$this->registerMockSectionDAO();
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		if (is_null($request->getRouter())) {
 			$router = new PKPRouter();
 			$request->setRouter($router);
@@ -91,7 +91,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$keywords = array(null => 'test');
 		$articleSearch = new ArticleSearch();
 		$error = '';
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
 
 		// Test whether the result from the mocked DAOs is being returned.
@@ -134,7 +134,7 @@ class ArticleSearchTest extends PKPTestCase {
 		$testToDate = date('Y-m-d H:i:s', strtotime('2012-03-15 18:30:00'));
 		$error = '';
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		foreach($testCases as $testCase) {
 			// Test a simple search with the simulated callback.
@@ -275,15 +275,15 @@ class ArticleSearchTest extends PKPTestCase {
 	private function registerMockPublishedArticleDAO() {
 		// Mock a PublishedArticleDAO.
 		$publishedArticleDAO = $this->getMockBuilder(PublishedArticleDAO::class)
-			->setMethods(array('getByArticleId'))
+			->setMethods(array('getBySubmissionId'))
 			->getMock();
 
 		// Mock a published article.
 		$publishedArticle = new PublishedArticle();
 
-		// Mock the getByArticleId() method.
+		// Mock the getBySubmissionId() method.
 		$publishedArticleDAO->expects($this->any())
-		                    ->method('getByArticleId')
+		                    ->method('getBySubmissionId')
 		                    ->will($this->returnValue($publishedArticle));
 
 		// Register the mock DAO.

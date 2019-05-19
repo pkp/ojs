@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/search.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Display the page to search and view search results.
@@ -31,7 +31,9 @@
 			<label class="pkp_screen_reader" for="query">
 				{translate key="search.searchFor"}
 			</label>
-			<input type="text" id="query" name="query" value="{$query|escape}" class="query" placeholder="{translate|escape key="common.search"}">
+			{block name=searchQuery}
+				<input type="text" id="query" name="query" value="{$query|escape}" class="query" placeholder="{translate|escape key="common.search"}">
+			{/block}
 		</div>
 
 		<fieldset class="search_advanced">
@@ -56,14 +58,19 @@
 				<label class="label" for="authors">
 					{translate key="search.author"}
 				</label>
-				<input type="text" for="authors" name="authors" value="{$authors|escape}">
+				{block name=searchAuthors}
+					<input type="text" for="authors" name="authors" value="{$authors|escape}">
+				{/block}
 			</div>
+			{call_hook name="Templates::Search::SearchResults::AdditionalFilters"}
 		</fieldset>
 
 		<div class="submit">
 			<button class="submit" type="submit">{translate key="common.search"}</button>
 		</div>
 	</form>
+
+	{call_hook name="Templates::Search::SearchResults::PreResults"}
 
 	{* Search results, finally! *}
 	<div class="search_results">

@@ -3,8 +3,8 @@
 /**
  * @file tests/data/50-SectionsTest.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionsTest
@@ -45,9 +45,9 @@ class SectionsTest extends WebTestCase {
 		$this->click($selector);
 
 		// Add Section Editors (David Buskins and Stephanie Berardo)
-		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem") and contains(text(),"David Buskins")]');
 		$this->click($selector);
-		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"Stephanie Berardo")]');
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem") and contains(text(),"Stephanie Berardo")]');
 		$this->click($selector);
 
 		// Save changes
@@ -67,7 +67,7 @@ class SectionsTest extends WebTestCase {
 		$this->click('id=abstractsNotRequired');
 
 		// Add a Section Editor (Minoti Inoue)
-		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem__item") and contains(text(),"David Buskins")]');
+		$this->waitForElementPresent($selector='//*[contains(@class,"pkpListPanelItem") and contains(text(),"Minoti Inoue")]');
 		$this->click($selector);
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));

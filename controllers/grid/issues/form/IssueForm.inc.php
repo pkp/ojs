@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
@@ -32,6 +32,7 @@ class IssueForm extends Form {
 		parent::__construct('controllers/grid/issues/form/issueForm.tpl');
 
 		$form = $this;
+		$this->addCheck(new FormValidatorRegExp($this, 'volume', 'optional', 'editor.issues.volumeRequired', '/^[0-9]+$/i'));
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', function($showVolume) use ($form) {
 			return !$showVolume || $form->getData('volume') ? true : false;
 		}));
@@ -61,7 +62,7 @@ class IssueForm extends Form {
 	/**
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		if ($this->issue) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
@@ -91,7 +92,7 @@ class IssueForm extends Form {
 			);
 		}
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**

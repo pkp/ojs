@@ -8,8 +8,8 @@
 /**
  * @file classes/issue/Issue.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Issue
@@ -355,7 +355,7 @@ class Issue extends DataObject {
 	/**
 	 * Get issue cover image file name
 	 * @param $locale string
-	 * @return string
+	 * @return string|array
 	 */
 	function getCoverImage($locale) {
 		return $this->getData('coverImage', $locale);
@@ -363,7 +363,7 @@ class Issue extends DataObject {
 
 	/**
 	 * Set issue cover image file name
-	 * @param $coverImage string
+	 * @param $coverImage string|array
 	 * @param $locale string
 	 */
 	function setCoverImage($coverImage, $locale) {

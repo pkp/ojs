@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -131,8 +131,7 @@ u okviru raspodjele uredničkih zaduženja za časopis {$contextName} vama je do
 URL priloga: {$submissionUrl}<br />
 Korisničko ime: {$editorUsername}<br />
 <br />
-Unaprijed hvala,<br />
-{$editorialContactSignature}]]></body>
+Unaprijed hvala.]]></body>
 		<description>Ovim obrascem e-pošte glavni urednik obavještava urednika rubrike da mu je dodijeljen zadatak vođenja priloga kroz uređivački postupak. Obrazac pruža i osnovne informacije o prilogu.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -200,8 +199,7 @@ Upute za recenzente<br />
 <br />
 s obzirom na okolnosti, odlučili smo povući zamolbu da izvršite recenziju članka &quot;{$submissionTitle}&quot; za časopis {$contextName}. Nadamo se da ćemo vam se u budućnosti ponovno moći obratiti da vašom recenzijom pridonesete ovom časopisu.<br />
 <br />
-Srdačno,<br />
-{$editorialContactSignature}]]></body>
+Srdačno.]]></body>
 		<description>Ovim obrascem e-pošte urednik rubrike recenzenta obavještava o povlačenju zahtjeva za izradu recenzije za koju je prethodno recenzent bio zadužen ili koja je recenzentu bila ponuđena.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -230,8 +228,7 @@ Srdačno,<br />
 <br />
 hvala vam što ste izradili recenziju članka &quot;{$submissionTitle}&quot; za časopis {$contextName}. Cijenimo vaš doprinos kvaliteti radova objavljenih u našem časopisu.<br />
 <br />
-Srdačno,<br />
-{$editorialContactSignature}]]></body>
+Srdačno,]]></body>
 		<description>Ovim obrascem e-pošte  urednik rubrike potvrđuje recenzentu primitak završene recenzije.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -306,9 +303,7 @@ Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti lekturu ili da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />
 <br />
-Srdačno,<br />
-{$editorialContactSignature}<br />
-]]></body>
+Srdačno,]]></body>
 		<description>Ovim obrascem e-pošte urednik rubrike šalje lektoru zamolbu da započne s lekturom priloga. Poruka pruža osnovne informacije o prilogu i kako mu pristupiti.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -322,8 +317,7 @@ Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu obavezu ili ako imate bilo kakvih dodatnih pitanja, molim vas da mi se obratite.<br />
 <br />
-Srdačno,<br />
-{$editorialContactSignature}]]></body>
+Srdačno,]]></body>
 		<description>Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da mu je dodijeljen zadatak  izrade prijeloma priloga.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -418,21 +412,6 @@ zahvaljujem vam na korekturi prijeloma priloga &quot;{$submissionTitle}&quot; za
 Srdačno,<br />
 {$editorialContactSignature}]]></body>
 		<description>Ovim obrascem e-pošte urednik rubrike potvrđuje korektoru zaprimanje korekture.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Zamolba za unos korekture (grafički urednik)</subject>
-		<body><![CDATA[Poštovana/i {$participantName},<br />
-<br />
-molimo vas da izvršite potrebne ispravke u prijelomu priloga &quot;{$submissionTitle}&quot; za časopis {$contextName} u skladu s priloženim korekturama.<br />
-<br />
-URL priloga: {$submissionUrl}<br />
-Korisničko ime: {$participantUsername}<br />
-<br />
-U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite.<br />
-<br />
-Srdačno,<br />
-{$editorialContactSignature}]]></body>
-		<description>Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da su korekture inicijalnog prijeloma članka izrađene i spremne za unos. Poruka daje osnovne informacije o članku i kako mu pristupiti.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Napravljena korektura (grafički urednik)</subject>

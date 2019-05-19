@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearchDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchDAO
@@ -18,7 +18,6 @@ import('classes.search.ArticleSearch');
 import('lib.pkp.classes.search.SubmissionSearchDAO');
 
 class ArticleSearchDAO extends SubmissionSearchDAO {
-
 	/**
 	 * Retrieve the top results for a phrases with the given
 	 * limit (default 500 results).
@@ -81,6 +80,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				issues i,
 				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
+				ps.is_current_submission_version = 1 AND 
 				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
 				ps.submission_id = s.submission_id AND

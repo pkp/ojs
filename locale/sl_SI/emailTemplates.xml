@@ -4,8 +4,8 @@
 <!--
   * locale/sl_SI/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -190,8 +190,7 @@ Prispevek, &quot;{$submissionTitle},&quot; v reviji {$contextName} vam je bil do
 URL povezava prispevka: {$submissionUrl}<br />
 Uporabniško ime: {$editorUsername}<br />
 <br />
-Hvala,<br />
-{$editorialContactSignature}]]></body>
+Hvala.]]></body>
 		<description>Email je obvestilo urendiku rubrike, da je zadolžen za vodenje prispevka skozi urendiški postopek. Vsebuje informacije o prispevku in dostopu do spletne strani revije.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -378,9 +377,7 @@ Navodila za recenzijo<br />
 <br />
 Odločili smo se, da prekličemo našo prošnjo za vašo recenzijo prispevka, &quot;{$submissionTitle},&quot; za publikacjo {$contextName}. Opravičujemo se vam za vse nevšečnosti, ki vam jih to lahko povzroči in upamo, da se lahko še obrnemo na vas pri uredniškem procesu revije tudi v prihodnje.<br />
 <br />
-Če imate kakršnokoli vprašanje, se prosim obrnite name.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Če imate kakršnokoli vprašanje, se prosim obrnite name.]]></body>
 		<description>Ta email pošlje urednik rubrike recenzentu, ki je bil zaprošen za opravljanje recenzije, in ga obvesti, da je je bilo opravljanje recenzije preklicano.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -405,9 +402,7 @@ Pripravljen sem opraviti recenzijo prispevka, &quot;{$submissionTitle},&quot; za
 		<subject>Zahvala za recenzijo prispevka</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Hvala za dokončanje recenzije prispevka, &quot;{$submissionTitle},&quot; za revijo {$contextName}. Zahvaljujemo se za vaš prispevek k kvaliteti del, ki jih objavljamo.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Hvala za dokončanje recenzije prispevka, &quot;{$submissionTitle},&quot; za revijo {$contextName}. Zahvaljujemo se za vaš prispevek k kvaliteti del, ki jih objavljamo.]]></body>
 		<description>Ta email pošlje uredenik rubrike recenzentu kot potrditev opravljene recenzije in zahvala zanjo.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -472,10 +467,7 @@ Prosim, če potrdite vašo pripravljenost za dokončanje vašega pomembnega pris
 <br />
 Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />
 <br />
-Naša odločitev je: Prispevek sprejet<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Naša odločitev je: Prispevek sprejet]]></body>
 		<description>Ta eamil pošlje urednik avtorju s končno odločitvijo, da je prispevek sprejet uza objavo.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -486,10 +478,7 @@ Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; z
 <br />
 Naša odločitev je: Prispevek se pošlje v recenzijo<br />
 <br />
-URL povezava do prispevka: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL povezava do prispevka: {$submissionUrl}]]></body>
 		<description>Ta email pošlje urednik avtorju z obvestilom, da je šel prispevek v recenzijo.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -498,10 +487,7 @@ URL povezava do prispevka: {$submissionUrl}<br />
 <br />
 Urejanje vašega prispevka, &quot;{$submissionTitle},&quot; je končano. Prispevek bom poslali v produkcijo.<br />
 <br />
-URL povezava do prispevka: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+URL povezava do prispevka: {$submissionUrl}]]></body>
 		<description>Ta email pošlje urednik avtorju z obvestilom, da je šel prispevek v produkcijo.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -510,10 +496,7 @@ URL povezava do prispevka: {$submissionUrl}<br />
 <br />
 Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />
 <br />
-Naša odločitev je: Potrebni so popravki<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Naša odločitev je: Potrebni so popravki]]></body>
 		<description>Ta email pošlje urednik avtorju z obvestilom, da so potrebne določene spremembe prispevka.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -522,10 +505,7 @@ Naša odločitev je: Potrebni so popravki<br />
 <br />
 Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />
 <br />
-Naša odločitev je: Potreben je ponoven krog recenzije.<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Naša odločitev je: Potreben je ponoven krog recenzije.]]></body>
 		<description>Ta email pošlje urednik avtorju z obvestilom, da je potrebna ponovna recenzija prispevka.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -534,10 +514,7 @@ Naša odločitev je: Potreben je ponoven krog recenzije.<br />
 <br />
 Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />
 <br />
-Naša odločitev je: Prispevek se zavrne<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+Naša odločitev je: Prispevek se zavrne]]></body>
 		<description>Ta email pošlje urednik avtorju z obvestilom, da je objava prispevka zavrnjena.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -552,9 +529,7 @@ Rad bi vas prosil, da opravite lektoriranje prispevka &quot;{$submissionTitle}&q
 <br />
 Povezava do publikacije {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
 Povezava do prispevka: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Uporabniško ime: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Uporabniško ime: {$participantUsername}]]></body>
 		<description>Ta email pošlje urednik rubrike lektorju prispevka s prošnjo za lektoriranje. Vsebuje kratka navodila za lektoranje in dostop do prispevka.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -571,9 +546,7 @@ Povezava do publikacije{$contextName}: <a href="{$contextUrl}">{$contextUrl}</a>
 Povezava do prispevka: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
 Uporabniško ime: {$participantUsername}<br />
 <br />
-Če v tem trenutku ne morete opraviti tega dela ali imate kakšno vprašanje, se prosim obrnite name. Hvala za vaš trud za to publikacijo.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Če v tem trenutku ne morete opraviti tega dela ali imate kakšno vprašanje, se prosim obrnite name. Hvala za vaš trud za to publikacijo.]]></body>
 		<description>Ta email pošlje urednik rubrike grafičnemu uredniku prispevka s prošnjo za pripravo preloma prispevka. Vsebuje kratka navodila za prirpavo preloma in dostop do prispevka.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -864,18 +837,14 @@ URL povezava prispevka: {$submissionUrl}<br />
 <br />
 V uredništvu revije {$contextName} smo sprejeli odločitev glede vašega prispevka &quot;{$submissionTitle}&quot;.<br />
 <br />
-Naša odločitev je: Prispevek se zavrne<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Naša odločitev je: Prispevek se zavrne]]></body>
 		<description>Email se pošlje avtorju, če se urednik odloči zavrniti prispevek še pred postopkom recenzije.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Uredniško priporočilo</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-Moje priporočilo glede prispevka &quot;{$submissionTitle}&quot; v reviji {$contextName}, je: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Moje priporočilo glede prispevka &quot;{$submissionTitle}&quot; v reviji {$contextName}, je: {$recommendation}]]></body>
 		<description>Email pošlje urednik (rubrike), ki lahko odda le priporočilo, in z njim obvesti uredništvo o svojem priporočilu glede prispevka</description>
 	</email_text>
 </email_texts>

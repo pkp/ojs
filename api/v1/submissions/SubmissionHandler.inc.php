@@ -3,8 +3,8 @@
 /**
  * @file api/v1/submission/SubmissionHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionHandler
@@ -317,7 +317,7 @@ class SubmissionHandler extends APIHandler {
 			}
 		}
 
-		$returnParams['contextId'] = $context->getId();
+		$returnParams['contextId'] = $request->getContext()->getId();
 
 		\HookRegistry::call('API::submissions::params', array(&$returnParams, $slimRequest));
 

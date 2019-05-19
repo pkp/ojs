@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localized email templates XML file.
@@ -218,8 +218,7 @@ A submissão &quot;{$submissionTitle}&quot; a {$contextName} foi-lhe designada p
 URL da Submissão: {$submissionUrl}<br />
 Nome de utilizador: {$editorUsername}<br />
 <br />
-Agradecendo desde já a sua atenção,<br />
-{$editorialContactSignature}]]></body>
+Agradecendo desde já a sua atenção.]]></body>
 		<description>Mensagem notifica o Editor de Secção que uma nova tarefa de acompanhamento de submissão lhe foi designada pelo Director. Fornece informações sobre a submissão e como aceder ao sistema.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -300,9 +299,7 @@ Foi cancelado o pedido de revisão da submissão &quot;{$submissionTitle}&quot; 
 <br />
 Lamentamos qualquer inconveniente causado e esperamos poder contar com a sua colaboração numa oportunidade futura.<br />
 <br />
-Em caso de dúvidas, entre em contacto através deste email.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Em caso de dúvidas, entre em contacto através deste email.]]></body>
 		<description>Mensagem enviada pelo Editor de Secção com um processo de revisão em andamento, notificando que o processo em questão foi cancelado.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -329,9 +326,7 @@ Lamento informar que não estou disponível no momento para realizar a revisão 
 <br />
 Agradecemos ter concluído a revisão da submissão &quot;{$submissionTitle}&quot; à revista {$contextName}.<br />
 <br />
-A sua contribuição é fundamental para a qualidade dos trabalhos publicados.<br />
-<br />
-{$editorialContactSignature}]]></body>
+A sua contribuição é fundamental para a qualidade dos trabalhos publicados.]]></body>
 		<description>Mensagem enviada pelo Editor de Secção ao Revisor para confirmar recebimento e agradecer o revisor pela conclusão da revisão.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -427,9 +422,7 @@ Nome de utilizador: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
-Agradecemos desde já a sua colaboração, fundamental para a qualidade da revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Agradecemos desde já a sua colaboração, fundamental para a qualidade da revista.]]></body>
 		<description>Mensagem enviada pelo Editor de Secção solicitando a realização de uma tarefa de edição ao Editor de Texto, com informações sobre e como aceder ao documento.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
@@ -562,9 +555,7 @@ Nome de utilizador: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
 <br />
-Agradecemos desde já a sua colaboração, fundamental para a qualidade da revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Agradecemos desde já a sua colaboração, fundamental para a qualidade da revista.]]></body>
 		<description>Mensagem enviada pelo Editor de Secção ao Editor de Layout, solicitando que sejam preparadas as Composições do texto final, com informações de acesso.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -678,28 +669,6 @@ A sua contribuição é fundamental para a qualidade desta publicação.<br />
 {$editorialContactSignature}]]></body>
 		<description>Mensagem enviada pelo Editor de Secção ao Leitor de Provas, agradecendo pelo trabalho concluído de Leitura de Provas.</description>
 	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Pedido de leitura de provas pelo Editor de Layout</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-O autor e o Leitor de Provas concluíram a leitura de provas do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, as correcções devem agora ser incorporadas conforme as instruções a seguir:<br />
-<br />
-1. Clique no URL da submissão, indicada mais adiante nesta mensagem.<br />
-2. Aceda ao sistema da revista e consulte as Correcções da Prova para a produção das composições actualizadas.<br />
-3. Envie as composições corrigidas.<br />
-4. Envie o email CONCLUÍDO no Passo 3 da secção Leitura de Provas ao editor.<br />
-<br />
-URL da revista {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL da Submissão: {$submissionUrl}<br />
-Nome de utilizador: {$participantUsername}<br />
-<br />
-Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
-<br />
-Agradecemos desde já a sua colaboração, fundamental para a qualidade da revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao Editor de Layout, solicitando que verifique os comentários e realize as alterações solicitadas após a Leitura de Provas. Possui informações sobre acesso ao sistema e ao documento</description>
-	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Leitura de provas concluída pelo Editor de Layout</subject>
 		<body><![CDATA[{$editorialContactName},<br />
@@ -775,9 +744,7 @@ Link: {$url}<br />
 Foi tomada uma decisão sobre o artigo submetido à revista {$contextName},<br />
 &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é: INSERIR DECISÃO EDITORIAL<br />
-<br />
-{$editorialContactSignature}]]></body>
+A decisão é: INSERIR DECISÃO EDITORIAL]]></body>
 		<description>Esta é uma mensagem do Editor/Editor de Secção ao autor para notificá-lo da decisão editorial (final) tomada sobre a submissão.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -786,9 +753,7 @@ A decisão é: INSERIR DECISÃO EDITORIAL<br />
 <br />
 Foi tomada uma decisão sobre o artigo submetido à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é: REVISÕES REQUERIDAS<br />
-<br />
-{$editorialContactSignature}]]></body>
+A decisão é: REVISÕES REQUERIDAS]]></body>
 		<description>Esta mensagem é enviada pelo do Editor/Editor de Secção ao autor, notificando-o da decisão final tomada sobre a submissão.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -797,9 +762,7 @@ A decisão é: REVISÕES REQUERIDAS<br />
 <br />
 Foi tomada uma decisão sobre o artigo enviado à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é: SUBMETER NOVAMENTE PARA REVISÕES<br />
-<br />
-{$editorialContactSignature}]]></body>
+A decisão é: SUBMETER NOVAMENTE PARA REVISÕES]]></body>
 		<description>Esta mensagem do Editor/Editor de Secção ao autor notifica sobre a decisão editorial final tomada sobre a submissão.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -808,9 +771,7 @@ A decisão é: SUBMETER NOVAMENTE PARA REVISÕES<br />
 <br />
 Foi tomada uma decisão sobre o artigo submetido à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-A decisão é: REJEITAR<br />
-<br />
-{$editorialContactSignature}]]></body>
+A decisão é: REJEITAR]]></body>
 		<description>Esta mensagem do Editor/Editor de Secção ao autor notifica sobre a decisão final tomada sobre a submissão.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
@@ -927,9 +888,7 @@ Foi tomada uma decisão sobre o artigo submetido a {$contextName}, &quot;{$submi
 <br />
 A decisão é: Enviar para Revisão<br />
 <br />
-URL da submissão: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+URL da submissão: {$submissionUrl}]]></body>
 		<description>Este email do Editor ou Editor de Secção para o Autor serve para notificar que a submissão foi enviada para uma revisão externa.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -938,9 +897,7 @@ URL da submissão: {$submissionUrl}<br />
 <br />
 A edição da sua submissão, &quot;{$submissionTitle},&quot; está concluída.  O artigo foi enviado para a produção.<br />
 <br />
-URL da submissão : {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+URL da submissão : {$submissionUrl}]]></body>
 		<description>Este e-mail do Editor ou Editor de Secção para o Autor notifica-o que a sua submissão foi enviada para produção.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
@@ -1092,18 +1049,14 @@ Se tiver questões, por favor contacte-me. Obrigado por considerar esta revisão
 <br />
 Em relação à sua submissão à revista {$contextName}, &quot;{$submissionTitle}&quot; foi tomada uma decisão.<br />
 <br />
-A decisão é: Rejeitar a Submissão<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+A decisão é: Rejeitar a Submissão]]></body>
 		<description>Ete e-mail é enviado ao autor se o editor decidir rejeitar a submissão à priori, antes do processo de revisão.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Recomenda;ção Editorial</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-A recomendação relativamente à submissão para  {$contextName}, &quot;{$submissionTitle}&quot; é: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+A recomendação relativamente à submissão para  {$contextName}, &quot;{$submissionTitle}&quot; é: {$recommendation}]]></body>
 		<description>Este e-mail é enviado pelo Editor de Secção ou Editor Acessor para o Editor de Secção ou Editor Priincipal, a notificar da recomendação final relativa à submissão.</description>
 	</email_text>
 </email_texts>

@@ -3,8 +3,8 @@
 /**
  * @file classes/issue/IssueDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueDAO
@@ -122,7 +122,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			FROM	issues i ';
 		if (is_null($settingValue)) {
 			$sql .= 'LEFT JOIN issue_settings ist ON i.issue_id = ist.issue_id AND ist.setting_name = ?
-				WHERE	(ist.setting_value IS NULL OR ist.setting_value = "")';
+				WHERE	(ist.setting_value IS NULL OR ist.setting_value = \'\')';
 		} else {
 			$params[] = (string) $settingValue;
 			$sql .= 'INNER JOIN issue_settings ist ON i.issue_id = ist.issue_id
@@ -158,7 +158,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		if ($volume !== null) {
 			$sql .= ' AND i.volume = ?';
-			$params[] = $volume;
+			$params[] = (int) $volume;
 		}
 		if ($number !== null) {
 			$sql .= ' AND i.number = ?';
@@ -361,7 +361,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
-				$issue->getVolume(),
+				$this->nullOrInt($issue->getVolume()),
 				$issue->getNumber(),
 				$issue->getYear(),
 				(int) $issue->getPublished(),
@@ -403,7 +403,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function issueExists($journalId, $volume, $number, $year, $issueId) {
 		$result = $this->retrieve(
 			'SELECT i.* FROM issues i WHERE journal_id = ? AND volume = ? AND number = ? AND year = ? AND issue_id <> ?',
-			array((int) $journalId, $volume, $number, $year, (int) $issueId)
+			array((int) $journalId, $this->nullOrInt($volume), $number, $year, (int) $issueId)
 		);
 		$returner = $result->RecordCount() != 0 ? true : false;
 		$result->Close();
@@ -438,7 +438,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				(int) $issue->getJournalId(),
-				$issue->getVolume(),
+				$this->nullOrInt($issue->getVolume()),
 				$issue->getNumber(),
 				$issue->getYear(),
 				(int) $issue->getPublished(),
@@ -545,7 +545,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			FROM	issues i,
 				published_submissions pa,
 				submissions a
-			WHERE	i.issue_id = pa.issue_id AND
+			WHERE	i.issue_id = pa.issue_id AND pa.is_current_submission_version = 1 AND
 				pa.submission_id = ? AND
 				pa.submission_id = a.submission_id AND
 				a.context_id = i.journal_id' .
@@ -657,7 +657,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return int
 	 */
 	function getNumArticles($issueId) {
-		$result = $this->retrieve('SELECT COUNT(*) FROM published_submissions WHERE issue_id = ?', (int) $issueId);
+		$result = $this->retrieve('SELECT COUNT(*) FROM published_submissions WHERE is_current_submission_version = 1 AND issue_id = ?', (int) $issueId);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 		$result->Close();
 		return $returner;
