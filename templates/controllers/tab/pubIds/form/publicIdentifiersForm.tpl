@@ -6,7 +6,6 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  *}
-{help file="issue-management" section="edit-issue-identifiers" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -37,6 +36,9 @@
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueIdentifiersFormFieldsNotification"}
 {/if}
 {csrf}
+
+{* Help Link *}
+{help file="issue-management" section="edit-issue-identifiers" class="pkp_help_tab"}
 
 {*include file="common/formErrors.tpl"*}
 {fbvFormSection}
