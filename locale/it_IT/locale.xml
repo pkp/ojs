@@ -895,8 +895,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="log.author.documentRevised">{$authorName} ha modificato l'articolo {$submissionId}. Il nuovo ID è {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">A {$reviewerName} è stato tolto l'incarico di revisore della proposta {$submissionId} per il {$round} ciclo di revisione.</message>
 	<message key="log.review.reviewInitiated">È iniziato il {$round} ciclo di revisione per la proposta {$submissionId} assegnata a {$reviewerName}.</message>
-	<message key="log.review.reviewReinitiated">Il {$round} ciclo di revisione, assegnato a {$reviewerName} per la proposta {$submissionId} è riniziato.</message>
-	<message key="log.review.reviewCleared">Il ciclo di review nr. {$round} assegnato a {$reviewerName} per la proposta {$submissionId} è stato portato a termine.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} è stato preso in considerazione per il ciclo di review nr. {$round} della proposta {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">La data di scadenza per il ciclo di review nr. {$round} della proposta {$submissionId} assegnata a {$reviewerName} è il {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">È disponibile il parere per il {$round} ciclo di revisione della proposta {$submissionId} assegnata a {$reviewerName}.</message>

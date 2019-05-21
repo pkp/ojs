@@ -19,18 +19,16 @@ class ArticleGalleyGridRow extends GridRow {
 	/** @var Submission **/
 	var $_submission;
 
-	/** @var array */
-	var $_userRoles;
+	/** @var boolean */
 	var $_isEditable;
 
 	/**
 	 * Constructor
 	 * @param $submission Submission
-	 * @param $userRoles array
+	 * @param $isEditable boolean
 	 */
 	function __construct($submission, $isEditable) {
 		$this->_submission = $submission;
-		$this->_userRoles = $userRoles;
 		$this->_isEditable = $isEditable;
 
 		parent::__construct();

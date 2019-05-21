@@ -937,8 +937,6 @@
 	<message key="log.author.documentRevised">Автор {$authorName} исправил статью {$submissionId}. Новый ID файла — {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Рецензент {$reviewerName} был освобожден от рецензирования материала {$submissionId} на {$round}-м раунде рецензирования.</message>
 	<message key="log.review.reviewInitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для материала {$submissionId} был начат.</message>
-	<message key="log.review.reviewReinitiated">{$round}-й раунд рецензирования рецензентом {$reviewerName} для материала {$submissionId} был начат заново.</message>
-	<message key="log.review.reviewCleared">{$round}-й раунд рецензирования рецензентом {$reviewerName} для материала {$submissionId} был очищен.</message>
 	<message key="log.review.reviewerRated">Рецензенту {$reviewerName} был присвоен рейтинг на {$round}-м раунде рецензирования материала {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Срок выполнения рецензии в рамках {$round}-го раунда рецензирования материала {$submissionId} рецензентом {$reviewerName} был установлен равным {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Рекомендация на {$round}-м раунде рецензирования материала {$submissionId} рецензентом {$reviewerName} была задана.</message>

@@ -678,8 +678,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkel {$submissionId}. Den nye filens ID er {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra vurdering av manuskriptet {$submissionId} for vurderingsrunde {$round}.</message>
 	<message key="log.review.reviewInitiated">Vurderingsrunde {$round} av manuskriptet {$submissionId} ved {$reviewerName} er igangsatt.</message>
- 	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er igangsatt på nytt.</message>
- 	<message key="log.review.reviewCleared">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er fjernet.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$submissionId} ved {$reviewerName} er satt til {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} ved {$reviewerName} er satt.</message>

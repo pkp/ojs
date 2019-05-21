@@ -925,8 +925,6 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="log.author.documentRevised">{$authorName} heeft artikel {$submissionId} herzien. Het nieuwe bestands-ID is {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$submissionId} voor reviewronde {$round}.</message>
 	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gestart.</message>
-	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is opnieuw gestart.</message>
-	<message key="log.review.reviewCleared">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gewist.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">De uiterste reviewdatum voor ronde {$round} van inzending {$submissionId} door {$reviewerName} is ingesteld op {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">De aanbeveling voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} is vastgelegd.</message>

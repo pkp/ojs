@@ -939,8 +939,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$submissionId}. Die neue Datei-ID ist {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Der Beitrag {$submissionId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
 	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} hat begonnen.</message>
-	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde erneut begonnen.</message>
-	<message key="log.review.reviewCleared">Die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} durch {$reviewerName} wurde gelöscht.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} wurde beurteilt für Durchgang {$round} der Begutachtung von Beitrag {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Abgabetermin für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} festgesetzt auf {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde abgegeben.</message>

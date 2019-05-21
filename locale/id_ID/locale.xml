@@ -928,8 +928,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 	<message key="log.author.documentRevised">{$authorName} telah merevisi naskah {$submissionId}. ID file baru adalah {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} telah dibebastugaskan dari review naskah {$submissionId} untuk ronde review {$round}.</message>
 	<message key="log.review.reviewInitiated">Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah dimulai.</message>
-	<message key="log.review.reviewReinitiated">Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah dimulai ulang.</message>
-	<message key="log.review.reviewCleared">Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah selesai.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} telah dinilai untuk ronde {$round} review naskah {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Tenggat waktu untuk ronde {$round} review naskah {$submissionId} oleh {$reviewerName} adalah tanggal {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Rekomendasi untuk ronde {$round} review naskah {$submissionId} oleh {$reviewerName} telah ditetapkan.</message>

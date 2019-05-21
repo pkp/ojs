@@ -986,8 +986,6 @@
 	<message key="log.author.documentRevised">{$authorName} виправив статтю {$submissionId}. Новий ID файла {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} був звільнений від рецензування подання {$submissionId} на {$round} раунді.</message>
 	<message key="log.review.reviewInitiated">Був розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-	<message key="log.review.reviewReinitiated">Був повторно розпочатий {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
-	<message key="log.review.reviewCleared">Були скасовані дані про {$round} раунд рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} був оцінений за {$round} раунд рецензування подання {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Дата кінцевого терміну {$round} раунду рецензування подання {$submissionId} фахівцем {$reviewerName} була призначена на {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Була визначена рекомендація {$round} раунду рецензування подання {$submissionId} фахівцем {$reviewerName}.</message>

@@ -89,15 +89,13 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	/**
 	 * Internal function to return a ReviewerSubmission object from a row.
 	 * @param $row array
+	 * @param $submissionVersion
 	 * @return ReviewerSubmission
 	 */
-	function _fromRow($row) {
+	function _fromRow($row, $submissionVersion = null) {
 		// Get the ReviewerSubmission object, populated with submission data
-		$reviewerSubmission = parent::_fromRow($row);
+		$reviewerSubmission = parent::_fromRow($row, $submissionVersion);
 		$reviewer = $this->userDao->getById($row['reviewer_id']);
-
-		// Comments
-		$reviewerSubmission->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 
 		// Editor Decisions
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
@@ -118,6 +116,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$reviewerSubmission->setDateDue($this->datetimeFromDB($row['date_due']));
 		$reviewerSubmission->setDateResponseDue($this->datetimeFromDB($row['date_response_due']));
 		$reviewerSubmission->setDeclined($row['declined']);
+		$reviewerSubmission->setCancelled($row['cancelled']);
 		$reviewerSubmission->setQuality($row['quality']);
 		$reviewerSubmission->setRound($row['round']);
 		$reviewerSubmission->setStep($row['step']);
@@ -144,6 +143,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 					competing_interests = ?,
 					recommendation = ?,
 					declined = ?,
+					cancelled = ?,
 					date_assigned = %s,
 					date_notified = %s,
 					date_confirmed = %s,
@@ -170,6 +170,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				$reviewerSubmission->getCompetingInterests(),
 				(int) $reviewerSubmission->getRecommendation(),
 				(int) $reviewerSubmission->getDeclined(),
+				(int) $reviewerSubmission->getCancelled(),
 				$reviewerSubmission->getQuality(),
 				(int) $reviewerSubmission->getReviewId()
 			)

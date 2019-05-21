@@ -821,8 +821,6 @@ Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>
 artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$submissionId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} {$submissionId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$submissionId} artikulua {$round}. bueltan ebaluatzen.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-buelta ezabatu egin da.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} {$submissionId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da.</message>
 	<message key="log.review.reviewDueDateSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltaren mugaeguna {$dueDate} izango da.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltako gomendioa ezarri da.</message>

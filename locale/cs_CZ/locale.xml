@@ -894,8 +894,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$submissionId}. Nové ID souboru je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$submissionId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zahájeno.</message>
-	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo znovu zahájeno.</message>
-	<message key="log.review.reviewCleared">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo vyčíštěno.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} byl ohodnocen pro recenzní kolo {$round} příspěvku {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Termín splnění recenzního kola {$round} příspěvku {$submissionId} recenzenta {$reviewerName} byl nastaven na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} od recenzenta {$reviewerName} bylo stanoveno.</message>

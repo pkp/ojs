@@ -566,8 +566,6 @@ O servidor actualmente tem suporte a mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} reviu o artigo {$submissionId}. O novo ID é {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewInitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada.</message>
-	<message key="log.review.reviewReinitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada novamente.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} foi liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} recebeu classificação para a ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Foi definido para {$dueDate} o prazo para conclusão da ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} definiu a recomendação para a ronda {$round} de revisão da submissão {$submissionId}.</message>

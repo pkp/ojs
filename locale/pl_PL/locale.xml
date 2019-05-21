@@ -776,9 +776,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="log.author.documentRevised">{$authorName} zrewidował(a) tekst {$submissionId}. Nowy identyfikator pliku to {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} został(a) odłączony(a) od recenzji tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} ponownie rozpoczął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewCancelled">{$reviewerName} anulował(a) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} usunął(ęła) recenzję tekstu {$submissionId} w {$round} rundzie.</message>
 	<message key="log.review.reviewerRated">Recenzent {$reviewerName} został(a) oceniony(a) po wykonaniu recenzji tekstu {$submissionId} po {$round} rundzie.</message>
 	<message key="log.review.reviewDueDateSet">Termin ukończenia recenzji tekstu {$submissionId} w {$round} rundzie dla recenzenta {$reviewerName} został ustalony na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Recenzent {$reviewerName} wskazał(a) rekomendacje w {$round} rundzie recenzji tekstu {$submissionId}.</message>

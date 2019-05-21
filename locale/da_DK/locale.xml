@@ -676,8 +676,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} har revideret artikel {$submissionId}. Det nye fil-id er {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Tildelingen af {$reviewerName} til bedømmelse af manuskriptet {$submissionId} for bedømmelsesrunde {$round} er fjernet.</message>
 	<message key="log.review.reviewInitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er startet.</message>
-	<message key="log.review.reviewReinitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er startet igen.</message>
-	<message key="log.review.reviewCleared">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er ryddet.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} er blevet klassificeret til rundebedømmelsen {$round} af manuskriptet {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Forfaldsdatoen for rundebedømmelsen {$round} af manuskriptet {$submissionId} af {$reviewerName} er angivet til {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Anbefalingen for rundebedømmelsen {$round} af manuskriptet {$submissionId} af {$reviewerName} er angivet.</message>

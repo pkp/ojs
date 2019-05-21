@@ -560,9 +560,7 @@ Aктивирани OAI протокол може бити искључен на
 	<message key="log.author.documentRevised">{$authorName} је ревидирао свој прилог {$submissionId}. ID новог фајла је {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} је повучен(а) из рецензентског поступка прилога {$submissionId} у {$round}. кругу рецензије.</message>
 	<message key="log.review.reviewInitiated">Рецензент {$reviewerName} је покренуо  {$round}. круг рецензије прилога {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">{$round}. круг рецензије рецензента {$reviewerName} за прилог {$submissionId} је изнова покренут.</message>
 	<message key="log.review.reviewCancelled">Рецензија {$round}. круга рецензента {$reviewerName} за прилог {$submissionId} је поништена.</message>
-	<message key="log.review.reviewCleared">Рецензија {$round}. круга рецензента {$reviewerName} за прилог {$submissionId} је обрисана.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} је оцењен за {$round}. круг рецензије прилога {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Крајњи рок за {$round}. круг рецензије за прилог {$submissionId} за рецензента {$reviewerName} је промењен на {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Рецензент {$reviewerName} је поставио препоруку за {$round}. круг рецензије прилога {$submissionId}.</message>
