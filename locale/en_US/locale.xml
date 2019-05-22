@@ -73,6 +73,8 @@
 	<message key="navigation.competingInterestGuidelines">Competing Interest Guidelines</message>
 	<message key="navigation.infoForAuthors.long">Information For Authors</message>
 	<message key="navigation.infoForLibrarians.long">Information For Librarians</message>
+	<message key="navigation.skip.about">Skip to about the journal</message>
+	<message key="navigation.skip.issue">Skip to the current issue</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Unassigned</message>
