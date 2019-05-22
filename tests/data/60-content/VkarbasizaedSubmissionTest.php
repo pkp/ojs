@@ -56,6 +56,10 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->click('//button[text()=\'Save\']');
 		$this->uploadWizardFile('PDF');
 
+		// Publish in current issue
+		$this->publish('Vol 1 No 1 (2014)');
+		$this->isInCurrentIssue($title);
+
 		$this->logOut();
 	}
 }

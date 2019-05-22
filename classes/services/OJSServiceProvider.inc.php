@@ -20,6 +20,7 @@ use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
 use \PKP\Services\PKPSiteService;
+use \APP\Services\StatsService;
 use \APP\Services\UserService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
@@ -83,6 +84,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// Schema service
 		$pimple['schema'] = function() {
 			return new PKPSchemaService();
+		};
+
+		// Publication statistics service
+		$pimple['stats'] = function() {
+			return new StatsService();
 		};
 	}
 }

@@ -109,6 +109,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Article</message>
 	<message key="article.articles">Articles</message>
+	<message key="common.publication">Article</message>
+	<message key="common.publications">Articles</message>
 	<message key="article.submissionId">Id. de la tramesa</message>
 	<message key="article.title">Títol</message>
 	<message key="article.authors">Autors/ores</message>

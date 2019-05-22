@@ -108,6 +108,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Άρθρο</message>
 	<message key="article.articles">Άρθρα</message>
+	<message key="common.publication">Άρθρο</message>
+	<message key="common.publications">Άρθρα</message>
 	<message key="article.submissionId">Αναγνωριστικό υποβολής</message>
 	<message key="article.title">Τίτλος</message>
 	<message key="article.authors">Συγγραφείς</message>

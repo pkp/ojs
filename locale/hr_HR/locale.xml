@@ -85,7 +85,11 @@
 	<message key="section.abbreviation">Kratica</message>
 	<message key="section.abbreviation.example">(Npr. Članci=ČLA)</message>
 
-	<!-- Common Article Terms --><message key="article.articles">Članci</message>
+	<!-- Common Article Terms -->
+	<message key="article.article">Članak</message>
+	<message key="article.articles">Članci</message>
+	<message key="common.publication">Članak</message>
+	<message key="common.publications">Članci</message>
 	<message key="article.submissionId">Identifikator prijavljenog</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Autor(i)</message>
@@ -787,7 +791,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="journal.issn">ISSN</message>
 	<message key="navigation.categories">Kategorije</message>
 	<message key="navigation.categories.browse">Pregledaj</message>
-	<message key="article.article">Članak</message>
 	<message key="user.profile.profileImage">Slika profila</message>
 	<message key="user.manageMySubscriptions">Upravljanje mojim pretplatama</message>
 	<message key="issue.fullIssue">Kompletno izdanje</message>

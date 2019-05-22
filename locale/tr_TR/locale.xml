@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Makale</message>
 	<message key="article.articles">Makaleler</message>
+	<message key="common.publication">Makale</message>
+	<message key="common.publications">Makaleler</message>
 	<message key="article.submissionId">Gönderi ID'si</message>
 	<message key="article.title">Başlık</message>
 	<message key="article.authors">Yazarlar</message>

@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artiklar</message>
+	<message key="common.publication">Artikel</message>
+	<message key="common.publications">Artiklar</message>
 	<message key="article.submissionId">Bidragets ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Författare</message>

@@ -32,6 +32,8 @@ define('CONTEXT_JOURNAL', 1);
 define('LANGUAGE_PACK_DESCRIPTOR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/locales.xml');
 define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');
 
+define('METRIC_TYPE_COUNTER', 'ojs::counter');
+
 class Application extends PKPApplication {
 	/**
 	 * Get the "context depth" of this application, i.e. the number of

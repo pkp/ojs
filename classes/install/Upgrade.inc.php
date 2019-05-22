@@ -713,7 +713,7 @@ class Upgrade extends Installer {
 		// Set the site default metric type.
 		$siteDao = DAORegistry::getDAO('SiteDAO');
 		$site = $siteDao->getSite();
-		$site->setData('defaultMetricType', OJS_METRIC_TYPE_COUNTER);
+		$site->setData('defaultMetricType', METRIC_TYPE_COUNTER);
 		$siteDao->updateObject($site);
 
 		return true;

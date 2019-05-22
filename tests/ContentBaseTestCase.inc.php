@@ -53,4 +53,25 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		$this->click($selector);
 		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 	}
+
+	/**
+	 * Schedule for publication in an issue
+	 */
+	function publish($issueTitle) {
+		$this->waitForElementPresent($selector = '//a[text()="Publish Version"]');
+		$this->click($selector);
+		$this->waitForElementPresent('//select[@id="issueId"]');
+		$this->select('id=issueId', 'label=' . $this->escapeJS($issueTitle));
+		$this->click('//button[text()=\'Save\']');
+	}
+
+	/**
+	 * Check if a submission appears in the current issue
+	 */
+	function isInCurrentIssue($submissionTitle) {
+		$this->open(self::$baseUrl);
+		$this->waitForElementPresent($selector = '//a[contains(text(), "Current")]');
+		$this->click($selector);
+		$this->waitForElementPresent('//a[contains(text(),' . $this->quoteXpath($submissionTitle) . ')]');
+	}
 }

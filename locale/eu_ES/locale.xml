@@ -106,7 +106,10 @@
 	<message key="section.abbreviation">Laburdura</message>
 	<message key="section.abbreviation.example">(Adibidez, Artikuluak=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikulua</message>
 	<message key="article.articles">Artikuluak</message>
+	<message key="common.publication">Artikulua</message>
+	<message key="common.publications">Artikuluak</message>
 	<message key="article.submissionId">Bidalketa ID</message>
 	<message key="article.title">Titulua</message>
 	<message key="article.authors">Egileak</message>
@@ -878,7 +881,6 @@ artikuluaren probak zuzentzeko.</message>
 	 *
 	-->
 	<!-- Default settings for payment items. -->
-	<message key="article.article">Artikulua</message>
 	<message key="user.manageMySubscriptions">Kudeatu nire harpidetzak</message>
 	<message key="subscriptionTypes.currency">Moneta:</message>
 	<message key="subscriptionTypes.year">urtea</message>

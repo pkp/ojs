@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Стаття</message>
 	<message key="article.articles">Статті</message>
+	<message key="common.publication">Стаття</message>
+	<message key="common.publications">Статті</message>
 	<message key="article.submissionId">ID подання</message>
 	<message key="article.title">Назва</message>
 	<message key="article.authors">Автор(и)</message>

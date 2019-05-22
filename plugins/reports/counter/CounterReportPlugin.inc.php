@@ -220,7 +220,7 @@ class CounterReportPlugin extends ReportPlugin {
 			$metricType = OJS_METRIC_TYPE_LEGACY_COUNTER;
 			$filter = array();
 		} else {
-			$metricType = OJS_METRIC_TYPE_COUNTER;
+			$metricType = METRIC_TYPE_COUNTER;
 			$filter = array(STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE);
 		}
 		$metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */

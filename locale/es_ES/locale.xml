@@ -108,6 +108,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artículo</message>
 	<message key="article.articles">Artículos</message>
+	<message key="common.publication">Artículo</message>
+	<message key="common.publications">Artículos</message>
 	<message key="article.submissionId">Id. del envío</message>
 	<message key="article.title">Título</message>
 	<message key="article.authors">Autores/as</message>

@@ -71,7 +71,10 @@
 	<message key="section.abbreviation">Abreviatura</message>
 	<message key="section.abbreviation.example">(Por exemplo, Artigos=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artigo</message>
 	<message key="article.articles">Artigos</message>
+	<message key="common.publication">Artigo</message>
+	<message key="common.publications">Artigos</message>
 	<message key="article.submissionId">ID da Submissão</message>
 	<message key="article.title">Título</message>
 	<message key="article.authors">Autores</message>
@@ -716,7 +719,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="article.fontSize.medium.altText">Média</message>
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="article.article">Artigo</message>
 	<message key="user.manageMySubscriptions">Gerir Minhas Subscrições</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
 	<message key="subscriptionTypes.year">ano</message>
