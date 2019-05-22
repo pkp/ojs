@@ -26,7 +26,7 @@
 	<message key="default.contextSettings.checklist.addressesLinked">Gde je moguće URL-ovi referenci su priloženi.</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">Tekst ima prored 1,5, koristi font Times New Roman veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima ili na kraju.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Упутства за ауторе</a>, koja se nalaze u sekciji "O časopisu".]]></message>
-	<message key="default.contextSettings.privacyStatement">Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Ovaj časopis pruža otvoreni pristup sadržaju po principu koji omogućuje istraživački rad besplatno dostupan javnosti, a sve u cilju veće globalne razmene znanja.</message>
 	<message key="default.groups.name.manager">Tehnički sekretar</message>
 	<message key="default.groups.plural.manager">Tehnički sekretari</message>

@@ -26,7 +26,7 @@
 	<message key="default.contextSettings.checklist.fileFormat">Os ficheiros para submissão encontram-se em formato Microsoft Word, OpenOffice ou RTF (desde que não ultrapassem 2MB)</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">O texto está em espaço duplo; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (excepto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Instruções para Autores</a>, na secção Sobre a Revista.]]></message>
-	<message key="default.contextSettings.privacyStatement">Os nomes e endereços fornecidos nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Os nomes e endereços fornecidos nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento.</message>
 	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
