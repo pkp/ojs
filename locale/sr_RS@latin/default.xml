@@ -11,13 +11,13 @@
   * Localization strings for the sr_RS@latin (Srpski) locale (default journal settings).
   *
   -->
- 
+
 <locale name="sr_RS@latin" full_name="Srpski">
 	<!-- Section default -->
 	<message key="section.default.title">Članci</message>
 	<message key="section.default.abbrev">ART</message>
 	<!--
-	 *	
+	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
@@ -31,7 +31,7 @@
 	<message key="default.journalSettings.purchaseArticleFee">Kupovina članaka</message>
 	<message key="default.journalSettings.membershipFee">Članstvo asocijacija</message>
 	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
-	<message key="default.journalSettings.privacyStatement">Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</message>
+	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</p>]]></message>
 	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis pruža otvoreni pristup sadržaju po principu koji omogućuje istraživački rad besplatno dostupan javnosti, a sve u cilju veće globalne razmene znanja.</message>
 	<message key="default.groups.name.manager">Tehnički sekretar</message>
 	<message key="default.groups.plural.manager">Tehnički sekretari</message>
@@ -80,7 +80,7 @@ ________________________________________________________________________<br/>
 
 	<pre>1. PROMENI...
 
-	a onda 
+	a onda
 
 	U...
 
