@@ -124,12 +124,10 @@ class UserInstitutionalSubscriptionForm extends Form {
 		// Check if IP range has been provided
 		$ipRanges = PKPString::regexp_split('/\s+/', trim($this->getData('ipRanges')));
 		$ipRangeProvided = false;
-		if (is_array($ipRanges)) {
-			foreach ($ipRanges as $ipRange) {
-				if ($ipRange != '') {
-					$ipRangeProvided = true;
-					break;
-				}
+		foreach ($ipRanges as $ipRange) {
+			if ($ipRange != '') {
+				$ipRangeProvided = true;
+				break;
 			}
 		}
 
