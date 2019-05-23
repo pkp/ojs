@@ -641,7 +641,7 @@
 		$orderByColumns = $('#orderByFormArea select', this.getHtmlElement());
 		$columns = $columns.add($orderByColumns);
 		optionalColumns = this.optionalColumns_;
-		for(columnName in optionalColumns) {
+		for (columnName in optionalColumns) {
 			$columns.find('option[value="' + columnName + '"]').
 					addClass('optionalColumn');
 			$aggregationOptions.filter('input[value="' + columnName + '"]').
