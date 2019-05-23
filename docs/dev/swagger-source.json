@@ -774,6 +774,13 @@
 						"type": "integer"
 					},
 					{
+						"name": "reviewStage",
+						"description": "Filter results by reviewers for one of the review stages in the workflow. Must be one of `WORKFLOW_STAGE_ID_INTERNAL_REVIEW` or `WORKFLOW_STAGE_ID_EXTERNAL_REVIEW`. In OJS, the review stage is `WORKFLOW_STAGE_ID_EXTERNAL_REVIEW`.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
 						"name": "reviewsCompleted",
 						"description": "Filter results by those who have completed at least `X` reviews. You can also pass a range as a string formatted as `X-X`.",
 						"in": "query",
@@ -797,20 +804,6 @@
 					{
 						"name": "averageCompletion",
 						"description": "Filter results by those who complete a review assignment within `X` days on average.",
-						"in": "query",
-						"required": false,
-						"type": "integer"
-					},
-					{
-						"name": "assignedToSubmission",
-						"description": "Filter results by those assigned to this submission ID.",
-						"in": "query",
-						"required": false,
-						"type": "integer"
-					},
-					{
-						"name": "assignedToSubmissionStage",
-						"description": "Filter results by those assigned to this submission stage. Will be ignored if no `assignedToSubmission` parameter exists.",
 						"in": "query",
 						"required": false,
 						"type": "integer"
