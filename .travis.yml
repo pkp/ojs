@@ -9,11 +9,15 @@ matrix:
     php: 7.1
   - env: TEST=pgsql
     php: 7.2
+  - env: TEST=pgsql
+    php: 7.3
   # MySQL / various PHP
   - env: TEST=mysql
     php: 7.1
   - env: TEST=mysql
     php: 7.2
+  - env: TEST=mysql
+    php: 7.3
   # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
   # - env: TEST=mysql DISABLE_PATH_INFO=1
   #   php: 7.2
