@@ -16,32 +16,5 @@
 <!DOCTYPE locales SYSTEM "../lib/pkp/dtd/locales.dtd">
 
 <locales>
-	<locale key="ar_IQ" complete="true"  name="العربية" iso639-2b="ara" iso639-3="ara" direction="rtl" />
-	<locale key="ca_ES" complete="false" name="Català" iso639-2b="cat" iso639-3="cat" />
-	<locale key="cs_CZ" complete="false" name="Čeština" iso639-2b="cze" iso639-3="ces" />
-	<locale key="da_DK" complete="false" name="Dansk" iso639-2b="dan" iso639-3="dan" />
-	<locale key="de_DE" complete="true"  name="Deutsch" iso639-2b="ger" iso639-3="deu" />
 	<locale key="en_US" complete="true"  name="English" iso639-2b="eng" iso639-3="eng" />
-	<locale key="es_ES" complete="true"  name="Español (España)" iso639-2b="spa" iso639-3="spa" />
-	<locale key="eu_ES" complete="false" name="Euskara" iso639-2b="eus" iso639-3="eus" />
-	<locale key="fa_IR" complete="true"  name="فارسی" iso639-2b="per" iso639-3="per" direction="rtl" />
-	<locale key="fi_FI" complete="true" name="Suomi" iso639-2b="fin" iso639-3="fin" />
-	<locale key="fr_CA" complete="false" name="Français (Canada)" iso639-2b="fre" iso639-3="fra" />
-	<locale key="fr_FR" complete="false" name="Français (France)" iso639-2b="fre" iso639-3="fra" />
-	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
-	<locale key="id_ID" complete="false" name="Bahasa Indonesia" iso639-2b="ind" iso639-3="ind" />
-	<locale key="it_IT" complete="false" name="Italiano" iso639-2b="ita" iso639-3="ita" />
-	<locale key="nb_NO" complete="false" name="Norsk Bokmål" iso639-2b="nor" iso639-3="nor" />
-	<locale key="nl_NL" complete="true" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
-	<locale key="pl_PL" complete="false" name="Język Polski" iso639-2b="pol" iso639-3="pol" />
-	<locale key="pt_BR" complete="true"  name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
-	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
-	<locale key="ru_RU" complete="false" name="Русский" iso639-2b="rus" iso639-3="rus" />
-	<locale key="sl_SI" complete="false" name="Slovenščina" iso639-2b="slv" iso639-3="slv" />
-	<locale key="sr_RS@cyrillic" complete="false" name="Cрпски" iso639-2b="srp" iso639-3="srp" />
-	<locale key="sr_RS@latin" complete="false" name="Srpski" iso639-2b="srp" iso639-3="srp" />
-	<locale key="sv_SE" complete="true" name="Svenska" iso639-2b="swe" iso639-3="swe" />
-	<locale key="tr_TR" complete="false" name="Türkçe" iso639-2b="tur" iso639-3="tur" />
-	<locale key="uk_UA" complete="false" name="Українська" iso639-2b="ukr" iso639-3="ukr" />
-	<locale key="zh_CN" complete="false" name="简体中文" iso639-2b="chi" iso639-3="zho" />
 </locales>
