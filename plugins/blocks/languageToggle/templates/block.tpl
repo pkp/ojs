@@ -16,7 +16,7 @@
 	<div class="content">
 		<ul>
 			{foreach from=$languageToggleLocales item=localeName key=localeKey}
-				<li class="locale_{$localeKey|escape}{if $localeKey == $currentLocale} current{/if}">
+				<li class="locale_{$localeKey|escape}{if $localeKey == $currentLocale} current{/if}" lang="{$localeKey|escape}">
 					<a href="{url router=$smarty.const.ROUTE_PAGE page="user" op="setLocale" path=$localeKey source=$smarty.server.REQUEST_URI}">
 						{$localeName}
 					</a>
