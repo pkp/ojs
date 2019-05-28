@@ -10,9 +10,6 @@
 [submodule "plugins/generic/staticPages"]
 	path = plugins/generic/staticPages
 	url = https://github.com/pkp/staticPages.git
-[submodule "plugins/generic/translator"]
-	path = plugins/generic/translator
-	url = https://github.com/pkp/translator.git
 [submodule "plugins/generic/tinymce"]
 	path = plugins/generic/tinymce
 	url = https://github.com/pkp/tinymce.git
