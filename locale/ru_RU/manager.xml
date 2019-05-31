@@ -596,4 +596,13 @@
 	<message key="plugins.importexport.common.error.unknownJournal">Указанный путь журнала «{$journalPath}» не существует.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Указанные объекты не удается найти.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Отправить копию основному контактному лицу, указанному в настройках журнала.</message>
+
+	<!-- Statistics -->
+	<message key="stats.publications.details">Информация о статье</message>
+	<message key="stats.publications.none">Не найдено статей со статистикой использования, которая соответствует данным параметрам.</message>
+	<message key="stats.publications.totalAbstractViews.timelineInterval">Общее число просмотров аннотации по датам</message>
+	<message key="stats.publications.totalGalleyViews.timelineInterval">Общее число просмотров файлов по датам</message>
+	<message key="stats.publications.countOfTotal">{$count} из {$total} статей</message>
+	<message key="stats.publications.abstracts">Аннотации</message>
+	<message key="stats.publications.galleys">Файлы</message>
 </locale>
