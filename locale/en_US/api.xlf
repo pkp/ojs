@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="PO-Revision-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="api-submissions-403-unpublishedIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to view unpublished issues.</source>
+        <target>You do not have permission to view unpublished issues.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-requestedDisabledContexts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can only view journals that have been enabled.</source>
+        <target>You can only view journals that have been enabled.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-notAllowed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to view this journal.</source>
+        <target>You do not have permission to view this journal.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-contextsDidNotMatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can not view or edit this journal unless you make a request to the journal's API or the site-wide API.</source>
+        <target>You can not view or edit this journal unless you make a request to the journal's API or the site-wide API.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-requiresContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can not edit this journal from the site-wide API.</source>
+        <target>You can not edit this journal from the site-wide API.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-notAllowedEdit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to edit this journal.</source>
+        <target>You do not have permission to edit this journal.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-notAllowedDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to delete this journal.</source>
+        <target>You do not have permission to delete this journal.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-404-contextNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal you requested was not found.</source>
+        <target>The journal you requested was not found.</target>
+      </segment>
+    </unit>
+    <unit id="api-emailTemplates-403-notAllowedChangeContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to move this email template to another journal.</source>
+        <target>You do not have permission to move this email template to another journal.</target>
+      </segment>
+    </unit>
+    <unit id="api-_payments-400-invalidPaymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment method you selected is not supported.</source>
+        <target>The payment method you selected is not supported.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

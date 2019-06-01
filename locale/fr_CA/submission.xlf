@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="PO-Revision-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="submission-submit-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit an Article</source>
+        <target>Soumettre un article</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-userGroup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit in my role as...</source>
+        <target>Rôle</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-userGroupDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the capacity under which you are submitting this article.</source>
+        <target>Choisissez le rôle sous lequel vous soumettez votre article.</target>
+      </segment>
+    </unit>
+    <unit id="submission-upload-selectComponent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select article component</source>
+        <target>Sélectionner l'élément de l'article</target>
+      </segment>
+    </unit>
+    <unit id="submission-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Title</source>
+        <target>Titre de l'article</target>
+      </segment>
+    </unit>
+    <unit id="submission-title-tip">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></source>
+        <target>voici une variable avec une valeur erronée</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-newSubmissionMultiple">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start a New Submission in</source>
+        <target>Commencer une nouvelle soumission dans</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-newSubmissionSingle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>New Submission</source>
+        <target>Nouvelle soumission</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-workflow">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Workflow</source>
+        <target>Processus éditorial pour la soumission</target>
+      </segment>
+    </unit>
+    <unit id="submission-abstract-wordCount-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The abstract must be {$wordCount} words or less.</source>
+        <target>Le résumé doit contenir {$wordCount} mots ou moins.</target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Metadata</source>
+        <target>Métadonnées</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-whatNext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</source>
+        <target>La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers.  Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-galleyInIssueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galley appears in issue entry</source>
+        <target>Les épreuves se trouvent dans le dossier du numéro.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-issueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View this submission's metadata</source>
+        <target>Voir les métadonnées de la soumission</target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry-modalTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission and Publication Metadata</source>
+        <target>Métadonnées de la soumission et de la publication</target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry-submissionMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission</source>
+        <target>Soumission</target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry-publicationMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication</source>
+        <target>Publication</target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create an issue entry for this article based on the metadata below.</source>
+        <target>Assigner l'article à un numéro en vous basant sur les métadonnées ci-dessous.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-articleGalleyMadeAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The article galley "{$galleyFormatName}" is made available.</source>
+        <target>L'article mis en page "{$galleyFormatName}" est disponible.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-articleGalleyMadeUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The article galley "{$galleyFormatName}" is made unavailable.</source>
+        <target>L'article mis en page "{$galleyFormatName}" n'est pas disponible.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-publicIdentifiers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission's public identifiers updated.</source>
+        <target>Identifiants publics mis à jour.</target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format Approval</source>
+        <target>Approbation du format</target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-removeMessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.</p>]]></source>
+        <target><![CDATA[<p>Ce mod`èle de mise en page <em>ne sera plus offert</em>aux lecteurs</p>.]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-message">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>This galley will <em>be made available</em> to readers.</p>]]></source>
+        <target><![CDATA[<p>Ce mod`èle de mise en page <em>sera offert</em>aux lecteurs</p>.]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-availableArticleGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Make this galley available</source>
+        <target>Rendre ce modèle de mise en page disponible</target>
+      </segment>
+    </unit>
+    <unit id="submission-galleyFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galley Files</source>
+        <target>Fichiers de mise en page</target>
+      </segment>
+    </unit>
+    <unit id="submission-proofReadingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign Auditor</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication.]]></source>
+        <target><![CDATA[Le responsable de la mise en page télécharge les fichiers qui ont été préparés pour publication ici.  Utiliser <em>Assigner un vérificateur</em> pour identifier les auteurs et les autres personnes qui reliront les articles mis en page, avec les fichiers corrigés téléchargés, pour approbation avant la publication.]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-approveProof">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Approve this proof for inclusion in the galley.</source>
+        <target>Approuver cette épreuve.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-pageProofApproved">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This proof has been approved for inclusion in the galley.</source>
+        <target>Cette épreuve a été approuvée.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-titleAndSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title and Abstract</source>
+        <target>Titre et résumé</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-upload-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc.</source>
+        <target>Télécharger les fichier associés à la soumission, incluant l'article, les fichiers multimedia, les ensembles de données, les oeuvres d'art, etc.</target>
+      </segment>
+    </unit>
+    <unit id="submission-pageProofs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofreading</source>
+        <target>Correction d'épreuve</target>
+      </segment>
+    </unit>
+    <unit id="submission-confirmSubmit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to submit this article to the journal?</source>
+        <target>Êtes-vous certain de vouloir soumettre cet article à la revue?</target>
+      </segment>
+    </unit>
+    <unit id="workflow-review-externalReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review</source>
+        <target>Évaluation</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-decision-sendExternalReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send to Review</source>
+        <target>Envoyer en évaluation</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-issueMetadataUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission's issue metadata was updated.</source>
+        <target>Les métadonnées pour la publication de la soumission ont été mises à jour.</target>
+      </segment>
+    </unit>
+    <unit id="submission-upload-fileContents">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Component</source>
+        <target>Élément de l'article</target>
+      </segment>
+    </unit>
+    <unit id="submission-complete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Approved</source>
+        <target>Approuvé</target>
+      </segment>
+    </unit>
+    <unit id="submission-incomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Awaiting Approval</source>
+        <target>En attente d'approbation</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-localeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a submission language.</source>
+        <target>Sélectionner une langue pour la soumission</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-submissionChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Checklist</source>
+        <target>Liste de vérification de la soumission</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-submissionChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must read and acknowledge that you've completed the requirements below before proceeding.</source>
+        <target>Lire et cocher les éléments suivants pour indiquer que vous répondez aux exigences.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Privacy Statement</source>
+        <target>Déclaration de confidentialité</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-contributorRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contributor's role</source>
+        <target>Rôle du contributeur</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-authorRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>At least one author is required.</source>
+        <target>Au moins un auteur est requis.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-authorRequiredFields">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The first name, last name, and email address of each author is required.</source>
+        <target>Les prénom, nom et adresse courriel de chaque auteur sont requis.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of your article.</source>
+        <target>Inscrire le titre de votre article.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-abstractRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter your article's abstract.</source>
+        <target>Inscrire le résumé de votre article.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-wordCountAlert">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your abstract is too long. Please shorten it to below the word limit indicated for this section.</source>
+        <target>Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-contributorRoleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select the contributor's role.</source>
+        <target>Sélectionner le rôle du contributeur.</target>
+      </segment>
+    </unit>
+    <unit id="submission-citationFormat-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The requested citation format could not be retrieved.</source>
+        <target>Le format de citation n'a pas été repéré.</target>
+      </segment>
+    </unit>
+    <unit id="submission-metadataDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</source>
+        <target>Ces spécifications sont basées sur l'ensemble d'éléments de métadonnées de Dublin Core, une norme internationale utilisée pour décrire les contenus d'une revue.</target>
+      </segment>
+    </unit>
+    <unit id="section-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Section</source>
+        <target>Aucune rubrique</target>
+      </segment>
+    </unit>
+    <unit id="submission-sectionOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Options</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="catalog-browseTitles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$numTitles} Items</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="catalog-category-heading">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Items</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

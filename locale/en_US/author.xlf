@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="PO-Revision-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="author-submit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>New Submission</source>
+        <target>New Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-track">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Submissions</source>
+        <target>Active Submissions</target>
+      </segment>
+    </unit>
+    <unit id="author-competingInterests">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></source>
+        <target><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submitArticle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit an Article</source>
+        <target>Submit an Article</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-stepsToSubmit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to Submit</source>
+        <target>Five Steps to Submit</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-startHereTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start a New Submission</source>
+        <target>Start a New Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-startHereLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></source>
+        <target><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step1">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Starting the Submission</source>
+        <target>Step 1. Starting the Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step2">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Uploading the Submission</source>
+        <target>Step 2. Uploading the Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step3">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Entering the Submission's Metadata</source>
+        <target>Step 3. Entering the Submission's Metadata</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step4">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Uploading Supplementary Files</source>
+        <target>Step 4. Uploading Supplementary Files</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step4a">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4a. Add a Supplementary File</source>
+        <target>Step 4a. Add a Supplementary File</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step5">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Confirming the Submission</source>
+        <target>Step 5. Confirming the Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-start">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Start</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-upload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Submission</source>
+        <target>Upload Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-metadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter Metadata</source>
+        <target>Enter Metadata</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Supplementary Files</source>
+        <target>Upload Supplementary Files</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Confirmation</source>
+        <target>Confirmation</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-nextSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Next Steps</source>
+        <target>Next Steps</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-cancelSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can complete this submission at a later date by selecting Active Submissions from the Author home.</source>
+        <target>You can complete this submission at a later date by selecting Active Submissions from the Author home.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-notAccepting">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal is not accepting submissions at this time.</source>
+        <target>This journal is not accepting submissions at this time.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-requestWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Request Waiver</source>
+        <target>Request Waiver</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-qualifyForWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please consider waiving the Article Submission Fee for this article</source>
+        <target>Please consider waiving the Article Submission Fee for this article</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addReasonsForWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the comments box below to indicate why fees should be waived.</source>
+        <target>Please use the comments box below to indicate why fees should be waived.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-mustEnterWaiverReason">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>If you are applying for a waiver, you must enter a reason in the space provided.</source>
+        <target>If you are applying for a waiver, you must enter a reason in the space provided.</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedReviewSubsequent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review Round {$round}</source>
+        <target>In Review Round {$round}</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedReviewRevisions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review: Revisions Required</source>
+        <target>In Review: Revisions Required</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedEditingCopyedit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Editing: Copyedit Requested</source>
+        <target>In Editing: Copyedit Requested</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedEditingProofread">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Editing: Proofread Requested</source>
+        <target>In Editing: Proofread Requested</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-uploadCopyeditedVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Copyedited Version</source>
+        <target>Upload Copyedited Version</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-proofreadingCorrections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofreading Corrections</source>
+        <target>Proofreading Corrections</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this incomplete submission?</source>
+        <target>Are you sure you want to delete this incomplete submission?</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-viewStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Status</source>
+        <target>View Status</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submissions.</source>
+        <target>No submissions.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-journalSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Section</source>
+        <target>Journal Section</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-journalSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles must be submitted to one of the journal's sections.</source>
+        <target>Articles must be submitted to one of the journal's sections.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-verifyChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must make sure all items in the submission checklist are satisfied before continuing.</source>
+        <target>You must make sure all items in the submission checklist are satisfied before continuing.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-copyrightNoticeAgree">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</source>
+        <target>The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-copyrightNoticeAgreeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must agree to the terms of the Copyright Notice before continuing.</source>
+        <target>You must agree to the terms of the Copyright Notice before continuing.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-coverNote">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Comments for the Editor</source>
+        <target>Comments for the Editor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-comments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter text (optional)</source>
+        <target>Enter text (optional)</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-sectionRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select an appropriate journal section for this submission.</source>
+        <target>Please select an appropriate journal section for this submission.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-localeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a submission language.</source>
+        <target>Please select a submission language.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal's Privacy Statement</source>
+        <target>Journal's Privacy Statement</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-reorderInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reorder authors to appear in the order they will be listed on publication.</source>
+        <target>Reorder authors to appear in the order they will be listed on publication.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-reorder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reorder author's name</source>
+        <target>Reorder author's name</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-selectPrincipalContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Principal contact for editorial correspondence.</source>
+        <target>Principal contact for editorial correspondence.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Author</source>
+        <target>Add Author</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-deleteAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete Author</source>
+        <target>Delete Author</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionIndexingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</source>
+        <target>Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-coverageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</source>
+        <target>Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></source>
+        <target><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-authorRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>At least one author is required.</source>
+        <target>At least one author is required.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-authorRequiredFields">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The first name, last name, and email address of each author is required.</source>
+        <target>The first name, last name, and email address of each author is required.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of your article.</source>
+        <target>Please enter the title of your article.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-abstractRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the abstract of your article.</source>
+        <target>Please enter the abstract of your article.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-wordCountAlert">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You have exceeded the maximum word limit for abstracts in this section's track.</source>
+        <target>You have exceeded the maximum word limit for abstracts in this section's track.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission File</source>
+        <target>Submission File</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-uploadSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload submission file</source>
+        <target>Upload submission file</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-replaceSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Replace submission file</source>
+        <target>Replace submission file</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submission file uploaded.</source>
+        <target>No submission file uploaded.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSubmissionConfirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to continue without uploading a submission file?</source>
+        <target>Are you sure you wish to continue without uploading a submission file?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFilesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</source>
+        <target>This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFiles-saveToUpload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Click Save to upload file (after which additional files can be uploaded).</source>
+        <target>Click Save to upload file (after which additional files can be uploaded).</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-forgottenSubmitSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to continue without uploading the supplementary file you have chosen?</source>
+        <target>Are you sure you wish to continue without uploading the supplementary file you have chosen?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSupplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No supplementary files have been added to this submission.</source>
+        <target>No supplementary files have been added to this submission.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-backToSupplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back to Supplementary Files</source>
+        <target>Back to Supplementary Files</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmDeleteSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this supplementary file?</source>
+        <target>Are you sure you want to delete this supplementary file?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-uploadSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload supplementary file</source>
+        <target>Upload supplementary file</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addSupplementaryFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Supplementary File</source>
+        <target>Add a Supplementary File</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-editSupplementaryFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit a Supplementary File</source>
+        <target>Edit a Supplementary File</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileData">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Supplementary File Metadata</source>
+        <target>Supplementary File Metadata</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileDataDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To index this supplementary material, provide the following metadata for the uploaded supplementary file.</source>
+        <target>To index this supplementary material, provide the following metadata for the uploaded supplementary file.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileUpload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Supplementary File</source>
+        <target>Supplementary File</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-createrOrOwner">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Creator (or owner) of file</source>
+        <target>Creator (or owner) of file</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>Research Instrument</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>Research Materials</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>Research Results</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>Transcripts</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>Data Analysis</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>Data Set</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-sourceText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Text</source>
+        <target>Source Text</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-briefDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief description</source>
+        <target>Brief description</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-availableToPeers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Present file to reviewers (without metadata), as it will not compromise blind review.</source>
+        <target>Present file to reviewers (without metadata), as it will not compromise blind review.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-publisherDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use only with formally published materials.</source>
+        <target>Use only with formally published materials.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dateDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Date when data was collected or instrument created.</source>
+        <target>Date when data was collected or instrument created.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-sourceDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of study or other point of origin.</source>
+        <target>Name of study or other point of origin.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-specifyOtherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Specify other</source>
+        <target>Specify other</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-noFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No file uploaded.</source>
+        <target>No file uploaded.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of this supplementary file.</source>
+        <target>Please enter the title of this supplementary file.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-subjectRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a subject.</source>
+        <target>Please enter a subject.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-descriptionRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a description.</source>
+        <target>Please enter a description.</target>
+      </segment>
+    </unit>
+    <unit id="author-suppFile-suppFilePublicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public supplemental file identification already exists.</source>
+        <target>Public supplemental file identification already exists.</target>
+      </segment>
+    </unit>
+    <unit id="author-suppFile-publicSuppFileIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public supplemental file identifier</source>
+        <target>Public supplemental file identifier</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</source>
+        <target>To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No files have been attached to this submission.</source>
+        <target>No files have been attached to this submission.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-filesSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>File Summary</source>
+        <target>File Summary</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-finishSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Finish Submission</source>
+        <target>Finish Submission</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionComplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission complete. Thank you for your interest in publishing with {$journalTitle}.</source>
+        <target>Submission complete. Thank you for your interest in publishing with {$journalTitle}.</target>
+      </segment>
+    </unit>
+    <unit id="author-article-uploadAuthorVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Author Version</source>
+        <target>Upload Author Version</target>
+      </segment>
+    </unit>
+    <unit id="author-article-copyeditedFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Copyedited File</source>
+        <target>Copyedited File</target>
+      </segment>
+    </unit>
+    <unit id="author-article-authorRevisedFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author File</source>
+        <target>Author File</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-authorSubmitLoginMessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</source>
+        <target>A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

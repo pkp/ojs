@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="PO-Revision-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="editor-home">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Home</source>
+        <target>Page d'accueil du rédacteur</target>
+      </segment>
+    </unit>
+    <unit id="editor-reassign">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reassign</source>
+        <target>Réassigner</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionsAndPublishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions and Publishing</source>
+        <target>Soumissions et publication</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionQueue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Queue</source>
+        <target>Soumission en attente</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Archive</source>
+        <target>Archives des soumissions</target>
+      </segment>
+    </unit>
+    <unit id="editor-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing</source>
+        <target>Publication</target>
+      </segment>
+    </unit>
+    <unit id="editor-publishedIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Published Issues</source>
+        <target>Numéros publiés</target>
+      </segment>
+    </unit>
+    <unit id="editor-allSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Sections</source>
+        <target>Toutes les rubriques</target>
+      </segment>
+    </unit>
+    <unit id="editor-allEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Editors</source>
+        <target>Tous les rédacteurs</target>
+      </segment>
+    </unit>
+    <unit id="editor-me">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Me</source>
+        <target>Moi</target>
+      </segment>
+    </unit>
+    <unit id="editor-publicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or file). Please choose unique identifiers within your journal.</source>
+        <target>L'identifiant public '{$publicIdentifier}' existe déjà pour un autre objet (numéro, article, épreuves ou fichier complémentaire). Veuillez choisir des identifiants uniques au sein de votre revue.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submissions in the archive.</source>
+        <target>Aucune soumission dans les archives.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-saveChanges">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</source>
+        <target>Enregistrer les modifications aux soumissions archivées? Les soumissions sélectionnées pour suppression seront supprimées du système de façon permanente.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this submission?</source>
+        <target>Êtes-vous certain de vouloir supprimer définitivement cette soumission?</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-confirmDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to record this decision?</source>
+        <target>Êtes-vous certain de vouloir enregistrer cette décision?</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-emailWillArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</source>
+        <target>Cette soumission sera archivée après l'envoi du courriel "Avis à l'auteur", ou après avoir décliné l'envoi de ce courriel.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-cannotSendToCopyediting">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</source>
+        <target>Avant d'envoyer une soumission en Révision, utiliser le lien "Aviser l'auteur" pour informer l'auteur de la décision et sélectionner la version à envoyer.</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Users</source>
+        <target>Informer les utilisateurs</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All readers ({$count} users)</source>
+        <target>Tous les lecteurs ({$count} utilisateurs)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All published authors ({$count} users)</source>
+        <target>Tous les auteurs publiés ({$count} utilisateurs)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allIndividualSubscribers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All individual subscribers ({$count} users)</source>
+        <target>Tous les abonnés individuels ({$count} utilisateurs)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allInstitutionalSubscribers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All institutional subscribers ({$count} users)</source>
+        <target>Tous les abonnés institutionnels ({$count} utilisateurs)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-inProgress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notifying users...</source>
+        <target>Aviser les utilisateurs...</target>
+      </segment>
+    </unit>
+    <unit id="editor-usersNotified">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Notified</source>
+        <target>Utilisateurs avisés</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send this message to all users associated with this journal ({$count} users)</source>
+        <target>Envoyer ce message à tous les utilisateurs associés à cette revue ({$count} utilisateurs)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-interestedUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send this message to the users associated with this journal who have indicated that they wish to receive updates ({$count} users)</source>
+        <target>Envoyer ce message aux utilisateurs associés à cette revue qui ont indiqué qu'ils désirent recevoir les mises à jour ({$count} utilisateurs)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-includeToc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include the table of contents from this issue:</source>
+        <target>Inclure le sommaire de ce numéro :</target>
+      </segment>
+    </unit>
+    <unit id="editor-editorAdministration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Administration</source>
+        <target>Administration du rédacteur</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-createIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Créer un numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-editIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Management: {$issueIdentification}</source>
+        <target>Gestion de numéro: {$issueIdentification}</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current Issue</source>
+        <target>Numéro courant</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-numArticles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items</source>
+        <target>Articles</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noArticles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No items are currently scheduled for this issue.</source>
+        <target>Aucun article n'est actuellement planifié pour ce numéro.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this issue?</source>
+        <target>Êtes-vous certain de vouloir supprimer définitivement ce numéro?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-published">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Published</source>
+        <target>Publié</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-unpublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unpublished</source>
+        <target>Non publié</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-datePublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Date Published</source>
+        <target>Date de publication</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-volumeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Volume is required and must be a positive, numeric value.</source>
+        <target>Le volume est obligatoire et doit être une valeur numérique positive.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-numberRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Number is required and must be a positive, numeric value.</source>
+        <target>Le numéro est obligatoire et doit être une valeur numérique positive.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-yearRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Year is required and must be a positive, numeric value.</source>
+        <target>L'année est obligatoire et doit être une valeur numérique positive.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title is required for the issue.</source>
+        <target>Le titre du numéro de la revue est obligatoire.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueIdentificationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue identification is required. Please select at least one of the issue identification options.</source>
+        <target>L'identification du numéro de la revue est obligatoire. Veuillez sélectionner au moins l'une des options d'identification du numéro.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueIdentification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue identification</source>
+        <target>Numéro d'identification</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicIssueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public issue identifier</source>
+        <target>Numéro d'identification publique</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Description</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-accessStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access status</source>
+        <target>Statut d'accès</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-accessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open access date</source>
+        <target>Date d'accès libre</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-enableOpenAccessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable delayed open access</source>
+        <target>Activer l'accès libre différé</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover image</source>
+        <target>Image de la page couverture</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(Allowed formats: .gif, .jpg, or .png)</source>
+        <target>(Formats acceptés : .gif, .jpg, ou .png)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-uploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Uploaded</source>
+        <target>Téléchargé</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Supprimer</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-proofed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofed</source>
+        <target>Révisé</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove cover page image?</source>
+        <target>Supprimer l'image de la page couverture?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverImageFileNameMismatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete did not match the cover image for this issue. Please reload the page and try again.</source>
+        <target>L'image de la page couverture à supprimer ne correspond pas à l'image de ce numéro. Veuillez recharger la page et essayer de nouveau.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>L'image de la page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà détruite. Essayer de recharger la page.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidCoverImageFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</source>
+        <target>Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, et .png.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-styleFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Stylesheet</source>
+        <target>Feuille de style</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidStyleFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid stylesheet format. Ensure that the submitted file is a valid CSS. (Note that stylesheets with comments at the beginning may be rejected.)</source>
+        <target>Le format de la feuille de style n'est pas valide. Assurez-vous que le fichier soumis soit une CSS valide. (Noter que les feuilles de style commencant par des commentaires peuvent être rejetées.)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeStyleFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove stylesheet?</source>
+        <target>Supprimer la feuille de style?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageCaption">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover caption</source>
+        <target>Légende de la page couverture</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-showCoverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create a cover for this issue with the following elements.</source>
+        <target>Créer une couverture pour ce numéro avec les éléments suivants.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageDisplay">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display</source>
+        <target>Afficher</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open access</source>
+        <target>Accès libre</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription</source>
+        <target>Abonnement</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-identification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification</source>
+        <target>Identification</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Accès</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-cover">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover</source>
+        <target>Page couverture</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmIssueDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All articles will be returned to the editing queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</source>
+        <target>Tous les articles seront retournés dans la file d'attente d'évaluation et tous les fichiers associés seront supprimés définitivement. Voulez-vous vraiment supprimer ce numéro?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-resetIssueOrder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal uses custom issue ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></source>
+        <target><![CDATA[Cette revue utilise un classement de numéro personnalisé. <a href="{$url}" class="action">Réinitialiser les valeurs par défaut</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-resetSectionOrder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This issue uses custom section ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></source>
+        <target><![CDATA[Ce numéro utilise un classement de rubrique personnalisé. <a href="{$url}" class="action">Réinitialiser les valeurs par défaut</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueData">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Data</source>
+        <target>Données du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-saveChanges">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save changes to table of contents?</source>
+        <target>Enregistrer les modifications à la table des matières?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-default">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Default</source>
+        <target>Par défaut</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-order">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Order</source>
+        <target>Classer</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public Id</source>
+        <target>Identifiant public</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publishIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Publier le numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-unpublishIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unpublish Issue</source>
+        <target>Dépublier le numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview Issue</source>
+        <target>Prévisualiser le numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-preview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>(Prévisualiser)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmPublish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to publish the new issue?</source>
+        <target>Êtes-vous certain de vouloir publier le nouveau numéro?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmUnpublish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to unpublish this published issue?</source>
+        <target>Êtes-vous certain que vous souhaitez retirer ce numéro publié?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmSetCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to set this issue as current?</source>
+        <target>Êtes-vous certain de vouloir définir ce numéro comme étant le dernier numéro?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicArticleIdExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unable to save public id for article:</source>
+        <target>Impossible d'enregistrer l'identifiant public pour cet article :</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noLiveIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Live Issues</source>
+        <target>Aucun numéro en ligne</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open</source>
+        <target>Ouvert</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-pages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Pages</source>
+        <target>Pages</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Galleys</source>
+        <target>Épreuves du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Galley</source>
+        <target>Épreuves du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-viewingGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Viewing Issue Galley</source>
+        <target>Voir les épreuves du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueGalleysDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish galleys with entire issue contents.</source>
+        <target>Publier les épreuves de l'ensemble du numéro.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noneIssueGalleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No issue galleys have been published.</source>
+        <target>Les épreuves du numéro n'ont pas été publiées.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyLabelRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An issue galley label is required.</source>
+        <target>Veuillez attribuer une étiquette aux épreuves du numéro.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyLocaleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An issue galley locale is required.</source>
+        <target>Veuillez préciser la langue utilisée dans les épreuves du numéro.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyPublicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public issue galley identification already exists.</source>
+        <target>L'identifiant du numéro de l'épreuve publié existe déjà.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-backToIssueGalleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back to issue galleys</source>
+        <target>Retourner aux épreuves du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmDeleteGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this issue galley?</source>
+        <target>Voulez-vous vraiment supprimer les épreuves de ce numéro?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-identifiers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identifiers</source>
+        <target>Identifiants</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-futureIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Future Issues</source>
+        <target>Numéros à venir</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add galley</source>
+        <target>Ajouter une épreuve</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-viewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View</source>
+        <target>Voir</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssueGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue Galley</source>
+        <target>Créer une épreuve pour le numéro</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-setCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Set Current Issue</source>
+        <target>Paramétrer le dernier numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-issueArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back Issues</source>
+        <target>Numéros précédents</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-designateReviewVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Designate the original file as the Review Version</source>
+        <target>Désigner le fichier original comme le fichier d'évaluation</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-decision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decision</source>
+        <target>Décision</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-showBy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show By</source>
+        <target>Montrer par</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-submitMMDD">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit MM-DD</source>
+        <target>Soumettre MM JJ</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-activeAssignments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Assignments</source>
+        <target>Assignations en cours</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-invite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invite</source>
+        <target>Inviter</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Accepter</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Submissions</source>
+        <target>Aucune soumission</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-lastAssigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Latest</source>
+        <target>Dernière</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-averageTime">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks</source>
+        <target>Semaines</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-lastCompleted">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Last Complete</source>
+        <target>Dernière complétée</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-assignedTo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Assigned To</source>
+        <target>Assigné à</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-inSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Section</source>
+        <target>Dans la rubrique</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-schedulePublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Schedule For Publication</source>
+        <target>Calendrier de publication</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-showPublicationVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show Scheduled Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-publishVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Version</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-viewMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Version Metadata</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-editMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Version Metadata</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-scheduleForPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Schedule for publication in</source>
+        <target>Publication planifié en</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-scheduleForPublication-toBeAssigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To Be Assigned</source>
+        <target>À assigner</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-payment-publicationFeeNotPaid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</source>
+        <target>Frais de publication non payés. Pour planifier la publication d'un article, aviser l'auteur qu'il doit payer les frais ou demander une dérogation.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-removeArticle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove Article From Issue</source>
+        <target>Retirer l'article du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</source>
+        <target>Êtes-vous certain de vouloir retirer cet article de ce numéro? L'article restera disponible pour un autre numéro.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidAccessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access date is not valid.</source>
+        <target>La date d'accès n'est pas valide.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-editIssueGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Issue Galley</source>
+        <target>Éditer les épreuves du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-production-productionReadyFilesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The layout editor prepares these files for each galley and then uploads to the appropriate <span class="pkp_help_title">Proofs</span> for proofreading.]]></source>
+        <target><![CDATA[Le responsable de la mise en page prépare les fichiers de chaque épreuve et les téléverse dans le dossier <span class="pkp_help_title">Épreuves</span> approprié pour fins de vérification.]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-selectGalleyFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Galley Files</source>
+        <target>Sélectionner les fichiers d'épreuves</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-editorial-finalDraftDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Final draft files in this list are transformed by a Copyeditor into copyedited versions, uploaded below under <span class="pkp_help_title">Copyediting</span>.]]></source>
+        <target><![CDATA[Les versions finales sur cette liste sont transformées par un Réviseur en versions révisées, téléversées dans <span class = "pkp_help_title">Révision</ span>.]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-proof-manageProofFilesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any files that have already been uploaded to any submission stage can be added to the Proofreading listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion.</source>
+        <target>Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case "Inclure" ci-dessous et en cliquant sur "Rechercher". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion.</target>
+      </segment>
+    </unit>
+    <unit id="editor-publicIdentificationExistsForTheSameType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your journal.</source>
+        <target>Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue.</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-coverImage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover Image</source>
+        <target>Image de la page couverture</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

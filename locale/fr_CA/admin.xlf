@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-08-19T12:40:27-07:00</note>
+      <note id="PO-Revision-Date">2019-08-19T12:40:27-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="admin-hostedJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Hosted Journals</source>
+        <target>Revues hébergées</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-appearance-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site appearance settings have been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-config-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site configuration settings have been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-info-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site information has been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal redirect</source>
+        <target>Réacheminement vers la revue</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirectInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</source>
+        <target>Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmDisable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></source>
+        <target><![CDATA[<p>Le téléchargement de fichiers de langue depuis le serveur Web Public Knowledge Project n'est pas disponible actuellement car: </p>
+<ul>
+<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU "tar". </li>
+<li>OJS est incapable de modifier le fichier de registre régional, généralement "registry/locales.xml". </li>
+</ul>
+<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a href="http://pkp.sfu.ca"> site Web PKP </a>. </p>]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the site and any hosted journals.</source>
+        <target>Cette langue sera la langue par défaut du site et de toute revue hébergée.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-supportedLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</source>
+        <target>Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues.</target>
+      </segment>
+    </unit>
+    <unit id="admin-locale-maybeIncomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked locales may be incomplete.</source>
+        <target>Les langues sélectionnées peuvent être incomplètes.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmUninstall">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-installNewLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</source>
+        <target>Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées pas les revues hébergées. Lire la documentation d'OJS pour plus d'information sur la prise en charge de nouvelles langues.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadFailed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The locale download failed. The error message(s) below describe the failure.</source>
+        <target>Le téléchargement de la langue a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-localeInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The "{$locale}" locale has been installed.</source>
+        <target>La langue "{$locale}" a été installée.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Download Locale</source>
+        <target>Télécharger la langue</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotOpen">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot open language descriptor from PKP web site.</source>
+        <target>Impossible d'ouvrir le descripteur de langue du site Web de PKP.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotModifyRegistry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</source>
+        <target>Impossible d'ajouter la nouvelle langue au fichier de registre de langue, généralement "registry/locales.xml".</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-ojs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS User Database</source>
+        <target>Base de données utilisateur d'OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncProfiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</source>
+        <target>Activer la synchronisation du profil de l'utilisateur (si prise en charge par ce plugiciel d'authentification). Les informations du profil de l'utilisateur seront automatiquement mises à jour depuis la source distante quand un utilisateur se connecte, et les modifications du profil (y compris le mot de passe) effectuées dans OJS vont automatiquement être mises à jour sur la source distante. Si cette option n'est pas activée, les informations du profil OJS vont rester séparées de celles du profil sur la source distante.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncPasswords">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</source>
+        <target>Permettre la modification du mot de passe de l'utilisateur (si prise en charge par ce plugiciel d'authentification). Activer cette option permettra aux utilisateurs de modifier leurs mot de passe OJS et d'utiliser la fonction "mot de passe oublié" pour réinitialiser un mot de passe oublié. Ces fonctions ne seront pas disponibles pour les utilisateurs utilisant une source d'authentification où cette option n'est pas activée.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableCreateUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</source>
+        <target>Permettre la création d'utilisateurs (si supporté par ce plugiciel d'authentification).Les utilisateurs créés avec OJS à l'aide de cette source d'authentification vont automatiquement être ajoutés à la source d'authentification distante s'ils n'existent pas déjà. De plus, si cette source est la source d'authentification par défaut, les comptes OJS créés par l'intermédiaire d'une inscription d'utilisateur seront également ajoutés à la source distante d'authentification.</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Version</source>
+        <target>Version OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfiguration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Configuration</source>
+        <target>Configuration OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfigurationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></source>
+        <target><![CDATA[Paramètres de configuration OJS de <tt>config.inc.php</tt>.]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-createInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</source>
+        <target>Vous serez inscrit automatiquement en tant que responsable de cette revue. Après avoir créé une nouvelle revue, entrez-y à titre de responsable pour poursuivre sa configuration et pour l'inscription à des rôles des utilisateurs.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-journalSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Paramètres de la revue</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No journals have been created.</source>
+        <target>Aucune revue n'a été créée.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Journal</source>
+        <target>Créer une revue</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-urlWillBe">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}.</source>
+        <target>Ça devrait être un mot court ou un acronyme qui identifie la revue. L'URL de la revue sera {$sampleUrl}</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required.</source>
+        <target>Un titre est requis.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A path is required.</source>
+        <target>Le chemin est obligatoire.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathAlphaNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path can only include letters, numbers and the characters _ and -. It must begin and end with a letter or number.</source>
+        <target>Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path you provided is already in use by another journal.</source>
+        <target>Le chemin sélectionné est déjà utilisé par une autre revue.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-create-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was created successfully.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-edit-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was edited successfully.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-enableJournalInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable this journal to appear publicly on the site</source>
+        <target>Permettre à cette revue d'apparaître publiquement sur le site</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-contextDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal description</source>
+        <target>Description de la revue</target>
+      </segment>
+    </unit>
+    <unit id="admin-journal-pathImportInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Existing journal path or path to create (e.g., "ojs").</source>
+        <target>Chemin d'accès à la revue existant ou à créer (par ex., "ojs").</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Import subscriptions</source>
+        <target>Importer les abonnements</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-transcode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcode article metadata from ISO8859-1</source>
+        <target>Conversion des métadonnées de l'article à partir de la norme ISO 8859-1</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-redirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Generate code to map OJS 1 URLs to OJS 2 URLs</source>
+        <target>Générer le code pour faire la correspondance entre les URLS d'OJS 1 et d'OJS 2</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-form-importPathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The import path is required.</source>
+        <target>Le chemin d'importation est obligatoire.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importErrors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Importing failed to complete successfully</source>
+        <target>L'importation a échoué</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge Users</source>
+        <target>Fusionner les utilisateurs</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-mergeUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge User</source>
+        <target>Fusionner l'utilisateur</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</source>
+        <target>Sélectionner un utilisateur à qui attribuer la paternité des textes, les assignations de révisions etc. de l'utilisateur précédent.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Sélectionner un utilisateur à fusionner au compte d'un autre utilisateur (par ex. : lorsque quelqu'un possède deux comptes utilisateur). Le compte sélectionné en premier sera supprimé et ses soumissions, assignations, etc. seront affectées au second compte.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Tous les utilisateurs inscrits à des rôles</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</source>
+        <target>Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldAccountCount}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldAccountCount}" sera supprimé. Cette action n'est pas réversible.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-noneEnrolled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No enrolled users.</source>
+        <target>Aucun utilisateur inscrit.</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-subscriptionExpiryReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminder</source>
+        <target>Rappel d'expiration d'abonnement</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-openAccessNotification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Notification</source>
+        <target>Avis de libre accès</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-reviewReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Reminder</source>
+        <target>Rappel d'évaluation</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
