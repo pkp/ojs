@@ -16,12 +16,4 @@
 
 import('lib.pkp.classes.user.PKPUserAction');
 
-class UserAction extends PKPUserAction {
-	/**
-	 * @copydoc PKPUserAction::mergeUsers()
-	 */
-	public function mergeUsers($oldUserId, $newUserId) {
-		parent::mergeUsers($oldUserId, $newUserId);
-	}
-}
-
+class UserAction extends PKPUserAction { }
