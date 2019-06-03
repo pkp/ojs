@@ -7,15 +7,15 @@
   * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * OJS version information.
+  * PPS version information.
   -->
 
 <version>
-	<application>ojs2</application>
+	<application>pps3</application>
 	<type>core</type>
-	<release>3.2.0.0</release>
-	<tag>ojs-3_2_0-0</tag>
-	<date>2019-01-01</date>
-	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-3.2.0.tar.gz</package>
+	<release>3.0.0.0</release>
+	<tag>pps-3_0_0-0</tag>
+	<date>2019-06-01</date>
+	<info>http://pkp.sfu.ca/pps/</info>
+	<package>http://pkp.sfu.ca/pps/download/pps-3.0.0.tar.gz</package>
 </version>

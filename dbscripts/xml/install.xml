@@ -10,7 +10,7 @@
   * Installation descriptor file.
   -->
 
-<install version="3.2.0.0">
+<install version="3.0.0.0">
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>
@@ -23,8 +23,6 @@
 	<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
 	<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
 	<schema file="lib/pkp/xml/schema/announcements.xml" />
-	<schema file="lib/pkp/xml/schema/reviews.xml" />
-	<schema file="lib/pkp/xml/schema/reviewForms.xml" />
 	<schema file="lib/pkp/xml/schema/submissions.xml" />
 	<schema file="lib/pkp/xml/schema/submissionFiles.xml" />
 	<schema file="lib/pkp/xml/schema/categories.xml" />

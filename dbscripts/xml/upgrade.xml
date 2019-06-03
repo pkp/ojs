@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.2.0.0">
+<install version="3.0.0.0">
 	<code function="checkPhpVersion" />
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
