@@ -19,19 +19,6 @@
 
 	{if $currentJournal}
 
-		{if $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-			<li>
-				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">
-					{translate key="navigation.current"}
-				</a>
-			</li>
-			<li>
-				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
-					{translate key="navigation.archives"}
-				</a>
-			</li>
-		{/if}
-
 		<li>
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="about"}">
 				{translate key="navigation.about"}
