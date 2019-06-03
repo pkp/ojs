@@ -26,9 +26,4 @@
 
 <!DOCTYPE scheduled_tasks SYSTEM "../lib/pkp/dtd/scheduledTasks.dtd">
 
-<scheduled_tasks>
-	<task class="lib.pkp.classes.task.ReviewReminder">
-		<descr>Send automated reminders to reviewers to complete their assignments.</descr>
-		<frequency hour="0"/>
-	</task>
-</scheduled_tasks>
+<scheduled_tasks></scheduled_tasks>
