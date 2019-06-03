@@ -89,21 +89,12 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
-			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
-			'IssueDAO' => 'classes.issue.IssueDAO',
-			'IssueGalleyDAO' => 'classes.issue.IssueGalleyDAO',
-			'IssueFileDAO' => 'classes.issue.IssueFileDAO',
 			'JournalDAO' => 'classes.journal.JournalDAO',
 			'JournalSettingsDAO' => 'classes.journal.JournalSettingsDAO',
 			'MetricsDAO' => 'classes.statistics.MetricsDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
-			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
 			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
-			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
-			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
-			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
 		));
 	}
 
