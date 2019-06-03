@@ -96,7 +96,6 @@ class TemplateManager extends PKPTemplateManager {
 				$dispatcher = $request->getDispatcher();
 				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'context') );
 
-				$paymentManager = Application::getPaymentManager($context);
 				$this->assign('pageFooter', $context->getLocalizedData('pageFooter'));
 			} else {
 				// Check if registration is open for any contexts
