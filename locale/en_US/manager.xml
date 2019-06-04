@@ -198,8 +198,6 @@
 	<message key="manager.setup.publicationSchedule">Publication Schedule</message>
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicIdentifier">Identification of Server Content</message>
-	<message key="manager.setup.publishing">Publishing Details</message>
-	<message key="manager.setup.publisher">Publisher</message>
 	<message key="manager.setup.publishingDescription">These details may be included in metadata provided to third-party archival bodies.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
@@ -216,7 +214,7 @@
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
 	<message key="manager.setup.siteAccess.view">Site Access</message>
 	<message key="manager.setup.siteAccess.viewContent">View Preprint Content</message>
-	<message key="manager.setup.stepsToJournalSite">Five Steps to a Server Web Site</message>
+	<message key="manager.setup.sponsoringOrganization">Sponsoring organization</message>
 	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Keywords</message>
 	<message key="manager.setup.subjectProvideExamples">Provide examples of keywords or topics as a guide for authors</message>

@@ -29,27 +29,10 @@ class MastheadForm extends PKPMastheadForm {
 				'groupId' => 'identity',
 				'value' => $context->getData('abbreviation'),
 			]))
-			->addGroup([
-				'id' => 'publishing',
-				'label' => __('manager.setup.publishing'),
-				'description' => __('manager.setup.publishingDescription'),
-			], [FIELD_POSITION_AFTER, 'identity'])
-			->addField(new FieldText('publisherInstitution', [
-				'label' => __('manager.setup.publisher'),
-				'groupId' => 'publishing',
-				'value' => $context->getData('publisherInstitution'),
-			]))
-			->addField(new FieldText('onlineIssn', [
-				'label' => __('manager.setup.onlineIssn'),
-				'size' => 'small',
-				'groupId' => 'publishing',
-				'value' => $context->getData('onlineIssn'),
-			]))
-			->addField(new FieldText('printIssn', [
-				'label' => __('manager.setup.printIssn'),
-				'size' => 'small',
-				'groupId' => 'publishing',
-				'value' => $context->getData('printIssn'),
+			->addField(new FieldText('sponsoringOrganization', [
+				'label' => __('manager.setup.sponsoringOrganization'),
+				'groupId' => 'identity',
+				'value' => $context->getData('sponsoringOrganization'),
 			]));
 	}
 }
