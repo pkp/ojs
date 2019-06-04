@@ -15,7 +15,7 @@
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Active Submissions</message>
 	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
-	<message key="author.submit.submitArticle">Submit an Article</message>
+	<message key="author.submit.submitArticle">Submit a Preprint</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
 	<message key="author.submit.startHereTitle">Start a New Submission</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></message>
@@ -32,28 +32,18 @@
 	<message key="author.submit.confirmation">Confirmation</message>
 	<message key="author.submit.nextSteps">Next Steps</message>
 	<message key="submission.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
-	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
-	<message key="author.submit.requestWaiver">Request Waiver</message>
-	<message key="author.submit.qualifyForWaiver">Please consider waiving the Article Submission Fee for this article</message>
-	<message key="author.submit.addReasonsForWaiver">Please use the comments box below to indicate why fees should be waived.</message>
-	<message key="author.submit.mustEnterWaiverReason">If you are applying for a waiver, you must enter a reason in the space provided.</message>
-	<message key="author.submissions.queuedReviewSubsequent">In Review Round {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">In Review: Revisions Required</message>
-	<message key="author.submissions.queuedEditingCopyedit">In Editing: Copyedit Requested</message>
-	<message key="author.submissions.queuedEditingProofread">In Editing: Proofread Requested</message>
-	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
-	<message key="author.submissions.proofreadingCorrections">Proofreading Corrections</message>
+	<message key="author.submit.notAccepting">This server is not accepting submissions at this time.</message>
 	<message key="author.submissions.confirmDelete">Are you sure you want to delete this incomplete submission?</message>
 	<message key="author.submissions.viewStatus">View Status</message>
 	<message key="author.submissions.noSubmissions">No submissions.</message>
-	<message key="author.submit.journalSection">Journal Section</message>
-	<message key="author.submit.journalSectionDescription">Articles must be submitted to one of the journal's sections.</message>
+	<message key="author.submit.journalSection">Server Section</message>
+	<message key="author.submit.journalSectionDescription">Preprints must be submitted to one of the server's sections.</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
-	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</message>
+	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this server (comments to the editor can be added below).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">You must agree to the terms of the Copyright Notice before continuing.</message>
 	<message key="submission.submit.coverNote">Comments for the Editor</message>
 	<message key="author.submit.comments">Enter text (optional)</message>
-	<message key="author.submit.form.sectionRequired">Please select an appropriate journal section for this submission.</message>
+	<message key="author.submit.form.sectionRequired">Please select an appropriate server section for this submission.</message>
 	<message key="author.submit.form.localeRequired">Please select a submission language.</message>
 	<message key="submission.submit.privacyStatement">Journal's Privacy Statement</message>
 	<message key="author.submit.reorderInstructions">Reorder authors to appear in the order they will be listed on publication.</message>
@@ -66,8 +56,8 @@
 	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
-	<message key="author.submit.form.titleRequired">Please enter the title of your article.</message>
-	<message key="author.submit.form.abstractRequired">Please enter the abstract of your article.</message>
+	<message key="author.submit.form.titleRequired">Please enter the title of your preprint .</message>
+	<message key="author.submit.form.abstractRequired">Please enter the abstract of your preprint .</message>
 	<message key="author.submit.form.wordCountAlert">You have exceeded the maximum word limit for abstracts in this section's track.</message>
 	<message key="author.submit.submissionFile">Submission File</message>
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
@@ -95,7 +85,6 @@
 	<message key="author.submit.suppFile.dataSet">Data Set</message>
 	<message key="author.submit.suppFile.sourceText">Source Text</message>
 	<message key="author.submit.suppFile.briefDescription">Brief description</message>
-	<message key="author.submit.suppFile.availableToPeers">Present file to reviewers (without metadata), as it will not compromise blind review.</message>
 	<message key="author.submit.suppFile.publisherDescription">Use only with formally published materials.</message>
 	<message key="author.submit.suppFile.dateDescription">Date when data was collected or instrument created.</message>
 	<message key="author.submit.suppFile.sourceDescription">Name of study or other point of origin.</message>
@@ -106,13 +95,12 @@
 	<message key="author.submit.suppFile.form.descriptionRequired">Please enter a description.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">Public supplemental file identification already exists.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Public supplemental file identifier</message>
-	<message key="author.submit.confirmationDescription">To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the server web site. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.noFiles">No files have been attached to this submission.</message>
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.article.uploadAuthorVersion">Upload Author Version</message>
-	<message key="author.article.copyeditedFile">Copyedited File</message>
 	<message key="author.article.authorRevisedFile">Author File</message>
-	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
+	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this server. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
 </locale>

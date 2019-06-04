@@ -13,11 +13,11 @@
 
 <locale name="en_US" full_name="English">
 	<!-- Submission wizard -->
-	<message key="submission.submit.title">Submit an Article</message>
+	<message key="submission.submit.title">Submit a Preprint</message>
 	<message key="submission.submit.userGroup">Submit in my role as...</message>
-	<message key="submission.submit.userGroupDescription">Choose the capacity under which you are submitting this article.</message>
-	<message key="submission.upload.selectComponent">Select article component</message>
-	<message key="submission.title">Article Title</message>
+	<message key="submission.submit.userGroupDescription">Choose the capacity under which you are submitting this preprint .</message>
+	<message key="submission.upload.selectComponent">Select preprint component</message>
+	<message key="submission.title">Preprint Title</message>
 	<message key="submission.title.tip"><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
 	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
 	<message key="submission.submit.newSubmissionSingle">New Submission</message>
@@ -25,7 +25,7 @@
 	<message key="submission.abstract.wordCount.description">The abstract must be {$wordCount} words or less.</message>
 
 	<message key="submission.issueEntry">Metadata</message>
-	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
+	<message key="submission.submit.whatNext.description">The server has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
 	<message key="grid.action.galleyInIssueEntry">Galley appears in issue entry</message>
 	<message key="grid.action.issueEntry">View this submission's metadata</message>
 
@@ -33,11 +33,11 @@
 	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
 	<message key="submission.issueEntry.submissionMetadata">Submission</message>
 	<message key="submission.issueEntry.publicationMetadata">Publication</message>
-	<message key="submission.issueEntry.confirm">Create an issue entry for this article based on the metadata below.</message>
+	<message key="submission.issueEntry.confirm">Create an issue entry for this preprint based on the metadata below.</message>
 
 	<!-- events -->
-	<message key="submission.event.articleGalleyMadeAvailable">The article galley "{$galleyFormatName}" is made available.</message>
-	<message key="submission.event.articleGalleyMadeUnavailable">The article galley "{$galleyFormatName}" is made unavailable.</message>
+	<message key="submission.event.articleGalleyMadeAvailable">The preprint galley "{$galleyFormatName}" is made available.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">The preprint galley "{$galleyFormatName}" is made unavailable.</message>
 	<message key="submission.event.publicIdentifiers">The submission's public identifiers updated.</message>
 
 	<!-- galleys grid -->
@@ -52,14 +52,12 @@
 	<message key="grid.action.approveProof">Approve this proof for inclusion in the galley.</message>
 	<message key="grid.action.pageProofApproved">This proof has been approved for inclusion in the galley.</message>
 	<message key="submission.submit.titleAndSummary">Title and Abstract</message>
-	<message key="submission.submit.upload.description">Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc.</message>
+	<message key="submission.submit.upload.description">Upload files associated with this submission, including the preprint , multimedia, data sets, artwork, etc.</message>
 	<message key="submission.pageProofs">Proofreading</message>
-	<message key="submission.confirmSubmit">Are you sure you wish to submit this article to the journal?</message>
-	<message key="workflow.review.externalReview">Review</message>
-	<message key="editor.submission.decision.sendExternalReview">Send to Review</message>
+	<message key="submission.confirmSubmit">Are you sure you wish to submit this preprint to the server?</message>
 	<message key="submission.event.issueMetadataUpdated">The submission's issue metadata was updated.</message>
 
-	<message key="submission.upload.fileContents">Article Component</message>
+	<message key="submission.upload.fileContents">Preprint Component</message>
 	<message key="submission.complete">Approved</message>
 	<message key="submission.incomplete">Awaiting Approval</message>
 	<message key="submission.submit.form.localeRequired">Please select a submission language.</message>
@@ -69,14 +67,14 @@
 	<message key="submission.submit.contributorRole">Contributor's role</message>
 	<message key="submission.submit.form.authorRequired">At least one author is required.</message>
 	<message key="submission.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
-	<message key="submission.submit.form.titleRequired">Please enter the title of your article.</message>
-	<message key="submission.submit.form.abstractRequired">Please enter your article's abstract.</message>
+	<message key="submission.submit.form.titleRequired">Please enter the title of your preprint .</message>
+	<message key="submission.submit.form.abstractRequired">Please enter your preprint 's abstract.</message>
 	<message key="submission.submit.form.wordCountAlert">Your abstract is too long. Please shorten it to below the word limit indicated for this section.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
 
 	<message key="submission.citationFormat.notFound">The requested citation format could not be retrieved.</message>
 
-	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</message>
+	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe server content.</message>
 	<message key="section.any">Any Section</message>
 
 	<message key="submission.sectionOptions">Section Options</message>

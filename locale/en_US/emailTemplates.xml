@@ -36,7 +36,7 @@ Reset my password: {$url}<br />
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Password Reset</subject>
-		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />
+		<body><![CDATA[Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the server.<br />
 <br />
 Your username: {$username}<br />
 Password: {$password}<br />
@@ -45,10 +45,10 @@ Password: {$password}<br />
 		<description>This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email.</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Journal Registration</subject>
+		<subject>Server Registration</subject>
 		<body><![CDATA[{$userFullName}<br />
 <br />
-You have now been registered as a user with {$contextName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.<br />
+You have now been registered as a user with {$contextName}. We have included your username and password in this email, which are needed for all work with this server through its website. At any point, you can ask to be removed from the server's list of users by contacting me.<br />
 <br />
 Username: {$username}<br />
 Password: {$password}<br />
@@ -70,44 +70,44 @@ Thank you,<br />
 		<description>This email is sent to a newly registered user to validate their email account.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>New Issue Published</subject>
+		<subject>New Preprint Published</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just published its latest issue at {$contextUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
+{$contextName} has just published its latest preprint at {$contextUrl}.
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>
-		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</description>
+		<description>This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new preprint and invites them to visit the server at a supplied URL.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, is a server for which a member of your faculty, [name of member], serves as a [title of position]. The server is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
-[Brief description of journal]<br />
+[Brief description of server]<br />
 <br />
-The URL to the LOCKSS Publisher Manifest for our journal is: {$contextUrl}/gateway/lockss<br />
+The URL to the LOCKSS Publisher Manifest for our server is: {$contextUrl}/gateway/lockss<br />
 <br />
-We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.<br />
+We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our server with your version of LOCKSS, we would be happy to provide it.<br />
 <br />
 Thank you,<br />
 {$principalContactSignature}]]></body>
-		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
+		<description>This email requests the keeper of a LOCKSS archive to consider including this server in their archive. It provides the URL to the server's LOCKSS Publisher Manifest.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Submission Acknowledgement</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Thank you for submitting the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. With the online journal management system that we are using, you will be able to track its progress through the editorial process by logging in to the journal web site:<br />
+Thank you for submitting the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. With the online server management system that we are using, you will be able to track its progress through the editorial process by logging in to the server web site:<br />
 <br />
 Submission URL: {$submissionUrl}<br />
 Username: {$authorUsername}<br />
 <br />
-If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />
+If you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
+		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the server. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
 		<subject>Submission Acknowledgement</subject>
@@ -115,7 +115,7 @@ If you have any questions, please contact me. Thank you for considering this jou
 <br />
 {$submitterName} has submitted the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. <br />
 <br />
-If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />
+If you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
@@ -130,7 +130,7 @@ Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
 Thank you.]]></body>
-		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site.</description>
+		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the server site.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editor Decision</subject>
@@ -166,7 +166,7 @@ A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the aut
 Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an preprint .</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>A message regarding {$contextName}</subject>
