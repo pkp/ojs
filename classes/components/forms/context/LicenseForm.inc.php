@@ -35,7 +35,6 @@ class LicenseForm extends PKPLicenseForm {
 				'description' => __('manager.distribution.copyrightYearBasis.description'),
 				'type' => 'radio',
 				'options' => [
-					['value' => 'issue', 'label' => __('manager.distribution.copyrightYearBasis.issue')],
 					['value' => 'submission', 'label' => __('manager.distribution.copyrightYearBasis.submission')],
 				],
 				'value' => $context->getData('copyrightYearBasis'),

@@ -68,7 +68,7 @@
 	<message key="submission.submit.form.authorRequired">At least one author is required.</message>
 	<message key="submission.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="submission.submit.form.titleRequired">Please enter the title of your preprint .</message>
-	<message key="submission.submit.form.abstractRequired">Please enter your preprint 's abstract.</message>
+	<message key="submission.submit.form.abstractRequired">Please enter your preprint's abstract.</message>
 	<message key="submission.submit.form.wordCountAlert">Your abstract is too long. Please shorten it to below the word limit indicated for this section.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
 
