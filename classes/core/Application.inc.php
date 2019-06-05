@@ -215,11 +215,8 @@ class Application extends PKPApplication {
 	 * @return array
 	 */
 	public static function getApplicationStages() {
-		// We leave out WORKFLOW_STAGE_ID_PUBLISHED since it technically is not a 'stage'.
+		// Only one stage in PPS
 		return array(
-				WORKFLOW_STAGE_ID_SUBMISSION,
-				WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
-				WORKFLOW_STAGE_ID_EDITING,
 				WORKFLOW_STAGE_ID_PRODUCTION
 		);
 	}

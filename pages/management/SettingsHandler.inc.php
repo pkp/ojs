@@ -37,14 +37,52 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
-	 * Add the archive and payments tabs to the distribution settings page
+	 * Add the submission settings tab to the workflow settings page
+	 *
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function workflow($args, $request) {
+
+		$templateMgr = TemplateManager::getManager($request);
+		$context = $request->getContext();
+		$router = $request->getRouter();
+		$dispatcher = $request->getDispatcher();
+
+		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+
+		$supportedFormLocales = $context->getSupportedFormLocales();
+		$localeNames = AppLocale::getAllLocales();
+		$locales = array_map(function($localeKey) use ($localeNames) {
+			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
+		}, $supportedFormLocales);
+
+		$submissionSettingsForm = new \APP\components\forms\context\SubmissionSettingsForm($apiUrl, $locales, $context);
+
+		// Add form to the existing settings data
+		$settingsData = $templateMgr->getTemplateVars('settingsData');
+		$settingsData['forms'][$submissionSettingsForm->id] = $submissionSettingsForm->getConfig();
+		$templateMgr->assign('settingsData', $settingsData);		
+
+		HookRegistry::register('Template::Settings::workflow::submission', function($hookName, $args) {
+			$templateMgr = $args[1];
+			$output = &$args[2];
+			$output .= $templateMgr->fetch('management/additionalWorkflowTabs.tpl');
+			return false;
+		});
+
+		parent::workflow($args, $request);
+
+	}
+
+	/**
+	 * Add the submission settings tab to the workflow settings page
 	 *
 	 * @param $args array
 	 * @param $request Request
 	 */
 	function distribution($args, $request) {
 		parent::distribution($args, $request);
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->display('management/distribution.tpl');
+		TemplateManager::getManager($request)->display('management/distribution.tpl');
 	}
 }

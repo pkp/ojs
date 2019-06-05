@@ -274,8 +274,8 @@
 	<message key="manager.setup.copyrightYearBasis">Base new preprint's copyright year on</message>
 	<message key="manager.setup.copyrightYearBasis.article">Article: default year will be drawn from the preprint's publication date, as in "publish-as-you-go".</message>
 	<message key="manager.setup.resetPermissions">Reset Preprint Permissions</message>
-	<message key="manager.setup.resetPermissions.confirm">Are you sure you wish to reset permissions data for all preprint s? This action can not be undone.</message>
-	<message key="manager.setup.resetPermissions.description">Remove the copyright statement and license information for every published preprint , reverting them to the server's current default settings. This will permanently remove all prior copyright and licensing information attached to preprint s. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the preprint's published in your server.</message>
+	<message key="manager.setup.resetPermissions.confirm">Are you sure you wish to reset permissions data for all preprints? This action can not be undone.</message>
+	<message key="manager.setup.resetPermissions.description">Remove the copyright statement and license information for every published preprint, reverting them to the server's current default settings. This will permanently remove all prior copyright and licensing information attached to preprints. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the preprint's published in your server.</message>
 	<message key="manager.setup.resetPermissions.success">Preprint permissions were successfully reset.</message>
 
 	<!-- Genres Grid -->
@@ -326,7 +326,7 @@
 	<message key="stats.publications.none">No preprint's were found with usage statistics matching these parameters.</message>
 	<message key="stats.publications.totalAbstractViews.timelineInterval">Total abstract views by date</message>
 	<message key="stats.publications.totalGalleyViews.timelineInterval">Total file views by date</message>
-	<message key="stats.publications.countOfTotal">{$count} of {$total} preprint s</message>
+	<message key="stats.publications.countOfTotal">{$count} of {$total} preprints</message>
 	<message key="stats.publications.abstracts">Abstracts</message>
 	<message key="stats.publications.galleys">Files</message>
 </locale>

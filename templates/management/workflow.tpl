@@ -14,7 +14,7 @@
 	<tabs>
 		<tab id="submission" name="{translate key="manager.publication.submissionStage"}">
 			{help file="settings" section="workflow-submission" class="pkp_help_tab"}
-			<tabs :options="{ useUrlFragment: false}" class="tabs-component--side">
+			<tabs :options="{ useUrlFragment: false}" class="tabs-component--side">			
 				<tab name="{translate key="submission.informationCenter.metadata"}">
 					<pkp-form
 						v-bind="components.{$smarty.const.FORM_METADATA_SETTINGS}"
