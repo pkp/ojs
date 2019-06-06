@@ -186,7 +186,7 @@ class UsageStatsLoader extends FileLoader {
 			if (!$plugin->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
 				list($countryCode, $cityName, $region) = $geoTool ? $geoTool->getGeoLocation($entryData['ip']) : array(null, null, null);
 				// Check optional columns setting.
-				$optionalColumns = $plugin->getSetting(CONTEXT_ID_NONE, 'optionalColumns');
+				$optionalColumns = (array) $plugin->getSetting(CONTEXT_ID_NONE, 'optionalColumns');
 				if (!in_array(STATISTICS_DIMENSION_CITY, $optionalColumns)) $cityName = null;
 				if (!in_array(STATISTICS_DIMENSION_REGION, $optionalColumns)) $cityName = $region = null;
 			}
@@ -431,7 +431,7 @@ class UsageStatsLoader extends FileLoader {
 
 			// Check if we have more than one url parameter.
 			if (isset($args[1])) {
-				// Ŝet the correct object type.
+				// Set the correct object type.
 				if ($workingAssocType == ASSOC_TYPE_ARTICLE) {
 					$assocType = ASSOC_TYPE_GALLEY;
 				} elseif ($workingAssocType == ASSOC_TYPE_ISSUE) {
