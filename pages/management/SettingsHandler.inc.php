@@ -39,7 +39,7 @@ class SettingsHandler extends ManagementHandler {
 	/**
 	 * Add the archive and access tabs to the distribution settings page
 	 *
-     * @copydoc ManagementHandler::_setupDistributionSettingsData()
+	 * @copydoc ManagementHandler::_setupDistributionSettingsData()
 	 */
 	function _setupDistributionSettingsData($request) {
   		$settingsData = parent::_setupDistributionsettingsData($request);
