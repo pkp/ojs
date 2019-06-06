@@ -243,10 +243,9 @@
 		<code function="migrateMetadataSettings" />
 		<code function="createLicenseTerms" />
 		<code function="installEmailTemplate" key="REVIEW_REINSTATE" locales="en_US" />
+		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
-
-	<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
