@@ -37,18 +37,25 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
-	 * Add the archive and payments tabs to the distribution settings page
+	 * Add the archive and access tabs to the distribution settings page
 	 *
-	 * @param $args array
-	 * @param $request Request
+     * @copydoc ManagementHandler::_setupDistributionSettingsData()
 	 */
-	function distribution($args, $request) {
-		parent::distribution($args, $request);
+	function _setupDistributionSettingsData($request) {
+  		$settingsData = parent::_setupDistributionsettingsData($request);
 
 		$templateMgr = TemplateManager::getManager($request);
 		$context = $request->getContext();
 		$router = $request->getRouter();
 		$dispatcher = $request->getDispatcher();
+
+		// Hook into the settings templates to add the appropriate tabs
+		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
+			$templateMgr = $args[1];
+			$output = &$args[2];
+			$output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
+			return false;
+		});
 
 		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
 		$lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
@@ -116,20 +123,10 @@ class SettingsHandler extends ManagementHandler {
 		}
 
 		// Add forms to the existing settings data
-		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['forms'][$accessForm->id] = $accessForm->getConfig();
-		$settingsData['forms'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
-		$settingsData['forms'][$archivePnForm->id] = $archivePnForm->getConfig();
-		$templateMgr->assign('settingsData', $settingsData);
+		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
+		$settingsData['components'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+		$settingsData['components'][$archivePnForm->id] = $archivePnForm->getConfig();
 
-		// Hook into the settings templates to add the appropriate tabs
-		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
-			$templateMgr = $args[1];
-			$output = &$args[2];
-			$output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
-			return false;
-		});
-
-		$templateMgr->display('management/distribution.tpl');
+  		return $settingsData;
 	}
 }
