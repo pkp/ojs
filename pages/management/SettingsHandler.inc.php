@@ -52,7 +52,7 @@ class SettingsHandler extends ManagementHandler {
 		// Hook into the settings templates to add the appropriate tabs
 		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
 			$templateMgr = $args[1];
-			$output = &$args[2];
+			$output =& $args[2];
 			$output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
 			return false;
 		});
