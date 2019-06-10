@@ -2905,7 +2905,7 @@ class Upgrade extends Installer {
  		# delete all existing 531 values from the actual metrics table
 		$metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
  		# copy updated 531 values from metrics_supp to metrics table
-		$metricsDao->update('INSERT metrics SELECT * FROM metrics_supp');
+		$metricsDao->update('INSERT INTO metrics SELECT * FROM metrics_supp');
  		# Drop metrics_supp table
 		$metricsDao->update('DROP TABLE metrics_supp');
  		return true;
