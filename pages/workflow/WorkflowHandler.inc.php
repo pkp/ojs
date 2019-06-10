@@ -66,8 +66,8 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 * @see PKPWorkflowHandler::isSubmissionReady()
 	 */
 	protected function isSubmissionReady($submission) {
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		return $publishedArticleDao->getBySubmissionId($submission->getId())?true:false;
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		return $publishedSubmissionDao->getBySubmissionId($submission->getId())?true:false;
 	}
 }
 

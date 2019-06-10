@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file classes/article/PublishedArticle.inc.php
+ * @file classes/article/PublishedSubmission.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PublishedArticle
+ * @class PublishedSubmission
  * @ingroup article
- * @see PublishedArticleDAO
+ * @see PublishedSubmissionDAO
  *
- * @brief Published article class.
+ * @brief Published submission class.
  */
 
 import('classes.article.Article');
@@ -20,22 +20,22 @@ import('classes.article.Article');
 define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
-class PublishedArticle extends Article {
+class PublishedSubmission extends Article {
 
 	/**
-	 * Get ID of published article.
+	 * Get ID of published submission.
 	 * @return int
 	 */
-	function getPublishedArticleId() {
-		return $this->getData('publishedArticleId');
+	function getPublishedSubmissionId() {
+		return $this->getData('publishedSubmissionId');
 	}
 
 	/**
-	 * Set ID of published article.
-	 * @param $publishedArticleId int
+	 * Set ID of published submission.
+	 * @param $publishedSubmissionId int
 	 */
-	function setPublishedArticleId($publishedArticleId) {
-		return $this->setData('publishedArticleId', $publishedArticleId);
+	function setPublishedSubmissionId($publishedSubmissionId) {
+		return $this->setData('publishedSubmissionId', $publishedSubmissionId);
 	}
 
 	/**
@@ -71,7 +71,7 @@ class PublishedArticle extends Article {
 	}
 
 	/**
-	 * Get views of the published article.
+	 * Get views of the published submission.
 	 * @return int
 	 */
 	function getViews() {

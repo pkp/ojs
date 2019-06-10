@@ -201,8 +201,8 @@ class ArticleDAO extends SubmissionDAO {
 	function deleteById($submissionId) {
 		parent::deleteById($submissionId);
 
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticleDao->deletePublishedArticleByArticleId($submissionId);
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmissionDao->deletePublishedSubmissionByArticleId($submissionId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteByArticleId($submissionId);
@@ -318,12 +318,12 @@ class ArticleDAO extends SubmissionDAO {
 	}
 
 	function flushCache() {
-		// Because both publishedArticles and articles are cached by
+		// Because both publishedSubmissions and articles are cached by
 		// article ID, flush both caches on update.
 		parent::flushCache();
 
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$cache = $publishedArticleDao->_getPublishedArticleCache();
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$cache = $publishedSubmissionDao->_getPublishedSubmissionCache();
 		$cache->flush();
 	}
 

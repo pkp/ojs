@@ -131,11 +131,11 @@ class DRIVERPlugin extends GenericPlugin {
 		// if the article is alive
 		if (!isset($row['tombstone_id'])) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($row['journal_id']);
-			$article = $publishedArticleDao->getBySubmissionId($row['submission_id']);
+			$article = $publishedSubmissionDao->getBySubmissionId($row['submission_id']);
 			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access
@@ -146,7 +146,7 @@ class DRIVERPlugin extends GenericPlugin {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if (is_a($article, 'PublishedSubmission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
 						$status = DRIVER_ACCESS_OPEN;
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = DRIVER_ACCESS_EMBARGOED;
@@ -183,11 +183,11 @@ class DRIVERPlugin extends GenericPlugin {
 	 */
 	function isDRIVERArticle($journalId, $articleId) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($journalId);
-			$article = $publishedArticleDao->getBySubmissionId($articleId);
+			$article = $publishedSubmissionDao->getBySubmissionId($articleId);
 			$issue = $issueDao->getById($article->getIssueId());
 
 			// is open access
@@ -198,7 +198,7 @@ class DRIVERPlugin extends GenericPlugin {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if (is_a($article, 'PublishedSubmission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
 						$status = DRIVER_ACCESS_OPEN;
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = DRIVER_ACCESS_EMBARGOED;

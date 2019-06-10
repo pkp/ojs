@@ -60,7 +60,7 @@
  * @uses $copyrightHolder string Name of copyright holder
  * @uses $copyrightYear string Year of copyright
  * @uses $licenseUrl string URL to license. Only assigned if license should be
- *   included with published articles.
+ *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
 <article class="obj_article_details">

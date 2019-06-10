@@ -20,8 +20,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 	/** @var Submission The submission used to show metadata information */
 	var $_submission;
 
-	/** @var PublishedArticle The published article associated with this submission */
-	var $_publishedArticle;
+	/** @var PublishedSubmission The published submission associated with this submission */
+	var $_publishedSubmission;
 
 	/** @var int The current stage id */
 	var $_stageId;
@@ -75,8 +75,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
 		$submission = $this->getSubmission();
-		$publishedArticle = $this->getPublishedArticle();
-		if ($publishedArticle) {
+		$publishedSubmission = $this->getPublishedSubmission();
+		if ($publishedSubmission) {
 			if ($submission->getCurrentSubmissionVersion() != $submission->getSubmissionVersion()) {
 				if (!isset($this->_formParams)) {
 					$this->_formParams = array();
@@ -86,9 +86,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$this->_formParams["hideSubmit"] = true;
 			}
 
-			$templateMgr->assign('publishedArticle', $publishedArticle);
+			$templateMgr->assign('publishedSubmission', $publishedSubmission);
 			$issueDao = DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getById($publishedArticle->getIssueId());
+			$issue = $issueDao->getById($publishedSubmission->getIssueId());
 			if ($issue) {
 				$templateMgr->assign('issueAccess', $issue->getAccessStatus());
 				$templateMgr->assign('accessOptions', array(
@@ -162,8 +162,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 		);
 
 		$submission = $this->getSubmission();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->_publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion());
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$this->_publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion());
 
 		$copyrightHolder = $submission->getCopyrightHolder(null);
 		$copyrightYear = $submission->getCopyrightYear();
@@ -190,11 +190,11 @@ class IssueEntryPublicationMetadataForm extends Form {
 	}
 
 	/**
-	 * Get the PublishedArticle
-	 * @return PublishedArticle
+	 * Get the PublishedSubmission
+	 * @return PublishedSubmission
 	 */
-	function getPublishedArticle() {
-		return $this->_publishedArticle;
+	function getPublishedSubmission() {
+		return $this->_publishedSubmission;
 	}
 
 	/**
@@ -270,12 +270,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$issue = $issueDao->getById($issueId, $context->getId());
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedArticle PublishedArticle */
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedSubmission PublishedSubmission */
 
-			if ($publishedArticle) {
+			if ($publishedSubmission) {
 				if (!$issue || !$issue->getPublished()) {
-					$fromIssue = $issueDao->getById($publishedArticle->getIssueId(), $context->getId());
+					$fromIssue = $issueDao->getById($publishedSubmission->getIssueId(), $context->getId());
 					if ($fromIssue->getPublished()) {
 						// Insert article tombstone
 						import('classes.article.ArticleTombstoneManager');
@@ -300,33 +300,33 @@ class IssueEntryPublicationMetadataForm extends Form {
 			if ($issue) {
 
 				// Schedule against an issue.
-				if ($publishedArticle) {
-					if ($issueId != $publishedArticle->getIssueId()) $publishedArticle->setSequence(REALLY_BIG_NUMBER);
-					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
-					$publishedArticle->setAccessStatus($accessStatus);
-					$publishedArticleDao->updatePublishedArticle($publishedArticle);
+				if ($publishedSubmission) {
+					if ($issueId != $publishedSubmission->getIssueId()) $publishedSubmission->setSequence(REALLY_BIG_NUMBER);
+					$publishedSubmission->setIssueId($issueId);
+					$publishedSubmission->setDatePublished($this->getData('datePublished'));
+					$publishedSubmission->setAccessStatus($accessStatus);
+					$publishedSubmissionDao->updatePublishedSubmission($publishedSubmission);
 
 					// article metadata must be reindexed
 					$submissionMetadataChanged = true;
 				} else {
-					$publishedArticle = $publishedArticleDao->newDataObject();
-					$publishedArticle->setId($submission->getId());
-					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
-					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
-					$publishedArticle->setAccessStatus($accessStatus);
-					$publishedArticle->setSubmissionVersion($submission->getSubmissionVersion());
-					$publishedArticle->setIsCurrentSubmissionVersion(true);
+					$publishedSubmission = $publishedSubmissionDao->newDataObject();
+					$publishedSubmission->setId($submission->getId());
+					$publishedSubmission->setIssueId($issueId);
+					$publishedSubmission->setDatePublished(Core::getCurrentDate());
+					$publishedSubmission->setSequence(REALLY_BIG_NUMBER);
+					$publishedSubmission->setAccessStatus($accessStatus);
+					$publishedSubmission->setSubmissionVersion($submission->getSubmissionVersion());
+					$publishedSubmission->setIsCurrentSubmissionVersion(true);
 
-					$prevPublishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion() - 1);
-					if ($prevPublishedArticle) {
-						$prevPublishedArticle->setIsCurrentSubmissionVersion(false);
+					$prevPublishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion() - 1);
+					if ($prevPublishedSubmission) {
+						$prevPublishedSubmission->setIsCurrentSubmissionVersion(false);
 
-						$publishedArticleDao->updatePublishedArticle($prevPublishedArticle);
+						$publishedSubmissionDao->updatePublishedSubmission($prevPublishedSubmission);
 					}
 
-					$publishedArticleDao->insertObject($publishedArticle);
+					$publishedSubmissionDao->insertObject($publishedSubmission);
 
 					// If we're using custom section ordering, and if this is the first
 					// article published in a section, make sure we enter a custom ordering
@@ -338,17 +338,17 @@ class IssueEntryPublicationMetadataForm extends Form {
 						}
 					}
 
-					// Index the published article metadata and files for the first time.
+					// Index the published submission metadata and files for the first time.
 					$submissionMetadataChanged = true;
 					$submissionFilesChanged = true;
 				}
 
 			} else {
-				if ($publishedArticle) {
+				if ($publishedSubmission) {
 					// This was published elsewhere; make sure we don't
 					// mess up sequencing information.
-					$issueId = $publishedArticle->getIssueId();
-					$publishedArticleDao->deletePublishedArticleByArticleId($submission->getId());
+					$issueId = $publishedSubmission->getIssueId();
+					$publishedSubmissionDao->deletePublishedSubmissionByArticleId($submission->getId());
 
 					// Delete the article from the search index.
 					$articleSearchIndex->submissionFileDeleted($submission->getId());
@@ -366,7 +366,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			}
 
 			// Resequence the articles.
-			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
+			$publishedSubmissionDao->resequencePublishedSubmissions($submission->getSectionId(), $issueId);
 
 			$submission->stampStatusModified();
 
@@ -382,13 +382,13 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$articleDao->updateObject($submission);
 
 			//after the submission is updated, update the search index
-			if ($publishedArticle) {
+			if ($publishedSubmission) {
 				if ($submissionFilesChanged) {
-					$articleSearchIndex->submissionFilesChanged($publishedArticle);
+					$articleSearchIndex->submissionFilesChanged($publishedSubmission);
 				}
 
 				if ($submissionMetadataChanged) {
-					$articleSearchIndex->submissionMetadataChanged($publishedArticle);
+					$articleSearchIndex->submissionMetadataChanged($publishedSubmission);
 				}
 			}
 

@@ -146,7 +146,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 					fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
 				}
 				if (!empty($selectedSubmissions)) {
-					$objects = $this->getPublishedArticles($selectedSubmissions, $context);
+					$objects = $this->getPublishedSubmissions($selectedSubmissions, $context);
 					$filter = $this->getSubmissionFilter();
 					$objectsFileNamePart = 'articles';
 				} elseif (!empty($selectedIssues)) {
@@ -243,7 +243,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/**
 	 * Deposit XML document.
 	 * This must be implemented in the subclasses, if the action is supported.
-	 * @param $objects mixed Array of or single published article, issue or galley
+	 * @param $objects mixed Array of or single published submission, issue or galley
 	 * @param $context Context
 	 * @param $filename Export XML filename
 	 * @return boolean Whether the XML document has been registered
@@ -340,7 +340,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Get the XML for selected objects.
-	 * @param $objects mixed Array of or single published article, issue or galley
+	 * @param $objects mixed Array of or single published submission, issue or galley
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string XML document.
@@ -370,7 +370,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/**
 	 * Mark selected submissions or issues as registered.
 	 * @param $context Context
-	 * @param $objects array Array of published articles, issues or galleys
+	 * @param $objects array Array of published submissions, issues or galleys
 	 */
 	function markRegistered($context, $objects) {
 		foreach ($objects as $object) {
@@ -381,7 +381,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Update the given object.
-	 * @param $object Issue|PublishedArticle|ArticleGAlley
+	 * @param $object Issue|PublishedSubmission|ArticleGAlley
 	 */
 	function updateObject($object) {
 		// Register a hook for the required additional
@@ -432,9 +432,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return array
 	 */
 	function getUnregisteredArticles($context) {
-		// Retrieve all published articles that have not yet been registered.
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$articles = $publishedArticleDao->getExportable(
+		// Retrieve all published submissions that have not yet been registered.
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
+		$articles = $publishedSubmissionDao->getExportable(
 			$context->getId(),
 			null,
 			null,
@@ -520,7 +520,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 		switch ($objectType) {
 			case 'articles':
-				$objects = $this->getPublishedArticles($args, $context);
+				$objects = $this->getPublishedSubmissions($args, $context);
 				$filter = $this->getSubmissionFilter();
 				$objectsFileNamePart = 'articles';
 				break;
@@ -595,19 +595,19 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Get published articles from submission IDs.
+	 * Get published submissions from submission IDs.
 	 * @param $submissionIds array
 	 * @param $context Context
 	 * @return array
 	 */
-	function getPublishedArticles($submissionIds, $context) {
-		$publishedArticles = array();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+	function getPublishedSubmissions($submissionIds, $context) {
+		$publishedSubmissions = array();
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		foreach ($submissionIds as $submissionId) {
-			$publishedArticle = $publishedArticleDao->getBySubmissionId($submissionId, $context->getId());
-			if ($publishedArticle) $publishedArticles[] = $publishedArticle;
+			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submissionId, $context->getId());
+			if ($publishedSubmission) $publishedSubmissions[] = $publishedSubmission;
 		}
-		return $publishedArticles;
+		return $publishedSubmissions;
 	}
 
 	/**

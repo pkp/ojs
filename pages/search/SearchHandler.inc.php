@@ -90,8 +90,8 @@ class SearchHandler extends Handler {
 		}
 
 		// Assign the year range.
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$yearRange = $publishedArticleDao->getArticleYearRange($journalId);
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$yearRange = $publishedSubmissionDao->getArticleYearRange($journalId);
 		$yearStart = substr($yearRange[1], 0, 4);
 		$yearEnd = substr($yearRange[0], 0, 4);
 		$templateMgr->assign(array(
@@ -181,7 +181,7 @@ class SearchHandler extends Handler {
 	}
 
 	/**
-	 * Show index of published articles by author.
+	 * Show index of published submissions by author.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
@@ -202,7 +202,7 @@ class SearchHandler extends Handler {
 			$affiliation = $request->getUserVar('affiliation');
 			$country = $request->getUserVar('country');
 
-			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getId():null, $givenName, $familyName, $affiliation, $country);
+			$publishedSubmissions = $authorDao->getPublishedSubmissionsForAuthor($journal?$journal->getId():null, $givenName, $familyName, $affiliation, $country);
 
 			// Load information associated with each article.
 			$journals = array();
@@ -214,7 +214,7 @@ class SearchHandler extends Handler {
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$journalDao = DAORegistry::getDAO('JournalDAO');
 
-			foreach ($publishedArticles as $article) {
+			foreach ($publishedSubmissions as $article) {
 				$articleId = $article->getId();
 				$issueId = $article->getIssueId();
 				$sectionId = $article->getSectionId();
@@ -235,13 +235,13 @@ class SearchHandler extends Handler {
 				}
 			}
 
-			if (empty($publishedArticles)) {
+			if (empty($publishedSubmissions)) {
 				$request->redirect(null, $request->getRequestedPage());
 			}
 
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
-				'publishedArticles' => $publishedArticles,
+				'publishedSubmissions' => $publishedSubmissions,
 				'issues' => $issues,
 				'issuesUnavailable' => $issuesUnavailable,
 				'sections' => $sections,

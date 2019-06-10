@@ -114,7 +114,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'metadata-article' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/viewMetadata/%id',
 				'urlSuffixPage' => $this->baseUrl.'/index.php/test/editor/issueToc/1',
-				'urlSuffix' => 'name=publishedArticles[1]'
+				'urlSuffix' => 'name=publishedSubmissions[1]'
 			),
 			'metadata-galley' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/editGalley/%id/1',

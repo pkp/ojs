@@ -67,16 +67,16 @@ class ViewReportPlugin extends ReportPlugin {
 		$articleIssueIdentificationMap = array();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 
-		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
-		while ($publishedArticle = $publishedArticles->next()) {
-			$articleId = $publishedArticle->getId();
-			$issueId = $publishedArticle->getIssueId();
-			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $publishedArticle->getLocalizedTitle() );
+		$publishedSubmissions =& $publishedSubmissionDao->getPublishedSubmissionsByJournalId($journal->getId());
+		while ($publishedSubmission = $publishedSubmissions->next()) {
+			$articleId = $publishedSubmission->getId();
+			$issueId = $publishedSubmission->getIssueId();
+			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $publishedSubmission->getLocalizedTitle() );
 
 			// Store the abstract view count
-			$abstractViewCounts[$articleId] = $publishedArticle->getViews();
+			$abstractViewCounts[$articleId] = $publishedSubmission->getViews();
 			// Make sure we get the issue identification
 			$articleIssueIdentificationMap[$articleId] = $issueId;
 			if (!isset($issueIdentifications[$issueId])) {
@@ -87,7 +87,7 @@ class ViewReportPlugin extends ReportPlugin {
 			}
 
 			// For each galley, store the label and the count
-			$galleys = $publishedArticle->getGalleys();
+			$galleys = $publishedSubmission->getGalleys();
 			$galleyViews[$articleId] = array();
 			$galleyViewTotals[$articleId] = 0;
 			foreach ($galleys as $galley) {

@@ -137,16 +137,16 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$submissionDao->updateObject($submission);
 
 		if ($reorder) {
-			// see if it is a published article
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
-			if ($publishedArticle) {
+			// see if it is a published submission
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false); /* @var $publishedSubmission PublishedSubmission */
+			if ($publishedSubmission) {
 				// Resequence the articles.
-				$publishedArticle->setSequence(REALLY_BIG_NUMBER);
-				$publishedArticleDao->updatePublishedArticle($publishedArticle);
-				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
+				$publishedSubmission->setSequence(REALLY_BIG_NUMBER);
+				$publishedSubmissionDao->updatePublishedSubmission($publishedSubmission);
+				$publishedSubmissionDao->resequencePublishedSubmissions($submission->getSectionId(), $publishedSubmission->getIssueId());
 				// The reordering for the old section is not necessary, but for the correctness sake
-				$publishedArticleDao->resequencePublishedArticles($oldSectionId, $publishedArticle->getIssueId());
+				$publishedSubmissionDao->resequencePublishedSubmissions($oldSectionId, $publishedSubmission->getIssueId());
 			}
 		}
 

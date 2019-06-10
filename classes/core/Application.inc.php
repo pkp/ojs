@@ -99,7 +99,7 @@ class Application extends PKPApplication {
 			'MetricsDAO' => 'classes.statistics.MetricsDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
-			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
+			'PublishedSubmissionDAO' => 'classes.article.PublishedSubmissionDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
@@ -160,7 +160,7 @@ class Application extends PKPApplication {
 	 * Get the published submission DAO.
 	 */
 	public static function getPublishedSubmissionDAO() {
-		return DAORegistry::getDAO('PublishedArticleDAO');
+		return DAORegistry::getDAO('PublishedSubmissionDAO');
 	}
 
 	/**

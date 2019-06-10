@@ -75,14 +75,14 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this, $submission));
 
 		$submissionDao = Application::getSubmissionDAO();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false);
-		$isExistingEntry = $publishedArticle?true:false;
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false);
+		$isExistingEntry = $publishedSubmission?true:false;
 
 		$submissionDao->updateObject($submission);
 
 		if ($isExistingEntry) {
-			// Update the search index for this published article.
+			// Update the search index for this published submission.
 			$articleSearchIndex = Application::getSubmissionSearchIndex();
 			$articleSearchIndex->submissionMetadataChanged($submission);
 		}

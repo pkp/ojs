@@ -58,12 +58,12 @@ class EditingProductionStatusNotificationManager extends PKPEditingProductionSta
 				if ($submission->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
 					$context = $request->getContext();
 					$contextId = $context->getId();
-					$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+					$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 					$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
 					$editorStageAssignments = $stageAssignmentDao->getEditorsAssignedToStage($submissionId, $submission->getStageId());
 					foreach ($editorStageAssignments as $editorStageAssignment) {
-						$publishedArticle = $publishedArticleDao->getBySubmissionId($submissionId, $contextId);
-						if ($publishedArticle) {
+						$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submissionId, $contextId);
+						if ($publishedSubmission) {
 							$this->_createNotification(
 								$request,
 								$submissionId,

@@ -72,11 +72,11 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 			// false positives or miss some entries. But there's no other way
 			// until OJS allows users to consistently normalize authors (via name,
 			// email, ORCID, whatever).
-			$articles = $authorDao->getPublishedArticlesForAuthor(
+			$articles = $authorDao->getPublishedSubmissionsForAuthor(
 				null, $author->getLocalizedGivenName(), $author->getLocalizedFamilyName(),
 				$author->getLocalizedAffiliation(), $author->getCountry()
 			);
-			foreach ($articles as $article) { /* @var $article PublishedArticle */
+			foreach ($articles as $article) { /* @var $article PublishedSubmission */
 				if ($displayedArticle->getId() == $article->getId()) continue;
 				$foundArticles[] = $article->getId();
 			}

@@ -71,7 +71,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 
 		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getFullTitle($article->getLocale())) . '"/>');
 
-		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
+		if (is_a($article, 'PublishedSubmission') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . strftime('%Y/%m/%d', strtotime($datePublished)) . '"/>');
 		} elseif ($issue && $issue->getYear()) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . htmlspecialchars($issue->getYear()) . '"/>');
@@ -108,7 +108,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		$i=$j=0;
-		if (is_a($article, 'PublishedArticle')) foreach ($article->getGalleys() as $galley) {
+		if (is_a($article, 'PublishedSubmission')) foreach ($article->getGalleys() as $galley) {
 			if (is_a($galley->getFile(), 'SupplementaryFile')) continue;
 			if ($galley->getFileType()=='application/pdf') {
 				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');

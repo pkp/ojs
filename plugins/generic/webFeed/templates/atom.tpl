@@ -16,7 +16,7 @@
 
 	{* Figure out feed updated date *}
 	{assign var=latestDate value=$issue->getDatePublished()}
-	{foreach name=sections from=$publishedArticles item=section}
+	{foreach name=sections from=$publishedSubmissions item=section}
 		{foreach from=$section.articles item=article}
 			{if $article->getLastModified() > $latestDate}
 				{assign var=latestDate value=$article->getLastModified()}
@@ -52,7 +52,7 @@
 
 	<subtitle type="html">{$description|strip|escape:"html"}</subtitle>
 
-	{foreach name=sections from=$publishedArticles item=section key=sectionId}
+	{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
 		{foreach from=$section.articles item=article}
 			<entry>
 				{* required elements *}

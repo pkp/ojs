@@ -19,7 +19,7 @@
 
 import('lib.pkp.tests.PKPTestCase');
 import('classes/issue/Issue');
-import('classes/article/PublishedArticle');
+import('classes/article/PublishedSubmission');
 import('classes/article/ArticleGalley');
 import('plugins.importexport.medra.classes.PubObjectCache');
 
@@ -49,7 +49,7 @@ class PubObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new PubObjectCache();
 
-		$article = new PublishedArticle();
+		$article = new PublishedSubmission();
 		$article->setId('2');
 		$article->setIssueId('1');
 
@@ -73,7 +73,7 @@ class PubObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new PubObjectCache();
 
-		$article = new PublishedArticle();
+		$article = new PublishedSubmission();
 		$article->setId('2');
 		$article->setIssueId('1');
 
@@ -111,7 +111,7 @@ class PubObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new PubObjectCache();
 
-		$article = new PublishedArticle();
+		$article = new PublishedSubmission();
 		$article->setId('2');
 		$article->setIssueId('1');
 

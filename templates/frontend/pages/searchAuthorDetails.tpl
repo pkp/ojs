@@ -5,7 +5,7 @@
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Index of published articles by author.
+ * Index of published submissions by author.
  *
  *}
 {strip}
@@ -15,7 +15,7 @@
 <div id="authorDetails">
 <h3>{$authorName|escape}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
 <ul>
-{foreach from=$publishedArticles item=article}
+{foreach from=$publishedSubmissions item=article}
 	{assign var=issueId value=$article->getIssueId()}
 	{assign var=issue value=$issues[$issueId]}
 	{assign var=issueUnavailable value=$issuesUnavailable.$issueId}

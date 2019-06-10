@@ -12,7 +12,7 @@
  * @uses $issueSeries string Vol/No/Year string for the issue
  * @uses $issueGalleys array Galleys for the entire issue
  * @uses $hasAccess bool Can this user access galleys for this context?
- * @uses $publishedArticles array Lists of articles published in this issue
+ * @uses $publishedSubmissions array Lists of articles published in this issue
  *   sorted by section.
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
@@ -94,7 +94,7 @@
 
 	{* Articles *}
 	<div class="sections">
-	{foreach name=sections from=$publishedArticles item=section}
+	{foreach name=sections from=$publishedSubmissions item=section}
 		<div class="section">
 		{if $section.articles}
 			{if $section.title}
