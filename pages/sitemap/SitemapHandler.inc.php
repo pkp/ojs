@@ -31,7 +31,7 @@ class SitemapHandler extends PKPSitemapHandler {
 		$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'search')));
 		// Issues
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		if ($journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
 			$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'current')));
@@ -40,7 +40,7 @@ class SitemapHandler extends PKPSitemapHandler {
 			while ($issue = $publishedIssues->next()) {
 				$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
 				// Articles for issue
-				$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
+				$articles = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
 				foreach($articles as $article) {
 					// Abstract
 					$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))));

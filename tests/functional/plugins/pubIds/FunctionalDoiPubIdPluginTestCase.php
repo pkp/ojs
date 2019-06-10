@@ -102,7 +102,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			'metadata-article' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/viewMetadata/%id',
 				'urlSuffixPage' => $this->baseUrl.'/index.php/test/editor/issueToc/%id',
-				'urlSuffix' => 'name=publishedArticles[1]'
+				'urlSuffix' => 'name=publishedSubmissions[1]'
 			),
 			'metadata-galley' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/editGalley/%id/1',
@@ -419,7 +419,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		// Assign object types to DAO names and methods.
 		$daos = array(
 			'Issue' => array('IssueDAO', 'getById', 'updateObject'),
-			'Article' => array('PublishedArticleDAO', 'getBySubmissionId', 'updateObject'),
+			'Article' => array('PublishedSubmissionDAO', 'getBySubmissionId', 'updateObject'),
 			'Galley' => array('ArticleGalleyDAO', 'getById', 'updateObject'),
 		);
 
@@ -442,7 +442,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			$object->setStoredPubId('publisher-id', 'doitest');
 			// Due to the 'unconventional' implementation of the article
 			// DAOs we have to manually change our DAO for article update.
-			if (is_a($object, 'PublishedArticle')) $dao = $dao->articleDao;
+			if (is_a($object, 'PublishedSubmission')) $dao = $dao->articleDao;
 			// Update the object.
 			$dao->$daos[$objectType][2]($object);
 
@@ -615,7 +615,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 
 
 	/**
-	 * SCENARIO OUTLINE: Preview DOI of published articles.
+	 * SCENARIO OUTLINE: Preview DOI of published submissions.
 	 *    WHEN I choose {suffix generation method}
 	 *     AND I open the metadata page of an published
 	 *         article that does not yet have a DOI generated
@@ -630,7 +630,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	 *   custom url suffix        | 10.1234/custom-url
 	 *
 	 *
-	 * SCENARIO OUTLINE: Preview DOI of unpublished articles.
+	 * SCENARIO OUTLINE: Preview DOI of unpublished submissions.
 	 *    WHEN I choose {suffix generation method}
 	 *     AND I open the metadata page of an unpublished
 	 *         article

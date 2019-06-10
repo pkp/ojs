@@ -93,7 +93,7 @@ class Application extends PKPApplication {
 			'JournalSettingsDAO' => 'classes.journal.JournalSettingsDAO',
 			'MetricsDAO' => 'classes.statistics.MetricsDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
-			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
+			'PublishedSubmissionDAO' => 'classes.article.PublishedSubmissionDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
 		));
 	}
@@ -151,7 +151,7 @@ class Application extends PKPApplication {
 	 * Get the published submission DAO.
 	 */
 	public static function getPublishedSubmissionDAO() {
-		return DAORegistry::getDAO('PublishedArticleDAO');
+		return DAORegistry::getDAO('PublishedSubmissionDAO');
 	}
 
 	/**

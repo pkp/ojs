@@ -59,11 +59,12 @@ class ArticleHandler extends Handler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
 		$journal = $request->getContext();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId((int) $journal->getId(), $articleId, true);
 
-		if (isset($publishedArticle)) {
-			$this->article = $publishedArticle;
+		if (isset($publishedSubmission)) {
+			$this->article = $publishedSubmission;
+
 		} else {
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
 			$article = $articleDao->getById((int) $articleId, $journal->getId(), true);
@@ -272,20 +273,15 @@ class ArticleHandler extends Handler {
 	 * @param $galleyId int or string
 	 */
 	function userCanViewGalley($request, $articleId, $galleyId = null) {
-
-
+		$publishedSubmission = $this->article;
 		$journal = $request->getJournal();
-		$publishedArticle = $this->article;
 		$journalId = $journal->getId();
-		$user = $request->getUser();
-		$userId = $user?$user->getId():0;
-
-		// If this is an editorial user who can view unpublished/unscheduled
-		// articles, bypass further validation. Likewise for its author.
-		if ($publishedArticle) {
+		if ($publishedSubmission) {
 			return true;
+		} else {
+			$request->redirect(null, 'search');
 		}
-		return false;
+		return true;
 	}
 
 	/**

@@ -293,7 +293,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 *     BUT the article will not be marked for deletion.
 	 *
 	 * SCENARIO: unpublishing an article
-	 *    WHEN I unpublish a previously published article
+	 *    WHEN I unpublish a previously published submission
 	 *    THEN an article setting "dirty" will be set to "1" which
 	 *         means that the article must be deleted from the index
 	 *     AND the article will appear in the public XML

@@ -33,7 +33,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 	 * @see PKPTestCase::getMockedDAOs()
 	 */
 	protected function getMockedDAOs() {
-		return array('AuthorDAO', 'OAIDAO', 'ArticleGalleyDAO', 'PublishedArticleDAO');
+		return array('AuthorDAO', 'OAIDAO', 'ArticleGalleyDAO', 'PublishedSubmissionDAO');
 	}
 
 	/**
@@ -71,8 +71,8 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$author->setEmail('someone@example.com');
 
 		// Article
-		import('classes.article.PublishedArticle');
-		$article = $this->getMockBuilder(PublishedArticle::class)
+		import('classes.article.PublishedSubmission');
+		$article = $this->getMockBuilder(PublishedSubmission::class)
 			->setMethods(array('getBestArticleId'))
 			->getMock();
 		$article->expects($this->any())
@@ -197,15 +197,15 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
 		// FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 
-		// Create a mocked PublishedArticleDAO that returns our test article.
-		import('classes.article.PublishedArticleDAO');
-		$articleDao = $this->getMockBuilder(PublishedArticleDAO::class)
+		// Create a mocked PublishedSubmissionDAO that returns our test article.
+		import('classes.article.PublishedSubmissionDAO');
+		$articleDao = $this->getMockBuilder(PublishedSubmissionDAO::class)
 			->getMethods(array('getByArticleId'))
 			->getMock();
 		$articleDao->expects($this->any())
 		            ->method('getBySubmissionId')
 		            ->will($this->returnValue($article));
-		DAORegistry::registerDAO('PublishedArticleDAO', $articleDao);
+		DAORegistry::registerDAO('PublishedSubmissionDAO', $articleDao);
 
 		//
 		// Test

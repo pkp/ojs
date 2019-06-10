@@ -38,7 +38,7 @@ class IssueEntryHandler extends PublicationEntryHandler {
 
 		$submission = $this->getSubmission();
 
-		// load in any galley formats assigned to this published article
+		// load in any galley formats assigned to this published submission
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleys = $galleyDao->getBySubmissionId($submission->getId(), null, $submission->getSubmissionVersion());
 

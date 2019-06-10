@@ -163,29 +163,29 @@ class SubmissionHandler extends APIHandler {
 		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
-		$publishedArticle = null;
+		$publishedSubmission = null;
 		if ($submission && $context) {
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId(
 				(int) $context->getId(),
 				$submission->getId(),
 				true
 			);
 		}
 
-		if (!$submission || !$publishedArticle) {
+		if (!$submission || !$publishedSubmission) {
 			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = array();
 
-		$galleys = $publishedArticle->getGalleys();
+		$galleys = $publishedSubmission->getGalleys();
 		if (!empty($galleys)) {
 			$galleyService = Services::get('galley');
 			$args = array(
 				'request' => $request,
 				'slimRequest' => $slimRequest,
-				'parent' => $publishedArticle,
+				'parent' => $publishedSubmission,
 			);
 			foreach ($galleys as $galley) {
 				$data[] = $galleyService->getFullProperties($galley, $args);

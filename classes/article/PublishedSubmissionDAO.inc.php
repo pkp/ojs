@@ -1,23 +1,23 @@
 <?php
 
 /**
- * @file classes/article/PublishedArticleDAO.inc.php
+ * @file classes/article/PublishedSubmissionDAO.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class PublishedArticleDAO
+ * @class PublishedSubmissionDAO
  * @ingroup article
- * @see PublishedArticle
+ * @see PublishedSubmission
  *
- * @brief Operations for retrieving and modifying PublishedArticle objects.
+ * @brief Operations for retrieving and modifying PublishedSubmission objects.
  */
 
-import('classes.article.PublishedArticle');
+import('classes.article.PublishedSubmission');
 import('classes.article.ArticleDAO');
 
-class PublishedArticleDAO extends ArticleDAO {
+class PublishedSubmissionDAO extends ArticleDAO {
 	/** @var ArticleGalleyDAO */
 	var $galleyDao;
 
@@ -39,22 +39,22 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * Handle an article cache miss
 	 * @param $cache GenericCache
 	 * @param $id mixed Article ID (potentially non-numeric)
-	 * @return PublishedArticle
+	 * @return PublishedSubmission
 	 */
 	function _articleCacheMiss($cache, $id) {
-		$publishedArticle = $this->getPublishedArticleByBestArticleId(null, $id, null);
-		$cache->setCache($id, $publishedArticle);
-		return $publishedArticle;
+		$publishedSubmission = $this->getPublishedSubmissionByBestArticleId(null, $id, null);
+		$cache->setCache($id, $publishedSubmission);
+		return $publishedSubmission;
 	}
 
 	/**
-	 * Get a the published article cache
+	 * Get a the published submission cache
 	 * @return GenericCache
 	 */
-	function _getPublishedArticleCache() {
+	function _getPublishedSubmissionCache() {
 		if (!isset($this->articleCache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->articleCache = $cacheManager->getObjectCache('publishedArticles', 0, array($this, '_articleCacheMiss'));
+			$this->articleCache = $cacheManager->getObjectCache('publishedSubmissions', 0, array($this, '_articleCacheMiss'));
 		}
 		return $this->articleCache;
 	}
@@ -66,7 +66,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return array
 	 */
 	function _articlesInSectionsCacheMiss($cache, $id) {
-		$articlesInSections = $this->getPublishedArticlesInSections($id, null);
+		$articlesInSections = $this->getPublishedSubmissionsInSections($id, null);
 		$cache->setCache($id, $articlesInSections);
 		return $articlesInSections;
 	}
@@ -86,9 +86,9 @@ class PublishedArticleDAO extends ArticleDAO {
 	/**
 	 * Retrieve Published Articles by issue id.  Limit provides number of records to retrieve
 	 * @param $issueId int
-	 * @return PublishedArticle objects array
+	 * @return PublishedSubmission objects array
 	 */
-	function getPublishedArticles($issueId) {
+	function getPublishedSubmissions($issueId) {
 		$params = array_merge(
 			$this->getFetchParameters(),
 			array(
@@ -114,21 +114,21 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$result = $this->retrieve($sql, $params);
 
-		$publishedArticles = array();
+		$publishedSubmissions = array();
 		while (!$result->EOF) {
-			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
+			$publishedSubmissions[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
 		$result->Close();
-		return $publishedArticles;
+		return $publishedSubmissions;
 	}
 
 	/**
-	 * Retrieve a count of published articles in a journal.
+	 * Retrieve a count of published submissions in a journal.
 	 * @param $journalId int
 	 */
-	function getPublishedArticleCountByJournalId($journalId) {
+	function getPublishedSubmissionCountByJournalId($journalId) {
 		$result = $this->retrieve(
 			'SELECT count(*)
 			FROM published_submissions ps,
@@ -146,13 +146,13 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve all published articles in a journal.
+	 * Retrieve all published submissions in a journal.
 	 * @param $journalId int
 	 * @param $rangeInfo object
 	 * @param $reverse boolean Whether to reverse the sort order
 	 * @return DAOResultFactory
 	 */
-	function getPublishedArticlesByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
+	function getPublishedSubmissionsByJournalId($journalId = null, $rangeInfo = null, $reverse = false) {
 		$params = $this->getFetchParameters();
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieveRange(
@@ -178,9 +178,9 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
 	 * @param $useCache boolean optional
-	 * @return array Array of PublishedArticle objects
+	 * @return array Array of PublishedSubmission objects
 	 */
-	function getPublishedArticlesInSections($issueId, $useCache = false) {
+	function getPublishedSubmissionsInSections($issueId, $useCache = false) {
 		if ($useCache) {
 			$cache = $this->_getArticlesInSectionsCache();
 			$returner = $cache->get($issueId);
@@ -211,13 +211,13 @@ class PublishedArticleDAO extends ArticleDAO {
 		);
 
 		$currSectionId = 0;
-		$publishedArticles = array();
+		$publishedSubmissions = array();
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$publishedArticle = $this->_fromRow($row);
-			if ($publishedArticle->getSectionId() != $currSectionId && !isset($publishedArticles[$publishedArticle->getSectionId()])) {
-				$currSectionId = $publishedArticle->getSectionId();
-				$publishedArticles[$currSectionId] = array(
+			$publishedSubmission = $this->_fromRow($row);
+			if ($publishedSubmission->getSectionId() != $currSectionId && !isset($publishedSubmissions[$publishedSubmission->getSectionId()])) {
+				$currSectionId = $publishedSubmission->getSectionId();
+				$publishedSubmissions[$currSectionId] = array(
 					'articles' => array(),
 					'title' => '',
 					'abstractsNotRequired' => $row['abstracts_not_required'],
@@ -225,24 +225,24 @@ class PublishedArticleDAO extends ArticleDAO {
 				);
 
 				if (!$row['section_hide_title']) {
-					$publishedArticles[$currSectionId]['title'] = $publishedArticle->getSectionTitle();
+					$publishedSubmissions[$currSectionId]['title'] = $publishedSubmission->getSectionTitle();
 				}
 			}
-			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
+			$publishedSubmissions[$currSectionId]['articles'][] = $publishedSubmission;
 			$result->MoveNext();
 		}
 
 		$result->Close();
-		return $publishedArticles;
+		return $publishedSubmissions;
 	}
 
 	/**
 	 * Retrieve Published Articles by section id
 	 * @param $sectionId int
 	 * @param $issueId int
-	 * @return PublishedArticle objects array
+	 * @return PublishedSubmission objects array
 	 */
-	function getPublishedArticlesBySectionId($sectionId, $issueId) {
+	function getPublishedSubmissionsBySectionId($sectionId, $issueId) {
 		$result = $this->retrieve(
 			'SELECT	ps.*,
 				s.*,
@@ -264,24 +264,24 @@ class PublishedArticleDAO extends ArticleDAO {
 			)
 		);
 
-		$publishedArticles = array();
+		$publishedSubmissions = array();
 		while (!$result->EOF) {
-			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
+			$publishedSubmissions[] = $this->_fromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
 		$result->Close();
-		return $publishedArticles;
+		return $publishedSubmissions;
 	}
 
 	/**
 	 * Retrieve Published Article by pub id
-	 * @param $publishedArticleId int
-	 * @return PublishedArticle object
+	 * @param $publishedSubmissionId int
+	 * @return PublishedSubmission object
 	 */
-	function getPublishedArticleById($publishedArticleId) {
+	function getPublishedSubmissionById($publishedSubmissionId) {
 		$params = array (
-			(int) $publishedArticleId
+			(int) $publishedSubmissionId
 		);
 
 		$result = $this->retrieve(
@@ -290,32 +290,32 @@ class PublishedArticleDAO extends ArticleDAO {
 		);
 		$row = $result->GetRowAssoc(false);
 
-		$publishedArticle = $this->newDataObject();
-		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
-		$publishedArticle->setId($row['submission_id']);
-		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
-		$publishedArticle->setSequence($row['seq']);
-		$publishedArticle->setAccessStatus($row['access_status']);
-		$publishedArticle->setSubmissionVersion($row['published_submission_version']);
-		$publishedArticle->setCurrentSubmissionVersion($row['published_submission_version']);
-		$publishedArticle->setIsCurrentSubmissionVersion($row['is_current_submission_version']);
+		$publishedSubmission = $this->newDataObject();
+		$publishedSubmission->setPublishedSubmissionId($row['published_submission_id']);
+		$publishedSubmission->setId($row['submission_id']);
+		$publishedSubmission->setIssueId($row['issue_id']);
+		$publishedSubmission->setDatePublished($this->datetimeFromDB($row['date_published']));
+		$publishedSubmission->setSequence($row['seq']);
+		$publishedSubmission->setAccessStatus($row['access_status']);
+		$publishedSubmission->setSubmissionVersion($row['published_submission_version']);
+		$publishedSubmission->setCurrentSubmissionVersion($row['published_submission_version']);
+		$publishedSubmission->setIsCurrentSubmissionVersion($row['is_current_submission_version']);
 
 		$result->Close();
-		return $publishedArticle;
+		return $publishedSubmission;
 	}
 
 	/**
-	 * Retrieve published article by article id
+	 * Retrieve published submission by article id
 	 * @param $articleId int
 	 * @param $journalId int optional
 	 * @param $useCache boolean optional
-	 * @return PublishedArticle object
+	 * @return PublishedSubmission object
 	 */
 	function getBySubmissionId($articleId, $journalId = null, $useCache = false, $submissionVersion = null) {
 
 		if ($useCache) {
-			$cache = $this->_getPublishedArticleCache();
+			$cache = $this->_getPublishedSubmissionCache();
 			$returner = $cache->get($articleId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
@@ -339,42 +339,42 @@ class PublishedArticleDAO extends ArticleDAO {
 			$params
 		);
 
-		$publishedArticle = null;
+		$publishedSubmission = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle = $this->_fromRow($result->GetRowAssoc(false), true, $submissionVersion);
+			$publishedSubmission = $this->_fromRow($result->GetRowAssoc(false), true, $submissionVersion);
 		}
 
 		$result->Close();
-		return $publishedArticle;
+		return $publishedSubmission;
 	}
 
 	/**
-	 * Retrieve published article by public article id
+	 * Retrieve published submission by public article id
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 * @param $pubId string
 	 * @param $journalId int
 	 * @param $useCache boolean optional
-	 * @return PublishedArticle object
+	 * @return PublishedSubmission object
 	 */
-	function getPublishedArticleByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
+	function getPublishedSubmissionByPubId($pubIdType, $pubId, $journalId = null, $useCache = false) {
 		if ($useCache && $pubIdType == 'publisher-id') {
-			$cache = $this->_getPublishedArticleCache();
+			$cache = $this->_getPublishedSubmissionCache();
 			$returner = $cache->get($pubId);
 			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
 			return $returner;
 		}
 
-		$publishedArticle = null;
+		$publishedSubmission = null;
 		if (!empty($pubId)) {
-			$publishedArticles = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
-			if ($publishedArticles->getCount()) {
-				assert($publishedArticles->getCount() == 1);
-				$publishedArticle = $publishedArticles->next();
+			$publishedSubmissions = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
+			if ($publishedSubmissions->getCount()) {
+				assert($publishedSubmissions->getCount() == 1);
+				$publishedSubmission = $publishedSubmissions->next();
 			}
 		}
-		return $publishedArticle;
+		return $publishedSubmission;
 	}
 
 	/**
@@ -409,15 +409,15 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve published article by public article id or, failing that,
+	 * Retrieve published submission by public article id or, failing that,
 	 * internal article ID; public article ID takes precedence.
 	 * @param $journalId int
 	 * @param $articleId string
 	 * @param $useCache boolean optional
-	 * @return PublishedArticle object
+	 * @return PublishedSubmission object
 	 */
-	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
-		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache);
+	function getPublishedSubmissionByBestArticleId($journalId, $articleId, $useCache = false) {
+		$article = $this->getPublishedSubmissionByPubId('publisher-id', $articleId, $journalId, $useCache);
 		if (!$article && ctype_digit("$articleId")) {
 			return $this->getBySubmissionId($articleId, $journalId, $useCache);
 		}
@@ -425,7 +425,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve "submission_id"s for published articles for a journal, sorted
+	 * Retrieve "submission_id"s for published submissions for a journal, sorted
 	 * alphabetically.
 	 * Note that if journalId is null, alphabetized article IDs for all
 	 * enabled journals are returned.
@@ -433,7 +433,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return Array
 	 */
-	function getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
+	function getPublishedSubmissionIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
 		$params = array(
 			'cleanTitle', AppLocale::getLocale(),
 			'cleanTitle'
@@ -469,7 +469,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve "submission_id"s for published articles for a journal, sorted
+	 * Retrieve "submission_id"s for published submissions for a journal, sorted
 	 * by reverse publish date.
 	 * Note that if journalId is null, alphabetized article IDs for all
 	 * journals are returned.
@@ -477,7 +477,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean (optional; default true)
 	 * @return array
 	 */
-	function getPublishedArticleIdsByJournal($journalId = null, $useCache = true) {
+	function getPublishedSubmissionIdsByJournal($journalId = null, $useCache = true) {
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result = $this->$functionName(
 			'SELECT	s.submission_id AS pub_id
@@ -502,13 +502,13 @@ class PublishedArticleDAO extends ArticleDAO {
 		return $articleIds;
 	}
 	/**
-	 * Retrieve "submission_id"s for published articles for a journal section, sorted
+	 * Retrieve "submission_id"s for published submissions for a journal section, sorted
 	 * by reverse publish date.
 	 * @param $sectionId int
 	 * @param $useCache boolean Optional (default true)
 	 * @return array
 	 */
-	function getPublishedArticleIdsBySection($sectionId, $useCache = true) {
+	function getPublishedSubmissionIdsBySection($sectionId, $useCache = true) {
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result = $this->$functionName(
 			'SELECT	s.submission_id
@@ -534,65 +534,65 @@ class PublishedArticleDAO extends ArticleDAO {
 
 	/**
 	 * Get a new data object.
-	 * @return PublishedArticle
+	 * @return PublishedSubmission
 	 */
 	function newDataObject() {
-		return new PublishedArticle();
+		return new PublishedSubmission();
 	}
 
 	/**
-	 * creates and returns a published article object from a row
+	 * creates and returns a published submission object from a row
 	 * @param $row array
 	 * @param $callHooks boolean Whether or not to call hooks
-	 * @return PublishedArticle object
+	 * @return PublishedSubmission object
 	 */
 	function _fromRow($row, $callHooks = true, $submissionVersion = null) {
-		$publishedArticle = parent::_fromRow($row);
-		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
-		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setSequence($row['seq']);
-		$publishedArticle->setAccessStatus($row['access_status']);
-		$publishedArticle->setDatePublished($row['date_published']);
-		$publishedArticle->setSubmissionVersion($row['published_submission_version']);
-		$publishedArticle->setCurrentSubmissionVersion($row['published_submission_version']);
-		$publishedArticle->setIsCurrentSubmissionVersion($row['is_current_submission_version']);
+		$publishedSubmission = parent::_fromRow($row);
+		$publishedSubmission->setPublishedSubmissionId($row['published_submission_id']);
+		$publishedSubmission->setIssueId($row['issue_id']);
+		$publishedSubmission->setSequence($row['seq']);
+		$publishedSubmission->setAccessStatus($row['access_status']);
+		$publishedSubmission->setDatePublished($row['date_published']);
+		$publishedSubmission->setSubmissionVersion($row['published_submission_version']);
+		$publishedSubmission->setCurrentSubmissionVersion($row['published_submission_version']);
+		$publishedSubmission->setIsCurrentSubmissionVersion($row['is_current_submission_version']);
 
-		$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'], null, $publishedArticle->getSubmissionVersion())->toArray());
-		$this->getDataObjectSettings('submission_settings', 'submission_id', $publishedArticle->getId(), $publishedArticle, $publishedArticle->getSubmissionVersion());
+		$publishedSubmission->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'], null, $publishedSubmission->getSubmissionVersion())->toArray());
+		$this->getDataObjectSettings('submission_settings', 'submission_id', $publishedSubmission->getId(), $publishedSubmission, $publishedSubmission->getSubmissionVersion());
 
-		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
-		return $publishedArticle;
+		if ($callHooks) HookRegistry::call('PublishedSubmissionDAO::_returnPublishedSubmissionFromRow', array(&$publishedSubmission, &$row));
+		return $publishedSubmission;
 	}
 
 
 	/**
-	 * inserts a new published article into published_submissions table
-	 * @param PublishedArticle object
+	 * inserts a new published submission into published_submissions table
+	 * @param PublishedSubmission object
 	 * @return pubId int
 	 */
-	function insertObject($publishedArticle) {
+	function insertObject($publishedSubmission) {
 		$this->update(
 			sprintf('INSERT INTO published_submissions
 				(submission_id, issue_id, date_published, seq, access_status, published_submission_version, is_current_submission_version)
 				VALUES
 				(?, ?, %s, ?, ?, ?, ?)',
-				$this->datetimeToDB($publishedArticle->getDatePublished())),
+				$this->datetimeToDB($publishedSubmission->getDatePublished())),
 			array(
-				(int) $publishedArticle->getId(),
-				(int) $publishedArticle->getIssueId(),
-				$publishedArticle->getSequence(),
-				$publishedArticle->getAccessStatus(),
-				(int) $publishedArticle->getSubmissionVersion(),
-				(int) $publishedArticle->getIsCurrentSubmissionVersion(),
+				(int) $publishedSubmission->getId(),
+				(int) $publishedSubmission->getIssueId(),
+				$publishedSubmission->getSequence(),
+				$publishedSubmission->getAccessStatus(),
+				(int) $publishedSubmission->getSubmissionVersion(),
+				(int) $publishedSubmission->getIsCurrentSubmissionVersion(),
 			)
 		);
 
-		$publishedArticle->setPublishedArticleId($this->getInsertId());
-		return $publishedArticle->getPublishedArticleId();
+		$publishedSubmission->setPublishedSubmissionId($this->getInsertId());
+		return $publishedSubmission->getPublishedSubmissionId();
 	}
 
 	/**
-	 * Get the ID of the last inserted published article.
+	 * Get the ID of the last inserted published submission.
 	 * @return int
 	 */
 	function getInsertId() {
@@ -601,22 +601,22 @@ class PublishedArticleDAO extends ArticleDAO {
 
 	/**
 	 * removes an published Article by id
-	 * @param $publishedArticleId int
+	 * @param $publishedSubmissionId int
 	 */
-	function deletePublishedArticleById($publishedArticleId) {
+	function deletePublishedSubmissionById($publishedSubmissionId) {
 		$this->update(
-			'DELETE FROM published_submissions WHERE published_submission_id = ?', (int) $publishedArticleId
+			'DELETE FROM published_submissions WHERE published_submission_id = ?', (int) $publishedSubmissionId
 		);
 
 		$this->flushCache();
 	}
 
 	/**
-	 * Delete published article by article ID
+	 * Delete published submission by article ID
 	 * NOTE: This does not delete the related Article or any dependent entities
 	 * @param $articleId int
 	 */
-	function deletePublishedArticleByArticleId($articleId) {
+	function deletePublishedSubmissionByArticleId($articleId) {
 		$this->update(
 			'DELETE FROM published_submissions WHERE submission_id = ?', (int) $articleId
 		);
@@ -624,10 +624,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Delete published articles by section ID
+	 * Delete published submissions by section ID
 	 * @param $sectionId int
 	 */
-	function deletePublishedArticlesBySectionId($sectionId) {
+	function deletePublishedSubmissionsBySectionId($sectionId) {
 		$result = $this->retrieve(
 			'SELECT	ps.submission_id AS submission_id
 			FROM	published_submissions ps
@@ -648,10 +648,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Delete published articles by issue ID
+	 * Delete published submissions by issue ID
 	 * @param $issueId int
 	 */
-	function deletePublishedArticlesByIssueId($issueId) {
+	function deletePublishedSubmissionsByIssueId($issueId) {
 		$this->update(
 			'DELETE FROM published_submissions WHERE issue_id = ?', (int) $issueId
 		);
@@ -660,10 +660,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * updates a published article
-	 * @param PublishedArticle object
+	 * updates a published submission
+	 * @param PublishedSubmission object
 	 */
-	function updatePublishedArticle($publishedArticle) {
+	function updatePublishedSubmission($publishedSubmission) {
 		$this->update(
 			sprintf('UPDATE published_submissions
 				SET
@@ -674,15 +674,15 @@ class PublishedArticleDAO extends ArticleDAO {
 					access_status = ?,
 					is_current_submission_version = ?
 				WHERE published_submission_id = ? AND published_submission_version = ?',
-				$this->datetimeToDB($publishedArticle->getDatePublished())),
+				$this->datetimeToDB($publishedSubmission->getDatePublished())),
 			array(
-				(int) $publishedArticle->getId(),
-				(int) $publishedArticle->getIssueId(),
-				$publishedArticle->getSequence(),
-				$publishedArticle->getAccessStatus(),
-				(int) $publishedArticle->getIsCurrentSubmissionVersion(),
-				(int) $publishedArticle->getPublishedArticleId(),
-				(int) $publishedArticle->getSubmissionVersion()
+				(int) $publishedSubmission->getId(),
+				(int) $publishedSubmission->getIssueId(),
+				$publishedSubmission->getSequence(),
+				$publishedSubmission->getAccessStatus(),
+				(int) $publishedSubmission->getIsCurrentSubmissionVersion(),
+				(int) $publishedSubmission->getPublishedSubmissionId(),
+				(int) $publishedSubmission->getSubmissionVersion()
 			)
 		);
 
@@ -690,35 +690,35 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Updates a published article field
-	 * @param $publishedArticleId int
+	 * Updates a published submission field
+	 * @param $publishedSubmissionId int
 	 * @param $field string
 	 * @param $value mixed
 	 */
-	function updatePublishedArticleField($publishedArticleId, $field, $value) {
+	function updatePublishedSubmissionField($publishedSubmissionId, $field, $value) {
 		$this->update(
-			"UPDATE published_submissions SET $field = ? WHERE published_submission_id = ? AND is_current_submission_version = 1", array($value, (int) $publishedArticleId)
+			"UPDATE published_submissions SET $field = ? WHERE published_submission_id = ? AND is_current_submission_version = 1", array($value, (int) $publishedSubmissionId)
 		);
 
 		$this->flushCache();
 	}
 
 	/**
-	 * Sequentially renumber published articles in their sequence order.
+	 * Sequentially renumber published submissions in their sequence order.
 	 * @param $sectionId int
 	 * @param $issueId int
 	 */
-	function resequencePublishedArticles($sectionId, $issueId) {
+	function resequencePublishedSubmissions($sectionId, $issueId) {
 		$result = $this->retrieve(
 			'SELECT ps.published_submission_id FROM published_submissions ps, submissions s WHERE s.section_id = ? AND s.submission_id = ps.submission_id AND ps.issue_id = ? AND ps.is_current_submission_version = 1 ORDER BY ps.seq',
 			array((int) $sectionId, (int) $issueId)
 		);
 
 		for ($i=1; !$result->EOF; $i++) {
-			list($publishedArticleId) = $result->fields;
+			list($publishedSubmissionId) = $result->fields;
 			$this->update(
 				'UPDATE published_submissions SET seq = ? WHERE published_submission_id = ? AND is_current_submission_version = 1',
-				array($i, $publishedArticleId)
+				array($i, $publishedSubmissionId)
 			);
 
 			$result->MoveNext();
@@ -728,7 +728,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Return years of oldest/youngest published article on site or within a journal
+	 * Return years of oldest/youngest published submission on site or within a journal
 	 * @param $journalId int Optional
 	 * @return array (maximum date published, minimum date published)
 	 */

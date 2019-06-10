@@ -20,8 +20,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 	/** @var Submission The submission used to show metadata information */
 	var $_submission;
 
-	/** @var PublishedArticle The published article associated with this submission */
-	var $_publishedArticle;
+	/** @var PublishedSubmission The published submission associated with this submission */
+	var $_publishedSubmission;
 
 	/** @var int The current stage id */
 	var $_stageId;
@@ -74,8 +74,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
 		$submission = $this->getSubmission();
-		$publishedArticle = $this->getPublishedArticle();
-		if ($publishedArticle) {
+		$publishedSubmission = $this->getPublishedSubmission();
+		if ($publishedSubmission) {
 			if ($submission->getCurrentSubmissionVersion() != $submission->getSubmissionVersion()) {
 				if (!isset($this->_formParams)) {
 					$this->_formParams = array();
@@ -84,8 +84,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$this->_formParams["readOnly"] = true;
 				$this->_formParams["hideSubmit"] = true;
 			}
-
-			$templateMgr->assign('publishedArticle', $publishedArticle);
+			$templateMgr->assign('publishedSubmission', $publishedSubmission);
 		}
 
 		$templateMgr->assign(array(
@@ -112,8 +111,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 		);
 
 		$submission = $this->getSubmission();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->_publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion());
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$this->_publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion());
 
 		$copyrightHolder = $submission->getCopyrightHolder(null);
 		$copyrightYear = $submission->getCopyrightYear();
@@ -140,11 +139,11 @@ class IssueEntryPublicationMetadataForm extends Form {
 	}
 
 	/**
-	 * Get the PublishedArticle
-	 * @return PublishedArticle
+	 * Get the PublishedSubmission
+	 * @return PublishedSubmission
 	 */
-	function getPublishedArticle() {
-		return $this->_publishedArticle;
+	function getPublishedSubmission() {
+		return $this->_publishedSubmission;
 	}
 
 	/**
@@ -173,82 +172,78 @@ class IssueEntryPublicationMetadataForm extends Form {
 		));
 	}
 
-	/**
-	 * Save the metadata and store the catalog data for this published
-	 * monograph.
-	 */
-	function execute() {
-		parent::execute();
+/**
+ * Save the metadata and store the catalog data for this published
+ * monograph.
+ */
+function execute() {
+	parent::execute();
 
-		$request = Application::get()->getRequest();
-		$submission = $this->getSubmission();
-		$context = $request->getContext();
+	$request = Application::get()->getRequest();
+	$submission = $this->getSubmission();
+	$context = $request->getContext();
 
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedArticle PublishedArticle */
+	$articleSearchIndex = Application::getSubmissionSearchIndex();
+	$submissionFilesChanged = false;
+	$submissionMetadataChanged = false;
 
-		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		$submissionFilesChanged = false;
-		$submissionMetadataChanged = false;
+	// define the access status for the article if none is set.
+	$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
 
-		// define the access status for the article if none is set.
-		$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
-
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		if (!is_null($this->getData('pages'))) {
-			$submission->setPages($this->getData('pages'));
-		}
-
-		$publishedArticle = $publishedArticleDao->newDataObject();
-		$publishedArticle->setId($submission->getId());
-		$publishedArticle->setDatePublished(Core::getCurrentDate());
-		$publishedArticle->setAccessStatus($accessStatus);
-		$publishedArticle->setSequence(REALLY_BIG_NUMBER);
-		$publishedArticle->setSubmissionVersion($submission->getSubmissionVersion());
-		$publishedArticle->setIsCurrentSubmissionVersion(true);
-		$prevPublishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion() - 1);
-
-		if ($prevPublishedArticle) {
-			$prevPublishedArticle->setIsCurrentSubmissionVersion(false);
-
-			$publishedArticleDao->updatePublishedArticle($prevPublishedArticle);
-		}
-
-		$publishedArticleDao->insertObject($publishedArticle);
-
-
-		// Index the published article metadata and files for the first time.
-		$submissionMetadataChanged = true;
-		$submissionFilesChanged = true;
-
-		if ($this->getData('attachPermissions')) {
-			$submission->setCopyrightYear($this->getData('copyrightYear'));
-			$submission->setCopyrightHolder($this->getData('copyrightHolder'), null); // Localized
-			$submission->setLicenseURL($this->getData('licenseURL'));
-		} else {
-			$submission->setCopyrightYear(null);
-			$submission->setCopyrightHolder(null, null);
-			$submission->setLicenseURL(null);
-		}
-
-		$submission->stampStatusModified();
-		$submission->setStatus(STATUS_PUBLISHED);
-		$articleDao->updateObject($submission);
-
-		//after the submission is updated, update the search index
-		if ($publishedArticle) {
-			if ($submissionFilesChanged) {
-				$articleSearchIndex->submissionFilesChanged($publishedArticle);
-			}
-
-			if ($submissionMetadataChanged) {
-				$articleSearchIndex->submissionMetadataChanged($publishedArticle);
-			}
-		}
-
-		$articleSearchIndex->submissionChangesFinished();
+	$articleDao = DAORegistry::getDAO('ArticleDAO');
+	if (!is_null($this->getData('pages'))) {
+		$submission->setPages($this->getData('pages'));
 	}
+
+	$sectionDao = DAORegistry::getDAO('SectionDAO');
+	$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+	$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedSubmission PublishedSubmission */
+
+	$publishedSubmission = $publishedSubmissionDao->newDataObject();
+	$publishedSubmission->setId($submission->getId());
+	$publishedSubmission->setDatePublished(Core::getCurrentDate());
+	$publishedSubmission->setSequence(REALLY_BIG_NUMBER);
+	$publishedSubmission->setAccessStatus($accessStatus);
+	$publishedSubmission->setSubmissionVersion($submission->getSubmissionVersion());
+	$publishedSubmission->setIsCurrentSubmissionVersion(true);
+	$prevPublishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion() - 1);
+	if ($prevPublishedSubmission) {
+		$prevPublishedSubmission->setIsCurrentSubmissionVersion(false);
+
+		$publishedSubmissionDao->updatePublishedSubmission($prevPublishedSubmission);
+	}
+
+	$publishedSubmissionDao->insertObject($publishedSubmission);
+
+	// Index the published submission metadata and files for the first time.
+	$submissionMetadataChanged = true;
+	$submissionFilesChanged = true;
+
+	if ($this->getData('attachPermissions')) {
+		$submission->setCopyrightYear($this->getData('copyrightYear'));
+		$submission->setCopyrightHolder($this->getData('copyrightHolder'), null); // Localized
+		$submission->setLicenseURL($this->getData('licenseURL'));
+	} else {
+		$submission->setCopyrightYear(null);
+		$submission->setCopyrightHolder(null, null);
+		$submission->setLicenseURL(null);
+	}
+
+	$submission->stampStatusModified();
+	$submission->setStatus(STATUS_PUBLISHED);
+	$articleDao->updateObject($submission);
+
+	//after the submission is updated, update the search index
+	if ($publishedSubmission) {
+		if ($submissionFilesChanged) {
+			$articleSearchIndex->submissionFilesChanged($publishedSubmission);
+		}
+
+		if ($submissionMetadataChanged) {
+			$articleSearchIndex->submissionMetadataChanged($publishedSubmission);
+		}
+	}
+	$articleSearchIndex->submissionChangesFinished();
 }
 
 

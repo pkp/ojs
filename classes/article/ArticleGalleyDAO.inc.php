@@ -461,7 +461,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
-	 * Get all published article galleys (eventually with a pubId assigned and) matching the specified settings.
+	 * Get all published submission galleys (eventually with a pubId assigned and) matching the specified settings.
 	 * @param $contextId integer optional
 	 * @param $pubIdType string
 	 * @param $title string optional

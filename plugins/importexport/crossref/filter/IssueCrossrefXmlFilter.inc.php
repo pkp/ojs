@@ -40,7 +40,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObjects array Array of Issues or PublishedArticles
+	 * @param $pubObjects array Array of Issues or PublishedSubmissions
 	 * @return DOMDocument
 	 */
 	function &process(&$pubObjects) {
@@ -63,7 +63,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$rootNode->appendChild($bodyNode);
 
 		foreach($pubObjects as $pubObject) {
-			// pubObject is either Issue or PublishedArticle
+			// pubObject is either Issue or PublishedSubmission
 			$journalNode = $this->createJournalNode($doc, $pubObject);
 			$bodyNode->appendChild($journalNode);
 		}
@@ -121,7 +121,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	/**
 	 * Create and return the journal node 'journal'.
 	 * @param $doc DOMDocument
-	 * @param $pubObject object Issue or PublishedArticle
+	 * @param $pubObject object Issue or PublishedSubmission
 	 * @return DOMElement
 	 */
 	function createJournalNode($doc, $pubObject) {

@@ -228,17 +228,17 @@ class ArticleSearch extends SubmissionSearch {
 	 *
 	 * @param $results array
 	 * @param $user User optional (if availability information is desired)
-	 * @return array An array with the articles, published articles,
+	 * @return array An array with the articles, published submissions,
 	 *  issue, journal, section and the issue availability.
 	 */
 	function formatResults($results, $user = null) {
 		$submissionDao = Application::getSubmissionDAO();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$contextDao = Application::getContextDAO();
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
-		$publishedArticleCache = array();
+		$publishedSubmissionCache = array();
 		$articleCache = array();
 		$issueCache = array();
 		$issueAvailabilityCache = array();
@@ -249,13 +249,13 @@ class ArticleSearch extends SubmissionSearch {
 		foreach ($results as $articleId) {
 			// Get the article, storing in cache if necessary.
 			if (!isset($articleCache[$articleId])) {
-				$publishedArticleCache[$articleId] = $publishedArticleDao->getBySubmissionId($articleId);
+				$publishedSubmissionCache[$articleId] = $publishedSubmissionDao->getBySubmissionId($articleId);
 				$articleCache[$articleId] = $submissionDao->getById($articleId);
 			}
 			$article = $articleCache[$articleId];
-			$publishedArticle = $publishedArticleCache[$articleId];
+			$publishedSubmission = $publishedSubmissionCache[$articleId];
 
-			if ($publishedArticle && $article) {
+			if ($publishedSubmission && $article) {
 				$sectionId = $article->getSectionId();
 				if (!isset($sectionCache[$sectionId])) {
 					$sectionCache[$sectionId] = $sectionDao->getById($sectionId);
@@ -268,7 +268,7 @@ class ArticleSearch extends SubmissionSearch {
 				}
 
 				// Get the issue, storing in cache if necessary.
-				$issueId = $publishedArticle->getIssueId();
+				$issueId = $publishedSubmission->getIssueId();
 				if (!isset($issueCache[$issueId])) {
 					$issue = $issueDao->getById($issueId);
 					$issueCache[$issueId] = $issue;
@@ -283,7 +283,7 @@ class ArticleSearch extends SubmissionSearch {
 				// Store the retrieved objects in the result array.
 				$returner[] = array(
 					'article' => $article,
-					'publishedArticle' => $publishedArticleCache[$articleId],
+					'publishedSubmission' => $publishedSubmissionCache[$articleId],
 					'issue' => $issueCache[$issueId],
 					'journal' => $contextCache[$contextId],
 					'issueAvailable' => $issueAvailabilityCache[$issueId],
@@ -309,9 +309,9 @@ class ArticleSearch extends SubmissionSearch {
 		// of the submission for a similarity search.
 		if ($result === false) {
 			// Retrieve the article.
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-			$article = $publishedArticleDao->getBySubmissionId($submissionId);
-			if (is_a($article, 'PublishedArticle')) {
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
+			$article = $publishedSubmissionDao->getBySubmissionId($submissionId);
+			if (is_a($article, 'PublishedSubmission')) {
 				// Retrieve keywords (if any).
 				$searchTerms = $article->getLocalizedSubject();
 				// Tokenize keywords.
