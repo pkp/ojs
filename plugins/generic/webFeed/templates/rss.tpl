@@ -57,7 +57,7 @@
 
 		<items>
 			<rdf:Seq>
-			{foreach name=sections from=$publishedArticles item=section key=sectionId}
+			{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
 				{foreach from=$section.articles item=article}
 					<rdf:li rdf:resource="{url page="article" op="view" path=$article->getBestArticleId()}"/>
 				{/foreach}{* articles *}
@@ -66,7 +66,7 @@
 		</items>
 	</channel>
 
-{foreach name=sections from=$publishedArticles item=section key=sectionId}
+{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
 	{foreach from=$section.articles item=article}
 		<item rdf:about="{url page="article" op="view" path=$article->getBestArticleId()}">
 

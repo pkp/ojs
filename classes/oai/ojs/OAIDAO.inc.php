@@ -22,7 +22,7 @@ class OAIDAO extends PKPOAIDAO {
  	/** Helper DAOs */
  	var $journalDao;
  	var $sectionDao;
-	var $publishedArticleDao;
+	var $publishedSubmissionDao;
 	var $articleGalleyDao;
 	var $issueDao;
  	var $authorDao;
@@ -39,7 +39,7 @@ class OAIDAO extends PKPOAIDAO {
 		parent::__construct();
 		$this->journalDao = DAORegistry::getDAO('JournalDAO');
 		$this->sectionDao = DAORegistry::getDAO('SectionDAO');
-		$this->publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$this->publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
@@ -183,11 +183,11 @@ class OAIDAO extends PKPOAIDAO {
 		$record->sets = array(urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev()));
 
 		if ($isRecord) {
-			$publishedArticle = $this->publishedArticleDao->getBySubmissionId($articleId);
+			$publishedSubmission = $this->publishedSubmissionDao->getBySubmissionId($articleId);
 			$issue = $this->getIssue($row['issue_id']);
 			$galleys = $this->articleGalleyDao->getBySubmissionId($articleId)->toArray();
 
-			$record->setData('article', $publishedArticle);
+			$record->setData('article', $publishedSubmission);
 			$record->setData('journal', $journal);
 			$record->setData('section', $section);
 			$record->setData('issue', $issue);

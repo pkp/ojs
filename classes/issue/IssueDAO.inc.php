@@ -460,7 +460,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
-	 * Delete issue. Deletes associated issue galleys, cover pages, and published articles.
+	 * Delete issue. Deletes associated issue galleys, cover pages, and published submissions.
 	 * @param $issue object issue
 	 */
 	function deleteObject($issue) {
@@ -492,9 +492,9 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issueFileManager = new IssueFileManager($issueId);
 		$issueFileManager->deleteIssueTree();
 
-		// Delete published articles
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
+		// Delete published submissions
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmissionDao->deletePublishedSubmissionsByIssueId($issueId);
 
 		// Delete issue settings and issue
 		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', (int) $issueId);

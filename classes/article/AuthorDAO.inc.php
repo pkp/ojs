@@ -31,7 +31,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * @param $affiliation string (optional)
 	 * @param $country string (optional)
 	 */
-	function &getPublishedArticlesForAuthor($journalId, $givenName, $familyName, $affiliation = null, $country = null) {
+	function &getPublishedSubmissionsForAuthor($journalId, $givenName, $familyName, $affiliation = null, $country = null) {
 		$params = array();
 
 		$supportedLocales = array();
@@ -100,18 +100,18 @@ class AuthorDAO extends PKPAuthorDAO {
 			$params
 		);
 
-		$publishedArticles = array();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedSubmissions = array();
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
-			$publishedArticle = $publishedArticleDao->getBySubmissionId($row['submission_id']);
-			if ($publishedArticle) {
-				$publishedArticles[] = $publishedArticle;
+			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($row['submission_id']);
+			if ($publishedSubmission) {
+				$publishedSubmissions[] = $publishedSubmission;
 			}
 			$result->MoveNext();
 		}
 		$result->Close();
-		return $publishedArticles;
+		return $publishedSubmissions;
 	}
 
 	/**

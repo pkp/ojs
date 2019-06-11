@@ -31,8 +31,8 @@
 	{if !$publicationFeeEnabled || $publicationPayment}
 		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication"}
 			{fbvFormSection for="schedule"}
-				{if $publishedArticle}
-					{assign var=issueId value=$publishedArticle->getIssueId()}
+				{if $publishedSubmission}
+					{assign var=issueId value=$publishedSubmission->getIssueId()}
 				{else}
 					{assign var=issueId value=0}
 				{/if}
@@ -46,12 +46,12 @@
 			{/fbvFormSection}
 		{/fbvFormArea}
 
-		{if $publishedArticle}
+		{if $publishedSubmission}
 			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
 				{fbvFormSection for="publishedDate"}
-					{fbvElement type="text" required=true id="datePublished" disabled=$formParams.readOnly value=$publishedArticle->getDatePublished() translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}
+					{fbvElement type="text" required=true id="datePublished" disabled=$formParams.readOnly value=$publishedSubmission->getDatePublished() translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}
 				{if $issueAccess && $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $context->getData('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
-					{fbvElement type="select" id="accessStatus" disabled=$formParams.readOnly required=true from=$accessOptions selected=$publishedArticle->getAccessStatus() translate=false label="editor.issues.access" inline=true size=$fbvStyles.size.MEDIUM}
+					{fbvElement type="select" id="accessStatus" disabled=$formParams.readOnly required=true from=$accessOptions selected=$publishedSubmission->getAccessStatus() translate=false label="editor.issues.access" inline=true size=$fbvStyles.size.MEDIUM}
 				{/if}
 				{/fbvFormSection}
 			{/fbvFormArea}

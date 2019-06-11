@@ -420,7 +420,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 	/**
 	 * Identify the locale precedence for this export.
 	 * @param $context Context
-	 * @param $article PublishedArticle
+	 * @param $article PublishedSubmission
 	 * @param $galley ArticleGalley
 	 * @return array A list of valid PKP locales in descending
 	 *  order of priority.

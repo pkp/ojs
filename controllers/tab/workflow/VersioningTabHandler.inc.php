@@ -72,7 +72,7 @@ class VersioningTabHandler extends PKPVersioningTabHandler {
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
 
-		$publishedSubmissionDao = Application::getPublishedSubmissionDAO(); /** @var $publishedSubmissionDao PublishedArticleDAO */
+		$publishedSubmissionDao = Application::getPublishedSubmissionDAO(); /** @var $publishedSubmissionDao PublishedSubmissionDAO */
 
 		// Create schedule for publication link action.
 		$dispatcher = $request->getDispatcher();

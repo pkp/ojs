@@ -45,26 +45,26 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		$isPublic =& $args[0];
 		$submission = $args[1];
 
-		if (is_a($submission, 'PublishedArticle')) {
-			$publishedArticle = $submission;
+		if (is_a($submission, 'PublishedSubmission')) {
+			$publishedSubmission = $submission;
 		} else {
-			$publishedArticleDao = \DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+			$publishedSubmissionDao = \DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId(
 				$submission->getContextId(),
 				$submission->getId(),
 				true
 			);
 		}
 
-		if (empty($publishedArticle)) {
+		if (empty($publishedSubmission)) {
 			return;
 		}
 
-		$issueId = $publishedArticle->getIssueId();
+		$issueId = $publishedSubmission->getIssueId();
 		$issueDao = \DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getById(
-			$publishedArticle->getIssueId(),
-			$publishedArticle->getJournalId(),
+			$publishedSubmission->getIssueId(),
+			$publishedSubmission->getJournalId(),
 			true
 		);
 
@@ -187,10 +187,10 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		$context = $request->getContext();
 		$dispatcher = $request->getDispatcher();
 
-		$publishedArticle = null;
+		$publishedSubmission = null;
 		if ($context) {
-			$publishedArticleDao = \DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+			$publishedSubmissionDao = \DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId(
 				(int) $context->getId(),
 				$submission->getId(),
 				true
@@ -198,11 +198,11 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		}
 
 		$issue = null;
-		if ($publishedArticle) {
+		if ($publishedSubmission) {
 			$issueDao = \DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getById(
-				$publishedArticle->getIssueId(),
-				$publishedArticle->getJournalId(),
+				$publishedSubmission->getIssueId(),
+				$publishedSubmission->getJournalId(),
 				true
 			);
 		}
@@ -252,11 +252,11 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 				case 'galleys':
 				case 'galleysSummary';
 					$values['galleys'] = null;
-					if ($publishedArticle) {
+					if ($publishedSubmission) {
 						$values['galleys'] = [];
 						$galleyService = \Services::get('galley');
-						$galleyArgs = array_merge($propertyArgs, array('parent' => $publishedArticle));
-						$galleys = $publishedArticle->getGalleys();
+						$galleyArgs = array_merge($propertyArgs, array('parent' => $publishedSubmission));
+						$galleys = $publishedSubmission->getGalleys();
 						foreach ($galleys as $galley) {
 							$values['galleys'][] = ($prop === 'galleys')
 								? $galleyService->getFullProperties($galley, $galleyArgs)

@@ -101,7 +101,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
 	 * @see PubObjectsExportPlugin::depositXML()
-	 * @param $objects PublishedArticle
+	 * @param $objects PublishedSubmission
 	 * @param $context Context
 	 * @param $jsonString string Export JSON string
 	 * @return boolean Whether the JSON string has been registered
@@ -201,7 +201,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
 	 * Get the JSON for selected objects.
-	 * @param $object PublishedArticle
+	 * @param $object PublishedSubmission
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string JSON variable.

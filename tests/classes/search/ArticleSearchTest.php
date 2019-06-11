@@ -37,7 +37,7 @@ class ArticleSearchTest extends PKPTestCase {
 	protected function getMockedDAOs() {
 		$mockedDaos = parent::getMockedDAOs();
 		$mockedDaos += array(
-			'ArticleSearchDAO', 'ArticleDAO', 'PublishedArticleDAO',
+			'ArticleSearchDAO', 'ArticleDAO', 'PublishedSubmissionDAO',
 			'IssueDAO', 'JournalDAO', 'SectionDAO'
 		);
 		return $mockedDaos;
@@ -53,7 +53,7 @@ class ArticleSearchTest extends PKPTestCase {
 		// Prepare the mock environment for this test.
 		$this->registerMockArticleSearchDAO();
 		$this->registerMockArticleDAO();
-		$this->registerMockPublishedArticleDAO();
+		$this->registerMockPublishedSubmissionDAO();
 		$this->registerMockIssueDAO();
 		$this->registerMockJournalDAO();
 		$this->registerMockSectionDAO();
@@ -269,25 +269,25 @@ class ArticleSearchTest extends PKPTestCase {
 	}
 
 	/**
-	 * Mock and register an PublishedArticleDAO as a test
+	 * Mock and register an PublishedSubmissionDAO as a test
 	 * back end for the ArticleSearch class.
 	 */
-	private function registerMockPublishedArticleDAO() {
-		// Mock a PublishedArticleDAO.
-		$publishedArticleDAO = $this->getMockBuilder(PublishedArticleDAO::class)
+	private function registerMockPublishedSubmissionDAO() {
+		// Mock a PublishedSubmissionDAO.
+		$publishedSubmissionDAO = $this->getMockBuilder(PublishedSubmissionDAO::class)
 			->setMethods(array('getBySubmissionId'))
 			->getMock();
 
-		// Mock a published article.
-		$publishedArticle = new PublishedArticle();
+		// Mock a published submission.
+		$publishedSubmission = new PublishedSubmission();
 
 		// Mock the getBySubmissionId() method.
-		$publishedArticleDAO->expects($this->any())
+		$publishedSubmissionDAO->expects($this->any())
 		                    ->method('getBySubmissionId')
-		                    ->will($this->returnValue($publishedArticle));
+		                    ->will($this->returnValue($publishedSubmission));
 
 		// Register the mock DAO.
-		DAORegistry::registerDAO('PublishedArticleDAO', $publishedArticleDAO);
+		DAORegistry::registerDAO('PublishedSubmissionDAO', $publishedSubmissionDAO);
 	}
 
 	/**

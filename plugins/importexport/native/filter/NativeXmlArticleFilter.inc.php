@@ -40,7 +40,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	 * @return DAO
 	 */
 	function getPublishedSubmissionDAO() {
-		return DAORegistry::getDAO('PublishedArticleDAO');
+		return DAORegistry::getDAO('PublishedSubmissionDAO');
 	}
 
 	/**
@@ -201,9 +201,9 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 
 	/**
 	 * Class-specific methods for published submissions.
-	 * @param PublishedArticle $submission
+	 * @param PublishedSubmission $submission
 	 * @param DOMElement $node
-	 * @return PublishedArticle
+	 * @return PublishedSubmission
 	 */
 	function populatePublishedSubmission($submission, $node) {
 		$deployment = $this->getDeployment();

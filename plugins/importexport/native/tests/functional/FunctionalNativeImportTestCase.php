@@ -21,12 +21,12 @@ import('lib.pkp.tests.functional.plugins.importexport.FunctionalImportExportBase
 class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 	private $expectedDois = array(
 		'Issue' => '10.1234/t.v1i1-imp-test',
-		'PublishedArticle' => '10.1234/t.v1i1.1-imp-test',
+		'PublishedSubmission' => '10.1234/t.v1i1.1-imp-test',
 		'Galley' => '10.1234/t.v1i1.1.g1-imp-test',
 	);
 	private $expectedURNs = array(
 		'Issue' => 'urn:nbn:de:0000-t.v1i1-imp-test8',
-		'PublishedArticle' => 'urn:nbn:de:0000-t.v1i1.1-imp-test5',
+		'PublishedSubmission' => 'urn:nbn:de:0000-t.v1i1.1-imp-test5',
 		'Galley' => 'urn:nbn:de:0000-t.v1i1.1.g1-imp-test5',
 	);
 
@@ -62,7 +62,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 
 		$daos = array(
 			'Issue' => 'IssueDAO',
-			'PublishedArticle' => 'PublishedArticleDAO',
+			'PublishedSubmission' => 'PublishedSubmissionDAO',
 			'Galley' => 'ArticleGalleyDAO',
 		);
 		$articleId = null;
@@ -72,7 +72,7 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 			self::assertNotNull($pubObject, "Error while testing $objectType: object or DOI has not been imported.");
 			$pubObjectByURN = call_user_func(array($dao, "get${objectType}ByPubId"), 'other::urn', $this->expectedURNs[$objectType]);
 			self::assertNotNull($pubObjectByURN, "Error while testing $objectType: object or URN has not been imported.");
-			if ($objectType == 'PublishedArticle') {
+			if ($objectType == 'PublishedSubmission') {
 				$articleId = $pubObject->getId();
 			}
 		}

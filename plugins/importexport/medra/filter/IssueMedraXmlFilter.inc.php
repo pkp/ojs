@@ -136,8 +136,8 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// 4) issue (as-work and as-manifestation):
 		// related works:
 		// - includes articles-as-work
-		$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-		$articlesByIssue = $articleDao->getPublishedArticles($issueId);
+		$articleDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $articleDao PublishedSubmissionDAO */
+		$articlesByIssue = $articleDao->getPublishedSubmissions($issueId);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleysByIssue = array();
 		foreach ($articlesByIssue as $relatedArticle) {

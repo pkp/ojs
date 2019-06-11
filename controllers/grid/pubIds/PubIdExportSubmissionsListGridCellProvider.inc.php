@@ -30,7 +30,7 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'pubId':

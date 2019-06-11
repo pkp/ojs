@@ -52,7 +52,7 @@
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<ttl>60</ttl>
 
-		{foreach name=sections from=$publishedArticles item=section key=sectionId}
+		{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
 			{foreach from=$section.articles item=article}
 				<item>
 					{* required elements *}

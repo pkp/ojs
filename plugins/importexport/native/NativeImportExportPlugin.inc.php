@@ -326,7 +326,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

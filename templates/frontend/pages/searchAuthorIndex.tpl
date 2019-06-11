@@ -5,7 +5,7 @@
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Index of published articles by author.
+ * Index of published submissions by author.
  *
  *}
 {strip}

@@ -45,7 +45,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	function createJournalNode($doc, $pubObject) {
 		$deployment = $this->getDeployment();
 		$journalNode = parent::createJournalNode($doc, $pubObject);
-		assert(is_a($pubObject, 'PublishedArticle'));
+		assert(is_a($pubObject, 'PublishedSubmission'));
 		$journalNode->appendChild($this->createJournalArticleNode($doc, $pubObject));
 		return $journalNode;
 	}
@@ -53,14 +53,14 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	/**
 	 * Create and return the journal issue node 'journal_issue'.
 	 * @param $doc DOMDocument
-	 * @param $submission PublishedArticle
+	 * @param $submission PublishedSubmission
 	 * @return DOMElement
 	 */
 	function createJournalIssueNode($doc, $submission) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$cache = $deployment->getCache();
-		assert(is_a($submission, 'PublishedArticle'));
+		assert(is_a($submission, 'PublishedSubmission'));
 		$issueId = $submission->getIssueId();
 		if ($cache->isCached('issues', $issueId)) {
 			$issue = $cache->get('issues', $issueId);
@@ -76,7 +76,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	/**
 	 * Create and return the journal article node 'journal_article'.
 	 * @param $doc DOMDocument
-	 * @param $submission PublishedArticle
+	 * @param $submission PublishedSubmission
 	 * @return DOMElement
 	 */
 	function createJournalArticleNode($doc, $submission) {
@@ -238,7 +238,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	 * Append the collection node 'collection property="crawler-based"' to the doi data node.
 	 * @param $doc DOMDocument
 	 * @param $doiDataNode DOMElement
-	 * @param $submission PublishedArticle
+	 * @param $submission PublishedSubmission
 	 * @param $galleys array of galleys
 	 */
 	function appendAsCrawledCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
@@ -268,7 +268,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	 * Append the collection node 'collection property="text-mining"' to the doi data node.
 	 * @param $doc DOMDocument
 	 * @param $doiDataNode DOMElement
-	 * @param $submission PublishedArticle
+	 * @param $submission PublishedSubmission
 	 * @param $galleys array of galleys
 	 */
 	function appendTextMiningCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
@@ -294,7 +294,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	/**
 	 * Create and return component list node 'component_list'.
 	 * @param $doc DOMDocument
-	 * @param $submission PublishedArticle
+	 * @param $submission PublishedSubmission
 	 * @param $componentGalleys array
 	 * @return DOMElement
 	 */

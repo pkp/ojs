@@ -702,7 +702,7 @@ class Upgrade extends Installer {
 			}
 		}
 
-		// Published articles.
+		// Published submissions.
 		$params = array(null, $loadId, 'ojs::legacyDefault', ASSOC_TYPE_SUBMISSION);
 		$metricsDao->update($insertIntoClause .
 			' SELECT ?, ?, ?, ?, pa.article_id, pa.article_id, pa.views, i.journal_id, ' . ASSOC_TYPE_ISSUE . ', pa.issue_id

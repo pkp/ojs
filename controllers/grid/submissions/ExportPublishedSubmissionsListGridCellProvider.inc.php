@@ -41,7 +41,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
 
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
@@ -102,7 +102,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'id':

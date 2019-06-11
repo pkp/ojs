@@ -232,10 +232,10 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 					break;
 				case 'articles':
 					$values[$prop] = array();
-					$publishedArticleDao = \DAORegistry::getDAO('PublishedArticleDAO');
-					$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
-					if (!empty($publishedArticles)) {
-						foreach ($publishedArticles as $article) {
+					$publishedSubmissionDao = \DAORegistry::getDAO('PublishedSubmissionDAO');
+					$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
+					if (!empty($publishedSubmissions)) {
+						foreach ($publishedSubmissions as $article) {
 							$values[$prop][] = \Services::get('submission')->getSummaryProperties($article, $args);
 						}
 					}
