@@ -292,7 +292,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			// define the access status for the article if none is set.
 			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
 
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 			if (!is_null($this->getData('pages'))) {
 				$submission->setPages($this->getData('pages'));
 			}
@@ -348,7 +348,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 					// This was published elsewhere; make sure we don't
 					// mess up sequencing information.
 					$issueId = $publishedSubmission->getIssueId();
-					$publishedSubmissionDao->deletePublishedSubmissionByArticleId($submission->getId());
+					$publishedSubmissionDao->deletePublishedSubmissionBySubmissionId($submission->getId());
 
 					// Delete the article from the search index.
 					$articleSearchIndex->submissionFileDeleted($submission->getId());
@@ -379,7 +379,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setStatus(STATUS_QUEUED);
 			}
 
-			$articleDao->updateObject($submission);
+			$submissionDao->updateObject($submission);
 
 			//after the submission is updated, update the search index
 			if ($publishedSubmission) {

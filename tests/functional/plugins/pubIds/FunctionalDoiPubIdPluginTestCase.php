@@ -442,7 +442,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			$object->setStoredPubId('publisher-id', 'doitest');
 			// Due to the 'unconventional' implementation of the article
 			// DAOs we have to manually change our DAO for article update.
-			if (is_a($object, 'PublishedSubmission')) $dao = $dao->articleDao;
+			if (is_a($object, 'PublishedSubmission')) $dao = $dao->submissionDao;
 			// Update the object.
 			$dao->$daos[$objectType][2]($object);
 

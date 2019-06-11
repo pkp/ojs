@@ -120,7 +120,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
 		);
 		$referredArticle = null;
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 
 		foreach ($embeddableFiles as $embeddableFile) {
 			$params = array();
@@ -129,7 +129,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 			// Ensure that the $referredArticle object refers to the article we want
 			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
-				$referredArticle = $articleDao->getById($galley->getSubmissionId());
+				$referredArticle = $submissionDao->getById($galley->getSubmissionId());
 			}
 			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
 			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
@@ -168,7 +168,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getByArticleId($galley->getSubmissionId());
+		$issue = $issueDao->getBySubmissionId($galley->getSubmissionId());
 
 		$journal = $request->getJournal();
 		$site = $request->getSite();

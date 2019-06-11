@@ -297,8 +297,8 @@ class SectionDAO extends PKPSectionDAO {
 		$subEditorsDao->deleteBySectionId($sectionId, $contextId);
 
 		// Remove articles from this section
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articleDao->removeArticlesFromSection($sectionId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao->removeSubmissionsFromSection($sectionId);
 
 		// Delete published submission entries from this section -- they must
 		// be re-published.

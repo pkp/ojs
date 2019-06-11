@@ -124,8 +124,8 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$subscriptionTypeDao = \DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypeDao->deleteByJournal($context->getId());
 
-		$articleDao = \DAORegistry::getDAO('ArticleDAO');
-		$articleDao->deleteByContextId($context->getId());
+		$submissionDao = \DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao->deleteByContextId($context->getId());
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new \PublicFileManager();

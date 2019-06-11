@@ -37,7 +37,7 @@ class ArticleSearchTest extends PKPTestCase {
 	protected function getMockedDAOs() {
 		$mockedDaos = parent::getMockedDAOs();
 		$mockedDaos += array(
-			'ArticleSearchDAO', 'ArticleDAO', 'PublishedSubmissionDAO',
+			'ArticleSearchDAO', 'SubmissionDAO', 'PublishedSubmissionDAO',
 			'IssueDAO', 'JournalDAO', 'SectionDAO'
 		);
 		return $mockedDaos;
@@ -52,7 +52,7 @@ class ArticleSearchTest extends PKPTestCase {
 
 		// Prepare the mock environment for this test.
 		$this->registerMockArticleSearchDAO();
-		$this->registerMockArticleDAO();
+		$this->registerMockSubmissionDAO();
 		$this->registerMockPublishedSubmissionDAO();
 		$this->registerMockIssueDAO();
 		$this->registerMockJournalDAO();
@@ -201,10 +201,10 @@ class ArticleSearchTest extends PKPTestCase {
 	}
 
 	/**
-	 * Callback dealing with ArticleDAO::getArticle()
-	 * calls via our mock ArticleDAO.
+	 * Callback dealing with SubmissionDAO::getArticle()
+	 * calls via our mock SubmissionDAO.
 	 *
-	 * @see ArticleDAO::getArticle()
+	 * @see SubmissionDAO::getArticle()
 	 */
 	public function callbackGetArticle($articleId, $journalId = null, $useCache = false) {
 		// Create an article instance with the correct id.
@@ -247,12 +247,12 @@ class ArticleSearchTest extends PKPTestCase {
 	}
 
 	/**
-	 * Mock and register an ArticleDAO as a test
+	 * Mock and register an SubmissionDAO as a test
 	 * back end for the ArticleSearch class.
 	 */
-	private function registerMockArticleDAO() {
-		// Mock an ArticleDAO.
-		$articleDAO = $this->getMockBuilder(ArticleDAO::class)
+	private function registerMockSubmissionDAO() {
+		// Mock an SubmissionDAO.
+		$submissionDao = $this->getMockBuilder(SubmissionDAO::class)
 			->setMethods(array('getArticle'))
 			->getMock();
 
@@ -260,12 +260,12 @@ class ArticleSearchTest extends PKPTestCase {
 		$article = new Article();
 
 		// Mock the getArticle() method.
-		$articleDAO->expects($this->any())
+		$submissionDao->expects($this->any())
 		           ->method('getArticle')
 		           ->will($this->returnCallback(array($this, 'callbackGetArticle')));
 
 		// Register the mock DAO.
-		DAORegistry::registerDAO('ArticleDAO', $articleDAO);
+		DAORegistry::registerDAO('SubmissionDAO', $submissionDao);
 	}
 
 	/**

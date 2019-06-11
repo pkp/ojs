@@ -536,7 +536,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param journalId int optional
 	 * @return Issue object
 	 */
-	function getByArticleId($articleId, $journalId = null) {
+	function getBySubmissionId($articleId, $journalId = null) {
 		$params = array((int) $articleId);
 		if ($journalId) $params[] = (int) $journalId;
 

@@ -15,7 +15,7 @@
  */
 
 import('classes.article.Author');
-import('classes.article.Article');
+import('classes.article.Submission');
 import('lib.pkp.classes.submission.PKPAuthorDAO');
 
 class AuthorDAO extends PKPAuthorDAO {

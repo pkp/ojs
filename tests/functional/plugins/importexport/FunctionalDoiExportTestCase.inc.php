@@ -423,10 +423,10 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		$issue = $issueDao->getById(1, 1);
 		$issue->setData('doiSuffix', '');
 		$issueDao->updateObject($issue);
-		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article = $articleDao->getById(1, 1);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$article = $submissionDao->getById(1, 1);
 		$article->setData('doiSuffix', '');
-		$articleDao->updateObject($article); // Do not use PublishedSubmissionDAO::updatePublishedSubmission() for this, otherwise the ADODB cache flush there may cause a permission error.
+		$submissionDao->updateObject($article); // Do not use PublishedSubmissionDAO::updatePublishedSubmission() for this, otherwise the ADODB cache flush there may cause a permission error.
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleys = $galleyDao->getBySubmissionId(1, 1);
 		while ($galley = $galleys->next()) {
@@ -823,7 +823,7 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		// Mark all our test objects as "unregistered".
 		$configurations = array(
 			'Issue' => array('IssueDAO', 'updateObject', 'getById', 1),
-			'Article' => array('ArticleDAO', 'updateObject', 'getArticle', 1),
+			'Article' => array('SubmissionDAO', 'updateObject', 'getArticle', 1),
 			'ArticleGalley' => array('ArticleGalleyDAO', 'updateObject', 'getById', array(1,2,3)),
 		);
 		$pluginInstance = $this->instantiatePlugin($pluginName);

@@ -89,8 +89,8 @@ class NotificationManager extends PKPNotificationManager {
 	function _getArticleTitle($notification) {
 		assert($notification->getAssocType() == ASSOC_TYPE_SUBMISSION);
 		assert(is_numeric($notification->getAssocId()));
-		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article = $articleDao->getById($notification->getAssocId());
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$article = $submissionDao->getById($notification->getAssocId());
 		if (!$article) return null;
 		return $article->getLocalizedTitle();
 	}

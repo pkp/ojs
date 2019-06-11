@@ -66,7 +66,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			$params[] = $journal->getId();
 		}
 
-		import('lib.pkp.classes.submission.Submission'); // STATUS_PUBLISHED
+		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
 		$result = $this->retrieveCached(
 			'SELECT
 				o.submission_id,

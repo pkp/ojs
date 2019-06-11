@@ -104,8 +104,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);
 			} else {
-				$articleDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $articleDao PublishedSubmissionDAO */
-				$article = $articleDao->getByArticleId($pubObject->getSubmissionId(), $context->getId());
+				$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
+				$article = $submissionDao->getBySubmissionId($pubObject->getSubmissionId(), $context->getId());
 				if ($article) $cache->add($article, null);
 			}
 		}
@@ -517,8 +517,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 				break;
 			case isset($issue):
 				// Parts: articles in this issue.
-				$articleDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $articleDao PublishedSubmissionDAO */
-				$articlesByIssue = $articleDao->getPublishedSubmissions($issue->getId());
+				$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
+				$articlesByIssue = $submissionDao->getPublishedSubmissions($issue->getId());
 				foreach ($articlesByIssue as $relatedArticle) {
 					$doi = $relatedArticle->getStoredPubId('doi');
 					if (!empty($doi)) {
@@ -791,8 +791,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * @return string
 	 */
 	function getIssueToc($issue, $objectLocalePrecedence) {
-		$articleDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $articleDao PublishedSubmissionDAO */
-		$articlesByIssue = $articleDao->getPublishedSubmissions($issue->getId());
+		$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
+		$articlesByIssue = $submissionDao->getPublishedSubmissions($issue->getId());
 		assert(is_array($articlesByIssue));
 		$toc = '';
 		foreach ($articlesByIssue as $articleInIssue) {
