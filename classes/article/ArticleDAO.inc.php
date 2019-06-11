@@ -96,7 +96,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return Article
 	 */
 	function newDataObject() {
-		return new Article();
+		return new Submission();
 	}
 
 	/**
