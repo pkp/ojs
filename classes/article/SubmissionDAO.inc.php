@@ -96,7 +96,7 @@ class SubmissionDAO extends PKPSubmissionDAO {
 	 * @return Article
 	 */
 	function newDataObject() {
-		return new Article();
+		return new Submission();
 	}
 
 	/**
