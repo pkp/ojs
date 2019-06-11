@@ -73,7 +73,7 @@ class JournalDAO extends ContextDAO {
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 */
 	function deleteAllPubIds($journalId, $pubIdType) {
-		$pubObjectDaos = array('IssueDAO', 'ArticleDAO', 'ArticleGalleyDAO');
+		$pubObjectDaos = array('IssueDAO', 'SubmissionDAO', 'ArticleGalleyDAO');
 		foreach($pubObjectDaos as $daoName) {
 			$dao = DAORegistry::getDAO($daoName);
 			$dao->deleteAllPubIds($journalId, $pubIdType);

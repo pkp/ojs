@@ -153,7 +153,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!is_a($pubObject, 'Issue')) {
 			assert(!is_null($submission));
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue = $issueDao->getByArticleId($submission->getId(), $contextId);
+			$issue = $issueDao->getBySubmissionId($submission->getId(), $contextId);
 		}
 		if ($issue && $contextId != $issue->getJournalId()) return null;
 

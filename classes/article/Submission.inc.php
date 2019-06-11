@@ -1,21 +1,21 @@
 <?php
 
 /**
- * @defgroup article Article
+ * @defgroup submission Submission
  * Articles, OMP's extension of the generic Submission class in lib-pkp, are
  * implemented here.
  */
 
 /**
- * @file classes/article/Article.inc.php
+ * @file classes/article/Submission.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class Article
- * @ingroup article
- * @see ArticleDAO
+ * @class Submission
+ * @ingroup submission
+ * @see SubmissionDAO
  *
  * @brief Article class.
  */
@@ -25,9 +25,9 @@ define ('AUTHOR_TOC_DEFAULT', 0);
 define ('AUTHOR_TOC_HIDE', 1);
 define ('AUTHOR_TOC_SHOW', 2);
 
-import('lib.pkp.classes.submission.Submission');
+import('lib.pkp.classes.submission.PKPSubmission');
 
-class Article extends Submission {
+class Submission extends PKPSubmission {
 
 	//
 	// Get/set methods
@@ -78,7 +78,7 @@ class Article extends Submission {
 							if ($publishedSubmission->getIssueId()) {
 								// override to the issue's year if published as issue-based
 								$issueDao =& DAORegistry::getDAO('IssueDAO');
-								$issue = $issueDao->getByArticleId($this->getId());
+								$issue = $issueDao->getBySubmissionId($this->getId());
 								if ($issue && $issue->getDatePublished()) {
 									$fieldValue = date('Y', strtotime($issue->getDatePublished()));
 								}

@@ -166,7 +166,7 @@ class SubmissionHandler extends APIHandler {
 		$publishedSubmission = null;
 		if ($submission && $context) {
 			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId(
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestSubmissionId(
 				(int) $context->getId(),
 				$submission->getId(),
 				true

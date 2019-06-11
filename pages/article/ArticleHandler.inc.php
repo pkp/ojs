@@ -60,14 +60,14 @@ class ArticleHandler extends Handler {
 
 		$journal = $request->getContext();
 		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId((int) $journal->getId(), $articleId, true);
+		$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestSubmissionId((int) $journal->getId(), $articleId, true);
 
 		if (isset($publishedSubmission)) {
 			$this->article = $publishedSubmission;
 
 		} else {
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$article = $articleDao->getById((int) $articleId, $journal->getId(), true);
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+			$article = $submissionDao->getById((int) $articleId, $journal->getId(), true);
 			$this->article = $article;
 		}
 

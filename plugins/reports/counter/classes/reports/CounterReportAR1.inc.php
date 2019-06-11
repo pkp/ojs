@@ -124,8 +124,8 @@ class CounterReportAR1 extends CounterReport {
 	 * @return mixed COUNTER\ReportItems or false
 	 */
 	private function _createReportItem($submissionId, $metrics) {
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getById($submissionId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$article = $submissionDao->getById($submissionId);
 		if (!$article) {
 			return false;
 		}

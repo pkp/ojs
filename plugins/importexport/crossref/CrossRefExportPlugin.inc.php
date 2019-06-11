@@ -106,8 +106,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		// if the failure occured on request and the message was saved
 		// return that message
 		$articleId = $request->getUserVar('articleId');
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$article = $articleDao->getByid($articleId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$article = $submissionDao->getByid($articleId);
 		$failedMsg = $article->getData($this->getFailedMsgSettingName());
 		if (!empty($failedMsg)) {
 			return $failedMsg;

@@ -14,10 +14,10 @@
  * @brief Operations for retrieving and modifying ReviewerSubmission objects.
  */
 
-import('classes.article.ArticleDAO');
+import('classes.article.SubmissionDAO');
 import('classes.submission.reviewer.ReviewerSubmission');
 
-class ReviewerSubmissionDAO extends ArticleDAO {
+class ReviewerSubmissionDAO extends SubmissionDAO {
 	var $authorDao;
 	var $userDao;
 	var $reviewAssignmentDao;

@@ -172,28 +172,82 @@ class IssueEntryPublicationMetadataForm extends Form {
 		));
 	}
 
-/**
- * Save the metadata and store the catalog data for this published
- * monograph.
- */
-function execute() {
-	parent::execute();
+	/**
+	 * Save the metadata and store the catalog data for this published
+	 * monograph.
+	 */
+	function execute() {
+		parent::execute();
 
-	$request = Application::get()->getRequest();
-	$submission = $this->getSubmission();
-	$context = $request->getContext();
+		$request = Application::get()->getRequest();
+		$submission = $this->getSubmission();
+		$context = $request->getContext();
 
-	$articleSearchIndex = Application::getSubmissionSearchIndex();
-	$submissionFilesChanged = false;
-	$submissionMetadataChanged = false;
+		$waivePublicationFee = $request->getUserVar('waivePublicationFee') ? true : false;
+		if ($waivePublicationFee) {
 
-	// define the access status for the article if none is set.
-	$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
+			$markAsPaid = $request->getUserVar('markAsPaid');
+			$paymentManager = Application::getPaymentManager($context);
 
-	$articleDao = DAORegistry::getDAO('ArticleDAO');
-	if (!is_null($this->getData('pages'))) {
-		$submission->setPages($this->getData('pages'));
-	}
+			$user = $request->getUser();
+
+			// Get a list of author user IDs
+			$authorUserIds = array();
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+			$submitterAssignment = $submitterAssignments->next();
+			assert(isset($submitterAssignment)); // At least one author should be assigned
+
+			$queuedPayment = $paymentManager->createQueuedPayment(
+				$request,
+				PAYMENT_TYPE_PUBLICATION,
+				$markAsPaid ? $submitterAssignment->getUserId() : $user->getId(),
+				$submission->getId(),
+				$markAsPaid ? $context->getData('publicationFee') : 0,
+				$markAsPaid ? $context->getData('currency') : ''
+			);
+
+			$paymentManager->queuePayment($queuedPayment);
+
+			// Since this is a waiver, fulfill the payment immediately
+			$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
+		} else {
+			// Get the issue for publication.
+			$issueDao = DAORegistry::getDAO('IssueDAO');
+			$issueId = $this->getData('issueId');
+			$issue = $issueDao->getById($issueId, $context->getId());
+
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedSubmission PublishedSubmission */
+
+			if ($publishedSubmission) {
+				if (!$issue || !$issue->getPublished()) {
+					$fromIssue = $issueDao->getById($publishedSubmission->getIssueId(), $context->getId());
+					if ($fromIssue->getPublished()) {
+						// Insert article tombstone
+						import('classes.article.ArticleTombstoneManager');
+						$articleTombstoneManager = new ArticleTombstoneManager();
+						$articleTombstoneManager->insertArticleTombstone($submission, $context);
+					}
+				}
+			}
+
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
+			$submissionFilesChanged = false;
+			$submissionMetadataChanged = false;
+
+			// define the access status for the article if none is set.
+			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
+
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+			if (!is_null($this->getData('pages'))) {
+				$submission->setPages($this->getData('pages'));
+			}
+
+		$request = Application::get()->getRequest();
+		$submission = $this->getSubmission();
+		$context = $request->getContext();
 
 	$sectionDao = DAORegistry::getDAO('SectionDAO');
 	$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
@@ -231,7 +285,7 @@ function execute() {
 
 	$submission->stampStatusModified();
 	$submission->setStatus(STATUS_PUBLISHED);
-	$articleDao->updateObject($submission);
+	$submissionDao->updateObject($submission);
 
 	//after the submission is updated, update the search index
 	if ($publishedSubmission) {

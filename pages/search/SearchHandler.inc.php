@@ -91,7 +91,7 @@ class SearchHandler extends Handler {
 
 		// Assign the year range.
 		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$yearRange = $publishedSubmissionDao->getArticleYearRange($journalId);
+		$yearRange = $publishedSubmissionDao->getSubmissionYearRange($journalId);
 		$yearStart = substr($yearRange[1], 0, 4);
 		$yearEnd = substr($yearRange[0], 0, 4);
 		$templateMgr->assign(array(

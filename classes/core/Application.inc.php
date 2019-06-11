@@ -85,7 +85,7 @@ class Application extends PKPApplication {
 	 */
 	public function getDAOMap() {
 		return array_merge(parent::getDAOMap(), array(
-			'ArticleDAO' => 'classes.article.ArticleDAO',
+			'SubmissionDAO' => 'classes.article.SubmissionDAO',
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
@@ -144,7 +144,7 @@ class Application extends PKPApplication {
 	 * @return SubmissionDAO
 	 */
 	public static function getSubmissionDAO() {
-		return DAORegistry::getDAO('ArticleDAO');
+		return DAORegistry::getDAO('SubmissionDAO');
 	}
 
 	/**

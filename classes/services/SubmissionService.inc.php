@@ -49,7 +49,7 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 			$publishedSubmission = $submission;
 		} else {
 			$publishedSubmissionDao = \DAORegistry::getDAO('PublishedSubmissionDAO');
-			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId(
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestSubmissionId(
 				$submission->getContextId(),
 				$submission->getId(),
 				true
@@ -190,7 +190,7 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		$publishedSubmission = null;
 		if ($context) {
 			$publishedSubmissionDao = \DAORegistry::getDAO('PublishedSubmissionDAO');
-			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestArticleId(
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestSubmissionId(
 				(int) $context->getId(),
 				$submission->getId(),
 				true
