@@ -16,7 +16,7 @@
 
 import('classes.article.Submission');
 
-class ReviewerSubmission extends Article {
+class ReviewerSubmission extends Submission {
 
 	/** @var array SubmissionFile reviewer file revisions of this submission */
 	var $reviewerFileRevisions;
