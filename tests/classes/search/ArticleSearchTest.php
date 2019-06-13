@@ -208,7 +208,7 @@ class ArticleSearchTest extends PKPTestCase {
 	 */
 	public function callbackGetArticle($articleId, $journalId = null, $useCache = false) {
 		// Create an article instance with the correct id.
-		$article = new Article();
+		$article = new Submission();
 		$article->setId($articleId);
 		return $article;
 	}
@@ -257,7 +257,7 @@ class ArticleSearchTest extends PKPTestCase {
 			->getMock();
 
 		// Mock an article.
-		$article = new Article();
+		$article = new Submission();
 
 		// Mock the getArticle() method.
 		$submissionDao->expects($this->any())

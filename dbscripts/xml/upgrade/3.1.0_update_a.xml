@@ -18,7 +18,7 @@
 		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE submission_files.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#2543 -->
-		<query>UPDATE filter_groups SET input_type = 'class::classes.article.Article' WHERE symbolic = 'article=>doaj-json'</query>
+		<query>UPDATE filter_groups SET input_type = 'class::classes.article.Submission' WHERE symbolic = 'article=>doaj-json'</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#2896 -->
 		<query>UPDATE journal_settings SET setting_name = 'citationsEnabledSubmission' WHERE setting_name = 'referencesEnabledSubmission'</query>
