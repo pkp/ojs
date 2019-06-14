@@ -76,7 +76,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
 
-		import('classes.article.Article');
+		import('classes.article.Submission');
 
 		$columns = array(
 			'submission_id' => __('article.submissionId'),
@@ -139,7 +139,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
 		fputcsv($fp, array_values($columns));
 
-		import('classes.article.Article'); // Bring in getStatusMap function
+		import('classes.article.Submission'); // Bring in getStatusMap function
 		$statusMap = Article::getStatusMap();
 
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');

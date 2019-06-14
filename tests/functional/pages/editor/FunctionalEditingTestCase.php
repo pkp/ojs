@@ -319,8 +319,8 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->publishArticle($this->_articleId);
 
 		// Check that the article is "dirty".
-		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article = $articleDao->getById($this->_articleId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
 
 		// Check that the article appears in the pull indexing
@@ -329,14 +329,14 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->assertContains('article id="' . $this->_articleId . '" sectionId="3" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
 
 		// Check that the article is now "clean".
-		$article = $articleDao->getById($this->_articleId);
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_CLEAN, $article->getData('indexingState'));
 
 		// Unpublish the article.
 		$this->unpublishArticle($this->_articleId);
 
 		// Check that the article is "dirty" again.
-		$article = $articleDao->getById($this->_articleId);
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
 
 		// Check that the article appears in the pull indexing
@@ -345,7 +345,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->assertContains('article id="' . $this->_articleId . '" sectionId="3" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
 
 		// Check that the article is "clean".
-		$article = $articleDao->getById($this->_articleId);
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_CLEAN, $article->getData('indexingState'));
 	}
 

@@ -24,12 +24,12 @@ class ArticleReportDAO extends DAO {
 	function getArticleReport($journalId) {
 		$locale = AppLocale::getLocale();
 
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articlesReturner = $articleDao->getByContextId($journalId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$articlesReturner = $submissionDao->getByContextId($journalId);
 
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$authorDao = DAORegistry::getDAO('AuthorDAO');
-		$articles = $articleDao->getByContextId($journalId);
+		$articles = $submissionDao->getByContextId($journalId);
 		$authorParams = array_merge(
 			$authorDao->getFetchParameters(),
 			array(

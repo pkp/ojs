@@ -14,13 +14,13 @@
  * @brief Published submission class.
  */
 
-import('classes.article.Article');
+import('classes.article.Submission');
 
 // Access status
 define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define('ARTICLE_ACCESS_OPEN', 1);
 
-class PublishedSubmission extends Article {
+class PublishedSubmission extends Submission {
 
 	/**
 	 * Get ID of published submission.

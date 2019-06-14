@@ -1,23 +1,23 @@
 <?php
 
 /**
- * @file classes/article/ArticleDAO.inc.php
+ * @file classes/article/SubmissionDAO.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ArticleDAO
+ * @class SubmissionDAO
  * @ingroup article
- * @see Article
+ * @see Submission
  *
  * @brief Operations for retrieving and modifying Article objects.
  */
 
-import('classes.article.Article');
-import('lib.pkp.classes.submission.SubmissionDAO');
+import('classes.article.Submission');
+import('lib.pkp.classes.submission.PKPSubmissionDAO');
 
-class ArticleDAO extends SubmissionDAO {
+class SubmissionDAO extends PKPSubmissionDAO {
 
 	/**
 	 * Get a list of fields for which localized data is supported
@@ -86,7 +86,7 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setPages($row['pages']);
 		$article->setHideAuthor($row['hide_author']);
 
-		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
+		HookRegistry::call('SubmissionDAO::_fromRow', array(&$article, &$row));
 
 		return $article;
 	}
@@ -96,7 +96,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @return Article
 	 */
 	function newDataObject() {
-		return new Article();
+		return new Submission();
 	}
 
 	/**
@@ -202,7 +202,7 @@ class ArticleDAO extends SubmissionDAO {
 		parent::deleteById($submissionId);
 
 		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$publishedSubmissionDao->deletePublishedSubmissionByArticleId($submissionId);
+		$publishedSubmissionDao->deletePublishedSubmissionBySubmissionId($submissionId);
 
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$articleGalleyDao->deleteByArticleId($submissionId);
@@ -309,7 +309,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * Removes articles from a section by section ID
 	 * @param $sectionId int
 	 */
-	function removeArticlesFromSection($sectionId) {
+	function removeSubmissionsFromSection($sectionId) {
 		$this->update(
 			'UPDATE submissions SET section_id = null WHERE section_id = ?', (int) $sectionId
 		);

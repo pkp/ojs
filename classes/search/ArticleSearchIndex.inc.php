@@ -269,7 +269,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 			// Build index
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 
 			$journals = $journalDao->getAll();
 			while ($journal = $journals->next()) {
@@ -277,7 +277,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
-				$articles = $articleDao->getByContextId($journal->getId());
+				$articles = $submissionDao->getByContextId($journal->getId());
 				while ($article = $articles->next()) {
 					if ($article->getSubmissionProgress() == 0) { // Not incomplete
 						$this->submissionMetadataChanged($article);

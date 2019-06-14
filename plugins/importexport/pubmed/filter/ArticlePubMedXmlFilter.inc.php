@@ -75,7 +75,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			if (!$journal || $journal->getId() != $submission->getContextId()) {
 				$journal = $journalDao->getById($submission->getContextId());
 			}
-			$issue = $issueDao->getByArticleId($submission->getId(), $journal->getId());
+			$issue = $issueDao->getBySubmissionId($submission->getId(), $journal->getId());
 
 			$articleNode = $doc->createElement('Article');
 			$articleNode->appendChild($this->createJournalNode($doc, $journal, $issue, $submission, $publishedSubmission));

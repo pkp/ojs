@@ -60,7 +60,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	 * @return MetadataDescription
 	 */
 	function &extractMetadataFromDataObject(&$article) {
-		assert(is_a($article, 'Article'));
+		assert(is_a($article, 'Submission'));
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_SUBMISSION);
 

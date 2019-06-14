@@ -8,16 +8,16 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublishedSubmissionDAO
- * @ingroup article
+ * @ingroup submission
  * @see PublishedSubmission
  *
  * @brief Operations for retrieving and modifying PublishedSubmission objects.
  */
 
 import('classes.article.PublishedSubmission');
-import('classes.article.ArticleDAO');
+import('classes.article.SubmissionDAO');
 
-class PublishedSubmissionDAO extends ArticleDAO {
+class PublishedSubmissionDAO extends SubmissionDAO {
 	/** @var ArticleGalleyDAO */
 	var $galleyDao;
 
@@ -41,8 +41,8 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	 * @param $id mixed Article ID (potentially non-numeric)
 	 * @return PublishedSubmission
 	 */
-	function _articleCacheMiss($cache, $id) {
-		$publishedSubmission = $this->getPublishedSubmissionByBestArticleId(null, $id, null);
+	function _submissionCacheMiss($cache, $id) {
+		$publishedSubmission = $this->getPublishedSubmissionByBestSubmissionId(null, $id, null);
 		$cache->setCache($id, $publishedSubmission);
 		return $publishedSubmission;
 	}
@@ -54,7 +54,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	function _getPublishedSubmissionCache() {
 		if (!isset($this->articleCache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->articleCache = $cacheManager->getObjectCache('publishedSubmissions', 0, array($this, '_articleCacheMiss'));
+			$this->articleCache = $cacheManager->getObjectCache('publishedSubmissions', 0, array($this, '_submissionCacheMiss'));
 		}
 		return $this->articleCache;
 	}
@@ -65,7 +65,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	 * @param $id int Issue ID
 	 * @return array
 	 */
-	function _articlesInSectionsCacheMiss($cache, $id) {
+	function _submissionsInSectionsCacheMiss($cache, $id) {
 		$articlesInSections = $this->getPublishedSubmissionsInSections($id, null);
 		$cache->setCache($id, $articlesInSections);
 		return $articlesInSections;
@@ -75,16 +75,16 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	 * Get a the "articles in sections" article cache
 	 * @return GenericCache
 	 */
-	function _getArticlesInSectionsCache() {
+	function _getSubmissionsInSectionsCache() {
 		if (!isset($this->articlesInSectionsCache)) {
 			$cacheManager = CacheManager::getManager();
-			$this->articlesInSectionsCache = $cacheManager->getObjectCache('articlesInSections', 0, array($this, '_articlesInSectionsCacheMiss'));
+			$this->articlesInSectionsCache = $cacheManager->getObjectCache('articlesInSections', 0, array($this, '_submissionsInSectionsCacheMiss'));
 		}
 		return $this->articlesInSectionsCache;
 	}
 
 	/**
-	 * Retrieve Published Articles by issue id.  Limit provides number of records to retrieve
+	 * Retrieve Published Submissions by issue id.  Limit provides number of records to retrieve
 	 * @param $issueId int
 	 * @return PublishedSubmission objects array
 	 */
@@ -175,14 +175,14 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve Published Articles by issue id
+	 * Retrieve Published Submissions by issue id
 	 * @param $issueId int
 	 * @param $useCache boolean optional
 	 * @return array Array of PublishedSubmission objects
 	 */
 	function getPublishedSubmissionsInSections($issueId, $useCache = false) {
 		if ($useCache) {
-			$cache = $this->_getArticlesInSectionsCache();
+			$cache = $this->_getSubmissionsInSectionsCache();
 			$returner = $cache->get($issueId);
 			return $returner;
 		}
@@ -237,7 +237,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve Published Articles by section id
+	 * Retrieve Published Submissions by section id
 	 * @param $sectionId int
 	 * @param $issueId int
 	 * @return PublishedSubmission objects array
@@ -275,7 +275,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve Published Article by pub id
+	 * Retrieve Published Submission by pub id
 	 * @param $publishedSubmissionId int
 	 * @return PublishedSubmission object
 	 */
@@ -378,7 +378,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	}
 
 	/**
-	 * @copydoc ArticleDAO::getBySetting()
+	 * @copydoc SubmissionDAO::getBySetting()
 	 */
 	function getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
 		$params = $this->getFetchParameters();
@@ -416,7 +416,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedSubmission object
 	 */
-	function getPublishedSubmissionByBestArticleId($journalId, $articleId, $useCache = false) {
+	function getPublishedSubmissionByBestSubmissionId($journalId, $articleId, $useCache = false) {
 		$article = $this->getPublishedSubmissionByPubId('publisher-id', $articleId, $journalId, $useCache);
 		if (!$article && ctype_digit("$articleId")) {
 			return $this->getBySubmissionId($articleId, $journalId, $useCache);
@@ -600,7 +600,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	}
 
 	/**
-	 * removes an published Article by id
+	 * removes a Published Submission by id
 	 * @param $publishedSubmissionId int
 	 */
 	function deletePublishedSubmissionById($publishedSubmissionId) {
@@ -616,7 +616,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	 * NOTE: This does not delete the related Article or any dependent entities
 	 * @param $articleId int
 	 */
-	function deletePublishedSubmissionByArticleId($articleId) {
+	function deletePublishedSubmissionBySubmissionId($articleId) {
 		$this->update(
 			'DELETE FROM published_submissions WHERE submission_id = ?', (int) $articleId
 		);
@@ -732,7 +732,7 @@ class PublishedSubmissionDAO extends ArticleDAO {
 	 * @param $journalId int Optional
 	 * @return array (maximum date published, minimum date published)
 	 */
-	function getArticleYearRange($journalId = null) {
+	function getSubmissionYearRange($journalId = null) {
 		$result = $this->retrieve(
 			'SELECT	MAX(ps.date_published),
 				MIN(ps.date_published)

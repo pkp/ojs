@@ -16,7 +16,7 @@
 
 
 import('lib.pkp.tests.PKPTestCase');
-import('classes.article.Article');
+import('classes.article.Submission');
 import('lib.pkp.classes.core.ArrayItemIterator');
 
 class ArticleSearchIndexTest extends PKPTestCase {
@@ -183,7 +183,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		HookRegistry::register('ArticleSearchIndex::articleMetadataChanged', array($this, 'callbackIndexArticleMetadata'));
 
 		// Simulate indexing via hook.
-		$article = new Article();
+		$article = new Submission();
 		$articleSearchIndex = $this->getMockArticleSearchIndex($this->never());
 		$articleSearchIndex->submissionMetadataChanged($article);
 
@@ -206,7 +206,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		$this->registerFileDAOs(true);
 
 		// Test indexing an article with a mock environment.
-		$article = new Article();
+		$article = new Submission();
 		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->submissionFilesChanged($article);
 	}
@@ -222,7 +222,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		$this->registerFileDAOs(false);
 
 		// Simulate indexing via hook.
-		$article = new Article();
+		$article = new Submission();
 		$articleSearchIndex = Application::getSubmissionSearchIndex();
 		$articleSearchIndex->submissionFilesChanged($article);
 
@@ -299,7 +299,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		self::assertEquals('ArticleSearchIndex::articleMetadataChanged', $hook);
 
 		list($article) = $params;
-		self::assertInstanceOf('Article', $article);
+		self::assertInstanceOf('Submission', $article);
 
 		// Returning "true" is required so that the default submissionMetadataChanged()
 		// code won't run.
@@ -315,7 +315,7 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		self::assertEquals('ArticleSearchIndex::submissionFilesChanged', $hook);
 
 		list($article) = $params;
-		self::assertInstanceOf('Article', $article);
+		self::assertInstanceOf('Submission', $article);
 
 		// Returning "true" is required so that the default submissionMetadataChanged()
 		// code won't run.

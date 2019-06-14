@@ -50,8 +50,8 @@ class OpenAIREPlugin extends GenericPlugin {
 			HookRegistry::register('issueentrysubmissionreviewform::Constructor', array($this, 'addCheck'));
 			HookRegistry::register('quicksubmitform::Constructor', array($this, 'addCheck'));
 
-			// Consider the new field for ArticleDAO for storage
-			HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
+			// Consider the new field for SubmissionDAO for storage
+			HookRegistry::register('submissiondao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
 
 			// Add OpenAIRE set to OAI results
 			HookRegistry::register('OAIDAO::getJournalSets', array($this, 'sets'));

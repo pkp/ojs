@@ -296,7 +296,7 @@ class IssueGridHandler extends GridHandler {
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published submissions and return original articles to editing queue
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
 		if (isset($publishedSubmissions) && !empty($publishedSubmissions)) {
@@ -307,7 +307,7 @@ class IssueGridHandler extends GridHandler {
 				if ($isBackIssue) {
 					$articleTombstoneManager->insertArticleTombstone($article, $journal);
 				}
-				$articleDao->changeStatus($article->getId(), STATUS_QUEUED);
+				$submissionDao->changeStatus($article->getId(), STATUS_QUEUED);
 				$publishedSubmissionDao->deletePublishedSubmissionById($article->getPublishedSubmissionId());
 			}
 		}
@@ -451,14 +451,14 @@ class IssueGridHandler extends GridHandler {
 
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 			$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
 			foreach ($publishedSubmissions as $publishedSubmission) {
-				$article = $articleDao->getById($publishedSubmission->getId());
+				$article = $submissionDao->getById($publishedSubmission->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
-					$articleDao->updateObject($article);
+					$submissionDao->updateObject($article);
 					if (!$articleSearchIndex) {
 						$articleSearchIndex = Application::getSubmissionSearchIndex();
 					}
@@ -545,13 +545,13 @@ class IssueGridHandler extends GridHandler {
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
 		foreach ($publishedSubmissions as $article) {
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
 			$article->setStatus(STATUS_QUEUED);
 			$article->stampStatusModified();
-			$articleDao->updateObject($article);
+			$submissionDao->updateObject($article);
 		}
 
 		$dispatcher = $request->getDispatcher();

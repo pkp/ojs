@@ -17,7 +17,7 @@
 			symbolic="article=>pubmed-xml"
 			displayName="plugins.importexport.pubmed.displayName"
 			description="plugins.importexport.pubmed.description"
-			inputType="class::classes.article.Article[]"
+			inputType="class::classes.article.Submission[]"
 			outputType="xml::dtd" />
 	</filterGroups>
 	<filters>

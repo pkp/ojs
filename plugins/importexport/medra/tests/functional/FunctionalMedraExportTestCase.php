@@ -163,12 +163,12 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 		// Test whether exporting updates changes correctly
 		// sets the notification type.
 		$pluginInstance = $this->instantiatePlugin('MedraExportPlugin');
-		$hookName = 'articledao::getAdditionalFieldNames';
+		$hookName = 'submissiondao::getAdditionalFieldNames';
 		HookRegistry::register($hookName, array($pluginInstance, 'getAdditionalFieldNames'));
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$testObject = $articleDao->getById(1);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$testObject = $submissionDao->getById(1);
 		$testObject->setData('medra::' . DOI_EXPORT_REGDOI, '1749/t.v1i1.1');
-		$articleDao->updateObject($testObject);
+		$submissionDao->updateObject($testObject);
 
 		// Remove the hook.
 		$hooks = HookRegistry::getHooks();

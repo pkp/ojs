@@ -406,8 +406,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);
 			} else {
-				$articleDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $articleDao PublishedSubmissionDAO */
-				$article = $articleDao->getByArticleId($articleId, $context->getId(), true);
+				$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
+				$article = $submissionDao->getBySubmissionId($articleId, $context->getId(), true);
 			}
 			assert(is_a($article, 'PublishedSubmission'));
 		}
