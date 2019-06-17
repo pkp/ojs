@@ -14,8 +14,8 @@
  * @brief Operations for retrieving and modifying PublishedSubmission objects.
  */
 
-import('classes.article.PublishedSubmission');
-import('classes.article.SubmissionDAO');
+import('classes.submission.PublishedSubmission');
+import('classes.submission.SubmissionDAO');
 
 class PublishedSubmissionDAO extends SubmissionDAO {
 	/** @var ArticleGalleyDAO */

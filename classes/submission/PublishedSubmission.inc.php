@@ -14,7 +14,7 @@
  * @brief Published submission class.
  */
 
-import('classes.article.Submission');
+import('classes.submission.Submission');
 
 // Access status
 define('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);

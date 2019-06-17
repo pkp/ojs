@@ -85,10 +85,10 @@ class Application extends PKPApplication {
 	 */
 	public function getDAOMap() {
 		return array_merge(parent::getDAOMap(), array(
-			'SubmissionDAO' => 'classes.article.SubmissionDAO',
+			'SubmissionDAO' => 'classes.submission.SubmissionDAO',
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
-			'AuthorDAO' => 'classes.article.AuthorDAO',
+			'AuthorDAO' => 'classes.submission.AuthorDAO',
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
 			'IssueDAO' => 'classes.issue.IssueDAO',
@@ -99,7 +99,7 @@ class Application extends PKPApplication {
 			'MetricsDAO' => 'classes.statistics.MetricsDAO',
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
-			'PublishedSubmissionDAO' => 'classes.article.PublishedSubmissionDAO',
+			'PublishedSubmissionDAO' => 'classes.submission.PublishedSubmissionDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',

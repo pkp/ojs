@@ -495,7 +495,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			$params[] = $pubIdSettingValue;
 		}
 
-		import('classes.article.Submission'); // STATUS_DECLINED constant
+		import('classes.submission.Submission'); // STATUS_DECLINED constant
 		$result = $this->retrieveRange(
 				'SELECT	sf.*, g.*
 			FROM	submission_galleys g

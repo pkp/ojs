@@ -14,7 +14,7 @@
  * @brief Operations for retrieving and modifying Article objects.
  */
 
-import('classes.article.Submission');
+import('classes.submission.Submission');
 import('lib.pkp.classes.submission.PKPSubmissionDAO');
 
 class SubmissionDAO extends PKPSubmissionDAO {

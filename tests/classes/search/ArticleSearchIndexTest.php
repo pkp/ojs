@@ -16,7 +16,7 @@
 
 
 import('lib.pkp.tests.PKPTestCase');
-import('classes.article.Submission');
+import('classes.submission.Submission');
 import('lib.pkp.classes.core.ArrayItemIterator');
 
 class ArticleSearchIndexTest extends PKPTestCase {

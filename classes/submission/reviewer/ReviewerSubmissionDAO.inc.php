@@ -14,7 +14,7 @@
  * @brief Operations for retrieving and modifying ReviewerSubmission objects.
  */
 
-import('classes.article.SubmissionDAO');
+import('classes.submission.SubmissionDAO');
 import('classes.submission.reviewer.ReviewerSubmission');
 
 class ReviewerSubmissionDAO extends SubmissionDAO {

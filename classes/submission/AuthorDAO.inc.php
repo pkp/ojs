@@ -14,8 +14,8 @@
  * @brief Operations for retrieving and modifying Author objects.
  */
 
-import('classes.article.Author');
-import('classes.article.Submission');
+import('classes.submission.Author');
+import('classes.submission.Submission');
 import('lib.pkp.classes.submission.PKPAuthorDAO');
 
 class AuthorDAO extends PKPAuthorDAO {

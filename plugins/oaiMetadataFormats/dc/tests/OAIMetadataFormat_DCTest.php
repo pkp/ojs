@@ -63,7 +63,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableRepresentationyDoi', 1);
 
 		// Author
-		import('classes.article.Author');
+		import('classes.submission.Author');
 		$author = new Author();
 		$author->setGivenName('author-firstname', 'en_US');
 		$author->setFamilyName('author-lastname', 'en_US');
@@ -71,7 +71,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$author->setEmail('someone@example.com');
 
 		// Article
-		import('classes.article.PublishedSubmission');
+		import('classes.submission.PublishedSubmission');
 		$article = $this->getMockBuilder(PublishedSubmission::class)
 			->setMethods(array('getBestArticleId'))
 			->getMock();
@@ -161,7 +161,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		//
 
 		// Create a mocked AuthorDAO that returns our test author.
-		import('classes.article.AuthorDAO');
+		import('classes.submission.AuthorDAO');
 		$authorDao = $this->getMockBuilder(AuthorDAO::class)
 			->setMethods(array('getBySubmissionId'))
 			->getMock();
@@ -198,7 +198,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 
 		// Create a mocked PublishedSubmissionDAO that returns our test article.
-		import('classes.article.PublishedSubmissionDAO');
+		import('classes.submission.PublishedSubmissionDAO');
 		$submissionDao = $this->getMockBuilder(PublishedSubmissionDAO::class)
 			->getMethods(array('getBySubmissionId'))
 			->getMock();
