@@ -216,7 +216,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$exportFilter->setDeployment($this->getDeployment());
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$issueGalleysDoc = $exportFilter->execute($issueGalleyDao->getByIssueId($issue->getId()));
+		$issue = $issueGalleyDao->getByIssueId($issue->getId());
+		$issueGalleysDoc = $exportFilter->execute($issue);
 		if ($issueGalleysDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($issueGalleysDoc->documentElement, true);
 			$issueNode->appendChild($clone);
