@@ -234,6 +234,9 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 		$journal = $deployment->getContext();
 
+		// Boundary condition: no sections in this issue.
+		if (!count($sections)) return;
+
 		$sectionsNode = $doc->createElementNS($deployment->getNamespace(), 'sections');
 		foreach ($sections as $section) {
 			$sectionNode = $doc->createElementNS($deployment->getNamespace(), 'section');
