@@ -118,7 +118,7 @@
 			<element name="last_modified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
-			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
+			<element ref="pkp:sections" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
