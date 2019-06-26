@@ -216,7 +216,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			if ($galleyFile) $contentItemNode->appendChild($this->createExtentNode($doc, $galleyFile));
 		}
 		// Article Title (mandatory)
-		$titles = $this->getTranslationsByPrecedence($article->getTitle(null), $objectLocalePrecedence);
+		$titles = $this->getTranslationsByPrecedence($article->getFullTitle(null), $objectLocalePrecedence);
 		assert(!empty($titles));
 		foreach ($titles as $locale => $title) {
 			$contentItemNode->appendChild($this->createTitleNode($doc, $locale, $title, O4DOI_TITLE_TYPE_FULL));

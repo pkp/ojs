@@ -80,7 +80,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$dc11Description = $this->instantiateMetadataDescription();
 
 		// Title
-		$this->_addLocalizedElements($dc11Description, 'dc:title', $article->getTitle(null));
+		$this->_addLocalizedElements($dc11Description, 'dc:title', $article->getFullTitle(null));
 
 		// Creator
 		$authors = $article->getAuthors();
