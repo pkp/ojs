@@ -986,7 +986,6 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="notification.type.editorAssignmentTask">Er is een nieuw artikel ingediend waarvoor een redacteur moet worden toegewezen.</message>
 	<message key="notification.type.assignProductionUser">Gebruik de link "Toevoegen" in de deelnemerslijst om een gebruiker te vragen om proeven te maken.</message>
 	<message key="notification.type.awaitingRepresentations">Awaiting Galleys.</message>
-	<message key="notification.type.publicationScheduled">This submission has been scheduled for publication.</message>
 
 	<!--
 	 *

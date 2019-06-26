@@ -492,10 +492,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issueFileManager = new IssueFileManager($issueId);
 		$issueFileManager->deleteIssueTree();
 
-		// Delete published submissions
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$publishedSubmissionDao->deletePublishedSubmissionsByIssueId($issueId);
-
 		// Delete issue settings and issue
 		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', (int) $issueId);
 		$this->update('DELETE FROM issues WHERE issue_id = ?', (int) $issueId);
@@ -543,11 +539,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$result = $this->retrieve(
 			'SELECT	i.*
 			FROM	issues i,
-				published_submissions pa,
 				submissions a
-			WHERE	i.issue_id = pa.issue_id AND pa.is_current_submission_version = 1 AND
-				pa.submission_id = ? AND
-				pa.submission_id = a.submission_id AND
+			LEFT JOIN publications p ON (p.publication_id = a.current_publication_id)
+			LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
+			WHERE	ps.setting_name="issueId" AND ps.setting_value = i.issue_id AND
+				a.submission_id = ? AND
 				a.context_id = i.journal_id' .
 				($journalId?' AND i.journal_id = ?':''),
 			$params
@@ -657,7 +653,14 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return int
 	 */
 	function getNumArticles($issueId) {
-		$result = $this->retrieve('SELECT COUNT(*) FROM published_submissions WHERE is_current_submission_version = 1 AND issue_id = ?', (int) $issueId);
+		$result = $this->retrieve(
+			'SELECT COUNT(*)
+				FROM submissions s
+				LEFT JOIN publications p ON (p.publication_id = s.current_publication_id)
+				LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
+				WHERE ps.setting_name="issueId" AND ps.setting_value = ?',
+			(int) $issueId
+		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 		$result->Close();
 		return $returner;

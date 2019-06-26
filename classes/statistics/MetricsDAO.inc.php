@@ -91,10 +91,9 @@ class MetricsDAO extends PKPMetricsDAO {
 		$returnArray = parent::getAssocObjectInfo($submissionId, $contextId);
 
 		// Submissions in OJS are associated with an Issue.
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submissionId, $contextId, true);
-		if ($publishedSubmission) {
-			$returnArray = array(ASSOC_TYPE_ISSUE, $publishedSubmission->getIssueId());
+		$submission = Services::get('submission')->get($submissionId);
+		if ($submission->getCurrentPublication()->getData('issueId')) {
+			$returnArray = array(ASSOC_TYPE_ISSUE, $submission->getCurrentPublication()->getData('issueId'));
 		}
 		return $returnArray;
 	}

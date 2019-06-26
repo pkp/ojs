@@ -1004,7 +1004,6 @@
 	<message key="notification.type.editorAssignmentTask">Была отправлена новая статья, которой нужно назначить редактора.</message>
 	<message key="notification.type.assignProductionUser">Назначить пользователя для создания гранок с помощью ссылки «Назначить» в списке «Участники».</message>
 	<message key="notification.type.awaitingRepresentations">Ожидающие гранок.</message>
-	<message key="notification.type.publicationScheduled">Этот материал запланирован для публикации.</message>
 
 	<!--
 	 *

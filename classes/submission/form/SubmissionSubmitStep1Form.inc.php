@@ -58,8 +58,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	/**
 	 * Checks whether a section policy contains any text (plain / readable).
 	 */
-	private function doesSectionPolicyContainAnyText($sectionPolicy)
-	{
+	private function doesSectionPolicyContainAnyText($sectionPolicy) {
 		$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
 		return strlen($sectionPolicyPlainText) > 0;
 	}
@@ -70,7 +69,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	function initData($data = array()) {
 		if (isset($this->submission)) {
 			parent::initData(array(
-				'sectionId' => $this->submission->getSectionId(),
+				'sectionId' => $this->submission->getCurrentPublication()->getData('sectionId'),
 			));
 		} else {
 			parent::initData();
@@ -105,12 +104,13 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	}
 
 	/**
-	 * Set the submission data from the form.
-	 * @param $submission Submission
+	 * Set the publication data from the form.
+	 * @param Publication $publication
+	 * @param Submission $submission
 	 */
-	function setSubmissionData($submission) {
-		$submission->setSectionId($this->getData('sectionId'));
-		parent::setSubmissionData($submission);
+	function setPublicationData($publication, $submission) {
+		$publication->setData('sectionId', $this->getData('sectionId'));
+		parent::setPublicationData($publication, $submission);
 	}
 }
 

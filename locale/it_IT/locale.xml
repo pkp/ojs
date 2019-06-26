@@ -1039,7 +1039,6 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="notification.savedIssueMetadata">Metadati della pubblicazione fascicolo salvati</message>
 	<message key="notification.type.assignProductionUser">Per assegnare ad un utente la possibilità di creare gabbia usa il link Assegna nella lista di partecipanti</message>
 	<message key="notification.type.awaitingRepresentations">Gabbie in attesa</message>
-	<message key="notification.type.publicationScheduled">Di questa proposta è stata pianificata la pubblicazione</message>
 	<message key="user.authorization.noContext">Nessuna rivista nel contesto!</message>
 	<message key="user.authorization.invalidIssue">Richiesto un fascicolo non valido</message>
 	<message key="grid.action.createContext">Crea una nuova rivista</message>

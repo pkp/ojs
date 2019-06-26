@@ -63,7 +63,6 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		$doc->preserveWhiteSpace = false;
 		$doc->formatOutput = true;
 
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$journal = null;
@@ -71,14 +70,13 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		$rootNode = $doc->createElement('ArticleSet');
 		foreach ($submissions as $submission) {
 			// Fetch associated objects
-			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId());
 			if (!$journal || $journal->getId() != $submission->getContextId()) {
 				$journal = $journalDao->getById($submission->getContextId());
 			}
 			$issue = $issueDao->getBySubmissionId($submission->getId(), $journal->getId());
 
 			$articleNode = $doc->createElement('Article');
-			$articleNode->appendChild($this->createJournalNode($doc, $journal, $issue, $submission, $publishedSubmission));
+			$articleNode->appendChild($this->createJournalNode($doc, $journal, $issue, $submission));
 
 
 			$submissionLocale = $submission->getLocale();
@@ -151,9 +149,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	 * @param $journal Journal
 	 * @param $issue Issue
 	 * @param $submission Submission
-	 * @param $publishedSubmission PublishedSubmission
 	 */
-	function createJournalNode($doc, $journal, $issue, $submission, $publishedSubmission) {
+	function createJournalNode($doc, $journal, $issue, $submission) {
 		$journalNode = $doc->createElement('Journal');
 
 		$publisherNameNode = $doc->createElement('PublisherName', $journal->getData('publisherInstitution'));
@@ -173,7 +170,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		if ($issue && $issue->getShowNumber()) $journalNode->appendChild($doc->createElement('Issue', $issue->getNumber()));
 
 		$datePublished = null;
-		if ($publishedSubmission) $datePublished = $publishedSubmission->getDatePublished();
+		if ($submission) $datePublished = $submission->getCurrentPublication()->getData('datePublished');
 		if (!$datePublished && $issue) $datePublished = $issue->getDatePublished();
 		if ($datePublished) {
 			$journalNode->appendChild($this->generatePubDateDom($doc, $datePublished, 'epublish'));

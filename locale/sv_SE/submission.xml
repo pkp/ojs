@@ -28,13 +28,10 @@
 	<message key="submission.submit.whatNext.description">Tidskriften har blivit meddelad om ditt insända bidrag, och du har fått en bekräftelse skickad till dig per e-post. När redaktören har läst ditt bidrag kommer hen att kontakta dig.</message>
 	<message key="grid.action.galleyInIssueEntry">Publiceringsversion visas i numrets lista</message>
 	<message key="grid.action.issueEntry">Visa metadata för det här bidraget</message>
-	
+
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Metadata för bidraget och dess publicering</message>
-	<message key="submission.issueEntry.submissionMetadata">Bidrag</message>
-	<message key="submission.issueEntry.publicationMetadata">Publicering</message>
-	<message key="submission.issueEntry.confirm">Skapa en post i numret för den här artikeln baserad på nedanstående metadata.</message>
-	
+	<message key="submission.publication">Publicering</message>
+
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Artikelns publiceringsversion "{$galleyFormatName}" har gjorts tillgänglig.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Artikelns publiceringsversion "{$galleyFormatName}" är inte längre tillgänglig.</message>
@@ -45,7 +42,7 @@
 	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Den här publiceringsversionen <em>kommer inte längre vara tillgänglig</em> för läsare.</p>]]></message>
 	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Den här publiceringsversionen <em>kommer göras tillgänglig</em> för läsare.</p>]]></message>
 	<message key="grid.action.availableArticleGalley">Gör den här publiceringsversionen tillgänglig.</message>
-	
+
 	<!-- galley files grid -->
 	<message key="submission.galleyFiles">Filer för publiceringsversion</message>
 	<message key="submission.proofReadingDescription"><![CDATA[Layoutredaktören laddar upp de produktionsklara filerna här. Använd <em>Utse manusgranskare</em> för att uppdra åt författare eller andra att korrekturläsa publiceringsversionerna, med korrigerade filer uppladdade för godkännande före publicering.]]></message>

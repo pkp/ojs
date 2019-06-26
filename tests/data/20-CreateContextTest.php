@@ -60,9 +60,9 @@ class CreateContextTest extends PKPCreateContextTest {
 		parent::settingsWizard();
 
 		self::$driver->executeScript('window.scrollTo(0,0);'); // Scroll to top of page
-		$this->click('//a[text()="Journal"]');
+		$this->click('//button[@id="context-button"]');
 		$this->setInputValue('[name="abbreviation-en_US"]', 'publicknowledge');
-		$this->click('//*[@id="journal"]//button[contains(text(),"Save")]');
+		$this->click('//*[@id="context"]//button[contains(text(),"Save")]');
 		$this->waitForTextPresent($this->contextName['en_US'] . ' was edited successfully.');
 	}
 

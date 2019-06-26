@@ -24,7 +24,7 @@
 			symbolic="article=>crossref-xml"
 			displayName="plugins.importexport.crossref.displayName"
 			description="plugins.importexport.crossref.description"
-			inputType="class::classes.article.Submission[]"
+			inputType="class::classes.submission.Submission[]"
 			outputType="xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)" />
 	</filterGroups>
 	<filters>

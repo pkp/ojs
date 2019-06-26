@@ -1,0 +1,53 @@
+{
+	"description": "A published version of an article.",
+	"required": [
+		"sectionId"
+	],
+	"properties": {
+		"accessStatus": {
+			"type": "integer",
+			"default": 0,
+			"validation": [
+				"nullable"
+			]
+		},
+		"galleys": {
+			"type": "array",
+			"apiSummary": true,
+			"readOnly": true
+		},
+		"hideAuthor": {
+			"type": "boolean",
+			"description": "Whether the contributor details should be displayed for this publication. Commonly used for editorial statements without individual authorship.",
+			"default": false,
+			"validation": [
+				"nullable"
+			]
+		},
+		"issueId": {
+			"type": "integer",
+			"validation": [
+				"nullable"
+			]
+		},
+		"pages": {
+			"type": "string",
+			"description": "The pages of the issue in which this article appears if it is published in a physical format.",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"sectionId": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"seq": {
+			"type": "integer",
+			"default": 0,
+			"validation": [
+				"nullable"
+			]
+		}
+	}
+}

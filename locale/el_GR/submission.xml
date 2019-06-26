@@ -33,10 +33,7 @@
 	<message key="grid.action.issueEntry">Προβολή των μεταδεδομένων αυτής της υποβολής</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Μεταδεδομένα υποβολής και δημοσίευσης</message>
-	<message key="submission.issueEntry.submissionMetadata">Υποβολή</message>
-	<message key="submission.issueEntry.publicationMetadata">Δημοσίευση</message>
-	<message key="submission.issueEntry.confirm">Δημιουργία μίας εγγραφής τεύχους για αυτό το άρθρο με βάση τα παρακάτω μεταδεδομένα</message>
+	<message key="submission.publication">Δημοσίευση</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Το τυπογραφικό δοκίμιο του άρθρου "{$galleyFormatName}" είναι διαθέσιμο.</message>

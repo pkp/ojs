@@ -29,10 +29,7 @@
 	<message key="grid.action.issueEntry">Visualizar os metadados desta submissão</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Submissão e publicação de metadados</message>
-	<message key="submission.issueEntry.submissionMetadata">Submissão</message>
-	<message key="submission.issueEntry.publicationMetadata">Publicação</message>
-	<message key="submission.issueEntry.confirm">Criar uma entrada de assunto para este artigo com base nos metadados abaixo.</message>
+	<message key="submission.publication">Publicação</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">A composição do artigo "{$galleyFormatName}" está disponível.</message>

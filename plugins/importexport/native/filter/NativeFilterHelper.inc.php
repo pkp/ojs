@@ -69,7 +69,7 @@ class NativeFilterHelper {
 
 				import('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
+				$filePath = $publicFileManager->getContextFilesPath($object->getData('contextId')) . '/' . $coverImage;
 				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 				$embedNode->setAttribute('encoding', 'base64');
 				$coverNode->appendChild($embedNode);

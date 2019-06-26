@@ -193,9 +193,11 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$exportFilter->setDeployment($this->getDeployment());
 		$exportFilter->setIncludeSubmissionsNode(true);
 
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
-		$articlesDoc = $exportFilter->execute($publishedSubmissions);
+		$submissions = Services::get('submission')->getMany([
+			'issueIds' => $issue->getId(),
+			'count' => 5000, // large upper limit
+		]);
+		$articlesDoc = $exportFilter->execute($submissions);
 		if ($articlesDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($articlesDoc->documentElement, true);
 			$issueNode->appendChild($clone);

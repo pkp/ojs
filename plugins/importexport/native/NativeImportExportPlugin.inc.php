@@ -323,10 +323,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$userDao = DAORegistry::getDAO('UserDAO');
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

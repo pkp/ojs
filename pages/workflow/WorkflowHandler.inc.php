@@ -39,6 +39,49 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		);
 	}
 
+	/**
+	 * Setup variables for the template
+	 * @param $request Request
+	 */
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
+
+		$templateMgr = TemplateManager::getManager($request);
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+
+		$submissionContext = $request->getContext();
+		if ($submission->getContextId() !== $submissionContext->getId()) {
+			$submissionContext = Services::get('context')->get($submission->getContextId());
+		}
+
+		$supportedFormLocales = $submissionContext->getSupportedFormLocales();
+		$localeNames = AppLocale::getAllLocales();
+		$locales = array_map(function($localeKey) use ($localeNames) {
+			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
+		}, $supportedFormLocales);
+
+		$latestPublication = $submission->getLatestPublication();
+
+		$latestPublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
+		$temporaryFileApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+		$baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($submissionContext->getId());
+
+		$journalEntryForm = new APP\components\forms\publication\JournalEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
+
+		$templateMgr->setConstants([
+			'FORM_JOURNAL_ENTRY',
+		]);
+
+		$workflowData = $templateMgr->getTemplateVars('workflowData');
+		$workflowData['components'][FORM_JOURNAL_ENTRY] = $journalEntryForm->getConfig();
+		$workflowData['components']['publicationFormIds'][] = FORM_JOURNAL_ENTRY;
+
+		$templateMgr->assign('workflowData', $workflowData);
+	}
+
 
 	//
 	// Protected helper methods
@@ -63,11 +106,21 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	}
 
 	/**
-	 * @see PKPWorkflowHandler::isSubmissionReady()
+	 * @copydoc PKPWorkflowHandler::_getRepresentationsGridUrl()
 	 */
-	protected function isSubmissionReady($submission) {
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		return $publishedSubmissionDao->getBySubmissionId($submission->getId())?true:false;
+	protected function _getRepresentationsGridUrl($request, $submission) {
+		return $request->getDispatcher()->url(
+			$request,
+			ROUTE_COMPONENT,
+			null,
+			'grid.articleGalleys.ArticleGalleyGridHandler',
+			'fetchGrid',
+			null,
+			[
+				'submissionId' => $submission->getId(),
+				'publicationId' => '__publicationId__',
+			]
+		);
 	}
 }
 

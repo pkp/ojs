@@ -956,7 +956,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="notification.type.editorAssignmentTask">Oddan je bil nov prispevek, ki mu mora biti dodeljen urednik.</message>
 	<message key="notification.type.assignProductionUser">Uporabite povezavo Dodaj v seznamu Sodelujočih, da dodelite uporabnika, ki bo naredil prelome.</message>
 	<message key="notification.type.awaitingRepresentations">Čakajoči prelomi.</message>
-	<message key="notification.type.publicationScheduled">Ta prispevek je pripravljen za objavo.</message>
 
 	<!--
 	 *

@@ -32,11 +32,9 @@
 	<message key="submission.metadataDescription">Disse specifikationer er baseret på Dublin Core, en international metadata standard til beskrivelse af tidsskrifters indhold.</message>
 	<message key="workflow.review.externalReview">Bedømmelse</message>
 	<message key="submission.issueEntry">Metadata</message>
-	<message key="submission.issueEntry.modalTitle">Indsendelses- og publikationsmetadata</message>
-	<message key="submission.issueEntry.submissionMetadata">Indsendelse</message>
 	<message key="editor.submission.decision.sendExternalReview">Send til bedømmelse</message>
 	<message key="submission.title">Artiklens titel</message>
-	<message key="submission.issueEntry.publicationMetadata">Publikation</message>
+	<message key="submission.publication">Publikation</message>
 	<message key="submission.event.issueMetadataUpdated">Indsendelsens nummer-metadata blev opdateret.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Vælg bidragyderens rolle</message>
 	<message key="submission.submit.contributorRole">Bidragyders rolle</message>
@@ -51,7 +49,6 @@
 	<message key="grid.action.workflow">Indsendelses-workflow</message>
 	<message key="grid.action.galleyInIssueEntry">Publiceringsversionen fremvises i nummeradgangen</message>
 	<message key="grid.action.issueEntry">Se denne indsendelses metadata</message>
-	<message key="submission.issueEntry.confirm">Opret en nummeradgang til denne artikel på basis af nedenstående metadata.</message>
 	<message key="submission.event.articleGalleyMadeAvailable">Artiklens publiceringsversion  "{$galleyFormatName}" er blevet gjort tilgængelig.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Artiklens publiceringsversion "{$galleyFormatName}" er ikke længere tilgængelig.</message>
 	<message key="submission.event.publicIdentifiers">Indsendelsens 'public identifiers' blev opdateret.</message>

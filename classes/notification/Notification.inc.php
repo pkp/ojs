@@ -15,7 +15,6 @@
 
 /** Notification associative types. */
 define('NOTIFICATION_TYPE_PUBLISHED_ISSUE', 		0x10000015);
-define('NOTIFICATION_TYPE_PUBLICATION_SCHEDULED',	0x10000016);
 
 // OJS-specific trivial notifications
 define('NOTIFICATION_TYPE_BOOK_REQUESTED',			0x3000001);

@@ -961,7 +961,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 
 <p>2. En mappe til opbevaring af uploadede filer skal oprettes og gøres skrivbar (se "Filindstillinger" nedenfor).</p>]]></message>
 	<message key="log.editor.recommendation">En redaktørbeslutning ({$decision}) for artiklen {$submissionId} blev registreret af {$editorName}.</message>
-	<message key="notification.type.publicationScheduled">Denne indsendelse er indstillet til publikation.</message>
 	<message key="navigation.subscriptions">Abonnementer</message>
 	<message key="log.editor.submissionExpedited">{$editorName} har påtaget sig redigeringen af artiklen {$submissionId}.</message>
 	<message key="user.reviewerPrompt.optin">Ja, jeg vil gerne kontaktes med anmodninger om at foretage bedømmelse af indsendelser til dette tidsskrift.</message>

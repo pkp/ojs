@@ -994,7 +994,6 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 	<message key="notification.type.editorAssignmentTask">En ny artikel har skickats in och behöver bli tilldelad en redaktör.</message>
 	<message key="notification.type.assignProductionUser">Låt en användare skapa publiceringsversioner genom att använda Lägg till-länken i Deltagarlistan.</message>
 	<message key="notification.type.awaitingRepresentations">Väntar på publiceringsversioner.</message>
-	<message key="notification.type.publicationScheduled">Det här bidraget är inlagt för publicering.</message>
 
 	<!--
 	 *

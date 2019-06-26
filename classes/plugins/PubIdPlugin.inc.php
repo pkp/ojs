@@ -49,18 +49,21 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 					if ($submissionEnabled || $representationEnabled) {
 						$submissionDao = Application::getSubmissionDAO();
 						$representationDao = Application::getRepresentationDAO();
-						$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-						$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissionsByJournalId($context->getId());
-						while ($publishedSubmission = $publishedSubmissions->next()) {
+						$submissions = Services::getMany([
+							'contextId' => $context->getId(),
+							'status' => STATUS_PUBLISHED,
+							'count' => 5000, // large upper limit
+						]);
+						foreach ($submissions as $submission) {
 							if ($submissionEnabled) {
-								$submissionPubId = $publishedSubmission->getStoredPubId($this->getPubIdType());
+								$submissionPubId = $submission->getStoredPubId($this->getPubIdType());
 								if (empty($submissionPubId)) {
-									$submissionPubId = $this->getPubId($publishedSubmission);
-									$submissionDao->changePubId($publishedSubmission->getId(), $this->getPubIdType(), $submissionPubId);
+									$submissionPubId = $this->getPubId($submission);
+									$submissionDao->changePubId($submission->getId(), $this->getPubIdType(), $submissionPubId);
 								}
 							}
 							if ($representationEnabled) {
-								$representations = $representationDao->getBySubmissionId($publishedSubmission->getid(), $context->getId());
+								$representations = $representationDao->getBySubmissionId($submission->getid(), $context->getId());
 								while ($representation = $representations->next()) {
 									$representationPubId = $representation->getStoredPubId($this->getPubIdType());
 									if (empty($representationPubId)) {
@@ -138,7 +141,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 			$submission = $submissionDao->getById($pubObject->getSubmissionId(), null, true);
 			if (!$submission) return null;
 			// Now we can identify the context.
-			$contextId = $submission->getJournalId();
+			$contextId = $submission->getData('contextId');
 		}
 		// Check the context
 		$context = $this->getContext($contextId);
@@ -255,18 +258,22 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) return false;
 
 		$pubIdType = $this->getPubIdType();
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$representationDao = Application::getRepresentationDAO();
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 
-		$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issueId);
-		foreach ($publishedSubmissions as $publishedSubmission) {
+		$submissions = Services::get('submission')->getMany([
+			'contextId' => $issue->getJournalId(),
+			'issueIds' => $issue->getId(),
+			'count' => 5000, // large upper limit
+		]);
+		foreach ($submissions as $submission) {
 			if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
-				$publishedSubmissionDao->deletePubId($publishedSubmission->getId(), $pubIdType);
+				$submissionDao->deletePubId($submission->getId(), $pubIdType);
 			}
 			if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
-				$representations = $representationDao->getBySubmissionId($publishedSubmission->getId());
+				$representations = $representationDao->getBySubmissionId($submission->getId());
 				while ($representation = $representations->next()) {
 					if ($representationPubIdEnabled) { // Does this option have to be enabled here for?
 						$representationDao->deletePubId($representation->getId(), $pubIdType);

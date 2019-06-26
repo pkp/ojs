@@ -32,9 +32,7 @@
 	<message key="submission.issueEntry">Метаподаци</message>
 	<message key="submission.submit.whatNext.description">Часопис је обавештен о вашој предају и послата вам је имејл порука са потврдом ваших података. Када уредници прегледа предају контактираће вас.</message>
 	<message key="grid.action.issueEntry">Погледај метаподатке предаје</message>
-	<message key="submission.issueEntry.modalTitle">Метаподаци предаје и публикације</message>
-	<message key="submission.issueEntry.submissionMetadata">Предаја</message>
-	<message key="submission.issueEntry.publicationMetadata">Публикације</message>
+	<message key="submission.publication">Публикације</message>
 	<message key="submission.event.publicIdentifiers">Јавни идентификатори предаје су ажурирани.</message>
 	<message key="grid.action.availableArticleGalley">Омогући овај фајл приказа</message>
 	<message key="submission.galleyFiles">Фајлови приказа</message>
@@ -63,7 +61,6 @@
 	<message key="submission.metadataDescription">Ове спецификације су базиране на Dublin Core сету метаподатака, међународном стандарду који се користи за описивање садржаја часописа.</message>
 	<message key="submission.submit.userGroupDescription">Одаберите капацитет под којим пријављујете овај чланак.</message>
 	<message key="grid.action.galleyInIssueEntry">Ова копија се појављује у броју часописа</message>
-	<message key="submission.issueEntry.confirm">Креирајте унос у броју за овај чланак на основу доле наведених метаподатака.</message>
 	<message key="submission.event.articleGalleyMadeAvailable">Пробна копија чланка "{$galleyFormatName}" је доступна.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Пробна копија чланка "{$galleyFormatName}" више није доступна.</message>
 	<message key="grid.issueEntry.availableGalley.title">Одобрење формата</message>

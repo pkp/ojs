@@ -1003,7 +1003,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="notification.type.editorAssignmentTask">A new article has been submitted to which an editor needs to be assigned.</message>
 	<message key="notification.type.assignProductionUser">Assign a user to create galleys using the Assign link in the Participants list.</message>
 	<message key="notification.type.awaitingRepresentations">Awaiting Galleys.</message>
-	<message key="notification.type.publicationScheduled">This submission has been scheduled for publication.</message>
 
 	<!--
 	 *

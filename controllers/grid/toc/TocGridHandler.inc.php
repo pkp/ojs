@@ -18,7 +18,7 @@ import('controllers.grid.toc.TocGridCategoryRow');
 import('controllers.grid.toc.TocGridRow');
 
 class TocGridHandler extends CategoryGridHandler {
-	var $publishedSubmissionsBySectionId;
+	var $submissionsBySectionId = [];
 
 	/**
 	 * Constructor
@@ -29,7 +29,7 @@ class TocGridHandler extends CategoryGridHandler {
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle', 'setAccessStatus')
 		);
-		$this->publishedSubmissionsBySectionId = array();
+		$this->submissionBySectionId = array();
 	}
 
 
@@ -135,7 +135,7 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @copydoc CategoryGridHandler::loadCategoryData()
 	 */
 	function loadCategoryData($request, &$section, $filter = null) {
-		return $this->publishedSubmissionsBySectionId[$section->getId()];
+		return $this->submissionsBySectionId[$section->getId()];
 	}
 
 	/**
@@ -144,16 +144,14 @@ class TocGridHandler extends CategoryGridHandler {
 	protected function loadData($request, $filter) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$publishedSubmissionsInSections = $publishedSubmissionDao->getPublishedSubmissionsInSections($issue->getId());
-		$sections = array();
-		foreach ($publishedSubmissionsInSections as $sectionId => $articles) {
+		$submissionsInSections = Services::get('submission')->getInSections($request->getContext()->getId(), $issue->getId());
+		$sections = [];
+		foreach ($submissionsInSections as $sectionId => $articles) {
 			if (!isset($sections[$sectionId])) {
-				$sections[$sectionId] = $sectionDao->getById($sectionId);
+				$sections[$sectionId] = Application::get()->getSectionDao()->getById($sectionId);
 			}
 			foreach($articles['articles'] as $article) {
-				$this->publishedSubmissionsBySectionId[$sectionId][$article->getId()] = $article;
+				$this->submissionsBySectionId[$sectionId][$article->getId()] = $article;
 			}
 		}
 		return $sections;
@@ -161,15 +159,20 @@ class TocGridHandler extends CategoryGridHandler {
 
 	/**
 	 * @copydoc GridHandler::getDataElementSequence()
+	 *
+	 * @param Section|Submission $object
 	 */
-	function getDataElementSequence($section) {
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$customOrdering = $sectionDao->getCustomSectionOrder($issue->getId(), $section->getId());
-		if ($customOrdering === null) { // No custom ordering specified; use default section ordering
-			return $section->getSequence();
-		} else { // Custom ordering specified.
-			return $customOrdering;
+	function getDataElementSequence($object) {
+		if (is_a($object, 'Submission')) {
+			return $object->getCurrentPublication()->getData('seq');
+		} else {
+			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+			$customOrdering = DAORegistry::getDAO('SectionDAO')->getCustomSectionOrder($issue->getId(), $section->getId());
+			if ($customOrdering === null) { // No custom ordering specified; use default section ordering
+				return $section->getSequence();
+			} else { // Custom ordering specified.
+				return $customOrdering;
+			}
 		}
 	}
 
@@ -188,20 +191,20 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc CategoryGridHandler::getDataElementInCategorySequence()
 	 */
-	function getDataElementInCategorySequence($categoryId, &$publishedSubmission) {
-		return $publishedSubmission->getSequence();
+	function getDataElementInCategorySequence($categoryId, &$submission) {
+		return $submission->getCurrentPublication()->getData('seq');
 	}
 
 	/**
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
-	function setDataElementInCategorySequence($sectionId, &$publishedSubmission, $newSequence) {
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		if ($sectionId != $publishedSubmission->getSectionId()) {
-			$publishedSubmission->setSectionId($sectionId);
+	function setDataElementInCategorySequence($sectionId, &$submission, $newSequence) {
+		$publication = $submission->getCurrentPublication();
+		$params = ['seq' => $newSequence];
+		if ($sectionId != $publication->getData('sectionId')) {
+			$params['sectionId'] = $sectionId;
 		}
-		$publishedSubmission->setSequence($newSequence);
-		$publishedSubmissionDao->updatePublishedSubmission($publishedSubmission);
+		$publication = Services::get('publication')->edit($publication, $params, Application::get()->getRequest());
 	}
 
 	//
@@ -215,28 +218,27 @@ class TocGridHandler extends CategoryGridHandler {
 	 */
 	function removeArticle($args, $request) {
 		$journal = $request->getJournal();
-		$articleId = (int) $request->getUserVar('articleId');
+		$submission = Services::get('submission')->get((int) $request->getUserVar('articleId'));
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$article = $publishedSubmissionDao->getBySubmissionId($articleId);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		if ($article && $article->getIssueId() == $issue->getId() && $request->checkCSRF()) {
+		if ($submission && $submission->getData('issueId') == $issue->getId() && $request->checkCSRF()) {
 			if ($issue->getPublished()) {
-				$articleTombstoneManager->insertArticleTombstone($article, $journal);
+				$articleTombstoneManager->insertArticleTombstone($submission, $journal);
 			}
-			$article->setStatus(STATUS_QUEUED);
-			$article->stampStatusModified();
+			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
 			// If the article is the only one in the section, delete the section from custom issue ordering
-			$sectionId = $article->getSectionId();
-			$publishedSubmissionArray = $publishedSubmissionDao->getPublishedSubmissionsBySectionId($sectionId, $issue->getId());
-			if (sizeof($publishedSubmissionArray) == 1) {
+			$sectionId = $submission->getData('sectionId');
+			$submissionsInSections = Services::get('submission')->getInSections($issue->getId());
+			if (!empty($submissionsInSections[$sectionId]) && count($submissionsInSections[$sectionId]) === 1) {
 				$sectionDao = DAORegistry::getDAO('SectionDAO');
 				$sectionDao->deleteCustomSection($issue->getId(), $sectionId);
 			}
-			$publishedSubmissionDao->deletePublishedSubmissionBySubmissionId($articleId);
-			$publishedSubmissionDao->resequencePublishedSubmissions($article->getSectionId(), $issue->getId());
+			$publication = Services::get('publication')->edit(
+				$submission->getCurrentPublication(),
+				['seq' => ''],
+				$request
+			);
 			return DAO::getDataChangedEvent();
 		}
 
@@ -251,16 +253,12 @@ class TocGridHandler extends CategoryGridHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function setAccessStatus($args, $request) {
-		$journal = $request->getJournal();
 		$articleId = (int) $request->getUserVar('articleId');
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$article = $publishedSubmissionDao->getBySubmissionId($articleId);
-		if ($article && $article->getIssueId() == $issue->getId() && $request->checkCSRF()) {
-			$article->setAccessStatus($request->getUserVar('status'));
-			$article->stampStatusModified();
-			$publishedSubmissionDao->updatePublishedSubmission($article);
+		$submission = Services::get('submission')->get($articleId);
+		$publication = $submission ? $submission->getCurrentPublication() : null;
+		if ($publication && $publication->getData('issueId') == $issue->getId() && $request->checkCSRF()) {
+			$publication = Services::get('publication')->edit($publication, ['accessStatus' => $request->getUserVar('status')], $request);
 			return DAO::getDataChangedEvent();
 		}
 

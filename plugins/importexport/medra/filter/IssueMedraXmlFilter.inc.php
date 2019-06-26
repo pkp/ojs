@@ -136,20 +136,22 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// 4) issue (as-work and as-manifestation):
 		// related works:
 		// - includes articles-as-work
-		$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
-		$articlesByIssue = $submissionDao->getPublishedSubmissions($issueId);
+		$submissionsByIssue = Services::get('submission')->getMany([
+			'issueIds' => $issue->getId(),
+			'count' => 5000, // large upper limit
+		]);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleysByIssue = array();
-		foreach ($articlesByIssue as $relatedArticle) {
-			$articleProprietaryId = $context->getId() . '-' . $pubObject->getId() . '-' . $relatedArticle->getId();
-			$relatedArticleIds = array(O4DOI_ID_TYPE_PROPRIETARY => $articleProprietaryId);
-			$doi = $relatedArticle->getStoredPubId('doi');
-			if (!empty($doi)) $relatedArticleIds[O4DOI_ID_TYPE_DOI] = $doi;
-			$issueNode->appendChild($this->createRelatedNode($doc, 'Work', O4DOI_RELATION_INCLUDES, $relatedArticleIds));
+		foreach ($submissionsByIssue as $relatedSubmission) {
+			$articleProprietaryId = $context->getId() . '-' . $pubObject->getId() . '-' . $relatedSubmission->getId();
+			$relatedSubmissionIds = array(O4DOI_ID_TYPE_PROPRIETARY => $articleProprietaryId);
+			$doi = $relatedSubmission->getStoredPubId('doi');
+			if (!empty($doi)) $relatedSubmissionIds[O4DOI_ID_TYPE_DOI] = $doi;
+			$issueNode->appendChild($this->createRelatedNode($doc, 'Work', O4DOI_RELATION_INCLUDES, $relatedSubmissionIds));
 			// Collect galleys by issue
-			$galleysByArticle = $galleyDao->getBySubmissionId($relatedArticle->getId())->toArray();
+			$galleysByArticle = $galleyDao->getByPublicationId($relatedSubmission->getCurrentPublication()->getId())->toArray();
 			$galleysByIssue = array_merge($galleysByIssue, $galleysByArticle);
-			unset($relatedArticle, $relatedArticleIds);
+			unset($relatedSubmission, $relatedSubmissionIds);
 		}
 		// related products:
 		// - includes articles-as-manifestation

@@ -28,13 +28,13 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
 	 * @copydoc ExportPublishedSubmissionsListGridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
-		$publishedSubmission = $row->getData();
+		$submission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
+		assert(is_a($submission, 'Submission') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'pubId':
-				return array('label' => $publishedSubmission->getStoredPubId($this->_plugin->getPubIdType()));
+				return array('label' => $submission->getStoredPubId($this->_plugin->getPubIdType()));
 		}
 		return parent::getTemplateVarsFromRowColumn($row, $column);
 	}

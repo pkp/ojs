@@ -17,14 +17,14 @@
 			symbolic="article=>doaj-xml"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.article.Submission[]"
+			inputType="class::classes.submission.Submission[]"
 			outputType="xml::schema(plugins/importexport/doaj/doajArticles.xsd)" />
 		<!-- DOAJ JSON article output -->
 		<filterGroup
 			symbolic="article=>doaj-json"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.article.Submission"
+			inputType="class::classes.submission.Submission"
 			outputType="primitive::string" />
 	</filterGroups>
 	<filters>
@@ -37,6 +37,6 @@
 		<filter
 			inGroup="article=>doaj-json"
 			class="plugins.importexport.doaj.filter.DOAJJsonFilter"
-			isTemplate="0" />	
+			isTemplate="0" />
 	</filters>
 </filterConfig>

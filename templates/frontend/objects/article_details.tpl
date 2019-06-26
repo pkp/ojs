@@ -189,18 +189,18 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations->getCount() || $article->getCitations()}
+			{if $citations || $article->getCurrentPublication()->getData('citationsRaw')}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
 					<div class="value">
-						{if $parsedCitations->getCount()}
-							{iterate from=parsedCitations item=parsedCitation}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
-							{/iterate}
-						{elseif $article->getCitations()}
-							{$article->getCitations()|nl2br}
+						{if $citations}
+							{foreach from=$citations item="citation"}
+								<p>{$citation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$citation}</p>
+							{/foreach}
+						{else}
+							{$article->getCurrentPublication()->getData('citationsRaw')|nl2br}
 						{/if}
 					</div>
 				</div>

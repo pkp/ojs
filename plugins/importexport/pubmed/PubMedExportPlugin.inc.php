@@ -156,13 +156,14 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	 * @return string XML contents representing the supplied issue IDs.
 	 */
 	function exportIssues($issueIds, $context, $user) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$submissionIds = array();
 		foreach ($issueIds as $issueId) {
-			$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issueId);
-			foreach ($publishedSubmissions as $publishedSubmission) {
-				$submissionIds[] = $publishedSubmission->getId();
+			$submissions = Services::get('submission')->getMany([
+				'issueIds' => $issueId,
+				'count' => 5000, // large upper limit
+			]);
+			foreach ($submissions as $submission) {
+				$submissionIds[] = $submission->getId();
 			}
 		}
 
@@ -200,9 +201,6 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$userDao = DAORegistry::getDAO('UserDAO');
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 
 		$journal = $journalDao->getByPath($journalPath);
 

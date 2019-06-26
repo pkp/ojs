@@ -8,23 +8,23 @@
  * @brief OJS-specific tabs for the distribution settings page
  *}
 
-<tab name="{translate key="manager.distribution.access"}">
+<tab id="access" label="{translate key="manager.distribution.access"}">
 	{help file="settings" section="distribution" class="pkp_help_tab"}
 	<pkp-form
 		v-bind="components.{$smarty.const.FORM_ACCESS}"
 		@set="set"
 	/>
 </tab>
-<tab id="archive" name="{translate key="manager.website.archiving"}">
+<tab id="archive" label="{translate key="manager.website.archiving"}">
 	{help file="settings" section="distribution" class="pkp_help_tab"}
-	<tabs :options="{ useUrlFragment: false}" class="tabs-component--side">
-		<tab name="{translate key="manager.setup.plnPluginArchiving"}">
+	<tabs :is-side-tabs="true">
+		<tab id="pln" label="{translate key="manager.setup.plnPluginArchiving"}">
 			<pkp-form
 				v-bind="components.archivePn"
 				@set="set"
 			/>
 		</tab>
-		<tab name="{translate key="manager.setup.otherLockss"}">
+		<tab id="lockss" label="{translate key="manager.setup.otherLockss"}">
 			<pkp-form
 				v-bind="components.{$smarty.const.FORM_ARCHIVING_LOCKSS}"
 				@set="set"

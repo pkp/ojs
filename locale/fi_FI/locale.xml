@@ -1027,7 +1027,6 @@ Palvelimesi tukee tällä hetkellä mbstringiä: <strong>{$supportsMBString}</st
 	<message key="editor.issues.futureIssues">Tulevat numerot</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Ole hyvä ja täytä kaikki pakolliset kentät.</message>
 	<message key="navigation.subscriptions">Tilaukset</message>
-	<message key="notification.type.publicationScheduled">Tämä käsikirjoitus on ajoitettu julkaistavaksi.</message>
 	<message key="log.editor.recommendation">{$editorName} tallensi päätöksen ({$decision}) käsikirjoitukselle {$submissionId}.</message>
 	<message key="subscriptions.status.noSubscription">Sinulla ei ole aktiivista tilausta.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>

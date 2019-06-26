@@ -38,10 +38,14 @@ class SubmissionHandler extends PKPSubmissionHandler {
 	 */
 	function fetchChoices($args, $request) {
 		$term = $request->getUserVar('term');
+		$locale = $request->getUserVar('locale');
+		if (!$locale) {
+			$locale = AppLocale::getLocale();
+		}
 		switch ($request->getUserVar('list')) {
 			case 'languages':
 				$languageDao = DAORegistry::getDAO('LanguageDAO');
-				$languages = $languageDao->getLanguages(AppLocale::getLocale());
+				$languages = $languageDao->getLanguages($locale);
 				$matches = array();
 				foreach ($languages as $language) {
 					if (stristr($language->getName(), $term)) $matches[$language->getCode()] = $language->getName();

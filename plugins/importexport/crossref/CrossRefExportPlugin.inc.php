@@ -274,7 +274,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * @see PubObjectsExportPlugin::depositXML()
 	 *
-	 * @param $objects PublishedSubmission
+	 * @param $objects Submission
 	 * @param $context Context
 	 * @param $filename Export XML filename
 	 */
@@ -372,7 +372,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 * @param $failedMsg string (opitonal)
 	 */
 	function updateDepositStatus($context, $object, $status, $batchId, $failedMsg = null) {
-		assert(is_a($object, 'PublishedSubmission') or is_a($object, 'Issue'));
+		assert(is_a($object, 'Submission') or is_a($object, 'Issue'));
 		// remove the old failure message, if exists
 		$object->setData($this->getFailedMsgSettingName(), null);
 		$object->setData($this->getDepositStatusSettingName(), $status);

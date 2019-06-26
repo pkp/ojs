@@ -934,7 +934,6 @@ Titre du système de classification]]></message>
 	<message key="payment.notFound">La demande de paiement a expiré. Veuillez communiquer avec un responsable de la revue pour plus de détails.</message>
 	<message key="log.editor.recommendation">Une recommandation éditoriale ({$decision}) pour l'article {$submissionId} a été enregistrée par {$editorName}.</message>
 	<message key="notification.type.public">Annonces publiques</message>
-	<message key="notification.type.publicationScheduled">La publication de cet article a été planifiée.</message>
 	<message key="navigation.subscriptions">Abonnements</message>
 	<message key="log.editor.submissionExpedited">{$editorName} a pris en charge l'édition de l'article {$submissionId}.</message>
 	<message key="user.register.form.emailConsentAllContexts">Oui, j'aimerais recevoir une notification pour les nouvelles publications et les annonces de toutes les revues auxquelles je me suis inscrit(e).</message>

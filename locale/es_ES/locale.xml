@@ -826,7 +826,6 @@
 	<message key="notification.type.submissionComment">Un editor/a hizo un comentario en "{$title}".</message>
 	<message key="notification.type.submissions">Eventos de los envíos</message>
 	<message key="notification.type.userComment">Un lector/a hizo un comentario en "{$title}"</message>
-	<message key="notification.type.publicationScheduled">Se ha programado este envío para su publicación.</message>
 
 	<!--
 	 *

@@ -131,7 +131,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
 				$referredArticle = $submissionDao->getById($galley->getSubmissionId());
 			}
-			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
+			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
 			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
 
 			$contents = preg_replace(

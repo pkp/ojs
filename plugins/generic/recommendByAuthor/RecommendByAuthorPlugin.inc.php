@@ -64,7 +64,6 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		// Find articles of the same author(s).
 		$displayedArticle = $smarty->getTemplateVars('article');
 		$authors = $displayedArticle->getAuthors();
-		$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 		$foundArticles = array();
 		foreach($authors as $author) { /* @var $author Author */
 			// The following article search is by name only as authors are
@@ -72,16 +71,20 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 			// false positives or miss some entries. But there's no other way
 			// until OJS allows users to consistently normalize authors (via name,
 			// email, ORCID, whatever).
-			$articles = $authorDao->getPublishedSubmissionsForAuthor(
-				null, $author->getLocalizedGivenName(), $author->getLocalizedFamilyName(),
-				$author->getLocalizedAffiliation(), $author->getCountry()
-			);
-			foreach ($articles as $article) { /* @var $article PublishedSubmission */
-				if ($displayedArticle->getId() == $article->getId()) continue;
-				$foundArticles[] = $article->getId();
-			}
+			$authorRecords = Services::get('author')->getMany([
+				'contextIds' => $displayedArticle->getData('contextId'),
+				'givenName' => $author->getLocalizedGivenName(),
+				'familyName' => $author->getLocalizedFamilyName(),
+			]);
+			$publicationIds = array_map(function($author) {
+				return $author->getData('publicationId');
+			}, $authorRecords);
+			$submissionIds = array_map(function($publicationId) {
+				return Services::get('publication')->get($publicationId)->getData('submissionId');
+			}, array_unique($publicationIds));
+			$foundArticles = array_merge($foundArticles, array_unique($submissionIds));
 		}
-		$results = array_unique($foundArticles);
+		$results = $foundArticles;
 
 		// Order results by metric.
 		$application = Application::getApplication();

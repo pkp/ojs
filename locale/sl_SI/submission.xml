@@ -30,10 +30,7 @@
 	<message key="grid.action.issueEntry">Poglej metapodatke prispevka</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Metapodatki o prispevku in številki</message>
-	<message key="submission.issueEntry.submissionMetadata">Prispevek</message>
-	<message key="submission.issueEntry.publicationMetadata">Številka</message>
-	<message key="submission.issueEntry.confirm">Ustvari vpis v številko za ta prispevek na osnovi spodnjih metapodatkov.</message>
+	<message key="submission.publication">Številka</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Prelom "{$galleyFormatName}" za prispevek je na voljo.</message>

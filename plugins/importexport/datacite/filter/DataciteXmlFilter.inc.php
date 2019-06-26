@@ -72,7 +72,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObject Issue|PublishedSubmission|ArticleGalley
+	 * @param $pubObject Issue|Submission|ArticleGalley
 	 * @return DOMDocument
 	 */
 	function &process(&$pubObject) {
@@ -92,7 +92,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 			if (!$cache->isCached('issues', $issue->getId())) {
 				$cache->add($issue, null);
 			}
-		} elseif (is_a($pubObject, 'PublishedSubmission')) {
+		} elseif (is_a($pubObject, 'Submission')) {
 			$article = $pubObject;
 			if (!$cache->isCached('articles', $article->getId())) {
 				$cache->add($article, null);
@@ -104,8 +104,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);
 			} else {
-				$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
-				$article = $submissionDao->getBySubmissionId($pubObject->getSubmissionId(), $context->getId());
+				$article = Services::get('submission')->get($pubObject->getSubmissionId());
 				if ($article) $cache->add($article, null);
 			}
 		}
@@ -222,7 +221,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Create creators node.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
 	 * @param $publisher string
@@ -268,7 +267,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Create titles node.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
 	 * @param $objectLocalePrecedence array
@@ -315,7 +314,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Create a date node list.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
 	 * @param $publicationDate string
@@ -394,7 +393,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Create a resource type node.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
 	 * @return DOMElement.
@@ -439,7 +438,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Generate alternate identifiers node list.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @return DOMElement
 	 */
@@ -474,7 +473,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Generate related identifiers node list.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @return DOMElement|null
 	 */
@@ -504,7 +503,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				unset($doi);
 				// Parts: galleys.
 				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-				$galleysByArticle = $galleyDao->getBySubmissionId($article->getId())->toArray();
+				$galleysByArticle = $galleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
 				foreach ($galleysByArticle as $relatedGalley) {
 					$doi = $relatedGalley->getStoredPubId('doi');
 					if (!empty($doi)) {
@@ -517,9 +516,11 @@ class DataciteXmlFilter extends NativeExportFilter {
 				break;
 			case isset($issue):
 				// Parts: articles in this issue.
-				$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
-				$articlesByIssue = $submissionDao->getPublishedSubmissions($issue->getId());
-				foreach ($articlesByIssue as $relatedArticle) {
+				$submissionsByIssue = Services::get('submission')->getMany([
+					'issueIds' => $issue->getId(),
+					'count' => 5000, // large upper limit
+				]);
+				foreach ($submissionsByIssue as $relatedArticle) {
 					$doi = $relatedArticle->getStoredPubId('doi');
 					if (!empty($doi)) {
 						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
@@ -538,7 +539,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Create a sizes node list.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
 	 * @return DOMElement|null Can be null if a size
@@ -588,7 +589,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * Create descriptions node list.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley Alley
 	 * @param $galleyFile SubmissionFile
 	 * @param $objectLocalePrecedence array
@@ -639,7 +640,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	/**
 	 * Identify the locale precedence for this export.
 	 * @param $context Context
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @return array A list of valid PKP locales in descending
 	 *  order of priority.
@@ -791,19 +792,21 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * @return string
 	 */
 	function getIssueToc($issue, $objectLocalePrecedence) {
-		$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
-		$articlesByIssue = $submissionDao->getPublishedSubmissions($issue->getId());
-		assert(is_array($articlesByIssue));
+		$submissionsByIssue = Services::get('submission')->getMany([
+			'issueIds' => $issue->getId(),
+			'count' => 5000, // large upper limit
+		]);
+		assert(is_array($submissionsByIssue));
 		$toc = '';
-		foreach ($articlesByIssue as $articleInIssue) {
-			$currentEntry = $this->getPrimaryTranslation($articleInIssue->getTitle(null), $objectLocalePrecedence);
+		foreach ($submissionsByIssue as $submissionInIssue) {
+			$currentEntry = $this->getPrimaryTranslation($submissionInIssue->getTitle(null), $objectLocalePrecedence);
 			assert(!empty($currentEntry));
-			$pages = $articleInIssue->getPages();
+			$pages = $submissionInIssue->getPages();
 			if (!empty($pages)) {
 				$currentEntry .= '...' . $pages;
 			}
 			$toc .= $currentEntry . "<br />";
-			unset($articleInIssue);
+			unset($submissionInIssue);
 		}
 		return $toc;
 	}

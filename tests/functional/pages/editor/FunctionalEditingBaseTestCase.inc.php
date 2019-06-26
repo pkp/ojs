@@ -35,7 +35,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 			'article_supplementary_files', 'article_supp_file_settings',
 			'authors', 'author_settings', 'edit_assignments',
 			'event_log', 'event_log_settings', 'issues',
-			'published_submissions', 'signoffs', 'notifications',
+			'signoffs', 'notifications',
 			'sessions'
 		);
 	}

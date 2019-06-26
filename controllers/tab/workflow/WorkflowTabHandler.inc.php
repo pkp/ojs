@@ -39,7 +39,7 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 							'publicationMetadata', null,
 							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
 						),
-						__('submission.issueEntry.publicationMetadata')
+						__('submission.publication')
 					),
 					__('editor.article.schedulePublication')
 				);

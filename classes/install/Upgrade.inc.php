@@ -2969,8 +2969,8 @@ class Upgrade extends Installer {
 
 	/**
 	 * Update permit_metadata_edit and can_change_metadata for user_groups and stage_assignments tables.
-	 * 
-	 * @return boolean True indicates success. 
+	 *
+	 * @return boolean True indicates success.
 	 */
 	function changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit() {
 		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var $stageAssignmentDao StageAssignmentDAO */
@@ -2980,15 +2980,15 @@ class Upgrade extends Installer {
 		$roleString = '(' . implode(",", $roles) . ')';
 
 		$userGroupDao->update(
-			'UPDATE user_groups 
-			SET permit_metadata_edit = 1 
+			'UPDATE user_groups
+			SET permit_metadata_edit = 1
 			WHERE role_id IN ' . $roleString
 		);
 
 		$stageAssignmentDao->update(
 			'UPDATE stage_assignments sa
 			JOIN user_groups ug on sa.user_group_id = ug.user_group_id
-			SET sa.can_change_metadata = 1 
+			SET sa.can_change_metadata = 1
 			WHERE ug.role_id IN ' . $roleString
 		);
 
