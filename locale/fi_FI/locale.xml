@@ -1100,4 +1100,11 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 	<message key="user.reviewerPrompt.optin">Kyllä, minulle voi lähettää vertaisarviointeja koskevia pyyntöjä tästä julkaisusta.</message>
 	<message key="user.register.form.emailConsentAllContexts">Kyllä, haluan uusia numeroita ja tiedotteita koskevia ilmoituksia kaikista julkaisuista, joihin olen rekisteröitynyt.</message>
 	<message key="notification.type.public">Julkiset tiedotteet</message>
+	<message key="section.policy">Osaston ohjeistus</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Kyllä, tietojani saa kerätä ja tallentaa tämän lehden <a href="{$privacyUrl}" target="_blank">tietosuojaselosteen</a> kuvaamalla tavalla.]]></message>
+	<message key="user.register.form.missingContextConsent">Sinun pitää hyväksyä niiden lehtien tietosuojaselosteet, joihin olet rekisteröitymässä.</message>
+	<message key="user.register.form.missingSiteConsent">Sinun pitää hyväksyä tämän sivuston tietosuojaseloste.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Lähetä uusi käsikirjoitus osastoon <a href="{$url}">{$name}</a>.]]></message>
+	<message key="catalog.sortBy">Artikkeleiden järjestys</message>
+	<message key="catalog.sortBy.categoryDescription">Valitse kategoriassa julkaistujen artikkeleiden järjestämistapa</message>
 </locale>

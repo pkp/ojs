@@ -48,9 +48,9 @@
 	<message key="author.submit.journalSection">Julkaisun osasto</message>
 	<message key="author.submit.journalSectionDescription">Artikkelit on lähetettävä yhteen julkaisun osastoista.</message>
 	<message key="author.submit.verifyChecklist">Varmista, että kaikki käsikirjoituksen tarkistuslistan kohdat täyttyvät ennen jatkamista.</message>
-	<message key="author.submit.copyrightNoticeAgree">Kirjoittajat hyväksyvät tämän tekijänoikeushuomautuksen ehdot, joita sovelletaan tähän käsikirjoitukseen, jos ja kun se julkaistaan tämän julkaisun toimesta (kommentteja toimittajalle voidaan lisätä alla).</message>
+	<message key="author.submit.copyrightNoticeAgree">Kirjoittajat hyväksyvät tämän tekijänoikeushuomautuksen ehdot, joita sovelletaan tähän käsikirjoitukseen, jos ja kun se julkaistaan tämän julkaisun toimesta (saate toimittajalle voidaan lisätä alla).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sinun on hyväksyttävä tekijänoikeushuomautuksen ehdot, ennen kuin voit jatkaa.</message>
-	<message key="submission.submit.coverNote">Kommentteja toimittajalle</message>
+	<message key="submission.submit.coverNote">Saate toimittajalle</message>
 	<message key="author.submit.comments">Syötä teksti (valinnainen)</message>
 	<message key="author.submit.form.sectionRequired">Valitse tälle käsikirjoitukselle sopiva julkaisun osasto.</message>
 	<message key="author.submit.form.localeRequired">Valitse käsikirjoituksen kieli.</message>

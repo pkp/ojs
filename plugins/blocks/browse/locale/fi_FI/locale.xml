@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<message key="plugins.block.browse">Selaus</message>
+	<message key="plugins.block.browse.displayName">Selauslohko</message>
+	<message key="plugins.block.browse.description">Tämä lisäosa ottaa käyttöön sivupalkin selaustyökalut</message>
+	<message key="plugins.block.browse.category">Kategoriat</message>
+</locale>

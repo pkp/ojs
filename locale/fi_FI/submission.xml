@@ -78,4 +78,6 @@
 	<message key="section.any">Kaikki osastot</message>
 	<message key="submission.abstract.wordCount.description">Abstraktin tulee olla korkeintaan {$wordCount} sanaa.</message>
 	<message key="submission.submit.form.wordCountAlert">Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen.</message>
+	<message key="catalog.browseTitles">{$numTitles} kohdetta</message>
+	<message key="catalog.category.heading">Kaikki kohteet</message>
 </locale>

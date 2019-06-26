@@ -292,7 +292,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Huom.</strong> Arvioijille lähetettävässä sähköpostikutsussa on erityinen URL-osoite, jonka kautta arvioijat pääsevät suoraan käsikirjoituksen arviointisivulle (muille sivuille pääsy vaatii sisäänkirjautumista). Tietoturvasyistä tämän valinnan kohdalla toimittajat eivät voi muokata sähköpostiosoitteita tai lisätä kopioita tai piilokopioita ennen viestin lähettämistä.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Arvioijien arvostelu</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Arvioijan muistutukset</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Anna linkki kohtaan <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sokkoarvioinnin varmistaminen</a> sellaisilla sivuilla, joissa kirjoittajat ja arvioijat lataavat tiedostoja.]]></message>
 	<message key="manager.setup.reviewPolicy">Arviointiperiaatteet</message>
 	<message key="manager.setup.searchEngineIndexing">Hakukoneindeksointi</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Anna julkaisusta lyhyt kuvaus, jonka hakukoneet voivat näyttää listatessaan julkaisun hakutuloksissa.</message>
@@ -604,4 +603,10 @@ Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötila
 	<message key="manager.setup.otherLockss">Muut arkistointivalinnat</message>
 	<message key="manager.setup.porticoEnable">Ota Portico käyttöön ja jaa lehden sisällöt Porticon verkostoon osallistuville kirjastoille.</message>
 	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.setup.enableOai">Ota OAI-rajapinta käyttöön</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Tämä on jatkuva tilausvaihtoehto, älä anna alkamispäivämäärää. </message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Tämä on jatkuva tilausvaihtoehto, älä anna päättymispäivämäärää. </message>
+	<message key="stats.publishedSubmissions.details">Artikkelin lisätiedot</message>
+	<message key="stats.publishedSubmissions.none">Artikkeleita ei löytynyt</message>
+	<message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Abstraktien katselukerrat päivämäärittäin</message>
 </locale>
