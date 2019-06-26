@@ -124,9 +124,9 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($article->getTitle($article->getLocale())) . '"/>');
+		$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($article->getFullTitle($article->getLocale())) . '"/>');
 		$i=0;
-		foreach ($article->getTitle(null) as $locale => $title) {
+		foreach ($article->getFullTitle(null) as $locale => $title) {
 			if ($locale == $article->getLocale()) continue;
 			$templateMgr->addHeader('dublinCoreAltTitle' . $i++, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($title) . '"/>');
 		}
