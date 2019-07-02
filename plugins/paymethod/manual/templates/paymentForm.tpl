@@ -31,7 +31,7 @@
 	<p>{$manualInstructions|nl2br}</p>
 
 	<p>
-		<a class="cmp_button" href="{url page="payment" op="plugin" path="ManualPayment"|to_array:"notify":$queuedPaymentId|escape}" class="action">
+		<a class="cmp_button" href="{url page="payment" op="plugin" path="ManualPayment"|to_array:"notify":$queuedPaymentId}" class="action">
 			{translate key="plugins.paymethod.manual.sendNotificationOfPayment"}
 		</a>
 	</p>
