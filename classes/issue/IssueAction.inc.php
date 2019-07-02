@@ -15,13 +15,6 @@
  */
 
 class IssueAction {
-
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-	}
-
 	/**
 	 * Actions.
 	 */
