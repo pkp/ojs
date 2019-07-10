@@ -151,20 +151,18 @@ class CounterReportAR1 extends CounterReport {
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journalId);
 		$articlePubIds = array();
 		$articlePubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $submissionId);
-		if ($pubIdPlugins) {
-			foreach ($pubIdPlugins as $pubIdPlugin) {
-				$pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType(), true);
-				if ($pubId) {
-					switch ($pubIdPlugin->getPubIdType()) {
-						case 'doi':
-							try {
-								$articlePubIds[] = new COUNTER\Identifier(strtoupper($pubIdPlugin->getPubIdType()), $pubId);
-							} catch (Exception $ex) {
-								// Just ignore it
-							}
-							break;
-						default:
-					}
+		foreach ($pubIdPlugins as $pubIdPlugin) {
+			$pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType(), true);
+			if ($pubId) {
+				switch ($pubIdPlugin->getPubIdType()) {
+					case 'doi':
+						try {
+							$articlePubIds[] = new COUNTER\Identifier(strtoupper($pubIdPlugin->getPubIdType()), $pubId);
+						} catch (Exception $ex) {
+							// Just ignore it
+						}
+						break;
+					default:
 				}
 			}
 		}

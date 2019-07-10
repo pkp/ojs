@@ -142,12 +142,10 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			// Display assign public identifiers form
 			$assignPubIds = false;
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-			if (is_array($pubIdPlugins)) {
-				foreach ($pubIdPlugins as $pubIdPlugin) {
-					if ($pubIdPlugin->isObjectTypeEnabled('Submission', $submission->getContextId())) {
-						$assignPubIds = true;
-						break;
-					}
+			foreach ($pubIdPlugins as $pubIdPlugin) {
+				if ($pubIdPlugin->isObjectTypeEnabled('Submission', $submission->getContextId())) {
+					$assignPubIds = true;
+					break;
 				}
 			}
 			if ($assignPubIds) {

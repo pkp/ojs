@@ -45,11 +45,9 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	 */
 	function clearIssueObjectsPubIds($pubIdPlugInClassName) {
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		if (is_array($pubIdPlugins)) {
-			foreach ($pubIdPlugins as $pubIdPlugin) {
-				if (get_class($pubIdPlugin) == $pubIdPlugInClassName) {
-					$pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
-				}
+		foreach ($pubIdPlugins as $pubIdPlugin) {
+			if (get_class($pubIdPlugin) == $pubIdPlugInClassName) {
+				$pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
 			}
 		}
 	}
