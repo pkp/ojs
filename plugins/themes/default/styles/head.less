@@ -21,16 +21,25 @@
 }
 
 // Mobile navigation menu
+
+.toggle, .pkp_site_name {
+	display: inline-block;
+}
+
+.pkp_site_name {
+	padding-left: @half;
+}
+
 .toggle {
 	@width: 20px;
-	@menu-colour: #c0c0c0;
+	@menu-colour: #ffffff;
 	@thickness: 4px;
-	display: inline-block;
 	
 	border: 0;
 	background: none;
 	outline: 0;
 	padding: 0;
+	margin-left: @half;
 
 	border-bottom: @thickness solid @menu-colour;
 	width: @width;
@@ -94,9 +103,8 @@
   	}
 
   	.pkp_site_name {
-		display: inline-block !important;
-		text-align: left;
-	}
+    	width: 100%;
+  	}
 
 	.menu {
 		display: block;
