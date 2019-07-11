@@ -20,6 +20,89 @@
 	padding-top: @triple * 2; // Make room for the user nav at the top
 }
 
+// Mobile navigation menu
+.toggle {
+	@width: 20px;
+	@menu-colour: #c0c0c0;
+	@thickness: 4px;
+	display: inline-block;
+	
+	border: 0;
+	background: none;
+	outline: 0;
+	padding: 0;
+
+	border-bottom: @thickness solid @menu-colour;
+	width: @width;
+
+	&:before {
+		content: "";
+		display: block;
+		border-bottom: @thickness solid @menu-colour;
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		border-bottom: @thickness solid @menu-colour;
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
+
+.menu {
+	display: none;
+}
+
+.menu--isOpen {
+	display: block;
+
+	.pkp_navigation_primary_row {
+ 
+		ul li {
+			list-style: none;
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
+			display: block;	
+			text-align: left;		
+		}
+
+		.pkp_navigation_primary {
+			> li {
+
+				> a {
+					text-align: left;
+					margin-right: 0;
+					margin-left: 0;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-desktop) {
+
+  	.toggle {
+		display: none;
+  	}
+
+  	.pkp_site_name {
+		display: inline-block !important;
+		text-align: left;
+	}
+
+	.menu {
+		display: block;
+  	}
+}
+
 // Site logo/nav on same line on larger screens
 .has_site_logo .pkp_head_wrapper {
 
@@ -421,6 +504,38 @@
 		&:hover .task_count,
 		&:focus .task_count {
 			background: #fff;
+		}
+	}
+}
+
+body.navIsOpen {
+
+	.siteHeader__details {
+		right: 0;
+	}
+
+	.siteHeader__screen {
+		display: block;
+		opacity: 0.5;
+	}
+
+	.siteHeader__navToggleIcon {
+
+		> span {
+
+			&:first-child {
+				transform: rotate(45deg);
+				top: 18px;
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:last-child {
+				transform: rotate(-45deg);
+				top: 18px;
+			}
 		}
 	}
 }
