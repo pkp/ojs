@@ -31,6 +31,12 @@
 		$('[data-toggle="dropdown"]').dropdown();
 	}
 
+	// Toggle nav menu on small screens
+	$('.toggle').click(function(e) {
+  		$('.menu').toggleClass('menu--isOpen');
+	});
+
+
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
 	    headerSearchForm = $('#headerNavigationContainer .pkp_search'),
