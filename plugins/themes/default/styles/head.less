@@ -9,6 +9,7 @@
  *
  * @brief Classes for the page header structural elements
  */
+@nav-menu-height: @quadruple;
 
 // Structural components of the header layout
 .pkp_structure_head {
@@ -16,68 +17,86 @@
 	border-bottom: @bg-border;
 }
 
-.pkp_head_wrapper {
-	padding-top: @triple * 2; // Make room for the user nav at the top
+.pkp_site_name_wrapper {
+	height: @nav-menu-height;
+
+	@media (min-width: @screen-desktop) {
+		height: auto;
+	}
 }
 
 // Mobile navigation menu
-
-.toggle, .pkp_site_name {
-	display: inline-block;
-}
-
-.pkp_site_name {
-	padding-left: @half;
-}
-
 .toggle {
-	@width: 20px;
-	@menu-colour: #ffffff;
-	@thickness: 4px;
-	
+	@thickness: 3px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: @nav-menu-height;
+	height: @nav-menu-height;
 	border: 0;
 	background: none;
-	outline: 0;
-	padding: 0;
-	margin-left: @half;
+	box-shadow: 1px 0 0 rgba(255,255,255,0.2), -1px 0 0 rgba(255,255,255,0.2);
+	z-index: 999;
 
-	border-bottom: @thickness solid @menu-colour;
-	width: @width;
-
-	&:before {
-		content: "";
-		display: block;
-		border-bottom: @thickness solid @menu-colour;
-		width: 100%;
-		margin-bottom: 5px;
+	&:focus {
+		outline: 1px dotted @text-bg-base;
+		box-shadow: none;
 	}
 
-	&:after {
-		content: "";
-		display: block;
-		border-bottom: @thickness solid @menu-colour;
-		width: 100%;
-		margin-bottom: 5px;
+	> span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 24px;
+		height: 19px;
+		border-bottom: @thickness solid @text-bg-base;
+		text-indent: -9999px;
+		overflow: hidden;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: @thickness;
+			background: @text-bg-base;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			top: 8px;
+		}
 	}
 }
 
 .menu {
 	display: none;
+	border-top: 1px solid rgba(255,255,255,0.2);
+
+	@media (min-width: @screen-desktop) {
+		border-top: none;
+	}
 }
 
 .menu--isOpen {
 	display: block;
 
 	.pkp_navigation_primary_row {
- 
+
 		ul li {
 			list-style: none;
 			margin-left: 0;
 			margin-right: 0;
 			padding-left: 0;
 			padding-right: 0;
-			display: block;	
-			text-align: left;		
+			display: block;
+			text-align: left;
 		}
 
 		.pkp_navigation_primary {
@@ -97,6 +116,10 @@
 }
 
 @media (min-width: @screen-desktop) {
+
+	.pkp_head_wrapper {
+		padding-top: @triple * 2; // Make room for the user nav at the top
+	}
 
   	.toggle {
 		display: none;
@@ -121,10 +144,19 @@
 
 // Site logo/name
 .pkp_site_name {
-	font-size: 2em; // Prevents extra vertical space after logos
+	position: absolute;
+	left: @nav-menu-height;
+	right: 0;
 	margin-top: 0;
 	margin-bottom: 0;
-	text-align: center;
+	padding-left: @base;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: @text-bg-base;
+	font-family: @font-site-title;
+	font-size: @font-sml;
 
 	> a {
 		padding-top: @base;
@@ -153,11 +185,9 @@
 
 	.is_text {
 		font-family: @font-site-title;
-		display: inline-block;
-		position: relative;
-		font-size: @font-header;
+		font-size: @font-sml;
 		font-weight: @bold;
-		line-height: @line-header;
+		line-height: @nav-menu-height;
 		color: @text-bg-base;
 		text-decoration: none;
 
@@ -166,8 +196,20 @@
 		}
 	}
 
-	@media(min-width: @screen-desktop) {
-		text-align: left;
+	@media (min-width: @screen-desktop) {
+		position: relative;
+		left: auto;
+		right: auto;
+		padding: 0;
+		white-space: normal;
+		font-size: 2em; // Prevents extra vertical space after logos
+		background: transparent;
+
+		.is_text {
+			font-family: @font-site-title;
+			font-size: @font-header;
+			line-height: @line-header;
+		}
 	}
 }
 
@@ -447,71 +489,74 @@
 }
 
 // User-focused navigation menu with login/logout, tasks, etc
-.pkp_navigation_user_wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding-left: @base;
-	padding-right: @base;
-}
+@media (min-width: @screen-desktop) {
 
-.pkp_navigation_user {
-	text-align: right;
-	font-size: @font-sml;
-	padding-right: @double;
-
-	li {
-		text-align: left;
+	.pkp_navigation_user_wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding-left: @base;
+		padding-right: @base;
 	}
 
-	a {
-		padding-top: @half;
-		padding-bottom: @half;
-		line-height: @line-sml;
-	}
+	.pkp_navigation_user {
+		text-align: right;
+		font-size: @font-sml;
+		padding-right: @double;
 
-	> li > a:focus {
-		outline: 0;
-	}
-
-	ul {
-		width: 10em;
-	}
-
-	> li > a,
-	> li.in_focus > a,
-	> li > a:hover,
-	> li > a:focus {
-		color: @text-bg-base;
-	}
-
-	// Align to the right edge of the container
-	> li:last-child > a {
-		padding-right: 0;
-	}
-
-	.task_count {
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		margin-left: 0.5em;
-		border-radius: 50%;
-		background: rgba(255,255,255,0.3);
-		line-height: 20px;
-		text-align: center;
-		font-size: 12px; // helps visually center the number
-	}
-
-	> li > ul a {
-
-		.task_count {
-			background: #ddd;
+		li {
+			text-align: left;
 		}
 
-		&:hover .task_count,
-		&:focus .task_count {
-			background: #fff;
+		a {
+			padding-top: @half;
+			padding-bottom: @half;
+			line-height: @line-sml;
+		}
+
+		> li > a:focus {
+			outline: 0;
+		}
+
+		ul {
+			width: 10em;
+		}
+
+		> li > a,
+		> li.in_focus > a,
+		> li > a:hover,
+		> li > a:focus {
+			color: @text-bg-base;
+		}
+
+		// Align to the right edge of the container
+		> li:last-child > a {
+			padding-right: 0;
+		}
+
+		.task_count {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-left: 0.5em;
+			border-radius: 50%;
+			background: rgba(255,255,255,0.3);
+			line-height: 20px;
+			text-align: center;
+			font-size: 12px; // helps visually center the number
+		}
+
+		> li > ul a {
+
+			.task_count {
+				background: #ddd;
+			}
+
+			&:hover .task_count,
+			&:focus .task_count {
+				background: #fff;
+			}
 		}
 	}
 }
