@@ -360,8 +360,12 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}
 
+		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$templateMgr->assign(array(
-			'hasAccess' => !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain
+			'hasAccess' => !$subscriptionRequired ||
+				$issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
+				$subscribedUser || $subscribedDomain
+				($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
 		));
 
 		import('classes.payment.ojs.OJSPaymentManager');

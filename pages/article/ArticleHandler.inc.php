@@ -259,7 +259,14 @@ class ArticleHandler extends Handler {
 			$subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 			$subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
-			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
+			$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$templateMgr->assign('hasAccess',
+				!$subscriptionRequired ||
+				($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) ||
+				$subscribedUser || $subscribedDomain ||
+				($user && $issue && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId())) ||
+				($user && $completedPaymentDao->hasPaidPurchaseArticle($user->getId(), $article->getId()))
+			);
 
 			$paymentManager = Application::get()->getPaymentManager($context);
 			if ( $paymentManager->onlyPdfEnabled() ) {
