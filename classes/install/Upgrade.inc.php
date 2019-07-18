@@ -1053,6 +1053,10 @@ class Upgrade extends Installer {
 				$creatorUserId = $managerUsers->next()->getId();
 			}
 			$article = $articleDao->getById($row['article_id']);
+			if (!$article) {
+				error_log('WARNING: Unable to fetch article for article_supplementary_files.supp_id = ' . $row['supp_id'] . '. Skipping.');
+				continue;
+			}
 
 			// if it is a remote supp file and article is published, convert it to a remote galley
 			if (!$row['file_id'] && $row['remote_url'] != '' && $article->getStatus() == STATUS_PUBLISHED) {
