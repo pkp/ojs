@@ -13,6 +13,9 @@
 
 <locale name="ar_IQ" full_name="العربية">
 	<message key="admin.hostedJournals">المجلات المستضافة</message>
+	<message key="admin.settings.appearance.success">إعدادات مظهر الموقع تغيرت بنجاح.</message>
+	<message key="admin.settings.config.success">إعدادات الموقع تغيرت بنجاح.</message>
+	<message key="admin.settings.info.success">معلومات تعريف الموقع تغيرت بنجاح.</message>
 	<message key="admin.settings.journalRedirect">إعادة توجيه موقع المجلة</message>
 	<message key="admin.settings.journalRedirectInstructions">إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال</message>
 	<message key="admin.settings.defaultMetricDescription">
@@ -53,7 +56,9 @@
 	<message key="admin.contexts.form.titleRequired">العنوان مطلوب حتماً.</message>
 	<message key="admin.contexts.form.pathRequired">المسار مطلوب حتماً</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">تسمية المسار متوقع لها أن تتكون من سلسلة حروف إنجليزية وأرقام وشُرط تحتية وواصلات، ولا بد لها أن تبدأ وتنتهي بحرف إنجليزي أو رقم حصراً</message>
-	<message key="admin.contexts.form.pathExists">المسار الذي اخترته سبق وأن استُعمل لمجلة أخرى</message>
+	<message key="admin.contexts.form.pathExists">المسار الذي أدخلته سبق وأن استُعمل لمجلة أخرى</message>
+	<message key="admin.contexts.form.create.success">{$name} قد تم إنشاؤها بنجاح.</message>
+	<message key="admin.contexts.form.edit.success">{$name} قد تم تعديلها بنجاح.</message>
 	<message key="admin.journals.enableJournalInstructions">إسمح لهذه المجلة بالظهور علانية في الموقع</message>
 	<message key="admin.contexts.contextDescription">وصف المجلة</message>
 	<message key="admin.journal.pathImportInstructions">المسار الحالي للمجلة، أو المسار المزمع إنشاؤه، مثلاً: "ojs"</message>
@@ -65,7 +70,7 @@
 	<message key="admin.mergeUsers">ضم المستخدمين</message>
 	<message key="admin.mergeUsers.mergeUser">ضم المستخدم</message>
 	<message key="admin.mergeUsers.into.description">إختر مستخدماً لمنحه سمات المستخدم السابق من صلاحيات ومهام التحرير... إلخ.</message>
-	<message key="admin.mergeUsers.from.description">إختر مستخدماً واحداً (أو أكثر) ليتم ضمهم إلى حساب مستخدم آخر، (على سبيل المثال: عندما يكون لمستخدم واحد أكثر من حساب في الموقع). جميع الحسابات أو الحساب التي تم تحديدها بدءً سيتم حذفها، لذلك فإن طلبات التقديم والمهام... إلخ المتعلقة بها ستصير متعلقة بالحساب الثاني</message>
+	<message key="admin.mergeUsers.from.description">إختر مستخدماً واحداً (أو أكثر) ليتم ضمهم إلى حساب مستخدم آخر، (على سبيل المثال: عندما يكون لمستخدم واحد أكثر من حساب في الموقع). جميع الحساب/الحسابات التي تم تحديدها بدءاً سيتم حذفها، لذلك فإن طلبات التقديم والمهام... إلخ المتعلقة بها ستصير متعلقة بالحساب الثاني</message>
 	<message key="admin.mergeUsers.allUsers">كل المستخدمين المسجلين</message>
 	<message key="admin.mergeUsers.confirm">هل أنت متأكد من رغبتك في ضم المستخدمين المحددين البالغ عددهم {$oldAccountCount} ضمن حساب المستخدم ذو اسم الدخول "{$newUsername}"؟ إن جميع تلك الحسابات ستزول من الموقع بعد إتمام هذه العملية والتي لا سبيل إلى التراجع عنها لاحقاً. لاحظ أن عدد الحسابات المعنية بالضم هو {$oldAccountCount}</message>
 	<message key="admin.mergeUsers.noneEnrolled">لا أحد مسجل في الموقع بعد</message>

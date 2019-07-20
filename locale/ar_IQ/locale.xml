@@ -73,6 +73,8 @@
 	<message key="navigation.competingInterestGuidelines">إرشادات الفوائد التنافسية</message>
 	<message key="navigation.infoForAuthors.long">معلومات للمؤلفين</message>
 	<message key="navigation.infoForLibrarians.long">معلومات لأمناء المكتبات</message>
+	<message key="navigation.skip.about">القفز إلى "عن المجلة"</message>
+	<message key="navigation.skip.issue">القفز إلى العدد الحالي</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">غير معين</message>
@@ -101,6 +103,7 @@
 	<message key="section.title">عنوان القسم</message>
 	<message key="section.abbreviation">المختصر</message>
 	<message key="section.abbreviation.example">(مثلاً، مقالات = مقل)</message>
+	<message key="section.policy">سياسة القسم</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">مقالة</message>
@@ -775,6 +778,7 @@
 	<message key="about.onlineSubmissions.register">سجّل</message>
 	<message key="about.onlineSubmissions.registrationRequired">{$login} أو {$register} لتقديم طلبات النشر.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} أو {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[قدم طلباً جديداً إلى القسم <a href="{$url}">{$name}</a>.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">قدم طلباً جديداً</message>
 	<message key="about.onlineSubmissions.viewSubmissions">عاين طلباتك التي قيد الانتظار</message>
 	<message key="about.authorGuidelines">إرشادات المؤلف</message>
@@ -979,7 +983,6 @@
 
 	<message key="metadata.pkp.peerReviewed">مؤلَّف محكَّم</message>
 
-
 	<!-- Notification Types -->
 
 	<message key="notification.type.editing">أحداث التحرير</message>
@@ -1046,4 +1049,7 @@
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} قد تولى مهمة تحرير المؤلَّف {$submissionId}.</message>
+
+	<message key="catalog.sortBy">ترتيب المقالات</message>
+	<message key="catalog.sortBy.categoryDescription">إختر كيفية ترتيب المقالات ضمن هذا القطاع.</message>
 </locale>

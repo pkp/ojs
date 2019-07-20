@@ -78,4 +78,9 @@
 
 	<message key="submission.metadataDescription">هذه المواصفات مستندة إلى جدول البيانات الوصفية Dublin Core، وهو صيغة قياسية عالمية تستعمل لوصف محتويات المجلة.</message>
 	<message key="section.any">أي قسم</message>
+
+	<message key="submission.sectionOptions">خيارات القسم</message>
+	<!-- categories -->
+	<message key="catalog.browseTitles">{$numTitles} فقرة/فقرات</message>
+	<message key="catalog.category.heading">كل الفقرات</message>
 </locale>

@@ -30,14 +30,14 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">لطفاً، أدخل اسم المستخدم الذي حصلت عليه من CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم بإيداع DOI الخاصة بالمقالات آلياً في CrossRef بمجرد نشر تلك المقالات. لطفاً، لاحظ أن هذا الأمر قد يستغرق وقتاً قصيراً للمعالجة بعد إجراء النشر (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك التحقق من كل DOI غير المسجلة عبر <a href="{$unregisteredURL}">قائمة المقالات غير المسجلة</a>.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">استعمل خاصية إختبار CrossRef (بيئة الاختبار) لمستودع DOI. لطفاً، لا تنس إزالة هذا الخيار عند التشغيل الفعلي.</message>
+	<message key="plugins.importexport.crossref.settings.form.validation">التحقق من XML. استعمل هذا الخيار مع تنزيل XML من أجل التسجيل اليدوي لمعرفات المكونات الرقمية DOI.</message>
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">ملاحظة: الأعداد فقط (وليس مقالاتها) سيتم الأخذ بها هنا عند إجراء التصدير/التسجيل.</message>
 	<!-- statuses -->
 	<message key="plugins.importexport.crossref.status.failed">فاشلة</message>
 	<message key="plugins.importexport.crossref.status.registered">فعالة</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">مؤشرة على أنها فاعلة</message>
-	<message key="plugins.importexport.crossref.statusLegend">
-		<![CDATA[
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
 		<p>حالة الإيداع:</p>
 		<p>
 		- غير مودعة: لم تجر أي محاولة إيداع لهذا المكون الرقمي DOI.<br />
@@ -56,13 +56,13 @@
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] المؤلفات [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] العدد [issueId]
-]]>
-	</message>
-	<message key="plugins.importexport.crossref.cliError">ERROR:</message>
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
+]]></message>
 
 	<!--  notifications -->
+	<message key="plugins.importexport.crossref.register.error.mdsError">التسجيل لم ينجح بشكل كامل! ملقم تسجيل معرفات المكونات الرقمية أرجع إشارة حدوث خطأ ما.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">التسجيل ناجح لكن مع وجود التحذير الآتي: '{$param}'.</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">لا يوجد عدد يطابق العدد المحدد بالرمز "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">لا توجد مقالة تطابق المقالة المحددة بالرمز "{$articleId}".</message>
 
