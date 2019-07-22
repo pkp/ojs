@@ -9,26 +9,42 @@
  */
 (function($) {
 
-	// Initialize dropdown navigation menus
+	// Initialize dropdown navigation menus on large screens
 	// See bootstrap dropdowns: https://getbootstrap.com/docs/4.0/components/dropdowns/
 	if (typeof $.fn.dropdown !== 'undefined') {
 		var $nav = $('#navigationPrimary, #navigationUser'),
 		$submenus = $('ul', $nav);
+		window.onresize = function() {
+			if (window.innerWidth > 992) {
+				$submenus.each(function(i) {
+					var id = 'pkpDropdown' + i;
+					$(this)
+						.addClass('dropdown-menu')
+						.attr('aria-labelledby', id);
+					$(this).siblings('a')
+						.attr('data-toggle', 'dropdown')
+						.attr('aria-haspopup', true)
+						.attr('aria-expanded', false)
+						.attr('id', id)
+						.attr('href', '#');
+				});
+				$('[data-toggle="dropdown"]').dropdown();
 
-		$submenus.each(function(i) {
-			var id = 'pkpDropdown' + i;
-			$(this)
-				.addClass('dropdown-menu')
-				.attr('aria-labelledby', id);
-			$(this).siblings('a')
-				.attr('data-toggle', 'dropdown')
-				.attr('aria-haspopup', true)
-				.attr('aria-expanded', false)
-				.attr('id', id)
-				.attr('href', '#');
-		});
-
-		$('[data-toggle="dropdown"]').dropdown();
+			} else {
+				$('[data-toggle="dropdown"]').dropdown('dispose');
+				$submenus.each(function(i) {
+					$(this)
+						.removeClass('dropdown-menu')
+						.removeAttr('aria-labelledby');
+					$(this).siblings('a')
+						.removeAttr('data-toggle')
+						.removeAttr('aria-haspopup')
+						.removeAttr('aria-expanded',)
+						.removeAttr('id')
+						.attr('href', '#');
+				});
+			}
+		}
 	}
 
 	// Toggle nav menu on small screens
