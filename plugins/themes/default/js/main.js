@@ -34,6 +34,7 @@
 	// Toggle nav menu on small screens
 	$('.toggle').click(function(e) {
   		$('.menu').toggleClass('menu--isOpen');
+  		$('.toggle').toggleClass('toggle--transform');
 	});
 
 

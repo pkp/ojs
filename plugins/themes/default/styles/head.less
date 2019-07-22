@@ -75,6 +75,27 @@
 	}
 }
 
+.toggle--transform {
+
+	> span {
+
+		border-bottom: 0;
+		overflow: visible;
+
+		&:before {
+			top: 7px;
+			transform: rotate(-405deg) translateY(1px) translateX(-2px);
+			-webkit-transform: rotate(-405deg) translateY(1px) translateX(-2px);      
+		}
+
+		&:after {
+			top: 14px;
+			transform: rotate(405deg) translateY(-3px) translateX(-4px); 
+			-webkit-transform: rotate(405deg) translateY(-3px) translateX(-4px);
+		}
+	}
+}
+
 .menu {
 	display: none;
 	border-top: 1px solid rgba(255,255,255,0.2);
