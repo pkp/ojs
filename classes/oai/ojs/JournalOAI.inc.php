@@ -167,7 +167,7 @@ class JournalOAI extends OAI {
 	 */
 	function records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
-		if (!HookRegistry::call('JournalOAI::records', array($this, $from, $until, $set, $offset, $limit, $total, &$records))) {
+		if (!HookRegistry::call('JournalOAI::records', array($this, $from, $until, $set, $offset, $limit, &$total, &$records))) {
 			$sectionId = null;
 			if (isset($set)) {
 				list($journalId, $sectionId) = $this->setSpecToSectionId($set);
@@ -184,7 +184,7 @@ class JournalOAI extends OAI {
 	 */
 	function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
-		if (!HookRegistry::call('JournalOAI::identifiers', array($this, $from, $until, $set, $offset, $limit, $total, &$records))) {
+		if (!HookRegistry::call('JournalOAI::identifiers', array($this, $from, $until, $set, $offset, $limit, &$total, &$records))) {
 			$sectionId = null;
 			if (isset($set)) {
 				list($journalId, $sectionId) = $this->setSpecToSectionId($set);
@@ -201,7 +201,7 @@ class JournalOAI extends OAI {
 	 */
 	function sets($offset, $limit, &$total) {
 		$sets = null;
-		if (!HookRegistry::call('JournalOAI::sets', array($this, $offset, $limit, $total, &$sets))) {
+		if (!HookRegistry::call('JournalOAI::sets', array($this, $offset, $limit, &$total, &$sets))) {
 			$sets = $this->dao->getJournalSets($this->journalId, $offset, $limit, $total);
 		}
 		return $sets;

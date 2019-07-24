@@ -77,7 +77,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$set = $params[3];
 		$offset = $params[4];
 		$limit = $params[5];
-		$total = $params[6];
+		$total =& $params[6];
 		$records =& $params[7];
 
 		$records = array();
