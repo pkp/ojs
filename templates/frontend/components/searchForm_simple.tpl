@@ -10,8 +10,13 @@
  * @uses $searchQuery string Previously input search query
  *}
 {if !$currentJournal || $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-	<form class="pkp_search" action="{url page="search" op="search"}" method="post" role="search">
+	{capture name="searchFormUrl"}{url page="search" op="search" escape=false}{/capture}
+	{$smarty.capture.searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
+	<form class="pkp_search" action="{$smarty.capture.searchFormUrl|strtok:"?"|escape}" method="get" role="search">
 		{csrf}
+		{foreach from=$formUrlParameters key=paramKey item=paramValue}
+			<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
+		{/foreach}
 		{block name=searchQuerySimple}
 			<input name="query" value="{$searchQuery|escape}" type="text" aria-label="{translate|escape key="common.searchQuery"}">
 		{/block}
