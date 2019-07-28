@@ -1136,6 +1136,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 <p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
 	<message key="notification.type.submissionSubmitted">Um novo artigo foi submetido: "{$title}".</message>
+	<message key="notification.type.editorialReport">Resumo do relatório de estatísticas.</message>
+	<message key="notification.type.editorialReport.contents">Isto é apenas um lembrete para você verificar a saúde de sua revista através do relatório editorial.</message>
 	<message key="notification.savedIssueMetadata">Metadados da edição salvos.</message>
 	<message key="notification.type.editorAssignmentTask">Um novo artigo foi submetido ao qual um editor precisa ser atribuído.</message>
 	<message key="user.authorization.noContext">Nenhuma revista em contexto!</message>

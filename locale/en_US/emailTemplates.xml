@@ -789,4 +789,24 @@ Our decision is to: Decline Submission<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
+	<email_text key="STATISTICS_REPORT_NOTIFICATION">
+		<subject>Articles and Review Report</subject>
+		<body><![CDATA[{$name}, <br />
+<br />
+Your journal health report can be found in your <a href="{$editorialReportLink}">OJS system</a>. Your key stats for {$month} {$year} are as follows:<br />
+<ul>
+	<li>New submissions this month: {$newSubmissions}</li>
+	<li>Declined submissions this month: {$declinedSubmissions}</li>
+	<li>Accepted submissions this month: {$acceptedSubmissions}</li>
+	<li>Total submissions in the system: {$totalSubmissions}</li>
+</ul>
+In addition, you may want to download and review the following reports:<br />
+<ul>
+	<li><a href="{$articlesReportLink}">Articles Report</a></li>
+	<li><a href="{$editorialReportLink}">Review Report</a></li>
+</ul>
+Sincerely,<br />
+{$principalContactSignature}]]></body>
+		<description>This email is automatically sent monthly to editors and journal managers to provide them a system health overview.</description>
+	</email_text>
 </email_texts>
