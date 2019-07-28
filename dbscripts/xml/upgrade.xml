@@ -229,6 +229,10 @@
 		<note file="docs/release-notes/README-3.1.2" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<code function="installEmailTemplate" key="STATISTICS_REPORT_NOTIFICATION" locales="en_US" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>

@@ -21,7 +21,7 @@ class StatsHandler extends PKPStatsHandler {
 	 */
 	public function __construct() {
 		parent::__construct();
-		HookRegistry::register ('TemplateManager::display', array($this, 'addArticleStatsData'));
+		HookRegistry::register('TemplateManager::display', [$this, 'addArticleStatsData']);
 	}
 
 	/**
@@ -33,10 +33,9 @@ class StatsHandler extends PKPStatsHandler {
 	 * @param array $args [$templateMgr, $template, $sendContentType, $charset, $output]
 	 */
 	public function addArticleStatsData($hookName, $args) {
-		$templateMgr = $args[0];
-		$template = $args[1];
+		list($templateMgr, $template) = $args;
 
-		if ($template !== 'stats/publishedSubmissions.tpl') {
+		if (!in_array($template, ['stats/publishedSubmissions.tpl', 'stats/editorialReport.tpl'])) {
 			return;
 		}
 

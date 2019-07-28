@@ -31,4 +31,8 @@
 		<descr>Send automated reminders to reviewers to complete their assignments.</descr>
 		<frequency hour="0"/>
 	</task>
+	<task class="lib.pkp.classes.task.StatisticsReport">
+		<descr>Send automated statistics reports to journal managers and editors.</descr>
+		<frequency day="1"/>
+	</task>
 </scheduled_tasks>
