@@ -11,7 +11,7 @@
 {if $galleyId}
 	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
 {else}
-	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()}
 {/if}
 TY  - JOUR
 {foreach from=$article->getAuthors() item=author}
@@ -32,3 +32,4 @@ JF  - {$journal->getLocalizedTitle()}{if $issue}; {$issue->getIssueIdentificatio
 KW  - {$article->getLocalizedSubject()|escape}
 N2  - {$article->getLocalizedAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 UR  - {$articleUrl}
+ER  -

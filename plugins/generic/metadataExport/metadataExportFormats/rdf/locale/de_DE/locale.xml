@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/metadataExportFormats/rdf/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for this metadata export plugin in de_DE.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.metadataExportFormats.rdf.displayName">RDF-Exportformat-Plug-In</message>
+	<message key="plugins.metadataExportFormats.rdf.metadataExportFormatName">RDF</message>
+	<message key="plugins.metadataExportFormats.rdf.description">Dieses Plug-In implementiert das RDF-Exportformat.</message>
+</locale>

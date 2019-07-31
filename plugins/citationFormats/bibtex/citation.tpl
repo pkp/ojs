@@ -11,7 +11,7 @@
 <div class="separator"></div>
 <div id="citation">
 {literal}
-<pre style="font-size: 1.5em; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">@article{{/literal}{$journal->getLocalizedInitials()|bibtex_escape}{$articleId|bibtex_escape}{literal},
+<pre style="font-size: 1.5em; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">@article{{/literal}{$journal->getLocalizedInitials()|bibtex_escape}{$article->getBestArticleId()|bibtex_escape}{literal},
 	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName|bibtex_escape} {$author->getLastName()|bibtex_escape}{if $i<$authorCount-1} {translate key="common.and"} {/if}{/foreach}{literal}},
 	title = {{/literal}{$article->getLocalizedTitle()|strip_tags|bibtex_escape}{literal}},
 	journal = {{/literal}{$journal->getLocalizedTitle()|bibtex_escape}{literal}},
