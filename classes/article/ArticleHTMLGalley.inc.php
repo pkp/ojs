@@ -33,6 +33,51 @@ class ArticleHTMLGalley extends ArticleGalley {
 	}
 
 	/**
+	* Eirik Hanssen, Oslo and Akershus University College of Applied Sciences 2015
+	* Return string contains the <body> element of the HTML Galley file renamed to a <div> element.
+	* The returned string is a html fragment where empty tags will be self closed, as required by xhtml rulesybe.
+	* The purpose is to allow to allow OJS pages displaying the HTML Galley of an article to validate. Without filtering the HTML file string
+	* through the getHTMLBodyContents() function, a valid (full) HTML document will simply be inserted in a <div> element in the OJS page,
+	* and then that resulting webpage won't be valid HTML since it is illegal to have a full html-document inside a div tag.
+	* This function requires the php DOMDocument module to operate. If DOMDocument module is not available, (often part of a php-xml package),
+	* a warning in form of a html-comment is appended to the html string instead of performing this filtering.
+	* @return string
+	*/
+	function getHTMLBodyContents($htmldoc){
+		// first check if DOMDocument class is available
+		if (class_exists('DOMDocument')) {
+			$originalHtmlDocument = new DOMDocument();
+			$htmlBodyContents = new DOMDocument();
+			$originalHtmlDocument->loadHTML($htmldoc);
+
+			// Get the body element node from the full html document.
+			$htmlBody = $originalHtmlDocument->getElementsByTagName('body')->item(0);
+
+			// LIBXML_NOEMPTYTAG makes sure no empty elements are shortened.
+			// This has the side-effect of adding closing tags to void elements such as img and hr tags too.
+			// This is a xhtml spec violation and needs to be fixed with regex
+
+			$fulltextBody = $originalHtmlDocument->saveXML($htmlBody, LIBXML_NOEMPTYTAG);
+
+			// preg_replace() here removes removes ending tags from elements that should be void and makes those tags self-closing
+			// The following void elements might be encountered:
+			// HTML4.01: area|base|basefont|br|col|frame|hr|img|input|isindex|link|meta|param
+			// XHTML1.0: area|base|basefont|br|col|hr|img|input|isindex|link|meta|param
+			// HTML5: area|base|br|col|embed|hr|img|input|keygen|link|meta|param|source|track|wbr
+			$fulltextBody = preg_replace('/><\/(area|base|basefont|br|col|embed|frame|hr|img|input|isindex|keygen|link|meta|param|source|track|wbr)>/', '/>' ,$fulltextBody);
+
+			// preg_replace() here renames the body tag to div, both opening and closing tag
+			$fulltextBody = preg_replace('/<(\/)*(body)/', '<$1div', $fulltextBody);
+
+			// the body contents is now wrapped in a div tag with xhtml tagging style of void elements
+			return "\n<!-- htmlFulltext Insertion Begin -->\n" . $fulltextBody . "\n<!-- htmlFulltext Insertion END -->\n";
+		} else {
+			// If DOMDocument class is not available: Append a warning as a html comment to the html string and return it.
+			return $htmldoc . "<!-- Warning: DOMDocument class is not available! Please check your PHP installation. DOMDocument module a part of php-xml package is required by getHTMLBodyContents()";
+		}
+	}
+
+	/**
 	 * Return string containing the contents of the HTML file.
 	 * This function performs any necessary filtering, like image URL replacement.
 	 * @param $baseImageUrl string base URL for image references
@@ -98,7 +143,10 @@ class ArticleHTMLGalley extends ArticleGalley {
 			$contents = str_replace('{$' . $key . '}', $value, $contents);
 		}
 
-		return $contents;
+		// Eirik Hanssen 2014-05-15:
+		// to make HTML Galley webpages in OJS validate, $contents will be filtered through the new getHTMLBodyContents() function
+		// This will grab the <body> element of the article (with all it's contents), rename it to a <div> tag  and return that instead as the HTML Galley html-string.
+		return $this->getHTMLBodyContents($contents);
 	}
 
 	function _handleOjsUrl($matchArray) {
