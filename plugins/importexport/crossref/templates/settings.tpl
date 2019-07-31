@@ -19,24 +19,29 @@
 
 	{capture assign="settingsUrl"}{plugin_url path="settings"}{/capture}
 	{url|assign:"publisherUrl" page="manager" op="setup" path="1" anchor='setupPublisher'}
+	{url|assign:"issnUrl" page="manager" op="setup" path="1" anchor='generalInformation'}
 	{url|assign:"doiUrl" page="manager" op="plugin" path="pubIds"}
 
 	{if !empty($configurationErrors) || !$currentJournal->getSetting('publisherInstitution')|escape}
-	<ul>
-		{foreach from=$configurationErrors item=configurationError}
-			{if $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_DOIPREFIX}
-				<li>{translate key="plugins.importexport.crossref.error.DOIsNotAvailable" doiUrl=$doiUrl}</li>
-			{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_SETTINGS}
-				<li>{translate key="plugins.importexport.crossref.error.pluginNotConfigured" settingsUrl=$settingsUrl}</li>
+		<ul>
+			{foreach from=$configurationErrors item=configurationError}
+				{if $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_DOIPREFIX}
+					<li>{translate key="plugins.importexport.crossref.error.DOIsNotAvailable" doiUrl=$doiUrl}</li>
+				{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIGERROR_SETTINGS}
+					<li>{translate key="plugins.importexport.crossref.error.pluginNotConfigured" settingsUrl=$settingsUrl}</li>
+				{/if}
+			{/foreach}
+			{if !$currentJournal->getSetting('publisherInstitution')|escape}
+				<li>{translate key="plugins.importexport.crossref.error.publisherNotConfigured" publisherUrl=$publisherUrl}</li>
 			{/if}
-		{/foreach}
-		{if !$currentJournal->getSetting('publisherInstitution')|escape}
-			<li>{translate key="plugins.importexport.crossref.error.publisherNotConfigured" publisherUrl=$publisherUrl}</li>
-		{/if}
-
-	</ul>
+		</ul>
 	{else}
-		{translate key="plugins.importexport.crossref.requirements.satisfied"}
+		<ul>
+			<li>{translate key="plugins.importexport.crossref.requirements.satisfied"}</li>
+			{if $currentJournal->getSetting('onlineIssn')|escape || $currentJournal->getSetting('printIssn')|escape}
+				<li>{translate key="plugins.importexport.crossref.requirements.issnWarning" issnUrl=$issnUrl}</li>
+			{/if}
+		</ul>
 	{/if}
 
 	<h3>{translate key="plugins.importexport.common.settings"}</h3>

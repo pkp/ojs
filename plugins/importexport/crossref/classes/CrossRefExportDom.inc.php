@@ -328,14 +328,19 @@ class CrossRefExportDom extends DOIExportDom {
 		XMLCustomWriter::appendChild($journalArticleNode, $titlesNode);
 
 		/* AuthorList */
-		$contributorsNode =& XMLCustomWriter::createElement($doc, 'contributors');
-		$isFirst = true;
-		foreach ($article->getAuthors() as $author) {
-			$authorNode =& $this->_generateAuthorDom($doc, $author, $isFirst);
-			$isFirst = false;
-			XMLCustomWriter::appendChild($contributorsNode, $authorNode);
+		// Contributor list must not be empty
+		$authors = $article->getAuthors();	
+		
+		if ($authors) {
+			$contributorsNode =& XMLCustomWriter::createElement($doc, 'contributors');
+			$isFirst = true;
+			foreach ($authors as $author) {
+				$authorNode =& $this->_generateAuthorDom($doc, $author, $isFirst);
+				$isFirst = false;
+				XMLCustomWriter::appendChild($contributorsNode, $authorNode);
+			}
+			XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);	
 		}
-		XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);
 
 		/* Abstracts */
 		if ($article->getAbstract($journal->getPrimaryLocale())) {
@@ -349,6 +354,11 @@ class CrossRefExportDom extends DOIExportDom {
 		$datePublished = $article->getDatePublished() ? $article->getDatePublished() : $issue->getDatePublished();
 		if ($datePublished) {
 			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $datePublished);
+			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
+		}
+		// fall back on issue publication date if there isn't an article publication date
+		elseif ($issue->getDatePublished()) {
+			$publicationDateNode =& $this->_generatePublisherDateDom($doc, $issue->getDatePublished());
 			XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 		}
 
