@@ -307,6 +307,16 @@ class NativeExportDom {
 
 		/* --- */
 
+		/* --- Sponsors --- */
+		if(is_array($article->getSponsor(null))) {
+			foreach($article->getSponsor(null) as $locale => $sponsor) {
+				if(strlen($sponsor) !== 0) {
+					$sponsorNode = XMLCustomWriter::createChildWithText($doc, $root, 'sponsor', $sponsor);
+					XMLCustomWriter::setAttribute($sponsorNode, 'locale', $locale);
+					unset($sponsorNode);
+				}
+			}
+		}
 
 		/* --- Galleys --- */
 		foreach ($article->getGalleys() as $galley) {
