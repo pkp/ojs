@@ -517,7 +517,7 @@ class ArticleFileManager extends FileManager {
 
 		if (!$this->uploadFile($fileName, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
-			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			$articleFileDao->deleteArticleFileById($articleFile->getFileId(), $articleFile->getRevision());
 
 			return false;
 		}
