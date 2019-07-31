@@ -1198,4 +1198,8 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<!-- Meldungen: Fehlerbehebung -->
 	<message key="debug.notes.currencyListLoad">Währungsliste "{$filename}" aus XML geladen</message>
 	<message key="debug.notes.helpMappingLoad">Auf der Suche nach {$id} wurde die XML-Hilfedatei {$filename} erneut geladen.</message>
+
+	<!-- Sorter setting for authorSearchIndex -->
+	<message key="authorList.sortOrder">A,B,C,D,E,F,G,H,I,J,K Ǩ,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z Ż</message>
+
 </locale>
