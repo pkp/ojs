@@ -76,7 +76,7 @@ class PLNHandler extends Handler {
 		$plnPlugin =& PluginRegistry::getPlugin('generic', PLN_PLUGIN_NAME);
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array($router->url($request, null, 'about'), 'about.aboutTheJournal')));
-		$templateMgr->display($plnPlugin->getTemplatePath() . DIRECTORY_SEPARATOR . 'status.tpl');
+		$templateMgr->display($plnPlugin->getTemplatePath() . 'status.tpl');
 	}
 }
 

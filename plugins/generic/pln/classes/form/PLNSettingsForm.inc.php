@@ -34,7 +34,7 @@ class PLNSettingsForm extends Form {
 	function PLNSettingsForm(&$plugin, $journalId) {
 		$this->_journalId = $journalId;
 		$this->_plugin =& $plugin;
-		parent::Form($plugin->getTemplatePath() . DIRECTORY_SEPARATOR . 'settings.tpl');
+		parent::Form($plugin->getTemplatePath() . 'settings.tpl');
 	}
 
 	/**

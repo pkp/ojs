@@ -163,7 +163,7 @@ class PLNPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function getTemplatePath() {
-		return parent::getTemplatePath() . DIRECTORY_SEPARATOR . 'templates';
+		return parent::getTemplatePath() . DIRECTORY_SEPARATOR . 'templates/';
 	}
 	
 	/**
@@ -225,6 +225,11 @@ class PLNPlugin extends GenericPlugin {
 				$gatewayPlugin = new PLNGatewayPlugin($this->getName());
 				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
 				break;
+			case 'blocks':
+				$this->import('PLNBlockPlugin');
+				$blockPlugin = new PLNBlockPlugin($this->getName());
+				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
+				break;
 		}
 		return false;
 	}
@@ -279,7 +284,7 @@ class PLNPlugin extends GenericPlugin {
 		$output =& $args[2];
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		$output .= $templateMgr->fetch($this->getTemplatePath() . DIRECTORY_SEPARATOR . 'setup.tpl');
+		$output .= $templateMgr->fetch($this->getTemplatePath() . 'setup.tpl');
 		return false;
 	}
 	
