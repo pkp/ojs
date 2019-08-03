@@ -1,15 +1,12 @@
+[submodule "lib/pkp"]
+	path = lib/pkp
+	url = https://github.com/pkp/pkp-lib.git
 [submodule "plugins/generic/usageStats"]
-        path = plugins/generic/usageStats
-        url = https://github.com/pkp/usageStats.git
+    path = plugins/generic/usageStats
+    url = https://github.com/pkp/usageStats.git
 [submodule "plugins/generic/customBlockManager"]
 	path = plugins/generic/customBlockManager
 	url = https://github.com/pkp/customBlockManager.git
-[submodule "plugins/generic/staticPages"]
-	path = plugins/generic/staticPages
-	url = https://github.com/pkp/staticPages.git
-[submodule "plugins/generic/translator"]
-	path = plugins/generic/translator
-	url = https://github.com/pkp/translator.git
 [submodule "plugins/generic/tinymce"]
 	path = plugins/generic/tinymce
 	url = https://github.com/pkp/tinymce.git
@@ -29,18 +26,9 @@
 [submodule "plugins/generic/orcidProfile"]
 	path = plugins/generic/orcidProfile
 	url = https://github.com/pkp/orcidProfile.git
-[submodule "plugins/blocks/makeSubmission"]
-	path = plugins/blocks/makeSubmission
-	url = https://github.com/pkp/makeSubmission.git
-[submodule "plugins/reports/reviewReport"]
-	path = plugins/reports/reviewReport
-	url = https://github.com/pkp/reviewReport
 [submodule "lib/ui-library"]
 	path = lib/ui-library
 	url = https://github.com/pkp/ui-library
 [submodule "plugins/generic/citationStyleLanguage"]
 	path = plugins/generic/citationStyleLanguage
 	url = https://github.com/pkp/citationStyleLanguage.git
-[submodule "plugins/reports/counter/classes/COUNTER"]
-	path = plugins/reports/counter/classes/COUNTER
-	url = https://github.com/ulsdevteam/COUNTER.git
