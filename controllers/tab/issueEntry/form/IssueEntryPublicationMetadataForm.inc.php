@@ -72,7 +72,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr = TemplateManager::getManager($request);
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
 		$submission = $this->getSubmission();
 		$publishedArticle = $this->getPublishedArticle();
@@ -87,24 +86,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			}
 
 			$templateMgr->assign('publishedArticle', $publishedArticle);
-			$issueDao = DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getById($publishedArticle->getIssueId());
-			if ($issue) {
-				$templateMgr->assign('issueAccess', $issue->getAccessStatus());
-				$templateMgr->assign('accessOptions', array(
-					ARTICLE_ACCESS_ISSUE_DEFAULT => __('editor.issues.default'),
-					ARTICLE_ACCESS_OPEN => __('editor.issues.open')
-				));
-			}
-		}
-
-		// include payment information
-		$paymentManager = Application::getPaymentManager($context);
-		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$publicationFeeEnabled = $paymentManager->publicationEnabled();
-		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
-		if ($publicationFeeEnabled) {
-			$templateMgr->assign('publicationPayment', $completedPaymentDao->getByAssoc(null, PAYMENT_TYPE_PUBLICATION, $this->getSubmission()->getId()));
 		}
 
 		$templateMgr->assign(array(
@@ -117,37 +98,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$templateMgr->assign('submission', $this->getSubmission());
 
 		return parent::fetch($request);
-	}
-
-	/**
-	 * builds the issue options pulldown for published and unpublished issues
-	 * @param $journal Journal
-	 * @return array Associative list of options for pulldown
-	 */
-	function getIssueOptions($journal) {
-		$issueOptions = array();
-		$journalId = $journal->getId();
-
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-
-		$issueOptions['future'] =  '------    ' . __('editor.issues.futureIssues') . '    ------';
-		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
-		while ($issue = $issueIterator->next()) {
-			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
-		}
-		$issueOptions['current'] = '------    ' . __('editor.issues.currentIssue') . '    ------';
-		$issuesIterator = $issueDao->getPublishedIssues($journalId);
-		$issues = $issuesIterator->toArray();
-		if (isset($issues[0]) && $issues[0]->getCurrent()) {
-			$issueOptions[$issues[0]->getId()] = $issues[0]->getIssueIdentification();
-			array_shift($issues);
-		}
-		$issueOptions['back'] = '------    ' . __('editor.issues.backIssues') . '    ------';
-		foreach ($issues as $issue) {
-			$issueOptions[$issue->getId()] = $issue->getIssueIdentification();
-		}
-
-		return $issueOptions;
 	}
 
 	/**
@@ -217,7 +167,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array(
-			'waivePublicationFee', 'markAsPaid', 'issueId',
 			'datePublished', 'accessStatus', 'pages',
 			'copyrightYear', 'copyrightHolder',
 			'licenseURL', 'attachPermissions',
@@ -235,165 +184,70 @@ class IssueEntryPublicationMetadataForm extends Form {
 		$submission = $this->getSubmission();
 		$context = $request->getContext();
 
-		$waivePublicationFee = $request->getUserVar('waivePublicationFee') ? true : false;
-		if ($waivePublicationFee) {
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedArticle PublishedArticle */
 
-			$markAsPaid = $request->getUserVar('markAsPaid');
-			$paymentManager = Application::getPaymentManager($context);
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
+		$submissionFilesChanged = false;
+		$submissionMetadataChanged = false;
 
-			$user = $request->getUser();
+		// define the access status for the article if none is set.
+		$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
 
-			// Get a list of author user IDs
-			$authorUserIds = array();
-			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
-			$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
-			$submitterAssignment = $submitterAssignments->next();
-			assert(isset($submitterAssignment)); // At least one author should be assigned
-
-			$queuedPayment = $paymentManager->createQueuedPayment(
-				$request,
-				PAYMENT_TYPE_PUBLICATION,
-				$markAsPaid ? $submitterAssignment->getUserId() : $user->getId(),
-				$submission->getId(),
-				$markAsPaid ? $context->getData('publicationFee') : 0,
-				$markAsPaid ? $context->getData('currency') : ''
-			);
-
-			$paymentManager->queuePayment($queuedPayment);
-
-			// Since this is a waiver, fulfill the payment immediately
-			$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
-		} else {
-			// Get the issue for publication.
-			$issueDao = DAORegistry::getDAO('IssueDAO');
-			$issueId = $this->getData('issueId');
-			$issue = $issueDao->getById($issueId, $context->getId());
-
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion()); /* @var $publishedArticle PublishedArticle */
-
-			if ($publishedArticle) {
-				if (!$issue || !$issue->getPublished()) {
-					$fromIssue = $issueDao->getById($publishedArticle->getIssueId(), $context->getId());
-					if ($fromIssue->getPublished()) {
-						// Insert article tombstone
-						import('classes.article.ArticleTombstoneManager');
-						$articleTombstoneManager = new ArticleTombstoneManager();
-						$articleTombstoneManager->insertArticleTombstone($submission, $context);
-					}
-				}
-			}
-
-			$articleSearchIndex = Application::getSubmissionSearchIndex();
-			$submissionFilesChanged = false;
-			$submissionMetadataChanged = false;
-
-			// define the access status for the article if none is set.
-			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
-
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			if (!is_null($this->getData('pages'))) {
-				$submission->setPages($this->getData('pages'));
-			}
-
-			if ($issue) {
-
-				// Schedule against an issue.
-				if ($publishedArticle) {
-					if ($issueId != $publishedArticle->getIssueId()) $publishedArticle->setSequence(REALLY_BIG_NUMBER);
-					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
-					$publishedArticle->setAccessStatus($accessStatus);
-					$publishedArticleDao->updatePublishedArticle($publishedArticle);
-
-					// article metadata must be reindexed
-					$submissionMetadataChanged = true;
-				} else {
-					$publishedArticle = $publishedArticleDao->newDataObject();
-					$publishedArticle->setId($submission->getId());
-					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
-					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
-					$publishedArticle->setAccessStatus($accessStatus);
-					$publishedArticle->setSubmissionVersion($submission->getSubmissionVersion());
-					$publishedArticle->setIsCurrentSubmissionVersion(true);
-
-					$prevPublishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion() - 1);
-					if ($prevPublishedArticle) {
-						$prevPublishedArticle->setIsCurrentSubmissionVersion(false);
-
-						$publishedArticleDao->updatePublishedArticle($prevPublishedArticle);
-					}
-
-					$publishedArticleDao->insertObject($publishedArticle);
-
-					// If we're using custom section ordering, and if this is the first
-					// article published in a section, make sure we enter a custom ordering
-					// for it. (Default at the end of the list.)
-					if ($sectionDao->customSectionOrderingExists($issueId)) {
-						if ($sectionDao->getCustomSectionOrder($issueId, $submission->getSectionId()) === null) {
-							$sectionDao->insertCustomSectionOrder($issueId, $submission->getSectionId(), REALLY_BIG_NUMBER);
-							$sectionDao->resequenceCustomSectionOrders($issueId);
-						}
-					}
-
-					// Index the published article metadata and files for the first time.
-					$submissionMetadataChanged = true;
-					$submissionFilesChanged = true;
-				}
-
-			} else {
-				if ($publishedArticle) {
-					// This was published elsewhere; make sure we don't
-					// mess up sequencing information.
-					$issueId = $publishedArticle->getIssueId();
-					$publishedArticleDao->deletePublishedArticleByArticleId($submission->getId());
-
-					// Delete the article from the search index.
-					$articleSearchIndex->submissionFileDeleted($submission->getId());
-				}
-			}
-
-			if ($this->getData('attachPermissions')) {
-				$submission->setCopyrightYear($this->getData('copyrightYear'));
-				$submission->setCopyrightHolder($this->getData('copyrightHolder'), null); // Localized
-				$submission->setLicenseURL($this->getData('licenseURL'));
-			} else {
-				$submission->setCopyrightYear(null);
-				$submission->setCopyrightHolder(null, null);
-				$submission->setLicenseURL(null);
-			}
-
-			// Resequence the articles.
-			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
-
-			$submission->stampStatusModified();
-
-			if ($issue && $issue->getPublished()) {
-				$submission->setStatus(STATUS_PUBLISHED);
-				// delete article tombstone
-				$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
-				$tombstoneDao->deleteByDataObjectId($submission->getId());
-			} else {
-				$submission->setStatus(STATUS_QUEUED);
-			}
-
-			$articleDao->updateObject($submission);
-
-			//after the submission is updated, update the search index
-			if ($publishedArticle) {
-				if ($submissionFilesChanged) {
-					$articleSearchIndex->submissionFilesChanged($publishedArticle);
-				}
-
-				if ($submissionMetadataChanged) {
-					$articleSearchIndex->submissionMetadataChanged($publishedArticle);
-				}
-			}
-
-			$articleSearchIndex->submissionChangesFinished();
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		if (!is_null($this->getData('pages'))) {
+			$submission->setPages($this->getData('pages'));
 		}
+
+		$publishedArticle = $publishedArticleDao->newDataObject();
+		$publishedArticle->setId($submission->getId());
+		$publishedArticle->setDatePublished(Core::getCurrentDate());
+		$publishedArticle->setAccessStatus($accessStatus);
+		$publishedArticle->setSequence(REALLY_BIG_NUMBER);
+		$publishedArticle->setSubmissionVersion($submission->getSubmissionVersion());
+		$publishedArticle->setIsCurrentSubmissionVersion(true);
+		$prevPublishedArticle = $publishedArticleDao->getBySubmissionId($submission->getId(), null, false, $submission->getSubmissionVersion() - 1);
+
+		if ($prevPublishedArticle) {
+			$prevPublishedArticle->setIsCurrentSubmissionVersion(false);
+
+			$publishedArticleDao->updatePublishedArticle($prevPublishedArticle);
+		}
+
+		$publishedArticleDao->insertObject($publishedArticle);
+
+
+		// Index the published article metadata and files for the first time.
+		$submissionMetadataChanged = true;
+		$submissionFilesChanged = true;
+
+		if ($this->getData('attachPermissions')) {
+			$submission->setCopyrightYear($this->getData('copyrightYear'));
+			$submission->setCopyrightHolder($this->getData('copyrightHolder'), null); // Localized
+			$submission->setLicenseURL($this->getData('licenseURL'));
+		} else {
+			$submission->setCopyrightYear(null);
+			$submission->setCopyrightHolder(null, null);
+			$submission->setLicenseURL(null);
+		}
+
+		$submission->stampStatusModified();
+		$submission->setStatus(STATUS_PUBLISHED);
+		$articleDao->updateObject($submission);
+
+		//after the submission is updated, update the search index
+		if ($publishedArticle) {
+			if ($submissionFilesChanged) {
+				$articleSearchIndex->submissionFilesChanged($publishedArticle);
+			}
+
+			if ($submissionMetadataChanged) {
+				$articleSearchIndex->submissionMetadataChanged($publishedArticle);
+			}
+		}
+
+		$articleSearchIndex->submissionChangesFinished();
 	}
 }
 

@@ -50,7 +50,6 @@
  * Templates::Article::Details
  *
  * @uses $article Article This article
- * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
  * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
  * @uses $supplementaryGalleys array List of article galleys that are supplementary
@@ -210,17 +209,11 @@
 
 		<div class="entry_details">
 
-			{* Article/Issue cover image *}
-			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
+			{* Article cover image *}
+			{if $article->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
-						{if $article->getLocalizedCoverImage()}
 							<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|escape|default:'null'}">
-						{else}
-							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
-							</a>
-						{/if}
 					</div>
 				</div>
 			{/if}
@@ -312,19 +305,8 @@
 				</div>
 			{/if}
 
-			{* Issue article appears in *}
-			<div class="item issue">
-				<div class="sub_item">
-					<div class="label">
-						{translate key="issue.issue"}
-					</div>
-					<div class="value">
-						<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-							{$issue->getIssueIdentification()}
-						</a>
-					</div>
-				</div>
-
+			{* Section article appears in *}
+			<div class="item section">
 				{if $section}
 					<div class="sub_item">
 						<div class="label">

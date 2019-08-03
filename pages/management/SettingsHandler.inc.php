@@ -37,19 +37,14 @@ class SettingsHandler extends ManagementHandler {
 	}
 
 	/**
-	 * Add the submission settings tab to the workflow settings page
 	 *
-	 * @param $args array
-	 * @param $request Request
+	 * @return array
 	 */
-	function workflow($args, $request) {
-
-		$templateMgr = TemplateManager::getManager($request);
+	function _setupWorkflowSettingsData($request) {
 		$context = $request->getContext();
-		$router = $request->getRouter();
 		$dispatcher = $request->getDispatcher();
 
-		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+		$contextApiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
 
 		$supportedFormLocales = $context->getSupportedFormLocales();
 		$localeNames = AppLocale::getAllLocales();
@@ -57,26 +52,18 @@ class SettingsHandler extends ManagementHandler {
 			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
 		}, $supportedFormLocales);
 
-		$submissionSettingsForm = new \APP\components\forms\context\SubmissionSettingsForm($apiUrl, $locales, $context);
+		$screeningForm = new \APP\components\forms\context\ScreeningForm($contextApiUrl, $locales, $context);
 
-		// Add form to the existing settings data
-		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['forms'][$submissionSettingsForm->id] = $submissionSettingsForm->getConfig();
-		$templateMgr->assign('settingsData', $settingsData);		
+		$settingsData = [
+			'components' => [
+				FORM_SCREENING => $screeningForm->getConfig(),
+			],
+		];
 
-		HookRegistry::register('Template::Settings::workflow::submission', function($hookName, $args) {
-			$templateMgr = $args[1];
-			$output = &$args[2];
-			$output .= $templateMgr->fetch('management/additionalWorkflowTabs.tpl');
-			return false;
-		});
-
-		parent::workflow($args, $request);
-
+		return array_merge_recursive(parent::_setupWorkflowSettingsData($request), $settingsData);
 	}
 
 	/**
-	 * Add the submission settings tab to the workflow settings page
 	 *
 	 * @param $args array
 	 * @param $request Request

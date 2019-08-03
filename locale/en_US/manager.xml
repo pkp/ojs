@@ -92,7 +92,10 @@
 	<message key="manager.setup.announcementsIntroduction">Introduction</message>
 	<message key="manager.setup.announcementsIntroduction.description">Enter any information you would like to appear on your announcements page.</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Server) </message>
-	<message key="manager.setup.archiving.success">The archiving details for this server have been updated.</message>
+	<message key="manager.setup.authorScreening">Author screening</message>
+	<message key="manager.setup.authorScreening.success">Author screening options saved</message>
+	<message key="manager.setup.disableAuthorScreening">Allow all new authors to publish preprints without screening</message>
+	<message key="manager.setup.enableAuthorScreening">Author has to have two publications in ORCID/Crossref database OR author requires editorial screening before publishing</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
 	<message key="manager.setup.history">Server History</message>
@@ -102,6 +105,7 @@
 	<message key="manager.setup.details">Details</message>
 	<message key="manager.setup.details.description">Name of server, ISSN, contacts, sponsors, and search engines.</message>
 	<message key="manager.setup.disableUserRegistration">The Server Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</message>
+
 	<message key="manager.setup.discipline">Academic Discipline and Sub-Disciplines</message>
 	<message key="manager.setup.disciplineDescription">Useful when server crosses disciplinary boundaries and/or authors submit multidisciplinary items.</message>
 	<message key="manager.setup.disciplineExamples">(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</message>
@@ -202,6 +206,7 @@
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the server site.</message>
+	<message key="manager.setup.screening">Screening</message>
 	<message key="manager.setup.searchEngineIndexing">Search Indexing</message>
 	<message key="manager.setup.searchEngineIndexing.success">The search engine index settings have been updated.</message>
 	<message key="manager.setup.searchEngineIndexing.description"><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></message>

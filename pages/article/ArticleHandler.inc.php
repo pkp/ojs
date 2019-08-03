@@ -22,9 +22,6 @@ class ArticleHandler extends Handler {
 	/** journal associated with the request **/
 	var $journal;
 
-	/** issue associated with the request **/
-	var $issue;
-
 	/** article associated with the request **/
 	var $article;
 
@@ -65,10 +62,7 @@ class ArticleHandler extends Handler {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
-			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
-			$this->issue = $issue;
 			$this->article = $publishedArticle;
 		} else {
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
@@ -98,11 +92,9 @@ class ArticleHandler extends Handler {
 
 		$journal = $request->getJournal();
 		$user = $request->getUser();
-		$issue = $this->issue;
 		$article = $this->article;
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
-			'issue' => $issue,
 			'article' => $article,
 			'fileId' => $fileId,
 		));
@@ -180,37 +172,14 @@ class ArticleHandler extends Handler {
 		if (!$galley) {
 			// No galley: Prepare the article landing page.
 
-			// Get the subscription status if displaying the abstract;
-			// if access is open, we can display links to the full text.
-			import('classes.issue.IssueAction');
+			$templateMgr->assign('hasAccess', true);
 
-			// The issue may not exist, if this is an editorial user
-			// and scheduling hasn't been completed yet for the article.
-			$issueAction = new IssueAction();
-			$subscriptionRequired = false;
-			if ($issue) {
-				$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
-			}
-
-			$subscribedUser = $issueAction->subscribedUser($user, $journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
-			$subscribedDomain = $issueAction->subscribedDomain($request, $journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
-
-			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
-
-			$paymentManager = Application::getPaymentManager($journal);
-			if ( $paymentManager->onlyPdfEnabled() ) {
-				$templateMgr->assign('restrictOnlyPdf', true);
-			}
-			if ( $paymentManager->purchaseArticleEnabled() ) {
-				$templateMgr->assign('purchaseArticleEnabled', true);
-			}
-
-			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article))) {
+			if (!HookRegistry::call('ArticleHandler::view', array(&$request, 1, &$article))) {
 				return $templateMgr->display('frontend/pages/article.tpl');
 			}
 		} else {
 			// Galley: Prepare the galley file download.
-			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
+			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, 1, &$galley, &$article))) {
 				$request->redirect(null, null, 'download', array($articleId, $galleyId));
 			}
 
@@ -304,97 +273,19 @@ class ArticleHandler extends Handler {
 	 */
 	function userCanViewGalley($request, $articleId, $galleyId = null) {
 
-		import('classes.issue.IssueAction');
-		$issueAction = new IssueAction();
 
 		$journal = $request->getJournal();
 		$publishedArticle = $this->article;
-		$issue = $this->issue;
 		$journalId = $journal->getId();
 		$user = $request->getUser();
 		$userId = $user?$user->getId():0;
 
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
-		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle, $user)) {
+		if ($publishedArticle) {
 			return true;
 		}
-
-		// Make sure the reader has rights to view the article/issue.
-		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
-			$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId(), $publishedArticle->getId());
-
-			// Check if login is required for viewing.
-			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getData('restrictArticleAccess') && isset($galleyId) && $galleyId) {
-				Validation::redirectLogin();
-			}
-
-			// bypass all validation if subscription based on domain or ip is valid
-			// or if the user is just requesting the abstract
-			if ( (!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId) ) {
-
-				// Subscription Access
-				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedArticle->getId());
-
-				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = Application::getPaymentManager($journal);
-
-				$purchasedIssue = false;
-				if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
-					$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-					$purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
-				}
-
-				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() == ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
-
-					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) {
-						/* if only pdf files are being restricted, then approve all non-pdf galleys
-						 * and continue checking if it is a pdf galley */
-						if ( $paymentManager->onlyPdfEnabled() ) {
-
-							if ($this->galley && !$this->galley->isPdfGalley() ) {
-								$this->issue = $issue;
-								$this->article = $publishedArticle;
-								return true;
-							}
-						}
-
-						if (!Validation::isLoggedIn()) {
-							Validation::redirectLogin('payment.loginRequired.forArticle');
-						}
-
-						/* if the article has been paid for then forget about everything else
-						 * and just let them access the article */
-						$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-						$dateEndMembership = $user->getSetting('dateEndMembership', 0);
-						if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $publishedArticle->getId())
-							|| (!is_null($dateEndMembership) && $dateEndMembership > time())) {
-							$this->issue = $issue;
-							$this->article = $publishedArticle;
-							return true;
-						} elseif ($paymentManager->purchaseArticleEnabled()) {
-							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getData('purchaseArticleFee'));
-							$paymentManager->queuePayment($queuedPayment);
-
-							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
-							$paymentForm->display($request);
-							exit;
-						}
-					}
-
-					if (!isset($galleyId) || $galleyId) {
-						if (!Validation::isLoggedIn()) {
-							Validation::redirectLogin('reader.subscriptionRequiredLoginText');
-						}
-						$request->redirect(null, 'about', 'subscriptions');
-					}
-				}
-			}
-		} else {
-			$request->redirect(null, 'search');
-		}
-		return true;
+		return false;
 	}
 
 	/**

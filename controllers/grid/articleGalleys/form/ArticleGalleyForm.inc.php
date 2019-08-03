@@ -106,7 +106,7 @@ class ArticleGalleyForm extends Form {
 	 * @return ArticleGalley The resulting article galley.
 	 */
 	function execute() {
-		import('classes.file.IssueFileManager');
+		#import('classes.file.IssueFileManager');
 
 		$journal = Application::get()->getRequest()->getJournal();
 		$articleGalley = $this->_articleGalley;

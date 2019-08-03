@@ -17,9 +17,9 @@
 				"in:issue,article"
 			]
 		},
-		"enableOai": {
+		"enableAuthorScreening": {
 			"type": "boolean",
-			"default": 1,
+			"default": 0,
 			"validation": [
 				"nullable"
 			]

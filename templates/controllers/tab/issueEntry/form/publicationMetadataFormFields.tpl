@@ -25,45 +25,12 @@
 
 	<input type="hidden" name="submissionId" value="{$submissionId|escape}" />
 	<input type="hidden" name="stageId" value="{$stageId|escape}" />
-	<input type="hidden" name="waivePublicationFee" value="0" />
-	<input type="hidden" name="markAsPaid" value="0" />
 
-	{if !$publicationFeeEnabled || $publicationPayment}
-		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication"}
-			{fbvFormSection for="schedule"}
-				{if $publishedArticle}
-					{assign var=issueId value=$publishedArticle->getIssueId()}
-				{else}
-					{assign var=issueId value=0}
-				{/if}
-				{fbvElement type="select" disabled=$formParams.readOnly id="issueId" required=true from=$issueOptions selected=$issueId translate=false label="editor.article.scheduleForPublication.toBeAssigned"}
-			{/fbvFormSection}
-		{/fbvFormArea}
-
-		{fbvFormArea id="pagesInformation" title="editor.issues.pages"}
-			{fbvFormSection for="customExtras"}
-				{fbvElement type="text" readOnly=$formParams.readOnly id="pages" label="editor.issues.pages" value=$submission->getPages() inline=true size=$fbvStyles.size.MEDIUM}
-			{/fbvFormSection}
-		{/fbvFormArea}
-
-		{if $publishedArticle}
-			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
-				{fbvFormSection for="publishedDate"}
-					{fbvElement type="text" required=true id="datePublished" disabled=$formParams.readOnly value=$publishedArticle->getDatePublished() translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}
-				{if $issueAccess && $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $context->getData('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
-					{fbvElement type="select" id="accessStatus" disabled=$formParams.readOnly required=true from=$accessOptions selected=$publishedArticle->getAccessStatus() translate=false label="editor.issues.access" inline=true size=$fbvStyles.size.MEDIUM}
-				{/if}
-				{/fbvFormSection}
-			{/fbvFormArea}
-		{/if}
-	{else}
-		{fbvFormArea id="waivePayment" title="editor.article.payment.publicationFeeNotPaid"}
-			{fbvFormSection for="waivePayment" size=$fbvStyles.size.MEDIUM}
-				{fbvElement type="button" disabled=$formParams.readOnly label="payment.paymentReceived" id="paymentReceivedButton" inline=true}
-				{fbvElement type="button" disabled=$formParams.readOnly label="payment.waive" id="waivePaymentButton" inline=true}
-			{/fbvFormSection}
-		{/fbvFormArea}
-	{/if}
+	{fbvFormArea id="pagesInformation" title="editor.issues.pages"}
+		{fbvFormSection for="customExtras"}
+			{fbvElement type="text" readOnly=$formParams.readOnly id="pages" label="editor.issues.pages" value=$submission->getPages() inline=true size=$fbvStyles.size.MEDIUM}
+		{/fbvFormSection}
+	{/fbvFormArea}
 
 	{fbvFormArea id="permissions" title="submission.permissions"}
 		{fbvFormSection list=true}

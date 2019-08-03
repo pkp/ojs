@@ -29,12 +29,6 @@
 			</a>
 			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
 		</li>
-		<li>
-			<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-				{$issue->getIssueIdentification()}
-			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
-		</li>
 		<li class="current">
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
