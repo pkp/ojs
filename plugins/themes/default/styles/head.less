@@ -140,6 +140,7 @@
 					padding-right: 0;
 					text-decoration: none;
 					color: @text-bg-base;
+					border-bottom: none;
 				}
 
 			}
@@ -163,25 +164,36 @@
 			line-height: @double;
 			text-align: center;
 
-			button {
-				&:extend(.cmp_button);
-				width: 100%;
-				margin-top: @base;
+			// button {
+			// 	&:extend(.cmp_button);
+			// 	width: 100%;
+			// 	margin-top: @base;
 
-				&:hover,
-				&:focus {
-					&:extend(.cmp_button:hover);
-				}
+			// 	&:hover,
+			// 	&:focus {
+			// 		&:extend(.cmp_button:hover);
+			// 	}
 
-				@media(min-width: @screen-phone) {
-					width: auto;
-					margin-top: 0;
-				}
-			}
+			// 	@media(min-width: @screen-phone) {
+			// 		width: auto;
+			// 		margin-top: 0;
+			// 	}
+			// }
 
-			input[type="text"] {
-				&:extend(.pkp_form input[type="text"]);
-			}
+			// input[type="text"] {
+			// 	&:extend(.pkp_form input[type="text"]);
+			// }
+
+			// input[type="submit"] {
+			// 	background: #CCCCCC;
+			// 	  border: 0 none;
+			// 	  height: 1.5em;
+			// 	  line-height: 1.5em;
+			// 	  margin: 0;
+			// 	  padding: 3px 0;
+			// 	  text-indent: 100px;
+			// 	  width: 20px;
+			// }
 
 			.search_controls {
 				display: none;
@@ -617,8 +629,11 @@
 }
 
 // Search bar
-.pkp_head_wrapper .pkp_search_mobile {
-	display: none;
+.pkp_head_wrapper {
+
+	.pkp_search_mobile {
+		display: none;
+	}
 }
 
 .pkp_head_wrapper .pkp_search_desktop {
@@ -646,6 +661,18 @@
 
 	input[type="text"] {
 		&:extend(.pkp_form input[type="text"]);
+	}
+
+	input[type="submit"] {
+		&:extend(.pkp_form input[type="submit"]);
+		background: #CCCCCC;
+		  border: 0 none;
+		  height: 1.5em;
+		  line-height: 1.5em;
+		  margin: 0;
+		  padding: 3px 0;
+		  text-indent: 100px;
+		  width: 20px;
 	}
 
 	.search_controls {
@@ -702,128 +729,128 @@
 		display: none;
 	}
 
-	@media(min-width: @screen-desktop) {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: @quadruple;
-		min-width: 100px;
-		padding: 0;
-		font-size: @font-base;
-		line-height: @line-base;
-		transition: min-width 0.4s;
-		text-align: right;
-		overflow-x: hidden;
+	// @media(min-width: @screen-desktop) {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	height: @quadruple;
+	// 	min-width: 100px;
+	// 	padding: 0;
+	// 	font-size: @font-base;
+	// 	line-height: @line-base;
+	// 	transition: min-width 0.4s;
+	// 	text-align: right;
+	// 	overflow-x: hidden;
 
-		button {
-			position: absolute;
-			top: 0;
-			left: -9999px;
-		}
+	// 	button {
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: -9999px;
+	// 	}
 
-		input[type="text"] {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 0;
-			padding: 0;
-			border: none;
-		}
+	// 	input[type="text"] {
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 0;
+	// 		padding: 0;
+	// 		border: none;
+	// 	}
 
-		.search_controls {
-			display: inline-block;
-		}
+	// 	.search_controls {
+	// 		display: inline-block;
+	// 	}
 
-		.search_prompt {
-			display: inline-block;
-			position: relative;
-			padding: @pkp_nav_primary_row_el_padding @double;
-			color: @text-bg-base;
-			cursor: pointer;
+	// 	.search_prompt {
+	// 		display: inline-block;
+	// 		position: relative;
+	// 		padding: @pkp_nav_primary_row_el_padding @double;
+	// 		color: @text-bg-base;
+	// 		cursor: pointer;
 
-			&:before {
-				font-size: @font-bump;
-				margin-right: 0.25em;
-			}
+	// 		&:before {
+	// 			font-size: @font-bump;
+	// 			margin-right: 0.25em;
+	// 		}
 
-			&:hover,
-			&:focus {
-				outline: 0;
-				padding-bottom: @pkp_nav_primary_row_el_padding - 2;
-				border-bottom: 2px solid @text-bg-base;
-			}
-		}
+	// 		&:hover,
+	// 		&:focus {
+	// 			outline: 0;
+	// 			padding-bottom: @pkp_nav_primary_row_el_padding - 2;
+	// 			border-bottom: 2px solid @text-bg-base;
+	// 		}
+	// 	}
 
-		&.is_open {
-			min-width: 100%;
-			background: @bg;
+	// 	&.is_open {
+	// 		min-width: 100%;
+	// 		background: @bg;
 
-			input[type="text"] {
-				width: 100%;
-				max-width: 100%;
-				line-height: @quadruple;
-				height: @quadruple;
-				top: 0;
-				left: 0;
-				padding-left: 0.5em;
-				padding-right: 180px; // try to stop before the search button, but this can change with different translations
-				border: none;
-				border-bottom: @bg-border;
-				font-size: @font-bump;
-				background: @bg;
+	// 		input[type="text"] {
+	// 			width: 100%;
+	// 			max-width: 100%;
+	// 			line-height: @quadruple;
+	// 			height: @quadruple;
+	// 			top: 0;
+	// 			left: 0;
+	// 			padding-left: 0.5em;
+	// 			padding-right: 180px; // try to stop before the search button, but this can change with different translations
+	// 			border: none;
+	// 			border-bottom: @bg-border;
+	// 			font-size: @font-bump;
+	// 			background: @bg;
 
-				&:hover,
-				&:focus {
-					outline: 0;
-				}
-			}
+	// 			&:hover,
+	// 			&:focus {
+	// 				outline: 0;
+	// 			}
+	// 		}
 
-			.search_prompt {
-				padding-bottom: @pkp_nav_primary_row_el_padding - 1;
-				background: @bg;
-				border-left: @bg-border;
-				border-bottom: 1px solid #ddd;
-				color: @primary;
+	// 		.search_prompt {
+	// 			padding-bottom: @pkp_nav_primary_row_el_padding - 1;
+	// 			background: @bg;
+	// 			border-left: @bg-border;
+	// 			border-bottom: 1px solid #ddd;
+	// 			color: @primary;
 
-				&:hover,
-				&:focus {
-					border-bottom-color: @primary;
-				}
-			}
-		}
+	// 			&:hover,
+	// 			&:focus {
+	// 				border-bottom-color: @primary;
+	// 			}
+	// 		}
+	// 	}
 
-		&.is_searching {
+	// 	&.is_searching {
 
-			input[type="text"] {
-				opacity: 0.5;
+	// 		input[type="text"] {
+	// 			opacity: 0.5;
 
-				&:hover,
-				&:focus {
-					border-color: @bg;
-				}
-			}
+	// 			&:hover,
+	// 			&:focus {
+	// 				border-color: @bg;
+	// 			}
+	// 		}
 
-			.search_prompt {
-				background: @bg;
-				border-left: @bg-border;
-				color: @primary;
+	// 		.search_prompt {
+	// 			background: @bg;
+	// 			border-left: @bg-border;
+	// 			color: @primary;
 
-				&:hover,
-				&:focus {
-					background: @bg;
-					color: @primary-lift;
-				}
-			}
+	// 			&:hover,
+	// 			&:focus {
+	// 				background: @bg;
+	// 				color: @primary-lift;
+	// 			}
+	// 		}
 
-			.search_cancel {
-				display: none;
-			}
+	// 		.search_cancel {
+	// 			display: none;
+	// 		}
 
-			.search_loading {
-				display: block;
-			}
-		}
-	}
+	// 		.search_loading {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
 }
 
 // User-focused navigation menu with login/logout, tasks, etc
