@@ -124,13 +124,13 @@ If you have any questions, please contact me. Thank you for considering this ser
 		<subject>Editorial Assignment</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
 <br />
-The submission, &quot;{$submissionTitle},&quot; to {$contextName} has been assigned to you to see through the editorial process in your role as Section Editor.<br />
+The submission, &quot;{$submissionTitle},&quot; to {$contextName} has been assigned to you to see through the editorial process in your role as Series Editor.<br />
 <br />
 Submission URL: {$submissionUrl}<br />
 Username: {$editorUsername}<br />
 <br />
 Thank you.]]></body>
-		<description>This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the server site.</description>
+		<description>This email notifies a Series Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the server site.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editor Decision</subject>
@@ -139,7 +139,7 @@ Thank you.]]></body>
 We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to: Accept Submission]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final "accept submission" decision regarding their submission.</description>
+		<description>This email from the Editor or Series Editor to an Author notifies them of a final "accept submission" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Editor Decision</subject>
@@ -148,14 +148,14 @@ Our decision is to: Accept Submission]]></body>
 We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to: Decline Submission]]></body>
-		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
+		<description>This email from the Editor or Series Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Editor Recommendation</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
 The recommendation regarding the submission to {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}]]></body>
-		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
+		<description>This email from the recommending Editor or Series Editor to the decision making Editors or Series Editors notifies them of a final recommendation regarding the submission.</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>

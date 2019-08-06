@@ -18,7 +18,7 @@
 	<message key="editor.submissionQueue">Submission Queue</message>
 	<message key="editor.submissionArchive">Submission Archive</message>
 	<message key="editor.publishing">Publishing</message>
-	<message key="editor.allSections">All Sections</message>
+	<message key="editor.allSections">All Series</message>
 	<message key="editor.allEditors">All Editors</message>
 	<message key="editor.me">Me</message>
 	<message key="editor.publicIdentificationExists">The public identifier '{$publicIdentifier}' already exists for another object (preprint , galley or file). Please choose unique identifiers within your server.</message>
@@ -50,7 +50,7 @@
 	<message key="editor.submissions.averageTime">Weeks</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
 	<message key="editor.submissions.assignedTo">Assigned To</message>
-	<message key="editor.submissions.inSection">In Section</message>
+	<message key="editor.submissions.inSection">In Series</message>
 	<message key="editor.article.schedulePublication">Schedule For Publication</message>
 	<message key="editor.article.showPublicationVersion">Show Scheduled Publication</message>
 	<message key="editor.article.publishVersion">Publish Version</message>

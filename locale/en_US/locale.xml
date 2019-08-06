@@ -80,12 +80,12 @@
 	-->
 
 	<!-- Common Section Terms -->
-	<message key="section.section">Section</message>
-	<message key="section.sections">Sections</message>
-	<message key="section.title">Section title</message>
+	<message key="section.section">Series</message>
+	<message key="section.sections">Series</message>
+	<message key="section.title">Series title</message>
 	<message key="section.abbreviation">Abbreviation</message>
-	<message key="section.abbreviation.example">(For example, Articles=ART)</message>
-	<message key="section.policy">Section Policy</message>
+	<message key="section.abbreviation.example">(For example, Preprints=PRE)</message>
+	<message key="section.policy">Series Policy</message>
 
 	<!-- Common Preprint Terms -->
 	<message key="article.article">Preprint</message>
@@ -97,7 +97,7 @@
 	<message key="article.authors">Authors</message>
 	<message key="article.indexingInformation">Indexing Information</message>
 	<message key="article.metadata">Metadata</message>
-	<message key="article.journalSection">Server Section</message>
+	<message key="article.journalSection">Server Series</message>
 	<message key="article.file">File</message>
 	<message key="article.suppFile">Supplementary File</message>
 	<message key="article.suppFiles">Supplementary File(s)</message>
@@ -165,9 +165,9 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Server Manager</message>
-	<message key="user.role.subEditor">Section Editor</message>
+	<message key="user.role.subEditor">Series Editor</message>
 	<message key="user.role.managers">Server Managers</message>
-	<message key="user.role.subEditors">Section Editors</message>
+	<message key="user.role.subEditors">Series Editors</message>
 	<message key="user.role.journalAssistant">Server Assistant</message>
 	<message key="user.role.journalAssistants">Server Assistants</message>
 
@@ -259,7 +259,7 @@ Authors who publish with this server agree to the following terms:
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />
-Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Server Management.)]]></message>
+Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Series Editors, go to Editors in Server Management.)]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>
 
 <ol>
@@ -271,7 +271,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- Languages -->
 
-	<!-- Section Management -->
+	<!-- Series Management -->
 
 	<!-- Import/Export -->
 
@@ -315,7 +315,7 @@ You may optionally provide the user with a reason for disabling their account.</
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Section Editor -->
+	<!-- Series Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
 	<message key="sectionEditor.completedEditorialAssignments">Completed Editorial Assignments</message>
 	<message key="sectionEditor.noneAssigned">No submissions assigned.</message>
@@ -441,13 +441,13 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="about.editorialTeam.biography">Biography</message>
 	<message key="about.editorialPolicies">Editorial Policies</message>
 	<message key="about.focusAndScope">Focus and Scope</message>
-	<message key="about.sectionPolicies">Section Policies</message>
+	<message key="about.sectionPolicies">Series Policies</message>
 	<message key="about.submissions">Submissions</message>
 	<message key="about.onlineSubmissions.login">Login</message>
 	<message key="about.onlineSubmissions.register">Register</message>
 	<message key="about.onlineSubmissions.registrationRequired">{$login} or {$register} to make a submission.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} or {$viewSubmissions}.</message>
-	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Make a new submission to the <a href="{$url}">{$name}</a> section.]]></message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Make a new submission to the <a href="{$url}">{$name}</a> series.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Make a new submission</message>
 	<message key="about.onlineSubmissions.viewSubmissions">view your pending submissions</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>
@@ -590,7 +590,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	-->
 	<!-- Authorization -->
 	<message key="user.authorization.noContext">No server in context!</message>
-	<message key="user.authorization.sectionAssignment">You are trying to access a preprint that is not part of your section.</message>
+	<message key="user.authorization.sectionAssignment">You are trying to access a preprint that is not part of your series.</message>
 
 	<!-- Icons: Default "alt" text -->
 

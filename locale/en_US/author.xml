@@ -36,14 +36,14 @@
 	<message key="author.submissions.confirmDelete">Are you sure you want to delete this incomplete submission?</message>
 	<message key="author.submissions.viewStatus">View Status</message>
 	<message key="author.submissions.noSubmissions">No submissions.</message>
-	<message key="author.submit.journalSection">Server Section</message>
-	<message key="author.submit.journalSectionDescription">Preprints must be submitted to one of the server's sections.</message>
+	<message key="author.submit.journalSection">Server Series</message>
+	<message key="author.submit.journalSectionDescription">Preprints must be submitted to one of the server's series.</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
 	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this server (comments to the editor can be added below).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">You must agree to the terms of the Copyright Notice before continuing.</message>
 	<message key="submission.submit.coverNote">Comments for the Editor</message>
 	<message key="author.submit.comments">Enter text (optional)</message>
-	<message key="author.submit.form.sectionRequired">Please select an appropriate server section for this submission.</message>
+	<message key="author.submit.form.sectionRequired">Please select an appropriate server series for this submission.</message>
 	<message key="author.submit.form.localeRequired">Please select a submission language.</message>
 	<message key="submission.submit.privacyStatement">Journal's Privacy Statement</message>
 	<message key="author.submit.reorderInstructions">Reorder authors to appear in the order they will be listed on publication.</message>
@@ -58,7 +58,7 @@
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="author.submit.form.titleRequired">Please enter the title of your preprint .</message>
 	<message key="author.submit.form.abstractRequired">Please enter the abstract of your preprint .</message>
-	<message key="author.submit.form.wordCountAlert">You have exceeded the maximum word limit for abstracts in this section's track.</message>
+	<message key="author.submit.form.wordCountAlert">You have exceeded the maximum word limit for abstracts in this series' track.</message>
 	<message key="author.submit.submissionFile">Submission File</message>
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
 	<message key="author.submit.replaceSubmissionFile">Replace submission file</message>

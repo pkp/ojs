@@ -13,8 +13,8 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<!-- Section default -->
-	<message key="section.default.title">Articles</message>
-	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.title">Preprints</message>
+	<message key="section.default.abbrev">PRE</message>
 	<message key="section.default.policy"></message>
 	<message key="default.genres.article">Preprint Text</message>
 
@@ -38,8 +38,8 @@
 	<message key="default.groups.name.editor">Server editor</message>
 	<message key="default.groups.plural.editor">Server editors</message>
 	<message key="default.groups.abbrev.editor">JE</message>
-	<message key="default.groups.name.sectionEditor">Section editor</message>
-	<message key="default.groups.plural.sectionEditor">Section editors</message>
+	<message key="default.groups.name.sectionEditor">Series editor</message>
+	<message key="default.groups.plural.sectionEditor">Series editors</message>
 	<message key="default.groups.abbrev.sectionEditor">SecE</message>
 	<!-- Genre Defaults -->
 	<message key="default.genres.researchInstrument">Research Instrument</message>

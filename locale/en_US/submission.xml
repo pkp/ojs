@@ -69,15 +69,15 @@
 	<message key="submission.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="submission.submit.form.titleRequired">Please enter the title of your preprint .</message>
 	<message key="submission.submit.form.abstractRequired">Please enter your preprint's abstract.</message>
-	<message key="submission.submit.form.wordCountAlert">Your abstract is too long. Please shorten it to below the word limit indicated for this section.</message>
+	<message key="submission.submit.form.wordCountAlert">Your abstract is too long. Please shorten it to below the word limit indicated for this series.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Please select the contributor's role.</message>
 
 	<message key="submission.citationFormat.notFound">The requested citation format could not be retrieved.</message>
 
 	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe server content.</message>
-	<message key="section.any">Any Section</message>
+	<message key="section.any">Any Series</message>
 
-	<message key="submission.sectionOptions">Section Options</message>
+	<message key="submission.sectionOptions">Series Options</message>
 	<!-- categories -->
 	<message key="catalog.browseTitles">{$numTitles} Items</message>
 	<message key="catalog.category.heading">All Items</message>
