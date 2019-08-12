@@ -153,224 +153,12 @@
 	.pkp_head_wrapper {
 		padding-top: @triple * 2; // Make room for the user nav at the top
 
-		.pkp_search_desktop {
+		.pkp_search_mobile {
 			display: none;
 		}
 
-		.pkp_search_mobile {
+		.pkp_search_desktop {
 			display: block;
-			padding: @base 0;
-			font-size: @font-sml;
-			line-height: @double;
-			text-align: center;
-
-			// button {
-			// 	&:extend(.cmp_button);
-			// 	width: 100%;
-			// 	margin-top: @base;
-
-			// 	&:hover,
-			// 	&:focus {
-			// 		&:extend(.cmp_button:hover);
-			// 	}
-
-			// 	@media(min-width: @screen-phone) {
-			// 		width: auto;
-			// 		margin-top: 0;
-			// 	}
-			// }
-
-			// input[type="text"] {
-			// 	&:extend(.pkp_form input[type="text"]);
-			// }
-
-			// input[type="submit"] {
-			// 	background: #CCCCCC;
-			// 	  border: 0 none;
-			// 	  height: 1.5em;
-			// 	  line-height: 1.5em;
-			// 	  margin: 0;
-			// 	  padding: 3px 0;
-			// 	  text-indent: 100px;
-			// 	  width: 20px;
-			// }
-
-			.search_controls {
-				display: none;
-				position: relative;
-
-				a {
-					text-decoration: none;
-				}
-			}
-
-			.search_prompt {
-				transition: background-color 0.4s;
-
-				// Needs to be defined outside of a media query or the font doesn't
-				// load
-				&:before {
-					.fa();
-					content: @fa-var-search;
-				}
-			}
-
-			.search_cancel,
-			.search_loading {
-				position: absolute;
-				top: @base;
-				right: 100%;
-				margin-right: @double;
-				text-align: center;
-				color: @text-light;
-			}
-
-			.search_cancel{
-
-				&:before {
-					.fa();
-					content: @fa-var-times;
-					width: @double;
-					height: @double;
-					line-height: @double;
-				}
-
-				&:hover,
-				&:focus {
-					outline: none;
-					border-radius: 50%;
-					background: @no;
-					color: #fff;
-				}
-			}
-
-			.search_loading {
-				.pkp_spinner;
-				display: none;
-			}
-
-			@media(min-width: @screen-desktop) {
-				position: absolute;
-				top: 0;
-				right: 0;
-				height: @quadruple;
-				min-width: 100px;
-				padding: 0;
-				font-size: @font-base;
-				line-height: @line-base;
-				transition: min-width 0.4s;
-				text-align: right;
-				overflow-x: hidden;
-
-				button {
-					position: absolute;
-					top: 0;
-					left: -9999px;
-				}
-
-				input[type="text"] {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 0;
-					padding: 0;
-					border: none;
-				}
-
-				.search_controls {
-					display: inline-block;
-				}
-
-				.search_prompt {
-					display: inline-block;
-					position: relative;
-					padding: @pkp_nav_primary_row_el_padding @double;
-					color: @text-bg-base;
-					cursor: pointer;
-
-					&:before {
-						font-size: @font-bump;
-						margin-right: 0.25em;
-					}
-
-					&:hover,
-					&:focus {
-						outline: 0;
-						padding-bottom: @pkp_nav_primary_row_el_padding - 2;
-						border-bottom: 2px solid @text-bg-base;
-					}
-				}
-
-				&.is_open {
-					min-width: 100%;
-					background: @bg;
-
-					input[type="text"] {
-						width: 100%;
-						max-width: 100%;
-						line-height: @quadruple;
-						height: @quadruple;
-						top: 0;
-						left: 0;
-						padding-left: 0.5em;
-						padding-right: 180px; // try to stop before the search button, but this can change with different translations
-						border: none;
-						border-bottom: @bg-border;
-						font-size: @font-bump;
-						background: @bg;
-
-						&:hover,
-						&:focus {
-							outline: 0;
-						}
-					}
-
-					.search_prompt {
-						padding-bottom: @pkp_nav_primary_row_el_padding - 1;
-						background: @bg;
-						border-left: @bg-border;
-						border-bottom: 1px solid #ddd;
-						color: @primary;
-
-						&:hover,
-						&:focus {
-							border-bottom-color: @primary;
-						}
-					}
-				}
-
-				&.is_searching {
-
-					input[type="text"] {
-						opacity: 0.5;
-
-						&:hover,
-						&:focus {
-							border-color: @bg;
-						}
-					}
-
-					.search_prompt {
-						background: @bg;
-						border-left: @bg-border;
-						color: @primary;
-
-						&:hover,
-						&:focus {
-							background: @bg;
-							color: @primary-lift;
-						}
-					}
-
-					.search_cancel {
-						display: none;
-					}
-
-					.search_loading {
-						display: block;
-					}
-				}
-			}
 		}
 	}
 
@@ -629,15 +417,12 @@
 }
 
 // Search bar
-.pkp_head_wrapper {
-
-	.pkp_search_mobile {
-		display: none;
-	}
+.pkp_search_mobile {
+	display: block;
 }
 
-.pkp_head_wrapper .pkp_search_desktop {
-	display: block;
+.pkp_search_desktop {
+	display: none;
 	padding: @base 0;
 	font-size: @font-sml;
 	line-height: @double;
