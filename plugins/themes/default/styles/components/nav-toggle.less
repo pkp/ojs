@@ -1,0 +1,114 @@
+// Toggle button
+.pkp_site_nav_toggle {
+	@thickness: 3px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: @nav-menu-height;
+	height: @nav-menu-height;
+	border: 0;
+	background: none;
+	box-shadow: 1px 0 0 rgba(255,255,255,0.2), -1px 0 0 rgba(255,255,255,0.2);
+	z-index: 999;
+
+	&:focus {
+		outline: 1px dotted @text-bg-base;
+		box-shadow: none;
+	}
+
+	> span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 24px;
+		height: 19px;
+		border-bottom: @thickness solid @text-bg-base;
+		text-indent: -9999px;
+		overflow: hidden;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: @thickness;
+			background: @text-bg-base;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			top: 8px;
+		}
+	}
+}
+
+.pkp_site_nav_toggle--transform {
+	> span {
+
+		border-bottom: 0;
+		overflow: visible;
+
+		&:before {
+			top: 7px;
+			transform: rotate(-405deg) translateY(1px) translateX(-2px);
+			-webkit-transform: rotate(-405deg) translateY(1px) translateX(-2px);
+		}
+
+		&:after {
+			top: 14px;
+			transform: rotate(405deg) translateY(-3px) translateX(-4px);
+			-webkit-transform: rotate(405deg) translateY(-3px) translateX(-4px);
+		}
+	}
+}
+
+// Show/hide the nav  menu
+.pkp_site_nav_menu {
+	display: none;
+}
+
+.pkp_site_nav_menu--isOpen {
+  display: block;
+}
+
+body.navIsOpen {
+	.siteHeader__details {
+		right: 0;
+	}
+
+	.siteHeader__screen {
+		display: block;
+		opacity: 0.5;
+	}
+
+	.siteHeader__navToggleIcon {
+		> span {
+			&:first-child {
+				transform: rotate(45deg);
+				top: 18px;
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:last-child {
+				transform: rotate(-45deg);
+				top: 18px;
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-desktop) {
+
+	.pkp_site_nav_menu {
+		display: block;
+	}
+}

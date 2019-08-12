@@ -14,7 +14,7 @@
 	if (typeof $.fn.dropdown !== 'undefined') {
 		var $nav = $('#navigationPrimary, #navigationUser'),
 		$submenus = $('ul', $nav);
-		window.onresize = function() {
+		function toggleDropdowns() {
 			if (window.innerWidth > 992) {
 				$submenus.each(function(i) {
 					var id = 'pkpDropdown' + i;
@@ -45,6 +45,10 @@
 				});
 			}
 		}
+		window.onresize = toggleDropdowns;
+		$().ready(function() {
+			toggleDropdowns();
+		});
 	}
 
 	// Toggle nav menu on small screens

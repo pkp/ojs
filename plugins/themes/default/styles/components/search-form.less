@@ -1,0 +1,121 @@
+.pkp_search {
+  position: relative;
+  display: block;
+	padding: @base 0;
+	font-size: @font-sml;
+	line-height: @double;
+	text-align: left;
+
+	input[type="text"] {
+    &:extend(.cmp_form input[type="text"]);
+    line-height: 34px;
+    height: 34px;
+    padding-right: 120px;
+	}
+
+	button[type="submit"] {
+    &:extend(.cmp_button);
+    position: absolute;
+    top: @base + 2px;
+    right: 2px;
+	}
+
+  .search_controls {
+		display: none;
+		position: relative;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.search_prompt {
+		transition: background-color 0.4s;
+
+		// Needs to be defined outside of a media query or the font doesn't
+		// load
+		&:before {
+			.fa();
+			content: @fa-var-search;
+		}
+  }
+
+	.search_cancel,
+	.search_loading {
+		position: absolute;
+		top: @base;
+		right: 100%;
+		margin-right: @double;
+		text-align: center;
+		color: @text-light;
+	}
+
+	.search_cancel {
+		&:before {
+			.fa();
+			content: @fa-var-times;
+			width: @double;
+			height: @double;
+			line-height: @double;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			border-radius: 50%;
+			background: @no;
+			color: #fff;
+		}
+	}
+
+	.search_loading {
+		.pkp_spinner;
+		display: none;
+	}
+}
+
+.pkp_search_mobile {
+  margin-top: 1rem;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  .search_controls {
+    display: none;
+  }
+}
+
+.pkp_search_desktop {
+  display: none;
+  float: right;
+	padding: @half 0;
+	font-size: @font-sml;
+	line-height: @double;
+  text-align: center;
+}
+
+@media (min-width: @screen-phone) {
+
+.pkp_search {
+
+	input[type="text"] {
+    line-height: 30px;
+    height: 30px;
+	}
+
+  button[type="submit"] {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+  }
+}
+
+@media (min-width: @screen-desktop) {
+	.pkp_search_mobile {
+		display: none;
+	}
+
+	.pkp_search_desktop {
+		display: block;
+  }
+}
