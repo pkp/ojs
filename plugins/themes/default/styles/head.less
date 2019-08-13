@@ -134,6 +134,39 @@
 	border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+.pkp_navigation_user {
+
+	.task_count {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-left: 0.5em;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.3);
+		line-height: 20px;
+		text-align: center;
+		font-size: 12px; // helps visually center the number
+	}
+
+	// Hide the top-level task count in mobile nav
+	> li > a .task_count {
+		display: none;
+	}
+
+	> li > ul a {
+		.task_count {
+			display: inline-block;
+			background: rgba(255, 255, 255, 0.8);
+			color: @primary;
+		}
+
+		&:hover .task_count,
+		&:focus .task_count {
+			background: #fff;
+		}
+	}
+}
+
 // The padding to apply to top-level items in the navigation row
 // Total height - line height (divided by 2 since it will be applied to top and bottom)
 @pkp_nav_primary_row_el_padding: (@quadruple - @double) / 2;
@@ -397,26 +430,14 @@
 			padding-right: 0;
 		}
 
-		.task_count {
+		// Show the top-level task count in desktop nav
+		>  li > a .task_count {
 			display: inline-block;
-			width: 20px;
-			height: 20px;
-			margin-left: 0.5em;
-			border-radius: 50%;
-			background: rgba(255, 255, 255, 0.3);
-			line-height: 20px;
-			text-align: center;
-			font-size: 12px; // helps visually center the number
 		}
 
 		> li > ul a {
 			.task_count {
-				background: #ddd;
-			}
-
-			&:hover .task_count,
-			&:focus .task_count {
-				background: #fff;
+				background: rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
