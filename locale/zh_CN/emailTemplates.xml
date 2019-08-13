@@ -387,7 +387,7 @@
 3. 发送完成稿件给编辑.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-稿件URL: {$submissionLayoutUrl}<br />
+稿件URL: {$submissionUrl}<br />
 用户名: {$participantUsername}<br />
 <br />
 如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献.]]></body>

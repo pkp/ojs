@@ -306,7 +306,7 @@ Hvis du ikke har anledning til å påta deg dette oppdraget, eller har ytterlige
 <br />
 Jeg vil med dette be deg om å layoutredigere sideoppsettet for manuskriptet &quot;{$submissionTitle}&quot; for {$contextName}.<br />
 <br />
-Manuskript URL: {$submissionLayoutUrl}<br />
+Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke har anledning til å utføre dette arbeidet nå, eller hvis du har ytterligere spørsmål, ber jeg om at du kontakter meg. Jeg vil med det samme takke deg for at du bidrar til arbeidet vårt.]]></body>

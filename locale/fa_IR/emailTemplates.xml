@@ -341,7 +341,7 @@
 <br />
 از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را آماده نمایید.<br />
 <br />
-آدرس مقاله: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+آدرس مقاله: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 نام کاربری: {$participantUsername}<br />
 <br />
 چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم.]]></body>

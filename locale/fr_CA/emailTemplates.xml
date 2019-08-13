@@ -313,7 +313,7 @@ J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submiss
 3. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL de {$contextName} : {$contextUrl}<br />
-URL du manuscrit : {$submissionLayoutUrl}<br />
+URL du manuscrit : {$submissionUrl}<br />
 Nom d'utilisateur : {$participantUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.]]></body>

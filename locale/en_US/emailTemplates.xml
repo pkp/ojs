@@ -529,7 +529,7 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galley
 4. Notify the Editor using Production Discussions that the galleys are uploaded and ready.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-Submission URL: {$submissionLayoutUrl}<br />
+Submission URL: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.]]></body>

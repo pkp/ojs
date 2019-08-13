@@ -360,7 +360,7 @@ Us demanem que us encarregueu de preparar les galerades de la tramesa &quot;{$su
 3. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
 URL de {$contextName}: {$contextUrl}<br />
-URL de la tramesa: {$submissionLayoutUrl}<br />
+URL de la tramesa: {$submissionUrl}<br />
 Nom d'usuari: {$participantUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />

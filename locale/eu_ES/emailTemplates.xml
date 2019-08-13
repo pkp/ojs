@@ -342,7 +342,7 @@ Erabiltzaile-izena: {$participantUsername}]]></body>
 3. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
 {$contextName} aldizkariaren URLa: {$contextUrl}<br />
-Artikuluaren URLa: {$submissionLayoutUrl}<br />
+Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.]]></body>

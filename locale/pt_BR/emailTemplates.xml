@@ -463,7 +463,7 @@ Solicito a preparação das composições do manuscrito &quot;{$submissionTitle}
 3. Clique no ícone de e-mail sob CONCLUÍDO e envie a mensagem ao editor.<br />
 <br />
 URL da revista {$contextName}: {$contextUrl}<br />
-URL da Submissão: {$submissionLayoutUrl}<br />
+URL da Submissão: {$submissionUrl}<br />
 Login: {$participantUsername}<br />
 <br />
 Caso não esteja disponível para assumir esta responsabilidade no momento, ou tenha quaisquer dúvidas, entre em contato via e-mail.<br />

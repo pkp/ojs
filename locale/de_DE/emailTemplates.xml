@@ -520,7 +520,7 @@ ich bitte Sie um das Layout der Fahnen für das Manuskript &quot;{$submissionTit
 3. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
 <br />
 URL {$contextName}: {$contextUrl}<br />
-URL des Beitrags: {$submissionLayoutUrl}<br />
+URL des Beitrags: {$submissionUrl}<br />
 Benutzer/innenname: {$participantUsername}<br />
 <br />
 Falls Sie zur Zeit nicht in der Lage sein sollten, die Arbeit zu übernehmen, oder Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihre Unterstützung dieser Zeitschrift.]]></body>

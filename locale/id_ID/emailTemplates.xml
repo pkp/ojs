@@ -513,7 +513,7 @@ Naskah &quot;{$submissionTitle}&quot; di {$contextName} memerlukan pembuatan gal
 4. Beritahu Editor menggunakan Diskusi Produksi bahwa galley telah diunggah dan siap digunakan.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-URL Naskah: {$submissionLayoutUrl}<br />
+URL Naskah: {$submissionUrl}<br />
 Nama pengguna: {$participantUsername}<br />
 <br />
 Jika Anda tidak dapat melakukan tugas ini saat ini atau mempunyai pertanyaan, silakan hubungi kami.  Terimakasih atas kontribusi Anda ke jurnal ini.]]></body>

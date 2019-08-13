@@ -458,7 +458,7 @@ Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} je nyní třeba p
 3. Pošlete editorovi email DOKONČENO.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL příspěvku: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Uživatelské jméno: {$participantUsername}<br />
 <br />
 Pokud nyní nemůžete tento úkol provést nebo máte nějaké dotazy, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.]]></body>

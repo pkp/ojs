@@ -341,7 +341,7 @@ Indsendelsen &quot;{$submissionTitle}&quot; til {$contextName} skal nu gøres pu
 4. Giv redaktøren besked når publiceringsversionen er klar via linket ‘Tilføj indlæg’ under ‘Drøftelser under produktion’.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-Submission URL: {$submissionLayoutUrl}<br />
+Submission URL: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />

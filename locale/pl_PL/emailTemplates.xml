@@ -617,7 +617,7 @@ proszę o wykonanie składu tekstu "{$submissionTitle}" przeznaczonego do opubli
 4. Powiadom redaktora o ukończeniu składu.<br />
 <br />
 Adres WWW czasopisma "{$contextName}”: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Adres WWW tekstu: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Adres WWW tekstu: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Nazwa użytkownika: {$participantUsername}<br />
 <br />
 Jeżeli nie jest możliwe wykonanie składu w podanym terminie proszę o kontakt.<br />

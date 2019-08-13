@@ -547,7 +547,7 @@ Julkaisuun {$contextName} liittyvä käsikirjoitus &quot;{$submissionTitle}&quot
 4. Ilmoittakaa toimittajalle Tuotantoon liittyvien keskustelujen kautta, että julkaistavat tiedostot ovat valmiit ja ne on ladattu.<br />
 <br />
 {$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Käsikirjoituksen URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Käsikirjoituksen URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Käyttäjätunnus: {$participantUsername}<br />
 <br />
 Mikäli ette voi ryhtyä tähän tehtävään juuri nyt, tai  jos teillä on kysyttävää, otattehan minuun yhteyttä. Kiitos panoksestanne tämän julkaisun hyväksi.<br />

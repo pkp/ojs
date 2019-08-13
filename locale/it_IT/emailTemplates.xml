@@ -365,7 +365,7 @@ Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda
 Vorrei chiederti di preparare le bozze per il manoscritto &quot;{$submissionTitle}&quot; per {$contextName}.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-URL manoscritto: {$submissionLayoutUrl}<br />
+URL manoscritto: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 Se non puoi prendere in carico il lavoro in questo periodo o hai qualche domanda, ti prego di contattarmi. Grazie per il tuo contributo al journal.]]></body>

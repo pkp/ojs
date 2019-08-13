@@ -345,7 +345,7 @@ DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.<br />
 <br />
-Prova dizgi kopya bağlantısı: {$submissionLayoutUrl}<br />
+Prova dizgi kopya bağlantısı: {$submissionUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 İşin gerçekleştirilmesi ile ilgili bir soru / sorularınızı yazabilirsiniz.<br />

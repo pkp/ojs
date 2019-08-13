@@ -527,7 +527,7 @@ Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunt
 <br />
 Le solicito que prepare las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
-URL del manuscrito: {$submissionLayoutUrl}<br />
+URL del manuscrito: {$submissionUrl}<br />
 Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a la revista.]]></body>

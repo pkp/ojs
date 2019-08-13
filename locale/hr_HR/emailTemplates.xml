@@ -312,7 +312,7 @@ Srdačno,]]></body>
 <br />
 molim vas da pripremite prijelom priloga &quot;{$submissionTitle}&quot; za časopis {$contextName}.<br />
 <br />
-URL rukopisa: {$submissionLayoutUrl}<br />
+URL rukopisa: {$submissionUrl}<br />
 Korisničko ime: {$participantUsername}<br />
 <br />
 U slučaju da trenutačno niste u mogućnosti preuzeti ovu obavezu ili ako imate bilo kakvih dodatnih pitanja, molim vas da mi se obratite.<br />

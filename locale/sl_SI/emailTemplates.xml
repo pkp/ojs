@@ -543,7 +543,7 @@ Prispevek &quot;{$submissionTitle}&quot; za publikacijo {$contextName} potrebuje
 4. Obvestite urednika preko razprave za produkcijo, da so prelomi pripravljeni in naloženi.<br />
 <br />
 Povezava do publikacije{$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Povezava do prispevka: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Povezava do prispevka: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Uporabniško ime: {$participantUsername}<br />
 <br />
 Če v tem trenutku ne morete opraviti tega dela ali imate kakšno vprašanje, se prosim obrnite name. Hvala za vaš trud za to publikacijo.]]></body>

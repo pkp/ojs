@@ -527,7 +527,7 @@ De proeven van inzending &quot;{$submissionTitle}&quot; bij {$contextName} kunne
 3. Stuur de GEREED e-mail naar de redacteur.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-URL inzending: {$submissionLayoutUrl}<br />
+URL inzending: {$submissionUrl}<br />
 Gebruikersnaam: {$participantUsername}<br />
 <br />
 Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op.]]></body>

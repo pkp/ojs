@@ -520,7 +520,7 @@ Bidraget &quot;{$submissionTitle}&quot; till {$contextName} behöver nu få publ
 4. Meddela Redaktören, genom att använda Produktionsdiskussioner, att publiceringsversionerna är uppladdade och klara.<br />
 <br />
 {$contextName} URL: {$contextUrl}<br />
-Bidragets URL: {$submissionLayoutUrl}<br />
+Bidragets URL: {$submissionUrl}<br />
 Användarnamn: {$participantUsername}<br />
 <br />
 Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften.]]></body>

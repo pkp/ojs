@@ -487,7 +487,7 @@ URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 3. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
 <br />
 URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання:  <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL подання:  <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Ім'я користувача: {$participantUsername}<br />
 <br />
 Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.]]></body>
