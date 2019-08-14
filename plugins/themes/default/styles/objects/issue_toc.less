@@ -68,6 +68,20 @@
 		margin-bottom: 0;
 	}
 
+	.galleys_links {
+		&:extend(.pkp_unstyled_list);
+		margin-top: @base;
+
+		li {
+			display: inline-block;
+			margin-right: 1em;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
 	@media(min-width: @screen-tablet) {
 
 		.heading {
