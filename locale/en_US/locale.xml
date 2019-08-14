@@ -143,6 +143,12 @@
 	<message key="submissions.editorRuling">Editor Ruling</message>
 	<message key="submission.eventLog">Event Log</message>
 
+	<!-- Submission list search engine -->
+	<message key="submissions.copyeditComplete">Copyedited</message>
+	<message key="submissions.layoutComplete">Layout edited</message>
+	<message key="submissions.proofreadingComplete">Proofread</message>
+	<message key="submission.search">Preprint Search</message>
+
 	<!-- Submission Notes -->
 
 	<!-- Common Server Terms -->
