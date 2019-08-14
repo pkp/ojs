@@ -7,9 +7,6 @@
 	<dc:title xml:lang="en-US">article-title-en</dc:title>
 	<dc:title xml:lang="de-DE">article-title-de</dc:title>
 	<dc:creator>author-lastname, author-firstname; author-affiliation</dc:creator>
-	<dc:subject xml:lang="en-US">article-discipline</dc:subject>
-	<dc:subject xml:lang="en-US">article-subject</dc:subject>
-	<dc:subject xml:lang="en-US">article-subject-class</dc:subject>
 	<dc:description xml:lang="en-US">article-abstract</dc:description>
 	<dc:publisher xml:lang="en-US">journal-publisher</dc:publisher>
 	<dc:contributor xml:lang="en-US">article-sponsor</dc:contributor>
@@ -28,8 +25,5 @@
 	<dc:relation>article-view-9-98</dc:relation>
 	<dc:relation>galley-doi</dc:relation>
 	<dc:relation>supp-file-doi</dc:relation>
-	<dc:coverage xml:lang="en-US">article-coverage-geo</dc:coverage>
-	<dc:coverage xml:lang="en-US">article-coverage-chron</dc:coverage>
-	<dc:coverage xml:lang="en-US">article-coverage-sample</dc:coverage>
 	<dc:rights xml:lang="en-US">journal-copyright</dc:rights>
 </oai_dc:dc>

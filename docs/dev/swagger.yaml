@@ -65,6 +65,10 @@ definitions:
         $ref: '#/definitions/LocaleObject'
       discipline:
         $ref: '#/definitions/LocaleObject'
+      supportingAgencies:
+        $ref: '#/definitions/LocaleObject'
+      keywords:
+        $ref: '#/definitions/LocaleObject'
       subject:
         $ref: '#/definitions/LocaleObject'
       type:
@@ -305,6 +309,10 @@ definitions:
           publisher:
             $ref: '#/definitions/LocaleObject'
           source:
+            $ref: '#/definitions/LocaleObject'
+          rights:
+            $ref: '#/definitions/LocaleObject'
+          coverage:
             $ref: '#/definitions/LocaleObject'
           subject:
             $ref: '#/definitions/LocaleObject'
