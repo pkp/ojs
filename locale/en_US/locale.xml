@@ -184,6 +184,7 @@
 	<message key="submissions.copyeditComplete">Copyedited</message>
 	<message key="submissions.layoutComplete">Layout edited</message>
 	<message key="submissions.proofreadingComplete">Proofread</message>
+	<message key="submission.search">Article Search</message>
 
 	<!-- Submission Notes -->
 
