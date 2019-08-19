@@ -1,26 +1,26 @@
 .pkp_search {
-  position: relative;
-  display: block;
+	position: relative;
+	display: block;
 	padding: @base 0;
 	font-size: @font-sml;
 	line-height: @double;
 	text-align: left;
 
 	input[type="text"] {
-    &:extend(.cmp_form input[type="text"]);
-    line-height: 34px;
-    height: 34px;
-    padding-right: 120px;
+		&:extend(.cmp_form input[type="text"]);
+		line-height: 34px;
+		height: 34px;
+		padding-right: 120px;
 	}
 
 	button[type="submit"] {
-    &:extend(.cmp_button);
-    position: absolute;
-    top: @base + 2px;
-    right: 2px;
+		&:extend(.cmp_button);
+		position: absolute;
+		top: @base + 2px;
+		right: 2px;
 	}
 
-  .search_controls {
+	.search_controls {
 		display: none;
 		position: relative;
 
@@ -37,13 +37,15 @@
 		&:before {
 			.fa();
 			content: @fa-var-search;
+			line-height: 18px;
 		}
-  }
+	}
 
 	.search_cancel,
 	.search_loading {
+		display: none;
 		position: absolute;
-		top: @base;
+		top: @base - 2;
 		right: 100%;
 		margin-right: @double;
 		text-align: center;
@@ -51,6 +53,8 @@
 	}
 
 	.search_cancel {
+		width: 25px;
+
 		&:before {
 			.fa();
 			content: @fa-var-times;
@@ -75,39 +79,37 @@
 }
 
 .pkp_search_mobile {
-  margin-top: 1rem;
-  padding-bottom: 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
+	margin-top: 1rem;
+	padding-bottom: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-  .search_controls {
-    display: none;
-  }
+	.search_controls {
+		display: none;
+	}
 }
 
 .pkp_search_desktop {
-  display: none;
-  float: right;
+	display: none;
+	float: right;
 	padding: @half 0;
 	font-size: @font-sml;
 	line-height: @double;
-  text-align: center;
+	text-align: center;
 }
 
 @media (min-width: @screen-phone) {
+	.pkp_search {
+		input[type="text"] {
+			line-height: 30px;
+			height: 30px;
+		}
 
-.pkp_search {
-
-	input[type="text"] {
-    line-height: 30px;
-    height: 30px;
+		button[type="submit"] {
+			position: relative;
+			top: auto;
+			right: auto;
+		}
 	}
-
-  button[type="submit"] {
-      position: relative;
-      top: auto;
-      right: auto;
-    }
-  }
 }
 
 @media (min-width: @screen-desktop) {
@@ -117,5 +119,128 @@
 
 	.pkp_search_desktop {
 		display: block;
-  }
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: @quadruple;
+		min-width: 100px;
+		padding: 0;
+		font-size: @font-base;
+		line-height: @line-base;
+		transition: min-width 0.4s;
+		text-align: right;
+		overflow-x: hidden;
+
+		button {
+			position: absolute;
+			top: 0;
+			left: -9999px;
+		}
+
+		input[type="text"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			padding: 0;
+			border: none;
+		}
+
+		.search_controls {
+			display: inline-block;
+		}
+
+		.search_prompt {
+			display: inline-block;
+			position: relative;
+			padding: @pkp_nav_primary_row_el_padding @double;
+			color: @text-bg-base;
+			cursor: pointer;
+
+			&:before {
+				font-size: @font-bump;
+				margin-right: 0.25em;
+			}
+
+			&:hover,
+			&:focus {
+				outline: 0;
+				padding-bottom: @pkp_nav_primary_row_el_padding - 2;
+				border-bottom: 2px solid @text-bg-base;
+			}
+		}
+
+		&.is_open {
+			min-width: 100%;
+			background: @bg;
+
+			input[type="text"] {
+				width: 100%;
+				max-width: 100%;
+				line-height: @quadruple;
+				height: @quadruple;
+				top: 0;
+				left: 0;
+				padding-left: 0.5em;
+				padding-right: 180px; // try to stop before the search button, but this can change with different translations
+				border: none;
+				border-bottom: @bg-border;
+				font-size: @font-bump;
+				background: @bg;
+
+				&:hover,
+				&:focus {
+					outline: 0;
+				}
+			}
+
+			.search_cancel {
+				display: block;
+			}
+
+			.search_prompt {
+				padding-bottom: @pkp_nav_primary_row_el_padding - 1;
+				background: @bg;
+				border-left: @bg-border;
+				border-bottom: 1px solid #ddd;
+				color: @primary;
+
+				&:hover,
+				&:focus {
+					border-bottom-color: @primary;
+				}
+			}
+		}
+
+		&.is_searching {
+			input[type="text"] {
+				opacity: 0.5;
+
+				&:hover,
+				&:focus {
+					border-color: @bg;
+				}
+			}
+
+			.search_prompt {
+				background: @bg;
+				border-left: @bg-border;
+				color: @primary;
+
+				&:hover,
+				&:focus {
+					background: @bg;
+					color: @primary-lift;
+				}
+			}
+
+			.search_cancel {
+				display: none;
+			}
+
+			.search_loading {
+				display: block;
+			}
+		}
+	}
 }
