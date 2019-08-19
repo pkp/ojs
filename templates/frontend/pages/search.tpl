@@ -77,6 +77,14 @@
 
 	{call_hook name="Templates::Search::SearchResults::PreResults"}
 
+	{* Results pagination *}
+	{if !$results->wasEmpty()}
+		<div class="pkp_screen_reader">
+			{page_info iterator=$results}
+			{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors title=$title abstract=$abstract galleyFullText=$galleyFullText discipline=$discipline subject=$subject type=$type coverage=$coverage indexTerms=$indexTerms dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}
+		</div>
+	{/if}
+
 	{* Search results, finally! *}
 	<div class="search_results">
 		{iterate from=results item=result}
