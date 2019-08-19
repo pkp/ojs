@@ -50,7 +50,7 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}">
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}
