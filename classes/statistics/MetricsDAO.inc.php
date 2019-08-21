@@ -153,7 +153,7 @@ class MetricsDAO extends PKPMetricsDAO {
 					COUNT(CASE WHEN s.status = ' . STATUS_QUEUED . ' AND s.stage_id = ' . WORKFLOW_STAGE_ID_EXTERNAL_REVIEW . ' THEN 0 END) AS active_external_review,
 					COUNT(CASE WHEN s.status = ' . STATUS_QUEUED . ' AND s.stage_id = ' . WORKFLOW_STAGE_ID_EDITING . ' THEN 0 END) AS active_editing,
 					COUNT(CASE WHEN s.status = ' . STATUS_QUEUED . ' AND s.stage_id = ' . WORKFLOW_STAGE_ID_PRODUCTION . ' THEN 0 END) AS active_production,
-				
+
 					-- all submissions
 					COUNT(0) AS submission_received,
 					COUNT(CASE WHEN ed.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT . ' THEN 0 END) AS submission_accepted,
@@ -172,7 +172,7 @@ class MetricsDAO extends PKPMetricsDAO {
 						END
 					) AS submission_declined_other,
 					COUNT(CASE WHEN s.status = ' . STATUS_DECLINED . ' THEN 0 END) AS submission_declined_total,
-				
+
 					-- average days to decide
 					AVG(
 						CASE WHEN ed.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT . '
@@ -186,7 +186,7 @@ class MetricsDAO extends PKPMetricsDAO {
 					) AS submission_days_to_reject,
 					AVG(DATEDIFF(first_ed.date_decided, COALESCE(s.date_submitted, s.last_modified))) AS submission_days_to_first_decide,
 					AVG(DATEDIFF(ed.date_decided, COALESCE(s.date_submitted, s.last_modified))) AS submission_days_to_decide,
-				
+
 					-- acceptance/rejection rate
 					COUNT(CASE WHEN ed.decision = ' . SUBMISSION_EDITOR_DECISION_ACCEPT . ' THEN 0 END) / COUNT(0) * 100 AS submission_acceptance_rate,
 					COUNT(CASE WHEN s.status = ' . STATUS_DECLINED . ' THEN 0 END) / COUNT(0) * 100 AS submission_rejection_rate,
@@ -324,7 +324,7 @@ class MetricsDAO extends PKPMetricsDAO {
 			) AS years
 				ON 1 = 1
 			GROUP BY
-				role_id
+				role_id, statistics.total, years.count
 		';
 		return array_reduce($this->retrieve($sql, $params)->GetAll(), function ($data, $row) {
 			$data[$row['role_id']] = $row;
