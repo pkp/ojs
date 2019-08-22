@@ -963,6 +963,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$submissionId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
+	<message key="log.review.reviewConfirmed">Editor {$userName} has confirmed a review for the round {$round} review for submission {$submissionId}.</message>
+	<message key="log.review.reviewReady">{$reviewerName} has completed the review for the round {$round} review for submission {$submissionId}.</message>
+
 	<message key="log.editor.decision">An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 	<message key="log.editor.recommendation">An editor recommendation ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 
