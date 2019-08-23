@@ -312,6 +312,7 @@ class SubmissionHandler extends APIHandler {
 					break;
 
 				case 'isIncomplete':
+				case 'isInactive':
 				case 'isOverdue':
 					$returnParams[$param] = true;
 					break;
