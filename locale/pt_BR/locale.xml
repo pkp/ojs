@@ -671,6 +671,7 @@ Você pode opcionalmente dar ao usuário um motivo para sua conta ter sido desab
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Fazer uma nova submissão</message>
 	<message key="about.onlineSubmissions.viewSubmissions">ver suas submissões pendentes</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Fazer uma nova submissão para a seção <a href="{$url}">{$name}</a>.]]></message>
 	<message key="about.authorGuidelines">Diretrizes para Autores</message>
 	<message key="about.submissionPreparationChecklist">Condições para submissão</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte do processo de submissão, os autores são obrigados a verificar a conformidade da submissão em relação a todos os itens listados a seguir. As submissões que não estiverem de acordo com as normas serão devolvidas aos autores.</message>
