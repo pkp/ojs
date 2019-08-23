@@ -133,6 +133,10 @@
 	<message key="editor.submissions.assignedTo">معين إلى</message>
 	<message key="editor.submissions.inSection">في قسم</message>
 	<message key="editor.article.schedulePublication">جدوله للنشر</message>
+	<message key="editor.article.showPublicationVersion">أظهر ما هو مجدول من المنشورات</message>
+	<message key="editor.article.publishVersion">رقم إصدار النشر</message>
+	<message key="editor.article.viewMetadata">معاينة البيانات الوصفية للإصدار</message>
+	<message key="editor.article.editMetadata">تعديل البيانات الوصفية للإصدار</message>
 	<message key="editor.article.scheduleForPublication">جدوله للنشر في</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">ليتم تعيينه</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">لم يتم دفع رسم النشر. لجدولة الفقرة لغرض النشر، أشعر المؤلف بدفع الرسم أو أخصمه له</message>

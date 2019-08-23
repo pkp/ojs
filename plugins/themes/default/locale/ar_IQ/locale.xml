@@ -27,4 +27,9 @@
 	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: زوج متكامل من خطي serif للعناوين و sans-serif لنص المتن.</message>
 	<message key="plugins.themes.default.option.colour.label">اللون</message>
 	<message key="plugins.themes.default.option.colour.description">إختر لوناً للعناوين.</message>
+	<message key="plugins.themes.default.option.showDescriptionInJournalIndex.label">وصف المجلة</message>
+	<message key="plugins.themes.default.option.showDescriptionInJournalIndex.option">أظهر وصف المجلة على صفحتها الرئيسية.</message>
+	<message key="plugins.themes.default.option.useHomepageImageAsHeader.label">خلفية رأس الصفحة</message>
+	<message key="plugins.themes.default.option.useHomepageImageAsHeader.description">عند تقديم صورة للصفحة الرئيسية، قم بعرضها في خلفية رأس الصفحة بدلاً من موضعها المعتاد في الصفحة الرئيسية.</message>
+	<message key="plugins.themes.default.option.useHomepageImageAsHeader.option">إظهار صورة الصفحة الرئيسية بمثابة خلفية لرأس الصفحة.</message>
 </locale>

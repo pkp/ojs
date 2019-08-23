@@ -21,6 +21,17 @@ Commands:
 	export [xmlFileName] [journal_path]
 	export [xmlFileName] [journal_path] [userId1] [userId2] ...
 ]]></message>
+	<message key="plugins.importexport.users.cliUsage.examples"><![CDATA[
+أمثلة:
+	استيراد المستخدمين إلى myJournal من myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	تصدير كل المستخدمين من myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	تصدير المستخدمين المحددين باستعمال رموزهم التعريفية:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2
+]]></message>
 	<message key="plugins.importexport.users.import.importUsers">استيراد المستخدمين</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[إختر ملف بيانات بصيغة XML يتضمن معلومات المستخدمين لاستيرادها إلى هذه المجلة. أنظر ملف المساعدة الخاص بالمجلة للحصول على تفاصيل عن صيغة هذا الملف.<br /><br />لاحظ أنه إن كان الملف المستورد يتضمن أي أسماء مستخدمين أو عناوين بريد الكتروني موجودة سلفاً في النظام، فإن بيانات هؤلاء المستخدمين لن يتم استيرادها، مع منحهم أي أدوار جديدة فيما لو جاءت مستوردة من الملف المعني، أي بعبارة أخرى، سيتم التعامل مع المستخدمين المكررين على أنهم معروفون سابقاً في النظام.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">استيراد المستخدم لم ينجح</message>

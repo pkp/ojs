@@ -347,8 +347,17 @@
 <br />
 حالياً، قررنا إلغاء إلتماسنا لكم بتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نعتذر عن أي إزعاج قد يسببه ذلك لحضرتكم، ونأمل التواصل معكم مستقبلاً فيما يتعلق بتحكيم طلبات النشر المرسلة إلى هذه المجلة العلمية.<br />
 <br />
-إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.<br />]]></body>
+إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بانتفاء الحاجة إلى تقييمه.</description>
+	</email_text>
+	<email_text key="REVIEW_REINSTATE">
+		<subject>إعادة التماس التحكيم</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+نرغب بإعادة التماسنا لحضرتكم لتحكيم المؤَّلف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نأمل أن تكونوا قادرين على إبداء العون بشأن عملية التحكيم في هذه المجلة.<br />
+<br />
+إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي.]]></body>
+		<description>هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بأن التماس التحكيم الملغى قد تمت العودة إليه.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>قادر على التحكيم</subject>
@@ -466,10 +475,7 @@
 <br />
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-قرارنا هو: بعض التنقيحات مطلوبة<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+قرارنا هو: بعض التنقيحات مطلوبة]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بأن مؤلفه بحاجة إلى بعض التنقيحات.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -478,10 +484,7 @@
 <br />
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-قرارنا هو: إعادة التقديم مجدداً<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+قرارنا هو: إعادة التقديم مجدداً]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (إعادة تقديم طلب النشر).</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -490,10 +493,7 @@
 <br />
 قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-قرارنا هو: الرفض<br />
-<br />
-{$editorialContactSignature}<br />
-]]></body>
+قرارنا هو: الرفض]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (رفض الطلب).</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
@@ -763,9 +763,7 @@
 <br />
 لقد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}، &quot;{$submissionTitle}&quot;.<br />
 <br />
-إن قرارنا هو: رفض النشر<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+إن قرارنا هو: رفض النشر]]></body>
 		<description>هذه الرسالة تعنون إلى المؤلف إذا رفض المحرر طلبه بشكل مبدئي قبل الدخول في مرحلة التحكيم</description>
 	</email_text>
 </email_texts>
