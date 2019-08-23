@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlIssueFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlIssueFilter
@@ -78,6 +78,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			$issue->setPublished($node->getAttribute('published'));
 			$issue->setCurrent($node->getAttribute('current'));
 			$issue->setAccessStatus($node->getAttribute('access_status'));
+			if ($issue) $issueDao->updateCurrent($context->getId());
 			$issueDao->insertObject($issue);
 			$deployment->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
 		}
@@ -139,9 +140,11 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			case 'sections':
 				$this->parseSections($n, $issue);
 				break;
-			case 'issue_covers':
+			case 'covers':
 				if (!$processOnlyChildren) {
-					$this->parseIssueCovers($n, $issue);
+					import('plugins.importexport.native.filter.NativeFilterHelper');
+					$nativeFilterHelper = new NativeFilterHelper();
+					$nativeFilterHelper->parseCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
 				}
 				break;
 			case 'issue_identification':
@@ -340,54 +343,6 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	}
 
 	/**
-	 * Parse out the object covers.
-	 * @param $node DOMElement
-	 * @param $object Issue
-	 */
-	function parseIssueCovers($node, $object) {
-		$deployment = $this->getDeployment();
-		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
-			if (is_a($n, 'DOMElement')) {
-				switch ($n->tagName) {
-					case 'cover':
-						$this->parseCover($n, $object);
-						break;
-					default:
-						$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
-				}
-			}
-		}
-	}
-
-	/**
-	 * Parse out the cover and store it in the object.
-	 * @param $node DOMElement
-	 * @param $object Issue
-	 */
-	function parseCover($node, $object) {
-		$deployment = $this->getDeployment();
-		$context = $deployment->getContext();
-		$locale = $node->getAttribute('locale');
-		if (empty($locale)) $locale = $context->getPrimaryLocale();
-		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
-			if (is_a($n, 'DOMElement')) {
-				switch ($n->tagName) {
-					case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
-					case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
-					case 'embed':
-						import('classes.file.PublicFileManager');
-						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $context->getId()) . '/' . $object->getCoverImage($locale);
-						file_put_contents($filePath, base64_decode($n->textContent));
-						break;
-					default:
-						$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
-				}
-			}
-		}
-	}
-
-	/**
 	 * Parse out the issue identification and store it in an issue.
 	 * @param $node DOMElement
 	 * @param $issue Issue
@@ -549,5 +504,3 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	}
 
 }
-
-

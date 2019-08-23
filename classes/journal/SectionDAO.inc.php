@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/SectionDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionDAO
@@ -20,6 +20,23 @@ import ('lib.pkp.classes.context.PKPSectionDAO');
 class SectionDAO extends PKPSectionDAO {
 	var $cache;
 
+	/**
+	 * Get the name of the section table in the database
+	 *
+	 * @return string
+	 */
+	protected function _getTableName() {
+		return 'sections';
+	}
+
+	/**
+	 * Get the name of the context ID table column
+	 *
+	 * @return string
+	 */
+	protected function _getContextIdColumnName() {
+		return 'journal_id';
+	}
 
 	function _cacheMiss($cache, $id) {
 		$section = $this->getById($id, null, false);
@@ -192,7 +209,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getLocaleFieldNames() {
 		return array_merge(
 			parent::getLocaleFieldNames(),
-			array('abbrev', 'policy', 'identifyType')
+			array('abbrev', 'identifyType')
 		);
 	}
 
@@ -280,13 +297,13 @@ class SectionDAO extends PKPSectionDAO {
 		$subEditorsDao->deleteBySectionId($sectionId, $contextId);
 
 		// Remove articles from this section
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$articleDao->removeArticlesFromSection($sectionId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$submissionDao->removeSubmissionsFromSection($sectionId);
 
-		// Delete published article entries from this section -- they must
+		// Delete published submission entries from this section -- they must
 		// be re-published.
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticleDao->deletePublishedArticlesBySectionId($sectionId);
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmissionDao->deletePublishedSubmissionsBySectionId($sectionId);
 
 		if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) return false;
 		$this->update('DELETE FROM section_settings WHERE section_id = ?', (int) $sectionId);
@@ -340,7 +357,7 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function getByIssueId($issueId) {
 		$result = $this->retrieve(
-			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_submissions pa, submissions a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.submission_id = a.submission_id AND pa.issue_id = ? ORDER BY section_seq',
+			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_submissions pa, submissions a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.is_current_submission_version = 1 AND s.section_id = a.section_id AND pa.submission_id = a.submission_id AND pa.issue_id = ? ORDER BY section_seq',
 			array((int) $issueId, (int) $issueId)
 		);
 
@@ -369,11 +386,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * Retrieve all sections for a journal.
 	 * @param $journalId int Journal ID
 	 * @param $rangeInfo DBResultRange optional
+	 * @param $submittableOnly boolean optional. Whether to return only sections
+	 *  that can be submitted to by anyone.
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
-	function getByContextId($journalId, $rangeInfo = null) {
+	 function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
+			'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
 			(int) $journalId, $rangeInfo
 		);
 
@@ -412,22 +431,6 @@ class SectionDAO extends PKPSectionDAO {
 		}
 		$result->Close();
 		return $returner;
-	}
-
-	/**
-	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
-	 * @param $journalId int Journal ID
-	 * @param $submittableOnly boolean optional
-	 * @return array
-	 */
-	function getTitles($journalId, $submittableOnly = false) {
-		$sections = array();
-		$sectionsIterator = $this->getByJournalId($journalId);
-		while ($section = $sectionsIterator->next()) {
-			if ($submittableOnly && $section->getEditorRestricted()) continue;
-			$sections[$section->getId()] = $section->getLocalizedTitle();
-		}
-		return $sections;
 	}
 
 	/**
@@ -607,7 +610,4 @@ class SectionDAO extends PKPSectionDAO {
 			array((float) $seq, (int) $issueId, (int) $sectionId)
 		);
 	}
-
 }
-
-

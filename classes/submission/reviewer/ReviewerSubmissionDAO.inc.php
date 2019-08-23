@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/reviewer/ReviewerSubmissionDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewerSubmissionDAO
@@ -14,10 +14,10 @@
  * @brief Operations for retrieving and modifying ReviewerSubmission objects.
  */
 
-import('classes.article.ArticleDAO');
+import('classes.article.SubmissionDAO');
 import('classes.submission.reviewer.ReviewerSubmission');
 
-class ReviewerSubmissionDAO extends ArticleDAO {
+class ReviewerSubmissionDAO extends SubmissionDAO {
 	var $authorDao;
 	var $userDao;
 	var $reviewAssignmentDao;
@@ -52,14 +52,14 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	submissions a
-				LEFT JOIN published_submissions ps ON (a.submission_id = ps.submission_id)
+				LEFT JOIN published_submissions ps ON (a.submission_id = ps.submission_id) and (ps.published_submission_version = a.submission_version) and ps.is_current_submission_version = 1
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-			WHERE	r.review_id = ?',
+			WHERE r.review_id = ?',
 			array(
 				'title', $primaryLocale, // Section title
 				'title', $locale, // Section title
@@ -89,15 +89,13 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	/**
 	 * Internal function to return a ReviewerSubmission object from a row.
 	 * @param $row array
+	 * @param $submissionVersion
 	 * @return ReviewerSubmission
 	 */
-	function _fromRow($row) {
+	function _fromRow($row, $submissionVersion = null) {
 		// Get the ReviewerSubmission object, populated with submission data
-		$reviewerSubmission = parent::_fromRow($row);
+		$reviewerSubmission = parent::_fromRow($row, $submissionVersion);
 		$reviewer = $this->userDao->getById($row['reviewer_id']);
-
-		// Comments
-		$reviewerSubmission->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
 
 		// Editor Decisions
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
@@ -118,6 +116,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$reviewerSubmission->setDateDue($this->datetimeFromDB($row['date_due']));
 		$reviewerSubmission->setDateResponseDue($this->datetimeFromDB($row['date_response_due']));
 		$reviewerSubmission->setDeclined($row['declined']);
+		$reviewerSubmission->setCancelled($row['cancelled']);
 		$reviewerSubmission->setQuality($row['quality']);
 		$reviewerSubmission->setRound($row['round']);
 		$reviewerSubmission->setStep($row['step']);
@@ -144,6 +143,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 					competing_interests = ?,
 					recommendation = ?,
 					declined = ?,
+					cancelled = ?,
 					date_assigned = %s,
 					date_notified = %s,
 					date_confirmed = %s,
@@ -170,6 +170,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				$reviewerSubmission->getCompetingInterests(),
 				(int) $reviewerSubmission->getRecommendation(),
 				(int) $reviewerSubmission->getDeclined(),
+				(int) $reviewerSubmission->getCancelled(),
 				$reviewerSubmission->getQuality(),
 				(int) $reviewerSubmission->getReviewId()
 			)

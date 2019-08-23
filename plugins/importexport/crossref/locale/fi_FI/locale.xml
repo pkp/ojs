@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/fi_FI/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -33,8 +33,6 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Huom. Ainoastaan numeroita (ei niiden artikkeleita) voidaan viedä/rekisteröidä tässä.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Lähetetty</message>
-	<message key="plugins.importexport.crossref.status.completed">Talletettu</message>
 	<message key="plugins.importexport.crossref.status.failed">Epäonnistui</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktiivinen</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Merkitty aktiiviseksi</message>
@@ -42,8 +40,6 @@
 		<p>Talletuksen tila:</p>
 		<p>
 		- Ei talletettu: tätä DOI-tunnistetta ei ole yritetty tallentaa.<br />
-		- Lähetetty: tämä DOI-tunniste on lähetetty talletettavaksi.<br />
-		- Talletettu: DOI-tunniste on talletettu Crossrefiin, mutta se ei välttämättä ole vielä aktiivinen.<br />
 		- Aktiivinen: DOI-tunniste on talletettu ja se resolvoituu oikein.<br />
 		- Epäonnistui: DOI-tunnisteen talletus epäonnistui.<br />
 		- Merkitty aktiiviseksi: DOI-tunniste merkittiin manuaalisesti aktiiviseksi.
@@ -53,11 +49,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">Lataa XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Merkitse aktiiviseksi</message>
-	<message key="plugins.importexport.crossref.action.register">Lähetä</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Tarkista tila</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRefin automaattinen rekisteröintitehtävä</message>
-	<message key="plugins.importexport.crossref.notification.failed">DOI-tunnisteen rekisteröiminen epäonnistui. Siirry sijaintiin Työkalut > Tuonti/Vienti > CrossRef XML -vientilisäosa nähdäksesi epäonnistuneet talletukset.</message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Käyttö: 
@@ -67,8 +60,6 @@
 	<message key="plugins.importexport.crossref.cliError">VIRHE:</message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">Lähetys ei onnistunut! DOI:n rekisteröintipalvelin tuotti virheen: ‘{$param}’.</message>
-	<message key="plugins.importexport.crossref.register.success">Lähetys onnistui!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Yksikään numero ei vastannut määritettyä numeron tunnistetta "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Yksikään artikkeli ei vastannut määritettyä artikkelin tunnistetta "{$articleId}".</message>
 

@@ -3,8 +3,8 @@
 /**
  * @file pages/reviewer/ReviewerHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewerHandler
@@ -34,7 +34,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		$context = $request->getContext();
-		if ($context->getSetting('reviewerAccessKeysEnabled')) {
+		if ($context->getData('reviewerAccessKeysEnabled')) {
 			$this->_validateAccessKey($request);
 		}
 
@@ -43,9 +43,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 		$this->addPolicy(new SubmissionAccessPolicy(
 			$request,
 			$args,
-			$roleAssignments,
-			'submissionId',
-			$router->getRequestedOp($request)=='submission' || (in_array($router->getRequestedOp($request), array('step', 'saveStep')) && $request->getUserVar('step') == 1) // Limit declined review views to step 1
+			$roleAssignments
 		));
 
 

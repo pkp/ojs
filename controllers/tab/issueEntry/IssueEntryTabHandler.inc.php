@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/IssueEntryTabHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryTabHandler
@@ -81,7 +81,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		// Remove the file
 		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->removeJournalFile($submission->getJournalId(), $file)) {
+		if ($publicFileManager->removeContextFile($submission->getJournalId(), $file)) {
 			$json = new JSONMessage(true);
 			$json->setEvent('fileDeleted');
 			return $json;
@@ -101,7 +101,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$stageId = $this->getStageId();
 		$user = $request->getUser();
 		import('controllers.tab.issueEntry.form.IssueEntryPublicationMetadataForm');
-		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
+		$issueEntryPublicationMetadataForm = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId, array('submissionVersion' => $submission->getSubmissionVersion()));
 		$issueEntryPublicationMetadataForm->initData();
 		return new JSONMessage(true, $issueEntryPublicationMetadataForm->fetch($request));
 	}
@@ -142,12 +142,10 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			// Display assign public identifiers form
 			$assignPubIds = false;
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-			if (is_array($pubIdPlugins)) {
-				foreach ($pubIdPlugins as $pubIdPlugin) {
-					if ($pubIdPlugin->isObjectTypeEnabled('Submission', $submission->getContextId())) {
-						$assignPubIds = true;
-						break;
-					}
+			foreach ($pubIdPlugins as $pubIdPlugin) {
+				if ($pubIdPlugin->isObjectTypeEnabled('Submission', $submission->getContextId())) {
+					$assignPubIds = true;
+					break;
 				}
 			}
 			if ($assignPubIds) {
@@ -281,7 +279,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 
 		$submission = $this->getSubmission();
 		import('controllers.modals.submissionMetadata.form.IssueEntrySubmissionReviewForm');
-		return new IssueEntrySubmissionReviewForm($submission->getId(), $this->getStageId(), array('displayedInContainer' => true));
+		return new IssueEntrySubmissionReviewForm($submission->getId(), $this->getStageId(), array('displayedInContainer' => true, 'submissionVersion' => $submission->getSubmissionVersion()));
 	}
 
 	/**

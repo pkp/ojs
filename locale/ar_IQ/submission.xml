@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/submission.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ar_IQ (العربية) locale.
@@ -16,7 +16,7 @@
 	<message key="submission.submit.title">قدم طلباً للنشر</message>
 	<message key="submission.submit.userGroup">قدم طلباً بصفتي...</message>
 	<message key="submission.submit.userGroupDescription">إختر بأية صفة تقوم بتقديم طلبك هذا.</message>
-	<message key="submission.upload.selectComponent">إختر مكون المؤلَّف</message>
+	<message key="submission.upload.selectComponent">إختر مكون المؤلَّف...</message>
 	<message key="submission.title">عنوان المؤلَّف</message>
 	<message key="submission.title.tip"><![CDATA[نوع التقديم عادة ما يكون واحداً من: صورة، نص، أو غيرهما من متعددات الوسائط التي بضمنها: البرامجات أو الملفات التفاعلية. لطفاً، إختر ما تجده أنسبها لطلبك. أمثلة ذلك قد تجدها في <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
 	<message key="submission.submit.newSubmissionMultiple">إبدأ طلباً جديداً في</message>
@@ -56,7 +56,7 @@
 	<message key="submission.pageProofs">القراءة التصحيحية</message>
 	<message key="submission.confirmSubmit">هل أنت متأكد من رغبتك في تقديم طلب النشر هذا إلى المجلة؟</message>
 	<message key="workflow.review.externalReview">التحكيم</message>
-	<message key="editor.submission.decision.sendExternalReview">مرسل لغرض التحكيم</message>
+	<message key="editor.submission.decision.sendExternalReview">أرسله للتحكيم</message>
 	<message key="submission.event.issueMetadataUpdated">قد تم تحديث البيانات الوصفية للعدد.</message>
 
 	<message key="submission.upload.fileContents">مكون المقالة</message>

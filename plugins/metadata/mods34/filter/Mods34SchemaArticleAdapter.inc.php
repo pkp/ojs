@@ -3,18 +3,18 @@
 /**
  * @file plugins/metadata/mods34/filter/Mods34SchemaArticleAdapter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Mods34SchemaArticleAdapter
  * @ingroup plugins_metadata_mods34_filter
  * @see Article
- * @see PublishedArticle
+ * @see PublishedSubmission
  * @see Mods34Schema
  *
  * @brief Class that inject/extract MODS schema compliant meta-data
- *  into/from an Article or PublishedArticle object.
+ *  into/from an Article or PublishedSubmission object.
  */
 
 import('lib.pkp.plugins.metadata.mods34.filter.Mods34SchemaSubmissionAdapter');
@@ -50,12 +50,12 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 	 * @param $targetDataObject Article
 	 */
 	function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject) {
-		assert(is_a($targetDataObject, 'Article'));
+		assert(is_a($targetDataObject, 'Submission'));
 		$article = parent::injectMetadataIntoDataObject($metadataDescription, $targetDataObject);
 
 		// ...
 		// FIXME: Go through MODS schema and see what context-specific
-		// information needs to be added, e.g. from Article, PublishedArticle
+		// information needs to be added, e.g. from Article, PublishedSubmission
 		// Issue, Journal, journal settings or site settings.
 
 		return $article;
@@ -66,14 +66,14 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 	 * @param $article Article
 	 */
 	function &extractMetadataFromDataObject(&$article) {
-		assert(is_a($article, 'Article'));
+		assert(is_a($article, 'Submission'));
 
 		// Extract meta-data from the submission.
 		$mods34Description =& parent::extractMetadataFromDataObject($article);
 
 		// ...
 		// FIXME: Go through MODS schema and see what context-specific
-		// information needs to be added, e.g. from Article, PublishedArticle
+		// information needs to be added, e.g. from Article, PublishedSubmission
 		// Issue, Journal, journal settings or site settings.
 
 		return $mods34Description;

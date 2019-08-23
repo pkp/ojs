@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -25,17 +25,18 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
-	<!-- review froms start -->
-
 	<!-- common -->
-
-	<!-- Journal Management -->
+	<message key="context.current">Revista atual:</message>
+	<message key="context.select">Alternar para outra revista:</message>
 
 	<!-- Categories -->
+	<message key="navigation.categories">Categorias</message>
+	<message key="navigation.categories.browse">Navegar</message>
 
-	<!--  peer review -->
 
-	<!-- Permissions -->
+
+	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de avaliação.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Favor preencher os campos requeridos.</message>
 
 	<!-- review forms end -->
 
@@ -104,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artigo</message>
 	<message key="article.articles">Artigos</message>
+	<message key="common.publication">Artigo</message>
+	<message key="common.publications">Artigos</message>
 	<message key="article.submissionId">ID da Submissão</message>
 	<message key="article.title">Título</message>
 	<message key="article.authors">Autores</message>
@@ -125,6 +128,18 @@
 	<message key="article.submissions">Submissões</message>
 	<message key="article.abstract">Resumo</message>
 	<message key="article.details">Detalhes</message>
+	<message key="article.abstract">Resumo</message>
+	<message key="article.coverPage.altText">Imagem de Capa</message>
+	<message key="article.accessLogoOpen.altText">Acesso Aberto</message>
+	<message key="article.accessLogoRestricted.altText">Acesso Restrito</message>
+	<message key="article.comments.sectionDefault">Padrão</message>
+	<message key="article.comments.disable">Desabilitar</message>
+	<message key="article.comments.enable">Habilitar</message>
+	<message key="article.fontSize">Tamanho da fonte</message>
+	<message key="article.fontSize.small.altText">Pequena</message>
+	<message key="article.fontSize.medium.altText">Média</message>
+	<message key="article.fontSize.large.altText">Grande</message>
+	<message key="article.return">Retornar aos Detalhes do Artigo</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Edição da submissão</message>
@@ -174,18 +189,38 @@
 	<message key="journal.journals">Revistas</message>
 	<message key="journal.path">Caminho</message>
 	<message key="context.context">Revista</message>
+	<message key="journal.issn">ISSN</message>
+	<message key="journal.viewAllIssues">Ver Todas as Edições</message>
 
 	<!-- User -->
+	<message key="user.noRoles.selectUsersWithoutRoles">Incluir usuários sem papel nesta revista.</message>
+	<message key="user.profile.profileImage">Imagem do Perfil</message>
 	<message key="user.showAllJournals">Mostrar Revistas</message>
 	<message key="user.registerForOtherJournals">Cadastrar em outras revistas</message>
+	<message key="user.reviewerPrompt">Você estaria disponível para avaliar submissões para esta revista?</message>
+	<message key="user.reviewerPrompt.userGroup">Sim, solicitar o papel de {$userGroup}.</message>
+	<message key="user.reviewerPrompt.optin">Sim, eu gostaria de receber solicitações para avaliar submissões para esta revista.</message>
+	<message key="user.register.contextsPrompt">Em que revistas deste site você gostaria de se registrar?</message>
+	<message key="user.register.otherContextRoles">Solicitar os seguintes papéis.</message>
+	<message key="user.register.noContextReviewerInterests">Se você solicitou para ser um avaliador em qualquer revista, favor digitar seus assuntos de interesse.</message>
 	<message key="user.myJournals">Minhas Revistas</message>
+	<message key="user.manageMySubscriptions">Gerenciar Minhas Assinaturas</message>
+	<message key="user.noRoles.chooseJournal">Sua conta atualmente não está associada a qualquer revista. Favor escolher uma revista:</message>
+	<message key="user.noRoles.noRolesForJournal">Sua conta não tem atualmente qualquer papel nesta revista. Favor escolher das ações abaixo:</message>
+	<message key="user.noRoles.submitArticle">Submeter uma Proposta</message>
+	<message key="user.noRoles.submitArticleRegClosed">Submeter um artigo: o registro de autores está atualmente desabilitado.</message>
+	<message key="user.noRoles.regReviewer">Registrar como um Revisor</message>
+	<message key="user.noRoles.regReviewerClosed">Registrar como um revisor: o registro de revisores está atualmente desabilitado.</message>
 
 	<!-- Roles -->
 	<message key="user.role.manager">Gerente da Revista</message>
 	<message key="user.role.subEditor">Editor de Seção</message>
 	<message key="user.role.subscriptionManager">Gerente de Assinaturas</message>
 	<message key="user.role.managers">Editores-Gerentes</message>
+	<message key="user.role.subEditors">Editores de Seção</message>
 	<message key="user.role.subscriptionManagers">Gerentes de Assinaturas</message>
+	<message key="user.role.journalAssistant">Assistente da Revista</message>
+	<message key="user.role.journalAssistants">Assistentes da Revista</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Edição</message>
@@ -199,6 +234,11 @@
 	<message key="issue.noIssues">Nenhuma edição</message>
 	<message key="issue.toc">Sumário</message>
 	<message key="issue.abstract">Resumo</message>
+	<message key="issue.coverPage.altText">Folha de Rosto</message>
+	<message key="issue.fullIssue">Edição Completa</message>
+	<message key="issue.nonpdf.title">Download da Edição</message>
+	<message key="issue.viewIssue">Ver Edição</message>
+	<message key="issue.return">Voltar aos Detalhes da Edição</message>
 
 	<!--
 	 *
@@ -249,12 +289,30 @@
 	-->
 
 	<!-- Reader article view -->
+	<message key="reader.subscribersOnly">Apenas Assinantes</message>
+	<message key="reader.subscriptionRequiredLoginText">Assinatura requerida para acessar o item. Para verificar assinatura, acesse seu perfil na revista.</message>
+	<message key="reader.openAccess">Acesso Aberto</message>
+	<message key="reader.subscriptionAccess">Requer Assinatura</message>
+	<message key="reader.subscriptionOrFeeAccess">Requer Assinatura ou Taxa</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comentários sobre o artigo</message>
 	<message key="comments.authenticated"><![CDATA[por <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Languages -->
+	<!-- Search -->
+	<message key="search.results.orderBy">Ordenar resusltados por</message>
+	<message key="search.results.orderBy.article">Título do Artigo</message>
+	<message key="search.results.orderBy.author">Autor</message>
+	<message key="search.results.orderBy.date">Data de Publicação</message>
+	<message key="search.results.orderBy.issue">Edição</message>
+	<message key="search.results.orderBy.journal">Título do Jornal</message>
+	<message key="search.results.orderBy.popularityAll">Popularidade (Todo o tempo)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularidade (Último Mês)</message>
+	<message key="search.results.orderBy.relevance">Relevância</message>
+	<message key="search.results.orderDir.asc">Ascendente</message>
+	<message key="search.results.orderDir.desc">Descendente</message>
+	<message key="search.results.similarDocuments">documentos semelhantes</message>
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Definir uma fonte de autenticação padrão diferente da do sistema implica em:</p>
 <ul>
@@ -279,8 +337,10 @@
 	<!-- Payment Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Plugins Genéricos são utilizados para ampliar o sistema, customizando o que não é possível com plugins de outras categorias.</message>
+	<message key="plugins.categories.viewableFiles">Plugins de Composição do Artigo</message>
+	<message key="plugins.categories.viewableFiles.description">Plugins de Composição do Artigo adicionam suporte a exibir diferentes tipos de documento como composições do artigo.</message>
 	<message key="plugins.categories.auth.description">Plugins de Autenticação permitem ao sistema delegar tarefas de autenticação a outros sistemas, como servidores LDAP.</message>
+	<message key="plugins.categories.generic.description">Plugins Genéricos são utilizados para ampliar o sistema, customizando o que não é possível com plugins de outras categorias.</message>
 
 
 
@@ -297,9 +357,6 @@
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[O sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) para assegurar arquivamento seguro e permanente do cache da sua revista, é suportado pelo OJS. LOCKSS é um software livre desenvolvido pela Biblioteca da Universidade de Stanford, que permite preservar revistas online escolhidas ao sondar as páginas das mesmas por conteúdo recém publicado e arquivando-o. Cada arquivo é continuamente validado contra cópias de outras bibliotecas. Caso o conteúdo esteja corrompido ou perdido, as cópias são usadas para restauração.
-<br /><br />
-Configurar o suporte ao LOCKSS para o OJS é necessário somente após a publicação de uma edição estar quase completa, bastando seguir os passos a seguir:]]></message>
 	<!-- Setup Step 3 -->
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Fila de Submissão > Avaliação de Submissão > Edição de Submissão > Fila de Agendamento > Sumário.<br /><br />
@@ -318,6 +375,9 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 
 
 	<!-- People Management -->
+	<message key="manager.people.confirmDisable">Desabilitar este usuário? Isso impedirá o usuário de acessar o sistema.
+
+Você pode opcionalmente dar ao usuário um motivo para sua conta ter sido desabilitada.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Você não possui direitos administrativos sobre este usuário porque:
 		<ul>
 			<li>O usuário é o administrador do portal</li>
@@ -351,7 +411,8 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
+
+
 
 
 
@@ -374,6 +435,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="sectionEditor.regrets.regretsAndCancels"><![CDATA[Arrependimentos & cancelamentos]]></message>
 	<message key="sectionEditor.regrets.regret">Arrependimento</message>
 	<message key="sectionEditor.regrets.result">Resultado</message>
+	<message key="sectionEditor.review.enrollReviewer">Cadastrar Usuário Existente como Avaliador</message>
 	<message key="sectionEditor.review.createReviewer">Cadastrar novo avaliador</message>
 
 	<!-- Layout Editor -->
@@ -395,12 +457,12 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="reviewer.article.notifyTheEditor">Notificar Editor</message>
 	<message key="reviewer.article.canDoReview">Disponível para avaliação</message>
 	<message key="reviewer.article.cannotDoReview">Indisponível para avaliação</message>
+	<message key="reviewer.article.restrictedFileAccess">A submissão será disponibilizada se e quando o avaliador concordar com realizar a revisão</message>
 	<message key="reviewer.article.submissionEditor">Editor da submissão</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Digite ou cole os comentários de avaliação aqui</message>
 	<message key="reviewer.article.editorToEnter">Em nome do avaliador, o editor informa</message>
 	<message key="reviewer.article.sendReminder">Enviar lembrete</message>
 	<message key="reviewer.article.automatic">(Auto)</message>
-	<message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
 	<message key="reviewer.article.recommendation">Recomendação</message>
 	<message key="reviewer.article.submitReview">Enviar avaliação ao editor</message>
 	<message key="reviewer.article.reviewerComments">Comentários</message>
@@ -422,13 +484,17 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="reviewer.article.reviewSchedule">Cronograma da avaliação</message>
 	<message key="reviewer.article.reviewSteps">Diretrizes para avaliação</message>
 	<message key="reviewer.article.reviewerGuidelines">Diretrizes para Avaliadores</message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[As diretrizes para avaliadores provirão os avaliadores de critérios para julgar a adequação de uma submissão para publicação na revista, e pode incluir  quaisquer instruções especiais para o preparo de uma avaliação efetiva e útil. Ao conduzir uma avaliação, são apresentadas aos avaliadores  duas caixas de texto abertas, a primeira "para o autor e o editor," e a segunda "para o editor." Alternativamete, o Gerente da Revista pode criar um formulário de avaliação por pares em under Formulários de Avaliação. Em todos os casos, editores terâo a opção de incluir as avaliações na correspondência com o autor.]]></message>
 	<message key="reviewer.article.notifyEditorA">Notificar o editor da submissão</message>
 	<message key="reviewer.article.notifyEditorB">a sua decisão sobre sua disponibilidade para realizar a avaliação.</message>
 	<message key="reviewer.article.consultGuidelines">Em caso positivo, consulte as Diretrizes para Avaliadores a seguir.</message>
 	<message key="reviewer.article.downloadSubmission">Clique no nome dos documentos para baixar para sua máquina e realizar a avaliação (no documento digital ou sua impressão) dos documentos associados à submissão.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare se você tem ou não conflitos de interesse com relação a esta pesquisa (ver <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">a Política de conflito de interesses</a>).]]></message>
+	<message key="reviewer.competingInterests">Conflitos de interesse</message>
 	<message key="reviewer.article.enterReviewA">Clique no ícone para digitar (ou colar) a avaliação da submissão.</message>
 	<message key="reviewer.article.uploadFile">Opcionalmente, é possível transferir uma versão do documento com seus comentários para consulta pelo editor e/ou autor.</message>
-	<message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
+	<message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação.</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Definir ou ajustar a recomendação do avaliador.</message>
 	<message key="reviewer.article.mustSelectDecision">Não foi selecionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a avaliação.</message>
 	<message key="reviewer.article.confirmDecision">Uma vez registrada a decisão não será mais possível modificar a avaliação. Deseja realmente proceder?</message>
 
@@ -481,10 +547,14 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="submission.copyedit.instructions">Diretrizes para Edição de Texto</message>
 
 	<!-- Submission Tracking - Layout Specific -->
+	<message key="submission.layout.noLayoutFile">Nenhum (enviar versão de texto final como versão de layout antes de enviar solicitação)</message>
+	<message key="submission.layout.publicGalleyId">Identificador de Composição Pública</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">O identificador de composição pública já existe.</message>
 	<message key="submission.layout.assignLayoutEditor">Designar Editor de Layout</message>
 	<message key="submission.layout.replaceLayoutEditor">Substituir Editor de Layout</message>
 	<message key="submission.layout.layoutComments">Comentários do Layout</message>
 	<message key="submission.layout.instructions">Diretrizes para Layout</message>
+	<message key="submission.layout.referenceLinking">Ligação de Referências</message>
 
 
 	<!-- Submission Tracking - Proofread Specific -->
@@ -519,18 +589,22 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="submission.comments.saveAndEmailAuthor">Salvar e enviar e-mail ao autor</message>
 	<message key="submission.comments.saveAndEmailEditor">Salvar e enviar e-mail ao editor</message>
 
-	<!-- Login -->
-
 	<!-- Registration -->
+	<message key="user.register.selectContext">Selecione a revista na qual cadastrar-se:</message>
 	<message key="user.register.noJournals">Não há revistas para se cadastrar neste portal.</message>
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
-	<message key="user.register.registrationDisabled">Cadastro de usuários desativado no momento.</message>
+	<message key="user.register.registrationDisabled">Esta revista não está aceitando cadastro de usuários no momento.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha digitada não contém o mínimo de caracteres.</message>
 	<message key="user.register.readerDescription">Notificado via e-mail da publicação de nova edição da revista.</message>
 	<message key="user.register.openAccessNotificationDescription">Notificado via e-mail quando edições da revista se tornarem de Acesso Livre.</message>
 	<message key="user.register.authorDescription">Pode submeter à revista.</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Disponível para realizar avaliação pelos pares das submissões a esta revista.</message>
 	<message key="user.register.reviewerDescription">Disponível para realizar avaliação pelos pares das submissões a esta revista. Identifique a área de avaliação (áreas de interesses e metodologias de pesquisa).</message>
+	<message key="user.register.reviewerInterests">Identifique interesses para avaliação (áreas substantivas e métodos de pesquisa):</message>
+	<message key="user.register.form.emailConsentAllContexts">Sim, eu gostaria de ser notificado sobre novas publicações e notícias relativos a todas as revistas nos quais estou cadastrados.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Sim, eu concordo em ter meus dados coletados e armazenados de acordo com a <a href="{$privacyUrl}" target="_blank">declaração de privacidade </a> desta revista.]]></message>
+	<message key="user.register.form.missingContextConsent">Você deve concordar com a declaração de privacidade para se cadastrar em uma revista.</message>
+	<message key="user.register.form.missingSiteConsent">Você deve concordar com a declaração de privacidade deste site.</message>
 
 
 
@@ -553,7 +627,10 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
+	<message key="article.pageTitle">Visão de {$title}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
+	<message key="article.download">Baixar este artigo PDF</message>
+	<message key="article.pluginMissing"><![CDATA[<p>O arquivo PDF que você selecionou deve carregar aqui se seu navegador Web tiver um plugin leitor de PDF instalado (por exemplo, uma versão recente do <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Baixar artigo</message>
@@ -564,7 +641,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="site.journalView">Acessar revista</message>
 	<message key="site.journalRegister">Cadastrar</message>
 	<message key="site.journalCurrent">Edição Atual</message>
-
+	<message key="site.noJournals">Não há revista disponível.</message>
 
 	<!-- Current index -->
 	<message key="current.current">Atual</message>
@@ -573,11 +650,15 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 
 	<!-- Archive index -->
 	<message key="archive.archives">Edições anteriores</message>
+	<message key="archive.archivesPageNumber">Edições anteriores - Página {$pageNumber}</message>
 	<message key="archive.browse">Navegar nas edições anteriores</message>
 	<message key="archive.issueUnavailable">Edição indisponível</message>
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Estatísticas</message>
+	<message key="about.contact">Contato</message>
+	<message key="about.aboutContext">Sobre a Revista</message>
+	<message key="about.history">Histórico da Revista</message>
 	<message key="about.editorialTeam">Equipe Editorial</message>
 	<message key="about.editorialTeam.biography">Biografia</message>
 	<message key="about.editorialPolicies">Políticas Editoriais</message>
@@ -587,23 +668,34 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="about.onlineSubmissions">Submissões Online</message>
 	<message key="about.onlineSubmissions.login">Acesso</message>
 	<message key="about.onlineSubmissions.registrationRequired">O cadastro no sistema e posterior acesso, por meio de login e senha, são obrigatórios para a submissão de trabalhos, bem como para acompanhar o processo editorial em curso. {$login} em uma conta existente ou {$register} uma nova conta.</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Fazer uma nova submissão</message>
+	<message key="about.onlineSubmissions.viewSubmissions">ver suas submissões pendentes</message>
 	<message key="about.authorGuidelines">Diretrizes para Autores</message>
 	<message key="about.submissionPreparationChecklist">Condições para submissão</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte do processo de submissão, os autores são obrigados a verificar a conformidade da submissão em relação a todos os itens listados a seguir. As submissões que não estiverem de acordo com as normas serão devolvidas aos autores.</message>
 	<message key="about.copyrightNotice">Declaração de Direito Autoral</message>
 	<message key="about.privacyStatement">Política de Privacidade</message>
+	<message key="about.authorFees">Taxas para Autores</message>
+	<message key="about.authorFeesMessage">Esta revista cobra as seguintes taxas dos autores.</message>
 	<message key="about.peerReviewProcess">Processo de Avaliação pelos Pares</message>
 	<message key="about.publicationFrequency">Periodicidade</message>
 	<message key="about.openAccessPolicy">Política de Acesso Livre</message>
 	<message key="about.delayedOpenAccess">Acesso Livre Adiado</message>
 	<message key="about.delayedOpenAccessDescription1">O conteúdo desta revista estará disponível para Acesso Livre</message>
 	<message key="about.delayedOpenAccessDescription2">mês(es) após a publicação da edição.</message>
-	<message key="about.authorSelfArchive">Autoarquivamento</message>
 	<message key="about.archiving">Arquivamento</message>
 	<message key="about.subscriptions">Assinaturas</message>
+	<message key="about.subscriptions.individual">Assinaturas Individuais</message>
+	<message key="about.subscriptions.institutional">Assinaturas Institutionais</message>
 	<message key="about.subscriptionsContact">Contato para Assinaturas</message>
+	<message key="about.subscriptionTypes.name">Nome</message>
+	<message key="about.subscriptionTypes.format">Formato</message>
+	<message key="about.subscriptionTypes.duration">Duração</message>
+	<message key="about.subscriptionTypes.cost">Custo</message>
 	<message key="about.availableSubscriptionTypes">Tipos de Assinaturas</message>
 	<message key="about.aboutThisPublishingSystem">Sobre este sistema de publicação</message>
+	<message key="about.aboutThisPublishingSystem.altText">Processo Editorial e de Publicação OJS</message>
 	<message key="about.aboutOJSJournal"><![CDATA[A revista usa o Open Journal Systems (OJS {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas, desenvolvido com suporte e distribuição pelo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sob a licença GNU General Public License.]]></message>
 	<message key="about.aboutOJSSite"><![CDATA[O portal utiliza o Open Journal Systems (OJS {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas desenvolvido com suporte e distribuição  pelo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sob a licença GNU General Public License.]]></message>
 
@@ -618,7 +710,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="installer.ojsUpgrade">Atualização do sistema</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4> Versão do OJS {$version}</h4>
 
-<p>Obrigado por baixar o <strong>Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia o arquivo <a href="{$baseUrl}/docs/README.md">README</a> incluídoeste software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Obrigado por baixar o <strong>Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia o arquivo <a href="{$baseUrl}/docs/README.md">README</a> incluído neste software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4> Atualização</h4>
 
@@ -665,8 +757,6 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="log.author.documentRevised">{$authorName} revisou o artigo {$submissionId}. O novo ID é {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da rodada {$round} de avaliação da submissão {$submissionId}.</message>
 	<message key="log.review.reviewInitiated">Iniciada a rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
-	<message key="log.review.reviewReinitiated">Iniciada novamente a rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} foi liberada(o) da rodada {$round} de avaliação da submissão {$submissionId}.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} recebeu classificação para a rodada {$round} de avaliação da submissão {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Definido para {$dueDate} o prazo para conclusão da rodada {$round} de avaliação da submissão {$submissionId}, designada a {$reviewerName}.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} definiu a recomendação para a rodada {$round} de avaliação da submissão {$submissionId}.</message>
@@ -702,50 +792,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 
 	<message key="log.imported">{$userName} importou o documento {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Opções da Ferramenta de Leitura</message>
-
-	<message key="rt.admin.settings.description">A ferramenta de leitura é exibida em um frame ao lado dos itens publicados, nas seções da revista cuja indexação foi habilitada. A ferramenta consiste de itens opcionais relacionados ao item publicado, listados abaixo, e um conjunto de funcionalidades que proporcionam acesso a mais itens relacionados, organizados por área do conhecimento e atividade.</message>
-	<message key="rt.admin.settings.enableReadingTools">Habilitar Ferramenta de Leitura para as seções escolhidas da revista.</message>
-	<message key="rt.admin.settings.relatedItems">Campo</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Veja <a href="{$relatedItemsLink}" class="action">Conjuntos de itens relacionados</a> para visualizar, incluir, corrigir ou remover itens para cada campo.]]></message>
-
-	<message key="rt.admin.options">Opções dos itens da revista</message>
-	<message key="rt.admin.relatedItems">Ferramentas para itens relacionados</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs possivelmente inválidas para os sistemas de busca online exibidos a seguir.<br />
-É necessário verificar manualmente as URLs marcadas como inválidas, pois o teste não é 100% preciso.<br />
-A validação pode falhar em URLs para pesquisa que requeiram dados via método POST.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Autor</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nome do autor, afiliação institucional, país</message>
-	<message key="rt.metadata.pkp.peerReviewed">Artigo Avaliado pelos Pares</message>
-
-
-
-	<message key="rt.beNotifiedWhen">Receber notificação quando...</message>
-
-	<message key="rt.thisJournal">Pesquisar nesta revista</message>
-
-
-	<message key="rt.context.authorTermsDescription">Para documentos com mais de um autor, deixe todos os nomes marcados para pesquisar trabalhos com coautoria semelhante, ou pesquise um por vez marcando cada nome individualmente. Para saber mais sobre o recurso pesquisado, clique no símbolo de informação. Estes recursos foram escolhidos devido a sua relevância e acessibilidade aberta (gratuita) para todo ou parte do conteúdo.</message>
-
+	<message key="metadata.pkp.peerReviewed">Artigo Avaliado pelos Pares</message>
 
 	<!--
 	 *
@@ -763,7 +810,7 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via método 
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
 	<message key="reader.subscriptionOrFeeAccess">Acesso Restrito ou Pago</message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direito Autoral Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direito Autoral Creative Commons</h3>
 <h4>1. Proposta de Política para Periódicos de Acesso Livre</h4>
 Autores que publicam nesta revista concordam com os seguintes termos:
 <ol type="a">
@@ -814,10 +861,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="installer.databaseSettingsInstructions">O sistema exige acesso a uma base de dados SQL para armazenar seus dados. Verifique os requisitos do sistema para a lista de bases de dados suportadas. Nos campos a seguir, informe as configurações a serem utilizadas para conexão ao servidor de bases de dados.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na rodada {$round} para avaliar a submissão {$submissionId} em nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">A Decisão Editorial ({$decision}) sobre a submissão {$submissionId} foi registrada por {$editorName}.</message>
-	<message key="rt.admin.settings.addComment">Incluir comentários (Permite a publicação de comentários pelos leitores, permitindo a exclusão pelo Gerente da Revista).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Usuários devem estar cadastrados e logados para comentar, sem permissão de anonimato.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Usuários devem estar cadastrados e logados para comentar, com permissão de anonimato.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar cadastrado para comentar, com permissão de anonimato.</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do arquivo XML</message>
 	<message key="reader.subscriptionRequiredLoginText">Assinatura exigida para acesso ao item. Para verificar sua assinatura, acesse a revista.</message>
 	<message key="about.authorFees">Taxas para Autores</message>
@@ -844,6 +887,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="user.noRoles.regReviewer">Cadastrar como avaliador</message>
 	<message key="user.noRoles.regReviewerClosed">Cadastrar como avaliador: o cadastro de avaliadores está atualmente desabilitado.</message>
 	<message key="issue.coverPage.altText">Capa da revista</message>
+	<message key="plugins.categories.generic.description">Plugins Genéricos são utilizados para ampliar o sistema, customizando o que não é possível com plugins de outras categorias.</message>
 	<message key="plugins.categories.implicitAuth">Plugins de Autenticação Implícita</message>
 	<message key="plugins.categories.implicitAuth.description">Plugins de Autenticação Implícita implementam suporte para autenticação de usuários baseada nos cabeçalhos HTTP.</message>
 	<message key="submission.layout.publicGalleyId">Identificador Público de Composição</message>
@@ -939,7 +983,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="payment.subscription.purchase">Adquirir Assinatura</message>
 	<message key="installer.installApplication">Instalar o sistema</message>
 	<message key="installer.upgradeApplication">Atualizar o sistema</message>
-	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Um comentário foi feito sobre a decisão editorial de "{$title}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>
@@ -1013,10 +1056,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="search.results.similarDocuments">Documentos similares</message>
 	<message key="plugins.categories.viewableFiles">Plugins de Composições Finais dos Artigos</message>
 	<message key="plugins.categories.viewableFiles.description">Plugins de Composições Finais dos Artigos permitem adicionar formatos de exibição diferentes aos documentos publicados.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems também suporta a <a href="http://clockss.org/" target="_blank"></a> CLOCKSS (Controlled Lots of Copies Keep Stuff Safe) do sistema para garantir um arquivo seguro e permanente para a revista. CLOCKSS é baseado no software open source LOCKSS desenvolvido na Biblioteca da Universidade de Stanford que permite que bibliotecas preservem revistas selecionadas regularmente registadas. Cada arquivo é continuamente validado contra outros registros da biblioteca, e se o conteúdo for caracterizado como corrompido ou perdido, os outros registros ou a revista são usados para restaurá-lo.]]></message>
 	<message key="submission.layout.galley.remotelyHostedContent">Esta composição final estará disponível em outro site.</message>
 	<message key="submission.layout.galley.remoteURL">URL do conteúdo hospedado remotamente</message>
-	<message key="reviewer.article.selectRecommendation.byEditor">Definir ou ajustar a recomendação do avaliador.</message>
 	<message key="user.register.selectContext">Selecione uma revista para se registrar:</message>
 	<message key="article.pageTitle">Vista do {$title}</message>
 	<message key="article.download">Baixar este arquivo PDF</message>

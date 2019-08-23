@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/pubIds/form/PublicIdentifiersForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublicIdentifiersForm
@@ -45,11 +45,9 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 	 */
 	function clearIssueObjectsPubIds($pubIdPlugInClassName) {
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		if (is_array($pubIdPlugins)) {
-			foreach ($pubIdPlugins as $pubIdPlugin) {
-				if (get_class($pubIdPlugin) == $pubIdPlugInClassName) {
-					$pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
-				}
+		foreach ($pubIdPlugins as $pubIdPlugin) {
+			if (get_class($pubIdPlugin) == $pubIdPlugInClassName) {
+				$pubIdPlugin->clearIssueObjectsPubIds($this->getPubObject());
 			}
 		}
 	}

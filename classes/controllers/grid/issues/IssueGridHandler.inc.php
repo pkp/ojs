@@ -8,8 +8,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -212,7 +212,7 @@ class IssueGridHandler extends GridHandler {
 
 		// Remove the file
 		$publicFileManager = new PublicFileManager();
-		if ($publicFileManager->removeJournalFile($issue->getJournalId(), $file)) {
+		if ($publicFileManager->removeContextFile($issue->getJournalId(), $file)) {
 			$json = new JSONMessage(true);
 			$json->setEvent('fileDeleted');
 			return $json;
@@ -295,20 +295,20 @@ class IssueGridHandler extends GridHandler {
 		$journal = $request->getJournal();
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
-		// remove all published articles and return original articles to editing queue
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
-		if (isset($publishedArticles) && !empty($publishedArticles)) {
+		// remove all published submissions and return original articles to editing queue
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
+		if (isset($publishedSubmissions) && !empty($publishedSubmissions)) {
 			// Insert article tombstone if the issue is published
 			import('classes.article.ArticleTombstoneManager');
 			$articleTombstoneManager = new ArticleTombstoneManager();
-			foreach ($publishedArticles as $article) {
+			foreach ($publishedSubmissions as $article) {
 				if ($isBackIssue) {
 					$articleTombstoneManager->insertArticleTombstone($article, $journal);
 				}
-				$articleDao->changeStatus($article->getId(), STATUS_QUEUED);
-				$publishedArticleDao->deletePublishedArticleById($article->getPublishedArticleId());
+				$submissionDao->changeStatus($article->getId(), STATUS_QUEUED);
+				$publishedSubmissionDao->deletePublishedSubmissionById($article->getPublishedSubmissionId());
 			}
 		}
 
@@ -450,20 +450,19 @@ class IssueGridHandler extends GridHandler {
 			$assignPublicIdentifiersForm->execute();
 
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
-			foreach ($publishedArticles as $publishedArticle) {
-				$article = $articleDao->getById($publishedArticle->getId());
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+			$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
+			foreach ($publishedSubmissions as $publishedSubmission) {
+				$article = $submissionDao->getById($publishedSubmission->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
 					$article->setStatus(STATUS_PUBLISHED);
 					$article->stampStatusModified();
-					$articleDao->updateObject($article);
+					$submissionDao->updateObject($article);
 					if (!$articleSearchIndex) {
-						import('classes.search.ArticleSearchIndex');
-						$articleSearchIndex = new ArticleSearchIndex();
+						$articleSearchIndex = Application::getSubmissionSearchIndex();
 					}
-					$articleSearchIndex->articleMetadataChanged($publishedArticle);
+					$articleSearchIndex->submissionMetadataChanged($publishedSubmission);
 				}
 				// delete article tombstone
 				$tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
@@ -477,7 +476,7 @@ class IssueGridHandler extends GridHandler {
 
 		// If subscriptions with delayed open access are enabled then
 		// update open access date according to open access delay policy
-		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $journal->getSetting('delayedOpenAccessDuration'))) {
+		if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $journal->getData('delayedOpenAccessDuration'))) {
 			$delayYears = (int)floor($delayDuration/12);
 			$delayMonths = (int)fmod($delayDuration,12);
 
@@ -497,10 +496,10 @@ class IssueGridHandler extends GridHandler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrent($journalId,$issue);
 
-		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
+		if ($articleSearchIndex) $articleSearchIndex->submissionChangesFinished();
 
 		// Send a notification to associated users if selected and journal is publishing content online with OJS
-		if ($request->getUserVar('sendIssueNotification') && $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
+		if ($request->getUserVar('sendIssueNotification') && $journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = array();
@@ -545,14 +544,14 @@ class IssueGridHandler extends GridHandler {
 		// insert article tombstones for all articles
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
-		foreach ($publishedArticles as $article) {
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
+		foreach ($publishedSubmissions as $article) {
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
 			$article->setStatus(STATUS_QUEUED);
 			$article->stampStatusModified();
-			$articleDao->updateObject($article);
+			$submissionDao->updateObject($article);
 		}
 
 		$dispatcher = $request->getDispatcher();

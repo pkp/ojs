@@ -3,8 +3,8 @@
 /**
  * @file classes/statistics/MetricsDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MetricsDAO
@@ -91,10 +91,10 @@ class MetricsDAO extends PKPMetricsDAO {
 		$returnArray = parent::getAssocObjectInfo($submissionId, $contextId);
 
 		// Submissions in OJS are associated with an Issue.
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $contextId, true);
-		if ($publishedArticle) {
-			$returnArray = array(ASSOC_TYPE_ISSUE, $publishedArticle->getIssueId());
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submissionId, $contextId, true);
+		if ($publishedSubmission) {
+			$returnArray = array(ASSOC_TYPE_ISSUE, $publishedSubmission->getIssueId());
 		}
 		return $returnArray;
 	}

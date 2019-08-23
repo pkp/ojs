@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/JmwandengaSubmissionTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JmwandengaSubmissionTest
@@ -56,6 +56,10 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->click('//button[text()=\'Save\']');
 		$this->uploadWizardFile('PDF');
+
+		// Publish in current issue
+		$this->publish('Vol 1 No 1 (2014)');
+		$this->isInCurrentIssue($title);
 
 		$this->logOut();
 	}

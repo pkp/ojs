@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/browse/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.block.browse">Просмотреть</message>
+	<message key="plugins.block.browse.displayName">Блок «Просмотр»</message>
+	<message key="plugins.block.browse.description">Этот модуль добавляет инструменты просмотра на боковую панель.</message>
+	<message key="plugins.block.browse.category">Категории</message>
+</locale>

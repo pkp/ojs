@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -23,124 +23,20 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Tätä käsikirjoitusta ei ole aiemmin julkaistu, eikä sitä ole lähetetty toiseen julkaisuun (tai asiasta on annettu selvitys Kommentteja toimittajalle -kohdassa).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Käsikirjoitustiedosto on OpenOffice-, Microsoft Word- tai RTF-asiakirjan tiedostomuodossa.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Lähteiden URL-osoitteet on annettu, mikäli ne ovat saatavilla.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Tekstin riviväli on yksi; kirjasinkoko on 12; tekstissä käytetään kursiivia, ei alleviivausta (paitsi URL-osoitteissa); ja kaikki kuvat, kuviot ja taulukot on sijoitettu ensisijaisesti sopiviin kohtiin tekstin lomaan, ei tekstin loppuun.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements">Teksti noudattaa kirjoittajan ohjeissa määriteltyjä stilistisiä ja bibliografisia vaatimuksia.</message>
-	<message key="default.journalSettings.privacyStatement">Tämän julkaisun sivustolle syötettyjä nimiä ja sähköpostiosoitteita käytetään yksinomaan tämän julkaisun tarkoituksiin, eikä niitä luovuteta mihinkään muuhun tarkoitukseen tai muille osapuolille.</message>
-	<message key="default.journalSettings.openAccessPolicy">Tämä julkaisun sisällöt ovat välittömästi avoimesti saatavilla noudattaen periaatetta, jonka mukaan tutkimuksen tekeminen vapaasti saatavilla olevaksi suurelle yleisölle tukee suurempaa globaalia tiedonvaihtoa.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Tämä julkaisu antaa luvan ja kannustaa kirjoittajia julkaisemaan julkaisuun lähetettyjä kohteita henkilökohtaisilla verkkosivuillaan tai julkaisuarkistoissa sekä julkaisemista ennen että sen jälkeen, viitaten bibliografisissa tiedoissa, mikäli mahdollista, sen julkaisuun tässä julkaisussa.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Teknisen toimittamisvaiheen tarkoitus on parantaa artikkelin tekstin kulkua, selkeyttä, kielioppia, sanamuotoja sekä muotoilua. Se on kirjoittajan viimeinen mahdollisuus tehdä merkittäviä muutoksia tekstiin, sillä seuraava vaihe on rajoitettu pelkästään kirjoitusvirheiden ja muotoilujen korjauksille.
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Tätä käsikirjoitusta ei ole aiemmin julkaistu, eikä sitä ole lähetetty toiseen julkaisuun (tai asiasta on annettu selvitys Kommentteja toimittajalle -kohdassa).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Käsikirjoitustiedosto on OpenOffice-, Microsoft Word- tai RTF-asiakirjan tiedostomuodossa.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Lähteiden URL-osoitteet on annettu, mikäli ne ovat saatavilla.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Tekstin riviväli on yksi; kirjasinkoko on 12; tekstissä käytetään kursiivia, ei alleviivausta (paitsi URL-osoitteissa); ja kaikki kuvat, kuviot ja taulukot on sijoitettu ensisijaisesti sopiviin kohtiin tekstin lomaan, ei tekstin loppuun.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements">Teksti noudattaa kirjoittajan ohjeissa määriteltyjä stilistisiä ja bibliografisia vaatimuksia.</message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Tämän julkaisun sivustolle syötettyjä nimiä ja sähköpostiosoitteita käytetään yksinomaan tämän julkaisun tarkoituksiin, eikä niitä luovuteta mihinkään muuhun tarkoitukseen tai muille osapuolille.</p>]]></message>
+	<message key="default.contextSettings.openAccessPolicy">Tämä julkaisun sisällöt ovat välittömästi avoimesti saatavilla noudattaen periaatetta, jonka mukaan tutkimuksen tekeminen vapaasti saatavilla olevaksi suurelle yleisölle tukee suurempaa globaalia tiedonvaihtoa.</message>
 
-Teknisesti toimitettava tiedosto on Word- tai .rtf-muodossa, joten sitä voidaan muokata helposti tekstinkäsittelyasiakirjana. Näissä ohjeissa ehdotetaan kahta lähestymistapaa tekniseen toimittamiseen. Yksi perustuu MS Wordin Jäljitä muutokset-toimintoon ja edellyttää, että sekä teknisellä toimittajalla, toimittajalla ja kirjoittajalla on oltava pääsy tähän ohjelmaan. Toinen järjestelmä, joka on ohjelmistosta riippumaton, on luvalla lainattu Harvard Educational Review -julkaisulta. Julkaisun toimittaja voi muokata näitä ohjeita, joten ehdotuksia tämän julkaisun prosessin parantamiseksi voidaan tehdä.
+	<message key="default.contextSettings.forReaders"><![CDATA[Kehotamme lukijoita rekisteröitymään palveluun, joka ilmoittaa tämän julkaisun uusista julkaisuista. Käytä tämän julkaisun etusivun yläosassa olevaa <a href="{$indexUrl}{$contextPath}/user/register">Rekisteröidy</a> -linkkiä. Rekisteröitymisen tuloksena lukijalle lähetetään sähköpostitse julkaisun jokaisen uuden numeron sisällysluettelo. Tämän palvelun käyttäjälistan avulla julkaisu myös saa tietoa kannattajamääristään ja lukijakunnastaan. Julkaisun <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Tietosuojaseloste</a> takaa, että lukijoiden nimiä ja sähköpostiosoitteita ei käytetä muihin tarkoituksiin.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Kiinnostaako tähän julkaisuun kirjoittaminen? Suosittelemme, että tutustut <a href="{$indexUrl}{$contextPath}/about">Tietoa julkaisusta</a> -sivulla julkaisun osastoiden käytäntöihin sekä ohjeisiin sivulla <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Kirjoittajan ohjeet</a>. Kirjoittajien tulee <a href="{$indexUrl}{$contextPath}/user/register">rekisteröityä</a> julkaisun käyttäjäksi ennen lähettämistä tai jo rekisteröidyttyään <a href="{$indexUrl}/index/login">kirjautua sisään</a> aloittaakseen viisiportaisen prosessin.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Kannustamme tutkimuskirjastojen hoitajia lisäämään tämän julkaisun kirjastojensa elektronisten julkaisujen kokoelmaan. Huomionarvoista on myös, että kirjastot voivat ylläpitää tämän julkaisun avoimen lähdekoodin julkaisujärjestelmää, ja tarjota sen tiedekuntien jäsenten käyttöön tieteellisten julkaisujen toimittamistarkoituksiin (ks. <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Tämä julkaisu hyödyntää LOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://www.lockss.org/">Lisää...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Tämä julkaisu hyödyntää CLOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://clockss.org/">Lisää...</a>]]></message>
 
-
-<h4>Teknisen toimittamisen järjestelmät</h4>
-
-<strong>1. Microsoft Wordin Jäljitä muutokset -toiminto</strong>
-
-Valikkorivin Tarkista-otsikon alta löytyvän Jäljitä muutokset -toiminnon avulla tekninen toimittaja voi tehdä lisäyksiä (teksti näkyy värillisenä) ja poistoja (teksti näkyy yliviivattuna ja värillisenä tai marginaalissa poistettuna). Tekninen toimittaja voi esittää kysymyksiä sekä kirjoittajalle (Kysymyksiä kirjoittajalle) että toimittajalle (Kysymyksiä toimittajalle) sijoittamalla nämä kysymykset hakasulkeisiin. Teknisesti toimitettu versio ladataan ja toimittajalle lähetetään ilmoitus. Toimittaja arvioi tekstin ja ilmoittaa kirjoittajalle.
-
-Toimittajan ja kirjoittajan tulee jättää tekstiin ne muutokset, joihin he ovat tyytyväisiä. Jos lisämuutokset ovat tarpeellisia, toimittaja ja kirjoittaja voivat tehdä muutoksia alkuperäisiin lisäyksiin ja poistoihin sekä tehdä uusia lisäyksiä ja poistoja muualle tekstiin. Kirjoittajien ja toimittajien tulee vastata kuhunkin heille osoitettuun kysymykseen sijoittaen vastaukset hakasulkeisiin.
-
-Toimittajan ja kirjoittajan tarkistettua tekstin, tekninen toimittaja suorittaa viimeisen tarkistuksen ja hyväksyy muutokset taitto- ja julkaistavat tiedostot -vaiheiden valmistelujen yhteydessä.
-
-
-<strong>2. Harvard Educational Review </strong>
-
-<strong>Ohjeet: Elektronisten korjausten tekeminen käsikirjoitukseen</strong>
-
-Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoitukseesi:
-
-<strong>Ehdotettuihin muutoksiin reagoiminen.</strong>
-&nbsp; Poista tekstin lihavointi jokaisen ehdotetun muutoksen kohdalla, jonka hyväksyt.
-&nbsp; Syötä alkuperäinen teksti <strong>lihavoituna</strong> jokaisen ehdotetun muutoksen kohdalla, jota et hyväksy.
-
-<strong>Lisäysten ja poistojen tekeminen.</strong>
-&nbsp; Osoita lisäykset <strong>lihavoimalla</strong> uusi teksti.
-&nbsp; Korvaa poistetut osat merkinnällä:<strong>[teksti poistettu]</strong>.
-&nbsp; Jos poistat yhden tai useamman virkkeen, osoita se esimerkiksi merkinnällä <strong>[poistettu 2 virkettä]</strong>.
-
-<strong>Kirjoittajalle osoitettuihin kysymyksiin (Kysymyksiä kirjoittajalle, KK) vastaaminen.</strong>
-&nbsp; Säilytä kaikki KK:t sellaisenaan ja lihavoituna tekstissä. Älä poista niitä.
-&nbsp; Vastaa kysymykseen lisäämällä kommentti sen perään. Kommentit tulee rajata käyttämällä merkintää:
-<strong>[Kommentti:]</strong>
-&nbsp; esim. <strong>[Kommentti: Laajensin keskustelua metodologioista, kuten ehdotit]</strong>.
-
-<strong>Kommenttien tekeminen.</strong>
-&nbsp; Kommenttien avulla voit kertoa tekstin järjestykseen tehdyistä muutoksista tai muista suurista korjauksista
-&nbsp; esim. <strong>[Kommentti: Siirsin yllä olevan kappaleen sivulta 5 sivulle 7].</strong>
-&nbsp; Huom. Sivunumeroihin viitatessa, käytä sinulle lähetetyn tulostetun käsikirjoituksen sivunumeroita. Tämä on tärkeää, koska sivunumerot voivat muuttua, kun asiakirjaa muokataan sähköisesti.
-
-<h4>Esimerkki sähköisten korjausten tekemisestä</h4>
-
-<ol>
-<li><strong>Ensimmäinen tekninen toimittaminen.</strong> Julkaisun tekninen toimittaja muokkaa tekstiä parantaakseen tekstin kulkua, selkeyttä, kielioppia, sanamuotoja ja muotoiluja, sekä tarvittaessa myös kirjoittajan kyselyitä. Kun tämä ensimmäinen muokkausvaihe on valmis, tekninen toimittaja lataa korjatun asiakirjan julkaisun verkkosivuston kautta ja ilmoittaa kirjoittajalle, että muokattu käsikirjoitus on valmis arviointia varten.</li>
-<li><strong>Kirjoittajan suorittama tekninen toimittaminen.</strong> Ennen toimitetun käsikirjoituksen rakenteeseen ja järjestykseen liittyvien suurten suunnanmuutosten tekoa, kirjoittajan on keskusteltava asiasta niiden toimittajien kanssa, jotka ovat vastuussa artikkelista. Kirjoittajien tulee hyväksyä/hylätä kaikki ensimmäisen teknisen toimituskierroksen aikana tehdyt muutokset tilanteeseen sopivalla tavalla ja vastata kaikkiin kirjoittajalle osoitettuihin kyselyihin. Tehtyään kaikki korjaukset, kirjoittajien tulee nimetä tiedosto uudelleen, muuttaen KirjoittajanNimiKK.doc -nimen KirjoittajanNimiKKV.doc:iksi (esim. MattiMeikäläinenKK.doc MattiMeikäläinenKKV.doc:iksi) ja ladata korjattu asiakirja julkaisun verkkosivuston kautta ohjeiden mukaisesti.</li>
-<li><strong>Viimeinen tekninen toimittaminen.</strong> Julkaisun tekninen toimittaja vahvistaa kirjoittajan tekemät muutokset ja sisällyttää kirjoittajalle osoitettujen kysymysten vastaukset tekstiin ja luo näin valmiin käsikirjoituksen. Lopuksi tekninen toimittaja lataa valmiin asiakirjan julkaisun verkkosivuston kautta ja ilmoittaa taittajalle, että tämä voi viimeistellä muotoilun.</li>
-</ol>]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Lähdeviitteen linkitysten lisääminen taittoprosessiin</h4>
-	<p>Muuttaessasi käsikirjoituksen HTML- tai PDF-muotoon varmista, että kaikki käsikirjoituksen hyperlinkit toimivat.</p>
-	<h4>A. Kun kirjoittaja antaa linkin lähdeviitteen yhteydessä</h4>
-	<ol>
-	<li>Käsikirjoituksen ollessa vielä tekstinkäsittelymuodossaan (esim. Word-tiedosto) lisää lauseke VIEW ITEM URL-osoitteen sisältävän lähdeviitteen perään.</li>
-	<li>Muuta kyseinen lauseke hyperlinkiksi korostamalla se ja käyttämällä Wordin Lisää hyperlinkki -työkalua sekä URL-osoitetta, joka valmisteltiin kohdassa # 2.</li>
-	</ol>
-	<h4>B. Mahdollista lähdeviitteiden etsiminen Google Scholar -palvelusta</h4>
-	<ol>
-		<li>Käsikirjoituksen ollessa vielä tekstinkäsittelymuodossaan (esim. Word-tiedosto) kopioi lähdeluettelossa olevan viitatun teoksen nimi (jos se on kovin yleiseltä vaikuttava—esim. "Rauha" — kopioi kirjoittajan nimi ja otsikko).</li>
-		<li>Liitä lähdeviitteen otsikko %22-koodien väliin ja lisää +-merkki otsikon jokaisen sanan väliin: http://scholar.google.com/scholar?q=%22LIITÄ+OTSIKKO+TÄHÄN%22&hl=en&lr=&btnG=Search.</li>
-
-	<li>Lisää lauseke GS SEARCH käsikirjoituksen lähdeluettelossa olevan, jokaisen viitteen loppuun.</li>
-	<li>Muuta kyseinen lauseke hyperlinkiksi korostamalla se ja käyttämällä Wordin Lisää hyperlinkki -työkalua sekä URL-osoitetta, joka valmisteltiin kohdassa # 2.</li>
-	</ol>
-	<h4>C. Mahdollista lähdeviitteiden etsiminen DOI-tunnisteen avulla</h4>
-	<ol>
-	<li>Käsikirjoituksen ollessa vielä Wordissa, kopioi joukko viitteitä CrossRef Text Query -palveluun osoitteessa http://www.crossref.org/SimpleTextQuery/.</li> 
-	<li>Liitä jokainen palvelun antama DOI-tunnus seuraavaan URL-osoitteeseen (= ja &-merkkien väliin): http://www.cmaj.ca/cgi/external_ref?access_num=LIITÄ DOI #TÄHÄN&link_type=DOI.</li> 
-	<li>Lisää lauseke CrossRef käsikirjoituksen lähdeluettelossa olevan, jokaisen viittauksen loppuun.</li>
-	<li>Muuta kyseinen lauseke hyperlinkiksi korostamalla se ja käyttämällä Wordin Lisää hyperlinkki -työkalua sekä oikeaa/soveltuvaa URL-osoitetta, joka valmisteltiin kohdassa # 2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Oikolukuvaiheen tarkoituksena on huomata virheet julkaistavien tiedostojen oikeinkirjoituksessa, kieliopissa ja muotoilussa. Tässä vaiheessa ei voida enää tehdä merkittäviä muutoksia, ellei osastotoimittajan kanssa ole keskusteltu asiasta. Taitto-kohdassa, klikkaa VIEW PROOF nähdäksesi HTML, PDF- ja muut käytettävissä olevat tiedostomuodot, joita käytetään tämän kohteen julkaisemissa.</p>
-	<h4>Oikeinkirjoitus- ja kielioppivirheet</h4>
-
-	<p>Kopioi ongelmalliset sanat tai sanaryhmät ja liitä ne Oikoluvun korjaukset -kenttään yhdessä "CHANGE TO" -ohjeistuksen kanssa toimittajalle seuraavasti:</p>
-
-	<pre>1. CHANGE...
-	kun muut
-	TO...
-	kuin muut</pre>
-	<br />
-	<pre>2. CHANGE...
-	Malinowsky
-	TO...
-	Malinowski</pre>
-	<br />
-
-	<h4>Muotoiluvirheet</h4>
-
-	<p>Kuvaile ongelman sijainti ja luonne Oikoluvun korjaukset -kentässä "FORMATTING"-otsikon jälkeen seuraavasti:</p>
-	<br />
-	<pre>3. FORMATTING
-	Taulukon 3 numerot eivät kohdistu oikein kolmannessa sarakkeessa.</pre>
-	<br>
-	<pre>4. FORMATTING
-	Kappaletta, joka alkaa "Tämä viimeksi mainittu aihe..." ei ole sisennetty.</pre>]]></message>
-
-	<message key="default.journalSettings.forReaders"><![CDATA[Kehotamme lukijoita rekisteröitymään palveluun, joka ilmoittaa tämän julkaisun uusista julkaisuista. Käytä tämän julkaisun etusivun yläosassa olevaa <a href="{$indexUrl}/{$journalPath}/user/register">Rekisteröidy</a> -linkkiä. Rekisteröitymisen tuloksena lukijalle lähetetään sähköpostitse julkaisun jokaisen uuden numeron sisällysluettelo. Tämän palvelun käyttäjälistan avulla julkaisu myös saa tietoa kannattajamääristään ja lukijakunnastaan. Julkaisun <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Tietosuojaseloste</a> takaa, että lukijoiden nimiä ja sähköpostiosoitteita ei käytetä muihin tarkoituksiin.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Kiinnostaako tähän julkaisuun kirjoittaminen? Suosittelemme, että tutustut <a href="{$indexUrl}/{$journalPath}/about">Tietoa julkaisusta</a> -sivulla julkaisun osastoiden käytäntöihin sekä ohjeisiin sivulla <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Kirjoittajan ohjeet</a>. Kirjoittajien tulee <a href="{$indexUrl}/{$journalPath}/user/register">rekisteröityä</a> julkaisun käyttäjäksi ennen lähettämistä tai jo rekisteröidyttyään <a href="{$indexUrl}/index/login">kirjautua sisään</a> aloittaakseen viisiportaisen prosessin.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Kannustamme tutkimuskirjastojen hoitajia lisäämään tämän julkaisun kirjastojensa elektronisten julkaisujen kokoelmaan. Huomionarvoista on myös, että kirjastot voivat ylläpitää tämän julkaisun avoimen lähdekoodin julkaisujärjestelmää, ja tarjota sen tiedekuntien jäsenten käyttöön tieteellisten julkaisujen toimittamistarkoituksiin (ks. <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Tämä julkaisu hyödyntää LOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://www.lockss.org/">Lisää...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Tämä julkaisu hyödyntää CLOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://clockss.org/">Lisää...</a>]]></message>
-
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Artikkelin julkaiseminen</message>
-	<message key="default.journalSettings.purchaseArticleFee">Osta artikkeli</message>
-	<message key="default.journalSettings.purchaseIssueFee">Osta numero</message>
-	<message key="default.journalSettings.membershipFee">Yhdistyksen jäsenyys</message>
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Julkaisun hallinnoija</message>
 	<message key="default.groups.plural.manager">Julkaisun hallinnoijat</message>
@@ -170,7 +66,7 @@ Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoituk
 	<message key="default.groups.name.externalReviewer">Arvioija</message>
 	<message key="default.groups.plural.externalReviewer">Arvioijat</message>
 	<message key="default.groups.abbrev.externalReviewer">A</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>

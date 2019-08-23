@@ -3,8 +3,8 @@
 /**
  * @file plugins/gateways/resolver/ResolverPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ResolverPlugin
@@ -64,9 +64,9 @@ class ResolverPlugin extends GatewayPlugin {
 			case 'doi':
 				$doi = implode('/', $args);
 				$journal = $request->getJournal();
-				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-				$article = $publishedArticleDao->getPublishedArticleByPubId('doi', $doi, $journal?$journal->getId():null);
-				if(is_a($article, 'PublishedArticle')) {
+				$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
+				$article = $publishedSubmissionDao->getPublishedSubmissionByPubId('doi', $doi, $journal?$journal->getId():null);
+				if(is_a($article, 'PublishedSubmission')) {
 					$request->redirect(null, 'article', 'view', $article->getBestArticleId());
 				}
 				break;
@@ -96,8 +96,8 @@ class ResolverPlugin extends GatewayPlugin {
 				if (!$issue || $issues->next()) break;
 				unset($issues);
 
-				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
+				$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+				$articles = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
 				foreach ($articles as $article) {
 					// Look for the correct page in the list of articles.
 					$matches = null;
@@ -132,7 +132,7 @@ class ResolverPlugin extends GatewayPlugin {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$journals = $journalDao->getAll(true);
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		header('content-type: text/plain');
 		header('content-disposition: attachment; filename=holdings.txt');
 		echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
@@ -155,8 +155,8 @@ class ResolverPlugin extends GatewayPlugin {
 			}
 
 			echo $this->sanitize($journal->getLocalizedName()) . "\t";
-			echo $this->sanitize($journal->getSetting('printIssn')) . "\t";
-			echo $this->sanitize($journal->getSetting('onlineIssn')) . "\t";
+			echo $this->sanitize($journal->getData('printIssn')) . "\t";
+			echo $this->sanitize($journal->getData('onlineIssn')) . "\t";
 			echo $this->sanitize($startDate===null?'':strftime('%Y-%m-%d', $startDate)) . "\t"; // start_date
 			echo $this->sanitize($endDate===null?'':strftime('%Y-%m-%d', $endDate)) . "\t"; // end_date
 			echo $this->sanitize('') . "\t"; // embargo_months

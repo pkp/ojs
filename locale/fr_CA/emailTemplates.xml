@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -131,8 +131,7 @@ La soumission intitulée « {$submissionTitle} » pour la revue {$contextName} v
 URL de la soumission : {$submissionUrl}<br />
 Nom d'utilisateur : {$editorUsername}<br />
 <br />
-Merci,<br />
-{$editorialContactSignature}]]></body>
+Merci.]]></body>
 		<description>Ce courriel avise un Rédacteur de rubrique que le Rédacteur lui a assigné la tâche de suivre une soumission durant le processus éditorial. Il fournit de l'information sur la soumission, et comment accéder au site Web de la revue.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -203,9 +202,7 @@ Directives pour l'évaluation<br />
 <br />
 Nous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Nous sommes désolés des inconvénients que cela pourrait vous causer et nous espérons que nous pourrons compter sur votre collaboration pour un autre projet.<br />
 <br />
-Si vous avez des questions, n'hésitez pas à communiquer avec nous.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Si vous avez des questions, n'hésitez pas à communiquer avec nous.]]></body>
 		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un Évaluateur qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -230,9 +227,7 @@ Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$sub
 		<subject>Accusé de réception de l'évaluation d'une soumission</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Nous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Nous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.]]></body>
 		<description>Ce courriel est envoyé par le Rédacteur de rubrique, pour accuser réception d'une évaluation terminée et remercier l'évaluateur de sa contribution.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -305,9 +300,7 @@ J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissi
 <br />
 URL de {$contextName} : {$contextUrl}<br />
 URL de la soumission : {$submissionUrl}<br />
-Nom d'utilisateur : {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Nom d'utilisateur : {$participantUsername}]]></body>
 		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un Réviseur, pour lui demander de commencer le processus de révision. Il fournit l'information sur la soumission et comment accéder à celle-ci.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -320,12 +313,10 @@ J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submiss
 3. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL de {$contextName} : {$contextUrl}<br />
-URL du manuscrit : {$submissionLayoutUrl}<br />
+URL du manuscrit : {$submissionUrl}<br />
 Nom d'utilisateur : {$participantUsername}<br />
 <br />
-Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.]]></body>
 		<description>Ce courriel envoyé par le Rédacteur de rubrique au Responsable de la mise en page, avise ce dernier qu'il a été assigné à la tâche de faire la mise en page de la soumission. Il fournit de l'information sur la soumission et comment y accéder.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -419,25 +410,6 @@ Nous vous remercions d'avoir accepté de corriger les épreuves du manuscrit int
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel du Rédacteur de rubrique au Correcteur d'épreuves confirme à ce dernier que le processus de la lecture d'épreuves a été complété et le remercie de sa contribution.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Demande de correction d'épreuves (Responsable de la mise en page)</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-Nous aimerions que vous insériez les modifications nécessaires à la suite de la correction d'épreuves du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
-1. Cliquer sur l'URL de la soumission ci-dessous.<br />
-2. Se connecter au site Web de la revue et consulter les corrections à apporter pour créer les épreuves corrigées.<br />
-3.Télécharger les épreuves corrigées.<br />
-4. Envoyer le courriel TERMINÉ de l'Étape 3 de Correction d'épreuves au rédacteur.<br />
-<br />
-URL de {$contextName} : {$contextUrl}<br />
-URL du manuscrit : {$submissionUrl}<br />
-Nom d'utilisateur : {$participantUsername}<br />
-<br />
-Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Ce courriel venant du Rédacteur de rubrique au Responsable de la mise en page avise ce dernier que les épreuves sont prêtes pour une évaluation finale. Il contient de l'information sur l'article et comment y accéder.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Correction d'épreuves terminée (Responsable de la mise en page)</subject>
@@ -581,9 +553,7 @@ Lien: {$url}<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
-<br />
-{$editorialContactSignature}]]></body>
+Notre décision est de :]]></body>
 		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -592,9 +562,7 @@ Notre décision est de :<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
-<br />
-{$editorialContactSignature}]]></body>
+Notre décision est de :]]></body>
 		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «révision requise» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -603,9 +571,7 @@ Notre décision est de :<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
-<br />
-{$editorialContactSignature}]]></body>
+Notre décision est de :]]></body>
 		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission à redéposer» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -614,9 +580,7 @@ Notre décision est de :<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
-<br />
-{$editorialContactSignature}]]></body>
+Notre décision est de :]]></body>
 		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission refusée» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
@@ -728,9 +692,7 @@ Nous avons pris une décision concernant votre soumission à {$contextName}, &qu
 <br />
 Notre décision est de : Envoyé pour l'évaluation<br />
 <br />
-Submission URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Submission URL: {$submissionUrl}]]></body>
 		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie que leur soumission a été envoyé à une source externe pour son évaluation.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
@@ -888,18 +850,14 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision: Refuser la soumission<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Notre décision: Refuser la soumission]]></body>
 		<description>Cet courriel est envoyé à l'auteur si la soumission est déclinée avant la phase d'évaluation</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Recommandation du rédacteur</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-La recommandation concernant la soumission de &quot;{$submissionTitle}&quot; à {$contextName} est de: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+La recommandation concernant la soumission de &quot;{$submissionTitle}&quot; à {$contextName} est de: {$recommendation}]]></body>
 		<description>Ce courriel envoyé par le rédacteur ou le rédacteur de rubrique aux rédacteurs en charge de la prise de décisions les informe d'une recommandation finale concernant la soumission.</description>
 	</email_text>
 </email_texts>

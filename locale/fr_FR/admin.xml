@@ -4,8 +4,8 @@
 <!--
   * locale/fr_FR/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français (France)) locale.
@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Revues hébergées</message>
 	<message key="admin.settings.journalRedirect">Réacheminement vers la revue</message>
 	<message key="admin.settings.journalRedirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
-	<message key="admin.settings.noJournalRedirect">Ne pas réacheminer</message>
 	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues.</message>
 	<message key="admin.languages.confirmUninstall">Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue.</message>
@@ -42,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique.</message>
 	<message key="admin.contexts.form.pathExists">Le chemin sélectionné est déjà utilisé par une autre revue.</message>
 	<message key="admin.journals.enableJournalInstructions">Permettre à cette revue d'apparaître publiquement sur le site</message>
-	<message key="admin.journals.journalDescription">Description de la revue</message>
+	<message key="admin.contexts.contextDescription">Description de la revue</message>
 	<message key="admin.journal.pathImportInstructions">Chemin d'accès à la revue existant ou à créer (par ex., "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer les abonnements</message>
 	<message key="admin.journals.transcode">Conversion des métadonnées de l'article à partir de la norme ISO 8859-1</message>
@@ -79,7 +78,6 @@
 
 	<message key="admin.languages.confirmDisable">Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</message>
 	<message key="admin.contexts.form.titleRequired">Un titre est requis.</message>
-	<message key="admin.presses.createInstructions">Le rôle de directeur de la revue vous sera automatique attribué. Après avoir créer une nouvelle revue, vous serez dirigé vers son assistant de configuration afin de terminer la configuration initiale de la revue.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Rappel d'expiration d'abonnement</message>
 	<message key="admin.scheduledTask.openAccessNotification">Avis de libre accès</message>
 	<message key="admin.scheduledTask.reviewReminder">Rappel d'évaluation</message>

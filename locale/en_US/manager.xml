@@ -4,14 +4,24 @@
 <!--
   * locale/en_US/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
 
 <locale name="en_US" full_name="U.S. English">
+	<message key="manager.distribution.access">Access</message>
+	<message key="manager.distribution.copyrightYearBasis.description">Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you "publish as you go", don't use the issue's publication date.</message>
+	<message key="manager.distribution.copyrightYearBasis.issue">Use the issue's publication date</message>
+	<message key="manager.distribution.copyrightYearBasis.submission">Use the article's publication date</message>
+	<message key="manager.distribution.publication">Publication</message>
+	<message key="manager.distribution.publishingMode">Publishing Mode</message>
+	<message key="manager.distribution.publishingMode.none">OJS will not be used to publish the journal's contents online.</message>
+	<message key="manager.distribution.publishingMode.openAccess">The journal will provide open access to its contents.</message>
+	<message key="manager.distribution.publishingMode.subscription">The journal will require subscriptions to access some or all of its contents.</message>
+	<message key="manager.distribution.publishingMode.success">The publishing details have been updated.</message>
 	<message key="manager.website.archiving">Archiving</message>
 	<message key="manager.emails.confirmResetAll">Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</message>
 	<message key="manager.files.note">Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</message>
@@ -29,7 +39,6 @@
 	<message key="manager.payment.amount">Amount</message>
 	<message key="manager.payment.authorFees">Author Fees</message>
 	<message key="manager.payment.authorFeesDescription">Enter fee amounts below in order to enable author processing charges.</message>
-	<message key="manager.payment.currency">Currency</message>
 	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
 	<message key="manager.payment.description">Description</message>
 	<message key="manager.payment.details">Details</message>
@@ -45,6 +54,7 @@
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
 	<message key="subscriptionManager.subscription.confirmRemove">Are you sure you wish to delete this subscription?</message>
+	<message key="manager.payment.success">The payment settings have been updated.</message>
 	<message key="manager.payment.options.enablePayments">Payments will be enabled for this journal. Note that users will be required to log in to make payments.</message>
 	<message key="manager.payment.options.fee">Fee</message>
 	<message key="manager.payment.options.feeDescription">Fee Description</message>
@@ -63,7 +73,6 @@
 	<message key="manager.payment.readerFees">Reader Fees</message>
 	<message key="manager.payment.readerFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</message>
 	<message key="manager.payment.records">Records</message>
-	<message key="manager.payments">Payments</message>
 	<message key="manager.paymentTypes">Payment Types</message>
 	<message key="manager.payment.userName">Payment ID</message>
 	<message key="manager.people.allEnrolledUsers">Users Enrolled in this Journal</message>
@@ -111,10 +120,8 @@
 	<message key="manager.setup">Journal Settings</message>
 	<message key="manager.setup.masthead">Masthead</message>
 	<message key="manager.setup.editorialTeam">Editorial Team</message>
-	<message key="manager.setup.editorialTeam.description">List editors, managing directors, and other individuals associated with the journal.</message>
 	<message key="manager.setup.homepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.homepageContentDescription">The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</message>
-	<message key="manager.setup.layout">Journal Layout</message>
 	<message key="manager.setup.useStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.contextName">Journal Name</message>
 	<message key="manager.setup.pageHeader">Journal Page Header</message>
@@ -129,23 +136,18 @@
 	<message key="manager.setup.alternateHeader">Alternate Header</message>
 	<message key="manager.setup.alternateHeaderDescription">Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</message>
 	<message key="manager.setup.announcements">Announcements</message>
-	<message key="manager.setup.announcementsDescription">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
-	<message key="manager.setup.announcementsIntroduction">Additional Information</message>
-	<message key="manager.setup.announcementsIntroductionDescription">Enter any additional information that should be displayed to readers on the Announcements page.</message>
+	<message key="manager.setup.announcements.success">The announcements settings have been updated.</message>
+	<message key="manager.setup.announcementsIntroduction">Introduction</message>
+	<message key="manager.setup.announcementsIntroduction.description">Enter any information you would like to appear on your announcements page.</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
+	<message key="manager.setup.archiving.success">The archiving details for this journal have been updated.</message>
 	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
 	<message key="manager.setup.history">Journal History</message>
 	<message key="manager.setup.historyDescription">This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</message>
-	<message key="manager.setup.copyeditInstructions">Copyedit Instructions</message>
-	<message key="manager.setup.copyeditInstructionsDescription">The Copyedit Instructions will be made available to Copyeditors, Authors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be modified or replaced by the Journal Manager at any point (in HTML or plain text).</message>
-	<message key="manager.setup.copyrightNotice">Copyright notice</message>
-	<message key="manager.setup.coverage">Coverage</message>
-	<message key="manager.setup.coverageDescription">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
+	<message key="manager.setup.contact.success">The contact details for this journal have been updated.</message>
 	<message key="manager.setup.currentIssue">Current issue</message>
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
-	<message key="manager.setup.customTags">Custom tags</message>
-	<message key="manager.setup.customTagsDescription">Custom HTML header tags to be inserted in the header of every page (e.g., META tags).</message>
 	<message key="manager.setup.details">Details</message>
 	<message key="manager.setup.details.description">Name of journal, ISSN, contacts, sponsors, and search engines.</message>
 	<message key="manager.setup.disableUserRegistration">The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</message>
@@ -156,14 +158,15 @@
 	<message key="manager.setup.displayCurrentIssue">Add the table of contents for the current issue (if available).</message>
 	<message key="manager.setup.editorDecision">Editor Decision</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
-	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">Any undeliverable emails will result in an error message to this address.</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailSignature">Signature</message>
-	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</message>
-	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">Display</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">of the most recent announcements on the journal homepage.</message>
+	<message key="manager.setup.emailSignature.description">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</message>
+	<message key="manager.setup.enableAnnouncements.enable">Enable announcements</message>
+	<message key="manager.setup.enableAnnouncements.description">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
+	<message key="manager.setup.numAnnouncementsHomepage">Display on Homepage</message>
+	<message key="manager.setup.numAnnouncementsHomepage.description">How many announcements to display on the homepage. Leave this empty to display none.</message>
 	<message key="manager.setup.enableUserRegistration">Visitors can register a user account with the journal.</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
 	<message key="manager.setup.focusAndScope.description">Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</message>
@@ -181,32 +184,31 @@
 	<message key="manager.setup.gettingDownTheDetails">Step 1. Getting Down the Details</message>
 	<message key="manager.setup.guidelines">Guidelines</message>
 	<message key="manager.setup.guidingSubmissions">Step 3. Guiding Submissions</message>
+	<message key="manager.setup.identity">Journal Identity</message>
 	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</message>
 	<message key="manager.setup.information.forAuthors">For Authors</message>
 	<message key="manager.setup.information.forLibrarians">For Librarians</message>
 	<message key="manager.setup.information.forReaders">For Readers</message>
+	<message key="manager.setup.information.success">The information for this journal was updated.</message>
 	<message key="manager.setup.initialIssue">Initial issue</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.institution">Institution</message>
 	<message key="manager.setup.itemsDescription">Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</message>
 	<message key="manager.setup.itemsPerPage">Items per page</message>
+	<message key="manager.setup.itemsPerPage.description">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page.</message>
 	<message key="manager.setup.journalAbbreviation">Journal Abbreviation</message>
 	<message key="manager.setup.journalArchiving">Journal Archiving</message>
-	<message key="manager.setup.journalSummary">Journal Summary</message>
-	<message key="manager.setup.journalSummary.description">A brief description of your journal that can be displayed in lists of journals.</message>
-	<message key="manager.setup.journalAbout">About the Journal</message>
-	<message key="manager.setup.journalAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
-	<message key="manager.setup.favicon">Journal Favicon</message>
-	<message key="manager.setup.faviconDescription">Add a favicon for this journal to display alongside the navigation bar when users are visiting your site.</message>
-	<message key="manager.setup.faviconInvalid">Invalid favicon format. Accepted formats are .ico, .png, and .gif.</message>
+	<message key="manager.setup.contextSummary">Journal Summary</message>
+	<message key="manager.setup.contextAbout">About the Journal</message>
+	<message key="manager.setup.contextAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
 	<message key="manager.setup.journalHomepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</message>
 	<message key="manager.setup.journalHomepageHeader">Journal Homepage Header</message>
 	<message key="manager.setup.journalHomepageHeader.altText">Journal Homepage Header</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</message>
-	<message key="manager.setup.journalInitials">Journal initials</message>
+	<message key="manager.setup.contextInitials">Journal initials</message>
 	<message key="manager.setup.journalLayout">Journal Layout</message>
 	<message key="manager.setup.journalLayoutDescription">Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</message>
 	<message key="manager.setup.journalLogo">Journal Logo</message>
@@ -220,24 +222,18 @@
 	<message key="manager.setup.journalTheme">Journal Theme</message>
 	<message key="manager.setup.journalThumbnail">Journal thumbnail</message>
 	<message key="manager.setup.journalThumbnail.description">A small logo or representation of the journal that can be used in lists of journals.</message>
-	<message key="manager.setup.journalThumbnail.altText">Alternate text for thumbnail</message>
-	<message key="manager.setup.journalTitle">Journal title</message>
+	<message key="manager.setup.contextTitle">Journal title</message>
+	<message key="manager.setup.keyInfo">Key Information</message>
+	<message key="manager.setup.keyInfo.description">Provide a short description of your journal and identify editors, managing directors and other members of your editorial team.</message>
 	<message key="manager.setup.labelName">Label name</message>
-	<message key="manager.setup.layoutInstructions">Layout Instructions</message>
-	<message key="manager.setup.layoutInstructionsDescription">Layout Instructions can be prepared for the formatting of publishing items in the journal and be entered below in HTML or plain text. They will be made available to  the Layout Editor and Section Editor on the Editing page of each submission. (As each journal may employ its own file formats, bibliographic standards, style sheets, etc., a default set of instructions is not provided.)</message>
-	<message key="manager.setup.layoutTemplates">Layout Templates</message>
-	<message key="manager.setup.layoutTemplatesDescription">Templates can be uploaded to appear in Layout for each of the standard formats published in the journal (e.g., article, book review, etc.) using any file format (e.g., pdf, doc, etc.) with annotations added specifying font, size, margins, etc. to serve as a guide for Layout Editors and Proofreaders.</message>
-	<message key="manager.setup.layoutTemplates.file">Template File</message>
-	<message key="manager.setup.layoutTemplates.title">Title</message>
+	<message key="manager.setup.lists.success">The list settings for this journal have been updated.</message>
 	<message key="manager.setup.lists">Lists</message>
-	<message key="manager.setup.listsDescription">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page. Also, limit the number of links to display to subsequent pages of the list.</message>
-	<message key="manager.setup.enableArchive">Enable Archiving</message>
-	<message key="manager.setup.plnPluginEnable">PKP PN plugin enabled</message>
+	<message key="manager.setup.plnPluginEnable">Enable the PKP PN plugin</message>
 	<message key="manager.setup.plnDescription">The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</message>
-	<message key="manager.setup.plnSettingsDescription">Click on the Settings link to accept the terms of use for the PKP PN.</message>
+	<message key="manager.setup.plnSettingsDescription"><![CDATA[View the <button>plugin settings</button> to accept the terms of use for the PKP PN.]]></message>
 	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
 	<message key="manager.setup.plnPluginNotInstalled">The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</message>
-	<message key="manager.setup.otherLockss">Alternate Archiving Options</message>
+	<message key="manager.setup.otherLockss">LOCKSS and CLOCKSS</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>
@@ -248,9 +244,6 @@
 	<message key="manager.setup.clockssLicenseLabel">CLOCKSS License Description</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.porticoEnable"><![CDATA[Enable Portico to store and distribute journal content to libraries participating in Portico.]]></message>
-	<message key="manager.setup.porticoTitle">Portico</message>
-	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
 	<message key="manager.setup.management">Management</message>
@@ -258,6 +251,7 @@
 	<message key="manager.setup.managementOfBasicEditorialSteps">Management of Basic Editorial Steps</message>
 	<message key="manager.setup.managingPublishingSetup">Management and Publishing Setup</message>
 	<message key="manager.setup.managingTheJournal">Step 4. Managing the Journal</message>
+	<message key="manager.setup.masthead.success">The masthead details for this journal have been updated.</message>
 	<message key="manager.setup.navigationBar">Navigation Bar</message>
 	<message key="manager.setup.navigationBarDescription">Add or remove additional navigation bar items.</message>
 	<message key="manager.setup.navItemIsAbsolute">URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</message>
@@ -267,52 +261,53 @@
 	<message key="manager.setup.note">Note</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></message>
 	<message key="manager.setup.numPageLinks">Page links</message>
-	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
+	<message key="manager.setup.numPageLinks.description">Limit the number of links to display to subsequent pages in a list.</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
-	<message key="manager.setup.openAccess">The journal will provide open access to its contents.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.policies">Policies</message>
 	<message key="manager.setup.policies.description">Focus, peer review, sections, privacy, security, and additional about items.</message>
 	<message key="manager.setup.printIssn">Print ISSN</message>
+	<message key="manager.setup.privacyStatement.success">The privacy statement has been updated.</message>
 	<message key="manager.setup.proofingInstructions">Proofing Instructions</message>
 	<message key="manager.setup.proofingInstructionsDescription">The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</message>
-	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
 	<message key="manager.setup.publicationSchedule">Publication Schedule</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.]]></message>
 	<message key="manager.setup.publicationScheduling">Publication Scheduling</message>
 	<message key="manager.setup.publicIdentifier">Identification of Journal Content</message>
+	<message key="manager.setup.publishing">Publishing Details</message>
 	<message key="manager.setup.publisher">Publisher</message>
-	<message key="manager.setup.publisherDescription">The name of the organization publishing the journal may be included in metadata provided to third-party archival bodies.</message>
+	<message key="manager.setup.publishingDescription">These details may be included in metadata provided to third-party archival bodies.</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
-	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
 	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
-	<message key="manager.setup.reviewGuidelinesDescription">Provide reviewers with criteria for judging a submission's suitability for publication in the journal, which may include instructions for preparing an effective and helpful review. Reviewers will have an opportunity to provide comments intended for the author and editor, as well as separate comments only for the editor.</message>
 	<message key="manager.setup.reviewOptions">Review Options</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Automated Email Reminders</message>
-	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Blind Review</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Weeks allowed to complete the review</message>
 	<message key="manager.setup.reviewOptions.onQuality">Editors will rate reviewers on a five-point quality scale after each review.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Reviewers will have access to the submission file only after agreeing to review it.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Restrict File Access</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">Reviewers will not be given access to the submission file until they have agreed to review it.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Reviewer Access</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Enable one-click reviewer access.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Note:</strong> The email invitation to reviewers will contain a special URL that takes invited reviewers directly to the Review page for the submission (with access to any other pages requiring them to log in). For security reasons with this option, editors are not able to modify email addresses or add CCs or BCCs prior to sending invitations to reviewers.]]></message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">One-click Reviewer Access</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description">Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in.</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.label">Include a secure link in the email invitation to reviewers.</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Reviewer Ratings</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Reviewer Reminders</message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
-	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
-	<message key="manager.setup.searchEngineIndexingDescription">Provide a brief description of the journal which search engines can display when listing the journal in search results.</message>
+	<message key="manager.setup.searchEngineIndexing">Search Indexing</message>
+	<message key="manager.setup.searchEngineIndexing.success">The search engine index settings have been updated.</message>
+	<message key="manager.setup.searchEngineIndexing.description"><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></message>
+	<message key="manager.setup.searchDescription.description">Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(If sections are not added, then items are submitted to the Articles section by default.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></message>
-	<message key="manager.setup.securitySettings">Access and Security Settings</message>
-	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.selectEditorDescription">The journal editor who will see it through the editorial process.</message>
 	<message key="manager.setup.selectSectionDescription">The journal section for which the item will be considered.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
-	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
+	<message key="manager.setup.siteAccess.view">Site Access</message>
+	<message key="manager.setup.siteAccess.viewContent">View Article Content</message>
 	<message key="manager.setup.stepsToJournalSite">Five Steps to a Journal Web Site</message>
 	<message key="manager.setup.subjectExamples">(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
 	<message key="manager.setup.subjectKeywordTopic">Keywords</message>
@@ -322,18 +317,17 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</message>
 	<message key="manager.setup.submissions">Submissions</message>
 	<message key="manager.setup.submissions.description">Author guidelines, copyright, and indexing (including registration).</message>
-	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
-	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
-	<message key="manager.setup.noPublishing">OJS will not be used to publish the journal's contents online.</message>
+	<message key="manager.setup.enableOai">Enable OAI</message>
+	<message key="manager.setup.enableOai.description"><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></message>
 	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
 	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>
 	<message key="manager.setup.uniqueIdentifier">Unique Identifier</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</message>
 	<message key="manager.setup.useEditorialReviewBoard">An editorial/review board will be used by the journal.</message>
+	<message key="manager.setup.userAccess.success">The user access details for this journal have been updated.</message>
 	<message key="manager.setup.useThumbnail">Thumbnail</message>
 	<message key="manager.setup.useImageTitle">Title image</message>
-	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.statistics.defaultMetricDescription">
@@ -372,14 +366,7 @@
 	<message key="manager.statistics.reports.filters.byObject.description">Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</message>
 
 	<message key="manager.subscriptionPolicies">Subscription Policies</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving Policy</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">The following Author Self-Archiving Policy will be included in About the Journal under Policies.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">With delayed open access, editors are still able to designate specific articles within an issue for immediate open access.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">The back issues of this journal will be available in an open access format</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Please select a valid duration length.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">The following Delayed Open Access Policy will be posted in About the Journal under Policies.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.expiry">Subscription Expiry</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</message>
@@ -448,6 +435,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Please select a valid subscription start date.</message>
 	<message key="manager.subscriptions.form.dateEnd">End date</message>
 	<message key="manager.subscriptions.form.dateEndRequired">A subscription end date is required.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">This is a non-expiring subscription type; please do not specify a start date.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">This is a non-expiring subscription type; please do not specify an end date.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Please select a valid subscription end date.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Note: All changes below are to user's system-wide profile.</message>
 	<message key="manager.subscriptions.form.userId">User</message>
@@ -539,7 +528,6 @@
 	<message key="manager.subscriptionTypes.name">Subscription type</message>
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
-	<message key="manager.distribution.access">Access</message>
 
 	<!-- Navigation Menu Items -->
 	<message key="manager.navigationMenus.subscriptions.description">Link to a page describing the subscriptions you offer.</message>
@@ -560,8 +548,9 @@
 	<message key="manager.setup.copyrightYearBasis.article">Article: default year will be drawn from the article's publication date, as in "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.issue">Issue: default year will be drawn from the issue's publication date.</message>
 	<message key="manager.setup.resetPermissions">Reset Article Permissions</message>
-	<message key="manager.setup.resetPermissions.confirm">Are you sure you wish to reset permissions data already attached to articles?</message>
-	<message key="manager.setup.resetPermissions.description">Copyright statement and license information will be permanently attached to published content, ensuring that this data will not change in the case of a journal changing policies for new submissions. To reset stored permissions information already attached to published content, use the button below.</message>
+	<message key="manager.setup.resetPermissions.confirm">Are you sure you wish to reset permissions data for all articles? This action can not be undone.</message>
+	<message key="manager.setup.resetPermissions.description">Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.</message>
+	<message key="manager.setup.resetPermissions.success">Article permissions were successfully reset.</message>
 
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">Components</message>
@@ -607,4 +596,13 @@
 	<message key="plugins.importexport.common.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">The specified objects could not be found.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the primary contact, identified in the Journal Settings.</message>
+
+	<!-- Statistics -->
+	<message key="stats.publications.details">Article Details</message>
+	<message key="stats.publications.none">No articles were found with usage statistics matching these parameters.</message>
+	<message key="stats.publications.totalAbstractViews.timelineInterval">Total abstract views by date</message>
+	<message key="stats.publications.totalGalleyViews.timelineInterval">Total file views by date</message>
+	<message key="stats.publications.countOfTotal">{$count} of {$total} articles</message>
+	<message key="stats.publications.abstracts">Abstracts</message>
+	<message key="stats.publications.galleys">Files</message>
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file plugins/blocks/subscription/SubscriptionBlockPlugin.inc.php
  *
- * Copyright (c) 2013-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2013-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionBlockPlugin
@@ -50,7 +50,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
+		if ($journal->getData('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION)
 			return '';
 
 		$user = $request->getUser();

@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionAction.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionAction
@@ -32,12 +32,12 @@ class SubscriptionAction {
 
 		$journal = $request->getJournal();
 
-		$subscriptionContactName = $journal->getSetting('subscriptionName');
-		$subscriptionContactEmail = $journal->getSetting('subscriptionEmail');
+		$subscriptionContactName = $journal->getData('subscriptionName');
+		$subscriptionContactEmail = $journal->getData('subscriptionEmail');
 
 		if (empty($subscriptionContactEmail)) {
-			$subscriptionContactEmail = $journal->getSetting('contactEmail');
-			$subscriptionContactName = $journal->getSetting('contactName');
+			$subscriptionContactEmail = $journal->getData('contactEmail');
+			$subscriptionContactName = $journal->getData('contactName');
 		}
 
 		if (empty($subscriptionContactEmail)) return false;
@@ -76,7 +76,11 @@ class SubscriptionAction {
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
 		$mail->assignParams($paramArray);
-		$mail->send();
+		if (!$mail->send()) {
+			import('classes.notification.NotificationManager');
+			$notificationMgr = new NotificationManager();
+			$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
+		}
 	}
 }
 

@@ -4,8 +4,8 @@
 <!--
   * locale/uk_UA/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings.
@@ -163,8 +163,7 @@ URL рукопису: {$submissionUrl}<br />
 URL подання: {$submissionUrl}<br />
 Ім'я користувача: {$editorUsername}<br />
 <br />
-Дякую,<br />
-{$editorialContactSignature}]]></body>
+Дякую.]]></body>
 		<description>Цим листом редактор видання повідомляє редактора розділу про доручення йому нагляду за процесом редакційного опрацювання подання. У листі міститься інформація про подання та про те, як отримати доступ до сайту журналу.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -240,9 +239,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 Наразі Ми вирішили скасувати наш запит на рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Вибачаємося за всі створені незручності та сподіваємось, що у майбутньому ми зможемо звертатися до Вас за допомогою у рецензуванні статей для цього журналу.<br />
 <br />
-Якщо Ви маєте додаткові запитання, будь ласка, повідомте мені про це.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Якщо Ви маєте додаткові запитання, будь ласка, повідомте мені про це.]]></body>
 		<description>Цим листом редактор розділу повідомляє рецензенту, який працює над поданням, про припинення рецензування.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -267,9 +264,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Подяка за рецензування статті</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Дякую за закінчення рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми цінуємо Ваш внесок у контроль якості роботи, поданої нам для публікації.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Дякую за закінчення рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми цінуємо Ваш внесок у контроль якості роботи, поданої нам для публікації.]]></body>
 		<description>Цим листом редактор розділу підтверджує отримання готової рецензії та дякує рецензенту за його внесок.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -334,9 +329,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
-Наше рішення:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Наше рішення:]]></body>
 		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -345,9 +338,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
-Наше рішення:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Наше рішення:]]></body>
 		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -356,9 +347,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
-Наше рішення:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Наше рішення:]]></body>
 		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -367,9 +356,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
-Наше рішення:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Наше рішення:]]></body>
 		<description>Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
@@ -386,9 +373,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 <br />
 URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
 URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Ім'я користувача: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
+Ім'я користувача: {$participantUsername}]]></body>
 		<description>Цим листом редактор розділу просить літературного редактора розпочати процес літературного редагування подання. У листі міститься інформація про подання та про те, як отримати доступ до нього.</description>
 	</email_text>
 	<email_text key="COPYEDIT_COMPLETE">
@@ -502,12 +487,10 @@ URL подання: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 3. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot;, щоб надіслати лист редактору.<br />
 <br />
 URL видання &quot;{$contextName}&quot;: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання:  <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL подання:  <a href="{$submissionUrl}">{$submissionUrl}</a><br />
 Ім'я користувача: {$participantUsername}<br />
 <br />
-Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.]]></body>
 		<description>Цим листом редактор розділу просить редактора верстки розпочати процес верстки подання. У листі міститься інформація про подання та про те, як отримати доступ до нього.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -604,25 +587,6 @@ URL подання: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Цим листом редактор розділу підтверджує коректору, що його робота прийнята, та дякує за його внесок.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Запит на коректуру (Редактор верстки)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot; було вичитане автором та коректором. Наразі потрібно внести всі запропоновані правки у гранках статті. Для цього зробіть наступне:<br />
-1. Натисніть на вказаній нижче адресі URL подання.<br />
-2. Увійдіть на сайт журналу, щоб ознайомитись з &quot;Виправленнями коректора&quot; та створити виправлені гранки.<br />
-5. Вивантажте виправленні гранки на сайт журналу.<br />
-6. Натисніть на зображення поштового конверту під заголовком &quot;закінчення&quot; кроку 3, щоб надіслати лист редактору.<br />
-<br />
-URL видання {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL подання: {$submissionUrl}<br />
-Ім'я користувача: {$participantUsername}<br />
-<br />
-Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Цим листом редактор розділу повідомляє редактора верстки, що гранки статті готові до внесення остаточних правок. У листі міститься інформація про статтю та про те, як отримати доступ до неї.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Коректура завершена (Редактор верстки)</subject>

@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marc/record.tpl
  *
- * Copyright (c) 2013-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2013-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * MARC-formatted metadata record for an article
@@ -13,14 +13,14 @@
 	{if $article->getDatePublished()}
 		<fixfield id="008">"{$article->getDatePublished()|strtotime|date_format:"%y%m%d %Y"}                        eng  "</fixfield>
 	{/if}
-	{if $journal->getSetting('onlineIssn')}
+	{if $journal->getData('onlineIssn')}
 		<varfield id="022" i1="#" i2="#">
-			<subfield label="$a">{$journal->getSetting('onlineIssn')|escape}</subfield>
+			<subfield label="$a">{$journal->getData('onlineIssn')|escape}</subfield>
 		</varfield>
 	{/if}
-	{if $journal->getSetting('printIssn')}
+	{if $journal->getData('printIssn')}
 		<varfield id="022" i1="#" i2="#">
-			<subfield label="$a">{$journal->getSetting('printIssn')|escape}</subfield>
+			<subfield label="$a">{$journal->getData('printIssn')|escape}</subfield>
 		</varfield>
 	{/if}
 	<varfield id="042" i1=" " i2=" ">
@@ -48,8 +48,8 @@
 	</varfield>{/if}
 
 	{assign var=publisher value=$journal->getName($journal->getPrimaryLocale())}
-	{if $journal->getSetting('publisherInstitution')}
-		{assign var=publisher value=$journal->getSetting('publisherInstitution')}
+	{if $journal->getData('publisherInstitution')}
+		{assign var=publisher value=$journal->getData('publisherInstitution')}
 	{/if}
 	<varfield id="260" i1=" " i2=" ">
 		<subfield label="b">{$publisher|escape}</subfield>

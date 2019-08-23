@@ -3,8 +3,8 @@
 /**
  * @file pages/oai/OAIHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIHandler
@@ -18,6 +18,8 @@ define('SESSION_DISABLE_INIT', 1); // FIXME?
 import('classes.oai.ojs.JournalOAI');
 import('classes.handler.Handler');
 
+use \Firebase\JWT\JWT;
+
 class OAIHandler extends Handler {
 
 	/**
@@ -25,7 +27,7 @@ class OAIHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
-		$this->validate();
+		$this->validate(null, $request);
 
 		PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
@@ -38,14 +40,23 @@ class OAIHandler extends Handler {
 	}
 
 	/**
-	 * Validate the request
+	 * @copydoc PKPHandler::validate()
 	 */
-	function validate() {
+	function validate($requiredContexts = null, $request = null) {
 		// Site validation checks not applicable
-		//parent::validate();
+		//parent::validate($requiredContexts, $request);
 
 		if (!Config::getVar('oai', 'oai')) {
-			Request::redirect(null, 'index');
+			$request->redirect(null, 'index');
+		}
+
+		// Permit the use of the Authorization header and an API key for access to unpublished content (article URLs)
+		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
+			list($bearer, $jwt) = explode(' ', $header);
+			if (strcasecmp($bearer, 'Bearer') == 0) {
+				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
+				$this->setApiToken($apiToken);
+			}
 		}
 	}
 

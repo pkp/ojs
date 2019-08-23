@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedPlugin
@@ -28,7 +28,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$externalFeedDao = new ExternalFeedDAO($this->getName());
 			DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
-			$request = Application::getRequest();
+			$request = Application::get()->getRequest();
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addStyleSheet('externalFeed', $request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
@@ -70,7 +70,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * Get the filename of the CSS stylesheet for this plugin.
 	 */
 	function getStyleSheetFile() {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
@@ -80,7 +80,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 		} else {
 			import('classes.file.PublicFileManager');
 			$fileManager = new PublicFileManager();
-			return $fileManager->getJournalFilesPath($journalId) . '/' . $styleSheet['uploadName'];
+			return $fileManager->getContextFilesPath($journalId) . '/' . $styleSheet['uploadName'];
 		}
 	}
 
@@ -130,7 +130,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function displayHomepage($hookName, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 

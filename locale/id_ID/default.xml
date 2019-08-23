@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -16,7 +16,7 @@
 	<message key="section.default.title">Artikel</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="section.default.policy"></message>
-	
+
 	<message key="default.genres.article">File Utama Naskah</message>
 
 	<!--
@@ -24,124 +24,19 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Naskah belum pernah diterbitkan sebelumnya, dan tidak sedang dalam pertimbangan untuk diterbitkan di jurnal lain (atau sudah dijelaskan dalam Komentar kepada Editor).</message>
-	<message key="default.journalSettings.checklist.fileFormat">File naskah dalam format dokumen OpenOffice, Microsoft Word, atau RTF.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Referensi yang dapat diakses online telah dituliskan URL-nya.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Naskah diketik dengan teks 1 spasi; font 12; menggunakan huruf miring, bukan huruf bergaris bawah (kecuali alamat URL); dan semua ilustrasi, gambar, dan tabel diletakkan dalam teks pada tempat yang diharapkan, bukan dikelompokkan tersendiri di akhir naskah.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements">Pengetikan naskah dan sitasi mengikuti gaya selingkung yang disyaratkan dalam Panduan Penulis</message>
- 	<message key="default.journalSettings.privacyStatement">Nama dan alamat email yang dimasukkan di website ini hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk disebarluaskan ke pihak lain.</message>
-	<message key="default.journalSettings.openAccessPolicy">Jurnal ini menyediakan akses terbuka yang pada prinsipnya membuat riset tersedia secara gratis untuk publik dan akan mensupport pertukaran pengetahuan global terbesar.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Jurnal ini memberi izin dan mendorong penulis untuk memposting item yang diserahkan ke jurnal di website personal atau repositori institusional sebelum dan sesudah penerbitan, sementara itu menyediakan detail bibliografi yang akan memberikan kredit, jika bisa diterapkan, penerbitannya di jurnal ini.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Tahap Copyediting dimaksudkan untuk meningkatkan aliran, kejelasan, tata bahasa, kata-kata, dan pemformatan artikel. Tahap ini mewakili kesempatan terakhir untuk penulis untu membuat perubahan substansial apapun pada teks karena tahap selanjutnya terlarang untuk koreksi format dan kesalahan penulisan.
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Naskah belum pernah diterbitkan sebelumnya, dan tidak sedang dalam pertimbangan untuk diterbitkan di jurnal lain (atau sudah dijelaskan dalam Komentar kepada Editor).</message>
+	<message key="default.contextSettings.checklist.fileFormat">File naskah dalam format dokumen OpenOffice, Microsoft Word, atau RTF.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Referensi yang dapat diakses online telah dituliskan URL-nya.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Naskah diketik dengan teks 1 spasi; font 12; menggunakan huruf miring, bukan huruf bergaris bawah (kecuali alamat URL); dan semua ilustrasi, gambar, dan tabel diletakkan dalam teks pada tempat yang diharapkan, bukan dikelompokkan tersendiri di akhir naskah.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements">Pengetikan naskah dan sitasi mengikuti gaya selingkung yang disyaratkan dalam Panduan Penulis</message>
+ 	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Nama dan alamat email yang dimasukkan di website ini hanya akan digunakan untuk tujuan yang sudah disebutkan, tidak akan disalahgunakan untuk tujuan lain atau untuk disebarluaskan ke pihak lain.</p>]]></message>
+	<message key="default.contextSettings.openAccessPolicy">Jurnal ini menyediakan akses terbuka yang pada prinsipnya membuat riset tersedia secara gratis untuk publik dan akan mensupport pertukaran pengetahuan global terbesar.</message>
 
-File untuk dicopyedit berupa file Word atau .rtf sehingga dapat diedit dengan mudah.  Petunjuk yang ditampilkan berikut menggambarkan dua pendekatan dalam melakukan copyediting.  Pendekatan pertama, berdasarkan fitur Track Changes di Microsoft Word yang membutuhkan copy editor, editor dan penulis memiliki program ini. Pendekatan kedua, tidak tergantung piranti lunak tertentu, dipinjam dengan seijin dari Harvard Educational Review. Editor Jurnal dapat memodifikasi petunjuk berikut ini dalam rangka meningkatkan proses editorial di jurnal ini.
-
-
-<h4>Sistem Copyedit</h4>
-
-<strong>1. Track Changes dari Microsoft Office Word</strong>
-
-Di bawah menu Review di Microsoft Office Word, fitur Track Changes memungkinkan copy editor untuk membuat sisipan (teks diberi warna) dan penghapusan (teks diberi coretan dengan warna atau di margin dan ditandai dengan kata dihapus). Copy editor dapat meninggalkan pertanyaan pada penulis (Pertanyaan ke Penulis) dan pada editor (Pertanyaan ke Editor) dengan menyisipkan pertanyaan-pertanyaan di dalam tanda kurung persegi (tanda [...]). Versi yang sudah dicopyedit kemudian diunggah, dan editor diberitahu. Editor kemudian mereview teks dan memberitahu penulis.
-
-Editor dan penulis cukup membiarkan perubahan yang dibuat copy editor jika telah puas dengan perubahan tersebut. Jika perlu perubahan lebih lanjut, editor dan penulis dapat melakukan perubahan dengan penyisipan dan penghapusan dalam naskah yang telah dicopyedit tersebut. Penulis dan editor harus menjawab setiap pertanyaan dari copy editor dengan mengetikkan responnya di dalam tanda kurung persegi tersebut.
-
-Setelah naskah direview oleh editor dan penulis, copy editor akan melakukan pengecekan terakhir untuk tahap layout dan galley.
-
-
-<strong>2. Harvard Educational Review</strong>
-
-<strong>Instruksi untuk Membuat Revisi Elektronik dalam Naskah</strong>
-
-Mohon ikuti protokol berikut dalam membuat revisi elekronik untuk naskah Anda:
-
-<strong>Merespon perubahan yang disarankan.</strong>
-&nbsp; Untuk masing-masing perubahan yang Anda setujui, ubah teks yang ditebalkan ke huruf biasa.
-&nbsp; Untuk masing-masing perubahan yang Anda tidak setuju, masukkan kembali teks asli dan <strong>tebalkan</strong>.
-
-<strong>Menambah dan menghapus.</strong>
-&nbsp; Tandai tambahan dengan <strong>menebalkan</strong>teks baru.
-&nbsp; Gantikan bagian yang dihapus dengan: <strong>[teks dihapus]</strong>.
-&nbsp; Jika Anda menghapus satu kalimat atau lebih, mohon berikan catatan, contoh <strong>[dua kalimat dihapus]</strong>.
-
-<strong>Merespon Pertanyaan untuk Penulis (QA/Queries to the Author).</strong>
-&nbsp; Jaga semua QA tetap utuh dan tercetak tebal.  Jangan dihapus.
-&nbsp; Untuk menjawab QA, tambahkan komentar setelah pertanyaan tersebut. Komentar harus dibatasi dengan menggunakan:
-<strong>[Komentar:]</strong>
-&nbsp; contoh: <strong>[Komentar: memperdalam pembahasan metodologi seperti yang Anda sarankan]</strong>.
-
-<strong>Membuat Komentar.</strong>
-&nbsp; Gunakan komentar untuk menjelaskan perubahan susunan atau revisi besar
-&nbsp; contoh: <strong>[Komentar: Memindahkan paragraf di atas dari hal. 5 ke hal. 7].</strong>
-&nbsp; Catatan: Saat merujuk suatu nomor halaman, gunakan nomor halaman dari print out naskah yang telah dikirimkan ke Anda. Hal ini penting karena nomor halaman bisa berubah saat dokumen direvisi secara elektronik.
-
-<h4>Ilustrasi Revisi Elektronik </h4>
-
-<ol>
-<li><strong>Copyedit Awal.</strong>  Copy editor jurnal akan mengedit teks untuk meningkatkan alur, kejelasan, tata bahasa, diksi dan format, juga termasuk pertanyaan penulis jika perlu. Saat Copyedit Awal selesai, copy editor akan mengunggah dokumen yang sudah direvisi melalui website jurnal dan memberitahu penulis bahwa ada naskah yang telah diedit dan perlu direview kembali oleh penulis.</li>
-<li><strong>Copyedit Penulis.</strong>  Sebelum mengubah drastis struktur dan susunan naskah yang sudah diedit, penulis harus bekerjasama dengan editor yang menangani naskah. Penulis harus menerima atau menolak perubahan apapun yang dibuat selama Copyediting Awal, dan merespon semua Pertanyaan ke Penulis (QA). Saat selesai melakukan revisi, penulis harus mengganti nama file dari NamaPenulisQA.doc menjadi NamaPenulisQAR.doc (contoh: dari LeeQA.doc ke LeeQAR.doc) dan mengunggah dokumen yang telah direvisi melalui website jurnal.</li>
-<li><strong>Copyedit Akhir.</strong>  Copy editor jurnal akan memverifikasi perubahan yang dibuat oleh penulis dan menggabungkan respon pada Pertanyaan ke Penulis untuk membuat naskah final. Saat selesai, copy editor akan mengunggah naskah final melalui website jurnal dan memberitahu editor layout untuk melanjutkan ke finalisasi format.</li>
-</ol>]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Menambah Tautan Referensi ke Proses Layout </h4>
-	<p>Saat mengubah naskah menjadi HTML atau PDF, pastikan semua hyperlink dalam naskah aktif.</p>
-	<h4>A. Jika Penulis Memberikan Tautan bersama dengan Referensi</h4>
-	<ol>
-	<li>Saat naskah masih dalam format pengolah kata (contoh: MS Office Word), tambahkan frase LIHAT ITEM di tiap akhir referensi yang mempunyai URL.</li>
-	<li>Ubah frase ke hyperlink dengan meng-highlightnya dan menggunakan alat Insert Hyperlink di Word, masukkan URL yang dipersiapkan di #2.</li>
-	</ol>
-	<h4>B. Memberi Pembaca Akses untuk Mencari Referensi dengan Google Scholar</h4>
-	<ol>
-	<li>Saat naskah masih dalam format pengolah kata (contoh: MS Office Word), salin judul referensi di Daftar Pustaka (jika judulnya tampak terlalu umum, contoh: "Damai"-salin nama penulis dan judul).</li>
-	<li>Tempel judul referensi antara %22, tambahkan tanda "+" di antara kata-kata: http://scholar.google.com/scholar?q=%22TULIS+JUDUL+DI+SINI%22&hl=en&lr=&btnG=Search.</li>
-
-	<li>Tambahkan frase GS SEARCH di tiap akhir referensi di daftar pustaka naskah.</li>
-	<li>Ubah frase itu ke hyperlink dengan meng-highlightnya dan menggunakan alat Insert Hyperlink di Word, masukkan URL yang dipersiapkan di #2.</li>
-	</ol>
-	<h4>C. Memberi Pembaca Akses untuk Mencari Referensi dengan DOI</h4>
-	<ol>
-	<li>Saat naskah masih dalam format pengolah kata (contoh: MS Office Word), salin sejumlah referensi ke dalam CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
-	<li>Tempel tiap DOI yang dihasilkan di URL berikut ini (di antara = and &): http://www.cmaj.ca/cgi/external_ref?access_num=TULIS_DOI_DISINI&link_type=DOI.</li>
-	<li>Tambahkan frase CrossRef di akhir tiap sitasi di daftar pustaka naskah.</li>
-	<li>Ubah frase menjadi hyperlink dengan memilih frase dan menggunakan alat Insert Hyperlink di Word, masukkan URL yang telah dipersiapkan di #2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[ <p>Tahap proofreading dimaksudkan untuk menemukan kesalahan di format, tata bahasa, dan ejaan galley. Perubahan substansi tidak bisa dibuat di tahap ini, kecuali didiskusikan dengan Editor Bagian. Di Layout, klik di VIEW PROOF untuk melihat HTML, PDF, dan format file lain yang tersedia dalam menerbitkan naskah ini.</p>
-	<h4>Untuk kesalahan tata bahasa dan ejaan</h4>
-
-	<p>Salin kata atau frase yang menjadi masalah dan letakkan mereka di kotak Koreksi Proofreading dengan instruksi "UBAH_KE" untuk editor seperti contoh berikut ini:</p>
-
-	<pre>1. UBAH...
-	di tulis lengkap
-	KE...
-	ditulis lengkap</pre>
-	<br />
-	<pre>2. UBAH...
-	Malinowsky 
-	KE....
-	Malinowski</pre>
-	<br />
-
-	<h4>Untuk kesalahan format </h4>
-	
-	<p>Jelaskan letak kesalahan dalam kotak Koreksi Proofreading setelah mengetik judul "FORMAT" seperti contoh berikut ini:</p>
-	<br />
-	<pre>3. FORMAT
-	Nomor dalam Tabel 3 tidak sejajar di kolom ketiga.</pre>
-	<br />
-	<pre>4. FORMAT
-	Paragraf yang dimulai dengan "Topik terakhir ini..." tidak menjorok.</pre>]]></message>
-	
-	<message key="default.journalSettings.forReaders"><![CDATA[Kami mendorong pembaca untuk mendaftarkan diri di layanan notifikasi penerbitan untuk jurnal ini. Gunakan tautan <a href="{$indexUrl}/{$journalPath}/user/register">Daftar</a>di bagian atas beranda jurnal. Dengan mendaftar, pembaca akan memperoleh email berisi Daftar Isi tiap ada terbitan jurnal baru. Daftar ini juga membuat jurnal dapat mengetahui tingkat dukungan atau jumlah pembaca. Lihat jurnal <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Pernyataan Privasi</a>, yang meyakinkan pembaca bahwa nama dan alamat email yang didaftarkan tidak akan digunakan untuk tujuan lain.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Tertarik menerbitkan jurnal? Kami merekomendasikan Anda mereview halaman <a href="{$indexUrl}/{$journalPath}/about">Tentang Kami </a>untuk kebijakan bagian jurnal serta <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Petunjuk Penulis </a>. Penulis perlu <a href="{$indexUrl}/{$journalPath}/user/register">Mendaftar </a>dengan jurnal sebelum menyerahkan atau jika sudah terdaftar <a href="{$indexUrl}/index/login">login</a>dan mulai proses lima langkah.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Kami mendorong pustakawan riset untuk mendaftar jurnal diantara pemegang jurnal eletronik perpustakaan. Begitu juga, ini mungkin berharga bahwa sistem penerbitan sumber terbuka jurnal cocok untuk perpustakaan untuk menjadi tuan rumah untuk anggota fakultas untuk menggunakan jurnal saat mereka terlibat dalam proses editing. (Lihat <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[OJS sistem LOCKSS berfungsi sebagai sistem pengarsipan terdistribusi antar-perpustakaan yang menggunakan sistem ini dengan tujuan membuat arsip permanen (untuk preservasi dan restorasi). <a href="http://www.lockss.org/">Lanjut...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
-	
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Publikasi Artikel</message>
-	<message key="default.journalSettings.purchaseArticleFee">Beli Artikel</message>
-	<message key="default.journalSettings.purchaseIssueFee">Beli Terbitan</message>
-	<message key="default.journalSettings.membershipFee">Keanggotaan Asosiasi</message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Kami mendorong pembaca untuk mendaftarkan diri di layanan notifikasi penerbitan untuk jurnal ini. Gunakan tautan <a href="{$indexUrl}{$contextPath}/user/register">Daftar</a>di bagian atas beranda jurnal. Dengan mendaftar, pembaca akan memperoleh email berisi Daftar Isi tiap ada terbitan jurnal baru. Daftar ini juga membuat jurnal dapat mengetahui tingkat dukungan atau jumlah pembaca. Lihat jurnal <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Pernyataan Privasi</a>, yang meyakinkan pembaca bahwa nama dan alamat email yang didaftarkan tidak akan digunakan untuk tujuan lain.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Tertarik menerbitkan jurnal? Kami merekomendasikan Anda mereview halaman <a href="{$indexUrl}{$contextPath}/about">Tentang Kami </a>untuk kebijakan bagian jurnal serta <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Petunjuk Penulis </a>. Penulis perlu <a href="{$indexUrl}{$contextPath}/user/register">Mendaftar </a>dengan jurnal sebelum menyerahkan atau jika sudah terdaftar <a href="{$indexUrl}/index/login">login</a>dan mulai proses lima langkah.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Kami mendorong pustakawan riset untuk mendaftar jurnal diantara pemegang jurnal eletronik perpustakaan. Begitu juga, ini mungkin berharga bahwa sistem penerbitan sumber terbuka jurnal cocok untuk perpustakaan untuk menjadi tuan rumah untuk anggota fakultas untuk menggunakan jurnal saat mereka terlibat dalam proses editing. (Lihat <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[OJS sistem LOCKSS berfungsi sebagai sistem pengarsipan terdistribusi antar-perpustakaan yang menggunakan sistem ini dengan tujuan membuat arsip permanen (untuk preservasi dan restorasi). <a href="http://www.lockss.org/">Lanjut...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Manajer Jurnal</message>
@@ -172,7 +67,7 @@ Mohon ikuti protokol berikut dalam membuat revisi elekronik untuk naskah Anda:
 	<message key="default.groups.name.externalReviewer">Reviewer</message>
 	<message key="default.groups.plural.externalReviewer">Reviewer</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

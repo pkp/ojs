@@ -4,8 +4,8 @@
 <!--
   * locale/sl_SI/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -99,6 +99,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Prispevek</message>
 	<message key="article.articles">Prispevki</message>
+	<message key="common.publication">Prispevek</message>
+	<message key="common.publications">Prispevki</message>
 	<message key="article.submissionId">ID prispevka</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Avtorji</message>
@@ -897,8 +899,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.author.documentRevised">{$authorName} je popravil prispevek {$submissionId}. Nov ID datoteke je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je bil razrešen(a) za recenzijo prispevka {$submissionId} za  {$round}. recenzijski krog</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} je začel(a) {$round}. krog recenzije  prispevka {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} je ponovno začel(a) {$round}. krog recenzije  prispevka {$submissionId}.</message>
-	<message key="log.review.reviewCleared">Recenzija {$round}. kroga recenzije recenzenta {$reviewerName} za prispevek {$submissionId} je bila zbrisana.</message>
 	<message key="log.review.reviewerRated">{$reviewerName}je bil ocenjen za {$round}. krog recenzije prispevka {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Končni datum za {$round}. krog recenzije prispevka {$submissionId} recenzenta {$reviewerName} je bil postavljen na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Recenzent {$reviewerName} je  oddal priporočilo za {$round}. krog recenzije za prispevek {$submissionId}.</message>
@@ -936,45 +936,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="log.imported">{$userName} je uvozil prispevek {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Možnosti orodja za branje</message>
-
-	<message key="rt.admin.settings.description">Orodja za branje so prikazana poleg prispevkov v indeksiranih rubrikah revije (ta nastavitev se nastavi za vsako rubriko posebej). Vsebujejo različna orodja, odvisno od izbranega prispevka, in orodja, ki omogočajo dostop do povezanih vsebin.</message>
-	<message key="rt.admin.settings.enableReadingTools">Omogoči orodja za branje za izbrano rubriko revije.</message>
-	<message key="rt.admin.settings.relatedItems">Področje</message>
-	<message key="rt.admin.settings.relatedItemsLink">Poglejte &lt;a href="{$relatedItemsLink}" class="action"&gt;povezane vsebine&lt;/a&gt; za pregled, dodajanje, popravljanje ali brisanje povezanih vsebin za katerokoli področje.</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Poglejte <a href="{$relatedItemsLink}" class="action">povezane vsebine</a> za pregled, dodajanje, popravljanje ali brisanje povezanih vsebin za katerokoli področje.]]></message>	<message key="rt.admin.options">Orodja za prispevke v reviji</message>
-	<message key="rt.admin.relatedItems">Orodja za povezane vsebine</message>
-
-	<message key="rt.admin.settings.addComment">Dodaj komentar (omogoča bralcem, da napišejo komentarje; glavni urednik ima možnost brisanje)</message>
-	<message key="rt.admin.settings.addComment.authenticated">Uporabnik mora biti registriran in vpisan za pisanje komentarjev. Anonimni komentarji niso dovoljeni.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Uporabnik mora biti registriran in vpisan za pisanje komentarjev. Anonimni komentarji so dovoljeni.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Uporabniku ni potrebno biti registriran. Anonimni komentarji so dovoljeni.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description">Morda nekatere spodnje povezave ne delujejo.&lt;br/&gt;
-Potrebno je ročno preveriti vse povezave, ki so označene kot neveljavne, ker test ni 100% zanesljiv.&lt;br/&gt;
-Testi lahko padejo na povezavah, ki potrebujejo izpolnjene formularje.</message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Morda nekatere spodnje povezave ne delujejo.<br/>
-	Potrebno je ročno preveriti vse povezave, ki so označene kot neveljavne, ker test ni 100% zanesljiv.<br/>
-	Testi lahko padejo na povezavah, ki potrebujejo izpolnjene formularje.]]></message>
-	<!-- RT Entities -->
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Avtor</message>
-	<message key="rt.metadata.pkp.primaryAuthor">Avtorjevo ime, pripadnost, država</message>
-	<message key="rt.metadata.pkp.peerReviewed">Strokovno recenziran prispevek</message>
-	<message key="rt.beNotifiedWhen">Obveščeni boste, ko....</message>
-	<message key="rt.thisJournal">Preglej revijo</message>
-	<message key="rt.context.authorTermsDescription">Za prispevke z več avtorji pustite vsa imena označena za iskanje podobnih ko-avtorskih del, ali označite enega po enega za iskanje po le enem imenu. Za več informacij o iskalnem viru pojdite na O reviji. Ti viri so bili izbrani zaradi njihove ustreznosti in njihovega brezplačnega dostopa do vseh ali le nekaterih vsebin.</message>
+	<message key="metadata.pkp.peerReviewed">Strokovno recenziran prispevek</message>
 
 	<!-- Notification Types -->
 	<message key="notification.type.articleSubmitted">Nov prispevek, "{$title}", je bil dodan.</message>

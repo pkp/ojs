@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/CcorinoSubmissionTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CcorinoSubmissionTest
@@ -49,7 +49,7 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 		$username = 'minoue';
 		$password = $username . $username;
 		$this->logIn($username, $password);
-		$xpath = '//div[contains(text(),' . $this->quoteXPath($title) . ')]';
+		$xpath = '//div[contains(text(),' . $this->quoteXpath($title) . ')]';
 		$this->waitForElementPresent($xpath);
 		$this->click($xpath);
 		// Recommend
@@ -57,7 +57,7 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 		$this->logOut();
 		// Log in as editor and see the existing recommendation
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->waitForText('css=div.pkp_workflow_recommendations', 'Recommendations: Accept Submission');
+		$this->waitForElementPresent('//div[contains(@class,"pkp_workflow_recommendations") and contains(text(),"Recommendations: Accept Submission")]');
 		$this->logOut();
 	}
 }

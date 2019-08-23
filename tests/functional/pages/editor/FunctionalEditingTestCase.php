@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/pages/editor/FunctionalEditingTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalEditingTest
@@ -108,14 +108,10 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		foreach($examples as $example) {
 			// Identify the test galley in the sample
 			// document format.
-			try {
-				// Go to the galley upload page and
-				// upload a galley.
-				$galleyUri = $this->_getTestFileUri($example);
-				$this->uploadGalley($this->_articleId, $galleyUri, $example);
-			} catch (Exception $e) {
-				throw $this->improveException($e, "example $example");
-			}
+			// Go to the galley upload page and
+			// upload a galley.
+			$galleyUri = $this->_getTestFileUri($example);
+			$this->uploadGalley($this->_articleId, $galleyUri, $example);
 		}
 
 		// Check that the galleys have been indexed.
@@ -140,12 +136,8 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 					$docFormat = $example;
 			}
 			$fieldName = "galleyFullText_${docFormat}_en_US";
-			try {
-				$this->assertArrayHasKey($fieldName, $indexDocument);
-				$this->assertContains("${example}testarticle", $indexDocument[$fieldName]);
-			} catch (Exception $e) {
-				throw $this->improveException($e, "checking indexed document for $example field");
-			}
+			$this->assertArrayHasKey($fieldName, $indexDocument);
+			$this->assertContains("${example}testarticle", $indexDocument[$fieldName]);
 		}
 	}
 
@@ -301,7 +293,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 	 *     BUT the article will not be marked for deletion.
 	 *
 	 * SCENARIO: unpublishing an article
-	 *    WHEN I unpublish a previously published article
+	 *    WHEN I unpublish a previously published submission
 	 *    THEN an article setting "dirty" will be set to "1" which
 	 *         means that the article must be deleted from the index
 	 *     AND the article will appear in the public XML
@@ -327,8 +319,8 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->publishArticle($this->_articleId);
 
 		// Check that the article is "dirty".
-		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article = $articleDao->getById($this->_articleId);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
 
 		// Check that the article appears in the pull indexing
@@ -337,14 +329,14 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->assertContains('article id="' . $this->_articleId . '" sectionId="3" journalId="2" instId="test-inst" loadAction="replace"', $pullXml);
 
 		// Check that the article is now "clean".
-		$article = $articleDao->getById($this->_articleId);
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_CLEAN, $article->getData('indexingState'));
 
 		// Unpublish the article.
 		$this->unpublishArticle($this->_articleId);
 
 		// Check that the article is "dirty" again.
-		$article = $articleDao->getById($this->_articleId);
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_DIRTY, $article->getData('indexingState'));
 
 		// Check that the article appears in the pull indexing
@@ -353,7 +345,7 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		$this->assertContains('article id="' . $this->_articleId . '" sectionId="3" journalId="2" instId="test-inst" loadAction="delete"', $pullXml);
 
 		// Check that the article is "clean".
-		$article = $articleDao->getById($this->_articleId);
+		$article = $submissionDao->getById($this->_articleId);
 		$this->assertEquals(SOLR_INDEXINGSTATE_CLEAN, $article->getData('indexingState'));
 	}
 

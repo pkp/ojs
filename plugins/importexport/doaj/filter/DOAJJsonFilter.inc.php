@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJJsonFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJJsonFilter
@@ -41,7 +41,7 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObject PublishedArticle
+	 * @param $pubObject PublishedSubmission
 	 * @return JSON string
 	 */
 	function &process(&$pubObject) {
@@ -64,7 +64,7 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 		$article = array();
 		$article['bibjson']['journal'] = array();
 		// Publisher name (i.e. institution name)
-		$publisher = $context->getSetting('publisherInstitution');
+		$publisher = $context->getData('publisherInstitution');
 		if (!empty($publisher)) $article['bibjson']['journal']['publisher'] = $publisher;
 		// To-Do: license ???
 		// Journal's title (M)
@@ -72,9 +72,9 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 		$article['bibjson']['journal']['title'] = $journalTitle;
 		// Identification Numbers
 		$issns = array();
-		$pissn = $context->getSetting('printIssn');
+		$pissn = $context->getData('printIssn');
 		if (!empty($pissn)) $issns[] = $pissn;
-		$eissn = $context->getSetting('onlineIssn');
+		$eissn = $context->getData('onlineIssn');
 		if (!empty($eissn)) $issns[] = $eissn;
 		if (!empty($issns)) $article['bibjson']['journal']['issns'] = $issns;
 		// Volume, Number
@@ -113,19 +113,18 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 			$article['bibjson']['end_page'] = $endPage;
 		}
 		// FullText URL
+		$request = Application::get()->getRequest();
 		$article['bibjson']['link'] = array();
 		$article['bibjson']['link'][] = array(
-			'url' => Request::url($context->getPath(), 'article', 'view', $pubObject->getId()),
+			'url' => $request->url($context->getPath(), 'article', 'view', $pubObject->getId()),
 			'type' => 'fulltext',
 			'content_type' => 'html'
 		);
-		// Authors: name, email and affiliation
+		// Authors: name and affiliation
 		$article['bibjson']['author'] = array();
 		$articleAuthors = $pubObject->getAuthors();
 		foreach ($articleAuthors as $articleAuthor) {
 			$author = array('name' => $articleAuthor->getFullName(false));
-			$email = $articleAuthor->getEmail();
-			if (!empty($email)) $author['email'] = $email;
 			$affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());
 			if (!empty($affiliation)) $author['affiliation'] = $affiliation;
 			$article['bibjson']['author'][] = $author;

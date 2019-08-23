@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionDAO
@@ -332,13 +332,16 @@ abstract class SubscriptionDAO extends DAO {
 	 * @return int Subscription ID
 	 */
 	function _insertObject($subscription) {
+		$dateStart = $subscription->getDateStart();
+		$dateEnd = $subscription->getDateEnd();
 		$this->update(
 			sprintf('INSERT INTO subscriptions
 				(journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
 				VALUES
 				(?, ?, ?, %s, %s, ?, ?, ?, ?)',
-				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
-			array(
+				$dateStart!==null?$this->dateToDB($dateStart):'null',
+				$dateEnd!==null?$this->datetimeToDB($dateEnd):'null'
+			), array(
 				(int) $subscription->getJournalId(),
 				(int) $subscription->getUserId(),
 				(int) $subscription->getTypeId(),
@@ -360,6 +363,8 @@ abstract class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 */
 	function _updateObject($subscription) {
+		$dateStart = $subscription->getDateStart();
+		$dateEnd = $subscription->getDateEnd();
 		$this->update(
 			sprintf('UPDATE subscriptions
 				SET
@@ -373,8 +378,9 @@ abstract class SubscriptionDAO extends DAO {
 					reference_number = ?,
 					notes = ?
 				WHERE subscription_id = ?',
-				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
-			array(
+				$dateStart!==null?$this->dateToDB($dateStart):'null',
+				$dateEnd!==null?$this->datetimeToDB($dateEnd):'null'
+			), array(
 				(int) $subscription->getJournalId(),
 				(int) $subscription->getUserId(),
 				(int) $subscription->getTypeId(),

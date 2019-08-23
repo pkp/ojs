@@ -4,154 +4,70 @@
 <!--
   * locale/nl_NL/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings for the nl_NL (Nederlands) locale.
   *
   -->
-
 <locale name="nl_NL" full_name="Nederlands">
 	<!-- Section default -->
-	<message key="section.default.title">Artikelen</message>
+	<message key="section.default.title">Artikels</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy"></message>
+	<message key="section.default.policy">Standaard sectiebeleid</message>
+
+	<message key="default.genres.article">Artikeltekst</message>
 
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">De inzending is niet eerder gepubliceerd en is ook niet in overweging bij een ander tijdschrift (tenzij een uitleg is gegeven bij Opmerkingen voor de redacteur).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Het ingezonden bestand is in OpenOffice, Microsoft Word, RTF of WordPerfect document bestandsformaat.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Waar beschikbaar zijn URLs voor de referenties toegevoegd</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettergrootte, gebruikt schuingedrukte tekst in plaats van onderstreepte (behalve bij URL adressen) en alle illustraties, figuren en tabellen staan op de juiste plek in de tekst en niet aan het einde.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals geformuleerd in <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, te vinden bij Over dit tijdschrift.]]></message>
-	<message key="default.journalSettings.privacyStatement">Namen en e-mailadressen die in dit tijdschrift worden ingevoerd, zullen alleen worden gebruikt voor de in dit tijdschrift genoemde doeleinden. Ze zullen niet worden gebruikt voor andere doeleinden of door andere partijen</message>
-	<message key="default.journalSettings.openAccessPolicy">Dit tijdschrift is vrij toegankelijk en gaat uit van het idee dat het vrij en onmiddellijk beschikbaar stellen van wetenschappelijk onderzoek voor het publiek de kennisuitwisseling wereldwijd beter ondersteunt.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Dit tijdschrift moedigt auteurs aan om de items die zijn ingezonden voor het tijdschrift ook op persoonlijke websites of in institutionele repositories te plaatsen, zowel voor als na publicatie onder vermelding van bibliografische gegevens die, indien van toepassing, de publicatie in dit tijdschrift aanhalen.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Het tekstredactie stadium is bedoeld om de loop, helderheid, grammatica en opmaak van het artikel te verbeteren. Het is de laatste gelegenheid voor de auteur om significante veranderingen in de tekst aan te brengen, aangezien het volgende stadium alleen bedoeld is voor taalfouten en opmaakcorrecties.
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">De inzending is niet eerder gepubliceerd en is ook niet in overweging bij een ander tijdschrift (tenzij een uitleg is gegeven bij Opmerkingen voor de redacteur).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Het ingezonden bestand is in OpenOffice, Microsoft Word, RTF of WordPerfect document bestandsformaat.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">Waar beschikbaar zijn URLs voor de referenties toegevoegd</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">De tekst is enkelvoudig gespatieerd, gebruikt een 12-punts lettergrootte, gebruikt schuingedrukte tekst in plaats van onderstreepte (behalve bij URL adressen) en alle illustraties, figuren en tabellen staan op de juiste plek in de tekst en niet aan het einde.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[De tekst voldoet aan de stilistische en bibliografische eisen zoals geformuleerd in <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Richtlijnen voor auteurs</a>, te vinden bij Over dit tijdschrift.]]></message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Namen en e-mailadressen die in dit tijdschrift worden ingevoerd, zullen alleen worden gebruikt voor de in dit tijdschrift genoemde doeleinden. Ze zullen niet worden gebruikt voor andere doeleinden of door andere partijen</p>]]></message>
+	<message key="default.contextSettings.openAccessPolicy">Dit tijdschrift is vrij toegankelijk en gaat uit van het idee dat het vrij en onmiddellijk beschikbaar stellen van wetenschappelijk onderzoek voor het publiek de kennisuitwisseling wereldwijd beter ondersteunt.</message>
 
-Het te redigeren bestand is in Word of .rtf formaat en kan daardoor eenvoudig als tekstverwerkingsdocument bewerkt worden. De set instructies die hier getoond wordt stelt twee benaderingen voor tekstredactie voor. Het ene is gebaseerd op de voorziening voor het bijhouden van wijzigingen van Microsoft Word en vereist dat terkstredacteur, redacteur en auteur toegang hebben tot dit programma. Het andere systeem, dat niet afhankelijk is van software, is met toestemming geleend van het Harvard Educational Review. De redacteur kan de kan deze instructies aanpassen dus suggesties voor het verbeteren van het proces van dit tijdschrift zijn mogelijk.
+	<message key="default.contextSettings.forReaders"><![CDATA[We moedigen onze lezers aan om zich aan te melden voor het ontvangen van bericht van publicatie. Gebruik hiervoor de knop <a href="{$indexUrl}{$contextPath}/user/register">Registreren</a> in de balk bovenaan de homepage van het tijdschrift. Na registratie ontvangt u per e-mail de inhoudsopgave van elk nieuw nummer. Daarnaast stelt u het tijdschrift in staat zich te beroepen op een zekere achterban. Zie de <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy verklaring</a> van het tijdschrift waarin de lezers wordt verzekerd dat hun naam en e-mailadres niet voor andere doeleinden zullen worden gebruikt.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Bent u geïnteresseerd in het aanleveren van artikels? Dan raden we u aan de pagina <a href="{$indexUrl}{$contextPath}/about">Over het tijdschrift</a> te bekijken dat informatie biedt over het publicatiebeleid van de verschillende secties. Lees ook vooraf de pagina <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Auteursrichtlijnen<a>. Auteurs moeten zich <a href="{$indexUrl}{$contextPath}/user/register">registreren</a> in het tijdschrift voordat ze artikels kunnen inzenden. Als u al bent ingeschreven hoeft u alleen nog <a href="{$indexUrl}{$contextPath}/login">in te loggen</a> en kunt u beginnen met de vijf stappen procedure. Indien u wel geregistreerd bent als lezer of reviewer maar nog niet als auteur, ga dan naar Mijn profiel in de rechter kolom en voeg de rol van auteur aan uw profiel toe.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[We moedigen bibliothecarissen van onderzoeksbibliotheken aan om dit tijdschrift op te nemen in hun digitale tijdschriftcollectie. Ook wijzen we u erop dat het open source systeem dat dit tijdschrift gebruikt om te publiceren, gehost kan worden door bibliotheken ter ondersteuning van hun bij de redactie van elektronische tijdschriften betrokken faculteitsmedewerkers. (zie <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Dit tijdschrift gebruikt het CLOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://clockss.org/">Meer...</a>]]></message>
 
-<h4>Tekstredactiesystemen</h4>
+	<!-- Group defaults -->
+	<message key="default.groups.name.manager">Tijdschriftbeheerder</message>
+	<message key="default.groups.plural.manager">Tijdschriftbeheerders</message>
+	<message key="default.groups.abbrev.manager">TB</message>
+	<message key="default.groups.name.editor">Tijdschriftredacteur</message>
+	<message key="default.groups.plural.editor">Tijdschriftredacteurs</message>
+	<message key="default.groups.abbrev.editor">TR</message>
+	<message key="default.groups.name.guestEditor">Gastredacteur</message>
+	<message key="default.groups.plural.guestEditor">Gastredacteurs</message>
+	<message key="default.groups.abbrev.guestEditor">GR</message>
+	<message key="default.groups.name.sectionEditor">Sectieredacteur</message>
+	<message key="default.groups.plural.sectionEditor">Sectieredacteurs</message>
+	<message key="default.groups.abbrev.sectionEditor">SR</message>
+	<message key="default.groups.name.subscriptionManager">Abonnementenbeheerder</message>
+	<message key="default.groups.plural.subscriptionManager">Abonnementenbeheerders</message>
+	<message key="default.groups.abbrev.subscriptionManager">AB</message>
 
-<b>1. Track Changes in Microsoft Word's</b>
+	<!-- Genre Defaults -->
+	<message key="default.genres.researchInstrument">Onderzoeksinstrument</message>
+	<message key="default.genres.researchMaterials">Onderzoeksmateriaal</message>
+	<message key="default.genres.researchResults">Onderzoeksresultaten</message>
+	<message key="default.genres.transcripts">Transcripties</message>
+	<message key="default.genres.dataAnalysis">Data-analyse</message>
+	<message key="default.genres.dataSet">Dataverzameling</message>
+	<message key="default.genres.sourceTexts">Brontekst</message>
 
-Bij Tools in de menubalk, geeft Track Changes de tekstredacteur de mogelijkheid om tekst toe te voegen (tekst wordt gekleurd) en te verwijderen (tekst wordt doorgestreept en gekleurd, of in de marge getoond als verwijderd). De tekstredacteur kan vragen voor zowel de auteur (Auteursvragen) als de redacteur (Redacteursvragen) opnemen door de vragen tussen rechte haken op te nemen. De geredigeerde versie wordt dan geladen en de redacteur gewaarschuwd. De redacteur beoordeelt de tekst en bericht de auteur
-
-De redacteur en auteur laten de veranderingen waarmee ze het eens zijn ongemoeid. Als meer aanpassingen nodig zijn kunnen de redacteur en de auteur de toegevoegde of verwijderde tekst veranderen en verdere toevoegingen of verwijderingen doen. Auteurs en redacteuren dienen te reageren op de aan hen gerichte vragen en hun reacties tussen de rechte haken te plaatsen.
-
-Nadat de tekst is gereviewd door redacteur en auteur doet de tekstredacteur een laatste slag over de tekst en accepteert de wijzigingen ter voorbereiding op opmaak en proeflezen.
-
-<b>2. Harvard Educational Review </b>
-
-<b>Instructies voor elektronische revisie van het manuscript</b>
-
-Volg het volgende protocol voor het doen van elektronische revisies op uw manuscript:
-
-<b>Reageren op voorgestelde veranderingen</b>
-  Als u een voorgestelde verandering accepteert, verandert u de vetgedrukte tekst in normale tekst
-  Als u een voorgestelde suggestie niet accepteert, zet zet u  de originele tekst <b>vetgedrukt</b> terug
-
-<b>Toevoegingen en verwijderen</b>
-  Markeer toevoegingen door de nieuwe tekst <b>vetgedrukt</b> te maken
-  Vervang verwijderde secties door: <b>[verwijderde tekst]</b>
-  Als u een of meer zinnen verwijdert, geeft dat dan aan met een aantekening, bv. <b>[2 zinnen verwijderd]</b>
-
-<b>Reageren op vragen aan de auteur(QA's)</b>
-  Hou alle QA's intact and vetgedrukt in de tekst. Verwijder ze niet.
-  Reageer op een QA, door er een opmerking achter te zetten. Opmerkingen moeten aangegeven worden met:
-<b>[Commentaar:</b>]
-  bv. <b>[Commentaar: Discussie over de methodologie uitgebreid zoals voorgesteld]</b>
-
-<b>Opmerkingen</b>
-  Gebruik opmerkingen om organisatorische veranderingen of grote revisies uit te leggen
-  bv.  <b>[Commentaar: De paragraaf verplaatst van p. 5 naar p. 7]</b>
-  Noot: Gebruik bij het refereren aan paginanummers de paginanummers van de afgedrukte kopie van het manuscript dat u gekregen heeft. Dit is belangrijk omdat paginanummers kunnen veranderen bij het reviseren van het document.
-
-<h4>Een voorbeeld van een elektronische revisie</h4>
-
-<b>Het originele "manuscript" bestand</b>
-
-Alvorens dramatisch af te wijken van de structuur en organisatie van uw originele manuscript, raden wij u aan om de meewerkenden aan uw stuk te raadplegen. Als de revisies gereed zijn verandert u de naam van het document van AuteursNaamQA.doc in AuteursnaamQAR.doc (bv. van LeeQA.doc in LeeQAR.doc). Druk een kopie af en stuur die met een floppy waarop het gereviseerde en hernoemde bestand staat.
-
-
-<b>Manuscript met vragen en suggsties zoals teruggestuurd naaar de auteur</b>
-
-Alvorens dramatisch af te wijken van de structuur en organisatie van uw originele <b>manuscript dat we naar u terugsturen</b>, raden wij u aan om de <b>redacteuren die eraan meewerken</b> te raadplegen. Als de revisies gereed zijn verandert u de naam van het document van AuteursNaamQA.doc in AuteursnaamQAR.doc (bv. van LeeQA.doc in LeeQAR.doc). Druk een kopie af en stuur die met een floppy waarop het totaal gereviseerde en hernoemde bestand staat.<b>[QA: In deze paragaaf kan het helpen om het belang van het nauwkeurig volgen van de instructies te benadrukken. Anders kan het redactieproces aanmerkelijk vertraagd worden]</b>
-
-<b>Gereviseerd manuscript aan haar teruggestuurd</b>
-
-Alvorens dramatisch af te wijken van de structuur en organisatie van uw originele manuscript dat we naar u terugsturen, raden wij u aan om de redacteuren die eraan meewerken te raadplegen. <b>De publicatie van uw manuscript kan significant vertraagd worden als u de instructies niet volgt.</b>
-
-Als de revisies gereed zijn verandert u de naam van het document van AuteursNaamQA.doc in AuteursnaamQAR.doc (bv. van LeeQA.doc in LeeQAR.doc). Druk een kopie af en stuur die met een floppy waarop het <b>[verwijderd woord]</b> gereviseerde en hernoemde bestand staat.<b>[QA: In deze paragaaf kan het helpen om het belang van het nauwkeurig volgen van de instructies te benadrukken. Anders kan het redactieproces aanmerkelijk vertraagd worden] [Commentaar: ik heb een zin toegevoegd als reactie op uw suggestie]</b>
-
-<b>Noten:</b>
-• Niet langer vetgedrukte tekst indiceert acceptatie van de voorgestelde veranderingen van de eerste zin
-• Zin toegevoegd als reactie op de QA. Vetgedrukte tekst indiceert nieuwe toevoeging
-• [verwijderd woord] geeft de verwijdering van "totaal"
-• Commentaar bevat een reactie op de QA van de redacteur]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Om links naar referenties toe te voegen aan het opmaakproces</h4>
-	<p>Bij het omzetten van een inzending naar HTML of PDF, verzeker u ervan dat alle hyperlinks in de inzending werken.</p>
-	<h4>A. Als de auteur een link bij de referentie levert</h4>
-	<ol>
-	<li>Voeg, als de inzending nog in het tekstverwerkingsformaat is (bv. Word), de tekst BEKIJK ITEM toe aan het eind van de referentie met een URL.</li>
-	<li>Maak van die tekst een hyperlink door het te selecteren en de bij 2 voorbereide URL toe te voegen met het Hyperlink Toevoegen gereedschap van Word.</li>
-	</ol>
-	<h4>B. Lezers in staat stellen om Google Scholar te doorzoeken voor referenties</h4>
-	<ol>
-	<li>Kopieer, als de inzending nog in het tekstverwerkingsformaat is (bv. Word), de titel van het in de referentielijst gerefereerde werk (als die te algemeen lijkt, bv. "Vrede", kopieer dan auteur en titel).</li>
-	<li>Plak de titel van de referentie tussen de %22's, met een + tussen ieder woord: http://scholar.google.com/scholar?q=%22PLAK+TITEL+HIER%22&hl=en&lr=&btnG=Search</li>
-	<li>Voeg de tekst GS SEARCH toe aan het einde van ieder citaat in de referentielijst van de inzending.</li>
-	<li>Verander die tekst in een hyperlink met het Hyperlink Toevoegen gereedschap van Word en de bij 2 voorbereide URL.</li>
-	</ol>
-	<h4>C. Lezers in staat stellen een referentie te zoeken met een DOI</h4>
-	<ol>
-	<li>Kopieer, als de inzending nog in Word staat, een set referenties in CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Plak iedere DOI die door de Query geleverd wordt in de volgende URL (tussen = en &): http://www.cmaj.ca/cgi/external_ref?access_num=PLAK DOI#HERE&link_type=DOI</li>
-	<li>Voeg de tekst CrossRef toe aan het eind van iedere citaties in de referentielijst van de inzending.</li>
-	<li>Verander die tekst in een hyperlink met het Hyperlink Toevoegen gereedschap van Word en de bij 2 voorbereide URL.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Proeflezen is bedoeld om spel-, type- en grammaticafouten in de proefdruk op te sporen. Meer substantiële veranderingen zijn niet mogelijk in dit stadium, tenzij besproken met de sectieredacteur. Klik in Opmaak op BEKIJK PROEF om de HTML, PDF en andere beschikbare bestandsformaten van de publicatie van dit item te bekijken.</p>
-<h4>Voor spel- en grammaticafouten</h4>
-
-<p>Kopieer het verkeerde woord of groep van woorden en plak ze in het proefleescorrecties veld met "verander in" instructies voor de redacteur als volgt...</p>
-
-<pre>1. VERANDER...
-dan de andere
-IN...
-dan de anderen</pre>
-<br />
-<pre>2. VERANDER...
-Malinowsky
-IN...
-Malinowski</pre>
-<br />
-
-<h4>Voor opmaakfouten</h4>
-
-<p>Beschrijf de plaats en aard van het probleem in het proefleescorrecties veld na het intypen van de titel "OPMAAK" als volgt...</p>
-<br />
-<pre>3. OPMAAK
-De getallen in de derde kolom van Tabel 3 zijn niet uitgelijnd.</pre>
-<br />
-<pre>4. OPMAAK
-De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
-	<message key="default.journalSettings.forReaders"><![CDATA[We moedigen onze lezers aan om zich aan te melden voor het ontvangen van bericht van publicatie. Gebruik hiervoor de knop <a href="{$indexUrl}/{$journalPath}/user/register">Registreren</a> in de balk bovenaan de homepage van het tijdschrift. Na registratie ontvangt u per e-mail de inhoudsopgave van elk nieuw nummer. Daarnaast stelt u het tijdschrift in staat zich te beroepen op een zekere achterban. Zie de <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Privacy verklaring</a> van het tijdschrift waarin de lezers wordt verzekerd dat hun naam en e-mailadres niet voor andere doeleinden zullen worden gebruikt.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Bent u geïnteresseerd in het aanleveren van artikelen? Dan raden we u aan de pagina <a href="{$indexUrl}/{$journalPath}/about">Over het tijdschrift</a> te bekijken dat informatie biedt over het publicatiebeleid van de verschillende secties. Lees ook vooraf de pagina <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Auteursrichtlijnen<a>. Auteurs moeten zich <a href="{$indexUrl}/{$journalPath}/user/register">registreren</a> in het tijdschrift voordat ze artikelen kunnen inzenden. Als u al bent ingeschreven hoeft u alleen nog <a href="{$indexUrl}/{$journalPath}/login">in te loggen</a> en kunt u beginnen met de vijf stappen procedure. Indien u wel geregistreerd bent als lezer of reviewer maar nog niet als auteur, ga dan naar Mijn profiel in de rechter kolom en voeg de rol van auteur aan uw profiel toe.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[We moedigen bibliothecarissen van onderzoeksbibliotheken aan om dit tijdschrift op te nemen in hun digitale tijdschriftcollectie. Ook wijzen we u erop dat het open source systeem dat dit tijdschrift gebruikt om te publiceren, gehost kan worden door bibliotheken ter ondersteuning van hun bij de redactie van elektronische tijdschriften betrokken faculteitsmedewerkers. (zie <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
-
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Artikelpublicatie</message>
-	<message key="default.journalSettings.purchaseArticleFee">Koop artikel</message>
-	<message key="default.journalSettings.membershipFee">Lidmaatschap van de organisatie</message>
-	<message key="default.journalSettings.purchaseIssueFee">Koop issue</message>
+	<message key="default.groups.name.externalReviewer">Reviewer</message>
+	<message key="default.groups.plural.externalReviewer">Reviewers</message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

@@ -1,0 +1,87 @@
+/**
+ * @file  plugins/themes/default/styles/pages/category.less
+ *
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the contact page
+ * @link templates/frontend/pages/category.tpl
+ */
+.page_catalog_category {
+
+	.article_count {
+		float: right;
+		padding: @base 0;
+		font-size: @font-sml;
+		color: @text-light;
+	}
+
+	.about_section .cover {
+		float: right;
+		width: 20%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.subcategories {
+
+		ul {
+			&:extend(.pkp_unstyled_list);
+		}
+
+		li {
+			padding-top: @half;
+			padding-bottom: @half;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		@media(min-width: @screen-tablet) {
+			position: relative;
+			margin-top: @triple * 2;
+			margin-left: -@double;
+			margin-right: -@double;
+			padding: @triple;
+			border-top: @bg-border;
+			border-bottom: @bg-border;
+
+			h2 {
+				position: absolute;
+				top: -15px;
+				left: @double;
+				margin: 0;
+				padding-left: @base;
+				padding-right: @base;
+				line-height: @triple;
+				background: @bg;
+				color: @text-light;
+			}
+		}
+
+		@media(min-width: @screen-desktop) {
+			margin-left: -@triple;
+			margin-right: -@triple;
+		}
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.cmp_article_list {
+			padding-top: @double;
+		}
+
+		h2.title {
+			.pkp_screen_reader();
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+
+		.cmp_article_list {
+			padding-top: @triple;
+		}
+	}
+}

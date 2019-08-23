@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@cyrillic/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Часописи</message>
 	<message key="admin.settings.journalRedirect">Редирекција часописа</message>
 	<message key="admin.settings.journalRedirectInstructions">Приступ сајту ће бити преусмерен на часопис. Ово може бити корисно ако хостујете само један часопис.</message>
-	<message key="admin.settings.noJournalRedirect">Не ради преусмеравање</message>
 	<message key="admin.languages.primaryLocaleInstructions">Ово ће бити примарни језик за сајт и све часописе.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Одаберите локализације које желите да подржите на сајту. Оне ће бити доступне за све часописе и приказиваће се у менију за одабир језика. Уколико не одаберете ни један додатни језик мени за избор језика се неће приказивати.</message>
 	<message key="admin.locale.maybeIncomplete">Маркиране локализације нису комплетне.</message>
@@ -43,7 +42,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Путања може да садржи само алфанумеричке карактере, подвлаке и цртице и мора почињати и завршавати са алфанумеричким карактером</message>
 	<message key="admin.contexts.form.pathExists">Дата путања се већ користи за други часопис.</message>
 	<message key="admin.journals.enableJournalInstructions">Дозволи да се часопис јавно приказује на сајту</message>
-	<message key="admin.journals.journalDescription">Опис часописа</message>
+	<message key="admin.contexts.contextDescription">Опис часописа</message>
 	<message key="admin.journal.pathImportInstructions">Постојећа путања или путања за креирање (нпр. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Увези претплате</message>
 	<message key="admin.journals.transcode">Препиши метаподатке чланака из ISO8859-1</message>
@@ -57,25 +56,10 @@
 	<message key="admin.mergeUsers.allUsers">Сви корисници који имају улоге</message>
 	<message key="admin.mergeUsers.confirm">Да ли сте сигурни да желите да спојите корисничке налоге {$oldAccountCount} у налог са корисничким именом "{$newUsername}"? одабрани налози {$oldAccountCount} више неће постојати.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Нема корисника са додељеним улогама.</message>
-	<message key="admin.settings.options">Опције</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Категорије</message>
-	<message key="admin.categories.disableCategories">Не организуј часописе у категорије.</message>
-	<message key="admin.categories.enableCategories">Дозволи уредницима часописа да организују часописе у категорије.</message>
-	<message key="admin.categories.editTitle">Уреди категорију</message>
-	<message key="admin.categories.createTitle">Направи категорију</message>
-	<message key="admin.categories.create">Направи нову категорију</message>
-	<message key="admin.categories.noneCreated">Нема направљених категорија</message>
-	<message key="admin.categories.confirmDelete">Да ли сте исгурни да желите избрисати ову катгеорију</message>
-	<message key="admin.categories.name">Име</message>
-	<message key="admin.categories.nameRequired">Обавезно је име категорије</message>
 	<message key="admin.settings.defaultMetricDescription">Ваша OJS инсталација је конфигурисана да може сачувати резултате једног или више начина мерења употребе. Статистика употребе ће бити приказана у неколико контекста. У случајевима кад мора бити употребљен само један начин мерења, нпр. да би се приказала листа најчешће употребљених чланак или за рангирање резултата претраге.  Одаберите један од подешених мерења као претпостављен.</message>
-	<message key="admin.categories.enable.description">Администратор сајта може дефинисати више категорија како би се организовао већиброј часописа. Управници часописа могу одабрати неколико категорија за свој часопис како би читаоци могли да нађу часописе претрагом у колекцији часописа.</message>
-
 	<message key="admin.languages.confirmDisable">Да ли сте сигурни да желите да онемогућите ову локализацију? Ово ће утицати на часописе који ју користе.</message>
 	<message key="admin.contexts.form.titleRequired">Наслов је обавезан.</message>
-	<message key="admin.presses.createInstructions">Аутоматски ће Вам бити додељена улога менаџера овог часописа. Након што га направите бићете преусмерени на чаробњак подешавања како бисте завршили иницијална подешавања часописа.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Подсетник о истеку претплате</message>
 	<message key="admin.scheduledTask.openAccessNotification">Обавештење о Отвореном приступу</message>
 	<message key="admin.scheduledTask.reviewReminder">Подсетник о рецензирању</message>

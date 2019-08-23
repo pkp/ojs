@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/ImportIssueTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ImportIssueTest
@@ -15,6 +15,8 @@
 
 import('tests.ContentBaseTestCase');
 
+use Facebook\WebDriver\Interactions\WebDriverActions;
+
 class ImportIssueTest extends ContentBaseTestCase {
 	/**
 	 * Import an issue.
@@ -22,8 +24,10 @@ class ImportIssueTest extends ContentBaseTestCase {
 	function testImportIssue() {
 		$this->logIn('dbarnes');
 
-		$this->waitForElementPresent($selector='//a[text()=\'Import/Export\']');
-		$this->click($selector);
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Tools"]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Import/Export"]'))
+			->perform();
 
 		$this->waitForElementPresent($selector='//a[text()=\'Native XML Plugin\']');
 		$this->click($selector);

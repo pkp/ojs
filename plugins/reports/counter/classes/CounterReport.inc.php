@@ -46,7 +46,7 @@ class CounterReport {
 	 * Constructor
 	 * @param string $release
 	 */
-	function CounterReport($release) {
+	function __construct($release) {
 		$this->_release = $release;
 	}
 
@@ -135,7 +135,7 @@ class CounterReport {
 	 * @return array()
 	 */
 	protected function filterForContext($filters) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getContext();
 		$journalId = $journal ? $journal->getId() : '';
 		// If the request context is at the journal level, the dimension context id must be that same journal id
@@ -263,7 +263,7 @@ class CounterReport {
 	 * @return mixed
 	 */
 	function _getVendorComponent($key) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$site = $request->getSite();
 		$context = $request->getContext();
 		$contextDao = Application::getContextDAO();
@@ -273,7 +273,7 @@ class CounterReport {
 				if ($availableContexts->getCount() > 1) {
 					$name = $site->getLocalizedTitle();
 				} else {
-					$name =  $context->getSetting('publisherInstitution');
+					$name =  $context->getData('publisherInstitution');
 					if (empty($name)) {
 						$name = $context->getLocalizedName();
 					}

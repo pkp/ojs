@@ -3,8 +3,8 @@
 /**
  * @file classes/mail/ArticleMailTemplate.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleMailTemplate
@@ -16,22 +16,9 @@
  */
 
 import('lib.pkp.classes.mail.SubmissionMailTemplate');
-import('classes.log.SubmissionEmailLogEntry'); // Bring in log constants
+import('lib.pkp.classes.log.SubmissionEmailLogEntry'); // Bring in log constants
 
 class ArticleMailTemplate extends SubmissionMailTemplate {
-	/**
-	 * Constructor.
-	 * @param $article object
-	 * @param $emailKey string optional
-	 * @param $locale string optional
-	 * @param $journal object optional
-	 * @param $includeSignature boolean optional
-	 * @see SubmissionMailTemplate::SubmissionMailTemplate()
-	 */
-	function __construct($article, $emailKey = null, $locale = null, $journal = null, $includeSignature = true) {
-		parent::__construct($article, $emailKey, $locale, $journal, $includeSignature);
-	}
-
 	/**
 	 * @copydoc SubmissionMailTemplate::assignParams()
 	 */

@@ -3,8 +3,8 @@
 /**
  * @file classes/log/SubmissionEventLogEntry.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionEventLogEntry
@@ -37,18 +37,7 @@ define('SUBMISSION_LOG_EDITOR_ARCHIVE', 			0x30000005);
 define('SUBMISSION_LOG_EDITOR_RESTORE', 			0x30000006);
 
 // Reviewer events 					0x40000000
-define('SUBMISSION_LOG_REVIEW_UNASSIGN',		 	0x40000002);
-define('SUBMISSION_LOG_REVIEW_INITIATE', 			0x40000003);
-define('SUBMISSION_LOG_REVIEW_CANCEL', 			0x40000004);
-define('SUBMISSION_LOG_REVIEW_REINITIATE',	 		0x40000005);
-define('SUBMISSION_LOG_REVIEW_REVISION', 			0x40000008);
-define('SUBMISSION_LOG_REVIEW_RECOMMENDATION', 		0x40000009);
-define('SUBMISSION_LOG_REVIEW_RATE', 			0x40000010);
-define('SUBMISSION_LOG_REVIEW_RESUBMIT', 			0x40000012);
-define('SUBMISSION_LOG_REVIEW_FILE', 			0x40000013);
-define('SUBMISSION_LOG_REVIEW_CONFIRM_BY_PROXY', 		0x40000015);
 define('SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY', 	0x40000016);
-define('SUBMISSION_LOG_REVIEW_FILE_BY_PROXY', 		0x40000017);
 
 // Copyeditor events 					0x50000000
 define('SUBMISSION_LOG_COPYEDIT_ASSIGN', 			0x50000001);

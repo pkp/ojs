@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/admin.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -16,7 +16,6 @@
 	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
 	<message key="admin.settings.journalRedirect">Tidsskriftomdirigering</message>
 	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>
-	<message key="admin.settings.noJournalRedirect">Ikke omdiriger</message>
 	<message key="admin.languages.primaryLocaleInstructions">Dette vil bli standard språk for nettstedet og alle de tidsskriftene det er vert for.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet.</message>
 	<message key="admin.languages.confirmUninstall">Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen.</message>
@@ -38,7 +37,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn.</message>
 	<message key="admin.contexts.form.pathExists">Den valgte filstien er allerede tatt i bruk av et annet tidsskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Tillat at dette tidsskriftet vises offentlig på nettstedet</message>
-	<message key="admin.journals.journalDescription">Tidsskriftbeskrivelse</message>
+	<message key="admin.contexts.contextDescription">Tidsskriftbeskrivelse</message>
 	<message key="admin.journal.pathImportInstructions">Eksisterende tidsskriftfilsti, eller filsti som skal opprettes (for eks. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer abonnement</message>
 	<message key="admin.journals.transcode">Artikkelens Transcode-metadata fra ISO8859-1</message>
@@ -59,16 +58,4 @@
 	<message key="admin.mergeUsers.confirm">Er du sikker på at du vil slå sammen brukerkontoen med navnet "{$oldUsername}" med kontoen med brukernavnet "{$newUsername}"?  Etterpå finnes ikke brukerkontoen med navnet "{$oldUsername}" lenger. Denne handlingen kan ikke omgjøres.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Ingen vervete brukere</message>
 	<message key="admin.locale.maybeIncomplete">Merkede lokaliseringsfiler kan være ukomplette.</message>
-	<message key="admin.categories">Kategorier</message>
-	<message key="admin.categories.enable.description">Nettstedsadministrator kan velge å definere et sett kategorier her, for å organisere store sett med tidsskrift. Tidsskriftadministratorer kan da velge flere av disse kategoriene for hvert tidsskrift, og lesere kan bla gjennom tidsskriftsamlingene via kategoriene.</message>
-	<message key="admin.categories.disableCategories">Ikke organiser tidsskrifter etter kategorier.</message>
-	<message key="admin.categories.enableCategories">Tillat at Tidsskriftadaministratorer organiserer tidsskrift etter kategorier.</message>
-	<message key="admin.categories.editTitle">Rediger kategori</message>
-	<message key="admin.categories.createTitle">Lag kategori</message>
-	<message key="admin.categories.create">Lag ny kategori</message>
-	<message key="admin.categories.noneCreated">Ingen kategorier er laget.</message>
-	<message key="admin.settings.options">Valg</message>
-	<message key="admin.categories.confirmDelete">Er du sikker på at du ønsker å slette denne kategorien?</message>
-	<message key="admin.categories.name">Kategorinavn</message>
-	<message key="admin.categories.nameRequired">Kategorinavn må oppgis.</message>
 </locale>

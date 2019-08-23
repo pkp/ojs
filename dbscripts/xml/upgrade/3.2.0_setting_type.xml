@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_setting_type.xml
+  *
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Remove the setting_type column from the journal_settings and site_settings
+  * tables. This column is obsolete now that we use the context.json schema to
+  * define setting types.
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			ALTER TABLE journal_settings DROP COLUMN setting_type
+		</query>
+		<query>
+			ALTER TABLE site_settings DROP COLUMN setting_type
+		</query>
+	</sql>
+</data>

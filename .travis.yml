@@ -1,28 +1,49 @@
 # Configure the build matrix
+matrix:
+  include:
+  # Validation
+  - env: TEST=validation
+    php: 7.2
+  # PostgreSQL / various PHP
+  - env: TEST=pgsql
+    php: 7.1
+  - env: TEST=pgsql
+    php: 7.2
+  - env: TEST=pgsql
+    php: 7.3
+  # MySQL / various PHP
+  - env: TEST=mysql
+    php: 7.1
+  - env: TEST=mysql
+    php: 7.2
+  - env: TEST=mysql
+    php: 7.3
+  # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
+  # - env: TEST=mysql DISABLE_PATH_INFO=1
+  #   php: 7.2
 env:
-  matrix:
-  - TEST=validation # Validation tests: lint the XML, minify the Javascript, etc
-  - TEST=pgsql # Integration tests using PostgreSQL
-  - TEST=mysql # Integration tests using MySQL/MariaDB
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
-php:
-  - 7.1
-  - 7.2
 dist: trusty
 python:
   - 3.3 # Required by Javascript linter/builder
 git:
   # Inhibit automatic submodule checkout (see below)
   submodules: false
+cache:
+  npm: true
+  directories:
+    - $HOME/.composer/cache
 addons:
-  firefox: "45.9.0esr" # Required by Selenium tests
   apt:
     update: true
 before_install:
   # Check out submodules (this script checks out developer forks if necessary)
   - ./tools/startSubmodulesTRAVIS.sh
+
+  # Update to latest stable version of npm
+  - npm i g -npm
 
   - |
     if [[ "$TEST" != "validation" ]]; then
@@ -41,9 +62,6 @@ before_install:
       ./lib/pkp/tools/travis/install-linter.sh
     fi
 
-  # The code coverage test is only performed in the MySQL test round.
-  - if [[ "$TEST" == "mysql" ]]; then ./lib/pkp/tools/travis/prepare-code-coverage.sh; fi
-
 script:
   - |
     if [[ "$TEST" != "validation" ]]; then
@@ -55,17 +73,19 @@ script:
       ./lib/pkp/tools/travis/validate-xml.sh
       ./lib/pkp/tools/buildjs.sh -n
       ./lib/pkp/tools/checkHelp.sh
+      ./lib/pkp/tools/travis/validate-json.sh
+      npm run lint
     fi
 
 after_script:
-  # Merge the coverage reports into one HTML report and upload to http://pkp.sfu.ca/test-coverage
-  - if [[ "$TEST" == "mysql" ]]; then ./lib/pkp/tools/travis/post-code-coverage.sh; fi
-
   # Upload the completed database to the PKP server for other uses
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/post-data-build.sh; fi
 
   # Print logs and outputs for debugging.
-  - tail -c 1048576 error.log
+  - tail -n 200 error.log
   - cat ./lib/pkp/tests/results/error.log
+
+after_failure:
   - sudo apt-get install sharutils
-  - test "$(ls -A lib/pkp/tests/results | grep .png)" && (tar cz lib/pkp/tests/results/*.png | uuencode /dev/stdout)
+  - import -window root screenshot.png
+  - tar cz screenshot.png | uuencode /dev/stdout

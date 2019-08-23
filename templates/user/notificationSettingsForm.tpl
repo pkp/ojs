@@ -1,8 +1,8 @@
 {**
  * templates/user/notificationSettings.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * User profile form.
@@ -13,9 +13,9 @@
 		{assign var=notFirstJournal value=0}
 		{foreach from=$journals name=journalOpenAccessNotifications key=thisJournalId item=thisJournal}
 			{assign var=thisJournalId value=$thisJournal->getId()}
-			{assign var=publishingMode value=$thisJournal->getSetting('publishingMode')}
-			{assign var=enableOpenAccessNotification value=$thisJournal->getSetting('enableOpenAccessNotification')}
-			{assign var=notificationEnabled value=$user->getSetting('openAccessNotification', $thisJournalId)}
+			{assign var=publishingMode value=$thisJournal->getData('publishingMode')}
+			{assign var=enableOpenAccessNotification value=$thisJournal->getData('enableOpenAccessNotification')}
+			{assign var=notificationEnabled value=$user->getData('openAccessNotification', $thisJournalId)}
 			{if !$notFirstJournal}
 				{assign var=notFirstJournal value=1}
 				<tr>

@@ -3,8 +3,8 @@
 /**
  * @file tests/plugins/importexport/PubObjectCacheTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubObjectCacheTest
@@ -19,7 +19,7 @@
 
 import('lib.pkp.tests.PKPTestCase');
 import('classes/issue/Issue');
-import('classes/article/PublishedArticle');
+import('classes/article/PublishedSubmission');
 import('classes/article/ArticleGalley');
 import('plugins.importexport.medra.classes.PubObjectCache');
 
@@ -49,7 +49,7 @@ class PubObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new PubObjectCache();
 
-		$article = new PublishedArticle();
+		$article = new PublishedSubmission();
 		$article->setId('2');
 		$article->setIssueId('1');
 
@@ -73,7 +73,7 @@ class PubObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new PubObjectCache();
 
-		$article = new PublishedArticle();
+		$article = new PublishedSubmission();
 		$article->setId('2');
 		$article->setIssueId('1');
 
@@ -111,7 +111,7 @@ class PubObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new PubObjectCache();
 
-		$article = new PublishedArticle();
+		$article = new PublishedSubmission();
 		$article->setId('2');
 		$article->setIssueId('1');
 

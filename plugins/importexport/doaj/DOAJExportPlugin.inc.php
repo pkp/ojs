@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/DOAJExportPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportPlugin
@@ -101,7 +101,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
 	 * @see PubObjectsExportPlugin::depositXML()
-	 * @param $objects PublishedArticle
+	 * @param $objects PublishedSubmission
 	 * @param $context Context
 	 * @param $jsonString string Export JSON string
 	 * @return boolean Whether the JSON string has been registered
@@ -201,7 +201,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
 	 * Get the JSON for selected objects.
-	 * @param $object PublishedArticle
+	 * @param $object PublishedSubmission
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string JSON variable.

@@ -3,8 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSPaymentManager.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSPaymentManager
@@ -34,7 +34,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff configured
 	 */
 	function isConfigured() {
-		return parent::isConfigured() && $this->_context->getSetting('paymentsEnabled');
+		return parent::isConfigured() && $this->_context->getData('paymentsEnabled');
 	}
 
 	/**
@@ -120,7 +120,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function publicationEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('publicationFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('publicationFee') > 0;
 	}
 
 	/**
@@ -128,7 +128,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function membershipEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('membershipFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('membershipFee') > 0;
 	}
 
 	/**
@@ -136,7 +136,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseArticleEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('purchaseArticleFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('purchaseArticleFee') > 0;
 	}
 
 	/**
@@ -144,7 +144,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseIssueEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('purchaseIssueFee') > 0;
+		return $this->isConfigured() && $this->_context->getData('purchaseIssueFee') > 0;
 	}
 
 	/**
@@ -152,7 +152,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function onlyPdfEnabled() {
-		return $this->isConfigured() && $this->_context->getSetting('restrictOnlyPdf');
+		return $this->isConfigured() && $this->_context->getData('restrictOnlyPdf');
 	}
 
 	/**
@@ -160,7 +160,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return PaymentPlugin
 	 */
 	function getPaymentPlugin() {
-		$paymentMethodPluginName = $this->_context->getSetting('paymentPluginName');
+		$paymentMethodPluginName = $this->_context->getData('paymentPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
 			$plugins = PluginRegistry::loadCategory('paymethod');
@@ -182,7 +182,15 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$userDao = DAORegistry::getDAO('UserDAO');
 				$user = $userDao->getById($queuedPayment->getUserId());
-				$userDao->renewMembership($user);
+				$dateEnd = $user->getSetting('dateEndMembership', 0);
+				if (!$dateEnd) $dateEnd = 0;
+
+				// if the membership is expired, extend it to today + 1 year
+				$time = time();
+				if ($dateEnd < $time ) $dateEnd = $time;
+
+				$dateEnd = mktime(23, 59, 59, date("m", $dateEnd), date("d", $dateEnd), date("Y", $dateEnd)+1);
+				$user->updateSetting('dateEndMembership', $dateEnd, 'date', 0);
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:

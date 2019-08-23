@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -83,7 +83,10 @@
 	<message key="section.abbreviation">Forkortelse</message>
 	<message key="section.abbreviation.example">(Eksempel: Artikler=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikkel</message>
 	<message key="article.articles">Artikler</message>
+	<message key="common.publication">Artikkel</message>
+	<message key="common.publications">Artikler</message>
 	<message key="article.submissionId">Manus-ID</message>
 	<message key="article.title">Tittel</message>
 	<message key="article.authors">Forfattere</message>
@@ -283,10 +286,6 @@
 
 
 
-
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), som er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er open source programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
-<br /><br />
-Oppsetting av LOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang. Da gjøres det ved å følge disse to trinnene:]]></message>
 
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[For å få innholdet i dette tidsskriftet indeksert i et verdensomspennende system av forskningsdatabaser, les <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">the steps to becoming a data contributor</a> og registrer ditt tidsskrift hos det offisielle <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Open Archives registeret</a>.  For å registrere tidsskriftet trenger du base-URLen til ditt arkiv: <span class="highlight">{$oaiUrl}</span>.  Etterpå kan du registrere tidsskriftet i <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI-registeret</a> og <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
@@ -599,7 +598,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="about.delayedOpenAccess">Utsatt Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">Innholdet i dette tidsskriftet vil bli tilgjengelig i Open Access format</message>
 	<message key="about.delayedOpenAccessDescription2">måned(er) etter at en utgave er publisert.</message>
-	<message key="about.authorSelfArchive">Forfatters egenarkivering</message>
 	<message key="about.archiving">Arkivering</message>
 	<message key="about.subscriptions">Abonnement</message>
 	<message key="about.subscriptionsContact">Abonnementskontakt</message>
@@ -683,8 +681,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkel {$submissionId}. Den nye filens ID er {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra vurdering av manuskriptet {$submissionId} for vurderingsrunde {$round}.</message>
 	<message key="log.review.reviewInitiated">Vurderingsrunde {$round} av manuskriptet {$submissionId} ved {$reviewerName} er igangsatt.</message>
- 	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er igangsatt på nytt.</message>
- 	<message key="log.review.reviewCleared">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er fjernet.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$submissionId} ved {$reviewerName} er satt til {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} ved {$reviewerName} er satt.</message>
@@ -720,50 +716,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 
 	<message key="log.imported">{$userName} har importert artikkel {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
- 	<message key="rt.admin.settings">Valg for leseverktøy</message>
-
- 	<message key="rt.admin.settings.description">Leseverktøyene vil bli vist i en ramme ved siden av publiserte elementer i de seksjonene av tidsskriftet som er utpekt for indeksering. Leseverktøyene består av et sett valgfrie verktøy tilknyttet det publiserte elementet (oppført nedenfor), og et sett verktøy som gir tilgang til relaterte elementer, organisert etter fag og felt.</message>
-	<message key="rt.admin.settings.enableReadingTools">Slå på leseverktøy for de utpekte seksjonene av tidsskriftet.</message>
-	<message key="rt.admin.settings.relatedItems">Felt</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Se <a href="{$relatedItemsLink}" class="action">Relaterte element sett</a> for å se, legge til, korrigere, eller slette relaterte elementer for hvert felt.]]></message>
-
-	<message key="rt.admin.options">Verktøy for tidsskriftelement</message>
- 	<message key="rt.admin.relatedItems">Verktøy for relaterte elementer</message>
-
-	<message key="rt.admin.settings.addComment">Legg til kommentar (tillater leseren å sende inn kommentarer, som redaksjonslederen kan slette. Leserkommentarer må være slått på i oppsett trinn 2).</message>
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Mulig ugyldige URL-adresser for søkestedene er vist nedenfor.<br/>
-Du bør validere de URLene som er angitt som ugyldige manuelt, fordi denne testen ikke er 100% nøyaktig.<br/>
-Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skjema.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Eier</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Forfatterens navn, tilknytning, land</message>
-	<message key="rt.metadata.pkp.peerReviewed">Fagfellevurdert artikkel</message>
-
-
-	<message key="rt.beNotifiedWhen">Be om å bli varslet når ...</message>
-
-	<message key="rt.thisJournal">Søk i tidsskrift</message>
-
-
- 	<message key="rt.context.authorTermsDescription">For elementer med flere enn en forfatter, kan du krysse av for hvert forfatternavn du vil søke på. For å få vite mer om søkeressursene, klikk på OM. Disse ressursene er valgt for sin relevans og frie tilgang til noe eller alt innhold.</message>
-
+	<message key="metadata.pkp.peerReviewed">Fagfellevurdert artikkel</message>
 
 	<!--
 	 *
@@ -817,7 +770,7 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 		<li>OJS greier ikke å modifisere registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</li>
 	</ul>
 <p>Pakkene med oversatte lokalfiler kan lastes ned manuelt fra <a href="http://pkp.sfu.ca">PKP-nettstedet</a>.</p>]]></message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
 <h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>
 Authors who publish with this journal agree to the following terms:
 <ol type="a">
@@ -889,10 +842,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="installer.databaseSettingsInstructions">OJS krever tilgang til en SQL-database for lagring av data. Se listen over databaser som støttes i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$submissionId} på vegne av {$reviewerName}.</message>
 	<message key="log.editor.decision">Redaktørbeslutningen ({$decision}) for artikkelen {$submissionId} ble journalført av {$editorName}.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates ikke.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
-	<message key="article.article">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">år</message>
@@ -964,7 +913,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.subscription.purchase">Kjøp abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikkel, "{$title}", har blitt innlevert.</message>
 	<message key="notification.type.editing">Redigeringshendelser</message>
 	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$title}" har blitt kommentert.</message>
 	<message key="notification.type.galleyModified">Et sideoppsett til "{$title}" har blitt endret.</message>

@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -28,7 +28,6 @@
 	<message key="manager.payment.amount">数额</message>
 	<message key="manager.payment.authorFees">作者费用管理</message>
 	<message key="manager.payment.authorFeesDescription">选择的选项，连同它们的说明和费用(可以在下面进行编辑),将出现在投稿流程的第一步和投稿下面的关于期刊,以及在哪里需要支付点.</message>
-	<message key="manager.payment.currency">支付货币</message>
 	<message key="manager.payment.currencymessage">OJS不执行任何货币转换.  如果接受付款订阅, 你必须确定订阅货币与这里指定的一个匹配.</message>
 	<message key="manager.payment.description">描述</message>
 	<message key="manager.payment.details">详细</message>
@@ -58,7 +57,6 @@
 	<message key="manager.payment.paymentType">支付类型</message>
 	<message key="manager.payment.readerFees">读者费用</message>
 	<message key="manager.payment.records">支付记录</message>
-	<message key="manager.payments">支付管理</message>
 	<message key="manager.payment.userName">支付ID</message>
 	<message key="manager.people.allEnrolledUsers">全部注册用户</message>
 	<message key="manager.people.allJournals">所有期刊</message>
@@ -111,19 +109,15 @@
 	<message key="manager.setup.alternateHeader">其它标题</message>
 	<message key="manager.setup.alternateHeaderDescription">否则，代替标题和图标，可以在上面的文字输入框之中插入一个HTML版本的标题。如果不需要的话就保持空白。</message>
 	<message key="manager.setup.announcements">公告</message>
-	<message key="manager.setup.announcementsDescription">可以发布公告以通知期刊的读者关于期刊的新闻稿以及活动。已发布的公告会出现在「公告」页面。</message>
-	<message key="manager.setup.announcementsIntroduction">额外的信息</message>
-	<message key="manager.setup.announcementsIntroductionDescription">输入在公告网页上要给读者看到的额外的信息</message>
+	<message key="manager.setup.enableAnnouncements.description">可以发布公告以通知期刊的读者关于期刊的新闻稿以及活动。已发布的公告会出现在「公告」页面。</message>
+	<message key="manager.setup.announcementsIntroduction.description">输入在公告网页上要给读者看到的额外的信息</message>
 	<message key="manager.setup.appearInAboutJournal">(将在「期刊介绍」中出现)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">要求投稿作者提供一个利益冲突（CI）的文字声明。</message>
 	<message key="manager.setup.competingInterests.requireReviewers">要求审稿人在每次提交同行评议的审稿的时候，提交一个利益冲突（CI）声明。</message>
 	<message key="manager.setup.history">期刊历史</message>
 	<message key="manager.setup.historyDescription">这段文字将显示在期刊网站的关于我们栏目，并且可以用来描述标题变化，编辑委员会，以及其他有关期刊的出版历史的变化.</message>
-	<message key="manager.setup.copyeditInstructions">文字编辑指引</message>
-	<message key="manager.setup.copyeditInstructionsDescription">「文字编辑指引」会在「投稿编辑」阶段显示给文字编辑、作者和栏目编辑看到。下面是一组预设的HTML格式指南，期刊管理员可以在任何阶段进行修订或者代换（以纯文字或HTML的方式）。</message>
-	<message key="manager.setup.copyrightNotice">版权注意事项</message>
-	<message key="manager.setup.coverage">涵盖范围</message>
-	<message key="manager.setup.coverageDescription">指涉地理空间上的位置、年代或者历史范围，以及＼或者研究样本的特征。</message>
+	<message key="manager.setup.metadata.coverage">涵盖范围</message>
+	<message key="manager.setup.metadata.coverage.description">指涉地理空间上的位置、年代或者历史范围，以及＼或者研究样本的特征。</message>
 	<message key="manager.setup.currentIssue">当期期刊</message>
 	<message key="manager.setup.customizingTheLook">步骤 5：自订外观。</message>
 	<message key="manager.setup.customTags">自订标签</message>
@@ -138,14 +132,12 @@
 	<message key="manager.setup.displayCurrentIssue">.为当期期刊新增一份目录（如果可以的话）</message>
 	<message key="manager.setup.editorDecision">编辑决策</message>
 	<message key="manager.setup.emailBounceAddress">退信邮箱</message>
-	<message key="manager.setup.emailBounceAddressDescription">如有任何退回的电子邮件，都会发送一封错误信息到这个地址。</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意：</strong>要启用这个选项，网站管理员必须启用OJS配置文件中的 <tt>allow_envelope_sender</tt>选项。可能会需要额外的服务器配置才能支持使用这个功能（可能不是所有服务器上都能用），请见上述的OJS文件。]]></message>
+	<message key="manager.setup.emailBounceAddress.description">如有任何退回的电子邮件，都会发送一封错误信息到这个地址。</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>注意：</strong>要启用这个选项，网站管理员必须启用OJS配置文件中的 <tt>allow_envelope_sender</tt>选项。可能会需要额外的服务器配置才能支持使用这个功能（可能不是所有服务器上都能用），请见上述的OJS文件。]]></message>
 	<message key="manager.setup.emails">电子邮件认证</message>
 	<message key="manager.setup.emailSignature">签名</message>
-	<message key="manager.setup.emailSignatureDescription">系统代表这份期刊所寄发的预备电子邮件会具有下面的签名列在信末。预备电子邮件的正文部分允许「期刊管理员」进行编辑。</message>
-	<message key="manager.setup.enableAnnouncements">让期刊管理员可以增加期刊公告。</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">显示</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首页最近公告。</message>
+	<message key="manager.setup.emailSignature.description">系统代表这份期刊所寄发的预备电子邮件会具有下面的签名列在信末。预备电子邮件的正文部分允许「期刊管理员」进行编辑。</message>
+	<message key="manager.setup.enableAnnouncements.enable">让期刊管理员可以增加期刊公告。</message>
 	<message key="manager.setup.enablePublicIssueId">自订的识别码将会被用来识别期数。</message>
 	<message key="manager.setup.enableUserRegistration">允设用户在本期刊网站注册为：</message>
 	<message key="manager.setup.focusAndScope">焦点和范围</message>
@@ -179,7 +171,7 @@
 	<message key="manager.setup.journalHomepageHeader">期刊首页标题</message>
 	<message key="manager.setup.journalHomepageHeader.altText">期刊首页头部</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">可以上传一个图片版本的期刊标题和标志图形(logo)到首页上（以.gif、.jpg、.png的文件格式），以替换文字版本的显示方式。</message>
-	<message key="manager.setup.journalInitials">期刊起首字母</message>
+	<message key="manager.setup.contextInitials">期刊起首字母</message>
 	<message key="manager.setup.journalLayout">期刊布局</message>
 	<message key="manager.setup.journalLayoutDescription">在这里选择一个期刊主题并选择期刊布局组件。一个期刊样式也可以在这里添加，它将替换系统默认的样式与主题样式（被选择的）。</message>
 	<message key="manager.setup.journalLogo">期刊图标</message>
@@ -191,16 +183,9 @@
 	<message key="manager.setup.journalSetupUpdated">您的期刊配置已经更新。</message>
 	<message key="manager.setup.journalStyleSheetInvalid">无效的期刊样式表格式。可接受的格式为.css的文件格式。</message>
 	<message key="manager.setup.journalTheme">期刊主题</message>
-	<message key="manager.setup.journalTitle">期刊名称</message>
+	<message key="manager.setup.contextTitle">期刊名称</message>
 	<message key="manager.setup.labelName">标签名</message>
-	<message key="manager.setup.layoutInstructions">版面指引</message>
-	<message key="manager.setup.layoutInstructionsDescription">「版面指引」用以准备将期刊的出版项目进行格式化，在下面以HTML或纯文字的方式输入。在每份投稿稿件的「编辑」页面中，版面编辑和栏目编辑都会看到这些信息。（每份期刊可能使用自订的文件格式、书目标准和样式表等等，所以没有准备一组预设的指引。）</message>
-	<message key="manager.setup.layoutTemplates">版面样式</message>
-	<message key="manager.setup.layoutTemplatesDescription">可以上传模板，显示在「版面」中，让期刊中每一种标准格式化的出版项目（例如论文、书评等等）使用加上注解、指派字体、大小、边距等等的任一种文件格式（如，doc、pdf等等），以作为版面编辑和校对者的指引。</message>
-	<message key="manager.setup.layoutTemplates.file">模板文件</message>
-	<message key="manager.setup.layoutTemplates.title">标题</message>
 	<message key="manager.setup.lists">列表</message>
-	<message key="manager.setup.listsDescription">.输入每页显示项目的最大数字（例如投稿数、用户数或者编辑作业指派人数），以及显示每个页面的链接数目。</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[启用LOCKSS，在加入LOCKSS的图书馆中保存与散布期刊的内容。<a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>页面。 A LOCKSS的认证信息会显示在「期刊存档」的「期刊介绍」中：]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[列出6-10个会注册并且快取这份期刊的图书馆。比方说，指派编辑或者编委成员工作的机构，以及＼或者已经加入LOCKSS的机构。见 <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. 用预备好的邀请函寄给(i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a>或者 (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">外观</message>
@@ -219,35 +204,32 @@
 	<message key="manager.setup.note">备注</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>注意：</strong>收稿通知的电子邮件现在是关闭的。若要开启，请在 <a class="action" href="{$preparedEmailsUrl}">备用电子邮件</a>启用「收稿通知」电子邮件。]]></message>
 	<message key="manager.setup.numPageLinks">网页链接</message>
-	<message key="manager.setup.onlineAccessManagement">线上阅读管理</message>
+	<message key="manager.setup.publishingMode">线上阅读管理</message>
 	<message key="manager.setup.onlineIssn">eISSN</message>
-	<message key="manager.setup.openAccess">期刊内容将开放阅读。</message>
+	<message key="manager.distribution.publishingMode.openAccess">期刊内容将开放阅读。</message>
 	<message key="manager.setup.pageNumberIdentifier">页码选项</message>
 	<message key="manager.setup.policies">方针</message>
 	<message key="manager.setup.policies.description">焦点、审稿、栏目、隐私、安全性和其它说明。</message>
 	<message key="manager.setup.printIssn">ISSN</message>
 	<message key="manager.setup.proofingInstructions">校对指引</message>
 	<message key="manager.setup.proofingInstructionsDescription">「校对指引」会在「投稿编辑」页面显示给校对者、作者、版面编辑与栏目编辑看到。下面是一组预设的HTML格式之指引，期刊管理员可以在任何阶段进行编辑或替换。（以纯文字或HTML的方式）</message>
-	<message key="manager.setup.provideRefLinkInstructions">提供排版编辑指示</message>
 	<message key="manager.setup.publicationSchedule">出版时程</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[期刊的各个项目能够一起出版，作为一期目录的一部份内容。否则，个别的项目能够在一准备好的时候，透过将它们加入到当期(或当卷)的「目录」中，迳行出版。请在「期刊介绍」中提供读者一个关于这份期刊会使用的系统以及其出刊频率的说明。]]></message>
 	<message key="manager.setup.publicationScheduling">出版时程配置</message>
 	<message key="manager.setup.publicIdentifier">期刊内容识别码</message>
 	<message key="manager.setup.publisher">出版者</message>
-	<message key="manager.setup.publisherDescription">出版这份期刊的组织单位名称会出现在这份期刊的「期刊介绍」中。</message>
+	<message key="manager.setup.publishingDescription">出版这份期刊的组织单位名称会出现在这份期刊的「期刊介绍」中。</message>
 	<message key="manager.setup.referenceLinking">参考文献链接</message>
-	<message key="manager.setup.refLinkInstructions.description">参考文献的排版指示</message>
 	<message key="manager.setup.restrictArticleAccess">用户必须登入才可以浏览已经出版论文的全文。</message>
 	<message key="manager.setup.restrictSiteAccess">用户必须登入才能浏览这个网站。</message>
 	<message key="manager.setup.reviewGuidelines">审稿须知</message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[「审稿须知」提供审稿人评判一份投稿是否适合在本期刊出版的判准，这就像是一个特殊的指南手册，用以进行有效的和协助性的审稿工作。]]></message>
 	<message key="manager.setup.reviewOptions">审稿选项</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">自动电子邮件备忘录 (可从 OJS 的预设电子邮件取得) 可以在两个时间点送给审稿人 (而编辑也随时可以直接电邮审稿人)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>注意：</strong>要启用这些选项，这个网站的管理员必须启用OJS配置文件中的<tt>scheduled_tasks</tt> 选项。（可能无法在所有的服务器上面执行），就在上面指出的OJS文件当中]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">盲审</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">一般审稿时间</message>
 	<message key="manager.setup.reviewOptions.onQuality">对每一篇审稿结果，编辑将会由1到5评比审稿人。</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">审稿人只有在答应审稿之后才能浏稿件文件。</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">审稿人只有在答应审稿之后才能浏稿件文件。</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">审稿人阅读选项</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">启用审稿人「一点即入」模式。</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意：</strong> 这封给审稿人的电子邮件邀请函会包涵一个特殊的网址链接，邀请审稿人直接进入稿件的「审稿」页面（同时可以存取其他需要登入身份的页面）。基于与这个选项相关的安全性理由，编辑在寄出给审稿人的邀请函之前，不能变更电子邮件或者增加副本(CCs)或密件副本(BCCs)。]]></message>
@@ -255,16 +237,13 @@
 	<message key="manager.setup.reviewOptions.reviewerReminders">审稿人备忘录</message>
 	<message key="manager.setup.reviewPolicy">审稿方针</message>
 	<message key="manager.setup.searchEngineIndexing">搜寻引擎索引</message>
-	<message key="manager.setup.searchEngineIndexingDescription">为协助用户使用搜寻引擎来了解这份期刊，请提供一份简短的期刊说明与相关关键字（以分号(;)加以区隔）。</message>
+	<message key="manager.setup.searchEngineIndexing.description">为协助用户使用搜寻引擎来了解这份期刊，请提供一份简短的期刊说明与相关关键字（以分号(;)加以区隔）。</message>
 	<message key="manager.setup.sectionsAndSectionEditors">栏目和栏目编辑</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">（如果没有加入任何栏目，那么投稿项目预设将是「论文」栏目。）</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[进入「栏目管理」以建立或修改本期刊的文章栏目（例如论文、书评等等）。<br /><br />在投稿给本期刊之后，作者将会指派其文章为...]]></message>
-	<message key="manager.setup.securitySettings">开放阅读与安全性配置</message>
-	<message key="manager.setup.securitySettingsDescription">OJS提供一个与安全性相关的数字选项，能够用来限制期刊的内容，并且基于日后审核结算的目的来维护额外的投稿稿件信息。</message>
 	<message key="manager.setup.selectEditorDescription">将会全程监控处理过程的期刊编辑</message>
 	<message key="manager.setup.selectSectionDescription">将会考虑纳入此项目的期刊栏目。</message>
 	<message key="manager.setup.showGalleyLinksDescription">总是显示相关文档链接以及明示的受限存取。</message>
-	<message key="manager.setup.siteAccess">网站权限</message>
 	<message key="manager.setup.stepsToJournalSite">创建一个期刊网站的5个步骤</message>
 	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地图问题、贝斯定理)</message>
 	<message key="manager.setup.subjectKeywordTopic">关键字</message>
@@ -274,8 +253,7 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">在提交一份投稿文章给这个期刊时，作者首先会被要求检查是否完成「投稿准备清单」中的每个项目，才能继续下一步。这份清单也会出现在「期刊介绍」内的「作者须知」栏位中。这份清单能够在下面进行编辑，而所有的项目将会需要作者进行检查后，才能继续他们的投稿流程。</message>
 	<message key="manager.setup.submissions">投稿</message>
 	<message key="manager.setup.submissions.description">作者指引、版权和索引(包括注册)。</message>
-	<message key="manager.setup.subscription">>这份期刊需要订阅之后才能阅读某些或所有的内容。</message>
-	<message key="manager.setup.subscriptionDescription">「订阅管理」模组需要指派「订阅管理员」，存取这个模组，包括额外的开放阅读、自行存档和电子邮件通知选项。</message>
+	<message key="manager.distribution.publishingMode.subscription">>这份期刊需要订阅之后才能阅读某些或所有的内容。</message>
 	<message key="manager.setup.typeExamples">(例如，历史研究、准实验、文学分析、调查＼访谈等等)</message>
 	<message key="manager.setup.typeMethodApproach">类型（方法＼研究取向）</message>
 	<message key="manager.setup.typeProvideExamples">在本栏中提供相关的研究类型、方法和研究取向作为范例</message>
@@ -283,7 +261,6 @@
 	<message key="manager.setup.uniqueIdentifierDescription">文章和期数可以被附加上一个识别数字或字串，使用一个像是数位物件识别系统(Digital Object Identifier System; DOI)的注册系统。</message>
 	<message key="manager.setup.useEditorialReviewBoard">本期刊设有一个编辑/审稿委员会。</message>
 	<message key="manager.setup.useImageTitle">标题图像</message>
-	<message key="manager.setup.useJournalStyleSheet">期刊CSS样式表</message>
 	<message key="manager.setup.userRegistration">用户注册</message>
 	<message key="manager.setup.useTextTitle">标题文字</message>
 	<message key="manager.statistics.statistics">期刊统计</message>
@@ -309,14 +286,7 @@
 	<message key="manager.statistics.statistics.selectSections">选择这个栏目以查看本期刊的审稿统计。</message>
 	<message key="manager.statistics.statistics.subscriptions">订阅</message>
 	<message key="manager.subscriptionPolicies">订阅规定</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">作者自行存档方案</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">下列的方案会列在「期刊介绍」之中。</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">稍后开放阅读</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">在稍后开放阅读的时候，编辑仍能够指定某一期期刊中的特定文章能够直接开放阅读。</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">将被以开发存取的格式被使用，在</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">个月以后</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">请选择一个有效的时间长度</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">下列的说明会发布在「期刊介绍」之中的「稍后开放阅读」下面</message>
 	<message key="manager.subscriptionPolicies.expiry">订阅到期</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">订阅期满后，读者可能会被拒绝进入所有订阅内容或可继续保留访问前发表的订阅内容到订阅的终止日期。</message>
 	<message key="manager.subscriptionPolicies.expiryFull">全部到期</message>
@@ -474,7 +444,6 @@
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">期刊主要页面访问量</message>
 	<message key="manager.statistics.reports.filters.byContext.description">通过上下文（期次/或者文章）缩小结果范围</message>
 	<message key="manager.statistics.reports.filters.byObject.description">通过目标类型（期刊，期次，pdf格式样稿，其他样稿）/或者一个或多个目标id（s）缩小结果范围</message>
-	<message key="manager.setup.resetPermissions.description">版权信息和许可协议信息将和发表的内容永久地连接在一起，这样可以保证这些数据不会因为期刊文章提交的新方针而改变。 如果您想要重新设置出版内容的权限信息，使用下面的按钮。</message>
 	<message key="manager.statistics.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
 在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
 	<message key="manager.setup.copyrightYearBasis">根据新期刊的版权</message>

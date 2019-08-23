@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localization strings.
@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artiklar</message>
+	<message key="common.publication">Artikel</message>
+	<message key="common.publications">Artiklar</message>
 	<message key="article.submissionId">Bidragets ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Författare</message>
@@ -371,16 +373,8 @@
 	<message key="plugins.categories.auth.description">Plugins för autentisering tillåter Open Journal Systems att autentisera användare via andra system, t.ex. LDAP-servrar.</message>
 	<message key="plugins.categories.generic.description">Allmänna plugins förstärker Open Journal Systems med funktioner som inte ryms inom de andra kategorierna av plugins.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems stöder <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) för att säkra permanent arkivering av tidskriften. LOCKSS är en fri och öppen programvara som utvecklats vid Stanford University Library. Programvaran skapar förutsättningar för bibliotek att bevara utvalda elektroniska tidskrifter genom att med regelbunden automatik söka igenom tidskrifternas webbsidor efter nyligen inlagt material och arkivera det. Varje arkiv synkas regelbundet mot speglingar hos andra bibliotek, och i händelse av förlorade eller skadade filer kan man återställa material från dessa speglingar.
-<br /><br />
-Du behöver inte aktivera LOCKSS i Open Journal Systems förrän publiceringen är i full gång. Installationen sker i följande två steg:]]></message>
-
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems stöder också <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe)-systemet för att säkra permanent arkivering av tidskriften. CLOCKSS är baserat på den fria och öppna programvaran LOCKSS som utvecklats vid Stanford University Library. Programvaran skapar förutsättningar för bibliotek att bevara utvalda elektroniska tidskrifter genom att med regelbunden automatik söka igenom tidskrifternas webbsidor efter nyligen inlagt material och arkivera det. Varje arkiv synkas regelbundet mot speglingar hos andra bibliotek, och i händelse av förlorade eller skadade filer kan man återställa material från dessa speglingar.
-<br /><br />
-Du behöver inte aktivera CLOCKSS-stöd i Open Journal Systems förrän publiceringen är i full gång.]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Föreslagna upphovsrättsdeklarationer baserade på Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Föreslagna upphovsrättsdeklarationer baserade på Creative Commons</h3>
 <h4>1. Förslag på deklaration för tidskrifter som erbjuder open access</h4>
 Författare som publicerar i den här tidskriften accepterar följande villkor:
 <ol type="a">
@@ -793,7 +787,6 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="about.delayedOpenAccess">Fördröjd open access</message>
 	<message key="about.delayedOpenAccessDescription1">Innehållet i den här tidskriften kommer att tillgängligöras som open access</message>
 	<message key="about.delayedOpenAccessDescription2">månad(er) efter att numret har publicerats.</message>
-	<message key="about.authorSelfArchive">Parallellpublicering</message>
 	<message key="about.archiving">Arkivering</message>
 	<message key="about.subscriptions">Prenumerationer</message>
 	<message key="about.subscriptions.individual">Enskilda prenumerationer</message>
@@ -943,8 +936,6 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} har arbetat om artikel {$submissionId}. Nytt fil-ID är {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} har tagits bort som granskare för bidrag {$submissionId}, granskningsomgång {$round}.</message>
 	<message key="log.review.reviewInitiated">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har påbörjats.</message>
-	<message key="log.review.reviewReinitiated">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har börjat om på nytt.</message>
-	<message key="log.review.reviewCleared">Omgång {$round}, med {$reviewerName} som granskare för bidrag {$submissionId}, har tagits bort.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} har betygsatts för sin granskning av bidraget {$submissionId}, omgång {$round}.</message>
 	<message key="log.review.reviewDueDateSet">Deadline för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har satts till {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Rekommendation för omgång {$round} i granskningen av bidrag {$submissionId} av {$reviewerName} har registrerats.</message>
@@ -983,62 +974,10 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 
 	<message key="log.imported">{$userName} har importerat artikel {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Alternativ för Läsverktyg</message>
-
-	<message key="rt.admin.settings.description">Läsverktygen kommer att visas i en ruta vid sidan av det publicerade materialet i de sektioner av tidskriften som stöder indexering. Läsverktygen består av en uppsättning valbara verktyg relaterade till det publicerade materialet (se nedan) och en uppsättning verktyg som ger tillgång till relaterad information, organiserad enligt ämne och disciplin.</message>
-	<message key="rt.admin.settings.enableReadingTools">Aktivera Läsverktyg för valda sektioner av tidskriften.</message>
-	<message key="rt.admin.settings.relatedItems">Fält</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Inställningar för relaterat material</a> för att visa, lägga till, korrigera, eller radera information från respektive fält.]]></message>
-
-	<message key="rt.admin.options">Verktyg för tidskriftselement</message>
-	<message key="rt.admin.relatedItems">Verktygselement för relaterat material</message>
-
-	<message key="rt.admin.settings.addComment">Lägg till kommentar (Gör det möjligt för läsare att posta kommentarer, som kan tas bort av tidskriftsansvarig.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Användare måste vara registrerade och inloggade för att lämna kommentarer och det är inte tillåtet att vara anonym.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Användare måste vara registrerade och inloggade för att lämna kommentarer och det är tillåtet att vara anonym.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Användare behöver inte registrera sig för att lämna kommentarer och det är tillåtet att vara anonym.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Förmodat ogiltiga URL:er för söksidor visas nedan.<br/>
-Du bör manuellt verifiera de URL:er som är markerade som ogiltiga eftersom urvalet inte kan garanteras till 100%.<br/>
-Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltiga i valideringen.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Upphovsperson</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Författarens namn, affiliering, land</message>
-	<message key="rt.metadata.pkp.peerReviewed">Sakkunniggranskad artikel</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Få avisering när ...</message>
-
-	<message key="rt.thisJournal">Sök tidskrift</message>
-
-
-	<message key="rt.context.authorTermsDescription">För material med fler än en författare, lämna samtliga namn markerade för att söka på arbeten av samma medförfattare, eller sök på en författare i taget genom att markera bara ett namn. För ytterligare information om resurserna sökningen sker i, se OM. De här resurserna är valda utifrån sin relevans och fria tillgång till hela eller delar av innehållet.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Sakkunniggranskad artikel</message>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editing">Redaktionella händelser</message>
 	<message key="notification.type.submissionSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editorDecisionComment">En kommentar har tillfogats redaktörsbeslut för "{$title}."</message>

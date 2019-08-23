@@ -15,15 +15,6 @@
 import('plugins.reports.counter.classes.CounterReport');
 
 class CounterReportJR1 extends CounterReport {
-
-	/**
-	 * Constructor
-	 * @param string $release
-	 */
-	function CounterReportJR1($release) {
-		parent::CounterReport($release);
-	}
-
 	/**
 	 * Get the report title
 	 * @return $string
@@ -75,7 +66,7 @@ class CounterReportJR1 extends CounterReport {
 			$this->setError(new Exception(__('plugins.reports.counter.exception.filter'), COUNTER_EXCEPTION_WARNING | COUNTER_EXCEPTION_BAD_FILTERS));
 		}
 		// Metric type is ojs::counter
-		$metricType = OJS_METRIC_TYPE_COUNTER;
+		$metricType = METRIC_TYPE_COUNTER;
 		// Ordering must be by Journal (ReportItem), and by Month (ItemPerformance) for JR1
 		$validOrder = array(STATISTICS_DIMENSION_CONTEXT_ID => STATISTICS_ORDER_DESC, STATISTICS_DIMENSION_MONTH => STATISTICS_ORDER_ASC);
 		// TODO: range
@@ -147,9 +138,9 @@ class CounterReportJR1 extends CounterReport {
 		$journalName = $journal->getLocalizedName();
 		$journalPubIds = array();
 		foreach (array('print', 'online') as $issnType) {
-			if ($journal->getSetting($issnType.'Issn')) {
+			if ($journal->getData($issnType.'Issn')) {
 				try {
-					$journalPubIds[] = new COUNTER\Identifier(ucfirst($issnType).'_ISSN', $journal->getSetting($issnType.'Issn'));
+					$journalPubIds[] = new COUNTER\Identifier(ucfirst($issnType).'_ISSN', $journal->getData($issnType.'Issn'));
 				} catch (Exception $ex) {
 					// Just ignore it
 				}

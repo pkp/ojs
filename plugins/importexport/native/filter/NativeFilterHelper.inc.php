@@ -2,8 +2,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeFilterHelper.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeFilterHelper
@@ -48,5 +48,87 @@ class NativeFilterHelper {
 		return $issueIdentificationNode;
 	}
 
-}
+	/**
+	 * Create and return an object covers node.
+	 * @param $filter NativeExportFilter
+	 * @param $doc DOMDocument
+	 * @param $object Issue|Article
+	 * @return DOMElement
+	 */
+	function createCoversNode($filter, $doc, $object) {
+		$deployment = $filter->getDeployment();
+		$coversNode = null;
+		$coverImages = $object->getCoverImage(null);
+		if (!empty($coverImages)) {
+			$coversNode = $doc->createElementNS($deployment->getNamespace(), 'covers');
+			foreach ($coverImages as $locale => $coverImage) {
+				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
+				$coverNode->setAttribute('locale', $locale);
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
+				import('classes.file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
+				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+				$embedNode->setAttribute('encoding', 'base64');
+				$coverNode->appendChild($embedNode);
+				$coversNode->appendChild($coverNode);
+			}
+		}
+		return $coversNode;
+	}
+
+	/**
+	 * Parse out the object covers.
+	 * @param $filter NativeExportFilter
+	 * @param $node DOMElement
+	 * @param $object Issue|Article
+	 * @param $assocType ASSOC_TYPE_ISSUE | ASSOC_TYPE_SUBMISSION
+	 */
+	function parseCovers($filter, $node, $object, $assocType) {
+		$deployment = $filter->getDeployment();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'cover':
+						$this->parseCover($filter, $n, $object, $assocType);
+						break;
+					default:
+						$deployment->addWarning($assocType, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+				}
+			}
+		}
+	}
+
+	/**
+	 * Parse out the cover and store it in the object.
+	 * @param $filter NativeExportFilter
+	 * @param $node DOMElement
+	 * @param $object Issue|Article
+	 * @param $assocType ASSOC_TYPE_ISSUE | ASSOC_TYPE_SUBMISSION
+	 */
+	function parseCover($filter, $node, $object, $assocType) {
+		$deployment = $filter->getDeployment();
+		$context = $deployment->getContext();
+		$locale = $node->getAttribute('locale');
+		if (empty($locale)) $locale = $context->getPrimaryLocale();
+		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
+			if (is_a($n, 'DOMElement')) {
+				switch ($n->tagName) {
+					case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
+					case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
+					case 'embed':
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
+						file_put_contents($filePath, base64_decode($n->textContent));
+						break;
+					default:
+						$deployment->addWarning($assocType, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+				}
+			}
+		}
+	}
+
+}

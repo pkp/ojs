@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/Section.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Section
@@ -82,7 +82,7 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Get open archive setting of section.
+	 * Get "will/will not be indexed" setting of section.
 	 * @return boolean
 	 */
 	function getMetaIndexed() {
@@ -90,7 +90,7 @@ class Section extends PKPSection {
 	}
 
 	/**
-	 * Set open archive setting of section.
+	 * Set "will/will not be indexed" setting of section.
 	 * @param $metaIndexed boolean
 	 */
 	function setMetaIndexed($metaIndexed) {
@@ -186,32 +186,4 @@ class Section extends PKPSection {
 	function setHideAuthor($hideAuthor) {
 		return $this->setData('hideAuthor', $hideAuthor);
 	}
-
-	/**
-	 * Get localized section policy.
-	 * @return string
-	 */
-	function getLocalizedPolicy() {
-		return $this->getLocalizedData('policy');
-	}
-
-	/**
-	 * Get policy.
-	 * @param $locale string
-	 * @return string
-	 */
-	function getPolicy($locale) {
-		return $this->getData('policy', $locale);
-	}
-
-	/**
-	 * Set policy.
-	 * @param $policy string
-	 * @param $locale string
-	 */
-	function setPolicy($policy, $locale) {
-		return $this->setData('policy', $policy, $locale);
-	}
 }
-
-

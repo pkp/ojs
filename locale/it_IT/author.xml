@@ -4,13 +4,11 @@
 <!--
   * locale/it_IT/author.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2000-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT (Italiano) locale.
-  * Contributed by Andrea Marchitelli - CINECA.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -116,4 +114,5 @@
 	<message key="author.submit.mustEnterWaiverReason">Se stai chiedendo un esonero, devi indicarne il motivo.</message>
 	<message key="author.submit.form.localeRequired">Seleziona una lingua per la proposta.</message>
 	<message key="author.submit.nextSteps">Passi successivi</message>
+	<message key="submission.submit.cancelSubmission">Puoi completare questa proposta successivamente selezionado "Proposte attive" dalla home dell'autore</message>
 </locale>

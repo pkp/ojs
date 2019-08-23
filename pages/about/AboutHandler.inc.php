@@ -3,8 +3,8 @@
 /**
  * @file pages/about/AboutHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AboutHandler
@@ -29,17 +29,17 @@ class AboutHandler extends AboutContextHandler {
 
 		if ($journal) {
 			$paymentManager = \Application::getPaymentManager($journal);
-			if (!($journal->getSetting('paymentsEnabled') && $paymentManager->isConfigured())) {
+			if (!($journal->getData('paymentsEnabled') && $paymentManager->isConfigured())) {
 				$request->redirect(null, 'index');
 			}
 		}
 
 		$templateMgr->assign(array(
-			'subscriptionAdditionalInformation' => $journal->getLocalizedSetting('subscriptionAdditionalInformation'),
-			'subscriptionMailingAddress' => $journal->getSetting('subscriptionMailingAddress'),
-			'subscriptionName' => $journal->getSetting('subscriptionName'),
-			'subscriptionPhone' => $journal->getSetting('subscriptionPhone'),
-			'subscriptionEmail' => $journal->getSetting('subscriptionEmail'),
+			'subscriptionAdditionalInformation' => $journal->getLocalizedData('subscriptionAdditionalInformation'),
+			'subscriptionMailingAddress' => $journal->getData('subscriptionMailingAddress'),
+			'subscriptionName' => $journal->getData('subscriptionName'),
+			'subscriptionPhone' => $journal->getData('subscriptionPhone'),
+			'subscriptionEmail' => $journal->getData('subscriptionEmail'),
 			'individualSubscriptionTypes' => $subscriptionTypeDao->getByInstitutional($journal->getId(), false, false),
 			'institutionalSubscriptionTypes' => $subscriptionTypeDao->getByInstitutional($journal->getId(), true, false),
 		));

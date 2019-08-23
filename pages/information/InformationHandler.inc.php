@@ -3,8 +3,8 @@
 /**
  * @file pages/information/InformationHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class InformationHandler
@@ -44,24 +44,24 @@ class InformationHandler extends Handler {
 
 		switch(array_shift($args)) {
 			case 'readers':
-				$content = $journal->getLocalizedSetting('readerInformation');
+				$content = $journal->getLocalizedData('readerInformation');
 				$pageTitle = 'navigation.infoForReaders.long';
 				break;
 			case 'authors':
-				$content = $journal->getLocalizedSetting('authorInformation');
+				$content = $journal->getLocalizedData('authorInformation');
 				$pageTitle = 'navigation.infoForAuthors.long';
 				break;
 			case 'librarians':
-				$content = $journal->getLocalizedSetting('librarianInformation');
+				$content = $journal->getLocalizedData('librarianInformation');
 				$pageTitle = 'navigation.infoForLibrarians.long';
 				break;
 			case 'competingInterestGuidelines':
-				$content = $journal->getLocalizedSetting('competingInterestsPolicy');
+				$content = $journal->getLocalizedData('competingInterestsPolicy');
 				$pageTitle = 'navigation.competingInterestGuidelines';
 				break;
 			case 'sampleCopyrightWording':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-				$content = __('manager.setup.authorCopyrightNotice.sample');
+				$content = __('manager.setup.copyrightNotice.sample');
 				$pageTitle = 'manager.setup.copyrightNotice';
 				break;
 			default:
@@ -100,7 +100,7 @@ class InformationHandler extends Handler {
 	 */
 	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		if (!$request->getJournal()->getSetting('restrictSiteAccess')) {
+		if (!$request->getJournal()->getData('restrictSiteAccess')) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}

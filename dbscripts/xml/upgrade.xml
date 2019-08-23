@@ -3,8 +3,8 @@
 <!--
   * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
@@ -51,8 +51,12 @@
 		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -67,6 +71,7 @@
 	<schema file="lib/pkp/xml/schema/controlledVocab.xml" />
 	<schema file="lib/pkp/xml/schema/submissions.xml" />
 	<schema file="lib/pkp/xml/schema/submissionFiles.xml" />
+	<schema file="lib/pkp/xml/schema/categories.xml" />
 	<schema file="lib/pkp/xml/schema/notes.xml" />
 	<schema file="lib/pkp/xml/schema/genres.xml" />
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
@@ -131,6 +136,7 @@
 		<code function="provideSupplementaryFilesForReview" />
 		<code function="setFileUploader" />
 		<code function="setFileName" />
+		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_pubId_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
@@ -212,9 +218,33 @@
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
 	</upgrade>
 
-	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
+	<upgrade minversion="2.4.0.0" maxversion="3.1.0.9">
 		<note file="docs/release-notes/README-3.1.1" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<data file="dbscripts/xml/upgrade/3.1.2_update.xml" />
+		<note file="docs/release-notes/README-3.1.2" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.4">
+		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_navigation_menu_items_locale_change.xml" />
+		<code function="migrateSiteLocales" />
+		<code function="migrateSidebarBlocks" />
+		<code function="migrateSiteStylesheet" />
+		<code function="migrateMetadataSettings" />
+		<code function="createLicenseTerms" />
+		<code function="installEmailTemplate" key="REVIEW_REINSTATE" locales="en_US" />
+		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
+		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

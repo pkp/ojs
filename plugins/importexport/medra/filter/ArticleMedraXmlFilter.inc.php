@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/ArticleMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleMedraXmlFilter
@@ -55,7 +55,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObjects array Array of PublishedArticles or ArticleGalleys
+	 * @param $pubObjects array Array of PublishedSubmissions or ArticleGalleys
 	 * @return DOMDocument
 	 */
 	function &process(&$pubObjects) {
@@ -84,7 +84,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	/**
 	 * Create and return the article (as work or as manifestation) node.
 	 * @param $doc DOMDocument
-	 * @param $pubObject PublishedArticle|ArticleGalley
+	 * @param $pubObject PublishedSubmission|ArticleGalley
 	 * @return DOMElement
 	 */
 	function createArticleNode($doc, $pubObject) {
@@ -92,13 +92,13 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$context = $deployment->getContext();
 		$cache = $deployment->getCache();
 		$plugin = $deployment->getPlugin();
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 
-		assert ((is_a($pubObject, 'PublishedArticle') && $this->isWork($context, $plugin)) ||
+		assert ((is_a($pubObject, 'PublishedSubmission') && $this->isWork($context, $plugin)) ||
 				(is_a($pubObject, 'ArticleGalley') && !$this->isWork($context, $plugin)));
 
-		if (is_a($pubObject, 'PublishedArticle')) {
+		if (is_a($pubObject, 'PublishedSubmission')) {
 			$galley = null;
 			$article = $pubObject;
 			if (!$cache->isCached('articles', $article->getId())) {
@@ -112,8 +112,8 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			if ($cache->isCached('articles', $galley->getSubmissionId())) {
 				$article = $cache->get('articles', $galley->getSubmissionId());
 			} else {
-				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-				$article = $publishedArticleDao->getByArticleId($galley->getSubmissionId());
+				$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
+				$article = $publishedSubmissionDao->getBySubmissionId($galley->getSubmissionId());
 				if ($article) $cache->add($article, null);
 			}
 			$articleNodeName = 'DOISerialArticleVersion';
@@ -180,7 +180,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	 * Create a content item node.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedArticle
+	 * @param $article PublishedSubmission
 	 * @param $galley ArticleGalley
 	 * @param $objectLocalePrecedence array
 	 * @return DOMElement
@@ -216,7 +216,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			if ($galleyFile) $contentItemNode->appendChild($this->createExtentNode($doc, $galleyFile));
 		}
 		// Article Title (mandatory)
-		$titles = $this->getTranslationsByPrecedence($article->getTitle(null), $objectLocalePrecedence);
+		$titles = $this->getTranslationsByPrecedence($article->getFullTitle(null), $objectLocalePrecedence);
 		assert(!empty($titles));
 		foreach ($titles as $locale => $title) {
 			$contentItemNode->appendChild($this->createTitleNode($doc, $locale, $title, O4DOI_TITLE_TYPE_FULL));

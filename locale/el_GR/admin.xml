@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/admin.xml
+  *
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  *
+  * Edited by National Documentation Center (EKT) team, 2019
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="admin.hostedJournals">Φιλοξενούμενα περιοδικά</message>
+	<message key="admin.settings.journalRedirect">Προώθηση σε περιοδικό</message>
+	<message key="admin.settings.options">Επιλογές</message>
+	<message key="admin.settings.journalRedirectInstructions">Αιτήματα που υποβάλλονται στον κεντρικό ιστότοπο του συστήματος θα προωθούνται στην ιστοσελίδα αυτού του περιοδικού. Η επιλογή είναι χρήσιμη αν ο ιστότοπος φιλοξενεί μόνο ένα περιοδικό.</message>
+	<message key="admin.settings.noJournalRedirect">Να μη γίνεται προώθηση</message>
+	<message key="admin.settings.defaultMetricDescription">Η εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, τα οποία εμφανίζονται σε διαφορετικά συγκείμενα.
+Σε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης (π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων ή για την ταξινόμηση των αποτελεσμάτων μίας αναζήτησης). Παρακαλούμε ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή.</message>
+	<message key="admin.languages.confirmDisable">Επιβεβαιώνετε την απενεργοποίηση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Η μεταφόρτωση γλωσσών από τον διακομιστή web του Public Knowledge Project δεν είναι δυνατή διότι:</p>
+	<ul>
+		<li>Ο διακομιστής σας δεν έχει ή δεν επιτρέπει εκτέλεση του βοηθητικού προγράμματος GNU "tar".</li>
+		<li>Το OJS δε μπορεί να τροποποιήσει το αρχείο μητρώου γλωσσών, συνήθως "registry/locales.xml".</li>
+	</ul>
+<p>Τα πακέτα γλωσσών μπορούν να μεταφορτωθούν από τον δικτυακό τόπο του PKP <a href="http://pkp.sfu.ca"></a>.</p>]]></message>
+
+	<message key="admin.languages.primaryLocaleInstructions">Αυτή θα είναι η προκαθορισμένη γλώσσα του ιστοτόπου και όλων των φιλοξενούμενων περιοδικών.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Επιλέξτε τις γλώσσες που θα υποστηρίζονται στον ιστότοπο. Οι επιλεγμένες γλώσσες θα είναι διαθέσιμες για χρήση σε όλα τα περιοδικά του ιστοτόπου και θα εμφανίζονται στο μενού επιλογής γλώσσας σε κάθε σελίδα του ιστοτόπου (η επιλογή αυτή παραμετροποιείται σε επίπεδο περιοδικού). Σε περίπτωση μη επιλογής δύο ή περισσότερων γλωσσών, το μενού επιλογής γλώσσας δεν θα εμφανίζεται και οι ρυθμίσεις γλώσσας σε επίπεδο περιοδικού δεν θα είναι διαθέσιμες.</message>
+	<message key="admin.locale.maybeIncomplete">Ενδέχεται να μην υπάρχουν πλήρεις μεταφράσεις για τις επιλεγμένες γλώσσες.</message>
+	<message key="admin.languages.confirmUninstall">Επιβεβαιώνετε την απεγκατάσταση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Επιλέξτε τις πρόσθετες γλώσσες προς εγκατάσταση. Η εγκατάσταση γλωσσών είναι προαπαιτούμενο για τη χρήση τους στα περιοδικά. Για πληροφορίες σχετικά με την υποστήριξη νέων γλωσσών, ανατρέξτε στο τεκμηριωτικό υλικό του OJS.</message>
+	<message key="admin.languages.downloadFailed">Η μεταφόρτωση της γλώσσας απέτυχε. Ακολουθεί η περιγραφή του σφάλματος.</message>
+	<message key="admin.languages.localeInstalled">Η γλώσσα "{$locale}" εγκαταστάθηκε.</message>
+	<message key="admin.languages.download">Μεταφόρτωση γλώσσας</message>
+	<message key="admin.languages.download.cannotOpen">Το άνοιγμα του αρχείου τεκμηρίωσης της γλώσσας από τον ιστότοπο του PKP δεν είναι εφικτό.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Δεν είναι δυνατή η προσθήκη της γλώσσας στο αρχείο μητρώου γλωσσών, συνήθως "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">Βάση δεδομένων Χρηστών του OJS</message>
+	<message key="admin.auth.enableSyncProfiles">Ενεργοποίηση του συγχρονισμού του προφίλ Χρήστη (εφόσον υποστηρίζεται από το συγκεκριμένο Πρόσθετο Πιστοποίησης). Οι πληροφορίες του προφίλ Χρήστη θα ενημερώνονται αυτόματα από την απομακρυσμένη πηγή όταν ο Χρήστης συνδέεται στο σύστημα, και οι αλλαγές στο προφίλ OJS (συμπεριλαμβανομένων των αλλαγών του κωδικού πρόσβασης) θα προστίθενται αυτόματα και την απομακρυσμένη πηγή. Εάν αυτή η επιλογή είναι απενεργοποιημένη, οι πληροφορίες προφίλ του OJS και της απομακρυσμένης πηγής θα φυλάσσονται χωριστά.</message>
+	<message key="admin.auth.enableSyncPasswords">Ενεργοποίηση της δυνατότητας τροποποίησης του κωδικού πρόσβασης από τους Χρήστες (εφόσον υποστηρίζεται από το συγκεκριμένο Πρόσθετο πιστοποίησης). Θα επιτρέπεται η τροποποίηση του κωδικού πρόσβασης από τους Χρήστες μέσω της λειτουργίας επαναφοράς κωδικού. Σε περίπτωση μη ενεργοποίησης της επιλογής, αυτές οι λειτουργίες δεν θα είναι διαθέσιμες στους Χρήστες με τη συγκεκριμένη πηγή πιστοποίησης.</message>
+	<message key="admin.auth.enableCreateUsers">Ενεργοποίηση της δυνατότητας δημιουργίας Χρήστη (εάν υποστηρίζεται από το συγκεκριμένο Πρόσθετο Πιστοποίησης). Οι Χρήστες που δημιουργούνται εντός του OJS με τη συγκεκριμένη πηγή πιστοποίησης θα προστίθενται αυτόματα στην απομακρυσμένη πηγή πιστοποίησης, εφόσον δεν υπάρχουν ήδη. Επιπρόσθετα, εάν αυτή είναι η προκαθορισμένη πηγή πιστοποίησης, οι λογαριασμοί που δημιουργούνται στο OJS με τη διαδικασία εγγραφής Χρήστη θα προστίθενται και στην απομακρυσμένη πηγή πιστοποίησης.</message>
+	<message key="admin.systemVersion">Έκδοση OJS</message>
+	<message key="admin.systemConfiguration">Ρύθμιση παραμέτρων του OJS</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Ρύθμιση παραμέτρων του OJS από το &lt;tt&gt;config.inc.php&lt;/tt&gt;.]]></message>
+	<message key="admin.journals.createInstructions">Θα σας αποδοθεί αυτόματα ο ρόλος του Διαχειριστή για αυτό το περιοδικό. Κατά τη δημιουργία ενός νέου περιοδικού, θα ανακατευθυνθείτε στις ρυθμίσεις του περιοδικού για να ολοκληρώσετε τη διαδικασία οργάνωσής του.</message>
+	<message key="admin.journals.journalSettings">Ρυθμίσεις περιοδικού</message>
+	<message key="admin.journals.noneCreated">Δεν έχει δημιουργηθεί κανένα περιοδικό.</message>
+	<message key="admin.contexts.create">Δημιουργία περιοδικού</message>
+	<message key="admin.journals.urlWillBe">Μια σύντομη λέξη ή ακρωνύμιο που θα ταυτοποιεί το περιοδικό. Το URL του περιοδικού θα είναι {$sampleUrl}.</message>
+	<message key="admin.contexts.form.titleRequired">Απαιτείται τίτλος για το περιοδικό.</message>
+	<message key="admin.contexts.form.pathRequired">Απαιτείται διαδρομή για το περιοδικό.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">Η διαδρομή πρέπει να αρχίζει και να λήγει με αλφαριθμητικό χαρακτήρα και να περιέχει μόνο αλφαριθμητικούς χαρακτήρες, κάτω παύλες ή παύλες.</message>
+	<message key="admin.contexts.form.pathExists">Η επιλεγμένη διαδρομή χρησιμοποιείται από άλλο περιοδικό.</message>
+	<message key="admin.journals.enableJournalInstructions">Δημόσια εμφάνιση του περιοδικού στον ιστότοπο</message>
+	<message key="admin.journals.journalDescription">Περιγραφή του περιοδικού</message>
+	<message key="admin.journal.pathImportInstructions">Υπάρχουσα διαδρομή περιοδικού ή διαδρομή προς δημιουργία (π.χ. "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Εισαγωγή συνδρομών</message>
+	<message key="admin.journals.transcode">Μετατροπή μεταδεδομένων άρθρου από ISO8859-1</message>
+	<message key="admin.journals.redirect">Δημιουργία κώδικα για την αντιστοίχιση των OJS 1 URLs σε OJS 2 URLs</message>
+	<message key="admin.journals.form.importPathRequired">Απαιτείται η διαδρομή εισαγωγής.</message>
+	<message key="admin.journals.importErrors">Η εισαγωγή δεν ολοκληρώθηκε επιτυχώς.</message>
+	<message key="admin.mergeUsers">Συγχώνευση Χρηστών</message>
+	<message key="admin.mergeUsers.mergeUser">Συγχώνευση Χρήστη</message>
+	<message key="admin.mergeUsers.into.description">Επιλέξτε έναν Χρήστη στον οποίο θα αποδώσετε τα δικαιώματα, τις αναθέσεις και τις εργασίες του προηγούμενου Χρήστη.</message>
+	<message key="admin.mergeUsers.from.description">Επιλέξτε έναν ή περισσότερους Χρήστες προς συγχώνευση στον λογαριασμό άλλου Χρήστη (αν π.χ. πρόκειται για Χρήστη με δύο λογαριασμούς). Ο λογαριασμός(-σμοί) που θα επιλεγεί πρώτος θα διαγραφεί και οι συνδεδεμένες υποβολές, αναθέσεις κλπ θα αποδοθούν στον δεύτερο λογαριασμό.</message>
+	<message key="admin.mergeUsers.allUsers">Όλοι οι εγγεγραμμένοι Χρήστες</message>
+	<message key="admin.mergeUsers.confirm">Είστε βέβαιοι ότι επιθυμείτε να συγχωνεύσετε τον/τους επιλεγμένο(-ους) {$oldAccountCount} λογαριασμό(-ους) στον λογαριασμό με όνομα Χρήστη "{$newUsername}"; Ο/Οι επιλεγμένος(-οι) {$oldAccountCount} λογαριασμός(-σμοί) θα διαγραφεί(-ούν). Αυτή η ενέργεια δεν είναι αναστρέψιμη.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Κανένας εγγεγραμμένος Χρήστης</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Κατηγορίες</message>
+	<message key="admin.categories.enable.description">Για την ορθή οργάνωση μεγάλου αριθμού περιοδικών, ο Διαχειριστής του δικτυακού τόπου μπορεί να ορίσει επιμέρους κατηγορίες/σύνολα περιοδικών. Θα υπάρχει η δυνατότητα επιλογής κατηγορίας από τους Διαχειριστές των περιοδικών και περιήγησης των αναγνωστών στις αντίστοιχες συλλογές περιοδικών.</message>
+	<message key="admin.categories.disableCategories">Να μη γίνει χρήση της λειτουργίας κατηγοριοποίησης</message>
+	<message key="admin.categories.enableCategories">Επιτρέψτε στους Διαχειριστές περιοδικών να κατατάσσουν τα περιοδικά σε κατηγορίες.</message>
+	<message key="admin.categories.editTitle">Επεξεργασία κατηγορίας</message>
+	<message key="admin.categories.createTitle">Δημιουργία κατηγορίας</message>
+	<message key="admin.categories.create">Δημιουργία νέας κατηγορίας</message>
+	<message key="admin.categories.noneCreated">Δεν έχουν δημιουργηθεί κατηγορίες.</message>
+	<message key="admin.categories.confirmDelete">Επιβεβαιώνετε τη διαγραφή αυτής της κατηγορίας;</message>
+	<message key="admin.categories.name">Ονομασία</message>
+	<message key="admin.categories.nameRequired">Απαιτείται μια ονομασία κατηγορίας.</message>
+	<message key="admin.presses.createInstructions">Θα σας αποδοθεί αυτόματα ο ρόλος του Διαχειριστή για αυτό το περιοδικό. Κατά τη δημιουργία ενός νέου περιοδικού, θα ανακατευθυνθείτε στις ρυθμίσεις του περιοδικού για να ολοκληρώσετε τη διαδικασία οργάνωσής του.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Υπενθύμιση λήξης συνδρομής</message>
+	<message key="admin.scheduledTask.openAccessNotification">Γνωστοποίηση ανοικτής πρόσβασης</message>
+	<message key="admin.scheduledTask.reviewReminder">Υπενθύμιση αξιολόγησης</message>
+</locale>

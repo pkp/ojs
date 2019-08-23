@@ -9,8 +9,8 @@
 /**
  * @file classes/journal/Journal.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Journal
@@ -34,7 +34,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedPageHeaderTitle() {
-		$titleArray = $this->getSetting('name');
+		$titleArray = $this->getData('name');
 		$title = null;
 
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
@@ -48,7 +48,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedPageHeaderLogo() {
-		$logoArray = $this->getSetting('pageHeaderLogoImage');
+		$logoArray = $this->getData('pageHeaderLogoImage');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}
@@ -60,7 +60,7 @@ class Journal extends Context {
 	 * @return string
 	 */
 	function getLocalizedFavicon() {
-		$faviconArray = $this->getSetting('favicon');
+		$faviconArray = $this->getData('favicon');
 		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
 			if (isset($faviconArray[$locale])) return $faviconArray[$locale];
 		}
@@ -75,16 +75,8 @@ class Journal extends Context {
 	 * Get the association type for this context.
 	 * @return int
 	 */
-	function getAssocType() {
+	public function getAssocType() {
 		return ASSOC_TYPE_JOURNAL;
-	}
-
-	/**
-	 * Get the settings DAO for this context object.
-	 * @return DAO
-	 */
-	static function getSettingsDAO() {
-		return DAORegistry::getDAO('JournalSettingsDAO');
 	}
 
 	/**
@@ -105,8 +97,7 @@ class Journal extends Context {
 	 */
 	function getMetricTypes($withDisplayNames = false) {
 		// Retrieve report plugins enabled for this journal.
-		$reportPlugins =& PluginRegistry::loadCategory('reports', true, $this->getId());
-		if (!is_array($reportPlugins)) return array();
+		$reportPlugins = PluginRegistry::loadCategory('reports', true, $this->getId());
 
 		// Run through all report plugins and retrieve all supported metrics.
 		$metricTypes = array();
@@ -133,7 +124,7 @@ class Journal extends Context {
 	 *   type could be identified.
 	 */
 	function getDefaultMetricType() {
-		$defaultMetricType = $this->getSetting('defaultMetricType');
+		$defaultMetricType = $this->getData('defaultMetricType');
 
 		// Check whether the selected metric type is valid.
 		$availableMetrics = $this->getMetricTypes();

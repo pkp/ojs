@@ -3,8 +3,8 @@
 /**
  * @file tests/ContentBaseTestCase.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ContentBaseTestCase
@@ -14,6 +14,11 @@
  */
 
 import('lib.pkp.tests.PKPContentBaseTestCase');
+
+use Facebook\WebDriver\WebDriverBy;
+use Facebook\WebDriver\Interactions\WebDriverActions;
+use Facebook\WebDriver\WebDriverExpectedCondition;
+use Facebook\WebDriver\WebDriverSelect;
 
 class ContentBaseTestCase extends PKPContentBaseTestCase {
 	/**
@@ -27,14 +32,6 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		// Page 1
 		$this->waitForElementPresent('id=sectionId');
 		$this->select('id=sectionId', 'label=' . $this->escapeJS($section));
-	}
-
-	/**
-	 * Get the number of items in the default submission checklist
-	 * @return int
-	 */
-	protected function _getChecklistLength() {
-		return 5;
 	}
 
 	/**
@@ -54,6 +51,27 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		$this->waitForElementPresent('//form[@id=\'initiateReview\']//input[@type=\'checkbox\']');
 		$this->waitForElementPresent($selector = '//form[@id=\'initiateReview\']//button[contains(., \'Send to Review\')]');
 		$this->click($selector);
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
+	}
+
+	/**
+	 * Schedule for publication in an issue
+	 */
+	function publish($issueTitle) {
+		$this->waitForElementPresent($selector = '//a[text()="Publish Version"]');
+		$this->click($selector);
+		$this->waitForElementPresent('//select[@id="issueId"]');
+		$this->select('id=issueId', 'label=' . $this->escapeJS($issueTitle));
+		$this->click('//button[text()=\'Save\']');
+	}
+
+	/**
+	 * Check if a submission appears in the current issue
+	 */
+	function isInCurrentIssue($submissionTitle) {
+		$this->open(self::$baseUrl);
+		$this->waitForElementPresent($selector = '//a[contains(text(), "Current")]');
+		$this->click($selector);
+		$this->waitForElementPresent('//a[contains(text(),' . $this->quoteXpath($submissionTitle) . ')]');
 	}
 }

@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -29,7 +29,6 @@
 	<message key="manager.payment.amount">المبلغ</message>
 	<message key="manager.payment.authorFees">رسوم المؤلف</message>
 	<message key="manager.payment.authorFeesDescription">أدخل مبالغ الرسوم أدناه من أجل تمكين معالجة رسوم النشر.</message>
-	<message key="manager.payment.currency">العملة</message>
 	<message key="manager.payment.currencymessage">نظام المجلات المفتوحة لا يجري أي عملية للتحويل بين العملات. عند قبول المدفوعات المالية للاشتراكات، عليك التأكد من كون مبلغ الاشتراك هو بعملة مطابقة للعملة المحددة هنا.</message>
 	<message key="manager.payment.description">الوصف</message>
 	<message key="manager.payment.details">التفاصيل</message>
@@ -63,8 +62,7 @@
 	<message key="manager.payment.readerFees">رسوم القرّاء</message>
 	<message key="manager.payment.readerFeesDescription">الخيارات المحددة مع أوصافها ورسوماتها (والتي بالإمكان تعديلها أدناه)، ستظهر في (عن المجلة) تحت باب السياسات، فضلاً عن ظهورها في مواضع أخرى حيثما يتطلب الدفع المالي.</message>
 	<message key="manager.payment.records">السجلات</message>
-	<message key="manager.payments">المدفوعات</message>
-	<message key="manager.paymentTypes">أنواع المدفوعاتPayment Types</message>
+	<message key="manager.paymentTypes">أنواع المدفوعات</message>
 	<message key="manager.payment.userName">معرَّف الدفع</message>
 	<message key="manager.people.allEnrolledUsers">الأفراد ذوي الأدوار في هذه المجلة</message>
 	<message key="manager.people.allJournals">جميع المجلات</message>
@@ -111,10 +109,8 @@
 	<message key="manager.setup">التهيئة</message>
 	<message key="manager.setup.masthead">طاقم المجلة</message>
 	<message key="manager.setup.editorialTeam">هيئة التحرير</message>
-	<message key="manager.setup.editorialTeam.description">قائمة بالمحررين، المدراء وغيرهم من الشخصيات المرتبطة بالمجلة.</message>
 	<message key="manager.setup.homepageContent">محتوى الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.homepageContentDescription">الصفحة الرئيسية للمجلة تشتمل إفتراضياً على روابط التنقل. يمكن إلحاق محتويات إضافية في الصفحة الرئيسية باستعمال واحد أو أكثر من الخيارات الآتية والتي ستظهر حسب ترتيبها المعروض أدناه.</message>
-	<message key="manager.setup.layout">تصميم المجلة</message>
 	<message key="manager.setup.useStyleSheet">أنماط المجلة</message>
 	<message key="manager.setup.contextName">اسم المجلة</message>
 	<message key="manager.setup.pageHeader">رأس صفحة المجلة</message>
@@ -129,19 +125,15 @@
 	<message key="manager.setup.alternateHeader">رأس صفحة بديل</message>
 	<message key="manager.setup.alternateHeaderDescription">عوضاً عن ذلك، بدلاً من العنوان والشعار، يمكن إضافة نسخة من رأس الصفحة بصيغة HTML مخصصة بالطريقة التي تريدها في مربع النص أدناه. أترك مربع النص فارغاً إن لم تتطلب ذلك.</message>
 	<message key="manager.setup.announcements">الإعلانات</message>
-	<message key="manager.setup.announcementsDescription">يمكن نشر الإعلانات لإعلام قراء المجلة عن الأخبار والأحداث. الإعلانات المنشورة ستظهر على صفحة الإعلانات.</message>
-	<message key="manager.setup.announcementsIntroduction">معلومات إضافية</message>
-	<message key="manager.setup.announcementsIntroductionDescription">أدخل أي معلومات إضافية ينبغي عرضها للقراء على صفحة الإعلانات.</message>
+	<message key="manager.setup.enableAnnouncements.description">يمكن نشر الإعلانات لإعلام قراء المجلة عن الأخبار والأحداث. الإعلانات المنشورة ستظهر على صفحة الإعلانات.</message>
+	<message key="manager.setup.announcementsIntroduction.description">أدخل أي معلومات إضافية ينبغي عرضها للقراء على صفحة الإعلانات.</message>
 	<message key="manager.setup.appearInAboutJournal">(لتظهر في "عن المجلة")</message>
 	<message key="manager.setup.competingInterests.requireAuthors">يتطلب تقديم المؤلفين لبيان المصالح المتضاربة (CI) مع طلبات النشر الخاصة بهم.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">يتطلب من المحكمين تقديم بيان المصالح المتضاربة (CI) مع كل تحكيم مناظر يقوموم به.</message>
 	<message key="manager.setup.history">تأريخ المجلة</message>
 	<message key="manager.setup.historyDescription">هذا النص سيظهر ضمن (عن المجلة) ويمكن أن يستعمل لمنح فكرة عن التعديلات التي حصلت في مناصب طاقم المجلة ورئاسة تحريرها أو أي فقرات أخرى ذات علاقة بتأريخ النشر في المجلة.</message>
-	<message key="manager.setup.copyeditInstructions">تعليمات التدقيق</message>
-	<message key="manager.setup.copyeditInstructionsDescription">تعليمات التدقيق ستكون متاحة للمدققين والمؤلفين ومحرري الأقسام خلال مرحلة تحرير طلبات النشر. فيما يأتي مجموعة إفتراضية من التعليمات بصيغة HTML، والتي من الممكن تعديلها أو استبدالها من قبل رئيس تحرير المجلة في أي وقت (بصيغة HTML أو بنص صريح).</message>
-	<message key="manager.setup.copyrightNotice">بيان الحقوق الفكرية</message>
-	<message key="manager.setup.coverage">التغطية</message>
-	<message key="manager.setup.coverageDescription">يشير إلى مواقع ذات خصوصية جغرافية أو تغطية لحقب تأريخية معينة و/أو خصائص لنماذج بحثية معينة.</message>
+	<message key="manager.setup.metadata.coverage">التغطية</message>
+	<message key="manager.setup.metadata.coverage.description">يشير إلى مواقع ذات خصوصية جغرافية أو تغطية لحقب تأريخية معينة و/أو خصائص لنماذج بحثية معينة.</message>
 	<message key="manager.setup.currentIssue">الإصدار الحالي</message>
 	<message key="manager.setup.customizingTheLook">الخطوة 5. تخصيص المظهر</message>
 	<message key="manager.setup.customTags">علامات مخصصة</message>
@@ -156,14 +148,12 @@
 	<message key="manager.setup.displayCurrentIssue">أدرج جدول المحتويات للإصدار الحالي (لو توفر).</message>
 	<message key="manager.setup.editorDecision">قرار المحرر</message>
 	<message key="manager.setup.emailBounceAddress">العنوان التخميني</message>
-	<message key="manager.setup.emailBounceAddressDescription">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.emails">تحديد هوية البريد الالكتروني</message>
 	<message key="manager.setup.emailSignature">التوقيع</message>
-	<message key="manager.setup.emailSignatureDescription">رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (الإعدادات).</message>
-	<message key="manager.setup.enableAnnouncements">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">عرض</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">من الإعلانات الأخيرة الموجودة في صفحة المجلة الرئيسية.</message>
+	<message key="manager.setup.emailSignature.description">رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (الإعدادات).</message>
+	<message key="manager.setup.enableAnnouncements.enable">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع</message>
 	<message key="manager.setup.enableUserRegistration">يمكن للمستخدمين تسجيل أنفسهم في موقع المجلة</message>
 	<message key="manager.setup.focusAndScope">التركيز ومجال التخصص</message>
 	<message key="manager.setup.focusAndScope.description">أعط وصفاً للمؤلفين، القراء وأمناء المكتبات عن مجالات النشر التي تُعنى بها هذه المجلة.</message>
@@ -183,7 +173,7 @@
 	<message key="manager.setup.guidingSubmissions">الخطوة 3. إرشاد طلبات النشر</message>
 	<message key="manager.setup.includeCreativeCommons">بالنسبة للمجلات التي تقدم الوصول المفتوح المباشر أو المؤجل، ضمّن رخصة الأعمال الإبداعية المشاعة مع كل الأعمال المنشورة في الوقت المناسب.</message>
 	<message key="manager.setup.information">المعلومات</message>
-	<message key="manager.setup.information.description">وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء متاح ضمن خانة  "المعلومات" من الشريط الجانبي.</message>
+	<message key="manager.setup.information.description">وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء، متاح ضمن خانة  "المعلومات" من الشريط الجانبي.</message>
 	<message key="manager.setup.information.forAuthors">للمؤلفين</message>
 	<message key="manager.setup.information.forLibrarians">لأمناء المكتبات</message>
 	<message key="manager.setup.information.forReaders">للقراء</message>
@@ -194,19 +184,15 @@
 	<message key="manager.setup.itemsPerPage">عدد فقرات الصفحة</message>
 	<message key="manager.setup.journalAbbreviation">مختصر اسم المجلة</message>
 	<message key="manager.setup.journalArchiving">محفوظات المجلة</message>
-	<message key="manager.setup.journalSummary">ملخص المجلة</message>
-	<message key="manager.setup.journalSummary.description">وصف موجز لمجلتك يمكن إظهاره عند استعراض قائمة المجلات.</message>
-	<message key="manager.setup.journalAbout">عن المجلة</message>
-	<message key="manager.setup.journalAbout.description">ضمّن أي معلومات عن مجلتك قد تكون ذات أهمية للقراء، والمؤلفين أو المحكمين. هذا قد يشمل سياسة الوصول المفتوح التي تتبعها، مجالات عمل المجلة، بيان الحقوق الفكرية، التصريح بالجهات الداعمة، تأريخ المجلة، بيان الخصوصية، وما إذا كانت المجلة منضمة إلى أي من أنظمة الحفظ الاحتياطي LOCKSS أو CLOCKSS.</message>
-	<message key="manager.setup.favicon">الرمز المفضل للمجلة</message>
-	<message key="manager.setup.faviconDescription">أضف إيقونة المجلة ليتم عرضها بجوار شريط التنقل عندما يزور المستخدمون موقعك هذا.</message>
-	<message key="manager.setup.faviconInvalid">صيغة الإيقونة غير صحيحة. الصيغ المدعومة هي: .ico, .png, and .gif.</message>
+	<message key="manager.setup.contextSummary">ملخص المجلة</message>
+	<message key="manager.setup.contextAbout">عن المجلة</message>
+	<message key="manager.setup.contextAbout.description">ضمّن أي معلومات عن مجلتك قد تكون ذات أهمية للقراء، والمؤلفين أو المحكمين. هذا قد يشمل سياسة الوصول المفتوح التي تتبعها، مجالات عمل المجلة، بيان الحقوق الفكرية، التصريح بالجهات الداعمة، تأريخ المجلة، بيان الخصوصية، وما إذا كانت المجلة منضمة إلى أي من أنظمة الحفظ الاحتياطي LOCKSS أو CLOCKSS.</message>
 	<message key="manager.setup.journalHomepageContent">محتوى الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.journalHomepageContentDescription">إفتراضياً، تتضمن الصفحة الرئيسية روابط للتنقل. يمكن إضافة محتوى إضافي لها عبر استعمال واحد أو أكثر من الخيارات الآتية، والتي ستظهر بالترتيب المعاين. لاحظ أن الإصدار الحالي يمكن الوصول إليه دوماً عبر رابط (الإصدار الحالي) في شريط التنقل.</message>
 	<message key="manager.setup.journalHomepageHeader">رأس الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.journalHomepageHeader.altText">رأس الصفحة الرئيسية للمجلة</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">نسخة رسومية من عنوان المجلة وشعارها بالصيغ: (.gif، .jpg أو .png) يمكن رفعها لتظهر في الصفحة الرئيسية، وعندها ستستبدل النسخة النصية التي لو لا وجودها، لظهرت في الصفحة. بعبارة أخرى، دائماً استعمالك للصور يعتبره الموقع بديل عن النصوص.</message>
-	<message key="manager.setup.journalInitials">الحروف الأولية للمجلة</message>
+	<message key="manager.setup.contextInitials">الحروف الأولية للمجلة</message>
 	<message key="manager.setup.journalLayout">تصميم المجلة</message>
 	<message key="manager.setup.journalLayoutDescription">إختر نمطاً لمظهر المجلة مع مكونات التصميم من هنا. بالإمكان أيضاً رفع ملف أنماط إلى الموقع، والذي يمكن عبره تخطي بيانات النمط القياسي وحسب ما يتناسب مع رغبة وأهداف الجهة المستفيدة من الموقع.</message>
 	<message key="manager.setup.journalLogo">شعار المجلة</message>
@@ -220,18 +206,9 @@
 	<message key="manager.setup.journalTheme">نمط المجلة</message>
 	<message key="manager.setup.journalThumbnail">مصغر المجلة</message>
 	<message key="manager.setup.journalThumbnail.description">شعار صغير أو ما يمثل المجلة بالإمكان استعماله ضمن قائمة مجلات الموقع.</message>
-	<message key="manager.setup.journalThumbnail.altText">النص البديل لمصغر المجلة</message>
-	<message key="manager.setup.journalTitle">عنوان المجلة</message>
+	<message key="manager.setup.contextTitle">عنوان المجلة</message>
 	<message key="manager.setup.labelName">اسم الملصق</message>
-	<message key="manager.setup.layoutInstructions">إرشادات التصميم الطباعي</message>
-	<message key="manager.setup.layoutInstructionsDescription">إرشادات التصميم الطباعي يمكن تحضيرها لتنسيق المؤلَّفات التي ستنشرها المجلة والتي من الممكن إدخالها أدناه بشكل نص صريح أو نص فائق HTML. ستكون تلك متاحة للمصمم الطباعي ولمحرر القسم خلال مرحلة التحرير لكل طلب نشر. (بما أن كل مجلة لها تنسيقاتها وتنضيدها القياسي وأنماطها... إلخ.، لا توجد رزمة جاهزة من التعليمات المتعلقة بذلك).</message>
-	<message key="manager.setup.layoutTemplates">قوالب التصميم الطباعي</message>
-	<message key="manager.setup.layoutTemplatesDescription">يمكن تحميل القوالب لتظهر كتصميم طباعي لكل من التنسيقات القياسية التي تُنشر في المجلة (أي، المقالات، الكتب، تقييمات الكتب... إلخ.) عبر استعمال أي من الصيغ المتعارف عليها، مثل: pdf، doc... إلخ. مع إضافة الملاحظات المحددة لنوع الخط، الحجم، الهوامش... إلخ. لتكون بمثابة دليل عمل للمصممين الطباعيين والموكلين بالقراءة التصحيحية.</message>
-	<message key="manager.setup.layoutTemplates.file">ملف قالب</message>
-	<message key="manager.setup.layoutTemplates.title">العنوان</message>
 	<message key="manager.setup.lists">القوائم</message>
-	<message key="manager.setup.listsDescription">أدخل أكبر عدد من الفقرات (على سبيل المثال: طلبات النشر، المستخدمون، مهام التحرير) التي لها أن تظهر في كل صفحة، وعدد روابط الصفحات التي لها أن تظهر في كل صفحة.</message>
-	<message key="manager.setup.enableArchive">تمكين الحفظ</message>
 	<message key="manager.setup.plnPluginEnable">الإضافة PKP PN ممكنة</message>
 	<message key="manager.setup.plnDescription">إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية.</message>
 	<message key="manager.setup.plnSettingsDescription">أنقر على رابط الإعدادات للموافقة على شروط استعمال شبكة الحفظ لمشروع المعرفة العامة.</message>
@@ -248,9 +225,6 @@
 	<message key="manager.setup.clockssLicenseLabel">وصف رخصة CLOCKSS</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[سجل للحصول على خدمة CLOCKSS عبر زيارة <a href="http://clockss.org/" target="_blank">موقع CLOCKSS</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.porticoEnable"><![CDATA[تمكين Portico من حفظ وتوزيع محتوى المجلة للمكتبات المشاركة في Portico.]]></message>
-	<message key="manager.setup.porticoTitle">Portico</message>
-	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">المظهر</message>
 	<message key="manager.setup.look.description">رأس الصفحة الرئيسية، المحتوى، رأس المجلة، تذييلها، شريط التنقل، وملف الأنماط.</message>
 	<message key="manager.setup.management">الإدارة</message>
@@ -267,7 +241,7 @@
 	<message key="manager.setup.note">ملاحظة</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>ملاحظة:</strong> رسالة الإشعار المتعلقة بتقديم طلب النشر معطلة حالياً. لاستعمال هذه الميزة، قم بتمكين رسالة SUBMISSION_ACK في <a class="action" href="{$preparedEmailsUrl}">الرسائل المحضرة</a>.]]></message>
 	<message key="manager.setup.numPageLinks">روابط الصفحة</message>
-	<message key="manager.setup.onlineAccessManagement">الوصول إلى محتوى المجلة</message>
+	<message key="manager.setup.publishingMode">الوصول إلى محتوى المجلة</message>
 	<message key="manager.setup.onlineIssn">ISSN في الإنترنت</message>
 	<message key="manager.setup.openAccess">ستوفر المجلة الوصول المفتوح لمحتوياتها.</message>
 	<message key="manager.setup.pageNumberIdentifier">خيار ترقيم الصفحة</message>
@@ -276,26 +250,23 @@
 	<message key="manager.setup.printIssn">ISSN الطباعي</message>
 	<message key="manager.setup.proofingInstructions">إرشادات القراءة التصحيحية</message>
 	<message key="manager.setup.proofingInstructionsDescription">إن إرشادات القراءة التصحيحية ستكون متاحة للقائمين بها والمؤلفين والمصممين الطباعيين ومحرري الأقسام خلال مرحلة تحرير طلب النشر. أدناه مجموعة إفتراضية من التعليمات بصيغة HTML، والتي بإمكان رئيس تحرير المجلة تعديلها أو استبدالها في أي وقت (بصيغة HTML أو بنص صريح).</message>
-	<message key="manager.setup.provideRefLinkInstructions">زود المصممين الطباعيين بالتعليمات.</message>
 	<message key="manager.setup.publicationSchedule">جدولة النشر</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[فقرات المجلة بالإمكان نشرها بشكل جماعي كجزء من عدد واحد له جدول محتوياته الخاص به. أو عوضاً عن ذلك، يمكن نشر الفقرات المنفردة بمجرد إكتمال تحضيرها، عبر إضافتها إلى جدول محتويات العدد "الحالي". زود القراء ضمن (عن المجلة) بعبارة تصف فيها النظام الذي ستتبعه هذه المجلة ومعدل النشر المتوقع لها.]]></message>
 	<message key="manager.setup.publicationScheduling">جدولة النشر</message>
 	<message key="manager.setup.publicIdentifier">ترميز محتوى المجلة</message>
 	<message key="manager.setup.publisher">الناشر</message>
-	<message key="manager.setup.publisherDescription">اسم المنظمة الناشرة للمجلة سيظهر في (عن المجلة).</message>
+	<message key="manager.setup.publishingDescription">اسم المنظمة الناشرة للمجلة سيظهر في (عن المجلة).</message>
 	<message key="manager.setup.referenceLinking">ربط المراجع</message>
-	<message key="manager.setup.refLinkInstructions.description">إرشادات التصميم الطباعي لربط المراجع</message>
 	<message key="manager.setup.restrictArticleAccess">على المستخدمين التسجيل في الموقع والدخول فيه لمعاينة المحتوى المتاح للوصول المفتوح.</message>
 	<message key="manager.setup.restrictSiteAccess">على المستخدمين التسجيل في الموقع والدخول فيه لمعاينة موقع المجلة.</message>
 	<message key="manager.setup.reviewGuidelines">دليل التحكيم</message>
-	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[إن دليل التحكيم سيزود المحكمين بمعايير الحكم على مدى مناسبة مؤلَّفٍ معين للنشر في المجلة، ويمكن تضمينه أي تعليمات خاصة لتحضير تحكيم مؤثر ومفيد. عند إجراء التحكيم، يقدم للمحكمين مربعا نص مفتوحين، الأول "للمؤلف والمحرر"، والثاني "للمحرر". أو كبديل عن ذلك، بإمكان رئيس تحرير المجلة إنشاء نموذج للتحكيم المناظر عبر <a href="{$reviewFormsUrl}" class="action">نماذج التحكيم</a>. في جميع الأحوال، سيكون للمحررين خيار تضمين التنقيحات المتعلقة بالمؤلف.]]></message>
 	<message key="manager.setup.reviewOptions">خيارات التحكيم</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">رسائل التذكير الآلية (المتوافرة في الرسائل الإفتراضية لنظام المجلات المفتوحة) يمكن إرسالها إلى المحكمين في موضعين (فضلاً عن تمكن المحرر من مراسلة المحكم يدوياً متى شاء)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر إعدادات إضافية في الملقم لدعم هذه الوظيفة (والتي قد لا تكون متاحة في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">التحكيم السري</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">المهلة المتاحة اعتيادياً للمحكمين</message>
 	<message key="manager.setup.reviewOptions.onQuality">سيقوم المحررون بتقييم المحكمين عبر سلم تقييم من خمس نقاط بعد كل عملية تحكيم.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">سيكون ملف طلب النشر متاحاً للمحكمين فقط عند قبولهم لمهمة تحكيمه.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">سيكون ملف طلب النشر متاحاً للمحكمين فقط عند قبولهم لمهمة تحكيمه.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">صلاحية وصول المحكم</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">تمكين وصول المحكم بنقرة واحدة.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>ملاحظة:</strong> إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً خاصاً يأخذهم مباشرة إلى صفحة التحكيم الخاصة بالطلب المعني (مع إمكانية الوصول إلى أي صفحات أخرى يتطلبها تسجيل دخولهم). لأسباب أمنية مع هذا الخيار، لا يكون بإمكان المحررين تعديل عناوين البريد الالكتروني أو تمرير نسخة من الرسالة إلى أطراف أخرى ليس لها علاقة بالتحكيم.]]></message>
@@ -304,16 +275,13 @@
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[إظهار روابط <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">لضمان التحكيم السري</a> على الصفحات التي يقوم فيها المؤلفون والمحكمون برفع الملفات.]]></message>
 	<message key="manager.setup.reviewPolicy">سياسة التحكيم</message>
 	<message key="manager.setup.searchEngineIndexing">فهرسة محركات البحث</message>
-	<message key="manager.setup.searchEngineIndexingDescription">لمساعدة مستعملي محركات البحث في العثور على هذه المجلة، زود الموقع بوصف موجز للمجلة والكلمات المفتاحية ذات العلاقة بها (مفصولة بفارزة منقوطة إنجليزية).</message>
+	<message key="manager.setup.searchEngineIndexing.description">لمساعدة مستعملي محركات البحث في العثور على هذه المجلة، زود الموقع بوصف موجز للمجلة والكلمات المفتاحية ذات العلاقة بها (مفصولة بفارزة منقوطة إنجليزية).</message>
 	<message key="manager.setup.sectionsAndSectionEditors">الأقسام ومحرروها</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(إذا لم يتم إضافة أي أقسام، تُقدم المؤلفات إلى قسم المقالات بشكل تلقائي)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[لإنشاء الأقسام أو تعديلها في هذه المجلة، مثل: المقالات، تنقيحات الكتب... إلخ. إذهب إلى إدارة القسم.<br /><br />سيقوم المؤلفون لدى تقديمهم لطلبات النشر في المجلة بتعيين...]]></message>
-	<message key="manager.setup.securitySettings">إعدادات الوصول والأمان</message>
-	<message key="manager.setup.securitySettingsDescription">نظام المجلات المفتوحة يقدم مجموعة من الخيارات المتعلقة بالأمان والتي يمكن استعمالها لتقييد الوصول إلى محتوى المجلة والحفاظ على معلومات إضافية عن طلبات النشر لأغراض تدقيقية.</message>
 	<message key="manager.setup.selectEditorDescription">محرر المجلة الذي سيطلع عليها خلال عملية التحرير.</message>
 	<message key="manager.setup.selectSectionDescription">قسم المجلة المتعلق بالفقرة المعنية.</message>
 	<message key="manager.setup.showGalleyLinksDescription">دائماً أظهر روابط لوح الطباعة وقيّد الوصول إلى المحتوى.</message>
-	<message key="manager.setup.siteAccess">تقييدات الوصول في الموقع ومحتوياته الأخرى</message>
 	<message key="manager.setup.stepsToJournalSite">خمس خطوات للحصول على موقع للمجلة</message>
 	<message key="manager.setup.subjectExamples">(مثل: التركيب الضوئي، الثقوب السوداء، مشكلة الخرائط رباعية الألوان، نظرية الكم)</message>
 	<message key="manager.setup.subjectKeywordTopic">الكلمات المفتاحية</message>
@@ -323,9 +291,8 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">قبيل الشروع بتقديم طلب النشر إلى المجلة، يُطلب من المؤلفين أولاً التحقق من أن كل فقرة واردة في إجراءات تحضير طلب النشر مستوفاة لديهم. تظهر تلك الخطوات أيضاً في إرشادات المؤلفين، ضمن (عن المجلة). يمكن تعديل فقرات القائمة أدناه، غير أن جميع تلك الفقرات ستتطلب تأشير استيفائها قبل أن يتسنى للمؤلفين متابعة عملية التقديم.</message>
 	<message key="manager.setup.submissions">طلبات النشر</message>
 	<message key="manager.setup.submissions.description">إرشادات المؤلفين، الحقوق الفكرية والفهرسة (بضمنها عملية التسجيل).</message>
-	<message key="manager.setup.subscription">تتطلب المجلة الاشتراك فيها للوصول إلى بعض محتوياتها أو كلها.</message>
-	<message key="manager.setup.subscriptionDescription">هذا الأمر يتطلب تعيين مدير للاشتراكات ليكون له حق الوصول إلى وحدة الاشتراكات، والتي تتيح المزيد من الوصول إلى المحتوى، والحفظ التلقائي وخيارات الإشعار البريدي.</message>
-	<message key="manager.setup.noPublishing">نظام المجلات المفتوحة لن يتم استعماله لنشر محتوى المجلة على الإنترنت.</message>
+	<message key="manager.distribution.publishingMode.subscription">تتطلب المجلة الاشتراك فيها للوصول إلى بعض محتوياتها أو كلها.</message>
+	<message key="manager.distribution.publishingMode.none">نظام المجلات المفتوحة لن يتم استعماله لنشر محتوى المجلة على الإنترنت.</message>
 	<message key="manager.setup.typeExamples">(مثل: الاستبيان التأريخي، البحث شبه التجريبي، التحليل الأدبي، المسح/المقابلة)</message>
 	<message key="manager.setup.typeMethodApproach">النوع (الأسلوب/المنهج)</message>
 	<message key="manager.setup.typeProvideExamples">أدرج أمثلة عن طرق بحث مماثلة، وأساليب ومناهج تتعلق بهذا الحقل العلمي</message>
@@ -334,7 +301,6 @@
 	<message key="manager.setup.useEditorialReviewBoard">هيئة التحرير/التحكيم المعتمدة لدى المجلة.</message>
 	<message key="manager.setup.useThumbnail">الصورة المصغرة</message>
 	<message key="manager.setup.useImageTitle">صورة العنوان</message>
-	<message key="manager.setup.useJournalStyleSheet">ملف أنماط المجلة</message>
 	<message key="manager.setup.userRegistration">تسجيل المستخدم</message>
 	<message key="manager.setup.useTextTitle">نص العنوان</message>
 	<message key="manager.statistics.defaultMetricDescription">
@@ -371,16 +337,9 @@
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">مشاهدات صفحة محتويات العدد</message>
 	<message key="manager.statistics.reports.filters.byContext.description">تضييق النتائج حسب السياق (الإصدار و/أو المؤلَّف).</message>
 	<message key="manager.statistics.reports.filters.byObject.description">تضييق النتائج حسب نوع المكون (مجلة، إصدار، مؤلَّف، لوح طباعي بصيغة pdf، ألواح طباعية أخرى) و/أو حسب الرمز التعريفي لمكون واحد أو أكثر.</message>
-	
+
 	<message key="manager.subscriptionPolicies">سياسات الاشتراك</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">سياسة الأرشفة الذاتية للمؤلف</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">سيتم تضمين سياسة الأرشفة الذاتية للمؤلف ضمن (عن المجلة) في بند السياسات.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">الوصول المفتوح المؤجل</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">مع الوصول المفتوح المؤجل، لا يزال بإمكان المحررين تعيين بعض المؤلَّفات ضمن إصدار معين للوصول المفتوح المباشر.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">إن الأعداد السابقة من هذه المجلة ستكون متاحة للوصول المفتوح</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">شهر/أشهر بعد نشر العدد.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">لطفاً، إختر مدة زمنية صحيحة.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">سيتم إدراج سياسة الوصول المفتوح المؤجل الآتية في (عن المجلة) ضمن بند السياسات.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">لطفاً، استعمل خانة التأشير.</message>
 	<message key="manager.subscriptionPolicies.expiry">انتهاء صلاحية الاشتراك</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">عند انتهاء صلاحية الاشتراك، قد يفقد القراء إمكانية الوصول لكل المحتوى المتعلق بالاشتراك، أو قد يبقى بإمكانهم الوصول إلى المحتوى المنشور قبل انتهاء صلاحيته فقط.</message>
@@ -397,7 +356,7 @@
 	<message key="manager.subscriptionPolicies.expiryReminders">تذكيرات انتهاء صلاحية الاشتراك</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">رسائل التذكير الآلية (متاحة للتعديل من قبل رئيس تحرير المجلة عبر باب المراسلات المحضرة) يمكن إرسالها إلى المشتركين سواءً قبل انتهاء صلاحية اشتراكاتهم أو بعدها.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
-	<message key="manager.subscriptionPolicies.expirySelectOne">إختر واحداً مما يأتي:</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">إختر واحداً مما يأتي...:</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[يمكن استعمال HTML في خانة النص (لحجم الخط ولونه... إلخ.)، مع معاملة الضغط على زر "return" على أنه <tt>&lt;br&gt;</tt>؛ إن محرر HTML يعمل مع المتصفح Firefox.]]></message>
 	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">لطفاً، إختر قيمة صائبة لعدد الأشهر بعد انتهاء صلاحية الاشتراك.</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">لطفاً، إختر قيمة صائبة لعدد الأشهر قبل انتهاء صلاحية الاشتراك.</message>
@@ -490,7 +449,7 @@
 	<message key="manager.subscriptions.selectSubscriber.desc">صلاحيات الوصول إلى الاشتراك تُمنح تلقائياً لمدير الاشتراكات في المجلة، وإلى المحررين ومحرري الأقسام والمصممين الطباعيين والمدققين ومصححي القراءة.</message>
 	<message key="manager.subscriptions.select">إختر</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">الاشتراك أُنشئ بنجاح.</message>
-	<message key="manager.subscriptions.subscriptionType">نوعيةالاشتراك</message>
+	<message key="manager.subscriptions.subscriptionType">نوعية الاشتراك</message>
 	<message key="manager.subscriptions.user">المستخدم</message>
 	<message key="manager.subscriptions.contact">عنوان الاتصال</message>
 	<message key="manager.subscriptions.institutionName">اسم المؤسسة</message>
@@ -562,7 +521,6 @@
 	<message key="manager.setup.copyrightYearBasis.issue">العدد: السنة الافتراضية ستعتبر هي نفس سنة العدد.</message>
 	<message key="manager.setup.resetPermissions">إعادة تعيين صلاحيات المؤلَّف</message>
 	<message key="manager.setup.resetPermissions.confirm">هل أنت متأكد من رغبتك في إعادة تعيين الصلاحيات المرتبطة مسبقاً بالمؤلفات؟</message>
-	<message key="manager.setup.resetPermissions.description">بيان الحقوق الفكرية ومعلومات الترخيص سيتم إرفاقها بشكل دائم بالمحتوى المنشور لضمان أن تلك المعلومات لن تتغير في حال أن غيرت المجلة من سياساتها عند التعامل مع طلبات نشر جديدة. لإعادة تعيين بيانات الصلاحيات المحفوظة مع المحتوى المنشور سابقاً، استعمل الزر أدناه.</message>
 
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">المكونات</message>

@@ -186,8 +186,8 @@ For contributions that are distributed separately as patches or plugins:
 /**
  * @file /path/to/filename.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package PACKAGE
@@ -236,8 +236,8 @@ For contributions that are distributed separately as patches or plugins:
 	{**
 	 * /path/to/filename.tpl
 	 *
-	 * Copyright (c) 2014-2018 Simon Fraser University
-	 * Copyright (c) 2003-2018 John Willinsky
+	 * Copyright (c) 2014-2019 Simon Fraser University
+	 * Copyright (c) 2003-2019 John Willinsky
 	 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 	 *
 	 * DESCRIPTION.
@@ -251,7 +251,7 @@ For contributions that are distributed separately as patches or plugins:
 
 * i18n strings are defined in locale/<locale_key>/locale.xml.
 * Key names should be in the form "sectionname(.subsectionname)*.name".
-  E.g., "manager.setup.journalTitle"
+  E.g., "manager.setup.contextTitle"
 * Use {translate key="my.key.name"} in templates to translate i18n keys.
 * Use the String wrapper class in place of the built-in string
   manipulation/regexp routines when handling data that could potentially be in

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/components/primaryNavMenu.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Primary navigation menu list for OJS
@@ -19,7 +19,7 @@
 
 	{if $currentJournal}
 
-		{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+		{if $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 			<li>
 				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">
 					{translate key="navigation.current"}
@@ -42,7 +42,7 @@
 						{translate key="about.aboutContext"}
 					</a>
 				</li>
-				{if $currentJournal->getLocalizedSetting('editorialTeam')}
+				{if $currentJournal->getLocalizedData('editorialTeam')}
 					<li>
 						<a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="editorialTeam"}">
 							{translate key="about.editorialTeam"}
@@ -54,7 +54,7 @@
 						{translate key="about.submissions"}
 					</a>
 				</li>
-				{if $currentJournal->getSetting('mailingAddress') || $currentJournal->getSetting('contactName')}
+				{if $currentJournal->getData('mailingAddress') || $currentJournal->getData('contactName')}
 					<li>
 						<a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="contact"}">
 							{translate key="about.contact"}

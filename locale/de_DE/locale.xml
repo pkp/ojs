@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -101,10 +101,13 @@
 	<message key="section.title">Titel der Rubrik</message>
 	<message key="section.abbreviation">Abkürzung</message>
 	<message key="section.abbreviation.example">(Zum Beispiel, Artikel=ART)</message>
+	<message key="section.policy">Richtlinien der Rubrik</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikel</message>
+	<message key="common.publication">Artikel</message>
+	<message key="common.publications">Artikel</message>
 	<message key="article.submissionId">Beitrags-ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Autor/innen</message>
@@ -371,16 +374,8 @@
 	<message key="plugins.categories.auth.description">Die Zugangs-Plugins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
 	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plugin-Kategorien bereitgestellt werden.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
-<br /><br />
-Wenn Sie denken, dass Sie Zugriff auf eines oder mehrere der <a href="http://www.lockss.org/community/networks/" target="_blank">hier gelisteten</a> LOCKSS-Netzwerke haben, kontaktieren Sie bitte die/den entsprechende/n LOCKSS-Netzwerk-Administrator/in, um sich um Aufnahme zu bewerben. Dazu können Sie das Formular unten ausfüllen, um in diese Netzwerke aufgenommen zu werden. <em>Es werden keine Inhalte archiviert werden, bevor Sie das entsprechende Netzwerk benachrichtigt haben.</em>]]></message>
-
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems unterstützt auch das <a href="http://clockss.org/" target="_blank">CLOCKSS</a>-System (Controlled Lots of Copies Keep Stuff Safe), um ein sicheres und dauerhaftes Archiv für die Zeitschrift zu gewährleisten. CLOCKSS basiert auf der Open-Source-Software LOCKSS, die an der Stanford University Library entwickelt worden ist und die Bibliotheken in die Lage versetzt, ausgewählte Onlinezeitschriften zu archivieren, in dem regelmäßig die Webseiten der registrierten Zeitschriften auf neu veröffentlichte Inhalte geprüft werden und diese dann archiviert werden. Jedes Archiv wird kontinuierlich durch den Vergleich mit den gespeicherten Versionen anderer Bibiotheken validiert. Wenn Inhalte gelöscht werden oder fehlerhaft sind, werden sie mit Hilfe der in anderen Bibliotheken archivierten Inhalte wiederhergestellt.
-<br /><br />
-Die CLOCKSS-Unterstützung in OJS sollte erst konfiguriert werden, wenn tatsächlich Inhalte publiziert werden.]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>
 <h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>
 Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:
 <ol type="a">
@@ -675,6 +670,9 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 	<message key="user.register.form.emailConsentAllContexts">Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Ja, ich stimme der Erfassung und Speicherung gemäß der <a href="{$privacyUrl}" target="_blank">Datenschutzerklärung</a> dieser Zeitschrift zu.]]></message>
+	<message key="user.register.form.missingContextConsent">Sie müssen der Datenschutzerklärung jeder Zeitschrift, bei der Sie sich registrieren, zustimmen.</message>
+	<message key="user.register.form.missingSiteConsent">Sie müssen der Datenschutzerklärung dieser Website zustimmen.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -778,6 +776,7 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="about.onlineSubmissions.register">Registrieren</message>
 	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein. In einen existierenden Account {$login} oder einen neuen Account {$register}.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} oder {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Eine neue Einreichung in Rubrik <a href="{$url}">{$name}</a> machen.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Neuen Beitrag einreichen</message>
 	<message key="about.onlineSubmissions.viewSubmissions">Beiträge in Bearbeitung ansehen</message>
 	<message key="about.authorGuidelines">Richtlinien für Autor/innen</message>
@@ -793,7 +792,6 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="about.delayedOpenAccess">Verzögerter Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">Der Inhalt dieser Zeitschrift erscheint in einem frei zugänglichen Format</message>
 	<message key="about.delayedOpenAccessDescription2">Monat(e) nach der Veröffentlichung einer Ausgabe.</message>
-	<message key="about.authorSelfArchive">Selbstarchivierung durch die/den Autor/in</message>
 	<message key="about.archiving">Archivierung</message>
 	<message key="about.subscriptions">Abonnements</message>
 	<message key="about.subscriptions.individual">Individuelle Abonnements</message>
@@ -943,8 +941,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="log.author.documentRevised">{$authorName} hat den Artikel bearbeitet {$submissionId}. Die neue Datei-ID ist {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Der Beitrag {$submissionId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
 	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} hat begonnen.</message>
-	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde erneut begonnen.</message>
-	<message key="log.review.reviewCleared">Die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} durch {$reviewerName} wurde gelöscht.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} wurde beurteilt für Durchgang {$round} der Begutachtung von Beitrag {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Abgabetermin für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} festgesetzt auf {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde abgegeben.</message>
@@ -983,62 +979,10 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 
 	<message key="log.imported">{$userName} hat Beitrag {$submissionId} importiert.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Lesewerkzeug-Optionen</message>
-
-	<message key="rt.admin.settings.description">Die Lesewerkzeuge erscheinen in denjenigen Rubriken der Zeitschrift, die zur Indizierung vorgesehen sind, in Frames neben den Beiträgen. Sie bestehen aus einem Satz optionaler Werkzeuge, die sich auf den jeweiligen Beitrag beziehen und die unten aufgelistet sind, sowie einem Satz von Werkzeugen, die verwandte Themen zugänglich machen, gegliedert nach Bereichen und Fachgebieten.</message>
-	<message key="rt.admin.settings.enableReadingTools">Lesewerkzeuge für die gekennzeichneten Rubriken der Zeitschrift aktivieren.</message>
-	<message key="rt.admin.settings.relatedItems">Verwandte Beiträge</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Siehe <a href="{$relatedItemsLink}" class="action">Werkzeuge für Verwandte Beiträge</a> zum Anzeigen, Hinzufügen, Korrigieren oder Entfernen von verwandten Themen für jedes Gebiet.]]></message>
-
-	<message key="rt.admin.options">Zeitschriftenwerkzeuge</message>
-	<message key="rt.admin.relatedItems">Werkzeuge für Verwandte Beiträge</message>
-
-	<message key="rt.admin.settings.addComment">Kommentieren (ermöglicht Leser/innen, Kommentare abzugeben. Die/der Zeitschriftenverwalter/in kann diese Kommentare löschen.)</message>
-	<message key="rt.admin.settings.addComment.authenticated">Benutzer/innen müssen registriert und eingeloggt sein, um kommentieren zu können. Anonymes Kommentieren ist nicht möglich.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Benutzer/innen müssen registriert und eingeloggt sein, um Kommentare abgeben zu können. Anonymes Kommentieren ist möglich.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Benutzer/innen müssen nicht registriert sein, um Kommentare abgeben zu können. Anonymes Kommentieren ist möglich.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Für Suchmaschinen möglicherweise ungültige URL sind unten aufgeführt.<br />
-Dieser Test ist nicht 100% genau, Sie sollten daher jede hier als ungültig gekennzeichneten URL manuell nachprüfen.<br />
-Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Autor/in</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Name der Autorin/des Autors, Institution, Land</message>
-	<message key="rt.metadata.pkp.peerReviewed">Begutachter Beitrag</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Benachrichtigung, falls...</message>
-
-	<message key="rt.thisJournal">Zeitschrift durchsuchen</message>
-
-
-	<message key="rt.context.authorTermsDescription">Bei Beiträgen von mehr als einer Autorin/einem Autor lassen Sie für eine Suche nach ähnlichen gemeinsamen Arbeiten dieser Autor/innen alle Namen angekreuzt oder wählen Sie für die Suche nach einzelnen Autor/innen nur jeweils einen Namen aus. Um weitere Informationen zu den durchsuchten Quellen zu erhalten, gehen Sie zu "Über uns". Die Quellen wurden nach ihrer Relevanz und wegen des freien Zugangs zu allen ihren Inhalten bzw. Teilen ihrer Inhalte ausgesucht.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Begutachter Beitrag</message>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
 	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
@@ -1103,4 +1047,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für die Einreichung {$submissionId} übernommen.</message>
+
+	<message key="catalog.sortBy">Artikelreihenfolge</message>
+	<message key="catalog.sortBy.categoryDescription">Wählen Sie, wie Artikel in dieser Kategorie sortiert sein sollen.</message>
 </locale>

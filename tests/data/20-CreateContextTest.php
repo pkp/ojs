@@ -3,8 +3,8 @@
 /**
  * @file tests/data/20-CreateContextTest.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CreateContextTest
@@ -13,9 +13,32 @@
  * @brief Data build suite: Create and configure a test journal
  */
 
-import('lib.pkp.tests.WebTestCase');
+import('lib.pkp.tests.data.PKPCreateContextTest');
 
-class CreateContextTest extends WebTestCase {
+use Facebook\WebDriver\Interactions\WebDriverActions;
+
+class CreateContextTest extends PKPCreateContextTest {
+	/** @var array */
+	public $contextName = [
+		'en_US' => 'Journal of Public Knowledge',
+		'fr_CA' => 'Journal de la connaissance du public',
+	];
+
+	/** @var string journal or press*/
+	public $contextType = 'journal';
+
+	/** @var array */
+	public $contextDescription = [
+		'en_US' => 'The Journal of Public Knowledge is a peer-reviewed quarterly publication on the subject of public access to science.',
+		'fr_CA' => 'Le Journal de Public Knowledge est une publication trimestrielle évaluée par les pairs sur le thème de l\'accès du public à la science.',
+	];
+
+	/** @var array */
+	public $contextAcronym = [
+		'en_US' => 'JPK',
+		'fr_CA' => 'JCP',
+	];
+
 	/**
 	 * Prepare for tests.
 	 */
@@ -24,55 +47,59 @@ class CreateContextTest extends WebTestCase {
 	}
 
 	/**
-	 * Create and set up test data journal.
+	 * Create and set up test data
 	 */
 	function testCreateContext() {
-		$this->open(self::$baseUrl);
-		$this->waitForElementPresent('link=Administration');
-		$this->click('link=Administration');
-		$this->waitForElementPresent('link=Hosted Journals');
-		$this->click('link=Hosted Journals');
-		$this->waitForElementPresent('css=[id^=component-grid-admin-journal-journalgrid-createContext-button-]');
-		$this->click('css=[id^=component-grid-admin-journal-journalgrid-createContext-button-]');
-
-		// Enter journal data
-		$this->waitForElementPresent('css=[id^=name-en_US-]');
-		$this->type('css=[id^=name-en_US-]', 'Journal of Public Knowledge');
-		$this->type('css=[id^=name-fr_CA-]', 'Journal de la connaissance du public');
-		$this->typeTinyMCE('description-en_US', 'The Journal of Public Knowledge is a peer-reviewed quarterly publication on the subject of public access to science.');
-		$this->typeTinyMCE('description-fr_CA', 'Le Journal de Public Knowledge est une publication trimestrielle évaluée par les pairs sur le thème de l\'accès du public à la science.');
-		$this->type('css=[id^=path-]', 'publicknowledge');
-		$this->clickAndWait('css=[id^=submitFormButton-]');
-		$this->waitForElementPresent('css=div.header:contains(\'Settings Wizard\')');
-		$this->waitJQuery();
+		$this->createContext();
 	}
 
 	/**
-	 * Set up the test journal.
+	 * Test the settings wizard
+	 */
+	function testSettingsWizard() {
+		parent::settingsWizard();
+
+		self::$driver->executeScript('window.scrollTo(0,0);'); // Scroll to top of page
+		$this->click('//a[text()="Journal"]');
+		$this->setInputValue('[name="abbreviation-en_US"]', 'publicknowledge');
+		$this->click('//*[@id="journal"]//button[contains(text(),"Save")]');
+		$this->waitForTextPresent($this->contextName['en_US'] . ' was edited successfully.');
+	}
+
+	/**
+	 * Test the Settings > Journal forms
 	 */
 	function testSetupContext() {
 		$this->open(self::$baseUrl);
 
-		// Management > Settings > Journal
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent('css=[id^=abbreviation-]');
-		$this->type('css=[id^=abbreviation-]', 'J Pub Know');
-		$this->type('css=[id^=acronym-]', 'PK');
-		$this->click('//form[@id=\'mastheadForm\']//button[text()=\'Save\']');
-		$this->waitForTextPresent('Your changes have been saved.');
+		// Settings > Journal > Masthead
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
+			->perform();
+		$this->setInputValue('[name="abbreviation-en_US"]', 'J Pub Know');
+		$this->setInputValue('[name="acronym-en_US"]', 'PK');
+		$this->setInputValue('[name="publisherInstitution"]', 'Public Knowledge Project');
 
-		// Management > Settings > Contact
-		$this->click('link=Contact');
-		$this->waitForElementPresent($selector='css=[id^=contactEmail-]');
-		$this->type($selector, 'rvaca@mailinator.com');
-		$this->type('css=[id^=contactName-]', 'Ramiro Vaca');
-		$this->type('css=[id^=supportEmail-]', 'rvaca@mailinator.com');
-		$this->type('css=[id^=supportName-]', 'Ramiro Vaca');
-		$this->type('css=[id^=mailingAddress-]', "123 456th Street\nBurnaby, British Columbia\nCanada");
-		$this->click('//form[@id=\'contactForm\']//button[text()=\'Save\']');
-		$this->waitForTextPresent('Your changes have been saved.');
+		// Invalid onlineIssn
+		$this->setInputValue('[name="onlineIssn"]', '0378-5955x');
+		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
+		$this->waitForElementPresent('//*[@id="masthead-onlineIssn-error"]//*[contains(text(),"This is not a valid ISSN.")]');
+		$this->setInputValue('[name="onlineIssn"]', '0378-5955');
+
+		// Invalid printIssn
+		$this->setInputValue('[name="printIssn"]', '03785955');
+		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
+		$this->waitForElementPresent('//*[@id="masthead-printIssn-error"]//*[contains(text(),"This is not a valid ISSN.")]');
+		$this->setInputValue('[name="printIssn"]', '0378-5955');
+
+		$this->click('//*[@id="masthead"]//button[contains(text(),"Save")]');
+		$this->waitForTextPresent('The masthead details for this journal have been updated.');
+
+		$this->contactSettings();
 	}
 }

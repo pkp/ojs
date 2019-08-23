@@ -3,8 +3,8 @@
 #
 # tools/buildpkg.sh
 #
-# Copyright (c) 2014-2018 Simon Fraser University
-# Copyright (c) 2003-2018 John Willinsky
+# Copyright (c) 2014-2019 Simon Fraser University
+# Copyright (c) 2003-2019 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an OJS package for distribution.
@@ -39,15 +39,10 @@ lib/pkp/plugins/*/*/tests								\
 plugins/*/*/tests									\
 plugins/auth/ldap									\
 plugins/generic/announcementFeed							\
-plugins/generic/backup									\
-plugins/generic/browse									\
-plugins/generic/coins									\
 plugins/generic/cookiesAlert								\
 plugins/generic/counter									\
 plugins/generic/customLocale								\
 plugins/generic/externalFeed								\
-plugins/generic/lucene									\
-plugins/generic/phpMyVisites								\
 plugins/generic/recommendBySimilarity							\
 plugins/generic/translator								\
 plugins/importexport/sample								\
@@ -61,16 +56,11 @@ lib/pkp/tests										\
 .scrutinizer.yml									\
 .travis.yml										\
 lib/pkp/.git										\
-lib/pkp/lib/components/*.js								\
-lib/pkp/lib/components/*.css								\
 lib/pkp/lib/vendor/smarty/smarty/demo							\
 lib/pkp/lib/vendor/alex198710/pnotify/.git						\
 lib/pkp/lib/vendor/sebastian								\
 lib/pkp/lib/vendor/oyejorge/less.php/test						\
 lib/pkp/tools/travis									\
-lib/pkp/lib/swordappv2/.git								\
-lib/pkp/lib/swordappv2/.git								\
-lib/pkp/lib/swordappv2/test								\
 plugins/paymethod/paypal/vendor/omnipay/common/tests/					\
 plugins/paymethod/paypal/vendor/omnipay/paypal/tests/					\
 plugins/paymethod/paypal/vendor/guzzle/guzzle/docs/					\
@@ -78,7 +68,6 @@ plugins/paymethod/paypal/vendor/guzzle/guzzle/tests/					\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/debug/				\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/console/Tests/			\
 plugins/paymethod/paypal/vendor/symfony/http-foundation/Tests/				\
-plugins/paymethod/paypal/vendor/symfony/event-dispatcher/				\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/filesystem/Tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/stopwatch/Tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/event-dispatcher/Tests/	\
@@ -102,13 +91,11 @@ lib/pkp/lib/vendor/pimple/pimple/ext/pimple/tests/					\
 lib/pkp/lib/vendor/robloach/component-installer/tests/					\
 lib/pkp/lib/vendor/phpmailer/phpmailer/test/						\
 node_modules										\
-.babelrc										\
 .editorconfig										\
-.eslintignore										\
-.eslintrc.js										\
-.postcssrc.js										\
+babel.config.js										\
+package-lock.json										\
 package.json										\
-webpack.config.js									\
+vue.config.js									\
 lib/ui-library"
 
 

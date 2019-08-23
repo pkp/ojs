@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/SubmissionMetadataViewForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionMetadataViewForm
@@ -39,7 +39,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
+		$sectionOptions = $sectionDao->getTitlesByContextId($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 		// get word count of the section
@@ -119,7 +119,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the article, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
-			$request = Application::getRequest();
+			$request = Application::get()->getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
@@ -128,7 +128,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 			$publicFileManager = new PublicFileManager();
 			$newFileName = 'article_' . $submission->getId() . '_cover_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$publicFileManager->copyContextFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
 			$submission->setCoverImage($newFileName, $locale);
 		}
 
@@ -137,22 +137,22 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$submissionDao->updateObject($submission);
 
 		if ($reorder) {
-			// see if it is a published article
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
-			if ($publishedArticle) {
+			// see if it is a published submission
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false); /* @var $publishedSubmission PublishedSubmission */
+			if ($publishedSubmission) {
 				// Resequence the articles.
-				$publishedArticle->setSequence(REALLY_BIG_NUMBER);
-				$publishedArticleDao->updatePublishedArticle($publishedArticle);
-				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
+				$publishedSubmission->setSequence(REALLY_BIG_NUMBER);
+				$publishedSubmissionDao->updatePublishedSubmission($publishedSubmission);
+				$publishedSubmissionDao->resequencePublishedSubmissions($submission->getSectionId(), $publishedSubmission->getIssueId());
 				// The reordering for the old section is not necessary, but for the correctness sake
-				$publishedArticleDao->resequencePublishedArticles($oldSectionId, $publishedArticle->getIssueId());
+				$publishedSubmissionDao->resequencePublishedSubmissions($oldSectionId, $publishedSubmission->getIssueId());
 			}
 		}
 
 		if ($submission->getDatePublished()) {
-			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::articleMetadataChanged($submission);
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
+			$articleSearchIndex->submissionMetadataChanged($submission);
 		}
 	}
 }

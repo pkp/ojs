@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/filter/IssueCrossrefXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueCrossrefXmlFilter
@@ -40,7 +40,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObjects array Array of Issues or PublishedArticles
+	 * @param $pubObjects array Array of Issues or PublishedSubmissions
 	 * @return DOMDocument
 	 */
 	function &process(&$pubObjects) {
@@ -63,7 +63,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$rootNode->appendChild($bodyNode);
 
 		foreach($pubObjects as $pubObject) {
-			// pubObject is either Issue or PublishedArticle
+			// pubObject is either Issue or PublishedSubmission
 			$journalNode = $this->createJournalNode($doc, $pubObject);
 			$bodyNode->appendChild($journalNode);
 		}
@@ -99,21 +99,21 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$context = $deployment->getContext();
 		$plugin = $deployment->getPlugin();
 		$headNode = $doc->createElementNS($deployment->getNamespace(), 'head');
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi_batch_id', htmlspecialchars($context->getSetting('initials', $context->getPrimaryLocale()) . '_' . time(), ENT_COMPAT, 'UTF-8')));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi_batch_id', htmlspecialchars($context->getData('initials', $context->getPrimaryLocale()) . '_' . time(), ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'timestamp', time()));
 		$depositorNode = $doc->createElementNS($deployment->getNamespace(), 'depositor');
 		$depositorName = $plugin->getSetting($context->getId(), 'depositorName');
 		if (empty($depositorName)) {
-			$depositorName = $context->getSetting('supportName');
+			$depositorName = $context->getData('supportName');
 		}
 		$depositorEmail = $plugin->getSetting($context->getId(), 'depositorEmail');
 		if (empty($depositorEmail)) {
-			$depositorEmail = $context->getSetting('supportEmail');
+			$depositorEmail = $context->getData('supportEmail');
 		}
 		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', htmlspecialchars($depositorName, ENT_COMPAT, 'UTF-8')));
 		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'email_address', htmlspecialchars($depositorEmail, ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($depositorNode);
-		$publisherInstitution = $context->getSetting('publisherInstitution');
+		$publisherInstitution = $context->getData('publisherInstitution');
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'registrant', htmlspecialchars($publisherInstitution, ENT_COMPAT, 'UTF-8')));
 		return $headNode;
 	}
@@ -121,7 +121,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	/**
 	 * Create and return the journal node 'journal'.
 	 * @param $doc DOMDocument
-	 * @param $pubObject object Issue or PublishedArticle
+	 * @param $pubObject object Issue or PublishedSubmission
 	 * @return DOMElement
 	 */
 	function createJournalNode($doc, $pubObject) {
@@ -146,22 +146,22 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$journalTitle = $context->getName($context->getPrimaryLocale());
 		// Attempt a fall back, in case the localized name is not set.
 		if ($journalTitle == '') {
-			$journalTitle = $context->getSetting('abbreviation', $context->getPrimaryLocale());
+			$journalTitle = $context->getData('abbreviation', $context->getPrimaryLocale());
 		}
 		$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'full_title', htmlspecialchars($journalTitle, ENT_COMPAT, 'UTF-8')));
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
-		$journalAbbrev = $context->getSetting('abbreviation', $context->getPrimaryLocale());
+		$journalAbbrev = $context->getData('abbreviation', $context->getPrimaryLocale());
 		if ( $journalAbbrev == '' ) {
-			$journalAbbrev = $context->getSetting('acronym', $context->getPrimaryLocale());
+			$journalAbbrev = $context->getData('acronym', $context->getPrimaryLocale());
 		}
 		$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'abbrev_title', htmlspecialchars($journalAbbrev, ENT_COMPAT, 'UTF-8')));
 		/* Both ISSNs are permitted for CrossRef, so sending whichever one (or both) */
-		if ($ISSN = $context->getSetting('onlineIssn') ) {
+		if ($ISSN = $context->getData('onlineIssn') ) {
 			$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issn', $ISSN));
 			$node->setAttribute('media_type', 'electronic');
 		}
 		/* Both ISSNs are permitted for CrossRef so sending whichever one (or both) */
-		if ($ISSN = $context->getSetting('printIssn') ) {
+		if ($ISSN = $context->getData('printIssn') ) {
 			$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issn', $ISSN));
 			$node->setAttribute('media_type', 'print');
 		}
@@ -192,7 +192,8 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issue', htmlspecialchars($issue->getNumber(), ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getDatePublished() && $issue->getStoredPubId('doi')) {
-			$journalIssueNode->appendChild($this->createDOIDataNode($doc, $issue->getStoredPubId('doi'), Request::url($context->getPath(), 'issue', 'view', $issue->getBestIssueId($context), null, null, true)));
+			$request = Application::get()->getRequest();
+			$journalIssueNode->appendChild($this->createDOIDataNode($doc, $issue->getStoredPubId('doi'), $request->url($context->getPath(), 'issue', 'view', $issue->getBestIssueId($context), null, null, true)));
 		}
 		return $journalIssueNode;
 	}

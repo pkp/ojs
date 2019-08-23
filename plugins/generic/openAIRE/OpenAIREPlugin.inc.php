@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/openAIRE/OpenAIREPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OpenAIREPlugin
@@ -50,8 +50,8 @@ class OpenAIREPlugin extends GenericPlugin {
 			HookRegistry::register('issueentrysubmissionreviewform::Constructor', array($this, 'addCheck'));
 			HookRegistry::register('quicksubmitform::Constructor', array($this, 'addCheck'));
 
-			// Consider the new field for ArticleDAO for storage
-			HookRegistry::register('articledao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
+			// Consider the new field for SubmissionDAO for storage
+			HookRegistry::register('submissiondao::getAdditionalFieldNames', array($this, 'articleSubmitGetFieldNames'));
 
 			// Add OpenAIRE set to OAI results
 			HookRegistry::register('OAIDAO::getJournalSets', array($this, 'sets'));
@@ -114,12 +114,15 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function metadataExecute($hookName, $params) {
 		$form =& $params[0];
-		if (get_class($form) == 'SubmissionSubmitStep3Form') {
-			$article =& $params[1];
-		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
-			$article = $form->getSubmission();
-		} elseif (get_class($form) == 'QuickSubmitForm') {
-			$article = $form->submission;
+		switch (get_class($form)) {
+			case 'SubmissionSubmitStep3Form':
+			case 'QuickSubmitForm':
+				$article = $form->submission;
+				break;
+			case 'IssueEntrySubmissionReviewForm':
+				$article = $form->getSubmission();
+				break;
+			default: throw new Exception('Unknown class form ' . get_class($form));
 		}
 		$formProjectID = $form->getData('projectID');
 		$article->setData('projectID', $formProjectID);
@@ -244,13 +247,13 @@ class OpenAIREPlugin extends GenericPlugin {
 			// OpenAIRE DC Rights
 			$openAIRERights = 'info:eu-repo/semantics/';
 			$status = '';
-			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
+			if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = 'openAccess';
-			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+			} else if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = 'openAccess';
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if (is_a($article, 'PublishedSubmission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
 						$status = 'openAccess';
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = 'embargoedAccess';
@@ -259,7 +262,7 @@ class OpenAIREPlugin extends GenericPlugin {
 					}
 				}
 			}
-			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
+			if ($journal->getData('restrictSiteAccess') == 1 || $journal->getData('restrictArticleAccess') == 1) {
 				$status = 'restrictedAccess';
 			}
 			$openAIRERights = $openAIRERights . $status;

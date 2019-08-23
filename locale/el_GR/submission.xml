@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/submission.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  *
+  * Edited by National Documentation Center (EKT) team, 2019
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<!-- Submission wizard -->
+	<message key="submission.submit.title">Υποβολή άρθρου</message>
+	<message key="submission.submit.userGroup">Υποβολή με τον ρόλο μου ως:</message>
+	<message key="submission.submit.userGroupDescription">Επιλέξτε την ιδιότητα υπό την οποία υποβάλλετε αυτό το άρθρο.</message>
+	<message key="submission.upload.selectComponent">Επιλέξτε στοιχείο του άρθρου.</message>
+	<message key="submission.title">Τίτλος άρθρου</message>
+	<message key="submission.title.tip"><![CDATA[Ο τύπος υποβολής είναι συνήθως 'εικόνα', 'κείμενο' ή τύποι πολυμέσων, όπως 'λογισμικό' ή 'διαδραστικό'. Παρακαλούμε επιλέξτε το πιο σχετικό με την υποβολή σας. Παραδείγματα μπορείτε να βρείτε στο <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Ξεκινήστε μία νέα υποβολή στο</message>
+	<message key="submission.submit.newSubmissionSingle">Νέα υποβολή</message>
+	<message key="grid.action.workflow">Ροή εργασιών υποβολής</message>
+	<message key="submission.abstract.wordCount.description">Η περίληψη δεν πρέπει να υπερβαίνει τις {$wordCount} λέξεις.</message>
+
+	<message key="submission.issueEntry">Μεταδεδομένα</message>
+	<message key="submission.submit.whatNext.description">Οι συντελεστές του περιοδικού ειδοποιήθηκαν για την υποβολή και σας έχει σταλεί σχετική επιβεβαίωση. Μόλις ο Επιμελητής του περιοδικού ελέγξει την υποβολή, θα επικοινωνήσει μαζί σας.</message>
+	<message key="grid.action.galleyInIssueEntry">Το τυπογραφικό δοκίμιο εμφανίζεται στη σχετική εγγραφή στο τεύχος.</message>
+	<message key="grid.action.issueEntry">Προβολή των μεταδεδομένων αυτής της υποβολής</message>
+
+	<!-- Submission Information Modal -->
+	<message key="submission.issueEntry.modalTitle">Μεταδεδομένα υποβολής και δημοσίευσης</message>
+	<message key="submission.issueEntry.submissionMetadata">Υποβολή</message>
+	<message key="submission.issueEntry.publicationMetadata">Δημοσίευση</message>
+	<message key="submission.issueEntry.confirm">Δημιουργία μίας εγγραφής τεύχους για αυτό το άρθρο με βάση τα παρακάτω μεταδεδομένα</message>
+
+	<!-- events -->
+	<message key="submission.event.articleGalleyMadeAvailable">Το τυπογραφικό δοκίμιο του άρθρου "{$galleyFormatName}" είναι διαθέσιμο.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">Το τυπογραφικό δοκίμιο του άρθρου "{$galleyFormatName}" δεν είναι διαθέσιμο.</message>
+	<message key="submission.event.publicIdentifiers">Τα δημόσια αναγνωριστικά της υποβολής επικαιροποιήθηκαν.</message>
+
+	<!-- galleys grid -->
+	<message key="grid.issueEntry.availableGalley.title">Έγκριση μορφοποίησης</message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Αυτό το τυπογραφικό δοκίμιο <em>δεν θα είναι πλέον διαθέσιμο</em> στους αναγνώστες.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Αυτό το τυπογραφικό δοκίμιο <em>θα είναι διαθέσιμο</em> στους αναγνώστες.</p>]]></message>
+	<message key="grid.action.availableArticleGalley">Αυτό το τυπογραφικό δοκίμιο να είναι διαθέσιμο.</message>
+
+	<!-- galley files grid -->
+	<message key="submission.galleyFiles">Αρχεία τυπογραφικών δοκιμίων</message>
+	<message key="submission.proofReadingDescription"><![CDATA[Εδώ ο Επιμελητής Διάταξης μεταφορτώνει τα αρχεία που είναι έτοιμα για δημοσίευση. Επιλέξτε τον σύνδεσμο <em>Ανάθεση σε Eλεγκτή</em> για να αναθέσετε τη διόρθωση των τυπογραφικών δοκιμίων στους Συγγραφείς ή άλλους Χρήστες. Τα διορθωμένα αρχεία θα μεταφορτωθούν για έγκριση πριν τη δημοσίευση.]]></message>
+	<message key="grid.action.approveProof">Έγκριση αυτού του διορθωμένου δοκιμίου για συμπερίληψη στο τυπογραφικό δοκίμιο</message>
+	<message key="grid.action.pageProofApproved">Αυτό το διορθωμένο δοκίμιο εγκρίθηκε για συμπερίληψη στο τυπογραφικό δοκίμιο.</message>
+	<message key="submission.submit.titleAndSummary">Τίτλος και περίληψη</message>
+	<message key="submission.submit.upload.description">Μεταφόρτωση αρχείων της υποβολής (κείμενο, πολυμέσα, σύνολα δεδομένων, εικόνες, κλπ.)</message>
+	<message key="submission.pageProofs">Διόρθωση τυπογραφικών δοκιμίων</message>
+	<message key="submission.confirmSubmit">Ειβεβαιώνετε την υποβολή του άρθρου στο περιοδικό;</message>
+	<message key="workflow.review.externalReview">Αξιολόγηση</message>
+	<message key="editor.submission.decision.sendExternalReview">Αποστολή προς αξιολόγηση</message>
+	<message key="submission.event.issueMetadataUpdated">Τα μεταδεδομένα του τεύχους επικαιροποιήθηκαν.</message>
+
+	<message key="submission.upload.fileContents">Στοιχεία του άρθρου</message>
+	<message key="submission.complete">Εγκρίθηκε</message>
+	<message key="submission.incomplete">Σε αναμονή για έγκριση</message>
+	<message key="submission.submit.form.localeRequired">Παρακαλούμε επιλέξτε τη γλώσσα της υποβολής.</message>
+	<message key="submission.submit.submissionChecklist">Λίστα ελέγχου υποβολής</message>
+	<message key="submission.submit.submissionChecklistDescription">Πριν προχωρήσετε, πρέπει να διαβάσετε και να επιβεβαιώσετε ότι η υποβολή πληροί τις παρακάτω προϋποθέσεις.</message>
+	<message key="submission.submit.privacyStatement">Πολιτική Προστασίας Προσωπικών Δεδομένων</message>
+	<message key="submission.submit.contributorRole">Ρόλος Συνεργάτη</message>
+	<message key="submission.submit.form.authorRequired">Απαιτείται η καταχώρηση τουλάχιστον ενός Συγγραφέα.</message>
+	<message key="submission.submit.form.authorRequiredFields">Απαιτούνται το όνομα, το επίθετο και η διεύθυνση ηλεκτρονικού ταχυδρομείου κάθε Συγγραφέα.</message>
+	<message key="submission.submit.form.titleRequired">Παρακαλούμε εισάγετε τον τίτλο του άρθρου.</message>
+	<message key="submission.submit.form.abstractRequired">Παρακαλούμε εισάγετε την περίληψη του άρθρου.</message>
+	<message key="submission.submit.form.wordCountAlert">Η περίληψή σας υπερβαίνει τον μέγιστο προβλεπόμενο αριθμό λέξεων για τη συγκεκριμένη ενότητα.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Παρακαλούμε επιλέξτε την ιδιότητα του Συνεργάτη.</message>
+
+	<message key="submission.citationFormat.notFound">Το πρότυπο παραπομπής που ζητήθηκε δε μπορεί να ανακτηθεί.</message>
+
+	<message key="submission.metadataDescription">Οι προδιαγραφές βασίζονται στο διεθνές πρότυπο Dublin Core, το οποίο χρησιμοποιείται για την περιγραφή περιεχομένου περιοδικών.</message>
+	<message key="section.any">Όλες οι ενότητες</message>
+</locale>

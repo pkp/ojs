@@ -4,8 +4,8 @@
 <!--
   * locale/sl_SI/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -55,7 +55,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Pot lahko vsebuje le alfanumerične znake, podčrtaj in pomišljaj ter se mora začeti in končati z alfanumeričnim znakom.</message>
 	<message key="admin.contexts.form.pathExists">Izbrano pot že uporablja druga revija.</message>
 	<message key="admin.journals.enableJournalInstructions">Omogoči, da se revija pojavlja javno na spletišču</message>
-	<message key="admin.journals.journalDescription">Opis revije</message>
+	<message key="admin.contexts.contextDescription">Opis revije</message>
 	<message key="admin.journal.pathImportInstructions">Obstoječa pot revije ali pot, ki jo želite ustvariti (npr. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Uvozi naročnine</message>
 	<message key="admin.journals.transcode">Prekodiraj metapodatke prenesenih člankov iz ISO8859-1</message>

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/medra/filter/filterConfig.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Filter Configuration.
@@ -24,7 +24,7 @@
 			symbolic="article=>medra-xml"
 			displayName="plugins.importexport.medra.displayName"
 			description="plugins.importexport.medra.description"
-			inputType="class::classes.article.Article[]"
+			inputType="class::classes.article.Submission[]"
 			outputType="xml::schema(http://www.medra.org/schema/onix/DOIMetadata/2.0/ONIX_DOIMetadata_2.0.xsd)" />
 		<!-- mEDRA XML galley output -->
 		<filterGroup

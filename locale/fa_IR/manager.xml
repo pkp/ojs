@@ -3,8 +3,8 @@
 <!--
   * locale/fa_IR/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
@@ -27,7 +27,6 @@
 	<message key="manager.payment.amount">مقدار</message>
 	<message key="manager.payment.authorFees">هزینه‌های نویسنده</message>
 	<message key="manager.payment.authorFeesDescription">گزینه‌های انتخابی همراه با شرح و قیمت‌های آن (که در این قسمت قابل ویرایش است) در مرحله ۱ ارسال مقاله و در قسمت «درباره مجله» تحت قسمت ارسال مقاله, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد.</message>
-	<message key="manager.payment.currency">واحد پول</message>
 	<message key="manager.payment.currencymessage">OJS هیچ تبدیل واحد پولی را انجام نمی‌دهد. چنانچه پرداخت برای اشتراک‌ها را قبول می‌کنید باید از تطابق واحد پولی پرداخت‌ها از آنچه در اینجا ذکر شده اطمینان حاصل کنید </message>
 	<message key="manager.payment.description">توصیف</message>
 	<message key="manager.payment.details">جزئیات</message>
@@ -61,7 +60,6 @@
 	<message key="manager.payment.readerFees">قیمت برای خوانندگان</message>
 	<message key="manager.payment.readerFeesDescription">گزینه‌های انتخابی همراه با شرح و قیمت‌های آن (که در این قسمت قابل ویرایش است) در قسمت «درباره مجله» تحت قسمت ارسال مقاله, و همچنین هر جا که پرداخت لازم باشد, خواهد آمد.</message>
 	<message key="manager.payment.records">رکوردها</message>
-	<message key="manager.payments">پرداخت‌ها</message>
 	<message key="manager.paymentTypes">انواع پرداخت </message>
 	<message key="manager.payment.userName">شناسه پرداخت</message>
 	<message key="manager.people.allEnrolledUsers">کاربران این مجله</message>
@@ -111,7 +109,6 @@
 	<message key="manager.setup.masthead.description">لیست دبیران، مدیران و سایر افرادی که با این مجله همکاری می‌کنند.</message>
 	<message key="manager.setup.homepageContent">محتوای صفحه اصلی مجله</message>
 	<message key="manager.setup.homepageContentDescription">صفحه خانگی مجله به صورت پیش‌فرض شامل لینک‌هایی برای پیمایش سایت می‌باشد. می‌توانید با استفاده از گزینه‌های زیر محتویات دیگری را به صفحه خانگی مجله اضافه کنید.</message>
-	<message key="manager.setup.layout">طرح‌بندی مجله</message>
 	<message key="manager.setup.useStyleSheet">استایل شیت مجله</message>
 	<message key="manager.setup.contextName">نام مجله</message>
 	<message key="manager.setup.pageHeader">سرتیتر صفحات مجله</message>
@@ -126,19 +123,15 @@
 	<message key="manager.setup.alternateHeader">سرتیتر جایگزین</message>
 	<message key="manager.setup.alternateHeaderDescription">به جای عنوان و لوگو یک نسخه HTML سرتیتر را می‌توان در جعبه متن زیر وارد کرد. در صورتی که نمی‌خواهید آن را خالی بگذارید.</message>
 	<message key="manager.setup.announcements">اطلاعیه‌ها</message>
-	<message key="manager.setup.announcementsDescription">اطلاعیه‌ها برای مطلع ساختن خوانندگان از خبرها و رویدادها می‌باشد که در صفحه اطلاعیه‌ها ظاهر می‌شود.</message>
-	<message key="manager.setup.announcementsIntroduction">اطلاعات تکمیلی</message>
-	<message key="manager.setup.announcementsIntroductionDescription">اطلاعات تکمیلی را که می‌باید در معرض دید خوانندگان  در صفحه اطلاعیه‌ها قرار گیرد وارد کنید.</message>
+	<message key="manager.setup.enableAnnouncements.description">اطلاعیه‌ها برای مطلع ساختن خوانندگان از خبرها و رویدادها می‌باشد که در صفحه اطلاعیه‌ها ظاهر می‌شود.</message>
+	<message key="manager.setup.announcementsIntroduction.description">اطلاعات تکمیلی را که می‌باید در معرض دید خوانندگان  در صفحه اطلاعیه‌ها قرار گیرد وارد کنید.</message>
 	<message key="manager.setup.appearInAboutJournal">(در قسمت درباره مجله نمایش داده می‌شود)</message>
 	<message key="manager.setup.competingInterests.requireAuthors">لازم است که نویسنده ارسال کننده مقاله بیانیه تضاد منافع در رابطه با مقاله خود را اعلام کند.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">لازم است داوران بیانیه تضاد منافع برای مقاله‌ای که داوری می‌کنند را اعلام کنند.</message>
 	<message key="manager.setup.history">تاریخچه مجله</message>
 	<message key="manager.setup.historyDescription">این متن در قسمت درباره مجله ظاهر می‌شود و از آن می‌توان برای توصیف تغییرات در عنوان، تیم سردبیری و دیگر موارد تغییر مربوط به تاریخچه انتشاراتی مجله استفاده کرد.</message>
-	<message key="manager.setup.copyeditInstructions">دستورالعمل ویراستاری</message>
-	<message key="manager.setup.copyeditInstructionsDescription">دستورالعمل ویراستاری در معرض دید ویراستاران، نویسندگان، و دبیران در هنگام ویراستاری مقاله ارسالی قرار می‌گیرد . متن زیر یک دستورالعمل ویراستاری پیشنهادی به‌صورت  HTML است. می‌توانید هم اکنون و یا بعداً آن را به دلخواه تغییر دهید.</message>
-	<message key="manager.setup.copyrightNotice">متن حق نشر</message>
-	<message key="manager.setup.coverage">پوشش</message>
-	<message key="manager.setup.coverageDescription">پوشش جغرافیائی ، زمانی یا تاریخی و یا ویژگی‌های نمونه مورد پژوهش</message>
+	<message key="manager.setup.metadata.coverage">پوشش</message>
+	<message key="manager.setup.metadata.coverage.description">پوشش جغرافیائی ، زمانی یا تاریخی و یا ویژگی‌های نمونه مورد پژوهش</message>
 	<message key="manager.setup.currentIssue">شماره جاری</message>
 	<message key="manager.setup.customizingTheLook">مرحله 5: تغییر دلخواه نمای ظاهری</message>
 	<message key="manager.setup.customTags">تگ‌های سفارشی</message>
@@ -153,14 +146,12 @@
 	<message key="manager.setup.displayCurrentIssue">افزودن فهرست مطالب شماره جاری در صورت موجود بودن.</message>
 	<message key="manager.setup.editorDecision">تصمیم دبیر</message>
 	<message key="manager.setup.emailBounceAddress">آدرس برگشت</message>
-	<message key="manager.setup.emailBounceAddressDescription">اگر ایمیلی برگشت بخورد پیغامی به این آدرس ارسال می‌شود</message>
-	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>توجه:</strong> برای فعال ساختن این گزینه مدیر سایت می‌بایست گزینه <tt>allow_envelope_sender</tt> در فایل تنظیمات OJS فعال سازد. همچنین ممکن است امکانات خاصی در سرور نیز لازم باشد که ممکن است همه سرورها آن را نداشته باشند. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید.]]></message>
+	<message key="manager.setup.emailBounceAddress.description">اگر ایمیلی برگشت بخورد پیغامی به این آدرس ارسال می‌شود</message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[<strong>توجه:</strong> برای فعال ساختن این گزینه مدیر سایت می‌بایست گزینه <tt>allow_envelope_sender</tt> در فایل تنظیمات OJS فعال سازد. همچنین ممکن است امکانات خاصی در سرور نیز لازم باشد که ممکن است همه سرورها آن را نداشته باشند. برای اطلاعات بیشتر به مستندات OJS مراجعه کنید.]]></message>
 	<message key="manager.setup.emails">شناسایی ایمیل</message>
 	<message key="manager.setup.emailSignature">امضا</message>
-	<message key="manager.setup.emailSignatureDescription">تمام ایمیل‌های از قبل تهیه شده که از طرف مجله ارسال می‌شود در انتها دارای امضای زیر است.</message>
-	<message key="manager.setup.enableAnnouncements">فعال‌سازی امکان افزودن اطلاعیه توسط مدیر مجله.</message>
-	<message key="manager.setup.enableAnnouncementsHomepage1">نمایش</message>
-	<message key="manager.setup.enableAnnouncementsHomepage2">جدیدترین اطلاعیه‌ها در صفحه خانگی مجله.</message>
+	<message key="manager.setup.emailSignature.description">تمام ایمیل‌های از قبل تهیه شده که از طرف مجله ارسال می‌شود در انتها دارای امضای زیر است.</message>
+	<message key="manager.setup.enableAnnouncements.enable">فعال‌سازی امکان افزودن اطلاعیه توسط مدیر مجله.</message>
 	<message key="manager.setup.enableUserRegistration">خوانندگان بتوانند در مجله ثبت‌نام کنند.</message>
 	<message key="manager.setup.focusAndScope">زمینه مطالعاتی</message>
 	<message key="manager.setup.focusAndScope.description">به اطلاع خوانندگان، نویسندگان و کتابخانه‌ها رسانید که مقالات این مجله در چه حیطه‌ای بوده و چه زمینه‌های مطالعاتی را پوشش می‌دهد.</message>
@@ -191,19 +182,15 @@
 	<message key="manager.setup.itemsPerPage">تعداد موارد در هر صفحه</message>
 	<message key="manager.setup.journalAbbreviation">نام اختصاری مجله</message>
 	<message key="manager.setup.journalArchiving">بایگانی مجله</message>
-	<message key="manager.setup.journalSummary">توضیح مختصر درباره مجله</message>
-	<message key="manager.setup.journalSummary.description">شرح مختصری درباره مجله بنویسید تا در لیست مجلات نمایش داده شود.</message>
-	<message key="manager.setup.journalAbout">درباره مجله</message>
-	<message key="manager.setup.journalAbout.description">وارد کردن اطلاعاتی درباره مجله که ممکن است مورد علاقه‌ی خوانندگان و داوران باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد ، زمینه مطالعاتی مجله، حق نشر، حامیان مجله، پیشینه‌ی مجله؛ بیانیه حفظ حریمی شخصی و ... باشد.</message>
-	<message key="manager.setup.favicon">نماد سایت (FAVICON)</message>
-	<message key="manager.setup.faviconDescription">اضافه کردن یک نماد دلخواه برای مجله برای نمایش در مرورگر</message>
-	<message key="manager.setup.faviconInvalid">فرمت فایل Favicon معتبر نمی‌باشد. فرمت‌های قابل قبول شامل ico، png، jpg و gif است.</message>
+	<message key="manager.setup.contextSummary">توضیح مختصر درباره مجله</message>
+	<message key="manager.setup.contextAbout">درباره مجله</message>
+	<message key="manager.setup.contextAbout.description">وارد کردن اطلاعاتی درباره مجله که ممکن است مورد علاقه‌ی خوانندگان و داوران باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد ، زمینه مطالعاتی مجله، حق نشر، حامیان مجله، پیشینه‌ی مجله؛ بیانیه حفظ حریمی شخصی و ... باشد.</message>
 	<message key="manager.setup.journalHomepageContent">محتوای صفحه اصلی مجله</message>
 	<message key="manager.setup.journalHomepageContentDescription">به صورت پیش‌فرض محتوی صفحه اصلی شامل لینک‌های گشت‌وگذار می‌باشد. برای افزودن محتویات دیگر به صفحه خانگی می‌توانید گزینه‌های زیر را بکار ببرید که به ترتیب ظاهر می‌شود. توجه داشته باشید که شماره جاری مجله همیشه از منوی گشت‌وگذار قابل انتخاب است.</message>
 	<message key="manager.setup.journalHomepageHeader">سرتیتر صفحه اصلی مجله</message>
 	<message key="manager.setup.journalHomepageHeader.altText">سرتیتر صفحه اصلی مجله</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">یک نسخه گرافیکی از عنوان و لوگو مجله (به‌صورت یک فایلgif، png یا jpg). می‌توان برای نمایش در صفحه اصلی آپلود کرد که جایگزین نسخه متنی می‌شود. در غیر این صورت نسخه متنی نمایش داده می‌شود.</message>
-	<message key="manager.setup.journalInitials">حروف اول مجله</message>
+	<message key="manager.setup.contextInitials">حروف اول مجله</message>
 	<message key="manager.setup.journalLayout">طرح‌بندی مجله</message>
 	<message key="manager.setup.journalLayoutDescription">در این قسمت یک پوسته و سپس اجزای طرح‌بندی را انتخاب کنید. همچنین می‌توانید به جای این کار یک استایل شیت برای مجله آپلود کرد.</message>
 	<message key="manager.setup.journalLogo">لوگوی مجله</message>
@@ -217,18 +204,9 @@
 	<message key="manager.setup.journalTheme">پوسته مجله</message>
 	<message key="manager.setup.journalThumbnail">تصویر کوچک (بندانگشتی) مجله</message>
 	<message key="manager.setup.journalThumbnail.description">یک لوگوی کوچک از مجله برای نمایش در لیست مجلات</message>
-	<message key="manager.setup.journalThumbnail.altText">متن جایگزین برای تصویر کوچک مجله</message>
-	<message key="manager.setup.journalTitle">عنوان مجله</message>
+	<message key="manager.setup.contextTitle">عنوان مجله</message>
 	<message key="manager.setup.labelName">نام برچسب</message>
-	<message key="manager.setup.layoutInstructions">دستورالعمل صفحه‌آرائی</message>
-	<message key="manager.setup.layoutInstructionsDescription">دستورالعمل صفحه‌آرائی جهت استفاده در صفحه‌آرائی و فرمت دهی مقالات. این دستورالعمل می‌تواند به صورت متن ساده یا HTML باشد. این دستورالعمل‌ها در دسترس صفحه‌آرا و دبیران در مرحله ویراستیاری مقاله ارسالی قرار خواهد گرفت.</message>
-	<message key="manager.setup.layoutTemplates">الگوی صفحه‌آرائی</message>
-	<message key="manager.setup.layoutTemplatesDescription">الگوها را می‌توان آپلود کرد تا  در دسترس صفحه‌آرا برای هرکدام از فرمت‌های استاندارد مجله قرار گیرد. در این الگوها نکات راهنمایی تهیه کلیشه چاپی مورد نظر از لحاظ فونت ، اندازه ، حاشیه‌ها و غیره به عنوان راهنمایی صفحه‌آرا  و بازبینی نهائی قرار دارد.</message>
-	<message key="manager.setup.layoutTemplates.file">فایل الگو</message>
-	<message key="manager.setup.layoutTemplates.title">عنوان</message>
 	<message key="manager.setup.lists">لیست‌ها</message>
-	<message key="manager.setup.listsDescription">حداکثر تعداد مواردی که در هر صفحه از لیست می‌توانند قرار گیرند و تعداد صفحاتی که لینک آن‌ها در هر صفحه نمایش داده شود را مشخص کنید.</message>
-	<message key="manager.setup.enableArchive">فعال‌سازی بایگانی</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[فعال کردن  LOCKSS برای ذخیره و انتشار محتوای مجله در کتابخانه‌های ثبت‌نام شده از طریق صفحه  <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> ]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[یک مجوز LOCKSS در قسمت درباره مجله  و تحت عنوان بایگانی ظاهر می‌شود: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">توضیح مجوز LOCKSS</message>
@@ -239,7 +217,6 @@
 	<message key="manager.setup.clockssLicenseLabel">توضیح مجوز CLOCKSS</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[برای ثبت‌نام در سرویس CLOCKSS به <a href="http://clockss.org/" target="_blank">وب‌سایت CLOCKSS</a> مراجعه کنید.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.Issn">شاپا </message>
 	<message key="manager.setup.look">شکل ظاهری</message>
 	<message key="manager.setup.look.description">سرتیتر صفحه اصلی، محتوی، سرتیتر مجله، پاورقی، منوهای گشت‌وگذار و استیل شیت</message>
 	<message key="manager.setup.management">مدیریت</message>
@@ -256,35 +233,32 @@
 	<message key="manager.setup.note">یادداشت</message>
 	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>توجه:</strong> در حال حاضر ارسال رسید مقاله ارسالی غیرفعال است. برای استفاده از این گزینه ایمیل SUBMISSION_ACK در <a class="action" href="{$preparedEmailsUrl}">نمونه ایمیل‌های از قبل آماده</a> را فعال کنید.]]></message>
 	<message key="manager.setup.numPageLinks">تعداد لینک صفحات</message>
-	<message key="manager.setup.onlineAccessManagement">اداره دسترسی آنلاین</message>
+	<message key="manager.setup.publishingMode">اداره دسترسی آنلاین</message>
 	<message key="manager.setup.onlineIssn">شاپا الکترونیک</message>
-	<message key="manager.setup.openAccess">این مجله دسترسی آزاد به محتوی خود را اجازه می‌دهد.</message>
+	<message key="manager.distribution.publishingMode.openAccess">این مجله دسترسی آزاد به محتوی خود را اجازه می‌دهد.</message>
 	<message key="manager.setup.pageNumberIdentifier">گزینه‌های شماره‌گذاری صفحات</message>
 	<message key="manager.setup.policies">سیاست‌ها</message>
 	<message key="manager.setup.policies.description">زمینه مطالعاتی، داوری، انواع مقالات، محرمانگی، امنیت ، و محتویات دیگر برای نمایش در بخش «درباره»</message>
 	<message key="manager.setup.printIssn">شاپا چاپی</message>
 	<message key="manager.setup.proofingInstructions">دستورالعمل بررسی نهائی</message>
 	<message key="manager.setup.proofingInstructionsDescription">دستورالعمل بازبینی نهائی در دسترس بازبینان نهائی ، نویسندگان ، صفحه‌آراها ، و دبیران در مرحله ویراستاری مقاله ارسالی قرار می‌گیرد. متن زیر یک دستورالعمل بازبینی نهائی پیشنهادی به صورت HTML است که می‌توانید به دلخواه آن را هم اکنون و یا بعداً تغییر دهید.</message>
-	<message key="manager.setup.provideRefLinkInstructions">دستورالعمل برای صفحه‌آرا</message>
 	<message key="manager.setup.publicationSchedule">زمان‌بندی چاپ</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[مقالات را می‌توان در قالب شماره مجله همراه با فهرست مقالات چاپ کرد. همچنین مقالات را به مجرد آماده شدن می‌توان از طریق افزودن آن‌ها به دوره جاری چاپ کرد. متنی تهیه کنید که در آن در مورد نحوه چاپ مجله و تعدد چاپ آن صحبت شده باشد. این متن در قسمت درباره مجله خواهد آمد.]]></message>
 	<message key="manager.setup.publicationScheduling">زمان‌بندی کردن چاپ</message>
 	<message key="manager.setup.publicIdentifier">شناسایی محتوای مجله</message>
 	<message key="manager.setup.publisher">ناشر</message>
-	<message key="manager.setup.publisherDescription">نام ناشر در صفحه «درباره مجله» خواهد آمد.</message>
+	<message key="manager.setup.publishingDescription">نام ناشر در صفحه «درباره مجله» خواهد آمد.</message>
 	<message key="manager.setup.referenceLinking">لینک به مراجع</message>
-	<message key="manager.setup.refLinkInstructions.description">دستورالعمل لینک به مراجع برای صفحه‌آرا</message>
 	<message key="manager.setup.restrictArticleAccess">برای دیدن متن کامل مقالات باید ثبت‌نام کنید</message>
 	<message key="manager.setup.restrictSiteAccess">برای دیدن سایت مجله باید ثبت‌نام کنید</message>
 	<message key="manager.setup.reviewGuidelines">راهنمای داوری</message>
-	<message key="manager.setup.reviewGuidelinesDescription">راهنمای داوری، ضوابط داوری در مورد قابل چاپ بودن مقاله ارسالی را در اختیار داور می‌گذارد. همچنین دستورالعمل انتخاب یک داوری مناسب را بیان می‌کند.</message>
 	<message key="manager.setup.reviewOptions">گزینه‌های داوری</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">ایمیل‌های خودکار یادآوری</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>توجه: </strong> برای فعال ساختن این گزینه مدیر سایت می‌بایست گزینه <tt>scheduled_tasks</tt> را در فایل تنظیمات سیستم فعال سازد، این تنظیم ممکن است نیازمند ویژگی‌های خاصی در سرور باشد که ممکن است در همه سرورها مقدور نباشد. در مستندات OJS به این موضوع اشاره شده است.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">داوری محرمانه</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">متوسط مهلت داوری</message>
 	<message key="manager.setup.reviewOptions.onQuality">دبیر بر مبنای یک تا پنج نمره‌ای به داور در مورد کیفیت کار وی در مورد هر داوری می‌دهد.</message>
-	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">داور هنگامی به فایل ارسال شده دسترسی دارد که انجام داوری را قبول کرده باشد.</message>
+	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess.description">داور هنگامی به فایل ارسال شده دسترسی دارد که انجام داوری را قبول کرده باشد.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">دسترسی داور</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">فعال ساختن گزینه تک کلیک دسترسی داور</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>توجه: </strong> دعوت‌نامه ارسالی برای داور  حاوی یک URL است که با کلیک بر روی آن، داور را مستقیماً به صفحه داوری مقاله ارسالی مورد نظر هدایت می‌کند. به دلایل امنیتی در صورت فعال‌سازی این گزینه دبیران نمی‌توانند آدرس‌های ایمیل و رونوشت‌های آن را تغییر دهند.]]></message>
@@ -292,16 +266,13 @@
 	<message key="manager.setup.reviewOptions.reviewerReminders">یادآوری داور</message>
 	<message key="manager.setup.reviewPolicy">سیاست‌های داوری</message>
 	<message key="manager.setup.searchEngineIndexing">نمایه در موتور جستجو</message>
-	<message key="manager.setup.searchEngineIndexingDescription">برای کمک به موتورهای جستجو جهت نمایه کردن بهتر این مجله توصیف مختصری از مجله و کلیدواژه‌های مناسب که با سمی کولون از هم جدا هستند بیاورید.</message>
+	<message key="manager.setup.searchEngineIndexing.description">برای کمک به موتورهای جستجو جهت نمایه کردن بهتر این مجله توصیف مختصری از مجله و کلیدواژه‌های مناسب که با سمی کولون از هم جدا هستند بیاورید.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">انواع مقالات و دبیر آن‌ها</message>
 	<message key="manager.setup.sectionsDefaultSectionDescription">(چنانچه انواع مقالات تعیین نشود ، نوع مقالات ارسالی به صورت پیش‌فرض «مقاله پژوهشی» خواهد بود.)</message>
 	<message key="manager.setup.sectionsDescription"><![CDATA[برای تعریف انواع مقالات و یا تغییر آن‌ها برای این مجله به قسمت مدیریت انواع مقالات بروید. <br /><br />نویسندگان در زمان ارسال مقاله می‌توانند آن‌ها را انتخاب کنند.]]></message>
-	<message key="manager.setup.securitySettings">تنظیمات سطح دسترسی و امنیتی</message>
-	<message key="manager.setup.securitySettingsDescription">OJS  تعدادی گزینه امنیتی دارد که می‌تواند دستیابی به قسمت‌های مختلف را محدود کند.</message>
 	<message key="manager.setup.selectEditorDescription">دبیری که مسئول رسیدگی به مقاله است</message>
 	<message key="manager.setup.selectSectionDescription">نوع مقاله که آیتم مورد نظر به آن تعلق دارد</message>
 	<message key="manager.setup.showGalleyLinksDescription">نمایش لینک تمام متن و تذکر دسترسی محدود </message>
-	<message key="manager.setup.siteAccess">دستیابی به سایت</message>
 	<message key="manager.setup.stepsToJournalSite">مراحل پنج‌گانه نصب مجله</message>
 	<message key="manager.setup.subjectExamples">مانند: فتوسنتز; سیاه‌چاله; مسئله نقشه چهار رنگ; تئوری بازی</message>
 	<message key="manager.setup.subjectKeywordTopic">کلیدواژه‌ها</message>
@@ -311,9 +282,8 @@
 	<message key="manager.setup.submissionPreparationChecklistDescription">در بدو ارسال مقاله به مجله ابتدا از نویسنده خواسته می‌شود تا موارد مختلف مربوط ارسال مقاله را در یک چک‌لیست تیک بزند تا بدین وسیله اطمینان حاصل شود که وی آن‌ها را رعایت کرده است. این چک‌لیست همچنین در راهنمای نویسندگان نیز در قسمت درباره مجله نمایش داده  می‌شود. در زیر می‌توان این لیست را مشاهده و به‌دلخواه آن را ویرایش کنید. تمام موارد این چک‌لیست می‌بایست توسط نویسنده تیک بخورد تا وی قادر به ادامه ارسال مقاله باشد.</message>
 	<message key="manager.setup.submissions">مقالات ارسالی</message>
 	<message key="manager.setup.submissions.description">راهنمای نویسندگان، حق نشر، نمایه‌سازی</message>
-	<message key="manager.setup.subscription">برای دسترسی به بعضی یا تمامی محتوی این مجله ایجاد اشتراک لازم است.</message>
-	<message key="manager.setup.subscriptionDescription">یک ماژول اداره اشتراک ایجاد می‌شود و یک مدیر اشتراک منصوب می‌گردد که به ماژول اشتراک دسترسی دارد. این ماژول خود دارای گزینه‌هایی برای دسترسی آزاد، بایگانی خودکار، و اطلاع‌رسانی از طریق با ایمیل می‌باشد.</message>
-	<message key="manager.setup.noPublishing">از OJS برای انتشار آنلاین محتوای مجله استفاده نخواهد شد.</message>
+	<message key="manager.distribution.publishingMode.subscription">برای دسترسی به بعضی یا تمامی محتوی این مجله ایجاد اشتراک لازم است.</message>
+	<message key="manager.distribution.publishingMode.none">از OJS برای انتشار آنلاین محتوای مجله استفاده نخواهد شد.</message>
 	<message key="manager.setup.typeExamples">مانند: پرسشنامه تاریخچه‌ای؛ نیمه تجربی؛ آنالیز ادبی؛ مصاحبه</message>
 	<message key="manager.setup.typeMethodApproach">نوع (روش/راهکار)</message>
 	<message key="manager.setup.typeProvideExamples">مثال‌هایی برای انواع پژوهش، روش‌ها و راهکارها</message>
@@ -322,7 +292,6 @@
 	<message key="manager.setup.useEditorialReviewBoard">این مجله دارای تیم سردبیری و داوران است</message>
 	<message key="manager.setup.useThumbnail">تصویرک</message>
 	<message key="manager.setup.useImageTitle">تصویر عنوان</message>
-	<message key="manager.setup.useJournalStyleSheet">استایل شیت مجله</message>
 	<message key="manager.setup.userRegistration">ثبت‌نام کاربران</message>
 	<message key="manager.setup.useTextTitle">متن عنوان</message>
 	<message key="manager.statistics.defaultMetricDescription">مجله شما از چندین معیار اندازه‌گیری برای ذخیره آمار استفاده می‌کند. اما در برخی موارد نیاز است که از یک معیار استفاده شود، برای مثال در نمایش لیست مقالات بیشتر مشاهده شده. لطفاً یک معیار اندازه‌گیری را به عنوان معیار پیش‌فرض انتخاب کنید.</message>
@@ -356,14 +325,7 @@
 	<message key="manager.statistics.reports.filters.byContext.description">محدودتر کردن نتایج بر اساس محتوا(شماره یا مقاله)</message>
 	<message key="manager.statistics.reports.filters.byObject.description">محدودتر کردن نتایج بر اساس نوع (مجله، شماره، مقاله یا نوع فایل) یا شناسه داده</message>
 	<message key="manager.subscriptionPolicies">سیاست‌های اشتراک</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">سیاست‌های بایگانی توسط خود نویسنده</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">متن زیر در قسمت درباره مجله خواهد آمد.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">دسترسی آزاد ( با تأخیر)</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">علی‌رغم دسترسی آزاد تأخیری ، دبیران هنوز می‌توانند مقالات خاصی را به عنوان دسترسی آزاد فوری مشخص کنند.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">شماره‌های قبلی این مجله به‌صورت آزاد در دسترس است.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ماه بعد از انتشار یک شماره مجله</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">لطفاً مدت زمان صحیحی را انتخاب کنید.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">متن زیر در قسمت درباره مجله تحت عنوان دسترسی آزاد تأخیری نمایش داده خواهد شد.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">لطفاً تیک بزنید</message>
 	<message key="manager.subscriptionPolicies.expiry">انقضای اشتراک</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">در صورت انقضای اشتراک دسترسی خوانندگان به تمام مقالات و یا به مقالاتی که بعد از انقضا منتشر شده است بسته می‌شود</message>
@@ -541,7 +503,6 @@
 	<message key="manager.setup.copyrightYearBasis.issue">شماره: سال پیش‌فرض از تاریخ انتشار این شماره‌حساب خواهد شد.</message>
 	<message key="manager.setup.resetPermissions">رست کردن مجوزهای دسترسی مقالات</message>
 	<message key="manager.setup.resetPermissions.confirm">آیا مطمئن هستید که می‌خواهید مجوزهای دسترسی انتساب داده شده به این مقاله رست شود.</message>
-	<message key="manager.setup.resetPermissions.description">بیانیه حق نشر و مجوزهای دسترسی به صورت همیشگی به محتوای انتشار یافته ضمیمه می‌شود. در صورت نیاز به تغییر و یا رست کردن این مجوزها و بیانیه‌ها از دکمه زیر استفاده کنید.</message>
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">اجزاء</message>
 	<message key="grid.genres.title">اجزاء مقاله</message>

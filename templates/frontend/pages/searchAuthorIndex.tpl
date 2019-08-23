@@ -1,11 +1,11 @@
 {**
  * templates/frontend/pages/searchAuthorIndex.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Index of published articles by author.
+ * Index of published submissions by author.
  *
  *}
 {strip}
@@ -18,7 +18,7 @@
 <div id="authors">
 {iterate from=authors item=author}
 	{assign var=lastFirstLetter value=$firstLetter}
-	{assign var=firstLetter value=$author->getLocalizedGivenName()|String_substr:0:1}
+	{assign var=firstLetter value=$author->getLocalizedFamilyName()|String_substr:0:1}
 
 	{if $lastFirstLetter|lower != $firstLetter|lower}
 			<div id="{$firstLetter|escape}">

@@ -3,8 +3,8 @@
 /**
  * @file classes/file/IssueFileManager.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileManager
@@ -146,7 +146,7 @@ class IssueFileManager extends FileManager {
 	 * Create an issue galley based on a temporary file.
 	 * @param $temporaryFile TemporaryFile
 	 * @param $contentType int Issue file content type
-	 * @return IssueFile the resulting issue file
+	 * @return IssueFile|false the resulting issue file
 	 */
 	function fromTemporaryFile($temporaryFile, $contentType = ISSUE_FILE_PUBLIC) {
 		$result = null;

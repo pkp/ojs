@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/tests/functional/FunctionalMedraExportTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalMedraExportTest
@@ -163,12 +163,12 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 		// Test whether exporting updates changes correctly
 		// sets the notification type.
 		$pluginInstance = $this->instantiatePlugin('MedraExportPlugin');
-		$hookName = 'articledao::getAdditionalFieldNames';
+		$hookName = 'submissiondao::getAdditionalFieldNames';
 		HookRegistry::register($hookName, array($pluginInstance, 'getAdditionalFieldNames'));
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$testObject = $articleDao->getById(1);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$testObject = $submissionDao->getById(1);
 		$testObject->setData('medra::' . DOI_EXPORT_REGDOI, '1749/t.v1i1.1');
-		$articleDao->updateObject($testObject);
+		$submissionDao->updateObject($testObject);
 
 		// Remove the hook.
 		$hooks = HookRegistry::getHooks();
@@ -246,13 +246,9 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 	 */
 	public function testWorkProductExplanation() {
 		$this->logIn();
-		try {
-			foreach(array('index', 'articles', 'galleys', 'all') as $pageName) {
-				$this->open($this->pages[$pageName]);
-				$this->assertElementPresent('//a[@href="http://www.medra.org/en/metadata_td.htm"]');
-			}
-		} catch(Exception $e) {
-			throw $this->improveException($e, "$pageName page");
+		foreach(array('index', 'articles', 'galleys', 'all') as $pageName) {
+			$this->open($this->pages[$pageName]);
+			$this->assertElementPresent('//a[@href="http://www.medra.org/en/metadata_td.htm"]');
 		}
 	}
 

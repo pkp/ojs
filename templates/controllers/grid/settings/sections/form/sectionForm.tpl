@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/settings/section/form/sectionForm.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Section form under journal management.
@@ -50,7 +50,7 @@
 		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
 	{/fbvFormArea}
 
-	{fbvFormArea id="indexingInfo" title="submission.indexing"}
+	{fbvFormArea id="indexingInfo" title="submission.sectionOptions"}
 		{fbvFormSection list=true}
 			{fbvElement type="checkbox" id="metaReviewed" checked=$metaReviewed label="manager.sections.submissionReview"}
 			{fbvElement type="checkbox" id="abstractsNotRequired" checked=$abstractsNotRequired label="manager.sections.abstractsNotRequired"}
@@ -69,10 +69,14 @@
 		{fbvFormSection}
 			{assign var="uuid" value=""|uniqid|escape}
 			<div id="subeditors-{$uuid}">
-				<script type="text/javascript">
-					pkp.registry.init('subeditors-{$uuid}', 'SelectListPanel', {$subEditorsListData});
-				</script>
+				<list-panel
+					v-bind="components.subeditors"
+					@set="set"
+				/>
 			</div>
+			<script type="text/javascript">
+				pkp.registry.init('subeditors-{$uuid}', 'Container', {$subEditorsListData|json_encode});
+			</script>
 		{/fbvFormSection}
 	{/if}
 

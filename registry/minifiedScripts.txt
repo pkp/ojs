@@ -1,8 +1,8 @@
 #
 # registry/minifiedScripts.txt
 #
-# Copyright (c) 2014-2018 Simon Fraser University
-# Copyright (c) 2003-2018 John Willinsky
+# Copyright (c) 2014-2019 Simon Fraser University
+# Copyright (c) 2003-2019 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # This file contains a list of all JavaScript files that should be compiled
@@ -18,14 +18,10 @@ lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js
 lib/pkp/js/lib/jquery/plugins/jquery.sortElements.js
 lib/pkp/js/lib/jquery/plugins/jquery.cookie.js
 lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js
-lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js
 lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js
 
 # Underscore library
 lib/pkp/js/lib/underscore/underscore.js
-
-# JSON library
-lib/pkp/js/lib/json/json2.js
 
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
@@ -45,8 +41,6 @@ lib/pkp/js/classes/features/Feature.js
 lib/pkp/js/classes/features/OrderItemsFeature.js
 lib/pkp/js/classes/features/OrderGridItemsFeature.js
 lib/pkp/js/classes/features/OrderCategoryGridItemsFeature.js
-lib/pkp/js/classes/features/OrderListbuilderItemsFeature.js
-lib/pkp/js/classes/features/OrderMultipleListsItemsFeature.js
 lib/pkp/js/classes/features/GeneralPagingFeature.js
 lib/pkp/js/classes/features/PagingFeature.js
 lib/pkp/js/classes/features/InfiniteScrollingFeature.js
@@ -72,13 +66,11 @@ lib/pkp/js/controllers/form/ToggleFormHandler.js
 lib/pkp/js/controllers/form/FileUploadFormHandler.js
 lib/pkp/js/controllers/form/MultilingualInputHandler.js
 lib/pkp/js/controllers/form/CancelActionAjaxFormHandler.js
-lib/pkp/js/controllers/form/ThemeOptionsHandler.js
 lib/pkp/js/controllers/form/UserFormHandler.js
 lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js
 lib/pkp/js/controllers/grid/GridHandler.js
 lib/pkp/js/controllers/grid/CategoryGridHandler.js
 lib/pkp/js/controllers/listbuilder/ListbuilderHandler.js
-lib/pkp/js/controllers/listbuilder/MultipleListsListbuilderHandler.js
 lib/pkp/js/controllers/modal/ModalHandler.js
 lib/pkp/js/controllers/modal/ConfirmationModalHandler.js
 lib/pkp/js/controllers/modal/RedirectConfirmationModalHandler.js
@@ -101,22 +93,15 @@ lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuItemsFormHandler.
 lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js
 lib/pkp/js/controllers/grid/settings/user/form/UserDetailsFormHandler.js
 lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
-lib/pkp/js/controllers/grid/settings/metadata/MetadataGridHandler.js
-lib/pkp/js/controllers/tab/settings/form/FileViewFormHandler.js
-lib/pkp/js/controllers/tab/settings/announcements/form/AnnouncementSettingsFormHandler.js
-lib/pkp/js/controllers/tab/settings/archiving/form/ArchivingSettingsFormHandler.js
-lib/pkp/js/controllers/tab/settings/permissions/form/PermissionSettingsFormHandler.js
-lib/pkp/js/controllers/tab/settings/paymentMethod/PaymentMethodHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
-lib/pkp/js/controllers/tab/settings/siteAccessOptions/form/SiteAccessOptionsFormHandler.js
 lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js
 lib/pkp/js/controllers/informationCenter/NotesHandler.js
 lib/pkp/js/controllers/statistics/ReportGeneratorFormHandler.js
 lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js
 lib/pkp/js/pages/header/HeaderHandler.js
 lib/pkp/js/pages/header/TasksHandler.js
-lib/pkp/js/pages/admin/ContextsHandler.js
 lib/pkp/js/pages/submission/SubmissionTabHandler.js
+lib/pkp/js/pages/submission/SubmissionStep1FormHandler.js
 lib/pkp/js/pages/submission/SubmissionStep2FormHandler.js
 lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js
 lib/pkp/js/pages/workflow/WorkflowHandler.js

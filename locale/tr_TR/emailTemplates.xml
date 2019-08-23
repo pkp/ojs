@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -161,8 +161,7 @@ Bu süreçteki değerli yardımlarınız için tekrar teşekkür ederim.<br />
 Başvuru Erişim Adresi: {$submissionUrl}<br />
 Kullanıcı Adı: {$editorUsername}<br />
 <br />
-Teşekkürler,<br />
-{$editorialContactSignature}]]></body>
+Teşekkürler.]]></body>
 		<description>Bu eposta, bir Bölüm Editörüne bir gönderinin yayınlanma sürecinde supervizörlük görevi verildiğini bildirir. Gönderi hakkındaki bilgileri ve dergi internet sitesine girişte gerekli olan bilgileri içerir.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
@@ -235,10 +234,7 @@ Değerlendirme Rehberi:<br />
 		<subject>Değerlendirmenin iptalini rica ederiz</subject>
 		<body><![CDATA[Sayın {$reviewerName},<br />
 <br />
-{$contextName} için yayınlanmak üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makalenin değerlendirmesini sizden talep etmiştik. Ancak gelinen noktada değerlendirmeye gerek kalmamıştır. Şu ana dek size verdiğimiz zahmetlerden dolayı teşekkür ederiz.<br />
-<br />
-<br />
-{$editorialContactSignature}]]></body>
+{$contextName} için yayınlanmak üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makalenin değerlendirmesini sizden talep etmiştik. Ancak gelinen noktada değerlendirmeye gerek kalmamıştır. Şu ana dek size verdiğimiz zahmetlerden dolayı teşekkür ederiz.]]></body>
 		<description>Değerlendirme süreci sona ermeden editörün değerlendirmeyi iptal için hakeme gönderdiği mesaj.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
@@ -265,9 +261,7 @@ Değerlendirme Rehberi:<br />
 		<subject>Değerlendirme İçin Teşekkür</subject>
 		<body><![CDATA[Sayın {$reviewerName},<br />
 <br />
-{$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirme işlemini tamamladığınız için teşekkür ederiz. Yayınımıza yaptığınız katkıyı takdirle anıyoruz.<br />
-<br />
-{$editorialContactSignature}]]></body>
+{$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirme işlemini tamamladığınız için teşekkür ederiz. Yayınımıza yaptığınız katkıyı takdirle anıyoruz.]]></body>
 		<description>Bu elektronik posta gözden geçirme işlemi bitirilen makalenin alındığını haber vermek ve gözden geçirmeyi yapan kişiye katkılarından dolayı teşekkür etmek için Bölüm Editörü tarafından gönderilmiştir.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
@@ -342,9 +336,7 @@ Yazı ulaşım adresi: {$submissionUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 Lütfen eğer sayfa düzenini yapmanız konusunda bir sorun var ise bana bildiriniz.<br />
-DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
+DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz.]]></body>
 		<description>Yayınlanması için karar verilen yazının sayfa düzeni için gönderilmesinde kullanılır.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
@@ -353,13 +345,11 @@ DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.<br />
 <br />
-Prova dizgi kopya bağlantısı: {$submissionLayoutUrl}<br />
+Prova dizgi kopya bağlantısı: {$submissionUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 İşin gerçekleştirilmesi ile ilgili bir soru / sorularınızı yazabilirsiniz.<br />
-Katkılarınız için teşekkür ederiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
+Katkılarınız için teşekkür ederiz.]]></body>
 		<description>Son sayfa düzeni kopyasının mizanpajının gönderilmesinde kullanılan mesaj.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
@@ -453,21 +443,6 @@ Dergimizin kalitesine katkılarınız için teşekkür ederiz.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Editörün Prova dizgi okuyucuya teşekkür mesajı.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Son mizanpaj kontrolü için rica</subject>
-		<body><![CDATA[sayın {$participantName},<br />
-<br />
-{$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın prova dizgisi son biçimini almıştır. Tarafınızdan yayınlanmadan önceki son kontrolün yapılmasını rica ederim.<br />
-<br />
-Makaleye ulaşım bağlantısı: {$submissionUrl}<br />
-Kullanıcı adınız: {$participantUsername}<br />
-<br />
-İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.<br />
-Dergimizin kalitesine katkılarınız için teşekkür ederiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Yayın öncesi son mizanpaj kontrolü için editörün haber mesajı</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Son mizanpaj kontrolü tamamdır</subject>
@@ -685,9 +660,7 @@ Review Guidelines<br />
 <br />
 {$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
-Kararımız:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Kararımız:]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
@@ -696,9 +669,7 @@ Kararımız:<br />
 <br />
 {$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
-Kararımız:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Kararımız:]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
@@ -707,9 +678,7 @@ Kararımız:<br />
 <br />
 {$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
-Kararımız:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Kararımız:]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
@@ -718,9 +687,7 @@ Kararımız:<br />
 <br />
 {$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
-Kararımız:<br />
-<br />
-{$editorialContactSignature}]]></body>
+Kararımız:]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final decision regarding their submission.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
@@ -847,9 +814,7 @@ Gönderi URL: {$submissionUrl}<br />
 
 &quot;{$submissionTitle},&quot; adlı gönderinizin düzenlemesi tamamlandı. Makalenizi basım aşamasına gönderiyoruz.<br />
 <br />
-Gönderi URL'si: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Gönderi URL'si: {$submissionUrl}]]></body>
 		<description>Editörden veya Bölüm Editörden Yazar'a gönderilen bu e-posta, makalelerin basım aşamasına gönderildiklerini bildirir.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
@@ -863,9 +828,7 @@ Gönderi URL'si: {$submissionUrl}<br />
 <br />
 {$contextName}, &quot;{$submissionTitle}&quot; adresine yaptığınız gönderinizle ilgili bir karara varılmıştır..<br />
 <br />
-Kararımız: Gönderi Reddedildi<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Kararımız: Gönderi Reddedildi]]></body>
 		<description>Değerlendirme aşamasından önce editörün gönderiyi reddetmesi halinde bu e-posta yazarına gönderilir.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
@@ -876,18 +839,14 @@ Kararımız: Gönderi Reddedildi<br />
 <br />
 Karar: Hakeme Gönderilmesi Uygundur<br />
 <br />
-Submission URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+Submission URL: {$submissionUrl}]]></body>
 		<description>Editörden veya Bölüm Editörden bir Yazar'a gönderilen bu e-posta, gönderinin harici bir hakeme gönderildiğini bildirir.</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Editör Tavsiyesi</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-{$contextName}, &quot;{$submissionTitle}&quot; adlı gönderi ile ilgili öneri: {$recommendation}<br />
-<br />
-{$editorialContactSignature}<br />]]></body>
+{$contextName}, &quot;{$submissionTitle}&quot; adlı gönderi ile ilgili öneri: {$recommendation}]]></body>
 		<description>Düzenleyici Editörden veya Bölüm Editörden, karar veren editörleri veya Bölüm Editörleri'ne gönderilen bu e-postalar, onlara gönderiyle ilgili nihai bir öneriyi bildirir.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">

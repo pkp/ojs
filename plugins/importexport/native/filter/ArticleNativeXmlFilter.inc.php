@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/ArticleNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleNativeXmlFilter
@@ -68,24 +68,27 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 			$submissionNode->setAttribute('section_ref', $section->getLocalizedAbbrev());
 		}
 
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId());
-		$publishedArticle ? $submissionNode->setAttribute('seq', $publishedArticle->getSequence()) : $submissionNode->setAttribute('seq', '0');
-		$publishedArticle ? $submissionNode->setAttribute('access_status', $publishedArticle->getAccessStatus()) : $submissionNode->setAttribute('access_status', '0');
-		// if this is a published article and not part/subelement of an issue element
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId());
+		$publishedSubmission ? $submissionNode->setAttribute('seq', $publishedSubmission->getSequence()) : $submissionNode->setAttribute('seq', '0');
+		$publishedSubmission ? $submissionNode->setAttribute('access_status', $publishedSubmission->getAccessStatus()) : $submissionNode->setAttribute('access_status', '0');
+		// if this is a published submission and not part/subelement of an issue element
 		// add issue identification element
-		if ($publishedArticle && !$deployment->getIssue()) {
+		if ($publishedSubmission && !$deployment->getIssue()) {
 			$issueDao = DAORegistry::getDAO('IssueDAO');
-			$issue = $issueDao->getById($publishedArticle->getIssueId());
+			$issue = $issueDao->getById($publishedSubmission->getIssueId());
 			import('plugins.importexport.native.filter.NativeFilterHelper');
 			$nativeFilterHelper = new NativeFilterHelper();
 			$submissionNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 		}
 		$pages = $submission->getPages();
 		if (!empty($pages)) $submissionNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'pages', htmlspecialchars($pages, ENT_COMPAT, 'UTF-8')));
+		// cover images
+		import('plugins.importexport.native.filter.NativeFilterHelper');
+		$nativeFilterHelper = new NativeFilterHelper();
+		$coversNode = $nativeFilterHelper->createCoversNode($this, $doc, $submission);
+		if ($coversNode) $submissionNode->appendChild($coversNode);
 		return $submissionNode;
 	}
 
 }
-
-

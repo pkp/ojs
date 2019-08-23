@@ -3,8 +3,8 @@
 /**
  * @file api/v1/submission/SubmissionHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionHandler
@@ -15,7 +15,7 @@
  */
 
 import('lib.pkp.classes.handler.APIHandler');
-import('classes.core.ServicesContainer');
+import('classes.core.Services');
 
 class SubmissionHandler extends APIHandler {
 
@@ -29,12 +29,12 @@ class SubmissionHandler extends APIHandler {
 			'GET' => array (
 				array(
 					'pattern' => $this->getEndpointPattern(),
-					'handler' => array($this, 'getSubmissionList'),
+					'handler' => array($this, 'getMany'),
 					'roles' => $roles
 				),
 				array(
 					'pattern' => $this->getEndpointPattern() . '/{submissionId}',
-					'handler' => array($this, 'getSubmission'),
+					'handler' => array($this, 'get'),
 					'roles' => $roles
 				),
 				array(
@@ -71,7 +71,7 @@ class SubmissionHandler extends APIHandler {
 			$routeName = $route->getName();
 		}
 
-		if ($routeName === 'getSubmission' || $routeName === 'getGalleys' || $routeName === 'getParticipants') {
+		if ($routeName === 'get' || $routeName === 'getGalleys' || $routeName === 'getParticipants') {
 			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
 			$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 		}
@@ -87,15 +87,14 @@ class SubmissionHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function getSubmissionList($slimRequest, $response, $args) {
-		$request = Application::getRequest();
+	public function getMany($slimRequest, $response, $args) {
+		$request = Application::get()->getRequest();
 		$currentUser = $request->getUser();
-		$dispatcher = $request->getDispatcher();
 		$context = $request->getContext();
-		$submissionService = ServicesContainer::instance()->get('submission');
+		$submissionService = Services::get('submission');
 
 		if (!$context) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$params = $this->_buildListRequestParams($slimRequest);
@@ -109,7 +108,7 @@ class SubmissionHandler extends APIHandler {
 		}
 
 		$items = array();
-		$submissions = $submissionService->getSubmissions($context->getId(), $params);
+		$submissions = $submissionService->getMany($params);
 		if (!empty($submissions)) {
 			$propertyArgs = array(
 				'request' => $request,
@@ -121,7 +120,7 @@ class SubmissionHandler extends APIHandler {
 		}
 
 		$data = array(
-			'itemsMax' => $submissionService->getSubmissionsMaxCount($context->getId(), $params),
+			'itemsMax' => $submissionService->getMax($params),
 			'items' => $items,
 		);
 
@@ -136,21 +135,16 @@ class SubmissionHandler extends APIHandler {
 	 *
 	 * @return Response
 	 */
-	public function getSubmission($slimRequest, $response, $args) {
+	public function get($slimRequest, $response, $args) {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
-		$request = Application::getRequest();
-		$dispatcher = $request->getDispatcher();
-		$context = $request->getContext();
-
+		$request = Application::get()->getRequest();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
-		$data = ServicesContainer::instance()
-			->get('submission')
-			->getFullProperties($submission, array(
-				'request' => $request,
-				'slimRequest' 	=> $slimRequest
-			));
+		$data = Services::get('submission')->getFullProperties($submission, array(
+			'request' => $request,
+			'slimRequest' 	=> $slimRequest
+		));
 
 		return $response->withJson($data, 200);
 	}
@@ -165,32 +159,33 @@ class SubmissionHandler extends APIHandler {
 	 * @return Response
 	 */
 	public function getGalleys($slimRequest, $response, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 
+		$publishedSubmission = null;
 		if ($submission && $context) {
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+			$publishedSubmission = $publishedSubmissionDao->getPublishedSubmissionByBestSubmissionId(
 				(int) $context->getId(),
 				$submission->getId(),
 				true
 			);
 		}
 
-		if (!$submission || !$publishedArticle) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+		if (!$submission || !$publishedSubmission) {
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = array();
 
-		$galleys = $publishedArticle->getGalleys();
+		$galleys = $publishedSubmission->getGalleys();
 		if (!empty($galleys)) {
-			$galleyService = ServicesContainer::instance()->get('galley');
+			$galleyService = Services::get('galley');
 			$args = array(
 				'request' => $request,
 				'slimRequest' => $slimRequest,
-				'parent' => $publishedArticle,
+				'parent' => $publishedSubmission,
 			);
 			foreach ($galleys as $galley) {
 				$data[] = $galleyService->getFullProperties($galley, $args);
@@ -212,20 +207,21 @@ class SubmissionHandler extends APIHandler {
 	 * @return Response
 	 */
 	public function getParticipants($slimRequest, $response, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		$stageId = isset($args['stageId']) ? $args['stageId'] : null;
 
 		if (!$submission) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = array();
 
-		$userService = ServicesContainer::instance()->get('user');
+		$userService = Services::get('user');
 
-		$users = $userService->getUsers($context->getId(), array(
+		$users = $userService->getMany(array(
+			'contextId' => $context->getId(),
 			'count' => 100, // high upper-limit
 			'assignedToSubmission' => $submission->getId(),
 			'assignedToSubmissionStage' => $stageId,
@@ -252,9 +248,8 @@ class SubmissionHandler extends APIHandler {
 	 */
 	private function _buildListRequestParams($slimRequest) {
 
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$currentUser = $request->getUser();
-		$context = $request->getContext();
 
 		// Merge query params over default params
 		$defaultParams = array(
@@ -321,6 +316,8 @@ class SubmissionHandler extends APIHandler {
 					break;
 			}
 		}
+
+		$returnParams['contextId'] = $request->getContext()->getId();
 
 		\HookRegistry::call('API::submissions::params', array(&$returnParams, $slimRequest));
 

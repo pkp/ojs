@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -108,6 +108,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artículo</message>
 	<message key="article.articles">Artículos</message>
+	<message key="common.publication">Artículo</message>
+	<message key="common.publications">Artículos</message>
 	<message key="article.submissionId">Id. del envío</message>
 	<message key="article.title">Título</message>
 	<message key="article.authors">Autores/as</message>
@@ -347,10 +349,8 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems es compatible con el sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) que garantiza a la revista un archivo permanente y seguro. LOCKSS es un programa de código abierto desarrollado por la Biblioteca de la Universidad de Stanford y que permite a las bibliotecas conservar revistas web seleccionadas buscando regularmente en revistas registradas para recopilar el nuevo contenido publicado y archivarlo. Cada archivo es validado continuamente con registros de otras bibliotecas, así que cualquier contenido dañado o perdido se puede restaurar utilizando esos registros o la misma revista. <br /><br /> No es necesario instalar LOCKSS para Open Journal Systems hasta que no se haya puesto en marcha la publicación; una vez llegados a ese punto, se deberán seguir dos pasos:]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Avisos de derechos de autor propuestos por Creative Commons</h3> <h4>1. Política propuesta para revistas que ofrecen acceso abierto</h4> Aquellos autores/as que tengan publicaciones con esta revista, aceptan los términos siguientes: <ol type="a"> <li>Los autores/as conservarán sus derechos de autor y garantizarán a la revista el derecho de primera publicación de su obra, el cuál estará simultáneamente sujeto a la <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Licencia de reconocimiento de Creative Commons</a> que permite a terceros compartir la obra siempre que se indique su autor y su primera publicación esta revista.</li> <li>Los autores/as podrán adoptar otros acuerdos de licencia no exclusiva de distribución de la versión de la obra publicada (p. ej.: depositarla en un archivo telemático institucional o publicarla en un volumen monográfico) siempre que se indique la publicación inicial en esta revista.</li> <li>Se permite y recomienda a los autores/as difundir su obra a través de Internet (p. ej.: en archivos telemáticos institucionales o en su página web) antes y durante el proceso de envío, lo cual puede producir intercambios interesantes y aumentar las citas de la obra publicada. (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">El efecto del acceso abierto</a>).</li> </ol> <h4>2. Política propuesta para revistas que ofrecen acceso abierto diferido</h4> Aquellos autores/as que tengan publicaciones con esta revista, aceptan los términos siguientes: <ol type="a"> <li>Los autores/as conservarán sus derechos de autor y garantizarán a la revista el derecho de primera publicación de su obra [ESPECIFICAR PERIODO DE TIEMPO], el cuál estará simultáneamente sujeto a la <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Licencia de reconocimiento de Creative Commons</a> que permite a terceros compartir la obra siempre que se indique su autor y su primera publicación esta revista.</li> <li>Los autores/as podrán adoptar otros acuerdos de licencia no exclusiva de distribución de la versión de la obra publicada (p. ej.: depositarla en un archivo telemático institucional o publicarla en un volumen monográfico) siempre que se indique la publicación inicial en esta revista.</li> <li>Se permite y recomienda a los autores/as difundir su obra a través de Internet (p. ej.: en archivos telemáticos institucionales o en su página web) antes y durante el proceso de envío, lo cual puede producir intercambios interesantes y aumentar las citas de la obra publicada. (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">El efecto del acceso abierto</a>).</li> </ol>]]></message>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Avisos de derechos de autor propuestos por Creative Commons</h3> <h4>1. Política propuesta para revistas que ofrecen acceso abierto</h4> Aquellos autores/as que tengan publicaciones con esta revista, aceptan los términos siguientes: <ol type="a"> <li>Los autores/as conservarán sus derechos de autor y garantizarán a la revista el derecho de primera publicación de su obra, el cuál estará simultáneamente sujeto a la <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Licencia de reconocimiento de Creative Commons</a> que permite a terceros compartir la obra siempre que se indique su autor y su primera publicación esta revista.</li> <li>Los autores/as podrán adoptar otros acuerdos de licencia no exclusiva de distribución de la versión de la obra publicada (p. ej.: depositarla en un archivo telemático institucional o publicarla en un volumen monográfico) siempre que se indique la publicación inicial en esta revista.</li> <li>Se permite y recomienda a los autores/as difundir su obra a través de Internet (p. ej.: en archivos telemáticos institucionales o en su página web) antes y durante el proceso de envío, lo cual puede producir intercambios interesantes y aumentar las citas de la obra publicada. (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">El efecto del acceso abierto</a>).</li> </ol> <h4>2. Política propuesta para revistas que ofrecen acceso abierto diferido</h4> Aquellos autores/as que tengan publicaciones con esta revista, aceptan los términos siguientes: <ol type="a"> <li>Los autores/as conservarán sus derechos de autor y garantizarán a la revista el derecho de primera publicación de su obra [ESPECIFICAR PERIODO DE TIEMPO], el cuál estará simultáneamente sujeto a la <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Licencia de reconocimiento de Creative Commons</a> que permite a terceros compartir la obra siempre que se indique su autor y su primera publicación esta revista.</li> <li>Los autores/as podrán adoptar otros acuerdos de licencia no exclusiva de distribución de la versión de la obra publicada (p. ej.: depositarla en un archivo telemático institucional o publicarla en un volumen monográfico) siempre que se indique la publicación inicial en esta revista.</li> <li>Se permite y recomienda a los autores/as difundir su obra a través de Internet (p. ej.: en archivos telemáticos institucionales o en su página web) antes y durante el proceso de envío, lo cual puede producir intercambios interesantes y aumentar las citas de la obra publicada. (Véase <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">El efecto del acceso abierto</a>).</li> </ol>]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Pasos: Cola de envío &gt; revisión de envíos &gt; edición de envíos &gt; tabla de contenidos.<br /><br /> Seleccione un modelo para gestionar esos aspectos del proceso editorial. (Para designar un gestor/a de edición y editores/as de sección, vaya a "Editores" en "Gestión de la revista».)]]></message>
@@ -682,7 +682,6 @@
 	<message key="about.delayedOpenAccess">Acceso abierto diferido</message>
 	<message key="about.delayedOpenAccessDescription1">Los contenidos de esta revista estarán disponibles en un formato de acceso abierto</message>
 	<message key="about.delayedOpenAccessDescription2">mes/es después de la publicación de un número.</message>
-	<message key="about.authorSelfArchive">Archivo automático de autores/as</message>
 	<message key="about.archiving">Archivar</message>
 	<message key="about.subscriptions">Suscripciones</message>
 	<message key="about.subscriptions.individual">Suscripciones individuales</message>
@@ -774,8 +773,6 @@
 	<message key="log.author.documentRevised">{$authorName} revisó el artículo {$submissionId}. El Id. del nuevo archivo es {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Se excluyó a {$reviewerName} de la revisión del envío {$submissionId} en la ronda de revisión {$round}.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} inició la ronda de revisión {$round} del envío {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} reinició la ronda de revisión {$round} del envío {$submissionId}.</message>
-	<message key="log.review.reviewCleared">La ronda {$round} que {$reviewerName} revisa para el envío {$submissionId} se eliminó.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} ha sido clasificado/a para la ronda de revisión {$round} del envío {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">La fecha límite para la ronda de revisión {$round} del envío {$submissionId} de {$reviewerName} se estableció para {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">La recomendación para la ronda de revisión {$round} del envío {$submissionId} se estableció por el revisor/a {$reviewerName}.</message>
@@ -813,47 +810,10 @@
 	<message key="log.imported">{$userName} importó el artículo {$submissionId}.</message>
 
 
-	<!-- Reading Tools entries -->
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Opciones de las herramientas de lectura</message>
-
-	<message key="rt.admin.settings.description">Las herramientas de lectura se encuentran en un cuadro junto a los artículos publicados en las secciones de la revista que han sido designados para la indexación. Las herramientas de lectura consisten en un conjunto de herramientas opcionales relacionadas con el artículo publicado (que se enumeran a continuación) y un conjunto de herramientas que facilitan el acceso a artículos relacionados, organizados por campos y disciplinas.</message>
-	<message key="rt.admin.settings.enableReadingTools">Habilitar herramientas de lectura para las secciones designadas de la revista.</message>
-	<message key="rt.admin.settings.relatedItems">Campo</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Véanse los <a href="{$relatedItemsLink}" class="action">conjuntos de elementos relacionados</a> para ver, añadir, corregir o eliminar elementos relacionados con cada campo.]]></message>
-
-	<message key="rt.admin.options">Herramientas para artículos de la revista</message>
-	<message key="rt.admin.relatedItems">Herramientas de artículos relacionados</message>
-
-	<message key="rt.admin.settings.addComment">Añadir comentario (permite que los lectores/as envíen comentarios que puede eliminar el gestor/a de la revista).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Los usuarios/as deben estar registrados/as y haber iniciado sesión para publicar un mensaje; no existe la posibilidad de hacerlo anónimamente.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Los usuarios/as deben estar registrados/as y haber iniciado sesión para publicar un mensaje con posibilidad de hacerlo anónimamente.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Los usuarios/as no tienen que estar registrados/as para publicar ya que se permite hacerlo anónimamente.</message>
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-	<message key="rt.admin.validateUrls.description"><![CDATA[A continuación se muestran posibles URLs inválidas de sitios de búsqueda.<br /> Deberá verificar manualmente cualquier URL marcada como inválida, ya que esta prueba no es 100% precisa.<br /> Al buscar URLs que necesiten datos de formularios publicados, la validación podría fallar.]]></message>
-
-	<!-- RT Entities -->
-	<message key="rt.metadata.dublinCore.primaryAuthor">Creador/a</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nombre de autor/a, institución, país</message>
-	<message key="rt.metadata.pkp.peerReviewed">Artículo revisado por pares</message>
-
-	<message key="rt.beNotifiedWhen">Notificarme cuando...</message>
-
-	<message key="rt.thisJournal">Buscar revista</message>
-
-	<message key="rt.context.authorTermsDescription">Para artículos con mas de un autor/a, deje todos los nombres seleccionados para buscar por trabajos similares de co-autor/a o busque uno a la vez seleccionando un sólo nombre. Para obtener más información sobre el recurso que busca, haga clic en ACERCA DE. Estos recursos han sido seleccionados por su relevancia y por su acceso abierto (gratuito) a todo o parte de su contenido.</message>
-
+	<message key="metadata.pkp.peerReviewed">Artículo revisado por pares</message>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Se envió un nuevo artículo, "{$title}".</message>
 	<message key="notification.type.editing">Edición de eventos</message>
 	<message key="notification.type.editorDecisionComment">Se dejó un comentario en la decisión editorial para "{$title}".</message>
 	<message key="notification.type.galleyModified">Se modificó una galerada para "{$title}".</message>
@@ -909,9 +869,6 @@
 	<message key="search.results.similarDocuments">documentos similares</message>
 	<message key="plugins.categories.viewableFiles">Módulos de galerada del artículo</message>
 	<message key="plugins.categories.viewableFiles.description">Los módulos de galerada del artículo añaden soporte para visualizar diferentes tipos de documentos como galeradas del artículo.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems también soporta el sistema <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) para garantizar un archivo permanente y seguro para la revista. CLOCKSS se basa en el software de código abierto LOCKSS desarrollado en la Stanford University Library, que permite a las bibliotecas conservar las revistas web escogidas mediante la comprobación regular de los sitios web de las revistas registradas en busca de contenido publicado recientemente y archivándolo. Cada archivo se valida constantemente contra otras memorias caché de bibliotecas y, si se detecta que el contenido se ha corrompido o perdido, se usan las otras memorias caché o la revista para restaurarlo.
-<br /><br />
-La configuración del soporte CLOCKSS para Open Journal Systems no hace falta que se lleve a cabo hasta que la publicación esté totalmente en marcha.]]></message>
 	<message key="submission.layout.galley.remotelyHostedContent">Esta galerada se abrirá en una página web nueva.</message>
 	<message key="submission.layout.galley.remoteURL">URL del contenido alojado remotamente</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Configurar o ajustar la recomendación del revisor/a.</message>

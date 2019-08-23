@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -71,7 +71,10 @@
 	<message key="section.abbreviation">Abreviatura</message>
 	<message key="section.abbreviation.example">(Por exemplo, Artigos=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artigo</message>
 	<message key="article.articles">Artigos</message>
+	<message key="common.publication">Artigo</message>
+	<message key="common.publications">Artigos</message>
 	<message key="article.submissionId">ID da Submissão</message>
 	<message key="article.title">Título</message>
 	<message key="article.authors">Autores</message>
@@ -241,10 +244,6 @@
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic.description">Plugins Genéricos são utilizados para ampliar o sistema, customizando o que não é possível com plugins de outras categorias.</message>
 	<message key="plugins.categories.auth.description">Plugins de Autenticação permitem ao sistema delegar tarefas de autenticação a outros sistemas, como servidores LDAP.</message>
-
-	<message key="manager.setup.lockssDescription"><![CDATA[O sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) para assegurar arquivamento seguro e permanente do cache da sua revista, é suportado pelo OJS. LOCKSS é um software livre desenvolvido pela Biblioteca da Universidade de Stanford, que permite preservar revistas online escolhidas ao sondar as páginas das mesmas por conteúdo recém publicado e arquivando-o. Cada arquivo é continuamente validado contra cópias de outras bibliotecas. Caso o conteúdo esteja corrompido ou perdido, as cópias são usadas para restauração.
-<br /><br />
-Configurar o suporte ao LOCKSS para o OJS é necessário somente após a publicação de uma edição estar quase completa, bastando seguir os passos a seguir:]]></message>
 
 	<!-- Setup Step 3 -->
 	<!-- Setup Step 4 -->
@@ -489,7 +488,6 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="about.delayedOpenAccess">Acesso Livre Adiado</message>
 	<message key="about.delayedOpenAccessDescription1">O conteúdo desta revista estará disponível para Acesso Livre</message>
 	<message key="about.delayedOpenAccessDescription2">mês(es) após a publicação da edição.</message>
-	<message key="about.authorSelfArchive">Auto-arquivamento</message>
 	<message key="about.archiving">Arquivamento</message>
 	<message key="about.subscriptions">Subscrições</message>
 	<message key="about.subscriptionsContact">Contacto para Subscrições</message>
@@ -571,8 +569,6 @@ O servidor actualmente tem suporte a mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} reviu o artigo {$submissionId}. O novo ID é {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewInitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada.</message>
-	<message key="log.review.reviewReinitiated">A ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}, foi iniciada novamente.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} foi liberada(o) da ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} recebeu classificação para a ronda {$round} de revisão da submissão {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Foi definido para {$dueDate} o prazo para conclusão da ronda {$round} de revisão da submissão {$submissionId}, designada a {$reviewerName}.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} definiu a recomendação para a ronda {$round} de revisão da submissão {$submissionId}.</message>
@@ -608,50 +604,7 @@ O servidor actualmente tem suporte a mbstring: <strong>{$supportsMBString}</stro
 
 <message key="log.imported">{$userName} importou o documento {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Opções da Ferramenta de Leitura</message>
-
-	<message key="rt.admin.settings.description">As ferramentas de leitura são exibidas numa frame ao lado dos itens publicados, nas secções da revista cuja indexação foi activada. As ferramentas consistem de itens opcionais relacionados ao item publicado, listados abaixo e um conjunto de outras ferramentas que proporcionam acesso a mais itens relacionados, organizados por área do conhecimento e atividade.</message>
-	<message key="rt.admin.settings.enableReadingTools">Activar Ferramenta de Leitura para as secções escolhidas da revista.</message>
-	<message key="rt.admin.settings.relatedItems">Campo</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Veja <a href="{$relatedItemsLink}" class="action">Conjuntos de Itens Relacionados</a> para visualizar, incluir, corrigir ou remover itens para cada campo.]]></message>
-
-	<message key="rt.admin.options">Opções dos Itens da Revistas</message>
-	<message key="rt.admin.relatedItems">Ferramentas de Itens Relacionados</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[URLs possivelmente inválidas para os sistemas de pesquisa online exibidos a seguir.<br />
-É necessário verificar manualmente os URLs marcadas como inválidas, pois o teste não é 100% preciso.<br />
-A validação pode falhar em URLs para pesquisa que requeiram dados via método POST.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Autor</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nome do Autor, afiliação institucional, país</message>
-	<message key="rt.metadata.pkp.peerReviewed">Artigo Revisto por Pares</message>
-
-
-
-	<message key="rt.beNotifiedWhen">Receber notificação quando...</message>
-
-	<message key="rt.thisJournal">Pesquisar nesta revista</message>
-
-
-	<message key="rt.context.authorTermsDescription">Para documentos com mais de um autor, deixe todos os nomes marcados para pesquisar trabalhos com coautoria semelhante, ou pesquise um por vez marcando cada nome individualmente. Para saber mais sobre o recurso pesquisado, clique no símbolo de informação. Estes recursos foram escolhidos devido à sua relevância e acessibilidade aberta (gratuita) para todo ou parte do conteúdo.</message>
-
+	<message key="metadata.pkp.peerReviewed">Artigo Revisto por Pares</message>
 
 	<!--
 	 *
@@ -675,7 +628,7 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via método 
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
 	<message key="reader.subscriptionOrFeeAccess">Acesso Restrito ou Pago</message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direitos de Autor Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direitos de Autor Creative Commons</h3>
 <h4>1. Proposta de Política para Periódicos de Acesso Livre</h4>
 Autores que publicam nesta revista concordam com os seguintes termos:
 <ol type="a">
@@ -726,10 +679,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="installer.databaseSettingsInstructions">O sistema exige acesso a uma base de dados SQL para armazenar os seus dados. Verifique os requisitos do sistema para a lista de bases de dados suportadas. Nos campos a seguir, informe as configurações a serem utilizadas para conectar ao servidor de bases de dados.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na ronda {$round} para rever a submissão {$submissionId} em nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">A Decisão Editorial ({$decision}) sobre a submissão {$submissionId} foi registada por {$editorName}.</message>
-	<message key="rt.admin.settings.addComment">Adicionar comentários (Permite a publicação de comentários pelos leitores, permitindo a eliminação pelo Director).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Utilizadores devem estar registados e ligados para comentar, sem permissão de anonimato.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Utilizadores devem estar registados e ligados para comentar, com permissão de anonimato.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar registado para comentar, com permissão de anonimato.</message>
 	<message key="debug.notes.currencyListLoad">Lista de moedas "{$filename}" do ficheiro XML</message>
 	<message key="reader.subscriptionRequiredLoginText">Subscrição exigida para acesso ao item. Para verificar a sua subscrição, aceda à revista.</message>
 	<message key="about.authorFees">Taxas para Autores</message>
@@ -770,7 +719,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="article.fontSize.medium.altText">Média</message>
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="article.article">Artigo</message>
 	<message key="user.manageMySubscriptions">Gerir Minhas Subscrições</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
 	<message key="subscriptionTypes.year">ano</message>
@@ -844,7 +792,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="payment.subscription.purchase">Adquirir Subscrições</message>
 	<message key="installer.installApplication">Instalar o sistema</message>
 	<message key="installer.upgradeApplication">Actualizar o sistema</message>
-	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Foi produzido um comentário sobre a decisão editorial de "{$title}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>
@@ -921,9 +868,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="search.results.similarDocuments">documentos similares</message>
 	<message key="plugins.categories.viewableFiles">Plugins de Ddição de Artigos</message>
 	<message key="plugins.categories.viewableFiles.description">Os plugins da Edição de Artigos suporta a exibição de diferentes tipos de documentos como as edições de artigos.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems also supports the <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. CLOCKSS is based upon the open source LOCKSS software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
-<br /><br />
-Setting up CLOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway.]]></message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Highlighted items indicate action is required by an editor, labelled as follows:
 		<ul>
@@ -983,7 +927,6 @@ Setting up CLOCKSS support for Open Journal Systems does not need to take place 
 	<message key="search.cli.rebuildIndex.unknownJournal">O caminho fornecido "{$journalPath}" não pôde ser usado nesta revista.</message>
 	<message key="subscriptions.status.noSubscription">Não tem uma subscrição ativa.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>
-	<message key="manager.setup.porticoDescription">O Portico é um serviço sem fins lucrativos com vista à preservação de publicações digitais, incluindo revistas eletrónicas, e-books, e outras coleções históricas digitalizadas. Se a sua revista tiver um contrato com o Portico, poderá ativá-lo aqui:</message>
 	<message key="payment.type.publication.required">A taxa de publicação está em pagamento.</message>
 	<message key="payment.requestPublicationFee">Solicitar taxa de publicação ({$feeAmount})</message>
 	<message key="payment.notFound">Foi solicitado um pagamento, mas o prazo expirou. Contacte o Gestor da Revista para mais informação.</message>
@@ -991,4 +934,9 @@ Setting up CLOCKSS support for Open Journal Systems does not need to take place 
 	<message key="log.editor.submissionExpedited">{$editorName} tomou o processo de edição do artigo {$submissionId}.</message>
 	<message key="notification.type.publicationScheduled">Esta submissão foi agendada para publicação.</message>
 	<message key="log.editor.recommendation">O editor {$editorName} registou uma recomendação ({$decision}) para o artigo {$submissionId}.</message>
+	<message key="user.reviewerPrompt.optin">Sim, quero ser contactado com pedidos de revisão a submissões para esta revista.</message>
+	<message key="user.register.form.emailConsentAllContexts">Sim, quero ser notificado de novas publicações e anúncios para todas as revistas em que me registei.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Sim, concordo que os meus dados sejam recolhidos e armazenados de acordo com os <a href="{$privacyUrl}" target="_blank">termos de privacidade</a> da revista.]]></message>
+	<message key="user.register.form.missingContextConsent">Tem de concordar com os termos de privacidade para todas as revistas para as quais se registou.</message>
+	<message key="user.register.form.missingSiteConsent">Tem de concordar com os termos de privacidade deste sítio.</message>
 </locale>

@@ -4,12 +4,11 @@
 <!--
   * locale/it_IT/editor.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2000-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT (Italiano) locale.
-  * Contributed by Andrea Marchitelli - CINECA.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -90,7 +89,72 @@
 	<message key="editor.navigation.futureIssues">Fascicoli futuri</message>
 	<message key="editor.navigation.issueArchive">Fascicoli pubblicati</message>
 	<message key="editor.article.designateReviewVersion">Imposta il file originale come versione di revisione</message>
+	<message key="editor.article.uploadReviewVersion">Carica un file modificato da mandare in revisione</message>
+	<message key="editor.article.showSuppFile">Invia il file ai revisori</message>
+	<message key="editor.article.layoutAndProof"><![CDATA[Layout & bozze]]></message>
+	<message key="editor.article.clear">Rimuovi</message>
+	<message key="editor.article.clearReviewer">Rimuovi revisore</message>
+	<message key="editor.article.changeSection">Cambia sezione</message>
+	<message key="editor.article.setDueDate">Impostare la data di scadenza</message>
+	<message key="editor.article.addReviewer">Aggiungi revisore</message>
+	<message key="editor.article.toReviewer">Al revisore</message>
+	<message key="editor.article.notifyReviewer">Informa il revisore</message>
+	<message key="editor.article.initiateReview">Avvia la revisione</message>
+	<message key="editor.article.cancelReview">Cancella la richiesta</message>
+	<message key="editor.article.clearReview">Rimuovi il revisore</message>
+	<message key="editor.article.enterRecommendation">Inserisci il parere</message>
+	<message key="editor.article.enterReviewerRecommendation">Inserisci il parere del revisore</message>
+	<message key="editor.article.recommendation">Parere</message>
+	<message key="editor.article.selectReviewer">Seleziona un revisore</message>
+	<message key="editor.article.replaceReviewer">Sostituisci il revisore</message>
+	<message key="editor.article.editorToEnter">Editor per le segnalazioni e i commenti ai revisori</message>
+	<message key="editor.article.uploadReviewForReviewer">Caricamento versione revisionata</message>
+	<message key="editor.article.peerReviewOptions">Opzioni di peer review</message>
 	<message key="editor.article.decision">Decisione</message>
+	<message key="editor.article.noEditorSelected">Nessun editor selezionato.</message>
+	<message key="editor.article.recordDecision">Registra la decisione</message>
+	<message key="editor.article.cannotRecord">Il section editor non è stato registrato.</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">I revisori possono vedere la versione dell'autore</message>
+	<message key="editor.article.designateDueDate">Cambia la data di scadenza</message>
+	<message key="editor.article.designateDueDateDescription">Inserisci la data o il numero di settimane per la nuova scadenza.</message>
+	<message key="editor.article.todaysDate">Data odierna</message>
+	<message key="editor.article.requestedByDate">Nuova scadenza</message>
+	<message key="editor.article.dueDateFormat">Formato: AAAA-MM-GG</message>
+	<message key="editor.article.numberOfWeeks">Numero di settimane</message>
+	<message key="editor.article.selectCopyeditor">Assegna copyeditor</message>
+	<message key="editor.article.replaceCopyeditor">Sostituisci copyeditor</message>
+	<message key="editor.article.editorsCopyedit">Copyedit effettuato dall'editor</message>
+	<message key="editor.article.showAuthor">Permetti agli autori di vedere i file</message>
+	<message key="editor.article.showCopyeditor">Mostra la versione al copyeditor</message>
+	<message key="editor.article.rateReviewer">Valutazione del revisore</message>
+	<message key="editor.article.reviewerRating.veryGood">5 Alto</message>
+	<message key="editor.article.reviewerRating.good">4</message>
+	<message key="editor.article.reviewerRating.average">3 Medio</message>
+	<message key="editor.article.reviewerRating.poor">2</message>
+	<message key="editor.article.reviewerRating.veryPoor">1 Basso</message>
+	<message key="editor.article.comments">Commenti</message>
+	<message key="editor.article.commentsRequired">Il campo per i commenti è necessario.</message>
+	<message key="editor.article.saveRating">Salva la valutazione</message>
+	<message key="editor.article.noneSelected">Nessuna selezione effettuata</message>
+	<message key="editor.article.authorProofing">Correzione delle bozze dell'autore</message>
+	<message key="editor.article.archiveSubmission">Archivia la proposta</message>
+	<message key="editor.article.restoreToQueue">Ripristina nella lista attiva</message>
+	<message key="editor.article.assignSectionEditor">Assegna a un section editor</message>
+	<message key="editor.article.assignEditor">Assegna a un editor</message>
+	<message key="editor.article.selectEditor">Aggiungi il {$roleName}</message>
+	<message key="editor.article.selectDecision">Seleziona la decisione</message>
+	<message key="editor.article.selectLayoutEditor">Seleziona l'editor del layout</message>
+	<message key="editor.article.replaceLayoutEditor">Sostituisci l'editor del layout</message>
+	<message key="editor.article.reviewSubmission">Revisione della proposta</message>
+	<message key="editor.article.resubmitForReview">Invia di nuovo il file in revisione</message>
+	<message key="editor.article.resubmitFileForPeerReview">Invia di nuovo in revisione il file selezionato</message>
+	<message key="editor.article.sendToCopyedit">Invia i file al copyediting</message>
+	<message key="editor.article.selectProofreader">Assegna il correttore di bozze</message>
+	<message key="editor.article.replaceProofreader">Sostituisci il correttore di bozze</message>
+	<message key="editor.article.authorComments">Commenti dell'autore</message>
+	<message key="editor.article.proofreaderComments">Commenti del correttore di bozze</message>
+	<message key="editor.article.layoutEditorFinal">Layout Editor Definitivo</message>
+	<message key="editor.article.noDate">(data)</message>
 	<message key="editor.submissions.showBy">Mostra per il</message>
 	<message key="editor.submissions.submitMMDD">Inviata MM-GG</message>
 	<message key="editor.submissions.activeAssignments">Incarichi attivi</message>
@@ -105,6 +169,15 @@
 	<message key="editor.article.scheduleForPublication">Metti in coda per la pubblicazione in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Da assegnare</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Quota di pubblicazione non pagata. Avvertire l'autore per poter pianificare la pubblicazione dell'articolo.</message>
+	<message key="editor.article.display">Visualizza</message>
+	<message key="editor.article.hideTocAuthorDescription">Non visualizzare i nomi degli autori nel sommario del fascicolo</message>
+	<message key="editor.article.hideTocAuthorDefault">Default</message>
+	<message key="editor.article.hideTocAuthorHide">Ometti</message>
+	<message key="editor.article.hideTocAuthorShow">Mostra</message>
+	<message key="editor.article.cover">Copertina</message>
+	<message key="editor.article.coverImage">Immagine di copertina</message>
+	<message key="editor.article.uploaded">Caricato</message>
+	<message key="editor.article.removeCoverPage">Rimuovi l'immagine di copertina?</message>
 	<message key="editor.article.remove">Rimuovi</message>
 	<message key="editor.issues.enableOpenAccessDate">Accesso aperto con embargo</message>
 	<message key="editor.issues.unpublishIssue">Nascondi il fascicolo pubblicato</message>
@@ -124,5 +197,29 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>
 	<message key="editor.issues.backToIssueGalleys">Torna alle gabbie del fascicolo</message>
 	<message key="editor.issues.confirmDeleteGalley">Sei sicuro di cancellare questa gabbia del fascicolo?</message>
-	<message key="editor.article.coverImage">Immagine di copertina</message>
+	<message key="editor.notifyUsers.allReaders">Tutti i lettori ({$count} utenti)</message>
+	<message key="editor.issues.editIssue">Gestione fascicolo: : {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Data pubblicazione</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">L'immagine di copertina che hai chiesto di cancellare non corrisponde all'immagine di copertina di questo fascicolo. Per favore ricarica la pagina e prova di nuovo.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">L'immagine di copertina che hai chiesto di cancellare non esiste. Potrebbe essere stata cancellata. Prova a ricaricare la pagina.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Formato non valido per l'immagine di copertina. I formati accettati sono  .gif, .jpg, o .png.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Sei sicuro di voler definire questo fascicolo come quello corrente?</message>
+	<message key="editor.issues.identifiers">Identificativi</message>
+	<message key="grid.action.addGalley">Aggiungi una gabbia</message>
+	<message key="grid.action.publish">Pubblica fascicolo</message>
+	<message key="grid.action.addIssue">Crea un fascicolo</message>
+	<message key="grid.action.viewIssue">Vedi</message>
+	<message key="grid.action.previewIssue">Anteprima</message>
+	<message key="grid.action.addIssueGalley">Crea una gabbia per tutto il fascicolo</message>
+	<message key="grid.action.setCurrentIssue">Definisce il fascicolo corrente</message>
+	<message key="editor.article.schedulePublication">Pianifica per la pubblicazione</message>
+	<message key="editor.article.removeCoverImageFileNotFound">L'immagine che hai chiesto di cancellare non esiste. Potrebbe essere stata già cancellata. Prova a ricaricare la pagina.</message>
+	<message key="grid.action.removeArticle">Rimuovi articolo dal fascicolo</message>
+	<message key="editor.article.remove.confirm">Se sicuro di voler rimuovere l'articolo da questo fascicolo ? L'articolo sarà disponibile per uscire in un altro fascicolo.</message>
+	<message key="editor.issues.editIssueGalley">Modifica la gabbia per il fascicolo</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Il layout editor prepare questi file per ogni gabbia e li carica agli appropriati <span class="pkp_help_title">Correttori</span> per la correzione delle bozze.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Seleziona le gabbie (file)</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Le versioni finali sono state trasformate dal Copyeditor in versioni definitive e caricate sotto <span class="pkp_help_title">Copyediting</span>.]]></message>
+	<message key="editor.publicIdentificationExistsForTheSameType">L'identificativo pubblico  '{$publicIdentifier}' esiste di già per un'altro oggetto dello stesso genere. Per favore scegli un identificativo univoco per lo stesso tipo di oggetti all'interno della rivista.</message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Ogni file in qualsiasi punto del precorso di revisione può essere aggiunto alla "Correzioni di bozze" selezionando il ceheckbox qui sotto e cliccando 'Cerca': vengono elencati tutti i files disponibili e il file desiderato può essere scelto per l'inclusione.</message>
 </locale>

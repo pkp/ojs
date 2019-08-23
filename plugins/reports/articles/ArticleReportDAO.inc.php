@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/articles/ArticleReportDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportDAO
@@ -22,79 +22,15 @@ class ArticleReportDAO extends DAO {
 	 * @return array
 	 */
 	function getArticleReport($journalId) {
-		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
-		$result = $this->retrieve(
-			'SELECT	a.submission_id AS submission_id,
-				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
-				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
-				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
-				a.status AS status,
-				a.language AS language
-			FROM	submissions a
-				LEFT JOIN submission_settings aspl1 ON (aspl1.submission_id=a.submission_id AND aspl1.setting_name = ? AND aspl1.locale = a.locale)
-				LEFT JOIN submission_settings asl1 ON (asl1.submission_id=a.submission_id AND asl1.setting_name = ? AND asl1.locale = ?)
-				LEFT JOIN submission_settings aspl2 ON (aspl2.submission_id=a.submission_id AND aspl2.setting_name = ? AND aspl2.locale = a.locale)
-				LEFT JOIN submission_settings asl2 ON (asl2.submission_id=a.submission_id AND asl2.setting_name = ? AND asl2.locale = ?)
-				LEFT JOIN section_settings spl ON (spl.section_id=a.section_id AND spl.setting_name = ? AND spl.locale = ?)
-				LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
-			WHERE	a.context_id = ? AND
-				a.submission_progress = 0
-			ORDER BY a.submission_id',
-			array(
-				'title', // Article title
-				'title',
-				$locale,
-				'abstract', // Article abstract
-				'abstract',
-				$locale,
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				(int) $journalId
-			)
-		);
-		$articlesReturner = new DBRowIterator($result);
-		unset($result);
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$articlesReturner = $submissionDao->getByContextId($journalId);
 
-		$result = $this->retrieve(
-			'SELECT	MAX(d.date_decided) AS date_decided,
-				d.submission_id AS submission_id
-			FROM	edit_decisions d,
-				submissions a
-			WHERE	a.context_id = ? AND
-				a.submission_progress = 0 AND
-				a.submission_id = d.submission_id
-			GROUP BY d.submission_id',
-			array((int) $journalId)
-		);
-		$decisionDatesIterator = new DBRowIterator($result);
-		$decisionsReturner = array();
-		while ($row = $decisionDatesIterator->next()) {
-			$result = $this->retrieve(
-				'SELECT	d.decision AS decision,
-					d.submission_id AS submission_id
-				FROM	edit_decisions d,
-					submissions a
-				WHERE	d.date_decided = ? AND
-					d.submission_id = a.submission_id AND
-					a.submission_progress = 0 AND
-					d.submission_id = ?',
-				array(
-					$row['date_decided'],
-					$row['submission_id']
-				)
-			);
-			$decisionsReturner[] = new DBRowIterator($result);
-			unset($result);
-		}
-
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$authorDao = DAORegistry::getDAO('AuthorDAO');
-		$articles = $articleDao->getByContextId($journalId);
-		$params = array_merge(
+		$articles = $submissionDao->getByContextId($journalId);
+		$authorParams = array_merge(
 			$authorDao->getFetchParameters(),
 			array(
 				'biography',
@@ -103,10 +39,14 @@ class ArticleReportDAO extends DAO {
 				'affiliation',
 				'affiliation',
 				$locale,
+				'orcid',
 				(int) $journalId,
 			)
 		);
-		$authorsReturner = array();
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$site = Application::get()->getRequest()->getSite();
+		$sitePrimaryLocale = $site->getPrimaryLocale();
+		$authorsReturner = $editorsReturner = $decisionsReturner = array();
 		$index = 1;
 		while ($article = $articles->next()) {
 			$result = $this->retrieve(
@@ -114,6 +54,7 @@ class ArticleReportDAO extends DAO {
 					a.email AS email,
 					a.country AS country,
 					a.url AS url,
+					ass.setting_value AS orcid,
 					COALESCE(aasl.setting_value, aas.setting_value) AS biography,
 					COALESCE(aaasl.setting_value, aaas.setting_value) AS affiliation
 				FROM	authors a
@@ -123,20 +64,86 @@ class ArticleReportDAO extends DAO {
 					LEFT JOIN author_settings aasl ON (a.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
 					LEFT JOIN author_settings aaas ON (a.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = s.locale)
 					LEFT JOIN author_settings aaasl ON (a.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
+					LEFT JOIN author_settings ass ON (a.author_id = ass.author_id AND ass.setting_name = ?)
 				WHERE
 					s.context_id = ? AND
 					s.submission_progress = 0 AND
 					a.submission_id = ?',
-				array_merge($params, array((int) $article->getId()))
+				array_merge($authorParams, array((int) $article->getId()))
 			);
 			$authorIterator = new DBRowIterator($result);
 			$authorsReturner[$article->getId()] = $authorIterator;
 			unset($result);
+
+			// Get all assigned editors and sub-editors
+			$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+			$managerAssignmentFactory = $stageAssignmentDao->getBySubmissionAndRoleId($article->getId(), ROLE_ID_MANAGER);
+			$subEditorAssignmentFactory = $stageAssignmentDao->getBySubmissionAndRoleId($article->getId(), ROLE_ID_SUB_EDITOR);
+			$editorsAssignments = array_merge($managerAssignmentFactory->toArray(), $subEditorAssignmentFactory->toArray());
+			if (!empty($editorsAssignments)) {
+				$editorsUserIds = array_unique(array_map(create_function('$o', 'return (int) $o->getUserId();'), $editorsAssignments));
+				$editorsUserIdsString = '(' . implode(', ', $editorsUserIds) .')';
+
+				$editorParams = array_merge(
+					$userDao->getFetchParameters(),
+					array(
+						'biography',
+						$sitePrimaryLocale,
+						'biography',
+						$locale,
+						'affiliation',
+						$sitePrimaryLocale,
+						'affiliation',
+						$locale,
+					)
+				);
+
+				$result = $this->retrieve(
+					'SELECT	' . $userDao->getFetchColumns() .',
+						u.user_id AS editor_id,
+						u.email AS email,
+						u.country AS country,
+						u.url AS url,
+						us.setting_value AS orcid,
+						COALESCE(usbl.setting_value, usbsl.setting_value) AS biography,
+						COALESCE(usal.setting_value, usasl.setting_value) AS affiliation
+					FROM	users u
+						' . $userDao->getFetchJoins() .'
+						LEFT JOIN user_settings usbsl ON (usbsl.user_id = u.user_id AND usbsl.setting_name = ? AND usbsl.locale = ?)
+						LEFT JOIN user_settings usbl ON (usbl.user_id = u.user_id AND usbl.setting_name = ? AND usbl.locale = ?)
+						LEFT JOIN user_settings usasl ON (usasl.user_id = u.user_id AND usasl.setting_name = ? AND usasl.locale = ?)
+						LEFT JOIN user_settings usal ON (usal.user_id = u.user_id AND usal.setting_name = ? AND usal.locale = ?)
+						LEFT JOIN user_settings us ON (us.user_id = u.user_id AND us.setting_name = \'orcid\')
+					WHERE
+						u.user_id IN ' . $editorsUserIdsString,
+						$editorParams
+						);
+				$editorIterator = new DBRowIterator($result);
+				$editorsReturner[$article->getId()] = $editorIterator;
+				unset($result);
+			}
+
+			// get all decisions and recommendations for each editor assignment for this submisison
+			foreach ($editorsAssignments as $editorsAssignment) {
+				$result = $this->retrieve(
+						'SELECT	d.decision AS decision,
+						d.date_decided,
+						d.submission_id AS submission_id
+					FROM	edit_decisions d,
+						submissions a
+					WHERE	d.submission_id = a.submission_id AND
+						a.submission_progress = 0 AND
+						d.submission_id = ? AND d.editor_id = ?',
+						array((int) $article->getId(), (int) $editorsAssignment->getUserId())
+						);
+				$decisionsReturner[$article->getId()][$editorsAssignment->getUserId()] = new DBRowIterator($result);
+				unset($result);
+			}
+
 			$index++;
 		}
 
-		return array($articlesReturner, $authorsReturner, $decisionsReturner);
+		return array($articlesReturner, $authorsReturner, $editorsReturner, $decisionsReturner);
 	}
 }
-
 

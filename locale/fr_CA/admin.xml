@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localization strings.
@@ -15,7 +15,6 @@
 	<message key="admin.hostedJournals">Revues hébergées</message>
 	<message key="admin.settings.journalRedirect">Réacheminement vers la revue</message>
 	<message key="admin.settings.journalRedirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
-	<message key="admin.settings.noJournalRedirect">Ne pas réacheminer</message>
 	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues.</message>
 	<message key="admin.languages.confirmUninstall">Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue.</message>
@@ -42,7 +41,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique.</message>
 	<message key="admin.contexts.form.pathExists">Le chemin sélectionné est déjà utilisé par une autre revue.</message>
 	<message key="admin.journals.enableJournalInstructions">Permettre à cette revue d'apparaître publiquement sur le site</message>
-	<message key="admin.journals.journalDescription">Description de la revue</message>
+	<message key="admin.contexts.contextDescription">Description de la revue</message>
 	<message key="admin.journal.pathImportInstructions">Chemin d'accès à la revue existant ou à créer (par ex., "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer les abonnements</message>
 	<message key="admin.journals.transcode">Conversion des métadonnées de l'article à partir de la norme ISO 8859-1</message>
@@ -57,23 +56,10 @@
 	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldAccountCount}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldAccountCount}" sera supprimé. Cette action n'est pas réversible.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Aucun utilisateur inscrit.</message>
 	<message key="admin.locale.maybeIncomplete">Les langues sélectionnées peuvent être incomplètes.</message>
-	<message key="admin.settings.options">Options</message>
-	<message key="admin.categories">Catégories</message>
-	<message key="admin.categories.enable.description">S'il le veut, l'administrateur de site peut ici définir un ensemble de catégories visant à optimiser la gestion d'un grand nombre de titres. Les directeurs de revue pourront alors rattacher leur publication à plusieurs de ces catégories, et les lecteurs pourront consulter les revues disponibles par type de catégorie.</message>
-	<message key="admin.categories.disableCategories">Ne pas classer les revues par catégorie.</message>
-	<message key="admin.categories.enableCategories">Permettre aux directeurs de classer les revues par catégorie.</message>
-	<message key="admin.categories.editTitle">Modifier une catégorie</message>
-	<message key="admin.categories.createTitle">Créer une catégorie</message>
-	<message key="admin.categories.create">Créer une nouvelle catégorie</message>
-	<message key="admin.categories.noneCreated">Pas de catégories créées.</message>
-	<message key="admin.categories.confirmDelete">Voulez-vous vraiment supprimer cette catégorie?</message>
-	<message key="admin.categories.name">Nom</message>
-	<message key="admin.categories.nameRequired">Un nom de catégorie est requis.</message>
 	<message key="admin.settings.defaultMetricDescription">Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</message>
 
 	<message key="admin.languages.confirmDisable">Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</message>
 	<message key="admin.contexts.form.titleRequired">Un titre est requis.</message>
-	<message key="admin.presses.createInstructions">Le rôle de directeur de la revue vous sera automatique attribué. Après avoir créer une nouvelle revue, vous serez dirigé vers son assistant de configuration afin de terminer la configuration initiale de la revue.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Rappel d'expiration d'abonnement</message>
 	<message key="admin.scheduledTask.openAccessNotification">Avis de libre accès</message>
 	<message key="admin.scheduledTask.reviewReminder">Rappel d'évaluation</message>

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/webFeed/WebFeedGatewayPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebFeedGatewayPlugin
@@ -83,7 +83,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	public function fetch($args, $request) {
 		// Make sure we're within a Journal context
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 		if (!$journal) return false;
 
@@ -112,17 +112,17 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$displayItems = $this->_parentPlugin->getSetting($journal->getId(), 'displayItems');
 		$recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		if ($displayItems == 'recent' && $recentItems > 0) {
 			import('lib.pkp.classes.db.DBResultRange');
 			$rangeInfo = new DBResultRange($recentItems, 1);
-			$publishedArticleObjects = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId(), $rangeInfo, true);
-			$publishedArticles = array();
-			while ($publishedArticle = $publishedArticleObjects->next()) {
-				$publishedArticles[]['articles'][] = $publishedArticle;
+			$publishedSubmissionObjects = $publishedSubmissionDao->getPublishedSubmissionsByJournalId($journal->getId(), $rangeInfo, true);
+			$publishedSubmissions = array();
+			while ($publishedSubmission = $publishedSubmissionObjects->next()) {
+				$publishedSubmissions[]['articles'][] = $publishedSubmission;
 			}
 		} else {
-			$publishedArticles = $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
+			$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissionsInSections($issue->getId(), true);
 		}
 
 		$versionDao = DAORegistry::getDAO('VersionDAO');
@@ -131,11 +131,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'ojsVersion' => $version->getVersionString(),
-			'publishedArticles' => $publishedArticles,
+			'publishedSubmissions' => $publishedSubmissions,
 			'journal' => $journal,
 			'issue' => $issue,
 			'showToc' => true,
 		));
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.copyrightStatement
 
 		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
 

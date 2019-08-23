@@ -3,8 +3,8 @@
 /**
 * @file classes/statistics/StatisticsHelper.inc.php
 *
-* Copyright (c) 2013-2018 Simon Fraser University
-* Copyright (c) 2003-2018 John Willinsky
+* Copyright (c) 2013-2019 Simon Fraser University
+* Copyright (c) 2003-2019 John Willinsky
 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 *
 * @class StatisticsHelper
@@ -26,7 +26,7 @@ class StatisticsHelper extends PKPStatisticsHelper {
 	protected function getAppColumnTitle($column) {
 		switch ($column) {
 			case STATISTICS_DIMENSION_SUBMISSION_ID:
-				return __('article.article');
+				return __('common.publication');
 			case STATISTICS_DIMENSION_PKP_SECTION_ID:
 				return __('section.section');
 			case STATISTICS_DIMENSION_CONTEXT_ID:
@@ -57,7 +57,7 @@ class StatisticsHelper extends PKPStatisticsHelper {
 				ASSOC_TYPE_SECTION => __('section.section'),
 				ASSOC_TYPE_ISSUE => __('issue.issue'),
 				ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
-				ASSOC_TYPE_ARTICLE => __('article.article'),
+				ASSOC_TYPE_SUBMISSION => __('common.publication'),
 				ASSOC_TYPE_SUBMISSION_FILE => __('submission.galleyFiles')
 		);
 

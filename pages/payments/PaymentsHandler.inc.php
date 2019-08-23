@@ -3,8 +3,8 @@
 /**
  * @file pages/payments/PaymentsHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaymentsHandler
@@ -115,11 +115,7 @@ class PaymentsHandler extends Handler {
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
-		if ($subscriptionPolicyForm->isLocaleResubmit()) {
-			$subscriptionPolicyForm->readInputData();
-		} else {
-			$subscriptionPolicyForm->initData();
-		}
+		$subscriptionPolicyForm->initData();
 		return new JSONMessage(true, $subscriptionPolicyForm->fetch($request));
 	}
 
@@ -157,11 +153,7 @@ class PaymentsHandler extends Handler {
 		import('classes.subscription.form.PaymentTypesForm');
 
 		$paymentTypesForm = new PaymentTypesForm();
-		if ($paymentTypesForm->isLocaleResubmit()) {
-			$paymentTypesForm->readInputData();
-		} else {
-			$paymentTypesForm->initData();
-		}
+		$paymentTypesForm->initData();
 		return new JSONMessage(true, $paymentTypesForm->fetch($request));
 	}
 

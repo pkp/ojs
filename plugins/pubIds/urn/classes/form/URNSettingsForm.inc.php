@@ -3,8 +3,8 @@
 /**
  * @file plugins/pubIds/urn/classes/form/URNSettingsForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class URNSettingsForm
@@ -80,7 +80,7 @@ class URNSettingsForm extends Form {
 
 		// for URN reset requests
 		import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$this->setData('clearPubIdsLinkAction', new LinkAction(
 			'reassignURNs',
 			new RemoteActionConfirmationModal(

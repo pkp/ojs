@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/UserInstitutionalSubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserInstitutionalSubscriptionForm
@@ -122,14 +122,12 @@ class UserInstitutionalSubscriptionForm extends Form {
 		}
 
 		// Check if IP range has been provided
-		$ipRanges = $this->getData('ipRanges');
+		$ipRanges = PKPString::regexp_split('/\s+/', trim($this->getData('ipRanges')));
 		$ipRangeProvided = false;
-		if (is_array($ipRanges)) {
-			foreach ($ipRanges as $ipRange) {
-				if ($ipRange != '') {
-					$ipRangeProvided = true;
-					break;
-				}
+		foreach ($ipRanges as $ipRange) {
+			if ($ipRange != '') {
+				$ipRangeProvided = true;
+				break;
 			}
 		}
 
@@ -141,14 +139,16 @@ class UserInstitutionalSubscriptionForm extends Form {
 		// If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
 		if ($ipRangeProvided) {
 			import('classes.subscription.InstitutionalSubscription');
-			$this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'user.subscriptions.form.ipRangeValid', function($ipRange) {
-				return PKPString::regexp_match(
+
+			$this->addCheck(new FormValidatorCustom($this, 'ipRanges', 'required', 'manager.subscriptions.form.ipRangeValid', function($ipRanges) {
+				foreach (PKPString::regexp_split('/\s+/', trim($ipRanges)) as $ipRange) if (!PKPString::regexp_match(
 					'/^' .
 					// IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
 					'((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
 					'$/i',
-					$ipRange
-				);
+					trim($ipRange))
+				) return false;
+				return true;
 			}));
 		}
 	}
@@ -192,7 +192,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$subscription->setInstitutionName($this->getData('institutionName'));
 		$subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
 		$subscription->setDomain($this->getData('domain'));
-		$subscription->setIPRanges($this->getData('ipRanges'));
+		$subscription->setIPRanges(PKPString::regexp_split('/\s+/', $this->getData('ipRanges')));
 
 		if ($subscription->getId()) {
 			$institutionalSubscriptionDao->updateObject($subscription);

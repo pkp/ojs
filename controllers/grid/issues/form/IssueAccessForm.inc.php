@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueAccessForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueAccessForm
@@ -74,7 +74,7 @@ class IssueAccessForm extends Form {
 	 * @return int Issue ID for created/updated issue
 	 */
 	function execute() {
-		$journal = Application::getRequest()->getJournal();
+		$journal = Application::get()->getRequest()->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN);

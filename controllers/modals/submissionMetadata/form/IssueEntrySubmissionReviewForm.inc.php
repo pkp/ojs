@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/IssueEntrySubmissionReviewForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CatalogEntrySubmissionReviewForm
@@ -32,25 +32,60 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	}
 
 	/**
+	 * Fetch the HTML contents of the form.
+	 * @param $request PKPRequest
+	 * return string
+	 */
+	function fetch($request) {
+		$context = $request->getContext();
+
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$user = $request->getUser();
+		$canSubmitAll = $roleDao->userHasRole($context->getId(), $user->getId(), ROLE_ID_MANAGER) ||
+			$roleDao->userHasRole($context->getId(), $user->getId(), ROLE_ID_SUB_EDITOR);
+
+		// Get section options for this context
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionOptions = array('0' => '') + $sectionDao->getTitlesByContextId($context->getId(), !$canSubmitAll);
+
+		// Get section policies for this context
+		$sectionPolicies = array();
+		foreach ($sectionOptions as $sectionId => $sectionTitle) {
+			$section = $sectionDao->getById($sectionId);
+
+			$sectionPolicy = $section ? $section->getLocalizedPolicy() : null;
+			$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
+			if (strlen($sectionPolicyPlainText) > 0)
+				$sectionPolicies[$sectionId] = $sectionPolicy;
+		}
+
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('sectionPolicies', $sectionPolicies);
+
+		return parent::fetch($request);
+	}
+
+	/**
 	 * Save the metadata.
 	 */
 	function execute() {
 		parent::execute();
-		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this));
 
 		$submission = $this->getSubmission();
-		$submissionDao = Application::getSubmissionDAO();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
-		$isExistingEntry = $publishedArticle?true:false;
+		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this, $submission));
 
-		if ($isExistingEntry) {
-			// Update the search index for this published article.
-			import('classes.search.ArticleSearchIndex');
-			ArticleSearchIndex::articleMetadataChanged($submission);
-		}
+		$submissionDao = Application::getSubmissionDAO();
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submission->getId(), null, false);
+		$isExistingEntry = $publishedSubmission?true:false;
 
 		$submissionDao->updateObject($submission);
+
+		if ($isExistingEntry) {
+			// Update the search index for this published submission.
+			$articleSearchIndex = Application::getSubmissionSearchIndex();
+			$articleSearchIndex->submissionMetadataChanged($submission);
+		}
 	}
 }
 

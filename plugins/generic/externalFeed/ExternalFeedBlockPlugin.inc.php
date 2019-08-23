@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedBlockPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedBlockPlugin
@@ -59,9 +59,8 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * Get the external feed plugin
 	 * @return object
 	 */
-	function &getExternalFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		return $plugin;
+	function getExternalFeedPlugin() {
+		return PluginRegistry::getPlugin('generic', $this->parentPluginName);
 	}
 
 	/**
@@ -69,7 +68,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getPluginPath() {
-		$plugin =& $this->getExternalFeedPlugin();
+		$plugin = $this->getExternalFeedPlugin();
 		return $plugin->getPluginPath();
 	}
 
@@ -84,7 +83,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		if (!$journal) return '';
 
 		$journalId = $journal->getId();
-		$plugin =& $this->getExternalFeedPlugin();
+		$plugin = $this->getExternalFeedPlugin();
 		if (!$plugin->getEnabled()) return '';
 
 		$requestedPage = $request->getRequestedPage();

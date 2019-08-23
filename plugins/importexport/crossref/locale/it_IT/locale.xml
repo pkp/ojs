@@ -4,13 +4,11 @@
 <!--
   * plugins/importexport/crossref/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT locale.
-  * Contributed by AePIC Team CILEA.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -26,4 +24,41 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email del depositor</message>
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Se vuoi usare questo plugin per registrare i DOI direttamente su CrossRef avrai bisogno di un nome utente e una password (ottenibili su <a href="http://www.crossref.org" target="_blank">CrossRef</a>). Se non ha un nome utente e una password, puoi comunque esportare nel formato XML di CrossRef ma non potrai registrare i DOI con CrossRef tramite OJS.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.username">Nome utente</message>
+	<message key="plugins.importexport.crossref.requirements">Requisiti</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Tutti i requisiti del plugin sono soddisfatti</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Non è stato configurato un editore per la rivista. Devi indicare un editore per la rivista nella <a href="{$journalSettingsUrl}" target="_blank">Pagina di configurazione della rivista</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[Non è stato configurato un ISSN per la rivista. Devi indicare un ISSN per la rivista nella <a href="{$journalSettingsUrl}" target="_blank">Pagina di configurazione della rivista</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Gli articoli non sono stati configurati per ricevere DOI nel plugin dei DOI. Per tanto non è possibile depositare o esportare con questo plugin.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Per favore inserisci il nome del depositante.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Per favore inserisci la mail del depositante.</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Per favore inserisci lo username che hai ricevuto da CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS depositerà automaticamente i DOI in CrossRef per registrarli. Per favore nota che può passare un certo tempo dalla pubblicazione prima della fine del processo. Puoi controllare tutti i DOI non registrati.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">Usa l'API di test di CrossRef per il deposito. Non ti dimenticare di togliere questa opzione quando passi in produzione.</message>
+	<message key="plugins.importexport.crossref.issues.description">Nota: solo i fascicoli (e non i loro articoli) saranno considerati per l'export e/o la registrazione.</message>
+	<message key="plugins.importexport.crossref.status.submitted">Inviato.</message>
+	<message key="plugins.importexport.crossref.status.completed">Depositato.</message>
+	<message key="plugins.importexport.crossref.status.failed">Fallito.</message>
+	<message key="plugins.importexport.crossref.status.registered">Attivo</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Marcato come attivo</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Status del deposito:</p>
+		<p>
+		- Non depositato: non si è provato a depositare questo DOI.<br />
+		- Inviato: questo DOI è stato inviato per il deposito.<br />
+		- Depositato: Il DOI è stato depositato presso Crossref, ma non è ancora attivo.<br />
+		- Attivo: Il DOI è stato depositato e viene interpretato correttamente.<br />
+		- Fallito: Il deposito del DOI è fallito.<br />
+		- Marcato come attivo: Il DOI è stato marcato come attivo manualmente.
+		</p>
+		<p>Solo lo status dell'ultimo tentativo di deposito viene visualizzato.</p>
+		<p>Se il deposito è fallito, per favore risolvi il problema e riprova a registrare il DOI.</p>]]></message>
+	<message key="plugins.importexport.crossref.action.export">Scarica XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Marca come attivo</message>
+	<message key="plugins.importexport.crossref.action.register">Invia</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Controlla lo status</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Nome del task che registra in automatico in CrossRef</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">L'invio non ha avuto successo. Il server di registrazione ha dato come errore: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">L'invio ha avuto successo!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nessun fascicolo corrisponde all'ID: "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nessun articolo corrisponde all'ID: "{$articleId}".</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Un DOI ha fallito la registrazione. Per favore vai in Strumenti > import/esport > CrossRef Plufin per vedere i depositi falliti]]></message>
 </locale>

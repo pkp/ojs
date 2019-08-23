@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -109,6 +109,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Článek</message>
 	<message key="article.articles">Články</message>
+	<message key="common.publication">Článek</message>
+	<message key="common.publications">Články</message>
 	<message key="article.submissionId">ID příspěvku</message>
 	<message key="article.title">Název</message>
 	<message key="article.authors">Autoři</message>
@@ -353,11 +355,8 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[OJS podporuje technologii <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systém, aby zajistil bezpečnou a stálou archivaci časopisu. LOCKSS je open source software vyvinutý v Stanford University Library, který umožňuje knihovnám zabezpečovat vybrané webové časopisy tím, že se pravidelně dotazuje webových stránek časopisu na nově publikovaný obsah a archivuje ho. Každý archív je neustále kontrolován porovnáváním oproti archívům dalších knihoven, a pokud je zjištěno jeho poškození nebo ztráta jsou tyto archívy použity k jeho obnovení.
-<br /><br />
-Nastavení podpory technologie LOCKSS pro OJS nemusí být provedeno, dokud není publikování časopisu zaběhané. Potom následujte tyto dva kroky:]]></message>
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Navrhovaná oznámení o copyrightu Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Navrhovaná oznámení o copyrightu Creative Commons</h3>
 <h4>1. Navrhovaná pravidla pro časopisy, které nabízejí otevřený přístup</h4>
 Autoři, kteří publikují v tomto časopise, souhlasí s následujícími body:
 <ol type="a">
@@ -751,7 +750,6 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="about.delayedOpenAccess">Zpožděný otevřený přístup</message>
 	<message key="about.delayedOpenAccessDescription1">Obsah tohoto čísla bude dostupný ve formátu otevřeného přístupu</message>
 	<message key="about.delayedOpenAccessDescription2">měsíc(e) poté, co bylo číslo publikováno.</message>
-	<message key="about.authorSelfArchive">Vlastní archivování autora</message>
 	<message key="about.archiving">Archivování</message>
 	<message key="about.subscriptions">Předplatné</message>
 	<message key="about.subscriptions.individual">Předplatné pro jednotlivce</message>
@@ -898,8 +896,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$submissionId}. Nové ID souboru je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$submissionId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zahájeno.</message>
-	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo znovu zahájeno.</message>
-	<message key="log.review.reviewCleared">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo vyčíštěno.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} byl ohodnocen pro recenzní kolo {$round} příspěvku {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Termín splnění recenzního kola {$round} příspěvku {$submissionId} recenzenta {$reviewerName} byl nastaven na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} od recenzenta {$reviewerName} bylo stanoveno.</message>
@@ -937,61 +933,9 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 
 	<message key="log.imported">{$userName} importoval článek {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Možnosti nástrojů pro čtení</message>
-
-	<message key="rt.admin.settings.description">Nástroje pro čtení se objeví v panelu vedle publikovaných položek v sekcích časopisu určených k indexování. Nástroje pro čtení sestávají ze sady volitelných nástrojů (uvedených níže) vztahujících se k publikované položce a ze sady nástrojů, které poskytují přístup k souvisejícím položkám uspořádaným podle oblasti a disciplíny.</message>
-	<message key="rt.admin.settings.enableReadingTools">Povolit nástroje pro čtení pro stanovené sekce časopisu.</message>
-	<message key="rt.admin.settings.relatedItems">Oblast</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Viz <a href="{$relatedItemsLink}" class="action">Sady souvisejících položek</a> pro zobrazení, přidání, opravu nebo smazání souvisejících položek pro každou oblast.]]></message>
-
-	<message key="rt.admin.options">Nástroje pro položku časopisu</message>
-	<message key="rt.admin.relatedItems">Nástroje pro související položku</message>
-
-	<message key="rt.admin.settings.addComment">Přidat komentář (umožňuje čtenářům zaslat komentář, manažer časopisu ho může smazat).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Uživatelé musí být registrováni a přihlášeni, aby mohli zaslat komntář. Anonymní komentáře nejsou povoleny.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Uživatelé musí být registrováni a přihlášení, aby mohli poslat komentář. Anonymní komentáře jsou povoleny.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Uživatelé nemusí být registrováni a přihlášeni, aby mohli poslat komentář. Anonymní komentáře jsou povoleny.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[URL adresy, které jsou možná neplatné pro vyhledávací stránky, jsou zobrazeny níže.<br />
-Měli byste ručně ověřit každou adresu URL označenou jako neplatnou, protože tento test není 100% přesný.<br />
-Ověřování může selhat při vyhledávání URL, které vyžadují "posted form data".]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Tvůrce</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Autorovo jméno, pracoviště, stát</message>
-	<message key="rt.metadata.pkp.peerReviewed">Recenzovaný článek</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Být informován pokud...</message>
-
-	<message key="rt.thisJournal">Prohledat časopis</message>
-
-
-	<message key="rt.context.authorTermsDescription">Pro vyhledání prací s podobným spoluautorstvím nechejte u položek s více než jedním autorem zaškrtnutá všechna jména. Zaškrtnutím jednoho jména můžete prohledávat autory postupně. Více o vyhledaných zdrojích se dozvíte klinutím na O ZDROJÍCH. Tyto zdroje byly vybrány pro svou relevantnost a otevřený (volný) přístup k části nebo k celému svému obsahu.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Recenzovaný článek</message>
 
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
 	<message key="notification.type.galleyModified">Byla změněna sazebnice článku "{$title}".</message>
@@ -1047,9 +991,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="search.results.similarDocuments">podobné dokumenty</message>
 	<message key="plugins.categories.viewableFiles">Pluginy pro sazebnice článků</message>
 	<message key="plugins.categories.viewableFiles.description">Pluginy sazebnic článků přidávají podporu pro různé typy sazebnic článků.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems také podporuje systém <a href="http://clockss.org/" target="_blank"> CLOCKSS </a>  (Controlled Lots of Copies Keep Stuff Safe), aby byl zajištěn bezpečný a trvalý archiv časopisu. Systém CLOCKSS je založen na softwaru open source LOCKSS vyvinutém ve Stanfordské univerzitní knihovně, který umožňuje knihovnám uchovávat vybrané webové časopisy pravidelným vyhledáváním registrovaných webových stránek časopisů pro nově publikovaný obsah a jeho archivací. Každý archiv je neustále ověřován proti ostatním mezipaměti knihoven a pokud je obsah poškozen nebo ztracen, použijí se k jeho obnově ostatní mezipaměti nebo časopis.
-<br /> <br />
-Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po dokončení publikování.]]></message>
 	<message key="editor.issues.backIssues">Předchozí čísla</message>
 	<message key="editor.issues.futureIssues">Budoucí čísla</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Tato sazebnice bude dostupná na nové webové stránce.</message>

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
@@ -70,10 +70,10 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					$journal = $templateMgr->getTemplateVars('currentContext');
 					$issue = $templateMgr->getTemplateVars('issue');
-					$publishedArticle = $templateMgr->getTemplateVars('article');
+					$publishedSubmission = $templateMgr->getTemplateVars('article');
 
 					// No published objects, no usage event.
-					if (!$journal && !$issue && !$publishedArticle) break;
+					if (!$journal && !$issue && !$publishedSubmission) break;
 
 					if ($journal) {
 						$pubObject = $journal;
@@ -88,9 +88,9 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 						$idParams = array('s' . $issue->getId());
 					}
 
-					if ($publishedArticle) {
-						$pubObject = $publishedArticle;
-						$assocType = ASSOC_TYPE_ARTICLE;
+					if ($publishedSubmission) {
+						$pubObject = $publishedSubmission;
+						$assocType = ASSOC_TYPE_SUBMISSION;
 						$canonicalUrlParams = array($pubObject->getId());
 						$idParams = array('m' . $pubObject->getId());
 					}
@@ -143,7 +143,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 		return array(
 			ASSOC_TYPE_JOURNAL,
 			ASSOC_TYPE_ISSUE,
-			ASSOC_TYPE_ARTICLE
+			ASSOC_TYPE_SUBMISSION,
 		);
 	}
 
@@ -151,7 +151,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	 * @see PKPUsageEventPlugin::isPubIdObjectType()
 	 */
 	protected function isPubIdObjectType($pubObject) {
-		return is_a($pubObject, 'PublishedArticle');
+		return is_a($pubObject, 'PublishedSubmission');
 	}
 
 }

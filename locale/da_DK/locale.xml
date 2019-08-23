@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Danish locale.
@@ -88,7 +88,10 @@
 	<message key="section.abbreviation">Forkortelse</message>
 	<message key="section.abbreviation.example">(F.eks. Artikler = ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikler</message>
+	<message key="common.publication">Artikel</message>
+	<message key="common.publications">Artikler</message>
 	<message key="article.submissionId">Manuskript-id</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Forfattere</message>
@@ -271,12 +274,8 @@
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford University Library, og som gør det muligt for biblioteker at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
-<br /><br />
-Konfigurationen af LOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til oplysninger om ophavsret på baggrund af Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Forslag til oplysninger om ophavsret på baggrund af Creative Commons</h3>
 <h4>1. Forslag til politik for tidsskrifter, der tilbyder Open Access</h4>
 Forfattere, der publicerer deres værker via dette tidsskrift, accepterer følgende vilkår:
 <ol type="a">
@@ -557,7 +556,6 @@ Du kan vælge at give brugeren en begrundelse for deaktiveringen af kontoen.</me
 	<message key="about.delayedOpenAccess">Forsinket Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">Dette tidsskrifts indhold vil være tilgængeligt i et Open Access-format</message>
 	<message key="about.delayedOpenAccessDescription2">måned(er) efter publiceringen af et nummer.</message>
-	<message key="about.authorSelfArchive">Selvarkivering for forfattere</message>
 	<message key="about.archiving">Arkivering</message>
 	<message key="about.subscriptions">Abonnementer</message>
 	<message key="about.subscriptionsContact">Kontaktperson for abonnementer</message>
@@ -681,8 +679,6 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} har revideret artikel {$submissionId}. Det nye fil-id er {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">Tildelingen af {$reviewerName} til bedømmelse af manuskriptet {$submissionId} for bedømmelsesrunde {$round} er fjernet.</message>
 	<message key="log.review.reviewInitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er startet.</message>
-	<message key="log.review.reviewReinitiated">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er startet igen.</message>
-	<message key="log.review.reviewCleared">Rundebedømmelsen {$round}, der foretages af {$reviewerName}, for manuskriptet {$submissionId} er ryddet.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} er blevet klassificeret til rundebedømmelsen {$round} af manuskriptet {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Forfaldsdatoen for rundebedømmelsen {$round} af manuskriptet {$submissionId} af {$reviewerName} er angivet til {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Anbefalingen for rundebedømmelsen {$round} af manuskriptet {$submissionId} af {$reviewerName} er angivet.</message>
@@ -720,42 +716,7 @@ Serveren understøtter i øjeblikket mbstring: <strong>{$supportsMBString}</stro
 
 	<message key="log.imported">{$userName} har importeret artiklen {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Indstillinger for læseværktøjer</message>
-
-	<message key="rt.admin.settings.description">Læseværktøjerne vises i en ramme ved siden af publicerede elementer i de sektioner af tidsskriftet, der skal indekseres. Læseværktøjerne består af et sæt valgfrie værktøjer med tilknytning til det publicerede element, der er angivet nedenfor, samt et sæt værktøjer, som giver adgang til relaterede elementer, der er organiseret efter felt og fagområde.</message>
-	<message key="rt.admin.settings.enableReadingTools">Aktiver Læseværktøjer for udvalgte sektioner af tidsskriftet.</message>
-	<message key="rt.admin.settings.relatedItems">Felt</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Se <a href="{$relatedItemsLink}" class="action">Relaterede elementsæt</a> for at få vist, tilføje, rette eller slette relaterede elementer for hvert felt.]]></message>
-
-	<message key="rt.admin.options">Elementværktøjer for tidsskrift</message>
-	<message key="rt.admin.relatedItems">Relaterede elementværktøjer</message>
-
-	<message key="rt.admin.settings.addComment">Tilføj kommentar (gør det muligt for læsere at sende kommentarer, og tidsskriftschefen kan foretage sletning).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Brugere skal være registreret og logget på for at kunne sende, og anonymitet er ikke tilladt.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Brugere skal være registreret og logget på for at kunne sende, og anonymitet er tilladt.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Brugere skal ikke være registreret for at sende, og anonymitet er tilladt.</message>
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Eventuelt ugyldige URL-adresser på opslagswebsteder er vist nedenfor.<br />
-Du bør manuelt kontrollere alle de URL-adresser, der er markeret som ugyldige, da denne test ikke er 100% nøjagtig.<br />
-Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver sendte formulardata.]]></message>
-
-	<!-- RT Entities -->
-	<message key="rt.metadata.dublinCore.primaryAuthor">Opretter</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Forfatters navn, tilhørsforhold, land</message>
-	<message key="rt.metadata.pkp.peerReviewed">Artikel undergået peer review</message>
-	<message key="rt.beNotifiedWhen">Skal underrettes, når...</message>
-
-	<message key="rt.thisJournal">Søg i tidsskrift</message>
-
-
-	<message key="rt.context.authorTermsDescription">I forbindelse med elementer med mere end én forfatter skal du markere alle navnene for at søge efter værker af de samme forfattere. Du kan også søge efter en ad gangen ved kun at markere et enkelt navn. Klik på OM for at få mere at vide om de ressourcer, der blev søgt i. Disse ressourcer er valgt på baggrund af deres relevans og deres (gratis) Open Access til hele eller dele af deres indhold.</message>
-
+	<message key="metadata.pkp.peerReviewed">Artikel undergået peer review</message>
 
 	<!--
 	 *
@@ -797,7 +758,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="about.aboutThisPublishingSystem.altText">OJS redaktions- og publikationsproces</message>
 	<message key="help.searchReturnResults">Tilbage til søgeresultater</message>
 	<message key="payment.type.purchaseArticle">Gebyr for køb af artikel</message>
-	<message key="article.article">Artikel</message>
 	<message key="journal.issn">ISSN-nummer</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
@@ -875,7 +835,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="payment.subscription.purchase">Køb abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Opgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", er blevet indleveret.</message>
 	<message key="notification.type.editing">Redigeringshændelser</message>
 	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$title}".</message>
 	<message key="notification.type.galleyModified">Der er foretaget en ændring af et publiceringsformatet til "{$title}".</message>
@@ -928,9 +887,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="submission.layout.galley.remotelyHostedContent">Denne publiceringsversion vil være tilgængelig på et separat website.</message>
 	<message key="submission.layout.galley.remoteURL">Ekstern URL</message>
 	<message key="notification.savedIssueMetadata">Nummer-metadata gemt</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems understøtter også <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskrifter. CLOCKSS er baseret på LOCKSS open source-software, der er udviklet på Stanford University Library, og som gør det muligt for biblioteker at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
-<br /><br />
-Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
 	<message key="user.noRoles.selectUsersWithoutRoles">Inkludér brugere uden nogen roller vedrørende dette tidsskrift.</message>
 	<message key="user.role.subEditors">Sektionsredaktører</message>
 	<message key="user.role.journalAssistant">Tidsskriftsassistent</message>
@@ -987,7 +943,6 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="issue.viewIssue">Se nummer</message>
 	<message key="subscriptions.status.noSubscription">Du har ikke et aktivt abonnement.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>
-	<message key="manager.setup.porticoDescription">Portico er en ikke-kommerciel tjeneste, der har forpligtet sig til at opbevare digitale publikationer, herunder e-tidsskrifter, e-bøger og digitaliserede historiske samlinger. Hvis dit tidsskrift underskrev en kontrakt med Portico, skal du aktivere den her:</message>
 	<message key="payment.type.publication.required">Publikationsgebyret er endnu ikke betalt.</message>
 	<message key="payment.requestPublicationFee">Rekvirer publikationsgebyr ({$feeAmount})</message>
 	<message key="payment.notFound">Der er blevet anmodet om betaling, men betalingsfristen er udløbet. Kontakt tidsskriftschefen for yderligere oplysninger.</message>

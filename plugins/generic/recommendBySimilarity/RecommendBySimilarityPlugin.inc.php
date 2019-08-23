@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/recommendBySimilarity/RecommendBySimilarityPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RecommendBySimilarityPlugin
@@ -71,7 +71,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 
 		// If we got similarity terms then execute a search with...
 		// ... request, journal and error messages, ...
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 		$error = null;

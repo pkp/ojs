@@ -1,8 +1,8 @@
 /**
  * @file plugins/themes/default/styles/pages/submissions.less
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Styles applying to submissions page
@@ -10,7 +10,7 @@
  */
 .page_submissions {
 
-	.submission_checklist {
+	.submission_sections, .submission_checklist {
 
 		ul {
 			margin: @double 0 0;
@@ -32,24 +32,55 @@
 		}
 	}
 
+	.submission_sections {
+		h3 {
+			margin-top: 0;
+		}
+
+		.cmp_notification {
+			margin-bottom: 0;
+		}
+	}
+
 	@media(min-width: @screen-phone) {
 
-		.submission_checklist li {
-			padding: @double @double @double (@double * 2);
+		.submission_sections, .submission_checklist {
 
-			&:before {
-				content: @fa-var-check;
-				position: absolute;
-				left: @double;
-				top: 50%;
-				-webkit-transform: translate(-50%, -50%);
-				-moz-transform: translate(-50%, -50%);
-				-ms-transform: translate(-50%, -50%);
-				-o-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-				font-size: @font-lead;
-				color: @yes;
+			li {
+				padding: @double @double @double (@double * 2);
+
+				&:before {
+					position: absolute;
+					font-size: @font-lead;
+					color: @yes;
+				}
+			}
+		}
+
+		.submission_sections {
+			li {
+				&:before {
+					content: @fa-var-chevron-right;
+					top: 22px;
+					left: @double - 3;
+				}
+			}
+		}
+
+		.submission_checklist {
+			li {
+				&:before {
+					content: @fa-var-check;
+					top: 50%;
+					left: @double;
+					-webkit-transform: translate(-50%, -50%);
+					-moz-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-o-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+				}
 			}
 		}
 	}
+
 }

@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -109,6 +109,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Article</message>
 	<message key="article.articles">Articles</message>
+	<message key="common.publication">Article</message>
+	<message key="common.publications">Articles</message>
 	<message key="article.submissionId">Id. de la tramesa</message>
 	<message key="article.title">Títol</message>
 	<message key="article.authors">Autors/ores</message>
@@ -352,10 +354,8 @@
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[L’Open Journal Systems admet l’ús del sistema <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) per assegurar que es manté un arxivament segur i permanent de la revista. El LOCKSS és una aplicació de codi font obert desenvolupada a la biblioteca de la Universitat de Stanford que permet als bibliotecaris/àries mantenir les revistes electròniques seleccionades mitjançant el sondeig dels llocs web de les revistes registrades per recopilar-ne els nous continguts publicats i arxivar-los. Cada arxiu es valida contínuament amb la memòria cau d’altres biblioteques i si el seu contingut es malmet o es perd, s’utilitzen les altres memòries cau de la revista per restaurar-lo.<br /><br /> No caldrà configurar la compatibilitat del LOCKSS amb l’Open Journal Systems fins que comenci la publicació, punt en què haureu de seguir aquests dos passos:]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Propostes d’avisos de drets d’autoria de Creative Commons</h3> <h4>1. Proposta de política per a revistes que ofereixen accés lliure</h4> Els autors/ores que publiquen en aquesta revista accepten els termes següents: <ol type="a"> <li>Els autors/ores conserven els drets d'autor i concedeixen a la revista el dret de primera publicació de l'obra, registrada sota una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">llicència de reconeixement de Creative Commons</a>, que permet que se'n faci difusió reconeixent-ne l'autoria i la primera publicació en aquesta revista.</li> <li>Els autors/ores poden establir, independentment, altres disposicions contractuals que permetin la publicació de la versió publicada en aquesta revista en altres mitjans (per exemple, en un repositori institucional o en un llibre), amb el reconeixement de la publicació inicial en aquesta revista.</li> <li>Els autors/ores tenen permís per publicar la seva obra en línia i se'ls proposa de fer-ho (per exemple, en repositoris institucionals o a la seva pàgina web) abans i durant el procés de tramesa, perquè pot produir bons resultats i fer que l'obra publicada rebi més citacions (Vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li> </ol> <h4>2. Proposta de política per a revistes que ofereixen accés lliure diferit</h4> Els autors/ores que publiquen en aquesta revista accepten els termes següents: <ol type="a"> <li>Els autors/ores conserven els drets d'autor i concedeixen a la revista el dret de primera publicació de l'obra, que durant [ESPECIFIQUEU UN PERÍODE DE TEMPS] després de la publicació queda simultàniament registrada sota una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">llicència de reconeixement de Creative Commons</a>, que permet que se'n faci difusió reconeixent-ne l'autoria i la primera publicació en aquesta revista.</li> <li>Els autors/ores poden establir, independentment, altres disposicions contractuals que permetin la publicació de la versió publicada en aquesta revista en altres mitjans (per exemple, en un repositori institucional o en un llibre), amb el reconeixement de la publicació inicial en aquesta revista.</li> <li>Els autors/ores tenen permís per publicar la seva obra en línia i se'ls proposa de fer-ho (per exemple, en repositoris institucionals o a la seva pàgina web) abans i durant el procés de tramesa, perquè pot produir bons resultats i fer que l'obra publicada rebi més citacions (Vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li> </ol>]]></message>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Propostes d’avisos de drets d’autoria de Creative Commons</h3> <h4>1. Proposta de política per a revistes que ofereixen accés lliure</h4> Els autors/ores que publiquen en aquesta revista accepten els termes següents: <ol type="a"> <li>Els autors/ores conserven els drets d'autor i concedeixen a la revista el dret de primera publicació de l'obra, registrada sota una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">llicència de reconeixement de Creative Commons</a>, que permet que se'n faci difusió reconeixent-ne l'autoria i la primera publicació en aquesta revista.</li> <li>Els autors/ores poden establir, independentment, altres disposicions contractuals que permetin la publicació de la versió publicada en aquesta revista en altres mitjans (per exemple, en un repositori institucional o en un llibre), amb el reconeixement de la publicació inicial en aquesta revista.</li> <li>Els autors/ores tenen permís per publicar la seva obra en línia i se'ls proposa de fer-ho (per exemple, en repositoris institucionals o a la seva pàgina web) abans i durant el procés de tramesa, perquè pot produir bons resultats i fer que l'obra publicada rebi més citacions (Vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li> </ol> <h4>2. Proposta de política per a revistes que ofereixen accés lliure diferit</h4> Els autors/ores que publiquen en aquesta revista accepten els termes següents: <ol type="a"> <li>Els autors/ores conserven els drets d'autor i concedeixen a la revista el dret de primera publicació de l'obra, que durant [ESPECIFIQUEU UN PERÍODE DE TEMPS] després de la publicació queda simultàniament registrada sota una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">llicència de reconeixement de Creative Commons</a>, que permet que se'n faci difusió reconeixent-ne l'autoria i la primera publicació en aquesta revista.</li> <li>Els autors/ores poden establir, independentment, altres disposicions contractuals que permetin la publicació de la versió publicada en aquesta revista en altres mitjans (per exemple, en un repositori institucional o en un llibre), amb el reconeixement de la publicació inicial en aquesta revista.</li> <li>Els autors/ores tenen permís per publicar la seva obra en línia i se'ls proposa de fer-ho (per exemple, en repositoris institucionals o a la seva pàgina web) abans i durant el procés de tramesa, perquè pot produir bons resultats i fer que l'obra publicada rebi més citacions (Vegeu <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li> </ol>]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Cua de trameses &gt; Revisió de trameses &gt; Edició de trameses &gt; Taula de continguts.<br /><br /> Seleccioneu un model per a la gestió d’aquests aspectes del procés editorial. (Per designar un secretari/ària de redacció i els editors/ores de secció, aneu a la secció «Editors/ores» a l'Administració de la revista).]]></message>
@@ -695,7 +695,6 @@
 	<message key="about.delayedOpenAccess">Accés obert diferit</message>
 	<message key="about.delayedOpenAccessDescription1">Els continguts d’aquesta revista estaran disponibles en format d'accés lliure</message>
 	<message key="about.delayedOpenAccessDescription2">mes/os després de la publicació d’un número.</message>
-	<message key="about.authorSelfArchive">Arxivament automàtic per part de l’autor/a</message>
 	<message key="about.archiving">Arxivament</message>
 	<message key="about.subscriptions">Subscripcions</message>
 	<message key="about.subscriptions.individual">Subscripcions individuals</message>
@@ -787,8 +786,6 @@
 	<message key="log.author.documentRevised">{$authorName} ha revisat l’article {$submissionId}. El nou identificador per al fitxer és {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} s'ha desassignat de la tramesa de revisió {$submissionId} per a la ronda de revisió {$round}.</message>
 	<message key="log.review.reviewInitiated">S’ha començat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">S’ha reiniciat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
-	<message key="log.review.reviewCleared">S’ha esborrat la ronda {$round} de revisió feta per {$reviewerName} per a la tramesa {$submissionId}.</message>
 	<message key="log.review.reviewerRated">.{$reviewerName} s'ha puntuat per a la ronda {$round} de revisió de la tramesa {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">S’ha definit la data de venciment per a la ronda {$round} de revisió de la tramesa {$submissionId} feta per {$reviewerName}: {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">S’ha definit la recomanació per a la ronda {$round} de revisió de la tramesa {$submissionId} feta per {$reviewerName}.</message>
@@ -826,49 +823,10 @@
 
 	<message key="log.imported">{$userName} ha importat l’article {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Opcions per a les eines de lectura</message>
-
-	<message key="rt.admin.settings.description">Les eines de lectura apareixen en un marc al costat dels elements publicats per a les seccions de la revista designades per a la indexació. Les eines de lectura consisteixen en un conjunt d’eines opcionals relacionades amb els elements publicats (vegeu la llista següent) i també en un altre conjunt d’eines que proporcionen accés als elements relacionats, organitzats per camps i disciplines.</message>
-	<message key="rt.admin.settings.enableReadingTools">Habiliteu les eines de lectura per a les seccions de la revista designades.</message>
-	<message key="rt.admin.settings.relatedItems">Camp</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Vegeu <a href="{$relatedItemsLink}" class="action">Conjunts d’elements relacionats</a> per visualitzar, afegir, corregir o suprimir els elements relacionats per a cada camp.]]></message>
-
-	<message key="rt.admin.options">Eines dels elements de la revista</message>
-	<message key="rt.admin.relatedItems">Eines dels elements relacionats</message>
-
-	<message key="rt.admin.settings.addComment">Afegiu un comentari (permet que els lectors/ores publiquin comentaris. L'administrador/a de la revista podrà suprimir aquests comentaris).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Els usuaris/àries han d’estar registrats i han d’haver iniciat la sessió per poder publicar comentaris. No s’admeten comentaris anònims.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Els usuaris/àries han d’estar registrats i han d’haver iniciat la sessió per poder publicar comentaris. S'admeten comentaris anònims.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">No és necessari estar registrat per publicar comentaris. S’admeten comentaris anònims.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[A continuació es llisten els URL possiblement no vàlids per als llocs de cerca.<br /> Aquesta prova pot contenir errors, per la qual cosa haureu de comprovar els URL marcats com a no vàlids de manera manual.<br /> És possible que la validació falli per als URL de cerca que necessitin enviar dades de formulari.]]></message>
-
-	<!-- RT Entities -->
-	<message key="rt.metadata.dublinCore.primaryAuthor">Creador/a</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nom, afiliació i país de l’autor/a</message>
-	<message key="rt.metadata.pkp.peerReviewed">Article avaluat per experts/ertes</message>
-
-	<message key="rt.beNotifiedWhen">Vull rebre una notificació quan...</message>
-
-	<message key="rt.thisJournal">Cerca en la revista</message>
-
-	<message key="rt.context.authorTermsDescription">Per a les obres amb més d’un autor/a, deixeu tots els noms activats si voleu cercar obres que tinguin la mateixa autoria de manera col·laborativa o bé activeu un sol nom si voleu cercar cada persona una per una. Feu clic a «Sobre la revista» per obtenir més informació sobre el recurs cercat. Aquests recursos han estat seleccionats per la rellevància que tenen i perquè ofereixen accés lliure (gratuït) a tots o part dels continguts.</message>
+	<message key="metadata.pkp.peerReviewed">Article avaluat per experts/ertes</message>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">S'ha tramès un nou article: "{$title}".</message>
 	<message key="notification.type.editing">Esdeveniments d'edició</message>
 	<message key="notification.type.editorDecisionComment">S'ha fet un comentari a la decisió de l'editor/a a "{$title}".</message>
 	<message key="notification.type.galleyModified">S'ha modificat una galerada a "{$title}".</message>
@@ -953,9 +911,6 @@
 	<message key="search.cli.rebuildIndex.indexing">Indexant "{$journalName}"</message>
 	<message key="editor.issues.backIssues">Números anteriors</message>
 	<message key="editor.issues.futureIssues">Números pròxims</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems també suporta l'ús del sistema <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) per assegurar un arxivament permanent i segur a la revista. CLOCKSS es basa en el programari de codi font obert LOCKSS desenvolupat a la biblioteca de la Universitat de Stanford, que permet a les biblioteques mantenir les revistes web seleccionades a través del sondeig regular dels llocs web de les revistes registrades per recopilar-ne els nous continguts publicats i arxivar-los. Cada arxiu es valida contínuament amb la memòria cau d'altres biblioteques i, si el contingut es corromp o es perd, s'utilitzen les altres memòries cau o la revista per restaurar-lo.
-<br /><br />
-No cal configurar el suport CLOCKSS per a Open Journal Systems fins que comenci la publicació.]]></message>
 	<message key="notification.type.approveSubmission">Aquesta tramesa està actualment esperant l'acceptació. Quan l'obtingui apareixerà en el número.</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">La implementació de la cerca no permet reindexació per revista.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">La ruta especificada "{$journalPath}" no coincideix amb cap revista.</message>

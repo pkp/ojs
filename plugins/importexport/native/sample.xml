@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <article xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	locale="en_US" section_ref="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd"
-	stage="submission">
-	<id type="internal">1</id>
+	stage="production">
+	<id type="internal" advice="ignore">1</id>
+	<id type="public" advice="update">articlePublicId</id>
+	<id type="other::urn" advice="update">urn:nbn:de:0000-tj1.v1i1.14</id>
+	<id type="doi" advice="update">10.9876/tj1.v1i1.1</id>
 	<title locale="en_US">Article Title</title>
 	<prefix locale="en_US">The</prefix>
 	<subtitle locale="en_US">Subtitle</subtitle>
 	<abstract locale="en_US">the abstract</abstract>
+	<licenseUrl>http://licenseUrl</licenseUrl>
+	<copyrightHolder locale="en_US">copyright holder</copyrightHolder>
+	<copyrightYear>2014</copyrightYear>
+	<keywords locale="en_US">
+		<keyword>kw1</keyword>
+		<keyword>kw2</keyword>
+		<keyword>kw3</keyword>
+	</keywords>
+	<disciplines locale="en_US">
+		<discipline>discipline1</discipline>
+		<discipline>discipline2</discipline>
+	</disciplines>
+	<subjects locale="en_US">
+		<subject>subject1</subject>
+		<subject>subject2</subject>
+		<subject>subject3</subject>
+	</subjects>
 	<authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
 		<author primary_contact="true" user_group_ref="Journal manager">
-			<givenname locale="en_US">John</givenname>
-			<familyname locale="en_US">Smith</familyname>
+			<firstname>John</firstname>
+			<lastname>Smith</lastname>
 			<email>john.smith@your-domain.com</email>
 		</author>
 	</authors>
 	<submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		stage="submission" id="1" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-		<revision number="1" genre="Submission"
+		<revision number="1" genre="Article Text"
 			filename="article.docx" viewable="true"
 			date_uploaded="2014-03-06" date_modified="2014-03-06" filesize="18675"
 			filetype="application/octet-stream"
@@ -26,4 +46,69 @@
 			<embed encoding="base64">.. base64 encoded data is here ...</embed>
 		</revision>
 	</submission_file>
+	<submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		stage="proof" id="2" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<revision number="1" genre="Article Text"
+		filename="article.html" viewable="true"
+		date_uploaded="2014-03-06" date_modified="2014-03-06"
+		filetype="text/html"
+		uploader="admin">
+			<name locale="en_US">name of the HTML file</name>
+			<href src="http://URLTo/article.html"></href>
+		</revision>
+	</submission_file>
+	<artwork_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		stage="dependent" id="3" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<revision number="1" genre="Image"
+			filename="images.png" viewable="false"
+			date_uploaded="2014-03-06" date_modified="2014-03-06"
+			filetype="image/png"
+			uploader="admin">
+			<name locale="en_US">image name</name>
+			<submission_file_ref id="2" revision="1"/>
+			<href src="http://URLTo/image.png"></href>
+		</revision>
+	</artwork_file>
+	<supplementary_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		stage="proof" id="4" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<revision number="1" genre="Research Instrument"
+			filename="articleSuppFile.pdf" viewable="true"
+			date_uploaded="2014-03-06" date_modified="2014-03-06" filesize="86369"
+			filetype="application/pdf"
+			uploader="admin">
+			<name locale="en_US">supp file</name>
+			<embed encoding="base64">.. base64 encoded data is here ...</embed>
+		</revision>
+	</supplementary_file>
+	<article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		approved="false" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<name locale="en_US">HTML</name>
+		<seq>0</seq>
+		<submission_file_ref id="2" revision="1"/>
+	</article_galley>
+	<article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		approved="false" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<name locale="en_US">Remote galley or supp file</name>
+		<seq>1</seq>
+		<remote src="http://remoteURL"/>
+	</article_galley>
+	<article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		approved="false" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+		<name locale="en_US">Supp File</name>
+		<seq>2</seq>
+		<submission_file_ref id="4" revision="1"/>
+	</article_galley>
+	<issue_identification>
+		<volume>1</volume>
+		<number>1</number>
+		<year>2014</year>
+	</issue_identification>
+	<pages>1 - 30</pages>
+	<covers>
+		<cover locale="en_US">
+			<cover_image>cover_article_3_en_US.png</cover_image>
+			<cover_image_alt_text>article cover EN</cover_image_alt_text>
+			<embed encoding="base64">.. base64 encoded data is here ...</embed>
+		</cover>
+	</covers>
 </article>

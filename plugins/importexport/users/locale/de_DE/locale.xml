@@ -4,16 +4,16 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.importexport.users.displayName">Benutzer XML Einschub</message>
-	<message key="plugins.importexport.users.description">Benutzer Import und Export</message>
+	<message key="plugins.importexport.users.displayName">Benutzer-XML-Plugin</message>
+	<message key="plugins.importexport.users.description">Benutzer/innen importieren und exportieren</message>
 
 	<message key="plugins.importexport.users.cliUsage"><![CDATA[Gebrauch: {$scriptName} {$pluginName} [Befehl] ...
 Befehle:

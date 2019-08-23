@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/submissions/ExportPublishedSubmissionsListGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExportPublishedSubmissionsListGridCellProvider
@@ -41,7 +41,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
 
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
@@ -51,14 +51,14 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $publishedSubmission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('classes.core.ServicesContainer');
+				import('classes.core.Services');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							ServicesContainer::instance()->get('submission')->getWorkflowUrlByUserRoles($publishedSubmission)
+							Services::get('submission')->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
-						$title
+						htmlspecialchars($title)
 					)
 				);
 			case 'issue':
@@ -77,7 +77,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
 							__('plugins.importexport.common.settings.DOIPluginSettings')
 						),
-						$issue->getIssueIdentification(),
+						htmlspecialchars($issue->getIssueIdentification()),
 						null
 					)
 				);
@@ -87,16 +87,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
 				if ($status && array_key_exists($status, $statusActions)) {
 					assert(array_key_exists($status, $statusNames));
-					return array(
-						new LinkAction(
-							'edit',
-							new RedirectAction(
-								$statusActions[$status],
-								'_blank'
-							),
-							$statusNames[$status]
-						)
-					);
+					return array($statusActions[$status]);
 				}
 		}
 		return parent::getCellActions($request, $row, $column, $position);
@@ -111,7 +102,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'id':

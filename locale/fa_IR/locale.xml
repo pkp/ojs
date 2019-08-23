@@ -3,8 +3,8 @@
 <!--
   * locale/fa_IR/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
@@ -86,6 +86,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">مقاله</message>
 	<message key="article.articles">مقالات</message>
+	<message key="common.publication">مقاله</message>
+	<message key="common.publications">مقالات</message>
 	<message key="article.submissionId">شناسه مقاله ارسالی</message>
 	<message key="article.title">عنوان</message>
 	<message key="article.authors">نویسندگان</message>
@@ -318,10 +320,8 @@
 	<message key="plugins.categories.viewableFiles.description">افزونه‌های کلیشه چاپی مقاله امکان افزون فرمت‌های مختلف به کلیشه چاپی مقاله را فراهم می‌سازند.</message>
 	<message key="plugins.categories.auth.description">افزونه‌های احراز هویت عمل تأیید هویت را به سیستم‌های خارجی احراز هویت مانند سرور LDAP واگذار می‌کنند.</message>
 	<message key="plugins.categories.generic.description">افزونه‌های عمومی برای گسترش سیستم مجله‌های آزاد به روش‌های مختلف که توسط افزونه‌های دیگر پشتیبانی نمی‌شوند به کار می‌روند</message>
-	<message key="manager.setup.lockssDescription"><![CDATA[OJS  از سیستم <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> که علامت اختصاری Lots of Copies Keep Stuff Safe است  برای بایگانی امن و دائمی داده‌ها استفاده می‌کند. LOCKSS یک نرم‌افزار متن‌باز است که توسط کتابخانه دانشگاه استنفورد تهیه شده است و کتابخانه‌ها را قادر می‌سازد داده‌های مجلات انتخابی خود را جمع‌آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده‌ها از سایت‌های مجلات انتخاب شده صورت می‌گیرد. هر بایگانی به طور مداوم با داده‌های کتابخانه‌ای دیگر مقایسه و بروز رسانی می‌شود.	  <br /><br /> نصب پشتیبانی LOCKSS برای OJS تا وقتی که مجله کاملاً به‌صورت آنلاین چاپ نشود لازم نیست. پس از راه افتادن سیستم چاپ آنلاین مجله این دو اقدام را انجام دهید تا پشتیبانی از LOCKSS برقرار شود:]]></message>
-	<message key="manager.setup.clockssDescription"><![CDATA[این سامانه از سیستم CLOCKSS که علامت اختصاری Controled Lots of Copies Keep Stuff Safe است برای بایگانی امن و دائمی داده برای مجله پشتیبانی می‌کند. CLOCKSS یک نوم افزار متن‌باز است که توسط کتابخانه دانشگاه استنفورد تهیه شده است و کتابخانه‌ها را قادر می‌سازد داده‌های مجلات انتخابی خود را جمع‌آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده‌ها از سایت‌های مجلات انتخاب شده صورت می‌گیرد. هر بایگانی به طور مداوم با داده‌های کتابخانه‌ای دیگر مقایسه و بروز رسانی می‌شود.]]></message>
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>	  بیانیه حق نشر پیشنهادی Creative Commons	  </h3>	  <h4>	  ۱. سیاست پیشنهادی برای مجلاتی که دسترسی آزاد عرضه می‌کنند	  </h4>	  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:	  <ol type="a">		  <li>		  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند. هردو این امر تحت مجوز	  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">	  واگذاری Creative Commons	  </a>	  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.	  </li>		  <li>		  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.	  </li>		  <li>		  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله	  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)</li>	  </ol>		<h4>	  سیاست پیشنهادی برای مجلاتی که دسترسی آزاد با تأخیر عرضه می‌کنند	  </h4>	  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:	  <ol type="a">		  <li>		  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند و این مقاله [تأخیر زمانی] مدت پس از چاپ تحت مجوز	  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">	  واگذاری Creative Commons	  </a>	  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.		  </li>		  <li>			  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.		  </li>		  <li>			  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله	  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)		  </li>	  </ol>]]></message>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>	  بیانیه حق نشر پیشنهادی Creative Commons	  </h3>	  <h4>	  ۱. سیاست پیشنهادی برای مجلاتی که دسترسی آزاد عرضه می‌کنند	  </h4>	  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:	  <ol type="a">		  <li>		  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند. هردو این امر تحت مجوز	  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">	  واگذاری Creative Commons	  </a>	  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.	  </li>		  <li>		  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.	  </li>		  <li>		  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله	  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)</li>	  </ol>		<h4>	  سیاست پیشنهادی برای مجلاتی که دسترسی آزاد با تأخیر عرضه می‌کنند	  </h4>	  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:	  <ol type="a">		  <li>		  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند و این مقاله [تأخیر زمانی] مدت پس از چاپ تحت مجوز	  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">	  واگذاری Creative Commons	  </a>	  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.		  </li>		  <li>			  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.		  </li>		  <li>			  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله	  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)		  </li>	  </ol>]]></message>
 	<message key="manager.setup.citations.enable">فعال‌سازی دستیار نشانه‌گذاری ارجاعات</message>
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[مراحل: نوبت مقاله ارسالی &lt; داوری مقاله ارسالی &lt;  ویراستاری مقاله ارسالی &lt; فهرست مقالات.<br /><br />	  انتخاب مدلی برای اداره این جوانب روند دبیری. (برای انتساب یک سردبیر و دبیر بخش به قسمت دبیران در مدیریت مجله بروید.)]]></message>
@@ -602,7 +602,6 @@
 	<message key="about.delayedOpenAccess">دسترسی آزاد (با تأخیر)</message>
 	<message key="about.delayedOpenAccessDescription1">محتوای این مجله به‌صورت آزاد قابل دسترسی است.</message>
 	<message key="about.delayedOpenAccessDescription2">ماه پس از انتشار یک شماره</message>
-	<message key="about.authorSelfArchive">بایگانی شده توسط نویسنده</message>
 	<message key="about.archiving">بایگانی</message>
 	<message key="about.subscriptions">اشتراک</message>
 	<message key="about.subscriptions.individual">اشتراک‌های شخصی</message>
@@ -687,8 +686,6 @@
 	<message key="log.author.documentRevised">{$authorName} مقاله  {$submissionId} را اصلاح کرد. شناسه فایل جدید  {$fileId} می‌باشد.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} از داوری مقاله {$submissionId} برای دور  {$round} معزول شد.</message>
 	<message key="log.review.reviewInitiated">دور  {$round} داوری {$reviewerName} برای مقاله  {$submissionId} شروع شد.</message>
-	<message key="log.review.reviewReinitiated">دور {$round} داوری {$reviewerName} برای مقاله  {$submissionId} از نو شروع شد.</message>
-	<message key="log.review.reviewCleared">دور {$round} داوری {$reviewerName} برای مقاله {$submissionId} پاک شد.</message>
 	<message key="log.review.reviewerRated">{$reviewerName}  امتیاز دور  {$round} داوری مقاله {$submissionId} را وارد نمود.</message>
 	<message key="log.review.reviewDueDateSet">مهلت داوری دور  {$round} مقاله  {$submissionId} توسط {$reviewerName} به  {$dueDate} تغییر یافت.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} دور {$round} داوری برای مقاله  {$submissionId} را توصیه کرد.</message>
@@ -720,32 +717,8 @@
 	<message key="log.proofread.assign">{$assignerName}، {$proofreaderName}  را برای بازبینی نهائی مقاله  {$submissionId} انتخاب کرد.</message>
 	<message key="log.proofread.complete">{$proofreaderName} مقاله {$submissionId} را برای قرارگیری در نوبت ثبت کرد.</message>
 	<message key="log.imported">{$userName} مقاله  {$submissionId} را وارد کرد.</message>
-	<!-- Reading Tools entries -->
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">گزینه های ابزار خواندن</message>
-	<message key="rt.admin.settings.description">ابزارهای خواندن در کادر کنار مقالات چاپ شده در قسمتی از مجله که برای نمایش نمایه است، ظاهر میشود. ابزارهای خواندن مشتمل بر یک مجموعه از ابزارهای اختیاری مربوط به مقالات چاپ شده  است که در زیر لیست شده است و همچنین شامل مجموعه ای از ابزارهائی است که دسترسی به موارد مشابه را بر جسب زمینه مورد نظر و تخصص مربوطه فراهم میکند.</message>
-	<message key="rt.admin.settings.enableReadingTools">فعال ساختن ابزارهای خواندن برای مقالات مورد نظر مجله.</message>
-	<message key="rt.admin.settings.relatedItems">حیطه</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[برای دیدن ، افزودن ، تصحیح ، یا حذف به  <a href="{$relatedItemsLink}" class="action">مجموعه موارد مشابه</a>  برای هر حیطه مراجعه کنید.]]></message>
-	<message key="rt.admin.options">ابزار های مجله</message>
-	<message key="rt.admin.relatedItems">ابزار های موارد مربوطه</message>
-	<message key="rt.admin.settings.addComment">افزودن نقطه نظر: موجب میشود که خوانندگان بتوانند نظرات خود را ارسال کنند و مدیر مجله نیز میتواند آن‌ها را رد کند.</message>
-	<message key="rt.admin.settings.addComment.authenticated">برای ارسال نظر خود لازم است که ثبت‌نام کرده و سپس وارد شوید. ارسال بصورت گمنام مقدور نیست</message>
-	<message key="rt.admin.settings.addComment.anonymous">برای ارسال نظر خود بصورت گمنام لازم است که ثبت‌نام کرده و سپس وارد شوید.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت‌نام نیست</message>
-	<!-- RT Versions -->
-	<!-- RT Contexts -->
-	<!-- RT Searches -->
-	<message key="rt.admin.validateUrls.description"><![CDATA[احتمالا آدرس های جستجوی بی‌اعتباری در اینجا نشان داده شده است. <br />  میبایست بصورت دستی هر آدرسی که به عنوان بی‌اعتبار مشخص شده را آزمایش کنید چرا که آزمایشی که در اینجا انجام شده نتیجه آن صد در صد نیست.<br />  در مورد آدرسهای جستجوئی که مشتمل بر پر کردن و پست کردن اطالاعات یک فرم باشد ممکن است این آزمایش اعتبارسنجی شکست بخورد.]]></message>
-	<!-- RT Entities -->
-	<message key="rt.metadata.dublinCore.primaryAuthor">ایجاد</message>
-	<message key="rt.metadata.pkp.primaryAuthor">نام، وابستگی و کشور نویسنده</message>
-	<message key="rt.metadata.pkp.peerReviewed">مقاله داوری شده</message>
-	<message key="rt.beNotifiedWhen">با خبر شوم وقتی که...</message>
-	<message key="rt.thisJournal">جستجوی مجله</message>
-	<message key="rt.context.authorTermsDescription">در مورد مقالات با بیش از یک نویسنده تمام نام ها را در حالت چک خورده باقی بگذارید تا  در مورد کارهای مشترک آن‌ها جستجو شود. میتوانید هر بار یکی را جستجو کنید. برای اطلاع بیشتر در مورد منابع مورد جستجو بر روی «درباره» کلیک کنید. این منابع به خاطر مرتبط بودن آن‌ها و دسترسی آزاد به آن‌ها انتخاب شده اند.</message>
+	<message key="metadata.pkp.peerReviewed">مقاله داوری شده</message>
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ارسال شد.</message>
 	<message key="notification.type.editing">ویرایش رویدادها</message>
 	<message key="notification.type.submissionSubmitted">یک مقاله با عنوان  "{$title}" ارسال شده است</message>
 	<message key="notification.type.editorDecisionComment">نقطه‌نظری در خصوص تصمیم دبیر درباره "{$title}" برجا گذاشته شده است.</message>

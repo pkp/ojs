@@ -4,8 +4,8 @@
 <!--
   * filterConfig.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Filter Configuration.
@@ -17,7 +17,7 @@
 			symbolic="article=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.article.Article[]"
+			inputType="class::classes.article.Submission[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Native XML article input -->
 		<filterGroup
@@ -25,7 +25,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.article.Article[]" />
+			outputType="class::classes.article.Submission[]" />
 		<!-- Native XML issue output -->
 		<filterGroup
 			symbolic="issue=>native-xml"

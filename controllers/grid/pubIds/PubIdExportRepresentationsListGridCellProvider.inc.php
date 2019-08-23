@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/pubIds/PubIdExportRepresentationsListGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubIdExportRepresentationssListGridCellProvider
@@ -44,8 +44,8 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 		$columnId = $column->getId();
 		assert(is_a($publishedSubmissionGalley, 'ArticleGalley') && !empty($columnId));
 
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedSubmission = $publishedArticleDao->getByArticleId($publishedSubmissionGalley->getSubmissionId());
+		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
+		$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($publishedSubmissionGalley->getSubmissionId());
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
 			case 'title':
@@ -54,16 +54,14 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $publishedSubmission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('classes.core.ServicesContainer');
+				import('classes.core.Services');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							ServicesContainer::instance()
-									->get('submission')
-									->getWorkflowUrlByUserRoles($publishedSubmission)
+							Services::get('submission')->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
-						$title
+						htmlspecialchars($title)
 					)
 				);
 			case 'issue':
@@ -82,7 +80,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
 							__('plugins.importexport.common.settings.DOIPluginSettings')
 						),
-						$issue->getIssueIdentification(),
+						htmlspecialchars($issue->getIssueIdentification()),
 						null
 					)
 				);
@@ -99,7 +97,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 								$statusActions[$status],
 								'_blank'
 							),
-							$statusNames[$status]
+							htmlspecialchars($statusNames[$status])
 						)
 					);
 				}
@@ -148,5 +146,3 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 	}
 
 }
-
-

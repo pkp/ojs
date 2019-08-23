@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -106,7 +106,10 @@
 	<message key="section.abbreviation">Laburdura</message>
 	<message key="section.abbreviation.example">(Adibidez, Artikuluak=ART)</message>
 	<!-- Common Article Terms -->
+	<message key="article.article">Artikulua</message>
 	<message key="article.articles">Artikuluak</message>
+	<message key="common.publication">Artikulua</message>
+	<message key="common.publications">Artikuluak</message>
 	<message key="article.submissionId">Bidalketa ID</message>
 	<message key="article.title">Titulua</message>
 	<message key="article.authors">Egileak</message>
@@ -335,12 +338,9 @@ editoreari onartzen duten ala ez, eta bide beretik bidaltzen dizkiote ebaluazioa
 eta gomendioa ere. Ebaluatzaileen onarpena (edo ezespena), eta ondorengo
 ebaluazio-txostena eta gomendioa Editoreek sartzen dute bidalketaren
 Ebaluazio-orrian, ebaluazio-prozesua erregistratuta uzteko.</message>
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems-ek <a href="http://www.lockss.org/" target="_blank"> LOCKSS</a> (Lots of Copies Keep Stuff Safe) sistema erabiltzen du aldizkariaren artxibo seguru eta iraunkorra segurtatzeko. LOCKSS iturburu irekiko softwarea da, Stanford-eko Unibertsitateko Liburutegiak garatua, liburutegiei hautatutako web-aldizkariak mantentzen laguntzeko. LOCKSSek erregularki begiratzen du erregistratutako aldizkarien webguneetan, zenbaki edo eduki berririk argitaratu den ikusteko eta, hala bada, artxibatzeko. Artxibo bakoitza etengabe balidatzen da liburutegiko beste cache batzuen kontra, eta eduki hondatu edo galdurik aurkitzen bada, beste cacheak edo aldizkaria erabiltzen dira leheneratzeko.
-<br /><br />
-Argitaratzen hasi arte, ez da beharrezkoa LOCKSS euskarria gehitzea Open Journal Systems-i. Orduan, bi urrats hauek egin beharko dira:]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Creative Commons Copyright informazio proposatuak</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Creative Commons Copyright informazio proposatuak</h3>
 <h4>1. Sarrera librea ematen duten Aldizkarientzat proposatutako politika</h4>
 Aldizkari honetan argitaratzen duten egileak ados daude baldintza hauekin:
 <ol type="a">
@@ -688,7 +688,6 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="about.delayedOpenAccess">Sarrera libre geroratua</message>
 	<message key="about.delayedOpenAccessDescription1">Aldizkari honen edukia, argitaratu eta handik</message>
 	<message key="about.delayedOpenAccessDescription2">hilabetera egongo da erabilgarri sarrera libreko formatuan.</message>
-	<message key="about.authorSelfArchive">Egileen auto-artxibatzea</message>
 	<message key="about.archiving">Artxibatzea</message>
 	<message key="about.subscriptions">Harpidetzak</message>
 	<message key="about.subscriptionsContact">Harpidetzen kontaktua</message>
@@ -825,8 +824,6 @@ Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>
 artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$submissionId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} {$submissionId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
-	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$submissionId} artikulua {$round}. bueltan ebaluatzen.</message>
-	<message key="log.review.reviewCleared">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-buelta ezabatu egin da.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} {$submissionId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da.</message>
 	<message key="log.review.reviewDueDateSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltaren mugaeguna {$dueDate} izango da.</message>
 	<message key="log.review.reviewRecommendationSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltako gomendioa ezarri da.</message>
@@ -866,52 +863,7 @@ artikuluaren probak zuzentzeko.</message>
 
 	<message key="log.imported">{$userName} erabiltzaileak {$submissionId} artikulua inportatu du.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Irakurtzeko tresnen aukerak</message>
-
-	<message key="rt.admin.settings.description">Irakurtzeko tresnak marko batean agertzen dira, indexatutako ataletan argitaratutako elementuen ondoan. Irakurtzeko tresnak bi multzotan banatzen dira, argitaratutako lanari buruzkoak batzuk (ikus beheko zerrenda), eta lan horrekin erlazionatutako elementuetara joatekoak beste batzuk (eremuz eta diziplinaz antolatuta).</message>
-	<message key="rt.admin.settings.enableReadingTools">Gaitu Irakurtzeko tresnak hautatutako ataletarako.</message>
-	<message key="rt.admin.settings.relatedItems">Eremua</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Eremu bakoitzarekin erlazionatutako lanak ikusi, gehitu, zuzendu edo ezabatzeko, ikus <a href="{$relatedItemsLink}" class="action">Erlazionatutako lanen multzoak</a>.]]></message>
-
-	<message key="rt.admin.options">Aldizkariko lanen tresnak</message>
-	<message key="rt.admin.relatedItems">Erlazionatutako lanen tresnak</message>
-
-	<message key="rt.admin.settings.addComment">Gehitu iruzkinak (iruzkinak bidaltzeko aukera ematen die irakurleei, baina Aldizkariaren kudeatzaileak ezaba ditzake).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Erabiltzaileak erregistratuta egon behar dira eta saioa hasi behar dute iruzkinak bidaltzeko; ez da anonimorik onartzen.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Erabiltzaileak erregistratuta egon behar dira eta saioa hasi behar dute iruzkinak bidaltzeko, baina anonimoak onartzen dira.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Erabiltzaileek ez daukate erregistratuta egon beharrik iruzkinak bidaltzeko, anonimoak onartzen dira.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Behean erakusten dira bilaketa egiteko guneen URL baliogabeak ematen dutenak.<br />
-Eskuz egiaztatu beharko dituzu baliogabeko gisa markatutako URLak, proba hau ez delako % 100 fidagarria.<br />
-Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatzen duten URLetan.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Sortzailea</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Egilearen izena, erakundea, herrialdea</message>
-	<message key="rt.metadata.pkp.peerReviewed">Adituek ebaluatutako artikulua</message>
-	<message key="rt.beNotifiedWhen">Jakinarazi....</message>
-
-	<message key="rt.thisJournal">Bilatu aldizkarian</message>
-
-
-	<message key="rt.context.authorTermsDescription">Egile bat baino gehiago dituzten lanetan, utzi izen guztiak hautatuta antzeko lankidetzan egindako lanak bilatzeko, edo bilatu banaka, izen bakarra hautatuta. Baliabideari buruzko informazio gehiago ikusteko, sakatu GURI BURUZ. Garrantziren arabera eta eduki osoa edo zati bat atzitzeko sarrera librearen (doakoaren) arabera hautatu dira baliabideak.</message>
-
+	<message key="metadata.pkp.peerReviewed">Adituek ebaluatutako artikulua</message>
 
 	<!--
 	 *
@@ -929,7 +881,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	 *
 	-->
 	<!-- Default settings for payment items. -->
-	<message key="article.article">Artikulua</message>
 	<message key="user.manageMySubscriptions">Kudeatu nire harpidetzak</message>
 	<message key="subscriptionTypes.currency">Moneta:</message>
 	<message key="subscriptionTypes.year">urtea</message>
@@ -1006,7 +957,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="payment.subscription.purchase">Erosi harpidetza</message>
 	<message key="installer.installApplication">Instalatu Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Bertsio-berritu Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$title}", aurkeztu da.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$title}" artikuluan.</message>
 	<message key="notification.type.galleyModified">Galerada bat aldatu da "{$title}" artikuluan.</message>

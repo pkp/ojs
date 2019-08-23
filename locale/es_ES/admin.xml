@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -14,9 +14,7 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="admin.hostedJournals">Revistas alojadas</message>
 	<message key="admin.settings.journalRedirect">Redirigir revista</message>
-	<message key="admin.settings.options">Opciones</message>
 	<message key="admin.settings.journalRedirectInstructions">Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo.</message>
-	<message key="admin.settings.noJournalRedirect">No redirigir</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Su instalación de OJS está configurada para registrar más de una métrica de uso. Las estadísticas de uso se mostrarán en varios contextos. En algunos casos se debe utilizar una sola estadística de uso, p. ej. para mostrar una lista ordenada de los artículos más consultados o para clasificar los resultados de búsqueda. Seleccione una de las métricas configuradas como predeterminada.
 	</message>
@@ -47,7 +45,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, y debe empezar y terminar con un carácter alfanumérico.</message>
 	<message key="admin.contexts.form.pathExists">La ruta seleccionada ya está siendo utilizada por otra revista.</message>
 	<message key="admin.journals.enableJournalInstructions">Habilitar esta revista para que aparezca de forma pública en el sitio</message>
-	<message key="admin.journals.journalDescription">Descripción de la revista</message>
+	<message key="admin.contexts.contextDescription">Descripción de la revista</message>
 	<message key="admin.journal.pathImportInstructions">Ruta actual de la revista o ruta que se desea crear (p. ej. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importar suscripciones</message>
 	<message key="admin.journals.transcode">Transcodificar metadatos de artículos de ISO8859-1</message>
@@ -62,20 +60,6 @@
 	<message key="admin.mergeUsers.confirm">¿Está seguro/a de que desea fusionar la cuenta/s seleccionada {$oldAccountCount} con la cuenta con el nombre de usuario/a "{$newUsername}"? Las cuentas seleccionadas {$oldAccountCount} dejarán de existir. Esta acción no es reversible.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Usuarios/as no registrados.</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Categorías</message>
-	<message key="admin.categories.enable.description">El administrador/a del sitio puede definir un conjunto de categorías para organizar grandes conjuntos de revistas. Los gestores/as de revista pueden seleccionar varias de estas categorías para cada revista, y los lectores/as podrán examinar las colecciones de revistas por categorías.</message>
-	<message key="admin.categories.disableCategories">No organizar las revistas por categorías.</message>
-	<message key="admin.categories.enableCategories">Permitir a los gestores/as de revista organizar las revistas por categorías.</message>
-	<message key="admin.categories.editTitle">Editar categoría</message>
-	<message key="admin.categories.createTitle">Crear categoría</message>
-	<message key="admin.categories.create">Crear categoría nueva</message>
-	<message key="admin.categories.noneCreated">No se han creado categorías.</message>
-	<message key="admin.categories.confirmDelete">¿Está seguro/a de que desea eliminar la categoría?</message>
-	<message key="admin.categories.name">Nombre</message>
-	<message key="admin.categories.nameRequired">Se requiere un nombre para la categoría.</message>
-
-
 	<message key="admin.languages.confirmDisable">¿Está seguro de que desea desactivar esta configuración regional? Esto puede afectar a las revistas alojadas que actualmente usan esta configuración regional.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descarga de paquetes de lenguaje desde el servidor web de Public Knowledge Project no está disponible en este momento porque:</p>
 	<ul>
@@ -84,7 +68,6 @@
 	</ul>
 <p>Los paquetes de lenguaje se pueden descargar manualmente desde la página web de PKP <a href="https://pkp.sfu.ca"></a>.</p>]]></message>
 	<message key="admin.contexts.form.titleRequired">Se necesita un título.</message>
-	<message key="admin.presses.createInstructions">Usted será registrado automáticamente como administrador de esta revista. Tras la creación de la nueva revista será redireccionado al asistente de instalación para completar la configuración inicial de la revista.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatorio de caducidad de la suscripción</message>
 	<message key="admin.scheduledTask.openAccessNotification">Notificación de acceso abierto</message>
 	<message key="admin.scheduledTask.reviewReminder">Recordatorio de revisión</message>

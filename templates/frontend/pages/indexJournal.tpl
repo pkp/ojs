@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/indexJournal.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Display the index page for a journal
@@ -22,15 +22,21 @@
 
 	{call_hook name="Templates::Index::journal"}
 
-	{if $homepageImage}
-		<div class="homepage_image">
-			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
+	{if !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
+		<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
+	{/if}
+
+	{* Journal Description *}
+	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
+		<div id="homepageAbout" class="homepage_about">
+			<h2>{translate key="about.aboutContext"}</h2>
+			{$currentContext->getLocalizedData('description')}
 		</div>
 	{/if}
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
-		<div class="cmp_announcements highlight_first">
+		<div id="homepageAnnouncements" class="cmp_announcements highlight_first">
 			<h2>
 				{translate key="announcement.announcements"}
 			</h2>
@@ -60,7 +66,7 @@
 
 	{* Latest issue *}
 	{if $issue}
-		<div class="current_issue">
+		<div id="homepageIssue" class="current_issue">
 			<h2>
 				{translate key="journal.currentIssue"}
 			</h2>

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/subscriptions/SubscriptionsGridHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionsGridHandler
@@ -98,8 +98,8 @@ abstract class SubscriptionsGridHandler extends GridHandler {
 	function renderFilter($request, $filterData = array()) {
 		$context = $request->getContext();
 
-		// Import PKPUserDAO to define the USER_FIELD_* constants.
-		import('lib.pkp.classes.user.PKPUserDAO');
+		// Import UserDAO to define the USER_FIELD_* constants.
+		import('lib.pkp.classes.user.UserDAO');
 		$fieldOptions = array(
 			IDENTITY_SETTING_GIVENNAME => 'user.givenName',
 			IDENTITY_SETTING_FAMILYNAME => 'user.familyName',

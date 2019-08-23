@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
@@ -20,7 +20,7 @@
 	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Sie finden Ihren API-Key auf Ihrer DOAJ-Nutzerseite.</message>
 	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS wird Artikel automatisch an DOAJ abliefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach allen unregistrierten Artikeln suchen.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Die DOAJ-Test-API (Testumgebung) für die Registrierung nutzen. Bitte vergessen Sie nicht, diese Option für den Produktivbetrieb wieder abzuwählen.</message>
-	  
+
 	<message key="plugins.importexport.doaj.senderTask.name">DOAJ automatic registration task</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">Ablieferung war nicht erfolgreich! Die DOAJ-API hat einen Fehler zurückgemeldet: '{$param}'.</message>
 	
