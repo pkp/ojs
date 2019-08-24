@@ -74,7 +74,7 @@
 	<message key="navigation.infoForAuthors.long">Информация для авторов</message>
 	<message key="navigation.infoForLibrarians.long">Информация для библиотек</message>
 	<message key="navigation.skip.about">Сразу перейти к информации о журнале</message>
-	<message key="navigation.skip.issue">Сразу перети к текущему выпуску</message>
+	<message key="navigation.skip.issue">Сразу перейти к текущему выпуску</message>
 
 	<!-- Очереди статей -->
 	<message key="common.queue.long.submissionsUnassigned">Не назначенные</message>
@@ -840,12 +840,15 @@
 	<message key="payment.authorFees">Платежи авторов</message>
 	<message key="payment.type.submission">Плата за отправку</message>
 	<message key="payment.type.publication">Плата за публикацию</message>
+	<message key="payment.type.publication.required">Необходимо внести плату за публикацию.</message>
 	<message key="payment.type.fastTrack">Плата за ускоренное рассмотрение</message>
 	<message key="payment.type.membership">Плата за индивидуальное членство</message>
 	<message key="payment.type.purchaseArticle">Плата за покупку статьи</message>
 	<message key="payment.type.purchaseIssue">Плата за покупку номера</message>
 	<message key="payment.type.subscription">Плата за подписку</message>
 	<message key="payment.type.donation">Пожертвования</message>
+	<message key="payment.requestPublicationFee">Запросить плату за публикацию ({$feeAmount})</message>
+	<message key="payment.notFound">Платёж был запрошен, но срок оплаты прошёл. Свяжитесь с управляющим журнала для получения подробной информации.</message>
 
 	<message key="payment.donation.makeDonation">Сделать пожертвование</message>
 
