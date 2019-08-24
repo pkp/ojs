@@ -27,4 +27,9 @@
 	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: дополняющая друг друга пара с заголовками антиквой и основным текстом, набранным гротеском.</message>
 	<message key="plugins.themes.default.option.colour.label">Цвет</message>
 	<message key="plugins.themes.default.option.colour.description">Выбрать цвет для верхнего колонтитула.</message>
+	<message key="plugins.themes.default.option.showDescriptionInJournalIndex.label">Описание журнала</message>
+	<message key="plugins.themes.default.option.showDescriptionInJournalIndex.option">Показать описание журнала на главной странице.</message>
+	<message key="plugins.themes.default.option.useHomepageImageAsHeader.label">Фоновое изображение верхнего колонтитула</message>
+	<message key="plugins.themes.default.option.useHomepageImageAsHeader.description">После загрузки изображения главной страницы отображать его в качестве фона верхнего колонтитула, а не на обычном месте на главной странице.</message>
+	<message key="plugins.themes.default.option.useHomepageImageAsHeader.option">Показывать изображение главной страницы как фон верхнего колонтитула.</message>
 </locale>

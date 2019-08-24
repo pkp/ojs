@@ -20,5 +20,6 @@
 	<message key="api.contexts.403.notAllowedEdit">У вас нет прав для редактирования этого журнала.</message>
 	<message key="api.contexts.403.notAllowedDelete">У вас нет прав на удаление этого журнала.</message>
 	<message key="api.contexts.404.contextNotFound">Запрошенный вами журнал не найден.</message>
+	<message key="api.emailTemplates.403.notAllowedChangeContext">У вас нет прав на перемещение этого шаблона письма в другой журнал.</message>
 	<message key="api._payments.400.invalidPaymentMethod">Выбранный вами метод оплаты не поддерживается.</message>
 </locale>
