@@ -116,7 +116,7 @@ class MetricsDAO extends PKPMetricsDAO {
 
 		$params = $where = $whereMinimum = [];
 		if($dateStart || $dateEnd) {
-			$where[] = 'ed.date_decided ' . ($dateStart && $dateEnd ? 'BETWEEN ? AND ?' : ($dateStart ? '>= ?' : '<= ?'));
+			$where[] = 's.date_submitted ' . ($dateStart && $dateEnd ? 'BETWEEN ? AND ?' : ($dateStart ? '>= ?' : '<= ?'));
 			$dateStart && $params[] = $dateStart;
 			$dateEnd && $params[] = $dateEnd;
 		}
@@ -229,8 +229,8 @@ class MetricsDAO extends PKPMetricsDAO {
 			) AS statistics
 			INNER JOIN (
 				SELECT
-					YEAR(COALESCE(?, CURRENT_TIMESTAMP))
-					- YEAR(
+					EXTRACT(YEAR FROM COALESCE(?, CURRENT_TIMESTAMP))
+					- EXTRACT(YEAR FROM
 						COALESCE(
 							?,
 							(
@@ -290,7 +290,6 @@ class MetricsDAO extends PKPMetricsDAO {
 
 					GROUP BY uug.user_id, ug.role_id
 				) roles
-				GROUP BY roles.role_id
 
 				UNION ALL
 
@@ -307,8 +306,8 @@ class MetricsDAO extends PKPMetricsDAO {
 			) AS statistics
 			INNER JOIN (
 				SELECT
-					YEAR(COALESCE(?, CURRENT_TIMESTAMP))
-					- YEAR(
+					EXTRACT(YEAR FROM COALESCE(?, CURRENT_TIMESTAMP))
+					- EXTRACT(YEAR FROM
 						COALESCE(
 							?,
 							(
