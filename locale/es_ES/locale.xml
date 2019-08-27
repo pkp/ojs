@@ -669,6 +669,7 @@
 	<message key="about.submissions">Envíos</message>
 	<message key="about.onlineSubmissions.login">Ir a Iniciar sesión</message>
 	<message key="about.onlineSubmissions.registrationRequired">El registro y el inicio de sesión son necesarios para enviar elementos en línea y para comprobar el estado de los envíos recientes. {$login} a una cuenta existente o {$register} una nueva cuenta.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Realizar un nuevo envío a la sección <a href="{$url}">{$name}</a>.]]></message>
 	<message key="about.authorGuidelines">Directrices para autores/as</message>
 	<message key="about.submissionPreparationChecklist">Lista de comprobación para la preparación de envíos</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte del proceso de envío, los autores/as están obligados a comprobar que su envío cumpla todos los elementos que se muestran a continuación. Se devolverán a los autores/as aquellos envíos que no cumplan estas directrices.</message>
