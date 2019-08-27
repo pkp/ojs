@@ -55,7 +55,7 @@
 	<message key="manager.payment.options.waiverPolicy">Politique d'exemption</message>
 	<message key="manager.payment.paymentId">ID du paiement</message>
 	<message key="manager.payment.paymentMethod">Mode de paiement</message>
-	<message key="manager.payment.paymentMethod.description">Vous pouvez configurer n'importe quel des plugiciels de mode de paiement suivants à partir de cet écran.</message>
+	<message key="manager.payment.paymentMethod.description">Vous pouvez configurer n'importe quel des modules de mode de paiement suivants à partir de cet écran.</message>
 	<message key="manager.payment.paymentMethods">Modes de paiement des frais</message>
 	<message key="manager.payment.paymentType">Type de paiement</message>
 	<message key="manager.payment.readerFees">Frais de lecture</message>
@@ -247,7 +247,7 @@
 	<message key="manager.setup.reviewOptions.automatedReminders">Des rappels automatiques par courriel (disponibles dans les Courriels par défaut d'OJS) peuvent être envoyés aux rapporteurs à deux moments précis (à tout moment, le rédacteur peut également envoyer un courriel au rapporteur directement)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Note :</strong> Pour activer ces options, l'administrateur du site doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Une configuration serveur supplémentaire peut être requise afin de prendre en charge cette fonctionnalité (laquelle n'est pas disponible sur tous les serveurs), tel que mentionné dans la documentation d'OJS.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Évaluation à l'aveugle</message>
-	<message key="manager.setup.reviewOptions.numWeeksPerReview">Temps habituellement alloué aux évaluations</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">Délai d'évaluation alloué (semaines)</message>
 	<message key="manager.setup.reviewOptions.onQuality">Les rédacteurs noteront les rapporteurs sur une échelle qualitative de cinq points après chaque évaluation.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Les rapporteurs auront accès au fichier de soumission seulement après avoir accepté de l'évaluer.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Accès pour le rapporteur</message>
@@ -511,8 +511,8 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<message key="plugins.importexport.common.settings">Paramètres</message>
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce plugiciel, veuillez aller à la catégorie "identifiants publics", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce plugiciel n'est pas entièrement configuré.</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">Afin d'utiliser ce module, veuillez aller à la catégorie "identifiants publics", activez et configurez le module DOI et spécifiez un préfixe DOI valide.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Ce module n'est pas entièrement configuré.</message>
 	<message key="plugins.importexport.common.settings.form.password">Mot de passe</message>
 	<message key="plugins.importexport.common.settings.form.password.description">Veuillez noter que le mot de passe sera enregistré en tant que texte brut (il ne sera pas chiffré).</message>
 	<message key="plugins.importexport.common.action.register">Enregistrer</message>
@@ -553,8 +553,8 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="plugins.importexport.common.error.validation">Les objets sélectionnés n'ont pu être convertis.</message>
 	<message key="plugins.importexport.common.invalidXML">XML invalide:</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Le préfixe du DOI est manquant pour la revue qui a le chemin d'accès {$path}.</message>
-	<message key="plugins.importexport.common.missingRequirements">Exigences non satisfaites pour l'utilisation du plugiciel</message>
-	<message key="plugins.importexport.common.error.noDOIContentObjects">Aucune publication n'est sélectionnée pour l'attribution d'un DOI dans le plugiciel  "DOI public identifier", conséquemment il n'aura pas de dépôt ou d'exportation depuis le plugiciel.</message>
+	<message key="plugins.importexport.common.missingRequirements">Exigences non satisfaites pour l'utilisation du module</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Aucune publication n'est sélectionnée pour l'attribution d'un DOI dans le module  "DOI public identifier", conséquemment il n'aura pas de dépôt ou d'exportation depuis le module.</message>
 	<message key="plugins.importexport.common.filter.issue">Numéro</message>
 	<message key="plugins.importexport.common.status.any">Statut</message>
 	<message key="plugins.importexport.common.status.notDeposited">Non déposé</message>
@@ -565,7 +565,7 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="grid.genres.title.short">Éléments</message>
 	<message key="grid.genres.title">Éléments de l'article</message>
 	<message key="grid.genres.description">Ces éléments sont utilisés pour l'attribution de noms de fichiers et sont présentés dans un menu déroulant pour le téléchargement de fichiers. Les genres désignés ## permettent à l'utilisateur d'associer le fichier à l'ensemble de la soumission 99Z ou à un élément particulier par numéro (par exemple, 02).</message>
-	<message key="plugins.importexport.common.settings.DOIPluginSettings">Paramètres du plugiciel DOI</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">Paramètres du module DOI</message>
 	<message key="plugins.importexport.common.export.articles">Articles</message>
 	<message key="plugins.importexport.common.export.issues">Numéros</message>
 	<message key="plugins.importexport.common.export.representations">Épreuves</message>
@@ -617,4 +617,6 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Ce lien ne sera visible que lorsque un utilisateur est loggué.</message>
 	<message key="plugins.importexport.common.validation">Valider le XML avec l'export.</message>
 	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Le fichier {$param} n'est pas lisible.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Ceci est un abonnement illimité, merci de ne pas saisir de date.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Ceci est un abonnement illimité, merci de ne pas saisir de date.</message>
 </locale>
