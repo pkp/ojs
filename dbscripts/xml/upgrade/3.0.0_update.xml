@@ -213,8 +213,12 @@
 		<query driver="mysql">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="mysqli">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="postgres7">UPDATE submission_files SET file_stage=7 FROM articles_migration am WHERE am.editor_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
-		<query>UPDATE submission_files SET file_stage=10 WHERE file_id IN (SELECT file_id FROM submission_galleys)</query><!-- SUBMISSION_FILE_PROOF -->
-		<query>UPDATE submission_files SET file_stage=17 WHERE file_id IN (SELECT style_file_id FROM article_galleys_migration)</query><!-- SUBMISSION_FILE_DEPENDENT -->
+		<query driver="mysql">UPDATE submission_files sf, submission_galleys sg SET sf.file_stage=10 WHERE sg.file_id=sf.file_id</query><!-- SUBMISSION_FILE_PROOF --> 
+		<query driver="mysqli">UPDATE submission_files sf, submission_galleys sg SET sf.file_stage=10 WHERE sg.file_id=sf.file_id</query><!-- SUBMISSION_FILE_PROOF --> 
+		<query driver="postgres7">UPDATE submission_files SET file_stage=10 FROM submission_galleys sg WHERE sg.file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_PROOF -->
+		<query driver="mysql">UPDATE submission_files sf, article_galleys_migration agm SET sf.file_stage=17 WHERE agm.style_file_id=sf.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->
+		<query driver="mysqli">UPDATE submission_files sf, article_galleys_migration agm SET sf.file_stage=17 WHERE agm.style_file_id=sf.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->
+		<query driver="postgres7">UPDATE submission_files SET file_stage=17 FROM article_galleys_migration agm WHERE agm.style_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->
 	</sql>
 	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
