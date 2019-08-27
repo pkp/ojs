@@ -38,7 +38,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	/**
 	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
 	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
+	function getTemplateVarsFromRowColumn($request, $row, $column) {
 		$element = $row->getData();
 		$columnId = $column->getId();
 		assert(is_a($element, 'DataObject') && !empty($columnId));
@@ -51,7 +51,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 				break;
 			default: assert(false);
 		}
-		return parent::getTemplateVarsFromRowColumn($row, $column);
+		return parent::getTemplateVarsFromRowColumn($request, $row, $column);
 	}
 
 	/**

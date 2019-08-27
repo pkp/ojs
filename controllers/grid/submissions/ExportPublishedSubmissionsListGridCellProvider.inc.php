@@ -94,12 +94,9 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	}
 
 	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 *
-	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
+	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
 	 */
-	function getTemplateVarsFromRowColumn($row, $column) {
+	function getTemplateVarsFromRowColumn($request, $row, $column) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
 		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
