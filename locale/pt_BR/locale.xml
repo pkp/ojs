@@ -1115,5 +1115,12 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 	<message key="editor.issues.backIssues">Edições anteriores</message>
 	<message key="editor.issues.futureIssues">Edições futuras</message>
+	<message key="navigation.subscriptions">Assinaturas</message>
 
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} assumiu o processo de edição do artigo {$submissionId}.</message>
+
+	<message key="catalog.sortBy">Ordem dos artigos</message>
+	<message key="catalog.sortBy.categoryDescription">Escolher como ordenar os artigos desta categoria.</message>
+	
 </locale>
