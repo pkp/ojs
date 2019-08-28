@@ -310,9 +310,10 @@ class SubmissionHandler extends APIHandler {
 				case 'offset':
 					$returnParams[$param] = (int) $val;
 					break;
-
+				case 'daysInactive':
+					$returnParams[$param] = (int) $val[0];
+					break;
 				case 'isIncomplete':
-				case 'isInactive':
 				case 'isOverdue':
 					$returnParams[$param] = true;
 					break;
