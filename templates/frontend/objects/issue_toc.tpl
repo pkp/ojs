@@ -79,13 +79,13 @@
 	{* Full-issue galleys *}
 	{if $issueGalleys}
 		<div class="galleys">
-			<h2>
+			<h2 id="issueTocGalleyLabel">
 				{translate key="issue.fullIssue"}
 			</h2>
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}
 					<li>
-						{include file="frontend/objects/galley_link.tpl" parent=$issue purchaseFee=$currentJournal->getData('purchaseIssueFee') purchaseCurrency=$currentJournal->getData('currency')}
+						{include file="frontend/objects/galley_link.tpl" parent=$issue labelledBy="issueTocGalleyLabel" purchaseFee=$currentJournal->getData('purchaseIssueFee') purchaseCurrency=$currentJournal->getData('currency')}
 					</li>
 				{/foreach}
 			</ul>
