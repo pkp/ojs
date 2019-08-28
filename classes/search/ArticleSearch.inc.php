@@ -53,10 +53,10 @@ class ArticleSearch extends SubmissionSearch {
 				$orderBy = 'score';
 			} else {
 				// Retrieve a metrics report for all articles.
-				$column = STATISTICS_DIMENSION_ARTICLE_ID;
+				$column = STATISTICS_DIMENSION_SUBMISSION_ID;
 				$filter = array(
 					STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION),
-					STATISTICS_DIMENSION_ARTICLE_ID => array(array_keys($unorderedResults))
+					STATISTICS_DIMENSION_SUBMISSION_ID => array(array_keys($unorderedResults))
 				);
 				if ($orderBy == 'popularityMonth') {
 					$oneMonthAgo = date('Ymd', strtotime('-1 month'));
