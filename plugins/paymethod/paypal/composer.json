@@ -1,11 +1,12 @@
 {
 	"require": {
 		"symfony/event-dispatcher" : "~2.7",
-		"omnipay/paypal": "~2.0"
+		"omnipay/paypal": "~3.0",
+		"php-http/guzzle6-adapter": "*"
 	},
 	"config": {
 		"platform": {
-			"php": "7.0.0"
+			"php": "7.2.0"
 		}
 	}
 }
