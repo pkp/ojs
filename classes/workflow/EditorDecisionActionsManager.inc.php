@@ -91,8 +91,10 @@ class EditorDecisionActionsManager {
 	 * @param $context Context
 	 * @param $stageId int WORKFLOW_STAGE_ID_...
 	 * @param $makeDecision boolean If the user can make decisions
+	 * @return array describing the decision made in the given stage
 	 */
 	static function getStageDecisions($context, $stageId, $makeDecision = true) {
+		$result = null;
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
 				$result = self::_submissionStageDecisions($stageId, $makeDecision);
