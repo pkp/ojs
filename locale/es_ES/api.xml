@@ -5,12 +5,26 @@
   * locale/es_ES/api.xml
   *
   * Copyright (c) 2014-2019 Simon Fraser University
-  * Copyright (c) 2000-2019 John Willinsky
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the REST API.
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="api.submissions.403.unpublishedIssues">No tiene permiso para ver los números no publicados.</message>
+	<message key="api.400.paramNotSupported">El parámetro {$param} no está soportado.</message>
+	<message key="api.403.unauthorized">No tiene autorización para acceder al recurso solicitado.</message>
+	<message key="api.404.resourceNotFound">El recurso solicitado no fue encontrado.</message>
+	<message key="api.404.endpointNotFound">La URL solicitada no fue reconocida.</message>
+	<message key="api.submissions.403.csrfTokenFailure">Su solicitud fue rechazada. Esto puede deberse a que su sesión ha exportado. Pruebe recargar la página e intenrtar nuevamente.</message>
+	<message key="api.submissions.403.requestedOthersUnpublishedSubmissions">Solo puede ver envíos sin publicar a los que usted ha sido asignado.</message>
+	<message key="api.submissions.403.deleteSubmissionOutOfContext">No puede eliminar un envío que no está asignado a este contexto.</message>
+	<message key="api.submissions.403.unauthorizedDeleteSubmission">No tiene permisos para eliminar este envío.</message>
+	<message key="api.submissions.404.resourceNotFound">El recurso solicitado no fue encontrado.</message>
+	<message key="api.submissions.400.missingRequired">Su solicitud no pudo ser completada ya que le falta información requerida.</message>
+	<message key="api.submissions.400.invalidIssueIdentifiers">El volumen, número o año requerido no es válido.</message>
+	<message key="api.submissions.unknownError">Un error inesperado ha ocurrido. Por favor recargue la página e intente nuevamente.</message>
+	<message key="api.stats.400.wrongDateFormat">Su solicitud no fue válida. La fecha debe tener el formato YYYY-MM-DD.</message>
+	<message key="api.stats.400.wrongDateRange">Su solicitud no fue válida. La fecha de inicio no puede ser posterior a la fecha de finalización.</message>
+	<message key="api.stats.400.wrongTimeSegmentDaily">Su solicitud no fue válida. El segmento de tiempo "diario" sólo puede utilizarse junto a un rango de fechas (fecha de inicio y fecha de finalización) dentro de los últimos 90 días.</message>
 </locale>
