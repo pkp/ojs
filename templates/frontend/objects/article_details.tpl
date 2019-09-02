@@ -196,9 +196,11 @@
 					</h3>
 					<div class="value">
 						{if $parsedCitations->getCount()}
+							<ul class="references">
 							{iterate from=parsedCitations item=parsedCitation}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+								<li>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</li>
 							{/iterate}
+							</ul>
 						{elseif $article->getCitations()}
 							{$article->getCitations()|nl2br}
 						{/if}
