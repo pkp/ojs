@@ -40,7 +40,7 @@
 	<message key="plugins.generic.externalFeed.manager.noneCreated">No hay fuentes RSS externas</message>
 	<message key="plugins.generic.externalFeed.manager.create">Crear nueva fuente RSS externa</message>
 	<message key="plugins.generic.externalFeed.manager.edit">Editar fuente RSS externa</message>
-	<message key="plugins.generic.externalFeed.manager.confirmDelete">¿Está seguro de querer borrar permanentemente este feed RSS?</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">¿Está seguro de querer borrar permanentemente esta fuente RSS?</message>
 
 	<!-- External Feed Settings -->
 	<message key="plugins.generic.externalFeed.settings">Settings</message>
