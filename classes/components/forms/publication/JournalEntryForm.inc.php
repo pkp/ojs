@@ -108,7 +108,7 @@ class JournalEntryForm extends FormComponent {
 			->addField(new FieldOptions('categoryIds', [
 				'label' => __('submission.submit.placement.categories'),
 				'value' => (array) $publication->getData('categoryIds'),
-        'options' => $categoryOptions,
+				'options' => $categoryOptions,
 			]))
 			->addField(new FieldUploadImage('coverImage', [
 				'label' => __('editor.article.coverImage'),

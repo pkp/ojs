@@ -67,7 +67,7 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		$this->waitForElementPresent($selector = '//div[@id="publication"]//button[contains(text(),"Schedule For Publication")]');
 		$this->click($selector);
 		$this->waitForTextPresent('All publication requirements have been met. Are you sure you want to publish this?');
-		$this->click('//div[@class="pkpWorflow__publishModal"]//button[contains(text(),"Publish")]');
+		$this->click('//div[@class="pkpWorkflow__publishModal"]//button[contains(text(),"Publish")]');
 	}
 
 	/**

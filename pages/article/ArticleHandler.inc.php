@@ -72,6 +72,10 @@ class ArticleHandler extends Handler {
 			$submissionId = $urlPath;
 		}
 
+		if (!$submissionId) {
+			$request->getDispatcher()->handle404();
+		}
+
 		$submission = Services::get('submission')->get($submissionId);
 
 		if (!$submission) {

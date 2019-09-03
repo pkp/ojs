@@ -26,20 +26,20 @@ class FieldSelectIssue extends FieldSelect {
 	 */
 	public function getConfig() {
 		$config = parent::getConfig();
-    $config['publicationStatus'] = $this->publicationStatus;
+		$config['publicationStatus'] = $this->publicationStatus;
 
-    $issueUrlPlaceholder = \Application::get()->getRequest()->getDispatcher()->url(
-      \Application::get()->getRequest(),
-      ROUTE_PAGE,
-      null,
-      'issue',
-      'view',
-      '__issueId__'
-    );
+		$issueUrlPlaceholder = \Application::get()->getRequest()->getDispatcher()->url(
+			\Application::get()->getRequest(),
+			ROUTE_PAGE,
+			null,
+			'issue',
+			'view',
+			'__issueId__'
+		);
 
-    $config['publishedNoticeBase'] = __('publication.publishedIn', ['issueUrl' => $issueUrlPlaceholder]);
-    $config['scheduledNoticeBase'] = __('publication.scheduledIn', ['issueUrl' => $issueUrlPlaceholder]);
-    $config['unscheduleLabel'] = __('publication.unschedule');
+		$config['publishedNoticeBase'] = __('publication.publishedIn', ['issueUrl' => $issueUrlPlaceholder]);
+		$config['scheduledNoticeBase'] = __('publication.scheduledIn', ['issueUrl' => $issueUrlPlaceholder]);
+		$config['unscheduleLabel'] = __('publication.unschedule');
 
 		return $config;
 	}

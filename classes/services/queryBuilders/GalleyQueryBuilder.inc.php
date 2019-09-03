@@ -52,8 +52,8 @@ class GalleyQueryBuilder extends \PKP\Services\QueryBuilders\BaseQueryBuilder {
 	 * @return object Query object
 	 */
 	public function get() {
-    $this->columns = ['*'];
-    $q = Capsule::table('publication_galleys as g');
+		$this->columns = ['*'];
+		$q = Capsule::table('publication_galleys as g');
 
 		if (!empty($this->publicationIds)) {
 			$q->whereIn('g.publication_id', $this->publicationIds);

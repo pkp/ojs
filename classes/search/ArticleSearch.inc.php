@@ -74,7 +74,6 @@ class ArticleSearch extends SubmissionSearch {
 			// Exclude unwanted IDs.
 			if (in_array($submissionId, $exclude)) continue;
 
-
 			switch ($orderBy) {
 				case 'authors':
 					$submission = $submissionDao->getById($submissionId);

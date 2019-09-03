@@ -296,6 +296,8 @@ class IssueGridHandler extends GridHandler {
 		$isBackIssue = $issue->getPublished() > 0 ? true: false;
 
 		// remove all published submissions and return original articles to editing queue
+		import('classes.article.ArticleTombstoneManager');
+		$articleTombstoneManager = new ArticleTombstoneManager();
 		$submissions = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'count' => 5000, // large upper-limit
@@ -304,7 +306,7 @@ class IssueGridHandler extends GridHandler {
 		foreach ($submissions as $submission) {
 			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
 			if ($isBackIssue) {
-				$articleTombstoneManager->insertArticleTombstone($article, $journal);
+				$articleTombstoneManager->insertArticleTombstone($submission, $journal);
 			}
 			$publications = (array) $submission->getData('publications');
 			foreach ($publications as $publication) {
