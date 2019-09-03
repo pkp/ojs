@@ -189,15 +189,15 @@
 			{/if}
 
 			{* References *}
-			{if $citations || $article->getCurrentPublication()->getData('citationsRaw')}
+			{if $parsedCitations || $article->getCurrentPublication()->getData('citationsRaw')}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
 					<div class="value">
-						{if $citations}
-							{foreach from=$citations item="citation"}
-								<p>{$citation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$citation}</p>
+						{if $parsedCitations}
+							{foreach from=$parsedCitations item="parsedCitation"}
+								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
 							{/foreach}
 						{else}
 							{$article->getCurrentPublication()->getData('citationsRaw')|nl2br}

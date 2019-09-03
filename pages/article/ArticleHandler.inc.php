@@ -179,7 +179,7 @@ class ArticleHandler extends Handler {
 		if ($requestedPublication->getData('citationsRaw')) {
 			$parsedCitations = DAORegistry::getDAO('CitationDAO')->getByPublicationId($requestedPublication->getId());
 			$templateMgr->assign([
-				'citations' => $parsedCitations->toArray(),
+				'parsedCitations' => $parsedCitations->toArray(),
 			]);
 		}
 
@@ -193,7 +193,6 @@ class ArticleHandler extends Handler {
 			'copyrightHolder' => $requestedPublication->getData('copyrightHolder'),
 			'copyrightYear' => $requestedPublication->getData('copyrightYear'),
 			'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
-			'parsedCitations' => $parsedCitations ?? [],
 			// @TODO
 			// 'keywords' => ...,
 		]);
