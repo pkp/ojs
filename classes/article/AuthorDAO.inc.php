@@ -34,6 +34,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	 */
 	function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
 		$params = $this->getFetchParameters();
+		$params[] = 'issueId';
 		if (isset($journalId)) $params[] = $journalId;
 
 		$supportedLocales = array();
@@ -104,7 +105,7 @@ class AuthorDAO extends PKPAuthorDAO {
 					LEFT JOIN publication_settings ppss ON (ppss.publication_id = pp.publication_id)
 					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.current_publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
 					JOIN journals j ON (ss.context_id = j.journal_id)
-					JOIN issues i ON (ppss.setting_name="issueId" AND ppss.setting_value = i.issue_id AND i.published = 1)
+					JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = i.issue_id AND i.published = 1)
 					' . $sqlJoinAuthorSettings . '
 					WHERE j.enabled = 1 AND
 					' . (isset($journalId) ? 'j.journal_id = ?' : '')

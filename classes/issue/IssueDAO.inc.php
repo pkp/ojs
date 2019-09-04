@@ -533,7 +533,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return Issue object
 	 */
 	function getBySubmissionId($articleId, $journalId = null) {
-		$params = array((int) $articleId);
+		$params = ['issueId', (int) $articleId];
 		if ($journalId) $params[] = (int) $journalId;
 
 		$result = $this->retrieve(
@@ -542,7 +542,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				submissions a
 			LEFT JOIN publications p ON (p.publication_id = a.current_publication_id)
 			LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
-			WHERE	ps.setting_name="issueId" AND ps.setting_value = i.issue_id AND
+			WHERE	ps.setting_name = ? AND ps.setting_value = i.issue_id AND
 				a.submission_id = ? AND
 				a.context_id = i.journal_id' .
 				($journalId?' AND i.journal_id = ?':''),
@@ -658,8 +658,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 				FROM submissions s
 				LEFT JOIN publications p ON (p.publication_id = s.current_publication_id)
 				LEFT JOIN publication_settings ps ON (ps.publication_id = p.publication_id)
-				WHERE ps.setting_name="issueId" AND ps.setting_value = ?',
-			(int) $issueId
+				WHERE ps.setting_name = ? AND ps.setting_value = ?',
+			['issueId', (int) $issueId]
 		);
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 		$result->Close();

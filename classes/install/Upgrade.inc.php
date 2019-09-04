@@ -2943,7 +2943,7 @@ class Upgrade extends Installer {
 	function createLicenseTerms() {
 		$contextDao = Application::getContextDao();
 
-		$result = $contextDao->retrieve('SELECT * from ' . $contextDao->settingsTableName . ' WHERE setting_name="copyrightNotice"');
+		$result = $contextDao->retrieve('SELECT * from ' . $contextDao->settingsTableName . " WHERE setting_name='copyrightNotice'");
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$contextDao->update('

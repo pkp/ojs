@@ -481,6 +481,7 @@ class IssueGridHandler extends GridHandler {
 
 		if (!$wasPublished) {
 			// Publish all related publications
+			import('classes.submission.Submission');
 			$submissions = Services::get('submission')->getMany([
 				'contextId' => $issue->getJournalId(),
 				'issueIds' => $issue->getId(),
@@ -547,6 +548,7 @@ class IssueGridHandler extends GridHandler {
 		$issueDao->updateObject($issue);
 
 		// insert article tombstones for all articles
+		import('classes.submission.Submission');
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$submissions = Services::get('submission')->getMany([

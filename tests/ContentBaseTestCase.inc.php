@@ -63,9 +63,10 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 		$this->select('id=journalEntry-issueId-control', 'value=' . $this->escapeJS($issueTitle));
 		$this->click('//div[@id="issue"]//button[contains(text(),"Save")]');
 		$this->waitForTextPresent('The journal entry details have been updated.');
-		sleep(1);
+		sleep(8);
 		$this->waitForElementPresent($selector = '//div[@id="publication"]//button[contains(text(),"Schedule For Publication")]');
 		$this->click($selector);
+		sleep(2);
 		$this->waitForTextPresent('All publication requirements have been met. Are you sure you want to publish this?');
 		$this->click('//div[@class="pkpWorkflow__publishModal"]//button[contains(text(),"Publish")]');
 	}
