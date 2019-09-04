@@ -17,7 +17,7 @@
 	
 	<message key="plugins.importexport.pubmed.export">Exportar datos</message>
 	<message key="plugins.importexport.pubmed.export.issues">Exportar números</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Seleccione unnNúmero para exportar.</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Seleccione un número para exportar.</message>
 	<message key="plugins.importexport.pubmed.export.articles">Exportar artículos</message>
 	<message key="plugins.importexport.pubmed.export.selectArticle">Seleccione artículos para exportar.</message>
 	
