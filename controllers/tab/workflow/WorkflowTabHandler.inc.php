@@ -39,7 +39,7 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 							'publicationMetadata', null,
 							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
 						),
-						__('submission.issueEntry.publicationMetadata')
+						__('submission.publication')
 					),
 					__('editor.article.schedulePublication')
 				);
@@ -60,7 +60,6 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 				NOTIFICATION_TYPE_VISIT_CATALOG => array(ASSOC_TYPE_SUBMISSION, $submissionId),
 				NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => array(ASSOC_TYPE_SUBMISSION, $submissionId),
 				NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => array(ASSOC_TYPE_SUBMISSION, $submissionId),
-				NOTIFICATION_TYPE_PUBLICATION_SCHEDULED => array(ASSOC_TYPE_SUBMISSION, $submissionId)
 			),
 			NOTIFICATION_LEVEL_TRIVIAL => array()
 		);

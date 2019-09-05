@@ -48,7 +48,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	protected function getAffectedTables() {
 		return array(
 			'journal_settings', 'issues', 'issue_settings',
-			'published_submissions', 'submissions', 'submission_settings',
+			'submissions', 'submission_settings',
 			'submission_galleys', 'submission_galley_settings',
 			'plugin_settings'
 		);

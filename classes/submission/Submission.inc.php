@@ -7,7 +7,7 @@
  */
 
 /**
- * @file classes/article/Submission.inc.php
+ * @file classes/submission/Submission.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2003-2019 John Willinsky
@@ -40,8 +40,7 @@ class Submission extends PKPSubmission {
 	 * @return string|null
 	 */
 	function _getContextLicenseFieldValue($locale, $field) {
-		$contextDao = Application::getContextDAO();
-		$context = $contextDao->getById($this->getContextId());
+		$context = Services::get('context')->get($this->getData('contextId'));
 		$fieldValue = null; // Scrutinizer
 		switch ($field) {
 			case PERMISSIONS_FIELD_LICENSE_URL:
@@ -50,7 +49,7 @@ class Submission extends PKPSubmission {
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
 				switch($context->getData('copyrightHolderType')) {
 					case 'author':
-						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString(false));
+						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString());
 						break;
 					case 'context':
 					case null:
@@ -66,16 +65,15 @@ class Submission extends PKPSubmission {
 				$fieldValue = date('Y');
 
 				// Override based on context settings
-				$publishedSubmissionDao =& DAORegistry::getDAO('PublishedSubmissionDAO');
-				$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($this->getId());
-				if ($publishedSubmission) {
+				$publication = $this->getCurrentPublication();
+				if ($publication) {
 					switch($context->getData('copyrightYearBasis')) {
 						case 'submission':
 							// override to the submission's year if published as you go
-							$fieldValue = date('Y', strtotime($publishedSubmission->getDatePublished()));
+							$fieldValue = date('Y', strtotime($publication->getData('datePublished')));
 							break;
 						case 'issue':
-							if ($publishedSubmission->getIssueId()) {
+							if ($publication->getData('issueId')) {
 								// override to the issue's year if published as issue-based
 								$issueDao =& DAORegistry::getDAO('IssueDAO');
 								$issue = $issueDao->getBySubmissionId($this->getId());
@@ -98,46 +96,30 @@ class Submission extends PKPSubmission {
 	}
 
 	/**
-	 * Return the "best" article ID -- If a public article ID is set,
-	 * use it; otherwise use the internal article Id.
+	 * @see PKPSubmission::getBestId()
+	 * @deprecated 3.2.0.0
 	 * @return string
 	 */
 	function getBestArticleId() {
-		$publicArticleId = $this->getStoredPubId('publisher-id');
-		if (!empty($publicArticleId)) return $publicArticleId;
-		return $this->getId();
+		return parent::getBestId();
 	}
 
 	/**
 	 * Get ID of journal.
+	 * @deprecated 3.2.0.0
 	 * @return int
 	 */
 	function getJournalId() {
-		return $this->getData('journalId');
+		return $this->getData('contextId');
 	}
 
 	/**
 	 * Set ID of journal.
+	 * @deprecated 3.2.0.0
 	 * @param $journalId int
 	 */
 	function setJournalId($journalId) {
-		return $this->setData('journalId', $journalId);
-	}
-
-	/**
-	 * Get the context ID.
-	 * @return int
-	 */
-	function getContextId() {
-		return $this->getJournalId();
-	}
-
-	/**
-	 * Set the context ID.
-	 * @param $contextId int
-	 */
-	function setContextId($contextId) {
-		return $this->setJournalId($contextId);
+		return $this->setData('contextId', $journalId);
 	}
 
 	/**
@@ -145,7 +127,11 @@ class Submission extends PKPSubmission {
 	 * @return int
 	 */
 	function getSectionId() {
-		return $this->getData('sectionId');
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
+			return 0;
+		}
+		return $publication->getData('sectionId');
 	}
 
 	/**
@@ -153,7 +139,10 @@ class Submission extends PKPSubmission {
 	 * @param $sectionId int
 	 */
 	function setSectionId($sectionId) {
-		return $this->setData('sectionId', $sectionId);
+		$publication = $this->getCurrentPublication();
+		if ($publication) {
+			$publication->setData('sectionId', $sectionId);
+		}
 	}
 
 	/**
@@ -281,5 +270,55 @@ class Submission extends PKPSubmission {
 		}
 
 		return $urls;
+	}
+
+	/**
+	 * Get the galleys for an article.
+	 * @return array ArticleGalley
+	 * @deprecated 3.2.0.0
+	 */
+	function getGalleys() {
+		$galleys = $this->getData('galleys');
+		if (is_null($galleys)) {
+			$this->setData('galleys', Application::get()->getRepresentationDAO()->getByPublicationId($this->getCurrentPublication()->getId(), $this->getData('contextId'))->toArray());
+			return $this->getData('galleys');
+		}
+		return $galleys;
+	}
+
+	/**
+	 * Get the localized galleys for an article.
+	 * @return array ArticleGalley
+	 * @deprecated 3.2.0.0
+	 */
+	function getLocalizedGalleys() {
+		$allGalleys = $this->getData('galleys');
+		$galleys = array();
+		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $tryLocale) {
+			foreach (array_keys($allGalleys) as $key) {
+				if ($allGalleys[$key]->getLocale() == $tryLocale) {
+					$galleys[] = $allGalleys[$key];
+				}
+			}
+			if (!empty($galleys)) {
+				HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', array(&$galleys));
+				return $galleys;
+			}
+		}
+
+		return $galleys;
+	}
+
+	/**
+	 * Return option selection indicating if author should be hidden in issue ToC.
+	 * @return int AUTHOR_TOC_...
+	 * @deprecated 3.2.0.0
+	 */
+	function getHideAuthor() {
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
+			return 0;
+		}
+		return $publication->getData('hideAuthor');
 	}
 }

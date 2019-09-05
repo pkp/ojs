@@ -70,10 +70,10 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					$journal = $templateMgr->getTemplateVars('currentContext');
 					$issue = $templateMgr->getTemplateVars('issue');
-					$publishedSubmission = $templateMgr->getTemplateVars('article');
+					$submission = $templateMgr->getTemplateVars('article');
 
 					// No published objects, no usage event.
-					if (!$journal && !$issue && !$publishedSubmission) break;
+					if (!$journal && !$issue && !$submission) break;
 
 					if ($journal) {
 						$pubObject = $journal;
@@ -88,8 +88,8 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 						$idParams = array('s' . $issue->getId());
 					}
 
-					if ($publishedSubmission) {
-						$pubObject = $publishedSubmission;
+					if ($submission) {
+						$pubObject = $submission;
 						$assocType = ASSOC_TYPE_SUBMISSION;
 						$canonicalUrlParams = array($pubObject->getId());
 						$idParams = array('m' . $pubObject->getId());
@@ -151,7 +151,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	 * @see PKPUsageEventPlugin::isPubIdObjectType()
 	 */
 	protected function isPubIdObjectType($pubObject) {
-		return is_a($pubObject, 'PublishedSubmission');
+		return is_a($pubObject, 'Submission');
 	}
 
 }

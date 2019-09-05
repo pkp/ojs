@@ -21,7 +21,6 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 	 * @copydoc GridHandler::loadData()
 	 */
 	protected function loadData($request, $filter) {
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$context = $request->getContext();
 		list($search, $column, $issueId, $statusId) = $this->getFilterValues($filter);
 		$title = $author = null;
@@ -34,16 +33,17 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		return $publishedSubmissionDao->getExportable(
-			$context->getId(),
-			$this->_plugin->getPubIdType(),
-			$title,
-			$author,
-			$issueId,
-			$pubIdStatusSettingName,
-			$statusId,
-			$this->getGridRangeInfo($request, $this->getId())
-		);
+		return [];
+		// return $publishedSubmissionDao->getExportable(
+		// 	$context->getId(),
+		// 	$this->_plugin->getPubIdType(),
+		// 	$title,
+		// 	$author,
+		// 	$issueId,
+		// 	$pubIdStatusSettingName,
+		// 	$statusId,
+		// 	$this->getGridRangeInfo($request, $this->getId())
+		// );
 	}
 
 	/**

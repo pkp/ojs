@@ -35,7 +35,7 @@ class SectionsTest extends WebTestCase {
 		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Settings"]'))
 			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[text()="Journal"]'))
 			->perform();
-		$this->waitForElementPresent($selector='link=Sections');
+		$this->waitForElementPresent($selector='//button[contains(text(), "Sections")]');
 		$this->click($selector);
 
 		// Edit Section (default "Articles")

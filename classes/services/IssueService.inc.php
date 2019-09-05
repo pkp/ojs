@@ -110,7 +110,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 			->filterByNumbers($args['numbers'])
 			->filterByYears($args['years']);
 
-		\HookRegistry::call('Issue::getMany::queryBuilder', array($issueListQB, $contextId, $args));
+		\HookRegistry::call('Issue::getMany::queryBuilder', array($issueListQB, $args));
 
 		return $issueListQB;
 	}
@@ -232,11 +232,14 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 					break;
 				case 'articles':
 					$values[$prop] = array();
-					$publishedSubmissionDao = \DAORegistry::getDAO('PublishedSubmissionDAO');
-					$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
-					if (!empty($publishedSubmissions)) {
-						foreach ($publishedSubmissions as $article) {
-							$values[$prop][] = \Services::get('submission')->getSummaryProperties($article, $args);
+					$submissions = Services::get('submission')->getMany([
+						'contextId' => $issue->getJournalId(),
+						'issueIds' => $issue->getId(),
+						'count' => 1000, // large upper limit
+					]);
+					if (!empty($submissions)) {
+						foreach ($submissions as $submission) {
+							$values[$prop][] = \Services::get('submission')->getSummaryProperties($submission, $args);
 						}
 					}
 					break;

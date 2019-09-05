@@ -50,6 +50,8 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->assignParticipant('Proofreader', 'Sabine Kumar');
 
 		// Create a galley
+		$this->click('//button[@id="publication-button"]');
+		$this->click('//button[@id="galleys-button"]');
 		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addGalley-button-]');
 		$this->click($selector);
 		$this->waitForElementPresent('css=[id^=label-]');
@@ -58,8 +60,8 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->uploadWizardFile('PDF');
 
 		// Publish in current issue
-		$this->publish('Vol 1 No 1 (2014)');
-		$this->isInCurrentIssue($title);
+		$this->publish('1');
+		$this->isInIssue($title, 'Vol 1 No 2 (2014)');
 
 		$this->logOut();
 	}

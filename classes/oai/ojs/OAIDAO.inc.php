@@ -22,7 +22,6 @@ class OAIDAO extends PKPOAIDAO {
  	/** Helper DAOs */
  	var $journalDao;
  	var $sectionDao;
-	var $publishedSubmissionDao;
 	var $articleGalleyDao;
 	var $issueDao;
  	var $authorDao;
@@ -39,7 +38,6 @@ class OAIDAO extends PKPOAIDAO {
 		parent::__construct();
 		$this->journalDao = DAORegistry::getDAO('JournalDAO');
 		$this->sectionDao = DAORegistry::getDAO('SectionDAO');
-		$this->publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		$this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
@@ -183,11 +181,11 @@ class OAIDAO extends PKPOAIDAO {
 		$record->sets = array(urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev()));
 
 		if ($isRecord) {
-			$publishedSubmission = $this->publishedSubmissionDao->getBySubmissionId($articleId);
+			$submission = Services::get('submission')->get($articleId);
 			$issue = $this->getIssue($row['issue_id']);
-			$galleys = $this->articleGalleyDao->getBySubmissionId($articleId)->toArray();
+			$galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication())->toArray();
 
-			$record->setData('article', $publishedSubmission);
+			$record->setData('article', $submission);
 			$record->setData('journal', $journal);
 			$record->setData('section', $section);
 			$record->setData('issue', $issue);
@@ -239,7 +237,7 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
 				LEFT JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
-			WHERE pa.is_current_submission_version = 1 AND	i.published = 1 AND j.enabled = 1 AND (jsl.setting_value IS NULL OR jsl.setting_value <> ?) AND a.status <> ?
+			WHERE	i.published = 1 AND j.enabled = 1 AND (jsl.setting_value IS NULL OR jsl.setting_value <> ?) AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '

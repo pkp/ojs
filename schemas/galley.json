@@ -1,0 +1,65 @@
+{
+	"title": "Galley",
+	"description": "A galley representing a published file, such as a PDF or XML file.",
+	"required": [
+		"fileId",
+		"label",
+		"publicationId"
+	],
+	"properties": {
+		"fileId": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"id": {
+			"type": "integer",
+			"apiSummary": true,
+			"readOnly": true
+		},
+		"isApproved": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"locale": {
+			"type": "string",
+			"description": "The primary locale of this galley.",
+			"apiSummary": true,
+			"validation": [
+				"regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
+			]
+		},
+		"label": {
+			"type": "string",
+			"description": "A human-readable label for this galley. For the primary article, it is usually indicates the format like PDF, ePub or full text. For supplementary files it often indicates the content, such as source data or interview transcripts.",
+			"apiSummary": true
+		},
+		"pub-id::publisher-id": {
+			"type": "string",
+			"description": "A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.",
+			"apiSummary": true
+		},
+		"publicationId": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"seq": {
+			"type": "integer",
+			"description": "In what order this galley should appear in lists of galleys for this publication.",
+			"apiSummary": true
+		},
+		"urlRemote": {
+			"type": "string",
+			"description": "An optional URL where the galley can be viewed or downloaded.",
+			"apiSummary": true,
+			"validation": [
+				"url"
+			]
+		},
+		"urlPublished": {
+			"type": "string",
+			"description": "The URL where this galley can be viewed or downloaded.",
+			"apiSummary": true,
+			"readOnly": true
+		}
+	}
+}

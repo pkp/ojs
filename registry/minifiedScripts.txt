@@ -117,8 +117,6 @@ lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js
 js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js
 js/controllers/grid/issues/BackIssueGridHandler.js
 js/controllers/grid/issues/FutureIssueGridHandler.js
-js/controllers/tab/issueEntry/IssueEntryTabHandler.js
-js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js
 
 # Our own plug-in (depends on classes)
 lib/pkp/js/lib/jquery/plugins/jquery.pkp.js

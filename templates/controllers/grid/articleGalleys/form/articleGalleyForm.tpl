@@ -7,7 +7,7 @@
  *
  * Form to add/edit an issue galley.
  *}
-{if $remoteURL}
+{if $urlRemote}
 	{assign var="remoteRepresentation" value=true}
 {else}
 	{assign var="remoteRepresentation" value=false}
@@ -22,7 +22,7 @@
 		);
 	{rdelim});
 </script>
-<form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId representationId=$representationId}">
+<form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">
 	{csrf}
 	{fbvFormArea id="galley"}
 		{fbvFormSection title="submission.layout.galleyLabel" required=true}
@@ -34,7 +34,7 @@
 		{fbvFormSection for="remotelyHostedContent" list=true}
 			{fbvElement type="checkbox" label="submission.layout.galley.remotelyHostedContent" id="remotelyHostedContent"}
 			<div id="remote" style="display:none">
-				{fbvElement type="text" id="remoteURL" label="submission.layout.galley.remoteURL" value=$remoteURL}
+				{fbvElement type="text" id="urlRemote" label="submission.layout.galley.remoteURL" value=$urlRemote}
 			</div>
 		{/fbvFormSection}
 	{/fbvFormArea}

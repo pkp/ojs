@@ -54,11 +54,13 @@ class SettingsHandler extends ManagementHandler {
 
 		$screeningForm = new \APP\components\forms\context\ScreeningForm($contextApiUrl, $locales, $context);
 
-		$settingsData = [
-			'components' => [
-				FORM_SCREENING => $screeningForm->getConfig(),
-			],
-		];
+		// Add forms to the existing settings data
+		$settingsData = $templateMgr->getTemplateVars('settingsData');
+		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
+		$settingsData['components'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+		$settingsData['components'][$archivePnForm->id] = $archivePnForm->getConfig();
+		$settingsData['components']['FORM_SCREENING'] = $screeningForm->getConfig();
+		$templateMgr->assign('settingsData', $settingsData);
 
 		return array_merge_recursive(parent::_setupWorkflowSettingsData($request), $settingsData);
 	}

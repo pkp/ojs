@@ -300,11 +300,6 @@ class SectionDAO extends PKPSectionDAO {
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 		$submissionDao->removeSubmissionsFromSection($sectionId);
 
-		// Delete published submission entries from this section -- they must
-		// be re-published.
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		$publishedSubmissionDao->deletePublishedSubmissionsBySectionId($sectionId);
-
 		if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) return false;
 		$this->update('DELETE FROM section_settings WHERE section_id = ?', (int) $sectionId);
 		$this->update('DELETE FROM sections WHERE section_id = ?', (int) $sectionId);
@@ -356,9 +351,21 @@ class SectionDAO extends PKPSectionDAO {
 	 * @return array
 	 */
 	function getByIssueId($issueId) {
+		$issue = Services::get('issue')->get($issueId);
+		$submissions = Services::get('submission')->getMany([
+			'contextId' => $issue->getJournalId(),
+			'issueIds' => $issueId,
+		]);
+		$sectionIds = array_unique(array_map(function($submissions) {
+			return $submission->getCurrentPublication()->getData('sectionId');
+		}, $submissions));
 		$result = $this->retrieve(
-			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_submissions pa, submissions a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.is_current_submission_version = 1 AND s.section_id = a.section_id AND pa.submission_id = a.submission_id AND pa.issue_id = ? ORDER BY section_seq',
-			array((int) $issueId, (int) $issueId)
+			'SELECT s.*, COALESCE(o.seq, s.seq) AS section_seq
+				FROM sections s
+				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
+				WHERE s.section_id IN (' . substr(str_repeat('?,', count($sectionIds)), 0, -1) . ')
+				ORDER BY section_seq',
+			array_merge([(int) $issueId], $sectionIds)
 		);
 
 		$returner = array();

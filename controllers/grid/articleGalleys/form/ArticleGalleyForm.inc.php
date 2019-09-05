@@ -17,8 +17,11 @@
 import('lib.pkp.classes.form.Form');
 
 class ArticleGalleyForm extends Form {
-	/** @var the article */
+	/** @var Submission */
 	var $_submission = null;
+
+	/** @var Publication */
+	var $_publication = null;
 
 	/** @var ArticleGalley current galley */
 	var $_articleGalley = null;
@@ -26,11 +29,13 @@ class ArticleGalleyForm extends Form {
 	/**
 	 * Constructor.
 	 * @param $submission Submission
+	 * @param $publication Publication
 	 * @param $articleGalley ArticleGalley (optional)
 	 */
-	function __construct($request, $submission, $articleGalley = null) {
+	function __construct($request, $submission, $publication, $articleGalley = null) {
 		parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
 		$this->_submission = $submission;
+		$this->_publication = $publication;
 		$this->_articleGalley = $articleGalley;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
@@ -68,6 +73,7 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign(array(
 			'supportedLocales' => $journal->getSupportedSubmissionLocaleNames(),
 			'submissionId' => $this->_submission->getId(),
+			'publicationId' => $this->_publication->getId(),
 		));
 
 		return parent::fetch($request);
@@ -81,7 +87,7 @@ class ArticleGalleyForm extends Form {
 			$this->_data = array(
 				'label' => $this->_articleGalley->getLabel(),
 				'galleyLocale' => $this->_articleGalley->getLocale(),
-				'remoteURL' => $this->_articleGalley->getRemoteURL(),
+				'urlRemote' => $this->_articleGalley->getData('urlRemote'),
 			);
 		} else {
 			$this->_data = array();
@@ -96,7 +102,7 @@ class ArticleGalleyForm extends Form {
 			array(
 				'label',
 				'galleyLocale',
-				'remoteURL',
+				'urlRemote',
 			)
 		);
 	}
@@ -108,24 +114,23 @@ class ArticleGalleyForm extends Form {
 	function execute() {
 		#import('classes.file.IssueFileManager');
 
-		$journal = Application::get()->getRequest()->getJournal();
 		$articleGalley = $this->_articleGalley;
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
 		if ($articleGalley) {
 			$articleGalley->setLabel($this->getData('label'));
 			$articleGalley->setLocale($this->getData('galleyLocale'));
-			$articleGalley->setRemoteURL($this->getData('remoteURL'));
+			$articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
 			// Update galley in the db
 			$articleGalleyDao->updateObject($articleGalley);
 		} else {
 			// Create a new galley
 			$articleGalley = $articleGalleyDao->newDataObject();
-			$articleGalley->setSubmissionId($this->_submission->getId());
+			$articleGalley->setData('publicationId', $this->_publication->getId());
 			$articleGalley->setLabel($this->getData('label'));
 			$articleGalley->setLocale($this->getData('galleyLocale'));
-			$articleGalley->setRemoteURL($this->getData('remoteURL'));
+			$articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
 			// Insert new galley into the db
 			$articleGalleyDao->insertObject($articleGalley);

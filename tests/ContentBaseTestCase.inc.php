@@ -58,19 +58,27 @@ class ContentBaseTestCase extends PKPContentBaseTestCase {
 	 * Schedule for publication in an issue
 	 */
 	function publish($issueTitle) {
-		$this->waitForElementPresent($selector = '//a[text()="Publish Version"]');
+		$this->click('//button[@id="publication-button"]');
+		$this->click('//button[@id="issue-button"]');
+		$this->select('id=journalEntry-issueId-control', 'value=' . $this->escapeJS($issueTitle));
+		$this->click('//div[@id="issue"]//button[contains(text(),"Save")]');
+		$this->waitForTextPresent('The journal entry details have been updated.');
+		sleep(8);
+		$this->waitForElementPresent($selector = '//div[@id="publication"]//button[contains(text(),"Schedule For Publication")]');
 		$this->click($selector);
-		$this->waitForElementPresent('//select[@id="issueId"]');
-		$this->select('id=issueId', 'label=' . $this->escapeJS($issueTitle));
-		$this->click('//button[text()=\'Save\']');
+		sleep(2);
+		$this->waitForTextPresent('All publication requirements have been met. Are you sure you want to publish this?');
+		$this->click('//div[@class="pkpWorkflow__publishModal"]//button[contains(text(),"Publish")]');
 	}
 
 	/**
-	 * Check if a submission appears in the current issue
+	 * Check if a submission appears in an issue
 	 */
-	function isInCurrentIssue($submissionTitle) {
+	function isInIssue($submissionTitle, $issueTitle) {
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector = '//a[contains(text(), "Current")]');
+		$this->waitForElementPresent($selector = '//a[contains(text(), "Archives")]');
+		$this->click($selector);
+		$this->waitForElementPresent($selector = '//a[contains(text(),' . $this->quoteXpath($issueTitle) . ')]');
 		$this->click($selector);
 		$this->waitForElementPresent('//a[contains(text(),' . $this->quoteXpath($submissionTitle) . ')]');
 	}

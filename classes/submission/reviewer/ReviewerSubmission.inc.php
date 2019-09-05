@@ -14,7 +14,7 @@
  * @brief ReviewerSubmission class.
  */
 
-import('classes.article.Submission');
+import('classes.submission.Submission');
 
 class ReviewerSubmission extends Submission {
 

@@ -39,31 +39,31 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
-		$publishedSubmission = $row->getData();
+		$submission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
+		assert(is_a($submission, 'Submission') && !empty($columnId));
 
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
 			case 'title':
 				$this->_titleColumn = $column;
-				$title = $publishedSubmission->getLocalizedTitle();
+				$title = $submission->getLocalizedTitle();
 				if (empty($title)) $title = __('common.untitled');
-				$authorsInTitle = $publishedSubmission->getShortAuthorString();
+				$authorsInTitle = $submission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
 				import('classes.core.Services');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							Services::get('submission')->getWorkflowUrlByUserRoles($publishedSubmission)
+							Services::get('submission')->getWorkflowUrlByUserRoles($submission)
 						),
 						htmlspecialchars($title)
 					)
 				);
 			case 'issue':
-				$contextId = $publishedSubmission->getContextId();
-				$issueId = $publishedSubmission->getIssueId();
+				$contextId = $submission->getContextId();
+				$issueId = $submission->getIssueId();
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issue = $issueDao->getById($issueId, $contextId);
 				// Link to the issue edit modal
@@ -82,9 +82,9 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 					)
 				);
 			case 'status':
-				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
+				$status = $submission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
-				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
+				$statusActions = $this->_plugin->getStatusActions($submission);
 				if ($status && array_key_exists($status, $statusActions)) {
 					assert(array_key_exists($status, $statusNames));
 					return array($statusActions[$status]);
@@ -100,21 +100,21 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
-		$publishedSubmission = $row->getData();
+		$submission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedSubmission') && !empty($columnId));
+		assert(is_a($submission, 'Submission') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'id':
-				return array('label' => $publishedSubmission->getId());
+				return array('label' => $submission->getId());
 			case 'title':
 				return array('label' => '');
 			case 'issue':
 				return array('label' => '');
 			case 'status':
-				$status = $publishedSubmission->getData($this->_plugin->getDepositStatusSettingName());
+				$status = $submission->getData($this->_plugin->getDepositStatusSettingName());
 				$statusNames = $this->_plugin->getStatusNames();
-				$statusActions = $this->_plugin->getStatusActions($publishedSubmission);
+				$statusActions = $this->_plugin->getStatusActions($submission);
 				if ($status) {
 					if (array_key_exists($status, $statusActions)) {
 						$label = '';

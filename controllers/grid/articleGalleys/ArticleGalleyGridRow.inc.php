@@ -19,6 +19,9 @@ class ArticleGalleyGridRow extends GridRow {
 	/** @var Submission **/
 	var $_submission;
 
+	/** @var Publication **/
+	var $_publication;
+
 	/** @var boolean */
 	var $_isEditable;
 
@@ -27,8 +30,9 @@ class ArticleGalleyGridRow extends GridRow {
 	 * @param $submission Submission
 	 * @param $isEditable boolean
 	 */
-	function __construct($submission, $isEditable) {
+	function __construct($submission, $publication, $isEditable) {
 		$this->_submission = $submission;
+		$this->_publication = $publication;
 		$this->_isEditable = $isEditable;
 
 		parent::__construct();
@@ -102,13 +106,21 @@ class ArticleGalleyGridRow extends GridRow {
 	}
 
 	/**
+	 * Get the publication for this row (already authorized)
+	 * @return Publication
+	 */
+	function getPublication() {
+		return $this->_publication;
+	}
+
+	/**
 	 * Get the base arguments that will identify the data in the grid.
 	 * @return array
 	 */
 	function getRequestArgs() {
 		return array(
 			'submissionId' => $this->getSubmission()->getId(),
-			'submissionVersion' => $this->getSubmission()->getSubmissionVersion(),
+			'publicationId' => $this->getPublication()->getId(),
 		);
 	}
 }
