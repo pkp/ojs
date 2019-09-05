@@ -196,5 +196,6 @@
 		<query>DROP TABLE temp_submission_galleys</query>
 		<query>DROP TABLE temp_submission_galley_settings</query>
 		<query>DROP TABLE temp_published_submissions</query>
+		<query>DROP TABLE temp_citations</query>
 	</sql>
 </data>
