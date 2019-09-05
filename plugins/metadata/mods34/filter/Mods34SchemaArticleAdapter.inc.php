@@ -10,11 +10,11 @@
  * @class Mods34SchemaArticleAdapter
  * @ingroup plugins_metadata_mods34_filter
  * @see Article
- * @see PublishedSubmission
+ * @see Submission
  * @see Mods34Schema
  *
  * @brief Class that inject/extract MODS schema compliant meta-data
- *  into/from an Article or PublishedSubmission object.
+ *  into/from an Article or Submission object.
  */
 
 import('lib.pkp.plugins.metadata.mods34.filter.Mods34SchemaSubmissionAdapter');
@@ -55,7 +55,7 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 
 		// ...
 		// FIXME: Go through MODS schema and see what context-specific
-		// information needs to be added, e.g. from Article, PublishedSubmission
+		// information needs to be added, e.g. from Article, Submission
 		// Issue, Journal, journal settings or site settings.
 
 		return $article;
@@ -73,7 +73,7 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 
 		// ...
 		// FIXME: Go through MODS schema and see what context-specific
-		// information needs to be added, e.g. from Article, PublishedSubmission
+		// information needs to be added, e.g. from Article, Submission
 		// Issue, Journal, journal settings or site settings.
 
 		return $mods34Description;

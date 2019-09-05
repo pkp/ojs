@@ -253,7 +253,7 @@ class OpenAIREPlugin extends GenericPlugin {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = 'openAccess';
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedSubmission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if (is_a($article, 'Submission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
 						$status = 'openAccess';
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = 'embargoedAccess';

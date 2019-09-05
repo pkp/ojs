@@ -1000,7 +1000,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
 	<message key="notification.type.assignProductionUser">Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen.</message>
 	<message key="notification.type.awaitingRepresentations">Warte auf Fahnen.</message>
-	<message key="notification.type.publicationScheduled">Dieser Beitrag wurde zur Publikation vorgesehen.</message>
 
 	<!--
 	 *

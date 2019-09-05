@@ -117,9 +117,9 @@ class SettingsHandler extends ManagementHandler {
 
 		// Add forms to the existing settings data
 		$settingsData = $templateMgr->getTemplateVars('settingsData');
-		$settingsData['forms'][$accessForm->id] = $accessForm->getConfig();
-		$settingsData['forms'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
-		$settingsData['forms'][$archivePnForm->id] = $archivePnForm->getConfig();
+		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
+		$settingsData['components'][$archivingLockssForm->id] = $archivingLockssForm->getConfig();
+		$settingsData['components'][$archivePnForm->id] = $archivePnForm->getConfig();
 		$templateMgr->assign('settingsData', $settingsData);
 
 		// Hook into the settings templates to add the appropriate tabs

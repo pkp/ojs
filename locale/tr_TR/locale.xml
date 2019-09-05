@@ -1000,7 +1000,6 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="notification.type.editorAssignmentTask">Editörün atanması yapılması gereken yeni bir makale gönderildi.</message>
 	<message key="notification.type.assignProductionUser">Katılımcılar listesindeki Atama bağlantısını kullanarak bir kullanıcı oluşturmak için bir kullanıcı atayın.</message>
 	<message key="notification.type.awaitingRepresentations">Baskılar Bekliyor.</message>
-	<message key="notification.type.publicationScheduled">Bu gönderi yayınlanmak üzere planlandı.</message>
 	<message key="user.authorization.noContext">Bağlamda dergi yok!</message>
 	<message key="user.authorization.invalidIssue">Geçersiz sayı talep edildi!</message>
 	<message key="grid.action.createContext">Yeni Bir Dergi Oluştur</message>

@@ -1009,7 +1009,6 @@ L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu 
 	<message key="payment.notFound">Un paiement a été demandé, mais la requête a expiré. Contactez le responsable du journal pour les détails.</message>
 	<message key="log.editor.recommendation">La recommandation  ({$decision}) pour la soumission {$submissionId} a été déposé par {$editorName}.</message>
 	<message key="notification.type.public">Annonces publiques</message>
-	<message key="notification.type.publicationScheduled">Cette soumission a été programmée pour publication.</message>
 	<message key="navigation.subscriptions">Abonnements</message>
 	<message key="log.editor.submissionExpedited">{$editorName} prend en charge le processus éditorial pour la soumission {$submissionId}.</message>
 	<message key="user.reviewerPrompt.optin">Oui, je souhaite que l'on me contacte  pour des demandes d'évaluation des articles soumis à cette revue.</message>

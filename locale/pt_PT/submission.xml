@@ -34,10 +34,7 @@
 	<message key="submission.submit.whatNext.description">A revista foi notificada da sua submissão, e foi-lhe enviada uma confirmação por e-mail para conservar como prova. Assim vez que o Editor tenha analisado a submissão, este entrará em contacto.</message>
 	<message key="grid.action.galleyInIssueEntry">Edição aparece na entrada de números</message>
 	<message key="grid.action.issueEntry">Consultar metadados desta submissão</message>
-	<message key="submission.issueEntry.modalTitle">Metadados Submissão e Publicação</message>
-	<message key="submission.issueEntry.submissionMetadata">Submissão</message>
-	<message key="submission.issueEntry.publicationMetadata">Publicação</message>
-	<message key="submission.issueEntry.confirm">Crie um número de entrada para este artigo com base nos metadados abaixo.</message>
+	<message key="submission.publication">Publicação</message>
 	<message key="submission.event.articleGalleyMadeAvailable">A edição do artigo "{$galleyFormatName}" está disponível.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">A edição do artigo "{$galleyFormatName}" está indisponível.</message>
 	<message key="submission.event.publicIdentifiers">Os identificadores públicos da submissão foram actualizados.</message>

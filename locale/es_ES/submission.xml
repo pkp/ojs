@@ -34,10 +34,7 @@
 	<message key="submission.submit.whatNext.description">La revista ha sido notificada acerca de su envío y se le enviará un correo electrónico de confirmación para sus registros. Cuando el editor haya revisado el envío, se contactará con usted.</message>
 	<message key="grid.action.galleyInIssueEntry">La galerada aparece en la entrada del número</message>
 	<message key="grid.action.issueEntry">Ver los metadatos de este envío</message>
-	<message key="submission.issueEntry.modalTitle">Metadatos de envío y publicación</message>
-	<message key="submission.issueEntry.submissionMetadata">Envío</message>
-	<message key="submission.issueEntry.publicationMetadata">Publicación</message>
-	<message key="submission.issueEntry.confirm">Crear una entrada de número para este artículo basada en los siguientes metadatos.</message>
+	<message key="submission.publication">Publicación</message>
 	<message key="submission.event.articleGalleyMadeAvailable">La galerada del artículo "{$galleyFormatName}" ya está disponible.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">La galerada del artículo "{$galleyFormatName}" ya no está disponible.</message>
 	<message key="submission.event.publicIdentifiers">Identificadores públicos del envío actualizados.</message>

@@ -112,17 +112,14 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$displayItems = $this->_parentPlugin->getSetting($journal->getId(), 'displayItems');
 		$recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 		if ($displayItems == 'recent' && $recentItems > 0) {
-			import('lib.pkp.classes.db.DBResultRange');
-			$rangeInfo = new DBResultRange($recentItems, 1);
-			$publishedSubmissionObjects = $publishedSubmissionDao->getPublishedSubmissionsByJournalId($journal->getId(), $rangeInfo, true);
-			$publishedSubmissions = array();
-			while ($publishedSubmission = $publishedSubmissionObjects->next()) {
-				$publishedSubmissions[]['articles'][] = $publishedSubmission;
+			$submissions = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'count' => $recentItems]);
+			$submissionsInSections = [];
+			foreach ($submissions as $submission) {
+				$submissionsInSections[]['articles'][] = $submission;
 			}
 		} else {
-			$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissionsInSections($issue->getId(), true);
+			$submissionsInSections = Services::get('submission')->getInSections($issue->getId());
 		}
 
 		$versionDao = DAORegistry::getDAO('VersionDAO');
@@ -131,7 +128,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'ojsVersion' => $version->getVersionString(),
-			'publishedSubmissions' => $publishedSubmissions,
+			'publishedSubmissions' => $submissionsInSections,
 			'journal' => $journal,
 			'issue' => $issue,
 			'showToc' => true,

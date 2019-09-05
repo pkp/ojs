@@ -27,12 +27,9 @@
 	<message key="submission.submit.whatNext.description">Pengelola jurnal telah diberitahu tentang naskah yang Anda serahkan, dan sebuah email telah dikirimkan ke alamat Anda sebagai konfirmasi.  Ketika editor telah mereview penyerahan naskah, editor akan menghubungi Anda.</message>
 	<message key="grid.action.galleyInIssueEntry">Galley tampil di terbitan</message>
 	<message key="grid.action.issueEntry">Lihat metadata naskah ini</message>
-	
+
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Metadata Penyerahan dan Publikasi</message>
-	<message key="submission.issueEntry.submissionMetadata">Penyerahan</message>
-	<message key="submission.issueEntry.publicationMetadata">Publikasi</message>
-	<message key="submission.issueEntry.confirm">Buat entri terbitan untuk naskah ini berdasarkan metadata berikut.</message>
+	<message key="submission.publication">Publikasi</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Galley artikel "{$galleyFormatName}" tersedia.</message>

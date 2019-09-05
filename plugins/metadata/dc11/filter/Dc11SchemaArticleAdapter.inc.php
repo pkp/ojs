@@ -14,7 +14,7 @@
  *
  * @brief Abstract base class for meta-data adapters that
  *  injects/extracts Dublin Core schema compliant meta-data into/from
- *  an PublishedSubmission object.
+ *  a Submission object.
  */
 
 
@@ -71,9 +71,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// contains cached entities and avoids extra database access if this
 		// adapter is called from an OAI context.
 		$oaiDao = DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
-		$journal = $oaiDao->getJournal($article->getJournalId());
+		$journal = $oaiDao->getJournal($article->getData('contextId'));
 		$section = $oaiDao->getSection($article->getSectionId());
-		if (is_a($article, 'PublishedSubmission')) { /* @var $article PublishedSubmission */
+		if (is_a($article, 'Submission')) { /* @var $article Submission */
 			$issue = $oaiDao->getIssue($article->getIssueId());
 		} else $issue = null;
 
@@ -93,8 +93,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
 		$supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
 		$subjects = array_merge_recursive(
-			(array) $submissionKeywordDao->getKeywords($article->getId(), $supportedLocales),
-			(array) $submissionSubjectDao->getSubjects($article->getId(), $supportedLocales)
+			(array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
+			(array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
 		);
 		$this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 
@@ -119,7 +119,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 
 		// Date
-		if (is_a($article, 'PublishedSubmission')) {
+		if (is_a($article, 'Submission')) {
 			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
 			elseif (isset($issue) && $issue->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($issue->getDatePublished())));
 		}
@@ -138,9 +138,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 
 		// Format
-		if (is_a($article, 'PublishedSubmission')) {
+		if (is_a($article, 'Submission')) {
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-			$galleys = $articleGalleyDao->getBySubmissionId($article->getId());
+			$galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
 			$formats = array();
 			while ($galley = $galleys->next()) {
 				$dc11Description->addStatement('dc:format', $galley->getFileType());
@@ -152,8 +152,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$issueAction = new IssueAction();
 		$request = Application::get()->getRequest();
 		$includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
-		if (is_a($article, 'PublishedSubmission') && $includeUrls) {
-			$dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId())));
+		if (is_a($article, 'Submission') && $includeUrls) {
+			$dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', array($article->getBestId())));
 		}
 
 		// Source (journal title, issue id and pages)
@@ -161,7 +161,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$pages = $article->getPages();
 		if (!empty($pages)) $pages = '; ' . $pages;
 		foreach ($sources as $locale => $source) {
-			if (is_a($article, 'PublishedSubmission')) {
+			if (is_a($article, 'Submission')) {
 				$sources[$locale] .= '; ' . $issue->getIssueIdentification(array(), $locale);
 			}
 			$sources[$locale] .=  $pages;
@@ -176,14 +176,14 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Get galleys and supp files.
 		$galleys = array();
-		if (is_a($article, 'PublishedSubmission')) {
+		if (is_a($article, 'Submission')) {
 			$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-			$galleys = $articleGalleyDao->getBySubmissionId($article->getId())->toArray();
+			$galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
 		}
 
 		// Language
 		$locales = array();
-		if (is_a($article, 'PublishedSubmission')) {
+		if (is_a($article, 'Submission')) {
 			foreach ($galleys as $galley) {
 				$galleyLocale = $galley->getLocale();
 				if(!is_null($galleyLocale) && !in_array($galleyLocale, $locales)) {
@@ -200,7 +200,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Relation
 		// full text URLs
 		if ($includeUrls) foreach ($galleys as $galley) {
-			$relation = $request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId()));
+			$relation = $request->url($journal->getPath(), 'article', 'view', array($article->getBestId(), $galley->getBestGalleyId()));
 			$dc11Description->addStatement('dc:relation', $relation);
 			unset($relation);
 		}

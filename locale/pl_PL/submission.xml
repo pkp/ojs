@@ -34,10 +34,7 @@
 	<message key="submission.submit.whatNext.description">Redaktorzy czasopisma zostali poinformowani o Twoim zgłoszeniu. Na Twój adres email zostało również wysłane potwierdzenie. Po przejrzeniu zgłoszenia, redaktor skontaktuje się z Tobą.</message>
 	<message key="grid.action.galleyInIssueEntry">Pliki do publikacji są widoczne na stronie numeru</message>
 	<message key="grid.action.issueEntry">Wyświetl metadane zgłoszenia</message>
-	<message key="submission.issueEntry.modalTitle">Metadane zgłoszonego tekstu oraz publikacji</message>
-	<message key="submission.issueEntry.submissionMetadata">Zgłoszenie</message>
-	<message key="submission.issueEntry.publicationMetadata">Publikacja</message>
-	<message key="submission.issueEntry.confirm">Utwórz wpis dla tego artykułu oparty o metadane widoczne poniżej.</message>
+	<message key="submission.publication">Publikacja</message>
 	<message key="submission.event.articleGalleyMadeAvailable">Pliki do publikacji "{$galleyFormatName}" są dostępne.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Pliki do publikacji "{$galleyFormatName}" nie są dostępne.</message>
 	<message key="submission.event.publicIdentifiers">Publiczne identyfikatory zgłoszenia zaktualizowane.</message>

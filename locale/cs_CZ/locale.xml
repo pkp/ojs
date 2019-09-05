@@ -1047,7 +1047,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="payment.type.publication.required">Je třeba uhradit publikační poplatek.</message>
 	<message key="payment.requestPublicationFee">Požadovaný publikační poplatek ({$feeAmount})</message>
 	<message key="payment.notFound">Byla požadována platba, ale termín požadavku vypršel. Podrobné informace získáte od správce časopisu.</message>
-	<message key="notification.type.publicationScheduled">Příspěvek byl naplánován k publikování.</message>
 	<message key="navigation.subscriptions">Předplatné</message>
 	<message key="log.editor.submissionExpedited">{$editorName} převzal redakční proces příspěvku {$submissionId}.</message>
 	<message key="manager.setup.porticoDescription">Portico je nezisková služba, která se zasazuje o uchování digitálních publikací, včetně e-časopisů, elektronických knih a digitalizovaných historických sbírek. Pokud podepsal váš časopis smlouvu s Portico, povolte tuto službu zde:</message>

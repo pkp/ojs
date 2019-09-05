@@ -27,8 +27,7 @@
 	<message key="submission.submit.newSubmissionSingle">Nuova proposta</message>
 	<message key="submission.issueEntry">Metadati</message>
 	<message key="submission.submit.whatNext.description">La redazione ha ricevuto notifica della tua proposta e ti è stata inviata una email di conferma. Appena gli editor avranno visionato la tua proposta sarai contattato.</message>
-	<message key="submission.issueEntry.modalTitle">Metadati della proposta e di pubblicazione</message>
-	<message key="submission.issueEntry.publicationMetadata">Pubblicazione</message>
+	<message key="submission.publication">Pubblicazione</message>
 	<message key="submission.confirmSubmit">Sei sicuro di voler inviare la proposta?</message>
 	<message key="workflow.review.externalReview">Revisione</message>
 	<message key="editor.submission.decision.sendExternalReview">Invia questa proposta al revisore esterno</message>
@@ -40,8 +39,6 @@
 	<message key="grid.action.workflow">Flusso di lavoro per una proposta</message>
 	<message key="grid.action.galleyInIssueEntry">La gabbia appare all'interno del fascicolo</message>
 	<message key="grid.action.issueEntry">Vedi i metadati della proposta</message>
-	<message key="submission.issueEntry.submissionMetadata">Proposta</message>
-	<message key="submission.issueEntry.confirm">Inserisci questo articolo nel fascicolo basandoti sui metadati presenti qua sotto.</message>
 	<message key="submission.event.articleGalleyMadeAvailable">La gabbia "{$galleyFormatName}" di questo articolo è resa disponibile.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">La gabbia "{$galleyFormatName}" di questo articolo è resa indisponibile.</message>
 	<message key="submission.event.publicIdentifiers">L'identificativo pubblico di questa proposta è aggiornato.</message>

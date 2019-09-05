@@ -63,11 +63,9 @@ class ResolverPlugin extends GatewayPlugin {
 		switch ($scheme) {
 			case 'doi':
 				$doi = implode('/', $args);
-				$journal = $request->getJournal();
-				$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
-				$article = $publishedSubmissionDao->getPublishedSubmissionByPubId('doi', $doi, $journal?$journal->getId():null);
-				if(is_a($article, 'PublishedSubmission')) {
-					$request->redirect(null, 'article', 'view', $article->getBestArticleId());
+				$article = Application::get()->getSubmissionDAO()->getByPubId('doi', $doi, $request->getJournal());
+				if($article) {
+					$request->redirect(null, 'article', 'view', $article->getBestId());
 				}
 				break;
 			case 'vnp': // Volume, number, page
@@ -96,21 +94,23 @@ class ResolverPlugin extends GatewayPlugin {
 				if (!$issue || $issues->next()) break;
 				unset($issues);
 
-				$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-				$articles = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
-				foreach ($articles as $article) {
+				$submissions = Services::get('submission')->getMany([
+					'issueIds' => $issue->getId(),
+					'count' => 5000, // large upper limit
+				]);
+				foreach ($submissions as $submission) {
 					// Look for the correct page in the list of articles.
 					$matches = null;
-					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $article->getPages(), $matches)) {
+					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $submission->getPages(), $matches)) {
 						$matchedPage = $matches[1];
-						if ($page == $matchedPage) $request->redirect(null, 'article', 'view', $article->getBestArticleId());
+						if ($page == $matchedPage) $request->redirect(null, 'article', 'view', $submission->getBestId());
 					}
-					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $article->getPages(), $matches)) {
+					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $submission->getPages(), $matches)) {
 						$matchedPageFrom = $matches[1];
 						$matchedPageTo = $matches[3];
-						if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) $request->redirect(null, 'article', 'view', $article->getBestArticleId());
+						if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) $request->redirect(null, 'article', 'view', $submission->getBestId());
 					}
-					unset($article);
+					unset($submission);
 				}
 				break;
 		}

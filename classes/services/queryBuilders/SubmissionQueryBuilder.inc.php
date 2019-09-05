@@ -19,8 +19,26 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQueryBuilder {
 
+	/** @var int|array Issue ID(s) */
+	protected $issueIds = null;
+
 	/** @var int|array Section ID(s) */
 	protected $sectionIds = null;
+
+	/**
+	 * Set issue filter
+	 *
+	 * @param int|array $issueIds
+	 *
+	 * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
+	 */
+	public function filterByIssues($issueIds) {
+		if (!is_null($issueIds) && !is_array($issueIds)) {
+			$issueIds = [$issueIds];
+		}
+		$this->issueIds = $issueIds;
+		return $this;
+	}
 
 	/**
 	 * Set section filter
@@ -30,6 +48,9 @@ class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQu
 	 * @return \APP\Services\QueryBuilders\SubmissionQueryBuilder
 	 */
 	public function filterBySections($sectionIds) {
+		if (!is_null($sectionIds) && !is_array($sectionIds)) {
+			$sectionIds = [$sectionIds];
+		}
 		$this->sectionIds = $sectionIds;
 		return $this;
 	}
@@ -41,41 +62,25 @@ class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQu
 	 * @return object Query object
 	 */
 	public function appGet($q) {
-		$primaryLocale = \AppLocale::getPrimaryLocale();
-		$locale = \AppLocale::getLocale();
 
-		$this->columns[] = Capsule::raw('COALESCE(stl.setting_value, stpl.setting_value) AS section_title');
-		$this->columns[] = Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev');
-
-		$q->groupBy(Capsule::raw('COALESCE(stl.setting_value, stpl.setting_value)'));
-		$q->groupBy(Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value)'));
-
-		$q->leftJoin('section_settings as stpl', function($join) use($primaryLocale) {
-			$join->on('s.section_id', '=', Capsule::raw('stpl.section_id'));
-			$join->on('stpl.setting_name', '=', Capsule::raw("'section_title'"));
-			$join->on('stpl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
-		});
-
-		$q->leftJoin('section_settings as stl', function($join) use($locale) {
-			$join->on('s.section_id', '=', Capsule::raw('stl.section_id'));
-			$join->on('stl.setting_name', '=', Capsule::raw("'section_title'"));
-			$join->on('stl.locale', '=', Capsule::raw("'{$locale}'"));
-		});
-
-		$q->leftJoin('section_settings as sapl', function($join) use($primaryLocale) {
-			$join->on('s.section_id', '=', Capsule::raw('sapl.section_id'));
-			$join->on('sapl.setting_name', '=', Capsule::raw("'section_abbrev'"));
-			$join->on('sapl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
-		});
-
-		$q->leftJoin('section_settings as sal', function($join) use($locale) {
-			$join->on('s.section_id', '=', Capsule::raw('sal.section_id'));
-			$join->on('sal.setting_name', '=', Capsule::raw("'section_abbrev'"));
-			$join->on('sal.locale', '=', Capsule::raw("'{$locale}'"));
-		});
+		if (!empty($this->issueIds)) {
+			$issueIds = $this->issueIds;
+			$q->leftJoin('publications as issue_p', 'issue_p.submission_id', '=', 's.submission_id')
+				->leftJoin('publication_settings as issue_ps','issue_p.publication_id','=','issue_ps.publication_id')
+				->where(function($q) use ($issueIds) {
+					$q->where('issue_ps.setting_name', '=', 'issueId');
+					$q->whereIn('issue_ps.setting_value', $issueIds);
+				});
+		}
 
 		if (!empty($this->sectionIds)) {
-			$q->whereIn('s.section_id', $this->sectionIds);
+			$sectionIds = $this->sectionIds;
+			$q->leftJoin('publications as section_p', 'section_p.submission_id', '=', 's.submission_id')
+				->leftJoin('publication_settings as section_ps','section_p.publication_id','=','section_ps.publication_id')
+				->where(function($q) use ($sectionIds) {
+					$q->where('section_ps.setting_name', '=', 'sectionId');
+					$q->whereIn('section_ps.setting_value', $sectionIds);
+				});
 		}
 
 		return $q;

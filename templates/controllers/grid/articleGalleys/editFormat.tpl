@@ -15,7 +15,7 @@
 </script>
 <div id="editArticleGalleyMetadataTabs">
 	<ul>
-		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="editGalleyTab" submissionId=$submissionId representationId=$representationId}">{translate key="grid.action.editMetadata"}</a></li>
-		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="identifiers" submissionId=$submissionId representationId=$representationId}">{translate key="submission.identifiers"}</a></li>
+		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="editGalleyTab" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">{translate key="grid.action.editMetadata"}</a></li>
+		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="identifiers" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">{translate key="submission.identifiers"}</a></li>
 	</ul>
 </div>

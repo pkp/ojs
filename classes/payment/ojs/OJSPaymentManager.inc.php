@@ -254,8 +254,6 @@ class OJSPaymentManager extends PaymentManager {
 					$institutional = false;
 				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
-					// FIXME: Is this supposed to be here?
-					error_log(print_r($subscription, true));
 					return false;
 				}
 				if ($institutional) {

@@ -1098,7 +1098,6 @@
 	<message key="notification.type.editorAssignmentTask">Подана нова стаття, якій необхідно призначити редактора.</message>
 	<message key="notification.type.assignProductionUser">Призначити користувача для створення гранок за допомогою посилання «Додати» в списку «Учасники».</message>
 	<message key="notification.type.awaitingRepresentations">Очікування гранок.</message>
-	<message key="notification.type.publicationScheduled">Подання заплановане для публікації.</message>
 
 	<!--
 	 *

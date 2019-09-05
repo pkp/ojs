@@ -36,14 +36,6 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * Get the published submission DAO for this application.
-	 * @return DAO
-	 */
-	function getPublishedSubmissionDAO() {
-		return DAORegistry::getDAO('PublishedSubmissionDAO');
-	}
-
-	/**
 	 * Get the method name for inserting a published submission.
 	 * @return string
 	 */

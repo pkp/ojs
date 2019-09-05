@@ -30,10 +30,7 @@
 	<message key="grid.action.issueEntry">Переглянути метадані цього подання</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Метадані подання та публікації</message>
-	<message key="submission.issueEntry.submissionMetadata">Подання</message>
-	<message key="submission.issueEntry.publicationMetadata">Публікація</message>
-	<message key="submission.issueEntry.confirm">Створити для цієї статті запис у випуску на основі приведених нижче метаданих.</message>
+	<message key="submission.publication">Публікація</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Гранка статті "{$galleyFormatName}" зроблена доступною.</message>

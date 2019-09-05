@@ -1051,7 +1051,6 @@
 	<message key="notification.type.editorAssignmentTask">Ένα νέο άρθρο υποβλήθηκε. Εκκρεμεί η ανάθεση σε Επιμελητή.</message>
 	<message key="notification.type.assignProductionUser">Αναθέστε σε έναν Χρήστη να δημιουργήσει τυπογραφικά δοκίμια, χρησιμοποιώντας τον σύνδεσμο "Ανάθεση" στον κατάλογο των συμμετεχόντων.</message>
 	<message key="notification.type.awaitingRepresentations">Αναμονή για τυπογραφικά δοκίμια</message>
-	<message key="notification.type.publicationScheduled">Αυτή η υποβολή προγραμματίστηκε για δημοσίευση.</message>
 
 	<!--
 	 *

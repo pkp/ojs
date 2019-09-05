@@ -85,7 +85,7 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 			case SUBMISSION_FILE_PROOF:
 				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
-				$galley = $galleyDao->getById($submissionFile->getAssocId(), $submissionFile->getSubmissionId());
+				$galley = $galleyDao->getById($submissionFile->getAssocId());
 				if ($galley) {
 					$galley->setFileId($submissionFile->getFileId());
 					$galleyDao->updateObject($galley);

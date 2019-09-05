@@ -76,7 +76,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
 
-		import('classes.article.Submission');
+		import('classes.submission.Submission');
 
 		$columns = array(
 			'submission_id' => __('article.submissionId'),
@@ -139,7 +139,7 @@ class ArticleReportPlugin extends ReportPlugin {
 		fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
 		fputcsv($fp, array_values($columns));
 
-		import('classes.article.Submission'); // Bring in getStatusMap function
+		import('classes.submission.Submission'); // Bring in getStatusMap function
 		$statusMap = Article::getStatusMap();
 
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
@@ -188,19 +188,19 @@ class ArticleReportPlugin extends ReportPlugin {
 				case $index == 'source': $columns[$index] = $article->getSource($article->getLocale()); break;
 				case $index == 'type': $columns[$index] = $article->getLocalizedType(); break;
 				case $index == 'subjects':
-					$subjects = $submissionSubjectDao->getSubjects($article->getId(), array($article->getLocale()));
+					$subjects = $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), array($article->getLocale()));
 					$columns[$index] = join(', ', $subjects[$article->getLocale()]);
 					break;
 				case $index == 'disciplines':
-					$disciplines = $submissionDisciplineDao->getDisciplines($article->getId(), array($article->getLocale()));
+					$disciplines = $submissionDisciplineDao->getDisciplines($article->getCurrentPublication()->getId(), array($article->getLocale()));
 					$columns[$index] = join(', ', $disciplines[$article->getLocale()]);
 					break;
 				case $index == 'keywords':
-					$keywords = $submissionKeywordDao->getKeywords($article->getId(), array($article->getLocale()));
+					$keywords = $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), array($article->getLocale()));
 					$columns[$index] = join(', ', $keywords[$article->getLocale()]);
 					break;
 				case $index == 'agencies':
-					$agencies = $submissionAgencyDao->getAgencies($article->getId(), array($article->getLocale()));
+					$agencies = $submissionAgencyDao->getAgencies($article->getCurrentPublication()->getId(), array($article->getLocale()));
 					$columns[$index] = join(', ', $agencies[$article->getLocale()]);
 					break;
 				case $index == 'date_submitted': $columns[$index] = $article->getDateSubmitted(); break;

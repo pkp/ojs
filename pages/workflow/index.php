@@ -24,7 +24,6 @@ switch ($op) {
 	case 'editorial':
 	case 'production':
 	case 'editorDecisionActions':
-	case 'submissionHeader':
 	case 'submissionProgressBar':
 		define('HANDLER_CLASS', 'WorkflowHandler');
 		import('pages.workflow.WorkflowHandler');

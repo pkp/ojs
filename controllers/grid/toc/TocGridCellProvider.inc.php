@@ -49,7 +49,7 @@ class TocGridCellProvider extends GridCellProvider {
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		switch ($column->getId()) {
 			case 'access':
-				$article = $row->getData(); /* @var $article PublishedSubmission */
+				$article = $row->getData(); /* @var $article Submission */
 				return array(new LinkAction(
 					'disable',
 					new AjaxAction(

@@ -42,8 +42,7 @@ class OpenAccessNotification extends ScheduledTask {
 			);
 			$email->assignParams($paramArray);
 
-			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-			$publishedSubmissions = $publishedSubmissionDao->getPublishedSubmissionsInSections($issue->getId());
+			$submissions = Services::get('submission')->getInSections($issue->getId());
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
 			$templateMgr = TemplateManager::getManager();
@@ -52,7 +51,7 @@ class OpenAccessNotification extends ScheduledTask {
 				'templateSignature' => $journal->getData('emailSignature'),
 				'mimeBoundary' => $mimeBoundary,
 				'issue' => $issue,
-				'publishedSubmissions' => $publishedSubmissions,
+				'publishedSubmissions' => $submissions,
 			));
 
 			$email->addHeader('MIME-Version', '1.0');

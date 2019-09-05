@@ -41,7 +41,7 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObject PublishedSubmission
+	 * @param $pubObject Submission
 	 * @return JSON string
 	 */
 	function &process(&$pubObject) {
@@ -134,7 +134,7 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 		if (!empty($abstract)) $article['bibjson']['abstract'] = PKPString::html2text($abstract);
 		// Keywords
 		$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-		$keywords = $dao->getKeywords($pubObject->getId(), array($pubObject->getLocale()));
+		$keywords = $dao->getKeywords($pubObject->getCurrentPublication()->getId(), array($pubObject->getLocale()));
 		$allowedNoOfKeywords = array_slice($keywords[$pubObject->getLocale()], 0, 6);
 		if (!empty($keywords[$pubObject->getLocale()])) $article['bibjson']['keywords'] = $allowedNoOfKeywords;
 

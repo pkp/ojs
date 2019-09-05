@@ -16,8 +16,9 @@
 
 
 import('lib.pkp.tests.PKPTestCase');
-import('classes.article.Submission');
+import('classes.submission.Submission');
 import('lib.pkp.classes.core.ArrayItemIterator');
+import('lib.pkp.classes.services.PKPSchemaService'); // SCHEMA_GALLEY constant
 
 class ArticleSearchIndexTest extends PKPTestCase {
 

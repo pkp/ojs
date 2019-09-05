@@ -30,7 +30,7 @@
 
 	<!-- Submission Information Modal -->
 	<message key="submission.issueEntry.submissionMetadata">Yazı Girişi</message>
-	<message key="submission.issueEntry.publicationMetadata">Yayın</message>
+	<message key="submission.publication">Yayın</message>
 
 	<!-- events -->
 
@@ -43,8 +43,6 @@
 	<message key="submission.submit.whatNext.description">Dergiye yaptığınız gönderi bildirildi ve kayıtlarınız için bir onay e-postası gönderildi. Editör gönderiyi inceledikten sonra sizinle iletişim kuracak.</message>
 	<message key="grid.action.galleyInIssueEntry">Dizgi girişinde sorun görünüyor</message>
 	<message key="grid.action.issueEntry">Bu gönderinin üst verilerini görüntüle</message>
-	<message key="submission.issueEntry.modalTitle">Gönderi ve Yayın Üst Verisi</message>
-	<message key="submission.issueEntry.confirm">Aşağıdaki üst veriler temelinde bu makale için bir sorun girişi oluşturun.</message>
 	<message key="submission.event.articleGalleyMadeAvailable">Makale "{$galleyFormatName}" kullanılabilir hale getirilmiştir.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">"{$galleyFormatName}" makalesi kullanılmamaktadır.</message>
 	<message key="submission.event.publicIdentifiers">Gönderinin genel tanımlayıcıları güncellendi.</message>

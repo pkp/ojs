@@ -29,10 +29,7 @@
 	<message key="grid.action.issueEntry">Bekijk de metadata voor deze inzending</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Metadata voor inzending en publicatie</message>
-	<message key="submission.issueEntry.submissionMetadata">Inzending</message>
-	<message key="submission.issueEntry.publicationMetadata">Publicatie</message>
-	<message key="submission.issueEntry.confirm">Neem dit artikel op in een nummer, gebaseerd op onderstaande metadata.</message>
+	<message key="submission.publication">Publicatie</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">De proef voor dit artikel "{$galleyFormatName}" is nu beschikbaar.</message>

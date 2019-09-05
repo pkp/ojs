@@ -735,7 +735,6 @@
 	<message key="notification.type.editorAssignmentTask">مقاله‌ی جدیدی ثبت شده است ، لطفاً داوری برای آن مشخص نمایید</message>
 	<message key="notification.type.assignProductionUser">افزودن یک کاربر برای ایجاد کلیشه چاپی با انتخاب گزینه افزودن لینک در بخش همکاران</message>
 	<message key="notification.type.awaitingRepresentations">در انتظار کلیشه‌های چاپی.</message>
-	<message key="notification.type.publicationScheduled">این مقاله در نوبت چاپ قرار گرفت</message>
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.

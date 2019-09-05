@@ -37,7 +37,7 @@ class ArticleSearchTest extends PKPTestCase {
 	protected function getMockedDAOs() {
 		$mockedDaos = parent::getMockedDAOs();
 		$mockedDaos += array(
-			'ArticleSearchDAO', 'SubmissionDAO', 'PublishedSubmissionDAO',
+			'ArticleSearchDAO', 'SubmissionDAO',
 			'IssueDAO', 'JournalDAO', 'SectionDAO'
 		);
 		return $mockedDaos;
@@ -53,7 +53,6 @@ class ArticleSearchTest extends PKPTestCase {
 		// Prepare the mock environment for this test.
 		$this->registerMockArticleSearchDAO();
 		$this->registerMockSubmissionDAO();
-		$this->registerMockPublishedSubmissionDAO();
 		$this->registerMockIssueDAO();
 		$this->registerMockJournalDAO();
 		$this->registerMockSectionDAO();
@@ -266,28 +265,6 @@ class ArticleSearchTest extends PKPTestCase {
 
 		// Register the mock DAO.
 		DAORegistry::registerDAO('SubmissionDAO', $submissionDao);
-	}
-
-	/**
-	 * Mock and register an PublishedSubmissionDAO as a test
-	 * back end for the ArticleSearch class.
-	 */
-	private function registerMockPublishedSubmissionDAO() {
-		// Mock a PublishedSubmissionDAO.
-		$publishedSubmissionDAO = $this->getMockBuilder(PublishedSubmissionDAO::class)
-			->setMethods(array('getBySubmissionId'))
-			->getMock();
-
-		// Mock a published submission.
-		$publishedSubmission = new PublishedSubmission();
-
-		// Mock the getBySubmissionId() method.
-		$publishedSubmissionDAO->expects($this->any())
-		                    ->method('getBySubmissionId')
-		                    ->will($this->returnValue($publishedSubmission));
-
-		// Register the mock DAO.
-		DAORegistry::registerDAO('PublishedSubmissionDAO', $publishedSubmissionDAO);
 	}
 
 	/**

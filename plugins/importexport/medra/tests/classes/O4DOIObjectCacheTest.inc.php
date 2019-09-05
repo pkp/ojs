@@ -16,7 +16,7 @@
 
 import('lib.pkp.tests.PKPTestCase');
 import('classes/issue/Issue');
-import('classes/article/PublishedSubmission');
+import('classes/article/Submission');
 import('classes/article/ArticleGalley');
 import('plugins.importexport.medra.classes.O4DOIObjectCache');
 
@@ -46,7 +46,7 @@ class O4DOIObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new O4DOIObjectCache();
 
-		$article = new PublishedSubmission();
+		$article = new Submission();
 		$article->setId('2');
 		$article->setIssueId('1');
 
@@ -70,7 +70,7 @@ class O4DOIObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new O4DOIObjectCache();
 
-		$article = new PublishedSubmission();
+		$article = new Submission();
 		$article->setId('2');
 		$article->setIssueId('1');
 
@@ -108,7 +108,7 @@ class O4DOIObjectCacheTest extends PKPTestCase {
 		$nullVar = null;
 		$cache = new O4DOIObjectCache();
 
-		$article = new PublishedSubmission();
+		$article = new Submission();
 		$article->setId('2');
 		$article->setIssueId('1');
 

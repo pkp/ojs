@@ -29,11 +29,7 @@
 	<message key="grid.action.issueEntry">Katsele tämän käsikirjoituksen metatietoja</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Käsikirjoituksen ja julkaisun metatiedot</message>
-	<message key="submission.issueEntry.submissionMetadata">Käsikirjoitus</message>
-	<message key="submission.issueEntry.publicationMetadata">Julkaiseminen</message>
-	<message key="submission.issueEntry.confirm">Luo tälle artikkelille alla oleviin metatietoihin perustuvat numeron tiedot.</message>
-
+	<message key="submission.publication">Julkaiseminen</message>
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Artikkelin julkaistava tiedosto "{$galleyFormatName}" on nyt saatavilla.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Artikkelin julkaistava tiedosto "{$galleyFormatName}" ei ole enää saatavilla.</message>

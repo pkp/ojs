@@ -395,7 +395,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	 * Get the canonical URL of an object.
 	 * @param $request Request
 	 * @param $context Context
-	 * @param $object Issue|PublishedSubmission|ArticleGalley
+	 * @param $object Issue|Submission|ArticleGalley
 	 */
 	function _getObjectUrl($request, $context, $object) {
 		$router = $request->getRouter();
@@ -406,21 +406,20 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 			if ($cache->isCached('articles', $articleId)) {
 				$article = $cache->get('articles', $articleId);
 			} else {
-				$submissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $submissionDao PublishedSubmissionDAO */
-				$article = $submissionDao->getBySubmissionId($articleId, $context->getId(), true);
+				$article = Services::get('submission')->get($articleId);
 			}
-			assert(is_a($article, 'PublishedSubmission'));
+			assert(is_a($article, 'Submission'));
 		}
 		$url = null;
 		switch (true) {
 			case is_a($object, 'Issue'):
 				$url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId(), null, null, true);
 				break;
-			case is_a($object, 'PublishedSubmission'):
-				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestArticleId(), null, null, true);
+			case is_a($object, 'Submission'):
+				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestId(), null, null, true);
 				break;
 			case is_a($object, 'ArticleGalley'):
-				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()), null, null, true);
+				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestId(), $object->getBestGalleyId()), null, null, true);
 				break;
 		}
 		if ($this->isTestMode($context)) {

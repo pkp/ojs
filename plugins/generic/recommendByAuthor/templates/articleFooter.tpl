@@ -17,7 +17,7 @@
 
 			<ul>
 				{iterate from=articlesBySameAuthor item=articleBySameAuthor}
-					{assign var=publishedSubmission value=$articleBySameAuthor.publishedSubmission}
+					{assign var=submission value=$articleBySameAuthor.publishedSubmission}
 					{assign var=article value=$articleBySameAuthor.article}
 					{assign var=issue value=$articleBySameAuthor.issue}
 					{assign var=journal value=$articleBySameAuthor.journal}
@@ -25,7 +25,7 @@
 						{foreach from=$article->getAuthors() item=author}
 							{$author->getFullName()|escape},
 						{/foreach}
-						<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedSubmission->getBestArticleId()}">
+						<a href="{url journal=$journal->getPath() page="article" op="view" path=$submission->getBestId()}">
 							{$article->getLocalizedTitle()|strip_unsafe_html}
 						</a>,
 						<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">

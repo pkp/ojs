@@ -1002,7 +1002,6 @@
 	<message key="notification.type.editorAssignmentTask">مؤلَّف جديد تم تقديمه وهو بحاجة إلى تعيينه لمحرر.</message>
 	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط التعيين في قائمة المشاركين.</message>
 	<message key="notification.type.awaitingRepresentations">الألواح الطباعية قيد الانتظار.</message>
-	<message key="notification.type.publicationScheduled">هذا الطلب قد تمت جدولته للنشر.</message>
 
 	<!--
 	 *

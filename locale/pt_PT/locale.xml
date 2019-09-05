@@ -932,7 +932,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="payment.notFound">Foi solicitado um pagamento, mas o prazo expirou. Contacte o Gestor da Revista para mais informação.</message>
 	<message key="navigation.subscriptions">Subscrições</message>
 	<message key="log.editor.submissionExpedited">{$editorName} tomou o processo de edição do artigo {$submissionId}.</message>
-	<message key="notification.type.publicationScheduled">Esta submissão foi agendada para publicação.</message>
 	<message key="log.editor.recommendation">O editor {$editorName} registou uma recomendação ({$decision}) para o artigo {$submissionId}.</message>
 	<message key="user.reviewerPrompt.optin">Sim, quero ser contactado com pedidos de revisão a submissões para esta revista.</message>
 	<message key="user.register.form.emailConsentAllContexts">Sim, quero ser notificado de novas publicações e anúncios para todas as revistas em que me registei.</message>

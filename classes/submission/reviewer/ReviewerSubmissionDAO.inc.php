@@ -14,7 +14,7 @@
  * @brief Operations for retrieving and modifying ReviewerSubmission objects.
  */
 
-import('classes.article.SubmissionDAO');
+import('classes.submission.SubmissionDAO');
 import('classes.submission.reviewer.ReviewerSubmission');
 
 class ReviewerSubmissionDAO extends SubmissionDAO {
@@ -48,13 +48,13 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 		$result = $this->retrieve(
 			'SELECT	a.*,
 				r.*,
-				ps.date_published,
+				p.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	submissions a
-				LEFT JOIN published_submissions ps ON (a.submission_id = ps.submission_id) and (ps.published_submission_version = a.submission_version) and ps.is_current_submission_version = 1
+				LEFT JOIN publications p ON (a.submission_id = p.submission_id AND p.publication_id = a.current_publication_id)
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
-				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN sections s ON (s.section_id = p.section_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
@@ -89,12 +89,11 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 	/**
 	 * Internal function to return a ReviewerSubmission object from a row.
 	 * @param $row array
-	 * @param $submissionVersion
 	 * @return ReviewerSubmission
 	 */
-	function _fromRow($row, $submissionVersion = null) {
+	function _fromRow($row) {
 		// Get the ReviewerSubmission object, populated with submission data
-		$reviewerSubmission = parent::_fromRow($row, $submissionVersion);
+		$reviewerSubmission = parent::_fromRow($row);
 		$reviewer = $this->userDao->getById($row['reviewer_id']);
 
 		// Editor Decisions
@@ -175,25 +174,6 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 				(int) $reviewerSubmission->getReviewId()
 			)
 		);
-	}
-
-	/**
-	 * Map a column heading value to a database value for sorting
-	 * @param string
-	 * @return string
-	 */
-	function getSortMapping($heading) {
-		switch ($heading) {
-			case 'id': return 'a.submission_id';
-			case 'assignDate': return 'r.date_assigned';
-			case 'dueDate': return 'r.date_due';
-			case 'section': return 'section_abbrev';
-			case 'title': return 'submission_title';
-			case 'round': return 'r.round';
-			case 'review': return 'r.recommendation';
-			case 'decision': return 'editor_decision';
-			default: return null;
-		}
 	}
 }
 

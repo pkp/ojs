@@ -50,10 +50,7 @@
 	<message key="submission.upload.fileContents">Élément de l'article</message>
 	<message key="submission.complete">Approuvé</message>
 	<message key="grid.action.issueEntry">Voir les métadonnées de la soumission</message>
-	<message key="submission.issueEntry.modalTitle">Métadonnées de la soumission et de la publication</message>
-	<message key="submission.issueEntry.submissionMetadata">Soumission</message>
-	<message key="submission.issueEntry.publicationMetadata">Publication</message>
-	<message key="submission.issueEntry.confirm">Assigner l'article à un numéro en vous basant sur les métadonnées ci-dessous.</message>
+	<message key="submission.publication">Publication</message>
 	<message key="grid.action.galleyInIssueEntry">Les épreuves se trouvent dans le dossier du numéro.</message>
 	<message key="submission.event.articleGalleyMadeAvailable">L'article mis en page "{$galleyFormatName}" est disponible.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">L'article mis en page "{$galleyFormatName}" n'est pas disponible.</message>

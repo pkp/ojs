@@ -30,10 +30,7 @@
 	<message key="grid.action.issueEntry">Die Metadaten dieses Beitrags ansehen</message>
 
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">Metadaten von Einreichung und Veröffentlichung</message>
-	<message key="submission.issueEntry.submissionMetadata">Einreichung</message>
-	<message key="submission.issueEntry.publicationMetadata">Veröffentlichung</message>
-	<message key="submission.issueEntry.confirm">Einen Eintrag in der Ausgabe für diesen Artikel anlegen, basierend auf den unten gelisteten Metadaten.</message>
+	<message key="submission.publication">Veröffentlichung</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Die Artikelfahne "{$galleyFormatName}" wird verfügbar gemacht.</message>

@@ -15,15 +15,15 @@
 <data>
 	<sql>
 		<query driver="mysql">CREATE INDEX issue_settings_name_value ON issue_settings (setting_name(50), setting_value(150))</query>
-		<query driver="mysql">CREATE INDEX submission_settings_name_value ON submission_settings (setting_name(50), setting_value(150))</query>
-		<query driver="mysql">CREATE INDEX submission_galley_settings_name_value ON submission_galley_settings (setting_name(50), setting_value(150))</query>
+		<query driver="mysql">CREATE INDEX publication_settings_name_value ON publication_settings (setting_name(50), setting_value(150))</query>
+		<query driver="mysql">CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name(50), setting_value(150))</query>
 
 		<query driver="mysqli">CREATE INDEX issue_settings_name_value ON issue_settings (setting_name(50), setting_value(150))</query>
-		<query driver="mysqli">CREATE INDEX submission_settings_name_value ON submission_settings (setting_name(50), setting_value(150))</query>
-		<query driver="mysqli">CREATE INDEX submission_galley_settings_name_value ON submission_galley_settings (setting_name(50), setting_value(150))</query>
+		<query driver="mysqli">CREATE INDEX publication_settings_name_value ON publication_settings (setting_name(50), setting_value(150))</query>
+		<query driver="mysqli">CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name(50), setting_value(150))</query>
 
 		<query driver="postgres7">CREATE INDEX issue_settings_name_value ON issue_settings (setting_name, setting_value) WHERE setting_name IN ('medra::registeredDoi', 'datacite::registeredDoi')</query>
-		<query driver="postgres7">CREATE INDEX submission_settings_name_value ON submission_settings (setting_name, setting_value) WHERE setting_name IN ('indexingState', 'medra::registeredDoi', 'datacite::registeredDoi', 'pub-id::publisher-id')</query>
-		<query driver="postgres7">CREATE INDEX submission_galley_settings_name_value ON submission_galley_settings (setting_name, setting_value)</query>
+		<query driver="postgres7">CREATE INDEX publication_settings_name_value ON publication_settings (setting_name, setting_value) WHERE setting_name IN ('indexingState', 'medra::registeredDoi', 'datacite::registeredDoi', 'pub-id::publisher-id')</query>
+		<query driver="postgres7">CREATE INDEX publication_galley_settings_name_value ON publication_galley_settings (setting_name, setting_value)</query>
 	</sql>
 </data>

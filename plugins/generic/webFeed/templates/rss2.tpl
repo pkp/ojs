@@ -57,7 +57,7 @@
 				<item>
 					{* required elements *}
 					<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
-					<link>{url page="article" op="view" path=$article->getBestArticleId()}</link>
+					<link>{url page="article" op="view" path=$article->getBestId()}</link>
 					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
@@ -77,7 +77,7 @@
 						<cc:license></cc:license>
 					{/if}
 
-					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestArticleId()}</guid>
+					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestId()}</guid>
 					{if $article->getDatePublished()}
 						<pubDate>{$article->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 					{/if}

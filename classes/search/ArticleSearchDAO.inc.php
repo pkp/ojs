@@ -80,7 +80,6 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				issues i,
 				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				ps.is_current_submission_version = 1 AND 
 				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
 				ps.submission_id = s.submission_id AND

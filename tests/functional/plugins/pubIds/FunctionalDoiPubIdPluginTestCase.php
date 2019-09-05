@@ -37,7 +37,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 	protected function getAffectedTables() {
 		return array(
 			'journal_settings', 'plugin_settings', 'issues', 'issue_settings',
-			'published_submissions', 'submissions', 'submission_settings',
+			'submissions', 'submission_settings',
 			'submission_files', 'submission_galleys', 'submission_galley_settings',
 			'event_log', 'event_log_settings', 'notifications', 'sessions'
 		);
@@ -419,7 +419,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		// Assign object types to DAO names and methods.
 		$daos = array(
 			'Issue' => array('IssueDAO', 'getById', 'updateObject'),
-			'Article' => array('PublishedSubmissionDAO', 'getBySubmissionId', 'updateObject'),
+			'Article' => array('SubmissionDAO', 'getById', 'updateObject'),
 			'Galley' => array('ArticleGalleyDAO', 'getById', 'updateObject'),
 		);
 
@@ -442,7 +442,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 			$object->setStoredPubId('publisher-id', 'doitest');
 			// Due to the 'unconventional' implementation of the article
 			// DAOs we have to manually change our DAO for article update.
-			if (is_a($object, 'PublishedSubmission')) $dao = $dao->submissionDao;
+			if (is_a($object, 'Submission')) $dao = $dao->submissionDao;
 			// Update the object.
 			$dao->$daos[$objectType][2]($object);
 

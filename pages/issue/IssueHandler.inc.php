@@ -299,7 +299,6 @@ class IssueHandler extends Handler {
 		));
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 
 		$genreDao = DAORegistry::getDAO('GenreDAO');
 		$primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
@@ -307,10 +306,32 @@ class IssueHandler extends Handler {
 			return $genre->getId();
 		}, $primaryGenres);
 
+		import('classes.submission.Submission'); // import STATUS_ constants
+		$issueSubmissions = Services::get('submission')->getMany([
+			'contextId' => $journal->getId(),
+			'issueIds' => [$issue->getId()],
+			'status' => STATUS_PUBLISHED,
+		]);
+
+		$issueSubmissionsInSection = [];
+		foreach ($issueSubmissions as $submission) {
+			if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
+				continue;
+			}
+			if (!array_key_exists($sectionId, $issueSubmissionsInSection)) {
+				$section = DAORegistry::getDAO('SectionDAO')->getById($sectionId);
+				$issueSubmissionsInSection[$sectionId] = [
+					'title' => $section->getLocalizedTitle(),
+					'articles' => [],
+				];
+			}
+			$issueSubmissionsInSection[$sectionId]['articles'][] = $submission;
+		}
+
 		$templateMgr->assign(array(
 			'issue' => $issue,
 			'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),
-			'publishedSubmissions' => $publishedSubmissionDao->getPublishedSubmissionsInSections($issue->getId(), true),
+			'publishedSubmissions' => $issueSubmissionsInSection,
 			'primaryGenreIds' => $primaryGenreIds,
 		));
 
@@ -330,14 +351,11 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('issueExpiryPartial', $partial);
 
 			// Partial subscription expiry for articles
-			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-			$publishedSubmissionsTemp = $publishedSubmissionDao->getPublishedSubmissions($issue->getId());
-
 			$articleExpiryPartial = array();
-			foreach ($publishedSubmissionsTemp as $publishedSubmission) {
-				$partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedSubmission->getId());
-				if (!$partial) $issueAction->subscribedDomain($request, $journal, $issue->getId(), $publishedSubmission->getId());
-				$articleExpiryPartial[$publishedSubmission->getId()] = $partial;
+			foreach ($issueSubmissions as $issueSubmission) {
+				$partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $issueSubmission->getId());
+				if (!$partial) $issueAction->subscribedDomain($request, $journal, $issue->getId(), $issueSubmission->getId());
+				$articleExpiryPartial[$issueSubmission->getId()] = $partial;
 			}
 			$templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
 		}

@@ -154,7 +154,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 					$filter = $this->getIssueFilter();
 					$objectsFileNamePart = 'issues';
 				} elseif (!empty($selectedRepresentations)) {
-					$objects = $this->getArticleGalleys($selectedRepresentations, $context);
+					$objects = $this->getArticleGalleys($selectedRepresentations);
 					$filter = $this->getRepresentationFilter();
 					$objectsFileNamePart = 'galleys';
 				}
@@ -381,7 +381,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 	/**
 	 * Update the given object.
-	 * @param $object Issue|PublishedSubmission|ArticleGAlley
+	 * @param $object Issue|Submission|ArticleGalley
 	 */
 	function updateObject($object) {
 		// Register a hook for the required additional
@@ -432,19 +432,19 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return array
 	 */
 	function getUnregisteredArticles($context) {
-		// Retrieve all published submissions that have not yet been registered.
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
-		$articles = $publishedSubmissionDao->getExportable(
-			$context->getId(),
-			null,
-			null,
-			null,
-			null,
-			$this->getDepositStatusSettingName(),
-			EXPORT_STATUS_NOT_DEPOSITED,
-			null
-		);
-		return $articles->toArray();
+		// // Retrieve all published submissions that have not yet been registered.
+		// $publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
+		// $articles = $publishedSubmissionDao->getExportable(
+		// 	$context->getId(),
+		// 	null,
+		// 	null,
+		// 	null,
+		// 	null,
+		// 	$this->getDepositStatusSettingName(),
+		// 	EXPORT_STATUS_NOT_DEPOSITED,
+		// 	null
+		// );
+		// return $articles->toArray();
 	}
 	/**
 	 * Check whether we are in test mode.
@@ -530,7 +530,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				$objectsFileNamePart = 'issues';
 				break;
 			case 'galleys':
-				$objects = $this->getArticleGalleys($args, $context);
+				$objects = $this->getArticleGalleys($args);
 				$filter = $this->getRepresentationFilter();
 				$objectsFileNamePart = 'galleys';
 				break;
@@ -601,13 +601,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return array
 	 */
 	function getPublishedSubmissions($submissionIds, $context) {
-		$publishedSubmissions = array();
-		$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
-		foreach ($submissionIds as $submissionId) {
-			$publishedSubmission = $publishedSubmissionDao->getBySubmissionId($submissionId, $context->getId());
-			if ($publishedSubmission) $publishedSubmissions[] = $publishedSubmission;
-		}
-		return $publishedSubmissions;
+		$submissions = array_map(function($submissionId) {
+			return Services::get('submission')->get($submissionId);
+		}, $submissionIds);
+		return array_filter($submissions, function($submission) {
+			return $submission->getData('status') === STATUS_PUBLISHED;
+		});
 	}
 
 	/**
@@ -629,14 +628,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/**
 	 * Get article galleys from gallley IDs.
 	 * @param $galleyIds array
-	 * @param $context Context
 	 * @return array
 	 */
-	function getArticleGalleys($galleyIds, $context) {
+	function getArticleGalleys($galleyIds) {
 		$galleys = array();
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		foreach ($galleyIds as $galleyId) {
-			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
+			$articleGalley = $articleGalleyDao->getById($galleyId);
 			if ($articleGalley) $galleys[] = $articleGalley;
 		}
 		return $galleys;

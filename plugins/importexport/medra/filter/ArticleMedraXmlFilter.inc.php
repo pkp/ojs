@@ -55,7 +55,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	//
 	/**
 	 * @see Filter::process()
-	 * @param $pubObjects array Array of PublishedSubmissions or ArticleGalleys
+	 * @param $pubObjects array Array of Submissions or ArticleGalleys
 	 * @return DOMDocument
 	 */
 	function &process(&$pubObjects) {
@@ -84,7 +84,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	/**
 	 * Create and return the article (as work or as manifestation) node.
 	 * @param $doc DOMDocument
-	 * @param $pubObject PublishedSubmission|ArticleGalley
+	 * @param $pubObject Submission|ArticleGalley
 	 * @return DOMElement
 	 */
 	function createArticleNode($doc, $pubObject) {
@@ -95,10 +95,10 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 
-		assert ((is_a($pubObject, 'PublishedSubmission') && $this->isWork($context, $plugin)) ||
+		assert ((is_a($pubObject, 'Submission') && $this->isWork($context, $plugin)) ||
 				(is_a($pubObject, 'ArticleGalley') && !$this->isWork($context, $plugin)));
 
-		if (is_a($pubObject, 'PublishedSubmission')) {
+		if (is_a($pubObject, 'Submission')) {
 			$galley = null;
 			$article = $pubObject;
 			if (!$cache->isCached('articles', $article->getId())) {
@@ -112,9 +112,8 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			if ($cache->isCached('articles', $galley->getSubmissionId())) {
 				$article = $cache->get('articles', $galley->getSubmissionId());
 			} else {
-				$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
-				$article = $publishedSubmissionDao->getBySubmissionId($galley->getSubmissionId());
-				if ($article) $cache->add($article, null);
+				$article = Services::get('submission')->get($galley->getSubmissionId());
+				if ($article && $article->getData('status') === STATUS_PUBLISHED) $cache->add($article, null);
 			}
 			$articleNodeName = 'DOISerialArticleVersion';
 			$workOrProduct = 'Product';
@@ -136,8 +135,8 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// DOI (mandatory)
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		// DOI URL (mandatory)
-		$urlPath = $article->getBestArticleId();
-		if ($galley) $urlPath = array($article->getBestArticleId(), $galley->getBestGalleyId());
+		$urlPath = $article->getBestId();
+		if ($galley) $urlPath = array($article->getBestId(), $galley->getBestGalleyId());
 		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath, null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
@@ -180,7 +179,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	 * Create a content item node.
 	 * @param $doc DOMDocument
 	 * @param $issue Issue
-	 * @param $article PublishedSubmission
+	 * @param $article Submission
 	 * @param $galley ArticleGalley
 	 * @param $objectLocalePrecedence array
 	 * @return DOMElement
@@ -237,7 +236,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// Article keywords
 		// SubjectClass will be left out here, because we don't know the scheme/classification name
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
-		$allKeywords = $submissionKeywordDao->getKeywords($article->getId(), $context->getSupportedSubmissionLocales());
+		$allKeywords = $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $context->getSupportedSubmissionLocales());
 		$keywords = $this->getPrimaryTranslation($allKeywords, $objectLocalePrecedence);
 		if (!empty($keywords)) {
 			$keywordsString = implode(';', $keywords);
@@ -272,7 +271,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$relatedIssueNode = $this->createRelatedNode($doc, $issueWorkOrProduct, O4DOI_RELATION_IS_PART_OF, $relatedIssueIds);
 		// Galleys
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galleysByArticle = $galleyDao->getBySubmissionId($article->getId())->toArray();
+		$galleysByArticle = $galleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
 		if (!$galley) { // if exporting object is an article
 			$contentItemNode->appendChild($relatedIssueNode);
 			// related products:

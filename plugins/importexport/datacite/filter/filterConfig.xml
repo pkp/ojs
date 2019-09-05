@@ -24,7 +24,7 @@
 			symbolic="article=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
-			inputType="class::classes.article.Submission"
+			inputType="class::classes.submission.Submission"
 			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 		<!-- DataCite XML galley output -->
 		<filterGroup

@@ -30,10 +30,7 @@
 	<message key="grid.action.issueEntry">Показать метаданные этого материала</message>
 
 	<!-- Модальное окно информации об отправленном материале -->
-	<message key="submission.issueEntry.modalTitle">Метаданные отправленного материала и публикации</message>
-	<message key="submission.issueEntry.submissionMetadata">Отправленный материал</message>
-	<message key="submission.issueEntry.publicationMetadata">Публикация</message>
-	<message key="submission.issueEntry.confirm">Создать запись в выпуске для этой статьи на основе приведенных ниже метаданных.</message>
+	<message key="submission.publication">Публикация</message>
 
 	<!-- события -->
 	<message key="submission.event.articleGalleyMadeAvailable">Гранка статьи «{$galleyFormatName}» сделана доступной.</message>

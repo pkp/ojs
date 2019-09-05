@@ -28,12 +28,9 @@
 	<message key="submission.submit.whatNext.description">لقد تم إشعار المجلة بشأن طلبك هذا، وقد تمت مراسلتك لتأكيد بياناتك. بمجرد أن يراجع المحرر طلبك، سيقوم بالاتصال بك.</message>
 	<message key="grid.action.galleyInIssueEntry">اللوح الطباعي يظهر في مقدمة العدد</message>
 	<message key="grid.action.issueEntry">راجع البيانات الوصفية لطلب النشر هذا</message>
-	
+
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">البيانات الوصفية لطلب النشر</message>
-	<message key="submission.issueEntry.submissionMetadata">طلب النشر</message>
-	<message key="submission.issueEntry.publicationMetadata">النشر</message>
-	<message key="submission.issueEntry.confirm">أنشئ مدخلاً لطلب النشر هذا مستنداً إلى البيانات الوصفية أدناه.</message>
+	<message key="submission.publication">النشر</message>
 
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">إن اللوح الطباعي للمؤَّلف "{$galleyFormatName}" قد صار جاهزاً.</message>

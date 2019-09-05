@@ -17,14 +17,14 @@
 			symbolic="article=>mods34"
 			displayName="plugins.metadata.mods34.articleAdapter.displayName"
 			description="plugins.metadata.mods34.articleAdapter.description"
-			inputType="class::classes.article.Submission"
+			inputType="class::classes.submission.Submission"
 			outputType="metadata::plugins.metadata.mods34.schema.Mods34Schema(ARTICLE)" />
 		<filterGroup
 			symbolic="mods34=>article"
 			displayName="plugins.metadata.mods34.articleAdapter.displayName"
 			description="plugins.metadata.mods34.articleAdapter.description"
 			inputType="metadata::plugins.metadata.mods34.schema.Mods34Schema(ARTICLE)"
-			outputType="class::classes.article.Submission" />
+			outputType="class::classes.submission.Submission" />
 	</filterGroups>
 	<filters>
 		<!-- MODS 3.4 article adapters -->

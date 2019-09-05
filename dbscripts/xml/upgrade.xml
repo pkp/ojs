@@ -57,6 +57,7 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -232,7 +233,6 @@
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_setting_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
@@ -244,6 +244,7 @@
 		<code function="createLicenseTerms" />
 		<code function="installEmailTemplate" key="REVIEW_REINSTATE" locales="en_US" />
 		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
+		<data file="dbscripts/xml/upgrade/3.2.0_versioning.xml" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 

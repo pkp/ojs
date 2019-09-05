@@ -131,12 +131,12 @@ class DRIVERPlugin extends GenericPlugin {
 		// if the article is alive
 		if (!isset($row['tombstone_id'])) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($row['journal_id']);
-			$article = $publishedSubmissionDao->getBySubmissionId($row['submission_id']);
-			$issue = $issueDao->getById($article->getIssueId());
+			$submission = Services::get('submission')->get($row['submission_id']);
+			$publication = $submission->getCurrentPublication();
+			$issue = $issueDao->getById($publication->getData('issueId'));
 
 			// is open access
 			$status = '';
@@ -146,7 +146,7 @@ class DRIVERPlugin extends GenericPlugin {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedSubmission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
 						$status = DRIVER_ACCESS_OPEN;
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = DRIVER_ACCESS_EMBARGOED;
@@ -164,7 +164,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 
 			// is there a full text
-			$galleys = $article->getGalleys();
+			$galleys = $submission->getGalleys();
 			if (!empty($galleys)) {
 				return $status == DRIVER_ACCESS_OPEN;
 			}
@@ -183,12 +183,12 @@ class DRIVERPlugin extends GenericPlugin {
 	 */
 	function isDRIVERArticle($journalId, $articleId) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($journalId);
-			$article = $publishedSubmissionDao->getBySubmissionId($articleId);
-			$issue = $issueDao->getById($article->getIssueId());
+			$submission = Services::get('submission')->get($articleId);
+			$publication = $submission->getCurrentPublication();
+			$issue = $issueDao->getById($publication->getData('issueId'));
 
 			// is open access
 			$status = '';
@@ -198,7 +198,7 @@ class DRIVERPlugin extends GenericPlugin {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedSubmission') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
 						$status = DRIVER_ACCESS_OPEN;
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = DRIVER_ACCESS_EMBARGOED;
@@ -216,7 +216,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 
 			// is there a full text
-			$galleys = $article->getGalleys();
+			$galleys = $submission->getGalleys();
 			if (!empty($galleys)) {
 				return $status == DRIVER_ACCESS_OPEN;
 			}
