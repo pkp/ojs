@@ -211,7 +211,7 @@
 		<div class="entry_details">
 
 			{* Article/Issue cover image *}
-			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
+			{if $article->getLocalizedCoverImage() || ($issue && $issue->getLocalizedCoverImage())}
 				<div class="item cover_image">
 					<div class="sub_item">
 						{if $article->getLocalizedCoverImage()}
@@ -313,29 +313,34 @@
 			{/if}
 
 			{* Issue article appears in *}
-			<div class="item issue">
-				<div class="sub_item">
-					<div class="label">
-						{translate key="issue.issue"}
-					</div>
-					<div class="value">
-						<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-							{$issue->getIssueIdentification()}
-						</a>
-					</div>
-				</div>
+			{if $issue || $section}
+				<div class="item issue">
 
-				{if $section}
-					<div class="sub_item">
-						<div class="label">
-							{translate key="section.section"}
+					{if $issue}
+						<div class="sub_item">
+							<div class="label">
+								{translate key="issue.issue"}
+							</div>
+							<div class="value">
+								<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
+									{$issue->getIssueIdentification()}
+								</a>
+							</div>
 						</div>
-						<div class="value">
-							{$section->getLocalizedTitle()|escape}
+					{/if}
+
+					{if $section}
+						<div class="sub_item">
+							<div class="label">
+								{translate key="section.section"}
+							</div>
+							<div class="value">
+								{$section->getLocalizedTitle()|escape}
+							</div>
 						</div>
-					</div>
-				{/if}
-			</div>
+					{/if}
+				</div>
+			{/if}
 
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
