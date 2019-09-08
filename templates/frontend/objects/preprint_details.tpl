@@ -1,11 +1,11 @@
 {**
- * templates/frontend/objects/article_details.tpl
+ * templates/frontend/objects/preprint_details.tpl
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @brief View of an Article which displays all details about the article.
+ * @brief View of an Preprint which displays all details about the article.
  *  Expected to be primary object on the page.
  *
  * Many journals will want to add custom data to this object, either through
@@ -46,15 +46,15 @@
  * Core components are produced manually below, but can also be added via
  * plugins using the hooks provided:
  *
- * Templates::Article::Main
- * Templates::Article::Details
+ * Templates::Preprint::Main
+ * Templates::Preprint::Details
  *
- * @uses $article Article This article
- * @uses $section Section The journal section this article is assigned to
- * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
- * @uses $supplementaryGalleys array List of article galleys that are supplementary
- * @uses $keywords array List of keywords assigned to this article
- * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
+ * @uses $preprint Preprint This preprint
+ * @uses $section Section The journal section this preprint is assigned to
+ * @uses $primaryGalleys array List of preprint galleys that are not supplementary or dependent
+ * @uses $supplementaryGalleys array List of preprint galleys that are supplementary
+ * @uses $keywords array List of keywords assigned to this preprint
+ * @uses $pubIdPlugins Array of pubId plugins which this preprint may be assigned
  * @uses $licenseTerms string License terms.
  * @uses $copyrightHolder string Name of copyright holder
  * @uses $copyrightYear string Year of copyright
@@ -64,21 +64,21 @@
  *}
 <article class="obj_article_details">
 	<h1 class="page_title">
-		{$article->getLocalizedTitle()|escape}
+		{$preprint->getLocalizedTitle()|escape}
 	</h1>
 
-	{if $article->getLocalizedSubtitle()}
+	{if $preprint->getLocalizedSubtitle()}
 		<h2 class="subtitle">
-			{$article->getLocalizedSubtitle()|escape}
+			{$preprint->getLocalizedSubtitle()|escape}
 		</h2>
 	{/if}
 
 	<div class="row">
 		<div class="main_entry">
 
-			{if $article->getAuthors()}
+			{if $preprint->getAuthors()}
 				<ul class="item authors">
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$preprint->getAuthors() item=author}
 						<li>
 							<span class="name">
 								{$author->getFullName()|escape}
@@ -106,7 +106,7 @@
 				{if $pubIdPlugin->getPubIdType() != 'doi'}
 					{continue}
 				{/if}
-				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{assign var=pubId value=$preprint->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 					<div class="item doi">
@@ -127,7 +127,7 @@
 			{if !empty($keywords[$currentLocale])}
 			<div class="item keywords">
 				<span class="label">
-					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
+					{capture assign=translatedKeywords}{translate key="preprint.subject"}{/capture}
 					{translate key="semicolon" label=$translatedKeywords}
 				</span>
 				<span class="value">
@@ -141,18 +141,18 @@
 			{/if}
 
 			{* Abstract *}
-			{if $article->getLocalizedAbstract()}
+			{if $preprint->getLocalizedAbstract()}
 				<div class="item abstract">
-					<h3 class="label">{translate key="article.abstract"}</h3>
-					{$article->getLocalizedAbstract()|strip_unsafe_html}
+					<h3 class="label">{translate key="preprint.abstract"}</h3>
+					{$preprint->getLocalizedAbstract()|strip_unsafe_html}
 				</div>
 			{/if}
 
-			{call_hook name="Templates::Article::Main"}
+			{call_hook name="Templates::Preprint::Main"}
 
 			{* Author biographies *}
 			{assign var="hasBiographies" value=0}
-			{foreach from=$article->getAuthors() item=author}
+			{foreach from=$preprint->getAuthors() item=author}
 				{if $author->getLocalizedBiography()}
 					{assign var="hasBiographies" value=$hasBiographies+1}
 				{/if}
@@ -166,7 +166,7 @@
 							{translate key="submission.authorBiography"}
 						{/if}
 					</h3>
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$preprint->getAuthors() item=author}
 						{if $author->getLocalizedBiography()}
 							<div class="sub_item">
 								<div class="label">
@@ -188,7 +188,7 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations || $article->getCurrentPublication()->getData('citationsRaw')}
+			{if $parsedCitations || $preprint->getCurrentPublication()->getData('citationsRaw')}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
@@ -196,10 +196,10 @@
 					<div class="value">
 						{if $parsedCitations}
 							{foreach from=$parsedCitations item="parsedCitation"}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Preprint::Details::Reference" citation=$parsedCitation}</p>
 							{/foreach}
 						{else}
-							{$article->getCurrentPublication()->getData('citationsRaw')|nl2br}
+							{$preprint->getCurrentPublication()->getData('citationsRaw')|nl2br}
 						{/if}
 					</div>
 				</div>
@@ -209,22 +209,22 @@
 
 		<div class="entry_details">
 
-			{* Article cover image *}
-			{if $article->getLocalizedCoverImage()}
+			{* Preprint cover image *}
+			{if $preprint->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
-							<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|escape|default:'null'}">
+							<img src="{$preprint->getLocalizedCoverImageUrl()|escape}" alt="{$preprint->getLocalizedCoverImageAltText()|escape|default:'null'}">
 					</div>
 				</div>
 			{/if}
 
-			{* Article Galleys *}
+			{* Preprint Galleys *}
 			{if $primaryGalleys}
 				<div class="item galleys">
 					<ul class="value galleys_links">
 						{foreach from=$primaryGalleys item=galley}
 							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
+								{include file="frontend/objects/galley_link.tpl" parent=$preprint galley=$galley}
 							</li>
 						{/foreach}
 					</ul>
@@ -235,20 +235,20 @@
 					<ul class="value supplementary_galleys_links">
 						{foreach from=$supplementaryGalleys item=galley}
 							<li>
-								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
+								{include file="frontend/objects/galley_link.tpl" parent=$preprint galley=$galley isSupplementary="1"}
 							</li>
 						{/foreach}
 					</ul>
 				</div>
 			{/if}
 
-			{if $article->getDatePublished()}
+			{if $preprint->getDatePublished()}
 				<div class="item published">
 					<div class="label">
 						{translate key="submissions.published"}
 					</div>
 					<div class="value">
-						{$article->getDatePublished()|date_format:$dateFormatShort}
+						{$preprint->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
 			{/if}
@@ -305,7 +305,7 @@
 				</div>
 			{/if}
 
-			{* Section article appears in *}
+			{* Section preprint appears in *}
 			<div class="item section">
 				{if $section}
 					<div class="sub_item">
@@ -324,7 +324,7 @@
 				{if $pubIdPlugin->getPubIdType() == 'doi'}
 					{continue}
 				{/if}
-				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{assign var=pubId value=$preprint->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					<div class="item pubid">
 						<div class="label">
@@ -366,7 +366,7 @@
 				</div>
 			{/if}
 
-			{call_hook name="Templates::Article::Details"}
+			{call_hook name="Templates::Preprint::Details"}
 
 		</div><!-- .entry_details -->
 	</div><!-- .row -->

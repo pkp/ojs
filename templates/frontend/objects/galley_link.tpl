@@ -12,8 +12,6 @@
  * @uses $parent Issue|Article Object which these galleys are attached to
  * @uses $isSupplementary bool Is this a supplementary file?
  * @uses $hasAccess bool Can this user access galleys for this context?
- * @uses $restrictOnlyPdf bool Is access only restricted to PDF galleys?
- * @uses $purchaseArticleEnabled bool Can this article be purchased?
  * @uses $currentJournal Journal The current journal context
  * @uses $journalOverride Journal An optional argument to override the current
  *       journal with a specific context
@@ -40,34 +38,8 @@
 	{assign var="parentId" value=$parent->getBestId()}
 {/if}
 
-{* Get user access flag *}
-{if !$hasAccess}
-	{if $restrictOnlyPdf && $type=="pdf"}
-		{assign var=restricted value="1"}
-	{elseif !$restrictOnlyPdf}
-		{assign var=restricted value="1"}
-	{/if}
-{/if}
-
 {* Don't be frightened. This is just a link *}
-<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>
-
-	{* Add some screen reader text to indicate if a galley is restricted *}
-	{if $restricted}
-		<span class="pkp_screen_reader">
-			{if $purchaseArticleEnabled}
-				{translate key="reader.subscriptionOrFeeAccess"}
-			{else}
-				{translate key="reader.subscriptionAccess"}
-			{/if}
-		</span>
-	{/if}
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>
 
 	{$galley->getGalleyLabel()|escape}
-
-	{if $restricted && $purchaseFee && $purchaseCurrency}
-		<span class="purchase_cost">
-			{translate key="reader.purchasePrice" price=$purchaseFee currency=$purchaseCurrency}
-		</span>
-	{/if}
 </a>
