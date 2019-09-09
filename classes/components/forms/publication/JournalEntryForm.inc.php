@@ -9,8 +9,7 @@
  * @class JournalEntryForm
  * @ingroup classes_controllers_form
  *
- * @brief A preset form for setting a publication's issue, section, categories,
- *  pages, etc.
+ * @brief A preset form for setting a publication's section, categories etc.
  */
 namespace APP\components\forms\publication;
 use \PKP\components\forms\FormComponent;
@@ -18,7 +17,6 @@ use \PKP\components\forms\FieldOptions;
 use \PKP\components\forms\FieldSelect;
 use \PKP\components\forms\FieldText;
 use \PKP\components\forms\FieldUploadImage;
-use \APP\components\forms\FieldSelectIssue;
 
 define('FORM_JOURNAL_ENTRY', 'journalEntry');
 
@@ -44,35 +42,6 @@ class JournalEntryForm extends FormComponent {
 		$this->successMessage = __('publication.journalEntry.success');
 		$this->locales = $locales;
 
-		// Issue options
-		$issueOptions = [['value' => '', 'label' => '']];
-		$unpublishedIssues = \Services::get('issue')->getMany([
-			'contextId' => $publicationContext->getId(),
-			'isPublished' => false,
-		]);
-		if (!empty($unpublishedIssues)) {
-			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
-			foreach ($unpublishedIssues as $issue) {
-				$issueOptions[] = [
-					'value' => (int) $issue->getId(),
-					'label' => $issue->getIssueIdentification(),
-				];
-			}
-		}
-		$publishedIssues = \Services::get('issue')->getMany([
-			'contextId' => $publicationContext->getId(),
-			'isPublished' => true,
-		]);
-		if (!empty($publishedIssues)) {
-			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
-			foreach ($publishedIssues as $issue) {
-				$issueOptions[] = [
-					'value' => (int) $issue->getId(),
-					'label' => $issue->getIssueIdentification(),
-				];
-			}
-		}
-
 		// Section options
 		$sections = \Services::get('section')->getSectionList($publicationContext->getId());
 		$sectionOptions = [];
@@ -94,13 +63,7 @@ class JournalEntryForm extends FormComponent {
 			];
 		}
 
-		$this->addField(new FieldSelectIssue('issueId', [
-				'label' => __('issue.issue'),
-				'options' => $issueOptions,
-				'publicationStatus' => $publication->getData('status'),
-				'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
-			]))
-			->addField(new FieldSelect('sectionId', [
+		$this->addField(new FieldSelect('sectionId', [
 				'label' => __('section.section'),
 				'options' => $sectionOptions,
 				'value' => (int) $publication->getData('sectionId'),
@@ -118,10 +81,6 @@ class JournalEntryForm extends FormComponent {
 				'options' => [
 					'url' => $temporaryFileApiUrl,
 				],
-			]))
-			->addField(new FieldText('pages', [
-				'label' => __('editor.issues.pages'),
-				'value' => $publication->getData('pages'),
 			]));
 	}
 }

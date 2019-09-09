@@ -27,8 +27,6 @@
 	</div>
 
 	<div class="pkp_content_panel">
-		{capture assign=productionReadyFilesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.files.productionReady.ProductionReadyFilesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
-		{load_url_in_div id="productionReadyFilesGridDiv" url=$productionReadyFilesGridUrl}
 		{capture assign=queriesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.queries.QueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
 		{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
 	</div>

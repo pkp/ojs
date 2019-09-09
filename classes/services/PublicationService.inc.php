@@ -135,13 +135,6 @@ class PublicationService extends PKPPublicationService {
 			}
 		}
 
-		// Ensure that the issueId exists
-		if (isset($props['issueId']) && empty($errors['issueId'])) {
-			$issue = Services::get('issue')->get($props['issueId']);
-			if (!$issue) {
-				$errors['issueId'] = [__('publication.invalidIssue')];
-			}
-		}
 	}
 
 	/**
@@ -160,11 +153,6 @@ class PublicationService extends PKPPublicationService {
 	public function validatePublishPublication($hookName, $args) {
 		$errors =& $args[0];
 		$publication = $args[1];
-
-		// Every publication must be scheduled in an issue
-		if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
-			$errors['issueId'] = __('publication.required.issue');
-		}
 	}
 
 	/**
@@ -208,15 +196,10 @@ class PublicationService extends PKPPublicationService {
 		$newPublication = $args[0];
 		$oldPublication = $args[1];
 
-		// In OJS, a publication may be scheduled in a future issue. In such cases,
-		// the datePublished should remain empty and the status should be set to
-		// scheduled.
-		if (!$oldPublication->getData('datePublished')) {
-			$issue = Services::get('issue')->get($newPublication->getData('issueId'));
-			if ($issue && !$issue->getData('published')) {
-				$newPublication->setData('datePublished', '');
-				$newPublication->setData('status', STATUS_SCHEDULED);
-			}
+		// If the publish date is in the future, set the status to scheduled
+		$datePublished = $oldPublication->getData('datePublished');
+		if ($datePublished && strtotime($datePublished) > strtotime(\Core::getCurrentDate())) {
+			$newPublication->setData('status', STATUS_SCHEDULED);
 		}
 	}
 

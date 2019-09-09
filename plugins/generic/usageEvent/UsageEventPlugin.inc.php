@@ -26,7 +26,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	 */
 	function getEventHooks() {
 		return array_merge(parent::getEventHooks(), array(
-			'ArticleHandler::download',
+			'PreprintHandler::download',
 			'IssueHandler::download',
 			'HtmlArticleGalleyPlugin::articleDownload',
 			'HtmlArticleGalleyPlugin::articleDownloadFinished'
@@ -51,26 +51,26 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 		if (!$pubObject) {
 			switch ($hookName) {
-				// Press index page, issue content page and article abstract.
+				// Press index page and preprint abstract.
 				case 'TemplateManager::display':
 					$page = $router->getRequestedPage($request);
 					$op = $router->getRequestedOp($request);
 					$args = $router->getRequestedArgs($request);
 
-					$wantedPages = array('issue', 'article');
+					$wantedPages = array('issue', 'preprint');
 					$wantedOps = array('index', 'view');
 
 					if (!in_array($page, $wantedPages) || !in_array($op, $wantedOps)) break;
 
-					// View requests with 1 argument might relate to journal
-					// or article. With more than 1 is related with other objects
+					// View requests with 1 argument might relate to server
+					// or preprint. With more than 1 is related with other objects
 					// that we are not interested in or that are counted using a
 					// different hook.
 					if ($op == 'view' && count($args) > 1) break;
 
 					$journal = $templateMgr->getTemplateVars('currentContext');
 					$issue = $templateMgr->getTemplateVars('issue');
-					$submission = $templateMgr->getTemplateVars('article');
+					$submission = $templateMgr->getTemplateVars('preprint');
 
 					// No published objects, no usage event.
 					if (!$journal && !$issue && !$submission) break;
@@ -111,18 +111,18 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					$pubObject = $galley;
 					break;
 
-					// Article file.
-				case 'ArticleHandler::download':
+					// Preprint file.
+				case 'PreprintHandler::download':
 				case 'HtmlArticleGalleyPlugin::articleDownload':
 					$assocType = ASSOC_TYPE_SUBMISSION_FILE;
-					$article = $hookArgs[0];
+					$preprint = $hookArgs[0];
 					$galley = $hookArgs[1];
 					$fileId = $hookArgs[2];
 					// if file is not a gallay file (e.g. CSS or images), there is no usage event.
 					if ($galley->getFileId() != $fileId) return false;
 					$canonicalUrlOp = 'download';
-					$canonicalUrlParams = array($article->getId(), $galley->getId(), $fileId);
-					$idParams = array('a' . $article->getId(), 'g' . $galley->getId(), 'f' . $fileId);
+					$canonicalUrlParams = array($preprint->getId(), $galley->getId(), $fileId);
+					$idParams = array('a' . $preprint->getId(), 'g' . $galley->getId(), 'f' . $fileId);
 					$downloadSuccess = false;
 					$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 					$pubObject = $submissionFileDao->getLatestRevision($fileId);

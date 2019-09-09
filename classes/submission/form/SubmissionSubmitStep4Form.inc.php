@@ -36,6 +36,12 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 		parent::execute();
 
 		$submission = $this->submission;
+
+		// Move the submission to production stage 
+		$submissionDao = Application::getSubmissionDAO();
+		$submission->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
+		$submissionDao->updateObject($submission);
+
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
 		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
@@ -71,7 +77,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 					$authorMail->addRecipient($author->getEmail(), $author->getFullName());
 				}
 			}
-			$mail->bccAssignedSubEditors($submission->getId(), WORKFLOW_STAGE_ID_SUBMISSION);
+			$mail->bccAssignedSubEditors($submission->getId(), WORKFLOW_STAGE_ID_PRODUCTION);
 
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
