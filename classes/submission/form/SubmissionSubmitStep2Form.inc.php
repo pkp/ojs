@@ -22,6 +22,18 @@ class SubmissionSubmitStep2Form extends PKPSubmissionSubmitStep2Form {
 	function __construct($context, $submission) {
 		parent::__construct($context, $submission);
 	}
+
+	/**
+	 * @copydoc SubmissionSubmitForm::fetch
+	 */
+	function fetch($request, $template = null, $display = false) {
+		$templateMgr = TemplateManager::getManager($request);
+		$requestArgs['submissionId'] = $this->submission->getId();
+		$requestArgs['publicationId'] = $this->submission->getCurrentPublication()->getId();
+		$templateMgr->assign('requestArgs', $requestArgs);
+		return parent::fetch($request, $template, $display);
+	}
+
 }
 
 
