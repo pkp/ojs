@@ -19,7 +19,7 @@
 
 import('lib.pkp.classes.xml.XMLNode');
 
-define('MEDRA_WS_ENDPOINT_DEV', 'https://medra.dev.cineca.it/servlet/ws/medraWS');
+define('MEDRA_WS_ENDPOINT_DEV', 'https://www-medra-dev.medra.org/servlet/ws/medraWS');
 define('MEDRA_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/medraWS');
 define('MEDRA_WS_RESPONSE_OK', 200);
 
