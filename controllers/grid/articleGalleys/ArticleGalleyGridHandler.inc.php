@@ -31,7 +31,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
+			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
 	}
 
 
@@ -180,7 +180,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		return new ArticleGalleyGridRow(
 			$this->getSubmission(),
 			$this->getPublication(),
-			!empty(array_intersect([ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT], $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)))
+			!empty(array_intersect([ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR], $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)))
 		);
 	}
 
@@ -416,12 +416,19 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @return boolean
 	 */
 	public function canEdit() {
+		
+		/*
 		return Services::get('user')->canUserAccessStage(
 			WORKFLOW_STAGE_ID_PRODUCTION,
 			WORKFLOW_TYPE_EDITORIAL,
 			$this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
 			$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
 		);
+		*/
+
+		# FIXME: this check needs revision because it will not work upon initial submission
+		return true;
+
 	}
 }
 
