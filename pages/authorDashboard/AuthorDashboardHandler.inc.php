@@ -28,7 +28,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 			null,
 			'grid.articleGalleys.ArticleGalleyGridHandler',
 			'fetchGrid',
-			$submission->getId(),
+			null,
 			[
 				'submissionId' => $submission->getId(),
 				'publicationId' => '__publicationId__',
