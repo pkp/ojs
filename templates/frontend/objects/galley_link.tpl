@@ -30,13 +30,9 @@
 {/if}
 
 {* Get page and parentId for URL *}
-{if $parent instanceOf Issue}
-	{assign var="page" value="issue"}
-	{assign var="parentId" value=$parent->getBestIssueId()}
-{else}
-	{assign var="page" value="article"}
-	{assign var="parentId" value=$parent->getBestId()}
-{/if}
+{assign var="page" value="preprint"}
+{assign var="parentId" value=$parent->getBestId()}
+
 
 {* Don't be frightened. This is just a link *}
 <a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>

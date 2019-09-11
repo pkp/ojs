@@ -19,6 +19,41 @@ import('lib.pkp.pages.authorDashboard.PKPAuthorDashboardHandler');
 class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 
 	/**
+	 * Setup variables for the template
+	 * @param $request Request
+	 */
+	function setupTemplate($request) {
+		parent::setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);		
+
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+
+		$submissionContext = $request->getContext();
+		if ($submission->getContextId() !== $submissionContext->getId()) {
+			$submissionContext = Services::get('context')->get($submission->getContextId());
+		}
+
+		$supportedFormLocales = $submissionContext->getSupportedFormLocales();
+		$localeNames = AppLocale::getAllLocales();
+		$locales = array_map(function($localeKey) use ($localeNames) {
+			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
+		}, $supportedFormLocales);		
+
+		$latestPublication = $submission->getLatestPublication();
+		$latestPublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
+
+		$titleAbstractForm = new PKP\components\forms\publication\PKPTitleAbstractForm($latestPublicationApiUrl, $locales, $latestPublication);
+
+		$templateMgr->setConstants([
+			'FORM_TITLE_ABSTRACT',
+		]);
+
+		$workflowData = $templateMgr->getTemplateVars('workflowData');
+		$workflowData['components'][FORM_TITLE_ABSTRACT] = $titleAbstractForm->getConfig();
+		$templateMgr->assign('workflowData', $workflowData);
+	}
+
+	/**
 	 * @copydoc PKPAuthorDashboardHandler::_getRepresentationsGridUrl()
 	 */
 	protected function _getRepresentationsGridUrl($request, $submission) {
@@ -28,7 +63,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 			null,
 			'grid.articleGalleys.ArticleGalleyGridHandler',
 			'fetchGrid',
-			$submission->getId(),
+			null,
 			[
 				'submissionId' => $submission->getId(),
 				'publicationId' => '__publicationId__',

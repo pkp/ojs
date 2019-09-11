@@ -98,7 +98,7 @@ class PreprintHandler extends Handler {
 		if (in_array($request->getRequestedOp(), ['view', 'download'])) {
 			$galleyId = isset($args[1]) ? $args[1] : 0;
 			if ($galleyId) {
-				$this->galley = DAORegistry::getDAO('PreprintGalleyDAO')->getByBestGalleyId($galleyId, $submission->getCurrentPublication()->getId());
+				$this->galley = DAORegistry::getDAO('ArticleGalleyDAO')->getByBestGalleyId($galleyId, $submission->getCurrentPublication()->getId());
 				if (!$this->galley) {
 					$request->getDispatcher()->handle404();
 				}
@@ -193,7 +193,7 @@ class PreprintHandler extends Handler {
 		]);
 
 		// Fetch and assign the galley to the template
-		$galleyDao = DAORegistry::getDAO('PreprintGalleyDAO');
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = $galleyDao->getByBestGalleyId($galleyId, $preprint->getCurrentPublication()->getId());
 		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
 
@@ -245,7 +245,7 @@ class PreprintHandler extends Handler {
 		$submissionFiles = $submissionFileDao->getBySubmissionId($preprintId);
 		foreach ($submissionFiles as $submissionFile) {
 			if ($submissionFile->getData('old-supp-id') == $suppId) {
-				$preprintGalleyDao = DAORegistry::getDAO('PreprintGalleyDAO');
+				$preprintGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 				$preprintGalleys = $preprintGalleyDao->getByPublicationId($preprint->getCurrentPublication()->getId());
 				while ($preprintGalley = $preprintGalleys->next()) {
 					$galleyFile = $preprintGalley->getFile();
