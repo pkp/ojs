@@ -27,6 +27,20 @@
 	<div id="workflow-{$uuid}" class="pkpWorkflow">
 		<pkp-header :is-one-line="true" class="pkpWorkflow__header">
 			<h1 class="pkpWorkflow__identification">
+				<badge
+					v-if="submission.status === getConstant('STATUS_PUBLISHED')"
+					class="pkpWorkflow__identificationStatus"
+					:is-success="true"
+				>
+					{translate key="publication.status.published"}
+				</badge>
+				<badge
+					v-else-if="submission.status === getConstant('STATUS_SCHEDULED')"
+					class="pkpWorkflow__identificationStatus"
+					:is-primary="true"
+				>
+					{translate key="publication.status.scheduled"}
+				</badge>
 				<span class="pkpWorkflow__identificationId">{{ submission.id }}</span>
 				<span class="pkpWorkflow__identificationDivider">/</span>
 				<span class="pkpWorkflow__identificationAuthor">
@@ -39,6 +53,11 @@
 			</h1>
 			<template slot="actions">
 				<pkp-button
+					element="a"
+					:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.view : i18n.preview"
+					:href="submission.urlPublished"
+				></pkp-button>
+				<pkp-button
 					v-if="uploadFileUrl"
 					:label="i18n.uploadFile"
 					@click="openFileUpload"
@@ -49,7 +68,7 @@
 				></pkp-button>
 			</template>
 		</pkp-header>
-		<tabs>
+		<tabs  default-tab="workflow">
 			<tab id="workflow" label="{translate key="manager.workflow"}">
 
 				{include file="controllers/notification/inPlaceNotification.tpl" notificationId="authorDashboardNotification" requestOptions=$authorDashboardNotificationRequestOptions}
@@ -85,6 +104,7 @@
 										</span>
 									{/if}
 								</a>
+
 							</li>
 						{/foreach}
 					</ul>
@@ -125,6 +145,26 @@
 								</ul>
 							</dropdown>
 						</span>
+						<template slot="actions">
+							<pkp-button
+								v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
+								ref="publish"
+								:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.publish : i18n.schedulePublication"
+								@click="openPublish"
+							></pkp-button>
+							<pkp-button
+								v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')"
+								label="{translate key="publication.unschedule"}"
+								:is-warnable="true"
+								@click="openUnpublish"
+							></pkp-button>
+							<pkp-button
+								v-else-if="canCreateNewVersion"
+								ref="createVersion"
+								label="{translate key="publication.createVersion"}"
+								@click="createVersion"
+							></pkp-button>
+						</template>
 					</pkp-header>
 					<div
 						v-if="workingPublication.status === getConstant('STATUS_PUBLISHED')"

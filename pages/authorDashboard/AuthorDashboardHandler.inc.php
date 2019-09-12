@@ -44,12 +44,21 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 
 		$titleAbstractForm = new PKP\components\forms\publication\PKPTitleAbstractForm($latestPublicationApiUrl, $locales, $latestPublication);
 
+		// Import constants
+		import('classes.submission.Submission');
+
 		$templateMgr->setConstants([
+			'STATUS_QUEUED',
+			'STATUS_PUBLISHED',
+			'STATUS_DECLINED',
+			'STATUS_SCHEDULED',
 			'FORM_TITLE_ABSTRACT',
 		]);
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
 		$workflowData['components'][FORM_TITLE_ABSTRACT] = $titleAbstractForm->getConfig();
+		$workflowData['i18n']['schedulePublication'] = __('editor.article.schedulePublication');
+		$workflowData['i18n']['publish'] = __('publication.publish');
 		$templateMgr->assign('workflowData', $workflowData);
 	}
 
@@ -70,6 +79,32 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 			]
 		);
 	}
+
+	/**
+	 * Translate the requested operation to a stage id.
+	 * @param $request Request
+	 * @param $args array
+	 * @return integer One of the WORKFLOW_STAGE_* constants.
+	 */
+	protected function identifyStageId($request, $args) {
+		if ($stageId = $request->getUserVar('stageId')) {
+			return (int) $stageId;
+		}
+		// Maintain the old check for previous path urls
+		$router = $request->getRouter();
+		$workflowPath = $router->getRequestedOp($request);
+		$stageId = WorkflowStageDAO::getIdFromPath($workflowPath);
+		if ($stageId) {
+			return $stageId;
+		}
+		// Finally, retrieve the requested operation, if the stage id is
+		// passed in via an argument in the URL, like index/submissionId/stageId
+		$stageId = $args[1];
+		// Translate the operation to a workflow stage identifier.
+		assert(WorkflowStageDAO::getPathFromId($stageId) !== null);
+		return $stageId;
+	}
+
 }
 
 
