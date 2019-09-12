@@ -251,7 +251,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 			if ($section->getReviewFormId()) $sectionNode->setAttribute('review_form_id', $section->getReviewFormId());
 			$sectionNode->setAttribute('ref', $section->getAbbrev($journal->getPrimaryLocale()));
-			$sectionNode->setAttribute('seq', $section->getSequence());
+			$sectionNode->setAttribute('seq', (int) $section->getSequence());
 			$sectionNode->setAttribute('editor_restricted', $section->getEditorRestricted());
 			$sectionNode->setAttribute('meta_indexed', $section->getMetaIndexed());
 			$sectionNode->setAttribute('meta_reviewed', $section->getMetaReviewed());

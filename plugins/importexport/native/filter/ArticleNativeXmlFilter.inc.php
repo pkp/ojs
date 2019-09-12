@@ -70,7 +70,7 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 
 		$publication = $submission->getCurrentPublication();
 		$isPublished = $publication->getData('status') === STATUS_PUBLISHED;
-		$isPublished ? $submissionNode->setAttribute('seq', $publication->getData('seq')) : $submissionNode->setAttribute('seq', '0');
+		$isPublished ? $submissionNode->setAttribute('seq', (int) $publication->getData('seq')) : $submissionNode->setAttribute('seq', '0');
 		$isPublished ? $submissionNode->setAttribute('access_status', $publication->getData('accessStatus')) : $submissionNode->setAttribute('access_status', '0');
 		// if this is a published submission and not part/subelement of an issue element
 		// add issue identification element
