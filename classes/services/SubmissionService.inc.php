@@ -167,4 +167,12 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 
 		return $bySections;
 	}
+
+	/**
+	 * @copydoc \PKP\Services\EntityProperties\EntityWriteInterface::add()
+	 */
+	public function add($submission, $request) {
+		$submission->setData('sectionId', $submission->getSectionId());
+		return parent::add($submission, $request);
+	}
 }
