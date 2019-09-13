@@ -23,21 +23,19 @@
 	<message key="submission.submit.newSubmissionSingle">Новый материал</message>
 	<message key="grid.action.workflow">Процесс отправки</message>
 	<message key="submission.abstract.wordCount.description">Аннотация должна содержать не более {$wordCount} слов.</message>
+	<message key="submission.submit.noContext">Журнал для этого материала не удаётся найти.</message>
 
 	<message key="submission.issueEntry">Метаданные</message>
 	<message key="submission.submit.whatNext.description">Журнал был уведомлен об отправке Вами материала, подтверждение записи были направлено на Вашу электронную почту. Как только редактор просмотрит ваш материал, мы свяжемся с вами.</message>
 	<message key="grid.action.galleyInIssueEntry">Гранка появилась в выпуске</message>
 	<message key="grid.action.issueEntry">Показать метаданные этого материала</message>
 
-	<!-- Модальное окно информации об отправленном материале -->
-	<message key="submission.publication">Публикация</message>
-
 	<!-- события -->
 	<message key="submission.event.articleGalleyMadeAvailable">Гранка статьи «{$galleyFormatName}» сделана доступной.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Гранка статьи «{$galleyFormatName}» сделана недоступной.</message>
 	<message key="submission.event.publicIdentifiers">Открытые идентификаторы отправленного материала обновлены.</message>
 
-	<!-- стека гранок -->
+	<!-- сетка гранок -->
 	<message key="grid.issueEntry.availableGalley.title">Одобрение формата</message>
 	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Эту гранку <em>больше нельзя сделать доступной</em> читателям.</p>]]></message>
 	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Эта гранку <em>можно сделать доступной</em> читателям.</p>]]></message>
@@ -80,4 +78,15 @@
 	<!-- категории -->
 	<message key="catalog.browseTitles">Число категорий: {$numTitles}</message>
 	<message key="catalog.category.heading">Все категории</message>
+
+	<!-- Публикация -->
+	<message key="galley.editPublishedDisabled">Гранки этой публикации нельзя редактировать, так как она уже опубликована.</message>
+	<message key="galley.publicationNotFound">Публикацию для этой гранки не удаётся найти.</message>
+	<message key="publication.invalidSection">Раздел для этой публикации не удаётся найти.</message>
+	<message key="publication.invalidIssue">Выпуск для этой публикации не удаётся найти.</message>
+	<message key="publication.journalEntry">Запись в журнале</message>
+	<message key="publication.journalEntry.success">Информация о записи в журнале была обновлена.</message>
+	<message key="publication.required.issue">Публикация должна быть назначена в выпуск до её опубликования.</message>
+	<message key="publication.publishedIn"><![CDATA[Опубликовано в <a href="{$issueUrl}">{$issueName}</a>.]]></message>
+	<message key="publication.scheduledIn"><![CDATA[Запланировано к публикации в <a href="{$issueUrl}">{$issueName}</a>.]]></message>
 </locale>
