@@ -59,6 +59,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 
 		// Import constants
 		import('classes.submission.Submission');
+		import('classes.components.forms.publication.PublishForm');
 
 		$templateMgr->setConstants([
 			'STATUS_QUEUED',
@@ -66,6 +67,8 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 			'STATUS_DECLINED',
 			'STATUS_SCHEDULED',
 			'FORM_TITLE_ABSTRACT',
+			'FORM_PUBLISH',
+			'FORM_JOURNAL_ENTRY',
 		]);
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
@@ -73,6 +76,8 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 		$workflowData['i18n']['schedulePublication'] = __('editor.article.schedulePublication');
 		$workflowData['i18n']['publish'] = __('publication.publish');
 		$workflowData['publishUrl'] = $publishUrl;
+		$workflowData['components']['publicationFormIds'] = [FORM_PUBLISH,
+				FORM_TITLE_ABSTRACT, FORM_JOURNAL_ENTRY];
 		$templateMgr->assign('workflowData', $workflowData);
 	}
 

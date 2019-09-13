@@ -92,23 +92,26 @@
 						);
 					{rdelim});
 				</script>
-				<div id="stageTabs" class="pkp_controllers_tab">
-					<ul>
-						{foreach from=$workflowStages item=stage}
-							<li class="pkp_workflow_{$stage.path} stageId{$stage.id}{if $stage.statusKey} initiated{/if}">
-								<a name="stage-{$stage.path}" class="{$stage.path} stageId{$stage.id}" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.authorDashboard.AuthorDashboardTabHandler" op="fetchTab" submissionId=$submission->getId() stageId=$stage.id escape=false}">
-									{translate key=$stage.translationKey}
-									{if $stage.statusKey}
-										<span class="pkp_screen_reader">
-											{translate key=$stage.statusKey}
-										</span>
-									{/if}
-								</a>
+				<div id="submissionWorkflow" class="pkp_submission_workflow">
+					<div id="stageTabs" class="pkp_controllers_tab">
+						<ul>
+							{foreach from=$workflowStages item=stage}
+								<li class="pkp_workflow_{$stage.path} stageId{$stage.id}{if $stage.statusKey} initiated{/if}">
+									<a name="stage-{$stage.path}" class="{$stage.path} stageId{$stage.id}" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.authorDashboard.AuthorDashboardTabHandler" op="fetchTab" submissionId=$submission->getId() stageId=$stage.id escape=false}">
+										{translate key=$stage.translationKey}
+										{if $stage.statusKey}
+											<span class="pkp_screen_reader">
+												{translate key=$stage.statusKey}
+											</span>
+										{/if}
+									</a>
 
-							</li>
-						{/foreach}
-					</ul>
+								</li>
+							{/foreach}
+						</ul>
+					</div>
 				</div>
+
 			</tab>
 			<tab id="publication" label="{translate key="submission.publication"}">
 				<div class="pkpPublication" ref="publication" aria-live="polite">
