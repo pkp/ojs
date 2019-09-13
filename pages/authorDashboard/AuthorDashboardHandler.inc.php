@@ -42,6 +42,19 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 		$latestPublication = $submission->getLatestPublication();
 		$latestPublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
 
+		$publishUrl = $request->getDispatcher()->url(
+			$request,
+			ROUTE_COMPONENT,
+			null,
+			'modals.publish.PPSPublishHandler',
+			'publish',
+			null,
+			[
+				'submissionId' => $submission->getId(),
+				'publicationId' => '__publicationId__',
+			]
+		);
+
 		$titleAbstractForm = new PKP\components\forms\publication\PKPTitleAbstractForm($latestPublicationApiUrl, $locales, $latestPublication);
 
 		// Import constants
@@ -59,6 +72,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 		$workflowData['components'][FORM_TITLE_ABSTRACT] = $titleAbstractForm->getConfig();
 		$workflowData['i18n']['schedulePublication'] = __('editor.article.schedulePublication');
 		$workflowData['i18n']['publish'] = __('publication.publish');
+		$workflowData['publishUrl'] = $publishUrl;
 		$templateMgr->assign('workflowData', $workflowData);
 	}
 
