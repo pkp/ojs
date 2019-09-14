@@ -93,6 +93,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// title
 		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
 		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($submission->getTitle($submission->getLocale()), ENT_COMPAT, 'UTF-8')));
+		if ($subtitle = $submission->getSubtitle($submission->getLocale())) $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
 		$journalArticleNode->appendChild($titlesNode);
 
 		// contributors
