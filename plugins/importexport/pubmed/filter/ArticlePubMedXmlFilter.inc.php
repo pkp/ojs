@@ -103,8 +103,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			$articleNode->appendChild($doc->createElement('Language', AppLocale::get3LetterFrom2LetterIsoLanguage(substr($submission->getLocale(), 0, 2))));
 
 			$authorListNode = $doc->createElement('AuthorList');
-			foreach ($submission->getAuthors() as $authorIndex => $author) {
-				$authorListNode->appendChild($this->generateAuthorNode($doc, $journal, $issue, $submission, $author, $authorIndex));
+			foreach ($submission->getAuthors() as $author) {
+				$authorListNode->appendChild($this->generateAuthorNode($doc, $journal, $issue, $submission, $author));
 			}
 			$articleNode->appendChild($authorListNode);
 
@@ -188,7 +188,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	 * @param $author Author
 	 * @return DOMElement
 	 */
-	function generateAuthorNode($doc, $journal, $issue, $submission, $author, $authorIndex) {
+	function generateAuthorNode($doc, $journal, $issue, $submission, $author) {
 		$authorElement = $doc->createElement('Author');
 
 		if (empty($author->getLocalizedFamilyName())) {
