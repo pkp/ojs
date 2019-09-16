@@ -202,10 +202,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getLocalizedGivenName())));
 			$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedFamilyName())));
 		}
-		if ($authorIndex == 0) {
-			// See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7774
-			$authorElement->appendChild($doc->createElement('Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
-		}
+		$authorElement->appendChild($doc->createElement('Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
 
 		return $authorElement;
 	}
