@@ -176,6 +176,9 @@
 		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type) VALUES ('themePluginPath', 'default', 'string')</query>
 		<query>INSERT INTO journal_settings (setting_name, setting_value, setting_type, journal_id) SELECT 'themePluginPath', 'default', 'string', journal_id FROM journals</query>
 	</sql>
+	<sql><!-- Issue #4989: Set default review mode on upgrade from 2.x -->
+		<query>INSERT INTO journal_settings (setting_name, setting_value, setting_type, journal_id) SELECT 'defaultReviewMode', 'default', 'int', journal_id FROM journals</query><!-- SUBMISSION_REVIEW_METHOD_DOUBLEBLIND -->
+	</sql>
 
 	<sql><!-- OJS 2.4.x used log.author.submitted to log submission events; use submission.event.submissionSubmitted instead -->
 		<query>UPDATE event_log SET message='submission.event.submissionSubmitted' WHERE message='log.author.submitted'</query>
