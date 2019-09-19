@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:03-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:03-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="editor-home">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Home</source>
+        <target>Pàgina inicial de l’editor/a</target>
+      </segment>
+    </unit>
+    <unit id="editor-reassign">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reassign</source>
+        <target>Reassignació</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionsAndPublishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions and Publishing</source>
+        <target>Trameses i publicació</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionQueue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Queue</source>
+        <target>Cua de trameses</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Archive</source>
+        <target>Arxivament de trameses</target>
+      </segment>
+    </unit>
+    <unit id="editor-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing</source>
+        <target>Publicació</target>
+      </segment>
+    </unit>
+    <unit id="editor-publishedIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Published Issues</source>
+        <target>Números publicats</target>
+      </segment>
+    </unit>
+    <unit id="editor-allSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Sections</source>
+        <target>Totes les seccions</target>
+      </segment>
+    </unit>
+    <unit id="editor-allEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Editors</source>
+        <target>Tots els editors/ores</target>
+      </segment>
+    </unit>
+    <unit id="editor-me">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Me</source>
+        <target>Jo</target>
+      </segment>
+    </unit>
+    <unit id="editor-publicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or file). Please choose unique identifiers within your journal.</source>
+        <target>L'identificador públic '{$publicIdentifier}' correspon a un altre objecte ja existent (número, article, galerada o fitxer addicional). Trieu identificadors únics dins de la vostra revista.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submissions in the archive.</source>
+        <target>No hi ha cap tramesa a l’arxivament.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-saveChanges">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</source>
+        <target>Voleu desar els canvis fets a les trameses arxivades? Si marqueu una tramesa per suprimir-la, s’eliminarà permanentment del sistema.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this submission?</source>
+        <target>Esteu segur/a que voleu suprimir permanentment aquesta tramesa?</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-confirmDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to record this decision?</source>
+        <target>Esteu segur/a que voleu enregistrar aquesta decisió?</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-emailWillArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</source>
+        <target>Aquesta tramesa s’arxivarà després d’haver enviat el correu electrònic «Notifica a l’autor/a» o d’haver premut el botó «Omet el correu electrònic».</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-cannotSendToCopyediting">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</source>
+        <target>Abans d’enviar la tramesa per fer la correcció d’originals, utilitzeu l’enllaç «Notifica a l’autor/a» per informar l’autor/a de la decisió i seleccioneu la versió que s’ha d’enviar.</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Users</source>
+        <target>Notifica als usuaris/àries</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All readers ({$count} users)</source>
+        <target>Tots els lectors/ores ({$count} usuaris/àries)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All published authors ({$count} users)</source>
+        <target>Tots els autors/ores publicats ({$count} usuaris/àries)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allIndividualSubscribers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All individual subscribers ({$count} users)</source>
+        <target>Tots els subscriptors/ores individuals ({$count} usuaris/àries)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allInstitutionalSubscribers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All institutional subscribers ({$count} users)</source>
+        <target>Tots els subscriptors/ores institucionals ({$count} usuaris/àries)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-inProgress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notifying users...</source>
+        <target>S’està notificant als usuaris/àries...</target>
+      </segment>
+    </unit>
+    <unit id="editor-usersNotified">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Notified</source>
+        <target>S'ha notificat als usuaris/àries</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send this message to all users associated with this journal ({$count} users)</source>
+        <target>Envia aquest missatge a tots els usuaris/àries associats amb aquesta revista ({$count} usuaris/àries)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-interestedUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send this message to the users associated with this journal who have indicated that they wish to receive updates ({$count} users)</source>
+        <target>Envia aquest missatge als usuaris/àries associats amb aquesta revista que hagin indicat que volen rebre actualitzacions ({$count} usuaris/àries)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-includeToc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include the table of contents from this issue:</source>
+        <target>Inclou la taula de continguts d’aquest número:</target>
+      </segment>
+    </unit>
+    <unit id="editor-editorAdministration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Administration</source>
+        <target>Administració de l’editor/a</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-createIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Crea un número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-editIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Management: {$issueIdentification}</source>
+        <target>Gestió del número: {$issueIdentification}</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current Issue</source>
+        <target>Número actual</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-numArticles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items</source>
+        <target>Elements</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noArticles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No items are currently scheduled for this issue.</source>
+        <target>No hi ha cap element planificat per a aquest número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this issue?</source>
+        <target>Esteu segur/a que voleu suprimir permanentment aquest número?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-published">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Published</source>
+        <target>Publicats</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-unpublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unpublished</source>
+        <target>No publicats</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-datePublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Date Published</source>
+        <target>Data de publicació</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-volumeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Volume is required and must be a positive, numeric value.</source>
+        <target>Heu d’introduir un valor numèric positiu per al volum.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-numberRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Number is required and must be a positive, numeric value.</source>
+        <target>Heu d’introduir un valor numèric positiu per al número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-yearRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Year is required and must be a positive, numeric value.</source>
+        <target>Heu d’introduir un valor numèric positiu per a l’any.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title is required for the issue.</source>
+        <target>Heu d’introduir un títol per al número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueIdentificationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue identification is required. Please select at least one of the issue identification options.</source>
+        <target>Heu d’introduir la identificació per al número. Seleccioneu com a mínim una de les opcions d’identificació per al número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueIdentification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue identification</source>
+        <target>Identificació del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicIssueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public issue identifier</source>
+        <target>Identificador públic del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Descripció</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-accessStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access status</source>
+        <target>Estat d’accés</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-accessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open access date</source>
+        <target>Data d'accés lliure</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-enableOpenAccessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable delayed open access</source>
+        <target>Habilita l’accés lliure diferit</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover image</source>
+        <target>Imatge per a la portada</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(Allowed formats: .gif, .jpg, or .png)</source>
+        <target>(Formats admesos: .gif, .jpg, .png)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-uploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Uploaded</source>
+        <target>Carregat</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Elimina</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-proofed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofed</source>
+        <target>Corregits</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove cover page image?</source>
+        <target>Voleu eliminar la imatge de la portada?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverImageFileNameMismatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete did not match the cover image for this issue. Please reload the page and try again.</source>
+        <target>La imatge de portada que volíeu eliminar no coincideix amb la d'aquest número. Actualitzi la pàgina i torni-ho a provar.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidCoverImageFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</source>
+        <target>Format d'imatge de portada no vàlid. Els formats acceptats són .gif, .jpg, o .png.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-styleFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Stylesheet</source>
+        <target>Full d’estil</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidStyleFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid stylesheet format. Ensure that the submitted file is a valid CSS. (Note that stylesheets with comments at the beginning may be rejected.)</source>
+        <target>El format del full d’estil no és vàlid. Comproveu que el fitxer que heu tramès sigui un CSS vàlid. (No s’admeten fulls d’estil amb comentaris a l’inici.)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeStyleFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove stylesheet?</source>
+        <target>Voleu eliminar el full d’estil?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageCaption">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover caption</source>
+        <target>Peu de la portada</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-showCoverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create a cover for this issue with the following elements.</source>
+        <target>Crea una portada per a aquest número amb els elements següents:</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageDisplay">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display</source>
+        <target>Visualització</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open access</source>
+        <target>Accés lliure</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription</source>
+        <target>Subscripció</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-identification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification</source>
+        <target>Identificació</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Accés</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-cover">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover</source>
+        <target>Portada</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmIssueDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All articles will be returned to the editing queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</source>
+        <target>Si feu aquesta acció, tots els articles tornaran a la cua d’edició i tots els fitxers associats s'eliminaran permanentment. Esteu segur/a que voleu eliminar aquest número?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-resetIssueOrder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal uses custom issue ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></source>
+        <target><![CDATA[Aquesta revista utilitza una ordenació de números personalitzada. <a href="{$url}" class="action">Reinicia als valors predeterminats</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-resetSectionOrder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This issue uses custom section ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></source>
+        <target><![CDATA[Aquest número utilitza una ordenació de seccions personalitzada. <a href="{$url}" class="action">Reinicia als valors predeterminats</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueData">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Data</source>
+        <target>Dades del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-saveChanges">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save changes to table of contents?</source>
+        <target>Voleu desar els canvis a la taula de continguts?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-default">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Default</source>
+        <target>Per defecte</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-order">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Order</source>
+        <target>Ordena</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public Id</source>
+        <target>Id. pública</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publishIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Publica el número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-unpublishIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unpublish Issue</source>
+        <target>Suprimeix la publicació del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview Issue</source>
+        <target>Previsualització del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-preview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>(Vista prèvia)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmPublish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to publish the new issue?</source>
+        <target>Esteu segur/a que voleu publicar el número nou?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmUnpublish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to unpublish this published issue?</source>
+        <target>Esteu segur/a que voleu suprimir la publicació d’aquest número?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmSetCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to set this issue as current?</source>
+        <target>Segur que voleu establir aquest número com a l'actual?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicArticleIdExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unable to save public id for article:</source>
+        <target>No es pot desar l’id. pública per a l’article:</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noLiveIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Live Issues</source>
+        <target>No hi ha cap número en curs.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open</source>
+        <target>Oberts</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-pages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Pages</source>
+        <target>Pàgines</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Galleys</source>
+        <target>Galerades del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Galley</source>
+        <target>Galerada del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-viewingGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Viewing Issue Galley</source>
+        <target>Visualitza la galerada del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueGalleysDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish galleys with entire issue contents.</source>
+        <target>Publica les galerades amb tots els continguts del número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noneIssueGalleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No issue galleys have been published.</source>
+        <target>No s'ha publicat cap galerada d'aquest número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyLabelRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An issue galley label is required.</source>
+        <target>Heu d’introduir una etiqueta per a les galerades d'aquest número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyLocaleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An issue galley locale is required.</source>
+        <target>Heu d’introduir una configuració regional per a les galerades d'aquest número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyPublicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public issue galley identification already exists.</source>
+        <target>La identificació pública de la galerada d'aquest número ja existeix.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-backToIssueGalleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back to issue galleys</source>
+        <target>Torna a les galerades del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmDeleteGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this issue galley?</source>
+        <target>Esteu segur/a que voleu suprimir aquesta galerada del número?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-identifiers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identifiers</source>
+        <target>Identificadors</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-futureIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Future Issues</source>
+        <target>Propers números</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add galley</source>
+        <target>Afegir galerada</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-publish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Publicar número</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Crear número</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-viewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View</source>
+        <target>Visualitzar</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>Previsualitzar</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssueGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue Galley</source>
+        <target>Crear galerada del número</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-setCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Set Current Issue</source>
+        <target>Establir número actual</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-issueArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back Issues</source>
+        <target>Números anteriors</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-designateReviewVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Designate the original file as the Review Version</source>
+        <target>Designa el fitxer original com a versió de revisió</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-decision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decision</source>
+        <target>Decisió</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-showBy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show By</source>
+        <target>Mostra per</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-submitMMDD">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit MM-DD</source>
+        <target>Enviat el MM-DD</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-activeAssignments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Assignments</source>
+        <target>Assignacions actives</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-invite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invite</source>
+        <target>Convida</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Accepta</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Submissions</source>
+        <target>No hi ha cap tramesa</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-lastAssigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Latest</source>
+        <target>Darrera tramesa</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-averageTime">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks</source>
+        <target>Setmanes</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-lastCompleted">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Last Complete</source>
+        <target>Darrera tramesa completa</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-assignedTo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Assigned To</source>
+        <target>Assignada a</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-inSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Section</source>
+        <target>A la secció</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-schedulePublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Schedule For Publication</source>
+        <target>Programar per publicar</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-showPublicationVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show Scheduled Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-publishVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Version</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-viewMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Version Metadata</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-editMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Version Metadata</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-scheduleForPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Schedule for publication in</source>
+        <target>Planifica per a la publicació a</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-scheduleForPublication-toBeAssigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To Be Assigned</source>
+        <target>Encara no s’ha assignat</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-payment-publicationFeeNotPaid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</source>
+        <target>No s’ha pagat la quota de publicació. Per poder planificar l’element per a la publicació, notifiqueu a l’autor/a que ha de pagar la quota o fer l'exempció del pagament.</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-removeArticle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove Article From Issue</source>
+        <target>Eliminar article del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Elimina</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</source>
+        <target>Segur que voleu eliminar aquest article del número? L'article estarà disponible per programar-lo en un altre número.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidAccessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access date is not valid.</source>
+        <target>La data d’accés no és vàlida.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-editIssueGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Issue Galley</source>
+        <target>Editar galerada del número</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-production-productionReadyFilesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The layout editor prepares these files for each galley and then uploads to the appropriate <span class="pkp_help_title">Proofs</span> for proofreading.]]></source>
+        <target><![CDATA[El maquetador/a prepara aquests arxius per a cada galerada i aleshores els carrega al lloc <span class="pkp_help_title">Proves</span> adequat per a la seva correcció.]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-selectGalleyFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Galley Files</source>
+        <target>Seleccionar els arxius de galerada</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-editorial-finalDraftDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Final draft files in this list are transformed by a Copyeditor into copyedited versions, uploaded below under <span class="pkp_help_title">Copyediting</span>.]]></source>
+        <target><![CDATA[El corrector transforma els borradors finals d'aquesta llista en versions revisades i les carrega a continuació a <span class="pkp_help_title">Correcció d'originals</span>.]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-proof-manageProofFilesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any files that have already been uploaded to any submission stage can be added to the Proofreading listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion.</source>
+        <target>Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la llista de correcció de proves marcant la casella inferior "Incloure" i fent clic a "Cercar". D'aquesta manera es llistaran tots els arxius disponibles i es podran escollir per incloure'ls.</target>
+      </segment>
+    </unit>
+    <unit id="editor-publicIdentificationExistsForTheSameType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your journal.</source>
+        <target>L'identificador públic '{$publicIdentifier}' ja existeix per a un altre objecte del mateix tipus. Esculli identificadors únics per als objectes del mateix tipus dins la seva revista.</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-coverImage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover Image</source>
+        <target>Imatge per a la portada</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

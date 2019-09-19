@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:19-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:19-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="section-default-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Prispevki</target>
+      </segment>
+    </unit>
+    <unit id="section-default-abbrev">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ART</source>
+        <target>PRS</target>
+      </segment>
+    </unit>
+    <unit id="section-default-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source></source>
+        <target>Uredniška politika</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Text</source>
+        <target>Besedilo prispevka</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-notPreviouslyPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</source>
+        <target>Prispevek še ni bil nikjer objavljen, niti ni v procesu objavljanja v kakšni drugi reviji (oziroma je razlaga podana v polju Komentarji uredniku).</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-fileFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission file is in OpenOffice, Microsoft Word, or RTF document file format.</source>
+        <target>Datoteka oddanega prispevka je v formatu OpenOffice, Microsoft Word, RTF ali WordPerfect dokumenta.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-addressesLinked">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Where available, URLs for the references have been provided.</source>
+        <target>Kjer je možno, so objavljene URL povezave do literature.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-submissionAppearance">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</source>
+        <target>Besedilo ima enojni razmak; uporabljena pisava je velikosti 12 točk; za poudarjene besede uporabite stil poševno, podčrtano le za URL povezave; in vse ilustracije, slike in tabele so na pravih mestih v besedilu, namesto na kupu na koncu besedila.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-bibliographicRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.</source>
+        <target>Besedilo ustreza stilskim in bibliotehničnim zahtevam navodilih za avtorje.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</p>]]></source>
+        <target><![CDATA[<p>Imena in e-poštni naslovi vpisani v tem spletišču se bodo striktno uporabljala le za navedene namene te revije in ne bodo predane nobeni tretji osebi.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-openAccessPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</source>
+        <target>Revija je takoj prosto dostopna vsem v prepričanju, da prosta dostopnost do rezultatov raziskav vzpodbuja večjo izmenjavo znanja.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}{$contextPath}/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.]]></source>
+        <target><![CDATA[Bralce vzpodbujamo, da se prijavijo na obvestila o izdajah revije. Uporabite povezavo <a href="{$indexUrl}{$contextPath}/user/register">Registracija</a> na vrhu domače strani revije. Po registraciji boste po e-pošti prejemali kazalo vsebine vsake nove izdaje revije. Spisek tako registriranih bralcev pomeni za revijo tudi določeno podporo s strani bralcev. Preverite <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Izjavo o varstvu podatkov</a>, revije, ki zagotavlja, da se imena in e-poštni naslovi bralcev ne bodo zlorabili.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}{$contextPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}{$contextPath}/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="{$indexUrl}/index/login">log in</a> and begin the five-step process.]]></source>
+        <target><![CDATA[Vas zanima objavljanje v tej reviji? Predlagamo, da pogledate spletno stran <a href="{$indexUrl}{$contextPath}/about">O reviji</a> za uredniško politiko revije in <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Navodila avtorjem</a>. Avtorji se morajo pred objavljanjem <a href="{$indexUrl}{$contextPath}/user/register">registrirati</a> pri reviji, če pa so že registrirani, potem se enostavno <a href="{$indexUrl}/index/login">prijavijo</a> in začnejo s procesom oddaje prispevka.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></source>
+        <target><![CDATA[Vzpodbujamo, da znanstvene knjižnice uvrstijo to revijo v svojo evidenco elektronskih revij. Enako velja poudariti, da je ta sistem za elektronsko izdajanje odprtokodni sistem, namenjen knjižnicam za gostovanje in izdajanje revij svoje institucije (več <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-lockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://www.lockss.org/">More...</a>]]></source>
+        <target><![CDATA[Ta revija uporablja sistem LOCKSS za vzpostavitev distribuiranega sistema za arhiviranje med sodelujočimi knjižnicami in dovoljuje tem knjižnicam, da trajno arhivirajo revijo za namene ohranjanja in restavriranja. <a href="http://www.lockss.org/">Več...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-clockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></source>
+        <target><![CDATA[ Ta revija uporablja CLOCKSS sistem za vzpostavitev distribuiranega sistema arhiviranja med sodelujočimi knjižnicami in dovoljuje tem knjižnicam, da trajno arhivirajo revijo za namene ohranjaja in restavriranja. <a href="http://clockss.org/">Več...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal manager</source>
+        <target>Upravljalec revije</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal managers</source>
+        <target>Upravljalci revije</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JM</source>
+        <target>UP</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editor</source>
+        <target>Urednik revije</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editors</source>
+        <target>Uredniki revije</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JE</source>
+        <target>UP</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editor</source>
+        <target>Gostujoči urednik</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editors</source>
+        <target>Gostujoči uredniki</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>GE</source>
+        <target>GU</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editor</source>
+        <target>Urednik rubrike</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Uredniki rubrike</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SecE</source>
+        <target>UR</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Urednik naročnin</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Managers</source>
+        <target>Uredniki naročnin</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SubM</source>
+        <target>UN</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>Raziskovalni instrumenti</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>Raziskovalni materiali</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>Rezultati raziskave</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>Prepis</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>Analiza podatkov</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>Podatkovni niz</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-sourceTexts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Texts</source>
+        <target>Izvorna besedila</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer</source>
+        <target>Recenzent</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Recenzenti</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>R</source>
+        <target>R</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></source>
+        <target><![CDATA[<br/>
+_______________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

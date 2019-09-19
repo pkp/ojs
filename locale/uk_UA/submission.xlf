@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:24-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:24-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="submission-submit-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit an Article</source>
+        <target>Подати статтю</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-userGroup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit in my role as...</source>
+        <target>Подати, використовуючи мою роль...</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-userGroupDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the capacity under which you are submitting this article.</source>
+        <target>Оберіть роль, в якій ви подаєте цю статтю.</target>
+      </segment>
+    </unit>
+    <unit id="submission-upload-selectComponent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select article component</source>
+        <target>Обрати компонент статті</target>
+      </segment>
+    </unit>
+    <unit id="submission-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Title</source>
+        <target>Назва статті</target>
+      </segment>
+    </unit>
+    <unit id="submission-title-tip">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></source>
+        <target><![CDATA[Тип подання, зазвичай, визначається як «зображення», «текст» або інші типи мультимедіа, такі як «програмне забезпечення» чи «інтерактив». Будь ласка, оберіть найбільш відповідний тип для вашого матеріалу. Приклади див. за посиланням <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-newSubmissionMultiple">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start a New Submission in</source>
+        <target>Розпочати подання нового рукопису до</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-newSubmissionSingle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>New Submission</source>
+        <target>Новий рукопис</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-workflow">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Workflow</source>
+        <target>Процес подання</target>
+      </segment>
+    </unit>
+    <unit id="submission-abstract-wordCount-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The abstract must be {$wordCount} words or less.</source>
+        <target>Анотація повинна містити не більше, ніж {$wordCount} слів.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-noContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This submission's journal could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Metadata</source>
+        <target>Метадані</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-whatNext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</source>
+        <target>Редакцією журналу отримано повідомлення про подання Вашого рукопису; лист з підтвердженням було направлено на Вашу електронну пошту. Щойно редактори переглянуть Ваш матеріал, ми зв'яжемося з Вами.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-galleyInIssueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galley appears in issue entry</source>
+        <target>Гранка з'явилась у випуску</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-issueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View this submission's metadata</source>
+        <target>Переглянути метадані цього подання</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-articleGalleyMadeAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The article galley "{$galleyFormatName}" is made available.</source>
+        <target>Гранка статті "{$galleyFormatName}" зроблена доступною.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-articleGalleyMadeUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The article galley "{$galleyFormatName}" is made unavailable.</source>
+        <target>Гранка статті "{$galleyFormatName}" зроблена недоступною.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-publicIdentifiers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission's public identifiers updated.</source>
+        <target>Публічні ідентифікатори подання оновлені.</target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format Approval</source>
+        <target>Підтвердження формату</target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-removeMessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.</p>]]></source>
+        <target><![CDATA[<p>Цю гранку <em>більше не можна зробити доступною</em> для читачів.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-message">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>This galley will <em>be made available</em> to readers.</p>]]></source>
+        <target><![CDATA[<p>Цю гранку <em>можна зробити доступною</em> для читачів.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-availableArticleGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Make this galley available</source>
+        <target>Зробити цю гранку доступною</target>
+      </segment>
+    </unit>
+    <unit id="submission-galleyFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galley Files</source>
+        <target>Файли гранок</target>
+      </segment>
+    </unit>
+    <unit id="submission-proofReadingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign Auditor</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication.]]></source>
+        <target><![CDATA[Редактор верстки вивантажує сюди підготовлені до публікації файли. Використайте <em>Призначити аудитора</em>, щоб призначити авторів або інших користувачів для коректури гранок, із завантаженням відкоригованих файлів та їх схваленням перед публікацією.]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-approveProof">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Approve this proof for inclusion in the galley.</source>
+        <target>Схвалити цю правку для включення в гранку.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-pageProofApproved">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This proof has been approved for inclusion in the galley.</source>
+        <target>Ця правка була схвалена для включення в гранку.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-titleAndSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title and Abstract</source>
+        <target>Назва і анотація</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-upload-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc.</source>
+        <target>Завантажити файли, пов'язані з цим матеріалом: статті, мультимедіа, набори даних, твори мистецтва і т. д.</target>
+      </segment>
+    </unit>
+    <unit id="submission-pageProofs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofreading</source>
+        <target>Коректура</target>
+      </segment>
+    </unit>
+    <unit id="submission-confirmSubmit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to submit this article to the journal?</source>
+        <target>Ви впевнені, що хочете подати цю статтю в журнал?</target>
+      </segment>
+    </unit>
+    <unit id="workflow-review-externalReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review</source>
+        <target>Рецензування</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-decision-sendExternalReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send to Review</source>
+        <target>Надіслати на рецензування</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-issueMetadataUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission's issue metadata was updated.</source>
+        <target>Метадані випуска статті були оновлені.</target>
+      </segment>
+    </unit>
+    <unit id="submission-upload-fileContents">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Component</source>
+        <target>Компонент статті</target>
+      </segment>
+    </unit>
+    <unit id="submission-complete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Approved</source>
+        <target>Підтверджено</target>
+      </segment>
+    </unit>
+    <unit id="submission-incomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Awaiting Approval</source>
+        <target>Очікується підтвердження</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-localeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a submission language.</source>
+        <target>Будь ласка, оберіть мову подання.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-submissionChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Checklist</source>
+        <target>Вимоги до подання</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-submissionChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must read and acknowledge that you've completed the requirements below before proceeding.</source>
+        <target>Ви повинні прочитати і підтвердити, що виконали всі зазначені нижче вимоги перш ніж продовжити подання рукопису.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Privacy Statement</source>
+        <target>Положення про конфіденційність</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-contributorRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contributor's role</source>
+        <target>Роль відправника</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-authorRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>At least one author is required.</source>
+        <target>Потрібно зазначити хоча б одного автора.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-authorRequiredFields">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The first name, last name, and email address of each author is required.</source>
+        <target>Потрібно вказати ім'я, прізвище та адресу електронної пошти кожного автора.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of your article.</source>
+        <target>Будь ласка, введіть назву Вашої статті.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-abstractRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter your article's abstract.</source>
+        <target>Будь ласка, введіть анотацію Вашої статті.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-wordCountAlert">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your abstract is too long. Please shorten it to below the word limit indicated for this section.</source>
+        <target>Ваша анотація надто довга. Будь ласка, скоротіть її до кількості слів, що задана для даного розділу</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-contributorRoleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select the contributor's role.</source>
+        <target>Будь ласка, виберіть роль відправника.</target>
+      </segment>
+    </unit>
+    <unit id="submission-citationFormat-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The requested citation format could not be retrieved.</source>
+        <target>Не вдається отримати зазначений формат оформлення бібліографічних посилань.</target>
+      </segment>
+    </unit>
+    <unit id="submission-metadataDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</source>
+        <target>Ці специфікації базуються на наборі метаданих Dublin Core - міжнародному стандарті, що використовується для опису контенту журналу.</target>
+      </segment>
+    </unit>
+    <unit id="section-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Section</source>
+        <target>Будь-який розділ</target>
+      </segment>
+    </unit>
+    <unit id="submission-sectionOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Options</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="catalog-browseTitles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$numTitles} Items</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="catalog-category-heading">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Items</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="galley-editPublishedDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The galleys of this publication can not be edited because it has already been published.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="galley-publicationNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication for this galley could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-invalidSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The section for this publication could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-invalidIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The issue for this publication could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-journalEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Entry</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-journalEntry-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal entry details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-required-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication must be assigned to an issue before it can be published.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-publishedIn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Published in <a href="{$issueUrl}">{$issueName}</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-scheduledIn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Scheduled for publication in <a href="{$issueUrl}">{$issueName}</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

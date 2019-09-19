@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:03-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:03-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="author-submit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>New Submission</source>
+        <target>Nový příspěvek</target>
+      </segment>
+    </unit>
+    <unit id="author-track">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Submissions</source>
+        <target>Aktivní příspěvky</target>
+      </segment>
+    </unit>
+    <unit id="author-competingInterests">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></source>
+        <target><![CDATA[Střet&nbsp;zájmů <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Pravidla upravující střet zájmů</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submitArticle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit an Article</source>
+        <target>Odeslat článek</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-stepsToSubmit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to Submit</source>
+        <target>Pět kroků pro odeslání příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-startHereTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start a New Submission</source>
+        <target>Zahájit nový příspěvek</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-startHereLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></source>
+        <target><![CDATA[Pro přechod k prvnímu z pěti kroků odesílání příspěvku <a href="{$submitUrl}" class="action">klikněte zde</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step1">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Starting the Submission</source>
+        <target>Krok 1. Zahájení příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step2">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Uploading the Submission</source>
+        <target>Krok 2. Nahrání příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step3">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Entering the Submission's Metadata</source>
+        <target>Krok 3. Vložení metadat příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step4">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Uploading Supplementary Files</source>
+        <target>Krok 4. Nahrání doplňkových souborů</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step4a">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4a. Add a Supplementary File</source>
+        <target>Krok 4a. Přidat doplňkový soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step5">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Confirming the Submission</source>
+        <target>Krok 5. Potvrzení příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-start">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Zahájení</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-upload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Submission</source>
+        <target>Nahrát příspěvek</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-metadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter Metadata</source>
+        <target>Vložit metadata</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Supplementary Files</source>
+        <target>Nahrát doplňkové soubory</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Confirmation</source>
+        <target>Potvrzení</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-nextSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Next Steps</source>
+        <target>Další kroky</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-cancelSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can complete this submission at a later date by selecting Active Submissions from the Author home.</source>
+        <target>Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-notAccepting">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal is not accepting submissions at this time.</source>
+        <target>Tento časopis aktuálně nepřijímá příspěvky.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-requestWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Request Waiver</source>
+        <target>Požádat o prominutí</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-qualifyForWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please consider waiving the Article Submission Fee for this article</source>
+        <target>Zvažte, prosím, prominutí platby poplatku za zaslání příspěvku pro tento článek</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addReasonsForWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the comments box below to indicate why fees should be waived.</source>
+        <target>Použijte, prosím, níže umístěné pole pro komentář a uveďte, proč by Vám měl být poplatek prominut.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-mustEnterWaiverReason">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>If you are applying for a waiver, you must enter a reason in the space provided.</source>
+        <target>Pokud žádáte o prominutí platby, musíte do příslušného místa uvést důvod.</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedReviewSubsequent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review Round {$round}</source>
+        <target>V recenzním kole {$round}</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedReviewRevisions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review: Revisions Required</source>
+        <target>V recenzním řízení: Vyžaduje přepracování</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedEditingCopyedit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Editing: Copyedit Requested</source>
+        <target>Redakční úravy: Vyžádáno redigování</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedEditingProofread">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Editing: Proofread Requested</source>
+        <target>Redakční úpravy: Vyžádána korektura</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-uploadCopyeditedVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Copyedited Version</source>
+        <target>Nahrát redigovanou verzi</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-proofreadingCorrections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofreading Corrections</source>
+        <target>Korekturní opravy</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this incomplete submission?</source>
+        <target>Jste si jistý, že chcete smazat tento nedokončený příspěvek?</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-viewStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Status</source>
+        <target>Zobrazit stav</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submissions.</source>
+        <target>Žádné příspěvky.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-journalSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Section</source>
+        <target>Sekce časopisu</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-journalSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles must be submitted to one of the journal's sections.</source>
+        <target><![CDATA[Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-verifyChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must make sure all items in the submission checklist are satisfied before continuing.</source>
+        <target>Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-copyrightNoticeAgree">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</source>
+        <target>Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora).</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-copyrightNoticeAgreeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must agree to the terms of the Copyright Notice before continuing.</source>
+        <target>Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-coverNote">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Comments for the Editor</source>
+        <target>Komentář pro editora</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-comments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter text (optional)</source>
+        <target>Vložte text (nepovinné)</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-sectionRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select an appropriate journal section for this submission.</source>
+        <target>Vyberte prosím vhodnou sekci časopisu pro tento příspěvek.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-localeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a submission language.</source>
+        <target>Zvolte si, prosím, jazyk příspěvku.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal's Privacy Statement</source>
+        <target>Prohlášení o soukromí pro tento časopis</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-reorderInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reorder authors to appear in the order they will be listed on publication.</source>
+        <target>Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-reorder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reorder author's name</source>
+        <target>Přeuspořádat jméno autora</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-selectPrincipalContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Principal contact for editorial correspondence.</source>
+        <target>Hlavní kontakt pro korespondenci s editory.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Author</source>
+        <target>Přidat autora</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-deleteAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete Author</source>
+        <target>Smazat autora</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionIndexingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</source>
+        <target>Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-coverageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</source>
+        <target>Vztahuje se k zeměpisné oblasti, chronologickému nebo historickému záběru a/nebo charakteristikám výzkumného souboru.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></source>
+        <target><![CDATA[Čeština=cs; angličtina=en; francouzština=fr; španělština=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Další kódy</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-authorRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>At least one author is required.</source>
+        <target>Je vyžadován alespoň jeden autor.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-authorRequiredFields">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The first name, last name, and email address of each author is required.</source>
+        <target>Je vyžadováno jméno, příjmení a emailová adresa každého autora.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of your article.</source>
+        <target>Vložte, prosím, název vašeho článku.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-abstractRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the abstract of your article.</source>
+        <target>Vložte, prosím, abstrakt vašeho článku.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-wordCountAlert">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You have exceeded the maximum word limit for abstracts in this section's track.</source>
+        <target>Překročil jste maximální limit slov pro abstrakt v této sekci.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission File</source>
+        <target>Soubor s příspěvkem</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-uploadSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload submission file</source>
+        <target>Nahrát soubor příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-replaceSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Replace submission file</source>
+        <target>Nahradit soubor příspěvku</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submission file uploaded.</source>
+        <target>Nebyl nahrán žádný soubor příspěvku.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSubmissionConfirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to continue without uploading a submission file?</source>
+        <target>Jste si jistý, že chcete pokračovat bez nahrání souboru příspěvku?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFilesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</source>
+        <target>Tento volitelný krok umožňuje přidat k příspěvku doplňkové soubory. Tyto souboury (jakéhokoli formátu) mohou zahrnovat (a) výzkumné instrumenty, (b) datové soubory, které jsou v souladu s podmínkami posudku etičnosti výzkumu této studie, (c) zdroje, které by jinak byly čtenářům nedostupné, (d) obrázky a tabulky, které nemohou být začleněny do samotného textu nebo další materiály, které navyšují přínos příspěvku.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFiles-saveToUpload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Click Save to upload file (after which additional files can be uploaded).</source>
+        <target>Pro nahrání souboru klikněte na Uložit (poté je možné nahrát další soubory).</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-forgottenSubmitSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to continue without uploading the supplementary file you have chosen?</source>
+        <target>Jste si jistý, že chcete pokračovat bez nahrání doplňkového souboru, který jste vybral?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSupplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No supplementary files have been added to this submission.</source>
+        <target>Žádné doplňkové soubory nebyly přidány k tomuto příspěvku.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-backToSupplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back to Supplementary Files</source>
+        <target>Zpět k doplňkovým souborům</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmDeleteSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this supplementary file?</source>
+        <target>Jste si jistý, že chcete vymazat tento doplňkový soubor?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-uploadSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload supplementary file</source>
+        <target>Nahrát doplňkový soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addSupplementaryFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Supplementary File</source>
+        <target>Přidat doplňkový soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-editSupplementaryFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit a Supplementary File</source>
+        <target>Upravit doplňkový soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileData">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Supplementary File Metadata</source>
+        <target>Metadata doplňkového souboru</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileDataDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To index this supplementary material, provide the following metadata for the uploaded supplementary file.</source>
+        <target>Pro indexaci dohoto doplňkového materiálu uveďte následující metadata pro nahraný doplňkový soubor.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileUpload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Supplementary File</source>
+        <target>Doplňkový soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-createrOrOwner">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Creator (or owner) of file</source>
+        <target>Tvůrce (nebo vlastník) souboru</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>Výzkumný nástroj</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>Výzkumné materiály</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>Výsledky výzkumu</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>Transkripty</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>Analýza dat</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>Datový soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-sourceText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Text</source>
+        <target>Zdrojový text</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-briefDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief description</source>
+        <target>Stručný popis</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-availableToPeers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Present file to reviewers (without metadata), as it will not compromise blind review.</source>
+        <target>Poskytnout soubor recenzentům (bez metadat), aby nebyly narušeny anonymní recenze.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-publisherDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use only with formally published materials.</source>
+        <target>Použít pouze s formálně publikovanými materiály.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dateDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Date when data was collected or instrument created.</source>
+        <target>Datum, kdy byla posbírána data nebo vytvořen nástroj.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-sourceDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of study or other point of origin.</source>
+        <target>Název studie nebo jiné určení původu.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-specifyOtherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Specify other</source>
+        <target>Specifikujte jiný</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-noFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No file uploaded.</source>
+        <target>Nebyl nahrán žádný soubor.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of this supplementary file.</source>
+        <target>Vložte, prosím, název tohoto doplňkového souboru.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-subjectRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a subject.</source>
+        <target>Vložte prosím předmět.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-descriptionRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a description.</source>
+        <target>Vložte, prosím, popis.</target>
+      </segment>
+    </unit>
+    <unit id="author-suppFile-suppFilePublicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public supplemental file identification already exists.</source>
+        <target>Veřejný identifikátor doplňkového souboru již existuje.</target>
+      </segment>
+    </unit>
+    <unit id="author-suppFile-publicSuppFileIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public supplemental file identifier</source>
+        <target>Veřejný identifikátor doplňkového souboru</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</source>
+        <target>Pro odeslání vašeho příspěvku do {$journalTitle} klikněte na Dokončit příspěvek. Hlavní kontakt příspěvku obdrží e-mailem oznámení a bude moci po příhlášení na stránky časopisu sledovat postup příspěvku redakčním řízením. Děkujeme za Váš zájem publikovat v {$journalTitle}.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No files have been attached to this submission.</source>
+        <target>K příspěvku nebyly připojeny žádné soubory.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-filesSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>File Summary</source>
+        <target>Přehled souborů</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-finishSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Finish Submission</source>
+        <target>Dokončit příspěvek</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionComplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission complete. Thank you for your interest in publishing with {$journalTitle}.</source>
+        <target>Odeslání příspěvku dokončeno. Děkujeme za Váš zájem publikovat v {$journalTitle}.</target>
+      </segment>
+    </unit>
+    <unit id="author-article-uploadAuthorVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Author Version</source>
+        <target>Nahrát verzi od autora</target>
+      </segment>
+    </unit>
+    <unit id="author-article-copyeditedFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Copyedited File</source>
+        <target>Redigovaný soubor</target>
+      </segment>
+    </unit>
+    <unit id="author-article-authorRevisedFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author File</source>
+        <target>Soubor od autora</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-authorSubmitLoginMessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</source>
+        <target>Pro přispívání do tohoto časopisu je vyžadován uživatelský účet. To umožní našim editorům sledovat vaše příspěvky a kontaktovat Vás v případě, že se změní stav vašeho příspěvku nebo pokud od vás budou vyžadovány další informace.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:24-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:24-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="author-submit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>New Submission</source>
+        <target>新投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-track">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Submissions</source>
+        <target>处理中的投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-competingInterests">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></source>
+        <target><![CDATA[利益冲突 <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;政策</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submitArticle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit an Article</source>
+        <target>提交一篇论文</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-stepsToSubmit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to Submit</source>
+        <target>五步投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-startHereTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start a New Submission</source>
+        <target>开始新的投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-startHereLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></source>
+        <target><![CDATA[<a href="{$submitUrl}" class="action">点击这里</a> 开始五步投稿的第一步.]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step1">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Starting the Submission</source>
+        <target>步骤1. 开始投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step2">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Uploading the Submission</source>
+        <target>步骤2. 上传稿件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step3">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Entering the Submission's Metadata</source>
+        <target>步骤3. 输入稿件元信息</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step4">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Uploading Supplementary Files</source>
+        <target>步骤4. 上传附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step4a">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4a. Add a Supplementary File</source>
+        <target>步骤4a. 添加一个附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-step5">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Confirming the Submission</source>
+        <target>步骤5. 确认投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-start">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>开始</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-upload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Submission</source>
+        <target>上传稿件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-metadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter Metadata</source>
+        <target>输入元数据</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Supplementary Files</source>
+        <target>上传附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Confirmation</source>
+        <target>确认</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-nextSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Next Steps</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-cancelSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can complete this submission at a later date by selecting Active Submissions from the Author home.</source>
+        <target>您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-notAccepting">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal is not accepting submissions at this time.</source>
+        <target>这个杂志是在这个时候不接受投稿.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-requestWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Request Waiver</source>
+        <target>申请免费</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-qualifyForWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please consider waiving the Article Submission Fee for this article</source>
+        <target>请考虑免除这个文章的投稿费</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addReasonsForWaiver">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the comments box below to indicate why fees should be waived.</source>
+        <target>请使用下面的评论中表示，为何要免除费用..</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-mustEnterWaiverReason">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>If you are applying for a waiver, you must enter a reason in the space provided.</source>
+        <target>如果需要申请赦免费用，您必须在提供的空间里输入您的理由.</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedReviewSubsequent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review Round {$round}</source>
+        <target>审稿回合： {$round}</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedReviewRevisions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review: Revisions Required</source>
+        <target>审稿中: 要求修订</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedEditingCopyedit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Editing: Copyedit Requested</source>
+        <target>编辑中: 文本编辑请求</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-queuedEditingProofread">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Editing: Proofread Requested</source>
+        <target>编辑中: 校对请求</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-uploadCopyeditedVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Copyedited Version</source>
+        <target>上传文本编辑版本</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-proofreadingCorrections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofreading Corrections</source>
+        <target>校对更正</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this incomplete submission?</source>
+        <target>你确定要删除这个未完成的投稿?</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-viewStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Status</source>
+        <target>查看状态</target>
+      </segment>
+    </unit>
+    <unit id="author-submissions-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submissions.</source>
+        <target>没有投稿.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-journalSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Section</source>
+        <target>期刊栏目</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-journalSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles must be submitted to one of the journal's sections.</source>
+        <target><![CDATA[选择投稿的栏目 (参看在 <a href="{$aboutUrl}" target="_new">关于期刊</a> 的栏目与政策).]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-verifyChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must make sure all items in the submission checklist are satisfied before continuing.</source>
+        <target>您必须确定已经完成检查表中的所有的项目，才能继续下一步.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-copyrightNoticeAgree">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</source>
+        <target>作者同意这份版权注意事项的内容，并同意在这份期刊出版此稿件时适用于这份稿件（可以在下面加上给编辑的意见）.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-copyrightNoticeAgreeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must agree to the terms of the Copyright Notice before continuing.</source>
+        <target>您必须同意的条款版权公告，然后继续.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-coverNote">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Comments for the Editor</source>
+        <target>给编辑的注释</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-comments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter text (optional)</source>
+        <target>输入文本(可选)</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-sectionRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select an appropriate journal section for this submission.</source>
+        <target>请选择一个合适的期刊投稿.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-localeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a submission language.</source>
+        <target>请选择一种提交语言</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal's Privacy Statement</source>
+        <target>杂志的隐私声明</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-reorderInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reorder authors to appear in the order they will be listed on publication.</source>
+        <target>重新排列作者在发表时候的顺序.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-reorder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reorder author's name</source>
+        <target>重新排序作者姓名</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-selectPrincipalContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Principal contact for editorial correspondence.</source>
+        <target>编辑信件的主要联系方式.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Author</source>
+        <target>添加作者</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-deleteAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete Author</source>
+        <target>删除作者</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionIndexingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</source>
+        <target>依照本期刊所使用的领域类别以及编辑提供的范例，来选择能够最佳地说明此份稿件内容的词汇。以分号(;)来分隔多个词汇（如，词汇1; 词汇2; 词汇3）。</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-coverageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</source>
+        <target>地理空间位置、年代或历史涵盖范围，以及＼或者研究样本的特色.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></source>
+        <target><![CDATA[English=en; French=fr; 中文=zh<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">其他代码</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-authorRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>At least one author is required.</source>
+        <target>至少一个作者是必须的.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-authorRequiredFields">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The first name, last name, and email address of each author is required.</source>
+        <target>姓名和每个作者的电子邮件是必须的.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of your article.</source>
+        <target>清输入文章的标题.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-abstractRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the abstract of your article.</source>
+        <target>请输入文章摘要.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-form-wordCountAlert">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You have exceeded the maximum word limit for abstracts in this section's track.</source>
+        <target>您已经超出了这个栏目摘要的最大单词限制.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission File</source>
+        <target>投稿的文件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-uploadSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload submission file</source>
+        <target>上传投稿文件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-replaceSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Replace submission file</source>
+        <target>替换投稿文件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSubmissionFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submission file uploaded.</source>
+        <target>没有已上传的投稿文件.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSubmissionConfirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to continue without uploading a submission file?</source>
+        <target>你确定要继续而不提交的投稿的相关文件?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFilesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</source>
+        <target>这个在投稿流程中选择性的步骤，让作者可以增加文件到稿件上，加强稿件所拥有的影响力。「补充文件」可以包括(a)研究设备或方法；(b) 资料或数据组，依循研究工作的研究伦理审核； (c) 资料来源；无法提供给读者的来源不算；(d) 无法纳入文章本文之中的图片或表格。这些文件也会由作者编目索引，指明它们与稿件之间的关系，以及文件和文件之间的关系。「补充文件」可以用任一种文件格式上传，并且可以用原本的格式让读者取得。如果无损匿名审稿原则的话，也可以和审稿人共用这些文件.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFiles-saveToUpload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Click Save to upload file (after which additional files can be uploaded).</source>
+        <target>点击保存上传文件 (其他文件被上传之后).</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-forgottenSubmitSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to continue without uploading the supplementary file you have chosen?</source>
+        <target>您确定要继续而不上传已经选择的补充文件?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noSupplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No supplementary files have been added to this submission.</source>
+        <target>没有附件被添加到这个投稿.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-backToSupplementaryFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back to Supplementary Files</source>
+        <target>备份附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmDeleteSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this supplementary file?</source>
+        <target>您确认删除这个附件?</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-uploadSuppFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload supplementary file</source>
+        <target>上传附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-addSupplementaryFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Supplementary File</source>
+        <target>添加一个附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-editSupplementaryFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit a Supplementary File</source>
+        <target>编辑一个附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileData">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Supplementary File Metadata</source>
+        <target>附件源数据</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileDataDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To index this supplementary material, provide the following metadata for the uploaded supplementary file.</source>
+        <target>要索引这份补充材料，请为上传的补充文件输入下列的元数据。</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-supplementaryFileUpload">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Supplementary File</source>
+        <target>附件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-createrOrOwner">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Creator (or owner) of file</source>
+        <target>文件的拥有者</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>科研仪器</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>科研资料</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>科研结果</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>Transcripts</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>数据分析</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>数据集</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-sourceText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Text</source>
+        <target>源文本</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-briefDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief description</source>
+        <target>摘要描述</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-availableToPeers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Present file to reviewers (without metadata), as it will not compromise blind review.</source>
+        <target>给审稿人的当前文件 (没有元数据), 因为它不会妥协盲审.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-publisherDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use only with formally published materials.</source>
+        <target>只使用形式上已出版的资料.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-dateDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Date when data was collected or instrument created.</source>
+        <target>资料搜集或者建立方法的日期.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-sourceDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of study or other point of origin.</source>
+        <target>研究的名称或其他来源点.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-specifyOtherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Specify other</source>
+        <target>指定其他</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-noFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No file uploaded.</source>
+        <target>没有上传的文件.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of this supplementary file.</source>
+        <target>请输入本补充文件的标题.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-subjectRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a subject.</source>
+        <target>请输入主题.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-suppFile-form-descriptionRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a description.</source>
+        <target>请输入说明.</target>
+      </segment>
+    </unit>
+    <unit id="author-suppFile-suppFilePublicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public supplemental file identification already exists.</source>
+        <target>公共附件标识符已经存在.</target>
+      </segment>
+    </unit>
+    <unit id="author-suppFile-publicSuppFileIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public supplemental file identifier</source>
+        <target>公共附件标识符</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-confirmationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</source>
+        <target>完成了之前投稿流程的四个步骤，点击「完成投稿」以将您的初稿送交给{$journalTitle}。您会收到一封电子邮件确认信，并且在登入期刊网站后能够查看您的稿件正经历哪些编辑过程。感谢您愿意在{$journalTitle}出版您的文章.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-noFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No files have been attached to this submission.</source>
+        <target>这个投稿没有已经添加的文件.</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-filesSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>File Summary</source>
+        <target>文件摘要</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-finishSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Finish Submission</source>
+        <target>完成投稿</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-submissionComplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission complete. Thank you for your interest in publishing with {$journalTitle}.</source>
+        <target>投稿完成.感谢您对出版于 {$journalTitle}有兴趣.</target>
+      </segment>
+    </unit>
+    <unit id="author-article-uploadAuthorVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload Author Version</source>
+        <target>上传作者版本</target>
+      </segment>
+    </unit>
+    <unit id="author-article-copyeditedFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Copyedited File</source>
+        <target>文本编辑文件</target>
+      </segment>
+    </unit>
+    <unit id="author-article-authorRevisedFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author File</source>
+        <target>作者文件</target>
+      </segment>
+    </unit>
+    <unit id="author-submit-authorSubmitLoginMessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</source>
+        <target>投稿要求有一个本期刊的用户帐户.这个帐户用于编辑跟踪您的投稿，当投稿的状态改变的时候通知你，或者编辑需要您的相信信息 .</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

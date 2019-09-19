@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:18-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:18-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="admin-hostedJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Hosted Journals</source>
+        <target>Журналы на сайте</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-appearance-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site appearance settings have been successfully updated.</source>
+        <target>Настройки оформления сайта были успешно обновлены.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-config-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site configuration settings have been successfully updated.</source>
+        <target>Настройки конфигурации сайта были успешно обновлены.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-info-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site information has been successfully updated.</source>
+        <target>Информация сайта была успешно обновлена.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal redirect</source>
+        <target>Перенаправление журнала</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirectInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</source>
+        <target>Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>
+		Ваша инсталляция OJS настроена на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.
+		Есть случаи, когда должна быть применена только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее используемых статей или проранжировать
+		результаты поиска. Пожалуйста, выберите одну из настроенных метрик в качестве метрики по умолчанию.
+	</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmDisable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Вы уверены, что хотите отключить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></source>
+        <target><![CDATA[<p>Скачивание языковых пакетов с веб-сервера Public Knowledge Project сейчас недоступно, поскольку:</p>
+	<ul>
+		<li>На вашем сервере утилита GNU «tar» не установлена или не разрешено выполнение ее сервером.</li>
+		<li>OJS нет может изменить файл списка языков, обычно расположенный в «registry/locales.xml».</li>
+	</ul>
+<p>Языковые пакеты могут быть вручную скачаны с <a href="http://pkp.sfu.ca">веб-сайта PKP</a>.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the site and any hosted journals.</source>
+        <target>Это будет язык по умолчанию для сайта и всех размещенных на нем журналов.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-supportedLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</source>
+        <target>Выберите все языки для поддержки на сайте. Выбранные языки будут доступны для всех журналов, расположенных на этом сайте, а также появятся в меню выбора языков на каждой странице сайта (эта настройка может быть изменена на страницах конкретного журнала). Если выбран только один язык, меню переключения языков не будет показываться, дополнительные языковые настройки для журналов также не будут доступны.</target>
+      </segment>
+    </unit>
+    <unit id="admin-locale-maybeIncomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked locales may be incomplete.</source>
+        <target>Поддержка отмеченных языков может быть неполной.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmUninstall">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Вы уверены, что хотите удалить этот язык? Это может повлиять на все размещенные журналы, которые сейчас используют его.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-installNewLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</source>
+        <target>Выберите дополнительные языки для установки их поддержки в этой системе. Языки должны быть установлены до того, как их можно будет использовать в размещенных журналах. Смотрите в документации OJS информацию о том, как добавить поддержку новых языков.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadFailed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The locale download failed. The error message(s) below describe the failure.</source>
+        <target>Загрузка языка завершилась ошибкой. Сообщения ниже описывают эту ошибку.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-localeInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The "{$locale}" locale has been installed.</source>
+        <target>Язык «{$locale}» был установлен.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Download Locale</source>
+        <target>Скачать язык</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotOpen">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot open language descriptor from PKP web site.</source>
+        <target>Невозможно открыть дескриптор языка с веб-сайта PKP.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotModifyRegistry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</source>
+        <target>Невозможно добавить новый язык в файл списка языков, обычно расположенный в «registry/locales.xml».</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-ojs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS User Database</source>
+        <target>База пользователей OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncProfiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</source>
+        <target>Включить синхронизацию профилей пользователей (если поддерживается этим модулем аутентификации). Информация профиля пользователя будет автоматически обновляться из внешнего источника при входе пользователя в систему, а изменения в профиле (включая смену пароля), сделанные внутри OJS, будут автоматически внесены во внешний источник. Если эта настройка выключена, информация профиля пользователя OJS будет храниться независимо от внешнего источника информации о профиле пользователя.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncPasswords">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</source>
+        <target>Включить изменение пароля пользователя (если поддерживается этим модулем аутентификации). Если эта настройка включена, пользователи могут изменять свой пароль в OJS и использовать возможность восстановления пароля в OJS для сброса забытого пароля. Эти функции не будут доступны для пользователей с этим источником аутентификации, если эта настройка выключена.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableCreateUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</source>
+        <target>Включить создание новых пользователей (если поддерживается этим модулем аутентификации). Пользователи, созданные средствами OJS с этим источником аутентификации, будут автоматически добавлены во внешний источник аутентификации, если они там отсутствуют. Кроме того, если этот источник является источником аутентификации по умолчанию, учетные записи OJS, созданные путем регистрации пользователей, также будут добавлены во внешний источник аутентификации.</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Version</source>
+        <target>Версия OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfiguration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Configuration</source>
+        <target>Конфигурация OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfigurationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></source>
+        <target><![CDATA[Параметры конфигурации OJS из <tt>config.inc.php</tt>.]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-createInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</source>
+        <target>Вы будете автоматически записаны управляющим этого журнала. После создания нового журнала вы будете перенаправлены на мастер настройки журнала для завершения первоначальной настройки журнала.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-journalSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Настройки журнала</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No journals have been created.</source>
+        <target>Ни один журнал не был создан.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Journal</source>
+        <target>Создать журнал</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-urlWillBe">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}.</source>
+        <target>Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. URL-адрес журнала будет {$sampleUrl}.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required.</source>
+        <target>Название обязательно.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A path is required.</source>
+        <target>Путь обязателен.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathAlphaNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path can only include letters, numbers and the characters _ and -. It must begin and end with a letter or number.</source>
+        <target>Путь может содержать только буквы, цифры и символы _ и -. Путь должен начинаться и заканчиваться буквой или цифрой.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path you provided is already in use by another journal.</source>
+        <target>Указанный Вами путь уже используется другим журналом.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-create-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was created successfully.</source>
+        <target>{$name} был успешно создан.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-edit-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was edited successfully.</source>
+        <target>{$name} был успешно отредактирован.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-enableJournalInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable this journal to appear publicly on the site</source>
+        <target>Включить показ этого журнала для всех на сайте</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-contextDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal description</source>
+        <target>Описание журнала</target>
+      </segment>
+    </unit>
+    <unit id="admin-journal-pathImportInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Existing journal path or path to create (e.g., "ojs").</source>
+        <target>Существующий путь журнала или новый путь для создания (например, «ojs»).</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Import subscriptions</source>
+        <target>Импортировать подписки</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-transcode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcode article metadata from ISO8859-1</source>
+        <target>Перекодировать метаданные статей из ISO8859-1</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-redirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Generate code to map OJS 1 URLs to OJS 2 URLs</source>
+        <target>Генерировать код для переназначения адресов OJS 1 в адреса OJS 2</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-form-importPathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The import path is required.</source>
+        <target>Путь импорта обязателен.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importErrors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Importing failed to complete successfully</source>
+        <target>Импортирование завершилось неудачей.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge Users</source>
+        <target>Объединение пользователей</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-mergeUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge User</source>
+        <target>Объединить</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</source>
+        <target>Выберите пользователя, которому будут переданы авторство предыдущего пользователя, его редакционные задания и т. д.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Выберите пользователя (или нескольких) для слияния в другую учетную запись пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись (записи), выбранная первой, будет удалена, а все связанные с ней статьи, редакционные задания и т. д. будут присоединены к второй учетной записи.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Все записанные пользователи</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</source>
+        <target>Вы уверены, что хотите объединить выбранные {$oldAccountCount} учетных записей в учетную запись с именем пользователя «{$newUsername}»? Выбранные {$oldAccountCount} учетные записи после этого перестанут существовать. Это действие нельзя отменить.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-noneEnrolled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No enrolled users.</source>
+        <target>Нет записанных пользователей.</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-subscriptionExpiryReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminder</source>
+        <target>Напоминание об окончании подписки</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-openAccessNotification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Notification</source>
+        <target>Уведомление об открытом доступе</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-reviewReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Reminder</source>
+        <target>Напоминание рецензенту</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

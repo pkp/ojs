@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:09-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:09-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="section-default-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>مقالات</target>
+      </segment>
+    </unit>
+    <unit id="section-default-abbrev">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ART</source>
+        <target>م ق</target>
+      </segment>
+    </unit>
+    <unit id="section-default-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source></source>
+        <target>0</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Text</source>
+        <target>متن مقاله</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-notPreviouslyPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</source>
+        <target>مقاله ارسالی قبلاً چاپ نشده و هم در هیچ مجله دیگری تحت داوری برای چاپ نمی‌باشد. </target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-fileFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission file is in OpenOffice, Microsoft Word, or RTF document file format.</source>
+        <target>فایل ارسال شده به فرمت OpenOffice, Microsoft Word, RTF, یا WordPerfect می‌باشد.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-addressesLinked">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Where available, URLs for the references have been provided.</source>
+        <target>در صورت امکان لینک مراجع در داخل متن قرار داده شده است.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-submissionAppearance">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</source>
+        <target>فاصله سطور در متن مقاله تک فاصله‌ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب و یا در انتهای متن قرار داده شده است.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-bibliographicRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.</source>
+        <target><![CDATA[متن مقاله بر طبق اصول مقاله‌نویسی و مرجع‌نگاری اشاره شده در <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines"> راهنمای نویسندگان </a> می‌باشد. این راهنما در قسمت درباره مجله قابل مشاهده است.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</p>]]></source>
+        <target><![CDATA[<p>نام‌ها و ایمیل‌های وارد شده در سایت مجله، فقط در اهداف بیان شده بکار می‌رود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-openAccessPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</source>
+        <target>این مجله دستیابی فوری به محتوی خود را به‌صورت آزاد دارا می‌باشد به این امید که پژوهشی که به‌صورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی می‌شود</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}{$contextPath}/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.]]></source>
+        <target><![CDATA[به خوانندگان عزیز توصیه می‌کنیم که برای دریافت خبرهای انتشاراتی این مجله  با کلیک کردن بر روی لینک  <a href="{$indexUrl}{$contextPath}/user/register">ثبت‌نام</a> در بالای صفحات ثبت‌نام کنند. در نتیجه شما از طریق ایمیل فهرست مطالب هر شماره جدید را دریافت خواهید داشت. برای اطلاع از محرمانگی اطلاعاتی که وارد می‌کنید  <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">بیانیه محرمانگی</a> مجله را مطالعه نمایید. در این بیانیه آمده است که ایمیل‌هایی که وارد می‌کنید برای مقاصد دیگر بکار نخواهد رفت.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}{$contextPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}{$contextPath}/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="{$indexUrl}/index/login">log in</a> and begin the five-step process.]]></source>
+        <target><![CDATA[آیا می‌خواهید به این مجله مقاله بفرستید؟ توصیه می‌شود که متن <a href="{$indexUrl}{$contextPath}/about">درباره مجله</a>  که شامل سیاست‌های حاکم بر انواع مقالات؛ و متن  <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">راهنمای نویسندگان</a> را مطالعه فرمایید. برای ارسال مقاله لازم است در سامانه این مجله ثبت‌نام کنید. چنانچه تا کنون  در این مجله <a href="{$indexUrl}{$contextPath}/user/register">ثبت‌نام</a> نکرده‌اید نسبت به این کار اقدام کنید. چنانچه قبلاً ثبت‌نام کرده‌اید فقط کافی است که به سامانه   <a href="{$indexUrl}{$contextPath}/login">وارد</a> شوید  و مراحل پنجگانه ارسال مقاله را شروع کنید.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></source>
+        <target><![CDATA[به کتابخانه‌های پژوهشی توصیه می‌شود که این مجله را در لیست اقلام خود قرار دهند. همچنین می‌توانید به افرادی که در موسسه شما درگیر کار انتشار مجله هستند توصیه کنید که از این سیستم مجلات آزاد برای مجله خود استفاده کنند. جهت کسب اطلاعات بیشتر به سایت <a href="http://pkp.sfu.ca/ojs">سامانه مجلات آزاد </a> مراجعه کنید.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-lockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://www.lockss.org/">More...</a>]]></source>
+        <target><![CDATA[این مجله از سیستم LOCKSS  برای ایجاد یک بایگانی گسترده در کتابخانه‌های عضو این پروژه استفاده می‌کند و بدین وسیله یک بایگانی دائمی از محتویات خود ایجاد می‌کند. <a href="http://www.lockss.org/">اطلاعات بیشتر...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-clockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></source>
+        <target><![CDATA[این مجله از سیستم CLOCKSS  برای ایجاد یک بایگانی گسترده در کتابخانه‌های عضو این پروژه استفاده می‌کند و بدین وسیله یک بایگانی همیشگی از محتویات خود ایجاد می‌کند. <a href="http://clockss.org/">اطلاعات بیشتر...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal manager</source>
+        <target>مدیر مجله</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal managers</source>
+        <target>مدیران مجله</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JM</source>
+        <target>مدیر.م</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editor</source>
+        <target>سردبیر مجله</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editors</source>
+        <target>سردبیران مجله</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JE</source>
+        <target>سردبیر</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editor</source>
+        <target>دبیر مهمان</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editors</source>
+        <target>دبیران مهمان</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>GE</source>
+        <target>دبیر.م</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editor</source>
+        <target>دبیر</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>دبیران</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SecE</source>
+        <target>دبیر</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>مدیر اشتراک</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Managers</source>
+        <target>مدیران اشتراک</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SubM</source>
+        <target>م.اشتراک</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>ابزارهای پژوهش</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>مواد مورد استفاده</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>نتایج پژوهش</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>رونوشت‌ها</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>آنالیز داده‌ها</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>مجموعه‌ی داده‌ها</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-sourceTexts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Texts</source>
+        <target>منابع</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer</source>
+        <target>داور</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>داوران</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>R</source>
+        <target>داور</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></source>
+        <target><![CDATA[<br/>  ________________________________________________________________________<br/>  <a href="{$contextUrl}">{$contextName}</a>]]></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

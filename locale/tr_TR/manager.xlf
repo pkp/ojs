@@ -1,0 +1,5161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:23-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:23-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="manager-distribution-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Erişim</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you "publish as you go", don't use the issue's publication date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the issue's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-submission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the article's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Mode</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS will not be used to publish the journal's contents online.</source>
+        <target>ADS derginin online içeriğini yayımlamak için kullanılmaz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will provide open access to its contents.</source>
+        <target>Dergi açık erişime izin verir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will require subscriptions to access some or all of its contents.</source>
+        <target>Dergi içeriğinin tümüne veya bir bölümüne erişim için abonelik gerekir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publishing details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-website-archiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archiving</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-emails-confirmResetAll">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</source>
+        <target>Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm şablonları kaybedeceksiniz!</target>
+      </segment>
+    </unit>
+    <unit id="manager-files-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</source>
+        <target>Not: Dosya tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin doğrudan görülür ve yönetilebilir olmasını sağlayan, gelişmiş bir özelliktir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-journalManagement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Management</source>
+        <target>Dergi Yönetimi</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-ui">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>UI</source>
+        <target>Kullanıcı Arayüzü</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Gönderiler</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-forms">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Forms</source>
+        <target>Formlar</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-confirmDefaultSettingsOverwrite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will replace any locale-specific journal settings you had for this locale</source>
+        <target>Belirtmiş olduğunuz dil herhangi bir dile özgü dergi ayarlarını değiştirecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></source>
+        <target><![CDATA[ADS desteklenen dillerden herhangi biriyle kullanılabilir. ADS çok dilli bir sistem yapısına sahiptir ve her sayfada diller arasında geçiş yapabilme özelliği ile kullanıcıların istedikleri dilde veri girmesini sağlar.<br /><br />ADS tarafından desteklenen bir dil aşağıdaki listede yoksa, site yönetim arayüzünden dili yüklemek için site yöneticinize başvurun. Yeni dil desteği eklemek için ilgili talimatlar ve ADS belgelerine bakınız.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-noneAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</source>
+        <target>Üzgünüz, başka bir ek dil kullanılamaz. Bu dergide ek bir dil kullanmak istiyorsanız site yöneticinize başvurunuz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the journal site.</source>
+        <target>Bu dergi sitesi için varsayılan dil olacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-managementPages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management Pages</source>
+        <target>Yönetim Sayfaları</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Eylem</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-addPayment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Payment</source>
+        <target>Ödeme Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-amount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Amount</source>
+        <target>Tutar</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author Fees</source>
+        <target>Yazar Ücretleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter fee amounts below in order to enable author processing charges.</source>
+        <target>Hakkında başlığı altında, dergiye yapılan gönderilerdeki açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi gönderi sürecinin 1. Adımında görülür.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-currencymessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</source>
+        <target>ADS herhangi bir para birimi dönüşümünü gerçekleştirmez. Abonelik için ödemeleri kabul ederseniz, abonelik parasının burada belirtilenle eşleştiğinden emin olmalısınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Tanım</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Detaylar</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-editSubscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Abonelik Düzenle</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable</source>
+        <target>Etkinleştir</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-feePaymentOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Options</source>
+        <target>Ödeme Seçenekleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-form-numeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All costs must be positive numeric values (decimal points are allowed)</source>
+        <target>Tüm tutarlar pozitif numerik değerde olmalıdır (ondalık sayılar kabul edilir).</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Fees</source>
+        <target>Genel Ücretler</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</source>
+        <target>Dernek üyelikleri, Dergi Hakkında sayfasında Politikalar altında ve bağış linkleri sağ taraf çerçevede arama seçeneği üzerinde görülür.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Options</source>
+        <target>Genel Seçenekler</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-noPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Payments</source>
+        <target>Ödeme Yok</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Found</source>
+        <target>Bulunamadı</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Seçenekler</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-acceptSubscriptionPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</source>
+        <target>Bu abonelikler için ödemeyi aktif hale getirir. Abone Yöneticisi tarafından tür, maliyet süre ve abnelikler yönetilir.</target>
+      </segment>
+    </unit>
+    <unit id="subscriptionManager-subscription-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to delete this subscription?</source>
+        <target>Bu aboneliği silmek istediğinizden emin misiniz?</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-enablePayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payments will be enabled for this journal. Note that users will be required to log in to make payments.</source>
+        <target>Ödeme modülünü etkinleştirmek için buraya tıklayınız. Aşağıdaki formu doldurmak için ödeme ayarları konfigürasyonunu yapmalısınız. Not: Kullanıcılar ödeme yapabilmek için giriş yapmak zorundadırlar.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-fee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee</source>
+        <target>Ücret</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Description</source>
+        <target>Ücret Tanımlama</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Name</source>
+        <target>Ücret Adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-membershipFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Association Membership</source>
+        <target>Dernek Üyeliği</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-onlypdf">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Only Restrict Access to PDF version of issues and articles</source>
+        <target>Makale ve sayılarıdaki PDF sürüme sınırlandırılmış erişim</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-publicationFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Processing Charge</source>
+        <target>Makale Yayını</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseArticleFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Article</source>
+        <target>Makale Satın Al</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseIssueFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Issue</source>
+        <target>Sayı Satın Al</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-text">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description of Payment Method</source>
+        <target>Ödeme Metodu Açıklaması</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Ödeme Numarası</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Method</source>
+        <target>Ödeme Yönetmi</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You may configure any of the following Payment Method Plugins from this screen.</source>
+        <target>Bu ekrandan aşağıdaki ödeme metodu eklentilerinden birinin konfigürasyonunu yapmalısınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethods">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Methods</source>
+        <target>Ücret Ödeme Yönetemleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Type</source>
+        <target>Ödeme Türü</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reader Fees</source>
+        <target>Okuyucu Ücretleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</source>
+        <target>Hakkında başlığı altındaki politikalarda açıklamalar boyunca işaretli seçenekler ve ücretler (aşağıda düzenlenebilir) ödemenin nerede yapılacağı işaret edildiği gibi görülür.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-records">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Records</source>
+        <target>Kayıtlar</target>
+      </segment>
+    </unit>
+    <unit id="manager-paymentTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Types</source>
+        <target>Ödeme Türleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Ödeme Numarası</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allEnrolledUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Enrolled in this Journal</source>
+        <target>Bu Dergideki Kayıtlı Kullanıcılar</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Journals</source>
+        <target>Tüm Dergiler</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allSiteUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll a User from this Site in this Journal</source>
+        <target>Bu Dergide Kullanıcı Yetkilendir</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-showNoRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show users with no role</source>
+        <target>Rolü Olmayan Kullanıcıları Göster</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Tüm Aktif Kullanıcılar</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove this user from this journal? This action will unenroll the user from all roles within this journal.</source>
+        <target>Bu kullanıcıyı bu dergiden çıkar. Bu işlem kullanıcının bu dergideki tüm görevlerini iptal edecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-emailUsers-selectTemplate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a template</source>
+        <target>Şablon seç</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollExistingUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll an Existing User</source>
+        <target>Tüm Kayıtlı Kullancılar</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollSyncJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With journal</source>
+        <target>Dergi ile</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Başka bir kullanıcı hesabı ile birleştirmek için bir ya da  birden çok kullanıcı seç (Örneğin; iki kullanıcı hesabı olan kişiler için). Birincil olarak seçilen hesap silinecek ve kullanıcının gönderileri, görevleri, atamaları gibi tüm kayıtları ikinci seçilen hesaba aktarılacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</source>
+        <target>Önceki seçtiğiniz kullanıcının yazarlık, atama gibi görvlerinin bağlanacağı bir kullanıcı seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-roleEnrollment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$role} Enrollment</source>
+        <target>{$role} Kayıt</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-syncUserDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</source>
+        <target>Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını (Örneğin; Hakemler) dergiler arasında senkronize eder.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-abstractsNotRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not require abstracts</source>
+        <target>Abstrakt zorunlu değil</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-noSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></source>
+        <target><![CDATA[Henüz bölüm editörü yok. İlk önce Yönetim > Ayarlar > Kullanıcılar Rolleri &amp; ile en az bir kullanıcıya bu rolü ekleyin.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-assigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This Section's Editors</source>
+        <target>Bu Bölümün Editörleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this section?</source>
+        <target>Bu bölümü kalıcı olarak silmek istediğinizden emin misiniz?</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-alertDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before this section can be deleted, you must move articles published within it into other sections.</source>
+        <target>Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Section</source>
+        <target>Bölüm Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-sectionEditorInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</source>
+        <target>Bölüm editörlerinin gönderilere otomatik olarak atanması için bu bölüme bir bölüm editörü ekleyiniz. (Öte yandan, bir gönderi geldikten sonra bölüm editörleri manuel olarak da atanabilir.) Eğer eklendiyse bir bölüm editörü bu bölümün gönderilerini gözden geçirmeye (hakemlik) ve düzenlemeye (sayfa düzeni, mizanpaj ve tashih) otomatik olarak atanır. Bölüm editörleri Dergi Yönetimi kısmındaki Roller altında Bölüm Editörleri tıklanarak oluşturulur.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editorRestriction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items can only be submitted by Editors and Section Editors.</source>
+        <target>Öğeler sadece editörler ve bölüm editörleri tarafından gönderilerbilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Bölüm Editörleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-abbrevRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An abbreviated title is required for the section</source>
+        <target>Bölüm için kısaltılmış bir başlık gerekir</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-mustAllowPermission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that at least one checkbox is checked for each Section Editor assignment.</source>
+        <target>Her bir Bölüm Editörü atamasının işaretlenmesi için en az bir işaret kutusu olduğundan emin olun.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-reviewFormId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that you have chosen a valid review form.</source>
+        <target>Lütfen geçerli bir inceleme formu seçtiğinizden emin olun.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required for the section.</source>
+        <target>Bölüm için başlık gerekiyor.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit author names for section items from issues' table of contents.</source>
+        <target>Sayının içindekiler sayfasında bölüm öğeleri için yazar adlarını ele.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit the title of this section from issues' table of contents.</source>
+        <target>Bu bölümün başlığını sayının içindekiler tablosundan çıkar.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identify items published in this section as a(n)</source>
+        <target>Bu bölümde yayınlanan öğelerin belirlenmesinde kullanılacak tanım:</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyTypeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(For example, "Peer-reviewed Article", "Non-refereed Book Review", "Invited Commentary", etc.)</source>
+        <target>(Örneğin,  "Hakemlik Sürecinden Geçmiş Makale", "Hakemlik Sürecinden Geçmemiş Kitap Değerlendirmesi", "Davetli makale", v.b.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-indexed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Indexed</source>
+        <target>Dizinlenmiş</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No sections have been created.</source>
+        <target>Herhangi bir bölüm oluşturulmadı.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Submissions</source>
+        <target>Açık Başvurular</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Policy</source>
+        <target>Bölüm Politikası</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-readingTools">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reading Tools</source>
+        <target>Okuma Araçları</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-reviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer Reviewed</source>
+        <target>Hakam Değerlendirmesinden Geçmiş</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be included in the indexing of the journal</source>
+        <target>Bu bölümdeki maddeler derginin dizin içeriğine dahil edilmeyecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be peer-reviewed</source>
+        <target>Hakem değerlendirmesinden geçmeyecek</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-submissionsToThisSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions made to this section of the journal</source>
+        <target>Dergini bu bölümüne yapılan başvurular</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-unassigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Available Section Editors</source>
+        <target>Atanabilecek Bölüm Editörleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Word Count</source>
+        <target>Kelime Say</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCountInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit abstract word counts for this section (0 for no limit)</source>
+        <target>Bu bölümde özet (abstrakt) için kelime limiti (limitsiz: 0)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Ayar</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Masthead</source>
+        <target>Yönetici Listesi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorialTeam">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editorial Team</source>
+        <target>Kişiler ve Kurullar</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Dergi Ana Sayfa İçeriği</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</source>
+        <target>Derginin ana sayfası varsayılan olarak gezinme bağlantılarından oluşur. Ek ana sayfa içeriği, gösterilen sıraya göre görünecek olan aşağıdaki seçeneklerden biri veya tümü kullanılarak eklenebilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useStyleSheet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal style sheet</source>
+        <target>Dergi biçim sayfası</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Name</source>
+        <target>Dergi Adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Header</source>
+        <target>Dergi Sayfa Başlığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-aboutItemContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Content</source>
+        <target>İçerik</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addAboutItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add About Item</source>
+        <target>Ek Öğe</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addChecklistItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Checklist Item</source>
+        <target>Kontrol Listesi Öğesi Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Öğe Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItemtoAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item to Appear in "About the Journal"</source>
+        <target>"Dergi Hakkında" Kısmında Görüntülenmesi İçin Öğe Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Öğe Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addReviewerDatabaseLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add New Database Link</source>
+        <target>Yeni Veri Tabanı Bağlantısı Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addSponsor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Sponsoring Organization</source>
+        <target>Sponsor Kurum Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternate Header</source>
+        <target>Alternatif Başlık</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</source>
+        <target>Alternatif olarak, başlık ve logo yerine, başlık HTML biçiminde hazırlanarak bu alana eklenebilir, gerekli değil ise bu alanı boş bırakınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements</source>
+        <target>Duyurular</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The announcements settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Introduction</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter any information you would like to appear on your announcements page.</source>
+        <target>Duyuru sayfasında okuyuculara gösterilmek üzere ek bilgi gir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-appearInAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(To appear in About the Journal) </source>
+        <target>(Dergi Hakkında sayfasında görülmek üzere)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-archiving-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The archiving details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require submitting Authors to file a Competing Interest (CI) statement with their submission.</source>
+        <target>Yazarların gönderileriyle birlikte bir Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireReviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require Reviewers to file a CI statement with each peer review they submit.</source>
+        <target>Hakemlerin her bir değerlendirme gönderisi için Çıkar Çatışması bildirimi dosyası göndermeleri gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-history">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal History</source>
+        <target>Dergi Geçmişi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-historyDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</source>
+        <target>Buraya yazılan metin dergi web sayfasının "Hakkında" kısmında görüntülenir. Dergi geçmişi ve yayın kuruluna yönelik bilgiler verilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contact-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The contact details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current issue</source>
+        <target>Son Sayı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-customizingTheLook">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Customizing the Look</source>
+        <target>5. Basamak: Görünümün Özelleştirilmesi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Ayrıntılar</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of journal, ISSN, contacts, sponsors, and search engines.</source>
+        <target>Derginin Adı, ISSN, iletişim, sponsorlar ve arama motorları.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</source>
+        <target>Dergi Yöneticisi tüm kullanıcıları, editörler veya bölüm editörleri yalnızca hakemleri kaydedebilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-discipline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Academic Discipline and Sub-Disciplines</source>
+        <target>Akademik Disiplinler ve Alt Disiplinler</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</source>
+        <target>Eğer dergi akademik alanların bir kaçını kapsıyor veya yazarlar çalışmalarını akademik alanlara göre gönderiyorlar ise kullanışlıdır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</source>
+        <target>(Örneğin, Tarih; Eğitim; Sosyoloji; Psikoloji; Kültürel Çalışmalar; Hukuk)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant academic disciplines for this journal</source>
+        <target>Bu dergi için uygun akademik disiplin örnekleri ver.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-displayCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add the table of contents for the current issue (if available).</source>
+        <target>Son sayının içindekiler bölümünü ekle (mevcut ise).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Decision</source>
+        <target>Editör Kararı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Bounce Address</source>
+        <target>Yanıt vermeyen e-posta adresi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any undeliverable emails will result in an error message to this address.</source>
+        <target>İletilemeyen her posta bu adreste hata mesajı olarak sonuçlanacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-disabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Bu seçeneği etkinleştirmek için ADS konfigürasyon dosyasında <tt>allow_envelope_sender</tt> seçeneği etkin olmalıdır. Bu işlevin kullanılabilmesi için sunucu (tüm sunucularda çalışmayabilir) ayarlarında da değişiklik yapılması gerekir. Daha fazla bilgi için ADS belgelerine bakınız.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Email Identification</source>
+        <target>E-posta Tanımlama</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Signature</source>
+        <target>İmza</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</source>
+        <target>Dergi adına hazırlanmış ve sistem tarafından gönderilen e-postalara eklenen imzadır. Hazır e-posta metinleri Dergi Yönetimi sayfası altındadır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable announcements</source>
+        <target>Dergi yöneticilerinin dergilerine duyuru eklemelerini etkinleştir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</source>
+        <target>Duyurular dergi okuyucularına haber veya gelişmeleri iletmek için yayımlanır. Yayınlananlar  duyurular sayfasında görüntülenir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display on Homepage</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>How many announcements to display on the homepage. Leave this empty to display none.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Visitors can register a user account with the journal.</source>
+        <target>Kullanıcılar aşağıda belirtilen bir veya birden çok rol ile dergiye kendileri üye olabilirler.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus and scope</source>
+        <target>Odak ve kapsam</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</source>
+        <target>Yazarlar, okuyucular ve kütüphanecilere derginin yayınlayacağı makaleleri ve diğer öğeleri açıklayın.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWork">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors to Index Their Work</source>
+        <target>Çalışmalarını Dizinlemek İsteyen Yazarlar için</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWorkDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></source>
+        <target><![CDATA[Açık Dergi Sistemleri, dünya çapında elektronik araştırma kaynaklarına ulaşma amacı ile standart oluşturan <a href="http://www.openarchives.org/" target="_blank">Açık Arşiv Girişimi</a>nin Üst Veri Harmanlama Protokolünü destekler. Yazarlar makale başvuruları için veri sağlamak amacıyla benzer bir şablon kullanacaklardır. Dergi yöneticisi indeksleme için ve mevcut yazarlar ilgili örneklerle birlikte dizinlenmiş çalışmalarını bulmak için noktalı virgülle ayrılmış terim (Örneğin, terim1; terim2) kategorileri seçmelidir. Girişler “ör” veya “örneğin” kullanılarak örneklerdeki gibi yapılmalıdır.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-issnInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified ISSN is not valid.</source>
+        <target>Belirtilen ISSN geçerli değil.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact email is required.</source>
+        <target>Birincil bağlantı e-postası gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact name is required.</source>
+        <target>Birincil bağlantı ismi gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalInitialsRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal initials are required.</source>
+        <target>Derginin başharfleri gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalTitleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal title is required.</source>
+        <target>Dergi ismi gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-numReviewersPerSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of reviewers per submission is required.</source>
+        <target>Her gönderi için hakem sayısı gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support email is required.</source>
+        <target>Destek e-posta gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support name is required.</source>
+        <target>Destek isim gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-generalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Information</source>
+        <target>Genel Bilgi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-gettingDownTheDetails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Getting Down the Details</source>
+        <target>Adım 1: Ayrıntıları Düzenleme</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guidelines</source>
+        <target>Rehberler</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidingSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Guiding Submissions</source>
+        <target>Adım 3: Gönderi Rehberi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-identity">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Identity</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-includeCreativeCommons">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</source>
+        <target>Anında veya gecikmeli olarak açık erişim sunan dergiler için, yayınlanan tüm çalışmalarla birlikte uygun zamanda bir Creative Commons lisansı ekleyin.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Information</source>
+        <target>Bilgi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</source>
+        <target>Kütüphaneciler, potansiyel yazarlar ve okuyucular için derginin kısa açıklamsı yan taraftaki "Bilgi" kısmında yer almaktadır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors</source>
+        <target>Yazarlar İçin</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Librarians</source>
+        <target>Kütüphaneler İçin</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Readers</source>
+        <target>Okuyucular İçin</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The information for this journal was updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Initial issue</source>
+        <target>İlk sayı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssueDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</source>
+        <target>Seçilen biçime uygun olarak ADS ile yayınlanacak ilk sayının, sayı, cilt, yıl gibi özellikleri:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-institution">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution</source>
+        <target>Kurum</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</source>
+        <target>Sayfa üstünde oluşan Yönlendirme çubuğuna başka maddeler eklenebilir (Giriş Sayfası, Hakkında, Kullanıcı, Kullanıcı Ana Sayfası, v.b.).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items per page</source>
+        <target>Sayfa başına madde</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalAbbreviation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Abbreviation</source>
+        <target>Dergi Kısaltması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Archiving</source>
+        <target>Dergi Arşivi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Summary</source>
+        <target>Dergi Özeti</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>About the Journal</source>
+        <target>Dergi Hakkında</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</source>
+        <target>Derginiz hakkında okuyuculara, yazarlara veya hakemlere ilgilerini çekebilecek her türlü bilgiyi ekleyin. Bu, açık erişim politikanızı, derginin odak ve kapsamını, telif hakkı bildirimini, sponsorluk ifşasını, derginin tarihini, bir gizlilik bildirimini ve herhangi bir LOCKSS veya CLOCKSS arşivleme sistemine dahil edilmesini içerebilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Dergi Sayfa Sayfa İçeriği</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</source>
+        <target>Giriş sayfası var sayılan yönlendirme bağlantılarından oluşur. Aşağıdaki seçenekler kullanılarak, aşağıdaki sıra ile görülmek üzere giriş sayfasına eklenebilirler. Son  sayı yönlendirme bağlantılarında "Son Sayı" olarak sürekli yer alır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Dergi Ana Sayfa Başlığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Dergi Ana Sayfa Başlığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</source>
+        <target>Dergi başlığının grafik bir biçimi (Örneğin: jpg, png veya gif) ve dergi logosu ana sayfa için yüklenebilir. Yükleme yapıldığında yazı biçimindeki başlığın yeri alır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextInitials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal initials</source>
+        <target>Dergi baş harfleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Layout</source>
+        <target>Dergi Mizanpajı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayoutDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</source>
+        <target>Bir dergi teması seçiniz ve düzen parçalarını yerleştiriniz. Bir dergi biçimi aynı zamanda sistem çapında biçim ve tema biçimini (bir tema seçilmiş ise) geçersiz kılmak için kullanılabilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Dergi Logosu</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Dergi Logosu</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Footer</source>
+        <target>Dergi Sayfa Altlığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooterDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</source>
+        <target>Dergi Sayfalarının alt bölümünde görülemesini istediğiniz bağlantıları HTML biçiminde bu alana yazınız (Örneğin; yönlendirme, sayaç, reklam v.b.). Altlık her sayfada görüntülenecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Journal Policies</source>
+        <target>Adım 2. Dergi Politikaları</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Setup</source>
+        <target>Dergi Yapılandırma</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetupUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your journal setup has been updated.</source>
+        <target>Derginizin yapıladırması güncellenmiştir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalStyleSheetInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid journal stylesheet format. Accepted format is .css.</source>
+        <target>Biçimlendirme sayfası için geçersiz dosya biçimi. Desteklenen dosya biçimi .css dir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalTheme">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Theme</source>
+        <target>Dergi Teması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal thumbnail</source>
+        <target>Dergi Görseli (Küçük)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A small logo or representation of the journal that can be used in lists of journals.</source>
+        <target>Dergi listelerinde kullanılabilen küçük bir logo veya derginin temsili.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal title</source>
+        <target>Dergi başlığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Key Information</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a short description of your journal and identify editors, managing directors and other members of your editorial team.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-labelName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Label name</source>
+        <target>Etiket adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The list settings for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Lists</source>
+        <target>Listeler</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable the PKP PN plugin</source>
+        <target>PKP PN eklentisi etkinleştirildi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</source>
+        <target>PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnSettingsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[View the <button>plugin settings</button> to accept the terms of use for the PKP PN.]]></source>
+        <target>PKP PN için kullanım şartlarını kabul etmek için Ayarlar bağlantısına tıklayın.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>PKP Preservation Network (PN)</source>
+        <target>PKP Koruma Ağı (PN)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginNotInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</source>
+        <target>PKP Koruma Ağı (PN), birkaç temel kriteri karşılayan herhangi bir OJS dergisi için ücretsiz koruma hizmeti sunmaktadır. OJS 3 için PKP PN eklentisi şu anda geliştiriliyor ve eklenti galerisinde yakında sunulacak.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-otherLockss">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS and CLOCKSS</source>
+        <target>Alternatif Arşivleme Seçenekleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[LOCKSS aracılığı ile katılımcı kütüphanelerde dergi içeriğini depolamak, dağıtmak ve <a href="{$lockssUrl}" target="_blank">Yayıncı Manifestosu</a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı "Dergi Hakkında" sayfasında görünecektir:]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></source>
+        <target><![CDATA[CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS Lisansı</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS License Description</source>
+        <target>LOCKSS Lisansı Açıklaması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>.]]></source>
+        <target><![CDATA[Derginin kayıtlı olduğu ve saklandığı 6-10 kütüphane tanımla. Örneğin, editör veya yayın kurulu üyeleri LOCKSS’de yer alan kuruluşlara baş vurunuz. <a href="http://lockss.org/lockss/Libraries" target="_blank">Katılan kütüphaneleri buradan görebilirsiniz</a>. (i) Başvururken <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS da görev alan kütüphaneler</a> veya (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS'da henüz yer almayan kütüphaneler</a> ve hazır davet yazıları için tıklayın.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS</source>
+        <target>LOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Bir CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini depolamak ve dağıtmak için CLOCKSS uygulamasını etkinleştirin.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></source>
+        <target><![CDATA[CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <a href="http://clockss.org/" target="_blank">CLOCKSS Lisansı</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS License Description</source>
+        <target>CLOCKSS Lisansı Açıklaması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></source>
+        <target><![CDATA[<a href="http://clockss.org/" target="_blank"> CLOCKSS Web Sitesini</a> ziyaret ederek CLOCKSS hizmetine kaydolun.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS</source>
+        <target>CLOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Look</source>
+        <target>Görünüş</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Homepage header, content, journal header, footer, navigation bar, and style sheet.</source>
+        <target>Ana sayfa başlığı, içerik, dergi başlığı, altlık, yönlendirme çubuğu ve biçim sayfası.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management</source>
+        <target>Yönetim</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access and security, scheduling, announcements, copyediting, layout, and proofreading.</source>
+        <target>Erişim ve güvenlik, program, duyurular, son kopya, mizanpaj ve düzeltme.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managementOfBasicEditorialSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management of Basic Editorial Steps</source>
+        <target>Temel Editöryal Basamakların Yönetimi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingPublishingSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management and Publishing Setup</source>
+        <target>Yönetim ve Yayıncılık Ayarı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingTheJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Managing the Journal</source>
+        <target>4. Basamak: Dergi Yönetimi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The masthead details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBar">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation Bar</source>
+        <target>Yönlendirme Çubuğu</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBarDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add or remove additional navigation bar items.</source>
+        <target>Yönlendirme Çubuğuna madde ekle veya çıkar.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsAbsolute">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</source>
+        <target>Bağlantı adresleri tam olmalıdır (örneğin: "http://www.example.com"), siteye göreceli bağlantı kullanılmamalıdır (örneğin "/manager/setup")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsLiteral">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</source>
+        <target>Etiketler okunacak biçimde olmalı (örneğin: "Dergi Yönetimi"), yerel mesajı kullanılmamalı (örneğin: "yönetim.ayar")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noImageFileUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No image file uploaded.</source>
+        <target>Görsel dosyası yüklenmedi.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noStyleSheetUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No style sheet uploaded.</source>
+        <target>Biçimlendirme sayfası yüklenmedi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note</source>
+        <target>Not</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-submissionAckDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Otomatik başvuru e-posta gönderme seçeneği başlangıçta pasifleştirildi. Açmak için <a class="action" href="{$preparedEmailsUrl}">Hazır E-Posta Mesajları</a> sayfasında "SUBMISSION_ACK" olarak tanımlanan mesajı etkinleştirin.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page links</source>
+        <target>Sayfa bağlantıları</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of links to display to subsequent pages in a list.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-onlineIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online ISSN</source>
+        <target>eISSN</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageNumberIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page Number Option</source>
+        <target>Sayfa Numarası Seçenekleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Policies</source>
+        <target>Politikalar</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus, peer review, sections, privacy, security, and additional about items.</source>
+        <target>Odak, hakem değerlendirmesi, bölümler, gizlilik, güvenlik ve erişim öğeler hakkında ekler.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-printIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Print ISSN</source>
+        <target>ISSN</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-privacyStatement-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The privacy statement has been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofing Instructions</source>
+        <target>Düzenleme Yönergesi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</source>
+        <target>Düzenleme yönergesi düzenlenme basamağında mizanpajcılara, yazarlara ve bölüm editörlerine açık tutulur. Aşağıda, dergi yöneticisi tarafından istenildiğinde değiştirilebilecek, ön tanımlı (HTML veya düz metin) bir düzenleme verilmiştir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationSchedule">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Schedule</source>
+        <target>Yayın Planlaması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduleDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.</source>
+        <target>Makaleler, kendi içindekiler tablosu olan bir sayıda toplanarak  yayınlanabilir. Ayrıca hazır olan makale son sayının içindekiler tablosuna eklenerek yayınlanabilir. Dergi Hakkında bölümünde okuyucularınıza hangi sistemin kullanıldığı ve ne sıklıkta yeni sayı yayınlandığını belirtiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduling">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Scheduling</source>
+        <target>Yayın Planlaması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification of Journal Content</source>
+        <target>Dergi İçeriğinin Tanımlanması</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publisher">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher</source>
+        <target>Yayıncı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These details may be included in metadata provided to third-party archival bodies.</source>
+        <target>Dergiyi yayıncısının adı Dergi Hakkında kısmında görüntülenir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-referenceLinking">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Linking</source>
+        <target>Referans Bağlama</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictArticleAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view open access content.</source>
+        <target>Kullanıcılar açık erişim içeriğini görüntüleyebilmek için kayıt yaparak giriş yapmak zorundadır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictSiteAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view the journal site.</source>
+        <target>Kullanıcılar dergi sitesini görüntüleyebilmek için kayıt yaparak giriş yapmak zorundadır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Guidelines</source>
+        <target>Değerlendirme Rehberi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Options</source>
+        <target>Değerlendirme Seçenekleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated Email Reminders</source>
+        <target>Hakemlere iki durumda uyarı için otomatik e-posta gönderilecektir (editör istediği her zaman gönderebilir)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Bu özelliğin çalışabilmesi için site yöneticisinin ADS kurulum dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Bu iş için sunucuda da ayarlar yapmak gerekebilir ve her sunucuda bu işlev çalışmayabilir. (Daha fazla bilgi için ADS belgelerine bakınız).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-blindReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Blind Review</source>
+        <target>Kör Hakemlik</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-numWeeksPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks allowed to complete the review</source>
+        <target>Değerlendirme için tipik olarak kabul edilen süre</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-onQuality">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editors will rate reviewers on a five-point quality scale after each review.</source>
+        <target>Editörler her bir hakem incelemesinden sonra hakemler için 1-5 puan arasında kalite ölçeğine göre değerlendirme yapabilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Restrict File Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers will not be given access to the submission file until they have agreed to review it.</source>
+        <target>Hakemler değerlendirme isteğini kabul ettikten sonra değerlendirme dosyasına giriş yapabilirler.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Access</source>
+        <target>Hakem Erişimi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>One-click Reviewer Access</source>
+        <target>Tek tıkla hakem erişimini etkinleştir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in.</source>
+        <target><![CDATA[<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri eklemelerine izin vermez.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-label">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include a secure link in the email invitation to reviewers.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerRatings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Ratings</source>
+        <target>Hakem Puanlama</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Reminders</source>
+        <target>Hakem Hatırlatmaları</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Policy</source>
+        <target>Değerlendirme Politikası</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Search Indexing</source>
+        <target>Arama Motoru Dizinlemesi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The search engine index settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></source>
+        <target>Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) yazabilirsiniz. Ör. İktisat; İşletme; Finans.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchDescription-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsAndSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sections and Section Editors</source>
+        <target>Bölümler ve Bölüm Editörleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDefaultSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(If sections are not added, then items are submitted to the Articles section by default.)</source>
+        <target>(Eğer bölüm eklenmemişse, öğeler Makaleler bölümüne varsayılan olarak gönderilir.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></source>
+        <target><![CDATA[Dergi için bölümler oluşturmak veya değiştirmek (Örneğin; Makaleler, Kitap Değerlendirmeleri, v.b.) için Bölüm Yönetimine gidin. <br /><br /> Yazarlar dergiye gönderi yaparken seçim yapacaklardır...]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectEditorDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal editor who will see it through the editorial process.</source>
+        <target>Dergi editörü bunu editoryal süreç olarak görecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal section for which the item will be considered.</source>
+        <target>Dergi bölümü göz önüne alınacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-showGalleyLinksDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Always show galley links and indicate restricted access.</source>
+        <target>Daima dizgi bağantısını göster ve sınırlı erişimi belirt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-view">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Site Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-viewContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Article Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-stepsToJournalSite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to a Journal Web Site</source>
+        <target>Bir Dergi Web Sitesi İçin Beş Adım</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</source>
+        <target>(Örneğin: Fotosentez; Kara Delikler; Dört Renkli Harita Sorunu; Bayes Kuramı)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectKeywordTopic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Keywords</source>
+        <target>Anahtar Kelimeler</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of keywords or topics as a guide for authors</source>
+        <target>Yazarlar için anahtar kelime veya konu örnekleri verin.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission guidelines</source>
+        <target>Gönderi Rehberleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Preparation Checklist</source>
+        <target>Başvuru Hazırlık Kontrol Listesi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</source>
+        <target>Dergiye makale başvurusu yaparken, yazarlar önce Başvuru Hazırlık Kontrol Listesini kontrol etmelidirler. Kontrol listesi "Dergi Hakkında" altındaki "Yazar Rehberi" bölümündedir. Liste aşağıda düzenlenebilir, ama listedeki bütün öğelerin bir sonraki basamağa geçebilmek için yazarlar tarafından işaretlenmesi gerekmektedir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Başvurular</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author guidelines, copyright, and indexing (including registration).</source>
+        <target>Yazar rehberleri, telif hakkı ve dizinleme (kayıt dahil).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable OAI</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</source>
+        <target>(Örneğin: Tarihsel Sorgu; Yarı Deneysel; Edebi Analiz; Araştırma/Görüşme)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeMethodApproach">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Type (Method/Approach)</source>
+        <target>Tür (Yöntem/Yaklaşım)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant research types, methods, and approaches for this field</source>
+        <target>Bu alan için araştırma türleri, yöntemleri ve yaklaşımlarıyla ilgili örnekler sağlayınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unique Identifier</source>
+        <target>Tek Biçim Tanımlayıcı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifierDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</source>
+        <target>Makaleler ve sayılar bir tanımlama numarası veya sözcüğü ile etiketlenirler. Digital Object Identifier (DOI) Sistemi önerilen sistemdir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useEditorialReviewBoard">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An editorial/review board will be used by the journal.</source>
+        <target>Bir editöryal/değerlendirme kurulu dergi tarafından kullanılacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userAccess-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The user access details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Thumbnail</source>
+        <target>Küçük Görsel</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useImageTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title image</source>
+        <target>Başlık görseli</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User Registration</source>
+        <target>Üye Kayıdı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useTextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title text</source>
+        <target>Başlık metni</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>Derginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. Kullanım istatistikleri birkaç bağlamda görüntülenecektir.
+		Tek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. En çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini varsayılan olarak seçin.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Statistics</source>
+        <target>Dergi İstatistikleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-articleViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article View Counts (for Authors only)</source>
+        <target>Makale görüntüleme sayısı (sadece yazarlar için)</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Kabul (%):</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-decline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decline</source>
+        <target>Red (%):</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-revise">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Resubmit</source>
+        <target>Geliştirilmiş gönderi (%):</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to review</source>
+        <target>Değerlendime süresi (Gün):</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysToPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to publication</source>
+        <target>Yayına kadar geçen süre (Gün):</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</source>
+        <target>ADS yazılımı her degi için şu istatistikleri hesaplar. “Değerlendirme süresi” başvuru zamanından son editör kararı verilene kadar geçen gün sayısıdır. “Yayınlama süresi” ise başvurudan yayına dek geçen toplam süredir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-itemsPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items published</source>
+        <target>Yayınlanmış öğerler:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-makePublic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Check items to be made available to readers in About the Journal.</source>
+        <target>Dergi hakkında kısmında okuyucuların görmesini istediklerinizi seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</source>
+        <target>Not: Değerlendirme sonuçlarının toplamı %100 olmayabilir, çünkü halen değerlendirmede olanlar da vardır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues published</source>
+        <target>Yayınlanmış sayılar:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total submissions</source>
+        <target>Toplam başvuru sayısı:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-peerReviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer reviewed</source>
+        <target>Dğerlendirmeden geçmiş:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers</source>
+        <target>Kayıtlı okuyucular</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered users</source>
+        <target>Kayıtlı kullanıcılar:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. assigned</source>
+        <target>Görevlendirme Sayısı:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Hakemler:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerScore">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor score</source>
+        <target>Editör Puanı:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewsPerReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. of reviews</source>
+        <target>Değerlendirme Sayısı:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-selectSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select the sections for calculating this journal's peer-reviewed statistics.</source>
+        <target>Bu dergide hakem değerlendirme istatistiklerinin yapılmasını istediğiniz bölümlerini seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonelik:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article file downloads</source>
+        <target>İndirilen makale dosyaları</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstract">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views</source>
+        <target>Makale özet sayfası gösterimi</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstractAndDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views and downloads</source>
+        <target>Makale özeti ve indirmeleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-journalIndexPageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal main page views</source>
+        <target>Dergi ana sayfa görüntülemeleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-issuePageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue table of contents page views</source>
+        <target>İçindekiler sayfası görünümleri tablosu</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byContext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by context (issues and/or article).</source>
+        <target>Sonuçları (sayı ve/veya makale) bağlamıyla daralt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byObject-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</source>
+        <target>Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/veya bir veya daha fazla nesne ID'sine göre daralt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Policies</source>
+        <target>Abonelik Politikası</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-delayedOpenAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delayed Open Access</source>
+        <target>Gecikmiş Açık Erişim</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionExpiryReminderBeforeMonthsValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Lütfen verilen onay kutusunu kullanın.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry</source>
+        <target>Abonelik Sonu</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Abonelik bitiminden sonra, okuyucunun tüm abonelik içeriğine erişim reddedilebilir ancak abonelik sonuna kadar yayınlanan içeriğe erişimi korunabilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFull">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Full expiry</source>
+        <target>Tümünü Sonladır</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFullDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to all subscription content upon subscription expiry.</source>
+        <target>Abonelik bitiminden sonra okuyucuların tüm abonelik içeriğine erişimini engelle.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartial">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Partial expiry</source>
+        <target>Kısmen Sonlandır</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartialDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Okuyucuların son yayınlanan abonelik içeriğine erişimi engelle ancak abonelik sonuna kadar yayınlanan içeriğe erişimini koru.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Months</source>
+        <target>{$x} Aylar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Weeks</source>
+        <target>{$x} Haftalar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry</source>
+        <target>Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry.</source>
+        <target>Aboneleri abonelik süresinin sona ermesinden sonra e-posta ile bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Aboneleri abonelik süresinin bitiminden önce e-posta ile bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminders</source>
+        <target>Abonelik Sonu Uyarısı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired.</source>
+        <target>Otomatik e-posta hatırlatıcıları (ADS tarafından hazırlanmış e-postalar Dergi Yöneticileri tarafından düzenlenebilir) hem önce hem de bir abonelik süresi dolduktan sonra abonelere gönderilebilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Bu seçeneğin etkinleşmesi için, site yöneticisinin ADS ayar dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Ayrıca sunucunun da bazı özellikleri desteklemesi gerekir (her zaman mümkün olmayabilir), daha fazla bilgi için ADS belgelerine bakınız.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expirySelectOne">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select one of the following:</source>
+        <target>Aşağdakilerden birini seçiniz:</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-htmlInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></source>
+        <target><![CDATA[Alana girişte HTML tagları kullanılabilir (yazı fontu, rengi vb.), "enter" tuşu kullanımı <tt>&lt;br&gt;</tt> olarak değiştirilecektir; HTML düzenleyici Firefox ile de çalışır.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months after subscription expiry.</source>
+        <target>Lütfen abonelik bitince kaç ay sonra haber vermek istediğinizi belirtiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months before subscription expiry.</source>
+        <target>Lütfen abonelik bitmeden kaç ay önce haber vermek istediğinizi belirtiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks after subscription expiry.</source>
+        <target>Lütfen abonelik bitince kaç hafta sonra haber vermek istediğinizi belirtiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks before subscription expiry.</source>
+        <target>Lütfen abonelik bitmeden kaç hafta önce haber vermek istediğinizi belirtiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</source>
+        <target>Kayıtlı okuyucuların, açık erişim açıldığında e-posta ile dergi içeriğini almalarına izin var.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Bu seçeneğin etkinleşmesi için, site yöneticisinin ADS ayar dosyasında <tt>scheduled_tasks</tt> seçeneğini etkinleştirmesi gerekir. Ayrıca sunucunun da bazı özellikleri desteklemesi gerekir (her zaman mümkün olmayabilir), daha fazla bilgi için ADS belgelerine bakınız.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotifications">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online Payment Notifications</source>
+        <target>Online Ödeme Bildirimleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotificationsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</source>
+        <target>Otomatik e-posta bildirimleri (ADS tarafından  hazırlanmış e-postalar dergi yöneticileri tarafından düzenlenebilir) online ödemeler tamamlandıktan sonra Abone Yöneticisine gönderilebilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Individual subscription.</source>
+        <target>Bir biresyel abonenin online abonelik satın alması durumunda Abone Yöneticisini bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</source>
+        <target>Bir kurumsal abonenin online abonelik satın alması durumunda Abone Yöneticisini bilgilendir (tavsiye edilir).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Individual subscription.</source>
+        <target>Bir bireysel abonenin online abonelik yenileme yapması durumunda Abone Yöneticisini bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Institutional subscription.</source>
+        <target>Bir kurumsal abonenin online abonelik yenilemesi durumunda Abone Yöneticisini bilgilendir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentPurchaseInstitutionalDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Kurumsal abonelikler online satın alıdığında alan adları ve IP aralıkları için onay gereklidir. Bu aboneliklerin aktivasyonunun Abone Yöneticisi tarafından onaylanması gerektirir.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></source>
+        <target><![CDATA[<strong>Not:</strong> Bu seçenekleri etkinleştirmek için, Dergi Yöneticisi, Okuyucu Ücretleri altındaki abonelikleri online ödeme modülü de dahil olmak üzere etkinleştirmelidir.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Options For Subscription Journals</source>
+        <target>Abonelik Gerektiren Dergiler İçin Açık Erişim Politikası</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</source>
+        <target>Abonelik gerektiren dergiler "gecikmiş açık erişim" ya da "yazar kişisel arşivlemesi" gibi yazıya daha fazla ulaşım ve kaynak gösterilmeyi sağlayacak politikalar belirleyebilirler. Belirlenen politika Dergi Hakkında sayfasında yer alacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Information</source>
+        <target>Abonelik Bilgileri</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</source>
+        <target>Abonelik türleri ve bedeli, abonelik yöneticisinin adı ve adresi ile birlikte dergi hakkında sayfasına kendiliğinden yerleştirilecektir. Abonelik ile ilgili ödeme biçimi, hesap numarası, gelişmekte olan ülkeler için özel koşullar ve benzeri tüm ek bilgiler burada eklenebilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Abone Yöneticisi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</source>
+        <target>Dergi Hakkında sayfasında abonelik hakkında bilgi vermek üzere gösterilecek.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid email.</source>
+        <target>Lütfen geçerli bir e-posta adresi giriniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonelikler</target>
+      </segment>
+    </unit>
+    <unit id="manager-individualSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual Subscriptions</source>
+        <target>Bireysel Abonelikler</target>
+      </segment>
+    </unit>
+    <unit id="manager-institutionalSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Kurumsal Abonelikler</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmRenew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to renew this subscription?</source>
+        <target>Bu aboneliği yenilemek istediğinizden emin misiniz?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this subscription?</source>
+        <target>Bu aboneliği silmek istediğinizden emin misiniz?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-summary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions Summary</source>
+        <target>Abonelik Özeti</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription</source>
+        <target>Yeni Bir Abone Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-renew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Renew</source>
+        <target>Yenile</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End</source>
+        <target>Sonlandır</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEndSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End Date</source>
+        <target>Bitiş Tarihi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Başlat</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStartSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start Date</source>
+        <target>Başlangıç Tarihi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Alan (Domain)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Aboneliği Düzenle</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Düzelt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-withStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With Status</source>
+        <target>Durum ile</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-allStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All</source>
+        <target>Hepsi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-status">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Status</source>
+        <target>Durum</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription status is required.</source>
+        <target>Abonelik durumu gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription status.</source>
+        <target>Lütfen geçerli bir abonelik statüsü seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Abonelik türü</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type is required.</source>
+        <target>Abonelik türü gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type.</source>
+        <target>Lütfen geçerli bir abonelik türü seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start date</source>
+        <target>Başlangıç tarihi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription start date is required.</source>
+        <target>Abonelik başlangıç tarihi gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription start date.</source>
+        <target>Lütfen geçerli bir abonelik başlangıç tarihi giriniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End date</source>
+        <target>Bitiş tarihi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription end date is required.</source>
+        <target>Abonelik bitiş tarihi gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify a start date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify an end date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription end date.</source>
+        <target>Lütfen geçerli bir abonelik bitiş tarihi seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userProfileInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: All changes below are to user's system-wide profile.</source>
+        <target>Not: Aşağıdaki tüm değişiklikler sistem genelindeki kullanıcının profilinde vardır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Kullanıcı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact</source>
+        <target>İletişim</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user is required.</source>
+        <target>Bir kullanıcı gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid user.</source>
+        <target>Lütfen geçerli bir kullanıcı seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userCountryValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid country.</source>
+        <target>Lütfen geçerli bir ülke seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send the user an email with their username and subscription details.</source>
+        <target>Kullanıcı adı ve abonelik detaylarını bir e-mail ile kullanıcıya gönder.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Lütfen verilen onay kutularını kullanınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Üyelik</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Referans Numarası</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter membership information if the subscription type requires that subscribers belong to an association or organization.</source>
+        <target>Abonelik bir dernek veya organizasyona aitse ve eğer abonelik türü gerekliyse abonelik türünü giriniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires membership information.</source>
+        <target>Seçilmiş abonelik türleri üyelik bilgisi gerektirir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notlar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Alan (Domain)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution name</source>
+        <target>Kurum adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An institution name is required.</source>
+        <target>Kurum adı gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionMailingAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mailing address</source>
+        <target>Gönderi Adresi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></source>
+        <target><![CDATA[Eğer buraya bir alan adı (domain) girilirse, IP aralığı girilmeyebilir. <br /> Geçerli değerler kullanım alanı isimleridir (Örneğin; lib.sfu.ca).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainIPRangeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires a domain and/or an IP range for subscription authentication.</source>
+        <target>Seçilen abonelik türü aboneliğin doğrulanması için bir alan ve/veya IP aralığı gerektirmektedir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid domain.</source>
+        <target>Lütfen geçerli bir alan adı giriniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP ranges</source>
+        <target>IP aralığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[&#8226;]]></source>
+        <target><![CDATA[&#8226;]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></source>
+        <target>Eğer buraya bir IP aralığı girilirse, alan adı girilmeyebilir. Bir IP aralığı için geçerli değerler: IP adresi (Örneğin; 142.58.103.1), IP aralığı (Örneğin; 142.58.103.1 - 142.58.103.4), '*' işareti içeren bir IP aralığı (Örneğin; 142.58.103.*), veya bunların ';' işareti ile ile ayrılmış herhangi bir kombisayonu olabilir (Örneğin; 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid IP range.</source>
+        <target>Lütfen geçerli bir IP aralığı giriniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-deleteIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Sil</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-addIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add</source>
+        <target>Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-saveAndCreateAnother">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Kaydet ve Yeni Bir Tane Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionContactRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</source>
+        <target>Dergi kurulumunda kullanıcıya bir bildirim e-posta göndermek amacıyla, abone kişi adı ve e-posta adresi belirtilmelidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This user already has a subscription for this journal.</source>
+        <target>Kullanıcı hali hazırda bu deriye abone.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type must be created before new subscriptions can be made.</source>
+        <target>Abonelik türü yeni bir abone kaydetmeden önce oluşturmalıdır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP Range</source>
+        <target>IP Aralığı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Üyelik</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Referans Numarası</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notlar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscriptions</source>
+        <target>Abone yok</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Subscription Contact</source>
+        <target>Abonelik İletişimi Seç</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select User</source>
+        <target>Kullanıcı Seç</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectSubscriber-desc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</source>
+        <target>Abonelik erişim yetkisi, Dergi Yöneticisi, Editörler, Bölüm Editörleri, Mizanpajcılar, Yayın Editörleri ve Düzeltmeler için otomatik olarak verilir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-select">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select</source>
+        <target>Seç</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription created successfully.</source>
+        <target>Kayıt başarıyla oluşturuldu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Type</source>
+        <target>Abonelik türü</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Kullanıcı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-contact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact Name</source>
+        <target>İletişim Kurulacak Kişi Adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution Name</source>
+        <target>Kurum Adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Types</source>
+        <target>Abonelik Türleri</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</source>
+        <target>Uyarı! Bu ve benzeri türlerdeki bütün abonelikler silinecek. Devam etmek ve bu abonelik türünü silmek istediğinizdan emin misiniz?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Tutar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonelikler</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual</source>
+        <target>Bireysel</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional</source>
+        <target>Kurumsal</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription Type</source>
+        <target>Yeni Bir Abonelik Türü Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Devam</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription Type</source>
+        <target>Abonelik Türü Düzenle</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Düzelt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Tutar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $).</source>
+        <target>Rakamsal bir değer giriniz (Örneğin; 40 veya 40.00). "$" gibi semboller kullanmayınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cost must be a positive, numeric value.</source>
+        <target>Tutar pozitif, rakamsal bir değer olmalıdır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A cost is required.</source>
+        <target>Bir tutar gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currency">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Currency</source>
+        <target>Para birimi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A currency is required.</source>
+        <target>Para birimini gerekli.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid currency.</source>
+        <target>Lütfen bir para birimi değeri seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Tanımlama</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Expires after</source>
+        <target>Dolduktan sonra</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-months">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>months (e.g. 12)</source>
+        <target>ay (Örneğin, 12)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-neverExpires">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Never expires</source>
+        <target>Süresiz</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiringValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Lütfen verilen seçenkeleri kulanın.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Devam</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of months the subscription lasts (e.g. 12).</source>
+        <target>Kaç ay süreyle kayıt olacağınızı rakamla belirtiniz (Örneğin 12).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The duration must be a positive, numeric value.</source>
+        <target>Süre pozitif, rakamsal bir değer olmalıdır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A duration is required.</source>
+        <target>Süre gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-format">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format</source>
+        <target>Biçim</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type format is required.</source>
+        <target>Abonelik türü biçiminin bilinmesi gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type format.</source>
+        <target>Geçerli bir abonelik türü biçimi seçiniz.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonelikler</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual (users are validated via login)</source>
+        <target>Bireysel (kullanıcı girişiyle doğrulanır)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional (users are validated via domain or IP address)</source>
+        <target>Aboneler kullanım alanı ya da IP doğruluğu aracılığı ile onaylamalıdır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Lütfen verilen seçenekleri kullanınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</source>
+        <target><![CDATA[Üyelik bilgisi için abonelik gerekli. <br />(Örneğin; dernek, organizasyon, konsorsiyum, v.b.)]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Lütfen verilen kontrol kutusunu kullanınız.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Seçenekler</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-public">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not make this subscription type publicly available or visible on the website.</source>
+        <target><![CDATA[Bu abonelik türünü kamuya açık ya da görünür yapma. <br /> (Örneğin; Dergi Hakkında kısmında abonelikler altında).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Lütfen verilen çek kutularını kullanın.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Kaydet ve Yeni Bir Tane Oluştur</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of Type</source>
+        <target>Abonelik Tür Adı</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type with this name already exists.</source>
+        <target>Halen bu isimde bir abonelik türü var.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type name is required.</source>
+        <target>Abonelik türünün girilmesi gereklidir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Abonelik türü</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscription types have been created.</source>
+        <target>Herhangi bir abonelik türü oluşturulmadı.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptionTypeCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type created successfully.</source>
+        <target>Abonelik türü başarıyla oluşturuldu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-subscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the subscriptions you offer.</source>
+        <target>Sunduğunuz abonelikleri açıklayan bir sayfaya bağlantı verin.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the visitor's current and past subscriptions.</source>
+        <target>Ziyaretçinin mevcut ve geçmiş aboneliklerini açıklayan bir sayfaya bağlantı verin.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-conditionalWarning">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This link will only be displayed when a visitor is logged in.</source>
+        <target>Bu bağlantı sadece bir ziyaretçi giriş yaptığında görüntülenecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Categories</source>
+        <target>Kategoriler</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</source>
+        <target>Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</target>
+      </segment>
+    </unit>
+    <unit id="grid-category-path">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Path</source>
+        <target>Yol</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Section</source>
+        <target>Bölüm Ekle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-section-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc).</source>
+        <target>Bir derginin yayınlanmış sayılarındaki makaleler, genellikle tema veya içerik türü (Örn. İnceleme Makaleleri, Araştırma, vb.) tarafından Bölümlerde düzenlenir.</target>
+      </segment>
+    </unit>
+    <unit id="settings-roles-gridDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production.</source>
+        <target>Roller, dergideki farklı izin düzeylerine ve ilişkili iş akışlarına erişim verilmiş olan, kullanıcı grubundaki kullanıcı gruplarıdır. Beş farklı izin düzeyi vardır: Dergi Yöneticileri dergideki her şeye erişebilir (tüm içerik ve ayarlar); Bölüm Editörleri, atanan tüm içeriğe tam erişime sahiptir; Dergi Asistanları, bir editör tarafından kendilerine açıkça verilen tüm gönderilere sınırlı erişime sahiptir; Hakemler, incelenmek üzere atanmış oldukları gönderileri görebilir ve yapabilirler; Yazarlar, kendi gönderileriyle ilgili sınırlı miktarda bilgiyi görebilir ve bunlarla etkileşime girebilir. Ek olarak, rollere erişim, İç Değerlendirme, Gözden Geçirme, Editörlük ve Prodüksiyona erişim verilebilecek beş farklı aşama görevi vardır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-publication-library">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher Library</source>
+        <target>Yayıncı Kütüphanesi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Base new article's copyright year on</source>
+        <target>Yeni makalenin temel telif hakkı yılı</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article: default year will be drawn from the article's publication date, as in "publish-as-you-go".</source>
+        <target>Makale: varsayılan yıl, makalenin yayınlanma tarihinden itibaren, "olduğu gibi yayınla" yazısında olduğu gibi alınacaktır.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue: default year will be drawn from the issue's publication date.</source>
+        <target>Sayı: Varsayılan yıl, sayının yayınlanma tarihinden itibaren çizilecektir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reset Article Permissions</source>
+        <target>Makale İzinlerini Sıfırla</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to reset permissions data for all articles? This action can not be undone.</source>
+        <target>Makalelere zaten eklenmiş izin verilerini sıfırlamak istediğinizden emin misiniz?</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.</source>
+        <target>Telif hakkı bildirimi ve lisans bilgileri, yayınlanan içeriklere kalıcı olarak eklenecek ve yeni gönderilere yönelik politikaları değiştirerek bu verilerin değişmeyeceğinden emin olun. Yayımlanmış içeriklere zaten eklenmiş kayıtlı izinleri sıfırlamak için aşağıdaki düğmeyi kullanın.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article permissions were successfully reset.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title-short">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Components</source>
+        <target>Bileşenler</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Components</source>
+        <target>Makale Bileşenleri</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</source>
+        <target>Bu bileşenler dosya isimlendirme amaçları için kullanılır ve dosya yükleme üzerine açılan menüde sunulur. ## belirtilen türler, kullanıcının dosyayı tüm gönderi 99Z ile veya belirli bir bileşeni numarayla ilişkilendirmesine izin verir (ör. 02).</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Settings</source>
+        <target>Ayarlar</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-DOIPluginSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI Plugin Settings</source>
+        <target>DOI Eklentisi Ayarları</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-articles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Makaleler</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-issues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues</source>
+        <target>Sayılar</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-representations">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galleys</source>
+        <target>Dizgiler</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-missingRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Plugin requirements not met</source>
+        <target>Eklenti gereksinimleri karşılanmadı</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-DOIsNotAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plugin and specify a valid DOI prefix there.</source>
+        <target>Bu eklentiyi kullanabilmek için lütfen "Genel Belirleyici / Public Identifier" eklenti kategorisine gidin, DOI eklentisini etkinleştirin ve yapılandırın ve orada geçerli bir DOI öneki belirtin.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-pluginNotConfigured">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The plugin is not fully set up.</source>
+        <target>Eklenti tam olarak ayarlanmamış.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noDOIContentObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</source>
+        <target>DOI Genel Tanımlayıcı eklentisinde DOI ataması için herhangi bir yayın öğesi seçilmemiştir, bu nedenle bu eklentide hiçbir depo veya ihracat olanağı yoktur.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target>Şifre</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please note that the password will be saved as plain text, i.e. not encrypted.</source>
+        <target>Şifrenin düz metin olarak, yani şifrelenmemiş olarak kaydedileceğini lütfen unutmayın.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-filter-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Issue</source>
+        <target>Herhangi Bir Sayı</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Status</source>
+        <target>Herhangi Bir Durum</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-notDeposited">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Deposited</source>
+        <target>Depolanmamış</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-markedRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked registered</source>
+        <target>İşaretli kayıt</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-registered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered</source>
+        <target>Kayıtlı</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Eylem</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-export">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Export</source>
+        <target>İhraç</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-markRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mark registered</source>
+        <target>İşaretli kayıt</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-register">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Register</source>
+        <target>Kayıt</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Validate XML before the export and registration.</source>
+        <target>İhraç ve kayıt işleminden önce XML'i doğrulayın.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noObjectsSelected">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No objects selected.</source>
+        <target>Hiçbir nesne seçilmedi.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Could not convert selected objects.</source>
+        <target>Seçilen nesneler dönüştürülemedi.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-invalidXML">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid XML:</source>
+        <target>Geçersiz XML:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-outputFileNotWritable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The output file {$param} is not writable.</source>
+        <target>Çıktı dosyası {$param} yazılabilir değil.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-inputFileNotReadable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The input file {$param} is not readable.</source>
+        <target>Çıktı dosyası {$param} okunabilir değil.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-error-mdsError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration was not successful! The DOI registration server returned an error: '{$param}'.</source>
+        <target>Kayıt başarılı değil! DOI kayıt sunucusu bir hata verdi:  '{$param}'.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration successful!</source>
+        <target>Kayıt Başarılı!</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-senderTask-warning-noDOIprefix">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI prefix is missing for the journal with the path {$path}.</source>
+        <target>DOI öneki, günlük için {$path} yolu eksik.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-cliError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ERROR:</source>
+        <target>HATA:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified journal path, "{$journalPath}", does not exist.</source>
+        <target>Belirtilen günlük yolu "{$journalPath}" mevcut değil.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified objects could not be found.</source>
+        <target>Belirtilen nesneler bulunamadı.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-copyPrimaryContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send a copy to the primary contact, identified in the Journal Settings.</source>
+        <target>Dergi ayarları'nda tanımlanan birincil kişiye bir kopya gönderin.</target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No articles were found with usage statistics matching these parameters.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalAbstractViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total abstract views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalGalleyViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total file views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-countOfTotal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$count} of {$total} articles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-abstracts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Abstracts</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Files</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

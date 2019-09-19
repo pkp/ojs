@@ -1,0 +1,5163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:13-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:13-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="manager-distribution-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you "publish as you go", don't use the issue's publication date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the issue's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-submission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the article's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Mode</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS will not be used to publish the journal's contents online.</source>
+        <target>OJS neće biti upotrebljen za objavljivanje sadržaja časopisa na internetu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will provide open access to its contents.</source>
+        <target>Časopis omogućuje otvoreni pristup svojem cjelokupnom sadržaju.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will require subscriptions to access some or all of its contents.</source>
+        <target>Časopis zahtijeva pretplatu za pristup nekim ili svim svojim sadržajima.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publishing details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-website-archiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archiving</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-emails-confirmResetAll">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</source>
+        <target>Jeste li sigurni da želite vratiti izvorno sve predloške e-pošte u ovom časopisu? Izgubit ćete sva podešenja koja ste napravili.</target>
+      </segment>
+    </unit>
+    <unit id="manager-files-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</source>
+        <target>Napomena: Preglednik datoteka je napredna funkcija sustava koja omogućuje direktno pregledavanje i uređivanje datoteka i direktorija koje časopis koristi.</target>
+      </segment>
+    </unit>
+    <unit id="manager-journalManagement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Management</source>
+        <target>Upravljanje časopisom</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-ui">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>UI</source>
+        <target>UI</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Podneseni članci</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-forms">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Forms</source>
+        <target>Obrasci</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-confirmDefaultSettingsOverwrite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will replace any locale-specific journal settings you had for this locale</source>
+        <target>Ovo će poništiti sve jezično-specifične postavke koje ste izradili za ovaj prijevod (npr. obrasci e-pošte).</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></source>
+        <target><![CDATA[OJS može biti dostupan korisnicima na bilo kojem od mnogo podržanih jezika. OJS, može funkcionirati kao multilingvalni sustav i omogućiti korisnicima lak prelazak između jezika na svakoj strani i da se određeni podaci unesu na nekoliko dodatnih jezika.<br /><br />  Ako nije dole izlistan jezik koji podržava OJS pitajte vašeg administratora sustava OJS da instalira jezik iz sučelja za administraciju. Pogledajte u OJS dokumentima instrukcije kako se dodaje podrška za nove jezike.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-noneAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</source>
+        <target>Žao nam je, ali dodatni jezici nisu dostupni. Kontaktirajte vašeg administratora stranice ako želite koristiti dodatne jezike za ovaj časopis.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the journal site.</source>
+        <target>Ovo će biti standardni jezik za stranicu časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-managementPages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management Pages</source>
+        <target>Postavke časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Postupak</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-addPayment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Payment</source>
+        <target>Dodaj naplatu</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-amount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Amount</source>
+        <target>Iznos</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author Fees</source>
+        <target>Naplata od autora</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter fee amounts below in order to enable author processing charges.</source>
+        <target>Odabrane opcije, zajedno s njihovim opisom i iznosom (koji se mogu uređivati na ovoj stranici) bit će navedene u prvom koraku postupka prijave priloga, u rubrici "prijave priloga" pod poveznicom "o časopisu", kao i na svim mjestima gdje se traži plaćanje.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-currencymessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</source>
+        <target>OJS ne preračunava vrijednosti valuta. Ukoliko naplaćujete usluge časopisa, valuta u kojoj se zaprimaju uplate mora biti identična ovdje odabranoj.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Opis</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Detalji</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-editSubscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Uređivanje pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable</source>
+        <target>Omogući</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-feePaymentOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Options</source>
+        <target>Opcije naplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-form-numeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All costs must be positive numeric values (decimal points are allowed)</source>
+        <target>Svi iznosi moraju biti pozitivne numeričke vrijednosti (decimalni brojevi su dozvoljeni)</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Fees</source>
+        <target>Opće naplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</source>
+        <target>Mogućnost članstva u organizaciji bit će navedena u rubrici "uređivačka politika" pod poveznicom "o časopisu". U slučaju aktivacije opcije, poveznica na donacije nalazit će se u gornjem desnom okviru svake stranice, ponad prozora za pretraživanje.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Options</source>
+        <target>Opće opcije</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-noPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Payments</source>
+        <target>Bez uplata</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Found</source>
+        <target>Nije pronađeno</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Opcije</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-acceptSubscriptionPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</source>
+        <target>Ovo će aktivirati naplate u modulu pretplata, gdje administrator pretplate određuje tipove, iznose i trajanje pretplata te održava listu pretplatnika.</target>
+      </segment>
+    </unit>
+    <unit id="subscriptionManager-subscription-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to delete this subscription?</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-enablePayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payments will be enabled for this journal. Note that users will be required to log in to make payments.</source>
+        <target>Kako biste aktivirali modul za naplatu odaberite ovu opciju. Potom je potrebno kroz niže priložene opcije odrediti na koga i što se naplate odnose. Napomena: korisnici će se morati prijaviti u sustav žele li izvršiti uplatu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-fee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee</source>
+        <target>Iznos</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Description</source>
+        <target>Opis</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Name</source>
+        <target>Naziv</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-membershipFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Association Membership</source>
+        <target>Članstvo u organizaciji</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-onlypdf">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Only Restrict Access to PDF version of issues and articles</source>
+        <target>Ograniči pristup samo na PDF verzije članaka</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-publicationFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Processing Charge</source>
+        <target>Objavljivanje članka</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseArticleFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Article</source>
+        <target>Kupovina članka</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseIssueFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Issue</source>
+        <target>Kupi izdanje</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-text">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description of Payment Method</source>
+        <target>Opis metode plaćanja</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Identifikator naplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Method</source>
+        <target>Način uplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You may configure any of the following Payment Method Plugins from this screen.</source>
+        <target>Sa ovog ekrana možete podesiti funkcionalne dodatke namijenjenih plaćanju:</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethods">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Methods</source>
+        <target>Način uplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Type</source>
+        <target>Tip naplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reader Fees</source>
+        <target>Naplata od čitatelja</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</source>
+        <target>Odabrane opcije, zajedno s njihovim opisom i iznosom (koji se mogu uređivati na ovoj stranici) bit će navedene u rubrici "uređivačka politika" pod poveznicom "o časopisu", kao i na svim mjestima gdje se traži plaćanje.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-records">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Records</source>
+        <target>Arhiv naplata</target>
+      </segment>
+    </unit>
+    <unit id="manager-paymentTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Types</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Identifikacijski broj naplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allEnrolledUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Enrolled in this Journal</source>
+        <target>Svi registrirani korisnici časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Journals</source>
+        <target>Svi časopisi</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allSiteUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll a User from this Site in this Journal</source>
+        <target>Registriraj postojećeg korisnika sustava u ovaj časopis</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-showNoRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show users with no role</source>
+        <target>Pokaži korisnike bez uloge</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Svi upisani korisnici</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove this user from this journal? This action will unenroll the user from all roles within this journal.</source>
+        <target>Želite li ukloniti ovog korisnika iz časopisa? Ovaj postupak će ukloniti sve uloge korisnika unutar ovog časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-emailUsers-selectTemplate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a template</source>
+        <target>Odaberite predložak</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollExistingUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll an Existing User</source>
+        <target>Registriraj postojećeg korisnika</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollSyncJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With journal</source>
+        <target>Sa časopisom</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Odaberite korisnika kojeg ćete spojiti s drugim korisničkim računom (npr. u slučaju da neki korisnik posjeduje dva korisnička računa). Račun koji prvi odaberete bit će obrisan, a sve njegove priloge, zaduženja itd. bit će pridružene drugom računu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</source>
+        <target>Odaberite korisnika kojem želite pripisati autorstvo, uredničke objave, itd. prošlog korisnika.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-roleEnrollment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$role} Enrollment</source>
+        <target>{$role}</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-syncUserDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</source>
+        <target>Ova funkcija može se koristiti samo ukoliko se na sustavu nalazi više časopisa. Sinkronizacija dodijeljivanja uloga će svim korisnicima koji imaju odabranu ulogu u odabranom časopisu dodijeliti istu tu ulogu u ovome časopisu. Ova opcija dopušta sinkronizaciju uobičajenih skupova korisnika (npr. recenzenata) između časopisa koji se nalaze na istom sistemu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-abstractsNotRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not require abstracts</source>
+        <target>Ne trebaju sadržavati sažetke</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-noSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-assigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This Section's Editors</source>
+        <target>Urednici ove rubrike</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this section?</source>
+        <target>Da li ste sigurni da želite trajno izbrisati ovu rubriku?</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-alertDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before this section can be deleted, you must move articles published within it into other sections.</source>
+        <target>Prije nego obrišete ovu rubriku morate sve članke koji su u njoj prmjestiti u druge rubrike.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Section</source>
+        <target>Kreiraj rubriku</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-sectionEditorInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</source>
+        <target>Opcijama "odredi urednika" i "ukloni ulogu urednika" odredite koji će od postojećih urednika rubrika imati ovlasti uređivanja ove rubrike.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editorRestriction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items can only be submitted by Editors and Section Editors.</source>
+        <target>Samo urednici mogu prijavljivati priloge u ovu rubriku.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Urednici rubrika</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-abbrevRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An abbreviated title is required for the section</source>
+        <target>Skraćeni naslov je obavezan za ovu rubriku</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-mustAllowPermission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that at least one checkbox is checked for each Section Editor assignment.</source>
+        <target>Molimo da odaberete barem jednu opciju uz svako zaduženje urednika rubrika.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-reviewFormId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that you have chosen a valid review form.</source>
+        <target>Molimo odaberite valjani recenzijski obrazac.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required for the section.</source>
+        <target>Naslov je obavezan za ovu rubriku.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit author names for section items from issues' table of contents.</source>
+        <target>Za priloge u ovoj rubrici ne prikazuj imena autora u kazalu sadržaja.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit the title of this section from issues' table of contents.</source>
+        <target>Izostavi naslov ove rubrike iz kazala sadržaja izdanih brojeva časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identify items published in this section as a(n)</source>
+        <target>Pri kreiranju metapodataka, svi će članci u rubrici biti označeni kao:</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyTypeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(For example, "Peer-reviewed Article", "Non-refereed Book Review", "Invited Commentary", etc.)</source>
+        <target>(na primjer, "članak", "prikaz", "uvodnik", itd.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-indexed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Indexed</source>
+        <target>Katalogizirano</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No sections have been created.</source>
+        <target>Nema napravljenih rubrika.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Submissions</source>
+        <target>Otvoreno za prijave</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Policy</source>
+        <target>Opis rubrika</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-readingTools">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reading Tools</source>
+        <target>Alati za čitanje</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-reviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer Reviewed</source>
+        <target>Recenzijski postupak</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be included in the indexing of the journal</source>
+        <target>Nisu obuhvaćene indeksiranjem časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be peer-reviewed</source>
+        <target>Ne prolaze kroz recenzijski postupak.</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-submissionsToThisSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions made to this section of the journal</source>
+        <target>Prijave u ovoj rubrici časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-unassigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Available Section Editors</source>
+        <target>Dostupni urednici rubrika</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Word Count</source>
+        <target>Broj riječi</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCountInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit abstract word counts for this section (0 for no limit)</source>
+        <target>Ograničite broj riječi za sažetak u ovom odjeljku (0 za beskonačno):</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Uređivanje postavki časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Masthead</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorialTeam">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editorial Team</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useStyleSheet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal style sheet</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Name</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Header</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-aboutItemContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Content</source>
+        <target>Sadržaj</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addAboutItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add About Item</source>
+        <target>Dodaj stavku</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addChecklistItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Checklist Item</source>
+        <target>Dodaj novi uvjet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Dodaj stavku</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItemtoAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item to Appear in "About the Journal"</source>
+        <target>Dodaj stavku koja će se pojaviti u "o časopisu".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Dodaj stavke</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addReviewerDatabaseLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add New Database Link</source>
+        <target>Dodaj poveznicu na bazu recenzenata</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addSponsor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Sponsoring Organization</source>
+        <target>Dodaj pokroviteljsku organizaciju</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternate Header</source>
+        <target>Alternativno zaglavlje</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</source>
+        <target>Alternativno, moguće je postaviti HTML verziju zaglavlja umjesto naslova ili logotipa. Ukoliko to ne želite, ostavite priloženi tekstni okvir prazan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements</source>
+        <target>Obavijesti</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The announcements settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Introduction</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter any information you would like to appear on your announcements page.</source>
+        <target>Unesite dodatne informacije koje će biti stalno prikazane čitateljima na stranici "obavijesti".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-appearInAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(To appear in About the Journal) </source>
+        <target>(Pojavljuje se u "o časopisu")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-archiving-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The archiving details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require submitting Authors to file a Competing Interest (CI) statement with their submission.</source>
+        <target>Zahtijevaj od autora da prilikom prijave svog rukopisa ispune izjavu o sukobu interesa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireReviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require Reviewers to file a CI statement with each peer review they submit.</source>
+        <target>Zahtijevaj od recenzenata da prilikom izrade svake recenzije ispune izjavu o sukobu interesa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-history">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal History</source>
+        <target>Povijest časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-historyDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</source>
+        <target>Ovaj tekst će se pojaviti u "O časopisu" rubrici na sajtučasopisa i može biti upotrebljen za opis promjena u naslovu, uredništvu i drugim stvarima važnim za povijest izdavanja časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contact-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The contact details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current issue</source>
+        <target>Trenutni broj časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-customizingTheLook">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Customizing the Look</source>
+        <target>Korak 5. Prilagođavanje izgleda</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Osnovne informacije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of journal, ISSN, contacts, sponsors, and search engines.</source>
+        <target>Ime časopisa, ISSN, kontakti, izdavači i tražilice.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</source>
+        <target>Glavni urednik registrira sve korisnike. Urednici i urednici rubrika mogu kreirati korisničke račune za recenzente.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-discipline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Academic Discipline and Sub-Disciplines</source>
+        <target>Akademska disciplina i poddiscipline</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</source>
+        <target>Može koristiti kada časopis prelazi granice jedne akademske discipline i/ili autori prijavljuju priloge multidisciplinarnog karaktera.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</source>
+        <target>(Npr. povijest; sociologija; psihologija; kulturne studije; pravo)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant academic disciplines for this journal</source>
+        <target>Navedite primjere relevantnih akademskih disciplina za ovaj časopis</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-displayCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add the table of contents for the current issue (if available).</source>
+        <target>Dodaj kazalo sadržaja za trenutni broj časopisa (ako postoji).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Decision</source>
+        <target>Urednička odluka</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Bounce Address</source>
+        <target>Adresa obavijesti o nedostavljanju</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any undeliverable emails will result in an error message to this address.</source>
+        <target>Bilo koja nedostavljena e-pošta rezultirat će slanjem poruke o pogrešci na ovu adresu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-disabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Obavijest:</strong> Kako bi aktivirao ovu opciju, administrator stranice mora omogućiti <tt>allow_envelope_sender</tt> u konfiguracijskoj datoteci OJS-a. Dodatna konfiguracija poslužitelja je potrebna da bi podržala ovu funkcionalnost (što nije moguće na svim poslužiteljima) -  naznačeno u  OJS dokumentaciji.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Email Identification</source>
+        <target>Identifikacija e-pošte</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Signature</source>
+        <target>Potpis</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</source>
+        <target>Pripremljeni obrasci e-pošte poslani od strane sustava u ime časopisa na kraju će sadržavati ovdje priložen potpis. Sam sadržaj obrazaca e-pošte može uređivati glavni urednik opcijom "pripremljeni obrasci e-pošte" u izborniku "uređivački postupci".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable announcements</source>
+        <target>Omogući glavnim urednicima da postavljaju obavijesti.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</source>
+        <target>Čitatelji mogu biti informirani o novostima i događanjima vezanim uz časopis koje se objavljuju unutar zasebne stranice "obavijesti".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display on Homepage</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>How many announcements to display on the homepage. Leave this empty to display none.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Visitors can register a user account with the journal.</source>
+        <target>Korisnici se mogu sami registrirati na stranicama časopisa u jednoj ili više od sljedećih uloga:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus and scope</source>
+        <target>Fokus i područje primjene</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWork">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors to Index Their Work</source>
+        <target>Autorsko indeksiranje radova</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWorkDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></source>
+        <target><![CDATA[OJS se oslanja na <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> protokol za sakupljanje metapodataka, koji predstavlja standard u nastajanju sa ciljem omogućavanja dobro indeksiranog pristupa elektroničkim istraživačkim izvorima na globalnom nivou. Autori će koristiti jednostavan predložak kako bi naveli metapodatke za svoje priloge. Glavni urednik treba odabrati kategorije za indeksiranje i predstaviti autorima relevantne primjere, kako bi im pomogao u indeksiranju njihova rada, odvajajući pojmove s točka-zarezom (npr. naziv1; naziv2). Ne zaboravite popis primjera otpočeti sa "Npr." ili "Na primjer".]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-issnInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified ISSN is not valid.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact email is required.</source>
+        <target>Primarna e-pošta je obavezna.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact name is required.</source>
+        <target>Primarno ime (kontakta) je obavezno.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalInitialsRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal initials are required.</source>
+        <target>Inicijali časopisa su obavezni.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalTitleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal title is required.</source>
+        <target>Naslov časopisa je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-numReviewersPerSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of reviewers per submission is required.</source>
+        <target>Broj recenzija po prijavi je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support email is required.</source>
+        <target>E-pošta podrške je obavezna.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support name is required.</source>
+        <target>Ime podrške je obavezno.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-generalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Information</source>
+        <target>Opće informacije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-gettingDownTheDetails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Getting Down the Details</source>
+        <target>Korak 1. Ulazak u detalje</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guidelines</source>
+        <target>Smjernice</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidingSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Guiding Submissions</source>
+        <target>Korak 3. Vođenje podnesenih članaka</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-identity">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Identity</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-includeCreativeCommons">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Information</source>
+        <target>Informacije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</source>
+        <target>Kratak opis časopisa za knjižničare, buduće autore i čitatelje dostupan je svim posjetiteljima stranice pod odjeljkom "informacije" koji se nalazi u rubnom stupcu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors</source>
+        <target>Za autore</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Librarians</source>
+        <target>Za knjižničare</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Readers</source>
+        <target>Za čitatelje</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The information for this journal was updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Initial issue</source>
+        <target>Početno izdanje</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssueDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</source>
+        <target>Ovisno o odabranom formatu, odredite broj časopisa, svezak, i/ili godinu prvog izdanja izdanog u sklopu OJS-a:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-institution">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution</source>
+        <target>Institucija</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</source>
+        <target>U navigacijsku traku mogu se uz postojeće ("naslovna", "o časopisu", "korisnička", itd.) postaviti i dodatne navigacijske poveznice koje se tada pojavljuju na vrhu svake stranice.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items per page</source>
+        <target>Stavaka po stranici</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalAbbreviation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Abbreviation</source>
+        <target>Kratica časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Archiving</source>
+        <target>Arhiviranje časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Summary</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>About the Journal</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Sadržaj naslovne stranice časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</source>
+        <target>Prema inicijalnim postavkama, naslovna stranica se sastoji samo od navigacijskih poveznica. Naslovnoj se stranici može dodati sadržaj korištenjem jedne ili više od sljedećih opcija.  Bez obzira na ovdje odabrane opcije, trenutni broj časopisa je uvijek dostupan preko poveznice "trenutni broj" u navigacijskoj traci.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Zaglavlje naslovne stranice časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Zaglavlje naslovne stranice časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</source>
+        <target>Kao zaglavlje naslovne stranice časopisa mogu se postaviti tekstualna ili grafička verzija naslova te logotip časopisa (u obliku .gif, .jpg, ili .png datoteke).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextInitials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal initials</source>
+        <target>Inicijali časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Layout</source>
+        <target>Raspored elemenata</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayoutDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</source>
+        <target>Ovdje možete odabrati stilsku temu i raspored elemenata sučelja časopisa. Također, moguće je postaviti i stilsku tablicu koju će časopis koristiti namjesto sistemske ili tematske (ukoliko je izabrana) stilske tablice.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Logotip časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Logotip časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Footer</source>
+        <target>Podnožje stranice časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooterDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</source>
+        <target>Ovo je podnožje stranica vašeg časopisa. Da biste promijenili ili dopunili podnožje, zalijepite HTML kod u tekstni okvir ispod. Na primjer, ovdje možete postaviti druge navigacijske trake, brojač posjeta, i sl. Ovo podnožje će se pojaviti na svakoj stranici.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Journal Policies</source>
+        <target>Korak 2. Pravila i politike časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Setup</source>
+        <target>Podešavanje časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetupUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your journal setup has been updated.</source>
+        <target>Uređivanje postavki časopisa je ažurirano.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalStyleSheetInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid journal stylesheet format. Accepted format is .css.</source>
+        <target>Neispravan format stilske tablice časopisa. Prihvaćeni format je .css.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalTheme">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Theme</source>
+        <target>Stilska tema časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal thumbnail</source>
+        <target>Mala sličica časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A small logo or representation of the journal that can be used in lists of journals.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal title</source>
+        <target>Naslov časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Key Information</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a short description of your journal and identify editors, managing directors and other members of your editorial team.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-labelName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Label name</source>
+        <target>Naziv stavke</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The list settings for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Lists</source>
+        <target>Ispis popisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable the PKP PN plugin</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnSettingsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[View the <button>plugin settings</button> to accept the terms of use for the PKP PN.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>PKP Preservation Network (PN)</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginNotInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-otherLockss">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS and CLOCKSS</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Omogućite LOCKSS-u da u krugu knjižnica koje sudjeluju pohranjuje i distribuira sadržaj vašeg časopisa. <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> stranici. LOCKSS licenca će se pojaviti u stranici About the Journal u Archiving:]]</message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identificirajte 6-10 knjižnica koje će evidentirati i arhivirati sadržaj časopisa. Na primjer, institucije gdje urednici ili članovi uredništva rade i/ili druge institucije koje već sudjeluju u LOCKSS-u. Pogledajte <a href="http://www.lockss.org/community/" target="_blank">knjižnice koje sudjeluju</a>. Koristite pripremljene pozivnice za (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">knjižnice koje sudjeluju u LOCKSS-u</a> ili (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">knjižnice koje još ne sudjeluju u LOCKSS-u</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS License Description</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS License Description</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Look</source>
+        <target>Izgled</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Homepage header, content, journal header, footer, navigation bar, and style sheet.</source>
+        <target>Zaglavlje i sadržaj naslovne stranice, zaglavlje i podnožje stranica časopisa, navigacijska traka, CSS, način prikaza popisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management</source>
+        <target>Uređivački postupci</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access and security, scheduling, announcements, copyediting, layout, and proofreading.</source>
+        <target>Pristup sadržaju, režim objavljivanja časopisa, izdavanje obavijesti, postavke lekture, korekture i izrade prijeloma.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managementOfBasicEditorialSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management of Basic Editorial Steps</source>
+        <target>Upravljanje osnovnim lektorskim koracima</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingPublishingSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management and Publishing Setup</source>
+        <target>Postavljanje upravljanja i objavljivanja</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingTheJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Managing the Journal</source>
+        <target>Korak 4. Upravljanje časopisom</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The masthead details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBar">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation Bar</source>
+        <target>Navigacijska traka</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBarDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add or remove additional navigation bar items.</source>
+        <target>Dodajte ili uklonite dodatne stavke navigacijske trake.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsAbsolute">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</source>
+        <target>Uneseni URL poveznice je apsolutan (npr. "http://www.casopis.hr/manager/setup"), a ne putanja relativna stranici (npr. "/manager/setup").</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsLiteral">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</source>
+        <target>Uneseni naziv poveznice je običan tekst (npr. "uređivanje postavki časopisa"), a ne pojam u prijevodu sustava (npr. "manager.setup").</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noImageFileUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No image file uploaded.</source>
+        <target>Slikovna datoteka nije postavljena.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noStyleSheetUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No style sheet uploaded.</source>
+        <target>Stilska tablica nije postavljena.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note</source>
+        <target>Bilješka</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-submissionAckDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></source>
+        <target><![CDATA[<strong>Obavijest:</strong> E-pošta potvrde prijave je trenutno onemogućena. Da biste koristili ovu mogućnost, omogućite SUBMISSION_ACK e-poštu u <a class="action" href="{$preparedEmailsUrl}">Pripremljenoj e-pošti</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page links</source>
+        <target>Broj prikazanih stranica</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of links to display to subsequent pages in a list.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-onlineIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online ISSN</source>
+        <target>E-ISSN</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageNumberIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page Number Option</source>
+        <target>Navođenje broja stranica</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Policies</source>
+        <target>Uređivačka politika</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus, peer review, sections, privacy, security, and additional about items.</source>
+        <target>Fokus, recenzijski postupak, rubrike, privatnost, sigurnost i dodatne informacije o časopisu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-printIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Print ISSN</source>
+        <target>ISSN tiskanog izdanja</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-privacyStatement-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The privacy statement has been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofing Instructions</source>
+        <target>Upute za korekturu</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</source>
+        <target>Upute za korekturu bit će dostupne korektorima, autorima, grafičkim urednicima i urednicima u fazi uređivanja prijave. Ovdje je priložen uobičajen skup uputa za korekturu, koje glavni urednik prema potrebi može modificirati ili zamijeniti u bilo kojem trenutku (u HTML-u ili običnom tekstu).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationSchedule">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Schedule</source>
+        <target>Raspored objavljivanja</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduleDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.</source>
+        <target>Prilozi se obično objavljuju okupljeni u brojeve časopisa, kao dio broja časopisa s kazalom sadržaja. Alternativno, pojedinačni prilozi mogu biti objavljivani čim prođu kroz uređivački postupak, tako da se dodaju u sadržaj aktualnog sveska. Ovdje predstavite čitateljima princip objavljivanja koji će ovaj časopis koristiti te očekivanu učestalost izlaženja. Ove će informacije biti dostupne u rubrici "o časopisu".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduling">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Scheduling</source>
+        <target>Objavljivanje časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification of Journal Content</source>
+        <target>Identifikacija sadržaja časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publisher">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher</source>
+        <target>Nakladnik</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These details may be included in metadata provided to third-party archival bodies.</source>
+        <target>Ime nakladnika koje se pojavljuje u časopisu u rubrici "o časopisu". Nakladnik je pravna ili fizička osoba koja pokreće objavljivanje publikacije, snosi troškove izdavanja i tiskanja te je odgovorna za proizvodnju i distribuciju.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-referenceLinking">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Linking</source>
+        <target>Bibliografske poveznice</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictArticleAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view open access content.</source>
+        <target>Korisnici se moraju prijaviti u sustav da bi vidjeli sadržaj otvorenog pristupa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictSiteAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view the journal site.</source>
+        <target>Korisnici se moraju prijaviti u sustav da bi vidjeli stranicu časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Guidelines</source>
+        <target>Smjernice za recenziju</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Options</source>
+        <target>Opcije recenzije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated Email Reminders</source>
+        <target>Poruke e-pošte kojima se recenzente podsjeća na njihov zadatak (dostupni među obrascima e-pošte OJS-a) mogu se automatski odaslati recenzentima u dva slučaja (također, urednik može uvijek osobno kroz sustav poslati obrazac e-pošte s upitom recenzentu)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Napomena:</strong> Da biste aktivirali ovu opciju, administrator stranice mora omogućiti <tt>scheduled_tasks</tt> opciju u konfiguracijskoj datoteci (što nije moguće učiniti na svim poslužiteljima), kao što je pojašnjeno u OJS dokumentaciji.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-blindReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Blind Review</source>
+        <target>Anonimnost recenzije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-numWeeksPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks allowed to complete the review</source>
+        <target>Tipičan rok dozvoljen za recenzije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-onQuality">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editors will rate reviewers on a five-point quality scale after each review.</source>
+        <target>Urednici će nakon svake recenzije procjenjivati kvalitetu rada i suradnje pojedinih recenzenata ocjenom između 1 i 5.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Restrict File Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers will not be given access to the submission file until they have agreed to review it.</source>
+        <target>Recenzenti će imati pristup punom tekstu priloga tek nakon što pristanu na njegovu recenziju.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Access</source>
+        <target>Pristup za recenzente</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>One-click Reviewer Access</source>
+        <target>Omogući recenzentima pristup recenziji preko poveznice.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in.</source>
+        <target><![CDATA[<strong>Napomena:</strong> Pozivnica e-pošte za recenzente sadržavat će poseban URL koji vodi recenzente izravno na stranicu za recenziju prijava (za pristup bilo kojoj drugoj stranici potrebno je prijaviti se u sustav). Iz sigurnosnih razloga pri korištenju ove opcije urednici neće moći modificirati adrese primatelja e-pošte ili poslati kopiju poruke "na znanje" drugim primateljima pri slanju pozivnica recenzentima.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-label">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include a secure link in the email invitation to reviewers.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerRatings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Ratings</source>
+        <target>Ocjena rada recenzenata</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Reminders</source>
+        <target>Podsjetnici za recenzente</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Policy</source>
+        <target>Recenzijska politika</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Search Indexing</source>
+        <target>Indeksiranje časopisa za tražilice</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The search engine index settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></source>
+        <target>Kako bi olakšali pronalaženje ovog časopisa pomoću mrežnih tražilica, priložite kratak opis časopisa i relevantnih ključnih riječi (odvojenih točka-zarezima).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchDescription-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsAndSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sections and Section Editors</source>
+        <target>Rubrike i rubrika urednika</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDefaultSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(If sections are not added, then items are submitted to the Articles section by default.)</source>
+        <target>(Ako rubrike nisu dodane, stavke će biti dodane standardnoj rubrici "članci".)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></source>
+        <target><![CDATA[DA biste kreirali ili modificirali rubrike za časopis (npr. Članci, Recenzije knjiga itd.), odite na "upravljenje rubrikama"<br /><br />Autori će biti označeni pri predaji stavki...]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectEditorDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal editor who will see it through the editorial process.</source>
+        <target>Urednik časopisa koji će to vidjeti kroz postupak uređivanja.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal section for which the item will be considered.</source>
+        <target>Rubrika časopisa za koju će stavka biti razmatrana.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-showGalleyLinksDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Always show galley links and indicate restricted access.</source>
+        <target>Uvijek prikaži poveznicu na pun tekst priloga, uz naznaku ograničenja pristupa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-view">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Site Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-viewContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Article Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-stepsToJournalSite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to a Journal Web Site</source>
+        <target>Postavljanje mrežne stranice časopisa u pet koraka</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</source>
+        <target>(Npr. fotosinteza; crne rupe; mirovinska reforma; Bayesova teorija)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectKeywordTopic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Keywords</source>
+        <target>Ključne riječi</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of keywords or topics as a guide for authors</source>
+        <target>Navedite relevantne primjere ključnih riječi ili tema za područje ovog časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission guidelines</source>
+        <target>Smjernice za prijave</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Preparation Checklist</source>
+        <target>Uvjeti za predaju članka</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</source>
+        <target>Pri prijavljivanju priloga za časopis, od autora se prvo traži da potvrde kako njihov prilog zadovoljava svaku stavku "uvjeta za predaju priloga" prije nego što mogu nastaviti s postupkom prijave. Uvjeti za predaju priloga se također navode i kod "smjernica za autore", unutar rubrike "o časopisu". Popis uvjeta se može nadopuniti ili prilagoditi, a autori će uz svaku navedenu stavku svoju suglasnost morati označiti kvačicom.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Prijave</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author guidelines, copyright, and indexing (including registration).</source>
+        <target>Smjernice za autore, autorska prava i indeksiranje sadržaja.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable OAI</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</source>
+        <target>(Npr. povijesno istraživanje; prirodni eksperiment; književna analiza; anketa/intervju)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeMethodApproach">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Type (Method/Approach)</source>
+        <target>Tip (Metoda/Pristup)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant research types, methods, and approaches for this field</source>
+        <target>Navedite primjere tipova istraživanja, te istraživačkih metoda i pristupa relevantne za područje ovog časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unique Identifier</source>
+        <target>Jedinstveni identifikator</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifierDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</source>
+        <target>Članci i brojevi časopisa mogu biti označeni jedinstvenim identifikacijskim brojem ili nizom znakova, koristeći sustav za evidentiranje poput Digital Object Identifier System (DOI).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useEditorialReviewBoard">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An editorial/review board will be used by the journal.</source>
+        <target>Časopis će biti korišten od uredništva/recenzenata.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userAccess-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The user access details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Thumbnail</source>
+        <target>Mala sličica</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useImageTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title image</source>
+        <target>Slika naslova</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User Registration</source>
+        <target>Registracija korisnika</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useTextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title text</source>
+        <target>Tekst naslova</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>Vaš časopis je podešen tako da bilježi više od jednog načina mjerenja upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko konteksta.
+Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata pretrage.
+Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Statistics</source>
+        <target>Statistica časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-articleViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article View Counts (for Authors only)</source>
+        <target>Brojač pristupa člancima (samo za autore)</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Pozitivnih</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-decline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decline</source>
+        <target>Negativnih</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-revise">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Resubmit</source>
+        <target>Zahtijevane izmjene</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to review</source>
+        <target>Dana do recenzije</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysToPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to publication</source>
+        <target>Dana do objave</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</source>
+        <target>OJS izračunava izvjestan broj statistika za svako godište časopisa koji se nalazi na stranicama. Parametar "dana do recenzije" računa se kao prosječno trajanje razdoblja od datuma prijave (ili prilaganja verzije priloga za recenziju) do prvog donošenja uredničke odluke, dok se parametar "dana do objave" računa samo za prihvaćene prijave, kao prosječno vrijeme proteklo od slanja rukopisa do njegova objavljivanja.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-itemsPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items published</source>
+        <target>Objavljenih priloga</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-makePublic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Check items to be made available to readers in About the Journal.</source>
+        <target>Postavite kvačicu uz stavke za koje želite da budu dostupne čitateljima u sekciji "o časopisu".</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</source>
+        <target>Napomena: Zbroj postotaka za ishode recenzija može biti različit od 100% jer ponovno prijavljeni prilozi mogu biti ili prihvaćeni, ili odbijeni, ili se još nalaziti u postupku.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues published</source>
+        <target>Objavljenih brojeva</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total submissions</source>
+        <target>Ukupno prijava</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-peerReviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer reviewed</source>
+        <target>Završenih recenzija</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers</source>
+        <target>Registriranih čitatelja</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered users</source>
+        <target>Registriranih korisnika</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. assigned</source>
+        <target>Br. korištenih</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Recenzenta</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerScore">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor score</source>
+        <target>Urednikova ocjena</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewsPerReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. of reviews</source>
+        <target>Br. recenzija</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-selectSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select the sections for calculating this journal's peer-reviewed statistics.</source>
+        <target>Odaberite rubrike na osnovi čijih priloga želite da se računaju recenzijske statistike časopisa:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Pretplata</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article file downloads</source>
+        <target>Broj preuzimanja datoteka članka</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstract">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views</source>
+        <target>Broj pregleda stranice sa sažetkom</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstractAndDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views and downloads</source>
+        <target>Sažetak članka i preuzimanja</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-journalIndexPageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal main page views</source>
+        <target>Broj pregleda naslovnice časopisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-issuePageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue table of contents page views</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byContext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by context (issues and/or article).</source>
+        <target>Suzi rezultate po kontekstu (izdanje i ili članak).</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byObject-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</source>
+        <target>Suzi rezultate po tipu objekta (časopis, izdanje, članak, pdf korekturne kopije, druge korekturne kopije) i/ili po jednom ili više ID za određeni objekt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Policies</source>
+        <target>Politika pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-delayedOpenAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delayed Open Access</source>
+        <target>Odgođeni otvoreni pristup</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionExpiryReminderBeforeMonthsValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry</source>
+        <target>Istek pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Nakon isteka pretplate, čitatelju može biti uskraćen pristup cjelokupnom pretplatničkom sadržaju ili može zadržati pristup pretplatničkom sadržaju na koji je objavljen prije isteka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFull">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Full expiry</source>
+        <target>Potpuni istek</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFullDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to all subscription content upon subscription expiry.</source>
+        <target>Čitateljima je uskraćen pristup cjelokupnom pretplatničkom sadržaju nakon isteka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartial">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Partial expiry</source>
+        <target>Djelomičan istek</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartialDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Čitateljima je uskraćen pristup novom pretplatničkom sadržaju, ali zadržavaju pristup pretplatničkom sadržaju na koji je objavljen prije isteka pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Months</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Weeks</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminders</source>
+        <target>Podsjetnici o isteku pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired.</source>
+        <target>Automatizirani podsjetnici e-poštom (omogućeni za uređivanje glavnim urednicima u OJS-ovoj rubrici "pripremljeni obrasci e-pošte") mogu biti poslani pretplatnicima i prije i poslije no što je pretplata istekla.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Napomena:</strong> Kako biste aktivirali ove opcije, administrator stranice mora aktivirati <tt>scheduled_tasks</tt> opciju u OJS konfiguracijskoj datoteci. Ovo može zahtjevati dodatnu konfiguraciju poslužitelja (koja ne mora biti moguća na svim poslužiteljima), na način naveden u OJS dokumentaciji.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expirySelectOne">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select one of the following:</source>
+        <target>Odaberite jedno od sljedećeg:</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-htmlInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></source>
+        <target><![CDATA[U prostoru za tekst možete koristiti HTML (za određivanje veličine fonta, boje, itd.). Tipka "enter" tretira se kao <tt>&lt;br&gt;</tt>; uređivanje HTML-a radi sa preglednikom Firefox.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months after subscription expiry.</source>
+        <target>Molimo odaberite ispravnu vrijednost za broj mjeseci nakon isteka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months before subscription expiry.</source>
+        <target>Molimo odaberite ispravnu vrijednost za broj mjeseci prije isteka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks after subscription expiry.</source>
+        <target>Molimo odaberite ispravnu vrijednost za broj tjedana nakon isteka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks before subscription expiry.</source>
+        <target>Molimo odaberite ispravnu vrijednost za broj tjedana prije isteka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</source>
+        <target>Registrirani čitatelji će imati mogućnost primanja kazala sadržaja putem e-pošte kada broj časopisa postane dio otvorenog pristupa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Napomena:</strong> Kako biste aktivirali ove opcije, administrator stranice mora aktivirati <tt>scheduled_tasks</tt> opciju u OJS konfiguracijskoj datoteci. Ovo može zahtjevati dodatnu konfiguraciju poslužitelja (koja ne mora biti moguća na svim poslužiteljima), na način naveden u OJS dokumentaciji.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotifications">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online Payment Notifications</source>
+        <target>Obavijesti o internet plaćanjima</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotificationsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</source>
+        <target>Automatska obavještenja e-porukama (koje mogu urediti Ravnatelji časopisa ulaskom u Pripremljene poruke u OJS) mogu biti poslate Ravnatelju za pretplate nakon izvršenja uplate preko interneta za pretplatu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Individual subscription.</source>
+        <target>Obavijesti Ravnatelja za pretplate e-porukom nakon kupovine Individualne pretplate preko interneta.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</source>
+        <target>Obavijesti Ravnatelja za pretplate e-porukom nakon kupovine Institucionalne pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Individual subscription.</source>
+        <target>Obavijesti Ravnatelja za pretplate e-porukom nakon obnove Individualne pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Institutional subscription.</source>
+        <target>Obavijesti Ravnatelja za pretplate e-porukom nakon obnove Institucionalne pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentPurchaseInstitutionalDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></source>
+        <target><![CDATA[<strong>Napomena:</strong> Institucionalne pretplate kupljene preko interneta zahtijevaju odobrenje o domenu i IP opsegu adresa i aktiviranje pretplate od strane Ravnatelja za pretplate.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></source>
+        <target><![CDATA[<strong>Napomena:</strong>Ravnatelj časopisa mora omogućiti modul za plaćanja preko interneta uključujući i plaćanja za pretplate u Naknade čitatelja kako bi omogućili ove opcije.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Options For Subscription Journals</source>
+        <target>Mogućnosti otvorenog pristupa za časopise koji su dostupni uz pretplatu</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</source>
+        <target>Časopisi čijim je sadržajima pristup ograničen pretplatom mogu omogućiti "odgođeni otvoreni pristup" svojem sadržaju, kao i "autorsko samoarhiviranje" (što oboje povećava čitanost i citiranje sadržaja). Informacije o odabranim modusima pristupa bit će navedeni pod "o časopisu".</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Information</source>
+        <target>Informacije o pretplati</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</source>
+        <target>Tipovi i iznosi pretplate će se automatski postaviti kao rubrika "pretplate" pod "o časopisu", zajedno s kontaktnim informacijama o administratoru pretplate. Dodatne informacije o pretplatama, kao što su metode plaćanja ili sheme za pretplatnike iz zemalja u razvoju, mogu biti dodane ovdje.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Ravnatelj za pretplatu</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</source>
+        <target>Kontakt administratora pretplate naveden je unutar stranice "o časopisu" u rubrici "pretplate".</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid email.</source>
+        <target>Molimo unesite ispravnu e-poštu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-individualSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual Subscriptions</source>
+        <target>Individualne pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-institutionalSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Institucionalne pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmRenew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to renew this subscription?</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this subscription?</source>
+        <target>Jeste li sigurni da želite izbrisati ovu pretplatu?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-summary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions Summary</source>
+        <target>Sve pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription</source>
+        <target>Kreiraj novu pretplatu</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Napravi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-renew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Renew</source>
+        <target>Obnovi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End</source>
+        <target>Kraj</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEndSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End Date</source>
+        <target>Završni datum</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Početak</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStartSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start Date</source>
+        <target>Početni datum</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domena</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Uredi pretplatu</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Uredi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-withStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With Status</source>
+        <target>Sa statusom</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-allStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All</source>
+        <target>Sve</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-status">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Status</source>
+        <target>Status</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription status is required.</source>
+        <target>Obavezan je status pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription status.</source>
+        <target>Odaberite važeći status pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Tip pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type is required.</source>
+        <target>Tip pretplate je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type.</source>
+        <target>Molimo odaberite ispravan tip pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start date</source>
+        <target>Datum početka</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription start date is required.</source>
+        <target>Datum početka pretplate je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription start date.</source>
+        <target>Molimo odaberite ispravan datum početka pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End date</source>
+        <target>Datum kraja</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription end date is required.</source>
+        <target>Datum kraja pretplate je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify a start date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify an end date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription end date.</source>
+        <target>Molimo odaberite ispravan datum kraja pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userProfileInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: All changes below are to user's system-wide profile.</source>
+        <target>Napomena: Sve izmjene niže su na korisnikovom profilu u cijelom sustavu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Korisnik</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact</source>
+        <target>Kontakt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user is required.</source>
+        <target>Korisnik je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid user.</source>
+        <target>Molimo odaberite ispravnog korisnika.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userCountryValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid country.</source>
+        <target>Odaberite važeću državu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send the user an email with their username and subscription details.</source>
+        <target>Pošaljite korisniku e-poštu s njegovim korisničkim imenom i detaljima o pretplati.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Molimo koristite omogućeni potvrdni okvir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Članstvo</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Broj reference</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter membership information if the subscription type requires that subscribers belong to an association or organization.</source>
+        <target>Unesite informaciju o članstvu ako tip pretplate zahtijeva da pretplatnici pripadaju nekoj organizaciji ili udruzi.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires membership information.</source>
+        <target>Odabrani tip pretplate zahtijeva informaciju o članstvu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Bilješke</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domena</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution name</source>
+        <target>Naziv institucije</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An institution name is required.</source>
+        <target>Obavezan je naziv institucije</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionMailingAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mailing address</source>
+        <target>Poštanska adresa</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></source>
+        <target>Unesite domenu ako je pretplatnički tip za ustanove. Ako je domena unesena ovdje, tada je doseg brojčane adrese opcionalan. Ispravne vrijednosti imena domena (npr. lib.sfu.ca).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainIPRangeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires a domain and/or an IP range for subscription authentication.</source>
+        <target>Odabrani tip pretplate zahtijeva domenu i/ili raspon IP adresa za autentifikaciju pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid domain.</source>
+        <target>Molimo unesite ispravnu domenu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP ranges</source>
+        <target>IP doseg</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[&#8226;]]></source>
+        <target><![CDATA[&#8226;]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></source>
+        <target>Unesite doseg brojčane adrese (IP) ako je pretplatnički tip za ustanove. Ako je doseg brojčane adrese (IP) unesen ovdje, domena je opcionalna. Ispravne vrijednosti uključuju IP (npr. 142.58.103.1), CIDR IP doseg (npr. 142.58.100.0/24), IP doseg (npr. 142.58.103.1 - 142.58.103.4), IP doseg sa '*' (npr. 142.58.103.*), ili bilo koja kombinacija ovoga odvojena sa ';' (npr. 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid IP range.</source>
+        <target>Molimo unesite ispravan doseg brojčane adrese (IP).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-deleteIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Obriši</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-addIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add</source>
+        <target>Dodaj</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-saveAndCreateAnother">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Spremi i kreiraj drugog</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionContactRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</source>
+        <target>Da biste poslali e-poštu obavijesti korisniku, pretplatničko ime kontakta i adresa e-pošte moraju biti navedeni u Uređivanje postavki časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This user already has a subscription for this journal.</source>
+        <target>Korisnik već ima pretplatu za ovaj časopis.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type must be created before new subscriptions can be made.</source>
+        <target>Tip pretplate mora biti kreiran prije nego se izvrše nove pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP Range</source>
+        <target>IP doseg</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Članstvo</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Broj reference</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Bilješke</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscriptions</source>
+        <target>Nema kreiranih pretplata.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Subscription Contact</source>
+        <target>Odaberite kontakt za pretplatu</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select User</source>
+        <target>ODaberi korisnika</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectSubscriber-desc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</source>
+        <target>Privilegije pristupa pretplatama su automatski dodijeljene glavnim urednicima, urednicima, urednicima rubrike, grafičkim urednicima, lektorima i korektorima.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-select">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select</source>
+        <target>Upiši pretplatnika</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription created successfully.</source>
+        <target>Pretplata uspješno kreirana.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Type</source>
+        <target>Tip pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Korisnik</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-contact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact Name</source>
+        <target>Ime kontakta</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution Name</source>
+        <target>Naziv institucije</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Types</source>
+        <target>Tipovi pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</source>
+        <target>Upozorenje! Svi pretplatnici s ovim pretplatničkim tipom će također biti obrisani. Jeste li sigurni da želite nastaviti i obrisati ovaj tip pretplate?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Cijena</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual</source>
+        <target>Individualna</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional</source>
+        <target>Institucionalna</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription Type</source>
+        <target>Kreiraj novi tip pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Napravi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Trajanje</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription Type</source>
+        <target>Uredi tip pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Uredi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Cijena</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $).</source>
+        <target>Unesite samo numeričku vrijednost pretplate (npr. 40 ili 40.00). U ovo polje ne upisujte oznaku valute (npr. "$") niti bilo koji drugi tekst.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cost must be a positive, numeric value.</source>
+        <target>Cijena mora biti pozitivna numerička vrijednost.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A cost is required.</source>
+        <target>Cijena je obavezna.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currency">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Currency</source>
+        <target>Valuta</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A currency is required.</source>
+        <target>Valuta je obavezna.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid currency.</source>
+        <target>Molimo odaberite ispravnu valutu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Opis</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Expires after</source>
+        <target>Ističe nakon</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-months">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>months (e.g. 12)</source>
+        <target>mjeseci (npr. 12)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-neverExpires">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Never expires</source>
+        <target>Nikad ne ističe</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiringValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Upotrebite ponuđene mogućnosti.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Trajanje</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of months the subscription lasts (e.g. 12).</source>
+        <target>Duljina trajanja pretplate u mjesecima (npr. 12 za jednogodišnju).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The duration must be a positive, numeric value.</source>
+        <target>Trajanje mora imati pozitivnu numeričku vrijednost.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A duration is required.</source>
+        <target>Trajanje je obavezno.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-format">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format</source>
+        <target>Format</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type format is required.</source>
+        <target>Format tipa pretplate je obavezan.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type format.</source>
+        <target>Molimo odaberite ispravan format tipa pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual (users are validated via login)</source>
+        <target>Individualna (korisnici su potvrđeni prijavom u sustav)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional (users are validated via domain or IP address)</source>
+        <target>Pretplatnici moraju biti potvrđeni autentifikacijom putem domene ili IP adrese.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Molimo koristite omogućeni potvrdni okvir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</source>
+        <target>Pretplatnici moraju biti članovi udruge ili organizacije.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Molimo koristite omogućeni potvrdni okvir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Mogućnosti</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-public">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not make this subscription type publicly available or visible on the website.</source>
+        <target>Ovaj tip pretplate neće biti javno vidljiv korisnicima (npr. u rubrici "pretplate"  unutar poveznice "o časopisu").</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Ovaj tip pretplate neće se pojaviti pod Pretplate u O časopisu.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Spremi i kreiraj drugi</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of Type</source>
+        <target>Naziv ili tip</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type with this name already exists.</source>
+        <target>Pretplatnički tip s ovim imenom već postoji.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type name is required.</source>
+        <target>Ime pretplatničkog tipa je obavezno.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Tip pretplate</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscription types have been created.</source>
+        <target>Nema kreiranih tipova pretplate.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptionTypeCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type created successfully.</source>
+        <target>Tip pretplate je uspješno kreiran.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-subscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the subscriptions you offer.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the visitor's current and past subscriptions.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-conditionalWarning">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This link will only be displayed when a visitor is logged in.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Categories</source>
+        <target>Kategorije</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</source>
+        <target>Odaberite odgovarajuće kategorije koje su gore izlistane. Čitatelji će moći pregledavati članke po kategoriji iz cjelokupnog kompleta časopisa.</target>
+      </segment>
+    </unit>
+    <unit id="grid-category-path">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Path</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Section</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-section-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc).</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="settings-roles-gridDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-publication-library">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher Library</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Base new article's copyright year on</source>
+        <target>Postavi godinu autorskih prava članka na</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article: default year will be drawn from the article's publication date, as in "publish-as-you-go".</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue: default year will be drawn from the issue's publication date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reset Article Permissions</source>
+        <target>Vrati dozvole pristupa članku na prvobitno stanje.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to reset permissions data for all articles? This action can not be undone.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article permissions were successfully reset.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title-short">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Components</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Components</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Settings</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-DOIPluginSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI Plugin Settings</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-articles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-issues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-representations">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galleys</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-missingRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Plugin requirements not met</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-DOIsNotAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plugin and specify a valid DOI prefix there.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-pluginNotConfigured">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The plugin is not fully set up.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noDOIContentObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please note that the password will be saved as plain text, i.e. not encrypted.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-filter-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Issue</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Status</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-notDeposited">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Deposited</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-markedRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked registered</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-registered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-export">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Export</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-markRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mark registered</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-register">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Register</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Validate XML before the export and registration.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noObjectsSelected">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No objects selected.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Could not convert selected objects.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-invalidXML">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid XML:</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-outputFileNotWritable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The output file {$param} is not writable.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-inputFileNotReadable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The input file {$param} is not readable.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-error-mdsError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration was not successful! The DOI registration server returned an error: '{$param}'.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration successful!</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-senderTask-warning-noDOIprefix">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI prefix is missing for the journal with the path {$path}.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-cliError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ERROR:</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified journal path, "{$journalPath}", does not exist.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified objects could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-copyPrimaryContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send a copy to the primary contact, identified in the Journal Settings.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No articles were found with usage statistics matching these parameters.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalAbstractViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total abstract views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalGalleyViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total file views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-countOfTotal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$count} of {$total} articles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-abstracts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Abstracts</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Files</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

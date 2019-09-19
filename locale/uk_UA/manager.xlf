@@ -1,0 +1,5164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:24-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:24-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="manager-distribution-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Доступ</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you "publish as you go", don't use the issue's publication date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the issue's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-submission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the article's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Mode</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS will not be used to publish the journal's contents online.</source>
+        <target>OJS не буде використовуватись для електронної публікації змісту журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will provide open access to its contents.</source>
+        <target>Журнал надаватиме відкритий доступ до свого змісту.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will require subscriptions to access some or all of its contents.</source>
+        <target>Для доступу до змісту журналу (всього або деякого) буде потрібна передплата.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publishing details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-website-archiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archiving</source>
+        <target>Архівування</target>
+      </segment>
+    </unit>
+    <unit id="manager-emails-confirmResetAll">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</source>
+        <target>Ви впевнені, що хочете скинути всі шаблони листів цього журналу? Всі зміни, зроблені у шаблонах, будуть втрачені.</target>
+      </segment>
+    </unit>
+    <unit id="manager-files-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</source>
+        <target>Примітка: браузер файлів - це потужний інструмент, що дозволяє переглядати і управляти файлами та каталогами, пов'язаними з цим журналом.</target>
+      </segment>
+    </unit>
+    <unit id="manager-journalManagement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Management</source>
+        <target>Менеджмент журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-ui">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>UI</source>
+        <target>Інтерфейс</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Подання</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-forms">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Forms</source>
+        <target>Форми</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-confirmDefaultSettingsOverwrite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will replace any locale-specific journal settings you had for this locale</source>
+        <target>Ця дія скасує всі налаштування журналу, повязані з цією локалізацією.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></source>
+        <target><![CDATA[OJS може бути доступна для користувачів будь-якою з підтримуваних мов. Крім того, OJS може функціонувати як багатомовна система, дозволяючи користувачам змінювати мову з будь-якої сторінки сайту та забезпечуючи можливість вносити дані кількома додатковими мовами.<br /><br />Якщо потрібна мова підтримується OJS, але Ви не знаходите її у списку нижче, зверніться до адміністратора сайту з проханням встановити цю мову за допомогою його інтерфейсу. Для отримання інструкцій щодо додавання нових мов, будь ласка, перегляньте документацію OJS.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-noneAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</source>
+        <target>Вибачте, наразі підтримка додатковиими мовами недоступна. Щоб встановити додаткові мови для цього журналу, повідомте про адміністратора сайту.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the journal site.</source>
+        <target>Це буде основна мова сайту журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-managementPages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management Pages</source>
+        <target>Сторінки менеджменту</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Дія</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-addPayment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Payment</source>
+        <target>Додати платіж</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-amount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Amount</source>
+        <target>Розмір</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author Fees</source>
+        <target>Платежі авторів</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter fee amounts below in order to enable author processing charges.</source>
+        <target>Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться на Кроці 1 процесу подання рукопису, у розділі "Подання" сторінки "Про журнал", а також на сторінках, що стосуються цих платежів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-currencymessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</source>
+        <target>OJS не передбачає можливості перерахунку валют. Якщо журнал приймає платежі за передплату, переконайтеся, що валюта збігається із вказаною тут.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Опис</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Подробиці</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-editSubscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Редагувати передплату</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable</source>
+        <target>Дозволити</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-feePaymentOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Options</source>
+        <target>Налаштування платежів</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-form-numeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All costs must be positive numeric values (decimal points are allowed)</source>
+        <target>Всі розміри платежів повинні мати позитивні цифрові значення (дозволяються крапкові десяткові розділювачі)</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Fees</source>
+        <target>Загальні платежі</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</source>
+        <target>Посилання "Членство у асоціації" з'явиться у розділі "Політика" сторінки "Про журнал", кнопка для пожертв з'явиться над блоком пошуку правої бічної панелі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Options</source>
+        <target>Загальні налаштування</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-noPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Payments</source>
+        <target>Немає платежів</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Found</source>
+        <target>Не знайдено</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Налаштування</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-acceptSubscriptionPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</source>
+        <target>Активація платежів за передплати; типи, вартість, тривалість передплат та переліки передплатників налаштовуються менеджером передплати.</target>
+      </segment>
+    </unit>
+    <unit id="subscriptionManager-subscription-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to delete this subscription?</source>
+        <target>Ви впевнені, що хочете видалити дану підписку?</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-enablePayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payments will be enabled for this journal. Note that users will be required to log in to make payments.</source>
+        <target>Оберіть цей пункт, щоб включити модуль платежів. Заповніть форму нижче, щоб налаштувати платежі. Зауважте, що користувачі повинні увійти до системи, щоб здійснити платіж.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-fee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee</source>
+        <target>Розмір платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Description</source>
+        <target>Опис платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Name</source>
+        <target>Назва платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-membershipFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Association Membership</source>
+        <target>Членство у асоціації</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-onlypdf">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Only Restrict Access to PDF version of issues and articles</source>
+        <target>Обмежити доступ тільки до PDF-версій випусків і статей</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-publicationFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Processing Charge</source>
+        <target>Публікація статті</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseArticleFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Article</source>
+        <target>Придбання статті</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseIssueFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Issue</source>
+        <target>Купити випуск</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-text">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description of Payment Method</source>
+        <target>Опис платіжного методу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>ID платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Method</source>
+        <target>Метод здійснення платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You may configure any of the following Payment Method Plugins from this screen.</source>
+        <target>На цій сторінці Ви зможете налаштувати всі нижчезазначені Модулі платіжних методів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethods">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Methods</source>
+        <target>Методи здійснення платежів</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Type</source>
+        <target>Тип платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reader Fees</source>
+        <target>Платежі читачів</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</source>
+        <target>Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться у розділі "Політика" сторінки "Про журнал", а також на сторінках, що стосуються цих платежів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-records">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Records</source>
+        <target>Історія</target>
+      </segment>
+    </unit>
+    <unit id="manager-paymentTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Types</source>
+        <target>Типи платежів</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>ID платежу</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allEnrolledUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Enrolled in this Journal</source>
+        <target>Користувачі, які мають ролі у цьому журналі</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Journals</source>
+        <target>Всі журнали</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allSiteUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll a User from this Site in this Journal</source>
+        <target>Надати роль у цьому журналі користувачу, зареєстрованому на сайті</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-showNoRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show users with no role</source>
+        <target>Показати користувачів, які не мають ролей</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Всі користувачі, які мають ролі</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove this user from this journal? This action will unenroll the user from all roles within this journal.</source>
+        <target>Видалити цього користувача з цього журналу? Ця дія скасує всі призначення користувача в межах цього журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-emailUsers-selectTemplate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a template</source>
+        <target>Обрати шаблон</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollExistingUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll an Existing User</source>
+        <target>Надати нову роль існуючому користувачу</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollSyncJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With journal</source>
+        <target>З журналом</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Оберіть користувача, якого потрібно включити до облікового запису іншого користувача (наприклад, якщо одна особа має два облікові записи). Перший обраний обліковий запис буде видалений, а його подання, редакційні призначення, тощо будуть асоційовані з другим обраним обліковим записом.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</source>
+        <target>Оберіть користувача, якому слід передати права попереднього користувача (авторство, редакційні призначення, тощо).</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-roleEnrollment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$role} Enrollment</source>
+        <target>Призначення на роль "{$role}"</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-syncUserDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</source>
+        <target>Синхронізація реєстрацій дозволяє зареєструвати усіх користувачів, які виконують певну роль у певному журналі, у тих же ролях у цьому журналі. Дана функція дозволяє синхронізувати між журналами певні групи користувачів, наприклад рецензентів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-abstractsNotRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not require abstracts</source>
+        <target>Можуть бути без анотацій</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-noSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></source>
+        <target><![CDATA[Наразі немає редактори розділів. Спочатку призначте на цю роль хоча б одного користувача через Менеджмент > Налаштування > Користувачі > Ролі.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-assigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This Section's Editors</source>
+        <target>Редактори цього розділу</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this section?</source>
+        <target>Ви впевнені, що хочете назавжди видалити цей розділ?</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-alertDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before this section can be deleted, you must move articles published within it into other sections.</source>
+        <target>Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Section</source>
+        <target>Створити розділ</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-sectionEditorInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</source>
+        <target>Додайте для цього розділу редактора, який автоматично буде призначатися для роботи з поданнями. У іншому випадку, редакторів розділу, відповідальних за кожне окреме подання, потрібно буде призначати вручну. Доданий редактор розділу автоматично ставатиме відповідальним за нагляд за процесами наукового рецензування та редакційної обробки (літературного редагування, верстки та коректури) рукописів, поданих для публікації у цьому розділі. Створити нових редакторів розділів можна, натиснувши посилання "Редактори розділів" у розділі "Ролі" сторінки "Менеджмент журналу".</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editorRestriction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items can only be submitted by Editors and Section Editors.</source>
+        <target>Об'єкти можуть надсилатись лише Редакторами та Редакторами розділів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Редактори розділу</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-abbrevRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An abbreviated title is required for the section</source>
+        <target>Необхідно вказати абревіатуру для цього розділу</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-mustAllowPermission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that at least one checkbox is checked for each Section Editor assignment.</source>
+        <target>Будь ласка, переконайтеся, що обрано принаймні по одному прапорцю для кожного призначення редактора розділу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-reviewFormId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that you have chosen a valid review form.</source>
+        <target>Будь ласка, переконайтеся, що Ви коректно обрали форму рецензування.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required for the section.</source>
+        <target>Необхідно вказати назву цього розділу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit author names for section items from issues' table of contents.</source>
+        <target>Не вказувати імена авторів на сторінках змісту випусків для цього розділу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit the title of this section from issues' table of contents.</source>
+        <target>Не вказувати назву цього розділу на сторінках змісту випусків.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identify items published in this section as a(n)</source>
+        <target>Ідентифікувати об'єкти, опубліковані у цьому розділі, як</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyTypeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(For example, "Peer-reviewed Article", "Non-refereed Book Review", "Invited Commentary", etc.)</source>
+        <target>(наприклад, "рецензована стаття", "рецензія на книгу", "коментар фахівця", тощо)</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-indexed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Indexed</source>
+        <target>Індексується</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No sections have been created.</source>
+        <target>Не було створено жодного розділу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Submissions</source>
+        <target>Приймаються рукописи</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Policy</source>
+        <target>Політика розділу</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-readingTools">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reading Tools</source>
+        <target>Інструментарій для читання</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-reviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer Reviewed</source>
+        <target>Рецензується</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be included in the indexing of the journal</source>
+        <target>Не будуть індексуватись</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be peer-reviewed</source>
+        <target>Не будуть рецензуватись</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-submissionsToThisSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions made to this section of the journal</source>
+        <target>Рукописи, подані у цей розділ журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-unassigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Available Section Editors</source>
+        <target>Доступні редактори розділів</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Word Count</source>
+        <target>Кількість слів</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCountInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit abstract word counts for this section (0 for no limit)</source>
+        <target>Обмежити кількість слів у анотаціях статей цього розділу (0 - без обмеження)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Налаштування журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Masthead</source>
+        <target>Вихідні данні</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorialTeam">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editorial Team</source>
+        <target>Редакційний штат</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</source>
+        <target>Головна сторінка журналу за замовчуванням складається з навігаційних посилань. Додатковий контент на головній сторінці може бути доданий за допомогою одного або декількох наступних параметрів, що з'являться в показаному порядку.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useStyleSheet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal style sheet</source>
+        <target>Таблиця стилів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Name</source>
+        <target>Назва журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Header</source>
+        <target>Верхній колонтитул сторінки журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-aboutItemContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Content</source>
+        <target>Зміст</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addAboutItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add About Item</source>
+        <target>Додати підрозділ "Про журнал"</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addChecklistItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Checklist Item</source>
+        <target>Додати пункт вимог</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Додати елемент</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItemtoAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item to Appear in "About the Journal"</source>
+        <target>Додати власний підрозділ до розділу "Політика" сторінки "Про журнал"</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Додати елемент</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addReviewerDatabaseLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add New Database Link</source>
+        <target>Додати нове посилання на базу даних</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addSponsor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Sponsoring Organization</source>
+        <target>Додати організацію-спонсора</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternate Header</source>
+        <target>Альтернативний заголовок</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</source>
+        <target>Альтернативно, замість назви та логотипу, у поле нижче можна ввести HTML-версію заголовку сторінки. Залиште текстове поле порожнім, якщо альтернативний заголовок не потрібен.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements</source>
+        <target>Анонси</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The announcements settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Introduction</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter any information you would like to appear on your announcements page.</source>
+        <target>Додайте будь-яку інформацію, що відображатиметься для читачів, на сторінці "Анонси".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-appearInAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(To appear in About the Journal) </source>
+        <target>(показувати на сторінці "Про журнал")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-archiving-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The archiving details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require submitting Authors to file a Competing Interest (CI) statement with their submission.</source>
+        <target>Вимагати від авторів декларувати відсутність конфлікту інтересів щодо поданих матеріалів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireReviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require Reviewers to file a CI statement with each peer review they submit.</source>
+        <target>Вимагати від рецензентів декларувати відсутність конфлікту інтересів щодо призначених їм на рецензування матеріалів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-history">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal History</source>
+        <target>Історія журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-historyDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</source>
+        <target>Цей текст з'явиться в розділі «Про журнал» на сайті, він може бути використаний для опису зміни назв журналу, складу редакції та іншої інформації, пов'язаної з історією журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contact-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The contact details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current issue</source>
+        <target>Поточний випуск</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-customizingTheLook">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Customizing the Look</source>
+        <target>Крок 5. Налаштування вигляду</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Основні відомості</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of journal, ISSN, contacts, sponsors, and search engines.</source>
+        <target>Назва журналу, ISSN, контакти, спонсори та інформація для пошукових систем.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</source>
+        <target>Менеджер журналу реєструє всіх користувачів; редактори журналу та редактори розділів мають змогу реєструвати лише рецензентів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-discipline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Academic Discipline and Sub-Disciplines</source>
+        <target>Академічні дисципліни та напрямки</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</source>
+        <target>Корисно для міждисциплінарних журналів, що публікують статті у кількох галузях знання.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</source>
+        <target>(наприклад, Історія; Освіта; Соціологія; Психологія; Культурологія; Правознавство)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant academic disciplines for this journal</source>
+        <target>Наведіть приклади академічних дисциплін, що відповідають проблематиці цього журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-displayCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add the table of contents for the current issue (if available).</source>
+        <target>Додати сторінку змісту поточного випуску, якщо він існує.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Decision</source>
+        <target>Рішення редактора</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Bounce Address</source>
+        <target>Адреса повернення</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any undeliverable emails will result in an error message to this address.</source>
+        <target>На цю адресу будуть надсилатися повідомлення про всі недоставлені листи.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-disabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію, адміністратор повинен дозволити директиву <tt>allow_envelope_sender</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може вимагати також додаткових конфігурацій (що можливо не на всіх серверах).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Email Identification</source>
+        <target>Налаштування листування</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Signature</source>
+        <target>Підпис</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</source>
+        <target>Підготовлені листи, які будуть розсилатися системою від імені журналу, матимуть у кінці зазначений нижче підпис. Посилання для редагування змісту шаблонів листів доступне на сторінці "Менеджмент журналу".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable announcements</source>
+        <target>Дозволити менеджерам журналу додавати анонси журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</source>
+        <target>Для інформування читачів про новини та події редакція журналу може публікувати окрему сторінку "Анонси".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display on Homepage</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>How many announcements to display on the homepage. Leave this empty to display none.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Visitors can register a user account with the journal.</source>
+        <target>Відвідувачі можуть зареєструвати обліковий запис у журналі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus and scope</source>
+        <target>Галузь та проблематика</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</source>
+        <target>Опишіть для авторів, читачів і бібліотек діапазон статей або інших матеріалів, що будуть публікуватись у журналі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWork">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors to Index Their Work</source>
+        <target>Для авторів щодо індексації їх праць</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWorkDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></source>
+        <target><![CDATA[OJS підтримує Протокол для збору метаданих <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, який є стандартом забезпечення ефективного доступу до електронних наукових ресурсів у глобальному середовищі. Авторам варто надати можливість використання готових шаблонів для введення метаданих про роботи, які вони подають для публікації у журналі. Для цього менеджер журналу повинен обрати категорії термінів, за якими будуть індексуватися матеріали журналу, та надати привести приклади термінів як вказівку для майбутніх авторів. Розділяти приклади слід крапкою з комою (наприклад, термін1; термін2). Варто також вказати, що наведені терміни - це лише приклади; перед термінами у полях нижче треба написати слово "Наприклад,".]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-issnInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified ISSN is not valid.</source>
+        <target>Вказано некоректний ISSN.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact email is required.</source>
+        <target>Необхідно вказати email основної контактної особи.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact name is required.</source>
+        <target>Необхідно вказати основну контактну особу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalInitialsRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal initials are required.</source>
+        <target>Необхідно вказати абревіатуру журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalTitleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal title is required.</source>
+        <target>Необхідно вказати назву журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-numReviewersPerSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of reviewers per submission is required.</source>
+        <target>Необхідно вказати кількість рецензентів подання.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support email is required.</source>
+        <target>Необхідно вказати email контактної особи з технічних питань.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support name is required.</source>
+        <target>Необхідно вказати контактну особу з технічних питань.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-generalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Information</source>
+        <target>Загальна інформація</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-gettingDownTheDetails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Getting Down the Details</source>
+        <target>Крок 1. Основні відомості</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guidelines</source>
+        <target>Керівництва</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidingSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Guiding Submissions</source>
+        <target>Крок 3. Керівництво щодо подання</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-identity">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Identity</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-includeCreativeCommons">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</source>
+        <target>Включити у відповідний момент ліцензію Creative Commons для всіх опублікованих робіт в журналах, що надають відкритий доступ відразу або через деякий час.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Information</source>
+        <target>Інформація</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</source>
+        <target>Короткий опис журналу для бібліотекарів, потенційних авторів та читачів, що буде доступний на бічній панелі у розділі "Інформація".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors</source>
+        <target>Для авторів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Librarians</source>
+        <target>Для бібліотекарів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Readers</source>
+        <target>Для читачів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The information for this journal was updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Initial issue</source>
+        <target>Перший випуск</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssueDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</source>
+        <target>Залежно від обраного формату вкажіть том, номер та/або рік першого випуску, що буде опублікований в OJS:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-institution">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution</source>
+        <target>Організація</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</source>
+        <target>До поточного набору елементів навігаційної панелі, які відображаються у верхній частині сторінки ("Домашня сторінка", "Про нас", "Тека користувача", тощо), можна додати додаткові елементи.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items per page</source>
+        <target>Елементів на сторінці</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalAbbreviation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Abbreviation</source>
+        <target>Абревіатура журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Archiving</source>
+        <target>Архівування журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Summary</source>
+        <target>Короткий опис журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>About the Journal</source>
+        <target>Про журнал</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</source>
+        <target>Вкажіть основні відомості про журнал, що зацікавлять читачів, авторів або рецензентів. Це можуть бути положення про відкритий доступ, концепція журналу, умови передачі авторських прав, інформація про спонсорів, історія журналу, політика конфіденційності або відомості про включення матеріалів в архівну систему LOCKSS або CLOCKSS.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Зміст домашньої сторінки журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</source>
+        <target>За замовчуванням, на домашній сторінці розміщені лише навігаційні посилання. Використовуючи наступні опції можливо налаштувати домашню сторінку на відображення певного додаткового змісту. Зауважте, що зміст поточного випуску журналу завжди доступний за посиланням "Поточний випуск" на навігаційній панелі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Заголовок домашньої сторінки</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Заголовок домашньої сторінки</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</source>
+        <target>Замість тексту, який відображається на домашній сторінці за замовчуванням, можна вивантажити графічну версію назви та логотипу журналу (як файл формату .gif, .jpg або .png).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextInitials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal initials</source>
+        <target>Абревіатура журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Layout</source>
+        <target>Макет журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayoutDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</source>
+        <target>Оберіть тему журналу та визначте компоненти макету. Крім того, можна вивантажити таблиці стилів, які будуть застосовані над загальносистемними даними та таблицями стилів теми (якщо вона обрана).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Логотип журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Логотип журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Footer</source>
+        <target>Нижній колонтитул сторінки</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooterDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</source>
+        <target>Це нижній колонтитул сторінок Вашого журналу. Щоб змінити або оновити нижній колонтитул, вставте код HTML у поле нижче. Наприклад, у нижньому колонтитулі може розміщуватись ще одна навігаційна панель, лічильник тощо. Нижній колонтитул з'явиться на всіх сторінках сайту журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Journal Policies</source>
+        <target>Крок 2. Політика журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Setup</source>
+        <target>Налаштування журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetupUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your journal setup has been updated.</source>
+        <target>Налаштування Вашого журналу оновлені.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalStyleSheetInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid journal stylesheet format. Accepted format is .css.</source>
+        <target>Неприпустимий формат таблиці стилю. Дозволений лише формат .css.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalTheme">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Theme</source>
+        <target>Тема стилю журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal thumbnail</source>
+        <target>Мініатюрне зображення журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A small logo or representation of the journal that can be used in lists of journals.</source>
+        <target>Маленький логотип або обкладинка журналу, які можуть використовуватися в списку журналів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal title</source>
+        <target>Назва журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Key Information</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a short description of your journal and identify editors, managing directors and other members of your editorial team.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-labelName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Label name</source>
+        <target>Назва елементу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The list settings for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Lists</source>
+        <target>Списки</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable the PKP PN plugin</source>
+        <target>Плагін PKP PN увімкнено</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</source>
+        <target>Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють кілька базових критеріїв.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnSettingsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[View the <button>plugin settings</button> to accept the terms of use for the PKP PN.]]></source>
+        <target>Клацніть по посиланню "Налаштування" щоб прийняти умови використання PKP PN.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>PKP Preservation Network (PN)</source>
+        <target>Мережа архівування PKP (PKP Preservation Network, PKP PN))</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginNotInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</source>
+        <target>Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють декілька базових критеріїв. Плагін PKP PN для OJS 3 зараз знаходиться у розробці та незабаром буде доступним у галереї плагінів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-otherLockss">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS and CLOCKSS</source>
+        <target>Альтернативні варіанти архівування</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Дозволити LOCKSS для збереження та розповсюдження змісту журналу бібліотеками, що беруть участь у проекті, через сторінку <a href="{$lockssUrl}" target="_blank">Видавничий маніфест LOCKSS</a>. Ліцензія LOCKSS з'явиться на сторінці "Про журнал" у розділі "Архівування":]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></source>
+        <target><![CDATA[Ліцензія LOCKSS з'явиться в розділі «Про журнал» під заголовком «Архівація журналу»: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Ліцензія LOCKSS</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS License Description</source>
+        <target>Опис ліцензії LOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>.]]></source>
+        <target><![CDATA[Визначте 6-10 бібліотек, які будуть архівувати журнал. Наприклад, це можуть бути установи, у яких працюють редактори або члени редколегії та/або установи, що вже беруть участь у проекті LOCKSS. Див. <a href="http://www.lockss.org/community/" target="_blank">бібліотеки-учасниці</a>. Використайте шаблонні запрошення для (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">бібліотек, що беруть участь у LOCKSS</a> або (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">бібліотек, які поки не є учасницями LOCKSS</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS</source>
+        <target>LOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Дозволити CLOCKSS для збереження та розповсюдження змісту журналу бібліотеками, що беруть участь у проекті, через сторінку <a href="{$clockssUrl}" target="_blank">Видавничий маніфест CLOCKSS</a> page.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></source>
+        <target><![CDATA[Ліцензія CLOCKSS з'явиться в розділі «Про журнал» під заголовком «Архівація журналу»: <a href="http://clockss.org/" target="_blank">Ліцензія CLOCKSS</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS License Description</source>
+        <target>Опис ліцензії CLOCKSS </target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></source>
+        <target><![CDATA[Підпишіться на сервіс CLOCKSS, відвідавши <a href="http://clockss.org/" target="_blank">веб-сайт CLOCKSS</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS</source>
+        <target>CLOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Look</source>
+        <target>Вигляд</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Homepage header, content, journal header, footer, navigation bar, and style sheet.</source>
+        <target>Заголовок домашньої сторінки, зміст, заголовок журналу, підпис, навігаційна панель та таблиці стилів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management</source>
+        <target>Менеджмент</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access and security, scheduling, announcements, copyediting, layout, and proofreading.</source>
+        <target>Доступ, безпека, планування, анонси, літературне редагування, верстка та коректура.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managementOfBasicEditorialSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management of Basic Editorial Steps</source>
+        <target>Менеджмент основних кроків редакційної роботи</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingPublishingSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management and Publishing Setup</source>
+        <target>Налаштування менеджменту та публікації</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingTheJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Managing the Journal</source>
+        <target>Крок 4. Менеджмент журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The masthead details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBar">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation Bar</source>
+        <target>Навігаційна панель</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBarDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add or remove additional navigation bar items.</source>
+        <target>Додавайте або виключайте додаткові навігаційні елементи.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsAbsolute">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</source>
+        <target>Наведена абсолютна URL-адреса (наприклад, "http://www.example.com"), а не відносний шлях від кореневої теки сайту (наприклад, "/manager/setup")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsLiteral">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</source>
+        <target>Значення назви елементу є рядковим літералом (наприклад, "Налаштування"), а не ключем файлу локалізації (наприклад, "manager.setup")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noImageFileUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No image file uploaded.</source>
+        <target>Файл зображення не вивантажений.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noStyleSheetUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No style sheet uploaded.</source>
+        <target>Таблиця стилю не вивантажена.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note</source>
+        <target>Примітка</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-submissionAckDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Наразі розсилання листів подяки відключене. Щоб користуватися цією функціональністю дозвольте лист SUBMISSION_ACK на сторінці <a class="action" href="{$preparedEmailsUrl}">Шаблони листів</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page links</source>
+        <target>Посилань на сторінки</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of links to display to subsequent pages in a list.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-onlineIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online ISSN</source>
+        <target>ISSN онлайнової версії</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageNumberIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page Number Option</source>
+        <target>Налаштування пагінації</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Policies</source>
+        <target>Політика</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus, peer review, sections, privacy, security, and additional about items.</source>
+        <target>Проблематика, рецензування, розділи, приватність, безпека та додаткові відомості про журнал.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-printIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Print ISSN</source>
+        <target>ISSN друкованої версії</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-privacyStatement-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The privacy statement has been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofing Instructions</source>
+        <target>Інструкції з коректури</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</source>
+        <target>Інструкції з коректури стануть доступними коректорам, авторам, редакторам верстки та редакторам розділів на етапі редагування подань. Нижче подано стандартний набір інструкцій у форматі HTML. Менеджер журналу в будь-який час може змінювати або замінювати ці інструкції (у текстовому або гіпертекстовому форматі).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationSchedule">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Schedule</source>
+        <target>Графік публікації</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduleDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.</source>
+        <target>Статті журналу можуть збиратися у випуски з власними сторінками змісту. Можливо також публікувати матеріали по мірі їх редакційного опрацювання, додаючи готові до друку статті до сторінки змісту "поточного" випуску журналу. Надайте читачам журналу інформацію щодо принципу, який використовуватиме цей журнал, та щодо очікуваної періодичності видання.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduling">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Scheduling</source>
+        <target>Планування публікації</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification of Journal Content</source>
+        <target>Ідентифікація змісту журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publisher">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher</source>
+        <target>Видавець</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These details may be included in metadata provided to third-party archival bodies.</source>
+        <target>Назва установи-видавця журналу, яка має бути відображена на сторінці "Про журнал".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-referenceLinking">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Linking</source>
+        <target>Гіперпосилання у пристатейній бібліографії</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictArticleAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view open access content.</source>
+        <target>Користувачі мають бути зареєстровані для перегляду змісту у відкритому доступі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictSiteAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view the journal site.</source>
+        <target>Користувачі мають бути зареєстровані для перегляду веб-сайту журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Guidelines</source>
+        <target>Керівництво для рецензентів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Options</source>
+        <target>Налаштування рецензування</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated Email Reminders</source>
+        <target>Хоча редактор завжди може особисто контактувати з рецензентами по email, можливі також два варіанта налаштування автоматичного розсилання нагадувань (зміст листів-нагадувань можна змінити у розділі "Шаблони листів")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може потребувати додаткових конфігурацій (що можливо не на всіх серверах).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-blindReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Blind Review</source>
+        <target>Анонімне рецензування</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-numWeeksPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks allowed to complete the review</source>
+        <target>Типовий період, необхідний для проведення рецензування</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-onQuality">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editors will rate reviewers on a five-point quality scale after each review.</source>
+        <target>Після кожного рецензування редактори зможуть оцінювати рецензентів за п'ятибальною шкалою.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Restrict File Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers will not be given access to the submission file until they have agreed to review it.</source>
+        <target>Рецензенти будуть мати доступ до рукописів лише після згоди рецензувати їх.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Access</source>
+        <target>Доступ рецензентів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>One-click Reviewer Access</source>
+        <target>Дозволити доступ рецензента "єдиним натисканням".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in.</source>
+        <target><![CDATA[<strong>Примітка:</strong> Листи-запрошення рецензентів включатимуть спеціальний прямий URL до сторінки з поданням (при цьому для доступу до всіх інших сторінок їм буде необхідно зайти у систему з іменем/паролем). З міркувань безпеки, за умов використання цієї опції, редактори не зможуть змінювати адреси email або додавати додаткові адреси (CC та BCC) під час написання листів-запрошень рецензентів.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-label">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include a secure link in the email invitation to reviewers.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerRatings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Ratings</source>
+        <target>Рейтинги рецензентів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Reminders</source>
+        <target>Нагадування рецензентам</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Policy</source>
+        <target>Політика рецензування</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Search Indexing</source>
+        <target>Індексування пошуковими системами</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The search engine index settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></source>
+        <target>Щоб допомогти користувачам пошукових систем знаходити журнал, надайте короткий опис журналу та набір релевантних ключових слів (розділених крапкою з комою).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchDescription-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsAndSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sections and Section Editors</source>
+        <target>Розділи та редактори розділів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDefaultSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(If sections are not added, then items are submitted to the Articles section by default.)</source>
+        <target>(Якщо розділи не додані, матеріали будуть надсилатися до розділу статей за замовчуванням).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></source>
+        <target><![CDATA[Щоб додати або змінити розділи журналу (наприклад, Статті, Рецензії тощо), перейдіть на сторінку "Розділи журналу".<br /><br />Автори рукописів вказуватимуть...]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectEditorDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal editor who will see it through the editorial process.</source>
+        <target>Редактор журналу, який наглядатиме за редакційним процесом.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal section for which the item will be considered.</source>
+        <target>Розділ журналу для об'єктів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-showGalleyLinksDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Always show galley links and indicate restricted access.</source>
+        <target>Завжди відображати посилання на повні тексти та повідомляти про обмежений доступ.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-view">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Site Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-viewContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Article Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-stepsToJournalSite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to a Journal Web Site</source>
+        <target>П'ять кроків для створення веб-сайту журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</source>
+        <target>(наприклад, Фотосинтез; Чорні діри; Проблема чотирьох фарб; Теорема Баєса)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectKeywordTopic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Keywords</source>
+        <target>Ключові слова</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of keywords or topics as a guide for authors</source>
+        <target>Наведіть приклади ключових слів або тематичних рубрик як вказівку для авторів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission guidelines</source>
+        <target>Керівництво щодо подання</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Preparation Checklist</source>
+        <target>Вимоги до подання</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</source>
+        <target>Під час подання рукопису до журналу автори не зможуть завершити цей процес, поки вони не підтвердять відповідність рукопису всім встановленим вимогам. Список вимог також з'явиться у розділі "Керівництво для авторів" сторінки "Про журнал". Поданий нижче список вимог можна редагувати, але зауважте, що автор повинен буде підтвердити відповідність рукопису кожному з пунктів вимог, без цього він не зможе завершити процес подання рукопису до журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Подання</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author guidelines, copyright, and indexing (including registration).</source>
+        <target>Інформація для авторів, авторські права та індексування (в тому числі, реєстрація).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable OAI</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</source>
+        <target>(наприклад, Історичний екскурс; Результати експерименту; Огляд літератури; Опитування/Інтерв'ю)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeMethodApproach">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Type (Method/Approach)</source>
+        <target>Тип дослідження (методологія/підходи)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant research types, methods, and approaches for this field</source>
+        <target>Наведіть приклади термінів, які автори можуть застосовувати для характеристики типу дослідження, методології та використаних ними підходів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unique Identifier</source>
+        <target>Унікальний ідентифікатор</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifierDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</source>
+        <target>Статті та випуски можуть бути асоційовані з ідентифікаційними номерами або кодами однієї з реєстраційних систем, наприклад, системи цифрових ідентифікаторів об'єктів (DOI).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useEditorialReviewBoard">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An editorial/review board will be used by the journal.</source>
+        <target>Редколегія та/або Рада рецензентів журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userAccess-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The user access details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Thumbnail</source>
+        <target>Мініатюра</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useImageTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title image</source>
+        <target>Зображення заголовку</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User Registration</source>
+        <target>Реєстрація користувачів</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useTextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title text</source>
+        <target>Текст заголовку</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>
+	Ваш журнал налаштований на запис декількох метрик використання. Статистика використання буде відображатися в декількох контекстах.
+	Є випадки, коли повинен бути використаний тільки один вид статистики використання, наприклад, щоб відобразити упорядкований список найбільш часто використовуваних статей або для ранжування результатів пошуку.
+	Будь ласка, виберіть одну з налаштованих метрик як метрику за замовчуванням.
+	</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Statistics</source>
+        <target>Статистика журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-articleViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article View Counts (for Authors only)</source>
+        <target>Показники перегляду статей (лише для авторів)</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Прийнято</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-decline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decline</source>
+        <target>Відхилено</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-revise">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Resubmit</source>
+        <target>Повторно надіслано</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to review</source>
+        <target>Днів на рецензування</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysToPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to publication</source>
+        <target>Днів до публікації</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</source>
+        <target>OJS вираховує наступну статистику по кожному журналу. Період "днів до рецензування" вираховується від дати подання рукопису (або вказання версії рецензії) до прийняття початкового рішення редактором; період "днів до публікації" позначає термін від початкового вивантаження автором рукопису до остаточної публікації.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-itemsPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items published</source>
+        <target>Одиниць опубліковано</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-makePublic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Check items to be made available to readers in About the Journal.</source>
+        <target>Оберіть пункти, які Ви хочете публікувати у розділі "Про журнал".</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</source>
+        <target>Примітка: Відсоткове співвідношення рецензованих подань може не дорівнювати 100%, оскільки деякі матеріали, завантажені повторно, були прийняті, відхилені або все ще знаходяться в роботі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues published</source>
+        <target>Номерів опубліковано</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total submissions</source>
+        <target>Всього отримано від авторів</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-peerReviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer reviewed</source>
+        <target>Рецензовано</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers</source>
+        <target>Зареєстрованих читачів</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered users</source>
+        <target>Зареєстрованих користувачів</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. assigned</source>
+        <target>Запитів на рецензування</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Рецензентів</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerScore">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor score</source>
+        <target>Оцінка редактора</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewsPerReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. of reviews</source>
+        <target>Кількість рецензій</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-selectSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select the sections for calculating this journal's peer-reviewed statistics.</source>
+        <target>Оберіть розділи для підрахунку статистики процесу рецензування по цьому журналу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article file downloads</source>
+        <target>Скачування файлу статті</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstract">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views</source>
+        <target>Перегляди сторінки анотації статті</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstractAndDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views and downloads</source>
+        <target>Скачування і перегляди анотації статті</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-journalIndexPageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal main page views</source>
+        <target>Перегляди головної сторінки журналу</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-issuePageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue table of contents page views</source>
+        <target>Перегляди сторінки зі змістом випуску</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byContext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by context (issues and/or article).</source>
+        <target>Фільтрувати результати по контексту (випуску і/або статті).</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byObject-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</source>
+        <target>Фільтрувати результати за типом об'єкта (журнал, випуск, стаття, типи файлів) і/або по одному або декільком ID об'єктів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Policies</source>
+        <target>Політика передплат</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-delayedOpenAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delayed Open Access</source>
+        <target>Відстрочений відкритий доступ</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionExpiryReminderBeforeMonthsValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Будь ласка, поставте галочку.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry</source>
+        <target>Завершення передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Після завершення передплати читачі можуть втратити доступ до всього передплатного контенту або можуть мати доступ до змісту, опублікованого до дати завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFull">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Full expiry</source>
+        <target>Повне завершення</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFullDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to all subscription content upon subscription expiry.</source>
+        <target>Після завершення передплати читачі втрачатимуть доступ до всього передплатного змісту.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartial">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Partial expiry</source>
+        <target>Часткове завершення</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartialDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Після завершення передплати читачі втрачатимуть доступ до нового передплатного контенту, але продовжуватимуть мати доступ до змісту, опублікованого до дати завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Months</source>
+        <target>{$x} місяців</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Weeks</source>
+        <target>{$x} тижнів</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry</source>
+        <target>Сповістити учасників електронною поштою після закінчення терміну підписки</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry.</source>
+        <target>Сповістити учасників електронною поштою після закінчення терміну підписки.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Сповістити учасників електронною поштою після закінчення терміну підписки.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Сповістити учасників електронною поштою після закінчення терміну підписки.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminders</source>
+        <target>Нагадування про завершення передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired.</source>
+        <target>Автоматизовані поштові нагадування (зміст яких може редагувати менеджер журналу у розділі "Шаблони листів") можуть розсилатись передплатникам як до, так і після завершення їх передплат.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Щоб активувати цї опції адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цих опцій може вимагати також додаткових конфігурацій (що можливо не на всіх серверах).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expirySelectOne">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select one of the following:</source>
+        <target>Оберіть одне з наступного:</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-htmlInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></source>
+        <target><![CDATA[У текстовому полі може застосовуватись розмітка HTML (теги font size, color, тощо); перехід на наступний рядок трактується як тег <tt>&lt;br&gt;</tt>; редактор HTML працює з браузерами Firefox.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months after subscription expiry.</source>
+        <target>Будь ласка, вкажіть коректне значення кількості місяців після завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months before subscription expiry.</source>
+        <target>Будь ласка, вкажіть коректне значення кількості місяців до завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks after subscription expiry.</source>
+        <target>Будь ласка, вкажіть коректне значення кількості тижнів після завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks before subscription expiry.</source>
+        <target>Будь ласка, вкажіть коректне значення кількості тижнів до завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</source>
+        <target>Зареєстровані читачі матимуть можливість автоматизовано отримувати поштою сторінки змісту випусків, що з'явилися у відкритому доступі.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може вимагати додаткових конфігурацій (що можливо не на всіх серверах).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotifications">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online Payment Notifications</source>
+        <target>Електронні повідомлення про платежі</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotificationsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</source>
+        <target>Повідомлення про платежі (зміст яких може редагувати менеджер журналу у розділі "Шаблони листів") можуть автоматизовано надсилатись менеджеру передплати після завершення користувачами процедури оплати передплат.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Individual subscription.</source>
+        <target>Повідомляти менеджера передплати поштою про придбання індивідуальних передплат.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</source>
+        <target>Повідомляти менеджера передплати поштою про придбання інституційних передплат (рекомендується).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Individual subscription.</source>
+        <target>Повідомляти менеджера передплати поштою про поновлення індивідуальних передплат.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Institutional subscription.</source>
+        <target>Повідомляти менеджера передплати поштою про поновлення інституційних передплат.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentPurchaseInstitutionalDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Передплати, придбані установами в електронному режимі, потребують перевірки наданих даних про домени і діапазони IP-адрес та подальшої активації менеджером передплати.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></source>
+        <target><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію менеджер журналу повинен включити модуль платежів та дозволити платежі за передплату в розділі "Платежі читачів" сторінки "Налаштування платежів".]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Options For Subscription Journals</source>
+        <target>Налаштування відкритого доступу для передплатних журналів</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</source>
+        <target>Передплатні журнали можуть надавати відстрочений відкритий доступ до опублікованого контенту, а також дозволяти депонування авторами їх робіт у зовнішніх Інтернет-сховищах (обидві ці можливості покращують читаність та цитованість змісту журналу).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Information</source>
+        <target>Інформація про передплату</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</source>
+        <target>Інформація про типи передплат та структуру цін буде автоматично розміщена у розділі "Передплати" сторінки "Про журнал" разом з контактною інформацією менеджера передплати. Тут можна вказати додаткову інформацію, наприклад, про методи платежів або про підтримку передплатників з країн, що розвиваються.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Менеджер передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</source>
+        <target>Ця контактна особа буде вказана у розділі "Передплати" сторінки "Про журнал".</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid email.</source>
+        <target>Будь ласка, вкажіть коректну email адресу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-individualSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual Subscriptions</source>
+        <target>Індивідуальні передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-institutionalSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Інституційні передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmRenew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to renew this subscription?</source>
+        <target>Ви впевнені, що хочете продовжити дану підписку?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this subscription?</source>
+        <target>Ви впевнені, що хочете видалити цю передплату?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-summary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions Summary</source>
+        <target>Загальна інформація про передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription</source>
+        <target>Створити нову передплату</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Створити</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-renew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Renew</source>
+        <target>Поновити</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End</source>
+        <target>Завершення</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEndSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End Date</source>
+        <target>Дата завершення</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Початок</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStartSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start Date</source>
+        <target>Дата початку</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Домен</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Редагувати передплату</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Редагувати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-withStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With Status</source>
+        <target>Зі статусом</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-allStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All</source>
+        <target>Всі</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-status">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Status</source>
+        <target>Статус</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription status is required.</source>
+        <target>Необхідно вказати статус передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription status.</source>
+        <target>Будь ласка, коректно вкажіть статус передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Тип передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type is required.</source>
+        <target>Необхідно вказати тип передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type.</source>
+        <target>Будь ласка, вкажіть коректний тип передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start date</source>
+        <target>Дата початку</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription start date is required.</source>
+        <target>Необхідно вказати дату початку передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription start date.</source>
+        <target>Будь ласка, вкажіть коректну дату початку передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End date</source>
+        <target>Дата завершення</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription end date is required.</source>
+        <target>Необхідно вказати дату завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify a start date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify an end date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription end date.</source>
+        <target>Будь ласка, вкажіть коректну дату завершення передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userProfileInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: All changes below are to user's system-wide profile.</source>
+        <target>Примітка: Всі зміни нижче стосуються загальносистемного профілю користувача.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Користувач</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact</source>
+        <target>Контактна особа</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user is required.</source>
+        <target>Необхідно обрати користувача.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid user.</source>
+        <target>Будь ласка, коректно визначіть користувача.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userCountryValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid country.</source>
+        <target>Будь ласка, коректно вкажіть державу.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send the user an email with their username and subscription details.</source>
+        <target>Надіслати передплатнику лист з іменем користувача та подробицями передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Для налаштування опції надсилання листа, будь ласка, користуйтеся відповідним прапорцем.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Членство</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Реєстраційний номер</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter membership information if the subscription type requires that subscribers belong to an association or organization.</source>
+        <target>Якщо тип передплати вимагає членства передплатників у певній асоціації або організації, вкажіть інформацію про необхідне членство.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires membership information.</source>
+        <target>Обраний тип передплати потребує вказання інформації про членство.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Примітки</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Домен</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution name</source>
+        <target>Назва установи</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An institution name is required.</source>
+        <target>Необхідно вказати назву установи</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionMailingAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mailing address</source>
+        <target>Поштова адреса</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></source>
+        <target>Якщо це передплата для установи, вкажіть домен передплатника. Якщо вказується доменне ім'я, вказувати діапазон IP-адрес необов'язково. Доменні імена повинні бути коректними (наприклад, lib.sfu.ca).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainIPRangeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires a domain and/or an IP range for subscription authentication.</source>
+        <target>Обраний тип передплати потребує вказання домену та/або діапазону IP-адрес для аутентифікації передплатника.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid domain.</source>
+        <target>Будь ласка, вкажіть коректний домен.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP ranges</source>
+        <target>Діапазон IP-адрес</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[&#8226;]]></source>
+        <target><![CDATA[&#8226;]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></source>
+        <target>Якщо це передплата для установи, вкажіть діапазон IP-адрес передплатника. Якщо вказується діапазон IP-адрес, вказувати домен необов'язково. Можуть вказуватись окремі IP-адреси (наприклад, 142.58.103.1), IP-маски CIDR (наприклад, 142.58.100.0/24), звичайні діапазони IP-адрес (наприклад, 142.58.103.1 - 142.58.103.4), діапазони IP-адрес з символами '*' (наприклад, 142.58.103.*) або будь-які комбінації вищезазначених варіантів, розподілені крапкою з комою (';') (наприклад, 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid IP range.</source>
+        <target>Будь ласка, вкажіть коректний діапазон IP-адрес.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-deleteIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Видалити</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-addIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add</source>
+        <target>Додати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-saveAndCreateAnother">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Зберегти та створити іншу</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionContactRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</source>
+        <target>Для того, щоб надіслати повідомлення користувачу, у налаштуваннях журналу необхідно вказати ім'я та email контактної особи з питань передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This user already has a subscription for this journal.</source>
+        <target>Цей користувач вже має передплату на цей журнал.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type must be created before new subscriptions can be made.</source>
+        <target>Перш ніж нова передплата буде створена, необхідно вказати її тип.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP Range</source>
+        <target>Діапазон IP-адрес</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Членство</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Реєстраційний номер</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Примітки</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscriptions</source>
+        <target>Немає передплат</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Subscription Contact</source>
+        <target>Оберіть контактну особу для передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select User</source>
+        <target>Оберіть користувача</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectSubscriber-desc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</source>
+        <target>Права передплатників автоматично надаються менеджерам журналу, редакторам, редакторам розділів, редакторам верстки, літературним редакторам та коректорам.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-select">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select</source>
+        <target>Оберіть</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription created successfully.</source>
+        <target>Передплата створена успішно.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Type</source>
+        <target>Тип передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Користувач</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-contact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact Name</source>
+        <target>Ім'я контактної особи</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution Name</source>
+        <target>Назва установи</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Types</source>
+        <target>Типи передплат</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</source>
+        <target>Попередження! Всі передплати цього типу будуть видалені. Ви впевнені, що хочете продовжити та видалити цей тип передплати?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Вартість</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual</source>
+        <target>Індивідуальна</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional</source>
+        <target>Інституційна</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription Type</source>
+        <target>Створити новий тип передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Створити</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Тривалість</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription Type</source>
+        <target>Редагувати тип передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Редагувати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Вартість</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $).</source>
+        <target>Вкажіть цифрове значення (наприклад, 40 або 40.00) без додаткових символів (наприклад, $).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cost must be a positive, numeric value.</source>
+        <target>Вартість має бути позитивним цифровим значенням.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A cost is required.</source>
+        <target>Необхідно вказати вартість.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currency">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Currency</source>
+        <target>Валюта</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A currency is required.</source>
+        <target>Необхідно вказати валюту.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid currency.</source>
+        <target>Будь ласка, оберіть коректну валюту.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Опис</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Expires after</source>
+        <target>Завершується через</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-months">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>months (e.g. 12)</source>
+        <target>місяців (наприклад, 12)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-neverExpires">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Never expires</source>
+        <target>Необмежена</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiringValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Будь ласка, оберіть один із запропонованих варіантів.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Тривалість</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of months the subscription lasts (e.g. 12).</source>
+        <target>Тривалість передплати у місяцях (наприклад, 12).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The duration must be a positive, numeric value.</source>
+        <target>Тривалість має бути позитивним цифровим значенням.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A duration is required.</source>
+        <target>Необхідно вказати тривалість.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-format">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format</source>
+        <target>Формат</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type format is required.</source>
+        <target>Необхідно вказати формат типу передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type format.</source>
+        <target>Будь ласка, оберіть коректний формат типу передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual (users are validated via login)</source>
+        <target>Індивідуальна (користувачі аутентифікуються за іменем користувача/паролем)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional (users are validated via domain or IP address)</source>
+        <target>Передплатники розпізнаватимуться за допомогою аутентифікації за доменом або IP-адресою.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Для налаштування типу аутентифікації, будь ласка, скористайтеся відповідним прапорцем.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</source>
+        <target>Передплатники мають бути членами певної асоціації або організації.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Для налаштування передплати для членів асоціації/організації, будь ласка, скористайтеся відповідним прапорцем.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Додаткові налаштування</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-public">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not make this subscription type publicly available or visible on the website.</source>
+        <target><![CDATA[Інформація про цей тип передплати не буде публікуватися<br />(наприклад, у розділі "Передплати" сторінки "Про журнал").]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Для налаштування публічності типу передплати, будь ласка, скористайтеся відповідним прапорцем.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Зберегти та створити інший</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of Type</source>
+        <target>Назва типу</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type with this name already exists.</source>
+        <target>Тип передплати з такою назвою вже існує.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type name is required.</source>
+        <target>Необхідно вказати назву типу передплати.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Тип передплати</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscription types have been created.</source>
+        <target>Жодного типу передплати не було створено.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptionTypeCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type created successfully.</source>
+        <target>Тип передплати створений успішно.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-subscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the subscriptions you offer.</source>
+        <target>Посилання на сторінку, що описує підписки, які ви пропонуєте.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the visitor's current and past subscriptions.</source>
+        <target>Посилання на сторінку, що описує поточні та минулі підписки користувача.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-conditionalWarning">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This link will only be displayed when a visitor is logged in.</source>
+        <target>Це посилання відображатиметься лише у випадку, коли користувач увійшов до системи.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Categories</source>
+        <target>Категорії</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</source>
+        <target>Оберіть найбільш відповідні категорії зі списку нижче. Читачі зможуть переглядати статті за обраними категоріями.</target>
+      </segment>
+    </unit>
+    <unit id="grid-category-path">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Path</source>
+        <target>Шлях</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Section</source>
+        <target>Додати розділ</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-section-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc).</source>
+        <target>Статті в опублікованих випусках журналу групуються в розділи, зазвичай за темою або типом контенту, наприклад «оглядові статті», «наукові статті», тощо.</target>
+      </segment>
+    </unit>
+    <unit id="settings-roles-gridDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production.</source>
+        <target>Ролі - це групи користувачів, яким надається доступ різного рівня до різних робочих процесів журналу. Передбачено 5 різних рівнів доступу: Менеджери жураналу мають доступ до всього контенту і налаштувань; Редактори розділів мають повний доступ до всього призначеного їм контенту; Асистенти журналу мають обмежений доступ до рукописів, що були їм призначені Редактором; Рецензенти можуть переглядати і рецензувати призначені їм рукописи; Автори можуть переглядати і оперувати даними про їх власні рукописи. Крім того, є п'ять різних етапів призначень, для яких можуть призначатись ролі: подання, внутрішнє рецензування, рецензування, редагування та публікація.</target>
+      </segment>
+    </unit>
+    <unit id="manager-publication-library">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher Library</source>
+        <target>Бібліотека видавця</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Base new article's copyright year on</source>
+        <target>Рік авторського права нової статті визначається</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article: default year will be drawn from the article's publication date, as in "publish-as-you-go".</source>
+        <target>Стаття: рік за замовчуванням буде відповідати даті публікації статті, виходячи з принципу «публікація по ходу роботи».</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue: default year will be drawn from the issue's publication date.</source>
+        <target>Випуск: рік за замовчуванням буде відповідати даті публікації випуску.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reset Article Permissions</source>
+        <target>Скинути дозволи статей</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to reset permissions data for all articles? This action can not be undone.</source>
+        <target>Ви впевнені, що хочете скинути дозволи статей, які вже задані?</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article permissions were successfully reset.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title-short">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Components</source>
+        <target>Компоненти</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Components</source>
+        <target>Компоненти статті</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</source>
+        <target>Ці компоненти використовуються з метою надання імен файлам і відображаються у випадаючому меню в процесі їх вивантаженння.  Жанри, позначені ##, дозволяють користувачу пов'язувати файл як з усім відправленим матеріалом 99Z, так і з конкретним компонентом за номером (наприклад 02).</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Settings</source>
+        <target>Налаштування</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-DOIPluginSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI Plugin Settings</source>
+        <target>Налаштування модуля DOI</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-articles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Статті</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-issues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues</source>
+        <target>Випуски</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-representations">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galleys</source>
+        <target>Гранки</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-missingRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Plugin requirements not met</source>
+        <target>Вимоги модуля не виконані</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-DOIsNotAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plugin and specify a valid DOI prefix there.</source>
+        <target>Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів "Публічні ідентифікатори", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-pluginNotConfigured">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The plugin is not fully set up.</source>
+        <target>Модуль не був повністю підключений.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noDOIContentObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</source>
+        <target>Не обрано жодного опублікованого об'єкта для призначення DOI, тому неможливо здійснити депонування або експорт у модулі публічного ідентифікатора DOI.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target>Пароль</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please note that the password will be saved as plain text, i.e. not encrypted.</source>
+        <target>Зверніть увагу, що пароль буде збережений у вигляді звичайного тексту, тобто не буде зашифрований.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-filter-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Issue</source>
+        <target>Будь-який випуск</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Status</source>
+        <target>Будь-який статус</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-notDeposited">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Deposited</source>
+        <target>Не депонований</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-markedRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked registered</source>
+        <target>Відмічений як зареєстрований</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-registered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered</source>
+        <target>Зареєстрований</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Дія</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-export">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Export</source>
+        <target>Експорт</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-markRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mark registered</source>
+        <target>Відмітити зареєстрованим</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-register">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Register</source>
+        <target>Зареєструвати</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Validate XML before the export and registration.</source>
+        <target>Перевіряти XML перед експортом та реєстрацією.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noObjectsSelected">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No objects selected.</source>
+        <target>Немає обраних об'єктів.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Could not convert selected objects.</source>
+        <target>Неможливо конвертувати вибрані об'єкти.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-invalidXML">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid XML:</source>
+        <target>Невірний XML:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-outputFileNotWritable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The output file {$param} is not writable.</source>
+        <target>Файл результатів {$param} не доступний для запису.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-inputFileNotReadable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The input file {$param} is not readable.</source>
+        <target>Вхідний файл {$param} не доступний для читання.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-error-mdsError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration was not successful! The DOI registration server returned an error: '{$param}'.</source>
+        <target>Реєстрація пройшла невдало! Реєстраційний сервер DOI повернув помилку: '{$param}'.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration successful!</source>
+        <target>Реєстрація пройшла успішно!</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-senderTask-warning-noDOIprefix">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI prefix is missing for the journal with the path {$path}.</source>
+        <target>Відсутній префікс DOI для журналу з адресою {$path}.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-cliError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ERROR:</source>
+        <target>ПОМИЛКА:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified journal path, "{$journalPath}", does not exist.</source>
+        <target>Вказаний шлях журналу "{$journalPath}" не існує.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified objects could not be found.</source>
+        <target>Не вдалось знайти вказані об'єкти.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-copyPrimaryContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send a copy to the primary contact, identified in the Journal Settings.</source>
+        <target>Надіслати копію основній контактній особі, вказаній в налаштуваннях журналу.</target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No articles were found with usage statistics matching these parameters.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalAbstractViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total abstract views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalGalleyViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total file views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-countOfTotal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$count} of {$total} articles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-abstracts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Abstracts</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Files</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

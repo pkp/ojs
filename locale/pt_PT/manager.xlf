@@ -1,0 +1,5161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:18-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:18-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="manager-distribution-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Acesso</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you "publish as you go", don't use the issue's publication date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the issue's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-submission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the article's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Mode</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS will not be used to publish the journal's contents online.</source>
+        <target>O sistema não será usado para publicar o conteúdo da revista online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will provide open access to its contents.</source>
+        <target>A revista oferecerá acesso livre ao seu conteúdo.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will require subscriptions to access some or all of its contents.</source>
+        <target>A revista terá controle de subscrições para acesso ao seu conteúdo, ou parte dele.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publishing details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-website-archiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archiving</source>
+        <target>Arquivamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-emails-confirmResetAll">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</source>
+        <target>Deseja realmente restaurar todos os e-mails para o padrão original desta revista? Todas as personalizações serão perdidas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-files-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</source>
+        <target>Aviso: o Navegador de Ficheiros é uma ferramenta avançada que permite visualização e manipulação directa de documentos e pastas associadas à revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-journalManagement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Management</source>
+        <target>Administração da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-ui">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>UI</source>
+        <target>Interface do utilizador</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Submissões</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-forms">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Forms</source>
+        <target>Formulários</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-confirmDefaultSettingsOverwrite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will replace any locale-specific journal settings you had for this locale</source>
+        <target>A acção substituirá configurações específicas realizadas posteriormente no idioma seleccionado</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></source>
+        <target><![CDATA[O sistema pode estar disponível para utilizadores em vários idiomas. O sistema também pode operar como parcialmente multilíngüe, proporcionando a opção de troca de idioma em cada página e permitindo que algumas informações sejam incluídas no máximo dois idiomas a mais.<br /><br />Caso o idioma desejado não esteja disponível, solicite ao administrador do portal a sua instalação através da interface de administração. Para informações sobre instalação de novos idiomas, consulte a documentação do sistema.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-noneAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</source>
+        <target>Nenhum idioma adicional disponível. Informe o administrador do portal para inclusão de idiomas adicionais à revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the journal site.</source>
+        <target>Idioma padrão do sistema.</target>
+      </segment>
+    </unit>
+    <unit id="manager-managementPages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management Pages</source>
+        <target>Área Administrativa</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Acção</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-addPayment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Payment</source>
+        <target>Adicionar Forma de Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-amount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Amount</source>
+        <target>Total</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author Fees</source>
+        <target>Taxas para Autores</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter fee amounts below in order to enable author processing charges.</source>
+        <target>As opções definidas (bem como as descrições, que podem ser alteradas, e as taxas) serão exibidas no Passo 1 do processo de submissão e na secção Submissões em Sobre a Revista, assim como nos locais onde pagamento é exigido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-currencymessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</source>
+        <target>O sistema não realiza conversão de moeda. Ao aceitar pagamentos pela subscrição, certifique-se do tipo de moeda ter sido especificado corretamente.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Descrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Detalhes</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-editSubscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Editar Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable</source>
+        <target>Activar</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-feePaymentOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Options</source>
+        <target>Opções de Pagamento de Taxa</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-form-numeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All costs must be positive numeric values (decimal points are allowed)</source>
+        <target>Todos os preços devem ser valores numéricos positivos (são autorizadas casas decimais)</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Fees</source>
+        <target>Taxas Gerais</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</source>
+        <target>A Taxa de Adesão aparecerá na secção Políticas Sobre da revista e o link para doações aparecerá, normalmente, acima das funções de pesquisa da barra direita.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Options</source>
+        <target>Opções Gerais</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-noPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Payments</source>
+        <target>Nenhum pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Found</source>
+        <target>Não encontrado</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Opções</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-acceptSubscriptionPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</source>
+        <target>Esta acção activará o pagamento para Subscrições, sendo responsabilidade do Gestor de Subscrições definir e gerir os tipos, taxas, duração e assinantes</target>
+      </segment>
+    </unit>
+    <unit id="subscriptionManager-subscription-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to delete this subscription?</source>
+        <target>Deseja realmente apagar esta subscrição?</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-enablePayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payments will be enabled for this journal. Note that users will be required to log in to make payments.</source>
+        <target>Clique aqui para activar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Utilizadores deverão estar registados e ligados ao sistema para realizar pagamentos.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-fee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee</source>
+        <target>Taxa</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Description</source>
+        <target>Descrição da Taxa</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Name</source>
+        <target>Título da Taxa</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-membershipFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Association Membership</source>
+        <target>Taxa de Adesão</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-onlypdf">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Only Restrict Access to PDF version of issues and articles</source>
+        <target>Restringir acesso apenas a versões PDF dos artigos</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-publicationFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Processing Charge</source>
+        <target>Publicação de Artigo</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseArticleFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Article</source>
+        <target>Comprar Artigo</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseIssueFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Issue</source>
+        <target>Comprar Número</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-text">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description of Payment Method</source>
+        <target>Descrição do Método de Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Código do Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Method</source>
+        <target>Métodos de Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You may configure any of the following Payment Method Plugins from this screen.</source>
+        <target>A partir desta tela, é possível configurar os Plugins de Métodos de Pagamento listados a seguir.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethods">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Methods</source>
+        <target>Métodos de Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Type</source>
+        <target>Tipo de Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reader Fees</source>
+        <target>Taxas para Leitores</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</source>
+        <target>As opções definidas (bem como as descrições, que podem ser alteradas, e as taxas) serão exibidas na secção Políticas Sobre da revista, assim como nos locais onde pagamento é exigido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-records">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Records</source>
+        <target>Registos</target>
+      </segment>
+    </unit>
+    <unit id="manager-paymentTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Types</source>
+        <target>Formas de Pagamento</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Utilizador</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allEnrolledUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Enrolled in this Journal</source>
+        <target>Utilizadores registados nesta revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Journals</source>
+        <target>Todas as Revistas</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allSiteUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll a User from this Site in this Journal</source>
+        <target>Registar utilizador do portal nesta revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-showNoRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show users with no role</source>
+        <target>Exibir utilizadores sem papéis</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Todos os utilizadores</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove this user from this journal? This action will unenroll the user from all roles within this journal.</source>
+        <target>Remover este utilizador da revista? A acção removerá o registo do utilizador de todos os seus papéis dentro do sistema.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-emailUsers-selectTemplate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a template</source>
+        <target>Seleccionar padrão</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollExistingUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll an Existing User</source>
+        <target>Registar Utilizador Existente</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollSyncJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With journal</source>
+        <target>Com a revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Escolha um utilizador para juntar o seu registo dentro de outra conta (quando um utilizador possui duas contas distintas, em vez de acumular funções editoriais). O registo seleccionado primeiro será eliminado e as suas submissões e histórico de tarefas atribuídas ao segundo registo escolhido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</source>
+        <target>Escolha um utilizador a quem deseja atribuir as submissões e histórico de tarefas do registo anterior.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-roleEnrollment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$role} Enrollment</source>
+        <target>{$role} Associação</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-syncUserDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</source>
+        <target>Sincronizar Registo registará nesta revista todos os utilizadores com a função específica na revista especificada. Esta função permite que um grupo padrão de utilizadores (exemplo: revisores) seja partilhado entre revistas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-abstractsNotRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not require abstracts</source>
+        <target>Não exigir resumos</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-noSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></source>
+        <target><![CDATA[Ainda não existem Editores de Secção. Associe este papel a pelo menos um utilizador através da Administração>Configurações> Utilizadores& amp; Papéis em primeiro lugar.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-assigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This Section's Editors</source>
+        <target>Editores desta Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this section?</source>
+        <target>Tem a certeza que pretende eliminar permanentemente esta secção?</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-alertDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before this section can be deleted, you must move articles published within it into other sections.</source>
+        <target>Antes de ser eliminada esta secção, tem de remover os artigos publicados noutras secções.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Section</source>
+        <target>Criar Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-sectionEditorInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</source>
+        <target>Escolha dentre os Editores de Secção disponíveis e clique em "Designar Editor" a esta secção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editorRestriction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items can only be submitted by Editors and Section Editors.</source>
+        <target>Restrita a Editores e Editores de Secção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Editores de Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-abbrevRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An abbreviated title is required for the section</source>
+        <target>Acrónimo da secção obrigatório</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-mustAllowPermission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that at least one checkbox is checked for each Section Editor assignment.</source>
+        <target>Verifique que pelo menos uma opção está marcada para cada tarefa de Editor de Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-reviewFormId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that you have chosen a valid review form.</source>
+        <target>É necessário escolher um formulário de revisão válido</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required for the section.</source>
+        <target>Título obrigatório para a secção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit author names for section items from issues' table of contents.</source>
+        <target>Omitir nomes dos autores dos itens publicados nesta secção no sumário da edição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit the title of this section from issues' table of contents.</source>
+        <target>Omitir o título desta secção no sumário da edição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identify items published in this section as a(n)</source>
+        <target>Como metadado do artigo, identificar itens nesta secção como</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyTypeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(For example, "Peer-reviewed Article", "Non-refereed Book Review", "Invited Commentary", etc.)</source>
+        <target>(Exemplo: "Revisto por Pares", "Artigo Não Revisto por Pares", "Artigo Solicitado", etc.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-indexed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Indexed</source>
+        <target>Indexado</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No sections have been created.</source>
+        <target>Nenhuma secção criada.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Submissions</source>
+        <target>Submissões Abertas</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Policy</source>
+        <target>Política da Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-readingTools">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reading Tools</source>
+        <target>Ferramentas de Pesquisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-reviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer Reviewed</source>
+        <target>Revisto pelos Pares</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be included in the indexing of the journal</source>
+        <target>Itens da secção NÃO serão incluídos para indexação da revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be peer-reviewed</source>
+        <target>NÃO serão revistos por pares</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-submissionsToThisSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions made to this section of the journal</source>
+        <target>Submissões a esta secção da revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-unassigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Available Section Editors</source>
+        <target>Editores de Secção Disponíveis</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Word Count</source>
+        <target>Contar Palavras</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCountInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit abstract word counts for this section (0 for no limit)</source>
+        <target>Limitar a quantidade de palavras do resumo para esta secção (0 para ilimitado):</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Configuração</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Masthead</source>
+        <target>Título</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorialTeam">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editorial Team</source>
+        <target>Equipa Editorial</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Conteúdo da HomePage da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</source>
+        <target>A página inicial da revista consiste em links de navegação por padrão. O conteúdo adicional da página inicial pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useStyleSheet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal style sheet</source>
+        <target>Folhas de Estilos da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Name</source>
+        <target>Nome Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Header</source>
+        <target>Cabeçalho Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-aboutItemContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Content</source>
+        <target>Conteúdo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addAboutItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add About Item</source>
+        <target>Adicionar Item em Sobre</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addChecklistItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Checklist Item</source>
+        <target>Adicionar Item de Verificação</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Adicionar Item</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItemtoAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item to Appear in "About the Journal"</source>
+        <target>Adicionar Item em "Sobre a revista"</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Adicionar Item</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addReviewerDatabaseLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add New Database Link</source>
+        <target>Adicionar nova Base de Dados</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addSponsor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Sponsoring Organization</source>
+        <target>Adicionar Instiuição Patrocinadora</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternate Header</source>
+        <target>Cabeçalho Alternativo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</source>
+        <target>Pode-se incluir um cabeçalho em HTML, para substituir o padrão. Deixar em branco caso não seja utilizado.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements</source>
+        <target>Notícias</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The announcements settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Introduction</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter any information you would like to appear on your announcements page.</source>
+        <target>Insira um texto introdutório, ou qualquer informação desejada, a ser exibida aos leitores na página de Notícias.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-appearInAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(To appear in About the Journal) </source>
+        <target>(Para inclusão na secção Sobre a Revista)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-archiving-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The archiving details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require submitting Authors to file a Competing Interest (CI) statement with their submission.</source>
+        <target>Exigir dos Autores o registo de Conflito de Interesses (CI) junto com a submissão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireReviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require Reviewers to file a CI statement with each peer review they submit.</source>
+        <target>Exigir dos revisores registo de Conflito de Interesses em cada revisão realizada.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-history">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal History</source>
+        <target>Histórico da revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-historyDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</source>
+        <target>Este texto aparecerá na secção "Sobre" da revista e pode ser usado para detalhar mudanças de título, corpo editorial e outros itens de relevância na história da publicação.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contact-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The contact details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current issue</source>
+        <target>Número Actual</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-customizingTheLook">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Customizing the Look</source>
+        <target>Passo 5. Aparência da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Detalhes</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of journal, ISSN, contacts, sponsors, and search engines.</source>
+        <target>Nome da revista, ISSN, contactos, editora e patrocinadores e sistemas de pesquisa.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</source>
+        <target>O Director é responsável por registar todos os utilizadores, permitindo a Editores e Editores de Secção registar revisores.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-discipline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Academic Discipline and Sub-Disciplines</source>
+        <target>Área e sub-área de Conhecimento Académico</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</source>
+        <target>Recomendado para revistas e/ou trabalhos multidisciplinares.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</source>
+        <target>(Ex.: Psicologia; Educação; Sociologia; Neurociências)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant academic disciplines for this journal</source>
+        <target>Forneça exemplos de áreas do conhecimento relevantes para esta revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-displayCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add the table of contents for the current issue (if available).</source>
+        <target>Adicionar sumário na edição actual (se disponível).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Decision</source>
+        <target>Decisão Editorial</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Bounce Address</source>
+        <target>Endereço de retorno de e-mail</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any undeliverable emails will result in an error message to this address.</source>
+        <target>Qualquer e-mail retornado (não recebido) produzirá uma mensagem de erro para o endereço definido aqui.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-disabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deve activar a opção <tt>allow_envelope_sender</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tal funcionalidade (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Email Identification</source>
+        <target>Identificação de E-mail</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Signature</source>
+        <target>Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</source>
+        <target>Os modelos e-mails enviados pelo sistema em nome da revista incluirão a seguinte assinatura no final. O corpo do texto pode ser editado na secção E-mails da Administração da Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable announcements</source>
+        <target>Permitir que os directores da revista adicionem anúncios.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</source>
+        <target>Notícias podem ser publicadas para informar leitores sobre novidades e eventos, disponíveis na página Notícias.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display on Homepage</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>How many announcements to display on the homepage. Leave this empty to display none.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Visitors can register a user account with the journal.</source>
+        <target>Utilizadores podem se registar numa revista, assumindo um ou mais papéis, listados a seguir:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus and scope</source>
+        <target>Foco e Âmbito</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</source>
+        <target>Descreva aos autores, leitores e bibliotecários a gama de artigos e outros itens que a revista publicará.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWork">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors to Index Their Work</source>
+        <target>Indexação da submissão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWorkDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></source>
+        <target><![CDATA[O sistema adopta o Protocolo para Recolha de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, que é um padrão emergente para proporcionar acesso com base na indexação a recursos electrónicos de pesquisa numa escala global. Os autores farão uso de um padrão similar para incluir os metadados da submissão. O Director da revista deverá escolher as categorias para indexação e apresentar aos autores exemplos relevantes para auxiliá-los na indexação, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2). Os termos deverão ser fornecidos como exemplos, utilizando as expressões "Ex." ou "Por exemplo,".]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-issnInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified ISSN is not valid.</source>
+        <target>O ISSN indicado não é válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact email is required.</source>
+        <target>É obrigatório e-mail do contacto principal!</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact name is required.</source>
+        <target>É obrigatório o nome do contacto principal!</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalInitialsRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal initials are required.</source>
+        <target>Obrigatória o acrónimo da revista .</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalTitleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal title is required.</source>
+        <target>É obrigatório o título da revista .</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-numReviewersPerSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of reviewers per submission is required.</source>
+        <target>É obrigatório o número de revisores por submissão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support email is required.</source>
+        <target>É obrigatório o e-mail do Suporte Técnico!</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support name is required.</source>
+        <target>É obrigatório o Nome do Suporte Técnico!</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-generalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Information</source>
+        <target>Informação Geral</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-gettingDownTheDetails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Getting Down the Details</source>
+        <target>Passo 1. Detalhes da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guidelines</source>
+        <target>Directrizes</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidingSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Guiding Submissions</source>
+        <target>Passo 3. Instruções para Submissão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-identity">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Identity</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-includeCreativeCommons">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</source>
+        <target>Para revistas que oferecem acesso aberto imediato ou adiado, inclua uma licença Creative Commons com todos os trabalhos publicados no momento apropriado.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Information</source>
+        <target>Informação</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</source>
+        <target>Informações breves sobre a revista para bibliotecários, potenciais autores e leitores estão disponíveis na secção Informação na barra de ferramentas lateral.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors</source>
+        <target>Para Autores</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Librarians</source>
+        <target>Para Bibliotecários</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Readers</source>
+        <target>Para Leitores</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The information for this journal was updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Initial issue</source>
+        <target>Edição Inicial</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssueDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</source>
+        <target>Dependendo do formato escolhido, informe sobre a edição, volume e/ou ano da primeira edição a ser publicada no sistema:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-institution">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution</source>
+        <target>Instituição</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</source>
+        <target>Itens na Barra de Navegação, que aparece no topo da página, podem ser incluídos (Página Inicial, Sobre, Página do Utilizador, etc.).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items per page</source>
+        <target>Itens por página</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalAbbreviation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Abbreviation</source>
+        <target>Abreviatura da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Archiving</source>
+        <target>Arquivamento da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Summary</source>
+        <target>Sumário da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>About the Journal</source>
+        <target>Sobre a Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</source>
+        <target>Incluir qualquer informação sobre a revista que possa ser de interesse para leitores, autores ou revisores. Pode ser a política de acesso aberto, o enfoque da revista, aviso de direitos de autor, divulgação e patrocínio, histórico da revista, uma declaração de privacidade e inclusão em qualquer sistema de arquivamento LOCKSS ou CLOCKSS.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Conteúdo da Página Inicial</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</source>
+        <target>A página inicial consiste de uma lista de atalhos (links). Pode ser adicionado conteúdo adicional à página inicial  através de uma ou mais opções a seguir, que aparecerão na ordem exibida. Note que a edição actual é sempre acessível pelo atalho Actual na barra de navegação.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Cabeçalho da Página Inicial da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Cabeçalho da página inicial da revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</source>
+        <target>Uma versão em formato de imagem do título e logótipo da revista (como .gif, .jpg, ou .png ) pode ser submetida, que substituirá a versão em texto que aparece como padrão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextInitials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal initials</source>
+        <target>Sigla da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Layout</source>
+        <target>Layout da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayoutDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</source>
+        <target>Escolha um visual e defina o posicionamento dos componentes. Uma folha de estilos (CSS) também pode ser enviada, podendo alterar os padrões do estilo geral do sistema e do visual (caso tenha sido escolhido).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Logótipo da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Logótipo da revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Footer</source>
+        <target>Rodapé da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooterDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</source>
+        <target>No rodapé da revista é possível incluir ou actualizar o conteúdo, colocando código HTML customizado, como outras barras de navegação, contadores, publicidade. O rodapé aparecerá em todas as páginas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Journal Policies</source>
+        <target>Passo 2. Políticas da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Setup</source>
+        <target>Configuração da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetupUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your journal setup has been updated.</source>
+        <target>Configurações da revista actualizadas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalStyleSheetInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid journal stylesheet format. Accepted format is .css.</source>
+        <target>Formato de folha de estilo inválido. Formato aceitável é .css.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalTheme">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Theme</source>
+        <target>Aparência da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal thumbnail</source>
+        <target>Thumbnail da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A small logo or representation of the journal that can be used in lists of journals.</source>
+        <target>Um pequeno logótipo ou representação da revista que pode ser usado em listas de revistas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal title</source>
+        <target>Título da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Key Information</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a short description of your journal and identify editors, managing directors and other members of your editorial team.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-labelName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Label name</source>
+        <target>Nome da Categoria</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The list settings for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Lists</source>
+        <target>Listas</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable the PKP PN plugin</source>
+        <target>Plugin PKP PN ativo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</source>
+        <target>A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnSettingsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[View the <button>plugin settings</button> to accept the terms of use for the PKP PN.]]></source>
+        <target>Clique na ligação Configurações para aceitar os termos de uso para o PKP PN.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>PKP Preservation Network (PN)</source>
+        <target>Rede de Preservação PKP (PKP PN)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginNotInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</source>
+        <target>A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios O plugin PKP PN para OJS 3 está em desenvolvimento e ficará disponível na galeria de plugins em breve.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-otherLockss">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS and CLOCKSS</source>
+        <target>Opções Alternativas de Arquivo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Permitir ao LOCKSS armazenar e distribuir o conteúdo da revista a bibliotecas participantes através do <a href="{$lockssUrl}" target="_blank">Manifesto de Publicação</a> do LOCKSS. Uma licença LOCKSS aparecerá em Sobre a Revista na secção Arquivamento:]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></source>
+        <target><![CDATA[Uma licença LOCKSS aparecerá em Sobre a Revista em Arquivamento: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Licença LOCKSS</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS License Description</source>
+        <target>Descrição da licença LOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>.]]></source>
+        <target><![CDATA[Identifique 6 a 10 bibliotecas que registarão e guardarão a revista. Por exemplo, escolha instituições às quais os editores ou Membros do Equipa já sejam associados e/ou instituições já participantes do LOCKSS. Visite <a href="http://www.lockss.org/community/" target="_blank">bibliotecas participantes</a>. Utilize o convite preparado para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">Bibliotecas participantes do LOCKSS</a> ou (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">Bibliotecas NÃO participantes do LOCKSS</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS</source>
+        <target>LOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Activar o CLOCKSS para armazenar e distribuir conteúdo da revista nas bibliotecas participantes através de uma página CLOCKSS <a href="{$clockssUrl}" target="_blank">Manifest do Editor</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></source>
+        <target><![CDATA[A licença CLOCKSS aparecerá em Sobre a Revista em Arquivamento: <a href="http://clockss.org/" target="_blank">Licença CLOCKSS</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS License Description</source>
+        <target>Descrição Licença CLOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></source>
+        <target><![CDATA[Inscreva-se no serviço CLOCKSS visitando <a href="http://clockss.org/" target="_blank">o site CLOCKSS</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS</source>
+        <target>CLOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Look</source>
+        <target>Aparência</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Homepage header, content, journal header, footer, navigation bar, and style sheet.</source>
+        <target>Cabeçalho da Página Inicial, conteúdo, cabeçalho da revista, rodapé, barra de navegação e folha de estilo.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management</source>
+        <target>Administração</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access and security, scheduling, announcements, copyediting, layout, and proofreading.</source>
+        <target>Acesso e segurança, agendamento, avisos, edição de texto, layout e leitura de provas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managementOfBasicEditorialSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management of Basic Editorial Steps</source>
+        <target>Administração dos Passos básicos do Processo Editorial</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingPublishingSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management and Publishing Setup</source>
+        <target>Configurações de Administração e Publicação</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingTheJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Managing the Journal</source>
+        <target>Passo 4. Administração da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The masthead details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBar">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation Bar</source>
+        <target>Barra de Navegação</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBarDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add or remove additional navigation bar items.</source>
+        <target>Adicionar/Remover itens adicionais da barra de navegação.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsAbsolute">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</source>
+        <target>O URL é absoluto (Ex.: "http://www.exemplo.com") em vez de um caminho relativo no portal (Ex.: "/manager/setup")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsLiteral">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</source>
+        <target>O nome do item é um texto literal (Ex.: "Administração da Revista") em vez de uma chave de localização (Ex.: "administracao.geral")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noImageFileUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No image file uploaded.</source>
+        <target>Nenhuma imagem para exibição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noStyleSheetUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No style sheet uploaded.</source>
+        <target>Nenhuma Folha de Estilos enviada.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note</source>
+        <target>Nota de agradecimento</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-submissionAckDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> O e-mail de notificação de submissão está desactivado. Para utilizar esta opção, active o e-mail padrão SUBMISSION_ACK na configuração de <a class="action" href="{$preparedEmailsUrl}">E-mails Padrão</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page links</source>
+        <target>Links de Página</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of links to display to subsequent pages in a list.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-onlineIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online ISSN</source>
+        <target>ISSN Electrónico</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageNumberIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page Number Option</source>
+        <target>Opção de Número de Página</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Policies</source>
+        <target>Políticas</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus, peer review, sections, privacy, security, and additional about items.</source>
+        <target>Âmbito, revisão por pares, secções, privacidade, acesso, segurança e itens adicionais em Sobre a Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-printIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Print ISSN</source>
+        <target>ISSN (Impresso)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-privacyStatement-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The privacy statement has been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofing Instructions</source>
+        <target>Instruções de Leitura de Provas</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</source>
+        <target>As Instruções de Leitura de Provas estarão disponíveis para Leitores de Prova, Autores, Editores de Layout e Editores de Secção no estágio de Edição de Submissão. A seguir está um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Director a qualquer tempo (em HTML ou texto simples).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationSchedule">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Schedule</source>
+        <target>Formato de Publicação</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduleDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.</source>
+        <target>Os artigos da revista podem ser publicados colectivamente quando o sumário estiver pronto, ou individualmente, adicionando-se os mesmos ao sumário actual quando prontos. Informe os leitores, na secção Sobre a Revista, sobre o formato adoptado pela revista e a periodicidade de publicação.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduling">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Scheduling</source>
+        <target>Formato de Publicação</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification of Journal Content</source>
+        <target>Identificação do Conteúdo da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publisher">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher</source>
+        <target>Editora</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These details may be included in metadata provided to third-party archival bodies.</source>
+        <target>O nome da editora aparecerá na secção Sobre a Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-referenceLinking">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Linking</source>
+        <target>Links para Referências</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictArticleAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view open access content.</source>
+        <target>Utilizadores devem se registar e aceder ao sistema para visualizar conteúdo de acesso livre.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictSiteAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view the journal site.</source>
+        <target>Utilizadores devem se registar e aceder ao sistema para visualizar o conteúdo da revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Guidelines</source>
+        <target>Instruções para Revisão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Options</source>
+        <target>Opções para Revisão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated Email Reminders</source>
+        <target>E-mails automatizados serão enviados ao revisor (o editor também pode enviar lembretes ao revisor)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> Para activar estas opções, o administrador do portal deve activar a opção de <tt>scheduled_tasks</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tais funcionalidades (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-blindReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Blind Review</source>
+        <target>Revisão Cega por Pares</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-numWeeksPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks allowed to complete the review</source>
+        <target>Tempo padrão permitido para conlusão de uma revisão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-onQuality">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editors will rate reviewers on a five-point quality scale after each review.</source>
+        <target>Editores poderão classificar revisores numa escala de cinco pontos após cada revisão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Restrict File Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers will not be given access to the submission file until they have agreed to review it.</source>
+        <target>Revisores terão acesso ao documento da submissão somente após indicar disponibilidade para revisão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Access</source>
+        <target>Área do Revisor</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>One-click Reviewer Access</source>
+        <target>Activar Acesso 1-Clique</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in.</source>
+        <target><![CDATA[<strong>Aviso:</strong> O convite ao revisor conterá um URL especial que levará os revisores directamente à página de Revisão para a submissão em questão (sendo necessário realizar a autenticação para aceder a outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos revisores.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-label">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include a secure link in the email invitation to reviewers.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerRatings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Ratings</source>
+        <target>Classificação de Revisores</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Reminders</source>
+        <target>Lembretes a Revisores</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Policy</source>
+        <target>Política de Revisão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Search Indexing</source>
+        <target>Indexação para Mecanismos de Pesquisa</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The search engine index settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></source>
+        <target>Para auxiliar utilizadores de mecanismos de pesquisa a descobrir a sua revista, inclua uma descrição breve sobre a revista e palavras-chave relevantes (separadas por ponto-e-vírgula ";").</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchDescription-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsAndSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sections and Section Editors</source>
+        <target>Secções e Editores de Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDefaultSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(If sections are not added, then items are submitted to the Articles section by default.)</source>
+        <target>(Caso outras secções não sejam incluídas, todos os itens serão submetidos para a secção Artigos.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></source>
+        <target><![CDATA[Para modificar as secções da revista (Ex.: Artigos, Resenhas, etc.), entre em Secções.<br /><br />Ao submeter documentos para a revista, os Autores definirão:]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectEditorDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal editor who will see it through the editorial process.</source>
+        <target>O Editor responsável pelo processo editorial.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal section for which the item will be considered.</source>
+        <target>A secção para qual o documento deverá ser considerado.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-showGalleyLinksDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Always show galley links and indicate restricted access.</source>
+        <target>Exibir sempre links para composições e indicar acesso restrito.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-view">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Site Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-viewContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Article Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-stepsToJournalSite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to a Journal Web Site</source>
+        <target>Cinco passos para ter uma Revista na Web</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</source>
+        <target>(Ex.: Fotossíntese; Buracos Negros; Arquitectura da Informação; Sistemas de Informação)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectKeywordTopic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Keywords</source>
+        <target>Palavras-chave</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of keywords or topics as a guide for authors</source>
+        <target>Forneça exemplos de palavras-chave ou tópicos para auxiliar o autor</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission guidelines</source>
+        <target>Instruções para Submissão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Preparation Checklist</source>
+        <target>Normas de Submissão</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</source>
+        <target>Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada Item de Verificação nas Normas de Submissão, antes de proceder. A lista de Itens de Verificação também é apresentada em Instruções para Autores, na secção Sobre a Revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Submissões</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author guidelines, copyright, and indexing (including registration).</source>
+        <target>Instruções para o Autor, direitos de autor e indexação (incluindo registo).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable OAI</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</source>
+        <target>(Ex.: Pesquisa Histórica; Revisão de Literatura; Pesquisa Empírica de Campo; Entrevista Controlada; Prototipagem)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeMethodApproach">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Type (Method/Approach)</source>
+        <target>Tipo (Método/Processo/Enfoque)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant research types, methods, and approaches for this field</source>
+        <target>Forneça exemplos de tipos relevantes de pesquisa, métodos e abordagens</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unique Identifier</source>
+        <target>Identificador Único</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifierDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</source>
+        <target>Artigos e edições podem receber um número ou texto identificador, empregando um sistema de registo como o Identificador de Objecto Digital (DOI).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useEditorialReviewBoard">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An editorial/review board will be used by the journal.</source>
+        <target>Um Equipa editorial/revisão será utilizado pela revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userAccess-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The user access details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Thumbnail</source>
+        <target>Thumbnail</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useImageTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title image</source>
+        <target>Imagem Título</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User Registration</source>
+        <target>Registo de Utilizadores</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useTextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title text</source>
+        <target>Texto Título</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>A sua revista foi configurada para guardar mais do um tipo de métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
+		Existem situações em que um único tipo de estatística será usado, e.g. para mostrar uma lista ordenada dos artigos mais lidos ou para ordenar o resultado de pesquisas. Por favor, seleccione uma das métricas configuradas como padrão.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Statistics</source>
+        <target>Estatísticas da Revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-articleViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article View Counts (for Authors only)</source>
+        <target>Registo de visualização de artigo (Apenas para autores)</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Aceite</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-decline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decline</source>
+        <target>Recusado</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-revise">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Resubmit</source>
+        <target>Submeter novamente</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to review</source>
+        <target>Tempo de revisão</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysToPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to publication</source>
+        <target>Tempo até à Publicação</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</source>
+        <target>O sistema calcula as seguintes estatísticas para cada revista hospedada. A média "tempo de decisão" é calculada do dia da submissão (ou designação de Versão para Revisão) até o dia da Decisão Editorial inicial, enquanto que a média "tempo para publicação" é calculada para submissões aceitas desde a data de envio para o sistema até à sua publicação.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-itemsPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items published</source>
+        <target>Artigos Publicados:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-makePublic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Check items to be made available to readers in About the Journal.</source>
+        <target>Verificar itens a serem disponibilizados aos leitores em Sobre a Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</source>
+        <target>Aviso: Percentuais para submissões revistas por pares podem não somar 100%, já que artigos submetidos novamente podem ser aceites, rejeitados ou ainda estarem em processo de revisão ou edição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues published</source>
+        <target>Edições Publicadas</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total submissions</source>
+        <target>Total de submissões:</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-peerReviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer reviewed</source>
+        <target>Revisão por Pares</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers</source>
+        <target>Leitores registados</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered users</source>
+        <target>Utilizadores registados</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. assigned</source>
+        <target>Total Designados</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Revisores</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerScore">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor score</source>
+        <target>Pontuação</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewsPerReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. of reviews</source>
+        <target>Revisões</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-selectSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select the sections for calculating this journal's peer-reviewed statistics.</source>
+        <target>Escolha as secções para calcular as estatísticas de revisão por pares.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article file downloads</source>
+        <target>Downloads do ficheiro do artigo</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstract">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views</source>
+        <target>Visualizações da página do resumo do artigo</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstractAndDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views and downloads</source>
+        <target>Resumo do artigo e downloads</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-journalIndexPageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal main page views</source>
+        <target>Visualizações da página principal da revista</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-issuePageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue table of contents page views</source>
+        <target>Visualizações do sumário do número</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byContext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by context (issues and/or article).</source>
+        <target>Restringir resultados por contexto (número e/ou artigo)</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byObject-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</source>
+        <target>Restringir resultados por tipo de objecto (revista, número, artigo, tipos de ficheiros) e/ou por um mais IDs de objectos.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Policies</source>
+        <target>Políticas de Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-delayedOpenAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delayed Open Access</source>
+        <target>Acesso Livre Adiado</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionExpiryReminderBeforeMonthsValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Use a caixa de selecção fornecida.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry</source>
+        <target>Expiração de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Leitores podem perder acesso ao conteúdo exclusivo a subscritores no momento da expiração da subscrição, ou podem manter acesso a conteúdo publicado anteriormente à expiração.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFull">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Full expiry</source>
+        <target>Expiração total</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFullDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to all subscription content upon subscription expiry.</source>
+        <target>Leitores perdem acesso a todo o conteúdo exclusivo a subscritores na data de expiração.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartial">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Partial expiry</source>
+        <target>Expiração parcial</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartialDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Leitores mantêm acesso apenas a conteúdo publicado anteriormente à expiração. Novas publicações não permitirão acesso a conteúdo exclusivo a subscritores.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Months</source>
+        <target>{$x} Meses</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Weeks</source>
+        <target>{$x} Semanas</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry</source>
+        <target>Notificar os subscritores por email após expiração da subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry.</source>
+        <target>Notificar os subscritores por email após expiração da subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Notificar os subscritores por email antes da expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Notificar os subscritores por email antes da expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminders</source>
+        <target>Lembretes de Expiração de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired.</source>
+        <target>Lembretes automáticos via e-mail (editáveis nas configurações da revista por Editores-Gestores na área de E-mails Padrão) podem ser enviados aos subscritores tanto antes quanto após expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deverá activar a opção <tt>scheduled_tasks</tt> no ficheiro de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correcto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expirySelectOne">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select one of the following:</source>
+        <target>Escolha uma opção:</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-htmlInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></source>
+        <target><![CDATA[Em caso de utilização de código HTML nas caixas de texto nas Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratados como <tt>&lt;br&gt;</tt>. O Editor HTML funciona no Firefox.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months after subscription expiry.</source>
+        <target>Forneça um número válido para o período de meses depois da expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months before subscription expiry.</source>
+        <target>Forneça um número válido para o período de meses antes da expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks after subscription expiry.</source>
+        <target>Forneça um número válido para o período de semanas depois da expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks before subscription expiry.</source>
+        <target>Forneça um número válido para o período de semanas antes da expiração da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</source>
+        <target>Leitores registados terão a opção de receber o sumário via e-mail quando a edição se tornar de Acesso Livre.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deverá activar a opção <tt>scheduled_tasks</tt> no ficheiro de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotifications">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online Payment Notifications</source>
+        <target>Notificações de Pagamento Online</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotificationsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</source>
+        <target>Notificações automáticas via e-mail (disponíveis para personalização pelo Director na secção E-mails Padrão) podem ser enviados ao Gestor de Subscrições após a conclusão de pagamentos online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Individual subscription.</source>
+        <target>Notificar o Gestor de Subscrições via e-mail após a realização de um pagamento de Subscrição Individual online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</source>
+        <target>Notificar o Gestor de Subscrições via e-mail após a realização de um pagamento de Subscrição Institucional online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Individual subscription.</source>
+        <target>Notificar via e-mail o Gestor de Subscrições quando ocorrer renovação de Subscrição Individual.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Institutional subscription.</source>
+        <target>Notificar via e-mail o Gestor de Subscrições quando ocorrer renovação de Subscrição Institucional.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentPurchaseInstitutionalDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> Subscrições Institucionais adquiridas on-line exigem aprovação do domínio fornecido e das faixas de IP, além da activação da subscrição pelo Gestor de Subscrições.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></source>
+        <target><![CDATA[<strong>Aviso:</strong> Para activar estas opções, o Editor Gestor deve activar o módulo de pagamentos on-line, incluindo os pagamentos online para subscrições, em Taxas para Leitores.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Options For Subscription Journals</source>
+        <target>Opções de Acesso Livre para Revistas com Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</source>
+        <target>Revistas com Subscrições podem oferecer "Acesso Livre adiado" e/ou "auto-arquivamento pelo autor" (o que aumenta a leitura e citação do conteúdo!). As políticas escolhidas serão exibidas em Sobre a Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Information</source>
+        <target>Informação sobre Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</source>
+        <target>Os Tipos de Subscrições e a estrutura de valores é exibida automaticamente na página Subscrições, em Sobre a Revista, junto com o nome do Gestor de Subscrições e as formas de contacto. Outras informações para subscritores, como as formas de pagamento ou auxílio a subscritores de países em desenvolvimento, por exemplo, podem ser adicionadas aqui.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Gestor de Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</source>
+        <target>O contacto a seguir será exibido em Subscrições, em Sobre a Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid email.</source>
+        <target>Forneça um e-mail válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-individualSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual Subscriptions</source>
+        <target>Subscrições Individuais</target>
+      </segment>
+    </unit>
+    <unit id="manager-institutionalSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Subscrições Institucionais</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmRenew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to renew this subscription?</source>
+        <target>Confirma a renovação desta subscrição?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this subscription?</source>
+        <target>Deseja realmente eliminar esta subscrição?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-summary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions Summary</source>
+        <target>Detalhes das Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription</source>
+        <target>Criar Novo Subscritor</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Criar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-renew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Renew</source>
+        <target>Renovar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End</source>
+        <target>Data Final</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEndSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End Date</source>
+        <target>Expiração</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Data Inicial</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStartSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start Date</source>
+        <target>Início</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Dominio</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Editar Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Editar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-withStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With Status</source>
+        <target>Com Situação</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-allStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All</source>
+        <target>Todas</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-status">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Status</source>
+        <target>Estado</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription status is required.</source>
+        <target>A situação da subscrição é obrigatória.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription status.</source>
+        <target>Escolha uma situação de subscrição válida.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Tipo de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type is required.</source>
+        <target>Tipo de Subscrição obrigatório.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type.</source>
+        <target>Escolha um tipo de subscrição válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start date</source>
+        <target>Data Inicial</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription start date is required.</source>
+        <target>Data inicial obrigatória.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription start date.</source>
+        <target>Escolha uma data inicial válida.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End date</source>
+        <target>Data Final</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription end date is required.</source>
+        <target>Data final obrigatória.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify a start date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify an end date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription end date.</source>
+        <target>Escolha uma data final válida.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userProfileInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: All changes below are to user's system-wide profile.</source>
+        <target>Nota: Todas as alterações abaixo serão aplicadas ao perfil de forma geral no sistema.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Utilizador</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact</source>
+        <target>Contacto</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user is required.</source>
+        <target>Utilizador obrigatório.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid user.</source>
+        <target>Escolha um utilizador válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userCountryValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid country.</source>
+        <target>Indique um país válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send the user an email with their username and subscription details.</source>
+        <target>Enviar e-mail com nome de utilizador e detalhes da subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Utilize a caixa de opção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Associado</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Código de Referência</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter membership information if the subscription type requires that subscribers belong to an association or organization.</source>
+        <target>Insira as informações de associado caso seja exigido pelo tipo de subscrição.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires membership information.</source>
+        <target>O tipo de subscrição escolhido exige dados do associado.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notas</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domínio</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution name</source>
+        <target>Instituição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An institution name is required.</source>
+        <target>O nome da instituição é obrigatório.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionMailingAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mailing address</source>
+        <target>Endereço postal</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></source>
+        <target>Insira o domínio caso seja uma subscrição institucional. Caso o domínio seja fornecido, a faixa de IP é opcional. Somente nomes de domínio são válidos (ex.: lib.sfu.ca).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainIPRangeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires a domain and/or an IP range for subscription authentication.</source>
+        <target>O tipo de subscrição escolhido exige autenticação via domínio e/ou faixa de IP.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid domain.</source>
+        <target>Insira um domínio válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP ranges</source>
+        <target>Faixa de IP</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[&#8226;]]></source>
+        <target><![CDATA[&#8226;]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></source>
+        <target>Insira a faixa de IP caso seja uma subscrição institucional. Caso uma faixa de IP seja informada, o domínio é opcional. Valores validos incluem um IP (ex.: 142.58.103.1), uma faixa de IP CIDR (ex.: 142.58.100.0/24), uma faixa de IP (ex.: 142.58.103.1 - 142.58.103.4), uma faixa de IP com curinga '*' (ex.: 142.58.103.*), ou qualquer combinação dessas opções separadas por ponto-e-vírgula (;) (ex.: 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid IP range.</source>
+        <target>Insira uma faixa de IP válida.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-deleteIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Eliminar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-addIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add</source>
+        <target>Adicionar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-saveAndCreateAnother">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Guardar e Adicionar Outra</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionContactRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</source>
+        <target>Para enviar uma notificação via e-mail ao utilizador, é necessário especificar, na administração da revista, o nome e endereço de e-mail do contacto para subscrições.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This user already has a subscription for this journal.</source>
+        <target>O utilizador já possui uma subscrição da revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type must be created before new subscriptions can be made.</source>
+        <target>Um tipo de subscrição deve ser criado antes de criar novas subscrições.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP Range</source>
+        <target>Faixa de IP</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Código de Referência</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notas</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscriptions</source>
+        <target>Nenhuma subscrição criada.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Subscription Contact</source>
+        <target>Escolha o Contacto para a Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select User</source>
+        <target>Escolha o utilizador</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectSubscriber-desc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</source>
+        <target>Editores-Gestores, Editores, Editores de Secção, Editores de Layout, Editores de Texto e Leitores de Prova terão automaticamente acesso ao conteúdo para Assinantes.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-select">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select</source>
+        <target>Registar Subscritor</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription created successfully.</source>
+        <target>Subscrição criada com sucesso.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Type</source>
+        <target>Tipo de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Utilizador</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-contact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact Name</source>
+        <target>Nome do contacto</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution Name</source>
+        <target>Instituição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Types</source>
+        <target>Tipos de Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</source>
+        <target>AVISO! Todas as subscrições sob este tipo de subscrição serão eliminadas. Deseja realmente eliminar este tipo de subscrição?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Valor</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual</source>
+        <target>Individual</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional</source>
+        <target>Institucional</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription Type</source>
+        <target>Criar Novo Tipo de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Criar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Vigência</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription Type</source>
+        <target>Editar Tipo de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Editar</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Taxa</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $).</source>
+        <target>Insira um valor numérico(ex.: 40 ou 40.00). Não incluir textos ou símbolos como "$".</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cost must be a positive, numeric value.</source>
+        <target>O valor deve ser um número positivo.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A cost is required.</source>
+        <target>Taxa da subscrição obrigatória</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currency">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Currency</source>
+        <target>Moeda</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A currency is required.</source>
+        <target>Moeda obrigatória.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid currency.</source>
+        <target>Escolha uma moeda válida.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Descrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Expires after</source>
+        <target>Vencimento</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-months">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>months (e.g. 12)</source>
+        <target>meses (ex.: 12)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-neverExpires">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Never expires</source>
+        <target>Nunca expira</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiringValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Utilize as opções oferecidas.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Duração</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of months the subscription lasts (e.g. 12).</source>
+        <target>O tempo de subscrição, em número de meses (ex.: 12).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The duration must be a positive, numeric value.</source>
+        <target>A duração deve ser um número positivo.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A duration is required.</source>
+        <target>É obrigatório a duração.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-format">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format</source>
+        <target>Formato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type format is required.</source>
+        <target>Formato obrigatório.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type format.</source>
+        <target>Escolha um formato válido.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscrições</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual (users are validated via login)</source>
+        <target>Individual (utilizadores validados via autenticação)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional (users are validated via domain or IP address)</source>
+        <target>Assinantes serão validados através do domínio ou autenticação de IP.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Utilize a caixa de opção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</source>
+        <target>Assinantes deverão ser membros de uma associação, organização ou entidade de classe.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Utilize a caixa de opção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Opções</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-public">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not make this subscription type publicly available or visible on the website.</source>
+        <target>Tipo de subscrição NÃO será exibido em Subscrições, em Sobre a Revista.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Utilize a caixa de opção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Guardar e Criar Outra</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of Type</source>
+        <target>Nome</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type with this name already exists.</source>
+        <target>Nome do tipo de subscrição já existente.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type name is required.</source>
+        <target>Nome obrigatório.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Tipo de Subscrição</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscription types have been created.</source>
+        <target>Nenhum tipo de subscrição disponível.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptionTypeCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type created successfully.</source>
+        <target>Tipo de subscrição criada com sucesso.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-subscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the subscriptions you offer.</source>
+        <target>Ligação para uma página a descrever as subscrições disponíveis.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the visitor's current and past subscriptions.</source>
+        <target>Ligação para uma página a descrever as subscrições atuais e anteriores do visitante.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-conditionalWarning">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This link will only be displayed when a visitor is logged in.</source>
+        <target>Esta ligação só será apresentada quando um visitante estiver autenticado.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Categories</source>
+        <target>Categorias</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</source>
+        <target>Seleccionar as categorias mais adequadas da lista exibida em cima. Os leitores poderão procurar por categoria a partir da configuração concluída da revista.</target>
+      </segment>
+    </unit>
+    <unit id="grid-category-path">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Path</source>
+        <target>Caminho</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Section</source>
+        <target>Adicionar Secção</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-section-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc).</source>
+        <target>Os artigos que integram números publicados numa revista são organizados em Secções, tipicamente por tema ou tipo de conteúdo (por exemplo, artigos revistos, pesquisa, etc.).</target>
+      </segment>
+    </unit>
+    <unit id="settings-roles-gridDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production.</source>
+        <target>Os papéis são grupos de utilizadores na revista que têm acesso a diferentes níveis de permissão e fluxos de trabalho associados na revista. Existem cinco níveis de permissão diferentes: os Administradores da Revista têm acesso a tudo (todo o conteúdo e configurações); Os Editores de Secções têm acesso completo a todo o conteúdo atribuído; Os Assistentes Editotrais têm acesso limitado a todos os envios que foram explicitamente atribuídos a estes pelo um editor; Os revisores podem ver e executar os envios que foram designados para revisão; E os autores podem ver e interagir com uma quantidade limitada de informações nas suas próprias submissões. Além disso, existem cinco atribuições de estágios diferentes às quais os papéis podem ter acesso a: Submissão, Revisão Interna, Revisão, Editorial e Produção.</target>
+      </segment>
+    </unit>
+    <unit id="manager-publication-library">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher Library</source>
+        <target>Biblioteca de Editores</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Base new article's copyright year on</source>
+        <target>Definir ano de copyright do artigo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article: default year will be drawn from the article's publication date, as in "publish-as-you-go".</source>
+        <target>Artigo: ano padrão será extraído da data de publicação do artigo, como em "public-as-you-go".</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue: default year will be drawn from the issue's publication date.</source>
+        <target>Número: o ano padrão será extraído da data de publicação do número.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reset Article Permissions</source>
+        <target>Repor Permissões Artigo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to reset permissions data for all articles? This action can not be undone.</source>
+        <target>Tem certeza de que deseja restabelecer os dados de permissão já anexados aos artigos?</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article permissions were successfully reset.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title-short">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Components</source>
+        <target>Componentes</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Components</source>
+        <target>Componentes Artigo</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</source>
+        <target>Estes componentes são usados para fins de nomeação de ficheiros e são apresentados em um menu suspenso no upload de ficheiros. Os tipos designados ## permitem que o utilizador associe o ficheiro ao envio 99Z ou um componente específico por número (por exemplo, 02).</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Settings</source>
+        <target>Configurações</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-DOIPluginSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI Plugin Settings</source>
+        <target>Configurações Plugin DOI</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-articles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Artigos</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-issues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues</source>
+        <target>Números</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-representations">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galleys</source>
+        <target>Edições</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-missingRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Plugin requirements not met</source>
+        <target>Requisitos do plugin não foram preenchidos</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-DOIsNotAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plugin and specify a valid DOI prefix there.</source>
+        <target>Para utilizar este plugin, por favor, consultar a categoria de plugins "Identificador Público", activar e configurar o plug-in DOI e especificar um prefixo DOI válido.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-pluginNotConfigured">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The plugin is not fully set up.</source>
+        <target>O plugin não está totalmente configurado.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noDOIContentObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</source>
+        <target>Não foi seleccionada uma publicação oara a atribuição DOI através do plugin de identificador público DOI, portanto, não há nenhum depósito ou possibilidade de exportação neste plugin.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target>Senha</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please note that the password will be saved as plain text, i.e. not encrypted.</source>
+        <target>Tenha em atenção que a senha será guardada como texto, não encriptada.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-filter-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Issue</source>
+        <target>Qualquer Número</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Status</source>
+        <target>Qualquer Estado</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-notDeposited">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Deposited</source>
+        <target>Não Depositado</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-markedRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked registered</source>
+        <target>Marcado registado</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-registered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered</source>
+        <target>Registado</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Acção</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-export">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Export</source>
+        <target>Exportar</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-markRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mark registered</source>
+        <target>Marcar registado</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-register">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Register</source>
+        <target>Registar-se</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Validate XML before the export and registration.</source>
+        <target>Validar o XML antes de exportar e registar.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noObjectsSelected">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No objects selected.</source>
+        <target>Nenhum objecto seleccionado.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Could not convert selected objects.</source>
+        <target>Não foi possível converter objectos seleccionados.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-invalidXML">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid XML:</source>
+        <target>XML inválido:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-outputFileNotWritable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The output file {$param} is not writable.</source>
+        <target>O ficheiro de saída {$param} não é gravável.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-inputFileNotReadable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The input file {$param} is not readable.</source>
+        <target>Ficheiro de entrada {$param} não é legível.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-error-mdsError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration was not successful! The DOI registration server returned an error: '{$param}'.</source>
+        <target>O registo não foi bem-sucedido! O servidor de registo DOI retornou um erro: '{$param}'.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration successful!</source>
+        <target>Registo com sucesso!</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-senderTask-warning-noDOIprefix">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI prefix is missing for the journal with the path {$path}.</source>
+        <target>O prefixo DOI está em falta para a revista com o caminho {$path}.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-cliError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ERROR:</source>
+        <target>ERRO:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified journal path, "{$journalPath}", does not exist.</source>
+        <target>O caminho "{$journalPath}" da revista indicado não existe.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified objects could not be found.</source>
+        <target>Os objectos especificados não foram encontrados.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-copyPrimaryContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send a copy to the primary contact, identified in the Journal Settings.</source>
+        <target>Enviar uma cópia para o contacto principal, identificado nas Configurações da Revista.</target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No articles were found with usage statistics matching these parameters.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalAbstractViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total abstract views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalGalleyViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total file views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-countOfTotal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$count} of {$total} articles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-abstracts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Abstracts</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Files</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

@@ -9,8 +9,8 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:28-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:11-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:11-07:00</note>
       <note id="Language"></note>
     </notes>
     <unit id="context-current">
@@ -238,6 +238,15 @@
         <target>Non assignées</target>
       </segment>
     </unit>
+    <unit id="common-queue-short-submissionsUnassigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unassigned</source>
+        <target>Non assignées</target>
+      </segment>
+    </unit>
     <unit id="common-queue-long-submissionsInEditing">
       <notes>
         <note category="context"></note>
@@ -283,6 +292,15 @@
         <target>Archives</target>
       </segment>
     </unit>
+    <unit id="common-queue-short-submissionsArchives">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archives</source>
+        <target>Archives</target>
+      </segment>
+    </unit>
     <unit id="common-queue-long-active">
       <notes>
         <note category="context"></note>
@@ -292,7 +310,25 @@
         <target>Soumissions actives</target>
       </segment>
     </unit>
+    <unit id="common-queue-short-active">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active</source>
+        <target>Actives</target>
+      </segment>
+    </unit>
     <unit id="common-queue-long-completed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archive</source>
+        <target>Archivée(s)</target>
+      </segment>
+    </unit>
+    <unit id="common-queue-short-completed">
       <notes>
         <note category="context"></note>
       </notes>
@@ -365,6 +401,24 @@
       </segment>
     </unit>
     <unit id="article-articles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Articles</target>
+      </segment>
+    </unit>
+    <unit id="common-publication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article</source>
+        <target>Article</target>
+      </segment>
+    </unit>
+    <unit id="common-publications">
       <notes>
         <note category="context"></note>
       </notes>
@@ -868,6 +922,15 @@
         <target>Étape 3</target>
       </segment>
     </unit>
+    <unit id="submissions-queuedReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Review</source>
+        <target>En évaluation</target>
+      </segment>
+    </unit>
     <unit id="submissions-scheduled">
       <notes>
         <note category="context"></note>
@@ -940,6 +1003,15 @@
         <target>Épreuve</target>
       </segment>
     </unit>
+    <unit id="submissions-editorDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Decision</source>
+        <target>Décision du rédacteur</target>
+      </segment>
+    </unit>
     <unit id="submissions-editorRuling">
       <notes>
         <note category="context"></note>
@@ -974,6 +1046,24 @@
       <segment>
         <source>Layout edited</source>
         <target>Mise en page terminée</target>
+      </segment>
+    </unit>
+    <unit id="submissions-proofreadingComplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofread</source>
+        <target>Correction d'épreuves terminée</target>
+      </segment>
+    </unit>
+    <unit id="submission-search">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Search</source>
+        <target></target>
       </segment>
     </unit>
     <unit id="journal-currentIssue">
@@ -1282,6 +1372,15 @@
         <target>Numéros</target>
       </segment>
     </unit>
+    <unit id="issue-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title</source>
+        <target>Titre</target>
+      </segment>
+    </unit>
     <unit id="issue-volume">
       <notes>
         <note category="context"></note>
@@ -1343,6 +1442,15 @@
       <segment>
         <source>Table of Contents</source>
         <target>Sommaire</target>
+      </segment>
+    </unit>
+    <unit id="issue-abstract">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Abstract</source>
+        <target>Résumé</target>
       </segment>
     </unit>
     <unit id="issue-coverPage-altText">
@@ -1496,6 +1604,15 @@
       <segment>
         <source>Status</source>
         <target>Statut</target>
+      </segment>
+    </unit>
+    <unit id="subscriptions-status-active">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active</source>
+        <target>Actif</target>
       </segment>
     </unit>
     <unit id="subscriptions-status-needsInformation">
@@ -1867,6 +1984,15 @@
         <target>L'accès à cet article est réservé aux abonnés. Pour vérifier votre abonnement, vous connecter à la revue.</target>
       </segment>
     </unit>
+    <unit id="reader-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access</source>
+        <target>Accès libre</target>
+      </segment>
+    </unit>
     <unit id="reader-subscriptionAccess">
       <notes>
         <note category="context"></note>
@@ -1946,6 +2072,15 @@
       <segment>
         <source>Publication Date</source>
         <target>Date de publication</target>
+      </segment>
+    </unit>
+    <unit id="search-results-orderBy-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue</source>
+        <target>Numéro</target>
       </segment>
     </unit>
     <unit id="search-results-orderBy-journal">
@@ -2332,6 +2467,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target><![CDATA[#{$submissionId} Message de refus de l'évaluateur, annulations & cycles précédents]]></target>
       </segment>
     </unit>
+    <unit id="sectionEditor-regrets">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Regrets</source>
+        <target>Message de refus</target>
+      </segment>
+    </unit>
     <unit id="sectionEditor-regrets-link">
       <notes>
         <note category="context"></note>
@@ -2402,6 +2546,24 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Create New Reviewer</source>
         <target>Créer un nouvel évaluateur</target>
+      </segment>
+    </unit>
+    <unit id="layoutEditor-activeEditorialAssignments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Editorial Assignments</source>
+        <target>Travail éditorial en cours</target>
+      </segment>
+    </unit>
+    <unit id="layoutEditor-completedEditorialAssignments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Completed Editorial Assignments</source>
+        <target>Travail éditorial terminé</target>
       </segment>
     </unit>
     <unit id="layoutEditor-noActiveAssignments">
@@ -2917,6 +3079,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Fichier du réviseur</target>
       </segment>
     </unit>
+    <unit id="copyeditor-article-copyeditorFinalFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Copyeditor File</source>
+        <target>Fichier du réviseur</target>
+      </segment>
+    </unit>
     <unit id="proofreader-noProofreadingAssignments">
       <notes>
         <note category="context"></note>
@@ -3157,6 +3328,24 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Instructions de correction d'épreuves</target>
       </segment>
     </unit>
+    <unit id="submission-logType-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article</source>
+        <target>Article</target>
+      </segment>
+    </unit>
+    <unit id="submission-logType-author">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author</source>
+        <target>Auteur</target>
+      </segment>
+    </unit>
     <unit id="submission-logType-editor">
       <notes>
         <note category="context"></note>
@@ -3175,6 +3364,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Évaluation</target>
       </segment>
     </unit>
+    <unit id="submission-logType-copyedit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Copyedit</source>
+        <target>Révision</target>
+      </segment>
+    </unit>
     <unit id="submission-logType-layout">
       <notes>
         <note category="context"></note>
@@ -3184,6 +3382,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Mise en page</target>
       </segment>
     </unit>
+    <unit id="submission-logType-proofread">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofread</source>
+        <target>Correction d'épreuves</target>
+      </segment>
+    </unit>
     <unit id="submission-comments-editorAuthorCorrespondence">
       <notes>
         <note category="context"></note>
@@ -3191,6 +3398,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Editor/Author Correspondence</source>
         <target>Correspondance rédacteur/auteur</target>
+      </segment>
+    </unit>
+    <unit id="submission-comments-copyeditComments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Copyedit Comments</source>
+        <target>Commentaires de révision</target>
       </segment>
     </unit>
     <unit id="submission-comments-viewableDescription">
@@ -3229,6 +3445,24 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>After sending, present an editable BCC copy to send to reviewers.</source>
         <target>Suivant l'envoi, présenter une copie révisable en CCI pour l'envoyer aux évaluateurs.</target>
+      </segment>
+    </unit>
+    <unit id="submission-comments-forAuthorEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For author and editor</source>
+        <target>Pour l'auteur et le rédacteur</target>
+      </segment>
+    </unit>
+    <unit id="submission-comments-forEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For editor</source>
+        <target>Pour le rédacteur</target>
       </segment>
     </unit>
     <unit id="submission-comments-saveAndEmailAuthor">
@@ -3411,6 +3645,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Les abonnements actifs et échus sont affichés ci-dessous avec leur date d'expiration. De plus, les informations suivantes sur le statut peuvent être incluses avec chaque abonnement.</target>
       </segment>
     </unit>
+    <unit id="user-subscriptions-status">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Status</source>
+        <target>Statut</target>
+      </segment>
+    </unit>
     <unit id="user-subscriptions-statusDescription">
       <notes>
         <note category="context"></note>
@@ -3463,6 +3706,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Individual Subscription</source>
         <target>Abonnement individuel</target>
+      </segment>
+    </unit>
+    <unit id="user-subscriptions-institutionalSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Abonnements institutionnels</target>
       </segment>
     </unit>
     <unit id="user-subscriptions-renew">
@@ -3744,6 +3996,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Toutes les revues</target>
       </segment>
     </unit>
+    <unit id="search-authorIndex">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Browse Author Index</source>
+        <target>Explorer l'Index des auteurs</target>
+      </segment>
+    </unit>
     <unit id="search-authorDetails">
       <notes>
         <note category="context"></note>
@@ -3861,6 +4122,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>S'inscrire</target>
       </segment>
     </unit>
+    <unit id="site-journalCurrent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current Issue</source>
+        <target>Numéro courant</target>
+      </segment>
+    </unit>
     <unit id="site-noJournals">
       <notes>
         <note category="context"></note>
@@ -3868,6 +4138,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>There are no journals available.</source>
         <target>Il n'y a pas de revue disponible.</target>
+      </segment>
+    </unit>
+    <unit id="current-current">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current</source>
+        <target>Courant</target>
       </segment>
     </unit>
     <unit id="current-noCurrentIssue">
@@ -3886,6 +4165,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>This journal has not published any issues.</source>
         <target>Cette revue n'a publié aucun numéro.</target>
+      </segment>
+    </unit>
+    <unit id="archive-archives">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archives</source>
+        <target>Archives</target>
       </segment>
     </unit>
     <unit id="archive-archivesPageNumber">
@@ -3996,6 +4284,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Politiques de rubriques</target>
       </segment>
     </unit>
+    <unit id="about-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Soumissions</target>
+      </segment>
+    </unit>
     <unit id="about-onlineSubmissions-login">
       <notes>
         <note category="context"></note>
@@ -4003,6 +4300,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Login</source>
         <target>Ouvrir une session</target>
+      </segment>
+    </unit>
+    <unit id="about-onlineSubmissions-register">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Register</source>
+        <target>S'inscrire</target>
       </segment>
     </unit>
     <unit id="about-onlineSubmissions-registrationRequired">
@@ -4084,6 +4390,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Copyright Notice</source>
         <target>Mention de droit d'auteur</target>
+      </segment>
+    </unit>
+    <unit id="about-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Privacy Statement</source>
+        <target>Déclaration de confidentialité</target>
       </segment>
     </unit>
     <unit id="about-authorFees">
@@ -4176,6 +4491,24 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Abonnements</target>
       </segment>
     </unit>
+    <unit id="about-subscriptions-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual Subscriptions</source>
+        <target>Abonnements individuels</target>
+      </segment>
+    </unit>
+    <unit id="about-subscriptions-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Abonnements institutionnels</target>
+      </segment>
+    </unit>
     <unit id="about-subscriptionsContact">
       <notes>
         <note category="context"></note>
@@ -4194,6 +4527,15 @@ You may optionally provide the user with a reason for disabling their account.</
         <target>Nom</target>
       </segment>
     </unit>
+    <unit id="about-subscriptionTypes-format">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format</source>
+        <target>Format</target>
+      </segment>
+    </unit>
     <unit id="about-subscriptionTypes-duration">
       <notes>
         <note category="context"></note>
@@ -4210,6 +4552,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Cost</source>
         <target>Coût</target>
+      </segment>
+    </unit>
+    <unit id="about-availableSubscriptionTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Types</source>
+        <target>Types d'abonnement</target>
       </segment>
     </unit>
     <unit id="about-memberships">
@@ -4408,6 +4759,15 @@ You may optionally provide the user with a reason for disabling their account.</
       <segment>
         <source>Payment has already been sent</source>
         <target>Le paiement a déjà été envoyé</target>
+      </segment>
+    </unit>
+    <unit id="payment-authorFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author Fees</source>
+        <target>Frais pour les auteurs</target>
       </segment>
     </unit>
     <unit id="payment-type-submission">
@@ -5352,15 +5712,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
         <target>Épreuves en attente.</target>
       </segment>
     </unit>
-    <unit id="notification-type-publicationScheduled">
-      <notes>
-        <note category="context"></note>
-      </notes>
-      <segment>
-        <source>This submission has been scheduled for publication.</source>
-        <target>La publication de cet article a été planifiée.</target>
-      </segment>
-    </unit>
     <unit id="user-authorization-copyeditorAssignmentMissing">
       <notes>
         <note category="context"></note>
@@ -5422,6 +5773,15 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
       <segment>
         <source>Create a New Journal</source>
         <target>Créer une nouvelle revue</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-issues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues</source>
+        <target>Numéros</target>
       </segment>
     </unit>
     <unit id="notification-type-approveSubmission">
@@ -5557,6 +5917,15 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
       <segment>
         <source>Future Issues</source>
         <target>Numéros à venir</target>
+      </segment>
+    </unit>
+    <unit id="navigation-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnements</target>
       </segment>
     </unit>
     <unit id="log-editor-submissionExpedited">

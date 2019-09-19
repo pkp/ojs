@@ -9,8 +9,8 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:28-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:11-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:11-07:00</note>
       <note id="Language"></note>
     </notes>
     <unit id="editor-home">
@@ -913,6 +913,24 @@
         <target>Ajouter une épreuve</target>
       </segment>
     </unit>
+    <unit id="grid-action-publish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Publier le numéro</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Créer un numéro</target>
+      </segment>
+    </unit>
     <unit id="grid-action-viewIssue">
       <notes>
         <note category="context"></note>
@@ -920,6 +938,15 @@
       <segment>
         <source>View</source>
         <target>Voir</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>Aperçu</target>
       </segment>
     </unit>
     <unit id="grid-action-addIssueGalley">
@@ -1138,6 +1165,15 @@
         <target>Frais de publication non payés. Pour planifier la publication d'un article, aviser l'auteur qu'il doit payer les frais ou demander une dérogation.</target>
       </segment>
     </unit>
+    <unit id="editor-article-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà supprimée. Essayer de recharger la page.</target>
+      </segment>
+    </unit>
     <unit id="grid-action-removeArticle">
       <notes>
         <note category="context"></note>
@@ -1145,6 +1181,15 @@
       <segment>
         <source>Remove Article From Issue</source>
         <target>Retirer l'article du numéro</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Supprimer</target>
       </segment>
     </unit>
     <unit id="editor-article-remove-confirm">

@@ -1,0 +1,5160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:15-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:15-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="manager-distribution-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Tilgang</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose how a default copyright date is selected for an article. This default can be overridden on a case-by-case basis. If you "publish as you go", don't use the issue's publication date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the issue's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-copyrightYearBasis-submission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Use the article's publication date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Mode</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS will not be used to publish the journal's contents online.</source>
+        <target>OJS vil ikke bli brukt til å publisere tidsskriftets innhold på nett.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will provide open access to its contents.</source>
+        <target>Tidsskriftet kommer til å gi åpen tilgang (Open Access) til alt publisert innhold.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal will require subscriptions to access some or all of its contents.</source>
+        <target>Tidsskriftet kommer til å kreve abonnement for tilgang til alt eller deler av innholdet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-distribution-publishingMode-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publishing details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-website-archiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Archiving</source>
+        <target>Arkivering</target>
+      </segment>
+    </unit>
+    <unit id="manager-emails-confirmResetAll">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made.</source>
+        <target>Er du sikker på at du vil tilbakestille alle e-postmaler i dette tidsskriftet? Du vil miste alle tilpasninger du har gjort.</target>
+      </segment>
+    </unit>
+    <unit id="manager-files-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly.</source>
+        <target>NB: Filutforskeren er en avansert funksjon som gir mulighet til å manipulere filene og mappene til tidsskriftet direkte.</target>
+      </segment>
+    </unit>
+    <unit id="manager-journalManagement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Management</source>
+        <target>Tidsskriftadministrasjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-ui">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>UI</source>
+        <target>Brukergrensesnitt</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Manuskript</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-forms">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Forms</source>
+        <target>Skjema</target>
+      </segment>
+    </unit>
+    <unit id="manager-language-confirmDefaultSettingsOverwrite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will replace any locale-specific journal settings you had for this locale</source>
+        <target>Dette vil erstatte alle standard tidsskriftinnstillingene du hadde for dette lokalfilsettet</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-languageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></source>
+        <target><![CDATA[OJS kan vises for brukere på alle språk OJS til enhver tid støtter. Dessuten kan OJS brukes som et delvis flerspråklig system, som gir brukere mulighet til å veksle mellom språk på hver side, og som tillater at visse data skrives inn på flere tilleggssspråk.<br /><br/>Hvis et språk som er støttet av OJS ikke er oppført på listen nedenfor, må du be nettstedsadministratoren din om å installere språket, gjennom grensesnittet for nettstedsadministrasjon. Hvordan støtte for nye språk skal legges til, er beskrevet i OJS-dokumentasjonen.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-noneAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</source>
+        <target>Beklager, ingen flere språk er tilgjengelig. Kontakt nettstedsadministratoren din hvis du ønsker å bruke flere språk i dette tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the journal site.</source>
+        <target>Dette vil bli standard språk for tidsskriftets nettsted.</target>
+      </segment>
+    </unit>
+    <unit id="manager-managementPages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management Pages</source>
+        <target>Administrasjonssider</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Handling</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-addPayment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Payment</source>
+        <target>Legg til betaling</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-amount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Amount</source>
+        <target>Beløp</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author Fees</source>
+        <target>Forfatterbetaling</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-authorFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter fee amounts below in order to enable author processing charges.</source>
+        <target>De valgte alternativene med beskrivelse og priser vil vises både i trinn 1 av innsendingsprosessen, i 'Om' tidsskriftet, og når det kreves betaling.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-currencymessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</source>
+        <target>OJS utfører ingen valutakonversjoner. Hvis tidsskriftet skal ta betalt for abonnement, må du sørge for at den valutaen som er spesifisert her, er den riktige.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Beskrivelse</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Detaljer</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-editSubscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Rediger abonnement</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable</source>
+        <target>Slå på</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-feePaymentOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Options</source>
+        <target>Betalingsalternativer</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-form-numeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All costs must be positive numeric values (decimal points are allowed)</source>
+        <target>Alle beløp må oppgis med positive tall (desimaler er tillatt)</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Fees</source>
+        <target>Standardbetaling</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</source>
+        <target>Organisasjonsmedlemskap vil vises i 'OM' tidsskriftet under 'Retningslinjer', og donasjonslenken vil vises i sidespalten.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-generalOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Options</source>
+        <target>Generelle alternativer</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-noPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Payments</source>
+        <target>Ingen betalinger</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Found</source>
+        <target>Ikke funnet</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Alternativer</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-acceptSubscriptionPayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</source>
+        <target>Dette vil slå på betalingsverktøy for abonnement. Der kan abonnementstyper, priser, varighet og abonnenter redigeres av abonnementskontakten.</target>
+      </segment>
+    </unit>
+    <unit id="subscriptionManager-subscription-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to delete this subscription?</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-enablePayments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payments will be enabled for this journal. Note that users will be required to log in to make payments.</source>
+        <target>Klikk her for å slå på betalingsmodulen. Du må konfigurere betalingsinnstillingene ved å fylle ut skjemaet nedenfor. Vær oppmerksom på at brukerne må logge inn for å foreta betaling.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-fee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee</source>
+        <target>Priskategori</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Description</source>
+        <target>Priskategori: beskrivelse</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-feeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Name</source>
+        <target>Priskategori: navn</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-membershipFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Association Membership</source>
+        <target>Medlemskap i forening/selskap</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-onlypdf">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Only Restrict Access to PDF version of issues and articles</source>
+        <target>Bare begrens tilgangen til PDF-versjonen av artiklene</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-publicationFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Processing Charge</source>
+        <target>Publisering av artikkel</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseArticleFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Article</source>
+        <target>Kjøp artikkel</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-purchaseIssueFee">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Purchase Issue</source>
+        <target>Kjøp nummer</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-options-text">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description of Payment Method</source>
+        <target>Beskrivelse av betalingsmåte</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Betalings-ID</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Method</source>
+        <target>Betalingsmåte</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethod-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You may configure any of the following Payment Method Plugins from this screen.</source>
+        <target>Du kan konfigurere de programutvidelsene du trenger for ulike betalingsmåter fra dette skjermbildet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentMethods">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Fee Payment Methods</source>
+        <target>Betalingsmåter</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-paymentType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Type</source>
+        <target>Betalingsmåte</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFees">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reader Fees</source>
+        <target>Leserbetaling</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-readerFeesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</source>
+        <target>De valgte alternativene med beskrivelse og priser vil vises både i 'Om' tidsskriftet, og når det kreves betaling. (Prisene og beskrivelsene kan redigeres nedenfor.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-records">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Records</source>
+        <target>Betalingsoversikt</target>
+      </segment>
+    </unit>
+    <unit id="manager-paymentTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment Types</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Betalings-ID</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allEnrolledUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Enrolled in this Journal</source>
+        <target>Registrerte brukere med roller i dette tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Journals</source>
+        <target>Alle tidsskrift</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allSiteUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll a User from this Site in this Journal</source>
+        <target>Verve en bruker fra tidsskriftnettstedet til dette tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-showNoRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show users with no role</source>
+        <target>Vis brukere som ikke har rolle</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Alle brukere</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-confirmRemove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove this user from this journal? This action will unenroll the user from all roles within this journal.</source>
+        <target>Fjern denne brukeren fra dette tidsskriftet? Denne handlingen kommer til å avløse brukeren fra alle roller innenfor dette tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-emailUsers-selectTemplate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a template</source>
+        <target>Velg en mal</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollExistingUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enroll an Existing User</source>
+        <target>Verve eksisterende bruker</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-enrollSyncJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With journal</source>
+        <target>Med tidsskrift</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Velg en bruker du vil slå sammen med en annen brukerkonto (for eks. når noen har to brukerkontoer). Den først valgte kontoen vil bli slettet og tilhørende manuskript, oppdrag etc. vil bli overført til den andre kontoen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</source>
+        <target>Velg en bruker du vil overføre den foregående brukerens forfatterskap, redigeringsoppdrag etc.</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-roleEnrollment">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$role} Enrollment</source>
+        <target>{$role}-verving</target>
+      </segment>
+    </unit>
+    <unit id="manager-people-syncUserDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</source>
+        <target>Vervingssynkronisering verver alle brukere som allerede er vervet i angitt rolle i det angitte tidsskriftet til samme rolle i dette tidsskriftet. Denne funksjonen tillater at et felles sett brukere (for eks. fagkonsulenter) synkroniseres mellom tidsskrift.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-abstractsNotRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not require abstracts</source>
+        <target>Ikke krev sammendrag</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-noSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></source>
+        <target><![CDATA[Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-assigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This Section's Editors</source>
+        <target>Denne seksjonens redaktører</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this section?</source>
+        <target>Er du sikker på at du ønsker å slette denne seksjonen for godt?</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-alertDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before this section can be deleted, you must move articles published within it into other sections.</source>
+        <target>Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Section</source>
+        <target>Opprett seksjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-sectionEditorInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add a Section Editor to this section to have submissions automatically assigned to the Section Editor. (Otherwise, Section Editors can be assigned manually, after a submission comes in.) If added, a Section Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking Section Editors under Roles in Journal Management.</source>
+        <target>Velg blant de tilgjengelige seksjonsredaktørene og 'Oppnevn Redaktør' for denne seksjonen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editorRestriction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items can only be submitted by Editors and Section Editors.</source>
+        <target>Element kan bare sendes inn av redaktører og seksjonsredaktører.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-editors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Seksjonsredaktører</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-abbrevRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An abbreviated title is required for the section</source>
+        <target>En forkortet tittel er påkrevet for seksjonen</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-mustAllowPermission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that at least one checkbox is checked for each Section Editor assignment.</source>
+        <target>Vennligst kontrollér at minst én avkrysningsboks er krysset av for hvert oppdrag en seksjonsredaktør er oppnevnt til.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-reviewFormId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please ensure that you have chosen a valid review form.</source>
+        <target>Vennligst kontrollér at du har valgt et gyldig vurderingsskjema.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required for the section.</source>
+        <target>En tittel er påkrevet for seksjonen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocAuthor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit author names for section items from issues' table of contents.</source>
+        <target>Utelat forfatternavn for seksjonselementer fra utgavens innholdsoversikt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-hideTocTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Omit the title of this section from issues' table of contents.</source>
+        <target>Utelat tittelen til denne seksjonen fra utgavens innholdsoversikt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identify items published in this section as a(n)</source>
+        <target>Som metadata skal hvert element i denne seksjonen identifiseres som en</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-identifyTypeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(For example, "Peer-reviewed Article", "Non-refereed Book Review", "Invited Commentary", etc.)</source>
+        <target>(For eksempel, "fagfellevurdert artikkel", "redaksjonelt vurdert artikkel", "invitert artikkel" etc.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-indexed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Indexed</source>
+        <target>Indeksert</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No sections have been created.</source>
+        <target>Ingen seksjoner er opprettet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Submissions</source>
+        <target>Bidrag mottas</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Policy</source>
+        <target>Seksjonsretningslinjer</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-readingTools">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reading Tools</source>
+        <target>Leseverktøy</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-reviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer Reviewed</source>
+        <target>Fagfellevurdert</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be included in the indexing of the journal</source>
+        <target>Vil ikke omfattes av indekseringen av tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-submissionReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Will not be peer-reviewed</source>
+        <target>Vil ikke bli fagfellevurdert</target>
+      </segment>
+    </unit>
+    <unit id="manager-section-submissionsToThisSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions made to this section of the journal</source>
+        <target>Bidrag til denne seksjonen</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-unassigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Available Section Editors</source>
+        <target>Tilgjengelige seksjonsredaktører</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Word Count</source>
+        <target>Ordtelling</target>
+      </segment>
+    </unit>
+    <unit id="manager-sections-wordCountInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit abstract word counts for this section (0 for no limit)</source>
+        <target>Begrens antall ord i abstrakt i denne delen av tidsskriftet til (0 betyr ingen begrensning):</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Oppsett</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Masthead</source>
+        <target>Kolofon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorialTeam">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editorial Team</source>
+        <target>Redaksjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Innhold på hjemmesiden</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-homepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal homepage consists of navigation links by default. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown.</source>
+        <target>Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useStyleSheet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal style sheet</source>
+        <target>Tidsskriftets stilark</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Name</source>
+        <target>Tidsskriftets navn</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Header</source>
+        <target>Tidsskriftets topptekst</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-aboutItemContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Content</source>
+        <target>Innhold</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addAboutItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add About Item</source>
+        <target>Legg til om-element</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addChecklistItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Checklist Item</source>
+        <target>Legg til sjekklisteelement</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Legg til element</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addItemtoAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item to Appear in "About the Journal"</source>
+        <target>Legg til element som skal vises i Om tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Legg til element</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addReviewerDatabaseLink">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add New Database Link</source>
+        <target>Legg til en ny databaselenke</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-addSponsor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Sponsoring Organization</source>
+        <target>Legg til sponsor</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternate Header</source>
+        <target>Alternativ topptekst</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-alternateHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</source>
+        <target>I stedet for tittel og logo kan en HTML-versjon av toppteksten skrives inn i tekstboksen nedenfor. La ellers tekstboksen stå tom.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements</source>
+        <target>Oppslagstavle</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcements-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The announcements settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Introduction</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-announcementsIntroduction-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter any information you would like to appear on your announcements page.</source>
+        <target>Skriv inn øvrig informasjon som skal vises til lesere på oppslagstavlen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-appearInAboutJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(To appear in About the Journal) </source>
+        <target>(Vil bli vist i Om tidsskriftet)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-archiving-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The archiving details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require submitting Authors to file a Competing Interest (CI) statement with their submission.</source>
+        <target><![CDATA[Krev at forfattere som sender inn manuskript samtidig sender inn en <I>Erklæring om interessekonflikter</I>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-competingInterests-requireReviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Require Reviewers to file a CI statement with each peer review they submit.</source>
+        <target><![CDATA[Krev at fagkonsulenter sender inn en <I>Erklæring om interessekonflikter</I> sammen med hver fagvurdering de sender inn.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-history">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal History</source>
+        <target>Tidsskriftets historie</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-historyDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This text will appear in the "About" section of the journal website and can be used to describe changes in titles, editorial board, and other items of relevance to the journal's publication history.</source>
+        <target>Denne teksten vil vises i "Om"-avsnittet av tidsskriftets nettsted, og kan benyttes til å beskriver endringer i navn, redaksjon og annet som er relevant for tidsskriftets publiseringshistorie.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contact-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The contact details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current issue</source>
+        <target>Nyeste utgave</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-customizingTheLook">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 5. Customizing the Look</source>
+        <target>Trinn 5. Tilpasning av utseendet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Detaljer</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of journal, ISSN, contacts, sponsors, and search engines.</source>
+        <target>Navn på tidsskrift, ISSN, kontakter, sponsorer, og søkemotorer.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Journal Manager will register all user accounts. Editors or Section Editors may register user accounts for reviewers.</source>
+        <target>Slå av brukerregistrering. Brukere må opprettes manuelt av en redaksjonsleder.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-discipline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Academic Discipline and Sub-Disciplines</source>
+        <target>Akademisk fag og felt</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Useful when journal crosses disciplinary boundaries and/or authors submit multidisciplinary items.</source>
+        <target>Spesielt nyttig når tidsskrift krysser grensene mellom fagfelt og/eller forfattere sender inn tverrfaglige bidrag.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., History; Education; Sociology; Psychology; Cultural Studies; Law)</source>
+        <target>(For eks. historie; utdanningsvitenskap; sosiologi; psykologi; kulturstudier; statsvitenskap)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-disciplineProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant academic disciplines for this journal</source>
+        <target>Gi eksempler på relevante fagemner for dette tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-displayCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add the table of contents for the current issue (if available).</source>
+        <target>Legg til innholdsoversikten for nyste utgave (hvis tilgjengelig).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-editorDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Decision</source>
+        <target>Redaktørens beslutning</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Bounce Address</source>
+        <target>Feilmeldingsadresse</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any undeliverable emails will result in an error message to this address.</source>
+        <target>Alle e-poster som ikke kan leveres, vil utløse en feilmelding som sendes til denne adressen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailBounceAddress-disabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>allow_envelope_sender</tt> valgmuligheten i OJS konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Email Identification</source>
+        <target>E-post identifikasjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Signature</source>
+        <target>Signatur</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-emailSignature-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end.</source>
+        <target>De forberedte e-postene som blir sendt av systemet på vegne av tidsskriftet kommer til å ha følgende signatur nederst. Selve meldingstekstene til de forberedte e-postene er tilgjengelig for redigering under Tidsskriftadministrasjon.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-enable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable announcements</source>
+        <target>Tillat redaksjonsledere å legge til tidsskriftsoppslag.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableAnnouncements-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</source>
+        <target>Oppslag kan publiseres for å informere lesere om tidsskriftnyheter og begivenheter. Publiserte oppslag vises på oppslagstavlen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display on Homepage</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numAnnouncementsHomepage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>How many announcements to display on the homepage. Leave this empty to display none.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableUserRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Visitors can register a user account with the journal.</source>
+        <target>Tillat brukere å registrere selv på tidsskriftets nettsted som:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus and scope</source>
+        <target>Hovedfokus og spennvidde</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-focusAndScope-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Describe to authors, readers, and librarians the range of articles and other items the journal will publish.</source>
+        <target>Beskriv til forfattere, lesere og bibliotekarer spennvidden på artikler og annet innhold som tidsskriftet vil publisere.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWork">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors to Index Their Work</source>
+        <target>Forfatterenes indeksering av eget verk</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-forAuthorsToIndexTheirWorkDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work.]]></source>
+        <target><![CDATA[OJS følger <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> protokoll for innhøsting av metadata, som er en framtidsrettet indekseringsstandard som gir tilgang til elektroniske forskningsressurser på verdensbasis. Forfatterene kommer til å bruke en tilpasset mal for å oppgi slike metadata for sitt manuskript. Redaksjonslederen bør velge kategoriene for indeksering, og gi forfatterene relevante eksempler til hjelp ved indekseringen. Disse termene skal holdes atskilt med a semikolon (for eks. term1; term2). Merk eksemplene som eksempler ved å bruke "For eks." eller "For eksempel,".]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-issnInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified ISSN is not valid.</source>
+        <target>Angitt ISSN er ugyldig.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact email is required.</source>
+        <target>Hovedkontaktens e-post er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-contactNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The primary contact name is required.</source>
+        <target>Hovedkontaktens navn er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalInitialsRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal initials are required.</source>
+        <target>Tidsskriftets initialer er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-journalTitleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal title is required.</source>
+        <target>Tidsskriftets tittel er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-numReviewersPerSubmission">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of reviewers per submission is required.</source>
+        <target>Antallet fagkonsulenter per manuskript er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportEmailRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support email is required.</source>
+        <target>Teknisk kontaktpersons e-post er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-form-supportNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The support name is required.</source>
+        <target>Teknisk kontaktpersons navn er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-generalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>General Information</source>
+        <target>Generell informasjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-gettingDownTheDetails">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 1. Getting Down the Details</source>
+        <target>Trinn 1. Detaljene først</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guidelines</source>
+        <target>Retningslinjer</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-guidingSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 3. Guiding Submissions</source>
+        <target>Trinn 3. Innsending av manuskript</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-identity">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Identity</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-includeCreativeCommons">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</source>
+        <target><![CDATA[Inkluder en <i>Creative Commons</i>-lisens i alt som publiseres i tidsskriftet når de enten gir umiddelbar eller utsatt <i>Open Access</i>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Information</source>
+        <target>Informasjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Brief descriptions of the journal for librarians and prospective authors and readers. These are made available in the site's sidebar when the Information block has been added.</source>
+        <target>Korte beskrivelser av tidsskriftet for interesserte bibliotekarer, forfattere, og lesere som blir tilgjengelig i 'informasjon'-delen av sidefeltet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Authors</source>
+        <target>For forfattere</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Librarians</source>
+        <target>For bibliotekarer</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>For Readers</source>
+        <target>For lesere</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-information-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The information for this journal was updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Initial issue</source>
+        <target>Første utgave</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-initialIssueDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</source>
+        <target>For det formatet du valgte: oppgi utgave, volum og/eller år for første utgave som vil bli publisert i OJS:</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-institution">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution</source>
+        <target>Institusjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation bar items can be added to the current set (Home, About, User Home, etc.) that appear at the top of the page.</source>
+        <target>Navigasjonsfeltelementer kan legges til i det nåværende settet (hjem, om, min side, etc.) som vises på toppen av siden.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items per page</source>
+        <target>Element per side</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-itemsPerPage-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalAbbreviation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Abbreviation</source>
+        <target>Tidsskriftforkortelse</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Archiving</source>
+        <target>Tidsskriftarkivering</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Summary</source>
+        <target>Tidsskriftsbeskrivelse</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>About the Journal</source>
+        <target>Om tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextAbout-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</source>
+        <target>Inkluder informasjon om tidsskriftet som kan være av interesse for lesere, forfattere eller fagfeller. Dette kan inkludere retningslinjer for open access, hovedfokus og spennvidde for tidsskriftet, opphavsrettsnotis, informasjon om sponsorer, tidsskriftets historie, erklæring om personopplysninger og arkivering i LOCKSS eller CLOCKSS arkivsystem.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Tidsskrifthjemmeside innhold</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageContentDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</source>
+        <target>Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen. Merk at nåværende utgave alltid er tilgjengelig gjennom nyeste-lenken i navigasjonsfeltet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Tidsskriftets hjemmesidetopptekst</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Tidsskrifthjemmeside topptekst</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeaderDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</source>
+        <target>En grafisk versjon av tidsskriftets tittel og logo (i en .gif-, .jpg-, eller .png-fil) kan lastes opp for hjemmesiden, som kommer til å erstatte tekstversjonen som ellers vises.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextInitials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal initials</source>
+        <target>Tidsskriftinitialer</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayout">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Layout</source>
+        <target>Tidsskriftnettsidenes layout</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLayoutDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</source>
+        <target>Velg et designtema og velg layout-komponenter her. Det går også an å laste opp et egenprodusert stilark for tidsskriftet (CSS-stylesheet). Dette kan i så fall overstyre både stildata i systemet og tema-stilark for designtema (hvis et tema er valgt).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Tidsskriftlogo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Tidsskriftlogo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Page Footer</source>
+        <target>Tidsskriftside bunntekst</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPageFooterDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</source>
+        <target>Dette er bunnteksten for tidsskriftet ditt. For å endre eller oppdatere bunnteksten, lim inn HTML kode i tekstboksen nedenfor. For eksempel et annet navigasjonsfelt, et telleverk etc. Denne bunnteksten vil bli vist på hver side.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 2. Journal Policies</source>
+        <target>Trinn 2. Retningslinjer for tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Setup</source>
+        <target>Tidsskriftoppsett</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalSetupUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your journal setup has been updated.</source>
+        <target>Ditt tidsskriftoppsett er nå oppdatert.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalStyleSheetInvalid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid journal stylesheet format. Accepted format is .css.</source>
+        <target>Ugyldig stylesheetformat for tidsskriftet. Akseptert format er .css.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalTheme">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Theme</source>
+        <target>Tidsskriftnettsidenes designtema.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal thumbnail</source>
+        <target>Tidsskriftets miniatyrbilde</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalThumbnail-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A small logo or representation of the journal that can be used in lists of journals.</source>
+        <target>En liten logo eller representasjon av tidsskriftet som kan bli brukt i listen over tidsskrift.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-contextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal title</source>
+        <target>Tidsskrifttittel</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Key Information</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-keyInfo-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a short description of your journal and identify editors, managing directors and other members of your editorial team.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-labelName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Label name</source>
+        <target>Etikettnavn</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The list settings for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Lists</source>
+        <target>Lister</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable the PKP PN plugin</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnSettingsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[View the <button>plugin settings</button> to accept the terms of use for the PKP PN.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginArchiving">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>PKP Preservation Network (PN)</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-plnPluginNotInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-otherLockss">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS and CLOCKSS</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Tillat LOCKSS å lagre og distribuere tidsskriftinnholdet hos tilsluttete bibliotek via et LOCKSS <a href="{$lockssUrl}" target="_blank">Utgivermanifest</a>. En LOCKSS-lisens vil i så fall bli vist i 'Om' tidsskriftet, under Arkivering:]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></source>
+        <target><![CDATA[En LOKCSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-lisens</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS License Description</source>
+        <target>Beskrivelse av LOCKSS-lisens</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://www.lockss.org/community/" target="_blank">the LOCKSS community</a>.]]></source>
+        <target><![CDATA[Identifiser 6-10 bibliotek som vil registrere og cache tidsskriftet. Du kan for eksempel henvende deg til institusjoner hvor redaktører eller rådsmedlemmer arbeider og/eller institusjoner som allerede deltar i LOCKSS. Se <a href="http://www.lockss.org/community/" target="_blank">tilsluttete bibliotek</a>. Bruk de forberedte invitasjonene til (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotek tilsluttet LOCKSS</a> eller (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotek som ennå ikke er tilsluttet LOCKSS</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-lockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>LOCKSS</source>
+        <target>LOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssEnable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></source>
+        <target><![CDATA[Slå på CLOCKSS for å lagre og distribuere tidsskriftets innhold til deltakende bibliotek via et CLOCKSS-<a href="{$clockssUrl}" target="_blank">publiseringsmanifest</a> page.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[A CLOCKSS license will appear in About the Journal under Archiving: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></source>
+        <target><![CDATA[En CLOCKSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href="http://clockss.org/" target="_blank">CLOCKSS-lisens</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssLicenseLabel">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS License Description</source>
+        <target>Beskrivelse av CLOCKSS-lisens</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssRegister">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></source>
+        <target><![CDATA[Meld deg på CLOCKSS-tjenesten ved å besøke nettsiden: <a href="http://clockss.org/" target="_blank"></a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-clockssTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>CLOCKSS</source>
+        <target>CLOCKSS</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Look</source>
+        <target>Utseendet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-look-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Homepage header, content, journal header, footer, navigation bar, and style sheet.</source>
+        <target>Hjemmesidetopptekst, innhold, tidsskrift-topptekst, bunntekst, navigasjonsfelt, og stylesheet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management</source>
+        <target>Administrasjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-management-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access and security, scheduling, announcements, copyediting, layout, and proofreading.</source>
+        <target>Planlegging, nettilgang, oppslag, og bruk av manusredaktører, layoutredaktører og korrekturlesere.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managementOfBasicEditorialSteps">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management of Basic Editorial Steps</source>
+        <target>Administrasjon av grunnleggende redaksjonelle trinn</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingPublishingSetup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Management and Publishing Setup</source>
+        <target>Administrasjons- og publiseringsoppsett</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-managingTheJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Step 4. Managing the Journal</source>
+        <target>Trinn 4. Administrasjon av tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-masthead-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The masthead details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBar">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Navigation Bar</source>
+        <target>Navigasjonsfelt</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navigationBarDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add or remove additional navigation bar items.</source>
+        <target>Legg til eller fjern ytterligere navigasjonsfeltelementer.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsAbsolute">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>URL is an absolute URL (e.g., "http://www.example.com") rather than a path relative to the site (e.g., "/manager/setup")</source>
+        <target>URL er en absolutt URL (for eks. "http://www.example.com") heller enn en filsti som er relativ til nettstedet (for eks. "/manager/setup")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-navItemIsLiteral">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The label value is a literal string (e.g., "Journal Setup") rather than a localization message key (e.g., "manager.setup")</source>
+        <target>Etikettverdien er en tegnstreng (for eks. "Tidsskriftoppsett") heller enn en lokaliseringsnøkkel (for eks. "manager.setup")</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noImageFileUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No image file uploaded.</source>
+        <target>Ingen bildefil er lastet opp.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-noStyleSheetUploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No style sheet uploaded.</source>
+        <target>Ingen stylesheet lastet opp.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note</source>
+        <target>Merknad</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-submissionAckDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the "Submission Ack" email in Emails.]]></source>
+        <target><![CDATA[<strong>NB:</strong> Automatisk e-post med bekreftelse av manuskriptinnsending er for øyeblikket slått av. For å bruke denne funksjonen må du slå på SUBMISSION_ACK e-posten i <a class="action" href="{$preparedEmailsUrl}">Forberedte e-poster</a>.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page links</source>
+        <target>Side lenker</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-numPageLinks-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Limit the number of links to display to subsequent pages in a list.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-onlineIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online ISSN</source>
+        <target>ISSN for nettutgaven</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-pageNumberIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Page Number Option</source>
+        <target>Sidetallsvalg</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Policies</source>
+        <target>Retningslinjer</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-policies-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Focus, peer review, sections, privacy, security, and additional about items.</source>
+        <target>Hovedfokus, fagvurdering, seksjoner, personopplysninger, sikkerhet, og øvrige Om-emner.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-printIssn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Print ISSN</source>
+        <target>ISSN for trykt utgave</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-privacyStatement-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The privacy statement has been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofing Instructions</source>
+        <target>Instruks for korrekturlesing</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-proofingInstructionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Proofreading Instructions will be made available to Proofreaders, Authors, Layout Editors, and Section Editors in the Submission Editing stage. Below is a default set of instructions in HTML, which can be edited or replaced by the Journal Manager at any point (in HTML or plain text).</source>
+        <target>Instruksen for korrekturlesing vil bli gjort tilgjengelig for korrekturlesere, forfattere, layoutredaktører og seksjonsredaktører i manuskriptbehandlingsstadiet. Nedenfor finner du standardinstruksjoner (i HTML), som kan redigeres eller erstattes av redaksjonslederen når som helst (i HTML eller ren tekst).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationSchedule">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Schedule</source>
+        <target>Publiseringsplan</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduleDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.</source>
+        <target>Tidsskriftelementer kan publiseres samlet, som del av en utgave med egen innholdsoversikt. Alternativt kan enkeltelementene publiseres løpende, etter hvert som de er ferdigstilt, og da legges de til i nyeste nummers innholdsoversikt. I 'Om' tidsskriftet skal leserne finne opplysningene om hvilket av disse to systemene dette tidsskriftet vil bruke, og om forventet utgivelsesfrekvens.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicationScheduling">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Scheduling</source>
+        <target>Publiseringsplanlegging</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publicIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification of Journal Content</source>
+        <target>Identifikasjon av tidsskriftinnhold</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publisher">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher</source>
+        <target>Utgiver</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-publishingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These details may be included in metadata provided to third-party archival bodies.</source>
+        <target>Navnet til organisasjonen som publiserer tidsskriftet vil bli vist i 'Om' tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-referenceLinking">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Linking</source>
+        <target>Aktive henvisningslenker</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictArticleAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view open access content.</source>
+        <target>Brukere må logge inn for å se publiserte artikler i fulltekst.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-restrictSiteAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users must be registered and log in to view the journal site.</source>
+        <target>Brukere må logge inn for å se tidsskriftets nettsted.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Guidelines</source>
+        <target>Instruks for fagkonsulenter</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Options</source>
+        <target>Fagvurderingsvalgmuligheter</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated Email Reminders</source>
+        <target>Automatiserte e-post purringer (tilgjengelig i OJS's default e-poster) kan sendes til fagkonsulenter ved to anledninger (redaktøren kan i tillegg sende e-post direkte til fagkonsulenten)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-automatedRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>NB:</strong> For å aktivere disse valgmulighetene, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt>-valgmuligheten i OJS-konfigurasjonsfilen. Ytterligere serverkonfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-blindReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Blind Review</source>
+        <target>Anonym fagvurdering</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-numWeeksPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks allowed to complete the review</source>
+        <target>Vanlig varighet tillatt for fagfellevurderinger</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-onQuality">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editors will rate reviewers on a five-point quality scale after each review.</source>
+        <target>Redaktører kommer til å rangere fagkonsulentene på en fempunkts skala etter hvert vurderingsoppdrag.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Restrict File Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-restrictReviewerFileAccess-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers will not be given access to the submission file until they have agreed to review it.</source>
+        <target>Fagkonsulenter kommer til å få tilgang til manuskriptfilen bare etter å ha akseptert vurderingsoppdraget.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Access</source>
+        <target>Fagkonsulenttilgang</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>One-click Reviewer Access</source>
+        <target>Slå på ettklikks fagkonsulenttilgang.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in.</source>
+        <target><![CDATA[<strong>NB:</strong> E-post-invitasjonen til fagkonsulenter kommer til å inneholde en spesiell URL som binger den inviterte fagkonsulenten direkte til fagvurderingssiden for det aktuelle manuskriptet (tilgang til andre sider vil likevel kreve innlogging).  Med denne valgmuligheten slått på, kan ikke redaktørene endre e-postadresser eller legge til kopier eller blindkopier ved bestilling av fagvurderinger (av sikkerhetsgrunner).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerAccessKeysEnabled-label">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include a secure link in the email invitation to reviewers.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerRatings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Ratings</source>
+        <target>Vurdering av fagkonsulenter</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewOptions-reviewerReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer Reminders</source>
+        <target>Fagkonsulent-purringer</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-reviewPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Policy</source>
+        <target>Om fagvurderingsprosessen</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Search Indexing</source>
+        <target>Søkermotorindeksering</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The search engine index settings have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchEngineIndexing-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Help search engines like Google discover and display your site. You are encouraged to submit your <a href="{$sitemapUrl}" target="_blank">sitemap</a>.]]></source>
+        <target>For at brukere av søkemotorer skal finne dette tidsskriftet, bør du gi en kort beskrivelse av tidsskriftet, og relevante nøkkelord (atskilt med semikolon).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-searchDescription-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide a brief description (50-300 characters) of the journal which search engines can display when listing the journal in search results.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsAndSectionEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Sections and Section Editors</source>
+        <target>Tidsskriftseksjoner og seksjonsredaktører</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDefaultSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(If sections are not added, then items are submitted to the Articles section by default.)</source>
+        <target>(Hvis seksjoner ikke er angitt, vil bidraget bli sendt inn til Artikler.)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-sectionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[To create or modify sections for the journal (e.g., Articles, Book Reviews, etc.), go to Section Management.<br /><br />Authors on submitting items to the journal will designate...]]></source>
+        <target><![CDATA[For å opprette eller endre seksjoner for tidsskriftet (f.eks. Artikler, Bokanmeldelser, etc.), gå til seksjonsadministrasjon.<br /><br />Når forfattere sender inn elementer til tidsskriftet, kommer de til å angi ...]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectEditorDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal editor who will see it through the editorial process.</source>
+        <target>Tidsskriftredaktør som skal følge bidraget gjennom den redaksjonelle prosessen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-selectSectionDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal section for which the item will be considered.</source>
+        <target>Tidsskriftseksjonen bidraget skal vurderes for.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-showGalleyLinksDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Always show galley links and indicate restricted access.</source>
+        <target>Vis alltid sideoppsettlenker og indikér om tilgangen er begrenset.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-view">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Site Access</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-siteAccess-viewContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Article Content</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-stepsToJournalSite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Five Steps to a Journal Web Site</source>
+        <target>Fem trinn til et nettsted for tidsskriftet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</source>
+        <target>(F.eks. fotosyntese; sorte hull; Gödels teorem; Zenons paradokser)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectKeywordTopic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Keywords</source>
+        <target>Emneord</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-subjectProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of keywords or topics as a guide for authors</source>
+        <target>Gi eksempler på relevante nøkkelord eller emneord, til veiledning for forfatterene</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionGuidelines">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission guidelines</source>
+        <target>Retningslinjer for innsending av manuskript</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Preparation Checklist</source>
+        <target>Sjekkliste for klargjøring av manuskript</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissionPreparationChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</source>
+        <target>Ved innsending av manuskript til tidsskriftet, må forfattere først krysse av for hvert element på Sjekkliste for klargjøring av manuskript, før de får gå videre. Sjekklisten vises også i forfatterinstruksen, under 'Om' tidsskriftet. Sjekklisten kan redigeres nedenfor, men alle elementene på listen må krysses av før forfatteren kan gå videre med innsendingen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Innsendte manuskripter</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-submissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Author guidelines, copyright, and indexing (including registration).</source>
+        <target>Forfatterinstruks, copyright, og indeksering (herunder registrering).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable OAI</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-enableOai-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Provide metadata to third-party indexing services through the <a href="https://www.openarchives.org/">Open Archives Initiative</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</source>
+        <target>(F.eks. historisk studium; tankeeksperiment; feltundersøkelse; retorisk analyse; aksjonsforskning; kartlegging/intervju)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeMethodApproach">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Type (Method/Approach)</source>
+        <target>Type (metode/innfallsvinkel)</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-typeProvideExamples">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Provide examples of relevant research types, methods, and approaches for this field</source>
+        <target>Gi eksempler på relevante forskningstyper, metoder og innfallsvinkler for dette fagfeltet</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unique Identifier</source>
+        <target>Unik identifikator</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-uniqueIdentifierDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</source>
+        <target>Artikler og utgaver kan merkes med et identifikasjonsnummer eller tegnstreng som følger et registreringssystem, for eksempel  Digital Object Identifier (DOI).</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useEditorialReviewBoard">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An editorial/review board will be used by the journal.</source>
+        <target>Tidsskriftet skal ha redaksjons- eller fagfelleråd.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userAccess-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The user access details for this journal have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useThumbnail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Thumbnail</source>
+        <target>Miniatyrbilde</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useImageTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title image</source>
+        <target>Tittelbilde</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-userRegistration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User Registration</source>
+        <target>Brukerregistrering</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-useTextTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title text</source>
+        <target>Titteltekst</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>Tidsskriftet er konfigurert til å lagre mer enn én type brukerstatistikk. Brukerstatistikk vil bli vist i flere kontekster. Det er tilfeller der en enkelt brukerstatistikk må brukes, f.eks. for å vise en ordnet liste over de mest brukte artiklene eller for å rangere søkeresultat. Vennligst velg en av de konfigurerte statistikkene som standard.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Statistics</source>
+        <target>Tidsskriftstatistikk</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-articleViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article View Counts (for Authors only)</source>
+        <target>Telleverk for artikkelvisning (kun for forfattere)</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Akseptert</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-decline">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decline</source>
+        <target>Avvist</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-count-revise">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Resubmit</source>
+        <target>Sendt inn igjen</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysPerReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to review</source>
+        <target>Dager til vurdering</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-daysToPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Days to publication</source>
+        <target>Dager før utgitt</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</source>
+        <target>OJS beregner følgende statistikk for hvert tidsskrift.  'Dager til vurdering' er regnet ut fra innsendingsdatoen (eller datoen for utpeking av fagvurderingsversjon), til første gang redaktørens beslutning ble registrert, mens 'Dager før utgitt' er beregnet for det aksepterte manuskriptet fra det først ble lastet opp til det ble publisert.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-itemsPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items published</source>
+        <target>Element publisert</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-makePublic">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Check items to be made available to readers in About the Journal.</source>
+        <target>Kryss av for elementer som skal gjøres tilgjengelig for leserne i 'Om' tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-note">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</source>
+        <target>NB: Det totale prosenttallet for fagfellevurderte manuskript kan bli mindre enn 100%, fordi gjeninnsendte elementer enten er akseptert, avvist, eller fortsatt under arbeid.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues published</source>
+        <target>Utgaver publisert</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-numSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total submissions</source>
+        <target>Totalt antall manuskript</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-peerReviewed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Peer reviewed</source>
+        <target>Fagfellevurdert</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers</source>
+        <target>Registrerte lesere</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-registeredUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered users</source>
+        <target>Registrerte brukere</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerCount">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. assigned</source>
+        <target>Antall oppnevnt</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Fagkonsulenter</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewerScore">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor score</source>
+        <target>Redaktørens score</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-reviewsPerReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No. of reviews</source>
+        <target>Antall fagfellevurderinger</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-selectSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select the sections for calculating this journal's peer-reviewed statistics.</source>
+        <target>Velg seksjonene for utregning av dette tidsskriftets statistikk over fagfellevurdering.</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-statistics-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnement</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article file downloads</source>
+        <target>Nedlasting av artikkelfil</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstract">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views</source>
+        <target>Sidevisning av artikkelsammendrag</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-articleAbstractAndDownloads">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article abstract page views and downloads</source>
+        <target>Artikkelsammendrag og nedlastinger</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-journalIndexPageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal main page views</source>
+        <target>Visninger av tidsskriftets hovedside</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-defaultReport-issuePageViews">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue table of contents page views</source>
+        <target>Visninger av nummertabell eller innholdsside</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byContext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by context (issues and/or article).</source>
+        <target>Avgrens resultater etter kontekst (nummer og/eller artikler).</target>
+      </segment>
+    </unit>
+    <unit id="manager-statistics-reports-filters-byObject-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s).</source>
+        <target>Avgrens resultater etter objekttype (tidsskrift, nummer, artikkel, filtype) og/eller etter en eller flere objektIDer.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Policies</source>
+        <target>Abonnementsregler</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-delayedOpenAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delayed Open Access</source>
+        <target>Utsatt Open Access</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionExpiryReminderBeforeMonthsValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Vennligst bruk avkrysningsboksen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry</source>
+        <target>Abonnementets utløpstid</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Når abonnementet utløper kan leseren enten miste tilgangen til alt abonnementsinnhold, eller beholde tilgangen til det innholdet som var publisert fram til leserens abonnement utløp.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFull">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Full expiry</source>
+        <target>Utløpsdato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryFullDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to all subscription content upon subscription expiry.</source>
+        <target>Lesere mister tilgang til alt abonnementsinnhold når abonnementet utløper.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartial">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Partial expiry</source>
+        <target>Delvis utløpsdato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryPartialDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</source>
+        <target>Leseren får ikke lenger tilgang til nytt publisert innhold, men beholder tilgangen til det innholdet som var publisert fram til leserens abonnement utløp.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Months</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-xWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$x} Weeks</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderAfterWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email after subscription expiry.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeMonths">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminders</source>
+        <target>Varsel om abonnementsutløp</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired.</source>
+        <target>Automatiserte e-postpurringer (tilgjengelig for redigering av redaksjonsledere i OJS' Forberedte e-poster) kan sendes til abonnentene både før og etter at et abonnement har utløpt.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expiryRemindersDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>NB:</strong> For å aktivere disse valgmulighetene, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt> valgmuligheten in the OJS konfigurasjonsfilen. Ytterligere server konfigurasjon kan være påkrevet for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-expirySelectOne">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select one of the following:</source>
+        <target>Velg én av følgende:</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-htmlInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></source>
+        <target><![CDATA[HTML kan brukes i tekstområdet (for skrifttype, størrelse, farge etc.), med "linjeskift" lest som <tt>&lt;br&gt;</tt>; HTML-editoren virker med Firefox nettlesere.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months after subscription expiry.</source>
+        <target>Vennligst velg en gyldig verdi for antallet måneder etter at abonnementet utløper.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numMonthsBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of months before subscription expiry.</source>
+        <target>Vennligst velg en gyldig verdi for antallet måneder før abonnementet utløper.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksAfterSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks after subscription expiry.</source>
+        <target>Vennligst velg en gyldig verdi for antallet uker etter at abonnementet utløper.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-numWeeksBeforeSubscriptionExpiryReminderValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid value for the number of weeks before subscription expiry.</source>
+        <target>Vennligst velg en gyldig verdi for antallet uker før abonnementet utløper.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</source>
+        <target>Registrerte lesere kommer til å få velge om de vil motta innholdsoversikten med e-post straks en utgave blir Open Access.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessNotificationDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></source>
+        <target><![CDATA[<strong>NB:</strong> For å aktivere denne valgmuligheten, må nettstedsadministratoren slå på <tt>scheduled_tasks</tt> valgmuligheten i OJS' konfigurasjonsfil. Ytterligere serverkonfigurasjon kan være nødvendig for å støtte denne funksjonen (som likevel kan være umulig å bruke på enkelte servere), som oppgitt i OJS-dokumentasjonen.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotifications">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Online Payment Notifications</source>
+        <target>Melding on online-betalinger</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentNotificationsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Automated email notifications (available for editing by Journal Managers in OJS's Emails) can be sent to the Subscription Manager upon the completion of subscription online payments.</source>
+        <target>Automatiske e-postbeskjeder (som kan redigeres av tidsskriftadministratorer i OJS' e-postmaler) kan sendes til abonnementsansvarlig når en online abonnementsbetaling er fullført.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Individual subscription.</source>
+        <target>Gi abonnementsansvarlig beskjed via e-post når noen kjøper et individuelt abonnement online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online purchase of an Institutional subscription (recommended).</source>
+        <target>Gi abonnementsansvarlig beskjed via e-post når noen kjøper et institusjonelt abonnement online (anbefalt).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewIndividual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Individual subscription.</source>
+        <target>Gi abonnementsansvarlig beskjed via e-post når noen fornyer et individuelt abonnement online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-enableSubscriptionOnlinePaymentNotificationRenewInstitutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Subscription Manager by email upon online renewal of an Institutional subscription.</source>
+        <target>Gi abonnementsansvarlig beskjed via e-post når noen fornyer et institusjonelt abonnement online.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentPurchaseInstitutionalDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> Institutional subscriptions purchased online require approval of the provided domain and IP ranges and activation of the subscription by the Subscription Manager.]]></source>
+        <target><![CDATA[<strong>OBS:</strong> Ved online-kjøp av institusjonelle abonnementer må det oppgitte domene og IP-område godkjennes, og abonnementet aktiviseres, av abonnementsansvarlig.]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-onlinePaymentDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<strong>Note:</strong> To enable these options, the Journal Manager must enable the online payments module, including online payments for subscriptions, under Reader Fees.]]></source>
+        <target><![CDATA[<strong>OBS:</strong> For å tilgjengeliggjøre disse valgene, må tidsskriftadministratoren aktivisere modulen for online-betaling, inkludert online-betaling av abonnementer, under «leserbetaling».]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Options For Subscription Journals</source>
+        <target>Open Access-valg for abonnementstidsskrift</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-openAccessOptionsDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</source>
+        <target>Abonnementstidsskrift kan også tillate utsatt Open Access og/eller forfatters egenarkivering (som vil øke både leserkrets og siteringshyppighet). Valgene vil bli vist in 'Om' tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Information</source>
+        <target>Abonnementsinformasjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionAdditionalInformationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</source>
+        <target>Abonnementstyper og betalingsform vil bli skrevet inn automatisk under Abonnement på 'Om' tidsskriftet-siden, sammen med navnet og kontaktinformasjon for abonnementskontakten. Ytterligere informasjon om abonnement, som betalingsmåte eller særvilkår for abonnenter i den tredje verden, kan legges til her.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Abonnementskontakt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</source>
+        <target>Kontaktpersonen som er oppført under Abonnement i 'Om' tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionPolicies-subscriptionContactEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid email.</source>
+        <target>Vennligst skriv inn en gyldig e-post.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnement</target>
+      </segment>
+    </unit>
+    <unit id="manager-individualSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual Subscriptions</source>
+        <target>Individuelle abonnementer</target>
+      </segment>
+    </unit>
+    <unit id="manager-institutionalSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional Subscriptions</source>
+        <target>Institusjonelle abonnementer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmRenew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to renew this subscription?</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this subscription?</source>
+        <target>Er du sikker på at du vil slette dette abonnementet?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-summary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions Summary</source>
+        <target>Sammendrag av abonnementer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription</source>
+        <target>Opprett nytt abonnement</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Opprett</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-renew">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Renew</source>
+        <target>Forny</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End</source>
+        <target>Slutt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateEndSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End Date</source>
+        <target>Sluttdato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start</source>
+        <target>Start</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-dateStartSearch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start Date</source>
+        <target>Startdato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domene</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Rediger abonnement</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Rediger</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-withStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>With Status</source>
+        <target>Med status</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-allStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All</source>
+        <target>Alle</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-status">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Status</source>
+        <target>Status</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription status is required.</source>
+        <target>Abonnementsstatus må oppgis.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-statusValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription status.</source>
+        <target>Vennligst velg en gyldig abonnementsstatus.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Abonnementstype</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type is required.</source>
+        <target>En abonnementstype er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type.</source>
+        <target>Vennligst velg en gyldig abonnementstype.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStart">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start date</source>
+        <target>Startdato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription start date is required.</source>
+        <target>Startdato for abonnementet er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription start date.</source>
+        <target>Vennligst velg en gyldig startdato for abonnementet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEnd">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>End date</source>
+        <target>Sluttdato</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription end date is required.</source>
+        <target>Sluttdato for abonnementet er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateStartEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify a start date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndEmpty">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This is a non-expiring subscription type; please do not specify an end date.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-dateEndValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription end date.</source>
+        <target>Vennligst velg en gyldig sluttdato for abonnementet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userProfileInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Note: All changes below are to user's system-wide profile.</source>
+        <target>OBS: Alle endringer nedenfor gjelder i hele OJS-installasjonen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Bruker</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact</source>
+        <target>Kontakt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A user is required.</source>
+        <target>En bruker er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userIdValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid user.</source>
+        <target>Vennligst velg en gyldig bruker.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-userCountryValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid country.</source>
+        <target>Vennligst velg et gyldig land.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmail">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send the user an email with their username and subscription details.</source>
+        <target>Send brukeren en e-post med brukernavn og abonnementsdetaljer.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Vennligst bruk avkrysningsboksen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Medlemskap</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Referansenummer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter membership information if the subscription type requires that subscribers belong to an association or organization.</source>
+        <target>Skriv inn medlemskapsinformasjon hvis abonnementstypen krever at abonnenter tilhører et selskap eller en organisasjon.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-membershipRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires membership information.</source>
+        <target>Den valgte abonnementstypen krever medlemskapsinformasjon.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Kommentarer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domene</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution name</source>
+        <target>Institusjonsnavn</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An institution name is required.</source>
+        <target>Oppgi et institusjonsnavn</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-institutionMailingAddress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mailing address</source>
+        <target>Postadresse</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></source>
+        <target>Skriv inn et domene hvis abonnementstypen er for institusjoner. Hvis et domene er skrevet inn her, er IP-range valgfritt. Gyldige verdier er domenenavn (for eks. lib.sfu.ca).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainIPRangeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The selected subscription type requires a domain and/or an IP range for subscription authentication.</source>
+        <target>Den valgte abonnementstypen krever et domene og/eller et IP-områe for abonnementsautentisering.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domainValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid domain.</source>
+        <target>Vennligst skriv inn et gyldig domene.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP ranges</source>
+        <target>IP-område</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[&#8226;]]></source>
+        <target><![CDATA[&#8226;]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></source>
+        <target>Skriv inn et IP-område hvis abonnementstypen er for institusjoner. Hvis et IP-område er skrevet inn her, er domene valgfritt. Gyldige verdier kan være en IP (f.eks. 142.58.103.1), et CIDR IP-område (for eks. 142.58.100.0/24), en IP-range (f.eks. 142.58.103.1 - 142.58.103.4), et IP-område med '*' (f.eks. 142.58.103.*), eller hvilken som helst kombinasjon av disse, atskilt med en ';' (f.eks. 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-ipRangeValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter a valid IP range.</source>
+        <target>Vennligst skriv inn et gyldig IP-område.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-deleteIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Slett</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-addIpRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add</source>
+        <target>Legg til</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-saveAndCreateAnother">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Lagre og opprett en til</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionContactRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to send the user a notification email, the subscription contact name and email address must be specified in the journal Setup.</source>
+        <target>For å kunne sende brukeren varsling med e-post, må navn og e-postadresse til abonnementskontakten være spesifisert i tidsskriftoppsettet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-subscriptionExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This user already has a subscription for this journal.</source>
+        <target>Denne brukeren har allerede abonnement på dette tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-typeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type must be created before new subscriptions can be made.</source>
+        <target>Abonnementstype må lages før nye abonnementer kan tegnes.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-ipRange">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>IP Range</source>
+        <target>IP-område</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Medlemskap</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Referansenummer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notater</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscriptions</source>
+        <target>Ingen abonnement er opprettet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Subscription Contact</source>
+        <target>Velg abonnementskontakt</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select User</source>
+        <target>Velg bruker</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-selectSubscriber-desc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</source>
+        <target>Tidsskriftets redaksjonsledere, redaktører, seksjonsredaktører, layoutredaktører, manusredaktører og korrekturlesere får automatisk abonnement på tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-select">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select</source>
+        <target>Verve abonnent</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription created successfully.</source>
+        <target>Abonnement opprettet successfully.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-subscriptionType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Type</source>
+        <target>Abonnementstype</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Bruker</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-contact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contact Name</source>
+        <target>Kontaktnavn</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-institutionName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institution Name</source>
+        <target>Institusjonsnavn</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Types</source>
+        <target>Abonnementstyper</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Warning! All subscriptions with this subscription type will also be deleted. Are you sure you want to continue and delete this subscription type?</source>
+        <target>Advarsel! Alle abonnement med denne abonnementstypen vil også bli slettet. Er du sikker på at du vil fortsette, og slette denne abonnementstypen?</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Pris</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnementer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual</source>
+        <target>Personlig</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional</source>
+        <target>Institusjonell</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create New Subscription Type</source>
+        <target>Opprett ny abonnementstype</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Opprett</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Varighet</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription Type</source>
+        <target>Rediger abonnementstype</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Rediger</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Pris</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $).</source>
+        <target>Skriv inn en tallverdi (for eks. 40 eller 40.00). Ikke skriv inn annen tekst, som f.eks. «$» eller «NOK».</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cost must be a positive, numeric value.</source>
+        <target>Prisen må være en positiv tallverdi.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-costRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A cost is required.</source>
+        <target>En pris er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currency">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Currency</source>
+        <target>Valuta</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A currency is required.</source>
+        <target>En valuta er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-currencyValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid currency.</source>
+        <target>Vennligst velg en gyldig valuta.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Beskrivelse</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Expires after</source>
+        <target>Utløper etter</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-months">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>months (e.g. 12)</source>
+        <target>måneder (f.eks. 12)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiring-neverExpires">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Never expires</source>
+        <target>Utløper aldri</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-nonExpiringValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Bruk de angitte valgmulighetene.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Varighet</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The number of months the subscription lasts (e.g. 12).</source>
+        <target>Abonnementets varighet, angitt i antall måneder (for eks. 12).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The duration must be a positive, numeric value.</source>
+        <target>Varigheten må være en positiv tallverdi.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-durationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A duration is required.</source>
+        <target>Varighet må angis.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-format">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format</source>
+        <target>Format</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type format is required.</source>
+        <target>Et abonnementstypeformat er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-formatValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a valid subscription type format.</source>
+        <target>Vennligst velg et gyldig abonnementstypeformat.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnementer</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-individual">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Individual (users are validated via login)</source>
+        <target>Personlig (brukere kontrolleres ved hjelp av innlogging)</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutional">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Institutional (users are validated via domain or IP address)</source>
+        <target>Institusjonell (brukere må valideres via domene eller IP-adresse).</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Vennligst bruk avkrysningsboksen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</source>
+        <target>Abonnenter må være medlemmer av et selskap eller en organisasjon.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Vennligst bruk avkrysningsboksen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Valgmuligheter</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-public">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Do not make this subscription type publicly available or visible on the website.</source>
+        <target>Denne abonnementstypen vil ikke bli vist under Abonnement i 'Om' tidsskriftet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Vennligst bruk avkrysningsboksen.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Lagre og opprett en til</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Name of Type</source>
+        <target>Navn</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type with this name already exists.</source>
+        <target>En abonnementstype med dette navnet finnes allerede.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-typeNameRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A subscription type name is required.</source>
+        <target>Et abonnementstypenavn er påkrevet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Abonnementstype</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No subscription types have been created.</source>
+        <target>Ingen abonnementstyper er opprettet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-subscriptionTypeCreatedSuccessfully">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type created successfully.</source>
+        <target>Abonnementstypen er nå opprettet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-subscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the subscriptions you offer.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Link to a page describing the visitor's current and past subscriptions.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-navigationMenus-mySubscriptions-conditionalWarning">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This link will only be displayed when a visitor is logged in.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Categories</source>
+        <target>Kategorier</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-categories-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</source>
+        <target>Velg de mest passende kategorier fra listen. Lesere vil kunne bruke kategori for å navigere i hele tidsskriftutvalget.</target>
+      </segment>
+    </unit>
+    <unit id="grid-category-path">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Path</source>
+        <target>Sti</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Section</source>
+        <target>Legg til seksjon</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-section-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc).</source>
+        <target>Artikler i publiserte tidsskriftsnummer er organisert i seksjoner, vanligvis etter tema eller innholdstype (f.eks. vitenskapelige artikler, vitenskapelige oversiktsartikler osv.)</target>
+      </segment>
+    </unit>
+    <unit id="settings-roles-gridDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production.</source>
+        <target>Roller er grupper av tidsskriftsbrukere  som er gitt ulikt tilgangsnivå og knyttet til ulike arbeidsflyter i tidsskriftet. Det er fem ulike tilgangsnivå: Tidsskriftsadministratorer har tilgang til alt i tidsskriftet (alt innhold og alle innstillinger). Seksjonsredaktører har full tilgang til alt innhold de er blitt tildelt. Tidsskriftsassistenter har begrenset tilgang til alle manuskript som en redaktør har tildelt dem. Fagfeller kan se og arbeide med manuskriptene som de skal vurdere. Forfattere kan se og interagere med en begrenset mengde informasjon knyttet til deres manuskript. I tillegg er det fem ulike trinn som roller kan bli gitt tilgang til: Manuskriptinnsending, Intern fagfellevurdering, Fagfellevurdering, Redaksjonelt og Produksjon.</target>
+      </segment>
+    </unit>
+    <unit id="manager-publication-library">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publisher Library</source>
+        <target>Utgivers bibliotek</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Base new article's copyright year on</source>
+        <target>Baser nye artiklers opphavsrettsår på</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article: default year will be drawn from the article's publication date, as in "publish-as-you-go".</source>
+        <target>Artikkel: År vil bli hentet fra artikkelens publiseringsdato.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-copyrightYearBasis-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue: default year will be drawn from the issue's publication date.</source>
+        <target>Nummer: År vil bli hentet fra nummerets publiseringsdato.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reset Article Permissions</source>
+        <target>Tilbakestill artikkelrettigheter</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to reset permissions data for all articles? This action can not be undone.</source>
+        <target>Er du sikker på at du ønsker å tilbakestille rettighetsinformasjon som er knyttet til artikler?</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove the copyright statement and license information for every published article, reverting them to the journal's current default settings. This will permanently remove all prior copyright and licensing information attached to articles. In some cases, you may not be legally permitted to re-license work that has been published under a different license. Please take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-resetPermissions-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article permissions were successfully reset.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title-short">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Components</source>
+        <target>Komponenter</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Components</source>
+        <target>Artikkelkomponenter</target>
+      </segment>
+    </unit>
+    <unit id="grid-genres-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These components are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole submission 99Z or a particular component by number (e.g., 02).</source>
+        <target>Disse komponentene er brukt for å navngi filer og er presentert i en nedtrekksmeny ved opplasting av filer. Stilene som er tildelt ## tillater brukeren å knytte filen til enten hele innsendingen 99Z eller en bestemt nummerert komponent (f.eks. 02).</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Settings</source>
+        <target>Innstillinger</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-DOIPluginSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI Plugin Settings</source>
+        <target>Innstillinger for DOI-programutvidelse</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-articles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Artikler</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-issues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issues</source>
+        <target>Nummer</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-representations">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galleys</source>
+        <target>Sideoppsett</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-missingRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Plugin requirements not met</source>
+        <target>Krav til programutvidelse er ikke oppfylt</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-DOIsNotAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In order to use this plugin please go to the "Public Identifier" plugin category, enable and configure the DOI plugin and specify a valid DOI prefix there.</source>
+        <target>For å bruke denne programutvidelsen vennligst gå til "Programutvidelser for offentlige identifikatorer", slå på og konfigurer DOI-programutvidelsen og spesifiser et gyldig DOI-prefiks.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-pluginNotConfigured">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The plugin is not fully set up.</source>
+        <target>Programutvidelsen er ikke ferdig satt opp</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noDOIContentObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No publishing objects are selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin.</source>
+        <target>Ingen publiserte objekt er valgt for DOI-tildeling i DOI-programutvidelsen, så det er ingen deponerings- eller eksportmulighet i denne programutvidelsen.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target>Passord</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-settings-form-password-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please note that the password will be saved as plain text, i.e. not encrypted.</source>
+        <target>Vennligst merk at passordet vil bli lagret i ren tekst og ikke kryptert.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-filter-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Issue</source>
+        <target>Ethvert nummer</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Status</source>
+        <target>Enhver status</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-notDeposited">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Not Deposited</source>
+        <target>Ikke deponert</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-markedRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked registered</source>
+        <target>Merket som registrert</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-status-registered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registered</source>
+        <target>Registrert</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Handling</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-export">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Export</source>
+        <target>Eksporter</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-markRegistered">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Mark registered</source>
+        <target>Merk som registrert</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action-register">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Register</source>
+        <target>Registrer</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Validate XML before the export and registration.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-noObjectsSelected">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No objects selected.</source>
+        <target>Ingen objekt er valgt</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-validation">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Could not convert selected objects.</source>
+        <target>Kunne ikke konvertere de valgte objektene.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-invalidXML">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid XML:</source>
+        <target>Ugyldig XML:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-outputFileNotWritable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The output file {$param} is not writable.</source>
+        <target>Resultatfilen {$param} er ikke skrivbar.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-export-error-inputFileNotReadable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The input file {$param} is not readable.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-error-mdsError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration was not successful! The DOI registration server returned an error: '{$param}'.</source>
+        <target>Registreringen feilet! DOI-registreringstjeneren returnerte en feil: '{$param}'.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-register-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Registration successful!</source>
+        <target>Registreringen var vellykket!</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-senderTask-warning-noDOIprefix">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>DOI prefix is missing for the journal with the path {$path}.</source>
+        <target>DOI-prefiks mangler for tidsskriftet med stien {$path}.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-cliError">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ERROR:</source>
+        <target>FEIL:</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownJournal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified journal path, "{$journalPath}", does not exist.</source>
+        <target>Den spesifiserte tidsskriftsstien "{$journalPath}" eksisterer ikke.</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-error-unknownObjects">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The specified objects could not be found.</source>
+        <target>De spesifiserte objekteter ble ikke funnet.</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-notifications-copyPrimaryContact">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send a copy to the primary contact, identified in the Journal Settings.</source>
+        <target>Send en kopi til tidsskriftets hovedkontakt, som ble oppgitt i Oppsett Trinn 1.</target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Details</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-none">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No articles were found with usage statistics matching these parameters.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalAbstractViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total abstract views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-totalGalleyViews-timelineInterval">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Total file views by date</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-countOfTotal">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$count} of {$total} articles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-abstracts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Abstracts</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="stats-publications-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Files</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

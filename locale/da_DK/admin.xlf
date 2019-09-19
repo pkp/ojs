@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:04-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:04-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="admin-hostedJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Hosted Journals</source>
+        <target>Tilknyttede tidsskrifter</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-appearance-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site appearance settings have been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-config-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site configuration settings have been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-info-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site information has been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal redirect</source>
+        <target>Omdirigering af tidsskrift</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirectInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</source>
+        <target>Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
+		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
+		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmDisable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Er du sikker på, at du vil deaktivere denne landestandard? Det kan påvirke de hostede tidsskrifter, der måtte anvende landestandarden.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></source>
+        <target><![CDATA[<p>Download af sprogpakker fra Public Knowledge Project's web-server er ikke muligt på nuværende tidspunkt fordi:</p>
+	<ul>
+		<li>Din server har ikke eller tillader ikke afvikling af GNU "tar"-værktøjet.</li>
+		<li>OJS kan ikke ændre landekode-registerfilen, typisk "registry/locales.xml".</li>
+	</ul>
+<p>Sprogpakker kan downloades manuelt fra <a href="http://pkp.sfu.ca"> PKPs websted </a>.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the site and any hosted journals.</source>
+        <target>Dette er standardsproget for webstedet og alle tilknyttede tidsskrifter.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-supportedLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</source>
+        <target>Vælg alle de landestandarder, der skal understøttes på webstedet. De valgte landestandarder kan benyttes af alle de tidsskrifter, der er tilknyttet webstedet, og vises også i en sprogvalgsmenu, der vises på hver enkelt side på webstedet (kan tilsidesættes på tidsskriftsspecifikke sider). Hvis der ikke vælges flere landestandarder, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke være tilgængelige for tidsskrifter.</target>
+      </segment>
+    </unit>
+    <unit id="admin-locale-maybeIncomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked locales may be incomplete.</source>
+        <target>De markerede landestandarder kan være ufuldstændige</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmUninstall">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Er du sikker på, at du vil fjerne denne landestandard? Denne handling kan påvirke alle tilknyttede tidsskrifter, der i øjeblikket benytter landestandarden.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-installNewLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</source>
+        <target>Vælg yderligere landestandarder, du vil installere understøttelse af i dette system. Landestandarder skal installeres, inden de kan benyttes af tilknyttede tidsskrifter. Se dokumentationen til OJS for at få oplysninger om understøttelse af nye sprog.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadFailed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The locale download failed. The error message(s) below describe the failure.</source>
+        <target>Overførslen af landestandarden mislykkedes. Fejlen er beskrevet i nedenstående fejlmeddelelse(r).</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-localeInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The "{$locale}" locale has been installed.</source>
+        <target>Landestandarden "{$locale}" er blevet installeret.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Download Locale</source>
+        <target>Hent landestandard</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotOpen">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot open language descriptor from PKP web site.</source>
+        <target>Det er ikke muligt at åbne sprogbeskrivelsen fra PKP-webstedet.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotModifyRegistry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</source>
+        <target>Det er ikke muligt at føje den nye landestandard til landestandardens registreringsdatabasefil, normalt "registry/locales.xml".</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-ojs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS User Database</source>
+        <target>OJS-brugerdatabase</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncProfiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</source>
+        <target>Aktiver synkronisering af brugerprofil (hvis dette understøttes af denne godkendelses-plug-in). Oplysningerne om brugerprofil opdateres automatisk fra fjernkilden, når en bruger logger på, og de profilændringer (herunder ændringer af adgangskode), der er foretaget i OJS, opdateres automatisk på fjernkilden. Hvis denne indstilling ikke aktiveres, holdes oplysninger om OJS-profiler adskilt fra oplysninger om fjernkildeprofiler.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncPasswords">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</source>
+        <target>Aktiver ændring af brugeradgangskode (hvis dette understøttes af denne godkendelses-plug-in). Hvis denne indstilling aktiveres, kan brugere ændre deres adgangskode i OJS og bruge OJS-funktionen "mistet adgangskode" til at nulstille en glemt adgangskode. Disse funktioner vil ikke være tilgængelige for brugere med denne godkendelseskilde, hvis denne indstilling ikke aktiveres.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableCreateUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</source>
+        <target>Aktiver oprettelse af bruger (hvis dette understøttes af denne godkendelses-plug-in). De brugere, der oprettes i OJS med denne godkendelseskilde, føjes automatisk til fjerngodkendelseskilden, hvis de ikke allerede findes. Hvis denne kilde er standardgodkendelseskilden, føjes de OJS-konti, der er oprettet via brugerregistrering, også til fjerngodkendelseskilden.</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Version</source>
+        <target>OJS-version</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfiguration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Configuration</source>
+        <target>OJS-konfiguration</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfigurationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></source>
+        <target><![CDATA[OJS-konfigurationsindstillinger fra <tt>config.inc.php</tt>.]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-createInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</source>
+        <target>Du vil automatisk blive registreret som chef for dette tidsskrift. Når du har oprettet et nyt tidsskrift, skal du som chef registrere det for at kunne fortsætte med dets konfiguration og brugertilmelding.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-journalSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Tidsskriftsindstillinger</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No journals have been created.</source>
+        <target>Der er ikke oprettet nogen tidsskrifter.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Journal</source>
+        <target>Opret tidsskrift</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-urlWillBe">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}.</source>
+        <target>Tidsskriftets URL-adresse er {$sampleUrl}</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required.</source>
+        <target>Titel mangler.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A path is required.</source>
+        <target>En sti er påkrævet.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathAlphaNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path can only include letters, numbers and the characters _ and -. It must begin and end with a letter or number.</source>
+        <target>Stien må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path you provided is already in use by another journal.</source>
+        <target>Den valgte sti bruges allerede af et andet tidsskrift.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-create-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was created successfully.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-edit-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was edited successfully.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-enableJournalInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable this journal to appear publicly on the site</source>
+        <target>Offentliggør dette tidsskrift på webstedet</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-contextDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal description</source>
+        <target>Tidsskriftsbeskrivelse</target>
+      </segment>
+    </unit>
+    <unit id="admin-journal-pathImportInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Existing journal path or path to create (e.g., "ojs").</source>
+        <target>Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. "ojs").</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Import subscriptions</source>
+        <target>Importer abonnementer</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-transcode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcode article metadata from ISO8859-1</source>
+        <target>Omsæt kode for artikelmetadata fra ISO8859-1</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-redirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Generate code to map OJS 1 URLs to OJS 2 URLs</source>
+        <target>Gererer kode for at mappe OJS 1 URL's til OJS 2 URL's</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-form-importPathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The import path is required.</source>
+        <target>Importstien er påkrævet.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importErrors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Importing failed to complete successfully</source>
+        <target>Importen mislykkedes</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge Users</source>
+        <target>Flet brugere</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-mergeUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge User</source>
+        <target>Flet bruger</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</source>
+        <target>Vælg en bruger, som skal tilskrives den tidligere brugers forfatterskab, redigeringsopgaver osv.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Vælg en bruger, som skal flettes til en anden brugerkonto (f.eks. hvis en person har to brugerkonti). Den først valgte konto slettes, og dens manuskripter, tildelinger osv. tilskrives den anden konto.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Alle tilmeldte brugere</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</source>
+        <target>Er du sikker på, at du vil flette kontoen med brugernavnet {$oldAccountCount} til kontoen med brugernavnet "{$newUsername}"? Kontoen med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. Denne handling kan ikke fortrydes.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-noneEnrolled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No enrolled users.</source>
+        <target>Ingen tilmeldte brugere.</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-subscriptionExpiryReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminder</source>
+        <target>Påmindelse om abonnementes udløb</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-openAccessNotification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Notification</source>
+        <target>Open Access meddelelse</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-reviewReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Reminder</source>
+        <target>Påmindelse om bedømmelse</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

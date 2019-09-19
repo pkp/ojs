@@ -9,8 +9,8 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:51-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:07-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:07-07:00</note>
       <note id="Language"></note>
     </notes>
     <unit id="manager-distribution-access">
@@ -571,6 +571,15 @@
         <target>Payment Types</target>
       </segment>
     </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>Payment ID</target>
+      </segment>
+    </unit>
     <unit id="manager-people-allEnrolledUsers">
       <notes>
         <note category="context"></note>
@@ -1066,6 +1075,15 @@
         <target>Add Item to Appear in "About the Journal"</target>
       </segment>
     </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Add Item</target>
+      </segment>
+    </unit>
     <unit id="manager-setup-addReviewerDatabaseLink">
       <notes>
         <note category="context"></note>
@@ -1217,6 +1235,15 @@
       <segment>
         <source>Step 5. Customizing the Look</source>
         <target>Step 5. Customizing the Look</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Details</target>
       </segment>
     </unit>
     <unit id="manager-setup-details-description">
@@ -1705,6 +1732,15 @@
         <target>Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</target>
       </segment>
     </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Journal Homepage Content</target>
+      </segment>
+    </unit>
     <unit id="manager-setup-journalHomepageContentDescription">
       <notes>
         <note category="context"></note>
@@ -1715,6 +1751,15 @@
       </segment>
     </unit>
     <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>Journal Homepage Header</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
       <notes>
         <note category="context"></note>
       </notes>
@@ -1760,6 +1805,15 @@
       </segment>
     </unit>
     <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Journal Logo</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
       <notes>
         <note category="context"></note>
       </notes>
@@ -2686,6 +2740,15 @@
         <target>On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission.</target>
       </segment>
     </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Submissions</target>
+      </segment>
+    </unit>
     <unit id="manager-setup-submissions-description">
       <notes>
         <note category="context"></note>
@@ -3216,6 +3279,15 @@
         <target>Notify subscribers by email before subscription expiry.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Notify subscribers by email before subscription expiry.</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionPolicies-expiryReminders">
       <notes>
         <note category="context"></note>
@@ -3450,6 +3522,15 @@
         <target>Please enter a valid email.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscriptions</target>
+      </segment>
+    </unit>
     <unit id="manager-individualSubscriptions">
       <notes>
         <note category="context"></note>
@@ -3565,6 +3646,15 @@
       <segment>
         <source>Domain</source>
         <target>Domain</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Edit Subscription</target>
       </segment>
     </unit>
     <unit id="manager-subscriptions-editTitle">
@@ -3783,6 +3873,15 @@
         <target>Send the user an email with their username and subscription details.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Please use the checkbox provided.</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptions-form-membership">
       <notes>
         <note category="context"></note>
@@ -3826,6 +3925,15 @@
       <segment>
         <source>Notes</source>
         <target>Notes</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domain</target>
       </segment>
     </unit>
     <unit id="manager-subscriptions-form-institutionName">
@@ -3981,6 +4089,33 @@
         <target>IP Range</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Membership</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Reference Number</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notes</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptions-noneCreated">
       <notes>
         <note category="context"></note>
@@ -4044,6 +4179,15 @@
         <target>Subscription Type</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>User</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptions-contact">
       <notes>
         <note category="context"></note>
@@ -4089,6 +4233,15 @@
         <target>Cost</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscriptions</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-individual">
       <notes>
         <note category="context"></note>
@@ -4116,6 +4269,15 @@
         <target>Create New Subscription Type</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Create</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-duration">
       <notes>
         <note category="context"></note>
@@ -4132,6 +4294,24 @@
       <segment>
         <source>Edit Subscription Type</source>
         <target>Edit Subscription Type</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Edit</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Cost</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-form-costInstructions">
@@ -4188,6 +4368,15 @@
         <target>Please select a valid currency.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Description</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
       <notes>
         <note category="context"></note>
@@ -4222,6 +4411,15 @@
       <segment>
         <source>Please use the provided options.</source>
         <target>Please use the provided options.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Duration</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-form-durationInstructions">
@@ -4278,6 +4476,15 @@
         <target>Please select a valid subscription type format.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Subscriptions</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-individual">
       <notes>
         <note category="context"></note>
@@ -4296,6 +4503,15 @@
         <target>Institutional (users are validated via domain or IP address)</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Please use the provided options.</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-membership">
       <notes>
         <note category="context"></note>
@@ -4305,6 +4521,24 @@
         <target>Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Please use the checkbox provided.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Options</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-public">
       <notes>
         <note category="context"></note>
@@ -4312,6 +4546,24 @@
       <segment>
         <source>Do not make this subscription type publicly available or visible on the website.</source>
         <target>Do not make this subscription type publicly available or visible on the website.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Please use the checkbox provided.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Save and Create Another</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-form-typeName">
@@ -4339,6 +4591,15 @@
       <segment>
         <source>A subscription type name is required.</source>
         <target>A subscription type name is required.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Subscription type</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-noneCreated">
@@ -4681,6 +4942,15 @@
       <segment>
         <source>Registered</source>
         <target>Registered</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Action</target>
       </segment>
     </unit>
     <unit id="plugins-importexport-common-action-export">

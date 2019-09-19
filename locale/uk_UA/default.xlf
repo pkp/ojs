@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:23-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:23-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="section-default-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Статті</target>
+      </segment>
+    </unit>
+    <unit id="section-default-abbrev">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ART</source>
+        <target>СТАТ</target>
+      </segment>
+    </unit>
+    <unit id="section-default-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="default-genres-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Text</source>
+        <target>Текст статті</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-notPreviouslyPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</source>
+        <target>Це подання раніше не було опубліковане і не надсилалося на розгляд до редакцій інших журналів (або вкажіть пояснення у коментарях для редактора).</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-fileFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission file is in OpenOffice, Microsoft Word, or RTF document file format.</source>
+        <target>Файл подання є документом у форматі Microsoft Word, OpenOffice, RTF або WordPerfect.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-addressesLinked">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Where available, URLs for the references have been provided.</source>
+        <target>Веб-посилання у тексті супроводжуються повними коректними адресами URL.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-submissionAppearance">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</source>
+        <target>Текст набраний 12-м розміром кеглю з одинарним міжрядковим інтервалом; авторські акценти виділені курсивом, а не підкресленням (всюди, крім адрес URL); всі ілюстрації, графіки та таблиці розміщені безпосередньо у тексті, там, де вони повинні бути за змістом (а не у кінці документу).</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-bibliographicRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.</source>
+        <target><![CDATA[Текст відповідає вимогам щодо стилістики та бібліографії, викладеним у <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Керівництві для авторів</a> розділу "Про журнал".]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</p>]]></source>
+        <target><![CDATA[<p>Імена та електронні адреси, вказані користувачами на сайті цього журналу, будуть використані виключно для виконання внутрішніх технічних завдань цього журналу; вони не будуть поширюватись та передаватись стороннім особам.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-openAccessPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</source>
+        <target>Цей журнал підтримує політику миттєвого відкритого доступу до опублікованого контенту, слідуючи принципам вільного поширення наукової інформації та глобального обміну знаннями задля загального суспільного прогресу.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}{$contextPath}/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.]]></source>
+        <target><![CDATA[Ми пропонуємо авторам реєструватися на сайті, щоб скористатись службою повідомлень цього журналу. Для реєстрації використайте посилання <a href="{$indexUrl}{$contextPath}/user/register">Зареєструватися</a> у верхньому меню домашньої сторінки сайту журналу. У Вас буде можливість оперативно отримувати поштою сторінки змісту нових опублікованих випусків нашого видання та дозволите редакції відстежувати читацькі пріоритети та інтереси. Будь ласка, ознайомтеся з нашим <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Положенням про конфіденційність</a>, у якому йдеться про те, що журнал гарантує нерозповсюдження імен та електронних адрес своїх читачів стороннім особам.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}{$contextPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}{$contextPath}/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="{$indexUrl}/index/login">log in</a> and begin the five-step process.]]></source>
+        <target><![CDATA[Бажаєте опублікувати свою статтю у цьому журналі? Рекомендуємо ознайомитись з нашою редакційною політикою на сторінці <a href="{$indexUrl}{$contextPath}/about">Про журнал</a> та переглянути <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Керівництво для авторів</a>. Для того, щоб мати можливість подавати рукописи до нашого видання, автори повинні <a href="{$indexUrl}{$contextPath}/user/register">зареєструватися</a> на сайті журналу. Якщо Ви вже зареєстровані, просто <a href="{$indexUrl}/index/login">увійдіть на сайт</a> та пройдіть 5 кроків подання рукопису на розгляд.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></source>
+        <target><![CDATA[Ми пропонуємо науковим бібліотекам включити цей журнал до списків своїх електронних колекцій. Додатково, в цій видавничій системі передбачено засоби інтеграції з бібліотечним програмним забезпеченням, що дозволяє бібліотекам забезпечувати архівне збереження електронного контенту журналу та/або безпосередньо брати участь у видавничому процесі. Більш детально про ці можливості див. на сайті <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-lockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://www.lockss.org/">More...</a>]]></source>
+        <target><![CDATA[Цей журнал використовує систему LOCKSS (Lots of Copies Keep Stuff Safe) для захищеного та надійного розподіленого архівування опублікованого контенту журналу в численних бібліотеках та інформаційних центрах. Бібліотеки-учасниці проекту LOCKSS гарантують довготермінове зберігання повнотекстових архівів журналу та автоматичне відновлення пошкодженої інформації. <a href="http://www.lockss.org/">Детальніше...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-clockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></source>
+        <target><![CDATA[Цей журнал використовує систему CLOCKSS (Controled LOCKSS) для розподіленого архівного зберігання опублікованого контенту журналу в численних бібліотеках та дозволяє цим бібліотекам створювати архіви журналів з метою довготермінового зберігання та відновлення пошкодженої інформації. <a href="http://clockss.org/">Детальніше...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal manager</source>
+        <target>Менеджер журналу</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal managers</source>
+        <target>Менеджери журналу</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JM</source>
+        <target>МенЖ</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editor</source>
+        <target>Редактор журналу</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editors</source>
+        <target>Редактори журналу</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JE</source>
+        <target>РедЖ</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editor</source>
+        <target>Запрошений редактор</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editors</source>
+        <target>Запрошені редактори</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>GE</source>
+        <target>ЗапрРед</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editor</source>
+        <target>Редактор розділу</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Редактори розділів</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SecE</source>
+        <target>РедРозд</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Менеджер передплати</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Managers</source>
+        <target>Менеджери передплати</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SubM</source>
+        <target>МенП</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>Інструментарій дослідження</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>Матеріали дослідження</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>Результати дослідження</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>Стенограми</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>Аналіз даних</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>Набір даних</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-sourceTexts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Texts</source>
+        <target>Тексти першоджерел</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer</source>
+        <target>Рецензент</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Рецензенти</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>R</source>
+        <target>Рец</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></source>
+        <target><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

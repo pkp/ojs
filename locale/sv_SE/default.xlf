@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:22-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:22-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="section-default-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Articles</source>
+        <target>Artiklar</target>
+      </segment>
+    </unit>
+    <unit id="section-default-abbrev">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>ART</source>
+        <target>ART</target>
+      </segment>
+    </unit>
+    <unit id="section-default-policy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="default-genres-article">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Text</source>
+        <target>Artikeltext</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-notPreviouslyPublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</source>
+        <target>Bidraget har aldrig publicerats tidigare. Det är inte heller under övervägande hos en annan tidskrift (om så är fallet förklaras det i Kommentarer till redaktören).</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-fileFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission file is in OpenOffice, Microsoft Word, or RTF document file format.</source>
+        <target>Den insända filen för bidraget är i något av filformaten OpenOffice, Microsoft Word eller RTF.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-addressesLinked">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Where available, URLs for the references have been provided.</source>
+        <target>URL:er har angivits för de referenser där det är möjligt.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-submissionAppearance">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</source>
+        <target>Texten är satt med enkelt radavstånd, använder 12 punkters typsnittsstorlek, kursiverad text istället för understruken (utom när det gäller URL:er). Alla illustrationer, figurer och tabeller är också inbäddade i texten och inte förlagda till slutet.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-checklist-bibliographicRequirements">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.</source>
+        <target>Texten följer de stilmässiga och bibliografiska regler som beskrivs i Riktlinjer för författare.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</p>]]></source>
+        <target><![CDATA[<p>De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-openAccessPolicy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</source>
+        <target>Den här tidskriften gör sitt innehåll fritt tillgängligt omedelbart vid publicering enligt open access-principen om att det främjar ett ökat kunskapsutbyte världen över om forskning är fritt tillgänglig.</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="{$indexUrl}{$contextPath}/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal's <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.]]></source>
+        <target><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}{$contextPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Integritetspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}{$contextPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}{$contextPath}/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="{$indexUrl}/index/login">log in</a> and begin the five-step process.]]></source>
+        <target><![CDATA[Är du intresserad av att skicka in ett bidrag till den här tidskriften? Då rekommenderar vi att du läser igenom <a href="{$indexUrl}{$contextPath}/about">Om tidskriften</a>-sidan för att få en uppfattning om tidskriftens sektionspolicyer, samt <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Riktlinjer för författare</a>. För att skicka in ett bidrag måste du som författare <a href="{$indexUrl}{$contextPath}/user/register">registrera dig</a> hos tidskriften. Om du redan har ett konto kan du bara <a href="{$indexUrl}/index/login">logga in</a> och påbörja processen, som består av fem steg.]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-forLibrarians">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></source>
+        <target><![CDATA[Vi uppmuntrar bibliotekarier vid forskningsbibliotek att lista den här tidskriften i sitt biblioteks bestånd av elektroniska tidskrifter. Det kan också vara värt att notera att den här tidskriftens publiceringssystem, som utgör fri och öppen programvara, är ett passande system för bibliotek att drifta för sina forskare och de tidskrifter de arbetar med (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-lockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://www.lockss.org/">More...</a>]]></source>
+        <target><![CDATA[Den här tidskriften utnyttjar LOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://www.lockss.org/">Läs mer...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-clockssLicense">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></source>
+        <target><![CDATA[Den här tidskriften utnyttjar CLOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://clockss.org/">Läs mer...</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal manager</source>
+        <target>Tidskriftsansvarig</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal managers</source>
+        <target>Tidskriftsansvariga</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-manager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JM</source>
+        <target>TA</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editor</source>
+        <target>Tidskriftsredaktör</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal editors</source>
+        <target>Tidskriftsredaktörer</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-editor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>JE</source>
+        <target>TR</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editor</source>
+        <target>Gästredaktör</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Guest editors</source>
+        <target>Gästredaktörer</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-guestEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>GE</source>
+        <target>GR</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editor</source>
+        <target>Sektionsredaktör</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section editors</source>
+        <target>Sektionsredaktörer</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-sectionEditor">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SecE</source>
+        <target>SR</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Manager</source>
+        <target>Prenumerationsansvarig</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Managers</source>
+        <target>Prenumerationsansvariga</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-subscriptionManager">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>SubM</source>
+        <target>PA</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchInstrument">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Instrument</source>
+        <target>Forskningsinstrument</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchMaterials">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Materials</source>
+        <target>Forskningsmaterial</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-researchResults">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Research Results</source>
+        <target>Forskningsresultat</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-transcripts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcripts</source>
+        <target>Transkriberingar</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataAnalysis">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Analysis</source>
+        <target>Dataanalys</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-dataSet">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Data Set</source>
+        <target>Dataset</target>
+      </segment>
+    </unit>
+    <unit id="default-genres-sourceTexts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Source Texts</source>
+        <target>Källtexter</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-name-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewer</source>
+        <target>Granskare</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-plural-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reviewers</source>
+        <target>Granskare</target>
+      </segment>
+    </unit>
+    <unit id="default-groups-abbrev-externalReviewer">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>R</source>
+        <target>G</target>
+      </segment>
+    </unit>
+    <unit id="default-contextSettings-emailSignature">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></source>
+        <target><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

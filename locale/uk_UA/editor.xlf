@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:23-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:23-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="editor-home">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Home</source>
+        <target>Тека редактора</target>
+      </segment>
+    </unit>
+    <unit id="editor-reassign">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reassign</source>
+        <target>Повторно призначити</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionsAndPublishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions and Publishing</source>
+        <target>Подання та публікація</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionQueue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Queue</source>
+        <target>Редакційна черга</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Archive</source>
+        <target>Архів матеріалів</target>
+      </segment>
+    </unit>
+    <unit id="editor-publishing">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publishing</source>
+        <target>Публікація</target>
+      </segment>
+    </unit>
+    <unit id="editor-publishedIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Published Issues</source>
+        <target>Опубліковані випуски</target>
+      </segment>
+    </unit>
+    <unit id="editor-allSections">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Sections</source>
+        <target>Всі розділи</target>
+      </segment>
+    </unit>
+    <unit id="editor-allEditors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Editors</source>
+        <target>Всі редактори</target>
+      </segment>
+    </unit>
+    <unit id="editor-me">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Me</source>
+        <target>Я</target>
+      </segment>
+    </unit>
+    <unit id="editor-publicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The public identifier '{$publicIdentifier}' already exists for another object (issue, article, galley or file). Please choose unique identifiers within your journal.</source>
+        <target>Ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту (випуску, статті, гранки або супровідного файлу). Будь ласка, вкажіть унікальний ідентифікатор для цього журналу.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No submissions in the archive.</source>
+        <target>В архіві немає матеріалів.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-saveChanges">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</source>
+        <target>Зберегти зміни для архівованих матеріалів? Подання, помічені для видалення, будуть остаточно видалені з системи.</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionArchive-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this submission?</source>
+        <target>Ви впевнені, що хочете остаточно видалити це подання?</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-confirmDecision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to record this decision?</source>
+        <target>Ви впевнені, що хочете записати це рішення?</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-emailWillArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</source>
+        <target>Це подання буде архівоване після того, як буде надіслане повідомлення автору або після натискання кнопки "Пропустити надсилання листа".</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissionReview-cannotSendToCopyediting">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</source>
+        <target>Перш ніж надсилати подання на літературне редагування, за допомогою посилання "Сповістити автора", інформуйте автора про прийняте Вами рішення та визначіть версію для літературного редагування.</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify Users</source>
+        <target>Повідомити користувачів</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allReaders">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All readers ({$count} users)</source>
+        <target>Всім читачам ({$count} користувачів)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allAuthors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All published authors ({$count} users)</source>
+        <target>Всім опублікованим авторам ({$count} користувачів)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allIndividualSubscribers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All individual subscribers ({$count} users)</source>
+        <target>Всім індивідуальним передплатникам ({$count} користувачів)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allInstitutionalSubscribers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All institutional subscribers ({$count} users)</source>
+        <target>Всім установам-передплатникам ({$count} користувачів)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-inProgress">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notifying users...</source>
+        <target>Повідомлення розсилаються користувачам ...</target>
+      </segment>
+    </unit>
+    <unit id="editor-usersNotified">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Users Notified</source>
+        <target>Користувачам повідомлено</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send this message to all users associated with this journal ({$count} users)</source>
+        <target>Надіслати це повідомлення всім користувачам, асоційованим з цим журналом ({$count} користувачів)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-interestedUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send this message to the users associated with this journal who have indicated that they wish to receive updates ({$count} users)</source>
+        <target>Надіслати це повідомлення лише тим користувачам журналу, які виявили бажання отримувати новини ({$count} користувачів)</target>
+      </segment>
+    </unit>
+    <unit id="editor-notifyUsers-includeToc">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Include the table of contents from this issue:</source>
+        <target>Включити сторінку змісту цього випуску:</target>
+      </segment>
+    </unit>
+    <unit id="editor-editorAdministration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Editor Administration</source>
+        <target>Редактор: Адміністрування</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-createIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Створити випуск</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-editIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Management: {$issueIdentification}</source>
+        <target>Управління випуском: {$issueIdentification}</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-currentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Current Issue</source>
+        <target>Поточний випуск</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-numArticles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Items</source>
+        <target>Кількість статей</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noArticles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No items are currently scheduled for this issue.</source>
+        <target>Ні одної статті поки не заплановано для публікації у цьому випуску.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to permanently delete this issue?</source>
+        <target>Ви впевнені, що хочете назавжди видалити цей випуск?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-published">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Published</source>
+        <target>Опубліковані</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-unpublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unpublished</source>
+        <target>Неопубліковані</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-datePublished">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Date Published</source>
+        <target>Дата публікації</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-volumeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Volume is required and must be a positive, numeric value.</source>
+        <target>Необхідно ввести позитивне числове значення для номеру тому.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-numberRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Number is required and must be a positive, numeric value.</source>
+        <target>Необхідно ввести позитивне числове значення для номеру випуску.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-yearRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Year is required and must be a positive, numeric value.</source>
+        <target>Необхідно ввести позитивне числове значення для року видання.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title is required for the issue.</source>
+        <target>Необхідно вказати назву цього випуску.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueIdentificationRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue identification is required. Please select at least one of the issue identification options.</source>
+        <target>Необхідно ввести ідентифікатор випуску. Будь ласка, оберіть принаймні один з варіантів ідентифікації.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueIdentification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue identification</source>
+        <target>Ідентифікація випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicIssueIdentifier">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public issue identifier</source>
+        <target>Публічний ідентифікатор випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Опис</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-accessStatus">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access status</source>
+        <target>Статус доступу</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-accessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open access date</source>
+        <target>Дата відкриття доступу</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-enableOpenAccessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable delayed open access</source>
+        <target>Дозволити відтермінований відкритий доступ</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover image</source>
+        <target>Обкладинка</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>(Allowed formats: .gif, .jpg, or .png)</source>
+        <target>(дозволені формати: .gif, .jpg або .png)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-uploaded">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Uploaded</source>
+        <target>Вивантажено</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Видалити</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-proofed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofed</source>
+        <target>Перевірено</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove cover page image?</source>
+        <target>Видалити зображення обкладинки?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverImageFileNameMismatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete did not match the cover image for this issue. Please reload the page and try again.</source>
+        <target>Зображення обкладинки, яке ви хочете видалити, не відповідає зображенню обкладинки для цього випуску. Будь ласка, перезавантажте сторінку і спробуйте знову.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>Зображення обкладинки, якеу ви хочете видалити, не вдається знайти. Можливо воно вже було видалено. Спробуйте перезавантажити сторінку.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidCoverImageFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</source>
+        <target>Хибний формат зображення обкладинки. Дозволені формати: .gif, .jpg, .png.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-styleFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Stylesheet</source>
+        <target>Таблиця стилів</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidStyleFormat">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invalid stylesheet format. Ensure that the submitted file is a valid CSS. (Note that stylesheets with comments at the beginning may be rejected.)</source>
+        <target>Неприпустимий формат файлу таблиці стилю. Переконайтеся, що файл використовує коректний формат CSS. (Зауважте, що таблиці стилів, які починаються з коментарів, не можуть бути прийняті).</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-removeStyleFile">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove stylesheet?</source>
+        <target>Видалити таблицю стилю?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageCaption">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover caption</source>
+        <target>Підпис обкладинки</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-showCoverPage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create a cover for this issue with the following elements.</source>
+        <target>Створити для цього випуску обкладинку з наступними елементами.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-coverPageDisplay">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Display</source>
+        <target>Показати</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-openAccess">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open access</source>
+        <target>Відкритий доступ</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-subscription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription</source>
+        <target>Передплата</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-identification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identification</source>
+        <target>Ідентифікація</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-access">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access</source>
+        <target>Доступ</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-cover">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover</source>
+        <target>Обкладинка</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmIssueDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All articles will be returned to the editing queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</source>
+        <target>Всі статті повернуться до редакційної черги, а всі файли, асоційовані з випуском, будуть видалені назавжди. Ви впевнені, що хочете видалити цей випуск?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-resetIssueOrder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This journal uses custom issue ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></source>
+        <target><![CDATA[Цей журнал використовує нестандартне сортування випусків. <a href="{$url}" class="action">Скинути сортування до стандартного</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-resetSectionOrder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[This issue uses custom section ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></source>
+        <target><![CDATA[Цей випуск використовує нестандартне сортування розділів. <a href="{$url}" class="action">Скинути сортування до стандартного</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueData">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Data</source>
+        <target>Дані про випуск</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-saveChanges">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save changes to table of contents?</source>
+        <target>Зберегти зміни в змісті випуска?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-default">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Default</source>
+        <target>За замовчуванням</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-order">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Order</source>
+        <target>Сортування</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicId">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public Id</source>
+        <target>Ідентифікатор</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publishIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Опублікувати випуск</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-unpublishIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unpublish Issue</source>
+        <target>Скасувати публікацію випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview Issue</source>
+        <target>Переглянути випуск</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-preview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>(Попередній перегляд)</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmPublish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to publish the new issue?</source>
+        <target>Ви впевнені, що хочете опублікувати новий випуск?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmUnpublish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to unpublish this published issue?</source>
+        <target>Ви впевнені, що хочете скасувати публікацію цього опублікованого випуску?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmSetCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to set this issue as current?</source>
+        <target>Ви впевнені, що хочете зробити даний випуск поточним?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-publicArticleIdExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Unable to save public id for article:</source>
+        <target>Неможливо зберегти публічний ідентифікатор статті:</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noLiveIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Live Issues</source>
+        <target>Немає опублікованих випусків</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-open">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open</source>
+        <target>Відкритий</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-pages">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Pages</source>
+        <target>Сторінки</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Galleys</source>
+        <target>Гранки випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Issue Galley</source>
+        <target>Гранка випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-viewingGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Viewing Issue Galley</source>
+        <target>Переглядів гранки випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-issueGalleysDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish galleys with entire issue contents.</source>
+        <target>Публікувати гранки з повним змістом випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-noneIssueGalleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No issue galleys have been published.</source>
+        <target>Жодної гранки випуску не було опубліковано.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyLabelRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An issue galley label is required.</source>
+        <target>Необхідно вказати мітку гранки випуску.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyLocaleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>An issue galley locale is required.</source>
+        <target>Необхідно вказати локалізацію гранки випуску.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-galleyPublicIdentificationExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Public issue galley identification already exists.</source>
+        <target>Вказаний ідентифікатор гранки випуску вже існує.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-backToIssueGalleys">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back to issue galleys</source>
+        <target>Повернутися до гранок випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-confirmDeleteGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to delete this issue galley?</source>
+        <target>Ви впевнені, що хочете видалити цю гранку випуску?</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-identifiers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Identifiers</source>
+        <target>Ідентифікатори</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-futureIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Future Issues</source>
+        <target>Майбутні випуски</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add galley</source>
+        <target>Додати гранку</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-publish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Опублікувати випуск</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Створити випуск</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-viewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View</source>
+        <target>Переглянути</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>Попередній перегляд</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssueGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue Galley</source>
+        <target>Створити гранку випуску</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-setCurrentIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Set Current Issue</source>
+        <target>Задати поточний випуск</target>
+      </segment>
+    </unit>
+    <unit id="editor-navigation-issueArchive">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Back Issues</source>
+        <target>Попередні випуски</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-designateReviewVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Designate the original file as the Review Version</source>
+        <target>Позначити оригінальний файл як версію для рецензування</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-decision">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Decision</source>
+        <target>Рішення</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-showBy">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show By</source>
+        <target>Сортувати за</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-submitMMDD">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit MM-DD</source>
+        <target>Відправити ММ-ДД</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-activeAssignments">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Active Assignments</source>
+        <target>Активні призначення</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-invite">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Invite</source>
+        <target>Запросити</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-accept">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Accept</source>
+        <target>Прийняти</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-noSubmissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No Submissions</source>
+        <target>Немає матеріалів</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-lastAssigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Latest</source>
+        <target>Остання</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-averageTime">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Weeks</source>
+        <target>Тижнів</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-lastCompleted">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Last Complete</source>
+        <target>Остання завершена</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-assignedTo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Assigned To</source>
+        <target>Призначено</target>
+      </segment>
+    </unit>
+    <unit id="editor-submissions-inSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>In Section</source>
+        <target>У розділі</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-schedulePublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Schedule For Publication</source>
+        <target>Запланувати для публікації</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-showPublicationVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Show Scheduled Publication</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-publishVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Version</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-viewMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View Version Metadata</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-editMetadata">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Version Metadata</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="editor-article-scheduleForPublication">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Schedule for publication in</source>
+        <target>Запланувати для публікації у</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-scheduleForPublication-toBeAssigned">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To Be Assigned</source>
+        <target>Буде визначено</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-payment-publicationFeeNotPaid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</source>
+        <target>Плата за публікацію не отримана. Щоб внести статтю до графіку публікації, нагадайте автору про необхідність сплати рахунку або зробіть виняток та скасуйте плату.</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>Зображення обкладинки, яке ви хочете видалити, не вдається знайти. Можливо воно вже було видалено. Спробуйте перезавантажити сторінку.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-removeArticle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove Article From Issue</source>
+        <target>Видалити статтю з випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Видалити</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to remove this article from the issue? The article will be available for scheduling in another issue.</source>
+        <target>Ви впевнені, що хочете видалити цю статтю з випуску? Стаття буде доступна для планування в інший випуск.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-invalidAccessDate">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Access date is not valid.</source>
+        <target>Дата доступа не корректна.</target>
+      </segment>
+    </unit>
+    <unit id="editor-issues-editIssueGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Issue Galley</source>
+        <target>Редагувати гранку випуску</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-production-productionReadyFilesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The layout editor prepares these files for each galley and then uploads to the appropriate <span class="pkp_help_title">Proofs</span> for proofreading.]]></source>
+        <target><![CDATA[Верстальник підготує файли кожної гранки та завантажить їх у відповідні місця розділу <span class="pkp_help_title">«Коректура»</span> for proofreading.]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-selectGalleyFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select Galley Files</source>
+        <target>Вибрати файли гранок</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-editorial-finalDraftDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Final draft files in this list are transformed by a Copyeditor into copyedited versions, uploaded below under <span class="pkp_help_title">Copyediting</span>.]]></source>
+        <target><![CDATA[Готові файли чернеток з цього списку, пройшовши літературне редагування, завантажені літературним редактором в розділ <span class="pkp_help_title">«Літературне редагування»</span>.]]></target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-proof-manageProofFilesDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any files that have already been uploaded to any submission stage can be added to the Proofreading listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion.</source>
+        <target>Всі файли, які були завантажені на будь-якому етапі подання рукопису, можуть бути додані в список «Коректура», для цього потрібно поставити галочку «Включити» нижче і клацнути на кнопці «Пошук»: всі доступні файли будуть показані в списку і можуть бути обрані для включення.</target>
+      </segment>
+    </unit>
+    <unit id="editor-publicIdentificationExistsForTheSameType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your journal.</source>
+        <target>Публічний ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту такого ж типу. Будь ласка, обирайте унікальні Ідентифікатори для об'єктів одного типу у Вашому журналі.</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-coverImage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cover Image</source>
+        <target>Зображення обкладинки</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

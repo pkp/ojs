@@ -9,8 +9,8 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:28-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:11-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:11-07:00</note>
       <note id="Language"></note>
     </notes>
     <unit id="manager-distribution-access">
@@ -571,6 +571,15 @@
         <target>Types de paiement</target>
       </segment>
     </unit>
+    <unit id="manager-payment-userName">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Payment ID</source>
+        <target>ID du paiement</target>
+      </segment>
+    </unit>
     <unit id="manager-people-allEnrolledUsers">
       <notes>
         <note category="context"></note>
@@ -1066,6 +1075,15 @@
         <target>Ajouter un élément à afficher dans  « À propos de la revue »</target>
       </segment>
     </unit>
+    <unit id="manager-setup-addNavItem">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Add Item</source>
+        <target>Ajouter un élément</target>
+      </segment>
+    </unit>
     <unit id="manager-setup-addReviewerDatabaseLink">
       <notes>
         <note category="context"></note>
@@ -1217,6 +1235,15 @@
       <segment>
         <source>Step 5. Customizing the Look</source>
         <target>Étape 5. Personnalisation de l'apparence</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-details">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Details</source>
+        <target>Détails</target>
       </segment>
     </unit>
     <unit id="manager-setup-details-description">
@@ -1705,6 +1732,15 @@
         <target>Inclure toute information sur votre revue qui pourrait intéresser les lecteurs, les auteurs ou les évaluateurs. Cela peut inclure votre politique de libre accès, les champs d'intérêt, les questions entourant les droits d'auteur, la divulgation des commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans n'importe quel système d'archives LOCKSS ou CLOCKSS.</target>
       </segment>
     </unit>
+    <unit id="manager-setup-journalHomepageContent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Content</source>
+        <target>Contenu de la page d'accueil de la revue</target>
+      </segment>
+    </unit>
     <unit id="manager-setup-journalHomepageContentDescription">
       <notes>
         <note category="context"></note>
@@ -1715,6 +1751,15 @@
       </segment>
     </unit>
     <unit id="manager-setup-journalHomepageHeader">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Homepage Header</source>
+        <target>En-tête de la page d'accueil de la revue</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalHomepageHeader-altText">
       <notes>
         <note category="context"></note>
       </notes>
@@ -1760,6 +1805,15 @@
       </segment>
     </unit>
     <unit id="manager-setup-journalLogo">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Logo</source>
+        <target>Logo de la revue</target>
+      </segment>
+    </unit>
+    <unit id="manager-setup-journalLogo-altText">
       <notes>
         <note category="context"></note>
       </notes>
@@ -2686,6 +2740,15 @@
         <target>Lors d'une soumission à la revue, on demande d'abord aux auteurs de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans Directives aux auteurs, sous À propos de la revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de la liste devront être cochés avant que les auteurs puissent poursuivre la procédure de soumission.</target>
       </segment>
     </unit>
+    <unit id="manager-setup-submissions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submissions</source>
+        <target>Soumissions</target>
+      </segment>
+    </unit>
     <unit id="manager-setup-submissions-description">
       <notes>
         <note category="context"></note>
@@ -3213,6 +3276,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionPolicies-expiryReminderBeforeWeeks">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notify subscribers by email before subscription expiry.</source>
+        <target>Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionPolicies-expiryReminders">
       <notes>
         <note category="context"></note>
@@ -3447,6 +3519,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Veuillez saisir un courriel valide.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnements</target>
+      </segment>
+    </unit>
     <unit id="manager-individualSubscriptions">
       <notes>
         <note category="context"></note>
@@ -3562,6 +3643,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
       <segment>
         <source>Domain</source>
         <target>Domaine</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-edit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit Subscription</source>
+        <target>Modifier l'abonnement</target>
       </segment>
     </unit>
     <unit id="manager-subscriptions-editTitle">
@@ -3780,6 +3870,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Envoyer à l'utilisateur un courriel avec ses nom d'utilisateur et détails d'abonnement.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions-form-notifyEmailValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Veuillez utiliser la case à cocher fournie.</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptions-form-membership">
       <notes>
         <note category="context"></note>
@@ -3823,6 +3922,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
       <segment>
         <source>Notes</source>
         <target>Notes</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-form-domain">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Domain</source>
+        <target>Domaine</target>
       </segment>
     </unit>
     <unit id="manager-subscriptions-form-institutionName">
@@ -3978,6 +4086,33 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Intervalles d'adresses IP</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions-membership">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Membership</source>
+        <target>Adhésion</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-referenceNumber">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Reference Number</source>
+        <target>Numéro de référence</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptions-notes">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Notes</source>
+        <target>Notes</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptions-noneCreated">
       <notes>
         <note category="context"></note>
@@ -4041,6 +4176,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Type d'abonnement</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptions-user">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>User</source>
+        <target>Utilisateur</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptions-contact">
       <notes>
         <note category="context"></note>
@@ -4086,6 +4230,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Coût</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnements</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-individual">
       <notes>
         <note category="context"></note>
@@ -4113,6 +4266,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Créer un nouveau type d'abonnement</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-createTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create</source>
+        <target>Créer</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-duration">
       <notes>
         <note category="context"></note>
@@ -4129,6 +4291,24 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
       <segment>
         <source>Edit Subscription Type</source>
         <target>Modifier le type d'abonnement</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-editTitle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Modifier</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-cost">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cost</source>
+        <target>Coût</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-form-costInstructions">
@@ -4185,6 +4365,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Veuillez sélectionner une devise valide.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target>Description</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-nonExpiring-expiresAfter">
       <notes>
         <note category="context"></note>
@@ -4219,6 +4408,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
       <segment>
         <source>Please use the provided options.</source>
         <target>Veuillez utiliser les options fournies.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-duration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Duration</source>
+        <target>Durée</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-form-durationInstructions">
@@ -4275,6 +4473,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Veuillez sélectionner un format de type d'abonnement valide.</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-subscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscriptions</source>
+        <target>Abonnements</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-individual">
       <notes>
         <note category="context"></note>
@@ -4293,6 +4500,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target>Institutionnel (les utilisateurs sont validés via une adresse IP ou un domaine)</target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-institutionalValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the provided options.</source>
+        <target>Veuillez utiliser les options fournies.</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-membership">
       <notes>
         <note category="context"></note>
@@ -4302,6 +4518,24 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
         <target><![CDATA[Les abonnements requièrent l'information d'adhésion<br />(par ex., membre d'une association, d'une organisation, d'un consortium, etc.)]]></target>
       </segment>
     </unit>
+    <unit id="manager-subscriptionTypes-form-membershipValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Veuillez utiliser les cases à cocher fournies.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-options">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Options</source>
+        <target>Options</target>
+      </segment>
+    </unit>
     <unit id="manager-subscriptionTypes-form-public">
       <notes>
         <note category="context"></note>
@@ -4309,6 +4543,24 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
       <segment>
         <source>Do not make this subscription type publicly available or visible on the website.</source>
         <target><![CDATA[Ne pas rendre ce type d'abonnement disponible publiquement ou visible<br />(p. ex. sous Abonnements dans À propos de la revue).]]></target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-publicValid">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please use the checkbox provided.</source>
+        <target>Veuillez utiliser les cases à cocher fournies.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-form-saveAndCreateAnotherType">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Save and Create Another</source>
+        <target>Enregistrer et en créer un autre</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-form-typeName">
@@ -4336,6 +4588,15 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
       <segment>
         <source>A subscription type name is required.</source>
         <target>Le nom du type d'abonnement est obligatoire.</target>
+      </segment>
+    </unit>
+    <unit id="manager-subscriptionTypes-name">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription type</source>
+        <target>Type d'abonnement</target>
       </segment>
     </unit>
     <unit id="manager-subscriptionTypes-noneCreated">
@@ -4679,6 +4940,15 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
       <segment>
         <source>Registered</source>
         <target>Enregistré</target>
+      </segment>
+    </unit>
+    <unit id="plugins-importexport-common-action">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Action</source>
+        <target>Action</target>
       </segment>
     </unit>
     <unit id="plugins-importexport-common-action-export">

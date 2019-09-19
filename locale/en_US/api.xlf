@@ -9,10 +9,19 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:51-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:07-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:07-07:00</note>
       <note id="Language"></note>
     </notes>
+    <unit id="api-submissions-403-cantChangeContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can not change the journal of a submission.</source>
+        <target>You can not change the journal of a submission.</target>
+      </segment>
+    </unit>
     <unit id="api-submissions-403-unpublishedIssues">
       <notes>
         <note category="context"></note>
@@ -20,6 +29,15 @@
       <segment>
         <source>You do not have permission to view unpublished issues.</source>
         <target>You do not have permission to view unpublished issues.</target>
+      </segment>
+    </unit>
+    <unit id="api-submissions-403-contextRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To make or edit a submission you must make a request to the journal's API endpoint.</source>
+        <target>To make or edit a submission you must make a request to the journal's API endpoint.</target>
       </segment>
     </unit>
     <unit id="api-contexts-403-requestedDisabledContexts">
@@ -101,6 +119,24 @@
       <segment>
         <source>The payment method you selected is not supported.</source>
         <target>The payment method you selected is not supported.</target>
+      </segment>
+    </unit>
+    <unit id="api-publications-403-contextsDidNotMatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication that you requested is not part of this journal.</source>
+        <target>The publication that you requested is not part of this journal.</target>
+      </segment>
+    </unit>
+    <unit id="api-publications-403-submissionsDidNotMatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication that you requested is not part of this submission.</source>
+        <target>The publication that you requested is not part of this submission.</target>
       </segment>
     </unit>
   </file>

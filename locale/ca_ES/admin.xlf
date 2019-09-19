@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:02-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:02-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="admin-hostedJournals">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Hosted Journals</source>
+        <target>Revistes allotjades</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-appearance-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site appearance settings have been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-config-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site configuration settings have been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-info-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The site information has been successfully updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal redirect</source>
+        <target>Redirecció a la revista</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-journalRedirectInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</source>
+        <target>Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple.</target>
+      </segment>
+    </unit>
+    <unit id="admin-settings-defaultMetricDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>
+		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank
+		search results. Please select one of the configured metrics as a default.
+	</source>
+        <target>La vostra instal·lació de l'OJS està configurada per registrar més d'una mètrica d'utilització. Les estadístiques d'utilització es mostren en diferents contexts. Hi ha casos on només es fa servir una estadística d'ús, p. ex. per mostrar una llista ordenada dels articles més utilitzats o per ordenar resultats d'una cerca. Seleccioneu una de les mètriques configurades com a opció predeterminada.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmDisable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Esteu segur que voleu desactivar aquesta configuració regional? Això podria afectar a totes les revistes allotjades que actualment utilitzin aquesta configuració regional.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></source>
+        <target><![CDATA[<p>La descàrrega de paquets d'idiomes des del servidor web de Public Knowledge Project no està disponible actualment perquè:</p>
+	<ul>
+		<li>El seu servidor no té o no permet l'execució de la utilitat GNU "tar".</li>
+		<li>OJS no pot modificar l'arxiu de registre de configuració regional, normalment "registry/locales.xml".</li>
+	</ul>
+<p>Els paquets d'idiomes poden descarregarse manualment des de la pàgina web de PKP: <a href="http://pkp.sfu.ca"></a>.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-primaryLocaleInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This will be the default language for the site and any hosted journals.</source>
+        <target>Aquesta és la llengua predeterminada per al lloc web i per a qualsevol revista allotjada.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-supportedLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</source>
+        <target>Seleccioneu totes les configuracions regionals que oferirà el lloc web. Les configuracions regionals seleccionades estan disponibles per al seu ús a totes les revistes allotjades al lloc web, i també apareixen a un menú de selecció d'idioma disponible a cada pàgina del lloc web (que es pot desactivar en pàgines concretes de les revistes). Si no se seleccionen diferents configuracions regionals, el menú de selecció de llengua no apareix i la configuració avançada de llengua no està disponible a les revistes.</target>
+      </segment>
+    </unit>
+    <unit id="admin-locale-maybeIncomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Marked locales may be incomplete.</source>
+        <target>Les configuracions regionals marcades poden estar incompletes.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-confirmUninstall">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale.</source>
+        <target>Esteu segurs que voleu suprimir aquesta configuració regional? Aquesta acció pot afectar les revistes allotjades que fan servir aquesta configuració regional.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-installNewLocalesInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</source>
+        <target>Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Cal que instal·leu les configuracions regionals abans que les revistes allotjades les puguin fer servir. Consulteu la documentació de l'OJS per obtenir més informació sobre com instal·lar llengües addicionals.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-downloadFailed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The locale download failed. The error message(s) below describe the failure.</source>
+        <target>La descàrrega de la configuració regional ha fallat. El missatge d'error a continuació descriu el problema.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-localeInstalled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The "{$locale}" locale has been installed.</source>
+        <target>La configuració regional "{$locale}" s'ha instal·lat.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Download Locale</source>
+        <target>Descarrega la configuració regional</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotOpen">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot open language descriptor from PKP web site.</source>
+        <target>No s'ha pogut obrir el descriptor de llengua des del lloc web de PKP.</target>
+      </segment>
+    </unit>
+    <unit id="admin-languages-download-cannotModifyRegistry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</source>
+        <target>No s'ha pogut afegir la nova configuració regional al fitxer de registre de configuracions regionals, normalment «registry/locales.xml».</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-ojs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS User Database</source>
+        <target>Base de dades d'usuaris/àries de l'OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncProfiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</source>
+        <target>Habilita la sincronització de perfils d'usuari/ària (si ho admet aquest connector d'autenticació). La informació del perfil d'usuari/ària s'actualitza automàticament des de la font remota quan un usuari/ària inicia la sessió, i els canvis al perfil (també els canvis de contrasenya) fets dins de l'OJS s'actualitzen automàticament a la font remota. Si aquesta opció no està habilitada, la informació de perfil de l'OJS es mantindrà separada de la de la font remota.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableSyncPasswords">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</source>
+        <target>Habilita la modificació de contrasenyes d'usuari/ària (si ho admet aquest connector d'autenticació). L'habilitació d'aquesta opció permet que els usuaris/àries modifiquin la seva contrasenya de l'OJS i facin servir la característica «recuperar contrasenya» per restablir la contrasenya oblidada. Si no s'habilita l'opció, aquestes funcions no estan disponibles pels usuaris/àries amb aquesta font d’autenticació.</target>
+      </segment>
+    </unit>
+    <unit id="admin-auth-enableCreateUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</source>
+        <target>Habilita la creació d'usuaris/àries (si ho admet aquest connector d'autenticació). Els usuaris/àries creats a l'OJS amb aquesta font d'autenticació s'afegeixen automàticament a la font d’autenticació remota si és que encara no hi són. A més, si aquesta font és la font d'autenticació predeterminada, els comptes de l'OJS creats mitjançant el registre d'usuaris/àries també s'afegeixen a la font d'autenticació remota.</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemVersion">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Version</source>
+        <target>Versió de l'OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfiguration">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>OJS Configuration</source>
+        <target>Configuració de l'OJS</target>
+      </segment>
+    </unit>
+    <unit id="admin-systemConfigurationDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></source>
+        <target><![CDATA[Configuració de l'OJS a <tt>config.inc.php</tt>.]]></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-createInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</source>
+        <target>Rebreu automàticament el rol de director d'aquesta revista. Després de crear una revista nova, entreu-hi com a administradors per continuar amb la configuració i l'alta d'usuaris/àries.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-journalSettings">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Settings</source>
+        <target>Configuració de la revista</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-noneCreated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No journals have been created.</source>
+        <target>No s'ha creat cap revista.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-create">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Journal</source>
+        <target>Crea una revista</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-urlWillBe">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}.</source>
+        <target>Introduïu una paraula curta o un acrònim que identifiqui la revista. L'URL de la revista és {$sampleUrl}</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A title is required.</source>
+        <target>Es necessita un títol.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>A path is required.</source>
+        <target>Cal que introduïu una ruta.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathAlphaNumeric">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path can only include letters, numbers and the characters _ and -. It must begin and end with a letter or number.</source>
+        <target>La ruta només pot contenir caràcters alfanumèrics, guions baixos i guionets i ha de començar i acabar amb un caràcter alfanumèric.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-pathExists">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The path you provided is already in use by another journal.</source>
+        <target>Ja hi ha una altra revista que utilitza la ruta seleccionada.</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-create-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was created successfully.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-form-edit-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$name} was edited successfully.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-enableJournalInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Enable this journal to appear publicly on the site</source>
+        <target>Permet que aquesta revista aparegui públicament al lloc web</target>
+      </segment>
+    </unit>
+    <unit id="admin-contexts-contextDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal description</source>
+        <target>Descripció de la revista</target>
+      </segment>
+    </unit>
+    <unit id="admin-journal-pathImportInstructions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Existing journal path or path to create (e.g., "ojs").</source>
+        <target>Ruta existent a la revista o ruta que s'ha de crear (p. ex., «ojs»).</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importSubscriptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Import subscriptions</source>
+        <target>Importa subscripcions</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-transcode">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Transcode article metadata from ISO8859-1</source>
+        <target>Metadades de l'article Transcode de l’ISO8859-1</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-redirect">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Generate code to map OJS 1 URLs to OJS 2 URLs</source>
+        <target>Genera el codi per mapar els URL OJS 1 amb els URL OJS 2</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-form-importPathRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The import path is required.</source>
+        <target>Cal que introduïu una ruta d'importació.</target>
+      </segment>
+    </unit>
+    <unit id="admin-journals-importErrors">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Importing failed to complete successfully</source>
+        <target>La importació no s'ha completat.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge Users</source>
+        <target>Fusiona els usuaris/àries</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-mergeUser">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Merge User</source>
+        <target>Fusiona l’usuari/ària</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-into-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</source>
+        <target>Seleccioneu l’usuari/ària al qual vulgueu assignar les autories, encàrrecs d’edició, etc. de l’usuari/ària anterior.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-from-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account.</source>
+        <target>Seleccioneu un usuari/ària (o més d'un) que vulgueu fusionar amb un altre compte d’usuari/ària (p. ex, un usuari/ària que en tingui dos de diferents). Amb aquesta acció se suprimeix el primer compte (o el primer grup de comptes) que hàgiu seleccionat i les seves trameses, assignacions, etc., s’assignen al segon compte.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-allUsers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Enrolled Users</source>
+        <target>Tots els usuaris/àries donats d’alta</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-confirm">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</source>
+        <target>Esteu segurs que voleu fusionar el comptes seleccionats {$oldAccountCount} amb el compte amb nom d’usuari/ària «{$newUsername}»? Si ho feu, els comptes amb el nom d’usuari/ària {$oldAccountCount} ja no existiran. Aquesta acció no es pot desfer.</target>
+      </segment>
+    </unit>
+    <unit id="admin-mergeUsers-noneEnrolled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>No enrolled users.</source>
+        <target>No s’ha donat d’alta cap usuari/ària.</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-subscriptionExpiryReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Subscription Expiry Reminder</source>
+        <target>Recordatori de caducitat de la subscripció</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-openAccessNotification">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Open Access Notification</source>
+        <target>Notificació d'accés obert</target>
+      </segment>
+    </unit>
+    <unit id="admin-scheduledTask-reviewReminder">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review Reminder</source>
+        <target>Recordatori de revisió</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

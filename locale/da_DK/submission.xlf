@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:05-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:05-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="submission-submit-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit an Article</source>
+        <target>Indsend en artikel</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-userGroup">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submit in my role as...</source>
+        <target>Indsend i min rolle som...</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-userGroupDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Choose the capacity under which you are submitting this article.</source>
+        <target>Vælg i hvilken egenskab du indsender denne artikel.</target>
+      </segment>
+    </unit>
+    <unit id="submission-upload-selectComponent">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Select article component</source>
+        <target>Vælg artikelelement</target>
+      </segment>
+    </unit>
+    <unit id="submission-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Title</source>
+        <target>Artiklens titel</target>
+      </segment>
+    </unit>
+    <unit id="submission-title-tip">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></source>
+        <target><![CDATA[Indsendelsestypen er som regel enten 'billede', 'tekst' eller anden multimedietype.  Vælg den, der er mest relevant i forbindelse med din indsendelse.  Eksempler kan ses her: <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-newSubmissionMultiple">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Start a New Submission in</source>
+        <target>Påbegynd en ny indsendelse</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-newSubmissionSingle">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>New Submission</source>
+        <target>Ny indsendelse</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-workflow">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Workflow</source>
+        <target>Indsendelses-workflow</target>
+      </segment>
+    </unit>
+    <unit id="submission-abstract-wordCount-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The abstract must be {$wordCount} words or less.</source>
+        <target>Resumeet skal være på {$wordCount} ord eller derunder.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-noContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This submission's journal could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="submission-issueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Metadata</source>
+        <target>Metadata</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-whatNext-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</source>
+        <target>Tidsskriftet er blevet underrettet om din indsendelse, og du har modtaget en e-mailbekræftelse. Så snart redaktionen har gennemset indsendelsen, vil du blive kontaktet.</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-galleyInIssueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galley appears in issue entry</source>
+        <target>Publiceringsversionen fremvises i nummeradgangen</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-issueEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>View this submission's metadata</source>
+        <target>Se denne indsendelses metadata</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-articleGalleyMadeAvailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The article galley "{$galleyFormatName}" is made available.</source>
+        <target>Artiklens publiceringsversion  "{$galleyFormatName}" er blevet gjort tilgængelig.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-articleGalleyMadeUnavailable">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The article galley "{$galleyFormatName}" is made unavailable.</source>
+        <target>Artiklens publiceringsversion "{$galleyFormatName}" er ikke længere tilgængelig.</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-publicIdentifiers">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission's public identifiers updated.</source>
+        <target>Indsendelsens 'public identifiers' blev opdateret.</target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-title">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Format Approval</source>
+        <target>Formatgodkendelse</target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-removeMessage">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>This galley will <em>no longer be made available</em> to readers.</p>]]></source>
+        <target><![CDATA[<p>Denne publiceringsversion vil <em>ikke længere  blive gjort tilgængelig</em> for læsere.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-issueEntry-availableGalley-message">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[<p>This galley will <em>be made available</em> to readers.</p>]]></source>
+        <target><![CDATA[<p>Denne publiceringsversion <em>vil blive gjort tilgængelig</em> for læsere.</p>]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-availableArticleGalley">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Make this galley available</source>
+        <target>Gør denne publiceringsversion tilgængelig</target>
+      </segment>
+    </unit>
+    <unit id="submission-galleyFiles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Galley Files</source>
+        <target>Publiceringsklare filer</target>
+      </segment>
+    </unit>
+    <unit id="submission-proofReadingDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign Auditor</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication.]]></source>
+        <target><![CDATA[Layoutredaktøren uploader de produktionklare filer, der er blevet færdiggjort til publicering her. Brug <em>Tilføj auditør</em> for at vælge forfattere og andre til korrekturlæsning af filerne, med de tilrettede filer uploadet til godkendelse forud for publicering.]]></target>
+      </segment>
+    </unit>
+    <unit id="grid-action-approveProof">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Approve this proof for inclusion in the galley.</source>
+        <target>Godkend, at korrektur indgår som publiceringsversion .</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-pageProofApproved">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This proof has been approved for inclusion in the galley.</source>
+        <target>Denne korrektur er blevet godkendt til at indgå som publiceringsversion.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-titleAndSummary">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Title and Abstract</source>
+        <target>Titel og resumé</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-upload-description">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc.</source>
+        <target>Upload filer tilknyttet denne indsendelse, inklusiv artiklen, multimedi, datasæt, illustretioner osv.</target>
+      </segment>
+    </unit>
+    <unit id="submission-pageProofs">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Proofreading</source>
+        <target>Korrekturlæsning</target>
+      </segment>
+    </unit>
+    <unit id="submission-confirmSubmit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Are you sure you wish to submit this article to the journal?</source>
+        <target>Ønsker du at indsende denne artikel til tidsskriftet?</target>
+      </segment>
+    </unit>
+    <unit id="workflow-review-externalReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Review</source>
+        <target>Bedømmelse</target>
+      </segment>
+    </unit>
+    <unit id="editor-submission-decision-sendExternalReview">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Send to Review</source>
+        <target>Send til bedømmelse</target>
+      </segment>
+    </unit>
+    <unit id="submission-event-issueMetadataUpdated">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The submission's issue metadata was updated.</source>
+        <target>Indsendelsens nummer-metadata blev opdateret.</target>
+      </segment>
+    </unit>
+    <unit id="submission-upload-fileContents">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Article Component</source>
+        <target>Artikelmateriale</target>
+      </segment>
+    </unit>
+    <unit id="submission-complete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Approved</source>
+        <target>Godkendt</target>
+      </segment>
+    </unit>
+    <unit id="submission-incomplete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Awaiting Approval</source>
+        <target>Mangler godkendelse</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-localeRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select a submission language.</source>
+        <target>Vælg sprog.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-submissionChecklist">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Submission Checklist</source>
+        <target>Indsendelsestjekliste</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-submissionChecklistDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You must read and acknowledge that you've completed the requirements below before proceeding.</source>
+        <target>Læs og accept´er venligst nedenstående før du fortsætter.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-privacyStatement">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Privacy Statement</source>
+        <target>Erklæring om beskyttelse af personlige oplysninger</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-contributorRole">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Contributor's role</source>
+        <target>Bidragyders rolle</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-authorRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>At least one author is required.</source>
+        <target>Mindst en forfatter er påkrævet</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-authorRequiredFields">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The first name, last name, and email address of each author is required.</source>
+        <target>Fornavn, efternavn og e-mailadresse for hver forfatter er påkrævet.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-titleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter the title of your article.</source>
+        <target>Indskriv artiklens titel.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-abstractRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please enter your article's abstract.</source>
+        <target>Tilføj artiklens resumé.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-wordCountAlert">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Your abstract is too long. Please shorten it to below the word limit indicated for this section.</source>
+        <target>Dit resume er for langt. Forkort det venligst til under den ordgrænse, der er angivet for dette afsnit.</target>
+      </segment>
+    </unit>
+    <unit id="submission-submit-form-contributorRoleRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Please select the contributor's role.</source>
+        <target>Vælg bidragyderens rolle</target>
+      </segment>
+    </unit>
+    <unit id="submission-citationFormat-notFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The requested citation format could not be retrieved.</source>
+        <target>Det ønskede citationsformat kunne ikke genfindes.</target>
+      </segment>
+    </unit>
+    <unit id="submission-metadataDescription">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</source>
+        <target>Disse specifikationer er baseret på Dublin Core, en international metadata standard til beskrivelse af tidsskrifters indhold.</target>
+      </segment>
+    </unit>
+    <unit id="section-any">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Any Section</source>
+        <target>Enhver sektion</target>
+      </segment>
+    </unit>
+    <unit id="submission-sectionOptions">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Section Options</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="catalog-browseTitles">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>{$numTitles} Items</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="catalog-category-heading">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>All Items</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="galley-editPublishedDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The galleys of this publication can not be edited because it has already been published.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="galley-publicationNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication for this galley could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-invalidSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The section for this publication could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-invalidIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The issue for this publication could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-journalEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Entry</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-journalEntry-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal entry details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-required-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication must be assigned to an issue before it can be published.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-publishedIn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Published in <a href="{$issueUrl}">{$issueName}</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-scheduledIn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Scheduled for publication in <a href="{$issueUrl}">{$issueName}</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="" trgLang="">
+  <file id=".">
+    <notes>
+      <note id="Project-Id-Version"></note>
+      <note id="Report-Msgid-Bugs-To"></note>
+      <note id="Last-Translator"></note>
+      <note id="Language-Team"></note>
+      <note id="MIME-Version">1.0</note>
+      <note id="Content-Type">text/plain; charset=UTF-8</note>
+      <note id="Content-Transfer-Encoding">8bit</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:02-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:02-07:00</note>
+      <note id="Language"></note>
+    </notes>
+    <unit id="api-submissions-403-cantChangeContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can not change the journal of a submission.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="api-submissions-403-unpublishedIssues">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to view unpublished issues.</source>
+        <target>ليست لديك الصلاحية لمعاينة الأعداد غير المنشورة.</target>
+      </segment>
+    </unit>
+    <unit id="api-submissions-403-contextRequired">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>To make or edit a submission you must make a request to the journal's API endpoint.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-requestedDisabledContexts">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can only view journals that have been enabled.</source>
+        <target>يمكنك معاينة المجلات التي تم تمكينها فقط.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-notAllowed">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to view this journal.</source>
+        <target>ليست لديك صلاحية معاينة هذه المجلة.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-contextsDidNotMatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can not view or edit this journal unless you make a request to the journal's API or the site-wide API.</source>
+        <target>لا يمكنك معاينة هذه المجلة أو تعديلها ما لم تلتمس ذلك عبر واجهة برمجة التطبيق الخاصة بالمجلة أو تلك الخاصة بعموم الموقع.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-requiresContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You can not edit this journal from the site-wide API.</source>
+        <target>لا يمكنك تعديل هذه المجلة مستعملاً واجهة برمجة التطبيق الخاصة بعموم الموقع.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-notAllowedEdit">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to edit this journal.</source>
+        <target>ليست لديك صلاحية تعديل هذه المجلة.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-403-notAllowedDelete">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to delete this journal.</source>
+        <target>ليست لديك صلاحية حذف هذه المجلة.</target>
+      </segment>
+    </unit>
+    <unit id="api-contexts-404-contextNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal you requested was not found.</source>
+        <target>تعذر العثور على المجلة التي طلبتها.</target>
+      </segment>
+    </unit>
+    <unit id="api-emailTemplates-403-notAllowedChangeContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>You do not have permission to move this email template to another journal.</source>
+        <target>ليست لديك صلاحية نقل قالب المراسلة هذا إلى مجلة أخرى.</target>
+      </segment>
+    </unit>
+    <unit id="api-_payments-400-invalidPaymentMethod">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The payment method you selected is not supported.</source>
+        <target>طريقة التسديد التي اخترتها غير مدعومة.</target>
+      </segment>
+    </unit>
+    <unit id="api-publications-403-contextsDidNotMatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication that you requested is not part of this journal.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="api-publications-403-submissionsDidNotMatch">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication that you requested is not part of this submission.</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

@@ -9,8 +9,8 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:51-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:51-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:07-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:07-07:00</note>
       <note id="Language"></note>
     </notes>
     <unit id="editor-home">
@@ -913,6 +913,24 @@
         <target>Add galley</target>
       </segment>
     </unit>
+    <unit id="grid-action-publish">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Publish Issue</source>
+        <target>Publish Issue</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-addIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Create Issue</source>
+        <target>Create Issue</target>
+      </segment>
+    </unit>
     <unit id="grid-action-viewIssue">
       <notes>
         <note category="context"></note>
@@ -920,6 +938,15 @@
       <segment>
         <source>View</source>
         <target>View</target>
+      </segment>
+    </unit>
+    <unit id="grid-action-previewIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Preview</source>
+        <target>Preview</target>
       </segment>
     </unit>
     <unit id="grid-action-addIssueGalley">
@@ -1138,6 +1165,15 @@
         <target>Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</target>
       </segment>
     </unit>
+    <unit id="editor-article-removeCoverImageFileNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</source>
+        <target>The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page.</target>
+      </segment>
+    </unit>
     <unit id="grid-action-removeArticle">
       <notes>
         <note category="context"></note>
@@ -1145,6 +1181,15 @@
       <segment>
         <source>Remove Article From Issue</source>
         <target>Remove Article From Issue</target>
+      </segment>
+    </unit>
+    <unit id="editor-article-remove">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Remove</source>
+        <target>Remove</target>
       </segment>
     </unit>
     <unit id="editor-article-remove-confirm">

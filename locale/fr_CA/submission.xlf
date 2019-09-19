@@ -9,8 +9,8 @@
       <note id="MIME-Version">1.0</note>
       <note id="Content-Type">text/plain; charset=UTF-8</note>
       <note id="Content-Transfer-Encoding">8bit</note>
-      <note id="POT-Creation-Date">2019-08-19T12:40:28-07:00</note>
-      <note id="PO-Revision-Date">2019-08-19T12:40:28-07:00</note>
+      <note id="POT-Creation-Date">2019-09-19T12:34:11-07:00</note>
+      <note id="PO-Revision-Date">2019-09-19T12:34:11-07:00</note>
       <note id="Language"></note>
     </notes>
     <unit id="submission-submit-title">
@@ -103,6 +103,15 @@
         <target>Le résumé doit contenir {$wordCount} mots ou moins.</target>
       </segment>
     </unit>
+    <unit id="submission-submit-noContext">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>This submission's journal could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
     <unit id="submission-issueEntry">
       <notes>
         <note category="context"></note>
@@ -137,42 +146,6 @@
       <segment>
         <source>View this submission's metadata</source>
         <target>Voir les métadonnées de la soumission</target>
-      </segment>
-    </unit>
-    <unit id="submission-issueEntry-modalTitle">
-      <notes>
-        <note category="context"></note>
-      </notes>
-      <segment>
-        <source>Submission and Publication Metadata</source>
-        <target>Métadonnées de la soumission et de la publication</target>
-      </segment>
-    </unit>
-    <unit id="submission-issueEntry-submissionMetadata">
-      <notes>
-        <note category="context"></note>
-      </notes>
-      <segment>
-        <source>Submission</source>
-        <target>Soumission</target>
-      </segment>
-    </unit>
-    <unit id="submission-issueEntry-publicationMetadata">
-      <notes>
-        <note category="context"></note>
-      </notes>
-      <segment>
-        <source>Publication</source>
-        <target>Publication</target>
-      </segment>
-    </unit>
-    <unit id="submission-issueEntry-confirm">
-      <notes>
-        <note category="context"></note>
-      </notes>
-      <segment>
-        <source>Create an issue entry for this article based on the metadata below.</source>
-        <target>Assigner l'article à un numéro en vous basant sur les métadonnées ci-dessous.</target>
       </segment>
     </unit>
     <unit id="submission-event-articleGalleyMadeAvailable">
@@ -514,6 +487,87 @@
       </notes>
       <segment>
         <source>All Items</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="galley-editPublishedDisabled">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The galleys of this publication can not be edited because it has already been published.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="galley-publicationNotFound">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication for this galley could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-invalidSection">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The section for this publication could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-invalidIssue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The issue for this publication could not be found.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-journalEntry">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>Journal Entry</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-journalEntry-success">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The journal entry details have been updated.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-required-issue">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source>The publication must be assigned to an issue before it can be published.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-publishedIn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Published in <a href="{$issueUrl}">{$issueName}</a>.]]></source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="publication-scheduledIn">
+      <notes>
+        <note category="context"></note>
+      </notes>
+      <segment>
+        <source><![CDATA[Scheduled for publication in <a href="{$issueUrl}">{$issueName}</a>.]]></source>
         <target></target>
       </segment>
     </unit>
