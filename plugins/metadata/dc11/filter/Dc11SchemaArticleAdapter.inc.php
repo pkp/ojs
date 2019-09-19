@@ -21,15 +21,6 @@
 import('lib.pkp.classes.metadata.MetadataDataObjectAdapter');
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		parent::__construct($filterGroup);
-	}
-
-
 	//
 	// Implement template methods from Filter
 	//
@@ -202,7 +193,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		if ($includeUrls) foreach ($galleys as $galley) {
 			$relation = $request->url($journal->getPath(), 'article', 'view', array($article->getBestId(), $galley->getBestGalleyId()));
 			$dc11Description->addStatement('dc:relation', $relation);
-			unset($relation);
 		}
 
 		// Public identifiers
@@ -210,16 +200,13 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		foreach ($pubIdPlugins as $pubIdPlugin) {
 			if ($issue && $pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-				unset($pubIssueId);
 			}
 			if ($pubArticleId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:identifier', $pubArticleId);
-				unset($pubArticleId);
 			}
 			foreach ($galleys as $galley) {
 				if ($pubGalleyId = $galley->getStoredPubId($pubIdPlugin->getPubIdType())) {
 					$dc11Description->addStatement('dc:relation', $pubGalleyId);
-					unset($pubGalleyId);
 				}
 			}
 		}
@@ -266,7 +253,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				if (!empty($value)) {
 					$description->addStatement($propertyName, $value, $locale);
 				}
-				unset($value);
 			}
 		}
 	}

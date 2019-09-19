@@ -20,16 +20,6 @@
 import('lib.pkp.plugins.metadata.mods34.filter.Mods34SchemaSubmissionAdapter');
 
 class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
-	/**
-	 * Constructor
-	 * @param $filterGroup FilterGroup
-	 */
-	function __construct($filterGroup) {
-		// Configure the submission adapter
-		parent::__construct($filterGroup);
-	}
-
-
 	//
 	// Implement template methods from Filter
 	//
