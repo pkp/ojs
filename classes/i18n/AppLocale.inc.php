@@ -173,14 +173,14 @@ class AppLocale extends PKPLocale {
 	static function makeComponentMap($locale) {
 		$baseDir = "locale/$locale/";
 		return parent::makeComponentMap($locale) + array(
-			LOCALE_COMPONENT_APP_COMMON => $baseDir . 'locale.xliff',
-			LOCALE_COMPONENT_APP_AUTHOR => $baseDir . 'author.xliff',
-			LOCALE_COMPONENT_APP_SUBMISSION => $baseDir . 'submission.xliff',
-			LOCALE_COMPONENT_APP_EDITOR => $baseDir . 'editor.xliff',
-			LOCALE_COMPONENT_APP_MANAGER => $baseDir . 'manager.xliff',
-			LOCALE_COMPONENT_APP_ADMIN => $baseDir . 'admin.xliff',
-			LOCALE_COMPONENT_APP_DEFAULT => $baseDir . 'default.xliff',
-			LOCALE_COMPONENT_APP_API => $baseDir . 'api.xliff',
+			LOCALE_COMPONENT_APP_COMMON => $baseDir . 'locale.xlf',
+			LOCALE_COMPONENT_APP_AUTHOR => $baseDir . 'author.xlf',
+			LOCALE_COMPONENT_APP_SUBMISSION => $baseDir . 'submission.xlf',
+			LOCALE_COMPONENT_APP_EDITOR => $baseDir . 'editor.xlf',
+			LOCALE_COMPONENT_APP_MANAGER => $baseDir . 'manager.xlf',
+			LOCALE_COMPONENT_APP_ADMIN => $baseDir . 'admin.xlf',
+			LOCALE_COMPONENT_APP_DEFAULT => $baseDir . 'default.xlf',
+			LOCALE_COMPONENT_APP_API => $baseDir . 'api.xlf',
 		);
 	}
 }
