@@ -873,7 +873,7 @@ Diretrizes para Avaliação<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Envio de versão atualizada</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Editor(es):<br />
 <br />
 Uma versão atualizada de &quot;{$submissionTitle}&quot; foi enviada pelo autor {$authorName}.<br />
 <br />
