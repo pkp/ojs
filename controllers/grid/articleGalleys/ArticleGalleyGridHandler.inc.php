@@ -180,7 +180,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 		return new ArticleGalleyGridRow(
 			$this->getSubmission(),
 			$this->getPublication(),
-			!empty(array_intersect([ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR], $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)))
+			$this->canEdit()
+
 		);
 	}
 
