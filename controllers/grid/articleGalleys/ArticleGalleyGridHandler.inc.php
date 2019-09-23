@@ -181,7 +181,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		return new ArticleGalleyGridRow(
 			$this->getSubmission(),
 			$this->getPublication(),
-			!empty(array_intersect([ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT], $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)))
+			$this->canEdit()
 		);
 	}
 
@@ -417,12 +417,13 @@ class ArticleGalleyGridHandler extends GridHandler {
 	 * @return boolean
 	 */
 	public function canEdit() {
-		return Services::get('user')->canUserAccessStage(
-			WORKFLOW_STAGE_ID_PRODUCTION,
-			WORKFLOW_TYPE_EDITORIAL,
-			$this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
-			$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
-		);
+		return $this->getPublication()->getData('status') !== STATUS_PUBLISHED &&
+			Services::get('user')->canUserAccessStage(
+				WORKFLOW_STAGE_ID_PRODUCTION,
+				WORKFLOW_TYPE_EDITORIAL,
+				$this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
+				$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
+			);
 	}
 }
 
