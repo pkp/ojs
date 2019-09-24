@@ -1,5 +1,5 @@
 {
-	"description": "A published version of an article.",
+	"description": "A published version of a preprint.",
 	"required": [
 		"sectionId"
 	],
@@ -20,20 +20,6 @@
 			"type": "boolean",
 			"description": "Whether the contributor details should be displayed for this publication. Commonly used for editorial statements without individual authorship.",
 			"default": false,
-			"validation": [
-				"nullable"
-			]
-		},
-		"issueId": {
-			"type": "integer",
-			"validation": [
-				"nullable"
-			]
-		},
-		"pages": {
-			"type": "string",
-			"description": "The pages of the issue in which this article appears if it is published in a physical format.",
-			"apiSummary": true,
 			"validation": [
 				"nullable"
 			]

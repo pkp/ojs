@@ -28,7 +28,7 @@
 	<message key="manager.language.submissions">Submissions</message>
 	<message key="manager.language.forms">Forms</message>
 	<message key="manager.language.confirmDefaultSettingsOverwrite">This will replace any locale-specific server settings you had for this locale</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, PPS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by PPS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the PPS documentation.]]></message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this server.</message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the server site.</message>
 	<message key="manager.managementPages">Management Pages</message>
@@ -113,7 +113,7 @@
 	<message key="manager.setup.editorDecision">Editor Decision</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddress.description">Any undeliverable emails will result in an error message to this address.</message>
-	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the OJS documentation.]]></message>
+	<message key="manager.setup.emailBounceAddress.disabled"><![CDATA[In order to send undeliverable emails to a bounce address, the site administrator must enable the <code>allow_envelope_sender</code> option in the site configuration file. Server configuration may be required, as indicated in the PPS documentation.]]></message>
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignature.description">The prepared emails that are sent by the system on behalf of the server will have the following signature added to the end.</message>
@@ -171,8 +171,8 @@
 	<message key="manager.setup.journalSetupUpdated">Your server setup has been updated.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid server stylesheet format. Accepted format is .css.</message>
 	<message key="manager.setup.journalTheme">Server Theme</message>
-	<message key="manager.setup.journalThumbnail">Server thumbnail</message>
-	<message key="manager.setup.journalThumbnail.description">A small logo or representation of the server that can be used in lists of servers.</message>
+	<message key="manager.setup.serverThumbnail">Server thumbnail</message>
+	<message key="manager.setup.serverThumbnail.description">A small logo or representation of the server that can be used in lists of servers.</message>
 	<message key="manager.setup.contextTitle">Server title</message>
 	<message key="manager.setup.keyInfo">Key Information</message>
 	<message key="manager.setup.keyInfo.description">Provide a short description of your server and identify editors, managing directors and other members of your editorial team.</message>

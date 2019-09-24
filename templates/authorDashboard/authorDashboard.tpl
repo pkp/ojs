@@ -91,7 +91,7 @@
 							{rdelim}
 						);
 					{rdelim});
-				</script>
+				</script> 
 				<div id="submissionWorkflow" class="pkp_submission_workflow">
 					<div id="stageTabs" class="pkp_controllers_tab">
 						<ul>

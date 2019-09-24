@@ -118,7 +118,7 @@ If you have any questions, please contact me. Thank you for considering this ser
 If you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within PPS specified during the submission process.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Editorial Assignment</subject>

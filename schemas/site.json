@@ -1,6 +1,6 @@
 {
 	"title": "Site",
-	"description": "The overall site hosting journals.",
+	"description": "The overall site hosting servers.",
 	"properties": {
 		"about": {
 			"type": "string",

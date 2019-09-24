@@ -79,21 +79,21 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$request = $args[3];
 
 		// Move an uploaded journal thumbnail and set the updated data
-		if (!empty($params['journalThumbnail'])) {
+		if (!empty($params['serverThumbnail'])) {
 			$supportedLocales = $newContext->getSupportedLocales();
 			foreach ($supportedLocales as $localeKey) {
-				if (!array_key_exists($localeKey, $params['journalThumbnail'])) {
+				if (!array_key_exists($localeKey, $params['serverThumbnail'])) {
 					continue;
 				}
 				$localeValue = $this->_saveFileParam(
 					$newContext,
-					$params['journalThumbnail'][$localeKey],
-					'journalThumbnail',
+					$params['serverThumbnail'][$localeKey],
+					'serverThumbnail',
 					$request->getUser()->getId(),
 					$localeKey,
 					true
 				);
-				$newContext->setData('journalThumbnail', $localeValue, $localeKey);
+				$newContext->setData('serverThumbnail', $localeValue, $localeKey);
 			}
 		}
 	}
@@ -146,7 +146,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$props = $args[2];
 		$allowedLocales = $args[3];
 
-		if (!isset($props['journalThumbnail'])) {
+		if (!isset($props['serverThumbnail'])) {
 			return;
 		}
 
@@ -156,16 +156,16 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$userId = $user ? $user->getId() : null;
 		import('lib.pkp.classes.file.TemporaryFileManager');
 		$temporaryFileManager = new \TemporaryFileManager();
-		if (isset($props['journalThumbnail']) && empty($errors['journalThumbnail'])) {
+		if (isset($props['serverThumbnail']) && empty($errors['serverThumbnail'])) {
 			foreach ($allowedLocales as $localeKey) {
-				if (empty($props['journalThumbnail'][$localeKey]) || empty($props['journalThumbnail'][$localeKey]['temporaryFileId'])) {
+				if (empty($props['serverThumbnail'][$localeKey]) || empty($props['serverThumbnail'][$localeKey]['temporaryFileId'])) {
 					continue;
 				}
-				if (!$temporaryFileManager->getFile($props['journalThumbnail'][$localeKey]['temporaryFileId'], $userId)) {
-					if (!is_array($errors['journalThumbnail'])) {
-						$errors['journalThumbnail'] = [];
+				if (!$temporaryFileManager->getFile($props['serverThumbnail'][$localeKey]['temporaryFileId'], $userId)) {
+					if (!is_array($errors['serverThumbnail'])) {
+						$errors['serverThumbnail'] = [];
 					}
-					$errors['journalThumbnail'][$localeKey] = [__('manager.setup.noTemporaryFile')];
+					$errors['serverThumbnail'][$localeKey] = [__('manager.setup.noTemporaryFile')];
 				}
 			}
 		}

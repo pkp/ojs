@@ -19,7 +19,7 @@
 	<message key="admin.settings.journalRedirect">Server redirect</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this server. This may be useful if the site is hosting only a single server, for example.</message>
 	<message key="admin.settings.defaultMetricDescription">
-		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		Your PPS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
 		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used preprint's or to rank
 		search results. Please select one of the configured metrics as a default.
 	</message>
@@ -35,16 +35,16 @@
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all servers hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on server-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to servers.</message>
 	<message key="admin.locale.maybeIncomplete">Marked locales may be incomplete.</message>
 	<message key="admin.languages.confirmUninstall">Are you sure you want to uninstall this locale? This may affect any hosted servers currently using the locale.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted servers. See the OJS documentation for information on adding support for new languages.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted servers. See the PPS documentation for information on adding support for new languages.</message>
 	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
 	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed.</message>
 	<message key="admin.languages.download">Download Locale</message>
 	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS User Database</message>
-	<message key="admin.auth.enableSyncProfiles">Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</message>
-	<message key="admin.auth.enableSyncPasswords">Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</message>
-	<message key="admin.auth.enableCreateUsers">Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</message>
+	<message key="admin.auth.enableSyncProfiles">Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within PPS will be automatically updated on the remote source. If this option is not enabled PPS profile information will be kept separate from remote source profile information.</message>
+	<message key="admin.auth.enableSyncPasswords">Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within PPS and to use the PPS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</message>
+	<message key="admin.auth.enableCreateUsers">Enable user creation (if supported by this authentication plugin). Users created within PPS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, PPS accounts created through user registration will also be added to the remote authentication source.</message>
 	<message key="admin.systemVersion">OJS Version</message>
 	<message key="admin.systemConfiguration">OJS Configuration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS configuration settings from <tt>config.inc.php</tt>.]]></message>
@@ -63,7 +63,7 @@
 	<message key="admin.contexts.contextDescription">Server description</message>
 	<message key="admin.journal.pathImportInstructions">Existing server path or path to create (e.g., "ojs").</message>
 	<message key="admin.journals.transcode">Transcode preprint metadata from ISO8859-1</message>
-	<message key="admin.journals.redirect">Generate code to map OJS 1 URLs to OJS 2 URLs</message>
+	<message key="admin.journals.redirect">Generate code to map PPS 1 URLs to PPS 2 URLs</message>
 	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
 	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
 	<message key="admin.mergeUsers">Merge Users</message>

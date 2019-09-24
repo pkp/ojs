@@ -1,6 +1,6 @@
 {
-	"title": "Section",
-	"description": "A journal section. Typically a section within an issue, such as Articles or Reviews.",
+	"title": "Series",
+	"description": "A server series. Typically a theme or field of research.",
 	"properties": {
 		"id": {
 			"type": "integer",

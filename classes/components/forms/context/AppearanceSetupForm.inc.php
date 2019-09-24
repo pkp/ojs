@@ -24,11 +24,11 @@ class AppearanceSetupForm extends PKPAppearanceSetupForm {
 	public function __construct($action, $locales, $context, $baseUrl, $temporaryFileApiUrl) {
 		parent::__construct($action, $locales, $context, $baseUrl, $temporaryFileApiUrl);
 
-		$this->addField(new FieldUploadImage('journalThumbnail', [
-				'label' => __('manager.setup.journalThumbnail'),
-				'tooltip' => __('manager.setup.journalThumbnail.description'),
+		$this->addField(new FieldUploadImage('serverThumbnail', [
+				'label' => __('manager.setup.serverThumbnail'),
+				'tooltip' => __('manager.setup.serverThumbnail.description'),
 				'isMultilingual' => true,
-				'value' => $context->getData('journalThumbnail'),
+				'value' => $context->getData('serverThumbnail'),
 				'baseUrl' => $baseUrl,
 				'options' => [
 					'url' => $temporaryFileApiUrl,

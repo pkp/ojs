@@ -11,11 +11,11 @@
   -->
 
 <version>
-	<application>pps3</application>
+	<application>ojs2</application>
 	<type>core</type>
 	<release>3.2.0.0</release>
 	<tag>pps-3_2_0-0</tag>
-	<date>2019-06-01</date>
+	<date>2019-09-01</date>
 	<info>http://pkp.sfu.ca/pps/</info>
 	<package>http://pkp.sfu.ca/pps/download/pps-3.2.0.tar.gz</package>
 </version>

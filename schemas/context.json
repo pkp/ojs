@@ -1,6 +1,6 @@
 {
-	"title": "Journal",
-	"description": "A journal.",
+	"title": "Server",
+	"description": "A server.",
 	"properties": {
 		"abbreviation": {
 			"type": "string",
@@ -10,13 +10,6 @@
 				"nullable"
 			]
 		},
-		"copyrightYearBasis": {
-			"type": "string",
-			"default": "issue",
-			"validation": [
-				"in:issue,article"
-			]
-		},
 		"enableAuthorScreening": {
 			"type": "boolean",
 			"default": 0,
@@ -24,7 +17,7 @@
 				"nullable"
 			]
 		},
-		"journalThumbnail": {
+		"serverThumbnail": {
 			"type": "object",
 			"multilingual": true,
 			"apiSummary": true,

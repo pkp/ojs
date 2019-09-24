@@ -217,9 +217,9 @@
 	<message key="search.results.orderDir.desc">Descending</message>
 	<message key="search.results.similarDocuments">similar documents</message>
 
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifying a default authentication source other than OJS has the following effects:</p>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifying a default authentication source other than PPS has the following effects:</p>
 <ul>
-	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
+	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the PPS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
@@ -242,8 +242,8 @@
 	<!-- General plugin information -->
 	<message key="plugins.categories.viewableFiles">Preprint Galley Plugins</message>
 	<message key="plugins.categories.viewableFiles.description">Preprint Galley Plugins add support for displaying different document types as preprint galleys.</message>
-	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Server Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
-	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Server Systems in a variety of ways that are not supported by the other plugin categories.</message>
+	<message key="plugins.categories.auth.description">Authorization Plugins allow Preprint Server to delegate user authentication tasks to other systems, such as LDAP servers.</message>
+	<message key="plugins.categories.generic.description">Generic plugins are used to extend Preprint Server in a variety of ways that are not supported by the other plugin categories.</message>
 
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
@@ -464,15 +464,15 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="about.archiving">Archiving</message>
 	<message key="about.memberships">Memberships</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
-	<message key="about.aboutThisPublishingSystem.altText">OJS Editorial and Publishing Process</message>
-	<message key="about.aboutOJSJournal"><![CDATA[This server uses Open Server Systems {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[This site uses Open Server Systems {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
+	<message key="about.aboutThisPublishingSystem.altText">PPS Editorial and Publishing Process</message>
+	<message key="about.aboutOJSJournal"><![CDATA[This server uses Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[This site uses Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
 
 	<!-- Announcement -->
 
 	<!-- Help -->
-	<message key="help.ojsHelp">Open Server Systems Help</message>
-	<message key="help.ojsHelpAbbrev">OJS Help</message>
+	<message key="help.ojsHelp">Preprint Server Help</message>
+	<message key="help.ojsHelpAbbrev">PPS Help</message>
 	<message key="help.searchReturnResults">Return to Search Results</message>
 	<message key="help.goToEditPage">Edit {$sectionTitle}</message>
 
@@ -481,15 +481,15 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Payments -->
 
 	<!-- Installer -->
-	<message key="installer.appInstallation">OJS Installation</message>
-	<message key="installer.ojsUpgrade">OJS Upgrade</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+	<message key="installer.appInstallation">PPS Installation</message>
+	<message key="installer.ojsUpgrade">PPS Upgrade</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>PPS Version {$version}</h4>
 
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Server Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README.md">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Server Systems, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Thank you for downloading the Public Knowledge Project's <strong>Preprint Server</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README.md">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Preprint Server, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Upgrade</h4>
 
-<p>If you are upgrading an existing installation of OJS, <a href="{$upgradeUrl}">click here</a> to proceed.</p>
+<p>If you are upgrading an existing installation of PPS, <a href="{$upgradeUrl}">click here</a> to proceed.</p>
 
 <h4>Recommended system requirements</h4>
 
@@ -502,11 +502,11 @@ You may optionally provide the user with a reason for disabling their account.</
 
 <p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>
 
-<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>
+<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base PPS directory, or using the site administration web interface.</p>
 
 <h4>Supported database systems</h4>
 
-<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
+<p>PPS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the PPS team.</p>
 ]]></message>
 <message key="installer.preInstallationInstructions"><![CDATA[
 <h4>Pre-Installation Steps</h4>
@@ -523,39 +523,39 @@ You may optionally provide the user with a reason for disabling their account.</
 </ul>
 
 <p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
-	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS Version {$version}</h4>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>PPS Version {$version}</h4>
 
-<p>Thank you for downloading the Public Knowledge Project's <strong>Open Server Systems</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README.md">README</a> and <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Open Server Systems, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
-<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>
+<p>Thank you for downloading the Public Knowledge Project's <strong>Preprint Server</strong>. Before proceeding, please read the <a href="{$baseUrl}/docs/README.md">README</a> and <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href="http://pkp.sfu.ca/" target="_blank">PKP web site</a>. If you have bug reports or technical support inquiries about Preprint Server, see the <a href="http://forum.pkp.sfu.ca" target="_blank">support forum</a> or visit PKP's online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and PPS installation directory before proceeding.</p>
 <p>If you are running in <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Please note that full Unicode support requires PHP to be compiled with support for the <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.
 <br /><br />
 Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Your server currently allows file uploads: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Your server currently allows a maximum file upload size of: <strong>{$maxFileUploadSize}</strong>]]></message>
-	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here.</message>
+	<message key="installer.localeInstructions">The primary language to use for this system. Please consult the PPS documentation if you are interested in support for languages not listed here.</message>
 	<message key="installer.additionalLocalesInstructions">Select any additional languages to support in this system. These languages will be available for use by servers hosted on the site. Additional languages can also be installed at any time from the site administration interface.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files".]]></message>
-	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
-	<message key="installer.installApplication">Install Open Server Systems</message>
-	<message key="installer.upgradeApplication">Upgrade Open Server Systems</message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
+	<message key="installer.databaseSettingsInstructions">PPS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
+	<message key="installer.installApplication">Install Preprint Server</message>
+	<message key="installer.upgradeApplication">Upgrade Preprint Server</message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your PPS database or database tables before attempting to reinstall the database.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
+	<message key="installer.installationComplete"><![CDATA[<p>Installation of PPS has completed successfully.</p>
 <p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>
 <p>If you wish to be part of the PKP community, you can:</p>
 <ol>
 	<li>Read the <a href="http://pkp.sfu.ca/blog" target="_new">PKP blog</a> and follow the <a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS feed</a> for news and updates.</li>
 	<li>Visit the <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a> if you have questions or comments.</li>
 </ol>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of PPS to version {$version} has completed successfully.</p>
 <p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>
-<p>If you haven't already registered and wish to receive news and updates, <strong>please register at <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions or comments, please visit the <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
+<p>If you have questions or comments, please visit the <a href="http://forum.pkp.sfu.ca" target="_new">support forum</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
-	<message key="site.upgradeAvailable.admin"><![CDATA[There is a new version of OJS available! You are currently using OJS {$currentVersion}. The most recent version is OJS {$latestVersion}. Please visit <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> to download the most recent version and find upgrade instructions.]]></message>
-	<message key="site.upgradeAvailable.manager"><![CDATA[There is a new version of OJS available! You are currently using OJS {$currentVersion}. The most recent version is OJS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>.]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please visit <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> to download the most recent version and find upgrade instructions.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href="http://pkp.sfu.ca/ojs_download" target="_new">here</a>.]]></message>
 
 	<!-- Preprint Logs -->
 	<message key="log.author.documentRevised">{$authorName} has revised preprint {$submissionId}. The new file ID is {$fileId}.</message>
@@ -622,7 +622,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">This search implementation does not allow per-journal re-indexing.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">The given server path "{$journalPath}" could not be resolved to a server.</message>
 
-	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<!-- legacy strings from PPS 2, for upgraded installations from PPS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} has taken the edit process for the preprint {$submissionId}.</message>
 
 	<message key="catalog.sortBy">Order of preprint s</message>

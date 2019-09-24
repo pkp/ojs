@@ -46,7 +46,6 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 
 		foreach ($requestParams as $param => $value) {
 			switch ($param) {
-				case 'issueIds':
 				case 'sectionIds':
 					if (is_string($value) && strpos($value, ',') > -1) {
 						$value = explode(',', $value);
@@ -76,10 +75,6 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 
 		if (!empty($requestArgs['sectionIds'])) {
 			$submissionQB->filterBySections($requestArgs['sectionIds']);
-		}
-
-		if (!empty($requestArgs['issueIds'])) {
-			$submissionQB->filterByIssues($requestArgs['issueIds']);
 		}
 	}
 
