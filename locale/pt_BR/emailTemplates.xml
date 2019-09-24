@@ -12,6 +12,17 @@
   -->
 
 <email_texts locale="pt_BR">
+	<email_text key="NOTIFICATION">
+		<subject>Nova notificação de {$siteTitle}</subject>
+		<body><![CDATA[Você possui uma nova notificação de {$siteTitle}:<br />
+<br />
+{$notificationContents}<br />
+<br />
+Link: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Esta mensagem é enviada a usuários cadastrados que escolheram habilitar este tipo de notificação via email.</description>
+	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Solicitação de atualização de senha</subject>
 		<body><![CDATA[Recebemos uma solicitação para atualizar sua senha de acesso à revista {$siteTitle}.<br />
@@ -264,6 +275,29 @@ Resumo<br />
 {$submissionAbstract}]]></body>
 		<description>Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Solicitação de avaliação de artigo</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Este é um lembrete da solicitação de avaliação de um texto, &quot;{$submissionTitle},&quot; para {$contextName}. Aguardamos sua resposta até {$responseDueDate}, e este email foi gerado automaticamente e enviado tendo esta data em mente.<br />
+Acredito que você será um excelente avaliador para este manuscrito. O resumo da submissão segue abaixo, e espero que considere executar essa valiosíssima tarefa para nós.<br />
+<br />
+Por favor, entre no portal da revista e indique se pode ou não executar esta avaliação; no portal você também poderá acessar a submissão e registrar sua avaliação e recomendações; o site é {$contextUrl}<br />
+<br />
+O prazo da avaliação é {$reviewDueDate}.<br />
+<br />
+Se você não possui o usuário ou senha para o portal da revista, você pode solicitar a redefinição da seha (que será encaminhada por email junto com seu nome de usuário). {$passwordResetUrl}<br />
+<br />
+Endereço da submissão: {$submissionReviewUrl}<br />
+<br />
+Agradecemos pela contribuição.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Este email é enviado automaticamente quando o prazo de confirmação da avaliação está próximo (veja as Opções de avaliação nas Configurações &gt; Fluxo de trabalho &gt; Avaliação) e a avaliação por um clique está desativada. Tarefas marcadas devem ser habilitadas e configuradas (veja o arquivo de configuração do site).</description>
+</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Solicita avaliação de artigo</subject>
 		<body><![CDATA[{$reviewerName},<br />
@@ -641,17 +675,6 @@ Atenciosamente,<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Mensagem de boas-vindas enviada a novo avaliador cadastrado no sistema, com login e senha para acesso.</description>
-	</email_text>
-	<email_text key="NOTIFICATION">
-		<subject>Nova notificação de {$siteTitle}</subject>
-		<body><![CDATA[Você possui uma nova notificação de {$siteTitle}:<br />
-<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Esta mensagem é enviada a usuários cadastrados que escolheram habilitar este tipo de notificação via email.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisão editorial</subject>

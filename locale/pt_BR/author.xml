@@ -30,11 +30,17 @@
 	<message key="author.submit.metadata">Dados da Submissão </message>
 	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
 	<message key="author.submit.confirmation">Confirmação</message>
+	<message key="author.submit.nextSteps">Próximos Passos</message>
 	<message key="submission.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor.</message>
 	<message key="author.submit.notAccepting">A revista não está aceitando submissões neste momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
 	<message key="author.submit.qualifyForWaiver">Solicito considerar isenção de Taxa de Submissão para este artigo</message>
 	<message key="author.submit.addReasonsForWaiver">Informe no campo de comentários motivos para a isenção de taxa.</message>
+	<message key="author.submit.mustEnterWaiverReason">Informe a motivação no espaço disponível, caso esteja solicitando isenção de taxa.</message>
+	<message key="author.submissions.queuedReviewSubsequent">Em avaliação: rodada {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Em avaliação: Revisões Requeridas</message>
+	<message key="author.submissions.queuedEditingCopyedit">Em edição: Edição de Texto solicitada</message>
+	<message key="author.submissions.queuedEditingProofread">Em edição: Leitura de provas solicitada</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Transferir cópia editada</message>
 	<message key="author.submissions.proofreadingCorrections">Correções da Leitura de Prova</message>
 	<message key="author.submissions.confirmDelete">Deseja realmente excluir esta submissão incompleta?</message>
@@ -51,8 +57,10 @@
 	<message key="submission.submit.coverNote">Comentários para o editor</message>
 	<message key="author.submit.comments">Digite o texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Escolha a seção apropriada para a submissão.</message>
+	<message key="author.submit.form.localeRequired">Escolha um idioma para a submissão.</message>
 	<message key="submission.submit.privacyStatement">Política de Privacidade</message>
 	<message key="author.submit.reorderInstructions">Utilize as setas para alterar a ordem em que os nomes dos autores aparecerão na publicação.</message>
+	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.selectPrincipalContact">Contato principal para correspondência.</message>
 	<message key="author.submit.addAuthor">Incluir autor</message>
 	<message key="author.submit.deleteAuthor">Excluir autor</message>
@@ -63,6 +71,7 @@
 	<message key="author.submit.form.authorRequiredFields">São campos obrigatórios o primeiro nome (prénome), sobrenome e e-mail para cada autor.</message>
 	<message key="author.submit.form.titleRequired">Digite o título do documento.</message>
 	<message key="author.submit.form.abstractRequired">Informe o resumo do documento</message>
+	<message key="author.submit.form.wordCountAlert">O limite de palavras para resumos desta seção foi excedido.</message>
 	<message key="author.submit.submissionFile">Arquivo submetido</message>
 	<message key="author.submit.uploadSubmissionFile">Transferir arquivo</message>
 	<message key="author.submit.replaceSubmissionFile">Substituir arquivo</message>
@@ -109,13 +118,4 @@
 	<message key="author.article.copyeditedFile">Documento editado</message>
 	<message key="author.article.authorRevisedFile">Versão do Autor</message>
 	<message key="author.submit.authorSubmitLoginMessage">É necessário criar um cadastro para submeter documentos à revista. Isto permite aos editores acompanhar a submissão e notificá-lo das mudanças na situação da submissão, ou caso informações adicionais sejam necessárias para dar continuidade ao processo editorial.</message>
-	<message key="author.submit.mustEnterWaiverReason">Informe a motivação no espaço disponível, caso esteja solicitando isenção de taxa.</message>
-	<message key="author.submissions.queuedReviewSubsequent">Em avaliação: rodada {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">Em avaliação: Revisões Requeridas</message>
-	<message key="author.submissions.queuedEditingCopyedit">Em edição: Edição de Texto solicitada</message>
-	<message key="author.submissions.queuedEditingProofread">Em edição: Leitura de provas solicitada</message>
-	<message key="author.submit.reorder">Reordenar nome do autor</message>
-	<message key="author.submit.form.wordCountAlert">O limite de palavras para resumos desta seção foi excedido.</message>
-	<message key="author.submit.form.localeRequired">Escolha um idioma para a submissão.</message>
-	<message key="author.submit.nextSteps">Próximos Passos</message>
 </locale>

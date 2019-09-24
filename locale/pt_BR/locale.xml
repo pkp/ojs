@@ -101,6 +101,7 @@
 	<message key="section.title">Título da seção</message>
 	<message key="section.abbreviation">Abreviatura</message>
 	<message key="section.abbreviation.example">(Por exemplo, Artigos=ART)</message>
+	<message key="section.policy">Políticas de seção</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">Artigo</message>
@@ -144,6 +145,7 @@
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Edição da submissão</message>
 	<message key="submission.changeSection">Alterar para</message>
+	<message key="submission.sent">Enviado</message>
 	<message key="submission.editorDecision">Decisão Editorial</message>
 	<message key="submission.round">Rodada&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Avaliação do Editor</message>
@@ -239,6 +241,34 @@
 	<message key="issue.nonpdf.title">Download da Edição</message>
 	<message key="issue.viewIssue">Ver Edição</message>
 	<message key="issue.return">Voltar aos Detalhes da Edição</message>
+
+
+	<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">Moeda</message>
+	<message key="subscriptionTypes.year">ano</message>
+	<message key="subscriptionTypes.years">anos</message>
+	<message key="subscriptionTypes.month">mês</message>
+	<message key="subscriptionTypes.months">meses</message>
+	<message key="subscriptionTypes.nonExpiring">Não expira</message>
+	<message key="subscriptionTypes.format">Formato</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Impresso</message>
+	<message key="subscriptionTypes.format.printOnline">Impresso e Online</message>
+
+
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">Inativo</message>
+	<message key="subscriptions.status">Situação</message>
+	<message key="subscriptions.status.active">Ativo</message>
+	<message key="subscriptions.status.needsInformation">Requer mais informações</message>
+	<message key="subscriptions.status.needsApproval">Requer aprovação</message>
+	<message key="subscriptions.status.awaitingManualPayment">Aguardando pagamento manual</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Aguardando pagamento online</message>
+	<message key="subscriptions.status.other">Outro, ver Notas</message>
+	<message key="subscriptions.individualDescription">Assinaturas individuais exigem entrar no sistema para acesso a conteúdo restrito.</message>
+	<message key="subscriptions.institutionalDescription">Assinaturas institucionais não exigem entrar no sistema. O domínio e/ou endereço de IP é usado para proporcionar o controle de acesso a conteúdo restrito.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Aviso:</strong> Assinaturas institucionais adquiridas online exigem aprovação do domínio e faixas de IP antes de sua ativação.]]></message>
+
 
 	<!--
 	 *
@@ -806,7 +836,6 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 
 	<!-- Debug messages -->
 
-	<message key="submission.sent">Enviado</message>
 	<message key="reader.subscribersOnly">Exclusivo para assinantes</message>
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
@@ -904,27 +933,9 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="user.manageMySubscriptions">Gerenciar minhas assinaturas</message>
-	<message key="subscriptionTypes.currency">Moeda</message>
-	<message key="subscriptionTypes.year">ano</message>
-	<message key="subscriptionTypes.years">anos</message>
-	<message key="subscriptionTypes.month">mês</message>
-	<message key="subscriptionTypes.months">meses</message>
-	<message key="subscriptionTypes.nonExpiring">Não expira</message>
-	<message key="subscriptionTypes.format">Formato</message>
-	<message key="subscriptionTypes.format.online">Online</message>
-	<message key="subscriptionTypes.format.print">Impresso</message>
-	<message key="subscriptionTypes.format.printOnline">Impresso e Online</message>
-	<message key="subscriptions.inactive">Inativo</message>
-	<message key="subscriptions.status">Situação</message>
-	<message key="subscriptions.status.active">Ativo</message>
-	<message key="subscriptions.status.needsInformation">Requer mais informações</message>
-	<message key="subscriptions.status.needsApproval">Requer aprovação</message>
-	<message key="subscriptions.status.awaitingManualPayment">Aguardando pagamento manual</message>
-	<message key="subscriptions.status.awaitingOnlinePayment">Aguardando pagamento online</message>
-	<message key="subscriptions.status.other">Outro, ver Notas</message>
-	<message key="subscriptions.individualDescription">Assinaturas individuais exigem entrar no sistema para acesso a conteúdo restrito.</message>
-	<message key="subscriptions.institutionalDescription">Assinaturas institucionais não exigem entrar no sistema. O domínio e/ou endereço de IP é usado para proporcionar o controle de acesso a conteúdo restrito.</message>
-	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Aviso:</strong> Assinaturas institucionais adquiridas online exigem aprovação do domínio e faixas de IP antes de sua ativação.]]></message>
+
+
+
 	<message key="subscriptionManager.individualSubscriptions">Assinaturas Individuais</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Assinaturas Institucionais</message>
 	<message key="subscriptionManager.subscriptionTypes">Tipos de Assinaturas</message>
@@ -1045,6 +1056,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.role.journalAssistant">Assistente da Revista</message>
 	<message key="user.role.journalAssistants">Assitentes de Revista</message>
 	<message key="issue.return">Voltar aos Detalhes da Edição</message>
+
+
 	<message key="search.results.orderBy">Ordenar resultados por</message>
 	<message key="search.results.orderBy.article">Título do Artigo</message>
 	<message key="search.results.orderBy.author">Autor</message>

@@ -8,17 +8,35 @@
   -->
 
 <locale name="pt_BR" full_name="Português (Brasil)">
+	<!-- Section default -->
+<message key="section.default.title">Artigos</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy">Política padrão de seção</message>
+
+	<message key="default.genres.article">Texto do artigo</message>
+
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
 	<message key="default.contextSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em "Comentários ao editor".</message>
 	<message key="default.contextSettings.checklist.fileFormat">O arquivo da submissão está em formato Microsoft Word, OpenOffice ou RTF.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">As URL das referências informadas estão disponíveis.</message>
 	<message key="default.contextSettings.checklist.submissionAppearance">O texto está em espaço simples; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (exceto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
 	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Diretrizes para Autores</a>, na página Sobre a Revista.]]></message>
 	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Os nomes e endereços informados nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</p>]]></message>
 	<message key="default.contextSettings.openAccessPolicy">Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento.</message>
-	<message key="section.default.title">Artigos</message>
-	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy">Política padrão de seção</message>
-	<message key="default.genres.article">Texto do artigo</message>
+	
+
+	<message key="default.contextSettings.forReaders"><![CDATA[Sugerimos aos leitores se cadastrarem no serviço de notificação de publicação deste jornal. Use o link de <a href="{$indexUrl}{$contextPath}/user/register">Registro</a> no topo da página inicial da revista. Este cadastro fará com que o leitor receva o Sumário por email para cada nova edição da revista. Esta lista também contribui para a base de leitores da revista. Veja a <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Declaração de Privacidade</a> da revista, que garante aos leitores que seus nomes e endereços de email não serão utilizados para outros propósitos.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Tem interesse em submeter a esta revista? Recomendamos que leia a seção <a href="{$indexUrl}{$contextPath}/about">Sobre a Revista</a> para conhecer as políticas de seção da revista e também as <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Diretrizes para Autores</a>. Os autores precisam se <a href="{$indexUrl}{$contextPath}/user/register">registrar</a> na revista antes da submissão ou, se já for cadastrado, deve <a href="{$indexUrl}/index/login">entrar</a> e iniciar o processo de submissão em cinco passos.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Sugerimos aos bibliotecários que listem esta revista em seu acervo eletrônico. É também importante mencionar que o sistema de código aberto desta revista pode ser utilizado pelas bibliotecas para hospedar as revistas produzidas por seus docentes (ver <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Esta revista utiliza o sistema LOCKSS para construir um sistema de arquivamento distribuído entre as bibliotecas participantes, e permite às bibliotecas criar arquivos permanentes da revista para preservação e restauração. <a href="http://www.lockss.org/">Leia mais...</a>]]></message>
 	<message key="default.contextSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivos distribuídos entre bibliotecas participantes e permite que tais bibliotecas mantenham cópias permanentes da revista para propósitos de preservação e recuperação. <a href="http://clockss.org/">Saiba mais...</a>]]></message>
+
+	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Gerente da revista</message>
 	<message key="default.groups.plural.manager">Gerentes da revista</message>
 	<message key="default.groups.abbrev.manager">GR</message>
@@ -34,6 +52,8 @@
 	<message key="default.groups.name.subscriptionManager">Gerente de assinatura</message>
 	<message key="default.groups.plural.subscriptionManager">Gerentes de assinatura</message>
 	<message key="default.groups.abbrev.subscriptionManager">GAssin</message>
+
+	<!-- Genre Defaults -->
 	<message key="default.genres.researchInstrument">Instrumento de pesquisa</message>
 	<message key="default.genres.researchMaterials">Materiais de pesquisa</message>
 	<message key="default.genres.researchResults">Resultados de pesquisa</message>
@@ -41,7 +61,11 @@
 	<message key="default.genres.dataAnalysis">Análise de dados</message>
 	<message key="default.genres.dataSet">Conjunto de dados</message>
 	<message key="default.genres.sourceTexts">Textos fonte</message>
+
 	<message key="default.groups.name.externalReviewer">Avaliador</message>
 	<message key="default.groups.plural.externalReviewer">Avaliadores</message>
 	<message key="default.groups.abbrev.externalReviewer">A</message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
 </locale>

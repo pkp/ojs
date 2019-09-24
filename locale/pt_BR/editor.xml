@@ -13,6 +13,8 @@
 
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="editor.home">Página Inicial do Editor</message>
+	<message key="editor.reassign">Reatribuir</message>
+
 	<message key="editor.submissionsAndPublishing">Submissões e Publicações</message>
 	<message key="editor.submissionQueue">Fila de submissões</message>
 	<message key="editor.submissionArchive">Arquivo de submissões</message>
@@ -21,12 +23,17 @@
 	<message key="editor.allSections">Todas as seções</message>
 	<message key="editor.allEditors">Todos os editores</message>
 	<message key="editor.me">Mim</message>
+	<message key="editor.publicIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outro objeto (edição, artigo, composição final ou arquivo suplementar). Escolha um identificar único dentre os disponíveis em sua publicação.</message>
 	<message key="editor.submissionArchive.noSubmissions">Nenhuma submissão no arquivo.</message>
 	<message key="editor.submissionArchive.saveChanges">Salvar alterações a submissões arquivadas? Submissões marcadas para exclusão serão excluídas permanentemente do sistema.</message>
 	<message key="editor.submissionArchive.confirmDelete">Deseja realmente excluir esta submissão?</message>
 	<message key="editor.submissionReview.confirmDecision">Deseja realmente registrar a decisão?</message>
 	<message key="editor.submissionReview.emailWillArchive">Esta submissão será arquivada após a mensagem de Notificar Autor ser enviada ou pressionado o botão "Não enviar e-mail".</message>
 	<message key="editor.notifyUsers">Notificar Usuários</message>
+	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} usuários)</message>
+	<message key="editor.notifyUsers.allAuthors">Todos os autores com publicações ({$count} usuários)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} usuários)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} usuários)</message>
 	<message key="editor.notifyUsers.inProgress">Notificando usuários...</message>
 	<message key="editor.usersNotified">Usários notificados</message>
 	<message key="editor.notifyUsers.allUsers">Enviar esta mensagem a todos os usuários associados a esta revista ({$count} usuários)</message>
@@ -34,12 +41,14 @@
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do editor</message>
 	<message key="editor.issues.createIssue">Incluir edição</message>
+	<message key="editor.issues.editIssue">Gerenciamento de Edições: {$issueIdentification}</message>
 	<message key="editor.issues.currentIssue">Edição Atual</message>
 	<message key="editor.issues.numArticles">Itens</message>
 	<message key="editor.issues.noArticles">Nenhum item agendado para esta edição.</message>
 	<message key="editor.issues.confirmDelete">Deseja realmente excluir esta edição permanentemente?</message>
 	<message key="editor.issues.published">Publicado</message>
 	<message key="editor.issues.unpublished">Não publicado</message>
+	<message key="editor.issues.datePublished">Data de Publicação</message>
 	<message key="editor.issues.volumeRequired">O volume é obrigatório para a edição, devendo ser um número positivo inteiro.</message>
 	<message key="editor.issues.numberRequired">O número é obrigatório para a edição, devendo ser um número positivo inteiro.</message>
 	<message key="editor.issues.yearRequired">O ano é obrigatório para a edição, devendo ser um número positivo inteiro.</message>
@@ -51,12 +60,16 @@
 	<message key="editor.issues.accessStatus">Tipo de acesso</message>
 	<message key="editor.issues.accessDate">Data para Acesso Livre</message>
 	<message key="editor.issues.invalidAccessDate">A data para acesso é inválida.</message>
+	<message key="editor.issues.enableOpenAccessDate">Habilitar acesso livre adiado</message>
 	<message key="editor.issues.coverPage">Capa</message>
 	<message key="editor.issues.coverPageInstructions">(Formatos aceitáveis: .gif, .jpg ou .png )</message>
 	<message key="editor.issues.uploaded">Enviado</message>
 	<message key="editor.issues.remove">Remover</message>
 	<message key="editor.issues.proofed">Corrigido</message>
 	<message key="editor.issues.removeCoverPage">Remover capa?</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">A imagem da capa que você solicitou para excluir não corresponde à imagem da capa dessa edição. Por favor, recarregue a página e tente denovo.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ela já pode ter sido excluída. Tente recarregar a página.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png.</message>
 	<message key="editor.issues.invalidCoverPageFormat">Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.styleFile">Folha de Estilos</message>
 	<message key="editor.issues.invalidStyleFormat">O formato de Folha de Estilos é inválida. Certifique-se que o documento enviado é um documento CSS válido! Documentos CSS com comentários no início podem ser rejeitados. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
@@ -109,16 +122,10 @@
 	<message key="editor.article.hideCoverPageToc">Não exibir miniatura da capa no sumário.</message>
 	<message key="editor.article.hideCoverPageAbstract">Não exibir capa na página de resumo de artigo.</message>
 	<message key="editor.article.remove">Excluir</message>
-	<message key="editor.issues.enableOpenAccessDate">Habilitar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
-	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} usuários)</message>
-	<message key="editor.notifyUsers.allAuthors">Todos os autores com publicações ({$count} usuários)</message>
-	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} usuários)</message>
-	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} usuários)</message>
+
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para a edição de texto, use o link 'Notificar autor' para informá-lo da decisão e escolher a versão do documento a ser enviada.</message>
-	<message key="editor.reassign">Reatribuir</message>
-	<message key="editor.publicIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outro objeto (edição, artigo, composição final ou arquivo suplementar). Escolha um identificar único dentre os disponíveis em sua publicação.</message>
 	<message key="editor.issues.galleys">Composições finais da edição</message>
 	<message key="editor.issues.galley">Composição final da edição</message>
 	<message key="editor.issues.viewingGalley">Vendo composição final da edição</message>
@@ -141,13 +148,10 @@
 	<message key="editor.submission.selectGalleyFiles">Selecionar arquivos da composição</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Rascunhos finais nesta lista são transformados por um Editor de Texto em versões editadas, transferidas abaixo em <span class="pkp_help_title">Edição de Texto</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Quaisquer arquivos que já tenham sido transferidos para qualquer etapa da submissão podem ser adicionados à listagem de Leitura de Prova marcando-se a caixa de seleção Incluir abaixo e clicando-se em Busca: todos os arquivos disponíveis serão listados e podem ser escolhidos para inclusão.</message>
-	<message key="editor.issues.editIssue">Gerenciamento de Edições: {$issueIdentification}</message>
-	<message key="editor.issues.datePublished">Data de Publicação</message>
+
 	<message key="editor.issues.identifiers">Identificadores</message>
 	<message key="grid.action.addGalley">Adicionar composição final</message>
-	<message key="editor.issues.removeCoverImageFileNameMismatch">A imagem da capa que você solicitou para excluir não corresponde à imagem da capa dessa edição. Por favor, recarregue a página e tente denovo.</message>
-	<message key="editor.issues.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ela já pode ter sido excluída. Tente recarregar a página.</message>
-	<message key="editor.issues.invalidCoverImageFormat">Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png.</message>
+
 	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor, escolha identificadores únicos para os objetos do mesmo tipo dentro de sua revista.</message>
