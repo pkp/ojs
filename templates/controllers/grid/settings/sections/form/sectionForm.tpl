@@ -21,7 +21,7 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
 
-	{if $sectionEditorCount == 0}
+	{if !$hasSubEditors}
 		<span class="pkp_form_error"><p>{translate key="manager.section.noSectionEditors"}</p></span>
 	{/if}
 
