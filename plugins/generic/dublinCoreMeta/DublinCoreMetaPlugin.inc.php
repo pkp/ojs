@@ -49,7 +49,14 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		$issue = $args[1];
 		$article = $args[2];
 		$publication = $article->getCurrentPublication();
+		$requestArgs = $request->getRequestedArgs();
 		$journal = $request->getContext();
+
+		// Only add Dublin Core metadata tags to the canonical URL for the latest version
+		// See discussion: https://github.com/pkp/pkp-lib/issues/4870
+		if (count($requestArgs) > 1 && $requestArgs[1] === 'version') {
+			return;
+		}
 
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addHeader('dublinCoreSchema', '<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />');

@@ -28,6 +28,9 @@ class ArticleHandler extends Handler {
 	/** submission associated with the request **/
 	var $article;
 
+	/** publication associated with the request **/
+	var $publication;
+
 	/** galley associated with the request **/
 	var $galley;
 
@@ -59,7 +62,7 @@ class ArticleHandler extends Handler {
 	 * @param $args array Arguments list
 	 */
 	function initialize($request, $args = array()) {
-		$urlPath = isset($args[0]) ? $args[0] : 0;
+		$urlPath = empty($args) ? 0 : array_shift($args);
 
 		// Look for a publication with a publisher-id that matches the url path
 		$publications = Services::get('publication')->getMany([
@@ -98,18 +101,33 @@ class ArticleHandler extends Handler {
 
 		$this->article = $submission;
 
-		if (in_array($request->getRequestedOp(), ['view', 'download'])) {
-			$galleyId = isset($args[1]) ? $args[1] : 0;
-			if ($galleyId) {
-				$this->galley = DAORegistry::getDAO('ArticleGalleyDAO')->getByBestGalleyId($galleyId, $submission->getCurrentPublication()->getId());
-				if (!$this->galley) {
-					$request->getDispatcher()->handle404();
+		// Get the requested publication or if none requested get the current publication
+		$subPath = empty($args) ? 0 : array_shift($args);
+		if ($subPath === 'version') {
+			$publicationId = (int) array_shift($args);
+			$galleyId = empty($args) ? 0 : array_shift($args);
+			foreach ((array) $this->article->getData('publications') as $publication) {
+				if ($publication->getId() === $publicationId) {
+					$this->publication = $publication;
 				}
+			}
+			if (!$this->publication) {
+				$request->getDispatcher()->handle404();
+			}
+		} else {
+			$this->publication = $this->article->getCurrentPublication();
+			$galleyId = $subPath;
+		}
+
+		if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
+			$this->galley = DAORegistry::getDAO('ArticleGalleyDAO')->getByBestGalleyId($galleyId, $this->publication->getId());
+			if (!$this->galley) {
+				$request->getDispatcher()->handle404();
 			}
 		}
 
-		if ($submission->getCurrentPublication()->getData('issueId')) {
-			$this->issue = DAORegistry::getDAO('IssueDAO')->getById($submission->getCurrentPublication()->getData('issueId'), $submission->getData('contextId'), true);
+		if ($this->publication->getData('issueId')) {
+			$this->issue = DAORegistry::getDAO('IssueDAO')->getById($this->publication->getData('issueId'), $submission->getData('contextId'), true);
 		}
 	}
 
@@ -120,17 +138,30 @@ class ArticleHandler extends Handler {
 	 */
 	function view($args, $request) {
 		$articleId = array_shift($args);
-		$galleyId = array_shift($args);
-		$fileId = array_shift($args);
+		$subPath = array_shift($args);
+
+		if ($subPath === 'version') {
+			$publicationId = array_shift($args);
+			$galleyId = array_shift($args);
+			$fileId = array_shift($args);
+		} else {
+			$galleyId = $subPath;
+			$fileId = array_shift($args);
+		}
 
 		$context = $request->getContext();
 		$user = $request->getUser();
 		$issue = $this->issue;
 		$article = $this->article;
+		$publication = $this->publication;
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'issue' => $issue,
 			'article' => $article,
+			'publication' => $publication,
+			'firstPublication' => reset($article->getData('publications')),
+			'currentPublication' => $article->getCurrentPublication(),
+			'galley' => $this->galley,
 			'fileId' => $fileId,
 		));
 		$this->setupTemplate($request);
@@ -138,12 +169,18 @@ class ArticleHandler extends Handler {
 		// TODO: this defaults to the current publication but should
 		// retrieve the publication requested from the URL if it is
 		// passed as an arg
-		$requestedPublication = $this->article->getCurrentPublication();
+		$templateMgr->assign([
+			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
+			'publication' => $publication,
+			'section' => DAORegistry::getDAO('SectionDAO')->getById($publication->getData('sectionId')),
+		]);
 
-		if (!$this->userCanViewGalley($request, $article->getId(), $galleyId)) fatalError('Cannot view galley.');
+		if ($this->galley && !$this->userCanViewGalley($request, $article->getId(), $this->galley->getId())) {
+			fatalError('Cannot view galley.');
+		}
 
 		// Get galleys sorted into primary and supplementary groups
-		$galleys = $article->getGalleys();
+		$galleys = $publication->getData('galleys');
 		$primaryGalleys = array();
 		$supplementaryGalleys = array();
 		if ($galleys) {
@@ -176,8 +213,8 @@ class ArticleHandler extends Handler {
 		));
 
 		// Citations
-		if ($requestedPublication->getData('citationsRaw')) {
-			$parsedCitations = DAORegistry::getDAO('CitationDAO')->getByPublicationId($requestedPublication->getId());
+		if ($publication->getData('citationsRaw')) {
+			$parsedCitations = DAORegistry::getDAO('CitationDAO')->getByPublicationId($publication->getId());
 			$templateMgr->assign([
 				'parsedCitations' => $parsedCitations->toArray(),
 			]);
@@ -186,23 +223,26 @@ class ArticleHandler extends Handler {
 		// Assign deprecated values to the template manager for
 		// compatibility with older themes
 		$templateMgr->assign([
-			'section' => DAORegistry::getDAO('SectionDAO')->getById($requestedPublication->getData('sectionId')),
 			'licenseTerms' => $context->getLocalizedData('licenseTerms'),
-			'licenseUrl' => $requestedPublication->getData('licenseUrl'),
-			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($requestedPublication->getData('licenseUrl')),
-			'copyrightHolder' => $requestedPublication->getData('copyrightHolder'),
-			'copyrightYear' => $requestedPublication->getData('copyrightYear'),
+			'licenseUrl' => $publication->getData('licenseUrl'),
+			'copyrightHolder' => $publication->getData('copyrightHolder'),
+			'copyrightYear' => $publication->getData('copyrightYear'),
 			'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
-			'keywords' => $requestedPublication->getData('keywords'),
+			'keywords' => $publication->getData('keywords'),
 		]);
 
 		// Fetch and assign the galley to the template
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = $galleyDao->getByBestGalleyId($galleyId, $article->getCurrentPublication()->getId());
-		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
+		if ($this->galley && $this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 
-		if (!$galley) {
+		if (empty($this->galley)) {
 			// No galley: Prepare the article landing page.
+
+			// Ask robots not to index outdated versions and point to the canonical url for the latest version
+			if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+				$templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
+				$url = $request->getDispatcher()->url($request, ROUTE_PAGE, null, 'article', 'view', $article->getBestId());
+				$templateMgr->addHeader('canonical', '<link rel="canonical" href="' . $url . '">');
+			}
 
 			// Get the subscription status if displaying the abstract;
 			// if access is open, we can display links to the full text.
@@ -229,15 +269,20 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('purchaseArticleEnabled', true);
 			}
 
-			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article))) {
+			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article, $publication))) {
 				return $templateMgr->display('frontend/pages/article.tpl');
 			}
 		} else {
-			// Galley: Prepare the galley file download.
-			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
-				$request->redirect(null, null, 'download', array($article->getId(), $galleyId));
+
+			// Ask robots not to index outdated versions
+			if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+				$templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
 			}
 
+			// Galley: Prepare the galley file download.
+			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$this->galley, &$article, $publication))) {
+				$request->redirect(null, null, 'download', array($article->getId(), $this->galley->getId()));
+			}
 		}
 	}
 
