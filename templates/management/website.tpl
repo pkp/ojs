@@ -12,22 +12,22 @@
 {assign var="uuid" value=""|uniqid|escape}
 <div id="settings-context-{$uuid}">
 	<tabs>
-		<tab id="appearance" name="{translate key="manager.website.appearance"}">
+		<tab id="appearance" label="{translate key="manager.website.appearance"}">
 			{help file="settings" section="website" class="pkp_help_tab"}
-			<tabs :options="{ useUrlFragment: false }" class="tabs-component--side">
-				<tab name="{translate key="manager.setup.theme"}">
+			<tabs is-side-tabs="true">
+				<tab id="theme" label="{translate key="manager.setup.theme"}">
 					<theme-form
 						v-bind="components.{$smarty.const.FORM_THEME}"
 						@set="set"
 					/>
 				</tab>
-				<tab name="{translate key="navigation.setup"}">
+				<tab id="setup" label="{translate key="navigation.setup"}">
 					<pkp-form
 						v-bind="components.{$smarty.const.FORM_APPEARANCE_SETUP}"
 						@set="set"
 					/>
 				</tab>
-				<tab name="{translate key="manager.setup.advanced"}">
+				<tab id="advanced" label="{translate key="manager.setup.advanced"}">
 					<pkp-form
 						v-bind="components.{$smarty.const.FORM_APPEARANCE_ADVANCED}"
 						@set="set"
@@ -36,32 +36,32 @@
 				{call_hook name="Template::Settings::website::appearance"}
 			</tabs>
 		</tab>
-		<tab id="setup" name="{translate key="navigation.setup"}">
+		<tab id="setup" label="{translate key="navigation.setup"}">
 			{help file="settings" section="website" class="pkp_help_tab"}
-			<tabs :options="{ useUrlFragment: false }" class="tabs-component--side">
-				<tab name="{translate key="common.languages"}">
+			<tabs is-side-tabs="true">
+				<tab id="languages" label="{translate key="common.languages"}">
 					{capture assign=languagesUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.languages.ManageLanguageGridHandler" op="fetchGrid" escape=false}{/capture}
 					{load_url_in_div id="languageGridContainer" url=$languagesUrl}
 				</tab>
-				<tab name="{translate key="manager.navigationMenus"}">
+				<tab id="navigationMenus" label="{translate key="manager.navigationMenus"}">
 					{capture assign=navigationMenusGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.navigationMenus.NavigationMenusGridHandler" op="fetchGrid" escape=false}{/capture}
 					{load_url_in_div id="navigationMenuGridContainer" url=$navigationMenusGridUrl}
 					{capture assign=navigationMenuItemsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.navigationMenus.NavigationMenuItemsGridHandler" op="fetchGrid" escape=false}{/capture}
 					{load_url_in_div id="navigationMenuItemsGridContainer" url=$navigationMenuItemsGridUrl}
 				</tab>
-				<tab name="{translate key="manager.setup.announcements"}">
+				<tab id="announcements" label="{translate key="manager.setup.announcements"}">
 					<pkp-form
 						v-bind="components.{$smarty.const.FORM_ANNOUNCEMENT_SETTINGS}"
 						@set="set"
 					/>
 				</tab>
-				<tab name="{translate key="manager.setup.lists"}">
+				<tab id="lists" label="{translate key="manager.setup.lists"}">
 					<pkp-form
 						v-bind="components.{$smarty.const.FORM_LISTS}"
 						@set="set"
 					/>
 				</tab>
-				<tab name="{translate key="manager.setup.privacyStatement"}">
+				<tab id="privacy" label="{translate key="manager.setup.privacyStatement"}">
 					<pkp-form
 						v-bind="components.{$smarty.const.FORM_PRIVACY}"
 						@set="set"
@@ -70,14 +70,14 @@
 				{call_hook name="Template::Settings::website::setup"}
 			</tabs>
 		</tab>
-		<tab id="plugins" name="{translate key="common.plugins"}">
+		<tab id="plugins" label="{translate key="common.plugins"}">
 			{help file="settings" section="website" class="pkp_help_tab"}
 			<tabs :options="{ useUrlFragment: false }">
-				<tab name="{translate key="manager.plugins.installed"}">
+				<tab id="installedPlugins" label="{translate key="manager.plugins.installed"}">
 					{capture assign=pluginGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.SettingsPluginGridHandler" op="fetchGrid" escape=false}{/capture}
 					{load_url_in_div id="pluginGridContainer" url=$pluginGridUrl}
 				</tab>
-				<tab name="{translate key="manager.plugins.pluginGallery"}">
+				<tab id="pluginGallery" label="{translate key="manager.plugins.pluginGallery"}">
 					{capture assign=pluginGalleryGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.plugins.PluginGalleryGridHandler" op="fetchGrid" escape=false}{/capture}
 					{load_url_in_div id="pluginGalleryGridContainer" url=$pluginGalleryGridUrl}
 				</tab>

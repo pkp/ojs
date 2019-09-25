@@ -12,14 +12,14 @@
 {assign var="uuid" value=""|uniqid|escape}
 <div id="settings-context-{$uuid}">
 	<tabs>
-		<tab name="{translate key="submission.license"}">
+		<tab id="license" label="{translate key="submission.license"}">
 			{help file="settings" section="distribution" class="pkp_help_tab"}
 			<license-form
 				v-bind="components.{$smarty.const.FORM_LICENSE}"
 				@set="set"
 			/>
 		</tab>
-		<tab id="indexing" name="{translate key="manager.setup.searchEngineIndexing"}">
+		<tab id="indexing" label="{translate key="manager.setup.searchEngineIndexing"}">
 			{help file="settings" section="distribution" class="pkp_help_tab"}
 			<pkp-form
 				v-bind="components.{$smarty.const.FORM_SEARCH_INDEXING}"

@@ -188,8 +188,7 @@ class PreprintHandler extends Handler {
 			'copyrightHolder' => $requestedPublication->getData('copyrightHolder'),
 			'copyrightYear' => $requestedPublication->getData('copyrightYear'),
 			'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
-			// @TODO
-			// 'keywords' => ...,
+			'keywords' => $requestedPublication->getData('keywords'),
 		]);
 
 		// Fetch and assign the galley to the template
