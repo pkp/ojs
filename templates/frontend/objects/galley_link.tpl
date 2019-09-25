@@ -10,6 +10,7 @@
  *
  * @uses $galley Galley
  * @uses $parent Issue|Article Object which these galleys are attached to
+ * @uses $publication Publication Optionally the publication (version) to which this galley is attached
  * @uses $isSupplementary bool Is this a supplementary file?
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $currentJournal Journal The current journal context
@@ -30,12 +31,17 @@
 {/if}
 
 {* Get page and parentId for URL *}
-{assign var="page" value="preprint"}
-{assign var="parentId" value=$parent->getBestId()}
-
+	{assign var="page" value="preprint"}
+	{assign var="parentId" value=$parent->getBestId()}
+	{* Get a versioned link if we have an older publication *}
+	{if $publication && $publication->getId() !== $parent->getCurrentPublication()->getId()}
+		{assign var="path" value=$parentId|to_array:"version":$publication->getId():$galley->getBestGalleyId()}
+	{else}
+		{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
+	{/if}
+{/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>
-
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}" href="{url page=$page op="view" path=$path}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>
 	{$galley->getGalleyLabel()|escape}
 </a>

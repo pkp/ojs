@@ -78,7 +78,7 @@ class ArticleGalleyGridRow extends GridRow {
 						$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
 						array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_AUTHOR),
 						SUBMISSION_FILE_PROOF, ASSOC_TYPE_REPRESENTATION, $rowId,
-						null, $galley->getFileId()
+						null
 					));
 				}
 
