@@ -97,14 +97,12 @@ class IssueAction {
 			// that was valid during publication date of any one of the submission's
 			// publications
 			if (!$result && $journal->getData('subscriptionExpiryPartial')) {
-				if (isset($articleId)) {
-					if (isset($submission) && !empty($submission->getData('publications'))) {
-						import('classes.subscription.SubscriptionDAO');
-						foreach ($submission->getData('publications') as $publication) {
-							if ($subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publication->getData('datePublished'))) {
-								$result = true;
-								break;
-							}
+				if (isset($submission) && !empty($submission->getData('publications'))) {
+					import('classes.subscription.SubscriptionDAO');
+					foreach ($submission->getData('publications') as $publication) {
+						if ($subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publication->getData('datePublished'))) {
+							$result = true;
+							break;
 						}
 					}
 				} else if (isset($issueId)) {
