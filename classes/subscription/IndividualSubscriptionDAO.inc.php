@@ -453,11 +453,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Check whether user with ID has a valid individual subscription for a given journal.
-	 * @param $userId int
-	 * @param $journalId int
+	 * @param $userId int User ID
+	 * @param $journalId int Journal ID
 	 * @param $check int Check using either start date, end date, or both (default)
 	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
-	 * @return int
+	 * @return boolean
 	 */
 	function isValidIndividualSubscription($userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($userId) || empty($journalId)) {
@@ -500,7 +500,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			)
 		);
 
-		if ($result->RecordCount() != 0) $returner = $result->fields[0];
+		if ($result->RecordCount() != 0) $returner = (boolean) $result->fields[0];
 		else $returner = false;
 
 		$result->Close();

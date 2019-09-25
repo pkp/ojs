@@ -104,12 +104,10 @@ class IssueAction {
 			// If no valid subscription, check if there is an expired subscription
 			// that was valid during publication date of requested content
 			if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
-				if (isset($articleId)) {
-					if (isset($publishedArticle)) {
-						import('classes.subscription.SubscriptionDAO');
-						$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
-					}
-				} else if (isset($issueId)) {
+				if ($publishedArticle) {
+					import('classes.subscription.SubscriptionDAO');
+					$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
+				} elseif ($issueId) {
 					$issueDao = DAORegistry::getDAO('IssueDAO');
 					$issue = $issueDao->getById($issueId);
 					if (isset($issue) && $issue->getPublished()) {
