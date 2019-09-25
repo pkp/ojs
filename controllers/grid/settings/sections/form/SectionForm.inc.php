@@ -34,7 +34,6 @@ class SectionForm extends PKPSectionForm {
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.section.nameRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
 		$journal = $request->getJournal();
-		$this->addCheck(new FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', array(DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'), array(ASSOC_TYPE_JOURNAL, $journal->getId())));
 	}
 
 	/**
@@ -54,9 +53,7 @@ class SectionForm extends PKPSectionForm {
 			$this->setData(array(
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
-				'reviewFormId' => $section->getReviewFormId(),
 				'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
-				'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 				'abstractsNotRequired' => $section->getAbstractsNotRequired(),
 				'identifyType' => $section->getIdentifyType(null), // Localized
 				'editorRestriction' => $section->getEditorRestricted(),
@@ -80,14 +77,6 @@ class SectionForm extends PKPSectionForm {
 
 		$journal = $request->getJournal();
 
-		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
-		$reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
-		$reviewFormOptions = array();
-		while ($reviewForm = $reviewForms->next()) {
-			$reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();
-		}
-		$templateMgr->assign('reviewFormOptions', $reviewFormOptions);
-
 		// Section/Series Editors
 		$subEditorsListPanel = $this->_getSubEditorsListPanel($journal->getId(), $request);
 		$templateMgr->assign(array(
@@ -107,7 +96,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'identifyType', 'metaIndexed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
 	}
 
 	/**
@@ -139,11 +128,7 @@ class SectionForm extends PKPSectionForm {
 		// Populate/update the section object from the form
 		$section->setTitle($this->getData('title'), null); // Localized
 		$section->setAbbrev($this->getData('abbrev'), null); // Localized
-		$reviewFormId = $this->getData('reviewFormId');
-		if ($reviewFormId === '') $reviewFormId = null;
-		$section->setReviewFormId($reviewFormId);
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
-		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);
 		$section->setIdentifyType($this->getData('identifyType'), null); // Localized
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
