@@ -48,7 +48,14 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$request = $args[0];
 		$issue = $args[1];
 		$article = $args[2];
+		$requestArgs = $request->getRequestedArgs();
 		$journal = $request->getContext();
+
+		// Only add Google Scholar metadata tags to the canonical URL for the latest version
+		// See discussion: https://github.com/pkp/pkp-lib/issues/4870
+		if (count($requestArgs) > 1 && $requestArgs[1] === 'version') {
+			return;
+		}
 
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addHeader('googleScholarRevision', '<meta name="gs_meta_revision" content="1.1"/>');
