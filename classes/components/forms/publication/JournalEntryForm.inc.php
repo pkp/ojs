@@ -83,17 +83,6 @@ class JournalEntryForm extends FormComponent {
 			];
 		}
 
-		// Category options
-		$categoryOptions = [];
-		$result = \DAORegistry::getDAO('CategoryDAO')->getByContextId($publicationContext->getId());
-		while (!$result->eof()) {
-			$category = $result->next();
-			$categoryOptions[] = [
-				'value' => (int) $category->getId(),
-				'label' => $category->getLocalizedTitle(),
-			];
-		}
-
 		$this->addField(new FieldSelectIssue('issueId', [
 				'label' => __('issue.issue'),
 				'options' => $issueOptions,
@@ -104,13 +93,27 @@ class JournalEntryForm extends FormComponent {
 				'label' => __('section.section'),
 				'options' => $sectionOptions,
 				'value' => (int) $publication->getData('sectionId'),
-			]))
-			->addField(new FieldOptions('categoryIds', [
-				'label' => __('submission.submit.placement.categories'),
-				'value' => (array) $publication->getData('categoryIds'),
-				'options' => $categoryOptions,
-			]))
-			->addField(new FieldUploadImage('coverImage', [
+			]));
+
+		// Categories
+		$categoryOptions = [];
+		$result = \DAORegistry::getDAO('CategoryDAO')->getByContextId($publicationContext->getId());
+		while (!$result->eof()) {
+			$category = $result->next();
+			$categoryOptions[] = [
+				'value' => (int) $category->getId(),
+				'label' => $category->getLocalizedTitle(),
+			];
+		}
+		if (!empty($categoryOptions)) {
+			$this->addField(new FieldOptions('categoryIds', [
+					'label' => __('submission.submit.placement.categories'),
+					'value' => (array) $publication->getData('categoryIds'),
+					'options' => $categoryOptions,
+				]));
+		}
+
+		$this->addField(new FieldUploadImage('coverImage', [
 				'label' => __('editor.article.coverImage'),
 				'value' => $publicationContext->getData('coverImage'),
 				'isMultilingual' => true,
