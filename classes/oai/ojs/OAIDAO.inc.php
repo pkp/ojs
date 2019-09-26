@@ -231,15 +231,16 @@ class OAIDAO extends PKPOAIDAO {
 				NULL AS set_spec,
 				NULL AS oai_identifier
 			FROM
-				published_submissions pa
-				JOIN submissions a ON (a.submission_id = pa.submission_id)
-				JOIN issues i ON (i.issue_id = pa.issue_id)
-				JOIN sections s ON (s.section_id = a.section_id)
+				submissions a
+				JOIN publications p ON (a.current_publication_id = p.publication_id)
+				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\')
+				JOIN issues i ON (i.issue_id = psissue.setting_value)
+				JOIN sections s ON (s.section_id = p.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-				LEFT JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
-			WHERE	i.published = 1 AND j.enabled = 1 AND (jsl.setting_value IS NULL OR jsl.setting_value <> ?) AND a.status <> ?
+				JOIN journal_settings jsoai ON (jsoai.journal_id = j.journal_id AND jsoai.setting_name=? AND jsoai.setting_value=\'1\')
+			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
-				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
+				' . (isset($sectionId) ?' AND p.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
 				' . ($until?' AND GREATEST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND a.submission_id = ?':'') . '
