@@ -22,8 +22,8 @@ class SearchHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('classes.security.authorization.OjsJournalMustPublishPolicy');
-		if ($request->getContext()) $this->addPolicy(new OjsJournalMustPublishPolicy($request));
+		import('classes.security.authorization.PpsServerMustPublishPolicy');
+		if ($request->getContext()) $this->addPolicy(new PpsServerMustPublishPolicy($request));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
@@ -177,104 +177,6 @@ class SearchHandler extends Handler {
 			$searchParams = array('query' => implode(' ', $searchTerms));
 		}
 		$request->redirect(null, 'search', 'search', null, $searchParams);
-	}
-
-	/**
-	 * Show index of published submissions by author.
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function authors($args, $request) {
-		$this->validate(null, $request);
-		$this->setupTemplate($request);
-
-		$journal = $request->getJournal();
-		$user = $request->getUser();
-
-		$authorDao = DAORegistry::getDAO('AuthorDAO');
-
-		if (isset($args[0]) && $args[0] == 'view') {
-			// View a specific author
-			$authorName = $request->getUserVar('authorName');
-			$givenName = $request->getUserVar('givenName');
-			$familyName = $request->getUserVar('familyName');
-			$affiliation = $request->getUserVar('affiliation');
-			$country = $request->getUserVar('country');
-
-			$submissions = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getId():null, $givenName, $familyName, $affiliation, $country);
-
-			// Load information associated with each article.
-			$journals = array();
-			$issues = array();
-			$sections = array();
-			$issuesUnavailable = array();
-
-			$issueDao = DAORegistry::getDAO('IssueDAO');
-			$sectionDao = DAORegistry::getDAO('SectionDAO');
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-
-			foreach ($submissions as $article) {
-				$articleId = $article->getId();
-				$issueId = $article->getIssueId();
-				$sectionId = $article->getSectionId();
-				$journalId = $article->getData('contextId');
-
-				if (!isset($journals[$journalId])) {
-					$journals[$journalId] = $journalDao->getById($journalId);
-				}
-				if (!isset($issues[$issueId])) {
-					import('classes.issue.IssueAction');
-					$issue = $issueDao->getById($issueId);
-					$issues[$issueId] = $issue;
-					$issueAction = new IssueAction();
-					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue, $journals[$journalId]) && (!$issueAction->subscribedUser($user, $journals[$journalId], $issueId, $articleId) && !$issueAction->subscribedDomain($request, $journals[$journalId], $issueId, $articleId));
-				}
-				if (!isset($sections[$sectionId])) {
-					$sections[$sectionId] = $sectionDao->getById($sectionId, $journalId, true);
-				}
-			}
-
-			if (empty($submissions)) {
-				$request->redirect(null, $request->getRequestedPage());
-			}
-
-			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign(array(
-				'submissions' => $submissions,
-				'issues' => $issues,
-				'issuesUnavailable' => $issuesUnavailable,
-				'sections' => $sections,
-				'journals' => $journals,
-				'givenName' => $givenName,
-				'familyName' => $familyName,
-				'affiliation' => $affiliation,
-				'authorName' => $authorName
-			));
-
-			$countryDao = DAORegistry::getDAO('CountryDAO');
-			$country = $countryDao->getCountry($country);
-			$templateMgr->assign('country', $country);
-
-			$templateMgr->display('frontend/pages/searchAuthorDetails.tpl');
-		} else {
-			// Show the author index
-			$searchInitial = $request->getUserVar('searchInitial');
-			$rangeInfo = $this->getRangeInfo($request, 'authors');
-
-			$authors = $authorDao->getAuthorsAlphabetizedByJournal(
-				isset($journal)?$journal->getId():null,
-				$searchInitial,
-				$rangeInfo
-			);
-
-			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->assign(array(
-				'searchInitial' => $request->getUserVar('searchInitial'),
-				'alphaList' => array_merge(array('-'), explode(' ', __('common.alphaList'))),
-				'authors' => $authors,
-			));
-			$templateMgr->display('frontend/pages/searchAuthorIndex.tpl');
-		}
 	}
 
 	/**

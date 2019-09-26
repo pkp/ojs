@@ -45,8 +45,8 @@ class PreprintHandler extends Handler {
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
 		$this->addPolicy(new ContextRequiredPolicy($request));
 
-		import('classes.security.authorization.OjsJournalMustPublishPolicy');
-		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
+		import('classes.security.authorization.PpsServerMustPublishPolicy');
+		$this->addPolicy(new PpsServerMustPublishPolicy($request));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}

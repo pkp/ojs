@@ -1,21 +1,21 @@
 <?php
 /**
- * @file classes/security/authorization/OjsJournalMustPublishPolicy.inc.php
+ * @file classes/security/authorization/PpsServerMustPublishPolicy.inc.php
  *
  * Copyright (c) 2014-2019 Simon Fraser University
  * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class OjsJournalMustPublishPolicy
+ * @class PpsServerMustPublishPolicy
  * @ingroup security_authorization
  *
- * @brief Access policy to limit access to journals that do not publish online.
+ * @brief Access policy to limit access to servers that do not publish online.
  */
 
 import('lib.pkp.classes.security.authorization.PolicySet');
 import('lib.pkp.classes.security.authorization.AuthorizationPolicy');
 
-class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
+class PpsServerMustPublishPolicy extends AuthorizationPolicy {
 
 	var $_context;
 

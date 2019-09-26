@@ -27,6 +27,7 @@
 
 	<navigationMenu title="Primary Navigation Menu" area="primary">
 		<navigationMenuItem title="manager.announcements" type="NMI_TYPE_ANNOUNCEMENTS" />
+		<navigationMenuItem title="navigation.archives" type="NMI_TYPE_ARCHIVES" />
 		<navigationMenuItem title="navigation.about" type="NMI_TYPE_ABOUT">
 			<navigationMenuItem title="about.aboutContext" type="NMI_TYPE_ABOUT" />
 			<navigationMenuItem title="about.submissions" type="NMI_TYPE_SUBMISSIONS" />
