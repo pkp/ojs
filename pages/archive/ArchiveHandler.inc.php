@@ -46,7 +46,7 @@ class ArchiveHandler extends Handler {
 	}
 
 	/**
-	 * Display the issue archive listings
+	 * Display the preprint archive listings
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
@@ -59,27 +59,24 @@ class ArchiveHandler extends Handler {
 		$count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
 		$offset = $page > 1 ? ($page - 1) * $count : 0;
 
-
-		import('classes.core.Services');
-		$issueService = Services::get('issue');
+		import('classes.submission.Submission');
+		$submissionService = Services::get('submission');
 		$params = array(
 			'contextId' => $context->getId(),
-			'orderBy' => 'seq',
-			'orderDirection' => 'ASC',
 			'count' => $count,
 			'offset' => $offset,
-			'isPublished' => true,
+			'status' => STATUS_PUBLISHED,
 		);
-		$issues = $issueService->getMany($params);
-		$total = $issueService->getMax($params);
+		$publishedSubmissions = $submissionService->getMany($params);
+		$total = $submissionService->getMax($params);
 
 		$showingStart = $offset + 1;
-		$showingEnd = min($offset + $count, $offset + count($issues));
+		$showingEnd = min($offset + $count, $offset + count($publishedSubmissions));
 		$nextPage = $total > $showingEnd ? $page + 1 : null;
 		$prevPage = $showingStart > 1 ? $page - 1 : null;
 
 		$templateMgr->assign(array(
-			'issues' => $issues,
+			'publishedSubmissions' => $publishedSubmissions,
 			'showingStart' => $showingStart,
 			'showingEnd' => $showingEnd,
 			'total' => $total,

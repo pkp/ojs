@@ -96,7 +96,6 @@ class ArticleSearch extends SubmissionSearch {
 					$orderKey = $contextTitles[$data['journal_id']];
 					break;
 
-				case 'issuePublicationDate':
 				case 'publicationDate':
 					$orderKey = $data[$orderBy];
 					break;
@@ -227,17 +226,14 @@ class ArticleSearch extends SubmissionSearch {
 	 * @param $results array
 	 * @param $user User optional (if availability information is desired)
 	 * @return array An array with the articles, published submissions,
-	 *  issue, journal, section and the issue availability.
+	 * journal, section.
 	 */
 	function formatResults($results, $user = null) {
-		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$contextDao = Application::getContextDAO();
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 
 		$publishedSubmissionCache = array();
 		$articleCache = array();
-		$issueCache = array();
-		$issueAvailabilityCache = array();
 		$contextCache = array();
 		$sectionCache = array();
 
@@ -264,26 +260,11 @@ class ArticleSearch extends SubmissionSearch {
 					$contextCache[$contextId] = $contextDao->getById($contextId);
 				}
 
-				// Get the issue, storing in cache if necessary.
-				$issueId = $publishedSubmission->getIssueId();
-				if (!isset($issueCache[$issueId])) {
-					$issue = $issueDao->getById($issueId);
-					$issueCache[$issueId] = $issue;
-					import('classes.issue.IssueAction');
-					$issueAction = new IssueAction();
-					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $contextCache[$contextId]) || $issueAction->subscribedUser($user, $contextCache[$contextId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::get()->getRequest(), $contextCache[$contextId], $issueId, $articleId);
-				}
-
-				// Only display articles from published issues.
-				if (!$issueCache[$issueId]->getPublished()) continue;
-
 				// Store the retrieved objects in the result array.
 				$returner[] = array(
 					'article' => $article,
 					'publishedSubmission' => $publishedSubmissionCache[$articleId],
-					'issue' => $issueCache[$issueId],
 					'journal' => $contextCache[$contextId],
-					'issueAvailable' => $issueAvailabilityCache[$issueId],
 					'section' => $sectionCache[$sectionId]
 				);
 			}
@@ -339,7 +320,6 @@ class ArticleSearch extends SubmissionSearch {
 		$resultSetOrderingOptions = array(
 			'score' => __('search.results.orderBy.relevance'),
 			'authors' => __('search.results.orderBy.author'),
-			'issuePublicationDate' => __('search.results.orderBy.issue'),
 			'publicationDate' => __('search.results.orderBy.date'),
 			'title' => __('search.results.orderBy.article')
 		);
@@ -372,7 +352,7 @@ class ArticleSearch extends SubmissionSearch {
 	 */
 	function getDefaultOrderDir($orderBy) {
 		$orderDir = 'asc';
-		if (in_array($orderBy, array('score', 'publicationDate', 'issuePublicationDate', 'popularityAll', 'popularityMonth'))) {
+		if (in_array($orderBy, array('score', 'publicationDate', 'popularityAll', 'popularityMonth'))) {
 			$orderDir = 'desc';
 		}
 		return $orderDir;
