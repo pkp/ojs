@@ -49,6 +49,7 @@ lib/pkp/js/classes/features/CollapsibleGridFeature.js
 # Generic controllers
 lib/pkp/js/controllers/SiteHandler.js
 lib/pkp/js/controllers/UrlInDivHandler.js
+lib/pkp/js/controllers/EditorialActionsHandler.js
 lib/pkp/js/controllers/ExtrasOnDemandHandler.js
 lib/pkp/js/controllers/PageHandler.js
 lib/pkp/js/controllers/TabHandler.js
