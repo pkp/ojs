@@ -69,9 +69,9 @@
 		<p>{translate key="catalog.category.noItems"}</p>
 	{else}
 		<ul class="cmp_article_list articles">
-			{foreach from=$publishedSubmissions item=article}
+			{foreach from=$publishedSubmissions item=preprint}
 				<li>
-					{include file="frontend/objects/article_summary.tpl"}
+					{include file="frontend/objects/preprint_summary.tpl"}
 				</li>
 			{/foreach}
 		</ul>
