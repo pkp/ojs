@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artikel"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "Artikeltext"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Der Beitrag ist bisher unveröffentlicht und wurde auch keiner anderen Zeitschrift vorgelegt (andernfalls ist eine Erklärung in \"Kommentare für die Redaktion\" beigefügt)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Die Datei liegt im Format Microsoft Word, RTF oder WordPerfect vor."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Soweit möglich, wurden den Literaturangaben URLs beigefügt."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Grafiken und Tabellen sind an geeigneter Stelle im Text eingefügt und nicht am Textende."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Der Text folgt den stilistischen und bibliografischen Vorgaben in<a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\"> Richtlinien für Autor/innen</a> , die unter \"Über uns\" zu finden sind."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Namen und E-Mail-Adressen, die auf den Webseiten der Zeitschrift eingegeben werden, werden ausschließlich zu den angegebenen Zwecken verwendet und nicht an Dritte weitergegeben.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Diese Zeitschrift bietet freien Zugang (Open Access) zu ihren Inhalten, entsprechend der Grundannahme, dass die freie öffentliche Verfügbarkeit von Forschung einem weltweiten Wissensaustausch zugute kommt."
+
+msgid "default.contextSettings.forReaders"
+msgstr "Wir empfehlen unseren Leser/innen, sich für die Benachrichtigung bei neuen Veröffentlichungen dieser Zeitschrift einzutragen. Verwenden Sie den <a href=\"{$indexUrl}{$contextPath}/user/register\">Registrieren</a>-Link oben auf der Startseite der Zeitschrift. Angemeldete Leser/innen erhalten zu jeder neuen Ausgabe der Zeitschrift die Inhaltsangabe per E-Mail zugeschickt. Die Anmeldung ermöglicht es gleichzeitig der Zeitschrift, einen gewissen Grad an Unterstützung oder eine gewisse Leser/innenschaft zu belegen. Siehe die Regelungen zum <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Schutz persönlicher Daten</a> der Zeitschrift, die sicherstellen, dass weder Namen noch E-Mail-Adressen registrierter Benutzer/innen zu anderen Zwecken verwendet werden."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Haben Sie Interesse, einen Beitrag bei dieser Zeitschrift einzureichen? Wir möchten Sie auf <a href=\"{$indexUrl}{$contextPath}/about\">Über uns</a>, wo Sie die Richtlinien der Zeitschrift einsehen können, und auf <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Richtlinien für Autor/innen</a> verweisen. Autor/innen müssen sich <a href=\"{$indexUrl}{$contextPath}/user/register\">registrieren</a>, bevor Sie einen Beitrag bei der Zeitschrift einreichen können. Falls Sie bereits angemeldet sind, einfach <a href=\"{$indexUrl}{$contextPath}/login\">einloggen</a> und die \"Fünf Schritte zur Einreichung\" abarbeiten."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Wir ermutigen Forschungsbibliotheken, diese Zeitschrift in die Liste ihrer elektronischen Zeitschriften aufzunehmen. Darüber hinaus bietet das Open Source Veröffentlichungssystem dieser Zeitschrift Bibliotheken die Möglichkeit, Zeitschriften, an denen Mitglieder ihrer Fakultät mitarbeiten, online bereitzustellen. Siehe <a href=\"http://pkp.sfu.ca\">Public Knowledge Project</a>."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Diese Zeitschrift verwendet das LOCKSS-System, um mit Hilfe der teilnehmenden Bibliotheken ein dezentralen Achivierungssystem zu schaffen, bei dem diese Bibliotheken die Zeitschrift zu Aufbewahrungs- und Wiederherstellungszwecken permanent archivieren. <a href=\"http://www.lockss.org/\">Mehr...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Diese Zeitschrift benutzt das CLOCKSS-System, um ein verteiltes Archivsystem zwischen teilnehmenden Bibliotheken zu ermöglichen. Sie erlaubt diesen Bibliotheken, dauerhafte Archive der Zeitschrift zu Zwecken des Bewahrens und Wiederherstellens anzulegen. <a href=\"http://clockss.org/\">Mehr...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Zeitschriftenverwalter/in"
+
+msgid "default.groups.plural.manager"
+msgstr "Zeitschriftenverwalter/innen"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ZV"
+
+msgid "default.groups.name.editor"
+msgstr "Zeitschriftenredakteur/in"
+
+msgid "default.groups.plural.editor"
+msgstr "Zeitschriftenredakteur/innen"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ZR"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Gastredakteur/in"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Gastredakteur/innen"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GR"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Rubrikredakteur/in"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Rubrikredakteur/innen"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "RR"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abonnementverwalter/in"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abonnementverwalter/innen"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "AV"
+
+msgid "default.genres.researchInstrument"
+msgstr "Forschungsinstrument"
+
+msgid "default.genres.researchMaterials"
+msgstr "Forschungsmaterialien"
+
+msgid "default.genres.researchResults"
+msgstr "Forschungsergebnisse"
+
+msgid "default.genres.transcripts"
+msgstr "Transkriptionen"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Datenanalyse"
+
+msgid "default.genres.dataSet"
+msgstr "Datensatz"
+
+msgid "default.genres.sourceTexts"
+msgstr "Quelltexte"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "externe/r Gutachter/in"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Gutachter/innen"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "G"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

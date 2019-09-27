@@ -1,0 +1,438 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Página principal del editor/a"
+
+msgid "editor.reassign"
+msgstr "Volver a asignar"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Envíos y publicaciones"
+
+msgid "editor.submissionQueue"
+msgstr "Cola de envío"
+
+msgid "editor.submissionArchive"
+msgstr "Archivo de envíos"
+
+msgid "editor.publishing"
+msgstr "Publicación"
+
+msgid "editor.publishedIssues"
+msgstr "Números publicados"
+
+msgid "editor.allSections"
+msgstr "Todas las secciones"
+
+msgid "editor.allEditors"
+msgstr "Todos los editores/as"
+
+msgid "editor.me"
+msgstr "Yo"
+
+msgid "editor.publicIdentificationExists"
+msgstr "La identificación pública '{$publicIdentifier}' ya existe para otro objeto (número, artículo, galerada o archivo complementario). Elija identificadores exclusivos en la revista."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Ningún envío en el archivo."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "¿Desea guardar los cambios en envíos archivados? Los envíos que se seleccionen para ser eliminados se eliminarán permanentemente del sistema."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "¿Está seguro/a de que desea eliminar este envío de forma permanente?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "¿Está seguro/a de que desea registrar esta decisión?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Este envío se archivará después de que se envíe el correo electrónico de notificación al autor/a, o después de pulsar el botón No enviar correo electrónico."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Antes de mandar un envío a corrección de originales, utilice el enlace Notificar al autor/a para comunicarle la decisión y seleccionar la versión que se enviará."
+
+msgid "editor.notifyUsers"
+msgstr "Informar a los usuarios/as"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Todos los lectores/as ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Todos los autores/as publicados ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Todos los suscriptores/as individuales ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Todos los suscriptores/as institucionales ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Se está informando a los usuarios/as..."
+
+msgid "editor.usersNotified"
+msgstr "Usuarios/as informados"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Enviar este mensaje a todos los usuarios/as asociados con esta revista ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Enviar este mensaje a los usuarios/as asociados con esta revista que hayan indicado que desean recibir actualizaciones ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Incluir la tabla de contenidos de este número:"
+
+msgid "editor.editorAdministration"
+msgstr "Administración del editor/a"
+
+msgid "editor.issues.createIssue"
+msgstr "Crear número"
+
+msgid "editor.issues.currentIssue"
+msgstr "Número actual"
+
+msgid "editor.issues.numArticles"
+msgstr "Elementos"
+
+msgid "editor.issues.noArticles"
+msgstr "No hay elementos planificados para este número."
+
+msgid "editor.issues.confirmDelete"
+msgstr "¿Está seguro/a de que desea eliminar este número de forma permanente?"
+
+msgid "editor.issues.published"
+msgstr "Publicado"
+
+msgid "editor.issues.unpublished"
+msgstr "No publicado"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Introduzca el volumen, que debe ser un valor numérico positivo."
+
+msgid "editor.issues.numberRequired"
+msgstr "Introduzca el número, que debe ser un valor numérico positivo."
+
+msgid "editor.issues.yearRequired"
+msgstr "Introduzca el año, que debe ser un valor numérico positivo."
+
+msgid "editor.issues.titleRequired"
+msgstr "Introduzca un título para el número."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Introduzca una identificación del número. Seleccione al menos una de las opciones de identificación del número."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificación del número"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificación pública del número"
+
+msgid "editor.issues.description"
+msgstr "Descripción"
+
+msgid "editor.issues.accessStatus"
+msgstr "Estado de acceso"
+
+msgid "editor.issues.accessDate"
+msgstr "Fecha de acceso abierto"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Habilitar el acceso abierto diferido"
+
+msgid "editor.issues.coverPage"
+msgstr "Imagen de portada"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formatos permitidos: .gif, .jpg, o .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Cargado"
+
+msgid "editor.issues.remove"
+msgstr "Eliminar"
+
+msgid "editor.issues.proofed"
+msgstr "Revisado"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "¿Eliminar la imagen de portada?"
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "Formato de portada no válido. Formatos aceptados: .gif, .jpg, o .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Hoja de estilo"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Formato de hoja de estilo no válido. Asegúrese de que el archivo enviado es un CSS válido. (Tenga en cuenta que las hojas de estilo que contengan comentarios al principio pueden ser rechazadas)."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "¿Eliminar hoja de estilo?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Captura de portada"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Crear una portada para este número con los siguientes elementos."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Mostrar"
+
+msgid "editor.issues.hideCoverPageArchives"
+msgstr "No mostrar la miniatura de la imagen de portada en la lista de números."
+
+msgid "editor.issues.hideCoverPageCover"
+msgstr "No mostrar la imagen de portada antes que la tabla de contenidos."
+
+msgid "editor.issues.openAccess"
+msgstr "Acceso abierto"
+
+msgid "editor.issues.subscription"
+msgstr "Suscripción"
+
+msgid "editor.issues.identification"
+msgstr "Identificación"
+
+msgid "editor.issues.access"
+msgstr "Acceso"
+
+msgid "editor.issues.cover"
+msgstr "Portada"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Todos los artículos se devolverán a la lista de edición y todos los archivos asociados se eliminarán de forma permanente. ¿Está seguro/a de que desea eliminar este número?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Esta revista usa un sistema de orden de números personalizado. <a href=\"{$url}\" class=\"action\">Reestablecer valores por defecto</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Este número usa un sistema de orden de secciones personalizado. <a href=\"{$url}\" class=\"action\">Reestablecer valores por defecto</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Datos del número"
+
+msgid "editor.issues.saveChanges"
+msgstr "¿Desea guardar los cambios efectuados en las tabla de contenidos?"
+
+msgid "editor.issues.default"
+msgstr "Valor por defecto"
+
+msgid "editor.issues.order"
+msgstr "Orden"
+
+msgid "editor.issues.publicId"
+msgstr "Id. pública"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publicar número"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Eliminar número publicado"
+
+msgid "editor.issues.previewIssue"
+msgstr "Vista previa del número"
+
+msgid "editor.issues.preview"
+msgstr "(Vista previa)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "¿Está seguro/a de que desea publicar el nuevo número?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "¿Está seguro/a de que desea eliminar el número publicado?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "No se pudo guardar la Id. pública para el artículo:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Ningún número activo"
+
+msgid "editor.issues.open"
+msgstr "Abrir"
+
+msgid "editor.issues.pages"
+msgstr "Páginas"
+
+msgid "editor.issues.galleys"
+msgstr "Galeradas del número"
+
+msgid "editor.issues.galley"
+msgstr "Galerada del número"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Visualizar galerada del número"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publicar galeradas con todos los contenidos del número."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "No se publicaron galeradas del número."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Se requiere la etiqueta de galerada del número."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Se requiere la configuración regional de galerada del número."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "La identificación pública de galerada del número ya existe."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Volver a galeradas del número"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "¿Está seguro/a de que desea eliminar la galerada del número?"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Próximos números"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Números anteriores"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Designar el archivo original como la versión para revisar"
+
+msgid "editor.article.decision"
+msgstr "Decisión"
+
+msgid "editor.submissions.showBy"
+msgstr "Mostrado por"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Enviar MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Tareas activas"
+
+msgid "editor.submissions.invite"
+msgstr "Invitar"
+
+msgid "editor.submissions.accept"
+msgstr "Aceptar"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Sin envíos"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Última(s)"
+
+msgid "editor.submissions.averageTime"
+msgstr "Semanas"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Último completado"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Asignado a"
+
+msgid "editor.submissions.inSection"
+msgstr "En sección"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Programado para publicar en"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Aún sin asignar"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Cuota de publicación sin pagar. Para programar el elemento para su publicación, notifique al autor/a sobre el pago de la cuota o de su exención."
+
+msgid "editor.article.showCoverPage"
+msgstr "Crear una portada para este artículo con los siguientes elementos."
+
+msgid "editor.article.hideCoverPageToc"
+msgstr "No mostrar la miniatura de la imagen de portada en la tabla de contenidos."
+
+msgid "editor.article.hideCoverPageAbstract"
+msgstr "No mostrar la imagen de portada en la vista de resúmenes de artículos."
+
+msgid "editor.article.remove"
+msgstr "Eliminar"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Fecha de acceso no válida."
+
+msgid "editor.issues.editIssue"
+msgstr "Gestión del número: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Fecha de publicación"
+
+msgid "editor.issues.identifiers"
+msgstr "Identificadores"
+
+msgid "grid.action.addGalley"
+msgstr "Añadir galerada"
+
+msgid "grid.action.publish"
+msgstr "Publicar número"
+
+msgid "grid.action.addIssue"
+msgstr "Crear número"
+
+msgid "grid.action.viewIssue"
+msgstr "Ver"
+
+msgid "grid.action.previewIssue"
+msgstr "Previsualizar"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crear galerada del número"
+
+msgid "grid.action.removeArticle"
+msgstr "Eliminar artículo del número"
+
+msgid "editor.article.remove.confirm"
+msgstr "¿Está seguro de que desea eliminar este artículo del número? Dicho artículo estará disponible para programarlo en otro número."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Editar la galerada del número"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "El editor de maquetación prepara estos archivos para cada galerada y los carga en el sitio <span class=\"pkp_help_title\">Pruebas</span> apropiado para su corrección."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Seleccionar los archivos de galerada"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Los borradores finales de esta lista son transformados por el corrector/a de originales en versiones revisadas, cargadas a continuación en <span class=\"pkp_help_title\">Corrección de originales</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Cualquier archivo que ya haya sido asignado a una fase del envío puede añadirse a la lista de corrección de originales marcando la casilla \"Añadir\" y haciendo clic en \"Buscar\": se listarán todos los archivos disponibles y podrán ser seleccionados para su inclusión."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "El identificador público '{$publicIdentifier}' ya existe para otro objeto del mismo tipo. Por favor, elija identificadores únicos para los objetos del mismo tipo en su revista."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "La imagen de portada que deseaba eliminar no coincidía con la de este número. Recargue la página y vuelva a intentarlo."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "La imagen de portada que deseaba eliminar no se ha podido encontrar, puede que ya haya sido eliminada. Inténtelo recargando la página."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Formato de portada inválido. Los formatos aceptados son .gif, .jpg, or .png."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "¿Está seguro de que desea establecer este número como el actual?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Establecer número actual"
+
+msgid "editor.article.schedulePublication"
+msgstr "Programar para publicación"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "La imagen de portada que deseaba eliminar no se ha podido encontrar, puede que ya haya sido eliminada. Inténtelo recargando la página."
+
+msgid "editor.article.coverImage"
+msgstr "Imagen de portada"

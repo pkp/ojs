@@ -1,0 +1,2052 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Aktuelle Zeitschrift:"
+
+msgid "context.select"
+msgstr "Zu einer anderen Zeitschrift wechseln:"
+
+msgid "navigation.categories"
+msgstr "Kategorien"
+
+msgid "navigation.categories.browse"
+msgstr "Durchblättern"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Bitte füllen Sie die benötigten Felder aus."
+
+msgid "common.openJournalSystems"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Sind Sie sicher, dass Sie diese Aufgabe als beendet markieren wollen? Später können möglicherweise keine Änderungen mehr vorgenommen werden."
+
+msgid "common.payment"
+msgstr "Zahlung"
+
+msgid "common.payments"
+msgstr "Zahlungen"
+
+msgid "common.homePageHeader.altText"
+msgstr "Kopfzeile der Startseite"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Bild auf der Startseite der Zeitschrift"
+
+msgid "navigation.journalHelp"
+msgstr "Navigationshilfe"
+
+msgid "navigation.current"
+msgstr "Aktuelle Ausgabe"
+
+msgid "navigation.otherJournals"
+msgstr "Andere Zeitschriften"
+
+msgid "navigation.browseByIssue"
+msgstr "Nach Ausgabe"
+
+msgid "navigation.browseByAuthor"
+msgstr "Nach Autor/in"
+
+msgid "navigation.infoForAuthors"
+msgstr "Für Autor/innen"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Für Bibliothekar/innen"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Richtlinien für Interessenkonflikte"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informationen für Autor/innen"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informationen für Bibliothekar/innen"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nicht zugewiesen"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nicht zugewiesen"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "In redaktioneller Bearbeitung"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "In redaktioneller Bearbeitung"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Beiträge in Begutachtung"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "In Begutachtung"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archive"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archive"
+
+msgid "common.queue.long.active"
+msgstr "Aktuelle Beiträge"
+
+msgid "common.queue.short.active"
+msgstr "Aktuell"
+
+msgid "common.queue.long.completed"
+msgstr "Archiv"
+
+msgid "common.queue.short.completed"
+msgstr "Archiv"
+
+msgid "section.section"
+msgstr "Rubrik"
+
+msgid "section.sections"
+msgstr "Rubriken der Zeitschrift"
+
+msgid "section.title"
+msgstr "Titel der Rubrik"
+
+msgid "section.abbreviation"
+msgstr "Abkürzung"
+
+msgid "section.abbreviation.example"
+msgstr "(Zum Beispiel, Artikel=ART)"
+
+msgid "section.policy"
+msgstr "Richtlinien der Rubrik"
+
+msgid "article.article"
+msgstr "Artikel"
+
+msgid "article.articles"
+msgstr "Artikel"
+
+msgid "common.publication"
+msgstr "Artikel"
+
+msgid "common.publications"
+msgstr "Artikel"
+
+msgid "article.submissionId"
+msgstr "Beitrags-ID"
+
+msgid "article.title"
+msgstr "Titel"
+
+msgid "article.authors"
+msgstr "Autor/innen"
+
+msgid "article.indexingInformation"
+msgstr "Informationen für die Indizierung"
+
+msgid "article.metadata"
+msgstr "Metadaten"
+
+msgid "article.journalSection"
+msgstr "Rubrik"
+
+msgid "article.file"
+msgstr "Datei"
+
+msgid "article.suppFile"
+msgstr "Zusatzdatei"
+
+msgid "article.suppFiles"
+msgstr "Zusatzdatei(en)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Zus. Dateien"
+
+msgid "article.discipline"
+msgstr "Akademisches Fachgebiet und Untergebiete"
+
+msgid "article.subject"
+msgstr "Schlagworte"
+
+msgid "article.coverage"
+msgstr "Bereich"
+
+msgid "article.type"
+msgstr "Forschungsansatz, -methode oder -verfahren"
+
+msgid "article.language"
+msgstr "Sprache"
+
+msgid "article.sectionEditor"
+msgstr "Rubrikredakteur/in"
+
+msgid "article.commentsToEditor"
+msgstr "Kommentare der Autorin/des Autors"
+
+msgid "article.submission"
+msgstr "Beitrag"
+
+msgid "article.submissions"
+msgstr "Beiträge"
+
+msgid "article.details"
+msgstr "Angaben zum Artikel"
+
+msgid "article.abstract"
+msgstr "Abstract"
+
+msgid "article.coverPage.altText"
+msgstr "Titelbild"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Open Access"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Eingeschränkter Zugriff"
+
+msgid "article.comments.sectionDefault"
+msgstr "Voreinstellung"
+
+msgid "article.comments.disable"
+msgstr "Ausschalten"
+
+msgid "article.comments.enable"
+msgstr "Einschalten"
+
+msgid "article.fontSize"
+msgstr "Schriftgröße"
+
+msgid "article.fontSize.small.altText"
+msgstr "Klein"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Mittel"
+
+msgid "article.fontSize.large.altText"
+msgstr "Groß"
+
+msgid "article.return"
+msgstr "Zu Artikeldetails zurückkehren"
+
+msgid "submission.submissionEditing"
+msgstr "Redaktionelle Bearbeitung des Beitrags"
+
+msgid "submission.changeSection"
+msgstr "Ändern in"
+
+msgid "submission.sent"
+msgstr "Versandt"
+
+msgid "submission.editorDecision"
+msgstr "Entscheidung der Redakteurin/des Redakteurs"
+
+msgid "submission.round"
+msgstr "Durchgang {$round}"
+
+msgid "submission.editorReview"
+msgstr "Begutachtung durch Redakteur/in"
+
+msgid "submission.notifyAuthor"
+msgstr "Autor/in benachrichtigen"
+
+msgid "submission.notifyEditor"
+msgstr "Redakteur/in benachrichtigen"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Protokoll der E-Mail-Korrespondenz zwischen Redakteur/in und Autor/in"
+
+msgid "submission.reviewersVersion"
+msgstr "Von Gutachter/in kommentierte Datei"
+
+msgid "submission.postReviewVersion"
+msgstr "Begutachtete Datei"
+
+msgid "submission.editorVersion"
+msgstr "Fassung der Redakteurin/des Redakteurs"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Von der Autorin/dem Autor überarbeitete Fassung"
+
+msgid "submission.authorVersion"
+msgstr "Fassung der Autorin/des Autors"
+
+msgid "submission.copyediting"
+msgstr "Lektorat"
+
+msgid "submission.copyedit"
+msgstr "Lektorieren"
+
+msgid "submission.proofreading"
+msgstr "Korrekturlektorat"
+
+msgid "submission.scheduling"
+msgstr "Zeitliche Planung"
+
+msgid "submission.scheduledIn"
+msgstr "Veröffentlichung geplant für {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Ankündigung folgt)"
+
+msgid "submissions.sec"
+msgstr "Rub."
+
+msgid "submissions.step1"
+msgstr "1. Schritt"
+
+msgid "submissions.step3"
+msgstr "3. Schritt"
+
+msgid "submissions.queuedReview"
+msgstr "In Begutachtung"
+
+msgid "submissions.scheduled"
+msgstr "Geplant"
+
+msgid "submissions.published"
+msgstr "Veröffentlicht"
+
+msgid "submissions.initial"
+msgstr "Erster"
+
+msgid "submissions.proofread"
+msgstr "Korrekturgelesen"
+
+msgid "submissions.initialProof"
+msgstr "Erstkorrektur"
+
+msgid "submissions.postAuthor"
+msgstr "An Autor/in schicken"
+
+msgid "submissions.reviewRound"
+msgstr "Begutachtungsdurchgang"
+
+msgid "submissions.proof"
+msgstr "Korrektur"
+
+msgid "submissions.editorDecision"
+msgstr "Redaktionsentscheidung"
+
+msgid "submissions.editorRuling"
+msgstr "Redaktionsbeschluss"
+
+msgid "submission.eventLog"
+msgstr "Protokoll der Ereignisse"
+
+msgid "submissions.copyeditComplete"
+msgstr "Lektorat beendet"
+
+msgid "submissions.layoutComplete"
+msgstr "Layout fertig"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korrekturlektorat beendet"
+
+msgid "journal.currentIssue"
+msgstr "Aktuelle Ausgabe"
+
+msgid "journal.journals"
+msgstr "Zeitschriften"
+
+msgid "journal.path"
+msgstr "Zugangspfad"
+
+msgid "context.context"
+msgstr "Zeitschrift"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Alle Ausgaben anzeigen"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Nutzer/innen ohne Rolle in dieser Zeitschrift mit aufnehmen."
+
+msgid "user.profile.profileImage"
+msgstr "Profilbild"
+
+msgid "user.showAllJournals"
+msgstr "Alle Zeitschriften anzeigen"
+
+msgid "user.registerForOtherJournals"
+msgstr "Für andere Zeitschriften registrieren"
+
+msgid "user.reviewerPrompt"
+msgstr "Wären Sie daran interessiert, Beiträge in dieser Zeitschrift zu begutachten?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ja, die {$userGroup}-Rolle beantragen."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Ja, ich möchte kontaktiert werden, um für Gutachten zu Einreichungen bei dieser Zeitschrift angefragt zu werden."
+
+msgid "user.register.contextsPrompt"
+msgstr "Bei welchen Zeitschriften auf dieser Website möchten Sie sich registrieren?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Die folgenden Rollen beantragen."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Wenn Sie die Aufnahme als Gutachter/in bei einer Zeitschrift beantragt haben, geben Sie bitte Ihre Begutachtungsinteressen ein."
+
+msgid "user.myJournals"
+msgstr "Meine Zeitschriften"
+
+msgid "user.manageMySubscriptions"
+msgstr "Meine Abonnements verwalten"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Ihr Account ist derzeit keiner Zeitschrift zugeordnet. Bitte wählen Sie eine Zeitschrift aus:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Ihrem Account sind derzeit keine Rollen bei dieser Zeitschrift zugeordnet. Bitte wählen Sie aus den unten stehenden Aktionen aus:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Einen Vorschlag einreichen"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Einen Vorschlag einreichen: Registrierung als Autor/in ist momentan ausgeschaltet."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Als Gutachter/in registrieren"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Als Gutachter/in registrieren: Die Registrierung als Gutachter/in ist momentan ausgeschaltet.."
+
+msgid "user.role.manager"
+msgstr "Zeitschriftenverwalter/in"
+
+msgid "user.role.subEditor"
+msgstr "Rubrikredakteur/in"
+
+msgid "user.role.subscriptionManager"
+msgstr "Abonnementverwalter/in"
+
+msgid "user.role.managers"
+msgstr "Zeitschriftenverwalter/innen"
+
+msgid "user.role.subEditors"
+msgstr "Rubrikredakteur/innen"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Abonnementverwalter/innen"
+
+msgid "user.role.journalAssistant"
+msgstr "Zeitschriftenassistent/in"
+
+msgid "user.role.journalAssistants"
+msgstr "Zeitschriftenassistent/innen"
+
+msgid "issue.issue"
+msgstr "Ausgabe"
+
+msgid "issue.issues"
+msgstr "Ausgaben"
+
+msgid "issue.title"
+msgstr "Titel"
+
+msgid "issue.volume"
+msgstr "Band"
+
+msgid "issue.number"
+msgstr "Nummer"
+
+msgid "issue.vol"
+msgstr "Bd."
+
+msgid "issue.no"
+msgstr "Nr."
+
+msgid "issue.year"
+msgstr "Jahr"
+
+msgid "issue.noIssues"
+msgstr "Keine Ausgaben"
+
+msgid "issue.toc"
+msgstr "Inhaltsverzeichnis"
+
+msgid "issue.abstract"
+msgstr "Abstract"
+
+msgid "issue.coverPage.altText"
+msgstr "Titelseite"
+
+msgid "issue.fullIssue"
+msgstr "Komplette Ausgabe"
+
+msgid "issue.nonpdf.title"
+msgstr "Ausgaben-Download"
+
+msgid "issue.viewIssue"
+msgstr "Ausgabe ansehen"
+
+msgid "issue.return"
+msgstr "Zu Ausgabendetails zurückkehren"
+
+msgid "subscriptionTypes.currency"
+msgstr "Währung"
+
+msgid "subscriptionTypes.year"
+msgstr "Jahr"
+
+msgid "subscriptionTypes.years"
+msgstr "Jahre"
+
+msgid "subscriptionTypes.month"
+msgstr "Monat"
+
+msgid "subscriptionTypes.months"
+msgstr "Monate"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Nicht endend"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Print"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Print und Online"
+
+msgid "subscriptions.inactive"
+msgstr "Nicht aktiv"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Aktiv"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Informationen erforderlich"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Genehmigung erforderlich"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Manuelle Zahlung abwarten"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Online-Zahlung abwarten"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Sie haben kein aktives Abonnement."
+
+msgid "subscriptions.status.other"
+msgstr "Andere, siehe Hinweis"
+
+msgid "subscriptions.individualDescription"
+msgstr "Im Falle individueller Abonnements ist es erforderlich, sich einzuloggen, um auf Inhalte zuzugreifen."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Für institutionelle Abonnements ist kein Login erforderlich. Die Domäne und/oder IP-Adresse werden genutzt, um auf Inhalte zuzugreifen."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements ist die Bewilligung der Domain und des IP-Bereiches erforderlich, bevor das Abonnement aktiviert wird."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Neuzugang"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikel eingereicht"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Beitrag an die Warteliste für die Ausgabenplanung geschickt"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Beitrag einer Ausgabe zugewiesen"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikel veröffentlicht"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Bearbeitung durch Autor/in eingegangen"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Revisionsdatei durch Autor/in aktualisiert"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Beitrag einer Redakteurin/einem Redakteur zugeteilt"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Redakteur/in nicht länger für den Beitrag zuständig"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Entscheidung der Redakteurin/des Redakteurs eingegangen"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Datei aktualisiert"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Beitrag ans Archiv geschickt"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Beitrag aus dem Archiv wiederhergestellt"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Beitrag einer Lektorin/einem Lektor zugeteilt"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Lektor/in nicht länger für den Beitrag zuständig"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Lektorat für Beitrag veranlasst"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Bearbeitungsdatei der Lektorin/des Lektors aktualisiert"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Erstkorrektur abgeschlossen"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Lektorat abgeschlossen"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Lektorierte Datei aktualisiert"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Beitrag einer Korrekturlektorin/einem Korrekturlektor zugeteilt"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korrekturlektor/in nicht länger für den Beitrag zuständig"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Korrekturlektorat für Beitrag veranlasst"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Bearbeitungsdatei der Korrekturlektorin/des Korrekturlektors aktualisiert"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Korrekturlektorat abgeschlossen"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Beitrag einer Layoutredakteurin/einem Layoutredakteur zugeteilt"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Layoutredakteur/in nicht länger für den Beitrag zuständig"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Layout für Beitrag veranlasst"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Layoutfahne erstellt"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Layout abgeschlossen"
+
+msgid "reader.subscribersOnly"
+msgstr "Nur für Abonnent/innen"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Für den Zugang ist ein Abonnement erforderlich. Um Ihr Abonnement zu bestätigen, loggen Sie sich bei der Zeitschrift ein."
+
+msgid "reader.openAccess"
+msgstr "Freier Zugang (Open Access)"
+
+msgid "reader.subscriptionAccess"
+msgstr "Zugang für Abonnent/innen"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Zugang für Abonnent/innen oder durch Zahlung einer Gebühr"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Kommentare zu diesem Artikel"
+
+msgid "comments.authenticated"
+msgstr "von <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Ergebnisse sortieren nach"
+
+msgid "search.results.orderBy.article"
+msgstr "Artikeltitel"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor/in"
+
+msgid "search.results.orderBy.date"
+msgstr "Veröffentlichungsdatum"
+
+msgid "search.results.orderBy.issue"
+msgstr "Ausgabe"
+
+msgid "search.results.orderBy.journal"
+msgstr "Zeitschriftentitel"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Beliebtheit (gesamte Zeit)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Beliebtheit (letzter Monat)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevanz"
+
+msgid "search.results.orderDir.asc"
+msgstr "Aufsteigend"
+
+msgid "search.results.orderDir.desc"
+msgstr "Absteigend"
+
+msgid "search.results.similarDocuments"
+msgstr "ähnliche Dokumente"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Eine Standardauthentifizierungsquelle außerhalb vom OJS festzulegen, hat folgende Auswirkungen:</p>\n"
+"<ul>\n"
+"\t<li>Versucht jemand, auf dieser Seite ein neues Konto mit einem Benutzer/innen-Namen, der in der Authentifizierungsquelle existiert, nicht jedoch in der OJS-Datenbank, einzurichten, dann gelingt die Registrierung nur, wenn das eingegebene Passwort für dieses Benutzer/innen-Konto gültig ist.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>Beachten Sie:</h4>\n"
+"<p>Das System konnte die Konfigurationsdatei nicht automatisch überschreiben. Öffnen Sie <tt>config.inc.php</tt> mit einem geeigneten Texteditor und ersetzen Sie den Inhalt durch den Text im nachstehenden Textfeld.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Abonnementverwaltung"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "individueller Abonnements"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institutionelle Abonnements"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Abonnement-Arten"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Plugins für Artikelfahnen"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Plugins für Artikelfahnen fügen die Unterstützung für die Anzeige verschiedener Dokumentarten als Artikelfahnen hinzu."
+
+msgid "plugins.categories.auth.description"
+msgstr "Die Zugangs-Plugins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen."
+
+msgid "plugins.categories.generic.description"
+msgstr "Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plugin-Kategorien bereitgestellt werden."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Beispiele für die Anzeige von Creative-Commons-Lizenzen in den Copyright-Vermerken</h3>\n"
+"<h4>1. Empfohlene Copyright-Regelungen für Zeitschriften mit Open Access</h4>\n"
+"Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:\n"
+"<ol type=\"a\">\n"
+"\t<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung unter einer <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Namensnennung Lizenz</a>, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>\n"
+"\t<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>\n"
+"\t<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Empfohlene Copyright-Regelungen für Zeitschriften mit verzögertem Open Access</h4>\n"
+"Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgenden Bedingungen zu:\n"
+"<ol type=\"a\">\n"
+"\t<li>Die Autor/innen behalten das Copyright und erlauben der Zeitschrift die Erstveröffentlichung, womit die Arbeit [ZEITSPANNE FESTLEGEN] nach der Veröffentlichung zugleich unter einer <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Namensnennung Lizenz</a> lizenziert wird, die es anderen erlaubt, die Arbeit unter Nennung der Autor/innenschaft und der Erstpublikation in dieser Zeitschrift zu verwenden.</li>\n"
+"\t<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>\n"
+"\t<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />\n"
+"Wählen Sie ein Schema für diese Schritte im redaktionellen Verfahren. (Zur Bestimmung von Redakteur/innen und Rubrikredakteur/innen gehen Sie unter \"Zeitschriftenverwaltung\" zu \"Redakteur/innen\".)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Die folgenden Optionen sind verfügbar, die es Leser/innen ermöglichen, Online-Versionen der nachgewiesenen bzw. verwendeten Literatur zu finden.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Ein Lesewerkzeug hinzufügen</strong><p>Die Zeitschriftenverwaltung kann \"Verweise finden\" zu den Lesewerkzeugen zu den veröffentlichten Beiträgen hinzufügen. Dies ermöglicht den Leser/innen, den Titel einer Literaturangabe einzutragen und ausgewählte wissenschaftliche Datenbanken nach der Literaturangabe zu durchsuchen.</p></li>\n"
+"\t<li><strong>Links in die Literaturverweise einbetten</strong><p>Die Layouterin/der Layouter kann einen Link zu denjenigen Literaturverweisen hinzufügen, die online zu finden sind. Dazu muss sie/er die folgenden Anweisungen befolgen (die bearbeitet werden können).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Diese Nutzerin/diesen Nutzer sperren? Dies wird die Nutzerin/den Nutzer daran hindern, sich bei diesem System anzumelden.\n"
+"\n"
+"Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs angeben."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Leider haben Sie keine Verwaltungsrechte für diese/n Benutzer/in. Die Gründe mögen sein:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Die Benutzerin/der Benutzer ist ein/e Website-Administrator/in</li>\n"
+"\t\t\t<li>Die Benutzerin/der Benutzer ist an Zeitschriften beteiligt, die Sie nicht verwalten.</li>\n"
+"\t\t</ul>\n"
+"\tDiese Aufgabe muss von einer Website-Administratorin/einem Website-Administrator durchgeführt werden.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Redakteur/in erforderlich ist, gekennzeichnet wie folgt:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Ein/e Gutachter/in ist zugewiesen worden, aber noch nicht per E-Mail benachrichtigt worden.</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Alle Gutachter/innen haben ihre Kommentare eingereicht, aber es ist noch keine Entscheidung protokolliert worden.</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autor/in hat ein überarbeitetes Manuskript hochgeladen.</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Gutachter/in hat die Begutachtungsanfrage noch nicht beantwortet, die Frist ist abgelaufen.</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Gutachter/in hat die Begutachtung noch nicht abgeschlossen, die Frist ist abgelaufen.</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Fällig\" wird ausgefüllt, wenn ein/e Gutachter/in die Begutachtungsaufgabe übernimmt; die Spalte nennt die Anzahl der Wochen, bis ein Gutachten fällig ist oder (-) die Anzahl der Wochen, die ein Gutachten überfällig ist.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Hervorgehobene Einträge geben an, dass eine Aktion durch eine/n Redakteur/in erforderlich ist, gekennzeichnet wie folgt:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Eine Aktion in der Lektoratsphase ist erforderlich.</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Eine Aktion in der Layoutphase ist erforderlich.</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Eine Aktion in der Korrekturphase ist erforderlich.</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Bestehende Redaktionsaufgaben"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Beendete Redaktionsaufgaben"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Keine redaktionellen Aufgaben zugewiesen"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Wenn Sie diese/n Lektor/in erneut benachrichtigen, beginnt ihr/sein Lektorat erneut. Sind Sie sicher, dass Sie das wollen?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Wenn Sie diese/n Autorin/in erneut benachrichtigen, beginnt ihre/seine Aufgabe erneut. Sind Sie sicher, dass Sie das wollen?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Wenn Sie diese/n Layouter/in erneut benachrichtigen, beginnt ihre/seine Aufgabe erneut. Sind Sie sicher, dass Sie das wollen?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Wenn Sie diese/n Korrekturlektor/in erneut benachrichtigen, beginnt ihre/seine Aufgabe erneut. Sind Sie sicher, dass Sie das wollen?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Absagen"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Absagen durch Gutachter/innen, Abbrüche & Frühere Durchgänge"
+
+msgid "sectionEditor.regrets"
+msgstr "Absagen"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Absagen, Abbrüche, frühere Durchgänge anzeigen"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Peer Review, Durchgang {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Redaktionsentscheidung, Durchgang {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Absagen durch Gutachter/innen & Abbrüche"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Absage"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Ergebnis"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Tragen Sie eine/n bestehende/n Benutzer/in als Gutachter/in ein"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Neuen Gutachter/in erstellen"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Bestehende Redaktionsaufgaben"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Beendete Redaktionsaufgaben"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Keine redaktionellen Aufgaben zugewiesen"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Layoutaufgaben"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Fahnenformat hochladen"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Datei ersetzen"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Zusatzdatei hochladen"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Ungültiges Bildformat. Gültige Formate sind .gif, .jpg und .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Diese Fahne wird an einem externen Ort bereitgestellt werden."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL des extern bereitgestellten Inhalts"
+
+msgid "reviewer.pendingReviews"
+msgstr "Beiträge in Begutachtung"
+
+msgid "reviewer.completedReviews"
+msgstr "Begutachtungen abgeschlossen"
+
+msgid "reviewer.averageQuality"
+msgstr "Bewertung"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Zu begutachtende Datei"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Redakteur/in benachrichtigen"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Gutachten wird angefertigt"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Gutachten wird nicht angefertigt"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Der Beitrag wird erst zur Verfügung gestellt, wenn die Gutachterin/der Gutachter der Begutachtung zustimmt."
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Zuständige/r Redakteur/in"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Begutachtungskommentare hier eingeben oder hineinkopieren"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Von der Redakteurin/dem Redakteur einzutragen"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Erinnerung senden"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Empfehlung"
+
+msgid "reviewer.article.submitReview"
+msgstr "Gutachten bei der Redaktion einreichen"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Kommentare"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Hochgeladene Dateien"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Von der Gutachterin/dem Gutachter hochgeladene Version"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Falls Sie die Datei für die Redakteurin/den Redakteur kommentieren wollen, speichern Sie sie auf Ihrer Festplatte und verwenden Sie Durchsuchen/Hochladen.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Anfrage der Redakteurin/des Redakteurs"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Ihre Antwort"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Gutachten eingereicht"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Gutachten fällig"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Beitrag annehmen"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Überarbeitung erforderlich"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Erneut zur Begutachtung einreichen"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Anderswo erneut einreichen"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Beitrag ablehnen"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Siehe Kommentare"
+
+msgid "reviewer.article.schedule"
+msgstr "Zeitplan"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Beitrag zur Begutachtung"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Zeitplan der Begutachtung"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Begutachtungsschritte"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Richtlinien für die Gutachter/innen"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Die Begutachtungsrichtlinien geben den Gutachter/innen Kriterien an die Hand, mit deren Hilfe sie bewerten können, ob eine Einreichung für die Veröffentlichung in der Zeitschrift geeignet ist; sie können auch zusätzliche Instruktionen enthalten, die für eine effektive und hilfreiche Begutachtung nützlich sind. Für die Einreichung des Gutachtens stehen den Gutachter/innen zwei offene Textfelder zur Verfügung, eines \"für die Autor/innen und die Redakteur/innen\", ein zweites \"für die Redakteur/innen\". Alternativ können Zeitschriftenverwalter/innen ein Formular für die Begutachtung erstellen. Redakteur/innen haben immer die Option, die Gutachten in ihre Korrespondenz mit den Autor/innen aufzunehmen."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Die Redakteurin/den Redakteur"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "des Beitrags benachrichtigen, ob Sie die Begutachtung übernehmen wollen."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Falls Sie die Begutachtung vornehmen wollen, beachten Sie bitte die nachfolgenden Richtlinien für Gutachter/innen."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Klicken Sie auf die Dateinamen, um die zur Einreichung gehörenden Dateien herunterzuladen und zu begutachten (auf dem Bildschirm oder im Ausdruck)."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Erklären Sie, ob Sie bezüglich dieser Forschung einen Interessenkonflikt haben (Siehe <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Richtlinien für Interessenkonflikte</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Interessenkonflikte"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Bitte klicken Sie auf das Symbol, um Ihr Gutachten zu diesem Beitrag einzugeben."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Zusätzlich können Sie Dateien für die Redakteurin/den Redakteur und/oder die Autorin/den Autor hochladen."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Wählen Sie eine Empfehlung aus und reichen Sie Ihr Gutachten ein, um den Begutachtungsprozess abzuschließen. Sie müssen das Gutachten direkt eingeben oder eine Datei hochladen, bevor Sie eine Empfehlung auswählen können."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Gutachter/in-Empfehlung setzen oder anpassen"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Keine Empfehlung ausgewählt. Sie müssen zur Abgabe des Gutachtens eine Empfehlung auswählen."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Sobald Sie eine Empfehlung abgegeben haben, können Sie keine Änderungen mehr an diesem Gutachten vornehmen. Sind Sie sicher, dass Sie fortfahren wollen?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Datei zum Lektorat"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Datei der Lektorin/des Lektors"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Datei der Lektorin/des Lektors"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Keine Korrekturlektorataufgaben"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Gehen Sie wie folgt vor, um das Manuskript hochzuladen.</p>\n"
+"<ol>\n"
+"<li>Klicken Sie auf dieser Seite auf \"Durchsuchen\". Dadurch wird ein \"Datei auswählen\"-Fenster für das Auffinden der Datei auf Ihrer Festplatte geöffnet.</li>\n"
+"<li>Finden Sie die gewünschte Datei und markieren Sie sie.</li>\n"
+"<li>Klicken Sie auf Öffnen im \"Datei auswählen\"-Fenster, und der Dateiname wird übernommen.</li>\n"
+"<li>Klicken Sie dann \"Hochladen\" an. Die Datei wird von Ihrem Computer auf den Server der Zeitschrift geladen und nach den Gepflogenheiten der Zeitschrift umbenannt.</li>\n"
+"<li>Wenn der Beitrag hochgeladen ist, klicken Sie \"Speichern und fortfahren\" auf dieser Seite an.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Anfrage-E-Mail kann erst gesendet werden, wenn eine Begutachtungsversion vorliegt."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Anfrage-E-Mail kann erst gesendet werden, wenn eine Datei auf der Begutachtungsseite unter \"Redaktionsentscheidungen\" zum Lektorieren ausgewählt wurde."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Anfrage-E-Mail kann erst gesendet werden, wenn eine Datei zum Lektorieren hochgeladen wurde."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Erstes Lektorat"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Lektorat durch Redakteur/in"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Lektorat durch Autor/in"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Endgültiges Lektorat"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Lektorierte Version"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Beitrag einer Lektorin/einem Lektor zuweisen"
+
+msgid "submission.copyedit.useFile"
+msgstr "Datei verwenden"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Lektorat - Kommentare"
+
+msgid "submission.copyedit.instructions"
+msgstr "Lektorat - Richtlinien"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Keine (Laden Sie die endgültige Lektoratsversion als Layoutversion hoch, bevor Sie eine Anfrage stellen.)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Eindeutige Kennung der Fahne"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Eindeutige Kennung existiert bereits."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Beitrag einer Layouterin/einem Layouter zuweisen"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Layouter/in ersetzen"
+
+msgid "submission.layout.layoutComments"
+msgstr "Layout - Kommentare"
+
+msgid "submission.layout.instructions"
+msgstr "Layoutrichtlinien"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Verlinkung von Literaturververweisen"
+
+msgid "submission.proofreadingComments"
+msgstr "Korrekturlektorat - Kommentare"
+
+msgid "submission.proofread.corrections"
+msgstr "Korrekturlektorat - Korrekturen"
+
+msgid "submission.proofread.instructions"
+msgstr "Korrekturlektorat - Richtlinien"
+
+msgid "submission.logType.article"
+msgstr "Artikel"
+
+msgid "submission.logType.author"
+msgstr "Autor/in"
+
+msgid "submission.logType.editor"
+msgstr "Redakteur/in"
+
+msgid "submission.logType.review"
+msgstr "Gutachten"
+
+msgid "submission.logType.copyedit"
+msgstr "Lektorat"
+
+msgid "submission.logType.layout"
+msgstr "Layout"
+
+msgid "submission.logType.proofread"
+msgstr "Korrekturlektorat"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Korrepondenz Redakteur/in - Autor/in"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Lektorats-Kommentare"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Diese Kommentare können dem/der Autor/in mitgeteilt werden.<br />\n"
+"(Weitere Kommentare können nach dem Speichern hinzugefügt werden.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Für Autor/in und Redakteur/in"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Für Redakteur/in"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Nach dem Abschicken wird Ihnen eine bearbeitbare Blindkopie-E-Mail angezeigt, die an die Gutachter/innen geschickt werden kann."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Für Autor/in und Redakteur/in"
+
+msgid "submission.comments.forEditor"
+msgstr "Für Redakteur/in"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Speichern und E-Mail an Autor/in senden"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Speichern und E-Mail an Redakteur/in senden"
+
+msgid "user.register.selectContext"
+msgstr "Eine Zeitschrift auswählen, bei der Sie sich registrieren möchten:"
+
+msgid "user.register.noJournals"
+msgstr "Auf dieser Seite gibt es keine Zeitschriften, bei denen Sie sich eintragen könnten."
+
+msgid "user.register.privacyStatement"
+msgstr "Schutz persönlicher Daten"
+
+msgid "user.register.registrationDisabled"
+msgstr "Gegenwärtig nimmt diese Zeitschrift keine Registrierung von Benutzer/innen entgegen."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Das eingetragene Passwort ist zu kurz."
+
+msgid "user.register.readerDescription"
+msgstr "Sie werden per E-Mail über neue Ausgaben der Zeitschrift informiert."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Sie werden per E-Mail benachrichtigt, wenn eine Ausgabe der Zeitschrift frei zugänglich gemacht wird."
+
+msgid "user.register.authorDescription"
+msgstr "Sie können Beiträge bei der Zeitschrift einreichen"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten."
+
+msgid "user.register.reviewerDescription"
+msgstr "Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten."
+
+msgid "user.register.reviewerInterests"
+msgstr "Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Ja, ich stimme der Erfassung und Speicherung gemäß der <a href=\"{$privacyUrl}\" target=\"_blank\">Datenschutzerklärung</a> dieser Zeitschrift zu."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "Sie müssen der Datenschutzerklärung jeder Zeitschrift, bei der Sie sich registrieren, zustimmen."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Sie müssen der Datenschutzerklärung dieser Website zustimmen."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Meine Abonnements"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Abonnementstatus"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktive und ausgelaufene Abonnements werden unten zusammen mit ihrem Auslaufdatum angezeigt. Zusätzlich können die folgenden Statusinformationen zu jedem Abonnement aufgeführt werden."
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Beschreibung"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Bevor das Abonnement aktiviert werden kann, werden weitere Informationen benötigt."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Bevor das Abonnement aktiviert werden kann, muss es geprüft werden."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuelle Bezahlung wurde ausgelöst, ist aber noch nicht eingegangen."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Eine Online-Bezahlung wurde begonnen, aber abgebrochen oder nicht abgeschlossen."
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individuelles Abonnement"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institutionelles Abonnement"
+
+msgid "user.subscriptions.renew"
+msgstr "Verlängern"
+
+msgid "user.subscriptions.purchase"
+msgstr "Kaufen"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Ein neues Abonnement kaufen"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Ein individuelles Abonnement kaufen"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Ein institutionelles Abonnement kaufen"
+
+msgid "user.subscriptions.expires"
+msgstr "Endet: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Beendet: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Verfügbare Abonnement-Arten ansehen"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Abonnement-Art"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Mitgliedschaft"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Für die ausgewählte Abonnement-Art sind Mitgliedschaftsinformationen erforderlich."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Wählen Sie bitte eine gültige Abonnement-Art aus."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Für dieses Nutzer/innen-Konto existiert bereits ein individuelles Abonnement."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Für die ausgewählte Abonnement-Art sind Mitgliedschaftsinformationen erforderlich."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Name der Einrichtung"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Ein Einrichtungsname ist erforderlich."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Adresse"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Wenn hier eine Domain eingegeben wird, ist die Eingabe von IP-Bereichen optional.<br />Gültige Werte sind Domain-Namen (z.B. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Für die gewählte Abonnement-Art ist eine Domain und/oder ein IP-Bereich zur Authentifizierung des Abonnements erforderlich."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Bitte geben Sie eine gültige Domain ein."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP-Bereiche"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Wenn hier IP-Bereiche eingegeben werden, ist die Eingabe einer Domain optional.<br />Gültige Werte können eine IP-Adresse (z.B. 142.58.103.1), ein IP-Bereich (z.B. 142.58.103.1 - 142.58.103.4), ein IP-Bereich mit einem Stellvertretersymbol '*' (z.B. 142.58.*.*) und ein IP-Bereich mit CIDR (z.B. 142.58.100.0/24) sein."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Geben Sie bitte einen gültigen IP-Bereich ein."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Löschen"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Hinzufügen"
+
+msgid "search.browseAuthorIndex"
+msgstr "Verzeichnis der Autor/innen durchblättern"
+
+msgid "search.searchFor"
+msgstr "Artikel durchsuchen nach"
+
+msgid "search.withinJournal"
+msgstr "In"
+
+msgid "search.allJournals"
+msgstr "allen Zeitschriften"
+
+msgid "search.authorIndex"
+msgstr "Autor/innenverzeichnis durchblättern"
+
+msgid "search.authorDetails"
+msgstr "Nähere Angaben zu den Autor/innen"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>Suchhinweise: </h4><ul>\n"
+"<li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>\n"
+"<li>Häufig vorkommende Worte werden ignoriert</li>\n"
+"<li>Standardmäßig werden nur die Artikel aufgelistet, die <em>alle</em> Suchbegriffe enthalten (implizites <em>UND</em>).</li>\n"
+"<li>Mehrere Suchbegriffe verbunden durch <em>ODER</em> ergeben Artikel, die den einen und/oder den anderen Begriff enthalten, z.B. <em>Bildung ODER Forschung.</em></li>\n"
+"<li>Verwenden Sie Klammern für eine komplexere Suche, z.B. <em>Archiv ((Zeitschrift ODER Vortrag) NICHT Dissertation)</em>.</li>\n"
+"<li>Suchen Sie nach einer genauen Wortfolge, indem Sie sie in Anführungszeichen setzen, z.B. <em>\"Veröffentlichung mit freiem Zugang\"</em>.</li>\n"
+"<li>Schließen Sie ein Wort aus, indem Sie ihm <strong>-</strong> oder <em>NICHT</em> voranstellen, z.B. <em>Internetpublikation -Politik</em> oder <em>Internetpublikation NICHT Politik</em>.</li>\n"
+"<li>Verwenden Sie <strong>*</strong> als Platzhalter für beliebige Zeichenfolgen, z.B. <em>Sozi* Moral</em> listet alle Dokumente, die \"soziologisch\" oder \"sozial\" enthalten.</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Anzeige von {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Diese PDF-Datei herunterladen"
+
+msgid "article.pluginMissing"
+msgstr "<p>Die ausgewählte PDF-Datei sollte hier angezeigt werden, wenn Ihr Webbrowser ein PDF-Reader-Plugin installiert hat (zum Beispiel eine aktuelle Version des <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Artikel herunterladen"
+
+msgid "article.nonpdf.note"
+msgstr "Die gewählte Datei sollte automatisch geladen werden. Falls nicht, klicken Sie auf den nachstehenden Link. Beachten Sie bitte, dass die Datei zur Wiedergabe ein spezielles Programm oder ein Plugin benötigen kann.<br /><br />Falls die Datei nicht automatisch geladen wird, <a href=\"{$url}\">hier klicken</a>."
+
+msgid "site.journalsHosted"
+msgstr "Zeitschriften auf dieser Seite"
+
+msgid "site.journalView"
+msgstr "Zur Zeitschrift"
+
+msgid "site.journalRegister"
+msgstr "Sich registrieren"
+
+msgid "site.journalCurrent"
+msgstr "Aktuelle Ausgabe"
+
+msgid "site.noJournals"
+msgstr "Es sind keine Zeitschriften verfügbar."
+
+msgid "current.current"
+msgstr "Aktuelle Ausgabe"
+
+msgid "current.noCurrentIssue"
+msgstr "Keine aktuelle Ausgabe"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Von der Zeitschrift ist keine Ausgabe erschienen."
+
+msgid "archive.archives"
+msgstr "Archiv"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archive - Seite {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Ältere Ausgaben durchblättern"
+
+msgid "archive.issueUnavailable"
+msgstr "Ausgabe nicht verfügbar"
+
+msgid "about.statistics"
+msgstr "Statistiken"
+
+msgid "about.contact"
+msgstr "Kontakt"
+
+msgid "about.aboutContext"
+msgstr "Über die Zeitschrift"
+
+msgid "about.history"
+msgstr "Zeitschriften-Geschichte"
+
+msgid "about.editorialTeam"
+msgstr "Redaktion"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografie"
+
+msgid "about.editorialPolicies"
+msgstr "Zeitschriftenrichtlinien und Publikationsprozess"
+
+msgid "about.focusAndScope"
+msgstr "Konzept"
+
+msgid "about.sectionPolicies"
+msgstr "Rubriken-Richtlinien"
+
+msgid "about.submissions"
+msgstr "Beitragseinreichung"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Zum Login"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registrieren"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein. In einen existierenden Account {$login} oder einen neuen Account {$register}."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} oder {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Eine neue Einreichung in Rubrik <a href=\"{$url}\">{$name}</a> machen."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Neuen Beitrag einreichen"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Beiträge in Bearbeitung ansehen"
+
+msgid "about.authorGuidelines"
+msgstr "Richtlinien für Autor/innen"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Checkliste für Beitragseinreichungen"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Als Teil des Einreichungsverfahren werden die Autor/innen gebeten, anhand der Checkliste für Beiträge die Übereinstimmung ihres Beitrags Punkt für Punkt mit den angegebenen Vorgaben abzugleichen. Beiträge können an Autor/innen, die die Richtlinien nicht befolgen, zurückgegeben werden."
+
+msgid "about.copyrightNotice"
+msgstr "Copyright-Vermerk"
+
+msgid "about.privacyStatement"
+msgstr "Schutz persönlicher Daten"
+
+msgid "about.authorFees"
+msgstr "Autor/innen-Gebühren"
+
+msgid "about.authorFeesMessage"
+msgstr "Diese Zeitschrift erhebt die folgenden Autor/innen-Gebühren."
+
+msgid "about.peerReviewProcess"
+msgstr "Peer-Review-Vorgang"
+
+msgid "about.publicationFrequency"
+msgstr "Erscheinungsfrequenz"
+
+msgid "about.openAccessPolicy"
+msgstr "Open-Access-Richtlinie"
+
+msgid "about.delayedOpenAccess"
+msgstr "Verzögerter Open Access"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Der Inhalt dieser Zeitschrift erscheint in einem frei zugänglichen Format"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "Monat(e) nach der Veröffentlichung einer Ausgabe."
+
+msgid "about.archiving"
+msgstr "Archivierung"
+
+msgid "about.subscriptions"
+msgstr "Abonnements"
+
+msgid "about.subscriptions.individual"
+msgstr "Individuelle Abonnements"
+
+msgid "about.subscriptions.institutional"
+msgstr "Institutionelle Abonnements"
+
+msgid "about.subscriptionsContact"
+msgstr "Kontakt für Abonnements"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Name"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Dauer"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kosten"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Typen von Abonnements"
+
+msgid "about.memberships"
+msgstr "Mitgliedschaften"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Über dieses Publikationssystem"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Redaktions- und Veröffentlichungsprozess mit OJS"
+
+msgid "about.aboutOJSJournal"
+msgstr "Diese Zeitschrift verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>."
+
+msgid "about.aboutOJSSite"
+msgstr "Diese Website verwendet Open Journal Systems {$ojsVersion}, eine Open-Source-Zeitschriften- und Publikationsmanagement-Software. Sie wird unter der GNU General Public License entwickelt, dokumentiert und kostenlos vertrieben durch das <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>."
+
+msgid "help.ojsHelp"
+msgstr "Hilfe zu Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS-Hilfe"
+
+msgid "help.searchReturnResults"
+msgstr "Zurück zu Suchergebnissen"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle} bearbeiten"
+
+msgid "donations.thankYou"
+msgstr "Danke"
+
+msgid "donations.thankYouMessage"
+msgstr "Vielen Dank für Ihre Spende. Wir wissen sie sehr zu schätzen."
+
+msgid "payment.loginRequired"
+msgstr "Sie müssen angemeldet sein, um Zahlungen durchführen zu können."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Ein Abonnement oder der Erwerb des Artikels sind für den Zugang notwendig. Loggen Sie sich bei der Zeitschrift ein, um Ihr Abonnement zu überprüfen, auf frühere Erwerbungen zuzugreifen oder den Artikel zu erwerben."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Ein Abonnement oder der Erwerb der Ausgabe sind für den Zugang notwendig. Loggen Sie sich bei der Zeitschrift ein, um Ihr Abonnement zu überprüfen, auf frühere Erwerbungen zuzugreifen oder die Ausgabe zu erwerben."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Sie müssen angemeldet sein, um eine Spende zu machen."
+
+msgid "payment.paid"
+msgstr "Bezahlt"
+
+msgid "payment.payNow"
+msgstr "Jetzt bezahlen"
+
+msgid "payment.waive"
+msgstr "Auf Gebühr verzichten"
+
+msgid "payment.alreadyPaid"
+msgstr "Bereits bezahlt"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Wählen Sie dieses Kästchen aus, wenn Sie Ihre Zahlung bereits an die Zeitschrift übermittelt haben, um den Einreichungsprozess abzuschließen. Ihr Beitrag wird erst begutachtet, wenn die Zahlung angekommen ist. Klicken Sie \"Jetzt bezahlen\" an, um die Zahlungsanweisungen einzusehen."
+
+msgid "payment.paymentReceived"
+msgstr "Zahlung erhalten"
+
+msgid "payment.paymentSent"
+msgstr "Zahlung wurde bereits veranlasst"
+
+msgid "payment.authorFees"
+msgstr "Autor/innengebühren"
+
+msgid "payment.type.submission"
+msgstr "Gebühr für das Einreichen eines Beitrags"
+
+msgid "payment.type.publication"
+msgstr "Veröffentlichungsgebühr"
+
+msgid "payment.type.publication.required"
+msgstr "Die Veröffentlichungsgebühr ist fällig."
+
+msgid "payment.type.fastTrack"
+msgstr "Gebühr für beschleunigte Begutachtung"
+
+msgid "payment.type.membership"
+msgstr "Mitgliedsbeitrag"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Artikelgebühr"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Ausgabengebühr"
+
+msgid "payment.type.subscription"
+msgstr "Abonnementgebühr"
+
+msgid "payment.type.donation"
+msgstr "Spenden"
+
+msgid "payment.requestPublicationFee"
+msgstr "Fordere Veröffentlichungsgebühr ({$feeAmount}) an"
+
+msgid "payment.notFound"
+msgstr "Eine Zahlung wurde angefordert, aber die Anforderung ist abgelaufen. Kontaktieren Sie den Zeitschriftenverwalter/die Zeitschriftenverwalterin  für Einzelheiten."
+
+msgid "payment.donation.makeDonation"
+msgstr "Spenden"
+
+msgid "payment.submission.paySubmission"
+msgstr "Einreichungsgebühr zahlen"
+
+msgid "payment.publication.payPublication"
+msgstr "Veröffentlichungsgebühr zahlen"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Veröffentlichungsgebühr bezahlt"
+
+msgid "payment.membership.buyMembership"
+msgstr "Mitgliedschaft erwerben"
+
+msgid "payment.membership.renewMembership"
+msgstr "Mitgliedschaft erneuern"
+
+msgid "payment.membership.ends"
+msgstr "Endet"
+
+msgid "payment.subscription.purchase"
+msgstr "Abonnement erwerben"
+
+msgid "payment.subscription.renew"
+msgstr "Abonnement erneuern"
+
+msgid "payment.subscription.expires"
+msgstr "Läuft aus"
+
+msgid "installer.appInstallation"
+msgstr "Installation von OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Aktualisierung von OJS"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS-Version {$version}</h4>\n"
+"\n"
+"<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Projects (PKP)</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörende <a href=\"{$baseUrl}/docs/README.md\">README</a>-Datei. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href=\"http://forum.pkp.sfu.ca\">Support Forum</a> von PKP oder besuchen Sie unseren <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> per E-Mail kontaktieren.</p>\n"
+"\n"
+"<h4>Aktualisierungen</h4>\n"
+"\n"
+"<p>Wenn Sie eine bestehende Version von durch eine neuere ersetzen wollen, <a href=\"{$upgradeUrl}\">hier klicken</a></p>\n"
+"\n"
+"<h4>Empfohlene Systemvoraussetzungen</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; Sie nutzen momentan PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 oder <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x oder >= 2.0.4x oder Microsoft IIS 6</li>\n"
+"\t<li>Betriebssystem: Jedes Betriebssystem, das die obigen Programme unterstützt, darunter <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Die Ressourcen von PKP sind begrenzt; nicht alle Kombinationen von Plattformen und Programmversionen können getestet werden. Eine Funktionsgarantie kann daher nicht gegeben werden. </p>\n"
+"\n"
+"<p>Änderungen an diesen Einstellungen können nach der Installation in der Datei <tt>config.inc.php</tt> im OJS-Basisverzeichnis oder über die Oberfläche der Website-Administration vorgenommen werden.</p>\n"
+"\n"
+"<h4>Unterstützte Datenbank-Systeme</h4>\n"
+"\n"
+"<p>Bisher wurde OJS nur mit MySQL und PostgreSQL getestet, aber andere Datenbanken, die <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> unterstützen, können ebenfalls funktionieren (ganz oder teilweise). Berichte zur Kompatibilität und Patches für andere Datenbanken nimmt das OJS-Team gerne entgegen.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Vor der Installation</h4>\n"
+"\n"
+"\n"
+"<p>1. Die folgenden Dateien und Verzeichnisse (mit ihren Inhalten) müssen beschreibbar sein:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> ist beschreibbar (optional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> ist beschreibbar: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> ist beschreibbar: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> ist beschreibbar: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> ist beschreibbar: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> ist beschreibbar: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Ein Verzeichnis für die Ablage hochgeladener Dateien muss angelegt und beschreibbar gemacht werden (siehe \"Datei-Einstellungen\" unten).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS-Version{$version}</h4>\n"
+"\n"
+"<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Project</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörenden Dateien <a href=\"{$baseUrl}/docs/README.md\">README</a> und <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a>. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href=\"http://forum.pkp.sfu.ca\">Support Forum</a> von PKP oder besuchen Sie unseren <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href=\"mailto:pkp.contact@gmail.com\"></a> per E-Mail kontaktieren.</p>\n"
+"<p>Wir <strong>empfehlen dringend</strong>, dass Sie ein Backup Ihrer Datenbank, Dateiverzeichnisse und OJS-Installation machen, bevor Sie fortfahren.</p>\n"
+"<p>Falls Sie in einem <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP-Safe Mode</a> arbeiten, stellen Sie bitte sicher, dass die max_execution_time-Richtlinie in Ihrer php.ini-Konfigurationsdatei auf einen hohen Grenzwert eingestellt ist. Sollte dieses (oder irgendein anderes) Zeitlimit (z.B. die \"Timeout\"-Regelung von Apache) erreicht werden und der Upgrade-Prozess unterbrochen werden, müssen Sie manuell eingreifen.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Zur durchgängigen Unterstützung von Unicode (UTF-8) verwenden Sie stets UTF-8 als Zeichensatz. Beachten Sie, dass MySQL >= 4.1.1 oder PostgreSQL >= 7.1-Datenbankserver erforderlich sind. Beachten Sie bitte außerdem, dass die Unterstützung von Unicode PHP >= 4.3.0 kompiliert mit der Bibliothek <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> verlangt (in den meisten neueren PHP-Installationen standardmäßig aktiviert). Falls Ihr Server diese Anforderungen nicht erfüllt, können Schwierigkeiten mit erweiterten Schriftsätzen auftreten.\n"
+"<br /><br />\n"
+"Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Ihr Server erlaubt momentan Dateiuploads: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Ihr Server erlaubt beim Upload momentan eine maximale Dateigröße von: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Die Hauptsprache dieses Systems. Falls Sie an hier nicht aufgeführten Sprachen interessiert sind, sehen Sie bitte in der OJS-Dokumentation nach."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Wählen Sie alle weiteren Regionaleinstellungen, die das System unterstützen soll. Diese Regionaleinstellungen stehen allen Zeitschriften der Website zur Verfügung. Weitere Regionaleinstellungen können jederzeit über die Website-Administration eingerichtet werden."
+
+msgid "installer.filesDirInstructions"
+msgstr "Bitte geben Sie den vollständigen Pfad zu einem existierenden Verzeichnis an, in dem hochgeladene Dateien gespeichert werden sollen. Dieses Verzeichnis sollte nicht direkt aus dem WWW lesbar sein. <strong>Bitte stellen Sie sicher, dass dieses Verzeichnis existiert und beschreibbar ist, bevor Sie mit der Installation fortfahren.</strong> Pfadangaben auf Windows-Rechnern sollten normale Schrägstriche enthalten, z.B. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS benötigt eine SQL-Datenbank zur Speicherung der Daten. Eine Liste der unterstützten Datenbanken können Sie der oben stehenden Liste der Systemanforderungen entnehmen. Bitte geben Sie in den folgenden Feldern die Einstellungen zur Verbindung zur Datenbank ein."
+
+msgid "installer.installApplication"
+msgstr "Open Journal Systems installieren"
+
+msgid "installer.upgradeApplication"
+msgstr "Open Journal Systems upgraden"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Warnung:</strong> Wenn die Datenbank-Installation fehlschlägt, müssen Sie eventuell die OJS-Datenbank bzw. die Datenbank-Tabellen von Hand löschen, bevor Sie eine erneute Installation der Datenbank probieren können."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>WICHTIG!</h4>\n"
+"<p>Die Installationsprozedur konnte die Konfigurationsdatei nicht automatisch überschreiben. Bevor Sie versuchen, das System zu benutzen, öffnen Sie bitte <tt>config.inc.php</tt> in einem geeigneten Text-Editor und ersetzen Sie den Dateiinhalt durch den Inhalt des folgenden Textfeldes.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Die Installation von OJS wurde erfolgreich abgeschlossen.</p>\n"
+"<p>Um mit der Nutzung des Systems zu beginnen, <a href=\"{$loginUrl}\">loggen</a> Sie sich bitte mit dem auf der vorherigen Seite eingegebenen Benutzer/innen-Namen und dem entsprechenden Passwort <a href=\"{$loginUrl}\">ein</a>.</p>\n"
+"<p>Wenn Sie ein Teil der PKP-Community sein möchten, können Sie:</p>\n"
+"<ol>\n"
+"\t<li>das <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP-Blog</a> lesen und die <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS-Feeds</a> abonnieren.</li>\n"
+"\t<li>das <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">Support-Forum</a> besuchen, wenn Sie Fragen oder Kommentare haben.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Die Aktualisierung von OJS auf Version {$version} wurde erfolgreich abgeschlossen.</p>\n"
+"<p>Bitte vergessen Sie nicht, die \"installed\"-Einstellung in Ihrer config.inc.php-Konfigurationsdatei wieder zurück auf <em>On</em> zu setzen.</p>\n"
+"<p>Wenn Sie sich noch nicht registriert haben und in Zukunft Neuigkeiten und Hinweise auf Aktualisierungen erhalten möchten, <strong>registrieren Sie sich bitte auf <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Wenn Sie Fragen oder Kommentare haben, besuchen Sie bitte das <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">Support-Forum</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Eine neue Version von OJS ist verfügbar! Sie benutzen momentan OJS {$currentVersion}. Die aktuelleste Version ist OJS {$latestVersion}. Bitte gehen Sie zu <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">dieser Seite</a>, um die aktuelle Version herunterzuladen und um Informationen zum Upgrade einzusehen."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Eine neue Version von OJS ist verfügbar! Sie benutzen momentan OJS {$currentVersion}. Die aktuellste Version ist OJS {$latestVersion}. Bitte benachrichtigen Sie Ihre/n Website-Administrator/in ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>), um sie/ihn über dieses neue Release zu informieren. Mehr Informationen können <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">hier</a> gefunden werden."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} hat den Artikel bearbeitet {$submissionId}. Die neue Datei-ID ist {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "Der Beitrag {$submissionId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet."
+
+msgid "log.review.reviewInitiated"
+msgstr "Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} hat begonnen."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} wurde beurteilt für Durchgang {$round} der Begutachtung von Beitrag {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Abgabetermin für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} festgesetzt auf {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde abgegeben."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Die Empfehlung für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} wurde von Redakteur/in {$editorName} im Auftrag der Gutachterin/des Gutachters {$reviewerName} abgegeben."
+
+msgid "log.review.resubmit"
+msgstr "Beitrag {$submissionId} wurde erneut zur Begutachtung eingereicht."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} abgelehnt."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} angenommen."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} im Auftrag von {$reviewerName} abgelehnt."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} hat die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} im Auftrag von {$reviewerName} angenommen."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Redakteur/in {$userName} hat die Begutachtungsdatei von Beitrag {$submissionId} in Durchgang {$round} im Auftrag der Gutachterin/des Gutachters {$reviewerName} hochgeladen."
+
+msgid "log.review.reviewerFile"
+msgstr "Begutachtungsdatei wurde hochgeladen."
+
+msgid "log.editor.decision"
+msgstr "Eine Entscheidung ({$decision}) bezüglich Artikel {$submissionId} wurde von Redakteur/in {$editorName} abgegeben."
+
+msgid "log.editor.recommendation"
+msgstr "Eine redaktionelle Empfehlung ({$decision}) wurde von {$editorName} für den Artikel {$submissionId} eingetragen."
+
+msgid "log.copyedit.initiate"
+msgstr "Lektorat von Beitrag {$submissionId} wurde von {$copyeditorName} begonnen."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Die Standardbearbeitungsdatei wurde ausgewählt."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} hat das erste Lektorat von Beitrag {$submissionId} fertiggestellt."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} hat das endgültige Lektorat von Beitrag {$submissionId} fertiggestellt."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr " Beitrag {$submissionId} wurde {$copyeditorName} zum Lektorat zugewiesen."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Eine Lektoratsversion des Beitrags wurde hochgeladen."
+
+msgid "log.copyedit.authorFile"
+msgstr "Von der Autorin/vom Autor lektorierte Beitragsdatei wurde hochgeladen."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "Beitrag {$submissionId} wurde Layouter/in {$editorName} zugewiesen."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} ist nicht mehr Layouter/in von Beitrag {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} hat das Layout von Beitrag {$submissionId} abgeschlossen."
+
+msgid "log.editor.metadataModified"
+msgstr "Die Metadaten für den Beitrag wurden von {$editorName} verändert."
+
+msgid "log.editor.editorFile"
+msgstr "Eine Redaktionsversion des Beitrags wurde hochgeladen."
+
+msgid "log.editor.archived"
+msgstr "Beitrag {$submissionId} wurde archiviert."
+
+msgid "log.editor.restored"
+msgstr "Beitrag {$submissionId} wurde wieder auf die Liste gesetzt."
+
+msgid "log.editor.editorAssigned"
+msgstr "Beitrag {$submissionId} wurde Redakteur/in {$editorName} zugewiesen."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} hat Beitrag {$submissionId} {$proofreaderName} zum Korrekturlektorat zugewiesen."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} hat Beitrag {$submissionId} auf den Zeitplan gesetzt."
+
+msgid "log.imported"
+msgstr "{$userName} hat Beitrag {$submissionId} importiert."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Begutachter Beitrag"
+
+msgid "notification.type.editing"
+msgstr "Redaktionelle Ereignisse"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Ein neuer Artikel wurde eingereicht: \"{$title}\""
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über \"{$title}\" wurde hinterlassen."
+
+msgid "notification.type.galleyModified"
+msgstr "Für \"{$title}\" wurde eine Korrekturfahne geändert."
+
+msgid "notification.type.issuePublished"
+msgstr "Eine Ausgabe wurde veröffentlicht."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Eine neue Ankündigung wurde erstellt."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Für \"{$title}\" wurde ein Begutachtungsformular eingereicht."
+
+msgid "notification.type.reviewing"
+msgstr "Begutachtungsereignisse"
+
+msgid "notification.type.site"
+msgstr "Site-Ereignisse"
+
+msgid "notification.type.submissionComment"
+msgstr "Ein/e Redakteur/in hat \"{$title}\" kommentiert."
+
+msgid "notification.type.submissions"
+msgstr "Einreichungsereignisse"
+
+msgid "notification.type.userComment"
+msgstr "Ein/e Leser/in hat \"{$title}\" kommentiert."
+
+msgid "notification.type.public"
+msgstr "Öffentliche Ankündigungen"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Ausgabenmetadaten gespeichert."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Warte auf Fahnen."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Zugriff verweigert! Sie sind nicht als Lektor/in für diesen Artikel eingeteilt worden."
+
+msgid "user.authorization.noContext"
+msgstr "Keine Zeitschrift im Kontext!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Sie versuchen auf einen Artikel zuzugreifen, der nicht Teil Ihrer Rubrik ist."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Ungültige Ausgabe angefordert!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Ungültige Lektor/innenfassung oder keine Lektor/innenfassung angefordert!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Währungsliste \"{$filename}\" aus XML geladen"
+
+msgid "grid.action.createContext"
+msgstr "Neue Zeitschrift anlegen"
+
+msgid "editor.navigation.issues"
+msgstr "Ausgaben"
+
+msgid "notification.type.approveSubmission"
+msgstr "Dieser Beitrag wartet momentan auf Freigabe, bevor er in der Ausgabe erscheinen wird."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Warte auf Freigabe."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Bei anderen Zeitschriften registrieren"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Andere Zeitschriften ausblenden."
+
+msgid "article.view.interstitial"
+msgstr "Bitte wählen Sie eine Artikeldatei zum Download aus."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Freigegeben"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Warte auf Freigabe"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Fahnenfreigabe"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Diese Fahne zur Veröffentlichung freigeben.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Freigabe dieser Fahne entfernen.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indiziere \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Diese Implementierung der Suche erlaubt keine Neuindizierung pro Journal."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Der angegebene Pfad \"{$journalPath}\" führt zu keiner Zeitschrift."
+
+msgid "editor.issues.backIssues"
+msgstr "Frühere Ausgaben"
+
+msgid "editor.issues.futureIssues"
+msgstr "Zukünftige Ausgaben"
+
+msgid "navigation.subscriptions"
+msgstr "Abonnements"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} hat den Redaktionsprozess für die Einreichung {$submissionId} übernommen."
+
+msgid "catalog.sortBy"
+msgstr "Artikelreihenfolge"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Wählen Sie, wie Artikel in dieser Kategorie sortiert sein sollen."

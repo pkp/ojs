@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artículos"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "El envío no ha sido publicado previamente ni se ha sometido a consideración por ninguna otra revista (o se ha proporcionado una explicación al respecto en los Comentarios al editor/a)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "El archivo de envío está en formato OpenOffice, Microsoft Word, RTF o WordPerfect."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Siempre que sea posible, se proporcionan direcciones URL para las referencias."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "El texto tiene interlineado sencillo; 12 puntos de tamaño de fuente; se utiliza cursiva en lugar de subrayado (excepto en las direcciones URL); y todas las ilustraciones, figuras y tablas se encuentran colocadas en los lugares del texto apropiados, en vez de al final."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "El texto se adhiere a los requisitos estilísticos y bibliográficos resumidos en las <a href=\"{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines\" target=\"_new\">Directrices del autor/a</a>, que aparecen en Acerca de la revista."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Los nombres y las direcciones de correo electrónico introducidos en esta revista se usarán exclusivamente para los fines establecidos en ella y no se proporcionarán a terceros o para su uso con otros fines.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Esta revista proporciona un acceso abierto inmediato a su contenido, basado en el principio de ofrecer al público un acceso libre a las investigaciones ayuda a un mayor intercambio global de conocimiento."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Animamos a los lectores/as a registrarse en el servicio de notificación de publicaciones de la revista. Utilice el enlace <a href=\"{$indexUrl}/{$journalPath}/user/register\">Registro</a> de la parte superior de la página de inicio de la revista. Como resultado del registro, el lector/a recibirá por correo electrónico la Tabla de contenidos de cada número de la revista. Esta lista también permite que se le atribuya a la revista un cierto nivel de apoyo o número de lectores/as. Consulte la <a href=\"{$indexUrl}/{$journalPath}/about/submissions#privacyStatement\">Declaración de privacidad</a> de la revista, que garantiza a los lectores/as que sus nombres y direcciones de correo electrónico no se usarán con otros fines."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "¿Está interesado en publicar en la revista? Se recomienda revisar la página <a href=\"{$indexUrl}/{$journalPath}/about\">Acerca de la revista</a> para consultar las políticas de sección de la revista, así como las <a href=\"{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines\">Directrices del autor/a</a>. Los autores/as deben <a href=\"{$indexUrl}/{$journalPath}/user/register\">registrarse</a> en la revista antes de publicar o, si ya están registrados, pueden simplemente <a href=\"{$indexUrl}/index/login\">iniciar sesión</a> y comenzar el proceso de cinco pasos."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Se recomienda a los investigadores/as bibliotecarios/as que incluyan esta revista en su listado de revistas electrónicas. Asimismo, cabría destacar que el sistema de publicación de código abierto de esta revista es apto para bibliotecas con personal docente que desee editar sus propias revistas (ver <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.journalSettings.lockssLicense"
+msgstr "Esta revista utiliza el sistema LOCKSS para crear un sistema de archivo distribuido entre bibliotecas colaboradoras, a las que permite crear archivos permanentes de la revista con fines de conservación y restauración. <a href=\"https://lockss.org/\">Más...</a>"
+
+msgid "default.genres.article"
+msgstr "Texto del artículo"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos distribuido entre las bibliotecas participantes y permite a estas bibliotecas crear archivos permanentes de la revista con finalidad de preservación y restauración. <a href=\"https://clockss.org/\">Saber más...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Gestor/a de la revista"
+
+msgid "default.groups.plural.manager"
+msgstr "Gestores/as de la revista"
+
+msgid "default.groups.abbrev.manager"
+msgstr "GR"
+
+msgid "default.groups.name.editor"
+msgstr "Editor/a de la revista"
+
+msgid "default.groups.plural.editor"
+msgstr "Editores/as de la revista"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ER"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor/a invitado/a"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editores/as invitados/as"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor/a de sección"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editores/as de sección"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ESec"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Gestor/a de suscripción"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Gestores/as de suscripción"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "GSus"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumento de investigación"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiales de investigación"
+
+msgid "default.genres.researchResults"
+msgstr "Resultados de la investigación"
+
+msgid "default.genres.transcripts"
+msgstr "Transcripciones"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Análisis de datos"
+
+msgid "default.genres.dataSet"
+msgstr "Conjunto de datos"
+
+msgid "default.genres.sourceTexts"
+msgstr "Textos fuente"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Revisor/a"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Revisores/as"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "EI"

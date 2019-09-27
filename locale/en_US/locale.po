@@ -1,0 +1,2061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:39-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:39-07:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Current Journal:"
+
+msgid "context.select"
+msgstr "Switch to another journal:"
+
+msgid "navigation.categories"
+msgstr "Categories"
+
+msgid "navigation.categories.browse"
+msgstr "Browse"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Click on icon to fill in the review form."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Please fill in required fields."
+
+msgid "common.openJournalSystems"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Are you sure you wish to mark this task as completed? You may not be able to make changes afterwards."
+
+msgid "common.payment"
+msgstr "Payment"
+
+msgid "common.payments"
+msgstr "Payments"
+
+msgid "common.homePageHeader.altText"
+msgstr "Homepage Header"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Journal Homepage Image"
+
+msgid "navigation.journalHelp"
+msgstr "Journal Help"
+
+msgid "navigation.current"
+msgstr "Current"
+
+msgid "navigation.otherJournals"
+msgstr "Other Journals"
+
+msgid "navigation.browseByIssue"
+msgstr "By Issue"
+
+msgid "navigation.browseByAuthor"
+msgstr "By Author"
+
+msgid "navigation.infoForAuthors"
+msgstr "For Authors"
+
+msgid "navigation.infoForLibrarians"
+msgstr "For Librarians"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Competing Interest Guidelines"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Information For Authors"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Information For Librarians"
+
+msgid "navigation.skip.about"
+msgstr "Skip to about the journal"
+
+msgid "navigation.skip.issue"
+msgstr "Skip to the current issue"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Unassigned"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Unassigned"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Submissions in Editing"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "In Editing"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Submissions in Review"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "In Review"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archives"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archives"
+
+msgid "common.queue.long.active"
+msgstr "Active"
+
+msgid "common.queue.short.active"
+msgstr "Active"
+
+msgid "common.queue.long.completed"
+msgstr "Archive"
+
+msgid "common.queue.short.completed"
+msgstr "Archive"
+
+msgid "section.section"
+msgstr "Section"
+
+msgid "section.sections"
+msgstr "Sections"
+
+msgid "section.title"
+msgstr "Section title"
+
+msgid "section.abbreviation"
+msgstr "Abbreviation"
+
+msgid "section.abbreviation.example"
+msgstr "(For example, Articles=ART)"
+
+msgid "section.policy"
+msgstr "Section Policy"
+
+msgid "article.article"
+msgstr "Article"
+
+msgid "article.articles"
+msgstr "Articles"
+
+msgid "common.publication"
+msgstr "Article"
+
+msgid "common.publications"
+msgstr "Articles"
+
+msgid "article.submissionId"
+msgstr "Submission ID"
+
+msgid "article.title"
+msgstr "Title"
+
+msgid "article.authors"
+msgstr "Authors"
+
+msgid "article.indexingInformation"
+msgstr "Indexing Information"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Journal Section"
+
+msgid "article.file"
+msgstr "File"
+
+msgid "article.suppFile"
+msgstr "Supplementary File"
+
+msgid "article.suppFiles"
+msgstr "Supplementary File(s)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Supp. files"
+
+msgid "article.discipline"
+msgstr "Academic discipline and sub-disciplines"
+
+msgid "article.subject"
+msgstr "Keywords"
+
+msgid "article.coverage"
+msgstr "Coverage"
+
+msgid "article.type"
+msgstr "Type, method or approach"
+
+msgid "article.language"
+msgstr "Language"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Author comments"
+
+msgid "article.submission"
+msgstr "Submission"
+
+msgid "article.submissions"
+msgstr "Submissions"
+
+msgid "article.details"
+msgstr "Details"
+
+msgid "article.abstract"
+msgstr "Abstract"
+
+msgid "article.coverPage.altText"
+msgstr "Cover Image"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Open Access"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Restricted Access"
+
+msgid "article.comments.sectionDefault"
+msgstr "Default"
+
+msgid "article.comments.disable"
+msgstr "Disable"
+
+msgid "article.comments.enable"
+msgstr "Enable"
+
+msgid "article.fontSize"
+msgstr "Font Size"
+
+msgid "article.fontSize.small.altText"
+msgstr "Small"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Medium"
+
+msgid "article.fontSize.large.altText"
+msgstr "Large"
+
+msgid "article.return"
+msgstr "Return to Article Details"
+
+msgid "submission.submissionEditing"
+msgstr "Submission Editing"
+
+msgid "submission.changeSection"
+msgstr "Change to"
+
+msgid "submission.sent"
+msgstr "Sent"
+
+msgid "submission.editorDecision"
+msgstr "Editor Decision"
+
+msgid "submission.round"
+msgstr "Round&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Editor Review"
+
+msgid "submission.notifyAuthor"
+msgstr "Notify Author"
+
+msgid "submission.notifyEditor"
+msgstr "Notify Editor"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Editor/Author Email Record"
+
+msgid "submission.reviewersVersion"
+msgstr "Reviewer's annotated version of file"
+
+msgid "submission.postReviewVersion"
+msgstr "Post-review version of file"
+
+msgid "submission.editorVersion"
+msgstr "Editor Version"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Author's revised version of file"
+
+msgid "submission.authorVersion"
+msgstr "Author Version"
+
+msgid "submission.copyediting"
+msgstr "Copyediting"
+
+msgid "submission.copyedit"
+msgstr "Copyedit"
+
+msgid "submission.proofreading"
+msgstr "Proofreading"
+
+msgid "submission.scheduling"
+msgstr "Scheduling"
+
+msgid "submission.scheduledIn"
+msgstr "Scheduled for publication in {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "Sec"
+
+msgid "submissions.step1"
+msgstr "Step 1"
+
+msgid "submissions.step3"
+msgstr "Step 3"
+
+msgid "submissions.queuedReview"
+msgstr "In Review"
+
+msgid "submissions.scheduled"
+msgstr "Scheduled"
+
+msgid "submissions.published"
+msgstr "Published"
+
+msgid "submissions.initial"
+msgstr "Initial"
+
+msgid "submissions.proofread"
+msgstr "Proofread"
+
+msgid "submissions.initialProof"
+msgstr "Initial Proof"
+
+msgid "submissions.postAuthor"
+msgstr "Post-Author"
+
+msgid "submissions.reviewRound"
+msgstr "Review Round"
+
+msgid "submissions.proof"
+msgstr "Proof"
+
+msgid "submissions.editorDecision"
+msgstr "Editor Decision"
+
+msgid "submissions.editorRuling"
+msgstr "Editor Ruling"
+
+msgid "submission.eventLog"
+msgstr "Event Log"
+
+msgid "submissions.copyeditComplete"
+msgstr "Copyedited"
+
+msgid "submissions.layoutComplete"
+msgstr "Layout edited"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Proofread"
+
+msgid "submission.search"
+msgstr "Article Search"
+
+msgid "journal.currentIssue"
+msgstr "Current Issue"
+
+msgid "journal.journals"
+msgstr "Journals"
+
+msgid "journal.path"
+msgstr "Path"
+
+msgid "context.context"
+msgstr "Journal"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "View All Issues"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Include users with no roles in this journal."
+
+msgid "user.profile.profileImage"
+msgstr "Profile Image"
+
+msgid "user.showAllJournals"
+msgstr "Show My Journals"
+
+msgid "user.registerForOtherJournals"
+msgstr "Register for Other Journals"
+
+msgid "user.reviewerPrompt"
+msgstr "Would you be willing to review submissions to this journal?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Yes, request the {$userGroup} role."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Yes, I would like to be contacted with requests to review submissions to this journal."
+
+msgid "user.register.contextsPrompt"
+msgstr "Which journals on this site would you like to register with?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Request the following roles."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "If you requested to be a reviewer on any journal, please enter your subject interests."
+
+msgid "user.myJournals"
+msgstr "My Journals"
+
+msgid "user.manageMySubscriptions"
+msgstr "Manage My Subscriptions"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Your account is not currently associated with any journals. Please choose a journal:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Your account does not currently have any roles for this journal. Please choose from the actions below:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Submit a Proposal"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Submit an Article: Author registration is currently disabled."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Register as a Reviewer"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Register as a Reviewer: Reviewer registration is currently disabled."
+
+msgid "user.role.manager"
+msgstr "Journal Manager"
+
+msgid "user.role.subEditor"
+msgstr "Section Editor"
+
+msgid "user.role.subscriptionManager"
+msgstr "Subscription Manager"
+
+msgid "user.role.managers"
+msgstr "Journal Managers"
+
+msgid "user.role.subEditors"
+msgstr "Section Editors"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Subscription Managers"
+
+msgid "user.role.journalAssistant"
+msgstr "Journal Assistant"
+
+msgid "user.role.journalAssistants"
+msgstr "Journal Assistants"
+
+msgid "issue.issue"
+msgstr "Issue"
+
+msgid "issue.issues"
+msgstr "Issues"
+
+msgid "issue.title"
+msgstr "Title"
+
+msgid "issue.volume"
+msgstr "Volume"
+
+msgid "issue.number"
+msgstr "Number"
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.no"
+msgstr "No."
+
+msgid "issue.year"
+msgstr "Year"
+
+msgid "issue.noIssues"
+msgstr "No Issues"
+
+msgid "issue.toc"
+msgstr "Table of Contents"
+
+msgid "issue.abstract"
+msgstr "Abstract"
+
+msgid "issue.coverPage.altText"
+msgstr "Cover Page"
+
+msgid "issue.fullIssue"
+msgstr "Full Issue"
+
+msgid "issue.nonpdf.title"
+msgstr "Issue Download"
+
+msgid "issue.viewIssue"
+msgstr "View Issue"
+
+msgid "issue.return"
+msgstr "Return to Issue Details"
+
+msgid "subscriptionTypes.currency"
+msgstr "Currency"
+
+msgid "subscriptionTypes.year"
+msgstr "year"
+
+msgid "subscriptionTypes.years"
+msgstr "years"
+
+msgid "subscriptionTypes.month"
+msgstr "month"
+
+msgid "subscriptionTypes.months"
+msgstr "months"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Non-expiring"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Print"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Print and Online"
+
+msgid "subscriptions.inactive"
+msgstr "Inactive"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Active"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Needs Information"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Needs Approval"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Awaiting Manual Payment"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Awaiting Online Payment"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "You do not have an active subscription."
+
+msgid "subscriptions.status.other"
+msgstr "Other, See Notes"
+
+msgid "subscriptions.individualDescription"
+msgstr "Individual subscriptions require login to access subscription content."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Institutional subscriptions do not require login. The user's domain and/or IP address is used to provide access to subscription content."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Note:</strong> Institutional subscriptions purchased online require approval of the domain and IP ranges before the subscription is activated."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Submission event"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Article submitted"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Submission sent to issue scheduling queue"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Submission assigned to issue"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Article published"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Author revision submitted"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Author revision file updated"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor assigned to submission"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor unassigned from submission"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Editor decision submitted"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Editor file updated"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Submission sent to archive"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Submission restored from archive"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Copyeditor assigned to submission"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Copyeditor unassigned from submission"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Copyedit assignment initiated"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Copyeditor revisions file updated"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Initial copyedit completed"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Final copyedit completed"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Copyedit file updated"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Proofreader assigned to submission"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Proofreader unassigned from submission"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Proofread assignment initiated"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Proofreader revisions file updated"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Proofread assignment completed"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Layout editor assigned to submission"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Layout editor unassigned from submission"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Layout assignment initiated"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Layout galley updated"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Layout assignment completed"
+
+msgid "reader.subscribersOnly"
+msgstr "Subscribers Only"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Subscription required to access item. To verify subscription, log in to journal."
+
+msgid "reader.openAccess"
+msgstr "Open Access"
+
+msgid "reader.subscriptionAccess"
+msgstr "Requires Subscription"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Requires Subscription or Fee"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comments on this article"
+
+msgid "comments.authenticated"
+msgstr "by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Order results by"
+
+msgid "search.results.orderBy.article"
+msgstr "Article Title"
+
+msgid "search.results.orderBy.author"
+msgstr "Author"
+
+msgid "search.results.orderBy.date"
+msgstr "Publication Date"
+
+msgid "search.results.orderBy.issue"
+msgstr "Issue"
+
+msgid "search.results.orderBy.journal"
+msgstr "Journal Title"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularity (All Time)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularity (Last Month)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevance"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascending"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descending"
+
+msgid "search.results.similarDocuments"
+msgstr "similar documents"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Specifying a default authentication source other than OJS has the following effects:</p>\n"
+"<ul>\n"
+"\t<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTE!</h4>\n"
+"<p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Subscription Management"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individual Subscriptions"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institutional Subscriptions"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Subscription Types"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Article Galley Plugins"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Article Galley Plugins add support for displaying different document types as article galleys."
+
+msgid "plugins.categories.auth.description"
+msgstr "Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers."
+
+msgid "plugins.categories.generic.description"
+msgstr "Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Proposed Creative Commons Copyright Notices</h3>\n"
+"<h4>1. Proposed Policy for Journals That Offer Open Access</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>\n"
+"\t<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>\n"
+"\t<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Proposed Policy for Journals That Offer Delayed Open Access</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>\n"
+"\t <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>\n"
+"\t <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />\n"
+"Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add \"Find References\" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>\n"
+"\t<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Disable this user? This will prevent the user from logging into the system.\n"
+"\n"
+"You may optionally provide the user with a reason for disabling their account."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Sorry, you do not have administrative rights over this user. This may be because:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>The user is a site administrator</li>\n"
+"\t\t\t<li>The user is active in journals you do not manage</li>\n"
+"\t\t</ul>\n"
+"\tThis task must be performed by a site administrator.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Highlighted items indicate action is required by an editor, labelled as follows:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">A Reviewer has been assigned but not notified by email</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">All Reviewers have returned with their comments, but no decision is recorded</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Author has uploaded a revised manuscript</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Reviewer is overdue to confirm peer review invitation</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Reviewer is overdue to complete review</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Due\" is filled in when reviewer accepts request to review; it displays number of weeks to review's due date or (-) weeks that it is overdue.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Highlighted items indicate action is required by an editor, labelled as follows:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">An action is required in the copyediting stage</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">An action is required in the layout editing stage</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">An action is required in the proofreading stage</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Active Editorial Assignments"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Completed Editorial Assignments"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "No submissions assigned."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Notifying this copy editor again will restart their assignment. Are you sure you wish to do this?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Notifying this author again will restart their assignment. Are you sure you wish to do this?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Notifying this layout editor again will restart their assignment. Are you sure you wish to do this?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Notifying this proofreader again will restart their assignment. Are you sure you wish to do this?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Regrets"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Reviewer Regrets, Cancellations & Earlier Rounds"
+
+msgid "sectionEditor.regrets"
+msgstr "Regrets"
+
+msgid "sectionEditor.regrets.link"
+msgstr "View Regrets, Cancels, Previous Rounds"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Peer Review, Round {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Editor Decision, Round {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Reviewer Regrets & Cancellations"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Regret"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Result"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Enroll an Existing User As Reviewer"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Create New Reviewer"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Active Editorial Assignments"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Completed Editorial Assignments"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "No active editorial assignments."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Layout Editing Assignments"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Upload galley format"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Replace File"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Upload supplementary file"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Invalid image format. Accepted formats are .gif, .jpg, and .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "This galley will be available at a separate website."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL of remotely-hosted content"
+
+msgid "reviewer.pendingReviews"
+msgstr "Articles Pending Review"
+
+msgid "reviewer.completedReviews"
+msgstr "Done"
+
+msgid "reviewer.averageQuality"
+msgstr "Rating"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "File to be reviewed"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Notify The Editor"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Will do the review"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Unable to do the review"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Submission will be made available, if and when reviewer agrees to undertake review"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Submission Editor"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Type or paste in review comments here"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor To Enter"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Send Reminder"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Recommendation"
+
+msgid "reviewer.article.submitReview"
+msgstr "Submit Review To Editor"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comments"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Uploaded files"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Version uploaded by reviewer"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(If you want to annotate the file, for the editor, save on your hard drive and use Browse/Upload.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Editor's Request"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Your Response"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Review Submitted"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Review Due"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Accept Submission"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Revisions Required"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Resubmit for Review"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Resubmit Elsewhere"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Decline Submission"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "See Comments"
+
+msgid "reviewer.article.schedule"
+msgstr "Schedule"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Submission To Be Reviewed"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Review Schedule"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Review Steps"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Reviewer Guidelines"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first \"for author and editor,\" and the second \"for editor.\" Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Notify the submission's editor"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "as to whether you will undertake the review."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "If you are going to do the review, consult Reviewer Guidelines below."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Click on file names to download and review (on screen or by printing) the files associated with this submission."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Declare whether or not you have competing interests with regard to this research (see <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Competing Interests"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Click on icon to enter (or paste) your review of this submission."
+
+msgid "reviewer.article.uploadFile"
+msgstr "In addition, you can upload files for the editor and/or author to consult."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Set or adjust the reviewer recommendation."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "No recommendation was selected. You must choose a recommendation to submit."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "File To C/E"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Copyeditor File"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Copyeditor File"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "No Proofreading Assignments"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>To upload a manuscript to this journal, complete the following steps.</p>\n"
+"<ol>\n"
+"<li>On this page, click Browse (or Choose File) which opens a Choose File window for locating the file on the hard drive of your computer.</li>\n"
+"<li>Locate the file you wish to submit and highlight it.</li>\n"
+"<li>Click Open on the Choose File window, which places the name of the file on this page.</li>\n"
+"<li>Click Upload on this page, which uploads the file from the computer to the journal's web site and renames it following the journal's conventions.</li>\n"
+"<li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Request email cannot be sent until a Review Version is in place."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Request email cannot be sent until file is selected for copyediting in Editor Decision, Review page."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Request email cannot be sent until file is uploaded for copyediting."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Initial Copyedit"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Editor's Copyedit"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Author Copyedit"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Final Copyedit"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "C/E Version"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Assign Copyeditor"
+
+msgid "submission.copyedit.useFile"
+msgstr "Use File"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Copyedit Comments"
+
+msgid "submission.copyedit.instructions"
+msgstr "Copyedit Instructions"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "None (Upload final copyedit version as Layout Version prior to sending request)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Public Galley Identifier"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Public galley identification already exists."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Assign Layout Editor"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Replace Layout Editor"
+
+msgid "submission.layout.layoutComments"
+msgstr "Layout Comments"
+
+msgid "submission.layout.instructions"
+msgstr "Layout Instructions"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Reference Linking"
+
+msgid "submission.proofreadingComments"
+msgstr "Proofreading Comments"
+
+msgid "submission.proofread.corrections"
+msgstr "Proofreading Corrections"
+
+msgid "submission.proofread.instructions"
+msgstr "Proofing Instructions"
+
+msgid "submission.logType.article"
+msgstr "Article"
+
+msgid "submission.logType.author"
+msgstr "Author"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.review"
+msgstr "Review"
+
+msgid "submission.logType.copyedit"
+msgstr "Copyedit"
+
+msgid "submission.logType.layout"
+msgstr "Layout"
+
+msgid "submission.logType.proofread"
+msgstr "Proofread"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Editor/Author Correspondence"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Copyedit Comments"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"These comments can be shared with the author.<br />\n"
+"(After saving, further comments can be added.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "For author and editor"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "For editor"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "After sending, present an editable BCC copy to send to reviewers."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "For author and editor"
+
+msgid "submission.comments.forEditor"
+msgstr "For editor"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Save and Email Author"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Save and Email Editor"
+
+msgid "user.register.selectContext"
+msgstr "Select a journal to register with:"
+
+msgid "user.register.noJournals"
+msgstr "There are no journals you may register with on this site."
+
+msgid "user.register.privacyStatement"
+msgstr "Privacy Statement"
+
+msgid "user.register.registrationDisabled"
+msgstr "This journal is currently not accepting user registrations."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "The password you entered is not long enough."
+
+msgid "user.register.readerDescription"
+msgstr "Notified by email on publication of an issue of the journal."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Notified by email when an issue of the journal is made open access."
+
+msgid "user.register.authorDescription"
+msgstr "Able to submit items to the journal."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Willing to conduct peer review of submissions to the journal."
+
+msgid "user.register.reviewerDescription"
+msgstr "Willing to conduct peer review of submissions to the site."
+
+msgid "user.register.reviewerInterests"
+msgstr "Identify reviewing interests (substantive areas and research methods):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Yes, I would like to be notified of new publications and announcements for all journals that I registered with."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Yes, I agree to have my data collected and stored according to this journal's <a href=\"{$privacyUrl}\" target=\"_blank\">privacy statement</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "You must consent to the privacy statement for any journal with which you are registering."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "You must consent to this site's privacy statement."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "My Subscriptions"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Subscription Status"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Active and expired subscriptions are displayed below along with their expiration date. In addition, the following status information may be included with each subscription."
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Description"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Additional information is needed before the subscription can be activated"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Subscription must be reviewed before it can be activated"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manual payment has been initiated but not yet received"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "An online payment has been initiated but canceled or not completed"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individual Subscription"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institutional Subscriptions"
+
+msgid "user.subscriptions.renew"
+msgstr "Renew"
+
+msgid "user.subscriptions.purchase"
+msgstr "Purchase"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Purchase New Subscription"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Purchase Individual Subscription"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Purchase Institutional Subscription"
+
+msgid "user.subscriptions.expires"
+msgstr "Expires: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Expired: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "View Available Subscription Types"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Subscription Type"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Membership"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "The selected subscription type requires membership information."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Please select a valid subscription type."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "This user account already has an individual subscription."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Membership information if required for the selected subscription type."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Institution name"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "An institution name is required."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Mailing address"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "The selected subscription type requires a domain and/or an IP range for subscription authentication."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Please enter a valid domain."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP ranges"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Please enter a valid IP range."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Delete"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Add"
+
+msgid "search.browseAuthorIndex"
+msgstr "Browse Author Index"
+
+msgid "search.searchFor"
+msgstr "Search articles for"
+
+msgid "search.withinJournal"
+msgstr "Within"
+
+msgid "search.allJournals"
+msgstr "All Journals"
+
+msgid "search.authorIndex"
+msgstr "Browse Author Index"
+
+msgid "search.authorDetails"
+msgstr "Author Details"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Search tips: <ul>\n"
+"<li>Search terms are case-insensitive</li>\n"
+"<li>Common words are ignored</li>\n"
+"<li>By default only articles containing <em>all</em> terms in the query are returned (i.e., <em>AND</em> is implied)</li>\n"
+"<li>Combine multiple words with <em>OR</em> to find articles containing either term; e.g., <em>education OR research</em></li>\n"
+"<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal OR conference) NOT theses)</em></li>\n"
+"<li>Search for an exact phrase by putting it in quotes; e.g., <em>\"open access publishing\"</em></li>\n"
+"<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g. <em>online -politics</em> or <em>online NOT politics</em></li>\n"
+"<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of characters; e.g., <em>soci* morality</em> would match documents containing \"sociological\" or \"societal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "View of {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Download this PDF file"
+
+msgid "article.pluginMissing"
+msgstr "<p>The PDF file you selected should load here if your Web browser has a PDF reader plugin installed (for example, a recent version of <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Article Download"
+
+msgid "article.nonpdf.note"
+msgstr "The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href=\"{$url}\">click here</a>."
+
+msgid "site.journalsHosted"
+msgstr "Journals hosted on this site"
+
+msgid "site.journalView"
+msgstr "View Journal"
+
+msgid "site.journalRegister"
+msgstr "Register"
+
+msgid "site.journalCurrent"
+msgstr "Current Issue"
+
+msgid "site.noJournals"
+msgstr "There are no journals available."
+
+msgid "current.current"
+msgstr "Current"
+
+msgid "current.noCurrentIssue"
+msgstr "No Current Issue"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "This journal has not published any issues."
+
+msgid "archive.archives"
+msgstr "Archives"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archives - Page {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Browse through the older issues"
+
+msgid "archive.issueUnavailable"
+msgstr "Issue Unavailable"
+
+msgid "about.statistics"
+msgstr "Statistics"
+
+msgid "about.contact"
+msgstr "Contact"
+
+msgid "about.aboutContext"
+msgstr "About the Journal"
+
+msgid "about.history"
+msgstr "Journal History"
+
+msgid "about.editorialTeam"
+msgstr "Editorial Team"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biography"
+
+msgid "about.editorialPolicies"
+msgstr "Editorial Policies"
+
+msgid "about.focusAndScope"
+msgstr "Focus and Scope"
+
+msgid "about.sectionPolicies"
+msgstr "Section Policies"
+
+msgid "about.submissions"
+msgstr "Submissions"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Login"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Register"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} or {$register} to make a submission."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} or {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Make a new submission to the <a href=\"{$url}\">{$name}</a> section."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Make a new submission"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "view your pending submissions"
+
+msgid "about.authorGuidelines"
+msgstr "Author Guidelines"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Submission Preparation Checklist"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines."
+
+msgid "about.copyrightNotice"
+msgstr "Copyright Notice"
+
+msgid "about.privacyStatement"
+msgstr "Privacy Statement"
+
+msgid "about.authorFees"
+msgstr "Author Fees"
+
+msgid "about.authorFeesMessage"
+msgstr "This journal charges the following author fees."
+
+msgid "about.peerReviewProcess"
+msgstr "Peer Review Process"
+
+msgid "about.publicationFrequency"
+msgstr "Publication Frequency"
+
+msgid "about.openAccessPolicy"
+msgstr "Open Access Policy"
+
+msgid "about.delayedOpenAccess"
+msgstr "Delayed Open Access"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "The contents of this journal will be available in an open access format"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "month(s) after an issue is published."
+
+msgid "about.archiving"
+msgstr "Archiving"
+
+msgid "about.subscriptions"
+msgstr "Subscriptions"
+
+msgid "about.subscriptions.individual"
+msgstr "Individual Subscriptions"
+
+msgid "about.subscriptions.institutional"
+msgstr "Institutional Subscriptions"
+
+msgid "about.subscriptionsContact"
+msgstr "Subscriptions Contact"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Name"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Duration"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Cost"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Subscription Types"
+
+msgid "about.memberships"
+msgstr "Memberships"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "About this Publishing System"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS Editorial and Publishing Process"
+
+msgid "about.aboutOJSJournal"
+msgstr "This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems Help"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS Help"
+
+msgid "help.searchReturnResults"
+msgstr "Return to Search Results"
+
+msgid "help.goToEditPage"
+msgstr "Edit {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Thank You"
+
+msgid "donations.thankYouMessage"
+msgstr "Thank you for making a contribution.  Your contribution is much appreciated."
+
+msgid "payment.loginRequired"
+msgstr "You must be logged in to make a payment."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Subscription or issue purchase required to access item. To verify subscription, access previous purchase, or purchase issue, log in to journal."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "You must be logged in to make a donation."
+
+msgid "payment.paid"
+msgstr "Paid"
+
+msgid "payment.payNow"
+msgstr "Pay Now"
+
+msgid "payment.waive"
+msgstr "Waive"
+
+msgid "payment.alreadyPaid"
+msgstr "Already Paid"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions."
+
+msgid "payment.paymentReceived"
+msgstr "Payment Received"
+
+msgid "payment.paymentSent"
+msgstr "Payment has already been sent"
+
+msgid "payment.authorFees"
+msgstr "Author Fees"
+
+msgid "payment.type.submission"
+msgstr "Submission Fee"
+
+msgid "payment.type.publication"
+msgstr "Publication Fee"
+
+msgid "payment.type.publication.required"
+msgstr "The publication fee is due for payment."
+
+msgid "payment.type.fastTrack"
+msgstr "Fast Track Review Fee"
+
+msgid "payment.type.membership"
+msgstr "Individual Membership Fee"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Purchase Article Fee"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Purchase Issue Fee"
+
+msgid "payment.type.subscription"
+msgstr "Subscription Fee"
+
+msgid "payment.type.donation"
+msgstr "Donations"
+
+msgid "payment.requestPublicationFee"
+msgstr "Request publication fee ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "A payment has been requested, but the request has expired. Contact the Journal Manager for details."
+
+msgid "payment.donation.makeDonation"
+msgstr "Make a donation"
+
+msgid "payment.submission.paySubmission"
+msgstr "Pay Submission Fee"
+
+msgid "payment.publication.payPublication"
+msgstr "Pay to Publish"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Publication Fee Paid"
+
+msgid "payment.membership.buyMembership"
+msgstr "Buy Individual Membership"
+
+msgid "payment.membership.renewMembership"
+msgstr "Renew Individual Membership"
+
+msgid "payment.membership.ends"
+msgstr "Ends"
+
+msgid "payment.subscription.purchase"
+msgstr "Purchase Subscription"
+
+msgid "payment.subscription.renew"
+msgstr "Renew Subscription"
+
+msgid "payment.subscription.expires"
+msgstr "Expires"
+
+msgid "installer.appInstallation"
+msgstr "OJS Installation"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS Upgrade"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS Version {$version}</h4>\n"
+"\n"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Upgrade</h4>\n"
+"\n"
+"<p>If you are upgrading an existing installation of OJS, <a href=\"{$upgradeUrl}\">click here</a> to proceed.</p>\n"
+"\n"
+"<h4>Recommended system requirements</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; you are currently using PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Operating system: Any OS that supports the above software, including <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>\n"
+"\n"
+"<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base OJS directory, or using the site administration web interface.</p>\n"
+"\n"
+"<h4>Supported database systems</h4>\n"
+"\n"
+"<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Pre-Installation Steps</h4>\n"
+"\n"
+"\n"
+"<p>1. The following files and directories (and their contents) must be made writable:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> is writable: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> is writable: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. A directory to store uploaded files must be created and made writable (see \"File Settings\" below).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS Version {$version}</h4>\n"
+"\n"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Open Journal Systems</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Open Journal Systems, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and OJS installation directory before proceeding.</p>\n"
+"<p>If you are running in <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's \"Timeout\" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Please note that full Unicode support requires PHP to be compiled with support for the <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements.\n"
+"<br /><br />\n"
+"Your server currently supports mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Your server currently allows file uploads: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Your server currently allows a maximum file upload size of: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface."
+
+msgid "installer.filesDirInstructions"
+msgstr "Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database."
+
+msgid "installer.installApplication"
+msgstr "Install Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Upgrade Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>IMPORTANT!</h4>\n"
+"<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Installation of OJS has completed successfully.</p>\n"
+"<p>To begin using the system, <a href=\"{$loginUrl}\">login</a> with the username and password entered on the previous page.</p>\n"
+"<p>If you wish to be part of the PKP community, you can:</p>\n"
+"<ol>\n"
+"\t<li>Read the <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> and follow the <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a> for news and updates.</li>\n"
+"\t<li>Visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a> if you have questions or comments.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Upgrade of OJS to version {$version} has completed successfully.</p>\n"
+"<p>Don't forget to set the \"installed\" setting in your config.inc.php configuration file back to <em>On</em>.</p>\n"
+"<p>If you haven't already registered and wish to receive news and updates, <strong>please register at <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions or comments, please visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "There is a new version of OJS available! You are currently using OJS {$currentVersion}. The most recent version is OJS {$latestVersion}. Please visit <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> to download the most recent version and find upgrade instructions."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "There is a new version of OJS available! You are currently using OJS {$currentVersion}. The most recent version is OJS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} has revised article {$submissionId}. The new file ID is {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} has been unassigned from reviewing submission {$submissionId} for review round {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "The round {$round} review by {$reviewerName} for submission {$submissionId} has been initiated."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} has been rated for the round {$round} review of submission {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "The due date for the round {$round} review of submission {$submissionId} by {$reviewerName} has been set to {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "The recommendation for the round {$round} review of submission {$submissionId} by {$reviewerName} has been set."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "The recommendation for the round {$round} review of submission {$submissionId} has been set by the editor, {$editorName}, on behalf of the reviewer, {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "The submission {$submissionId} has been resubmitted for review."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} has declined the round {$round} review for submission {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} has accepted the round {$round} review for submission {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} has declined the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} has accepted the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$submissionId} on behalf of the reviewer, {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "A reviewer file has been uploaded."
+
+msgid "log.editor.decision"
+msgstr "An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr "An editor recommendation ({$decision}) for article {$submissionId} was recorded by {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Copyediting on submission {$submissionId} has been commenced by {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "The default copyedit file has been chosen."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} has completed the initial copy edit of submission {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} has completed the final copy edit of submission {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} has been assigned to copyedit submission {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "A copyeditor version of the submission file has been uploaded."
+
+msgid "log.copyedit.authorFile"
+msgstr "A version of the submission file copyedited by the author has been uploaded."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} has been assigned as layout editor for submission {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} has been unassigned as layout editor for submission {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} has completed layout editing for submission {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "The metadata for this article was modified by {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "An editor version of the submission file has been uploaded."
+
+msgid "log.editor.archived"
+msgstr "The submission {$submissionId} has been archived."
+
+msgid "log.editor.restored"
+msgstr "The submission {$submissionId} has been restored to the queue."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} has been assigned as editor to submission {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} has assigned {$proofreaderName} to proofread submission {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} has submitted {$submissionId} for scheduling."
+
+msgid "log.imported"
+msgstr "{$userName} has imported article {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Peer-reviewed Article"
+
+msgid "notification.type.editing"
+msgstr "Editing Events"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "A new article, \"{$title},\" has been submitted."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "A comment has been left on the editor decision for \"{$title}.\""
+
+msgid "notification.type.galleyModified"
+msgstr "A galley has been modified for \"{$title}.\""
+
+msgid "notification.type.issuePublished"
+msgstr "An issue has been published."
+
+msgid "notification.type.newAnnouncement"
+msgstr "A new announcement has been created."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "A review form review has been submitted for \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Reviewing Events"
+
+msgid "notification.type.site"
+msgstr "Site Events"
+
+msgid "notification.type.submissionComment"
+msgstr "An editor has made a comment on \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Submission Events"
+
+msgid "notification.type.userComment"
+msgstr "A reader has made a comment on \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Public Announcements"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Issue publication metadata saved."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "A new article has been submitted to which an editor needs to be assigned."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Assign a user to create galleys using the Assign link in the Participants list."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Awaiting Galleys."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Access denied! You have not been assigned as a copyeditor to this article."
+
+msgid "user.authorization.noContext"
+msgstr "No journal in context!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "You are trying to access an article that is not part of your section."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Invalid issue requested!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Invalid copyeditor submission or no copyeditor submission requested!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Loaded currency list \"{$filename}\" from XML"
+
+msgid "grid.action.createContext"
+msgstr "Create a New Journal"
+
+msgid "editor.navigation.issues"
+msgstr "Issues"
+
+msgid "notification.type.approveSubmission"
+msgstr "This submission is currently awaiting approval before it will appear in the issue."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Awaiting approval."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Register with other journals"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Hide other journals"
+
+msgid "article.view.interstitial"
+msgstr "Please choose an article file to download."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Approved"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Awaiting Approval"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Galley Approval"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Approve this galley for publication.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Remove approval of this galley.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexing \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "This search implementation does not allow per-journal re-indexing."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "The given journal path \"{$journalPath}\" could not be resolved to a journal."
+
+msgid "editor.issues.backIssues"
+msgstr "Back Issues"
+
+msgid "editor.issues.futureIssues"
+msgstr "Future Issues"
+
+msgid "navigation.subscriptions"
+msgstr "Subscriptions"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} has taken the edit process for the article {$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "Order of articles"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Choose how to order articles in this category."
