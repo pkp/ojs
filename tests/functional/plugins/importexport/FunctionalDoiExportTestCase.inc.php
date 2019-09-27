@@ -715,8 +715,8 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 	 */
 	protected function cleanXml($xml) {
 		// Fix missing translations. This is a problem of the test environment not of the implementation.
-		$xml = str_replace('##issue.vol##', 'Vol', $xml);
-		$xml = str_replace('##issue.no##', 'No', $xml);
+		$xml = str_replace('##issue.vol##', 'Vol.', $xml);
+		$xml = str_replace('##issue.no##', 'No.', $xml);
 
 		return $xml;
 	}

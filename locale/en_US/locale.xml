@@ -232,8 +232,8 @@
 	<message key="issue.title">Title</message>
 	<message key="issue.volume">Volume</message>
 	<message key="issue.number">Number</message>
-	<message key="issue.vol">Vol</message>
-	<message key="issue.no">No</message>
+	<message key="issue.vol">Vol.</message>
+	<message key="issue.no">No.</message>
 	<message key="issue.year">Year</message>
 	<message key="issue.noIssues">No Issues</message>
 	<message key="issue.toc">Table of Contents</message>
