@@ -86,6 +86,7 @@
 	<!-- Publication -->
 	<message key="galley.editPublishedDisabled">The galleys of this publication can not be edited because it has already been published.</message>
 	<message key="galley.publicationNotFound">The publication for this galley could not be found.</message>
+	<message key="publication.datePublished.description">The publication date will be set automatically when the issue is published. Do not enter a publication date unless the article was previously published elsewhere and you need to backdate it.</message>
 	<message key="publication.invalidSection">The section for this publication could not be found.</message>
 	<message key="publication.invalidIssue">The issue for this publication could not be found.</message>
 	<message key="publication.journalEntry">Journal Entry</message>

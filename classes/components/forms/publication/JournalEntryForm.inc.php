@@ -83,6 +83,12 @@ class JournalEntryForm extends FormComponent {
 				'options' => [
 					'url' => $temporaryFileApiUrl,
 				],
+			]))
+			->addField(new FieldText('datePublished', [
+				'label' => __('publication.datePublished'),
+				'description' => __('publication.datePublished.description'),
+				'value' => $publication->getData('datePublished'),
+				'size' => 'small',
 			]));
 	}
 }
