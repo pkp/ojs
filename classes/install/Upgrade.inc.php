@@ -2994,4 +2994,52 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * Update how submission cover images are stored
+	 *
+	 * Combines the coverImage and coverImageAltText settings in the
+	 * submissions table into an assoc array stored under the coverImage
+	 * setting.
+	 *
+	 * This will be migrated to the publication_settings table in
+	 * 3.2.0_versioning.xml.
+	 */
+	function migrateSubmissionCoverImages() {
+		$coverImagesBySubmission = [];
+
+		$result = Application::getSubmissionDAO()->retrieve(
+			'SELECT * from submission_settings WHERE setting_name="coverImage" OR setting_name="coverImageAltText"'
+		);
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			if (empty($coverImagesBySubmission[$submissionId])) {
+				$coverImagesBySubmission[$submissionId] = [];
+			}
+			if ($row['setting_name'] === 'coverImage') {
+				$coverImagesBySubmission[$submissionId]['uploadName'] = $row['setting_value'];
+				$coverImagesBySubmission[$submissionId]['dateUploaded'] = Core::getCurrentDate();
+			} elseif ($row['setting_name'] === 'coverImageAltText') {
+				$coverImagesBySubmission[$submissionId]['altText'] = $row['setting_value'];
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		foreach ($coverImagesBySubmission as $submissionId => $coverImagesBySubmission) {
+			Application::getSubmissionDAO()->update(
+				'UPDATE submission_settings
+					SET setting_value = ?
+					WHERE submission_id = ? AND setting_name = ?',
+				[
+					serialize($coverImagesBySubmission),
+					$submissionId,
+					'coverImage',
+				]
+			);
+		}
+
+		return true;
+	}
 }
