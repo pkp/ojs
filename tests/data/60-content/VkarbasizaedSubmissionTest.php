@@ -60,7 +60,7 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 
 		// Publish in current issue
 		$this->publish('1');
-		$this->isInIssue($title, 'Vol 1 No 2 (2014)');
+		$this->isInIssue($title, 'Vol. 1 No. 2 (2014)');
 
 		$this->logOut();
 	}
