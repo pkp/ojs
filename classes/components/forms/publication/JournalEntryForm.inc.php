@@ -77,7 +77,7 @@ class JournalEntryForm extends FormComponent {
 
 		$this->addField(new FieldUploadImage('coverImage', [
 				'label' => __('editor.article.coverImage'),
-				'value' => $publicationContext->getData('coverImage'),
+				'value' => $publication->getData('coverImage'),
 				'isMultilingual' => true,
 				'baseUrl' => $baseUrl,
 				'options' => [

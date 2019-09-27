@@ -180,96 +180,73 @@ class Submission extends PKPSubmission {
 	/**
 	 * Get the localized cover page server-side file name
 	 * @return string
+	 * @deprecated 3.2.0.0
 	 */
 	function getLocalizedCoverImage() {
-		return $this->getLocalizedData('coverImage');
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
+			return '';
+		}
+		$coverImage = $publication->getLocalizedData('coverImage');
+		return empty($coverImage['uploadName']) ? '' : $coverImage['uploadName'];
 	}
 
 	/**
 	 * get cover page server-side file name
 	 * @param $locale string
-	 * @return string|array
+	 * @return string
+	 * @deprecated 3.2.0.0
 	 */
 	function getCoverImage($locale) {
-		return $this->getData('coverImage', $locale);
-	}
-
-	/**
-	 * set cover page server-side file name
-	 * @param $coverImage string
-	 * @param $locale string
-	 */
-	function setCoverImage($coverImage, $locale) {
-		$this->setData('coverImage', $coverImage, $locale);
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
+			return '';
+		}
+		$coverImage = $publication->getData('coverImage', $locale);
+		return empty($coverImage['uploadName']) ? '' : $coverImage['uploadName'];
 	}
 
 	/**
 	 * Get the localized cover page alternate text
 	 * @return string
+	 * @deprecated 3.2.0.0
 	 */
 	function getLocalizedCoverImageAltText() {
-		return $this->getLocalizedData('coverImageAltText');
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
+			return '';
+		}
+		$coverImage = $publication->getLocalizedData('coverImage');
+		return empty($coverImage['altText']) ? '' : $coverImage['altText'];
 	}
 
 	/**
 	 * get cover page alternate text
 	 * @param $locale string
 	 * @return string
+	 * @deprecated 3.2.0.0
 	 */
 	function getCoverImageAltText($locale) {
-		return $this->getData('coverImageAltText', $locale);
-	}
-
-	/**
-	 * set cover page alternate text
-	 * @param $coverImageAltText string
-	 * @param $locale string
-	 */
-	function setCoverImageAltText($coverImageAltText, $locale) {
-		$this->setData('coverImageAltText', $coverImageAltText, $locale);
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
+			return '';
+		}
+		$coverImage = $publication->getData('coverImage', $locale);
+		return empty($coverImage['altText']) ? '' : $coverImage['altText'];
 	}
 
 	/**
 	 * Get a full URL to the localized cover image
 	 *
 	 * @return string
+	 * @deprecated 3.2.0.0
 	 */
 	function getLocalizedCoverImageUrl() {
-		$coverImage = $this->getLocalizedCoverImage();
-		if (!$coverImage) {
+		$publication = $this->getCurrentPublication();
+		if (!$publication) {
 			return '';
 		}
-
-		$request = Application::get()->getRequest();
-
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-
-		return $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($this->getContextId()) . '/' . $coverImage;
-	}
-
-	/**
-	 * Get full URLs all cover images
-	 *
-	 * @return array
-	 */
-	function getCoverImageUrls() {
-		$coverImages = $this->getCoverImage(null);
-		if (empty($coverImages)) {
-			return array();
-		}
-
-		$request = Application::get()->getRequest();
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-
-		$urls = array();
-
-		foreach ($coverImages as $locale => $coverImage) {
-			$urls[$locale] = sprintf('%s/%s/%s', $request->getBaseUrl(), $publicFileManager->getContextFilesPath($this->getJournalId()), $coverImage);
-		}
-
-		return $urls;
+		return $publication->getLocalizedCoverImageUrl($this->getData('contextId'));
 	}
 
 	/**

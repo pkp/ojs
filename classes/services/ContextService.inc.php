@@ -165,7 +165,7 @@ class ContextService extends \PKP\Services\PKPContextService {
 					if (!is_array($errors['serverThumbnail'])) {
 						$errors['serverThumbnail'] = [];
 					}
-					$errors['serverThumbnail'][$localeKey] = [__('manager.setup.noTemporaryFile')];
+					$errors['serverThumbnail'][$localeKey] = [__('common.noTemporaryFile')];
 				}
 			}
 		}

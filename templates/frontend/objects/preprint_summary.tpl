@@ -21,10 +21,14 @@
 {/if}
 
 <div class="obj_article_summary">
-	{if $preprint->getLocalizedCoverImage()}
+	{if $preprint->getCurrentPublication()->getLocalizedData('coverImage')}
 		<div class="cover">
 			<a {if $journal}href="{url journal=$journal->getPath() page="preprint" op="view" path=$preprintPath}"{else}href="{url page="preprint" op="view" path=$preprintPath}"{/if} class="file">
-				<img src="{$preprint->getLocalizedCoverImageUrl()|escape}" alt="{$preprint->getLocalizedCoverImageAltText()|escape|default:'null'}">
+				{assign var="coverImage" value=$preprint->getCurrentPublication()->getLocalizedData('coverImage')}
+				<img
+					src="{$preprint->getCurrentPublication()->getLocalizedCoverImageUrl($preprint->getData('contextId'))|escape}"
+					alt="{$coverImage.altText|escape|default:'null'}"
+				>
 			</a>
 		</div>
 	{/if}

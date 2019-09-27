@@ -221,12 +221,15 @@
 		</div><!-- .main_entry -->
 
 		<div class="entry_details">
-
 			{* Preprint cover image *}
-			{if $preprint->getLocalizedCoverImage()}
+			{if $publication->getLocalizedData('coverImage')}
 				<div class="item cover_image">
 					<div class="sub_item">
-							<img src="{$preprint->getLocalizedCoverImageUrl()|escape}" alt="{$preprint->getLocalizedCoverImageAltText()|escape|default:'null'}">
+							{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
+							<img
+								src="{$publication->getLocalizedCoverImageUrl($preprint->getData('contextId'))|escape}"
+								alt="{$coverImage.altText|escape|default:'null'}"
+							>
 					</div>
 				</div>
 			{/if}

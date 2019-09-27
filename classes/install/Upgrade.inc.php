@@ -57,5 +57,4 @@ class Upgrade extends Installer {
 		$templateMgr->clearCssCache();
 		return true;
 	}
-
 }
