@@ -764,6 +764,6 @@ Submission URL: {$submissionUrl}<br />
 We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Our decision is to: Decline Submission]]></body>
-		<description>This email is sent to the author if the editor declines his submission initially, before the review stage</description>
+		<description>This email is sent to the author if the editor declines their submission initially, before the review stage</description>
 	</email_text>
 </email_texts>
