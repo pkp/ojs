@@ -125,6 +125,12 @@ class JournalEntryForm extends FormComponent {
 			->addField(new FieldText('pages', [
 				'label' => __('editor.issues.pages'),
 				'value' => $publication->getData('pages'),
+			]))
+			->addField(new FieldText('datePublished', [
+				'label' => __('publication.datePublished'),
+				'description' => __('publication.datePublished.description'),
+				'value' => $publication->getData('datePublished'),
+				'size' => 'small',
 			]));
 	}
 }

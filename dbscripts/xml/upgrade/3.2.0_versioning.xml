@@ -15,6 +15,10 @@
 
 <data>
 	<sql>
+		<!-- change date_published from datetime to date before migrating -->
+		<query>
+			ALTER TABLE temp_published_submissions MODIFY COLUMN date_published date NULL
+		</query>
 		<!-- migrate data to new publications table -->
 		<query>
 			INSERT INTO publications (access_status, date_published, last_modified, locale, section_id, submission_id, status)
