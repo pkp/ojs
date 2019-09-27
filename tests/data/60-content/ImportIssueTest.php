@@ -33,7 +33,7 @@ class ImportIssueTest extends ContentBaseTestCase {
 		$this->click('//form[@id=\'importXmlForm\']//button[starts-with(@id,\'submitFormButton-\')]');
 
 		// Ensure that the import was listed as completed.
-		$this->waitForElementPresent('//*[contains(text(),\'The import completed successfully.\')]//li[contains(text(),\'Vol 1 No 1\')]');
+		$this->waitForElementPresent('//*[contains(text(),\'The import completed successfully.\')]//li[contains(text(),\'Vol. 1 No. 1\')]');
 
 		$this->logOut();
 	}
