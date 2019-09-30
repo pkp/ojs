@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:34-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Plugin de Exportação/Registro mEDRA"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Exporta metadados de edições, artigos e composições finais no formato Onix para DOI (O4DOI) e registra DOIs na agência de registro mEDRA."
+
+msgid "plugins.importexport.medra.intro"
+msgstr "Caso deseje registrar DOIs no mEDRA, siga as instruções na <a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">página do mEDRA</a> para receber seu login e senha. Mesmo que não possua dados próprios de login e senha, ainda assim será possível exportar os dados para o formato mEDRA XML (Onix para DOI), porém não poderá registrar seus DOIs no mEDRA por meio do OJS. Note que a senha será salva como texto puro, isto é, não encriptada, devido aos requisitos do serviço de registro mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Configure o plugin de exportação mEDRA:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Login"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Informe seu login mEDRA. O login não pode conter dois pontos (:)"
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Instituição registerada no mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Informe o nome da instituição registrada no mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Quem o mEDRA contactará em caso de dúvidas técnicas:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Instituição"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Informe o nome do técnico responsável pela exportação DOI (instituição de hospedagem, por exemplo)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Contato técnico"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Informe o nome do técnico responsável."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-mail"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Informe um endereço de e-mail válido."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Escolha o país a ser informado como 'país de publicação' para o mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Escolha se deseja exportar edições como <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'trabalhos' ou 'manifestações'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "trabalho"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestação"
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: DOIs designados a artigos serão exportados para o mEDRA como <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'trabalhos'</a>. DOIs designados a composições publicadas serão exportadas como <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestações'</a>."
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Exportar edições como"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS depositará DOIs automaticamente no mEDRA. Por favor note que isso pode levar um tempo depois da publicação. Você pode verificar os DOIs não registrados."

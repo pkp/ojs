@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:53-07:00\n"
+"Language: \n"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em \"Comentários ao editor\"."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "O arquivo da submissão está em formato Microsoft Word, OpenOffice ou RTF."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "O texto está em espaço simples; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (exceto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Diretrizes para Autores</a>, na página Sobre a Revista."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Os nomes e endereços informados nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento."
+
+msgid "section.default.title"
+msgstr "Artigos"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "Política padrão de seção"
+
+msgid "default.genres.article"
+msgstr "Texto do artigo"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivos distribuídos entre bibliotecas participantes e permite que tais bibliotecas mantenham cópias permanentes da revista para propósitos de preservação e recuperação. <a href=\"http://clockss.org/\">Saiba mais...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Gerente da revista"
+
+msgid "default.groups.plural.manager"
+msgstr "Gerentes da revista"
+
+msgid "default.groups.abbrev.manager"
+msgstr "GR"
+
+msgid "default.groups.name.editor"
+msgstr "Editor da revista"
+
+msgid "default.groups.plural.editor"
+msgstr "Editores da revista"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ER"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor convidado"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editores convidados"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "EConv"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor de seção"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editor de seção"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ESeç"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Gerente de assinatura"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Gerentes de assinatura"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "GAssin"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumento de pesquisa"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiais de pesquisa"
+
+msgid "default.genres.researchResults"
+msgstr "Resultados de pesquisa"
+
+msgid "default.genres.transcripts"
+msgstr "Transcrições"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Análise de dados"
+
+msgid "default.genres.dataSet"
+msgstr "Conjunto de dados"
+
+msgid "default.genres.sourceTexts"
+msgstr "Textos fonte"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Avaliador"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Avaliadores"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "A"

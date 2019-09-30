@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:34-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Exportação para DOAJ"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Exportar revista para o DOAJ, incluindo dados da revista para inclusão."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Solicitar inclusão ao DOAJ"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""
