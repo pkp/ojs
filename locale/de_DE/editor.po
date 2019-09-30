@@ -1,0 +1,420 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Startseite der Redakteurin/des Redakteurs"
+
+msgid "editor.reassign"
+msgstr "Wieder zuweisen"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Beiträge und Veröffentlichungen"
+
+msgid "editor.submissionQueue"
+msgstr "Liste der Beiträge"
+
+msgid "editor.submissionArchive"
+msgstr "Beitragsarchiv"
+
+msgid "editor.publishing"
+msgstr "Veröffentlichungen"
+
+msgid "editor.publishedIssues"
+msgstr "Veröffentlichte Ausgaben"
+
+msgid "editor.allSections"
+msgstr "Alle Rubriken"
+
+msgid "editor.allEditors"
+msgstr "Alle Redakteur/innen"
+
+msgid "editor.me"
+msgstr "Ich"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Kein Beitrag im Archiv"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Sind Sie sicher, dass Sie diesen Beitrag endgültig löschen wollen?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Sind Sie sicher, dass Sie diese Entscheidung protokollieren wollen?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Dieser Beitrag wird archiviert, nachdem die Benachrichtigungs-E-Mail an die Autorin/den Autor entweder versendet wurde oder nachdem \"E-Mail überspringen\" angeklickt wurde."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den ‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung zu informieren, und wählen Sie die zu überweisende Version aus."
+
+msgid "editor.notifyUsers"
+msgstr "Benutzer/innen benachrichtigen"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Alle Leser/innen ({$count} Nutzer/innen)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Alle veröffentlichten Autor/innen ({$count} Nutzer/innen)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Alle individuellen Abonnent/innen ({$count} Nutzer/innen)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Alle institutionellen Abonnent/innen ({$count} Nutzer/innen)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Benutzer/innen werden benachrichtigt…"
+
+msgid "editor.usersNotified"
+msgstr "Benutzer/innen benachrichtigt"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Mitteilung an alle Benutzer/innen senden, die angegeben haben, dass Sie auf dem Laufenden gehalten werden wollen ({$count} Benutzer/innen)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Das Inhaltsverzeichnis dieser Ausgabe anfügen:"
+
+msgid "editor.editorAdministration"
+msgstr "Redaktionsaufgaben"
+
+msgid "editor.issues.createIssue"
+msgstr "Ausgabe erstellen"
+
+msgid "editor.issues.editIssue"
+msgstr "Ausgabenverwaltung: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Aktuelle Ausgabe"
+
+msgid "editor.issues.numArticles"
+msgstr "Zahl der Beiträge"
+
+msgid "editor.issues.noArticles"
+msgstr "Zur Zeit kein Beitrag zur Veröffentlichung in dieser Ausgabe vorgesehen"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Sind Sie sicher, dass Sie diese Ausgabe endgültig löschen wollen?"
+
+msgid "editor.issues.published"
+msgstr "Veröffentlicht"
+
+msgid "editor.issues.unpublished"
+msgstr "Unveröffentlicht"
+
+msgid "editor.issues.datePublished"
+msgstr "Veröffentlichungsdatum"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Die Angabe \"Band\" (als positive ganze Zahl) ist erforderlich."
+
+msgid "editor.issues.numberRequired"
+msgstr "Die Angabe \"Nummer\" (als positive ganze Zahl) ist erforderlich."
+
+msgid "editor.issues.yearRequired"
+msgstr "Die Angabe \"Jahr\" (als positive ganze Zahl) ist erforderlich."
+
+msgid "editor.issues.titleRequired"
+msgstr "Die Angabe \"Titel\" ist erforderlich."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Eine Kennzeichnung der Ausgabe ist erforderlich. Bitte wählen Sie zumindest eine der Optionen zur Ausgabenkennzeichnung aus."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Ausgabenkennzeichnung"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Öffentliche Ausgabenkennzeichnung"
+
+msgid "editor.issues.description"
+msgstr "Beschreibung"
+
+msgid "editor.issues.accessStatus"
+msgstr "Zugangsstatus"
+
+msgid "editor.issues.accessDate"
+msgstr "Datum für freien Zugang"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Verzögerten freien Zugang aktivieren"
+
+msgid "editor.issues.coverPage"
+msgstr "Titelbild"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Gültige Formate: .gif, .jpg und .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Hochgeladen"
+
+msgid "editor.issues.remove"
+msgstr "Entfernen"
+
+msgid "editor.issues.proofed"
+msgstr "Überprüft"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Titelbild entfernen?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Das Titelbild, das Sie löschen wollten, stimmt nicht mit dem Titelbild dieser Ausgabe überein. Bitte laden Sie die Seite neu und versuchen Sie es erneut."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Ungültiges Titelseitenformat. Zulässige Formate sind .gif, .jpg oder .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Formatvorlage"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Format der Formatvorlage ungültig. Vergewissern Sie sich, dass die hochgeladene Datei eine gültige .css-Datei ist. (Beachten Sie, dass Formatvorlagen mit Eingangskommentaren abgelehnt werden können.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Formatvorlage entfernen?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Überschrift auf der Titelseite"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Erstellen Sie für diese Ausgabe eine Titelseite mit den folgenden Bestandteilen:"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Anzeigen"
+
+msgid "editor.issues.openAccess"
+msgstr "Freier Zugang (Open Access)"
+
+msgid "editor.issues.subscription"
+msgstr "Abonnement"
+
+msgid "editor.issues.identification"
+msgstr "Identifizierung"
+
+msgid "editor.issues.access"
+msgstr "Zugang"
+
+msgid "editor.issues.cover"
+msgstr "Titelseite"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Sind Sie sicher, dass Sie diese Ausgabe entfernen wollen? Alle Beiträge gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden Beiträge und alle Zusatzdateien werden endgültig gelöscht."
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Diese Ausgabe hat eine spezielle Rubrikreihenfolge. <a href=\"{$url}\" class=\"action\">Auf den Standard zurücksetzen</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Diese Zeitschrift benutzt eine spezielle Ausgabensortierung. <a href=\"{$url}\" class=\"action\">Standard wiederherstellen</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Daten der Ausgabe"
+
+msgid "editor.issues.saveChanges"
+msgstr "Änderungen im Inhaltsverzeichnis speichern?"
+
+msgid "editor.issues.default"
+msgstr "Standard"
+
+msgid "editor.issues.order"
+msgstr "Reihenfolge"
+
+msgid "editor.issues.publicId"
+msgstr "Öffentliche Kennzeichnung"
+
+msgid "editor.issues.publishIssue"
+msgstr "Ausgabe veröffentlichen"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Ausgabe zurückziehen"
+
+msgid "editor.issues.previewIssue"
+msgstr "Voransicht der Ausgabe"
+
+msgid "editor.issues.preview"
+msgstr "(Voransicht)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Sind Sie sicher, dass Sie die neue Ausgabe veröffentlichen wollen?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Sind sie sicher, dass Sie diese bereits veröffentlichte Ausgabe zurückziehen wollen?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Sind Sie sicher, dass Sie diese Ausgabe als aktuelle Ausgabe festlegen möchten?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Die öffentliche Kennzeichnung für den folgenden Beitrag konnte nicht gespeichert werden:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Keine aktuelle Ausgabe"
+
+msgid "editor.issues.open"
+msgstr "Offen"
+
+msgid "editor.issues.pages"
+msgstr "Seiten"
+
+msgid "editor.issues.galleys"
+msgstr "Ausgabenfahnen"
+
+msgid "editor.issues.galley"
+msgstr "Ausgabenfahne"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Ausgabenfahne ansehen"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Fahnen mit dem Inhalt der gesamten Ausgabe veröffentlichen."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Es wurden keine Ausgabenfahnen veröffentlicht."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Eine Kennung für die Ausgabenfahne wird benötigt."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Eine Regionaleinstellung für die Ausgabenfahne wird benötigt."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Die öffentliche Kennung der Ausgabenfahne existiert bereits."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Zurück zu den Ausgabenfahnen"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifier"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Zukünftige Ausgaben"
+
+msgid "grid.action.addGalley"
+msgstr "Fahne hinzufügen"
+
+msgid "grid.action.publish"
+msgstr "Ausgabe veröffentlichen"
+
+msgid "grid.action.addIssue"
+msgstr "Ausgabe anlegen"
+
+msgid "grid.action.viewIssue"
+msgstr "Ansehen"
+
+msgid "grid.action.previewIssue"
+msgstr "Preview"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Ausgabenfahne anlegen"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Aktuelle Ausgabe festlegen"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Frühere Ausgaben"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Die ursprüngliche Datei zur Begutachtungsversion machen"
+
+msgid "editor.article.decision"
+msgstr "Entscheidung"
+
+msgid "editor.submissions.showBy"
+msgstr "Anzeigen zum"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Einreichen MM-TT"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktuelle Aufgaben"
+
+msgid "editor.submissions.invite"
+msgstr "Einladen"
+
+msgid "editor.submissions.accept"
+msgstr "Annehmen"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Keine Beiträge"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Zuletzt"
+
+msgid "editor.submissions.averageTime"
+msgstr "Wochen"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Zuletzt fertiggestellt"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Zugeteilt an"
+
+msgid "editor.submissions.inSection"
+msgstr "In Rubrik"
+
+msgid "editor.article.schedulePublication"
+msgstr "Zur Veröffentlichung vorsehen"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Zur Veröffentlichung vorsehen in"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Muss noch zugewiesen werden"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Die Veröffentlichungsgebühr für diesen Artikel wurde noch nicht bezahlt. Sie können den Artikel zur Veröffentlichung einplanen, sobald die Gebühr bezahlt ist."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden."
+
+msgid "grid.action.removeArticle"
+msgstr "Artikel aus der Ausgabe entfernen"
+
+msgid "editor.article.remove"
+msgstr "Entfernen"
+
+msgid "editor.article.remove.confirm"
+msgstr "Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? Der Artikel kann danach für eine andere Ausgabe eingeplant werden."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Zugangsdatum ungültig."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Ausgabenfahne bearbeiten"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Der oder die Layouter/in bereitet diese Dateien für jede Fahne vor und lädt sie dann zu den zugehörigen <span class=\"pkp_help_title\">Korrektur</span> zum Korrekturlesen hoch."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Fahnendateien auswählen"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Endgültige Entwurfsdateien in dieser Liste werden durch eine/n Lektor/in in lektorierte Versionen umgewandelt und unter <span class=\"pkp_help_title\">Lektorat</span> hochgeladen."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Alle Dateien, die bisher zu irgendeiner Phase der Einreichung hochgeladen worden sind, können zur Korrekturliste hinzugefügt werden, indem die Auswahlbox unten angeklickt wird und auf Suchen geklickt wird: Alle verfügbaren Dateien werden aufgelistet und können ausgewählt werden."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Die öffentliche Kennung '{$publicIdentifier}' wird bereits für ein Objekt des selben Typs verwendet. Bitte wählen Sie innerhalb Ihrer Zeitschrift eindeutige Kennungen für Objekte gleichen Typs."
+
+msgid "editor.article.coverImage"
+msgstr "Titelbild"

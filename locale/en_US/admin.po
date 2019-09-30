@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:38-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:38-07:00\n"
+"Language: \n"
+
+msgid "admin.hostedJournals"
+msgstr "Hosted Journals"
+
+msgid "admin.settings.appearance.success"
+msgstr "The site appearance settings have been successfully updated."
+
+msgid "admin.settings.config.success"
+msgstr "The site configuration settings have been successfully updated."
+
+msgid "admin.settings.info.success"
+msgstr "The site information has been successfully updated."
+
+msgid "admin.settings.journalRedirect"
+msgstr "Journal redirect"
+
+msgid "admin.settings.journalRedirectInstructions"
+msgstr "Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tYour OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.\n"
+"\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank\n"
+"\t\tsearch results. Please select one of the configured metrics as a default.\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr "Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Your server does not have or allow execution of the GNU \"tar\" utility.</li>\n"
+"\t\t<li>OJS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Language packs can be manually downloaded from the <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "This will be the default language for the site and any hosted journals."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Marked locales may be incomplete."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Are you sure you want to uninstall this locale? This may affect any hosted journals currently using the locale."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages."
+
+msgid "admin.languages.downloadFailed"
+msgstr "The locale download failed. The error message(s) below describe the failure."
+
+msgid "admin.languages.localeInstalled"
+msgstr "The \"{$locale}\" locale has been installed."
+
+msgid "admin.languages.download"
+msgstr "Download Locale"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Cannot open language descriptor from PKP web site."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Cannot add the new locale to the locale registry file, typically \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS User Database"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within OJS and to use the OJS \"lost password\" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Enable user creation (if supported by this authentication plugin). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source."
+
+msgid "admin.systemVersion"
+msgstr "OJS Version"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS Configuration"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS configuration settings from <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup."
+
+msgid "admin.journals.journalSettings"
+msgstr "Journal Settings"
+
+msgid "admin.journals.noneCreated"
+msgstr "No journals have been created."
+
+msgid "admin.contexts.create"
+msgstr "Create Journal"
+
+msgid "admin.journals.urlWillBe"
+msgstr "This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "A title is required."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "A path is required."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "The path can only include letters, numbers and the characters _ and -. It must begin and end with a letter or number."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "The path you provided is already in use by another journal."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} was created successfully."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} was edited successfully."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Enable this journal to appear publicly on the site"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Journal description"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Existing journal path or path to create (e.g., \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Import subscriptions"
+
+msgid "admin.journals.transcode"
+msgstr "Transcode article metadata from ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generate code to map OJS 1 URLs to OJS 2 URLs"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "The import path is required."
+
+msgid "admin.journals.importErrors"
+msgstr "Importing failed to complete successfully"
+
+msgid "admin.mergeUsers"
+msgstr "Merge Users"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Merge User"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Select a user to whom to attribute the previous user's authorships, editing assignments, etc."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "All Enrolled Users"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username \"{$newUsername}\"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "No enrolled users."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Subscription Expiry Reminder"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open Access Notification"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Review Reminder"

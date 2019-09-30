@@ -1,0 +1,441 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:40-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:40-07:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Page d'accueil du rédacteur"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Soumissions et publication"
+
+msgid "editor.submissionQueue"
+msgstr "Soumission en attente"
+
+msgid "editor.submissionArchive"
+msgstr "Archives des soumissions"
+
+msgid "editor.publishing"
+msgstr "Publication"
+
+msgid "editor.publishedIssues"
+msgstr "Numéros publiés"
+
+msgid "editor.allSections"
+msgstr "Toutes les rubriques"
+
+msgid "editor.allEditors"
+msgstr "Tous les rédacteurs"
+
+msgid "editor.me"
+msgstr "Moi"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Aucune soumission dans les archives."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Enregistrer les modifications aux soumissions archivées? Les soumissions sélectionnées pour suppression seront supprimées du système de façon permanente."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Êtes-vous certain de vouloir supprimer définitivement cette soumission?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Êtes-vous certain de vouloir enregistrer cette décision?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Cette soumission sera archivée après l'envoi du courriel \"Avis à l'auteur\", ou après avoir décliné l'envoi de ce courriel."
+
+msgid "editor.notifyUsers"
+msgstr "Informer les utilisateurs"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Aviser les utilisateurs..."
+
+msgid "editor.usersNotified"
+msgstr "Utilisateurs avisés"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Envoyer ce message à tous les utilisateurs associés à cette revue ({$count} utilisateurs)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Envoyer ce message aux utilisateurs associés à cette revue qui ont indiqué qu'ils désirent recevoir les mises à jour ({$count} utilisateurs)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Inclure le sommaire de ce numéro :"
+
+msgid "editor.editorAdministration"
+msgstr "Administration du rédacteur"
+
+msgid "editor.issues.createIssue"
+msgstr "Créer un numéro"
+
+msgid "editor.issues.currentIssue"
+msgstr "Numéro courant"
+
+msgid "editor.issues.numArticles"
+msgstr "Articles"
+
+msgid "editor.issues.noArticles"
+msgstr "Aucun article n'est actuellement planifié pour ce numéro."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Êtes-vous certain de vouloir supprimer définitivement ce numéro?"
+
+msgid "editor.issues.published"
+msgstr "Publié"
+
+msgid "editor.issues.unpublished"
+msgstr "Non publié"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Le volume est obligatoire et doit être une valeur numérique positive."
+
+msgid "editor.issues.numberRequired"
+msgstr "Le numéro est obligatoire et doit être une valeur numérique positive."
+
+msgid "editor.issues.yearRequired"
+msgstr "L'année est obligatoire et doit être une valeur numérique positive."
+
+msgid "editor.issues.titleRequired"
+msgstr "Le titre du numéro de la revue est obligatoire."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "L'identification du numéro de la revue est obligatoire. Veuillez sélectionner au moins l'une des options d'identification du numéro."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Numéro d'identification"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Numéro d'identification publique"
+
+msgid "editor.issues.description"
+msgstr "Description"
+
+msgid "editor.issues.accessStatus"
+msgstr "Statut d'accès"
+
+msgid "editor.issues.accessDate"
+msgstr "Date d'accès libre"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "La date d'accès n'est pas valide."
+
+msgid "editor.issues.coverPage"
+msgstr "Image de la page couverture"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formats acceptés : .gif, .jpg, ou .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Téléchargé"
+
+msgid "editor.issues.remove"
+msgstr "Supprimer"
+
+msgid "editor.issues.proofed"
+msgstr "Révisé"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Supprimer l'image de la page couverture?"
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, ou .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Feuille de style"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Le format de la feuille de style n'est pas valide. Assurez-vous que le fichier soumis soit une CSS valide. (Noter que les feuilles de style commencant par des commentaires peuvent être rejetées.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Supprimer la feuille de style?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Légende de la page couverture"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Créer une couverture pour ce numéro avec les éléments suivants."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Afficher"
+
+msgid "editor.issues.hideCoverPageArchives"
+msgstr "Ne pas afficher l'imagette de la page couverture dans la liste des numéros."
+
+msgid "editor.issues.hideCoverPageCover"
+msgstr "Ne pas afficher l'image de la page couverture avant le sommaire."
+
+msgid "editor.issues.openAccess"
+msgstr "Accès libre"
+
+msgid "editor.issues.subscription"
+msgstr "Abonnement"
+
+msgid "editor.issues.identification"
+msgstr "Identification"
+
+msgid "editor.issues.access"
+msgstr "Accès"
+
+msgid "editor.issues.cover"
+msgstr "Page couverture"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Tous les articles seront retournés dans la file d'attente d'évaluation et tous les fichiers associés seront supprimés définitivement. Voulez-vous vraiment supprimer ce numéro?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Cette revue utilise un classement de numéro personnalisé. <a href=\"{$url}\" class=\"action\">Réinitialiser les valeurs par défaut</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Ce numéro utilise un classement de rubrique personnalisé. <a href=\"{$url}\" class=\"action\">Réinitialiser les valeurs par défaut</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Données du numéro"
+
+msgid "editor.issues.saveChanges"
+msgstr "Enregistrer les modifications à la table des matières?"
+
+msgid "editor.issues.default"
+msgstr "Par défaut"
+
+msgid "editor.issues.order"
+msgstr "Classer"
+
+msgid "editor.issues.publicId"
+msgstr "Identifiant public"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publier le numéro"
+
+msgid "editor.issues.previewIssue"
+msgstr "Prévisualiser le numéro"
+
+msgid "editor.issues.preview"
+msgstr "(Prévisualiser)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Êtes-vous certain de vouloir publier le nouveau numéro?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Impossible d'enregistrer l'identifiant public pour cet article :"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Aucun numéro en ligne"
+
+msgid "editor.issues.open"
+msgstr "Ouvert"
+
+msgid "editor.issues.pages"
+msgstr "Pages"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Numéros à venir"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Numéros précédents"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Désigner le fichier original comme le fichier d'évaluation"
+
+msgid "editor.article.decision"
+msgstr "Décision"
+
+msgid "editor.article.decision.resubmit"
+msgstr "Soumettre à nouveau pour évaluation"
+
+msgid "editor.submissions.showBy"
+msgstr "Montrer par"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Soumettre MM JJ"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Assignations en cours"
+
+msgid "editor.submissions.invite"
+msgstr "Inviter"
+
+msgid "editor.submissions.accept"
+msgstr "Accepter"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Aucune soumission"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Dernière"
+
+msgid "editor.submissions.averageTime"
+msgstr "Semaines"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Dernière complétée"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Assigné à"
+
+msgid "editor.submissions.inSection"
+msgstr "Dans la rubrique"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Publication planifié en"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "À assigner"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Frais de publication non payés. Pour planifier la publication d'un article, aviser l'auteur qu'il doit payer les frais ou demander une dérogation."
+
+msgid "editor.article.showCoverPage"
+msgstr "Créer une page couverture pour cet article avec les éléments suivants."
+
+msgid "editor.article.hideCoverPageToc"
+msgstr "Ne pas afficher l'imagette de la page couverture dans le sommaire."
+
+msgid "editor.article.hideCoverPageAbstract"
+msgstr "Ne pas afficher l'image de la page couverture lors de l'affichage du résumé de l'article."
+
+msgid "editor.article.remove"
+msgstr "Supprimer"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Activer l'accès libre différé"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Dépublier le numéro"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Êtes-vous certain que vous souhaitez retirer ce numéro publié?"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Avant d'envoyer une soumission en Révision, utiliser le lien \"Aviser l'auteur\" pour informer l'auteur de la décision et sélectionner la version à envoyer."
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Tous les lecteurs ({$count} utilisateurs)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Tous les auteurs publiés ({$count} utilisateurs)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Tous les abonnés individuels ({$count} utilisateurs)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Tous les abonnés institutionnels ({$count} utilisateurs)"
+
+msgid "editor.reassign"
+msgstr "Réassigner"
+
+msgid "editor.publicIdentificationExists"
+msgstr "L'identifiant public '{$publicIdentifier}' existe déjà pour un autre objet (numéro, article, épreuves ou fichier complémentaire). Veuillez choisir des identifiants uniques au sein de votre revue."
+
+msgid "editor.issues.galleys"
+msgstr "Épreuves du numéro"
+
+msgid "editor.issues.galley"
+msgstr "Épreuves du numéro"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Voir les épreuves du numéro"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publier les épreuves de l'ensemble du numéro."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Les épreuves du numéro n'ont pas été publiées."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Veuillez attribuer une étiquette aux épreuves du numéro."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Veuillez préciser la langue utilisée dans les épreuves du numéro."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "L'identifiant du numéro de l'épreuve publié existe déjà."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Retourner aux épreuves du numéro"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Voulez-vous vraiment supprimer les épreuves de ce numéro?"
+
+msgid "editor.issues.editIssue"
+msgstr "Gestion de numéro: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Date de publication"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "L'image de la page couverture à supprimer ne correspond pas à l'image de ce numéro. Veuillez recharger la page et essayer de nouveau."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "L'image de la page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà détruite. Essayer de recharger la page."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, et .png."
+
+msgid "editor.issues.identifiers"
+msgstr "Identifiants"
+
+msgid "grid.action.addGalley"
+msgstr "Ajouter une épreuve"
+
+msgid "grid.action.publish"
+msgstr "Publier le numéro"
+
+msgid "grid.action.addIssue"
+msgstr "Créer un numéro"
+
+msgid "grid.action.viewIssue"
+msgstr "Voir"
+
+msgid "grid.action.previewIssue"
+msgstr "Aperçu"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Créer une épreuve pour le numéro"
+
+msgid "editor.article.schedulePublication"
+msgstr "Calendrier de publication"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà supprimée. Essayer de recharger la page."
+
+msgid "grid.action.removeArticle"
+msgstr "Retirer l'article du numéro"
+
+msgid "editor.article.remove.confirm"
+msgstr "Êtes-vous certain de vouloir retirer cet article de ce numéro? L'article restera disponible pour un autre numéro."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Éditer les épreuves du numéro"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Le responsable de la mise en page prépare les fichiers de chaque épreuve et les téléverse dans le dossier <span class=\"pkp_help_title\">Épreuves</span> approprié pour fins de vérification."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Sélectionner les fichiers d'épreuves"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Les versions finales sur cette liste sont transformées par un Réviseur en versions révisées, téléversées dans <span class = \"pkp_help_title\">Révision</ span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case \"Inclure\" ci-dessous et en cliquant sur \"Rechercher\". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue."
+
+msgid "editor.article.coverImage"
+msgstr "Image de la page couverture"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Êtes-vous certain de vouloir définir ce numéro comme étant le dernier numéro?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Paramétrer le dernier numéro"

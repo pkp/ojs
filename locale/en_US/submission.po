@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:07:35-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:07:35-07:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Submit an Article"
+
+msgid "submission.submit.userGroup"
+msgstr "Submit in my role as..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Choose the capacity under which you are submitting this article."
+
+msgid "submission.upload.selectComponent"
+msgstr "Select article component"
+
+msgid "submission.title"
+msgstr "Article Title"
+
+msgid "submission.title.tip"
+msgstr "The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Start a New Submission in"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "New Submission"
+
+msgid "grid.action.workflow"
+msgstr "Submission Workflow"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "The abstract must be {$wordCount} words or less."
+
+msgid "submission.submit.noContext"
+msgstr "This submission's journal could not be found."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr "The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galley appears in issue entry"
+
+msgid "grid.action.issueEntry"
+msgstr "View this submission's metadata"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "The article galley \"{$galleyFormatName}\" is made available."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "The article galley \"{$galleyFormatName}\" is made unavailable."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "The submission's public identifiers updated."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Format Approval"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>This galley will <em>no longer be made available</em> to readers.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>This galley will <em>be made available</em> to readers.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Make this galley available"
+
+msgid "submission.galleyFiles"
+msgstr "Galley Files"
+
+msgid "submission.proofReadingDescription"
+msgstr "The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign Auditor</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication."
+
+msgid "grid.action.approveProof"
+msgstr "Approve this proof for inclusion in the galley."
+
+msgid "grid.action.pageProofApproved"
+msgstr "This proof has been approved for inclusion in the galley."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Title and Abstract"
+
+msgid "submission.submit.upload.description"
+msgstr "Upload files associated with this submission, including the article, multimedia, data sets, artwork, etc."
+
+msgid "submission.pageProofs"
+msgstr "Proofreading"
+
+msgid "submission.confirmSubmit"
+msgstr "Are you sure you wish to submit this article to the journal?"
+
+msgid "workflow.review.externalReview"
+msgstr "Review"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Send to Review"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "The submission's issue metadata was updated."
+
+msgid "submission.upload.fileContents"
+msgstr "Article Component"
+
+msgid "submission.complete"
+msgstr "Approved"
+
+msgid "submission.incomplete"
+msgstr "Awaiting Approval"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Please select a submission language."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Submission Checklist"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "You must read and acknowledge that you've completed the requirements below before proceeding."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Privacy Statement"
+
+msgid "submission.submit.contributorRole"
+msgstr "Contributor's role"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "At least one author is required."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "The first name, last name, and email address of each author is required."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Please enter the title of your article."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Please enter your article's abstract."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Your abstract is too long. Please shorten it to below the word limit indicated for this section."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Please select the contributor's role."
+
+msgid "submission.citationFormat.notFound"
+msgstr "The requested citation format could not be retrieved."
+
+msgid "submission.metadataDescription"
+msgstr "These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content."
+
+msgid "section.any"
+msgstr "Any Section"
+
+msgid "submission.sectionOptions"
+msgstr "Section Options"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Items"
+
+msgid "catalog.category.heading"
+msgstr "All Items"
+
+msgid "galley.editPublishedDisabled"
+msgstr "The galleys of this publication can not be edited because it has already been published."
+
+msgid "galley.publicationNotFound"
+msgstr "The publication for this galley could not be found."
+
+msgid "publication.datePublished.description"
+msgstr "The publication date will be set automatically when the issue is published. Do not enter a publication date unless the article was previously published elsewhere and you need to backdate it."
+
+msgid "publication.invalidSection"
+msgstr "The section for this publication could not be found."
+
+msgid "publication.invalidIssue"
+msgstr "The issue for this publication could not be found."
+
+msgid "publication.journalEntry"
+msgstr "Journal Entry"
+
+msgid "publication.journalEntry.success"
+msgstr "The journal entry details have been updated."
+
+msgid "publication.required.issue"
+msgstr "The publication must be assigned to an issue before it can be published."
+
+msgid "publication.publishedIn"
+msgstr "Published in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Scheduled for publication in <a href=\"{$issueUrl}\">{$issueName}</a>."

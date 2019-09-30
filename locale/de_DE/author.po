@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Neuer Beitrag"
+
+msgid "author.track"
+msgstr "Beiträge im Begutachtungsverfahren"
+
+msgid "author.competingInterests"
+msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Richtlinie</a> für Interessenkonflikte"
+
+msgid "author.submit.submitArticle"
+msgstr "Einen Artikel einreichen"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Fünf Schritte zur Einreichung"
+
+msgid "author.submit.startHereTitle"
+msgstr "Beginnen Sie eine neue Einreichung"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Hier anklicken</a>, um zu Schritt 1 des Einreichungsverfahrens zu gelangen."
+
+msgid "author.submit.step1"
+msgstr "Schritt 1. Einreichung beginnen"
+
+msgid "author.submit.step2"
+msgstr "Schritt 2. Beitrag hochladen"
+
+msgid "author.submit.step3"
+msgstr "Schritt 3. Metadaten des Beitrags eingeben"
+
+msgid "author.submit.step4"
+msgstr "Schritt 4. Zusatzdateien hochladen"
+
+msgid "author.submit.step4a"
+msgstr "Schritt 4a. Zusatzdatei hinzufügen"
+
+msgid "author.submit.step5"
+msgstr "Schritt 5. Einreichung bestätigen"
+
+msgid "author.submit.start"
+msgstr "Beginn"
+
+msgid "author.submit.upload"
+msgstr "Beitrag hochladen"
+
+msgid "author.submit.metadata"
+msgstr "Metadaten eingeben"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Zusatzdateien hochladen"
+
+msgid "author.submit.confirmation"
+msgstr "Bestätigung"
+
+msgid "author.submit.nextSteps"
+msgstr "Nächste Schritte"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Sie können die Einreichung auch später fertigstellen, indem Sie \"Aktuelle Beiträge\" auf der Autor/innenstartseite auswählen."
+
+msgid "author.submit.notAccepting"
+msgstr "Die Zeitschrift nimmt zur Zeit keine Beiträge an."
+
+msgid "author.submit.requestWaiver"
+msgstr "Gebührenverzicht beantragen"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen Artikel in Erwägung."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Nutzen Sie bitte das nachfolgende Kommentarfeld, um zu erklären, warum von einer Gebühr abgesehen werden soll."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Geben Sie bitte an, warum Sie einen Nachlass gewährt haben wollen."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "In Begutachtungsrunde {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "In Begutachtung: Überarbeitungen erforderlich"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "In redaktioneller Bearbeitung: Lektorat angefragt"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "In redaktioneller Bearbeitung: Korrekturlektorat angefragt"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Lektorierte Datei hochladen"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korrekturen des Korrekturlektorats"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Sind Sie sicher, dass Sie diese unvollständige Einreichung löschen wollen?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Status anzeigen"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Keine Eingaben"
+
+msgid "author.submit.journalSection"
+msgstr "Zeitschriftenrubrik"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Artikel müssen in einer der Rubriken der Zeitschrift eingereicht werden."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren."
+
+msgid "submission.submit.coverNote"
+msgstr "Kommentare für die Redaktion"
+
+msgid "author.submit.comments"
+msgstr "Text eingeben (optional)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Wählen Sie eine passende Rubrik für diesen Beitrag aus."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Bitte wählen Sie eine Beitragssprache."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Erklärung zum Schutz persönlicher Daten in dieser Zeitschrift"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Gruppieren Sie die Autor/innen um, so dass sie in der Reihenfolge stehen, in der sie in der Veröffentlichung auftauchen werden."
+
+msgid "author.submit.reorder"
+msgstr "Autor/innennamen umordnen"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Hauptkontakt für die redaktionelle Korrespondenz"
+
+msgid "author.submit.addAuthor"
+msgstr "Autor/in hinzufügen"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Autor/in löschen"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Stellen Sie Begriffe für die Indizierung des Beitrags zusammen; trennen Sie diese Begriffe durch ein Semikolon (Begriff1; Begriff2; Begriff3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Bezieht sich auf den räumlich-geographischen sowie den zeitlichen Bereich und auf die Eigenschaften des Forschungsgegenstandes."
+
+msgid "author.submit.languageInstructions"
+msgstr "deutsch=de; englisch=en; französisch=fr; spanisch=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">zusätzliche Kodierungen</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Es muss mindestens ein/e Autor/in angegeben werden."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Vorname, Name und E-Mail-Adresse für jede/n Autor/in erforderlich"
+
+msgid "author.submit.form.titleRequired"
+msgstr "Bitte den Titel Ihres Artikels eingeben"
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Geben Sie bitte ein Abstract Ihres Artikels ein."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Sie haben die maximale Länge für Abstracts in dieser Rubrik überschritten."
+
+msgid "author.submit.submissionFile"
+msgstr "Beitragsdatei"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Beitragsdatei hochladen"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Beitragsdatei ersetzen"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Keine Beitragsdatei hochgeladen."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Sind Sie sicher, dass Sie fortfahren wollen, ohne eine Beitragsdatei hochgeladen zu haben?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Dieser optionale Schritt ermöglicht das Hinzufügen zusätzlicher Dateien zum Beitrag. Die Dateien, die in jedem Format vorliegen können, können (a) Forschungsinstrumente, (b) Datensätze, die mit der Forschungsethik der Untersuchung übereinstimmen, (c) Quellen, die den Leser/innen sonst nicht zugänglich wären, (d) Zahlen und Tabellen, die nicht in den Text selbst eingebaut werden können, oder anderes Material, das zu der Arbeit beiträgt, enthalten."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Klicken Sie \"Sichern\" an, um die Datei hochzuladen. (Danach können noch weitere Dateien hochgeladen werden.)"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Sind Sie sicher, dass Sie fortfahren wollen, ohne die ausgewählte Zusatzdatei hochgeladen zu haben?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Dem Beitrag wurden keine Zusatzdateien angefügt."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Zurück zu Zusatzdateien"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Sind Sie sicher, dass Sie diese Zusatzdatei löschen wollen?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Zusatzdatei hochladen"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Zusatzdatei hinzufügen"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Zusatzdatei bearbeiten"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadaten der Zusatzdatei"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr " Zusätzliche Materialien werden indiziert, indem zur hochgeladenen Datei die folgenden Metadaten angegeben werden."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Zusatzdatei"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Autor/in (oder Eigentümer/in) der Datei"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Forschungsinstrument"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Forschungsmaterial"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Forschungsergebnisse"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transkripte"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Datenanalyse"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Datensatz"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Quellentext"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Kurze Beschreibung"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Datei (ohne Metadaten) den Gutachter/innen übermitteln, da dies die Anonymität der Begutachtung nicht beeinträchtigen wird."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Nur bei offiziell veröffentlichtem Material angeben"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Datum der Datenerhebung oder der Erstellung des Forschungsinstruments"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Bezeichnung der Untersuchung oder andere Herkunftsbezeichnung"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Sonstiges genau aufführen"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Es wurde keine Datei hochgeladen."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Bitte Titel der Zusatzdatei eingeben."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Bitte Gegenstand eingeben."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Bitte geben Sie eine Beschreibung ein."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Die öffentliche Bezeichnung der Zusatzdatei existiert bereits."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Öffentliche Bezeichnung der Zusatzdatei."
+
+msgid "author.submit.confirmationDescription"
+msgstr "Um Ihr Manuskript bei {$journalTitle} einzureichen, klicken Sie \"Einreichung abschließen\" an. Der Hauptkontakt des Beitrags wird eine Benachrichtigung per E-Mail erhalten und wird den Stand des Beitrags im redaktionellen Prozess auf der Website der Zeitschrift nachvollziehen können (Einloggen erforderlich). Vielen Dank für Ihr Interesse an einer Veröffentlichung bei {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "Dieser Einreichung wurden keine Dateien beigefügt."
+
+msgid "author.submit.filesSummary"
+msgstr "Zusammenfassung"
+
+msgid "author.submit.finishSubmission"
+msgstr "Einreichung abschließen"
+
+msgid "author.submit.submissionComplete"
+msgstr "Die Einreichung ist abgeschlossen. Vielen Dank für Ihr Interesse an einer Veröffentlichung bei {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Autor/innenversion hochladen"
+
+msgid "author.article.copyeditedFile"
+msgstr "Lektorierte Datei"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Autor/innendatei"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Um Beiträge bei dieser Zeitschrift einzureichen, ist ein Benutzer/innen-Konto erforderlich. Dies ermöglicht es unserer Redaktion, Ihre Beiträge zu verfolgen und Sie zu kontaktieren, wenn sich der Status Ihres Beitrags ändert oder wenn zusätzliche Informationen von Ihnen benötigt werden."

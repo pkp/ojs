@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
+"Language: \n"
+
+msgid "admin.hostedJournals"
+msgstr "Zeitschriften auf dieser Website"
+
+msgid "admin.settings.journalRedirect"
+msgstr "Umleitung zu der Zeitschrift"
+
+msgid "admin.settings.journalRedirectInstructions"
+msgstr "Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tIhre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.\n"
+"\t\tEs gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um\n"
+"\t\tSuchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren wollen? Dies könnte alle Zeitschriften auf dieser Plattform, die momentan diese Regionaleinstellung benutzen, betreffen."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Sprachpakete können momentan nicht vom Webserver des Public Knowledge Project installiert werden. Mögliche Gründe sind:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Ihr Server verfügt nicht über das Hilfsprogramm GNU \"tar\" oder erlaubt nicht dessen Ausführung.</li>\n"
+"\t\t<li>OJS kann die Locale-Registrierungsdatei nicht verändern, üblicherweise \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Sprachpakete können manuell von der <a href=\"http://pkp.sfu.ca\">PKP-Website</a> heruntergeladen werden.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Gekennzeichnete Lokaleinstellungen können unvollständig sein."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Die Regionaleinstellung \"{$locale}\" wurde installiert."
+
+msgid "admin.languages.download"
+msgstr "Regionaleinstellung herunterladen"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Die Sprachbeschreibung von der PKP-Webseite kann nicht geöffnet werden."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Die neue Regionaleinstellung kann nicht zu der Registrierungsdatei für Regionaleinstellungen (üblicherweise \"registry/locales.xml\") hinzugefügt werden."
+
+msgid "admin.auth.ojs"
+msgstr "OJS-Benutzer/innen-Datenbank"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Die Synchronisierung der Benutzer/innen-Profile ermöglichen, falls diese Funktion durch dieses Programm (authentication plugin) unterstützt wird. Benutzer/innen-Profile werden automatisch in der Quelldatei aktualisiert, wenn ein/e Benutzer/in sich einloggt. Profiländerungen (einschließlich Passwortänderungen) innerhalb von OJS bewirken automatisch die Aktualisierung der Quelldatei. Ist diese Option nicht zugelassen, bleiben die Informationen im OJS Benutzer/innen-Profil von den Informationen des Profils in der Quelldatei getrennt."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Die Passwortänderung durch die Benutzer/innen ermöglichen, falls diese Funktion durch dieses Programm (authentication plugin) unterstützt wird. Dadurch können die Benutzer/innen ihre Passwörter innerhalb des OJS ändern und die OJS-Funktion \"Passwort verloren?\" zur Wiederherstellung eines vergessenen Passwortes verwenden. Diese Funktionen stehen den Benutzer/innen dieser Authentifizierungsquelle nur dann zur Verfügung, wenn die Option aktiviert ist."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Die Einrichtung eines Benutzer/innen-Profils ermöglichen, falls diese Funktion durch dieses Programm (authentication plugin) unterstützt wird. Benutzer/innen-Profile, die im OJS mit Hilfe dieser Authentifizierungsquelle eingerichtet werden, werden automatisch auch der Quelldatei hinzugefügt, wenn sie dort nicht schon eingerichtet sind. Sollte diese Quelldatei die Standardauthentifizierungsquelle sein, werden auch die OJS-Konten, die bei der Registrierung von Benutzer/innen entstehen, der Authentifizierungsquelle hinzugefügt."
+
+msgid "admin.systemVersion"
+msgstr "OJS-Version"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-Konfiguration"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS-Konfigurationsdatei <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein."
+
+msgid "admin.journals.journalSettings"
+msgstr "Zeitschriften-Einstellungen"
+
+msgid "admin.journals.noneCreated"
+msgstr "Es wurde keine Zeitschrift eingerichtet."
+
+msgid "admin.contexts.create"
+msgstr "Eine Zeitschrift einrichten"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Die Zeitschrift sollte über ein kurzes Wort oder eine Abkürzung identifizierbar sein. Die URL der Zeitschrift wird {$sampleUrl} lauten."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Die Angabe eines Titels ist erforderlich."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Die Angabe eines Zugangspfads ist erforderlich."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Der Zugangspfad darf nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Ermöglichen Sie, dass diese Zeitschrift öffentlich auf der Website auftaucht."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Beschreibung der Zeitschrift"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Existierender oder einzurichtender Zugangspfad zur Zeitschrift (z.B. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Abonnements importieren"
+
+msgid "admin.journals.transcode"
+msgstr "Metadaten des Artikels aus ISO 8859-1 umkodieren"
+
+msgid "admin.journals.redirect"
+msgstr "Code generieren, um OJS-1-URL auf OJS-2-URL zu mappen"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Es muss ein Importpfad angegeben werden."
+
+msgid "admin.journals.importErrors"
+msgstr "Der Import ist fehlgeschlagen."
+
+msgid "admin.mergeUsers"
+msgstr "Benutzer/innen-Daten zusammenführen"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Benutzer/innen-Daten zusammenführen"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Bitte wählen Sie eine/n Benutzer/in aus, der oder dem Autor/innenstatus, Redaktionsaufgaben etc. der vorherigen Benutzerin/des vorherigen Benutzers übertragen werden sollen."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Bitte wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Benutzer/innen-Konto zusammengefasst werden sollen (z.B. wenn jemand zwei Benutzer/innen-Zugänge besitzt). Der zuerst ausgewählte Zugang wird gelöscht und seine Beiträge, Aufgaben etc. werden dem zweiten Konto zugeordnet."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Alle registrierten Benutzer/innen"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Sind Sie sicher, dass Sie die ausgewählten {$oldAccountCount} Konten in dem Konto mit dem Benutzer/innennamen \"{$newUsername}\" zusammenführen wollen? Die ausgewählten {$oldAccountCount} Konten werden danach nicht mehr existieren. Diese Aktion kann nicht rückgängig gemacht werden."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Keine registrierten Benutzer/innen."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Erinnerung an Abonnement-Ende"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open-Access-Benachrichtigung"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Erinnerung an Gutachten"
