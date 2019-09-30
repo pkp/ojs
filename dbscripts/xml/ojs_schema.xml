@@ -502,16 +502,10 @@
 		<field name="access_status" type="I8">
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="date_published" type="T"/>
+		<field name="date_published" type="D"/>
 		<field name="last_modified" type="T"/>
 		<field name="locale" type="C2" size="14"/>
 		<field name="primary_contact_id" type="I8" />
-		<field name="publication_date_type" type="C2" size="32">
-			<DEFAULT VALUE="pub"/>
-		</field>
-		<field name="publication_type" type="C2" size="32">
-			<DEFAULT VALUE="publication"/><!-- PUBLICATION_TYPE_PUBLICATION -->
-		</field>
 		<field name="section_id" type="I8" />
 		<field name="submission_id" type="I8">
 			<NOTNULL />
