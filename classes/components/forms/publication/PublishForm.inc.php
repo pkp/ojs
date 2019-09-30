@@ -44,8 +44,13 @@ class PublishForm extends FormComponent {
 			$submitLabel = __('publication.publish');
 			if ($publication->getData('issueId')) {
 				$issue = \Services::get('issue')->get($publication->getData('issueId'));
-				if (!$issue->getData('published')) {
-					$submitLabel = __('editor.article.schedulePublication');
+				if ($issue) {
+					if ($issue->getData('published')) {
+						$msg = __('publication.publish.confirmation.backIssue', ['issue' => $issue->getIssueIdentification()]);
+					} else {
+						$msg = __('publication.publish.confirmation.futureIssue', ['issue' => $issue->getIssueIdentification()]);
+						$submitLabel = __('editor.article.schedulePublication');
+					}
 				}
 			}
 			$this->addPage([
