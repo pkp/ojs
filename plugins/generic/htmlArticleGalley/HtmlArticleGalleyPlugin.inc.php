@@ -110,14 +110,15 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	function _getHTMLContents($request, $galley) {
 		$journal = $request->getJournal();
 		$submissionFile = $galley->getFile();
+		$submissionId = $submissionFile->getSubmissionId();
 		$contents = file_get_contents($submissionFile->getFilePath());
 
 		// Replace media file references
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 		$embeddableFiles = array_merge(
-			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
-			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
+			$submissionFileDao->getLatestRevisions($submissionId, SUBMISSION_FILE_PROOF),
+			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionId, SUBMISSION_FILE_DEPENDENT)
 		);
 		$referredArticle = null;
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
@@ -128,8 +129,8 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			if ($embeddableFile->getFileType()=='text/plain' || $embeddableFile->getFileType()=='text/css') $params['inline']='true';
 
 			// Ensure that the $referredArticle object refers to the article we want
-			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
-				$referredArticle = $submissionDao->getById($galley->getSubmissionId());
+			if (!$referredArticle || $referredArticle->getId() != $submissionId) {
+				$referredArticle = $submissionDao->getById($submissionId);
 			}
 			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
 			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
@@ -168,7 +169,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getBySubmissionId($galley->getSubmissionId());
+		$issue = $issueDao->getBySubmissionId($submissionId);
 
 		$journal = $request->getJournal();
 		$site = $request->getSite();

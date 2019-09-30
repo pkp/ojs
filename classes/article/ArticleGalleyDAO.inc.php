@@ -153,6 +153,22 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 	}
 
 	/**
+	 * Retrieve all galleys with a particular file id
+	 * @param $journalId int
+	 * @return DAOResultFactory
+	 */
+	function getByFileId($fileId) {
+		$result = $this->retrieve(
+			'SELECT	*
+			FROM	publication_galleys g
+			WHERE	g.file_id = ?',
+			(int) $fileId
+		);
+
+		return new DAOResultFactory($result, $this, '_fromRow');
+	}
+
+	/**
 	 * Retrieve publication galley by public galley id or, failing that,
 	 * internal galley ID; public galley ID takes precedence.
 	 * @param $galleyId string
