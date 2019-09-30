@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Users XML Plugin"
+
+msgid "plugins.importexport.users.description"
+msgstr "Import and export users"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Examples:\n"
+"\tImport users into myJournal from myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport all users from myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport users specified by their ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Import Users"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.<br /><br />Note that if the imported file contains any usernames or email addresses that already exist in the system, the user data for those users will not be imported and any new roles to be created will be assigned to the existing users."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "User data file"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Send a notification email to each imported user containing the user's username and password."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continue to import other users if a failure occurs."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "The following users were successfully imported into the system"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Errors occurred during the import"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Confirm that these are the users you would like to import into the system"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Warning"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Cannot use passwords hashed with {$importHash}; OJS is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "An unknown journal path \"{$journalPath}\" was specified."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Export Users"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Export By Role"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Export All"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Errors occurred during the export"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Could not write to the file \"{$fileName}\"."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "The import completed successfully. Users with usernames and email addresses that are not already in use have been imported, along with accompanying user groups."
+
+msgid "plugins.importexport.users.results"
+msgstr "Results"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Please upload a file under \"Import\" in order to continue."

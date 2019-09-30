@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:41-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:41-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Flux externes"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Bloc de flux externe"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Publie du contenu provenant de flux de syndication Web Atom/RSS externes. Par exemple, provenant d'une installation OCS, Drupal ou WordPress externe."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Aucun flux externe"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Titre"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Publié"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Plus..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Flux externes"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Paramètres"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "Pour afficher le contenu d'un flux des les blocs latéraux, aller à l'<a href=\"{$setupStep56}\" target=\"_blank\">Étape 5.6 de la configuration</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Titre"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Affichage de la page d'accueil"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Affichage de la page d'accueil"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Aucun affichage de la page d'accueil"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Affichage du bloc"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Toutes les pages"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Bloc dans toutes les pages"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Aucun bloc dans toutes les pages"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Page d'accueil"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Bloc dans la page d'accueil uniquement"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Aucun bloc dans la page d'accueil uniquement"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Aucun flux externe"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Créer un nouveau flux externe"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Modifier un flux externe"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Êtes-vous certain de vouloir supprimer de façon permanente ce flux?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Paramètres"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Personnaliser l'affichage des éléments du flux externe."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Affichage"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Feuille de style du flux externe"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "Une feuille de style personnaliée peut être utilisé au lieu de la feuille de style par défaut pour ce plugiciel. La feuille de style par défaut pour être visualisée ici"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Feuille de style personnalisée"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Titre"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "Le titre pour l'affichage de la page d'accueil et /ou du bloc"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Veuillez fournir un titre pour ce flux"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Veuillez fournir un URL de flux valide (incluant http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "L'URL du flux de syndication Atom/RSS externe (par ex., http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Affichage"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Afficher dans la page d'accueil"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Ne pas afficher en bloc"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Afficher en bloc dans la page d'accueil uniquement"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Afficher en bloc dans toutes les pages"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Limiter à"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "éléments de flux"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Enregistrer et en créer un autre"

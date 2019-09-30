@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:47-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:47-07:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Paypal Fee Payment"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "Payments will be processed using the PayPal service."
+
+msgid "plugins.paymethod.paypal"
+msgstr "Paypal Fee Payment"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Paypal Payment Settings"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Test Mode"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Account Name"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "Client ID"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Secret"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr "A transaction error occurred. Please contact the journal manager for details."

@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:42-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:42-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.openAIRE.displayName"
+msgstr "OpenAire"
+
+msgid "plugins.generic.openAIRE.description"
+msgstr "Le plugiciel OpenAIRE ajoute l'élément ProjectID aux métadonnées de l'article et étend le protocole OAI-PMH conformément aux directives OpenAIRE 1.1, permettant ainsi à OJS de se conformer aux directives OpenAIRE."
+
+msgid "plugins.generic.openAIRE.projectID"
+msgstr "OpenAIRE ProjectID"
+
+msgid "plugins.generic.openAIRE.projectID.description"
+msgstr "Si cette recherche résulte d'une initiative de l'UE conforme à la plate-forme de métadonnées <a href=\"https://www.openaire.eu/\" target=\"_blank\"> OpenAIRE </a>, veuillez inclure le ProjectID, un numéro de six chiffres correspondant au numéro d'identification de la subvention donnée."
+
+msgid "plugins.generic.openAIRE.projectIDValid"
+msgstr "Veuiller vous assurer d'entrer un ProjetcID valide (6 chiffres)"

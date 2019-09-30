@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Web-Feed-Plugin"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Dieses Plugin erzeugt RSS/Atom-Feeds für die aktuelle Ausgabe."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Einstellungen"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Links zu Web-Feeds nur auf den Seiten der Ausgabe anzeigen."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Web-Feed-Links nur auf der Hauptseite und den Ausgaben-Seiten anzeigen"
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Items in der aktuellen Ausgabe anzeigen."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Eine feste Anzahl der aktuellsten Elemente anzeigen."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Aktuelle Veröffentlichungen."
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Bitte geben sie eine positive, ganze Zahl für aktuelle Veröffentlichungen an."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom-Logo"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1-Logo"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2-Logo"

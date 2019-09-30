@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:39-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:39-07:00\n"
+"Language: \n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Connector del sistema de resolució"
+
+msgid "plugins.gateways.resolver.description"
+msgstr "Aquest connector determina números i articles a partir de la informació de citació."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr "No s'ha pogut determinar una unitat simple mitjançant la informació de citació indicada. Comproveu que la informació de citació sigui completa i que faci referència a una entitat d'aquesta versió de l'OJS."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Exporta el contingut"

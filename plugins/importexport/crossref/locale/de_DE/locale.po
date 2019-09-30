@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Crossref-Export/Registrierungs-Plugin"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Artikel-Metadaten im Crossref-Format exportieren oder registrieren."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Anforderungen"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Alle Anforderungen des Plugins sind erfüllt."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Es ist noch kein Verlag konfiguriert! Sie müssen eine publizierende Organisation in <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Zeitschrifteneinstellungen</a> angeben."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "Es ist noch keine ISSN der Zeitschrift eingestellt! Sie müssen eine ISSN in den <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Zeitschrifteneinstellungen</a> angeben."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Artikel sind im DOI-Plugin nicht zur DOI-Vergabe eingetragen, also gibt es keine Möglichkeit zur Ablieferung oder zum Export in diesem Plugin."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Die folgenden Angaben werden für eine erfolgreiche Abgabe bei Crossref nötig."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Depositor-Name"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Depositor-E-Mail"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Bitte geben Sie den Depositor-Namen ein."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Bitte geben Sie die Depositor-E-Mail-Adresse ein."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Wenn Sie dieses Plugin benutzen möchten, um Digital Object Identifiers (DOI) direkt bei Crossref zu registrieren, benötigen Sie dazu einen Nutzernamen und ein Passwort (das Sie bei <a href=\"http://www.crossref.org\" target=\"_blank\">Crossref</a> erhalten). Wenn Sie keine eigenen Zugangsdaten haben, können Sie immer noch Metadaten in das Crossref-XML-Format exportieren, aber Sie können Ihre DOI nicht aus OJS heraus bei Crossref registrieren."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Benutzer/innenname"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Bitte geben Sie den Benutzer/innennamen ein, den Sie von Crossref erhalten haben."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS wird die zugewiesenen DOI automatisch an Crossref liefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Die Crossref-Test-API (Testumgebung) für die DOI-Ablieferung benutzen. Bitte vergessen Sie nicht, diese Option vor dem Produktivbetrieb abzuwählen."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Hinweis: Nur Ausgaben (aber nicht ihre Artikel) werden hier für Export und Registrierung berücksichtigt."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Fehlgeschlagen"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktiv"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Als aktiv markiert"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Ablieferung"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Ablieferungsstatus:</p>\n"
+"\t\t<p>\n"
+"\t\t- Nicht abgeliefert: noch kein Ablieferungsversuch für diesen DOI.<br />\n"
+"\t\t- Aktiv: Der DOI wurde abgeliefert und wird korrekt aufgelöst.<br />\n"
+"\t\t- Fehlgeschlagen: DOI-Ablieferung ist fehlgeschlagen.<br />\n"
+"\t\t- Als aktiv markiert: Der DOI wurde manuell als aktiv markiert.\n"
+"\t\t</p>\n"
+"\t\t<p>Es wird nur der Status des letzten Übermittlungsversuchs angezeigt.</p>\n"
+"\t\t<p>Wenn eine Ablieferung fehlgeschlagen ist, beheben Sie bitte die Ursache und versuchen Sie erneut, den DOI zu registrieren.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "XML herunterladen"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Als aktiv markieren"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Crossref automatic registration task"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Verwendung:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Angegebene Ausgabenkennung \"{$issueId}\" passt zu keiner Ausgabe."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Angegebene Artikelkennung \"{$articleId}\" passt zu keinem Artikel."

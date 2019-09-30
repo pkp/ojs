@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:37-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:37-07:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "Protocole LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs au moyen d'une source de données LDAP externe."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Paramètres LDAP"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Nom d'hôte du serveur"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "Par ex. : \"ldap.exemple.com\", ou \"ldaps://ldap.exemple.com\" (pour utiliser SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port du serveur"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Facultatif. Utilise par défaut 389 (LDAP) ou 636 (LDAP sur SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Nom distinct de la base"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Par ex. : \"ou=personnes,dc=exemple,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Nom distinct du gestionnaire"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Par ex. : \"cn=gestionnaire,dc=exemple,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Mot de passe du gestionnaire"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Le nom distinct et le mot de passe du gestionnaire ne sont requis que si la synchronisation du profil/du mot de passe de l'utilisateur ou les options de création d'un utilisateur sont activées. Si le protocole LDAP n'est utilisé que pour l'authentification, ces options peuvent être ignorées."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Chiffrement du mot de passe"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Paramètres SASL (facultatifs)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mécanisme SASL"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Par ex. : \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Domaine"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Identification d'autorisation requise"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Caractéristiques de sécurité SASL"
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Attribut du nom du compte"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "L'attribut dont la valeur identifie de façon unique un objet de l'utilisateur, tel que uid ou cn ou sAMAccountName."

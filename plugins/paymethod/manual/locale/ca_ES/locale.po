@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:47-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:47-07:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Pagament manual de la quota"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "L'administrador registrarà manualment el rebut del pagament que fa l'usuari (fora del programari)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Pagament manual de la quota"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Configuració del pagament manual"
+
+msgid "plugins.paymethod.manual.settings.instructions"
+msgstr "Instruccions"
+
+msgid "plugins.paymethod.manual.settings.manualInstructions"
+msgstr "Instruccions del pagament de la quota per als usuaris que han escollit aquesta modalitat"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Títol"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Quota"

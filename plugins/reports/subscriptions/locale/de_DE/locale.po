@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:49-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:49-07:00\n"
+"Language: \n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Abonnement-Bericht"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr "Dieses Plugin liefert einen CSV-Bericht, der eine Liste der Abonnent/innen und zugehöriger Informationen enthält."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Adresse der Institution"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP-Bereiche"

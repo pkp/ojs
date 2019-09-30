@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:42-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:42-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Ähnliche Artikel empfehlen"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr "Dieses Plugin ergänzt eine Liste ähnlicher Artikel auf der Artikel-Abstractseite."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Ähnliche Artikel"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Sie können auch {$advancedSearchLink} für diesen Artikel nutzen."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "eine erweiterte Ähnlichkeitssuche starten"

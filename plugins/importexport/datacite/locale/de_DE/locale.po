@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "DataCite-Export/Registrierungs-Plugin"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Exportieren oder registrieren Sie Metadaten zu Ausgaben, Artikeln, Fahnen und Zusatzdateien im DataCite-Format."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Bitte konfigurieren Sie das DataCite-Plugin, bevor Sie es das erste Mal benutzen."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tWenn Sie DOI bei DataCite registrieren möchten, kontaktieren Sie bitte die/den\n"
+"\t\tBevollmächtigte/n über die  <a href=\"http://datacite.org/contact\" target=\"_blank\">\n"
+"\t\tDataCite-Homepage</a>, die/der Sie an Ihr lokales DataCite-Mitglied verweisen wird.\n"
+"\t\tNachdem Sie Kontakt zu der Mitgliedsorganisation hergestellt haben, wird Ihnen ein\n"
+"\t\tZugang zum DataCite-Dienst zum Ausstellen persistenter Kennungen (DOI) und zur\n"
+"\t\tRegistrierung zugehöriger Metadaten ermöglicht. Wenn Sie über keinen eigenen Benutzer/innennamen und\n"
+"\t\tkein eigenes Passwort verfügen, können Sie immerhin in das DataCite-XML-Format exportieren, aber Sie\n"
+"\t\tkönnen Ihre DOI nicht aus OJS heraus bei DataCite registrieren.\n"
+"\t\tBitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, gespeichert werden\n"
+"\t\twird, da der DataCite-Registrierungsdienst dies erfordert.\n"
+"\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Benutzer/innenname (symbol)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Bitte geben Sie den Benutzer/innennamen (symbol) ein, den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS wird die zugewiesenen DOI automatisch an DataCite liefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Den DataCite-Test-Präfix für die DOI-Registrierung benutzen. Bitte vergessen Sie nicht, diese Option vor dem Produktivbetrieb abzuwählen."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite automatic registration task"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Verwendung: \n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Mòdul d'exportació a XML de CrossRef"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Exporta les metadades de l'article en format XML de CrossRef."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Ús:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Requisits"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Tots els requisits del mòdul han estat satisfets."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Nom d'usuari"
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Són necessaris els següents elements per a un dipòsit CrossRef amb èxit."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Nom del dipositant"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Correu electrònic del dipositant"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Introduïu el nom del dipositant."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Introduïu el correu electrònic del dipositant."
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Tasca de registre automàtic de CrossRef"

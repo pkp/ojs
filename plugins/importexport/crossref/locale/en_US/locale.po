@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "CrossRef XML Export Plugin"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Export article metadata in CrossRef XML format."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Requirements"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "All plugin requirements are satisfied."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "A journal publisher has not been configured! You must add a publisher institution on the <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Journal Settings Page</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "A journal ISSN has not been configured! You must add an ISSN on the <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Journal Settings Page</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Articles are not selected for DOI assignment in the DOI public identifier plugin, so there is no deposit or export possibility in this plugin."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "The following items are required for a successful CrossRef deposit."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Depositor name"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Depositor email"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Please enter the depositor name."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Please enter the depositor email."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "If you would like to use this plugin to register Digital Object Identifiers (DOIs) directly with CrossRef you will need a username and password (available from <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>) in order to do so. If you do not have your own username and password you can still export into the CrossRef XML format, but you cannot register your DOIs with CrossRef from within OJS."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Username"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Please enter the username you got from CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS will deposit assigned DOIs automatically to CrossRef. Please note that this may take a short amount of time after publication to process  (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Use the CrossRef test API (testing environment) for the DOI deposit. Please do not forget to remove this option for the production."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr "Validate XML. Use this option for the XML download for the manual DOI registration."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Note: Only issues (and not their articles) will be considered for export/registration here."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Failed"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Active"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Marked active"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Deposit"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Deposit status:</p>\n"
+"\t\t<p>\n"
+"\t\t- Not deposited: no deposit attempt has been made for this DOI.<br />\n"
+"\t\t- Active: the DOI has been deposited, and is resolving correctly.<br />\n"
+"\t\t- Failed: the DOI deposit has failed.<br />\n"
+"\t\t- Marked active: the DOI was manually marked as active.\n"
+"\t\t</p>\n"
+"\t\t<p>Only the status of the last deposit attempt is displayed.</p>\n"
+"\t\t<p>If a deposit has failed, please solve the problem and try to register the DOI again.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Download XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Mark active"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRef automatic registration task"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Usage:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Registration was not fully successful! The DOI registration server returned an error."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "Registration was successful but the following warning occurred: '{$param}'."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "No issue matched the specified issue ID \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "No article matched the specified article ID \"{$articleId}\"."

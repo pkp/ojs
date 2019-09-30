@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:37-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:37-07:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Aquest connector permet autenticar i sincronitzar els comptes d'usuari amb una font de dades LDAP externa."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Configuració d'LDAP"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Nom del servidor"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "P. ex., \"ldap.exemple.com\" o \"ldaps://ldap.exemple.com\" (per a utilitzar SSL)."
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port del servidor"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Opcional. Per defecte 389 (LDAP) o 636 (LDAP sobre SSL)."
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "DN base"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "P. ex., \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "DN de l'administrador"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "P. ex., \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Contrasenya de l'administrador"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "El DN i la contrasenya de l'administrador només són necessaris si s'han habilitat les opcions de sincronització de perfils d'usuari i contrasenyes o de creació d'usuaris. Podeu ometre aquestes opcions si només utilitzeu LDAP per a finalitats d'autenticació."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atribut del nom del compte"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Atribut el valor del qual identifica de manera � un objecte de l'usuari, com ara uid, cn o sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Encriptació de contrasenyes"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Configuració de SASL (opcional)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mecanisme SASL"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "P. ex., \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Domini"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Id. de l'autorització sol·licitada"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Propietats de seguretat SASL"

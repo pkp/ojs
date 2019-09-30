@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Plugiciel XML natif d'OJS"
+
+msgid "plugins.importexport.native.description"
+msgstr "Importer et exporter des articles et des numéros dans le format XML natif d’OJS"
+
+msgid "plugins.importexport.native.import"
+msgstr "Importer"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Téléverser un fichier XML pour l'importer"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Exporter les articles"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Exporter les numéros"
+
+msgid "plugins.importexport.native.results"
+msgstr "Résultats"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Veuillez téléverser un fichier sous \"Importer\" pour continuer"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "L'importation a été complétée avec succès. Les items suivants ont été importés:"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Section inconnue {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "L'usager spécifié, \"{$userName}\", n'existe pas."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "La section avec le titre \"{$section1Title}\" et la section avec le titre \"{$section2Title}\" dans le numéro \"{$issueTitle}\" sont identiques à des sections existantes dans la revue."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "La section avec le titre \"{$sectionTitle}\" dans le numéro \"{$issueTitle}\" est identique à une section existante dans la revue, mais un autre titre de section ne correspond pas à un titre dans une section existante."
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Sélectionner les articles à exporter"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path] [user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"Additional parameters are required for importing data as follows, depending\n"
+"on the root node of the XML document.\n"
+"\n"
+"If the root node is <article> or <articles>, additional parameters are required.\n"
+"The following formats are accepted:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]"
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "L'abréviation \"{$section1Abbrev}\" et l'abréviation \"{$section2Abbrev}\" du numéro \"{$issueTitle}\" correspondent à des rubriques différentes de la revue."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "L'abréviation de rubrique \"{$sectionAbbrev}\" du numéro \"{$issueTitle}\" correspond à un rubrique de la revue, mais une autre abréviation de section ne correspond à aucune abréviation de rubrique existante."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "Aucune ou plus d'un numéro correspond `à l'identifiant de numéro donné, \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "Un numéro existant (ID:  {$issueId}) correspond à l'identifiant de numéro donné (\"{$issueIdentification}\"). Le numéro ne sera pas modifié, mais les articles seront ajoutés."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "L'élément d'identification du numéro est manquant pour l'article \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "L'article \"{$articleTitle}\" se retrouve dans un numéro, mais n'a pas de date de publication."
