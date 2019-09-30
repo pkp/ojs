@@ -60,7 +60,7 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 		$this->uploadWizardFile('PDF');
 
 		// Publish in current issue
-		$this->publish('1');
+		$this->publish('1', 'Vol. 1 No. 2 (2014)');
 		$this->isInIssue($title, 'Vol. 1 No. 2 (2014)');
 
 		$this->logOut();
