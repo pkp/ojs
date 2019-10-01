@@ -82,10 +82,14 @@
 	<!-- Публикация -->
 	<message key="galley.editPublishedDisabled">Гранки этой публикации нельзя редактировать, так как она уже опубликована.</message>
 	<message key="galley.publicationNotFound">Публикацию для этой гранки не удаётся найти.</message>
+	<message key="publication.datePublished.description">Дата публикации будет автоматически проставлена, когда выпуск будет опубликован. Не вводите дату публикации, кроме случаев, когда статья ранее была где-то опубликована и вам необходимо проставить дату публикации задним числом.</message>
 	<message key="publication.invalidSection">Раздел для этой публикации не удаётся найти.</message>
 	<message key="publication.invalidIssue">Выпуск для этой публикации не удаётся найти.</message>
 	<message key="publication.journalEntry">Запись в журнале</message>
 	<message key="publication.journalEntry.success">Информация о записи в журнале была обновлена.</message>
+	<message key="publication.publish.confirmation">Все требования к публикации были выполнены. Вы уверены, что хотите опубликовать этот материал?</message>
+	<message key="publication.publish.confirmation.futureIssue">Все требования к публикации были выполнены. Материал будет опубликован при публикации выпуска «{$issue}». Вы уверены, что хотите запланировать этот материал к публикации?</message>
+	<message key="publication.publish.confirmation.backIssue">Все требования к публикации были выполнены. Материал будет опубликован прямо сейчас в выпуске «{$issue}». Вы уверены, что хотите опубликовать этот материал?</message>
 	<message key="publication.required.issue">Публикация должна быть назначена в выпуск до её опубликования.</message>
 	<message key="publication.publishedIn"><![CDATA[Опубликовано в <a href="{$issueUrl}">{$issueName}</a>.]]></message>
 	<message key="publication.scheduledIn"><![CDATA[Запланировано к публикации в <a href="{$issueUrl}">{$issueName}</a>.]]></message>
