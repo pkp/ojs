@@ -84,7 +84,7 @@
 							<span class="pkpPublication__status">
 								<strong>{{ i18n.status }}</strong>
 								<span v-if="workingPublication.status === getConstant('STATUS_QUEUED') && workingPublication.id === currentPublication.id" class="pkpPublication__statusUnpublished">{translate key="publication.status.unscheduled"}</span>
-								<span v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')">{translate key="submissions.scheduled"}</span>
+								<span v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</span>
 								<span v-else-if="workingPublication.status === getConstant('STATUS_PUBLISHED')" class="pkpPublication__statusPublished">{translate key="publication.status.published"}</span>
 								<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unpublished"}</span>
 							</span>
@@ -105,7 +105,7 @@
 											>
 												{{ publication.id }} /
 												<template v-if="publication.status === getConstant('STATUS_QUEUED') && publication.id === currentPublication.id">{translate key="publication.status.unscheduled"}</template>
-												<template v-else-if="publication.status === getConstant('STATUS_SCHEDULED')">{translate key="submissions.scheduled"}</template>
+												<template v-else-if="publication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</template>
 												<template v-else-if="publication.status === getConstant('STATUS_PUBLISHED')">{translate key="publication.status.published"}</template>
 												<template v-else>{translate key="publication.status.unpublished"}</template>
 											</button>
