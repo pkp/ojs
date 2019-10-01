@@ -292,8 +292,25 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyDao->deleteObject($galley);
 
 		if ($galley->getFileId()) {
+			import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
+			$publication = Services::get('publication')->get($galley->getData('publicationId'));
+
+			// Delete dependent files if no other galley uses them
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-			$submissionFileDao->deleteAllRevisionsById($galley->getFileId());
+			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galley->getId(), $publication->getData('submissionId'), SUBMISSION_FILE_PROOF);
+			foreach ($galleyFiles as $file) {
+				$sharedFileGalleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByFileId($file->getFileId())->toArray();
+				if (empty($sharedFileGalleys)) {
+					$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
+				}
+			}
+
+			// Delete main galley file if no other galley uses it
+			$sharedFileGalleys = DAORegistry::getDAO('ArticleGalleyDAO')->getByFileId($galley->getFileId())->toArray();
+			if (empty($sharedFileGalleys)) {
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$submissionFileDao->deleteAllRevisionsById($galley->getFileId());
+			}
 		}
 
 		$notificationDao = DAORegistry::getDAO('NotificationDAO');
@@ -314,7 +331,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 		//inform search index that file has been deleted
 		$articleSearchIndex = Application::getSubmissionSearchIndex();
-		$articleSearchIndex->submissionFileDeleted($galley->getSubmissionId());
+		$articleSearchIndex->submissionFileDeleted($this->getSubmission()->getId());
 		$articleSearchIndex->submissionChangesFinished();
 
 		return DAO::getDataChangedEvent($galley->getId());
