@@ -401,9 +401,6 @@ msgstr "Aperçu"
 msgid "grid.action.addIssueGalley"
 msgstr "Créer une épreuve pour le numéro"
 
-msgid "editor.article.schedulePublication"
-msgstr "Calendrier de publication"
-
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà supprimée. Essayer de recharger la page."
 

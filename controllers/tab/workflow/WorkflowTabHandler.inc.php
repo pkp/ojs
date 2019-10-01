@@ -41,7 +41,7 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 						),
 						__('submission.publication')
 					),
-					__('editor.article.schedulePublication')
+					__('editor.submission.schedulePublication')
 				);
 				$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
 				break;

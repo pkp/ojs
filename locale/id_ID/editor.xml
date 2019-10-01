@@ -130,7 +130,6 @@
 	<message key="editor.submissions.lastCompleted">Lengkap yang Lalu</message>
 	<message key="editor.submissions.assignedTo">Ditugaskan ke</message>
 	<message key="editor.submissions.inSection">Di Bagian</message>
-	<message key="editor.article.schedulePublication">Jadwalkan untuk publikasi</message>
 	<message key="editor.article.scheduleForPublication">Jadwalkan untuk publikasi di</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Untuk Ditugaskan</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Biaya publikasi tidak dibayar. Untuk menjadwalkan item untuk dipublikasi beritahu penulis untuk membayar biaya atau mengajukan dispensasi.</message>

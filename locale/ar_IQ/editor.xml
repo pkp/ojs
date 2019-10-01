@@ -132,7 +132,6 @@
 	<message key="editor.submissions.lastCompleted">آخر المكتمل</message>
 	<message key="editor.submissions.assignedTo">معين إلى</message>
 	<message key="editor.submissions.inSection">في قسم</message>
-	<message key="editor.article.schedulePublication">جدوله للنشر</message>
 	<message key="editor.article.showPublicationVersion">أظهر ما هو مجدول من المنشورات</message>
 	<message key="editor.article.publishVersion">رقم إصدار النشر</message>
 	<message key="editor.article.viewMetadata">معاينة البيانات الوصفية للإصدار</message>

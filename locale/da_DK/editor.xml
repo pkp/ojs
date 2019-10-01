@@ -125,7 +125,6 @@
 	<message key="editor.reassign">Overfør</message>
 	<message key="editor.publicIdentificationExists">Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, publiceringsversion eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift.</message>
 	<message key="grid.action.addIssue">Opret nummer</message>
-	<message key="editor.article.schedulePublication">Planlæg publicering</message>
 	<message key="grid.action.addGalley">Tilføj publiceringsversion</message>
 	<message key="grid.action.viewIssue">Vis</message>
 	<message key="grid.action.previewIssue">Vis</message>

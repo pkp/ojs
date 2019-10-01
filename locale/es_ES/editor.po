@@ -428,9 +428,6 @@ msgstr "¿Está seguro de que desea establecer este número como el actual?"
 msgid "grid.action.setCurrentIssue"
 msgstr "Establecer número actual"
 
-msgid "editor.article.schedulePublication"
-msgstr "Programar para publicación"
-
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "La imagen de portada que deseaba eliminar no se ha podido encontrar, puede que ya haya sido eliminada. Inténtelo recargando la página."
 

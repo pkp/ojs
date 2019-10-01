@@ -132,7 +132,6 @@
 	<message key="editor.submissions.lastCompleted">Senast utfört</message>
 	<message key="editor.submissions.assignedTo">Tilldelat</message>
 	<message key="editor.submissions.inSection">I sektion</message>
-	<message key="editor.article.schedulePublication">Planera för publicering</message>
 	<message key="editor.article.scheduleForPublication">Ska publiceras i</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Återstår att planera</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publiceringsavgiften ej betald. För att planlägga för publicering, meddela författaren att betala eller avsäga sig avgiften.</message>

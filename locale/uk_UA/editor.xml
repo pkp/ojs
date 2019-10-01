@@ -95,7 +95,7 @@
 	<message key="editor.issues.unpublishIssue">Скасувати публікацію випуску</message>
 	<message key="editor.issues.previewIssue">Переглянути випуск</message>
 	<message key="editor.issues.preview">(Попередній перегляд)</message>
-	<message key="editor.issues.confirmPublish">Ви впевнені, що хочете опублікувати новий випуск?</message>	
+	<message key="editor.issues.confirmPublish">Ви впевнені, що хочете опублікувати новий випуск?</message>
 	<message key="editor.issues.confirmUnpublish">Ви впевнені, що хочете скасувати публікацію цього опублікованого випуску?</message>
 	<message key="editor.issues.confirmSetCurrentIssue">Ви впевнені, що хочете зробити даний випуск поточним?</message>
 	<message key="editor.issues.publicArticleIdExists">Неможливо зберегти публічний ідентифікатор статті:</message>
@@ -135,7 +135,6 @@
 	<message key="editor.submissions.lastCompleted">Остання завершена</message>
 	<message key="editor.submissions.assignedTo">Призначено</message>
 	<message key="editor.submissions.inSection">У розділі</message>
-	<message key="editor.article.schedulePublication">Запланувати для публікації</message>
 	<message key="editor.article.scheduleForPublication">Запланувати для публікації у</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Буде визначено</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Плата за публікацію не отримана. Щоб внести статтю до графіку публікації, нагадайте автору про необхідність сплати рахунку або зробіть виняток та скасуйте плату.</message>

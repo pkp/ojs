@@ -371,9 +371,6 @@ msgstr "Zugeteilt an"
 msgid "editor.submissions.inSection"
 msgstr "In Rubrik"
 
-msgid "editor.article.schedulePublication"
-msgstr "Zur Veröffentlichung vorsehen"
-
 msgid "editor.article.scheduleForPublication"
 msgstr "Zur Veröffentlichung vorsehen in"
 

@@ -130,7 +130,6 @@
 	<message key="editor.submissions.lastCompleted">Zadnje končano</message>
 	<message key="editor.submissions.assignedTo">Dodeljeno</message>
 	<message key="editor.submissions.inSection">V rubriki</message>
-	<message key="editor.article.schedulePublication">Dodeli v številko</message>
 	<message key="editor.article.scheduleForPublication">Planiran za objavo v</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">bo splaniran</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Prispevki za objavo niso plačani. Za planiranje objave prispevka obvesti avtorja o zahtevnem plačilu pristojbine ali ga oprosti pristojbine.</message>

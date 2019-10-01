@@ -208,7 +208,6 @@
 	<message key="grid.action.viewIssue">Wyświetl</message>
 	<message key="grid.action.previewIssue">Podgląd</message>
 	<message key="grid.action.addIssueGalley">Utwórz plik do publikacji</message>
-	<message key="editor.article.schedulePublication">Zaplanuj do publikacji</message>
 	<message key="editor.article.coverImage">Obraz okładki</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Obraz okładki który próbujesz usunąć nie został znaleziony. Mógł zostać usunięty wcześniej. Spróbuj przeładować stronę.</message>
 	<message key="grid.action.removeArticle">Usuń artykuł z numeru</message>

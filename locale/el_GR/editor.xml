@@ -135,7 +135,6 @@
 	<message key="editor.submissions.lastCompleted">Τελευταία ολοκληρωμένη</message>
 	<message key="editor.submissions.assignedTo">Ανάθεση σε</message>
 	<message key="editor.submissions.inSection">Στην ενότητα</message>
-	<message key="editor.article.schedulePublication">Πρόγραμματισμός δημοσίευσης</message>
 	<message key="editor.article.scheduleForPublication">Πρόγραμματισμός δημοσίευσης στο</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Προς ανάθεση</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Η εισφορά για τη δημοσίευση δεν έχει καταβληθεί. Για να προγραμματιστεί η δημοσίευση του άρθρου, ειδοποιήστε τον Συγγραφέα να καταβάλει την εισφορά ή να ζητήσει απαλλαγή από την εισφορά.</message>
