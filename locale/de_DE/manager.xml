@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -301,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Bewertung der Gutachterin/des Gutachters</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
 	<message key="manager.setup.reviewPolicy">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Damit die Nutzer/innen von Suchmaschinen die Zeitschrift einfacher finden, stellen Sie bitte eine kurze Beschreibung der Zeitschrift und charakteristische Schlagworte (durch Semikolon getrennt) zusammen.</message>
 	<message key="manager.setup.searchEngineIndexing">Für Suchmaschinen indizieren</message>
@@ -326,6 +325,7 @@
 	<message key="manager.setup.subscription">Einige oder alle Inhalte der Zeitschrift sind nur für Abonnent/innen zugänglich.</message>
 	<message key="manager.setup.subscriptionDescription">Die Einrichtung der Funktion einer Abonnementverwaltung ist in diesem Fall nötig. Diese hat Zugang zu den Abonnement-Modulen, was auch frei zugängliche Angebote, Selbst-Archivierung und Benachrichtigungen per E-Mail beinhaltet.</message>
 	<message key="manager.setup.noPublishing">OJS wird nicht verwendet, um die Zeitschrifteninhalte online zu veröffentlichen.</message>
+	<message key="manager.setup.enableOai">OAI-Zugang zu den Inhalten aktivieren</message>
 	<message key="manager.setup.typeExamples">(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; Umfrage/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Forschungsansatz, -methode oder -verfahren</message>
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
@@ -449,6 +449,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Wählen Sie ein gültiges Anfangsdatum des Abonnements.</message>
 	<message key="manager.subscriptions.form.dateEnd">Enddatum</message>
 	<message key="manager.subscriptions.form.dateEndRequired">Ein Enddatum des Abonnements ist erforderlich.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Startdatum an.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Enddatum an.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Wählen Sie ein gültiges Enddatum des Abonnements.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Hinweis: Alle unten stehenden Veränderungen betreffen Nutzer/innenprofil systemweit.</message>
 	<message key="manager.subscriptions.form.userId">Benutzer/in</message>

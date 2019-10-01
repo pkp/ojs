@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -301,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Обратите внимание:</strong> Письмо рецензентам с запросом будет содержать специальный URL-адрес (ссылку), по которой рецензенты смогут напрямую попасть на страницу «Рецензирование» материала (доступ ко всем другим страницам будет требовать входа в систему с их учетной записью). Из соображений безопасности, при использовании этой возможности редакторы не могут изменять адреса электронной почты или добавлять адреса для копий (CC) и скрытых копий (BCC) перед отправкой запросов рецензентам.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Рейтинги рецензентов</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Напоминания рецензентам</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Добавлять ссылки на <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">«Обеспечение слепого рецензирования»</a> на страницах, где авторы и рецензенты загружают файлы.]]></message>
 	<message key="manager.setup.reviewPolicy">Правила рецензирования</message>
 	<message key="manager.setup.searchEngineIndexing">Индексация поисковыми машинами</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Добавьте краткое описание журнала, которое будут отображать поисковые машины, при показе журнала в своих результатах выдачи.</message>
@@ -449,6 +448,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Пожалуйста, выберите правильную дату начала подписки.</message>
 	<message key="manager.subscriptions.form.dateEnd">Дата окончания</message>
 	<message key="manager.subscriptions.form.dateEndRequired">Дата окончания подписки обязательна.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">Срок действия этого типа подписки не ограничен; пожалуйста, не указывайте дату начала подписки.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">Срок действия этого типа подписки не ограничен; пожалуйста, не указывайте дату окончания подписки.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Пожалуйста, выберите правильную дату окончания подписки.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Обратите внимание: Все изменения ниже отразятся в профиле пользователя во всей системе.</message>
 	<message key="manager.subscriptions.form.userId">Пользователь</message>

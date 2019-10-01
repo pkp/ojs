@@ -3,8 +3,8 @@
 /**
  * @file classes/file/IssueFileManager.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileManager
@@ -80,11 +80,11 @@ class IssueFileManager extends FileManager {
 	 * @param $fileId int
 	 * @return boolean if successful
 	 */
-	function deleteFile($fileId) {
+	function deleteById($fileId) {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile = $issueFileDao->getById($fileId);
 
-		if (parent::deleteFile($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
+		if (parent::deleteByPath($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
 			$issueFileDao->deleteById($fileId);
 			return true;
 		}
@@ -105,7 +105,7 @@ class IssueFileManager extends FileManager {
 	 * @param $inline print file as inline instead of attachment, optional
 	 * @return boolean
 	 */
-	function downloadFile($fileId, $inline = false) {
+	function downloadById($fileId, $inline = false) {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile = $issueFileDao->getById($fileId);
 
@@ -113,7 +113,7 @@ class IssueFileManager extends FileManager {
 			$fileType = $issueFile->getFileType();
 			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 
-			return parent::downloadFile($filePath, $fileType, $inline);
+			return parent::downloadByPath($filePath, $fileType, $inline);
 
 		} else {
 			return false;
@@ -146,7 +146,7 @@ class IssueFileManager extends FileManager {
 	 * Create an issue galley based on a temporary file.
 	 * @param $temporaryFile TemporaryFile
 	 * @param $contentType int Issue file content type
-	 * @return IssueFile the resulting issue file
+	 * @return IssueFile|false the resulting issue file
 	 */
 	function fromTemporaryFile($temporaryFile, $contentType = ISSUE_FILE_PUBLIC) {
 		$result = null;
@@ -188,4 +188,4 @@ class IssueFileManager extends FileManager {
 	}
 }
 
-?>
+

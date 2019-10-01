@@ -1,8 +1,8 @@
 #
 # registry/minifiedScripts.txt
 #
-# Copyright (c) 2014-2018 Simon Fraser University
-# Copyright (c) 2003-2018 John Willinsky
+# Copyright (c) 2014-2019 Simon Fraser University
+# Copyright (c) 2003-2019 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # This file contains a list of all JavaScript files that should be compiled
@@ -18,17 +18,10 @@ lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js
 lib/pkp/js/lib/jquery/plugins/jquery.sortElements.js
 lib/pkp/js/lib/jquery/plugins/jquery.cookie.js
 lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js
-lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js
 lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js
 
 # Underscore library
 lib/pkp/js/lib/underscore/underscore.js
-
-# JSON library
-lib/pkp/js/lib/json/json2.js
-
-# Our own functions (depend on plug-ins)
-lib/pkp/js/functions/general.js
 
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
@@ -120,6 +113,7 @@ lib/pkp/js/pages/header/HeaderHandler.js
 lib/pkp/js/pages/header/TasksHandler.js
 lib/pkp/js/pages/admin/ContextsHandler.js
 lib/pkp/js/pages/submission/SubmissionTabHandler.js
+lib/pkp/js/pages/submission/SubmissionStep1FormHandler.js
 lib/pkp/js/pages/submission/SubmissionStep2FormHandler.js
 lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js
 lib/pkp/js/pages/workflow/WorkflowHandler.js

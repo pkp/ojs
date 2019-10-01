@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localization strings.
@@ -16,7 +16,7 @@
 	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne, utilise une police de 12 points, emploie l'italique plutôt que le souligné (sauf pour les adresses URL) et place toutes les illustrations, figures et tableaux aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans les  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>, qui se trouvent dans la section « À propos de la revue ».]]></message>
-	<message key="default.journalSettings.privacyStatement">Les noms et courriels saisis dans le site de cette revue seront utilisés exclusivement aux fins indiquées par cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</message>
+	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>Les noms et courriels saisis dans le site de cette revue seront utilisés exclusivement aux fins indiquées par cette revue et ne serviront à aucune autre fin, ni à toute autre partie.</p>]]></message>
 	<message key="default.journalSettings.openAccessPolicy">Cette revue fournit l'accès libre immédiat à son contenu se basant sur le principe que rendre la recherche disponible au public gratuitement facilite un plus grand échange du savoir, à l'échelle de la planète.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Les auteurs ont la permission et sont encouragés à diffuser les travaux soumis à la revue sur un site Web personnel ou un dépôt institutionnel autant avant qu'après leur publication dans cette revue (tout en donnant les détails bibliographiques du numéro de la revue, le cas échéant).</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[<p>L'étape de la révision de texte vise à améliorer le débit, la clarté, la grammaire, la formulation, et le formatage de l'article. Elle représente la dernière occasion pour l'auteur d'apporter des modifications substantielles au texte, la prochaine étape étant limitée aux corrections d'erreurs typographiques et de formatage. </p>
@@ -89,7 +89,7 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à soumettre à cette revue? Nous vous recommandons de consulter les politiques de rubrique de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">À propos de la revue</a> ainsi que les <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directives aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">S'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/{$journalPath}/login">ouvrir une session</a> et accéder au tableau de bord pour commencer les 5 étapes du processus]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothécaires à lister cette revue dans leur fonds de revues numériques. Aussi, il peut être pertinent de mentionner que ce système de publication en accès libre est conçu pour être hébergé par les bibliothèques de recherche pour que les membres de leurs facultés l'utilisent avec les revues dans lesquelles ils sont impliqués (voir <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et afin de permettre à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.org/">En savoir plus...</a>]]></message>
-	<message key="default.journalSettings.checklist.addressesLinked">Lorsque possible, les URLs des références ont été fournies.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Lorsque possible, les URL des références ont été fournies.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Pour ajouter des liens de références au processus de mise en page</h4>
 	<p>Quand vous convertissez une soumission en format HTML ou PDF, assurez-vous que tous les hyperliens dans les soumissions sont actifs.</p>
 	<h4>A. Quand l'auteur fournit un lien avec la référence</h4>

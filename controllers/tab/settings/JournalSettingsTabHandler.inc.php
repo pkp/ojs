@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/JournalSettingsTabHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalSettingsTabHandler
@@ -25,6 +25,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 			'masthead' => 'controllers.tab.settings.masthead.form.MastheadForm',
 			'contact' => 'lib.pkp.controllers.tab.settings.contact.form.ContactForm',
 			'sections' => 'controllers/tab/settings/journal/sections.tpl',
+			'categories' => 'management/categories.tpl',
 		));
 	}
 
@@ -32,14 +33,14 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 	// Overridden methods from Handler
 	//
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @copydoc ManagerSettingsTabHandler::initialize()
 	 */
-	function initialize($request, $args = null) {
-		parent::initialize($request, $args);
+	function initialize($request) {
+		parent::initialize($request);
 
 		// Load grid-specific translations
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
 	}
 }
 
-?>
+

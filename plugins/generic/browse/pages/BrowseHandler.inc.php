@@ -1,10 +1,10 @@
- <?php
+<?php
 
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BrowseHandler
@@ -27,7 +27,7 @@ class BrowseHandler extends Handler {
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 
-		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
+		$browsePlugin = PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		$enableBrowseBySections = $browsePlugin->getSetting($journal->getId(), 'enableBrowseBySections');
 		if ($enableBrowseBySections) {
 			if (isset($args[0]) && $args[0] == 'view') {
@@ -87,7 +87,7 @@ class BrowseHandler extends Handler {
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 
-		$browsePlugin =& PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
+		$browsePlugin = PluginRegistry::getPlugin('generic', BROWSE_PLUGIN_NAME);
 		$enableBrowseByIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'enableBrowseByIdentifyTypes');
 		if ($enableBrowseByIdentifyTypes) {
 			if (isset($args[0]) && $args[0] == 'view') {
@@ -179,4 +179,4 @@ class BrowseHandler extends Handler {
 	}
 }
 
-?>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -29,7 +29,7 @@
 	<message key="default.journalSettings.checklist.addressesLinked">Soweit möglich, wurden den Literaturangaben URLs beigefügt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Grafiken und Tabellen sind an geeigneter Stelle im Text eingefügt und nicht am Textende.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Der Text folgt den stilistischen und bibliografischen Vorgaben in<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Richtlinien für Autor/innen</a> , die unter "Über uns" zu finden sind.]]></message>
-	<message key="default.journalSettings.privacyStatement">Namen und E-Mail-Adressen, die auf den Webseiten der Zeitschrift eingegeben werden, werden ausschließlich zu den angegebenen Zwecken verwendet und nicht an Dritte weitergegeben.</message>
+	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>Namen und E-Mail-Adressen, die auf den Webseiten der Zeitschrift eingegeben werden, werden ausschließlich zu den angegebenen Zwecken verwendet und nicht an Dritte weitergegeben.</p>]]></message>
 	<message key="default.journalSettings.openAccessPolicy">Diese Zeitschrift bietet freien Zugang (Open Access) zu ihren Inhalten, entsprechend der Grundannahme, dass die freie öffentliche Verfügbarkeit von Forschung einem weltweiten Wissensaustausch zugute kommt.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Die Autor/innen werden dazu ermutigt, ihre bei dieser Zeitschrift eingereichten Beiträge parallel auf ihren persönlichen Homepages oder den Homepages von Institutionen zu veröffentlichen, wobei Sie in den bibliografischen Angaben ggf. auf die Veröffentlichung in dieser Zeitschrift hinweisen.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Das Lektorat soll die Lesbarkeit, Klarheit, Grammatik, Wortwahl und Formatierung des Artikels verbessern. Hier besteht für die Autor/innen die letzte Möglichkeit, noch einmal wesentliche Veränderungen am Text vorzunehmen. Danach werden nur noch Korrekturen von Tippfehlern vorgenommen.
@@ -41,11 +41,11 @@ Der zu lektorierende Text hat das Format Word oder .rtf, was seine Bearbeitung a
 
 <strong>1. "Änderungen verfolgen" von Microsoft Word</strong>
 
-Unter "Werkzeuge" in der Menüleiste findet sich bei Microsoft Word die "Änderungen verfolgen"-Funktion, die es der Lektorin/dem Lektor ermöglicht, Text einzufügen (der dann farblich gekennzeichnet ist) und zu löschen (der dann durchgestrichen und farblich gekennzeichnet ist oder an den Rändern als gelöscht erscheint). Durch Einfügen in eckigen Klammern kann die Lektorin/der Lektor sowohl an den/die Autor/in (Fragen an die Autorin/den Autor) als auch an den/die Redakteur/in (Fragen an die Redakteurin/den Redakteur) Nachfragen stellen. Die lektorierte Version wird sodann hochgeladen, und die Redakteurin/der Redakteur wird benachrichtigt. Die Redakteurin/der Redakteur begutachtet dann den Text und benachrichtigt die Autorin/den Autor. 
+Unter "Werkzeuge" in der Menüleiste findet sich bei Microsoft Word die "Änderungen verfolgen"-Funktion, die es der Lektorin/dem Lektor ermöglicht, Text einzufügen (der dann farblich gekennzeichnet ist) und zu löschen (der dann durchgestrichen und farblich gekennzeichnet ist oder an den Rändern als gelöscht erscheint). Durch Einfügen in eckigen Klammern kann die Lektorin/der Lektor sowohl an den/die Autor/in (Fragen an die Autorin/den Autor) als auch an den/die Redakteur/in (Fragen an die Redakteurin/den Redakteur) Nachfragen stellen. Die lektorierte Version wird sodann hochgeladen, und die Redakteurin/der Redakteur wird benachrichtigt. Die Redakteurin/der Redakteur begutachtet dann den Text und benachrichtigt die Autorin/den Autor.
 
 Redakteur/in und Autor/in sollten die Veränderungen, mit denen sie einverstanden sind, stehen lassen. Sollten weitere Änderungen nötig sein, können Redakteur/in und Autor/in sowohl an den durch das Lektorat eingefügten oder gelöschten Textstellen als auch an anderer Stelle im Text weitere Veränderungen vornehmen. Redakteur/innen und Autor/innen sollten auf jede der ihnen gestellten Nachfragen eingehen (die Antworten werden in die eckigen Klammern miteingefügt).
 
-Nachdem der Text von Redakteur/in und Autor/in überprüft wurde, nimmt die Lektorin/der Lektor einen letzte Durchsicht des Textes vor und akzeptiert die gemachten Änderungen, um so den Text für die Layout- und Druckfahnenphasen vorzubereiten. 
+Nachdem der Text von Redakteur/in und Autor/in überprüft wurde, nimmt die Lektorin/der Lektor einen letzte Durchsicht des Textes vor und akzeptiert die gemachten Änderungen, um so den Text für die Layout- und Druckfahnenphasen vorzubereiten.
 
 
 <strong>2. Harvard Educational Review </strong>

@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/masthead/form/MastheadForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MastheadForm
@@ -59,9 +59,10 @@ class MastheadForm extends ContextSettingsForm {
 	/**
 	 * @copydoc ContextSettingsForm::initData()
 	 */
-	function initData($request) {
-		parent::initData($request);
+	function initData() {
+		parent::initData();
 
+		$request = Application::getRequest();
 		$journal = $request->getContext();
 		if ($this->getData('acronym') == null) {
 			$acronym = array();
@@ -82,4 +83,4 @@ class MastheadForm extends ContextSettingsForm {
 	}
 }
 
-?>
+

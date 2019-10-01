@@ -1,15 +1,15 @@
 {**
  * plugins/generic/webFeed/templates/rss2.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * RSS 2 feed template
  *
  *}
 <?xml version="1.0" encoding="{$defaultCharset|escape}"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<channel>
 		{* required elements *}
 		<title>{$journal->getLocalizedName()|strip|escape:"html"}</title>
@@ -61,7 +61,8 @@
 					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
-					<author>{$article->getAuthorString(false)|escape:"html"}</author>
+					{* <author/> *}
+					<dc:creator>{$article->getAuthorString(false)|escape:"html"}</dc:creator>
 					{* <category/> *}
 					{* <comments/> *}
 					{* <source/> *}

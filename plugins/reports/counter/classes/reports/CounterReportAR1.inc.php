@@ -195,4 +195,4 @@ class CounterReportAR1 extends CounterReport {
 
 }
 
-?>
+

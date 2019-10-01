@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -84,6 +84,7 @@
 	<message key="section.abbreviation.example">(Eksempel: Artikler=ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artikler</message>
+	<message key="common.publishedSubmissions">Artikler</message>
 	<message key="article.submissionId">Manus-ID</message>
 	<message key="article.title">Tittel</message>
 	<message key="article.authors">Forfattere</message>
@@ -893,6 +894,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
 	<message key="article.article">Artikkel</message>
+	<message key="common.publishedSubmission">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">år</message>
@@ -964,7 +966,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.subscription.purchase">Kjøp abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikkel, "{$title}", har blitt innlevert.</message>
 	<message key="notification.type.editing">Redigeringshendelser</message>
 	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$title}" har blitt kommentert.</message>
 	<message key="notification.type.galleyModified">Et sideoppsett til "{$title}" har blitt endret.</message>

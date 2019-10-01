@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -203,10 +203,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getLocalizedGivenName())));
 			$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedFamilyName())));
 		}
-		if ($authorIndex == 0) {
-			// See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7774
-			$authorElement->appendChild($doc->createElement('Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
-		}
+		$authorElement->appendChild($doc->createElement('Affiliation', $author->getLocalizedAffiliation() . '. ' . $author->getEmail()));
 
 		return $authorElement;
 	}
@@ -230,4 +227,4 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	}
 }
 
-?>
+

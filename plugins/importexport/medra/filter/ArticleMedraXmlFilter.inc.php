@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/ArticleMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleMedraXmlFilter
@@ -216,7 +216,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			if ($galleyFile) $contentItemNode->appendChild($this->createExtentNode($doc, $galleyFile));
 		}
 		// Article Title (mandatory)
-		$titles = $this->getTranslationsByPrecedence($article->getTitle(null), $objectLocalePrecedence);
+		$titles = $this->getTranslationsByPrecedence($article->getFullTitle(null), $objectLocalePrecedence);
 		assert(!empty($titles));
 		foreach ($titles as $locale => $title) {
 			$contentItemNode->appendChild($this->createTitleNode($doc, $locale, $title, O4DOI_TITLE_TYPE_FULL));
@@ -396,4 +396,4 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 
 }
 
-?>
+

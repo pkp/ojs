@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/manager.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -507,7 +507,6 @@
 	<message key="manager.setup.reviewerDatabaseLink">Database over potensielle fagkonsulenter</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Legg til en lenke til en relevant og tilgjengelig litteraturdatabase på 'Velg fagkonsulent'-siden, for at databasen skal kunne brukes til å søke etter potensielle fagkonsulenter.</message>
 	<message key="manager.setup.reviewOptions.blindReview">Anonym fagvurdering</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Vis lenke til <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sikre anonym fagvurdering</a> på de sidene hvor forfattere og fagkonsulenter laster opp filer.]]></message>
 	<message key="manager.setup.showGalleyLinksDescription">Vis alltid sideoppsettlenker og indikér om tilgangen er begrenset.</message>
 	<message key="manager.statistics.statistics.articleViews">Telleverk for artikkelvisning (kun for forfattere)</message>
 	<message key="manager.subscriptionPolicies.expiry">Abonnementets utløpstid</message>

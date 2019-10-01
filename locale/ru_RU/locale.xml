@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -101,10 +101,13 @@
 	<message key="section.title">Название раздела</message>
 	<message key="section.abbreviation">Аббревиатура</message>
 	<message key="section.abbreviation.example">(Например, Статьи=СТ)</message>
+	<message key="section.policy">Правила раздела</message>
 
 	<!-- Общие термины статьи -->
 	<message key="article.article">Статья</message>
 	<message key="article.articles">Статьи</message>
+	<message key="common.publishedSubmission">Статья</message>
+	<message key="common.publishedSubmissions">Статьи</message>
 	<message key="article.submissionId">ID материала</message>
 	<message key="article.title">Название</message>
 	<message key="article.authors">Авторы</message>
@@ -676,6 +679,9 @@
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании материалов для этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите Ваши интересы как рецензента (основная тематика, методы исследования):</message>
 	<message key="user.register.form.emailConsentAllContexts">Да, я хочу, чтобы меня уведомляли о новых публикациях и объявлениях во всех журналах, в которых я зарегистрирован.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Да, я даю согласие на сбор и хранение моих данных в рамках <a href="{$privacyUrl}" target="_blank">политики конфиденциальности</a> этого журнала.]]></message>
+	<message key="user.register.form.missingContextConsent">Вы должны согласиться с политикой конфиденциальности любого журнала, в котором вы регистрируетесь.</message>
+	<message key="user.register.form.missingSiteConsent">Вы должны согласиться с политикой конфиденциальности этого сайта.</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>
@@ -779,6 +785,7 @@
 	<message key="about.onlineSubmissions.register">Зарегистрироваться</message>
 	<message key="about.onlineSubmissions.registrationRequired">Для отправки материала вам нужно {$login} или {$register}.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} или {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Отправить новый материал в раздел <a href="{$url}">«{$name}»</a>.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Отправить новый материал</message>
 	<message key="about.onlineSubmissions.viewSubmissions">просмотреть ранее отправленные материалы</message>
 	<message key="about.authorGuidelines">Руководство для авторов</message>
@@ -1036,7 +1043,6 @@
 
 	<!-- Типы уведомлений -->
 
-	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editing">События редактирования</message>
 	<message key="notification.type.submissionSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editorDecisionComment">Добавлен комментарий о решении редакции для «{$title}».</message>

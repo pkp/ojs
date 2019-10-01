@@ -4,36 +4,36 @@
 <!--
   * locale/nb_NO/default.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
- 
+
 <locale name="nb_NO" full_name="Norsk bokmål">
  	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet er ikke tidligere publisert, og er heller ikke til vurdering i noe annet tidsskrift (eller gi forklaring i feltet 'Kommentarer til redaktøren').</message>
 	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen er levert i Microsoft Word eller RTF filformat.</message>
 	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Så langt det går an er URL-adresser oppgitt til alle siterte kilder som foreligger på nett. URL-adressene skal være klikkbare (som for eks. <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>).]]></message>
  	<message key="default.journalSettings.checklist.submissionAppearance">Teksten bruker enkel linjeavstand; 12-punkts skrifttype som normalskrift (helst Times New Roman); kursiv i stedet for understreking (unntatt i URL-adresser); bruker aldri fet skrift (unntatt i overskrifter: kursiv er ellers eneste uthevingsmåte); og alle illustrasjoner, figurer og tabeller er satt inn på rett plass i teksten.</message>
  	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teksten følger formatkravene for stil og bibliografisk formatering, slik de er angitt i <a href="submissions#authorGuidelines" target="_blank">Forfatterinstruksen</a>, som finnes i <i>Om tidsskriftet</i>.]]></message>
- 	<message key="default.journalSettings.privacyStatement">Navn og e-postadresser som skrives inn til dette tidsskriftet og nettstedet vil kun bli brukt for de formålene som er oppgitt for tidsskriftet eller som følger av gyldig rettslig pålegg, og vil ikke bli gjort tilgjengelig verken for andre formål eller for uvedkommende.</message>
+ 	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>Navn og e-postadresser som skrives inn til dette tidsskriftet og nettstedet vil kun bli brukt for de formålene som er oppgitt for tidsskriftet eller som følger av gyldig rettslig pålegg, og vil ikke bli gjort tilgjengelig verken for andre formål eller for uvedkommende.</p>]]></message>
  	<message key="default.journalSettings.openAccessPolicy"><![CDATA[Tidsskriftet kommer til å gi alle brukere åpen tilgang <i>(Open Access)</i>, det vil si fri og gratis tilgang til alt publisert innhold.]]></message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Forfattere oppfordres til å gjøre sine artikler fra dette tidsskriftet tilgjengelig på personlige eller institusjonelle nettsted, forutsatt at de bibliografiske detaljdata for primærpubliseringen alltid er oppgitt.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manusredigeringsarbeidet skal forbedre flyt, klarhet, grammatisk korrekthet, ordvalg og formatvalg i artiklene. Dette stadiet er siste sjanse for forfatteren til å gjøre innholdsmessige endringer i teksten, ettersom det neste stadiet er begrenset til korreksjon av trykkfeil og formatering. 
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manusredigeringsarbeidet skal forbedre flyt, klarhet, grammatisk korrekthet, ordvalg og formatvalg i artiklene. Dette stadiet er siste sjanse for forfatteren til å gjøre innholdsmessige endringer i teksten, ettersom det neste stadiet er begrenset til korreksjon av trykkfeil og formatering.
 
-Filen til manusredigering skal være i Word eller .rtf filformat, og kan derfor ganske enkelt redigeres som et vanlig tekstdokument. De følgende instruksene viser to innfallsvinkler til rutiner for manusredigering. Den første bygger på Microsoft Words 'Spor endringer'-funksjon, og krever at både manusredaktøren, redaktøren og forfatteren bruker dette programmet. Den andre innfallsvinkelen er uavhengig av programvare, og er hentet fra  Harvard Educational Review, med deres tillatelse. Vær oppmerksom på at ansvarlig redaktør står fritt til å tilpasse disse instruksene, så kom gjerne med forslag til forbedringer av prosessen. 
+Filen til manusredigering skal være i Word eller .rtf filformat, og kan derfor ganske enkelt redigeres som et vanlig tekstdokument. De følgende instruksene viser to innfallsvinkler til rutiner for manusredigering. Den første bygger på Microsoft Words 'Spor endringer'-funksjon, og krever at både manusredaktøren, redaktøren og forfatteren bruker dette programmet. Den andre innfallsvinkelen er uavhengig av programvare, og er hentet fra  Harvard Educational Review, med deres tillatelse. Vær oppmerksom på at ansvarlig redaktør står fritt til å tilpasse disse instruksene, så kom gjerne med forslag til forbedringer av prosessen.
 
 <h4>To manusredigeringsrutiner</h4>
 
 <b>1. Microsoft Words 'Spor endringer'</b>
 
-Under Verktøy på menylinjen i Word finnes funksjonen 'Spor endringer', som tillater manusredaktøren å skrive innskudd (teksten vises i farge) og slette (tekst vises overstreket i farge, eller i margen: merket slettet). Manusredaktøren kan dessuten både skrive inn spørsmål til forfatteren [SpF:] og til redaktøren [SpR:] ved å skrive spørsmålene inn i hakeparenteser i teksten. Så lastes den manusredigerte versjonen opp til tidsskriftet, og redaktøren varsles. Redaktøren vurderer deretter teksten med merknadene, og kontakter så forfatteren. 
+Under Verktøy på menylinjen i Word finnes funksjonen 'Spor endringer', som tillater manusredaktøren å skrive innskudd (teksten vises i farge) og slette (tekst vises overstreket i farge, eller i margen: merket slettet). Manusredaktøren kan dessuten både skrive inn spørsmål til forfatteren [SpF:] og til redaktøren [SpR:] ved å skrive spørsmålene inn i hakeparenteser i teksten. Så lastes den manusredigerte versjonen opp til tidsskriftet, og redaktøren varsles. Redaktøren vurderer deretter teksten med merknadene, og kontakter så forfatteren.
 
 Redaktøren og forfatteren skal la de endringene de er fornøyde med stå. Hvis videre endringer er nødvendig, kan redaktøren og forfatteren både gjøre sine nye endringer i de første innskuddene eller slettingene, og skrive nye innskudd eller slette andre steder i teksten. Forfatteren og redaktøren bør svare på alle spørsmål manusredaktøren har stilt dem, fortrinnsvis ved å skrive svaret inn i samme hakeparentes [SpF. xxxxx; F. yyyyy]
 
-Etter at teksten er revidert av både redaktøren og forfatteren, skal manusredaktøren foreta en siste gjennomgang for å godkjenne alle endringer, før teksten sendes videre til sideoppsett. 
+Etter at teksten er revidert av både redaktøren og forfatteren, skal manusredaktøren foreta en siste gjennomgang for å godkjenne alle endringer, før teksten sendes videre til sideoppsett.
 
 
 <b>2. Harvard Educational Review  (<i>HER</i>)</b>
@@ -85,7 +85,7 @@ Etter at du er ferdig med omarbeidingen, gjør du om filnavnet fra Forfatternavn
 &bull; [slettet ord] viser sletting av "fullstendig"
 &bull; [Kommentar] inneholder svar på redaktørens SpF]]></message>
 
- 	<message key="default.journalSettings.proofingInstructions"><![CDATA[Korrekturstadiet skal vanligvis bare korrigere feil i de oppsatte sidenes ortografi, grammatikk, og formatering. Innholdsmessige endringer tillates ikke i dette stadiet, medmindre seksjonsredaktøren har godkjent dette spesielt på forhånd. Klikk på Layout i Vis korrektur for å få se hvilke HTML, PDF og andre tigjengelige filformat som er brukt ved publiseringen av dette elementet. 
+ 	<message key="default.journalSettings.proofingInstructions"><![CDATA[Korrekturstadiet skal vanligvis bare korrigere feil i de oppsatte sidenes ortografi, grammatikk, og formatering. Innholdsmessige endringer tillates ikke i dette stadiet, medmindre seksjonsredaktøren har godkjent dette spesielt på forhånd. Klikk på Layout i Vis korrektur for å få se hvilke HTML, PDF og andre tigjengelige filformat som er brukt ved publiseringen av dette elementet.
 
 <strong>Ved ortografiske og grammatiske feil</strong>
 

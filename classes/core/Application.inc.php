@@ -3,8 +3,8 @@
 /**
  * @file classes/core/Application.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Application
@@ -17,11 +17,9 @@
 
 import('lib.pkp.classes.core.PKPApplication');
 
-define('PHP_REQUIRED_VERSION', '5.6.0');
 define('REQUIRES_XSL', false);
 
-define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION);
-define('ASSOC_TYPE_PUBLISHED_ARTICLE',	ASSOC_TYPE_PUBLISHED_SUBMISSION);
+define('ASSOC_TYPE_ARTICLE',		ASSOC_TYPE_SUBMISSION); // DEPRECATED but needed by filter framework
 define('ASSOC_TYPE_GALLEY',		ASSOC_TYPE_REPRESENTATION);
 
 define('ASSOC_TYPE_JOURNAL',		0x0000100);
@@ -68,7 +66,7 @@ class Application extends PKPApplication {
 	 * Get the symbolic name of this application
 	 * @return string
 	 */
-	function getName() {
+	static function getName() {
 		return 'ojs2';
 	}
 
@@ -112,12 +110,8 @@ class Application extends PKPApplication {
 			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
-			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',
-			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
-			'UserDAO' => 'classes.user.UserDAO',
-			'UserSettingsDAO' => 'classes.user.UserSettingsDAO'
 		));
 	}
 
@@ -168,6 +162,13 @@ class Application extends PKPApplication {
 	 */
 	static function getSubmissionDAO() {
 		return DAORegistry::getDAO('ArticleDAO');
+	}
+
+	/**
+	 * Get the published submission DAO.
+	 */
+	static function getPublishedSubmissionDAO() {
+		return DAORegistry::getDAO('PublishedArticleDAO');
 	}
 
 	/**
@@ -274,4 +275,4 @@ class Application extends PKPApplication {
 	}
 }
 
-?>
+

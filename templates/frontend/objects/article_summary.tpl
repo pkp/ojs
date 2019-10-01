@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_summary.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article summary which is shown within a list of articles.
@@ -44,7 +44,7 @@
 	<div class="meta">
 		{if $showAuthor}
 		<div class="authors">
-			{$article->getAuthorString()}
+			{$article->getAuthorString()|escape}
 		</div>
 		{/if}
 
@@ -70,12 +70,12 @@
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
 					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
-						{php}continue;{/php}
+						{continue}
 					{/if}
 				{/if}
 				<li>
 					{assign var="hasArticleAccess" value=$hasAccess}
-					{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
+					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
 					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}

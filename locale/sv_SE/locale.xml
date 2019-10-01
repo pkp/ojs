@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localization strings.
@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artiklar</message>
+	<message key="common.publishedSubmission">Artikel</message>
+	<message key="common.publishedSubmissions">Artiklar</message>
 	<message key="article.submissionId">Bidragets ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Författare</message>
@@ -665,7 +667,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<!-- Registration -->
 	<message key="user.register.selectContext">Välj en tidskrift att registrera dig hos:</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här webbplatsen.</message>
-	<message key="user.register.privacyStatement">Sekretesspolicy</message>
+	<message key="user.register.privacyStatement">Integritetspolicy</message>
 	<message key="user.register.registrationDisabled">Den här tidskriften tar för tillfället inte emot några registreringar.</message>
 	<message key="user.register.form.passwordLengthTooShort">Det lösenord du angivit är för kort.</message>
 	<message key="user.register.readerDescription">Meddelas via e-post när nytt nummer av tidskriften publiceras.</message>
@@ -784,7 +786,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="about.submissionPreparationChecklist">Checklista vid insändning av bidrag</message>
 	<message key="about.submissionPreparationChecklist.description">Som en del av insändningsprocessen måste författare kryssa för att bidraget uppfyller följande krav. Bidrag som inte uppfyller kraven kan komma att skickas tillbaka till författaren.</message>
 	<message key="about.copyrightNotice">Upphovsrättsdeklaration</message>
-	<message key="about.privacyStatement">Sekretesspolicy</message>
+	<message key="about.privacyStatement">Integritetspolicy</message>
 	<message key="about.authorFees">Författaravgifter</message>
 	<message key="about.authorFeesMessage">Den här tidskriften tillämpar följande författaravgifter.</message>
 	<message key="about.peerReviewProcess">Granskningsprocess</message>
@@ -1038,7 +1040,6 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editing">Redaktionella händelser</message>
 	<message key="notification.type.submissionSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editorDecisionComment">En kommentar har tillfogats redaktörsbeslut för "{$title}."</message>

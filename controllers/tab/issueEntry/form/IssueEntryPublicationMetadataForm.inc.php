@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/form/IssueEntryPublicationMetadataForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryPublicationMetadataForm
@@ -212,9 +212,10 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Save the metadata and store the catalog data for this published
 	 * monograph.
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 
+		$request = Application::getRequest();
 		$submission = $this->getSubmission();
 		$context = $request->getContext();
 
@@ -270,6 +271,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			import('classes.search.ArticleSearchIndex');
 			$articleSearchIndex = new ArticleSearchIndex();
+			$submissionFilesChanged = false;
+			$articleMetadataChanged = false;
 
 			// define the access status for the article if none is set.
 			$accessStatus = $this->getData('accessStatus') != '' ? $this->getData('accessStatus') : ARTICLE_ACCESS_ISSUE_DEFAULT;
@@ -283,14 +286,14 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 				// Schedule against an issue.
 				if ($publishedArticle) {
+					if ($issueId != $publishedArticle->getIssueId()) $publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setDatePublished($this->getData('datePublished'));
 					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
-					// Re-index the published article metadata.
-					$articleSearchIndex->articleMetadataChanged($publishedArticle);
+					// article metadata must be reindexed
+					$articleMetadataChanged = true;
 				} else {
 					$publishedArticle = $publishedArticleDao->newDataObject();
 					$publishedArticle->setId($submission->getId());
@@ -312,8 +315,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 					}
 
 					// Index the published article metadata and files for the first time.
-					$articleSearchIndex->articleMetadataChanged($publishedArticle);
-					$articleSearchIndex->submissionFilesChanged($publishedArticle);
+					$articleMetadataChanged = true;
+					$submissionFilesChanged = true;
 				}
 
 			} else {
@@ -353,9 +356,21 @@ class IssueEntryPublicationMetadataForm extends Form {
 			}
 
 			$articleDao->updateObject($submission);
+
+			//after the submission is updated, update the search index
+			if ($publishedArticle) {
+				if ($submissionFilesChanged) {
+					$articleSearchIndex->submissionFilesChanged($publishedArticle);
+				}
+
+				if ($articleMetadataChanged) {
+					$articleSearchIndex->articleMetadataChanged($publishedArticle);
+				}
+			}
+
 			$articleSearchIndex->articleChangesFinished();
 		}
 	}
 }
 
-?>
+

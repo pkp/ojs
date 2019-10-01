@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@latin/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the sr_RS@latin (Srpski) locale.
   *
@@ -70,6 +70,7 @@
 
 	<!--  Common Article Terms  -->
 	<message key="article.articles">Članci</message>
+	<message key="common.publishedSubmissions">Članci</message>
 	<message key="article.submissionId">ID prijave članka</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Autori</message>
@@ -711,6 +712,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="payment.type.purchaseArticle">Cena pristupa pojedinim člancima</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Članak</message>
+	<message key="common.publishedSubmission">Članak</message>
 	<message key="user.manageMySubscriptions">Upravljanje mojim pretplatama</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">godina</message>
@@ -773,7 +775,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="about.subscriptionTypes.duration">Trajanje</message>
 	<message key="about.subscriptionTypes.cost">Cena</message>
 	<message key="payment.authorFees">Naknade za autora</message>
-	<message key="notification.type.articleSubmitted">Novi članak, "{$title}", je predat.</message>
 	<message key="notification.type.galleyModified">Fajl za prikaz je izmenjen za "{$title}".</message>
 	<message key="notification.type.issuePublished">Izdanje je objavljeno.</message>
 	<message key="notification.type.newAnnouncement">Novo obaveštenje je napravljeno.</message>

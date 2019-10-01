@@ -3,8 +3,8 @@
 /**
  * @file classes/install/Upgrade.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Upgrade
@@ -466,10 +466,9 @@ class Upgrade extends Installer {
 
 				// Copyeditors.  Pull from the signoffs for SIGNOFF_COPYEDITING_INITIAL.
 				// there should only be one (or no) copyeditor for each submission.
-				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
 
 				$copyEditorResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
-								array(257, $submissionId, 'SIGNOFF_COPYEDITING_INITIAL'));
+								array(ASSOC_TYPE_SUBMISSION, $submissionId, 'SIGNOFF_COPYEDITING_INITIAL'));
 
 				if ($copyEditorResult->NumRows() == 1) { // the signoff exists.
 					$copyEditorRow = $copyEditorResult->GetRowAssoc(false);
@@ -481,10 +480,9 @@ class Upgrade extends Installer {
 
 				// Layout editors.  Pull from the signoffs for SIGNOFF_LAYOUT.
 				// there should only be one (or no) layout editor for each submission.
-				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
 
 				$layoutEditorResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
-						array(257, $submissionId, 'SIGNOFF_LAYOUT'));
+						array(ASSOC_TYPE_SUBMISSION, $submissionId, 'SIGNOFF_LAYOUT'));
 
 				if ($layoutEditorResult->NumRows() == 1) { // the signoff exists.
 					$layoutEditorRow = $layoutEditorResult->GetRowAssoc(false);
@@ -496,10 +494,9 @@ class Upgrade extends Installer {
 
 				// Proofreaders.  Pull from the signoffs for SIGNOFF_PROOFREADING_PROOFREADER.
 				// there should only be one (or no) layout editor for each submission.
-				// 257 === 0x0000101 (the old assoc type for ASSOC_TYPE_ARTICLE)
 
 				$proofreaderResult = $stageAssignmentDao->retrieve('SELECT user_id FROM signoffs WHERE assoc_type = ? AND assoc_id = ? AND symbolic = ?',
-						array(257, $submissionId, 'SIGNOFF_PROOFREADING_PROOFREADER'));
+						array(ASSOC_TYPE_SUBMISSION, $submissionId, 'SIGNOFF_PROOFREADING_PROOFREADER'));
 
 				if ($proofreaderResult->NumRows() == 1) { // the signoff exists.
 					$proofreaderRow = $proofreaderResult->GetRowAssoc(false);
@@ -873,21 +870,6 @@ class Upgrade extends Installer {
 		}
 		$result->Close();
 
-		// Localize the email header and footer fields.
-		$contextDao = DAORegistry::getDAO('JournalDAO');
-		$settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$contexts = $contextDao->getAll();
-		while ($context = $contexts->next()) {
-			foreach (array('emailFooter', 'emailSignature') as $settingName) {
-				$settingsDao->updateSetting(
-					$context->getId(),
-					$settingName,
-					$context->getSetting('emailHeader'),
-					'string'
-				);
-			}
-		}
-
 		return true;
 	}
 
@@ -1074,6 +1056,10 @@ class Upgrade extends Installer {
 				$creatorUserId = $managerUsers->next()->getId();
 			}
 			$article = $articleDao->getById($row['article_id']);
+			if (!$article) {
+				error_log('WARNING: Unable to fetch article for article_supplementary_files.supp_id = ' . $row['supp_id'] . '. Skipping.');
+				continue;
+			}
 
 			// if it is a remote supp file and article is published, convert it to a remote galley
 			if (!$row['file_id'] && $row['remote_url'] != '' && $article->getStatus() == STATUS_PUBLISHED) {
@@ -1479,7 +1465,7 @@ class Upgrade extends Installer {
 		import('lib.pkp.classes.file.SubmissionFileManager');
 		// Get supp files with show_reviewers = 1
 		// We cannot support/consider remote supp files
-		$suppFilesResult = $submissionFileDao->retrieve('SELECT a.context_id, sf.* FROM article_supplementary_files sf, submissions a WHERE a.submission_id = sf.article_id AND sf.show_reviewers = 1 AND sf.remote_url IS NULL');
+		$suppFilesResult = $submissionFileDao->retrieve('SELECT a.context_id, sf.* FROM article_supplementary_files sf, submissions a WHERE a.submission_id = sf.article_id AND sf.file_id <> 0 AND sf.show_reviewers = 1 AND sf.remote_url IS NULL and sf.file_id in (select f.file_id from submission_files f)');
 		while (!$suppFilesResult->EOF) {
 			$suppFilesRow = $suppFilesResult->getRowAssoc(false);
 			$suppFilesResult->MoveNext();
@@ -2225,7 +2211,8 @@ class Upgrade extends Installer {
 				$groupUsers = array();
 				$groupPrimaryLocaleTitles = array();
 				// get groups sorted by context -- that accords to the order they are displayed on the about page
-				$allGroupsResult = $roleDao->retrieve('SELECT * FROM groups WHERE assoc_type = ? AND assoc_id = ? AND about_displayed = 1 ORDER BY context, seq', array((int) ASSOC_TYPE_JOURNAL, (int) $journal->getId()));
+				$dataSource = $roleDao->getDataSource();
+				$allGroupsResult = $roleDao->retrieve('SELECT * FROM ' . $dataSource->nameQuote . 'groups' . $dataSource->nameQuote . ' WHERE assoc_type = ? AND assoc_id = ? AND about_displayed = 1 ORDER BY context, seq', array((int) ASSOC_TYPE_JOURNAL, (int) $journal->getId()));
 				while (!$allGroupsResult->EOF) {
 					$groupRow = $allGroupsResult->getRowAssoc(false);
 					$groupMembershipsResult = $roleDao->retrieve('SELECT * FROM group_memberships WHERE group_id = ? AND about_displayed = 1 ORDER BY seq', $groupRow['group_id']);
@@ -2885,6 +2872,47 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	* Update assoc_id for assoc_type ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531
+	* @return boolean True indicates success.
+	*/
+	function updateSuppFileMetrics() {
+ 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$metricsDao = DAORegistry::getDAO('MetricsDAO');
+ 		# Copy 531 assoc_type data to temp table
+		$result = $metricsDao->update(
+			'CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)'
+		);
+ 		# Fetch submission_file data with old-supp-id
+		$result = $submissionFileDao->retrieve(
+			'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
+			'old-supp-id'
+		);	
+ 		# Loop through the data and save to temp table
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+ 			# Use assoc_type 2531 to prevent collisions between old assoc_id and new assoc_id
+			$metricsDao->update(
+			'UPDATE metrics_supp SET assoc_id = ?, assoc_type = ? WHERE assoc_type = ? AND assoc_id = ?',
+			array((int) $row['file_id'], 2531, 531, (int) $row['setting_value'])
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+ 		# update temprorary 2531 values to 531 values
+		$metricsDao->update(
+			'UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?',
+			array(531, 2531)
+		);		
+ 		# delete all existing 531 values from the actual metrics table
+		$metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
+ 		# copy updated 531 values from metrics_supp to metrics table
+		$metricsDao->update('INSERT INTO metrics SELECT * FROM metrics_supp');
+ 		# Drop metrics_supp table
+		$metricsDao->update('DROP TABLE metrics_supp');
+ 		return true;
+	}	
+
 }
 
-?>
+

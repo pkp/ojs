@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/filter/ArticleCrossrefXmlFilter.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleCrossrefXmlFilter
@@ -93,6 +93,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// title
 		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
 		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($submission->getTitle($submission->getLocale()), ENT_COMPAT, 'UTF-8')));
+		if ($subtitle = $submission->getSubtitle($submission->getLocale())) $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
 		$journalArticleNode->appendChild($titlesNode);
 
 		// contributors
@@ -117,6 +118,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}
 			$contributorsNode->appendChild($personNameNode);
+			$isFirst = false;
 		}
 		$journalArticleNode->appendChild($contributorsNode);
 
@@ -327,4 +329,4 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 }
 
-?>
+

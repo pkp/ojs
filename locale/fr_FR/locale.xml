@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français (France)) locale.
@@ -84,6 +84,7 @@
 	<message key="section.abbreviation.example">(Par exemple, Articles=ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Articles</message>
+	<message key="common.publishedSubmissions">Articles</message>
 	<message key="article.submissionId">ID de la soumission</message>
 	<message key="article.title">Titre</message>
 	<message key="article.authors">Auteurs</message>
@@ -175,7 +176,7 @@
 	<message key="issue.volume">Volume</message>
 	<message key="issue.number">Numéro</message>
 	<message key="issue.vol">Vol.</message>
-	<message key="issue.no">No</message>
+	<message key="issue.no">No.</message>
 	<message key="issue.year">Année</message>
 	<message key="issue.noIssues">Aucun numéro</message>
 	<message key="issue.toc">Sommaire</message>
@@ -267,8 +268,8 @@
 	<!-- Plugin Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Les plugiciels génériques sont utilisés pour étendre les possibilités d'Open Journal Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de plugiciels.</message>
-	<message key="plugins.categories.auth.description">Les plugiciels d'autorisation permettent au Open Journal Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
+	<message key="plugins.categories.generic.description">Les modules génériques sont utilisés pour étendre les possibilités d'Open Journal Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de modules.</message>
+	<message key="plugins.categories.auth.description">Les modules d'autorisation permettent au Open Journal Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems prend en charge le système <a href="http://lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
 	<br /><br />
@@ -469,7 +470,7 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Télécharger l'article</message>
-	<message key="article.nonpdf.note"><![CDATA[Le fichier que vous avez sélectionné devrait commencer à se télécharger automatiquement. S'il ne le fait pas, cliquer sur le lien ci-dessous. Noter que ce fichier peut nécessiter un logiciel de lecture particulier ou un plugiciel pour être visualisé.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Le fichier que vous avez sélectionné devrait commencer à se télécharger automatiquement. S'il ne le fait pas, cliquer sur le lien ci-dessous. Noter que ce fichier peut nécessiter un logiciel de lecture particulier ou un module pour être visualisé.<br /><br />Si le fichier ne se télécharge pas automatiquement, <a href="{$url}">cliquer ici</a>.]]></message>
 
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revues hébergées sur ce site</message>
@@ -779,6 +780,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.type.purchaseArticle">Frais d'achat de l'article</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Article</message>
+	<message key="common.publishedSubmission">Article</message>
 	<message key="user.manageMySubscriptions">Gérer Mes abonnements</message>
 	<message key="subscriptionTypes.currency">Devise</message>
 	<message key="subscriptionTypes.year">année</message>
@@ -823,8 +825,8 @@ Titre du système de classification]]></message>
 	<message key="user.subscriptions.purchaseNewSubscription">Souscrire à un nouvel abonnement</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Souscrire à un abonnement individuel</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Souscrire à un abonnement institutionnel</message>
-	<message key="user.subscriptions.expires">Expire</message>
-	<message key="user.subscriptions.expired">Expiré</message>
+	<message key="user.subscriptions.expires">Expire le {$date}</message>
+	<message key="user.subscriptions.expired">Expiré le {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Afficher les types d'abonnement disponibles</message>
 	<message key="user.subscriptions.form.typeId">Type d'abonnement</message>
 	<message key="user.subscriptions.form.membership">Adhésion</message>
@@ -858,7 +860,6 @@ Titre du système de classification]]></message>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Des URLs de sites de recherche possiblement invalides sont affichés ci-dessous.<br />
 Vous devriez vérifier manuellement tous les URLs indentifiés comme invalides, car ce test n'est pas fiable à 100%.<br />
 La validation peut échouer sur les URL de recherche qui nécessitent des formulaires de données enregistrés.]]></message>
-	<message key="notification.type.articleSubmitted">Un nouvel article, "{$title}", a été soumis.</message>
 	<message key="notification.type.editing">Événements de révision</message>
 	<message key="notification.type.editorDecisionComment">Un commentaire a été laissé concernant la décision du rédacteur pour "{$title}".</message>
 	<message key="notification.type.galleyModified">Une épreuve a été modifiée pour "{$title}".</message>
@@ -933,7 +934,7 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.authorization.invalidCopyditorSubmission">Dépôt du rédacteur non valide ou non requis!</message>
 	<message key="user.profile.profileImage">Image du profil</message>
 	<message key="editor.navigation.issues">Numéros</message>
-	<message key="context.current">Revue sélectionnée:</message>
+	<message key="context.current">Revue sélectionnée :</message>
 	<message key="context.select">Sélectionner une autre revue:</message>
 	<message key="article.return">Retourner aux informations sur l'article</message>
 	<message key="journal.viewAllIssues">Voir tous les numéros</message>
@@ -981,8 +982,8 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="search.results.orderDir.asc">Croissant</message>
 	<message key="search.results.orderDir.desc">Décroissant</message>
 	<message key="search.results.similarDocuments">Documents similaires</message>
-	<message key="plugins.categories.viewableFiles">Plugiciels d'épreuve</message>
-	<message key="plugins.categories.viewableFiles.description">Les plugiciels d'épreuves soutiennent l'affichage de différents types de documents comme épreuves.</message>
+	<message key="plugins.categories.viewableFiles">Modules d'épreuve</message>
+	<message key="plugins.categories.viewableFiles.description">Les modules d'épreuves soutiennent l'affichage de différents types de documents comme épreuves.</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Cette épreuve sera disponible sur un site web distinct.</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Fixer ou ajuster la recommandation du rapporteur.</message>
 	<message key="article.pageTitle">Vue de {$title}</message>
@@ -1013,9 +1014,26 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 </ul>
 
 <p>2. Un répertoire pour stocker les fichiers téléchargés doit être créé et accessible en écriture (voir "Paramètres des fichiers" ci-dessous).</p>]]></message>
-	<message key="article.pluginMissing"><![CDATA[*<p>Le fichier PDF sélectionné devrait se s'afficher ici si un plugiciel de lecture de PDF est installé dans votre navigateur (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.pluginMissing"><![CDATA[*<p>Le fichier PDF sélectionné devrait se s'afficher ici si un module externe de lecture de PDF est installé dans votre navigateur (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
 <br /> <br />
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Merci de remplir les champs requis.</message>
+	<message key="user.reviewerPrompt.optin">Oui, j'accepte d'évaluer des articles pour ce journal.</message>
+	<message key="subscriptions.status.noSubscription">Vous n'avez pas d'abonnement actif.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico est un service non commercial d'archivage. Si votre journal a signé un contrat avec Portico, activez le ici :</message>
+	<message key="user.register.form.emailConsentAllContexts">Oui, je souhaite être notifié pour toutes les nouvelles publications et annonces pour tous les journaux auxquels je suis abonné.</message>
+	<message key="payment.type.publication.required">Le tarif de publication est requis pour le paiement.</message>
+	<message key="payment.requestPublicationFee">Prix de publication  ({$feeAmount})</message>
+	<message key="payment.notFound">Un paiement a été demandé, mais la requête a expiré. Contactez le responsable du journal pour les détails.</message>
+	<message key="log.editor.recommendation">La recommandation  ({$decision}) pour la soumission {$submissionId} a été déposé par {$editorName}.</message>
+	<message key="notification.type.public">Annonces publiques</message>
+	<message key="notification.type.publicationScheduled">Cette soumission a été programmée pour publication.</message>
+	<message key="navigation.subscriptions">Abonnements</message>
+	<message key="log.editor.submissionExpedited">{$editorName} prend en charge le processus éditorial pour la soumission {$submissionId}.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Oui, je suis d'accord  pour avoir mes données collectées selon le traitement décrit ici : <a href="{$privacyUrl}" target="_blank">Déclarations de confidentialité</a>.]]></message>
+	<message key="user.register.form.missingContextConsent">Vous devez approuver les déclarations de confidentialité.</message>
+	<message key="user.register.form.missingSiteConsent">Vous devez consentir aux déclarations de confidentialités</message>
 </locale>

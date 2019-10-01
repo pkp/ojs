@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -101,10 +101,13 @@
 	<message key="section.title">Section title</message>
 	<message key="section.abbreviation">Abbreviation</message>
 	<message key="section.abbreviation.example">(For example, Articles=ART)</message>
+	<message key="section.policy">Section Policy</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">Article</message>
 	<message key="article.articles">Articles</message>
+	<message key="common.publishedSubmission">Article</message>
+	<message key="common.publishedSubmissions">Articles</message>
 	<message key="article.submissionId">Submission ID</message>
 	<message key="article.title">Title</message>
 	<message key="article.authors">Authors</message>
@@ -226,8 +229,8 @@
 	<message key="issue.title">Title</message>
 	<message key="issue.volume">Volume</message>
 	<message key="issue.number">Number</message>
-	<message key="issue.vol">Vol</message>
-	<message key="issue.no">No</message>
+	<message key="issue.vol">Vol.</message>
+	<message key="issue.no">No.</message>
 	<message key="issue.year">Year</message>
 	<message key="issue.noIssues">No Issues</message>
 	<message key="issue.toc">Table of Contents</message>
@@ -675,6 +678,9 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the site.</message>
 	<message key="user.register.reviewerInterests">Identify reviewing interests (substantive areas and research methods):</message>
 	<message key="user.register.form.emailConsentAllContexts">Yes, I would like to be notified of new publications and announcements for all journals that I registered with.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Yes, I agree to have my data collected and stored according to this journal's <a href="{$privacyUrl}" target="_blank">privacy statement</a>.]]></message>
+	<message key="user.register.form.missingContextConsent">You must consent to the privacy statement for any journal with which you are registering.</message>
+	<message key="user.register.form.missingSiteConsent">You must consent to this site's privacy statement.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">My Subscriptions</message>
@@ -778,6 +784,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="about.onlineSubmissions.register">Register</message>
 	<message key="about.onlineSubmissions.registrationRequired">{$login} or {$register} to make a submission.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} or {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Make a new submission to the <a href="{$url}">{$name}</a> section.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Make a new submission</message>
 	<message key="about.onlineSubmissions.viewSubmissions">view your pending submissions</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>
@@ -1038,7 +1045,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">A new article, "{$title}", has been submitted.</message>
 	<message key="notification.type.editing">Editing Events</message>
 	<message key="notification.type.submissionSubmitted">A new article, "{$title}," has been submitted.</message>
 	<message key="notification.type.editorDecisionComment">A comment has been left on the editor decision for "{$title}."</message>
@@ -1103,4 +1109,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} has taken the edit process for the article {$submissionId}.</message>
+
+	<message key="catalog.sortBy">Order of articles</message>
+	<message key="catalog.sortBy.categoryDescription">Choose how to order articles in this category.</message>
 </locale>

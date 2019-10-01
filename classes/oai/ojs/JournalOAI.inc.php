@@ -3,8 +3,8 @@
 /**
  * @file classes/oai/ojs/JournalOAI.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalOAI
@@ -167,7 +167,7 @@ class JournalOAI extends OAI {
 	 */
 	function records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
-		if (!HookRegistry::call('JournalOAI::records', array($this, $from, $until, $set, $offset, $limit, $total, &$records))) {
+		if (!HookRegistry::call('JournalOAI::records', array($this, $from, $until, $set, $offset, $limit, &$total, &$records))) {
 			$sectionId = null;
 			if (isset($set)) {
 				list($journalId, $sectionId) = $this->setSpecToSectionId($set);
@@ -184,7 +184,7 @@ class JournalOAI extends OAI {
 	 */
 	function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total) {
 		$records = null;
-		if (!HookRegistry::call('JournalOAI::identifiers', array($this, $from, $until, $set, $offset, $limit, $total, &$records))) {
+		if (!HookRegistry::call('JournalOAI::identifiers', array($this, $from, $until, $set, $offset, $limit, &$total, &$records))) {
 			$sectionId = null;
 			if (isset($set)) {
 				list($journalId, $sectionId) = $this->setSpecToSectionId($set);
@@ -201,7 +201,7 @@ class JournalOAI extends OAI {
 	 */
 	function sets($offset, $limit, &$total) {
 		$sets = null;
-		if (!HookRegistry::call('JournalOAI::sets', array($this, $offset, $limit, $total, &$sets))) {
+		if (!HookRegistry::call('JournalOAI::sets', array($this, $offset, $limit, &$total, &$sets))) {
 			$sets = $this->dao->getJournalSets($this->journalId, $offset, $limit, $total);
 		}
 		return $sets;
@@ -229,4 +229,4 @@ class JournalOAI extends OAI {
 	}
 }
 
-?>
+

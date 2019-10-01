@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/sample/SampleImportExportPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SampleImportExportPlugin
@@ -61,7 +61,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				$journal = $request->getJournal();
 				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo(Application::getRequest(), 'issues'));
 
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('issues', $issues);
@@ -86,4 +86,4 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	}
 }
 
-?>
+

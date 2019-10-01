@@ -4,12 +4,11 @@
 <!--
   * plugins/importexport/doaj/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the it_IT (Italiano) locale.
-  *
+  * Localization strings
   -->
 
 <locale name="it_IT" full_name="Italiano">
@@ -19,4 +18,11 @@
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Uso:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.doaj.registrationIntro">Se vuoi registrare gli articoli da OJS, inserisci la tua DOAJ API key. Altrimenti puoi sempre esportare i dati nel formato  DOAJ XML, ma allora non potrai registrare i dati in DOAJ direttamente con OJS.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">DOAJ API Key</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Trovi la tua API key dentro la tua pagina utente di DOAJ.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS depositerà in automatico gli articoli in DOAJ. Per favore nota che ci vuole un certo tempo dalla pubblicazione per lavorare la registrazione. Puoi controllare tutti gli articoli non registrati.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Usa l'API di test di DOAJ per le registrazioni. Non ti dimenticare di rimuovere questa opzione prima di andare in produzione.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Nome del task di registrazione automatica su DOAJ</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">Il deposito non è andato bene, L'API DOAJ ha dato come errore: '{$param}'.</message>
 </locale>

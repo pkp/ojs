@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/IndividualSubscriptionDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndividualSubscriptionDAO
@@ -436,14 +436,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		$params = array_merge($userDao->getFetchParameters(), array((int) $journalId));
 		$result = $this->retrieveRange(
 			'SELECT	s.*,
-			' . $userDao->getFetchColumns() .'
+			' . $userDao->getFetchColumns() . '
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
-				' . $userDao->getFetchJoins() .'
+				' . $userDao->getFetchJoins() . '
 			WHERE	st.institutional = 0
 				AND s.journal_id = ? ' .
-			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) .
+			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) . ' ' .
 			$userDao->getOrderBy() .', s.subscription_id',
 			$params,
 			$rangeInfo
@@ -453,11 +453,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Check whether user with ID has a valid individual subscription for a given journal.
-	 * @param $userId int
-	 * @param $journalId int
+	 * @param $userId int User ID
+	 * @param $journalId int Journal ID
 	 * @param $check int Check using either start date, end date, or both (default)
 	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
-	 * @return int
+	 * @return boolean
 	 */
 	function isValidIndividualSubscription($userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($userId) || empty($journalId)) {
@@ -500,7 +500,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			)
 		);
 
-		if ($result->RecordCount() != 0) $returner = $result->fields[0];
+		if ($result->RecordCount() != 0) $returner = (boolean) $result->fields[0];
 		else $returner = false;
 
 		$result->Close();
@@ -557,4 +557,4 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 }
 
-?>
+

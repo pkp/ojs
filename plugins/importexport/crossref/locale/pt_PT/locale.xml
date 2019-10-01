@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -35,16 +35,12 @@
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">O OJS depositará DOIs atribuídos automaticamente junto do CrossRef. Por favor, note que esta acção pode levar algum tempo tempo a processar. Pode verificar todos os DOIs não registados.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Use a API de teste CrossRef (ambiente de teste) para o depósito DOI. Não esqueça de remover esta opção para a produção.</message>
 	<message key="plugins.importexport.crossref.issues.description">Nota: Somente números (e não os artigos) serão considerados para exportação/registo aqui.</message>
-	<message key="plugins.importexport.crossref.status.submitted">Submetido</message>
-	<message key="plugins.importexport.crossref.status.completed">Depositado</message>
 	<message key="plugins.importexport.crossref.status.failed">Falhou</message>
 	<message key="plugins.importexport.crossref.status.registered">Activo</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Marcado activo</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Estado do depósito:</p>
 		<p>
 		- Não depositado: nenhuma tentativa de depósito feita para este DOI.<br />
-		- Submetido: este DOI foi submetido para depósito.<br />
-		- Depositado: o DOI não foi depositado junto do Crossref, e pode não estar ainda activo.<br />
 		- Activo: o DOI foi depositado, e está a ser processado normalmente.<br />
 		- Falhado: o depósito do DOI falhou.<br />
 		- Marcado com activo: o DOI foi manualmente marcado como activo.
@@ -53,11 +49,6 @@
 		<p>Se um depósito falhou, resolva o problema e tente registar novamente o DOI.</p>]]></message>
 	<message key="plugins.importexport.crossref.action.export">Download XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Marcar activo</message>
-	<message key="plugins.importexport.crossref.action.register">Submeter</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Verificar estado</message>
-	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Não foi registar um DOI. Por favor, vá a Ferramentas> Importar/Exportar> Complemento de exportação XML CrossRef para ver os depósitos com erros.]]></message>
-	<message key="plugins.importexport.crossref.register.error.mdsError">A submissão não foi bem sucedida! O servidor de registo DOI devolveu um erro: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">Submissão com sucesso!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhum número corresponde ao ID do problema especificado "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo corresponde ao ID do artigo especificado "{$articleId}".</message>
 </locale>

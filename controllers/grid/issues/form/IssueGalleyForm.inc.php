@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueGalleyForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyForm
@@ -72,16 +72,17 @@ class IssueGalleyForm extends Form {
 	}
 
 	/**
-	 * Validate the form
+	 * @copydoc Form::validate
 	 */
-	function validate($request) {
+	function validate($callHooks = true) {
 		// Check if public galley ID is already being used
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
 		$publicGalleyId = $this->getData('publicGalleyId');
 		if ($publicGalleyId) {
-			if (is_numeric($publicGalleyId)) {
+			if (ctype_digit($publicGalleyId)) {
 				$this->addError('publicGalleyId', __('editor.publicIdentificationNumericNotAllowed', array('publicIdentifier' => $publicGalleyId)));
 				$this->addErrorField('publicGalleyId');
 			} elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley?$this->_issueGalley->getId():null, true)) {
@@ -90,7 +91,7 @@ class IssueGalleyForm extends Form {
 			}
 		}
 
-		return parent::validate();
+		return parent::validate($callHooks);
 	}
 
 	/**
@@ -124,13 +125,13 @@ class IssueGalleyForm extends Form {
 
 	/**
 	 * Save changes to the galley.
-	 * @param $request PKPRequest
 	 * @return int the galley ID
 	 */
-	function execute($request) {
+	function execute() {
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 
@@ -146,11 +147,11 @@ class IssueGalleyForm extends Form {
 			if ($temporaryFile) {
 				// Galley has a file, delete it before uploading new one
 				if ($issueGalley->getFileId()) {
-					$issueFileManager->deleteFile($issueGalley->getFileId());
+					$issueFileManager->deleteById($issueGalley->getFileId());
 				}
 				// Upload new file
 				$issueFile = $issueFileManager->fromTemporaryFile($temporaryFile);
-				$issueGalley->setFileId($issueFile->getFileId());
+				$issueGalley->setFileId($issueFile->getId());
 			}
 
 			$issueGalley->setLabel($this->getData('label'));
@@ -199,4 +200,4 @@ class IssueGalleyForm extends Form {
 	}
 }
 
-?>
+

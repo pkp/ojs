@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -101,10 +101,13 @@
 	<message key="section.title">Titel der Rubrik</message>
 	<message key="section.abbreviation">Abkürzung</message>
 	<message key="section.abbreviation.example">(Zum Beispiel, Artikel=ART)</message>
+	<message key="section.policy">Richtlinien der Rubrik</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikel</message>
+	<message key="common.publishedSubmission">Artikel</message>
+	<message key="common.publishedSubmissions">Artikel</message>
 	<message key="article.submissionId">Beitrags-ID</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Autor/innen</message>
@@ -675,6 +678,9 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
 	<message key="user.register.form.emailConsentAllContexts">Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Ja, ich stimme der Erfassung und Speicherung gemäß der <a href="{$privacyUrl}" target="_blank">Datenschutzerklärung</a> dieser Zeitschrift zu.]]></message>
+	<message key="user.register.form.missingContextConsent">Sie müssen der Datenschutzerklärung jeder Zeitschrift, bei der Sie sich registrieren, zustimmen.</message>
+	<message key="user.register.form.missingSiteConsent">Sie müssen der Datenschutzerklärung dieser Website zustimmen.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -778,6 +784,7 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="about.onlineSubmissions.register">Registrieren</message>
 	<message key="about.onlineSubmissions.registrationRequired">Um Beiträge online einzureichen oder den aktuellen Status eines eingereichten Beitrags zu überprüfen, müssen Sie registriert und eingeloggt sein. In einen existierenden Account {$login} oder einen neuen Account {$register}.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} oder {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Eine neue Einreichung in Rubrik <a href="{$url}">{$name}</a> machen.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Neuen Beitrag einreichen</message>
 	<message key="about.onlineSubmissions.viewSubmissions">Beiträge in Bearbeitung ansehen</message>
 	<message key="about.authorGuidelines">Richtlinien für Autor/innen</message>
@@ -1038,7 +1045,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
 	<message key="notification.type.submissionSubmitted">Ein neuer Artikel wurde eingereicht: "{$title}"</message>
 	<message key="notification.type.editorDecisionComment">Ein Kommentar zur Entscheidung des Redakteur/der Redaktuerin über "{$title}" wurde hinterlassen.</message>
@@ -1103,4 +1109,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für die Einreichung {$submissionId} übernommen.</message>
+
+	<message key="catalog.sortBy">Artikelreihenfolge</message>
+	<message key="catalog.sortBy.categoryDescription">Wählen Sie, wie Artikel in dieser Kategorie sortiert sein sollen.</message>
 </locale>

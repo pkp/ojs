@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/crossref/locale/fa_IR/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
@@ -31,16 +31,12 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">توجه: فقط شماره ها (و نه مقالات آنها) برای برون دهی/ثبت در نظر گرفته می شود.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">ثبت شده</message>
-	<message key="plugins.importexport.crossref.status.completed">سپرده شده</message>
 	<message key="plugins.importexport.crossref.status.failed">ناموفق</message>
 	<message key="plugins.importexport.crossref.status.registered">فعال</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">نشانه گذاری شده به عنوان فعال</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>سپرده:</p>
 <p>
 -سپرده نشده: هیچ تلاشی برای سپرده گذاری برای این DOI انجام نشده است.<br />
--ثبت شده: این DOI برای سپرده ارسال شده است.<br />
--سپرده گذاری شده: DOI به Crossref سپرده شده است، اما ممکن است هنوز فعال نباشد.<br />
 -فعال: DOI سپرده شده است و به درستی حل و فصل می شود.<br />
 -ناموفق: سپرده DOI شکست خورده است.<br />
 -نشانه گذاری شده به عنوان فعال: DOI به صورت دستی به عنوان فعال شناخته شده است.<br />
@@ -54,16 +50,11 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">دانلود XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">نشانه گذاری به عنوان فعال</message>
-	<message key="plugins.importexport.crossref.action.register">ثبت</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">برررسی وضعیت</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">وظیفه ثبت خودکار CrossRef</message>
-	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[ثبت DOI با خطا مواجه شد. برای مشاهده گزارش خطا ها به قسمت ابزارها > برون دهی/درون ریزی > افزونه برون دهی CrossRef XML، مراجعه کنید.]]></message>
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[نحوه استفاده:  {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...  {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...]]></message>
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">ثبت موفقیت آمیز نبود. سرور ثبت DOI با خطای زیر مواجه شد: '{$param}'.</message>
-	<message key="plugins.importexport.crossref.register.success">ثبت با موفقیت انجام پذیرفت</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">هیچ شماره ای با شناسه مقاله "{$issueId}" همخوانی ندارد.</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">هیچ مقاله ای با شناسه مقاله "{$articleId}" همخوانی ندارد.</message>
 </locale>

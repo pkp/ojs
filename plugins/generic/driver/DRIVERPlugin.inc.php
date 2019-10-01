@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/driver/DRIVERPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DRIVERPlugin
@@ -77,7 +77,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$set = $params[3];
 		$offset = $params[4];
 		$limit = $params[5];
-		$total = $params[6];
+		$total =& $params[6];
 		$records =& $params[7];
 
 		$records = array();
@@ -225,4 +225,4 @@ class DRIVERPlugin extends GenericPlugin {
 
 }
 
-?>
+

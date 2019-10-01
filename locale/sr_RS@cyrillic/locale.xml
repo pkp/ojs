@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@cyrillic/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
@@ -72,6 +72,7 @@
 
 
 	<!--  Common Article Terms  --><message key="article.articles">Чланци</message>
+	<message key="common.publishedSubmissions">Чланци</message>
 	<message key="article.submissionId">ID поднеска чланка</message>
 	<message key="article.title">Наслов</message>
 	<message key="article.authors">Аутори</message>
@@ -744,6 +745,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="payment.type.purchaseArticle">Цена приступа појединим чланцима</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Чланак</message>
+	<message key="common.publishedSubmission">Чланак</message>
 	<message key="user.manageMySubscriptions">Управљање мојим претплатама</message>
 	<message key="subscriptionTypes.currency">Валута</message>
 	<message key="subscriptionTypes.year">година</message>
@@ -806,7 +808,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="about.subscriptionTypes.duration">Трајање</message>
 	<message key="about.subscriptionTypes.cost">Цена</message>
 	<message key="payment.authorFees">Накнаде за аутора</message>
-	<message key="notification.type.articleSubmitted">Нови чланак, "{$param}", je predat.</message>
 	<message key="notification.type.galleyModified">Фајл за приказ је измењен за "{$param}".</message>
 	<message key="notification.type.issuePublished">Издање је објављено.</message>
 	<message key="notification.type.newAnnouncement">Ново обавештење је направљено.</message>

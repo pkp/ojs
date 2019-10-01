@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/SubmissionMetadataViewForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionMetadataViewForm
@@ -39,7 +39,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
+		$sectionOptions = $sectionDao->getTitlesByContextId($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 		// get word count of the section
@@ -83,11 +83,9 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 	/**
 	 * Initialize form data
-	 * @param $args array
-	 * @param $request PKPRequest
 	 */
-	function initData($args, $request) {
-		parent::initData($args, $request);
+	function initData() {
+		parent::initData();
 		$submission = $this->getSubmission();
 		$locale = AppLocale::getLocale();
 		$this->setData('coverImage', $submission->getCoverImage($locale));
@@ -104,10 +102,9 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 	/**
 	 * Save changes to submission.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 		$submission = $this->getSubmission();
 		$submissionDao = Application::getSubmissionDAO();
 
@@ -122,6 +119,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the article, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$request = Application::getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
@@ -159,4 +157,4 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	}
 }
 
-?>
+

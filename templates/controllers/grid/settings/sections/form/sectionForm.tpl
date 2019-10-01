@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/settings/section/form/sectionForm.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Section form under journal management.
@@ -21,7 +21,7 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
 
-	{if $sectionEditorCount == 0}
+	{if !$hasSubEditors}
 		<span class="pkp_form_error"><p>{translate key="manager.section.noSectionEditors"}</p></span>
 	{/if}
 

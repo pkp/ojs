@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -103,6 +103,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikkeli</message>
 	<message key="article.articles">Artikkelit</message>
+	<message key="common.publishedSubmission">Artikkeli</message>
+	<message key="common.publishedSubmissions">Artikkelit</message>
 	<message key="article.submissionId">Käsikirjoituksen tunniste</message>
 	<message key="article.title">Otsikko</message>
 	<message key="article.authors">Kirjoittajat</message>
@@ -856,7 +858,7 @@ Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.
 	<message key="installer.ojsUpgrade">OJS:n päivitys</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS:n versio {$version}</h4>
 
-<p>Kiitos, että latasit Public Knowledge Projectin <strong>Open Journal Systems</strong>-järjestelmän. Ennen kuin jatkat, lue <a href="{$baseUrl}/docs/README.md">README</a> -tiedosto, joka tulee tämän ohjelmiston mukana. Löydät lisätietoja Public Knowledge Projectista ja sen ohjelmistoprojekteista <a href="http://pkp.sfu.ca/" target="_blank">PKP:n verkkosivustolta</a>. Jos haluat ilmoittaa ohjelmistovirheestä tai ottaa yhteyttä Open Journal Systemsin tekniseen tukeen, katso <a href="http://forum.pkp.sfu.ca" target="_blank">tukifoorumi</a> tai mene PKP:n online- <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">virheilmoitusjärjestelmään</a>. Yhteydenotot mieluiten tukifoorumin kautta, mutta voit myös lähettää sähköpostia osoitteeseen <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Kiitos, että latasit Public Knowledge Projectin <strong>Open Journal Systems</strong>-järjestelmän. Ennen kuin jatkat, lue <a href="{$baseUrl}/docs/README">README</a> -tiedosto, joka tulee tämän ohjelmiston mukana. Löydät lisätietoja Public Knowledge Projectista ja sen ohjelmistoprojekteista <a href="http://pkp.sfu.ca/" target="_blank">PKP:n verkkosivustolta</a>. Jos haluat ilmoittaa ohjelmistovirheestä tai ottaa yhteyttä Open Journal Systemsin tekniseen tukeen, katso <a href="http://forum.pkp.sfu.ca" target="_blank">tukifoorumi</a> tai mene PKP:n online- <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">virheilmoitusjärjestelmään</a>. Yhteydenotot mieluiten tukifoorumin kautta, mutta voit myös lähettää sähköpostia osoitteeseen <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Päivitys</h4>
 
@@ -896,7 +898,7 @@ Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.
 <p>2. Ladattaville tiedostoille on luotava hakemisto ja siitä on tehtävä kirjoituskelpoinen (ks. "Tiedostoasetukset" alla).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS:n versio {$version}</h4>
 
-<p>Kiitos, että latasit Public Knowledge Projectin <strong>Open Journal Systems</strong>-järjestelmän. Ennen kuin jatkat, lue <a href="{$baseUrl}/docs/README.md">README</a> ja <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> -tiedostot, jotka tulevat tämän ohjelmiston mukana. Löydät lisätietoja Public Knowledge Projectista ja sen ohjelmistoprojekteista <a href="http://pkp.sfu.ca/" target="_blank">PKP:n verkkosivustolta</a>. Jos haluat ilmoittaa ohjelmistovirheestä tai ottaa yhteyttä Open Journal Systemsin tekniseen tukeen, katso <a href="http://forum.pkp.sfu.ca" target="_blank">tukifoorumi</a> tai mene PKP:n online- <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">virheilmoitusjärjestelmään</a>. Yhteydenotot mieluiten tukifoorumin kautta, mutta voit myös lähettää sähköpostia osoitteeseen <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Kiitos, että latasit Public Knowledge Projectin <strong>Open Journal Systems</strong>-järjestelmän. Ennen kuin jatkat, lue <a href="{$baseUrl}/docs/README">README</a> ja <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> -tiedostot, jotka tulevat tämän ohjelmiston mukana. Löydät lisätietoja Public Knowledge Projectista ja sen ohjelmistoprojekteista <a href="http://pkp.sfu.ca/" target="_blank">PKP:n verkkosivustolta</a>. Jos haluat ilmoittaa ohjelmistovirheestä tai ottaa yhteyttä Open Journal Systemsin tekniseen tukeen, katso <a href="http://forum.pkp.sfu.ca" target="_blank">tukifoorumi</a> tai mene PKP:n online- <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">virheilmoitusjärjestelmään</a>. Yhteydenotot mieluiten tukifoorumin kautta, mutta voit myös lähettää sähköpostia osoitteeseen <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>On <strong>erittäin suositeltavaa,</strong> että varmuuskopioit tietokannan, tiedostohakemiston ja OJS-asennushakemiston ennen jatkamista.</p>
 <p>Jos käytät <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>-vikasietotilaa, varmista, että max_execution_time-direktiivi php.ini -asetustiedostossa on määritetty korkeaksi. Jos tämä tai jokin muu määräaikaraja (esim. Apachen "Aikakatkaisu"-direktiivi) täyttyy ja päivitysprosessi keskeytetään, vaaditaan manuaalisia toimia.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Saadaksesi täyden Unicode (UTF-8) -tuen, valitse UTF-8 kaikkiin merkistöasetuksiin. Huomioithan, että täysi Unicode-tuki edellyttää, että PHP on käännetty tukemaan <a href="http://www.php.net/mbstring" target="_blank">mbstring</a>-kirjastoa (oletuksena viimeisimmissä PHP-asennuksissa). Saatat kohdata ongelmia käyttäessäsi laajennettuja merkistöjä, jos palvelimesi ei täytä näitä vaatimuksia.
@@ -1026,7 +1028,6 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Uusi artikkeli, "{$title}", on lähetetty.</message>
 	<message key="notification.type.editing">Toimittamiseen liittyvät tapahtumat</message>
 	<message key="notification.type.submissionSubmitted">Uusi artikkeli, "{$title}", on lähetetty.</message>
 	<message key="notification.type.editorDecisionComment">Toimittajan kohdetta "{$title}" koskevaa päätöstä on kommentoitu.</message>
@@ -1096,4 +1097,7 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 	<message key="payment.requestPublicationFee">Pyydä julkaisumaksua ({$feeAmount})</message>
 	<message key="payment.notFound">Maksua on pyydetty, mutta pyyntö on vanhentunut. Ota yhteyttä julkaisuun.</message>
 	<message key="log.editor.submissionExpedited">{$editorName} on nopeuttanut käsikirjoituksen {$submissionId} käsittelyä.</message>
+	<message key="user.reviewerPrompt.optin">Kyllä, minulle voi lähettää vertaisarviointeja koskevia pyyntöjä tästä julkaisusta.</message>
+	<message key="user.register.form.emailConsentAllContexts">Kyllä, haluan uusia numeroita ja tiedotteita koskevia ilmoituksia kaikista julkaisuista, joihin olen rekisteröitynyt.</message>
+	<message key="notification.type.public">Julkiset tiedotteet</message>
 </locale>

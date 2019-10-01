@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/JournalDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalDAO
@@ -160,7 +160,7 @@ class JournalDAO extends ContextDAO {
 
 		$pubObjectDaos = array(
 			ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
-			ASSOC_TYPE_ARTICLE => Application::getSubmissionDAO(),
+			ASSOC_TYPE_SUBMISSION => Application::getSubmissionDAO(),
 			ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
 			ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
 			ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')
@@ -210,4 +210,4 @@ class JournalDAO extends ContextDAO {
 	}
 }
 
-?>
+

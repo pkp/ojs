@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/WebsiteSettingsTabHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebsiteSettingsTabHandler
@@ -67,7 +67,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	 */
 	function showFileUploadForm($args, $request) {
 		$fileUploadForm = $this->_getFileUploadForm($request);
-		$fileUploadForm->initData($request);
+		$fileUploadForm->initData();
 
 		return new JSONMessage(true, $fileUploadForm->fetch($request));
 	}
@@ -105,7 +105,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		$fileUploadForm->readInputData();
 
 		if ($fileUploadForm->validate()) {
-			if ($fileUploadForm->execute($request)) {
+			if ($fileUploadForm->execute()) {
 				// Generate a JSON message with an event
 				$settingName = $request->getUserVar('fileSettingName');
 				return DAO::getDataChangedEvent($settingName);
@@ -124,7 +124,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		$settingName = $request->getUserVar('fileSettingName');
 
 		$tabForm = $this->getTabForm();
-		$tabForm->initData($request);
+		$tabForm->initData();
 
 		if ($request->checkCSRF() && $tabForm->deleteFile($settingName, $request)) {
 			return DAO::getDataChangedEvent($settingName);
@@ -146,7 +146,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 
 		// Try to fetch the file.
 		$tabForm = $this->getTabForm();
-		$tabForm->initData($request);
+		$tabForm->initData();
 
 		$renderedElement = $tabForm->renderFileView($settingName, $request);
 
@@ -216,4 +216,4 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	}
 }
 
-?>
+

@@ -4,17 +4,17 @@
 <!--
   * plugins/generic/recommendByAuthor/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
- 
+
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.recommendByAuthor.displayName">Artikel anhand Autor/in empfehlen</message>
 	<message key="plugins.generic.recommendByAuthor.description">Dieses Plugin ergänzt eine Liste von Artikeln des/der gleichen Autor/in auf der Artikel-Abstractseite.</message>
-    
-    <message key="plugins.generic.recommendByAuthor.heading">Am häufigsten gelesenen Artikel dieser/dieses Autor/in</message>
-    <message key="plugins.generic.recommendByAuthor.noMetric">Bitte beachten Sie: Dieses Plugin erfordert, dass mindestens ein Statistik/Berichts-Plugin aktiviert ist. Wenn Ihr Statistik-Plugin mehr als eine Metrik unterstütztzt, wählen Sie bitte eine Hauptmetrik auf den Seiten des/der Adminsitrator/in oder Zeitschriftenverwalter/in aus.</message>
+
+	<message key="plugins.generic.recommendByAuthor.heading">Am häufigsten gelesenen Artikel dieser/dieses Autor/in</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Bitte beachten Sie: Dieses Plugin erfordert, dass mindestens ein Statistik/Berichts-Plugin aktiviert ist. Wenn Ihr Statistik-Plugin mehr als eine Metrik unterstütztzt, wählen Sie bitte eine Hauptmetrik auf den Seiten des/der Adminsitrator/in oder Zeitschriftenverwalter/in aus.</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/payments/subscriptionTypeForm.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subscription type form under journal management.
@@ -12,6 +12,13 @@
 	$(function() {ldelim}
 		// Attach the form handler.
 		$('#subscriptionTypeForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#individual, #institutional').on('change', function() {ldelim}
+			if ($('#institutional').prop('checked')) {ldelim}
+				$('#membership').prop('checked', false).prop('disabled', true);
+			{rdelim} else {ldelim}
+				$('#membership').prop('disabled', false);
+			{rdelim}
+		{rdelim});
 	{rdelim});
 </script>
 

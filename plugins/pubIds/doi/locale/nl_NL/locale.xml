@@ -4,51 +4,72 @@
 <!--
   * plugins/pubIds/doi/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * DOI plugin localization strings
+  * Localization strings for the nl_NL (Nederlands) locale.
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Deze plugin maakt het mogelijk om Digital Object Identifiers toe te kennen aan nummers, artikels en proeven in OJS.</message>
 	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Configureer de DOI plugin om DOIs in OJS te kunnen beheren en gebruiken:</message>
-	
+
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tijdschriftinhoud</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Kies de objecten waar DOI's aan toegekend moeten worden.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Kies de objecten waaraan Digital Object Identifiers (DOI) toegekend worden:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Nummers</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Artikelen</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Artikels</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Proeven</message>
-	
+
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI voorvoegsel</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Het DOI voorvoegsel wordt toegekend door de registrerende instantie (bv. <a href="http://www.crossref.org" target="_new">CrossRef</a>) en heeft als format 10.xxxx (bv. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Het DOI voorvoegsel is verplicht en heeft de volgende vorm: 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Achtervoegsel</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Een DOI achtervoegsel kan iedere gewenste vorm hebben, maar moet uniek zijn tussen alle objecten met hetzelfde DOI voorvoegsel:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">voor nummers</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">voor artikelen</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">voor proeven</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Gebruik onderstaand patroon om DOI achtervoegsels te genereren. Gebruik %j voor de initialen van het tijdschrift, %v voor het bandnummer, %i voor het nummer, %Y voor het jaar, %a voor het OJS ID van het artikel, %g voor het OJS ID van de proef, %f voor het OJS ID van het bestand, *p voor het paginanummer en %x voor "Aangepaste identificatie".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Bijvoorbeeld vol%viss%ipp%p kan resulteren in een DOI als 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">voor nummers</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">voor artikels</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">voor proeven</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Gebruik standaard patronen.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i voor nummerss<br />%j.v%vi%i.%a voor artikelen<br />%j.v%vi%i.%a.g%g voor proeven.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i voor nummerss<br />%j.v%vi%i.%a voor artikels<br />%j.v%vi%i.%a.g%g voor proeven.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Voeg een individueel DOI achtervoegsel in voor elk gepubliceerd item. U vindt een bijkomend URN invoerveld bij de metadata voor elk item.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Kies het DOI voorvoegsel voor nummers.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Kies het DOI voorvoegsel voor artikelen.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Kies het DOI voorvoegsel voor artikels.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Kies het DOI voorvoegsel voor proeven.</message>
-	
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign">DOI's opnieuw toekennen</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Weet u zeker dat u alle bestaande DOI's wilt verwijderen?</message>	
 
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">DOI's opnieuw toekennen</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Als u de DOI configuratie verandert, heeft dat geen gevolgen voor reeds toegekende DOI's. Nadat de gewijzigde DOI configuratie is opgeslagen kunt u deze knop gebruiken om alle bestaande DOI's te wissen om de nieuwe instellingen ook toe te passen op bestaande objecten.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Weet u zeker dat u alle bestaande DOI's wilt verwijderen?</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Ken DOI's toe</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Ken DOI's toe aan alle gepubliceerde objecten in het tijdschrift die nog geen DOI hebben. Deze actie kan niet worden gebruikt als een individueel achtervoegsel werd ingesteld. Als bovenstaande DOI configuratie werd gewijzigd, sla dan de wijzigingen op alvorens deze actie uit te voeren. Het toekennen van DOI's kan lang duren, afhankelijk van het aantal gepubliceerde objecten in het tijdschrift.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Weet u zeker dat u DOI's wilt toekennen aan alle gepubliceerde objecten die nog geen DOI hebben?</message>
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">nummer</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">artikel</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">proef</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">proef</message>
+	<message key="plugins.pubIds.doi.editor.customSuffixMissing">De DOI kan niet worden toegekend omdat het achtervoegsel ontbreekt.</message>
+	<message key="plugins.pubIds.doi.editor.patternNotResolved">De DOI kan niet worden toegekend omdat het een ongeldig patroon bevat.</message>
+	<message key="plugins.pubIds.doi.editor.canBeAssigned">U ziet een voorbeeld van de DOI. Selecteer de checkbox en dien het formulier in om de DOI toe te kennen.</message>
+	<message key="plugins.pubIds.doi.editor.assigned">De DOI werd toegekend aan dit {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">het opgegeven DOI voorvoegsel is al in gebruik bij een ander gepubliceerd item. Kies een uniek DOI voorvoegsel voor ieder item.</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Verwijder DOI</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Weet u zeker dat u de bestaande DOI wilt verwijderen?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Verwijder DOI's van de objecten in dit nummer</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Weet u zeker dat u de bestaande DOI's voor de objecten in dit nummer wilt verwijderen?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Gebruik de volgende optie om DOI's van alle objecten (artikels en proeven) te verwijderen die ingepland zijn voor dit nummer.</message>
+	<!-- assignment form -->
+	<message key="plugins.pubIds.doi.editor.assignDoi">Ken de DOI {$pubId} toe aan dit {$pubObjectType}</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">De DOI kan niet worden toegekend omdat het aangepaste achtervoegsel ontbreekt.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">De DOI {$pubId} kan niet worden toegekend omdat het een ongeldig patroon bevat.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">De URN {$pubId} werd toegekend.</message>
 </locale>

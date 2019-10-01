@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
@@ -132,7 +132,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				$referredArticle = $articleDao->getById($galley->getSubmissionId());
 			}
 			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
-			$pattern = preg_quote($embeddableFile->getOriginalFileName());
+			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
 
 			$contents = preg_replace(
 				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
@@ -162,6 +162,9 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			array($this, '_handleOjsUrl'),
 			$contents
 		);
+
+		$templateMgr = TemplateManager::getManager($request);
+		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -256,5 +259,3 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		return $matchArray[1] . $url . $matchArray[3];
 	}
 }
-
-?>

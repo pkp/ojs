@@ -21,3 +21,4 @@
 ./plugins/paymethod/paypal/vendor
 ./lib/pkp/tests
 ./node_modules
+./lib/ui-library/node_modules

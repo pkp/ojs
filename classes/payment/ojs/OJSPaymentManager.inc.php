@@ -3,8 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSPaymentManager.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSPaymentManager
@@ -182,7 +182,15 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$userDao = DAORegistry::getDAO('UserDAO');
 				$user = $userDao->getById($queuedPayment->getUserId());
-				$userDao->renewMembership($user);
+				$dateEnd = $user->getSetting('dateEndMembership', 0);
+				if (!$dateEnd) $dateEnd = 0;
+
+				// if the membership is expired, extend it to today + 1 year
+				$time = time();
+				if ($dateEnd < $time ) $dateEnd = $time;
+
+				$dateEnd = mktime(23, 59, 59, date("m", $dateEnd), date("d", $dateEnd), date("Y", $dateEnd)+1);
+				$user->updateSetting('dateEndMembership', $dateEnd, 'date', 0);
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
@@ -341,4 +349,4 @@ class OJSPaymentManager extends PaymentManager {
 	}
 }
 
-?>
+

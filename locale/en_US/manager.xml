@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -301,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Note:</strong> The email invitation to reviewers will contain a special URL that takes invited reviewers directly to the Review page for the submission (with access to any other pages requiring them to log in). For security reasons with this option, editors are not able to modify email addresses or add CCs or BCCs prior to sending invitations to reviewers.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Reviewer Ratings</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Reviewer Reminders</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
 	<message key="manager.setup.searchEngineIndexing">Search Engine Indexing</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Provide a brief description of the journal which search engines can display when listing the journal in search results.</message>
@@ -326,6 +325,7 @@
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
 	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.noPublishing">OJS will not be used to publish the journal's contents online.</message>
+	<message key="manager.setup.enableOai">Enable OAI access to content</message>
 	<message key="manager.setup.typeExamples">(E.g., Historical Inquiry; Quasi-Experimental; Literary Analysis; Survey/Interview)</message>
 	<message key="manager.setup.typeMethodApproach">Type (Method/Approach)</message>
 	<message key="manager.setup.typeProvideExamples">Provide examples of relevant research types, methods, and approaches for this field</message>
@@ -449,6 +449,8 @@
 	<message key="manager.subscriptions.form.dateStartValid">Please select a valid subscription start date.</message>
 	<message key="manager.subscriptions.form.dateEnd">End date</message>
 	<message key="manager.subscriptions.form.dateEndRequired">A subscription end date is required.</message>
+	<message key="manager.subscriptions.form.dateStartEmpty">This is a non-expiring subscription type; please do not specify a start date.</message>
+	<message key="manager.subscriptions.form.dateEndEmpty">This is a non-expiring subscription type; please do not specify an end date.</message>
 	<message key="manager.subscriptions.form.dateEndValid">Please select a valid subscription end date.</message>
 	<message key="manager.subscriptions.form.userProfileInstructions">Note: All changes below are to user's system-wide profile.</message>
 	<message key="manager.subscriptions.form.userId">User</message>
@@ -608,4 +610,9 @@
 	<message key="plugins.importexport.common.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">The specified objects could not be found.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the primary contact, identified in the Journal Settings.</message>
+
+	<!-- Statistics -->
+	<message key="stats.publishedSubmissions.details">Article Details</message>
+	<message key="stats.publishedSubmissions.none">No articles were found.</message>
+	<message key="stats.publishedSubmissions.totalAbstractViews.timeSegment">Total abstract views for each article by date</message>
 </locale>

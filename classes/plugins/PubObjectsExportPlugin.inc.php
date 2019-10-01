@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/PubObjectsExportPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubObjectsExportPlugin
@@ -82,6 +82,15 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			case 'index':
 				$form->initData();
 				return new JSONMessage(true, $form->fetch($request));
+			case 'statusMessage':
+				$statusMessage = $this->getStatusMessage($request);
+				if ($statusMessage) {
+					$templateMgr = TemplateManager::getManager($request);
+					$templateMgr->assign(array(
+						'statusMessage' => htmlentities($statusMessage),
+					));
+					return new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('statusMessage.tpl')));
+				}
 		}
 		return parent::manage($args, $request);
 	}
@@ -175,8 +184,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
-			$fileManager->downloadFile($exportFileName);
-			$fileManager->deleteFile($exportFileName);
+			$fileManager->downloadByPath($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
 			// Get the XML
@@ -210,7 +219,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 			}
 			// Remove all temporary files.
-			$fileManager->deleteFile($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
@@ -240,6 +249,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return boolean Whether the XML document has been registered
 	 */
 	abstract function depositXML($objects, $context, $filename);
+
+	/**
+	 * Get detailed message of the object status i.e. failure messages.
+	 * Parameters needed have to be in the request object.
+	 * @param $request PKPRequest
+	 * @return string Preformatted text that will be displayed in a div element in the modal
+	 */
+	function getStatusMessage($request) {
+		return null;
+	}
 
 	/**
 	 * Get the submission filter.
@@ -571,7 +590,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 				$this->usage($scriptName);
 			}
-			$fileManager->deleteFile($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 		}
 	}
 
@@ -674,4 +693,4 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 
 }
 
-?>
+

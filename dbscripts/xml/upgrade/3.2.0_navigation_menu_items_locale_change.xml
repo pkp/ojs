@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_navigation_menu_items_locale_change.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Update the locales for default navigation menu items
+  *
+  -->
+
+<data>
+	<!-- pkp/pkp-lib#4214 navigation.submissions locale changed to about.submissions-->
+	<sql>
+		<query>UPDATE navigation_menu_item_settings SET setting_value='about.submissions' WHERE setting_name='titleLocaleKey' AND setting_value='navigation.submissions'</query>
+	</sql>
+</data>

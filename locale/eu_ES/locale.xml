@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -107,6 +107,7 @@
 	<message key="section.abbreviation.example">(Adibidez, Artikuluak=ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artikuluak</message>
+	<message key="common.publishedSubmissions">Artikuluak</message>
 	<message key="article.submissionId">Bidalketa ID</message>
 	<message key="article.title">Titulua</message>
 	<message key="article.authors">Egileak</message>
@@ -930,6 +931,7 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	-->
 	<!-- Default settings for payment items. -->
 	<message key="article.article">Artikulua</message>
+	<message key="common.publishedSubmission">Artikulua</message>
 	<message key="user.manageMySubscriptions">Kudeatu nire harpidetzak</message>
 	<message key="subscriptionTypes.currency">Moneta:</message>
 	<message key="subscriptionTypes.year">urtea</message>
@@ -1006,7 +1008,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="payment.subscription.purchase">Erosi harpidetza</message>
 	<message key="installer.installApplication">Instalatu Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Bertsio-berritu Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$title}", aurkeztu da.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$title}" artikuluan.</message>
 	<message key="notification.type.galleyModified">Galerada bat aldatu da "{$title}" artikuluan.</message>

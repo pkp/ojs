@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/crossref/templates/index.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -78,7 +78,7 @@
 					{capture assign=submissionsListGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="crossref" category="importexport" escape=false}{/capture}
 					{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 					{fbvFormSection list="true"}
-						{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+						{fbvElement type="checkbox" id="validation" label="plugins.importexport.crossref.settings.form.validation" checked=$validation|default:false}
 					{/fbvFormSection}
 					{if !empty($actionNames)}
 						{fbvFormSection}

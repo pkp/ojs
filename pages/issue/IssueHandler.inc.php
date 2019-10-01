@@ -3,8 +3,8 @@
 /**
  * @file pages/issue/IssueHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
@@ -39,7 +39,7 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @see PKPHandler::initialize()
 	 * @param $args array Arguments list
 	 */
 	function initialize($request, $args = array()) {
@@ -128,6 +128,8 @@ class IssueHandler extends Handler {
 		import('classes.core.ServicesContainer');
 		$issueService = ServicesContainer::instance()->get('issue');
 		$params = array(
+			'orderBy' => 'seq',
+			'orderDirection' => 'ASC',
 			'count' => $count,
 			'offset' => $offset,
 			'isPublished' => true,
@@ -165,7 +167,7 @@ class IssueHandler extends Handler {
 			if (!HookRegistry::call('IssueHandler::download', array(&$issue, &$galley))) {
 				import('classes.file.IssueFileManager');
 				$issueFileManager = new IssueFileManager($issue->getId());
-				return $issueFileManager->downloadFile($galley->getFileId(), $request->getUserVar('inline')?true:false);
+				return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline')?true:false);
 			}
 		}
 	}
@@ -354,4 +356,4 @@ class IssueHandler extends Handler {
 	}
 }
 
-?>
+

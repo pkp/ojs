@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionDAO
@@ -178,37 +178,60 @@ abstract class SubscriptionDAO extends DAO {
 	abstract function renewSubscription($subscription);
 
 	/**
-	 * Internal function to generate user based search query.
-	 * @return string
-	 */
-	function _generateUserNameSearchSQL($search, $searchMatch, $prefix, &$params) {
-		$first_last = $this->concat($prefix.'first_name', '\' \'', $prefix.'last_name');
-		$first_middle_last = $this->concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
-		$last_comma_first = $this->concat($prefix.'last_name', '\', \'', $prefix.'first_name');
-		$last_comma_first_middle = $this->concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
-		if ($searchMatch === 'is') {
-			$searchSql = " AND (LOWER({$prefix}last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
-		} elseif ($searchMatch === 'contains') {
-			$searchSql = " AND (LOWER({$prefix}last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
-			$search = '%' . $search . '%';
-		} else { // $searchMatch === 'startsWith'
-			$searchSql = " AND (LOWER({$prefix}last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
-			$search = $search . '%';
-		}
-		$params[] = $params[] = $params[] = $params[] = $params[] = $search;
-		return $searchSql;
-	}
-
-	/**
 	 * Internal function to generate subscription based search query.
 	 * @return string
 	 */
-	function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params) {
+	protected function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params) {
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
-			case SUBSCRIPTION_USER:
-				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'u.', $params);
+			case IDENTITY_SETTING_GIVENNAME:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) = LOWER(?)';
+				} elseif ($searchMatch === 'contains') {
+					$searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(COALESCE(ugl,ugpl)) LIKE LOWER(?)';
+					$search = $search . '%';
+				}
+				$params[] = $search;
+				break;
+			case IDENTITY_SETTING_FAMILYNAME:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) = LOWER(?)';
+				} elseif ($searchMatch === 'contains') {
+					$searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
+					$search = $search . '%';
+				}
+				$params[] = $search;
+				break;
+			case USER_FIELD_USERNAME:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(u.username) = LOWER(?)';
+				} elseif ($searchMatch === 'contains') {
+					$searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
+					$search = $search . '%';
+				}
+				$params[] = $search;
+				break;
+			case USER_FIELD_EMAIL:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(u.email) = LOWER(?)';
+				} elseif ($searchMatch === 'contains') {
+					$searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				} else { // $searchMatch === 'startsWith'
+					$searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
+					$search = $search . '%';
+				}
+				$params[] = $search;
 				break;
 			case SUBSCRIPTION_MEMBERSHIP:
 				if ($searchMatch === 'is') {
@@ -309,13 +332,16 @@ abstract class SubscriptionDAO extends DAO {
 	 * @return int Subscription ID
 	 */
 	function _insertObject($subscription) {
+		$dateStart = $subscription->getDateStart();
+		$dateEnd = $subscription->getDateEnd();
 		$this->update(
 			sprintf('INSERT INTO subscriptions
 				(journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
 				VALUES
 				(?, ?, ?, %s, %s, ?, ?, ?, ?)',
-				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
-			array(
+				$dateStart!==null?$this->dateToDB($dateStart):'null',
+				$dateEnd!==null?$this->datetimeToDB($dateEnd):'null'
+			), array(
 				(int) $subscription->getJournalId(),
 				(int) $subscription->getUserId(),
 				(int) $subscription->getTypeId(),
@@ -337,6 +363,8 @@ abstract class SubscriptionDAO extends DAO {
 	 * @param $subscription Subscription
 	 */
 	function _updateObject($subscription) {
+		$dateStart = $subscription->getDateStart();
+		$dateEnd = $subscription->getDateEnd();
 		$this->update(
 			sprintf('UPDATE subscriptions
 				SET
@@ -350,8 +378,9 @@ abstract class SubscriptionDAO extends DAO {
 					reference_number = ?,
 					notes = ?
 				WHERE subscription_id = ?',
-				$this->dateToDB($subscription->getDateStart()), $this->datetimeToDB($subscription->getDateEnd())),
-			array(
+				$dateStart!==null?$this->dateToDB($dateStart):'null',
+				$dateEnd!==null?$this->datetimeToDB($dateEnd):'null'
+			), array(
 				(int) $subscription->getJournalId(),
 				(int) $subscription->getUserId(),
 				(int) $subscription->getTypeId(),
@@ -388,4 +417,4 @@ abstract class SubscriptionDAO extends DAO {
 	}
 }
 
-?>
+

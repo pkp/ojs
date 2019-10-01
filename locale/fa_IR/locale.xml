@@ -3,8 +3,8 @@
 <!--
   * locale/fa_IR/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
@@ -86,6 +86,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">مقاله</message>
 	<message key="article.articles">مقالات</message>
+	<message key="common.publishedSubmission">مقاله</message>
+	<message key="common.publishedSubmissions">مقالات</message>
 	<message key="article.submissionId">شناسه مقاله ارسالی</message>
 	<message key="article.title">عنوان</message>
 	<message key="article.authors">نویسندگان</message>
@@ -745,7 +747,6 @@
 	<message key="rt.thisJournal">جستجوی مجله</message>
 	<message key="rt.context.authorTermsDescription">در مورد مقالات با بیش از یک نویسنده تمام نام ها را در حالت چک خورده باقی بگذارید تا  در مورد کارهای مشترک آن‌ها جستجو شود. میتوانید هر بار یکی را جستجو کنید. برای اطلاع بیشتر در مورد منابع مورد جستجو بر روی «درباره» کلیک کنید. این منابع به خاطر مرتبط بودن آن‌ها و دسترسی آزاد به آن‌ها انتخاب شده اند.</message>
 	<!-- Notification Types -->
-	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ارسال شد.</message>
 	<message key="notification.type.editing">ویرایش رویدادها</message>
 	<message key="notification.type.submissionSubmitted">یک مقاله با عنوان  "{$title}" ارسال شده است</message>
 	<message key="notification.type.editorDecisionComment">نقطه‌نظری در خصوص تصمیم دبیر درباره "{$title}" برجا گذاشته شده است.</message>

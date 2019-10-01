@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/openAIRE/OpenAIREPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OpenAIREPlugin
@@ -114,12 +114,15 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function metadataExecute($hookName, $params) {
 		$form =& $params[0];
-		if (get_class($form) == 'SubmissionSubmitStep3Form') {
-			$article =& $params[1];
-		} elseif (get_class($form) == 'IssueEntrySubmissionReviewForm') {
-			$article = $form->getSubmission();
-		} elseif (get_class($form) == 'QuickSubmitForm') {
-			$article = $form->submission;
+		switch (get_class($form)) {
+			case 'SubmissionSubmitStep3Form':
+			case 'QuickSubmitForm':
+				$article = $form->submission;
+				break;
+			case 'IssueEntrySubmissionReviewForm':
+				$article = $form->getSubmission();
+				break;
+			default: throw new Exception('Unknown class form ' . get_class($form));
 		}
 		$formProjectID = $form->getData('projectID');
 		$article->setData('projectID', $formProjectID);
@@ -324,4 +327,4 @@ class OpenAIREPlugin extends GenericPlugin {
 
 
 }
-?>
+

@@ -9,8 +9,8 @@
 /**
  * @file classes/journal/Journal.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Journal
@@ -105,7 +105,7 @@ class Journal extends Context {
 	 */
 	function getMetricTypes($withDisplayNames = false) {
 		// Retrieve report plugins enabled for this journal.
-		$reportPlugins =& PluginRegistry::loadCategory('reports', true, $this->getId());
+		$reportPlugins = PluginRegistry::loadCategory('reports', true, $this->getId());
 		if (!is_array($reportPlugins)) return array();
 
 		// Run through all report plugins and retrieve all supported metrics.
@@ -143,7 +143,7 @@ class Journal extends Context {
 				$defaultMetricType = $availableMetrics[0];
 			} else {
 				// Use the site-wide default metric.
-				$application = PKPApplication::getApplication();
+				$application = Application::getApplication();
 				$defaultMetricType = $application->getDefaultMetricType();
 			}
 		} else {
@@ -170,9 +170,9 @@ class Journal extends Context {
 	function getMetrics($metricType = null, $columns = array(), $filter = array(), $orderBy = array(), $range = null) {
 		// Add a journal filter and run the report.
 		$filter[STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		return $application->getMetrics($metricType, $columns, $filter, $orderBy, $range);
 	}
 }
 
-?>
+

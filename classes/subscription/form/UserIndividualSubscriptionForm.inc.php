@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/UserIndividualSubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserIndividualSubscriptionForm
@@ -93,9 +93,12 @@ class UserIndividualSubscriptionForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
+		if (is_null($request)) {
+			$request = $this->request;
+		}
 		$templateMgr = TemplateManager::getManager($this->request);
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
@@ -104,7 +107,7 @@ class UserIndividualSubscriptionForm extends Form {
 				$this->subscriptionTypes
 			),
 		));
-		parent::display($this->request);
+		parent::display($request, $template);
 	}
 
 	/**

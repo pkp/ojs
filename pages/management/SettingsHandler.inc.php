@@ -3,8 +3,8 @@
 /**
  * @file pages/management/SettingsHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsHandler
@@ -48,6 +48,7 @@ class SettingsHandler extends ManagementHandler {
 	 * @param $request PKPRequest
 	 */
 	function settings($args, $request) {
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 		$path = array_shift($args);
 		switch($path) {
 			case 'index':
@@ -132,7 +133,6 @@ class SettingsHandler extends ManagementHandler {
 	function distribution($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$this->setupTemplate($request);
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.permissions
 		$templateMgr->display('management/settings/distribution.tpl');
 	}
 
@@ -148,4 +148,4 @@ class SettingsHandler extends ManagementHandler {
 	}
 }
 
-?>
+

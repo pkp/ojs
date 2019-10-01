@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -15,6 +15,8 @@
  */
 
 import('classes.handler.Handler');
+
+use \Firebase\JWT\JWT;
 
 class ArticleHandler extends Handler {
 	/** journal associated with the request **/
@@ -34,6 +36,15 @@ class ArticleHandler extends Handler {
 	 * @copydoc PKPHandler::authorize()
 	 */
 	function authorize($request, &$args, $roleAssignments) {
+		// Permit the use of the Authorization header and an API key for access to unpublished/subscription content
+		if ($header = array_search('Authorization', array_flip(getallheaders()))) {
+			list($bearer, $jwt) = explode(' ', $header);
+			if (strcasecmp($bearer, 'Bearer') == 0) {
+				$apiToken = json_decode(JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), array('HS256')));
+				$this->setApiToken($apiToken);
+			}
+		}
+
 		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
 		$this->addPolicy(new ContextRequiredPolicy($request));
 
@@ -45,8 +56,9 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * @see PKPHandler::initialize()
+	 * @param $args array Arguments list
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = array()) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
 		$journal = $request->getContext();
@@ -257,6 +269,7 @@ class ArticleHandler extends Handler {
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
+		if (!isset($this->galley)) $request->getDispatcher()->handle404();
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		else if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
@@ -275,7 +288,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadById($fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');
@@ -394,4 +407,4 @@ class ArticleHandler extends Handler {
 	}
 }
 
-?>
+

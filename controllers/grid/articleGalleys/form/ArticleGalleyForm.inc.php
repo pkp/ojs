@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/form/ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
@@ -103,13 +103,12 @@ class ArticleGalleyForm extends Form {
 
 	/**
 	 * Save changes to the galley.
-	 * @param $request PKPRequest
 	 * @return ArticleGalley The resulting article galley.
 	 */
-	function execute($request) {
+	function execute() {
 		import('classes.file.IssueFileManager');
 
-		$journal = $request->getJournal();
+		$journal = Application::getRequest()->getJournal();
 		$articleGalley = $this->_articleGalley;
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
@@ -137,4 +136,4 @@ class ArticleGalleyForm extends Form {
 	}
 }
 
-?>
+

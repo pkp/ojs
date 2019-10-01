@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localization strings.
@@ -18,7 +18,7 @@
 	<message key="section.default.policy"></message>
 
 	<message key="default.genres.article">Artikeltext</message>
-	
+
 	<!--
 	 *
 	 * DEFAULT - Default settings for setup items.
@@ -29,7 +29,7 @@
 	<message key="default.journalSettings.checklist.addressesLinked">URL:er har angivits för de referenser där det är möjligt.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Texten är satt med enkelt radavstånd, använder 12 punkters typsnittsstorlek, kursiverad text istället för understruken (utom när det gäller URL:er). Alla illustrationer, figurer och tabeller är också inbäddade i texten och inte förlagda till slutet.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements">Texten följer de stilmässiga och bibliografiska regler som beskrivs i Riktlinjer för författare.</message>
-	<message key="default.journalSettings.privacyStatement">De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</message>
+	<message key="default.journalSettings.privacyStatement"><![CDATA[<p>De namn och e-postadresser som används på den här tidskriftens webbplats kommer endast att användas för tidskriftens arbete och inte göras tillgängliga för något annat syfte eller till tredje part.</p>]]></message>
 	<message key="default.journalSettings.openAccessPolicy">Den här tidskriften gör sitt innehåll fritt tillgängligt omedelbart vid publicering enligt open access-principen om att det främjar ett ökat kunskapsutbyte världen över om forskning är fritt tillgänglig.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Den här tidskriften tillåter och uppmuntrar författare att publicera bidrag insända till tidskriften på sina personliga hemsidor eller i institutionella arkiv både före och efter publicering, så länge bibliografiska detaljer medföljer som anger att bidraget publicera(t)s i den här tidskriften.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Manusredigerings-stadiet är till för att förbättra artikeltextens flyt, tydlighet, grammatik, ordval och formatering. Det utgör sista chansen för författaren att göra större ändringar i texten eftersom de korrigeringar som görs i nästa steg endast avser stavfel och justeringar gällande formatering.
@@ -65,7 +65,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 
 <strong>Att svara på Frågor till författaren (QAs).</strong>
 &nbsp; Behåll alla QAs intakta och fetade i texten. Ta inte bort dem.
-&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt 
+&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt
 <strong>[Kommentar:]</strong>
 &nbsp; t.ex., <strong>[Kommentar: Utvecklade metoddiskussion enligt ditt förslag]</strong>.
 
@@ -131,7 +131,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<pre>4. FORMATERING
 	Styckeindraget som inleder "Det senaste ämnet..." är inte avsiktligt..</pre>]]></message>
 
-	<message key="default.journalSettings.forReaders"><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}/{$journalPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Sekretesspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Vi uppmuntrar våra läsare att registrera sig för att få aviseringar från den här tidskriften. Använd <a href="{$indexUrl}/{$journalPath}/user/register">Registrera dig</a>-länken överst på tidskriftens webbsida. Genom att registrera sig där kan du som läsare få ett e-postmeddelande med innehållsförteckning för varje nytt nummer tidskriften publicerar. Listan gör också att tidskriften kan peka på ett visst läsarunderlag. Se tidskriftens <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Integritetspolicy</a>, som försäkrar dig som läsare att ditt namn eller e-postadress inte kommer användas för andra syften.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Är du intresserad av att skicka in ett bidrag till den här tidskriften? Då rekommenderar vi att du läser igenom <a href="{$indexUrl}/{$journalPath}/about">Om tidskriften</a>-sidan för att få en uppfattning om tidskriftens sektionspolicyer, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Riktlinjer för författare</a>. För att skicka in ett bidrag måste du som författare <a href="{$indexUrl}/{$journalPath}/user/register">registrera dig</a> hos tidskriften. Om du redan har ett konto kan du bara <a href="{$indexUrl}/index/login">logga in</a> och påbörja processen, som består av fem steg.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi uppmuntrar bibliotekarier vid forskningsbibliotek att lista den här tidskriften i sitt biblioteks bestånd av elektroniska tidskrifter. Det kan också vara värt att notera att den här tidskriftens publiceringssystem, som utgör fri och öppen programvara, är ett passande system för bibliotek att drifta för sina forskare och de tidskrifter de arbetar med (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Den här tidskriften utnyttjar LOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://www.lockss.org/">Läs mer...</a>]]></message>
@@ -142,7 +142,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<message key="default.journalSettings.purchaseArticleFee">Köp av enstaka artikel</message>
 	<message key="default.journalSettings.purchaseIssueFee">Köp av enstaka nummer</message>
 	<message key="default.journalSettings.membershipFee">Medlemskap</message>
-	
+
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Tidskriftsansvarig</message>
 	<message key="default.groups.plural.manager">Tidskriftsansvariga</message>

@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -524,7 +524,7 @@
 		<subject>إلتماس نسخة التدقيق</subject>
 		<body><![CDATA[{$participantName}:<br />
 <br />
-أود مطالبتك بتوفير نسخة قابلة للتدقيق للمؤلَّف الموسوم &quot;{$submissionTitle}&quot; والمرسل إلى {$contextName} عبر اتباع الخطوات الآتية:<br />
+أود مطالبتك بتوفير نسخة مدققة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; والمرسل إلى {$contextName} عبر اتباع الخطوات الآتية:<br />
 1. أنقر على رابط طلب النشر أدناه.<br />
 2. إفتح أي ملفات متوافرة ضمن الملفات المسودة وأجر متطلبات التدقيق مضيفاً أي قرارات أو ملاحظات تتعلق بالتدقيق حسب الحاجة.<br />
 3. إحفظ الملفات المدققة، ثم إرفعها إلى لوحة المدققات.<br />

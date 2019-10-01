@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -72,4 +72,4 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster verwendet wird.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} wurde zugewiesen.</message>
- </locale>
+</locale>

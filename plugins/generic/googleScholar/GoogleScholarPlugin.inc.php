@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/googleScholar/GoogleScholarPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GoogleScholarPlugin
@@ -69,7 +69,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getTitle($article->getLocale())) . '"/>');
+		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getFullTitle($article->getLocale())) . '"/>');
 
 		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . strftime('%Y/%m/%d', strtotime($datePublished)) . '"/>');
@@ -137,4 +137,4 @@ class GoogleScholarPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

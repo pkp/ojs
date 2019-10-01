@@ -3,8 +3,8 @@
 <!--
   * locale/fa_IR/manager.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
@@ -290,7 +290,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>توجه: </strong> دعوت‌نامه ارسالی برای داور  حاوی یک URL است که با کلیک بر روی آن، داور را مستقیماً به صفحه داوری مقاله ارسالی مورد نظر هدایت می‌کند. به دلایل امنیتی در صورت فعال‌سازی این گزینه دبیران نمی‌توانند آدرس‌های ایمیل و رونوشت‌های آن را تغییر دهند.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">امتیاز داور</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">یادآوری داور</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[لینک <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">اطمینان از داوری محرمانه</a> در صفحاتی که نویسندگان و داوران فایل آپلود می‌کنند ظاهر می‌شود.]]></message>
 	<message key="manager.setup.reviewPolicy">سیاست‌های داوری</message>
 	<message key="manager.setup.searchEngineIndexing">نمایه در موتور جستجو</message>
 	<message key="manager.setup.searchEngineIndexingDescription">برای کمک به موتورهای جستجو جهت نمایه کردن بهتر این مجله توصیف مختصری از مجله و کلیدواژه‌های مناسب که با سمی کولون از هم جدا هستند بیاورید.</message>

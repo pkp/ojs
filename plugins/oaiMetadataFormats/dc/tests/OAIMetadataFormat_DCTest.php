@@ -7,8 +7,8 @@
 /**
  * @file plugins/oaiMetadataFormats/dc/tests/OAIMetadataFormat_DCTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
@@ -83,8 +83,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		$article->setType('art-type', 'en_US');
 		$article->setTitle('article-title-en', 'en_US');
 		$article->setTitle('article-title-de', 'de_DE');
-		$article->setDiscipline('article-discipline', 'en_US');
-		$article->setSubject('article-subject', 'en_US');
 		$article->setAbstract('article-abstract', 'en_US');
 		$article->setSponsor('article-sponsor', 'en_US');
 		$article->setStoredPubId('doi', 'article-doi');
@@ -131,7 +129,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// Router
 		import('lib.pkp.classes.core.PKPRouter');
 		$router = $this->getMock('PKPRouter', array('url'));
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$router->setApplication($application);
 		$router->expects($this->any())
 		       ->method('url')
@@ -252,4 +250,4 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
        	return $handler.'-'.$op.'-'.implode('-', $path);
 	}
 }
-?>
+

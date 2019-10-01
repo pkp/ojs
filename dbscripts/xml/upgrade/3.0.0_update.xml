@@ -4,8 +4,8 @@
 <!--
   * 3.0.0_update.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 3.0.0.0 general updates.
@@ -176,6 +176,9 @@
 		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type) VALUES ('themePluginPath', 'default', 'string')</query>
 		<query>INSERT INTO journal_settings (setting_name, setting_value, setting_type, journal_id) SELECT 'themePluginPath', 'default', 'string', journal_id FROM journals</query>
 	</sql>
+	<sql><!-- Issue #4989: Set default review mode on upgrade from 2.x -->
+		<query>INSERT INTO journal_settings (setting_name, setting_value, setting_type, journal_id) SELECT 'defaultReviewMode', 'default', 'int', journal_id FROM journals</query><!-- SUBMISSION_REVIEW_METHOD_DOUBLEBLIND -->
+	</sql>
 
 	<sql><!-- OJS 2.4.x used log.author.submitted to log submission events; use submission.event.submissionSubmitted instead -->
 		<query>UPDATE event_log SET message='submission.event.submissionSubmitted' WHERE message='log.author.submitted'</query>
@@ -213,8 +216,12 @@
 		<query driver="mysql">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="mysqli">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="postgres7">UPDATE submission_files SET file_stage=7 FROM articles_migration am WHERE am.editor_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
-		<query>UPDATE submission_files SET file_stage=10 WHERE file_id IN (SELECT file_id FROM submission_galleys)</query><!-- SUBMISSION_FILE_PROOF -->
-		<query>UPDATE submission_files SET file_stage=17 WHERE file_id IN (SELECT style_file_id FROM article_galleys_migration)</query><!-- SUBMISSION_FILE_DEPENDENT -->
+		<query driver="mysql">UPDATE submission_files sf, submission_galleys sg SET sf.file_stage=10 WHERE sg.file_id=sf.file_id</query><!-- SUBMISSION_FILE_PROOF --> 
+		<query driver="mysqli">UPDATE submission_files sf, submission_galleys sg SET sf.file_stage=10 WHERE sg.file_id=sf.file_id</query><!-- SUBMISSION_FILE_PROOF --> 
+		<query driver="postgres7">UPDATE submission_files SET file_stage=10 FROM submission_galleys sg WHERE sg.file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_PROOF -->
+		<query driver="mysql">UPDATE submission_files sf, article_galleys_migration agm SET sf.file_stage=17 WHERE agm.style_file_id=sf.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->
+		<query driver="mysqli">UPDATE submission_files sf, article_galleys_migration agm SET sf.file_stage=17 WHERE agm.style_file_id=sf.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->
+		<query driver="postgres7">UPDATE submission_files SET file_stage=17 FROM article_galleys_migration agm WHERE agm.style_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_DEPENDANT -->
 	</sql>
 	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>

@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Danish locale.
@@ -89,6 +89,7 @@
 	<message key="section.abbreviation.example">(F.eks. Artikler = ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artikler</message>
+	<message key="common.publishedSubmissions">Artikler</message>
 	<message key="article.submissionId">Manuskript-id</message>
 	<message key="article.title">Titel</message>
 	<message key="article.authors">Forfattere</message>
@@ -798,6 +799,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="help.searchReturnResults">Tilbage til søgeresultater</message>
 	<message key="payment.type.purchaseArticle">Gebyr for køb af artikel</message>
 	<message key="article.article">Artikel</message>
+	<message key="common.publishedSubmission">Artikel</message>
 	<message key="journal.issn">ISSN-nummer</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
@@ -875,7 +877,6 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="payment.subscription.purchase">Køb abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Opgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", er blevet indleveret.</message>
 	<message key="notification.type.editing">Redigeringshændelser</message>
 	<message key="notification.type.editorDecisionComment">Der er blevet skrevet en kommentar til redaktørens beslutning vedrørende "{$title}".</message>
 	<message key="notification.type.galleyModified">Der er foretaget en ændring af et publiceringsformatet til "{$title}".</message>
@@ -961,7 +962,7 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="plugins.categories.viewableFiles.description">'Article Galley Plugins' understøtter fremvisningen af forskellige dokumenttyper som publiceringsversion af artiklen.</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Indsæt eller tilret bedømmer-indstillingen.</message>
 	<message key="user.register.selectContext">Vælg et tidsskrift at lade dig registrere ved:</message>
-	<message key="article.pageTitle">Bedømmelse af {$title}</message>
+	<message key="article.pageTitle">Visning af: {$title}</message>
 	<message key="article.download">Download denne PDF-fil</message>
 	<message key="article.pluginMissing"><![CDATA[<p>Den valgte PDF-fil vil blive indlæst her, såfremt din browser har en PDF reader plugin installeret (for eksempel, en nyere version af <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 	<message key="archive.archivesPageNumber">Arkiver - Side {$pageNumber}</message>
@@ -1012,4 +1013,7 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="user.reviewerPrompt.optin">Ja, jeg vil gerne kontaktes med anmodninger om at foretage bedømmelse af indsendelser til dette tidsskrift.</message>
 	<message key="user.register.form.emailConsentAllContexts">Ja, jeg vil gerne underrettes om nye publikationer og meddelelser fra alle de tidsskrifter, som jeg er registreret hos.</message>
 	<message key="notification.type.public">Offentlige meddelelser</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Ja, jeg accepterer at få mine data indsamlet og gemt i overensstemmelse med dette tidsskrifts <a href="{$privacyUrl}" target="_blank"> erklæring om beskyttelse af personlige oplysninger </a>.]]></message>
+	<message key="user.register.form.missingContextConsent">Du skal - i forbindelse med registrering - acceptere de pågældende tidsskrifters erklæring om beskyttelse af personlige oplysninger.</message>
+	<message key="user.register.form.missingSiteConsent">Du skal godkende dette websteds erklæring om beskyttelse af personlige oplysninger.</message>
 </locale>

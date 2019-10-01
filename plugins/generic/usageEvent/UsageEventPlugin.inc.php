@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
@@ -90,7 +90,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					if ($publishedArticle) {
 						$pubObject = $publishedArticle;
-						$assocType = ASSOC_TYPE_ARTICLE;
+						$assocType = ASSOC_TYPE_SUBMISSION;
 						$canonicalUrlParams = array($pubObject->getId());
 						$idParams = array('m' . $pubObject->getId());
 					}
@@ -143,7 +143,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 		return array(
 			ASSOC_TYPE_JOURNAL,
 			ASSOC_TYPE_ISSUE,
-			ASSOC_TYPE_ARTICLE
+			ASSOC_TYPE_SUBMISSION,
 		);
 	}
 
@@ -156,4 +156,4 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 }
 
-?>
+

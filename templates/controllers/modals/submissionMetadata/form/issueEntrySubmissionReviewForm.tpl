@@ -1,8 +1,8 @@
 {**
  * controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display a submission's issue entry form.
@@ -62,6 +62,8 @@
 		{load_url_in_div id=$authorsGridContainer url="$authorGridUrl"}
 	{/if}
 
+	{include file="submission/form/categories.tpl"}
+
 	{* Cover Image *}
 	{fbvFormArea id="coverImage" title="editor.article.coverImage"}
 		{if !$formParams.readOnly}
@@ -96,7 +98,7 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{include file="submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly}
+	{include file="submission/submissionMetadataFormFields.tpl" readOnly=$formParams.readOnly  metadataModal=true}
 
 	{if !$formParams.hideSubmit}
 		{fbvFormButtons id="submissionMetadataFormSubmit" submitText="common.save"}

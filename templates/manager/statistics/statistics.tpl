@@ -1,8 +1,8 @@
 {**
  * templates/manager/statistics/statistics.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subtemplate defining the statistics table.
@@ -45,7 +45,7 @@
 			</script>
 				<select name="sectionIds[]" class="selectMenu" multiple="multiple" size="5">
 					{foreach from=$sections item=section}
-						<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()}</option>
+						<option {if in_array($section->getId(), $sectionIds)}selected="selected" {/if}value="{$section->getId()}">{$section->getLocalizedTitle()|escape}</option>
 					{/foreach}
 				</select><br/>&nbsp;<br/>
 				<input type="submit" value="{translate key="common.record"}" class="button defaultButton"/>

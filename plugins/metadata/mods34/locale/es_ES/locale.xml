@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/mods34/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.metadata.mods34.articleAdapter.displayName">Adaptador de artículos MODS 3.4</message>
+	<message key="plugins.metadata.mods34.articleAdapter.description">Extrae/introduce metadatos de/en los artículos.</message>
+</locale>

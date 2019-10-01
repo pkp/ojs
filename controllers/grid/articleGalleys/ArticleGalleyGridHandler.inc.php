@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridHandler.inc.php
  *
- * Copyright (c) 2016-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2016-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridHandler
@@ -167,7 +167,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function getRowInstance() {
 		import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
 		return new ArticleGalleyGridRow(
-			$this->getSubmission()
+			$this->getSubmission(),
+			$this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
 		);
 	}
 
@@ -208,7 +209,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($representation);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 
@@ -228,8 +229,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($representation);
 		$form->readInputData();
-		if ($form->validate($request)) {
-			$form->execute($request);
+		if ($form->validate()) {
+			$form->execute();
 			return DAO::getDataChangedEvent();
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
@@ -307,6 +308,12 @@ class ArticleGalleyGridHandler extends GridHandler {
 			);
 		}
 
+		//inform search index that file has been deleted
+		import('classes.search.ArticleSearchIndex');
+		$articleSearchIndex = new ArticleSearchIndex();
+		$articleSearchIndex->submissionFileDeleted($galley->getSubmissionId());
+		$articleSearchIndex->articleChangesFinished();
+
 		return DAO::getDataChangedEvent($galley->getId());
 	}
 
@@ -359,8 +366,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $galley);
 		$galleyForm->readInputData();
 
-		if ($galleyForm->validate($request)) {
-			$galley = $galleyForm->execute($request);
+		if ($galleyForm->validate()) {
+			$galley = $galleyForm->execute();
 
 			if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
 				$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
@@ -396,4 +403,4 @@ class ArticleGalleyGridHandler extends GridHandler {
 	}
 }
 
-?>
+

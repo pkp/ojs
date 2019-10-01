@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/PaymentTypesForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaymentTypesForm
@@ -54,7 +54,8 @@ class PaymentTypesForm extends Form {
 	/**
 	 * Initialize form data from current group group.
 	 */
-	function initData($journal) {
+	function initData() {
+		$journal = Application::getRequest()->getContext();
 		foreach (array_keys($this->settings) as $settingName) {
 			$this->setData($settingName, $journal->getSetting($settingName));
 		}
@@ -69,14 +70,13 @@ class PaymentTypesForm extends Form {
 
 	/**
 	 * Save settings
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
-		$journal = $request->getJournal();
+	function execute() {
+		$journal = Application::getRequest()->getJournal();
 		foreach (array_keys($this->settings) as $settingName) {
 			$journal->updateSetting($settingName, $this->getData($settingName));
 		}
 	}
 }
 
-?>
+

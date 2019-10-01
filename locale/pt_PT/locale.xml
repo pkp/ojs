@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -72,6 +72,7 @@
 	<message key="section.abbreviation.example">(Por exemplo, Artigos=ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artigos</message>
+	<message key="common.publishedSubmissions">Artigos</message>
 	<message key="article.submissionId">ID da Submissão</message>
 	<message key="article.title">Título</message>
 	<message key="article.authors">Autores</message>
@@ -771,6 +772,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="article.fontSize.large.altText">Maior</message>
 	<message key="journal.issn">ISSN</message>
 	<message key="article.article">Artigo</message>
+	<message key="common.publishedSubmission">Artigo</message>
 	<message key="user.manageMySubscriptions">Gerir Minhas Subscrições</message>
 	<message key="subscriptionTypes.currency">Moeda</message>
 	<message key="subscriptionTypes.year">ano</message>
@@ -844,7 +846,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="payment.subscription.purchase">Adquirir Subscrições</message>
 	<message key="installer.installApplication">Instalar o sistema</message>
 	<message key="installer.upgradeApplication">Actualizar o sistema</message>
-	<message key="notification.type.articleSubmitted">Um novo artigo, "{$title}", foi submetido.</message>
 	<message key="notification.type.editing">Editando eventos</message>
 	<message key="notification.type.editorDecisionComment">Foi produzido um comentário sobre a decisão editorial de "{$title}".</message>
 	<message key="notification.type.galleyModified">A versão para publicação foi alterada para "{$title}".</message>
@@ -991,4 +992,9 @@ Setting up CLOCKSS support for Open Journal Systems does not need to take place 
 	<message key="log.editor.submissionExpedited">{$editorName} tomou o processo de edição do artigo {$submissionId}.</message>
 	<message key="notification.type.publicationScheduled">Esta submissão foi agendada para publicação.</message>
 	<message key="log.editor.recommendation">O editor {$editorName} registou uma recomendação ({$decision}) para o artigo {$submissionId}.</message>
+	<message key="user.reviewerPrompt.optin">Sim, quero ser contactado com pedidos de revisão a submissões para esta revista.</message>
+	<message key="user.register.form.emailConsentAllContexts">Sim, quero ser notificado de novas publicações e anúncios para todas as revistas em que me registei.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Sim, concordo que os meus dados sejam recolhidos e armazenados de acordo com os <a href="{$privacyUrl}" target="_blank">termos de privacidade</a> da revista.]]></message>
+	<message key="user.register.form.missingContextConsent">Tem de concordar com os termos de privacidade para todas as revistas para as quais se registou.</message>
+	<message key="user.register.form.missingSiteConsent">Tem de concordar com os termos de privacidade deste sítio.</message>
 </locale>

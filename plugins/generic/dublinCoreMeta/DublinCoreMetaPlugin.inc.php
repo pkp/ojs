@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/dublinCoreMeta/DublinCoreMetaPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DublinCoreMetaPlugin
@@ -124,9 +124,9 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($article->getTitle($article->getLocale())) . '"/>');
+		$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($article->getFullTitle($article->getLocale())) . '"/>');
 		$i=0;
-		foreach ($article->getTitle(null) as $locale => $title) {
+		foreach ($article->getFullTitle(null) as $locale => $title) {
 			if ($locale == $article->getLocale()) continue;
 			$templateMgr->addHeader('dublinCoreAltTitle' . $i++, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($title) . '"/>');
 		}
@@ -161,4 +161,4 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

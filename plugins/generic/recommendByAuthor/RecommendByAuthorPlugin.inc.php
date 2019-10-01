@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/recommendByAuthor/RecommendByAuthorPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RecommendByAuthorPlugin
@@ -84,13 +84,13 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$results = array_unique($foundArticles);
 
 		// Order results by metric.
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (empty($metricType)) $smarty->assign('noMetricSelected', true);
-		$column = STATISTICS_DIMENSION_ARTICLE_ID;
+		$column = STATISTICS_DIMENSION_SUBMISSION_ID;
 		$filter = array(
-				STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_ARTICLE),
-				STATISTICS_DIMENSION_ARTICLE_ID => array($results)
+				STATISTICS_DIMENSION_ASSOC_TYPE => array(ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION),
+				STATISTICS_DIMENSION_SUBMISSION_ID => array($results)
 		);
 		$orderBy = array(STATISTICS_METRIC => STATISTICS_ORDER_DESC);
 		$statsReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
@@ -105,7 +105,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$orderedResults = array_merge($orderedResults, $remainingResults);
 
 		// Pagination.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$rangeInfo = Handler::getRangeInfo($request, 'articlesBySameAuthor');
 		if ($rangeInfo && $rangeInfo->isValid()) {
 			$page = $rangeInfo->getPage();
@@ -138,4 +138,4 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		return false;
 	}
 }
-?>
+
