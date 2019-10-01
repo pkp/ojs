@@ -49,7 +49,7 @@ class PublishForm extends FormComponent {
 						$msg = __('publication.publish.confirmation.backIssue', ['issue' => $issue->getIssueIdentification()]);
 					} else {
 						$msg = __('publication.publish.confirmation.futureIssue', ['issue' => $issue->getIssueIdentification()]);
-						$submitLabel = __('editor.article.schedulePublication');
+						$submitLabel = __('editor.submission.schedulePublication');
 					}
 				}
 			}

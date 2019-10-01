@@ -18,7 +18,12 @@
 		<div class="pkp_tab_actions">
 			<ul class="pkp_workflow_decisions">
 				<li>
-					<a href="#publication" class="pkp_linkaction_toPublication">{translate key="editor.article.schedulePublication"}</a>
+					<button
+						class="pkpButton pkpButton--isPrimary"
+						onClick="pkp.eventBus.$emit('open-tab', 'publication')"
+					>
+						{translate key="editor.submission.schedulePublication"}
+					</button>
 				</li>
 			</ul>
 		</div>

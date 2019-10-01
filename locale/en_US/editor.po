@@ -125,9 +125,6 @@ msgstr "Assigned To"
 msgid "editor.submissions.inSection"
 msgstr "In Series"
 
-msgid "editor.article.schedulePublication"
-msgstr "Schedule For Publication"
-
 msgid "editor.article.showPublicationVersion"
 msgstr "Show Scheduled Publication"
 
