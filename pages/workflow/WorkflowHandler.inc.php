@@ -78,7 +78,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
 		$workflowData['components'][FORM_JOURNAL_ENTRY] = $journalEntryForm->getConfig();
 		$workflowData['publicationFormIds'][] = FORM_JOURNAL_ENTRY;
-		$workflowData['i18n']['schedulePublication'] = __('editor.article.schedulePublication');
+		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
 
 		$templateMgr->assign('workflowData', $workflowData);
 	}

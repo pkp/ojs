@@ -209,7 +209,6 @@
 	<message key="grid.action.viewIssue">Zobrazit</message>
 	<message key="grid.action.previewIssue">Náhled</message>
 	<message key="grid.action.addIssueGalley">Vytvořit sazebnici čísla</message>
-	<message key="editor.article.schedulePublication">Naplánováno k publikování</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Obrázek obálky, který chcete smazat, nebyl nalezen. Možná již byl smazána. Zkuste znovu načíst stránku.</message>
 	<message key="grid.action.removeArticle">Odebrat článek z čísla</message>
 	<message key="editor.article.remove.confirm">Opravdu chcete odstranit tento článek z čísla? Článek bude k dispozici pro vydání v jiném čísle.</message>

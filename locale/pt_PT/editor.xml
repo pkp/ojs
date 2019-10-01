@@ -135,7 +135,6 @@
 	<message key="grid.action.viewIssue">Ver Número</message>
 	<message key="grid.action.previewIssue">Prévisualizar Número</message>
 	<message key="grid.action.addIssueGalley">Criar Edição</message>
-	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
 	<message key="editor.article.removeCoverImageFileNotFound">A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido elimindas. Tente recarregar a página.</message>
 	<message key="grid.action.removeArticle">Remover Artigo de Número</message>
 	<message key="editor.article.remove.confirm">Tem certeza de que deseja remover este artigo do número? O artigo estará disponível para agendamento noutro número.</message>

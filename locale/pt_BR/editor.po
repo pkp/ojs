@@ -419,9 +419,6 @@ msgstr "Não foi possível encontrar a imagem da capa que você solicitou para e
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr "Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png."
 
-msgid "editor.article.schedulePublication"
-msgstr "Agendar para Publicação"
-
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página."
 

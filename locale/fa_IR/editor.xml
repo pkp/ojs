@@ -130,7 +130,6 @@
 	<message key="editor.submissions.lastCompleted">آخرین داوری کامل شده</message>
 	<message key="editor.submissions.assignedTo">منتسب شده به</message>
 	<message key="editor.submissions.inSection">برای مقالات از نوع</message>
-	<message key="editor.article.schedulePublication">برنامه چاپ</message>
 	<message key="editor.article.scheduleForPublication">کاندید پذیرش</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">قرار است انتساب یابد</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">هزینه چاپ پرداخت نشده است. برای قرار دادن در نوبت چاپ به نویسنده اطلاع دهید تا هزینه را پرداخت کند</message>

@@ -132,7 +132,6 @@
 	<message key="editor.submissions.lastCompleted">Son Tamamlanan</message>
 	<message key="editor.submissions.assignedTo">Atanan</message>
 	<message key="editor.submissions.inSection">Bölümde</message>
-	<message key="editor.article.schedulePublication">Yayınlanacağı Sayı:</message>
 	<message key="editor.article.scheduleForPublication">Yayınlanmak üzere planlandığı sayı:</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Yayın Planı Yapılacak</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Yayın ücreti ödenmedi. Öğenin yayın planına alınabilmesi için yazara ödeme veya feragat bilgilendirmesi yap.</message>

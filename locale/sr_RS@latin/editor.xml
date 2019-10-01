@@ -142,7 +142,6 @@
 	<message key="editor.submissions.lastCompleted">Poslednje kompletirano</message>
 	<message key="editor.submissions.assignedTo">Dodeljeno za</message>
 	<message key="editor.submissions.inSection">U sekciji/rubrici</message>
-	<message key="editor.article.schedulePublication">Dodeli za objavljivanje</message>
 	<message key="editor.article.scheduleForPublication">Dodeli za objavljivanje u</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Biće dodeljen</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Naknada za objavljivanje nije plaćena. Da bi se rad objavio obavestite autora da plati naknadu ili da traži izuzeće od plaćanja.</message>

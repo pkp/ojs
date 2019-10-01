@@ -132,7 +132,6 @@
 	<message key="editor.submissions.lastCompleted">Последняя завершенная</message>
 	<message key="editor.submissions.assignedTo">Кому назначено</message>
 	<message key="editor.submissions.inSection">В разделе</message>
-	<message key="editor.article.schedulePublication">Запланировать для публикации</message>
 	<message key="editor.article.showPublicationVersion">Показать запланированную публикацию</message>
 	<message key="editor.article.publishVersion">Опубликовать версию</message>
 	<message key="editor.article.viewMetadata">Показать метаданные версии</message>

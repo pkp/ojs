@@ -147,7 +147,6 @@
 	<message key="grid.action.previewIssue">Previsualitzar</message>
 	<message key="grid.action.addIssueGalley">Crear galerada del número</message>
 	<message key="grid.action.setCurrentIssue">Establir número actual</message>
-	<message key="editor.article.schedulePublication">Programar per publicar</message>
 	<message key="editor.article.removeCoverImageFileNotFound">La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</message>
 	<message key="grid.action.removeArticle">Eliminar article del número</message>
 	<message key="editor.article.remove.confirm">Segur que voleu eliminar aquest article del número? L'article estarà disponible per programar-lo en un altre número.</message>

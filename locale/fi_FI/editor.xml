@@ -131,7 +131,6 @@
 	<message key="editor.submissions.lastCompleted">Viimeisin valmis</message>
 	<message key="editor.submissions.assignedTo">Osoitettu käyttäjälle</message>
 	<message key="editor.submissions.inSection">Osastossa</message>
-	<message key="editor.article.schedulePublication">Ajoita julkaistavaksi</message>
 	<message key="editor.article.scheduleForPublication">Ajoita julkaistavaksi (numerossa)</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Osoitetaan</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Julkaisumaksu maksamatta. Ilmoita kirjoittajalle, että maksu on maksettava tai siitä on luovuttava, jotta kohde voidaan ajoittaa julkaistavaksi.</message>

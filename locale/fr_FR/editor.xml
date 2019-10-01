@@ -222,7 +222,6 @@
 	<message key="grid.action.viewIssue">Voir</message>
 	<message key="grid.action.previewIssue">Aperçu</message>
 	<message key="grid.action.addIssueGalley">Créer une épreuve pour le numéro</message>
-	<message key="editor.article.schedulePublication">Calendrier de publication</message>
 	<message key="editor.article.removeCoverImageFileNotFound">L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà supprimée. Essayer de recharger la page.</message>
 	<message key="grid.action.removeArticle">Retirer l'article du numéro</message>
 	<message key="editor.article.remove.confirm">Êtes-vous certain de vouloir retirer cet article de ce numéro? L'article restera disponible pour un autre numéro.</message>
@@ -234,7 +233,7 @@
 	<message key="editor.publicIdentificationExistsForTheSameType">Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue.</message>
         <message key="editor.submission.printReviews">Imprimer les rapports</message>
         <message key="editor.submission.submissionSummary">Récapitulatif Article</message>
-        
+
 	<message key="editor.article.coverImage">Image de la page couverture</message>
 	<message key="editor.issues.confirmSetCurrentIssue">Etes-vous sûr de vouloir définir ce volume comme étant le courant ?</message>
 	<message key="grid.action.setCurrentIssue">Définir le volume courant</message>

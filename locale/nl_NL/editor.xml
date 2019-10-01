@@ -132,7 +132,6 @@
 	<message key="editor.submissions.lastCompleted">Laatste voltooid</message>
 	<message key="editor.submissions.assignedTo">Toegekend aan</message>
 	<message key="editor.submissions.inSection">In sectie</message>
-	<message key="editor.article.schedulePublication">Inplannen voor publicatie in</message>
 	<message key="editor.article.scheduleForPublication">Inplannen voor publicatie in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Nog toe te wijzen</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publicatiekosten niet betaald. Vraag de auteur om betaling of scheld die kwijt om het item voor publicatie in te plannen.</message>
