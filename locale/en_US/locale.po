@@ -317,9 +317,6 @@ msgstr "Step 3"
 msgid "submissions.queuedReview"
 msgstr "In Review"
 
-msgid "submissions.scheduled"
-msgstr "Scheduled"
-
 msgid "submissions.published"
 msgstr "Published"
 

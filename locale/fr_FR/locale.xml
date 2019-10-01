@@ -135,7 +135,6 @@
 	<message key="submissions.step1">Étape 1</message>
 	<message key="submissions.step3">Étape 3</message>
 	<message key="submissions.queuedReview">En évaluation</message>
-	<message key="submissions.scheduled">Planifiée</message>
 	<message key="submissions.published">Publiée</message>
 	<message key="submissions.initial">Initiale</message>
 	<message key="submissions.proofread">Faire la correction d'épreuves</message>

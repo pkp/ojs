@@ -165,7 +165,6 @@
 	<message key="submissions.step1">Крок 1</message>
 	<message key="submissions.step3">Крок 3</message>
 	<message key="submissions.queuedReview">рецензується</message>
-	<message key="submissions.scheduled">Заплановано до публікації</message>
 	<message key="submissions.published">Опубліковано</message>
 	<message key="submissions.initial">Початок</message>
 	<message key="submissions.proofread">Скореговано</message>

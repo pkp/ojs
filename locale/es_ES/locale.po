@@ -299,9 +299,6 @@ msgstr "Paso 3"
 msgid "submissions.queuedReview"
 msgstr "En revisión"
 
-msgid "submissions.scheduled"
-msgstr "Planificado"
-
 msgid "submissions.published"
 msgstr "Publicado"
 

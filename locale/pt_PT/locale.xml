@@ -126,7 +126,6 @@
 	<message key="submissions.step1">Passo 1</message>
 	<message key="submissions.step3">Passo 3</message>
 	<message key="submissions.queuedReview">Em Revisão</message>
-	<message key="submissions.scheduled">Agendado</message>
 	<message key="submissions.published">Publicado</message>
 	<message key="submissions.initial">Inicial</message>
 	<message key="submissions.proofread">Ler Prova</message>
