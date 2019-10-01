@@ -82,6 +82,7 @@
 	<!-- Публикация -->
 	<message key="galley.editPublishedDisabled">Гранки этой публикации нельзя редактировать, так как она уже опубликована.</message>
 	<message key="galley.publicationNotFound">Публикацию для этой гранки не удаётся найти.</message>
+	<message key="publication.datePublished.description">Дата публикации будет автоматически проставлена, когда выпуск будет опубликован. Не вводите дату публикации, кроме случаев, когда статья ранее была где-то опубликована и вам необходимо проставить дату публикации задним числом.</message>
 	<message key="publication.invalidSection">Раздел для этой публикации не удаётся найти.</message>
 	<message key="publication.invalidIssue">Выпуск для этой публикации не удаётся найти.</message>
 	<message key="publication.journalEntry">Запись в журнале</message>
