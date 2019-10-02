@@ -69,7 +69,8 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 	 * @copydoc DataObjectRequiredPolicy::getDataObjectId()
 	 * Considers a not numeric public URL identifier
 	 */
-	function getDataObjectId() {
+	function getDataObjectId($lookOnlyByParameterName = false) {
+		if ($lookOnlyByParameterName) throw new Exception('lookOnlyByParameterName not supported for issues.');
 		// Identify the data object id.
 		$router = $this->_request->getRouter();
 		switch(true) {

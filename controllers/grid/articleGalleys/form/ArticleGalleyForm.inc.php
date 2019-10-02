@@ -60,23 +60,23 @@ class ArticleGalleyForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
-		$journal = $request->getJournal();
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		if ($this->_articleGalley) $templateMgr->assign(array(
 			'representationId' => $this->_articleGalley->getId(),
 			'articleGalley' => $this->_articleGalley,
 			'articleGalleyFile' => $this->_articleGalley->getFile(),
 		));
+		$journal = $request->getJournal();
 		$templateMgr->assign(array(
 			'supportedLocales' => $journal->getSupportedSubmissionLocaleNames(),
 			'submissionId' => $this->_submission->getId(),
 			'publicationId' => $this->_publication->getId(),
 		));
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
