@@ -32,23 +32,17 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 		if ($hookResult === false || is_null($hookResult)) {
 			// Build author keywords
 			$authorText = array();
-			$authors = $submission->getAuthors();
-			for ($i=0, $count=count($authors); $i < $count; $i++) {
-				$author = $authors[$i];
-				$givenNames = $author->getGivenName(null);
-				if (is_array($givenNames)) foreach ($givenNames as $givenName) { // Localized
+			foreach ($submission->getCurrentPublication()->getData('authors') as $author) {
+				foreach ((array) $author->getGivenName(null) as $givenName) { // Localized
 					array_push($authorText, $givenName);
 				}
-				$familyNames = $author->getFamilyName(null);
-				if (is_array($familyNames)) foreach ($familyNames as $familyName) { // Localized
+				foreach ((array) $author->getFamilyName(null) as $familyName) { // Localized
 					array_push($authorText, $familyName);
 				}
-				$affiliations = $author->getAffiliation(null);
-				if (is_array($affiliations)) foreach ($affiliations as $affiliation) { // Localized
+				foreach ((array) $author->getAffiliation(null) as $affiliation) { // Localized
 					array_push($authorText, $affiliation);
 				}
-				$bios = $author->getBiography(null);
-				if (is_array($bios)) foreach ($bios as $bio) { // Localized
+				foreach ((array) $author->getBiography(null) as $bio) { // Localized
 					array_push($authorText, strip_tags($bio));
 				}
 			}
@@ -277,11 +271,11 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
-				$articles = $submissionDao->getByContextId($journal->getId());
-				while ($article = $articles->next()) {
-					if ($article->getSubmissionProgress() == 0) { // Not incomplete
-						$this->submissionMetadataChanged($article);
-						$this->submissionFilesChanged($article);
+				$submissions = Services::get('submission')->getMany(['contextId' => $journal->getId()]);
+				foreach ($submissions as $submission) {
+					if ($submission->getSubmissionProgress() == 0) { // Not incomplete
+						$this->submissionMetadataChanged($submission);
+						$this->submissionFilesChanged($submission);
 						$numIndexed++;
 					}
 				}
