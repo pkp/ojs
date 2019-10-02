@@ -22,4 +22,6 @@
 	<message key="plugins.block.subscription.comingFromIP">من</message>
 	<message key="plugins.block.subscription.about">الاشتراكات</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">أدخل الموقع للتحقق من الاشتراك</message>
+	<message key="plugins.block.subscription.subscriptionRequired">لا بد من الاشتراك من أجل الوصول إلى بعض الموارد.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">معرفة المزيد</message>
 </locale>

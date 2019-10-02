@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Plugiciel de flux de nouvelles"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Ce plugiciel produit des flux de nouvelles en format Atom/RSS pour le numéro courant."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Paramètres"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Afficher les liens de flux de nouvelles sur les pages du numéro seulement."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Afficher les liens de flux de nouvelles sur toutes les pages de la revue."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Afficher les articles du dernier numéro publié."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "les articles publiés le plus récemment."
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Veuillez entrer un nombre entier positif pour les articles publiés récemment."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Logo Atom"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Logo RSS2"
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Afficher les liens de fil de syndication dans la page d'accueil et les pages des numéros uniquement."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Afficher un nombre fixe des éléments les plus récents."

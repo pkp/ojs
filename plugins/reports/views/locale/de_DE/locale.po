@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:49-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:49-07:00\n"
+"Language: \n"
+
+msgid "plugins.reports.views.displayName"
+msgstr "Lese-Bericht"
+
+msgid "plugins.reports.views.description"
+msgstr "Dieses Plugin liefert einen CSV-Bericht, der die Lesezugriffe für jeden Artikel angibt."
+
+msgid "plugins.reports.views.articleId"
+msgstr "Artikel-ID"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Artikeltitel"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Veröffentlichungsdatum"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Abstract-Ansichten"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Gesamte Fahnen-Ansichten"

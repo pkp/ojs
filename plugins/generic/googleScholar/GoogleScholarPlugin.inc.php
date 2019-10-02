@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/googleScholar/GoogleScholarPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GoogleScholarPlugin
@@ -48,17 +48,24 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$request = $args[0];
 		$issue = $args[1];
 		$article = $args[2];
+		$requestArgs = $request->getRequestedArgs();
 		$journal = $request->getContext();
+
+		// Only add Google Scholar metadata tags to the canonical URL for the latest version
+		// See discussion: https://github.com/pkp/pkp-lib/issues/4870
+		if (count($requestArgs) > 1 && $requestArgs[1] === 'version') {
+			return;
+		}
 
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addHeader('googleScholarRevision', '<meta name="gs_meta_revision" content="1.1"/>');
 		$templateMgr->addHeader('googleScholarJournalTitle', '<meta name="citation_journal_title" content="' . htmlspecialchars($journal->getName($journal->getPrimaryLocale())) . '"/>');
 
-		if ($abbreviation = $journal->getSetting('abbreviation', $journal->getPrimaryLocale()) || $abbreviation = $journal->getSetting('acronym', $journal->getPrimaryLocale())) {
+		if ($abbreviation = $journal->getData('abbreviation', $journal->getPrimaryLocale()) || $abbreviation = $journal->getData('acronym', $journal->getPrimaryLocale())) {
 			$templateMgr->addHeader('googleScholarJournalAbbrev', '<meta name="citation_journal_abbrev" content="' . htmlspecialchars($abbreviation) . '"/>');
 		}
 
-		if (($issn = $journal->getSetting('onlineIssn')) || ($issn = $journal->getSetting('printIssn')) || ($issn = $journal->getSetting('issn'))) {
+		if (($issn = $journal->getData('onlineIssn')) || ($issn = $journal->getData('printIssn')) || ($issn = $journal->getData('issn'))) {
 			$templateMgr->addHeader('googleScholarIssn', '<meta name="citation_issn" content="' . htmlspecialchars($issn) . '"/> ');
 		}
 
@@ -69,9 +76,9 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getTitle($article->getLocale())) . '"/>');
+		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getFullTitle($article->getLocale())) . '"/>');
 
-		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
+		if (is_a($article, 'Submission') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . strftime('%Y/%m/%d', strtotime($datePublished)) . '"/>');
 		} elseif ($issue && $issue->getYear()) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . htmlspecialchars($issue->getYear()) . '"/>');
@@ -95,12 +102,12 @@ class GoogleScholarPlugin extends GenericPlugin {
 			}
 		}
 
-		$templateMgr->addHeader('googleScholarHtmlUrl', '<meta name="citation_abstract_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId())) . '"/>');
+		$templateMgr->addHeader('googleScholarHtmlUrl', '<meta name="citation_abstract_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestId())) . '"/>');
 		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language) . '"/>');
 
 		$i=0;
 		$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-		$keywords = $dao->getKeywords($article->getId(), array(AppLocale::getLocale()));
+		$keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), array(AppLocale::getLocale()));
 		foreach ($keywords as $locale => $localeKeywords) {
 			foreach ($localeKeywords as $keyword) {
 				$templateMgr->addHeader('googleScholarKeyword' . $i++, '<meta name="citation_keywords" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
@@ -108,12 +115,30 @@ class GoogleScholarPlugin extends GenericPlugin {
 		}
 
 		$i=$j=0;
-		if (is_a($article, 'PublishedArticle')) foreach ($article->getGalleys() as $galley) {
+		if (is_a($article, 'Submission')) foreach ($article->getGalleys() as $galley) {
 			if (is_a($galley->getFile(), 'SupplementaryFile')) continue;
 			if ($galley->getFileType()=='application/pdf') {
-				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
+				$templateMgr->addHeader('googleScholarPdfUrl' . $i++, '<meta name="citation_pdf_url" content="' . $request->url(null, 'article', 'download', array($article->getBestId(), $galley->getBestGalleyId())) . '"/>');
 			} elseif ($galley->getFileType()=='text/html') {
-				$templateMgr->addHeader('googleScholarHtmlUrl' . $i++, '<meta name="citation_fulltext_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId())) . '"/>');
+				$templateMgr->addHeader('googleScholarHtmlUrl' . $i++, '<meta name="citation_fulltext_html_url" content="' . $request->url(null, 'article', 'view', array($article->getBestId(), $galley->getBestGalleyId())) . '"/>');
+			}
+		}
+
+		// citation_refence
+		$outputReferences = array();
+		$citationDao = DAORegistry::getDAO('CitationDAO');
+		$parsedCitations = $citationDao->getByPublicationId($article->getCurrentPublication()->getId());
+		if ($parsedCitations->getCount()){
+			while ($citation = $parsedCitations->next()) {
+				$outputReferences[] = $citation->getRawCitation();
+			}
+		}
+		HookRegistry::call('GoogleScholarPlugin::references', array(&$outputReferences, $article->getId()));
+
+		if (!empty($outputReferences)){
+			$i=0;
+			foreach ($outputReferences as $outputReference) {
+				$templateMgr->addHeader('googleScholarReference' . $i++, '<meta name="citation_reference" content="' . htmlspecialchars($outputReference) . '"/>');
 			}
 		}
 
@@ -137,4 +162,4 @@ class GoogleScholarPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

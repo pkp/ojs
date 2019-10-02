@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -15,9 +15,7 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="admin.hostedJournals">Revistes allotjades</message>
 	<message key="admin.settings.journalRedirect">Redirecció a la revista</message>
-	<message key="admin.settings.options">Opcions</message>
 	<message key="admin.settings.journalRedirectInstructions">Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple.</message>
-	<message key="admin.settings.noJournalRedirect">No redireccionis</message>
 	<message key="admin.settings.defaultMetricDescription">La vostra instal·lació de l'OJS està configurada per registrar més d'una mètrica d'utilització. Les estadístiques d'utilització es mostren en diferents contexts. Hi ha casos on només es fa servir una estadística d'ús, p. ex. per mostrar una llista ordenada dels articles més utilitzats o per ordenar resultats d'una cerca. Seleccioneu una de les mètriques configurades com a opció predeterminada.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Aquesta és la llengua predeterminada per al lloc web i per a qualsevol revista allotjada.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Seleccioneu totes les configuracions regionals que oferirà el lloc web. Les configuracions regionals seleccionades estan disponibles per al seu ús a totes les revistes allotjades al lloc web, i també apareixen a un menú de selecció d'idioma disponible a cada pàgina del lloc web (que es pot desactivar en pàgines concretes de les revistes). Si no se seleccionen diferents configuracions regionals, el menú de selecció de llengua no apareix i la configuració avançada de llengua no està disponible a les revistes.</message>
@@ -46,7 +44,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">La ruta només pot contenir caràcters alfanumèrics, guions baixos i guionets i ha de començar i acabar amb un caràcter alfanumèric.</message>
 	<message key="admin.contexts.form.pathExists">Ja hi ha una altra revista que utilitza la ruta seleccionada.</message>
 	<message key="admin.journals.enableJournalInstructions">Permet que aquesta revista aparegui públicament al lloc web</message>
-	<message key="admin.journals.journalDescription">Descripció de la revista</message>
+	<message key="admin.contexts.contextDescription">Descripció de la revista</message>
 	<message key="admin.journal.pathImportInstructions">Ruta existent a la revista o ruta que s'ha de crear (p. ex., «ojs»).</message>
 	<message key="admin.journals.importSubscriptions">Importa subscripcions</message>
 	<message key="admin.journals.transcode">Metadades de l'article Transcode de l’ISO8859-1</message>
@@ -61,20 +59,6 @@
 	<message key="admin.mergeUsers.confirm">Esteu segurs que voleu fusionar el comptes seleccionats {$oldAccountCount} amb el compte amb nom d’usuari/ària «{$newUsername}»? Si ho feu, els comptes amb el nom d’usuari/ària {$oldAccountCount} ja no existiran. Aquesta acció no es pot desfer.</message>
 	<message key="admin.mergeUsers.noneEnrolled">No s’ha donat d’alta cap usuari/ària.</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Categories</message>
-	<message key="admin.categories.enable.description">L'Administrador/a del lloc web pot definir un grup de categories per ajudar a organitzar grups grans de revistes. Els Administradors/ores de revistes poden triar diverses d'aquestes categories per a cada revista, i els lectors/ores poden navegar a través de col·leccions de revistes agrupades per categoria.</message>
-	<message key="admin.categories.disableCategories">No organitzis revistes en categories.</message>
-	<message key="admin.categories.enableCategories">Permet que els Administradors/ores de revistes les organitzin en categories.</message>
-	<message key="admin.categories.editTitle">Edita una categoria</message>
-	<message key="admin.categories.createTitle">Crea una categoria</message>
-	<message key="admin.categories.create">Crea una nova categoria</message>
-	<message key="admin.categories.noneCreated">No s'ha creat cap categoria.</message>
-	<message key="admin.categories.confirmDelete">Esteu segurs que voleu suprimir aquesta categoria?</message>
-	<message key="admin.categories.name">Nom</message>
-	<message key="admin.categories.nameRequired">Cal que introduïu un nom de categoria.</message>
-
-
 	<message key="admin.languages.confirmDisable">Esteu segur que voleu desactivar aquesta configuració regional? Això podria afectar a totes les revistes allotjades que actualment utilitzin aquesta configuració regional.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descàrrega de paquets d'idiomes des del servidor web de Public Knowledge Project no està disponible actualment perquè:</p>
 	<ul>
@@ -82,7 +66,6 @@
 		<li>OJS no pot modificar l'arxiu de registre de configuració regional, normalment "registry/locales.xml".</li>
 	</ul>
 <p>Els paquets d'idiomes poden descarregarse manualment des de la pàgina web de PKP: <a href="http://pkp.sfu.ca"></a>.</p>]]></message>
-	<message key="admin.presses.createInstructions">Sereu registrat automàticament com a gestor d'aquesta revista. Després de la creació de la nova revista, se'l redirigirà cap a l'assistent de configuració per completar la instal·lació inicial de la revista.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatori de caducitat de la subscripció</message>
 	<message key="admin.scheduledTask.openAccessNotification">Notificació d'accés obert</message>
 	<message key="admin.scheduledTask.reviewReminder">Recordatori de revisió</message>

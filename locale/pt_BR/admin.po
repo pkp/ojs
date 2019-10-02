@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:53-07:00\n"
+"Language: \n"
+
+msgid "admin.hostedJournals"
+msgstr "Revistas hospedadas"
+
+msgid "admin.settings.journalRedirect"
+msgstr "Redirecionamento para revista"
+
+msgid "admin.settings.journalRedirectInstructions"
+msgstr "As solicitações realizadas ao portal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Este será o idioma padrão para o portal e todas as revistas hospedadas."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Os idiomas selecionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desativada individualmente por revista). Caso não sejam selecionados vários idiomas, a lista de idiomas não estará disponível e a opção \"configurações de idioma\" não estará disponível para as revistas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Deseja realmente remover este idioma? A execução pode afetar revistas hospedas que podem estar utilizando o idioma."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Selecione idiomas adicionais para uso no sistema. Os idiomas devem ser instalados antes que possam ser utilizados pelas revistas hospedadas. Veja a documentação para informações sobre como incluir novos idiomas no sistema."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Erro ao baixar idioma. A seguir, um detalhamento do(s) erro(s)."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Idioma \"{$locale}\" instalado."
+
+msgid "admin.languages.download"
+msgstr "Baixar idioma"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Não é possível abrir a identificação de idioma do portal do PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Não é possível incluir novo idioma no arquivo de registro de idiomas, geralmente \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "Base de dados de usuários"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Habilitar sincronização de perfil de usuários (caso suportado pelo plugin de autenticação!). Os perfis dos usuários serão atualizados com o conteúdo da fonte remota assim que o usuário acessar o sistema, e alterações no perfil (incluindo alteração de senha) realizadas dentro do sistema atualizarão a fonte remota. Caso esta opção não esteja habilitada, os perfis no sistema serão mantidos separados da fonte remota."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Habilitar alteração de senha de usuário (caso suportado pelo plugin de autenticação!). Habilitar esta opção permite ao usuário modificar a senha do sistema e fazer uso da opção de recuperação de senha para criar uma nova senha. Estas funcionalidades não estarão disponíveis aos usuários com esta fonte de autenticação, caso esta opção não seja habilitada."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Habilitar criação de usuários (caso suportado pelo plugin de autenticação!). Usuários criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, usuários criados através do cadastro de usuários também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão."
+
+msgid "admin.systemVersion"
+msgstr "Versão do OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Configuração do OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Configurações do OJS no arquivo <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Configurações da revista"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nenhuma revista foi criada."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Deseja realmente excluir permanentemente esta revista e seu conteúdo?"
+
+msgid "admin.contexts.create"
+msgstr "Criar revista"
+
+msgid "admin.journals.createInstructions"
+msgstr "Seu cadastro como Gerente da Revista será automático. Após a criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Geralmente é usado um acrônimo que identifica o periódico. A URL da revista será: {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "O caminho é obrigatório."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "O caminho deve conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "O caminho selecionado já está em uso por outra revista."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Permitir Acesso Livre a esta revista no portal"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descrição"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Caminho existente ou caminho a ser criado (ex.:"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importar assinaturas"
+
+msgid "admin.journals.transcode"
+msgstr "Transcodificar metadados de ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Gerar código para mapear URLs da versão 1 do OJS para URLs da versão 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "O caminho físico para a importação é obrigatório."
+
+msgid "admin.journals.importErrors"
+msgstr "Importação não concluída."
+
+msgid "admin.mergeUsers"
+msgstr "Mesclar usuários"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Mesclar usuário"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Escolha um usuário a quem deseja atribuir as submissões e histórico de tarefas do cadastro anterior."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Escolha um usuário para mesclar o cadastro com o de outra conta (quando um usuário possui duas contas distintas, em vez de acumular papéis editoriais). O cadastro selecionado primeiro será excluído e suas submissões e histórico de tarefas atribuídas ao segundo cadastro escolhido."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Todos os usuários"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Deseja realmente mesclar os \"{$oldAccountCount}\" cadastro(s) selecionado(s) no cadastro do usuário \"{$newUsername}\"? Os \"{$oldAccountCount}\" serão excluídos permanentemente. Esta ação é irreversível!"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nenhum usuário cadastrado."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Idiomas marcados podem estar incompletos."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:\n"
+"\t<ul>\n"
+"\t\t<li>Seu servidor não possui ou não permite a execução da ferramenta \"tar\" GNU</li>\n"
+"\t\t<li>O sistema não possui permissão para alterar o arquivo de registro de idiomas, normalmente \"registry/locales.xml\".</li>\n"
+"                <li>O servidor não possui permissões para conexão remota ao servidor do PKP</li>\n"
+"\t</ul>\n"
+"Idiomas estão disponíveis para download manual no <a href=\"http://pkp.sfu.ca\">portal do PKP</a>.</p>"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "O título é obrigatório"
+
+msgid "admin.languages.confirmDisable"
+msgstr "Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer revistas hospedadas utilizando o idioma."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Lembrete de Expiração da Assinatura"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificação de Acesso Aberto"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Lembrete de Avaliação"

@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:42-07:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Einen Artikel einreichen"
+
+msgid "submission.submit.userGroup"
+msgstr "Einreichen in meiner Rolle als ..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Wählen Sie die Eigenschaft aus, in der Sie diesen Artikel einreichen."
+
+msgid "submission.upload.selectComponent"
+msgstr "Artikel-Bestandteil auswählen"
+
+msgid "submission.title"
+msgstr "Artikeltitel"
+
+msgid "submission.title.tip"
+msgstr "Der Einreichungstyp ist normalerweise 'image', 'text' oder Multimediatypen inklusive 'software' oder 'interactive'.  Bitte wählen Sie den für Ihre Einreichung passendsten Typ aus. Beispiele finden Sie unter <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Eine neue Einreichung beginnen in"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Neue Einreichung"
+
+msgid "grid.action.workflow"
+msgstr "Einreichungsworkflow"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Das Abstract darf höchstens {$wordCount} Wörter enthalten."
+
+msgid "submission.issueEntry"
+msgstr "Metadaten"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Die Zeitschrift wurde über Ihre Einreichung informiert, und Sie haben eine Bestätigung per E-Mail erhalten. Sobald die/der Redakteur/in die Einreichung begutachtet hat, werden Sie benachrichtigt."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Fahne in der Ausgabe angezeigt"
+
+msgid "grid.action.issueEntry"
+msgstr "Die Metadaten dieses Beitrags ansehen"
+
+msgid "submission.publication"
+msgstr "Veröffentlichung"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Die Artikelfahne \"{$galleyFormatName}\" wird verfügbar gemacht."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Die Artikelfahne \"{$galleyFormatName}\" wird nicht mehr verfügbar sein."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Die Identifier des Beitrags wurden aktualisiert."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Freigabe des Formats"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Diese Fahne wird <em>nicht mehr verfügbar sein</em> für Leser/innen."
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Diese Fahne wird für Leser/innen <em>verfügbar gemacht</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Diese Fahnen verfügbar machen"
+
+msgid "submission.galleyFiles"
+msgstr "Fahnendateien"
+
+msgid "submission.proofReadingDescription"
+msgstr "Der oder die Layouter/in lädt die herstellungsfertigen Dateien hier hoch. Benutzen Sie em>Auditor/in hinzufügen</em>, um Autor/innen und andere zum Korrekturlesen der Fahnen einzuplanen. Korrigierte Dateien werden vor Veröffentlichung zur Freigabe hochgeladen."
+
+msgid "grid.action.approveProof"
+msgstr "Diese Korrektur für die Aufnahme in die Fahne freigeben."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Diese Korrektur wurde für die Aufnahme in die Fahne freigegeben."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Titel und Abstract"
+
+msgid "submission.submit.upload.description"
+msgstr "Dateien, die zu dieser Einreichung gehören, hochladen: Artikel, Multimediadateien, Datensätze, Illustrationen etc."
+
+msgid "submission.pageProofs"
+msgstr "Korrekturlesen"
+
+msgid "submission.confirmSubmit"
+msgstr "Sind Sie sicher, dass Sie diesen Artikel bei der Zeitschrift einreichen möchten?"
+
+msgid "workflow.review.externalReview"
+msgstr "Gutachten"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "In Begutachtung schicken"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Die Metadaten der Ausgabe dieser Einreichung wurden aktualisiert."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikel-Bestandteil"
+
+msgid "submission.complete"
+msgstr "Freigegeben"
+
+msgid "submission.incomplete"
+msgstr "Warte auf Freigabe"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Bitte wählen Sie eine Sprache des Beitrags aus."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Einreichungs-Checkliste"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Sie müssen die Anforderungen lesen und bestätigen, bevor Sie fortfahren können."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Datenschutzerklärung"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rolle der Beiträgerin/des Beiträgers"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Mindestens ein/e Autor/in muss angegeben werden."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Vorname, Nachname und E-Mail-Adresse aller Autor/innen müssen angegeben werden."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Bitte geben Sie den Titel Ihres Artikels an."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Bitte geben Sie das Abstract Ihres Artikels an."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ihr Abstract ist zu lang. Bitte kürzen Sie es auf eine Länge, die unter der Höchstgrenze für diese Rubrik liegt."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Bitte wählen Sie die Rolle der Beiträgerin/des Beiträgers aus."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Das angeforderte Zitationsformat konnte nicht abgerufen werden."
+
+msgid "submission.metadataDescription"
+msgstr "Diese Spezifikationen basieren auf dem Dublin-Core-Metadaten-Schema, einem internationalen Standard zur Beschreibung von Zeitschrifteninhalten."
+
+msgid "section.any"
+msgstr "Alle Rubriken"

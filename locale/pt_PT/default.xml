@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -22,136 +22,24 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita e não se encontra sob revisão ou para publicação junto de outra revista. Caso contrário, deve-se justificar em "Comentários ao Editor".</message>
-	<message key="default.journalSettings.checklist.fileFormat">Os ficheiros para submissão encontram-se em formato Microsoft Word, OpenOffice ou RTF (desde que não ultrapassem 2MB)</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">O texto está em espaço duplo; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (excepto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instruções para Autores</a>, na secção Sobre a Revista.]]></message>
-	<message key="default.journalSettings.privacyStatement">Os nomes e endereços fornecidos nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</message>
-	<message key="default.journalSettings.openAccessPolicy">Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Esta revista permite e encoraja os autores a submeterem artigos para a revista ou repositórios institucionais, antes e após a publicação (sempre oferecendo uma indexação detalhada do artigo).</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[A edição de texto procura aperfeiçoar a leitura, clareza, gramática, vocabulário e formatação do documento. Representa a última oportunidade para o autor realizar alterações substanciais ao texto, sendo que no próximo passo as correcções são restritas a erros de redacção e formatação.
-
-O documento a ser editado está no formato .doc, .swx ou .rtf, permitindo edição rápida por um processador de texto. As directrizes descritas aqui apresentam duas propostas para a edição. A primeira é baseada nas ferramentas de controle de alterações do Microsoft Word e requer que todos os envolvidos no processo possuam o programa. A segunda, independente de ferramenta, foi apropriada com autorização da Harvard Educational Review. O editor tem poderes para modificar estas directrizes, sugerindo melhorias no processo editorial da revista.
-
-<h4>Processos de Edição de Texto</h4>
-
-<strong>1. Controle de Alterações do Microsoft Word</strong>
-
-No menu Ferramentas, a opção Controle de alterações permite ao editor de texto incluir (o texto aparece em cores) ou remover (o texto aparece manchado a cores ou nas margens como removido) conteúdo. O editor de texto pode incluir comentários para o autor e o editor através do ícone de comentários na barra de ferramentas. A versão editada pode então ser enviada e o editor é notificado via e-mail. O editor revê as alterações no texto e notifica o autor.
-
-O editor e o autor devem manter as alterações com as quais concordem. No caso da necessidade de mais alterações, ambos podem alterar as modificações do editor de texto, além de incluir outras. Ambos devem responder aos comentários remetidos, com respostas nos campos de comentário específicos.
-
-Após a revisão do texto por parte do editor e do autor, o editor de texto deverá realizar uma última revisão, aceitando as alterações para proceder à fase de Layout e Composição para publicação.
-
-<strong>2. Harvard Educational Review </strong>
-
-<strong> Instruções para Fazer Revisões Electrónicas em Manuscritos</strong>
-
-Siga o seguinte protocolo para fazer revisões electrónicas no seu manuscrito:
-
-<strong>Respostas a sugestões de alteração</strong>
-  Para cada sugestão aceite, remova o negrito do texto.
-   Para cada sugestão rejeitada, insira o texto original novamente e marque-o em <strong>negrito</strong>.
-
-<strong>Realizando Inserções e Remoções</strong>
-   Indique inserções novas em <strong>negrito</strong>.
-   Substitua o texto removido por: <strong>[texto removido]</strong>.
-  Caso remova uma frase ou mais, indique com um aviso (ex.: <strong>[removidas 2 frases]</strong>).
-
-<strong>Respondendo a Dúvidas ao Autor (QAs)</strong>
-   Mantenha todas as QAs intactas e em negrito dentro do texto. Não as remova.
-   Para responder a uma QA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
-<strong>[Comentário: ]</strong>
-  Ex.: <strong>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</strong>
-
-<strong>Incluindo Comentários</strong>
-   Use comentários para explicar alterações organizacionais ou revisões mais importantes
-  Ex.: <strong>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</strong>
-  Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrónicas.
-
-<h4>Exemplo de uma Revisão Electrónica</h4>
-
-<strong>Manuscrito original</strong>
-
-Antes de alterar dramaticamente a estrutura e organização do texto original, apresente o documento aos autores. Após o término das suas revisões, renomeie o ficheiro de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com um disquete contendo tanto a versão revista quanto a versão renomeada em Word.
-
-<strong>Manuscrito devolvido para o autor, com dúvidas e sugestões</strong>
-Antes de alterar dramaticamente a estrutura e organização do <strong>texto original que estamos devolvendo</strong>, apresente o documento aos <strong>contribuidores do trabalho</strong>. Após o término das suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com uma disquete contendo tanto a versão revista quanto a versão renomeada em Word. <strong>[QA: Neste parágrafo, pode ser útil enfatizar a importância de seguir às intstruções atentamente ao realizar revisões electrónicas. Caso contrário, o processo de edição pode demorar consideravelmente]</strong>
-
-<strong>Manuscrito revisto devolvido para o autor</strong>
-
-Antes de alterar dramaticamente a estrutura e organização do texto original que estamos devolvendo, apresente o documento aos autores do trabalho. <strong>O não cumprimento das instruções a seguir pode atrasar consideravelmente a publicação do texto</strong>.
-
-Após o término das suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com uma disquete contendo a versão <strong>[deleted word]</strong> revista e a versão renomeada em Word. <strong>[QA: Neste parágrafo, pode ser útil enfatizar a importância de seguir às intstruções atentamente ao realizar revisões electrónicas. Caso contrário, o processo de edição pode demorar consideravelmente] [Comentário: frase adicionada em resposta a sua sugestão]</strong>
-
-<strong>Avisos:</strong>
-• Texto simples indica aceitação de alterações sugeridas à primeira frase
-• Frase inserida em resposta a QA. Texto em negrito indica inserção
-• [deleted word] indica remoção de "completamente"
-• Comentário contém a resposta às QAs dos editores]]></message>
-
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita e não se encontra sob revisão ou para publicação junto de outra revista. Caso contrário, deve-se justificar em "Comentários ao Editor".</message>
+	<message key="default.contextSettings.checklist.fileFormat">Os ficheiros para submissão encontram-se em formato Microsoft Word, OpenOffice ou RTF (desde que não ultrapassem 2MB)</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">O texto está em espaço duplo; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (excepto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Instruções para Autores</a>, na secção Sobre a Revista.]]></message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Os nomes e endereços fornecidos nesta revista serão usados exclusivamente para os serviços prestados por esta publicação, não sendo disponibilizados para outras finalidades ou a terceiros.</p>]]></message>
+	<message key="default.contextSettings.openAccessPolicy">Esta revista oferece acesso livre imediato ao seu conteúdo, seguindo o princípio de que disponibilizar gratuitamente o conhecimento científico ao público proporciona maior democratização mundial do conhecimento.</message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Convidamos os leitores a se registarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}/{$journalPath}/user/register">Registo</a> no menu superior da página. O registo permitirá ao leitor receber o Sumário via e-mail a cada nova edição. A lista procura também reivnidicar um nível básico de apoio ou de leitura. Leia a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidade</a> da revista, que assegura aos leitores que os nomes e endereços fornecidos não serão utilizados para outros fins.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a secção <a href="{$indexUrl}/{$journalPath}/about">Sobre a Revista</a> e ler as políticas de secção, bem como as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instruções para Autores</a>. É necessário que os autores se <a href="{$indexUrl}/{$journalPath}/user/register">registem</a> no sistema antes de submeter um artigo; caso já tenha se registado basta <a href="{$indexUrl}/{$journalPath}/login">aceder</a> ao sistema e iniciar o processo de 5 passos de submissão.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre nos seus catálogos de revistas electrónicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas de pesquisa em apoio ao trabalho de publicação de revistas de corpo académico. Para mais informações sobre o Open Journal Systems - OJS, e a administração e publicação de revistas revistas por pares visite o <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza o sistema LOCKSS para criar um sistema de arquivo distribuído entre as bibliotecas participantes e permite às mesmas criar arquivos permanentes da revista para a preservação e restauração. <a href="http://www.lockss.org/">Saiba mais...</a>]]></message>
-	<message key="default.journalSettings.checklist.addressesLinked">Quando disponíveis, foram fornecidos URLs para as referências.</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Para incluir Referências Activas no processo de Layout</h4>
-	<p>Ao transformar a submissão para HTML ou PDF, assegure-se de que todos os hiperlinks estão activos.</p>
-	<h4>A. Quando o autor informa o Link para a Referência</h4>
-	<ol>
-	<li>Enquanto a submissão ainda está num formato de edição de texto original (ex.: Word), inclua a frase VISUALIZAR ITEM no final da referência que possui uma URL.</li>
-	<li>Transforme a frase num hiperlink seleccionando-a e utilizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
-	</ol>
-	<h4>B. Permitindo aos Leitores buscas por referências no Google Académico</h4>
-	<ol>
-	<li>Enquanto a submissão ainda está num formato de edição de texto original (ex.: Word), copie o título do trabalho referenciado na lista de Referências (caso pareça ser um título muito comum – por exemplo "Paz" – copie o autor e o título).</li>
-	<li>Cole o texto seleccionado entre as marcações de espaço %22, incluindo o sinal + entre cada palavra: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
-	<li>Inclua a frase GS SEARCH no final de cada citação na lista de Referências da submissão.</li>
-	<li>Transforme a frase em um hiperlink seleccionando-a e utilizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
-	</ol>
-	<h4>C. Permitindo aos Leitores pesquisas por referências que possuem DOI</h4>
-	<ol>
-	<li>Enquanto a submissão ainda está num formato de edição de texto original (ex.: Word), copie um grupo de referências na ferramenta CrossRef Text Query (http://www.crossref.org/freeTextQuery/)</li>
-	<li>Cole cada DOI que a ferramenta Query retorna na seguinte URL (entre os sinais = e &): http://www.cmaj.ca/cgi/external_ref?access_num=COLE O DOI#AQUI&link_type=DOI</li>
-	<li>Inclua a frase CrossRef no final de cada citação na lista de Referências da submissão.</li>
-	<li>Transforme a frase num hiperlink seleccionando-a e utilizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
-	</ol>]]></message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>O processo de leitura de provas tem por objetivo corrigir erros de ortografia, gramática e formatação na composição. Alterações mais importantes não podem ser realizadas nesta etapa, sem o consentimento do editor da secção. No Layout, clique em Visualizar Prova para ver a composição em HTML, PDF e/ou outro formato disponível.</p>
-<h4>Erros de Ortografia e Gramática</h4>
-
-<p>Copie a palavra com problemas ou o conjunto de palavras e cole no campo de Alterações da Prova com as instruções de "ALTERE-PARA" conforme as instruções a seguir.</p>
-
-<pre>1. ALTERE
-a pesquisa envolve
-PARA
-a pesquisa envolve</pre>
-<br />
-<pre>2. ALTERE
-Malinowsky
-PARA
-Malinowski </pre>
-<br />
-
-<h4>Erros de Formatação</h4>
-
-<p>Descreva o local e a natureza do problema na caixa Alterações da Prova, após digitar no título "FORMATAÇÃO" conforme as instruções a seguir...</p>
-<br />
-<pre>3. FORMATAÇÃO
-Os números na Tabela 3 não estão alinhadas na 3ª coluna.</pre>
-<br />
-<pre>4. FORMATAÇÃO
-O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Convidamos os leitores a se registarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}{$contextPath}/user/register">Registo</a> no menu superior da página. O registo permitirá ao leitor receber o Sumário via e-mail a cada nova edição. A lista procura também reivnidicar um nível básico de apoio ou de leitura. Leia a <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Política de Privacidade</a> da revista, que assegura aos leitores que os nomes e endereços fornecidos não serão utilizados para outros fins.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a secção <a href="{$indexUrl}{$contextPath}/about">Sobre a Revista</a> e ler as políticas de secção, bem como as <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Instruções para Autores</a>. É necessário que os autores se <a href="{$indexUrl}{$contextPath}/user/register">registem</a> no sistema antes de submeter um artigo; caso já tenha se registado basta <a href="{$indexUrl}{$contextPath}/login">aceder</a> ao sistema e iniciar o processo de 5 passos de submissão.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre nos seus catálogos de revistas electrónicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas de pesquisa em apoio ao trabalho de publicação de revistas de corpo académico. Para mais informações sobre o Open Journal Systems - OJS, e a administração e publicação de revistas revistas por pares visite o <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Esta revista utiliza o sistema LOCKSS para criar um sistema de arquivo distribuído entre as bibliotecas participantes e permite às mesmas criar arquivos permanentes da revista para a preservação e restauração. <a href="http://www.lockss.org/">Saiba mais...</a>]]></message>
+	<message key="default.contextSettings.checklist.addressesLinked">Quando disponíveis, foram fornecidos URLs para as referências.</message>
 	<message key="section.default.title">Artigos</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.publicationFee">Publicação de artigo</message>
-	<message key="default.journalSettings.purchaseArticleFee">Comprar Artigo</message>
-	<message key="default.journalSettings.membershipFee">Registo em Entidade de Classe</message>
-	<message key="default.journalSettings.purchaseIssueFee">Comprar Número</message>
 	<message key="default.genres.article">Texto Artigo</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivamento distribuído entre as bibliotecas participantes e permite que estas bibliotecas criem arquivos permanentes da revista para fins de preservação e restauração. <a href="http://clockss.org/">Mais ...</a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivamento distribuído entre as bibliotecas participantes e permite que estas bibliotecas criem arquivos permanentes da revista para fins de preservação e restauração. <a href="http://clockss.org/">Mais ...</a>]]></message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
 	<message key="default.groups.name.manager">Director da Revista</message>
 	<message key="default.groups.plural.manager">Directores da Revista</message>

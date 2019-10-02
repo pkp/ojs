@@ -1,0 +1,105 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugiciel XML pour utilisateurs"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importer et exporter des utilisateurs"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Utilisation : {$scriptName} {$pluginName} [command] ...\n"
+"Commandes :\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importation d'utilisateurs"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Choisir un fichier de données XML contenant l'information de l'utilisateur pour l'importer dans cette conférence planifiée. Voyez l'aide de la conférence planifiée pour les détails sur le format de ce fichier. Noter que si le fichier importé contient un ou plusieurs nom(s) d'utilisateur ou adresse(s) de courriel qui existent déjà dans le système, les données pour ces utilisateurs ne seront pas importées et tous les nouveaux rôles à créer seront assignés aux utilisateurs existants."
+
+msgid "plugins.importexport.users.import.failedToImportUser"
+msgstr "L'importation de l'utilisateur a échoué"
+
+msgid "plugins.importexport.users.import.failedToImportRole"
+msgstr "L'assignation d'un rôle à l'utilisateur a échoué"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Fichier de données de l'utilisateur"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Envoyer à chaque utilisateur importé un courriel d'avis contenant le nom et le mot de passe de l'utilisateur."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continuer à importer d'autres utilisateurs si un échec se produit."
+
+msgid "plugins.importexport.users.import.noFileError"
+msgstr "Aucun fichier n'a été téléchargé!"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Les utilisateurs suivants ont été importés avec succès dans le système"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Des erreurs sont se produites lors de l'importation"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Confirmez que ces utilisateurs sont bien ceux que vous souhaitez importer dans le système"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Un chemin d'accès de revue inconnu \"{$journalPath}\" a été spécifié."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exporter les utilisateurs"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exporter par rôle"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Tout exporter"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Des erreurs se sont produites durant l'exportation"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Incapable d'écrire dans le fichier \"{$fileName}\"."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Avertissement"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Ne peut utiliser les mots de passe hachés avec {$importHash}. OMP est configuré pour utiliser {$ojsHash}. Si vous continuez, vous devrez reconfigurer les mots de passe des utilisateurs importés."
+
+msgid "plugins.importexport.users.results"
+msgstr "Résultats"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Importation réussie. Les utilisateurs dont les noms et adresses électroniques ne sont pas utilisés ont été importés, ainsi que les groupes d'utilisateurs connexes."
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"Exemples:\n"
+"\tImport users into myJournal from myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport all users from myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport users specified by their ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Veuillez téléverser un fichier sous \"Importer\" pour continuer."

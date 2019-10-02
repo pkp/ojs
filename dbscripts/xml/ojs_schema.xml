@@ -4,8 +4,8 @@
 <!--
   * ojs_schema.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS database schema in XML.
@@ -64,10 +64,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="setting_value" type="X"/>
-		<field name="setting_type" type="C2" size="6">
-			<NOTNULL/>
-			<descr>(bool|int|float|string|object)</descr>
-		</field>
 		<descr>Journal settings.</descr>
 		<index name="journal_settings_journal_id">
 			<col>journal_id</col>
@@ -439,42 +435,28 @@
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
-		<field name="locale" type="C2" size="14" />
 		<field name="context_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="section_id" type="I8" />
-		<field name="language" type="C2" size="10">
-			<DEFAULT VALUE="en"/>
-		</field>
-		<field name="citations" type="X"/>
+		<field name="current_publication_id" type="I8" />
+		<field name="date_status_modified" type="T"/>
 		<field name="date_submitted" type="T"/>
 		<field name="last_modified" type="T"/>
-		<field name="date_status_modified" type="T"/>
+		<field name="stage_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/><!-- WORKFLOW_STAGE_ID_SUBMISSION -->
+		</field>
 		<field name="status" type="I1">
 			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
+			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
 		</field>
 		<field name="submission_progress" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
 		</field>
-
-		<field name="pages" type="C2" size="255"/>
-		<field name="hide_author" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="stage_id" type="I8">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/><!-- WORKFLOW_STAGE_ID_SUBMISSION -->
-		</field>
 		<descr>Submissions</descr>
-		<index name="submissions_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="submissions_section_id">
-			<col>section_id</col>
+		<index name="submissions_context_id">
+			<col>context_id</col>
 		</index>
 	</table>
 
@@ -495,10 +477,6 @@
 			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
-		<field name="setting_type" type="C2" size="6">
-			<NOTNULL/>
-			<descr>(bool|int|float|string|object)</descr>
-		</field>
 		<descr>Submission metadata</descr>
 		<index name="submission_settings_submission_id">
 			<col>submission_id</col>
@@ -513,51 +491,79 @@
 
 	<!--
 	  *
-	  * TABLE published_submissions
+	  * TABLE publications
 	  *
 	  -->
-	<table name="published_submissions">
-		<field name="published_submission_id" type="I8">
+	<table name="publications">
+		<field name="publication_id" type="I8">
 			<KEY />
-			<AUTOINCREMENT/>
+			<AUTOINCREMENT />
 		</field>
+		<field name="access_status" type="I8">
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="date_published" type="D"/>
+		<field name="last_modified" type="T"/>
+		<field name="locale" type="C2" size="14"/>
+		<field name="primary_contact_id" type="I8" />
+		<field name="section_id" type="I8" />
 		<field name="submission_id" type="I8">
-			<NOTNULL/>
+			<NOTNULL />
 		</field>
-		<field name="issue_id" type="I8">
+		<field name="status" type="I1">
 			<NOTNULL/>
+			<DEFAULT VALUE="1"/><!-- STATUS_QUEUED -->
 		</field>
-		<field name="date_published" type="T"/>
-		<field name="seq" type="F">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="access_status" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<descr>Published submissions</descr>
-		<index name="published_submissions_submission_id">
+		<descr>Publications</descr>
+		<index name="publications_submission_id">
 			<col>submission_id</col>
-			<UNIQUE/>
 		</index>
-		<index name="published_submissions_issue_id">
-			<col>issue_id</col>
+		<index name="publications_section_id">
+			<col>section_id</col>
 		</index>
 	</table>
 
 	<!--
 	  *
-	  * TABLE submission_galleys
+	  * TABLE publication_settings
 	  *
 	  -->
-	<table name="submission_galleys">
+	<table name="publication_settings">
+		<field name="publication_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="14">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<descr>publication metadata</descr>
+		<index name="publication_settings_publication_id">
+			<col>publication_id</col>
+		</index>
+		<index name="publication_settings_pkey">
+			<col>publication_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE publication_galleys
+	  *
+	  -->
+	<table name="publication_galleys">
 		<field name="galley_id" type="I8">
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="locale" type="C2" size="14"/>
-		<field name="submission_id" type="I8">
+		<field name="publication_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="255"/>
@@ -571,18 +577,18 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<descr>Submission galleys</descr>
-		<index name="submission_galleys_submission_id">
-			<col>submission_id</col>
+		<descr>Publication galleys</descr>
+		<index name="publication_galleys_publication_id">
+			<col>publication_id</col>
 		</index>
 	</table>
 
 	<!--
 	  *
-	  * TABLE submission_galley_settings
+	  * TABLE publication_galley_settings
 	  *
 	  -->
-	<table name="submission_galley_settings">
+	<table name="publication_galley_settings">
 		<field name="galley_id" type="I8">
 			<NOTNULL />
 		</field>
@@ -594,15 +600,11 @@
 			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
-		<field name="setting_type" type="C2" size="6">
-			<NOTNULL/>
-			<descr>(bool|int|float|string|object)</descr>
-		</field>
-		<descr>Article galley metadata.</descr>
-		<index name="submission_galley_settings_galley_id">
+		<descr>Galley metadata.</descr>
+		<index name="publication_galley_settings_galley_id">
 			<col>galley_id</col>
 		</index>
-		<index name="submission_galley_settings_pkey">
+		<index name="publication_galley_settings_pkey">
 			<col>galley_id</col>
 			<col>locale</col>
 			<col>setting_name</col>

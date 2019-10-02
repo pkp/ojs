@@ -1,15 +1,15 @@
 [submodule "lib/pkp"]
 	path = lib/pkp
 	url = https://github.com/pkp/pkp-lib.git
+[submodule "plugins/generic/usageStats"]
+        path = plugins/generic/usageStats
+        url = https://github.com/pkp/usageStats.git
 [submodule "plugins/generic/customBlockManager"]
 	path = plugins/generic/customBlockManager
 	url = https://github.com/pkp/customBlockManager.git
 [submodule "plugins/generic/staticPages"]
 	path = plugins/generic/staticPages
 	url = https://github.com/pkp/staticPages.git
-[submodule "plugins/generic/translator"]
-	path = plugins/generic/translator
-	url = https://github.com/pkp/translator.git
 [submodule "plugins/generic/tinymce"]
 	path = plugins/generic/tinymce
 	url = https://github.com/pkp/tinymce.git

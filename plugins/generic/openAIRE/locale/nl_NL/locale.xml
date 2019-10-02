@@ -4,16 +4,17 @@
 <!--
   * plugins/generic/openAIRE/locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings.
+  * Localization strings for the nl_NL (Nederlands) locale.
   -->
- 
+
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">De OpenAIRE plugin voegt het projectID element toe de artikel-metadata en breidt de OAI-PMH interface uit overeenkomstig de  OpenAIRE Guidelines 1.1. OJS tijdschriften worden hiermee OpenAIRE compliant.</message>
 	<message key="plugins.generic.openAIRE.projectID">OpenAIRE ProjectID</message>
+	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Als dit onderzoek kadert in een EU initiatief dat past in het  <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> metadata platform, voeg dan het ProjectID toe; een code van 6 cijfers die overeenkomt met de Grant Agreement identificatie.]]></message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Geef een geldig projectID (6 cijfers)</message>
 </locale>

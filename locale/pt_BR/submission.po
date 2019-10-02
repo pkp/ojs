@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:53-07:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Submeter um artigo"
+
+msgid "submission.submit.userGroup"
+msgstr "Realizar a submissão como..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Escolha o papel com o qual deseja submeter este manuscrito."
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecione o componente do artigo"
+
+msgid "submission.title"
+msgstr "Título do artigo"
+
+msgid "submission.title.tip"
+msgstr "O tipo de submissão é usualmente uma imagem, um texto ou outro tipo de multimídia incluindo programas ou interativas. Por favor, escolha a opção mais adequada para a sua submissão. Exemplos podem ser encontrados em  <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Começar Nova Submissão em"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nova Submissão"
+
+msgid "grid.action.workflow"
+msgstr "Fluxo de trabalho para a submissão"
+
+msgid "submission.issueEntry"
+msgstr "Metadados"
+
+msgid "submission.submit.whatNext.description"
+msgstr "O periódico foi notificado de sua submissão e  um e-mail de confirmação foi enviado para seu registro. Assim que um dos editores revisar sua submissão entrará em contato."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Composição aparece na entrada dos fascículos"
+
+msgid "grid.action.issueEntry"
+msgstr "Visualizar os metadados desta submissão"
+
+msgid "submission.publication"
+msgstr "Publicação"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "A composição do artigo \"{$galleyFormatName}\" está disponível."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "A composição do artigo  \"{$galleyFormatName}\" não está disponível.."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formato para aprovação"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Esta composição não será <em>mais disponibilizada</em> para os leitores."
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Esta composição irá <em>se tornar disponível</em> para os leitores."
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Tornar esta prova disponível."
+
+msgid "submission.galleyFiles"
+msgstr "Arquivos da composição (prova)"
+
+msgid "submission.proofReadingDescription"
+msgstr "O editor de layout baixa aqui os arquivos prontos para produção (preparados para publicação). Use  <em>Selecionar Auditores</em> para designar autores e outros para a leitura e correção das provas. Os arquivos corrigidos devem ser enviados para aprovação antes da publicação."
+
+msgid "grid.action.approveProof"
+msgstr "Aprovar esta prova para inclusão na composição."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Esta prova foi aprovada para inclusão na composição."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Título e Resumo"
+
+msgid "submission.submit.upload.description"
+msgstr "Baixar arquivos associados a esta submissão, incluindo o artigo, multimídia, conjuntos de dados, obras de arte, etc."
+
+msgid "submission.pageProofs"
+msgstr "Leitura de prova"
+
+msgid "submission.confirmSubmit"
+msgstr "Tem certeza que deseja submeter este artigo para o periódico?"
+
+msgid "workflow.review.externalReview"
+msgstr "Avaliação"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Enviar para Avaliação"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "A submissão dos metadados foi realizada."
+
+msgid "submission.upload.fileContents"
+msgstr "Componentes do artigo"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Os identificadores públicos da submissão foram atualizados."
+
+msgid "submission.complete"
+msgstr "Aprovado"
+
+msgid "submission.incomplete"
+msgstr "Esperando Aprovação"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Por favor selecione um idioma para o envio do manuscrito."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Checklist da Submissão"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Você deve ler e reconhecer que você completou os requisitos abaixo antes de prosseguir."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaração de Privacidade"
+
+msgid "submission.submit.contributorRole"
+msgstr "Papel do Colaborador"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Pelo menos um autor é necessário."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "O primeiro nome, sobrenome e endereço de e-mail de cada autor devem ser informados."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, indique o título do seu artigo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, informe o resumo do seu artigo."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Por favor, selecione o papel do colaborador."

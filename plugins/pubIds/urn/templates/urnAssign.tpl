@@ -1,8 +1,8 @@
 {**
  * @file plugins/pubIds/urn/templates/urnAssign.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Assign URN to an object option.
@@ -27,8 +27,8 @@
 				{/if}
 			{/fbvFormSection}
 		{else}
-			{assign var=templatePath value=$pubIdPlugin->getTemplatePath()}
-			{include file="`$templatePath`urnAssignCheckBox.tpl" pubId=$pubId pubObjectType=$pubObjectType}
+			{assign var=templatePath value=$pubIdPlugin->getTemplateResource('urnAssignCheckBox.tpl')}
+			{include file=$templatePath pubId=$pubId pubObjectType=$pubObjectType}
 		{/if}
 	{/if}
 	{/fbvFormArea}

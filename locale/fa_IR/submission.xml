@@ -3,8 +3,8 @@
 <!--
   * locale/fa_IR/submission.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
@@ -25,10 +25,7 @@
 	<message key="grid.action.galleyInIssueEntry">کلیشه چاپی شماره آماده شد.</message>
 	<message key="grid.action.issueEntry">مشاهده فراداده‌های این مقاله ارسال شده</message>
 	<!-- Submission Information Modal -->
-	<message key="submission.issueEntry.modalTitle">فراداده های مقاله ارسالی و چاپ شده</message>
-	<message key="submission.issueEntry.submissionMetadata">مقاله ارسالی</message>
-	<message key="submission.issueEntry.publicationMetadata">انتشار</message>
-	<message key="submission.issueEntry.confirm">بر اساس فراداده های زیر برای این مقاله یک شماره مجله مشخص کنید</message>
+	<message key="submission.publication">انتشار</message>
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">کلیشه چاپی "{$galleyFormatName}" مقاله در دسترس است</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">کلیشه چاپی "{$galleyFormatName}" مقاله در دسترس نیست</message>

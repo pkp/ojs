@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:33-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:33-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Canais externos"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Bloco de canais externos"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Publique conteúdo de canais de informação nos formatos Atom/RSS, a partir de fontes externas como sites em WordPress, Drupal, ou OCS."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Nenhum canal externo"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Título"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Publicado"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Mais..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Canais externos"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Configurações"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "Para exibir conteúdo em blocos na barra lateral, acesse o <a href=\"{$setupStep56}\" target=\"_blank\">Passo 5.6 da configuração</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Título"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Exibir na página inicial"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Exibr na página inicial"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Não exibir na página inicial"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Exibir bloco"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Todas as páginas"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Em todas as páginas"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Em nenhuma página"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Página inicial"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Somente na página inicial"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Nenhum bloco apenas na página inicial"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Nenhum canal externo"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Criar novo canal externo"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Editar canal externo"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Deseja realmente excluir permanentemente este canal externo?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Configurações"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Personalize a exibição de itens do canal externo."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Exibir"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Folha de estilos"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "Uma folha de estilos personalizada pode ser usada para substituir a usada por padrão por este plugin. A folha de estilos padrão pode ser visualizada aqui"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Folha de estilos personalizada"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Título"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "O título para exibição na página inicial e/ou no bloco"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Informe um título para este canal"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Informe uma URL válida para o canal (inclua http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "A URL do canal de disseminação de conteúdo externo, no formato Atom/RSS (ex.: http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Exibir"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Exibir na página inicial"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Não exibir no bloco"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Exibir no bloco apenas na página inicial"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Exibir no bloco em todas as páginas"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Limitar a"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "itens"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Salvar e criar outro"

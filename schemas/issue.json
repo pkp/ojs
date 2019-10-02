@@ -1,0 +1,110 @@
+{
+	"title": "Issue",
+	"description": "An issue.",
+	"properties": {
+		"_href": {
+			"type": "string",
+			"readOnly": true,
+			"apiSummary": true
+		},
+		"articles": {
+			"type": "array",
+			"readOnly": true,
+			"items": {
+				"$ref": "#/definitions/SubmissionSummary"
+			}
+		},
+		"coverImageAltText": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true
+		},
+		"coverImageUrl": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"url"
+			]
+		},
+		"dateNotified": {
+			"type": "string",
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
+		},
+		"datePublished": {
+			"type": "string",
+			"apiSummary": true,
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
+		},
+		"description": {
+			"type": "string",
+			"multilingual": "true",
+			"apiSummary": true
+		},
+		"doi": {
+			"type": "string"
+		},
+		"galleys": {
+			"type": "array",
+			"readOnly": true,
+			"apiSummary": true,
+			"items": {
+				"$ref": "#/definitions/Galley"
+			}
+		},
+		"id": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"identification": {
+			"type": "string",
+			"readOnly": true,
+			"apiSummary": true
+		},
+		"isCurrent": {
+			"type": "boolean",
+			"readOnly": true
+		},
+		"lastModified": {
+			"type": "string",
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
+		},
+		"number": {
+			"type": "string",
+			"apiSummary": true
+		},
+		"publishedUrl": {
+			"type": "string",
+			"apiSummary": true,
+			"validation": [
+				"url"
+			]
+		},
+		"sections": {
+			"type": "array",
+			"readOnly": true,
+			"items": {
+				"$ref": "#/definitions/SectionSummary"
+			}
+		},
+		"title": {
+			"type": "string",
+			"multilingual": "true",
+			"apiSummary": true
+		},
+		"volume": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"year": {
+			"type": "integer",
+			"apiSummary": true
+		}
+	}
+}

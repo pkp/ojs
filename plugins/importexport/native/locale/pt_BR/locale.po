@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:34-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Plugin XML Nativo"
+
+msgid "plugins.importexport.native.description"
+msgstr "Importação e exportação de livros em formato XML nativo do OMP."
+
+msgid "plugins.importexport.native.import"
+msgstr "Importar"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Por favor, selecione um arquivo XML para carregar e pressione \"Iniciar Envio\". Quando o upload for concluído, pressione \"OK\" para importar o documento no OMP."
+
+msgid "plugins.importexport.native.export"
+msgstr "Exportar"
+
+msgid "plugins.importexport.native.results"
+msgstr "Resultados"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Faça upload de um arquivo e clique em \"Importar\" para continuar."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "A importação foi concluída com êxito. Os seguintes itens foram importados:"
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "O título da seção \"{$section1Title}\" e o título da seção  \"{$section2Title}\" da edição \"{$issueTitle}\" são compatíveis com edições diferentes existentes na revista."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "O título da seção \"{$sectionTitle}\" da edição \"{$issueTitle}\" é compatível com uma seção existente, mas o outro título desta seção não é compatível com o outro título da seção existente na revista."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "A abreviatura da seção \"{$section1Abbrev}\" e a abreviatura da seção \"{$section2Abbrev}\" da edição \"{$issueTitle}\" são compatíveis com seções distintas existentes na revista."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "A abreviatura da seção \"{$sectionAbbrev}\" da edição \"{$issueTitle}\" é compatível com uma seção existente, mas outra abreviatura desta edição não é compatível com outra abreviatura de seção existente na revista."
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Exportar Artigos"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr "O título da seção \"{$section1Title}\" e o título da seção  \"{$section2Title}\" da edição \"{$issueTitle}\" são compatíveis com edições diferentes existentes na revista."
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Exportar Edições"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Seção desconhecida {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "O usuário informado, \"{$userName}\", não existe."

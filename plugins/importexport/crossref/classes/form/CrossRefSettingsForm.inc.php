@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/classes/form/CrossRefSettingsForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefSettingsForm
@@ -61,7 +61,7 @@ class CrossRefSettingsForm extends Form {
 		// DOI plugin settings action link
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		if (isset($pubIdPlugins['doipubidplugin'])) {
-			$application = PKPApplication::getApplication();
+			$application = Application::getApplication();
 			$request = $application->getRequest();
 			$dispatcher = $application->getDispatcher();
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
@@ -147,4 +147,4 @@ class CrossRefSettingsForm extends Form {
 
 }
 
-?>
+

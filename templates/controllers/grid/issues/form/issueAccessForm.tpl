@@ -1,14 +1,13 @@
 {**
  * templates/controllers/grid/issues/form/issueData.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for creation and modification of an issue
  *}
 
-{help file="issue-management.md#edit-issue-data" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -17,6 +16,9 @@
 </script>
 
 <form class="pkp_form" id="issueAccessForm" method="post" action="{url op="updateAccess" issueId=$issueId}">
+	{* Help Link *}
+	{help file="issue-management" section="edit-issue-data" class="pkp_help_tab"}
+
 	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueAccessNotification"}
 
@@ -25,7 +27,7 @@
 			{fbvElement required="true" type="select" id="accessStatus" from=$accessOptions selected=$accessStatus}
 		{/fbvFormSection}
 		{fbvFormSection title="editor.issues.accessDate"}
-			{fbvElement type="text" id="openAccessDate" value=$openAccessDate|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
+			{fbvElement type="text" id="openAccessDate" value=$openAccessDate size=$fbvStyles.size.SMALL class="datepicker"}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons submitText="common.save"}

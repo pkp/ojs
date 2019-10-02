@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:48-07:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Dieses Plugin ermöglicht die Zuweisung von Uniform Resource Names zu Ausgaben, Artikeln und Fahnen in OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Bitte konfigurieren Sie das URN-Plugin, damit Sie URN in OJS verwalten und benutzen können:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Zeitschrifteninhalt"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Bitte wählen Sie, welchen Objekten URN zugewiesen werden sollen."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Bitte wählen Sie die Publikationsobjekte, denen Uniform Resource Names (URN) zugewiesen werden:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "URN werden Ausgaben zugewiesen werden."
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "URN werden Artikeln zugewiesen werden."
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "URN werden Fahnen (z.B. HTML- oder PDF-Dateien) zugewiesen werden."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN-Präfix"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "Der URN-Präfix ist der feste, niemals wechselnde Bestandteil des URN (z.B. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "Der URN-Präfix muss in der Form \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt; angegeben werden."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN-Suffix"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Ein URN-Suffix kann in beliebiger Form sein, muss aber eindeutig unter allen Publikationsobjekten, denen derselbe URNPräfix zugewiesen wird:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Verwenden Sie das unten angegebene Muster, um URN-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die Seitenzahl und %x für die \"benutzerdefinierte Kennung\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "vol%viss%ipp%p würde z.B. einen URN-Suffix \"vol3iss2pp230\" erzeugen."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "für Ausgaben"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "für Artikel"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "für Fahnen"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Bitte geben Sie das URN-Suffix-Muster für Ausgaben ein."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Bitte geben Sie das URN-Suffix-Muster für Artikel ein."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Bitte geben Sie das URN-Suffix-Muster für Fahnen ein."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Die Standardmuster benutzen."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i für Ausgaben<br />%j.v%vi%i.%a für Artikel<br />%j.v%vi%i.%a.g%g für Fahnen."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Geben Sie einen individuellen URN-Suffix für jedes publizierte Element ein. Sie finden ein zusätzliches URN-Eingabefeld auf der Metadatenseite jedes Elements."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Prüfziffer"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Die Prüfziffer wird automatisch berechnet und am Ende, als letzte Ziffer des URN, angefügt."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Namensraum"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Auswählen"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Der Namensraum für persistente Bezeichner wird in der Regel für die Registrierung benötigt (z.B. bei der Deutschen Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Resolver-URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(z.B. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Bitte geben Sie die Adresse des Resolvers ein."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "URN löschen"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Wenn Sie Ihre URN-Konfiguration ändern, werden bereits zugewiesene URN nicht betroffen sein. Sobald die geänderte URN-Konfiguration gespeichert worden ist, nutzen Sie bitte diesen Knopf, um alle bestehenden URN zu löschen, so dass die neuen Einstellungen für bestehende Objekte gelten."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Sind Sie sicher, dass Sie alle existierenden URN löschen möchten?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "Ausgabe"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "Artikel"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "Fahne"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "Es kann kein URN zugewiesen werden, weil der angepasste Suffix fehlt."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "Es kann kein URN zugewiesen werden, weil ein ungültiges Muster verwendet wird."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Sie sehen eine Voransicht des URN. Wählen Sie die Checkbox und speichern Sie das Formular, um den URN zuzuweisen."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "Der URN ist diesem Objekt vom Typ {$pubObjectType} zugewiesen."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Der angegebene URN-Suffix wird bereits für ein anderes veröffentlichtes Element benutzt. Bitte vergeben Sie einen eindeutigen URN-Suffix für jedes Element."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "URN entfernen"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Sind Sie sicher, dass Sie den existierenden URN entfernen möchten?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "URN für die Objekte der Ausgabe entfernen"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Sind Sie sicher, dass Sie die URN der existierenden Objekte der Ausgabe entfernen möchten?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Nutzen Sie die folgende Option, um die URN aller Objekte (Artikel und Fahnen), die momentan dieser Ausgabe zugeordnet sind, zu entfernen."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Prüfziffer hinzufügen"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "URN {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen?"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "Es kann kein URN zugewiesen werden, weil der angepasste Suffix fehlt."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster verwendet wird."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} wurde zugewiesen."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Die Prüfziffer fehlt."

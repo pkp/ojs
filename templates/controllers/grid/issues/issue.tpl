@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/issues/issue.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * The "edit issue" tabset.
@@ -19,7 +19,7 @@
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="editIssueData" issueId=$issueId}">{translate key="editor.issues.issueData"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="issueGalleys" issueId=$issueId}">{translate key="editor.issues.galleys"}</a></li>
 		<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="identifiers" issueId=$issueId}">{translate key="editor.issues.identifiers"}</a></li>
-		{if $currentJournal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION}
+		{if $currentJournal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION}
 			<li><a href="{url router=$smarty.const.ROUTE_COMPONENT op="access" issueId=$issueId}">{translate key="editor.issues.access"}</a></li>
 		{/if}
 	</ul>

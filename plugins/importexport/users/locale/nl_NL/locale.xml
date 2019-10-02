@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.importexport.users.displayName">Gebruikers XML plugin</message>
+	<message key="plugins.importexport.users.description">Importeer en exporteer gebruikers</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Gebruik: {$scriptName} {$pluginName} [commando] ...
+Commando's:
+	import [xmlBestandsNaam] [tijdschriftPad]
+	export [xmlBestandsNaam] [tijdschriftPad]
+	export [xmlBestandsNaam] [tijdschriftPad] [gebruikersId1] [gebruikersId2] ...
+]]></message>
+	<message key="plugins.importexport.users.cliUsage.examples">Voorbeelden:
+	Importeer gebruikers in mijnTijdschrift van mijnImporteerBestand.xml:
+	{$scriptName} {$pluginName} import mijnImporteerBestand.xml mijnTijdschrift
+
+	Exporteer alle gebruikers van mijnTijdschrift:
+	{$scriptName} {$pluginName} export mijnExporteerBestand.xml mijnTijdschrift
+
+	Exporteer gebruikers met een speciefieke ID:
+	{$scriptName} {$pluginName} export mijnExporteerBestand.xml mijnTijdschrift 1 2
+</message>
+	<message key="plugins.importexport.users.import.importUsers">Importeer gebruikers</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Selecteer een XML bestand met gebruikergegevevens om in dit tijdschrift te importeren. Raadpleeg het hulpsysteem van het tijdschrift voor details over het formaat van dit bestand.<br /><br />Merk op dat als het geïmporteerde bestand reeds bestaande gebruikersnamen of e-mailadressen bevat, de gegevens voor die gebruikers niet zullen worden geïmporteerd, en alle nieuwe rollen zullen worden toegekend aan de reeds bestaande gebruikers.]]></message>
+	<message key="plugins.importexport.users.import.dataFile">Gebruikers gegevensbestand</message>
+	<message key="plugins.importexport.users.import.sendNotify">Verstuur een verwittigings-e-mail aan alle geïmporteerde gebruikers, met hun gebruikersnaam en wachtwoord.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Ga door met importeren als het proces mislukt voor een gebruiker.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Volgende gebruikers werden met succes geïmporteerd in het systeem</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Er waren fouten tijdens het importeren</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Bevestig dat u deze gebruikers wilt importeren in het systeem</message>
+	<message key="plugins.importexport.users.import.warning">Waarschuwing</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Wachtwoorden die met {$importHash} werden versleuteld, kunnen niet worden gebruikt. OJS is geconfigureerd om {$ojsHash} te gebruiken. Als u doorgaat, zal u de wachtwoorden voor de geïmporteerde gebruikers moeten vernieuwen.</message>
+	<message key="plugins.importexport.users.unknownPress">Er werd een onbekend tijdschriftpad "{$journalPath}" opgegeven.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Exporteer gebruikers</message>
+	<message key="plugins.importexport.users.export.exportByRole">Exporteer volgens rol</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Exporteer alle</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Er waren fouten tijdens het exporteren</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Kon het bestand "{$fileName}" niet schrijven.</message>
+	<message key="plugins.importexport.users.importComplete">De gebruikers werden met succes geïmporteerd: gebruikers met gebruikersnamen en e-mailadressen die nog niet in gebruik waren zijn geïmporteerd, met overeenkomstige gebruikersgroepen.</message>
+	<message key="plugins.importexport.users.results">Resultaten</message>
+	<message key="plugins.importexport.users.uploadFile">Laad eerst een bestand op onder "Importeer".</message>
+</locale>

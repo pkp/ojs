@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/pubIds/PubIdExportSubmissionsListGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubIdExportSubmissionsListGridCellProvider
@@ -28,17 +28,17 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
 	 * @copydoc ExportPublishedSubmissionsListGridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
-		$publishedSubmission = $row->getData();
+		$submission = $row->getData();
 		$columnId = $column->getId();
-		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
+		assert(is_a($submission, 'Submission') && !empty($columnId));
 
 		switch ($columnId) {
 			case 'pubId':
-				return array('label' => $publishedSubmission->getStoredPubId($this->_plugin->getPubIdType()));
+				return array('label' => $submission->getStoredPubId($this->_plugin->getPubIdType()));
 		}
 		return parent::getTemplateVarsFromRowColumn($row, $column);
 	}
 
 }
 
-?>
+

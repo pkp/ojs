@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.importexport.native.displayName">Native XML plugin</message>
+	<message key="plugins.importexport.native.description">Importeer en exporteer artikels en nummers in het XML formaat van OJS.</message>
+	<message key="plugins.importexport.native.import">Importeer</message>
+	<message key="plugins.importexport.native.import.instructions">Upload een XML bestand om te importeren</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Selecteer artikels om te exporteren</message>
+	<message key="plugins.importexport.native.exportSubmissions">Exporteer artikels</message>
+	<message key="plugins.importexport.native.exportIssues">Exporteer nummers</message>
+	<message key="plugins.importexport.native.results">Resultaten</message>
+	<message key="plugins.inportexport.native.uploadFile">Laad eerst een bestand op onder "Importeer".</message>
+	<message key="plugins.importexport.native.importComplete">De import is goed uitgevoerd. Volgende items werden geïmporteerd:</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Gebruik: {$scriptName} {$pluginName} [commando] ...
+Commando's:
+	import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam] ...
+	export [xmlBestandsNaam] [tijdschriftPad] articles [artikelId1] [artikelId2] ...
+	export [xmlBestandsNaam] [tijdschriftPad] article [artikelId]
+	export [xmlBestandsNaam] [tijdschriftPad] issues [nummerId1] [nummerId2] ...
+	export [xmlBestandsNaam] [tijdschriftPad] issue [nummerId]
+
+Om data te importeren zijn bijkomende parameters nodig, afhankelijk van het 
+hoofdelement van het XML document.
+
+Als het hoofdelement <article> of <articles> is, zijn bijkomende parameters vereist. 
+Volgende formaten worden geaccepteerd:
+
+{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam]
+	issue_id [nummerId] section_id [sectieId]
+
+{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam]
+	issue_id [nummerId] section_name [naam]
+
+{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad]
+	issue_id [nummerId] section_abbrev [afkorting]
+]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">Onbekende sectie {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">De opgegeven gebruiker "{$userName} bestaat niet.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">De sectietitels van "{$section1Title}" en "{$section2Title}" in  het nummer "{$issueTitle}" komen overeen met de verschillende secties in het tijdschrift.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">De sectietitel "{$sectionTitle}" in het nummer "{$issueTitle}" komt overeen met een bestaande tijdschriftsectie, maar een andere titel van deze sectie komt niet overeen met een andere titel van de huidige tijdschriftsectie.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">De afkortingen van secties "{$section1Abbrev}" en "{$section2Abbrev}" in  het nummer "{$issueTitle}" komen overeen met de verschillende secties in het tijdschrift.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">De afkorting van sectie "{$sectionAbbrev}" in het nummer "{$issueTitle}" komt overeen met een bestaande tijdschriftsectie, maar een andere afkorting van deze sectie komt niet overeen met een andere afkorting van de huidige tijdschriftsectie.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Er zijn geen nummers die overeenkomen met de opgegeven nummer-identificatie "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Het bestaande nummer met id {$issueId} komt overeen met de opgegeven issue id "{$issueIdentification}". Het nummer zal niet worden gewijzigd, maar artkels zullen worden toegevoegd.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Het element met de identicatie van het nummer ontbreekt voor het artikel "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Het artikel "{$articleTitle}" is opgenomen in een nummer, maar heeft geen publicatiedatum.</message>
+</locale>

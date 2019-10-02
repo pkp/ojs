@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -14,9 +14,7 @@
 <locale name="fi_FI" full_name="Suomi">
 	<message key="admin.hostedJournals">Ylläpidetyt julkaisut</message>
 	<message key="admin.settings.journalRedirect">Julkaisun uudelleenohjaus</message>
-	<message key="admin.settings.options">Valinnat</message>
 	<message key="admin.settings.journalRedirectInstructions">Pyynnöt pääsivustolle uudelleenohjataan tähän julkaisuun. Tämä saattaa olla hyödyllinen toiminto, jos sivustolla ylläpidetään vain yhtä julkaisua.</message>
-	<message key="admin.settings.noJournalRedirect">Älä uudelleenohjaa</message>
 	<message key="admin.settings.defaultMetricDescription">
 OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näkyvät useassa yhteydessä.
 		Joissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletusarvoksi.
@@ -56,7 +54,7 @@ OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käytt�
 	<message key="admin.contexts.form.pathAlphaNumeric">Polku voi sisältää vain aakkosnumeerisia merkkejä, alaviivoja ja yhdysmerkkejä, ja sen täytyy alkaa ja päättyä aakkosnumeeriseen merkkiin.</message>
 	<message key="admin.contexts.form.pathExists">Valittu polku on jo toisen julkaisun käytössä.</message>
 	<message key="admin.journals.enableJournalInstructions">Näytä tämä julkaisu julkisesti sivustolla</message>
-	<message key="admin.journals.journalDescription">Julkaisun kuvaus</message>
+	<message key="admin.contexts.contextDescription">Julkaisun kuvaus</message>
 	<message key="admin.journal.pathImportInstructions">Olemassa oleva julkaisupolku tai luotava polku (esim. "ojs").</message>
 	<message key="admin.journals.importSubscriptions">Tuo tilaukset</message>
 	<message key="admin.journals.transcode">Muunna artikkelin metatiedot ISO8859-1 -merkistöstä</message>
@@ -71,19 +69,6 @@ OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käytt�
 	<message key="admin.mergeUsers.confirm">Haluatko varmasti yhdistää valitut tilit {$oldAccountCount} tiliin, jolla on käyttäjätunnus "{$newUsername}"? Valitut tilit {$oldAccountCount} poistetaan kokonaan. Tätä toimintoa ei voi kumota.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Ei rooliin lisättyjä käyttäjiä. </message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Kategoriat</message>
-	<message key="admin.categories.enable.description">Sivuston ylläpitäjä voi halutessaan määrittää tässä joukon kategorioita, jotka auttavat suuren julkaisumäärän organisointia. Julkaisujen hallinnoijat voivat valita jokaiselle julkaisulle useita näistä kategorioista, ja lukijat voivat selata julkaisukokoelmia kategorioittain.</message>
-	<message key="admin.categories.disableCategories">Älä järjestä julkaisuja kategorioihin.</message>
-	<message key="admin.categories.enableCategories">Salli julkaisujen hallinnoijien järjestää julkaisuja kategorioihin.</message>
-	<message key="admin.categories.editTitle">Muokkaa kategoriaa</message>
-	<message key="admin.categories.createTitle">Luo kategoria</message>
-	<message key="admin.categories.create">Luo uusi kategoria</message>
-	<message key="admin.categories.noneCreated">Yhtään kategoriaa ei ole luotu.</message>
-	<message key="admin.categories.confirmDelete">Haluatko varmasti poistaa tämän kategorian?</message>
-	<message key="admin.categories.name">Nimi</message>
-	<message key="admin.categories.nameRequired">Kategorianimi vaaditaan.</message>
-	<message key="admin.presses.createInstructions">Sinut lisätään automaattisesti tämän julkaisun hallinnoijaksi. Uuden julkaisun luonnin jälkeen sinut uudelleenohjataan ohjattuun asetusten luontiin julkaisun aloitusasetusten loppuun saattamiseksi.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Muistutus tilauksen päättymisestä</message>
 	<message key="admin.scheduledTask.openAccessNotification">Open Access -ilmoitus</message>
 	<message key="admin.scheduledTask.reviewReminder">Muistutus arvioinnista</message>

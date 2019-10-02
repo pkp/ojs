@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:34-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Exportação/Registro DataCite"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Exporte ou registre metadados de edições, artigos, composições e arquivos suplementares no DataCite."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr "Caso deseje registrar DOIs no DataCite, entre em contato com o Gerente por meio da <a href=\"http://datacite.org/contact\" target=\"_blank\">página do DataCite</a>, que irá encaminá-lo ao seu Representante DataCite local. Uma vez estabelecido o relacionamento com a organização representante, será providenciado o acesso ao serviço  DataCite para a cunhagem de identificadores persistente (DOIs) e registro de metadados associados. Mesmo que não possua um login e senha, será possível exportar dados no formato XML  DataCite, porém não poderá registrar seus DOIs no DataCite por meio do OJS. Note que a senha será gravada como texto puro, isto é, não encriptada, devido aos requisitos de registro do serviço DataCite."
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Login (símbolo)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Informe seu login (símbolo) recebido do DataCite. O login não pode conter dois pontos (:)."
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "Dados DataCite do remetente"
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Por favor configure o plugin de exportação DataCite antes de utilizá-lo pela primeira vez."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS depositará DOIs automaticamente no DataCite. Por favor note que isso pode levar um tempo depois da publicação. Você pode verificar os DOIs não registrados."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Use o prefixo de testes do DataCite para registro dos DOI. Não esqueça de remover esta opção quando não estiver mais em testes."

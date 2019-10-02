@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
@@ -86,7 +86,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$article =& $args[0];
 		$galley =& $args[1];
 		$fileId =& $args[2];
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 
 		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
 			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
@@ -110,17 +110,18 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	function _getHTMLContents($request, $galley) {
 		$journal = $request->getJournal();
 		$submissionFile = $galley->getFile();
+		$submissionId = $submissionFile->getSubmissionId();
 		$contents = file_get_contents($submissionFile->getFilePath());
 
 		// Replace media file references
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 		$embeddableFiles = array_merge(
-			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
-			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
+			$submissionFileDao->getLatestRevisions($submissionId, SUBMISSION_FILE_PROOF),
+			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionId, SUBMISSION_FILE_DEPENDENT)
 		);
 		$referredArticle = null;
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
 
 		foreach ($embeddableFiles as $embeddableFile) {
 			$params = array();
@@ -128,11 +129,11 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			if ($embeddableFile->getFileType()=='text/plain' || $embeddableFile->getFileType()=='text/css') $params['inline']='true';
 
 			// Ensure that the $referredArticle object refers to the article we want
-			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
-				$referredArticle = $articleDao->getById($galley->getSubmissionId());
+			if (!$referredArticle || $referredArticle->getId() != $submissionId) {
+				$referredArticle = $submissionDao->getById($submissionId);
 			}
-			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
-			$pattern = preg_quote($embeddableFile->getOriginalFileName());
+			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
+			$pattern = preg_quote(rawurlencode($embeddableFile->getOriginalFileName()));
 
 			$contents = preg_replace(
 				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
@@ -163,9 +164,12 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			$contents
 		);
 
+		$templateMgr = TemplateManager::getManager($request);
+		$contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
+
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getByArticleId($galley->getSubmissionId());
+		$issue = $issueDao->getBySubmissionId($submissionId);
 
 		$journal = $request->getJournal();
 		$site = $request->getSite();
@@ -185,7 +189,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 
 	function _handleOjsUrl($matchArray) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$url = $matchArray[2];
 		$anchor = null;
 		if (($i = strpos($url, '#')) !== false) {
@@ -250,11 +254,9 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				$journal = $request->getJournal();
 				import ('classes.file.PublicFileManager');
 				$publicFileManager = new PublicFileManager();
-				$url = $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
+				$url = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];
 	}
 }
-
-?>

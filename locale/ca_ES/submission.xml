@@ -4,8 +4,8 @@
 <!--
   * locale/ca_ES/submission.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the ca_ES (Català) locale.
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -34,10 +34,7 @@
 	<message key="submission.submit.whatNext.description">La revista ha rebut la seva tramesa i li enviarà un correu electrònic de confirmació per als seus registres. Quan l'editor/a hagi revisat la tramesa contactarà amb vostè.</message>
 	<message key="grid.action.galleyInIssueEntry">La galerada apareix a l'entrada del número</message>
 	<message key="grid.action.issueEntry">Veure les metadades de la tramesa</message>
-	<message key="submission.issueEntry.modalTitle">Metadades de la tramesa i la publicació</message>
-	<message key="submission.issueEntry.submissionMetadata">Tramesa</message>
-	<message key="submission.issueEntry.publicationMetadata">Publicació</message>
-	<message key="submission.issueEntry.confirm">Crear una entrada de número per a aquest article basada en les metadades següents.</message>
+	<message key="submission.publication">Publicació</message>
 	<message key="submission.event.articleGalleyMadeAvailable">La galerada de l'article "{$galleyFormatName}" ja està disponible.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">La galerada de l'article "{$galleyFormatName}" ja no està disponible.</message>
 	<message key="submission.event.publicIdentifiers">Els identificadors públics de la tramesa s'han actualitzat.</message>

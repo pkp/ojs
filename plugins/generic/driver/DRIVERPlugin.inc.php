@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/driver/DRIVERPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DRIVERPlugin
@@ -77,7 +77,7 @@ class DRIVERPlugin extends GenericPlugin {
 		$set = $params[3];
 		$offset = $params[4];
 		$limit = $params[5];
-		$total = $params[6];
+		$total =& $params[6];
 		$records =& $params[7];
 
 		$records = array();
@@ -131,22 +131,22 @@ class DRIVERPlugin extends GenericPlugin {
 		// if the article is alive
 		if (!isset($row['tombstone_id'])) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($row['journal_id']);
-			$article = $publishedArticleDao->getByArticleId($row['submission_id']);
-			$issue = $issueDao->getById($article->getIssueId());
+			$submission = Services::get('submission')->get($row['submission_id']);
+			$publication = $submission->getCurrentPublication();
+			$issue = $issueDao->getById($publication->getData('issueId'));
 
 			// is open access
 			$status = '';
-			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
+			if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = DRIVER_ACCESS_OPEN;
-			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+			} else if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
 						$status = DRIVER_ACCESS_OPEN;
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = DRIVER_ACCESS_EMBARGOED;
@@ -155,7 +155,7 @@ class DRIVERPlugin extends GenericPlugin {
 					}
 				}
 			}
-			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
+			if ($journal->getData('restrictSiteAccess') == 1 || $journal->getData('restrictArticleAccess') == 1) {
 				$status = DRIVER_ACCESS_RESTRICTED;
 			}
 
@@ -164,7 +164,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 
 			// is there a full text
-			$galleys = $article->getGalleys();
+			$galleys = $submission->getGalleys();
 			if (!empty($galleys)) {
 				return $status == DRIVER_ACCESS_OPEN;
 			}
@@ -183,22 +183,22 @@ class DRIVERPlugin extends GenericPlugin {
 	 */
 	function isDRIVERArticle($journalId, $articleId) {
 			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 
 			$journal = $journalDao->getById($journalId);
-			$article = $publishedArticleDao->getByArticleId($articleId);
-			$issue = $issueDao->getById($article->getIssueId());
+			$submission = Services::get('submission')->get($articleId);
+			$publication = $submission->getCurrentPublication();
+			$issue = $issueDao->getById($publication->getData('issueId'));
 
 			// is open access
 			$status = '';
-			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
+			if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$status = DRIVER_ACCESS_OPEN;
-			} else if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
+			} else if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 				if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
 					$status = DRIVER_ACCESS_OPEN;
 				} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-					if (is_a($article, 'PublishedArticle') && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) {
+					if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
 						$status = DRIVER_ACCESS_OPEN;
 					} else if ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != NULL) {
 						$status = DRIVER_ACCESS_EMBARGOED;
@@ -207,7 +207,7 @@ class DRIVERPlugin extends GenericPlugin {
 					}
 				}
 			}
-			if ($journal->getSetting('restrictSiteAccess') == 1 || $journal->getSetting('restrictArticleAccess') == 1) {
+			if ($journal->getData('restrictSiteAccess') == 1 || $journal->getData('restrictArticleAccess') == 1) {
 				$status = DRIVER_ACCESS_RESTRICTED;
 			}
 
@@ -216,7 +216,7 @@ class DRIVERPlugin extends GenericPlugin {
 			}
 
 			// is there a full text
-			$galleys = $article->getGalleys();
+			$galleys = $submission->getGalleys();
 			if (!empty($galleys)) {
 				return $status == DRIVER_ACCESS_OPEN;
 			}
@@ -225,4 +225,4 @@ class DRIVERPlugin extends GenericPlugin {
 
 }
 
-?>
+

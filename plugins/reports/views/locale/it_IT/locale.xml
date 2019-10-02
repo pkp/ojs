@@ -4,20 +4,19 @@
 <!--
   * plugins/reports/views/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the it_IT locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.reports.views.displayName">Report delle viste</message>
 	<message key="plugins.reports.views.description">Questo plugin genera un report CSV che riepiloga le viste su ciascun articolo</message>
-	<message key="plugins.reports.views.galleyViews">Totale visualizzazioni della gabbia</message>
 	<message key="plugins.reports.views.articleId">ID dell'articolo</message>
 	<message key="plugins.reports.views.articleTitle">Titolo dell'articolo</message>
 	<message key="plugins.reports.views.datePublished">Data di pubblicazione</message>
 	<message key="plugins.reports.views.abstractViews">Visualizzazioni dell'abstract</message>
+	<message key="plugins.reports.views.galleyViews">Totale visualizzazioni della gabbia</message>
 </locale>

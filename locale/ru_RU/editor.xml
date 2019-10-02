@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/editor.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -132,7 +132,10 @@
 	<message key="editor.submissions.lastCompleted">Последняя завершенная</message>
 	<message key="editor.submissions.assignedTo">Кому назначено</message>
 	<message key="editor.submissions.inSection">В разделе</message>
-	<message key="editor.article.schedulePublication">Запланировать для публикации</message>
+	<message key="editor.article.showPublicationVersion">Показать запланированную публикацию</message>
+	<message key="editor.article.publishVersion">Опубликовать версию</message>
+	<message key="editor.article.viewMetadata">Показать метаданные версии</message>
+	<message key="editor.article.editMetadata">Редактировать метаданные версии</message>
 	<message key="editor.article.scheduleForPublication">Запланировать для публикации в</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Будет назначено позже</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Не поступила плата за публикацию. Чтобы запланировать материал к публикации уведомите автора о необходимости внести плату или отмените платеж.</message>

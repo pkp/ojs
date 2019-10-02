@@ -24,3 +24,9 @@ tools:
     feature_patterns:
       - '\badd(?:s|ed)?\b'
       - '\bimplement(?:s|ed)?\b'
+build:
+  nodes:
+    analysis:
+      tests:
+        override:
+          - php-scrutinizer-run

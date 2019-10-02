@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:44-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:44-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Plugiciel d'exportation DOAJ"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Exporter la revue vers DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Communiquer avec DOAJ pour intégration"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Utilisation:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Si vous souhaitez enregistrer des articles à partir d'OJS, veuillez entrer votre clé API DOAJ. Sinon, vous pourrez toujours exporter en format XML DOAJ, mais vous ne pourrez pas enregistrer vos articles avec DOAJ à partir d'OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Clé API DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Vous trouverez votre clé API sur votre page utilisateur du site de DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS déposera les articles automatiquement chez DOAJ. Veuillez noter que cela peut prendre un peu de temps ap`res la publication pour le traitement (par exemple en fonction de votre configuration cronjob). Vous pouvez vérifier pour les articles non enregistrés."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Utiliser l'API test DOAJ (environnement de test) pour l'enregistrement. N'oubliez pas d'enlever cette option en production."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Tâche d'enregistrement automatique DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Le dépôt n'a pas réussi! L'API DOAJ a retourné le message d'erreur suivant: '{$param}'."

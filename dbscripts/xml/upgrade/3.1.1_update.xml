@@ -4,8 +4,8 @@
 <!--
   * 3.1.1_update.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 3.1.1.0 general updates.
@@ -26,12 +26,6 @@
 		<query driver="postgres7">DELETE FROM filters f USING filter_groups fg WHERE f.filter_group_id = fg.filter_group_id AND fg.symbolic IN ('citation=>nlm30', 'isbn=>nlm30-element-citation', 'nlm30-article-xml=>nlm23-article-xml', 'nlm30-element-citation=>isbn', 'nlm30-element-citation=>nlm30-element-citation', 'nlm30-element-citation=>nlm30-xml', 'nlm30-element-citation=>plaintext', 'nlm30=>citation', 'plaintext=>nlm30-element-citation', 'submission=>nlm23-article-xml', 'submission=>nlm30-article-xml', 'submission=>reference-list')</query>
 		<!-- remove filter_groups -->
 		<query>DELETE FROM filter_groups WHERE symbolic IN ('citation=>nlm30', 'isbn=>nlm30-element-citation', 'nlm30-article-xml=>nlm23-article-xml', 'nlm30-element-citation=>isbn', 'nlm30-element-citation=>nlm30-element-citation', 'nlm30-element-citation=>nlm30-xml', 'nlm30-element-citation=>plaintext', 'nlm30=>citation', 'plaintext=>nlm30-element-citation', 'submission=>nlm23-article-xml', 'submission=>nlm30-article-xml', 'submission=>reference-list')</query>
-	</sql>
-	<!-- update the supp file ids to the new file ids, ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531 -->
-	<sql>
-		<query driver="mysql">UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
-		<query driver="mysqli">UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
-		<query driver="postgres7">UPDATE metrics SET assoc_id = sfs.file_id FROM submission_file_settings sfs WHERE metrics.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND CAST(nullif(sfs.setting_value, '') AS integer) = metrics.assoc_id</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#3311 rename subject(EnabledSubmission, EnabledWorkflow, Required) to subjects(EnabledSubmission, EnabledWorkflow, Required) in journal_settings -->
 		<query>UPDATE journal_settings SET setting_name = 'subjectsEnabledSubmission' WHERE setting_name = 'subjectEnabledSubmission'</query>

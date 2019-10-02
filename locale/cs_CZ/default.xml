@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -22,141 +22,23 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">Příspěvek nebyl dosud publikován ani není v současnosti zaslán do jiného časopisu pro posouzení (nebo bylo podáno vysvětlení v Komentářích pro editora).</message>
-	<message key="default.journalSettings.checklist.fileFormat">Soubor příspěvku je ve formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked">URL odkazy na reference jsou uvedeny všude, kde to bylo možné.</message>
-	<message key="default.journalSettings.checklist.submissionAppearance">Text má jednoduché řádkování; písmo má velikost 12; je použita spíše kurzíva a ne podtržení (kromě url adres); všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci.</message>
-	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Pokynech pro autory</a>, které se nachází na stránce O časopisu.]]></message>
-	<message key="default.journalSettings.privacyStatement">Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</message>
-	<message key="default.journalSettings.openAccessPolicy">Tento časopis poskytuje okamžitý otevřený přístup ke svému obsahu na principu, podle kterého volné zpřístupnění výsledků výzkumu podporuje větší celosvětovou výměnu poznatků.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Tento časopis dovoluje a doporučuje autorům zavěsit příspěvky do časopisu na osobních webových stránkách nebo v instituciálních archivech, a to jak před jejich publikováním, tak po něm. Přitom je potřeba uvést bibliografické údaje, které, pokud je to možné, dokládají publikování příspěvku v našem časopisu.</message>
-	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Etapa redigování příspěvku je zaměřena na zkvalitnění toku textu, jeho srozumitelnosti, gramatiky, stylizace a formátování. Představuje pro autora poslední šanci, kdy může udělat v textu nějakou podstatnou změnu, protože další etapa je již omezena pouze na opravy překlepů a formátování.
-
-Soubor pro redigování je ve formátu Word nebo .rtf, a proto může být snadno upravován jako textový dokument. Uvedený soubor instrukcí nabízí dva přístupy k redigování. Jeden je založen na nástroji Revize v programu Microsoft Word a vyžaduje, aby redaktor, editor i autor měli k dispozici tento program. Druhý systém, který nezávisí na softwaru, byl s dovolením vypůjčen od Harvard Educational Review. Editor může pozměnit tyto instrukce, aby lépe vyhovovaly požadavkům tohoto časopisu.
-
-
-<h4>Systémy pro redigování</h4>
-
-<strong>1. Revize programu Microsoft Word</strong>
-
-Nástroj Revize (nachází se v menu pod položkou nástroje) umožňuje redaktorovi vkládat (vložený text se zobrazí barevně) a mazat (smazaný text bude zobrazen barevně a přeškrtnutý nebo na okraji a označen jako odstraněný) text. Redaktor může vznést dotazy na autora (Dotaz na autora) i na editora (Dotaz na editora) tím, že tyto dotazy vloží do hranatých závorek. Potom redaktor nahraje redigovanou verzi příspěvku a uvědomí editora. Editor překontroluje text a uvědomí autora.
-
-Editor a autor by měli ponechat ty změny, se kterými jsou spokojeni. Pokud je třeba udělat další změny, editor a autor mohou pozměnit původně vložený nebo smazaný text, stejně tak lze vložit nebo smazat nové časti na jiném místě v textu. Autoři a editoři by se měli vyjádřit ke každému dotazu, který na ně byl vznesen a svou odpověď vložit do hranatých závorek.
-
-Poté, co byl text zkontrolován editorem a autorem, redaktor naposledy projde text a přijme změny, aby ho připravil pro další etapy zpracování (grafické úpravy a korektury).
-
-
-<strong>2. Harvard Educational Review </strong>
-
-<strong>Instrukce pro elektronické redigování příspěvku</strong>
-
-Postupujte prosím podle následujícího protokolu pro elektronické redigování Vašeho příspěvku:
-
-<strong>Reakce na doporučené změny</strong>
-&nbsp; U každé doporučené změny, kterou jste přijali, změňte text z tučného na normální
-&nbsp; U každé doporučené změny, kterou nepřijmete, vložte opět původní text a zvýrazněte ho <strong>tučně</strong>
-
-<strong>Doplňování a mazání</strong>
-&nbsp; Označte doplněné části <strong>tučným</strong> zvýrazněním nového textu
-&nbsp; Nahraďte smazané části: <strong>[smazaný text]</strong>
-&nbsp; Pokud smažete jednu nebo více vět, uveďte to prosím v poznámce, např. <strong>[smazány 2 věty]</strong>
-
-<strong>Odpovídání na dotazy na autora (DA)</strong>
-&nbsp; Ponechte všechny DA beze změny a tučně zvýrazněné v textu. Nemažte je.
-&nbsp; Pro odpověď přidejte za DA komentář. Komentáře by měly být vymezeny použitím:
-<strong>[Komentář:</strong>]
-&nbsp; např.: <strong>[Komentář: Rozšířena diskuze k metodice, jak bylo doporučeno]</strong>
-
-<strong>Vytváření komentářů</strong>
-&nbsp; Použijte komentář pro vysvětlení změn uspořádání nebo pro významnější opravy
-&nbsp; např.: <strong>[Komentář: Přesunul jsem výše uvedený odstavec ze str. 5 na str. 7]</strong>
-&nbsp; Poznámka: Pokud se odkazujete na čísla stránek, použijte prosím čísla stránek z tištěné kopie příspěvku, která Vám byla zaslána. Je to důležité, protože čísla stránek se mohou změnit, pokud je prováděno elektronické redigování dokumentu.
-
-<h4>Ukázka elektronického redigování</h4>
-
-<strong>Původní soubor příspěvku</strong>
-
-Dříve, než dramaticky odstoupíte od struktury a uspořádání vašeho původního rukopisu, překontrolujte ho s jeho koeditory. Poté, co budete hotovi s úpravami, přejmenujte soubor z JmenoAutoraDA.doc na JmenoAutoraDAR.doc (např.: z NovakDA.doc na NovakDAR.doc). Vytiskněte kopii příspěvku a pošlete ji poštou spolu s disketou obsahující kompletně opravený a přejmenovaný soubor dokumentu.
-
-
-<strong>Příspěvek zaslaný zpět autorovi spolu s dotazy a návrhy</strong>
-
-Dříve, než dramaticky odstoupíte od struktury a uspořádání <strong>[smazána 2 slova]</strong> rukopisu, <strong>který vám vracíme</strong>, překontrolujte ho s <strong>[smazána 2 slova]</strong><strong>editory, kteří ho mají na starosti</strong>. Poté, co budete hotovi s úpravami, přejmenujte soubor z JmenoAutoraDA.doc na JmenoAutoraDAR.doc (např.: z NovakDA.doc na NovakDAR.doc). Vytiskněte kopii příspěvku a pošlete ji poštou spolu s disketou obsahující kompletně opravený a přejmenovaný soubor dokumentu. <strong>[DA: V odstavci by bylo vhodné zdůraznit důležitost pečlivého dodržení instrukcí pro elektronické redigování. Jinak může dojít k výraznému zpomalení edičního procesu]</strong>
-
-<strong>Opravený příspěvek zaslaný zpět redakci</strong>
-
-Dříve, než dramaticky odstoupíte od struktury a uspořádání rukopisu, který vám vracíme, překontrolujte ho s editory, kteří ho mají na starosti. <strong>Pochopte prosím, že pokud nedodržíte následující instrukce, publikování Vašeho příspěvku může být značně zpomaleno.</strong>
-
-Poté, co budete hotovi s úpravami, přejmenujte soubor z JmenoAutoraDA.doc na JmenoAutoraDAR.doc (např.: z NovakDA.doc na NovakDAR.doc). Vytiskněte kopii příspěvku a pošlete ji poštou spolu s disketou obsahující <strong>[smazáno slovo]</strong> opravený a přejmenovaný soubor dokumentu. <strong>[DA: V odstavci by bylo vhodné zdůraznit důležitost pečlivého dodržení instrukcí pro elektronické redigování. Jinak může dojít k výraznému zpomalení edičního procesu] [Komentář: S ohledem na Vaše doporučení jsem přidal větu.]</strong>
-
-<strong>Poznámky:</strong>
-&bull; Odebrání tučného zvýraznění textu poukazuje na přijetí doporučené změny v první větě
-&bull; Přidána věta v reakci na DA. Tučný text poukazuje na přidání nového textu
-&bull; [smazáno slovo] poukazuje na smazání slova "kompletně"
-&bull; Komentář obsahuje odpověď na DA od redaktora.]]></message>
-
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Přidání odkazů na reference v průběhu provádění grafických úprav</h4>
-	<p>Když převádíte příspěvek do HTML nebo PDF, ujistěte se, že všechny hyperlinky v příspěvku jsou aktivní.</p>
-	<h4>A. Pokud autor uvede u reference URL odkaz </h4>
-	<ol>
-	<li>Dokud je ještě příspěvek v textovém editoru (např.: Word), vložte frázi ZOBRAZIT POLOŽKU za každou referenci obsahující URL adresu.</li>
-	<li>Převeďte tuto frázi na hyperlink tím, že ji označíte a použijete nástroj Wordu pro vkládání odkazů. Využijte přitom URL adresu, kterou poskytl autor.</li>
-	</ol>
-	<h4>B. Umožněte čtenářům vyhledat referenci pomocí Google Scholar</h4>
-	<ol>
-	<li>Dokud je ještě příspěvek v textovém editoru (např.: Word), zkopírujte název práce uvedené v referenčním seznamu (pokud se zdá být název příliš krátký nebo obecný – např.: „Mír“ – pak zkopírejte autora a název).</li>
-	<li>Vložte název reference mezi dvojici %22 a vepište + mezi jednotlivá slova: http://scholar.google.com/scholar?q=%22VLOŽTE+NÁZEV+SEM%22&hl=en&lr=&btnG=Search</li>
-	<li>Přidejte frázi GS SEARCH na konec každé citace v referenčním seznamu příspěvku.</li>
-	<li>Převeďte tuto frázi na hyperlink tím, že ji označíte a použijete nástroj Wordu pro vkládání odkazů. Využijte přitom odpovídající URL adresu, kterou jste si připravili v kroku č. 2.</li>
-	</ol>
-	<h4>C. Umožněte čtenářům vyhledat referenci pomocí DOI</h4>
-	<ol>
-	<li>Dokud je ještě příspěvek v textovém editoru, nakopírujte dávku referencí do CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
-	<li>Vložte každý DOI, který Query poskytne do následující URL adresy (mezi = a &): http://www.cmaj.ca/cgi/external_ref?access_num=VLOŽTE DOI SEM&link_type=DOI</li>
-	<li>Přidejte frázi CrossRef na konec každé citace v referenčním seznamu příspěvku.</li>
-	<li> Převeďte tuto frázi na hyperlink tím, že ji označíte a použijete nástroj Wordu pro vkládání odkazů. Využijte přitom odpovídající URL adresu, kterou jste si připravili v kroku č. 2.</li>
-	</ol>]]></message>
-
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Etapa provádění korektur je určena pro zachycení jakýchkoliv pravopisných, gramatických a formálních chyb. Podstatnější změny již v této etapě není možné bez předchozí konzultace s editorem provádět. V grafických úpravách, klikněte na ZOBRAZIT PRO KOREKCI, aby jste mohli prohlížet HTML, PDF a jiné dostupné formáty souborů použité pro publikování dané položky.</p>
-<h4>Pro chyby v pravopisu a gramatice</h4>
-
-<p>Zkopírujte problémové slovo nebo skupinu slov a vložte je následujícím způsobem do pole pro korekční opravy s uvedením instrukce pro editora “ZMĚNIT-NA“…</p>
-
-<pre>1. ZMĚNIT...
-níž jež ostatní
-NA...
-níž než ostatní</pre>
-<br />
-<pre>2. ZMĚNIT...
-Malinowsky
-NA...
-Malinowski</pre>
-<br />
-
-<h4>Pro chyby ve formátování</h4>
-
-<p>Popište následujícím způsobem místo výskytu a povahu problému v poli pro korekční opravy. Korekci uveďte frází "FORMÁTOVÁNÍ"...</p>
-<br />
-<pre>3. FORMÁTOVÁNÍ
-Čísla v Tabulce 3 nejsou ve třetím sloupci zarovnána.</pre>
-<br />
-<pre>4. FORMÁTOVÁNÍ
-Odstavec, který začíná "Toto poslední téma..." nebyl zamýšlený.</pre>]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+	<message key="default.contextSettings.checklist.notPreviouslyPublished">Příspěvek nebyl dosud publikován ani není v současnosti zaslán do jiného časopisu pro posouzení (nebo bylo podáno vysvětlení v Komentářích pro editora).</message>
+	<message key="default.contextSettings.checklist.fileFormat">Soubor příspěvku je ve formátu OpenOffice, Microsoft Word, RTF nebo WordPerfect.</message>
+	<message key="default.contextSettings.checklist.addressesLinked">URL odkazy na reference jsou uvedeny všude, kde to bylo možné.</message>
+	<message key="default.contextSettings.checklist.submissionAppearance">Text má jednoduché řádkování; písmo má velikost 12; je použita spíše kurzíva a ne podtržení (kromě url adres); všechny ilustrace tabulky a obrázky jsou umístěny spíše v textu, než na konci.</message>
+	<message key="default.contextSettings.checklist.bibliographicRequirements"><![CDATA[Text odpovídá stylistickým a bibliografickým požadavkům uvedeným v <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines" target="_new">Pokynech pro autory</a>, které se nachází na stránce O časopisu.]]></message>
+	<message key="default.contextSettings.privacyStatement"><![CDATA[<p>Jména a emailové adresy vložené na této stránce budou použity výhradně pro uvedené účely tohoto časopisu a nebudou zpřístupněny pro jiné účely ani třetí straně.</p>]]></message>
+	<message key="default.contextSettings.openAccessPolicy">Tento časopis poskytuje okamžitý otevřený přístup ke svému obsahu na principu, podle kterého volné zpřístupnění výsledků výzkumu podporuje větší celosvětovou výměnu poznatků.</message>
+	<message key="default.contextSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
-<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
-	<message key="default.journalSettings.forReaders"><![CDATA[Vyzýváme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href="{$indexUrl}/{$journalPath}/user/register">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href="{$indexUrl}/{$journalPath}/about">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Pokyny pro autory</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href="{$indexUrl}/{$journalPath}/user/register">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href="{$indexUrl}/{$journalPath}/login">přihlásit</a> a zahájit pětistupňový proces.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Vyzýváme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://lockss.org/">Více...</a>]]></message>
+<a href="{$contextUrl}">{$contextName}</a>]]></message>
+	<message key="default.contextSettings.forReaders"><![CDATA[Vyzýváme čtenáře, aby se zapsali do služby pro oznamování nově vydaných čísel tohoto časopisu. Použijte odkaz <a href="{$indexUrl}{$contextPath}/user/register">Registrovat</a> v horní části domácí stránky časopisu. Díky této registraci bude čtenář dostávat emailem obsah každého nově vydaného čísla. Seznam čtenářů rovněž umožňuje časopisu doložit určitou úroveň podpory nebo čtenosti časopisu. Viz <a href="{$indexUrl}{$contextPath}/about/submissions#privacyStatement">Prohlášení o soukromí</a> tohoto časopisu, které ujišťuje čtenáře, že jejich jméno a emailová adresa nebudou použity pro jiné účely.]]></message>
+	<message key="default.contextSettings.forAuthors"><![CDATA[Máte zájem publikovat v tomto časopisu? Doporučujeme pročtení stránky <a href="{$indexUrl}{$contextPath}/about">O časopisu</a> kde jsou uvedeny pravidla časopisu pro jednotlivé sekce, stejně jako <a href="{$indexUrl}{$contextPath}/about/submissions#authorGuidelines">Pokyny pro autory</a>. Než mohou autoři odeslat příspěvek, musí se do časopisu <a href="{$indexUrl}{$contextPath}/user/register">zaregistrovat</a> nebo pokud již registrovaní jsou, mohou se jednoduše <a href="{$indexUrl}{$contextPath}/login">přihlásit</a> a zahájit pětistupňový proces.]]></message>
+	<message key="default.contextSettings.forLibrarians"><![CDATA[Vyzýváme knihovníky, aby uváděli tento časopis ve svém seznamu volně dostupných elektronických publikací. Také může být vhodné poznamenat, že open source redakční software, který tento časopis využívá, je vhodný pro použití s časopisy, v jejichž redakcích mohou členové fakult dané univerzity pracovat (viz <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.contextSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://lockss.org/">Více...</a>]]></message>
 
-	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.publicationFee">Publikování článku</message>
-	<message key="default.journalSettings.purchaseArticleFee">Koupit článek</message>
-	<message key="default.journalSettings.membershipFee">Členství v asociaci</message>
-	<message key="default.journalSettings.purchaseIssueFee">Zakoupit číslo</message>
 	<message key="default.genres.article">Text článku</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Tento časopis využívá systém CLOCKSS k vytvoření distribuovaného systému archivace mezi zúčastněnými knihovnami a umožňuje knihovnám vytvářet trvalé archivy časopisu pro účely uchování a obnovy. <a href="http://clockss.org/"> Více ... </a>]]></message>
+	<message key="default.contextSettings.clockssLicense"><![CDATA[Tento časopis využívá systém CLOCKSS k vytvoření distribuovaného systému archivace mezi zúčastněnými knihovnami a umožňuje knihovnám vytvářet trvalé archivy časopisu pro účely uchování a obnovy. <a href="http://clockss.org/"> Více ... </a>]]></message>
 	<message key="default.groups.name.manager">Manažer časopisu</message>
 	<message key="default.groups.plural.manager">Manažeři časopisu</message>
 	<message key="default.groups.abbrev.manager">Man</message>

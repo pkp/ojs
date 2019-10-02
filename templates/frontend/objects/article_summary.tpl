@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_summary.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article summary which is shown within a list of articles.
@@ -14,7 +14,7 @@
  * @uses $hideGalleys bool Hide the article galleys for this article?
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
-{assign var=articlePath value=$article->getBestArticleId()}
+{assign var=articlePath value=$article->getBestId()}
 
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 	{assign var="showAuthor" value=true}
@@ -24,13 +24,13 @@
 	{if $article->getLocalizedCoverImage()}
 		<div class="cover">
 			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
-				<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText() != ''} alt="{$article->getLocalizedCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
+				<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|escape|default:'null'}">
 			</a>
 		</div>
 	{/if}
 
 	<div class="title">
-		<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
+		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
 			{$article->getLocalizedTitle()|strip_unsafe_html}
 			{if $article->getLocalizedSubtitle()}
 				<span class="subtitle">
@@ -44,7 +44,7 @@
 	<div class="meta">
 		{if $showAuthor}
 		<div class="authors">
-			{$article->getAuthorString()}
+			{$article->getAuthorString()|escape}
 		</div>
 		{/if}
 
@@ -70,15 +70,15 @@
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
 					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
-						{php}continue;{/php}
+						{continue}
 					{/if}
 				{/if}
 				<li>
 					{assign var="hasArticleAccess" value=$hasAccess}
-					{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
+					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
-					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
 				</li>
 			{/foreach}
 		</ul>

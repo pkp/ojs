@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:40-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:40-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Connector de canals d'informació d'avisos"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Aquest connector genera canals d'informació RSS/Atom per als avisos de la revista."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Configuració"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Mostra enllaços als canals d'informació a totes les pàgines de la revista."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Mostra enllaços als canals d'informació a la pàgina inicial i a la pàgina d'avisos."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Mostra enllaços als canals d'informació només a la pàgina d'avisos."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Limita els canals d'informació als"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "avisos més recents."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Introduïu un nombre enter positiu per als avisos més recents."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Logotip d'Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Logotip d'RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Logotip d'RSS2"

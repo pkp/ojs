@@ -3,8 +3,8 @@
 /**
  * @file classes/services/NavigationMenuService.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NavigationMenuService
@@ -13,7 +13,7 @@
  * @brief Helper class that encapsulates NavigationMenu business logic
  */
 
-namespace OJS\Services;
+namespace APP\Services;
 
 /** types for all ojs default navigationMenuItems */
 define('NMI_TYPE_SUBSCRIPTIONS', 'NMI_TYPE_SUBSCRIPTIONS');
@@ -74,9 +74,9 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 	function getDisplayStatusCallback($hookName, $args) {
 		$navigationMenuItem =& $args[0];
 
-		$request = \Application::getRequest();
+		$request = \Application::get()->getRequest();
 		$dispatcher = $request->getDispatcher();
-		$templateMgr = \TemplateManager::getManager(\Application::getRequest());
+		$templateMgr = \TemplateManager::getManager(\Application::get()->getRequest());
 
 		$isUserLoggedIn = \Validation::isLoggedIn();
 		$isUserLoggedInAs = \Validation::isLoggedInAs();
@@ -90,18 +90,18 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 		switch ($menuItemType) {
 			case NMI_TYPE_CURRENT:
 			case NMI_TYPE_ARCHIVES:
-				$navigationMenuItem->setIsDisplayed($context && $context->getSetting('publishingMode') != PUBLISHING_MODE_NONE);
+				$navigationMenuItem->setIsDisplayed($context && $context->getData('publishingMode') != PUBLISHING_MODE_NONE);
 				break;
 			case NMI_TYPE_SUBSCRIPTIONS:
 				if ($context) {
 					$paymentManager = \Application::getPaymentManager($context);
-					$navigationMenuItem->setIsDisplayed($context->getSetting('paymentsEnabled') && $paymentManager->isConfigured());
+					$navigationMenuItem->setIsDisplayed($context->getData('paymentsEnabled') && $paymentManager->isConfigured());
 				}
 				break;
 			case NMI_TYPE_MY_SUBSCRIPTIONS:
 				if ($context) {
 					$paymentManager = \Application::getPaymentManager($context);
-					$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getSetting('paymentsEnabled') && $paymentManager->isConfigured() && $context->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
+					$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
 				}
 				break;
 		}

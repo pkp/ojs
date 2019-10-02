@@ -1,8 +1,8 @@
 {**
  * templates/payments/subscriptionPolicyForm.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Setup subscription policies.
@@ -43,8 +43,8 @@
 		<p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
 		{fbvElement type="select" id="numMonthsBeforeSubscriptionExpiryReminder" name="numMonthsBeforeSubscriptionExpiryReminder" selected=$numMonthsBeforeSubscriptionExpiryReminder from=$validNumMonthsBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
 		{fbvElement type="select" id="numWeeksBeforeSubscriptionExpiryReminder" name="numWeeksBeforeSubscriptionExpiryReminder" selected=$numWeeksBeforeSubscriptionExpiryReminder from=$validNumWeeksBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numWeeksAfterSubscriptionExpiryReminder" name="numWeeksAfterSubscriptionExpiryReminder" selected=$numWeeksAfterSubscriptionExpiryReminder from=$validNumWeeksAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
 		{fbvElement type="select" id="numMonthsAfterSubscriptionExpiryReminder" name="numMonthsAfterSubscriptionExpiryReminder" selected=$numMonthsAfterSubscriptionExpiryReminder from=$validNumMonthsAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numWeeksAfterSubscriptionExpiryReminder" name="numWeeksAfterSubscriptionExpiryReminder" selected=$numWeeksAfterSubscriptionExpiryReminder from=$validNumWeeksAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
 
 		{if !$scheduledTasksEnabled}
 			<span>{translate key="manager.subscriptionPolicies.expiryRemindersDisabled"}</span>
@@ -66,19 +66,8 @@
 			<span>{translate key="manager.subscriptionPolicies.onlinePaymentDisabled"}<span>
 		{/if}
 	{/fbvFormSection}
-
 	{fbvFormSection label="manager.subscriptionPolicies.openAccessOptions" list=true}
-		<p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
-
-		{fbvElement type="select" id="delayedOpenAccessDuration" name="delayedOpenAccessDuration" selected=$delayedOpenAccessDuration from=$validDuration label="manager.subscriptionPolicies.delayedOpenAccessDescription" size=$fbvStyles.size.MEDIUM translate=false}
 		{fbvElement type="checkbox" id="enableOpenAccessNotification" name="enableOpenAccessNotification" value=1 checked=$enableOpenAccessNotification label="manager.subscriptionPolicies.openAccessNotificationDescription" disabled=$scheduledTasksEnabled|compare:0}
-
-		<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>
-		{fbvElement type="textarea" id="delayedOpenAccessPolicy" value=$delayedOpenAccessPolicy rich=true label="about.delayedOpenAccess" multilingual=true}
-
-		<p>{translate key="manager.subscriptionPolicies.authorSelfArchiveDescription"}</p>
-		{fbvElement type="checkbox" id="enableAuthorSelfArchive" name="enableAuthorSelfArchive" value=1 checked=$enableAuthorSelfArchive label="manager.subscriptionPolicies.authorSelfArchive" disabled=$scheduledTasksEnabled|compare:0}
-		{fbvElement type="textarea" id="authorSelfArchivePolicy" value=$authorSelfArchivePolicy rich=true multilingual=true}
 	{/fbvFormSection}
 
 	{fbvFormButtons hideCancel=true submitText="common.save"}

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/classes/form/DataciteSettingsForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteSettingsForm
@@ -59,7 +59,7 @@ class DataciteSettingsForm extends Form {
 		// DOI plugin settings action link
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		if (isset($pubIdPlugins['doipubidplugin'])) {
-			$application = PKPApplication::getApplication();
+			$application = Application::getApplication();
 			$request = $application->getRequest();
 			$dispatcher = $application->getDispatcher();
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
@@ -142,4 +142,4 @@ class DataciteSettingsForm extends Form {
 
 }
 
-?>
+

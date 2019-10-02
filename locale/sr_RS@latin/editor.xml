@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@latin/editor.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@latin (Srpski) locale.
@@ -142,7 +142,6 @@
 	<message key="editor.submissions.lastCompleted">Poslednje kompletirano</message>
 	<message key="editor.submissions.assignedTo">Dodeljeno za</message>
 	<message key="editor.submissions.inSection">U sekciji/rubrici</message>
-	<message key="editor.article.schedulePublication">Dodeli za objavljivanje</message>
 	<message key="editor.article.scheduleForPublication">Dodeli za objavljivanje u</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Biće dodeljen</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Naknada za objavljivanje nije plaćena. Da bi se rad objavio obavestite autora da plati naknadu ili da traži izuzeće od plaćanja.</message>

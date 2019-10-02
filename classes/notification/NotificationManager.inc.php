@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/NotificationManager.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PKPNotificationManager
@@ -89,8 +89,8 @@ class NotificationManager extends PKPNotificationManager {
 	function _getArticleTitle($notification) {
 		assert($notification->getAssocType() == ASSOC_TYPE_SUBMISSION);
 		assert(is_numeric($notification->getAssocId()));
-		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
-		$article = $articleDao->getById($notification->getAssocId());
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+		$article = $submissionDao->getById($notification->getAssocId());
 		if (!$article) return null;
 		return $article->getLocalizedTitle();
 	}
@@ -153,10 +153,6 @@ class NotificationManager extends PKPNotificationManager {
 				assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
 				import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
 				return new ApproveSubmissionNotificationManager($notificationType);
-			case NOTIFICATION_TYPE_PUBLICATION_SCHEDULED:
-				assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
-				import('classes.notification.managerDelegate.EditingProductionStatusNotificationManager');
-				return new EditingProductionStatusNotificationManager($notificationType);
 		}
 		// Otherwise, fall back on parent class
 		return parent::getMgrDelegate($notificationType, $assocType, $assocId);
@@ -164,4 +160,4 @@ class NotificationManager extends PKPNotificationManager {
 
 }
 
-?>
+

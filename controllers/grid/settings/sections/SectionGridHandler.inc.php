@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/SectionGridHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
@@ -33,7 +33,7 @@ class SectionGridHandler extends SetupGridHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @copydoc GridHandler::initialize()
+	 * @copydoc SetupGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
@@ -172,7 +172,7 @@ class SectionGridHandler extends SetupGridHandler {
 
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);
-		$sectionForm->initData($args, $request);
+		$sectionForm->initData();
 		return new JSONMessage(true, $sectionForm->fetch($request));
 	}
 
@@ -190,7 +190,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionForm->readInputData();
 
 		if ($sectionForm->validate()) {
-			$sectionForm->execute($args, $request);
+			$sectionForm->execute();
 			return DAO::getDataChangedEvent($sectionForm->getSectionId());
 		}
 		return new JSONMessage(false);
@@ -220,8 +220,8 @@ class SectionGridHandler extends SetupGridHandler {
 		}
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', array((int) $request->getUserVar('sectionId'), (int) $journal->getId()));
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$checkSubmissions = $submissionDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', array((int) $request->getUserVar('sectionId'), (int) $journal->getId()));
 
 		if ($checkSubmissions->numRows() > 0) {
 			return new JSONMessage(false, __('manager.sections.alertDelete'));
@@ -233,4 +233,4 @@ class SectionGridHandler extends SetupGridHandler {
 	}
 }
 
-?>
+

@@ -1,8 +1,8 @@
 {**
  * plugins/generic/announcementFeed/templates/rss.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * RSS feed template
@@ -21,8 +21,8 @@
 		<link>{url journal=$journal->getPath()}</link>
 		{if $journal->getLocalizedDescription()}
 			{assign var="description" value=$journal->getLocalizedDescription()}
-		{elseif $journal->getLocalizedSetting('searchDescription')}
-			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
+		{elseif $journal->getLocalizedData('searchDescription')}
+			{assign var="description" value=$journal->getLocalizedData('searchDescription')}
 		{/if}
 		<description>{$description|strip|escape:"html"}</description>
 

@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:44-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:44-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "DataCite Export/Registration Plugin"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Export or register issue, article, galley and supplementary file metadata in DataCite format."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Please configure the DataCite export plugin before using it for the first time."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tIf you want to register DOIs with DataCite, please contact the Managing\n"
+"\t\tAgent via the <a href=\"http://datacite.org/contact\" target=\"_blank\">DataCite\n"
+"\t\thomepage</a>, who will refer you to your local DataCite Member. Once you have\n"
+"\t\testablished a relationship with the Member organisation, you will be provided\n"
+"\t\twith access to the DataCite service for minting persistent identifiers (DOIs)\n"
+"\t\tand registering associated metadata. If you do not have your own username and\n"
+"\t\tpassword you'll still be able to export into the DataCite XML format but you\n"
+"\t\tcannot register your DOIs with DataCite from within OJS.\n"
+"\t\tPlease note that the password will be saved as plain text, i.e. not encrypted, due\n"
+"\t\tto the DataCite registration service requirements.\n"
+"\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Username (symbol)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Please enter the username (symbol) you got from DataCite. The username may not contain colons."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS will deposit DOIs automatically to DataCite. Please note that this may take a short amount of time after publication to process (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Use the DataCite test prefix for DOI registration. Please do not forget to remove this option for the production."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite automatic registration task"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Usage: \n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

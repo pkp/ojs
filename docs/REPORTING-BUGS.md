@@ -6,7 +6,7 @@ https://github.com/pkp/pkp-lib#issues
 ## Support Forum
 
 A user support forum for PKP software is located at:
-http://forum.pkp.sfu.ca/
+https://forum.pkp.sfu.ca/
 
 ## Email
 

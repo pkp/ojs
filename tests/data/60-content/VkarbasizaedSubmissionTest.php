@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/VkarbasizaedSubmissionTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class VkarbasizaedSubmissionTest
@@ -49,12 +49,18 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 		$this->assignParticipant('Proofreader', 'Catherine Turner');
 
 		// Create a galley
+		$this->click('//button[@id="publication-button"]');
+		$this->click('//button[@id="galleys-button"]');
 		$this->waitForElementPresent($selector='css=[id^=component-grid-articlegalleys-articlegalleygrid-addGalley-button-]');
 		$this->click($selector);
 		$this->waitForElementPresent('css=[id^=label-]');
 		$this->type('css=[id^=label-]', 'PDF');
 		$this->click('//button[text()=\'Save\']');
 		$this->uploadWizardFile('PDF');
+
+		// Publish in current issue
+		$this->publish('1', 'Vol. 1 No. 2 (2014)');
+		$this->isInIssue($title, 'Vol. 1 No. 2 (2014)');
 
 		$this->logOut();
 	}

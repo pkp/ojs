@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:43-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Connector de canals d'informació"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Aquest connector crea canals d'informació RSS/Atom per al número actual."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Configuració"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Mostra els enllaços als canals d'informació només a les pàgines del número."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Mostra els enlla殳 als canals d'informaciﭯm豠a la p�na inicial i a les p�nes del n�."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Mostra els enllaços als canals d'informació a totes les pàgines de la revista."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Mostra els elements al número actual."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "elements més recents."
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Introduïu un nombre enter positiu per als elements més recents."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Logotip Atom"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Logotip RSS1"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Logotip RSS2"

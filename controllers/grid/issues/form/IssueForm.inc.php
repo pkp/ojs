@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueForm.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
@@ -32,6 +32,7 @@ class IssueForm extends Form {
 		parent::__construct('controllers/grid/issues/form/issueForm.tpl');
 
 		$form = $this;
+		$this->addCheck(new FormValidatorRegExp($this, 'volume', 'optional', 'editor.issues.volumeRequired', '/^[0-9]+$/i'));
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', function($showVolume) use ($form) {
 			return !$showVolume || $form->getData('volume') ? true : false;
 		}));
@@ -61,7 +62,7 @@ class IssueForm extends Form {
 	/**
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		if ($this->issue) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->assign(array(
@@ -91,14 +92,15 @@ class IssueForm extends Form {
 			);
 		}
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
 	 * @copydoc Form::validate()
 	 */
-	function validate($request) {
+	function validate($callHooks = true) {
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$request = Application::get()->getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
@@ -110,13 +112,13 @@ class IssueForm extends Form {
 			}
 		}
 
-		return parent::validate();
+		return parent::validate($callHooks);
 	}
 
 	/**
 	 * @copydoc Form::initData()
 	 */
-	function initData($request) {
+	function initData() {
 		if (isset($this->issue)) {
 			$locale = AppLocale::getLocale();
 			$this->_data = array(
@@ -171,9 +173,9 @@ class IssueForm extends Form {
 
 	/**
 	 * Save issue settings.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -182,7 +184,7 @@ class IssueForm extends Form {
 			$issue = $this->issue;
 		} else {
 			$issue = $issueDao->newDataObject();
-			switch ($journal->getSetting('publishingMode')) {
+			switch ($journal->getData('publishingMode')) {
 				case PUBLISHING_MODE_SUBSCRIPTION:
 				case PUBLISHING_MODE_NONE:
 					$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
@@ -231,7 +233,7 @@ class IssueForm extends Form {
 			$publicFileManager = new PublicFileManager();
 			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$publicFileManager->copyContextFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
 			$issue->setCoverImage($newFileName, $locale);
 			$issueDao->updateObject($issue);
 		}
@@ -244,4 +246,4 @@ class IssueForm extends Form {
 	}
 }
 
-?>
+

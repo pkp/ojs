@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -85,7 +85,11 @@
 	<message key="section.abbreviation">Kratica</message>
 	<message key="section.abbreviation.example">(Npr. Članci=ČLA)</message>
 
-	<!-- Common Article Terms --><message key="article.articles">Članci</message>
+	<!-- Common Article Terms -->
+	<message key="article.article">Članak</message>
+	<message key="article.articles">Članci</message>
+	<message key="common.publication">Članak</message>
+	<message key="common.publications">Članci</message>
 	<message key="article.submissionId">Identifikator prijavljenog</message>
 	<message key="article.title">Naslov</message>
 	<message key="article.authors">Autor(i)</message>
@@ -266,10 +270,6 @@
 	<!-- Journal Setup -->
 	<!-- Setup Step 1 -->
 	<!-- Setup Step 2 -->
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems podržava <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (mnogo kopija čuva stvari sigurnima) sustav da bi osigurao sigurnu i trajnu arhivu za časopise. LOCKSS je program otvorenog koda razvijen pri sveučilišnoj knjižnici u Stanfordu koji omogućuje knjižnicama da čuvaju odabrane mrežne časopise tako što periodički provjeravaju sadržaj mrežnih stranica časopisa registriranih u sustav, te arhiviraju sve novoobjavljene sadržaje. Sadržaj svakog arhiva se konstantno uspoređuje sa drugim knjižnicama koje su uključene u sustav, te ako je bilo koji sadržaj neispravan ili izgubljen, sadržaj se obnavlja podacima iz drugih arhiva u mreži ili iz izvornog časopisa.
-<br /><br />
-Postavljanje LOCKSS podrške za Open Journal Systems nije potrebno dok izdavanje elektroničke verzije časopisa nije doista pokrenuto, odnosno prvi broj objavljen ili pri izdavanju. Da bi se to učinilo, potrebno je slijediti ova dva koraka:]]></message>
-
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[Časopis će koristiti predmetnu klasifikaciju sustava dostupnu na mreži.<br />
 Naslov klasifikacijskog sustava]]></message>
@@ -551,7 +551,6 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 	<message key="about.delayedOpenAccess">Odgođeni otvoreni pristup</message>
 	<message key="about.delayedOpenAccessDescription1">Sadržaj ovog časopisa bit će dostupan u formatu otvorenog pristupa</message>
 	<message key="about.delayedOpenAccessDescription2">mjesec(i) nakon objave broja časopisa.</message>
-	<message key="about.authorSelfArchive">Autoarhiviranje autora</message>
 	<message key="about.archiving">Arhiviranje</message>
 	<message key="about.subscriptions">Pretplate</message>
 	<message key="about.subscriptionsContact">Kontakt za pretplate</message>
@@ -634,8 +633,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.author.documentRevised">{$authorName} je revidirao svoj prilog {$submissionId}. ID nove datoteke je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$submissionId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$submissionId}.</message>
-	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$submissionId} je iznova pokrenut.</message>
-	<message key="log.review.reviewCleared">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je izbrisana.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} je ocijenjen za {$round}. krug recenzije priloga {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Krajnji rok za {$round}. krug recenzije za prilog {$submissionId} za recenzenta {$reviewerName} je izmijenjen na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Recenzent {$reviewerName} je postavio preporuku za {$round}. krug recenzije priloga {$submissionId}.</message>
@@ -671,40 +668,7 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 
 	<message key="log.imported">{$userName} je unio članak {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->	<!-- RT Settings --><message key="rt.admin.settings">Opcije alata za čitanje</message>
-
-	<message key="rt.admin.settings.description">Alati za čitanje prikazuju se uz objavljene priloge u indeksiranim rubrikama časopisa (ova se opcija postavlja za svaku rubriku pod "rubrike časopisa"). Alati za čitanje mogu sadržavati razne opcije koje se odnose na dotični objavljeni prilog (navedene niže na ovoj stranici), te skupova opcija organiziranih po području i disciplini koje omogućuju pretraživanje drugih mrežnih servisa za podatke vezane sa člankom.</message>
-	<message key="rt.admin.settings.enableReadingTools">Omogući alate za čitanje za indeksirane rubrike časopisa.</message>
-	<message key="rt.admin.settings.relatedItems">Područja</message>
-        <message key="rt.admin.settings.relatedItemsLink"><![CDATA[Pristupite izborniku <a href="{$relatedItemsLink}" class="action">područja pretraživanja </a> da biste pregledali, dodali, ispravili ili izbrisali stavke i kontekste pretraživanja za bilo koje područje.]]></message>
-
-	<message key="rt.admin.options">Alati za priloge časopisa</message>
-
-	<message key="rt.admin.relatedItems">Alati za pretraživanje srodnih sadržaja</message>
-
-
-	<message key="rt.admin.settings.addComment">Dodaj komentar (omogućuje čitateljima da ostavljaju komentare objavljenih priloga. Glavni urednik ima mogućnost brisanja komentara).</message>
-
-	<!-- RT Versions -->	<!-- RT Contexts -->	<!-- RT Searches -->	<!-- RT Entities -->	<message key="rt.metadata.dublinCore.primaryAuthor">Tvorac</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Autorovo ime, pripadnost, država</message>
-	<message key="rt.metadata.pkp.peerReviewed">Stručno recenziran članak</message>
-
-
-
-
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Bit ćete obaviješteni kada...</message>
-
-	<message key="rt.thisJournal">Pretraži časopis</message>
-
-
-	<message key="rt.context.authorTermsDescription">Za stavke koje imaju više od jednog autora, ostavite sva imena provjerena zbog traženja sličnih ko-autorskih radova, ili pretražujte jednog po jednog provjeravajući samo pojedinačno ime. Da biste naučili više o pretraživanom izvoru, kliknite na O ČASOPISU. Ovi izvori su odabrani zbog svoje relevantnosti i otvorenog (besplatnog) pristupa njegovom cijelom ili djelomičnom sadržaju.</message>
-
+	<message key="metadata.pkp.peerReviewed">Stručno recenziran članak</message>
 
 	<!--
 	 *
@@ -730,7 +694,7 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 		<li>OJS ne može modificirati lokalizacijsku registry datoteku, obično "registry/locales.xml".</li>
 	</ul>
 <p>Datoteku s jezicima možete ručno preuzeti sa <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
 <h4>1. Prijedlog za časopise koji omogućuju otvoren pristup</h4>
 Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 <ol type="a">
@@ -796,9 +760,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="installer.databaseSettingsInstructions">OJS sa spremanje svojih podataka zahtjeva pristup SQL bazi. Pregledajte gorenavedene sistemske zahtjeve za popis baza koje OJS podržava. U niže priloženim poljima navedite postavke koje će se koristiti za povezivanje s bazom.</message>
 	<message key="log.review.reviewDeclinedByProxy">{$userName} je odbio/la {$round} recenziju priloga {$submissionId} u ime {$reviewerName}.</message>
 	<message key="log.editor.decision">{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$submissionId}.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Anonimni komentari nisu dozvoljeni. Korisnici moraju biti registrirani i prijavljeni da bi mogli ostavljati komentare.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Anonimni komentari su dozvoljeni, ali korisnici moraju biti registrirani i prijavljeni kako bi ostavili komentar.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Anonimni komentari su dopušteni, a korisnici se ne trebaju registrirati da bi ih ostavljali.</message>
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na sličicu na zaslonu kako biste ispunili recenzijski obrazac.</message>
@@ -830,7 +791,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="journal.issn">ISSN</message>
 	<message key="navigation.categories">Kategorije</message>
 	<message key="navigation.categories.browse">Pregledaj</message>
-	<message key="article.article">Članak</message>
 	<message key="user.profile.profileImage">Slika profila</message>
 	<message key="user.manageMySubscriptions">Upravljanje mojim pretplatama</message>
 	<message key="issue.fullIssue">Kompletno izdanje</message>
@@ -925,14 +885,10 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="user.subscriptions.statusInformation">Aktivne i istekle pretplate su dole prikazane sa datumima isteka. Dodatno, slijedeće statusne informacije mogu biti prikzanu uz svaku pretplatu.</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Ako je ovdje unesen domen, IP opseg nije obavezan. <br />Važeće vrijednosti za naživ domena je (npr. hrcak.srce.hr)]]></message>
 	<message key="payment.loginRequired.forIssue">Da bi pristupili ovoj stavki potrebna je pretplata ili kupiti izdanje. Prijavite se u sustav i časopis za provjeriti pretplatu, pristupiti prethodnoj kupovini ili sada kupiti izdanje.</message>
-	<message key="notification.type.articleSubmitted">Novi članak "{$title}", je podnešen.</message>
 	<message key="notification.type.editorDecisionComment">Postavljen je komentar na urednikovu odluku za  "{$title}".</message>
 	<message key="notification.type.reviewerFormComment">Obrazac za recenziju je poslata za  "{$title}".</message>
 	<message key="notification.type.submissionComment">Urednik je komentirao  "{$title}".</message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Recenzijske upute daju recenzentima kriterije o prosuđivanju da li je podnešeni članak odgovarajući za objavljivanje u časopisu.  Ove upute daju instrukcije recenzentima kako pripremiti efikasnu i sadržajnu recenziju. Recenzentima će u toku recenzije biti otvorena dva tekstualna okvira.  Prvi se odnosi na autora i urednika, a drugi za urednika. Ravnatelj časopisa može napraviti obrazac u  dijelu Recenzinjski obrasci.  U svakom slučaju, urednici će uvijek imati mogućnost uključiti recenzije u korespodenciji sa autorom.</message>
-	<message key="rt.admin.validateUrls.description"><![CDATA[Moguće je da su dole prikazane neke nevažeće URL za mjesta za traženje.<br />
-Provjerite ručno da li su prikazane URL važeće jer ovaj test nije 100% točan. <br />
-Provjera može pogriješiti kod URL koji zahtijevaju pretragu pomoću obrasca.]]></message>
 	<message key="manager.setup.reviewProcessEmailDescription">Urednici šalju
 Recenzenti zahtijevaju pregled podnesenog članka u privitku ove poruke.  Recenzenti informiraju urednike o njihovim odobravanjima ili kritičkim primjedbama kao i tekst pregleda i preporuka. Urednici upisuju odobravanja ili neslaganja i njihove preglede i preporuke u stranicu Pregled podnesaka da bi pratili proces recenzije.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>

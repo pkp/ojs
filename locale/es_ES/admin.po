@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
+"Language: \n"
+
+msgid "admin.hostedJournals"
+msgstr "Revistas alojadas"
+
+msgid "admin.settings.journalRedirect"
+msgstr "Redirigir revista"
+
+msgid "admin.settings.journalRedirectInstructions"
+msgstr "Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tSu instalación de OJS está configurada para registrar más de una métrica de uso. Las estadísticas de uso se mostrarán en varios contextos. En algunos casos se debe utilizar una sola estadística de uso, p. ej. para mostrar una lista ordenada de los artículos más consultados o para clasificar los resultados de búsqueda. Seleccione una de las métricas configuradas como predeterminada.\n"
+"\t"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Éste será el idioma predeterminado para el sitio y para todas las revistas que aloje."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Seleccione todas las configuraciones regionales que serán compatibles con el sitio. Las configuraciones regionales seleccionadas estarán disponibles para todas las revistas alojadas en el sitio y también aparecerán en el menú de selección de idioma en cada página del sitio (puede ser anulado en páginas específicas de las revistas). Si no ha seleccionado más de una configuración regional, el menú de selección no aparecerá y la configuración extendida de idioma no estará disponible para las revistas."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Las configuraciones regionales marcadas pueden estar incompletas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "¿Está seguro/a de que desea desinstalar esta configuración regional? Esto puede afectar a cualquier revista alojada que esté utilizando actualmente dicha configuración regional."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Seleccione cualquier configuración regional adicional para instalar su soporte en este sistema. Debe instalar las configuraciones regionales antes de que otras revistas alojadas puedan utilizarlas. Vea la documentación de OJS para obtener más información o para añadir soporte para nuevos idiomas."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Fallo en la descarga de configuraciones regionales. El siguiente mensaje/s de error describe el fallo."
+
+msgid "admin.languages.localeInstalled"
+msgstr "La configuración regional \"{$locale}\" se instaló."
+
+msgid "admin.languages.download"
+msgstr "Descargar configuración regional"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "No se puede abrir el descriptor de idiomas del sitio web PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "No se puede añadir la nueva configuración regional al archivo de registro de configuraciones locales, normalmente \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "Base de datos de usuarios/as de OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Habilitar la sincronización del perfil de usuario/a (si el módulo de autenticación es compatible). La información del perfil del usuario/a se actualizará automáticamente desde una fuente remota cuando el usuario/a inicie sesión. Los cambios que se hagan en el perfil dentro de OJS (incluido el cambio de contraseña) se actualizarán automáticamente en la fuente remota. Si esta opción no está habilitada, la información del perfil de OJS se mantendrá separada de la información del perfil de la fuente remota."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Habilitar la modificación de contraseña de usuario/a (si el módulo de autenticación es compatible). Habilitar esta opción permite a los usuarios/as modificar su contraseña desde OJS y usar la función de OJS \"contraseña perdida\" para restablecer la contraseña en caso de olvido. Los usuarios/as con esta fuente de autenticación no podrán disponer de dichas funciones si la opción no está habilitada."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Habilitar la creación de usuarios/as (si es compatible con el módulo de autenticación). Los usuarios/as creados en OJS con esta fuente de autenticación se añadirán automáticamente a la fuente de autenticación remota si no existían previamente. De forma adicional, si ésta es la fuente de autenticación por defecto, las cuentas OJS creadas mediante un registro de usuario/a también se añadirán a la fuente de autenticación remota."
+
+msgid "admin.systemVersion"
+msgstr "Versión de OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Configuración de OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Configuración de OJS de <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Configuración de la revista"
+
+msgid "admin.journals.noneCreated"
+msgstr "No se han creado revistas."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "¿Está seguro/a de que desea eliminar esta revista y todos sus contenidos de forma permanente?"
+
+msgid "admin.contexts.create"
+msgstr "Crear revista"
+
+msgid "admin.journals.createInstructions"
+msgstr "Se le asignará de forma automática el rol de gestor/a de la revista. Tras crear una nueva revista, acceda a ella como gestor/a para continuar con la configuración y el registro de usuarios/as."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Este elemento debe ser una palabra corta o acrónimo para identificar la revista. La dirección URL de la revista será {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Inserte una ruta."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "La ruta sólo puede contener caracteres alfanuméricos, guiones y guiones bajos, y debe empezar y terminar con un carácter alfanumérico."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "La ruta seleccionada ya está siendo utilizada por otra revista."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Habilitar esta revista para que aparezca de forma pública en el sitio"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descripción de la revista"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Ruta actual de la revista o ruta que se desea crear (p. ej. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importar suscripciones"
+
+msgid "admin.journals.transcode"
+msgstr "Transcodificar metadatos de artículos de ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generar código para asignar direcciones URL OJS 1 a URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Se requiere la ruta de importación."
+
+msgid "admin.journals.importErrors"
+msgstr "No se pudo completar la importación correctamente"
+
+msgid "admin.mergeUsers"
+msgstr "Fusionar usuarios/as"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fusionar usuario/a"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Seleccione un usuario/a para atribuirle las autorías del anterior usuario/a, editar asignaciones, etc."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Seleccione uno (o varios) usuarios/as para fusionarlos en otra cuenta de usuario/a (p. ej. cuando algún usuario/a tiene dos cuentas distintas). La cuenta/s seleccionada en primer lugar será eliminada/s y todos los envíos, asignaciones, etc. se atribuirán a la segunda cuenta."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Todos los usuarios/as registrados"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "¿Está seguro/a de que desea fusionar la cuenta/s seleccionada {$oldAccountCount} con la cuenta con el nombre de usuario/a \"{$newUsername}\"? Las cuentas seleccionadas {$oldAccountCount} dejarán de existir. Esta acción no es reversible."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Usuarios/as no registrados."
+
+msgid "admin.languages.confirmDisable"
+msgstr "¿Está seguro de que desea desactivar esta configuración regional? Esto puede afectar a las revistas alojadas que actualmente usan esta configuración regional."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>La descarga de paquetes de lenguaje desde el servidor web de Public Knowledge Project no está disponible en este momento porque:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Su servidor no dispone o no permite la ejecución de la utilidad GNU \"tar\".</li>\n"
+"\t\t<li>OJS no es capaz de modificar el archivo de registro de configuración regional, normalmente \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Los paquetes de lenguaje se pueden descargar manualmente desde la página web de PKP <a href=\"https://pkp.sfu.ca\"></a>.</p>"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Se necesita un título."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Recordatorio de caducidad de la suscripción"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificación de acceso abierto"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Recordatorio de revisión"

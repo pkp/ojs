@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Native XML Plugin"
+
+msgid "plugins.importexport.native.description"
+msgstr "Import and export articles and issues in OJS's native XML format."
+
+msgid "plugins.importexport.native.import"
+msgstr "Import"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Upload XML file to import"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Select articles to export"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Export Articles"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Export Issues"
+
+msgid "plugins.importexport.native.results"
+msgstr "Results"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Please upload a file under \"Import\" in order to continue."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "The import completed successfully. The following items were imported:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path] [user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"Additional parameters are required for importing data as follows, depending\n"
+"on the root node of the XML document.\n"
+"\n"
+"If the root node is <article> or <articles>, additional parameters are required.\n"
+"The following formats are accepted:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Unknown section {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "The specified user, \"{$userName}\", does not exist."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "The section title \"{$section1Title}\" and the section title \"{$section2Title}\" in the \"{$issueTitle}\" issue matched the different existing journal sections."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "The section title \"{$sectionTitle}\" in the \"{$issueTitle}\" issue matched an existing journal section, but another title of this section doesn't match with another title of the existing journal section."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "The section abbreviation \"{$section1Abbrev}\" and the section abbreviation \"{$section2Abbrev}\" of the \"{$issueTitle}\" issue matched the different existing journal sections."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "The section abbreviation \"{$sectionAbbrev}\" in the \"{$issueTitle}\" issue matched an existing journal section, but another abbreviation of this section doesn't match with another abbreviation of the existing journal section."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "None or more than one issue matches the given issue identification \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "Existing issue with id {$issueId} matches the given issue identification \"{$issueIdentification}\".  This issue will not be modified, but articles will be added."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "The issue identification element is missing for the article \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "The article \"{$articleTitle}\" is contained within an issue, but has no published date."

@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:44-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:44-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ Export Plugin"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Export Journal for DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Contact DOAJ for inclusion"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "If you would like to register articles from within OJS, please enter your DOAJ API Key. Else, you'll still be able to export into the DOAJ XML format but you cannot register your articles with DOAJ from within OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API Key"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "You will find your API key on your DOAJ user page."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS will deposit articles automatically to DOAJ. Please note that this may take a short amount of time after publication to process (e.g. depending on your cronjob configuration). You can check for all unregistered articles."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Use the DOAJ test API (testing environment) for the registration. Please do not forget to remove this option for the production."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ automatic registration task"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Deposit was not successful! The DOAJ API returned an error: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Usage:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

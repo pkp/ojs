@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedGatewayPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedGatewayPlugin
@@ -85,7 +85,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		if (!$journal) return false;
 
 		// Make sure announcements and plugin are enabled
-		$announcementsEnabled = $journal->getSetting('enableAnnouncements');
+		$announcementsEnabled = $journal->getData('enableAnnouncements');
 		if (!$announcementsEnabled || !$this->_parentPlugin->getEnabled()) return false;
 
 		// Make sure the feed type is specified and valid

@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/DOIPubIdExportPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdExportPlugin
@@ -37,23 +37,20 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				// Check for configuration errors:
 				$configurationErrors = $templateMgr->getTemplateVars('configurationErrors');
 				// missing DOI prefix
-				$doiPrefix = $exportArticles = $exportIssues = null;
+				$doiPrefix = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 				if (isset($pubIdPlugins['doipubidplugin'])) {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
 					$doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());
-					$exportArticles = $doiPlugin->getSetting($context->getId(), 'enableSubmissionDoi');
-					$exportIssues = $doiPlugin->getSetting($context->getId(), 'enableIssueDoi');
-					$exportRepresentations = $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi');
+					$templateMgr->assign(array(
+						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enableSubmissionDoi'),
+						'exportIssues' => $doiPlugin->getSetting($context->getId(), 'enableIssueDoi'),
+						'exportRepresentations' => $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi'),
+					));
 				}
 				if (empty($doiPrefix)) {
 					$configurationErrors[] = DOI_EXPORT_CONFIG_ERROR_DOIPREFIX;
 				}
-				$templateMgr->assign(array(
-					'exportArticles' => $exportArticles,
-					'exportIssues' => $exportIssues,
-					'exportRepresentations' => $exportRepresentations,
-				));
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
@@ -78,7 +75,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * Mark selected submissions or issues as registered.
 	 * @param $context Context
-	 * @param $objects array Array of published articles, issues or galleys
+	 * @param $objects array Array of published submissions, issues or galleys
 	 */
 	function markRegistered($context, $objects) {
 		foreach ($objects as $object) {
@@ -95,7 +92,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 * when several DOI registration plug-ins
 	 * are active at the same time.
 	 * @param $context Context
-	 * @param $object Issue|PublishedArticle|ArticleGalley
+	 * @param $object Issue|Submission|ArticleGalley
 	 * @param $testPrefix string
 	 */
 	function saveRegisteredDoi($context, $object, $testPrefix = '10.1234') {
@@ -129,19 +126,19 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 * @return array
 	 */
 	function getUnregisteredArticles($context) {
-		// Retrieve all published articles that have not yet been registered.
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-		$articles = $publishedArticleDao->getExportable(
-			$context->getId(),
-			$this->getPubIdType(),
-			null,
-			null,
-			null,
-			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
-			null,
-			null
-		);
-		return $articles->toArray();
+		// Retrieve all published submissions that have not yet been registered.
+		// $publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
+		// $articles = $publishedSubmissionDao->getExportable(
+		// 	$context->getId(),
+		// 	$this->getPubIdType(),
+		// 	null,
+		// 	null,
+		// 	null,
+		// 	$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+		// 	null,
+		// 	null
+		// );
+		// return $articles->toArray();
 	}
 
 	/**
@@ -170,7 +167,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Retrieve all unregistered articles.
+	 * Retrieve all unregistered galleys.
 	 * @param $context Context
 	 * @return array
 	 */
@@ -178,8 +175,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		// Retrieve all galleys that have not yet been registered.
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$galleys = $galleyDao->getExportable(
-			$this->getPubIdType(),
 			$context?$context->getId():null,
+			$this->getPubIdType(),
 			null,
 			null,
 			null,
@@ -191,19 +188,18 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Get published articles with a DOI assigned from submission IDs.
+	 * Get published submissions with a DOI assigned from submission IDs.
 	 * @param $submissionIds array
 	 * @param $context Context
 	 * @return array
 	 */
-	function getPublishedArticles($submissionIds, $context) {
-		$publishedArticles = array();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		foreach ($submissionIds as $submissionId) {
-			$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $context->getId());
-			if ($publishedArticle && $publishedArticle->getStoredPubId('doi')) $publishedArticles[] = $publishedArticle;
-		}
-		return $publishedArticles;
+	function getPublishedSubmissions($submissionIds, $context) {
+		$submissions = array_map(function($submissionId) {
+			return Services::get('submission')->get($submissionId);
+		}, $submissionIds);
+		return array_filter($submissions, function($submission) {
+			return $submission->getData('status') === STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
+		});
 	}
 
 	/**
@@ -225,14 +221,13 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * Get article galleys with a DOI assigned from gallley IDs.
 	 * @param $galleyIds array
-	 * @param $context Context
 	 * @return array
 	 */
-	function getArticleGalleys($galleyIds, $context) {
+	function getArticleGalleys($galleyIds) {
 		$galleys = array();
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		foreach ($galleyIds as $galleyId) {
-			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
+			$articleGalley = $articleGalleyDao->getById($galleyId);
 			if ($articleGalley && $articleGalley->getStoredPubId('doi')) $galleys[] = $articleGalley;
 		}
 		return $galleys;
@@ -240,4 +235,4 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 
 }
 
-?>
+

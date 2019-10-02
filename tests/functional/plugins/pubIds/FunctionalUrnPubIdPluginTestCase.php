@@ -3,8 +3,8 @@
 /**
  * @file tests/functional/plugins/pubIds/FunctionalUrnPubIdPluginTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FunctionalUrnPubIdPluginTest
@@ -48,7 +48,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	protected function getAffectedTables() {
 		return array(
 			'journal_settings', 'issues', 'issue_settings',
-			'published_submissions', 'submissions', 'submission_settings',
+			'submissions', 'submission_settings',
 			'submission_galleys', 'submission_galley_settings',
 			'plugin_settings'
 		);
@@ -114,7 +114,7 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 			'metadata-article' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/viewMetadata/%id',
 				'urlSuffixPage' => $this->baseUrl.'/index.php/test/editor/issueToc/1',
-				'urlSuffix' => 'name=publishedArticles[1]'
+				'urlSuffix' => 'name=publishedSubmissions[1]'
 			),
 			'metadata-galley' => array(
 				'url' => $this->baseUrl.'/index.php/test/editor/editGalley/%id/1',
@@ -720,8 +720,6 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 						$this->assertAttribute($page[$urnMetaAttribute], $expectedURN);
 					}
 				}
-			} catch(Exception $e) {
-				throw $this->improveException($e, $objectType);
 			}
 		}
 	}
@@ -733,22 +731,20 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	 * @param $expectedURN string
 	 */
 	private function checkMetadataPage($objectType, $editable = false, $expectedURN = null) {
-			try {
-				$objectType = strtolower_codesafe($objectType);
-				$metadataPage = "metadata-$objectType";
-				$this->verifyLocation('exact:'.$this->getUrl($this->pages[$metadataPage], 1));
-				if (!$this->verified()) {
-					$this->open($this->getUrl($this->pages[$metadataPage], 1));
-				}
-				if ($editable) {
-					$this->assertElementPresent($this->pages[$metadataPage]['urnInput']);
-				} else {
-					$this->assertElementNotPresent($this->pages[$metadataPage]['urnInput']);
-					$this->assertText($this->pages[$metadataPage]['urn'], $expectedURN);
-				}
-			} catch(Exception $e) {
-				throw $this->improveException($e, $objectType);
+		try {
+			$objectType = strtolower_codesafe($objectType);
+			$metadataPage = "metadata-$objectType";
+			$this->verifyLocation('exact:'.$this->getUrl($this->pages[$metadataPage], 1));
+			if (!$this->verified()) {
+				$this->open($this->getUrl($this->pages[$metadataPage], 1));
 			}
+			if ($editable) {
+				$this->assertElementPresent($this->pages[$metadataPage]['urnInput']);
+			} else {
+				$this->assertElementNotPresent($this->pages[$metadataPage]['urnInput']);
+				$this->assertText($this->pages[$metadataPage]['urn'], $expectedURN);
+			}
+		}
 	}
 
 	/**
@@ -772,4 +768,4 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	*/
 
 }
-?>
+

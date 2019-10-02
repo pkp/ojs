@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/workflow/WorkflowTabHandler.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WorkflowTabHandler
@@ -39,9 +39,9 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 							'publicationMetadata', null,
 							array('submissionId' => $submission->getId(), 'stageId' => $stageId)
 						),
-						__('submission.issueEntry.publicationMetadata')
+						__('submission.publication')
 					),
-					__('editor.article.schedulePublication')
+					__('editor.submission.schedulePublication')
 				);
 				$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
 				break;
@@ -60,11 +60,10 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler {
 				NOTIFICATION_TYPE_VISIT_CATALOG => array(ASSOC_TYPE_SUBMISSION, $submissionId),
 				NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => array(ASSOC_TYPE_SUBMISSION, $submissionId),
 				NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => array(ASSOC_TYPE_SUBMISSION, $submissionId),
-				NOTIFICATION_TYPE_PUBLICATION_SCHEDULED => array(ASSOC_TYPE_SUBMISSION, $submissionId)
 			),
 			NOTIFICATION_LEVEL_TRIVIAL => array()
 		);
 	}
 }
 
-?>
+

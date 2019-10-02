@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/views/ViewReportPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ViewReportPlugin
@@ -47,7 +47,7 @@ class ViewReportPlugin extends ReportPlugin {
 	 * @copydoc ReportPlugin::display()
 	 */
 	function display($args, $request) {
-		$journal = $request->getJournal();
+		$context = $request->getContext();
 
 		$columns = array(
 			__('plugins.reports.views.articleId'),
@@ -67,16 +67,18 @@ class ViewReportPlugin extends ReportPlugin {
 		$articleIssueIdentificationMap = array();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-
-		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
-		while ($publishedArticle = $publishedArticles->next()) {
-			$articleId = $publishedArticle->getId();
-			$issueId = $publishedArticle->getIssueId();
-			$articleTitles[$articleId] = $publishedArticle->getLocalizedTitle();
+		$submissions = Services::get('submission')->getMany([
+			'contextId' => $context->getId(),
+			'status' => STATUS_PUBLISHED,
+			'count' => 5000, // large upper limit
+		]);
+		foreach ($submissions as $submission) {
+			$articleId = $submission->getId();
+			$issueId = $submission->getIssueId();
+			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $submission->getLocalizedTitle() );
 
 			// Store the abstract view count
-			$abstractViewCounts[$articleId] = $publishedArticle->getViews();
+			$abstractViewCounts[$articleId] = $submission->getViews();
 			// Make sure we get the issue identification
 			$articleIssueIdentificationMap[$articleId] = $issueId;
 			if (!isset($issueIdentifications[$issueId])) {
@@ -87,7 +89,7 @@ class ViewReportPlugin extends ReportPlugin {
 			}
 
 			// For each galley, store the label and the count
-			$galleys = $publishedArticle->getGalleys();
+			$galleys = $submission->getGalleys();
 			$galleyViews[$articleId] = array();
 			$galleyViewTotals[$articleId] = 0;
 			foreach ($galleys as $galley) {
@@ -111,6 +113,8 @@ class ViewReportPlugin extends ReportPlugin {
 		header('content-type: text/comma-separated-values');
 		header('content-disposition: attachment; filename=views-' . date('Ymd') . '.csv');
 		$fp = fopen('php://output', 'wt');
+		//Add BOM (byte order mark) to fix UTF-8 in Excel
+		fprintf($fp, chr(0xEF).chr(0xBB).chr(0xBF));
 		fputcsv($fp, array_merge($columns, $galleyLabels));
 
 		ksort($abstractViewCounts);
@@ -132,4 +136,4 @@ class ViewReportPlugin extends ReportPlugin {
 	}
 }
 
-?>
+

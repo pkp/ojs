@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -30,20 +30,18 @@
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Пожалуйста, введите имя пользователя, которое вы получили от CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS будет депонировать присвоенные DOI автоматически в CrossRef. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные DOI.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Использовать тестовый API CrossRef (среда тестирования) для депонирования DOI. Пожалуйста, не забудьте убрать этот параметр для реальной работы.</message>
+	<message key="plugins.importexport.crossref.settings.form.validation">Проверка XML. Используйте этот параметр, чтобы скачать XML для ручной регистрации DOI.</message>
 	<!-- описания -->
 	<message key="plugins.importexport.crossref.issues.description">Примечание: Здесь для экспорта/регистрации будут рассматриваться только выпуски (а не статьи в этих выпусках).</message>
 	<!-- статусы -->
-	<message key="plugins.importexport.crossref.status.submitted">Отправлен</message>
-	<message key="plugins.importexport.crossref.status.completed">Депонирован</message>
 	<message key="plugins.importexport.crossref.status.failed">Ошибка</message>
 	<message key="plugins.importexport.crossref.status.registered">Активный</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Отмечен как активный</message>
+	<message key="plugins.importexport.crossref.action.register">Депонировать</message>
 	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[
 		<p>Статус депонирования:</p>
 		<p>
 		- Не депонирован: этот DOI не пытались депонировать.<br />
-		- Отправлен: этот DOI был отправлен на депонирование.<br />
-		- Депонирован: этот DOI был депонирован в Crossref, но может быть пока не активен.<br />
 		- Активный: этот DOI был депонирован и корректно интерпретируется.<br />
 		- Ошибка: депонирование DOI потерпело неудачу.<br />
 		- Отмечен как активный: DOI был вручную отмечен как активный.
@@ -53,11 +51,8 @@
 	<!-- действия -->
 	<message key="plugins.importexport.crossref.action.export">Скачать XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Отметить как активный</message>
-	<message key="plugins.importexport.crossref.action.register">Отправить</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Проверить статус</message>
 	<!-- запланированная задача -->
 	<message key="plugins.importexport.crossref.senderTask.name">Задача автоматической регистрации CrossRef</message>
-	<message key="plugins.importexport.crossref.notification.failed">Регистрация DOI потерпела неудачу. Пожалуйста, перейдите в Инструменты > Импорт/Экспорт > Модуль «Экспорт CrossRef XML», чтобы увидеть неудавшиеся депонирования.</message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Вызов:
@@ -66,8 +61,8 @@
 ]]></message>
 
 	<!--  уведомления -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">Отправка не удалась! Сервер регистрации DOI вернул ошибку: «{$param}».</message>
-	<message key="plugins.importexport.crossref.register.success">Отправка прошла успешно!</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Регистрация не была полностью успешной! Сервер регистрации DOI вернул ошибку.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">Регистрация прошла успешно, но было получено следующее предупреждение: «{$param}».</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Нет выпуска, соответствующего указанному ID выпуска «{$issueId}».</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Нет статьи, соответствующей указанному ID статьи «{$articleId}».</message>
 

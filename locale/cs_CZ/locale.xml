@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for the cs_CZ (Čeština) locale.
@@ -109,6 +109,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Článek</message>
 	<message key="article.articles">Články</message>
+	<message key="common.publication">Článek</message>
+	<message key="common.publications">Články</message>
 	<message key="article.submissionId">ID příspěvku</message>
 	<message key="article.title">Název</message>
 	<message key="article.authors">Autoři</message>
@@ -167,7 +169,7 @@
 	<message key="submissions.step3">Krok 3</message>
 	<message key="submissions.queuedReview">Ve frontě k recenzi</message>
 	<message key="submissions.scheduled">Naplánované</message>
-	<message key="submissions.published">Publikované</message>
+	<message key="submissions.published">Publikováno</message>
 	<message key="submissions.initial">Počáteční</message>
 	<message key="submissions.proofread">Korektura</message>
 	<message key="submissions.initialProof">Počáteční kontrola</message>
@@ -186,7 +188,7 @@
 	<!-- Submission Notes -->
 
 	<!-- Common Journal Terms -->
-	<message key="journal.currentIssue">Aktuální výtisk</message>
+	<message key="journal.currentIssue">Aktuální číslo</message>
 	<message key="journal.journals">Časopisy</message>
 	<message key="journal.path">Cesta</message>
 	<message key="context.context">Časopis</message>
@@ -353,11 +355,8 @@
 	<!-- Setup Step 2 -->
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[OJS podporuje technologii <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systém, aby zajistil bezpečnou a stálou archivaci časopisu. LOCKSS je open source software vyvinutý v Stanford University Library, který umožňuje knihovnám zabezpečovat vybrané webové časopisy tím, že se pravidelně dotazuje webových stránek časopisu na nově publikovaný obsah a archivuje ho. Každý archív je neustále kontrolován porovnáváním oproti archívům dalších knihoven, a pokud je zjištěno jeho poškození nebo ztráta jsou tyto archívy použity k jeho obnovení.
-<br /><br />
-Nastavení podpory technologie LOCKSS pro OJS nemusí být provedeno, dokud není publikování časopisu zaběhané. Potom následujte tyto dva kroky:]]></message>
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Navrhovaná oznámení o copyrightu Creative Commons</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Navrhovaná oznámení o copyrightu Creative Commons</h3>
 <h4>1. Navrhovaná pravidla pro časopisy, které nabízejí otevřený přístup</h4>
 Autoři, kteří publikují v tomto časopise, souhlasí s následujícími body:
 <ol type="a">
@@ -456,12 +455,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 
 	<!-- Navigation sidebar menu -->
 
-
-
-
-
-
-
+	<!-- Used by editor in submission review / editing -->
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktivní editorské úkoly</message>
 	<message key="sectionEditor.completedEditorialAssignments">Dokončené editorské úkoly</message>
@@ -665,8 +659,8 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="user.subscriptions.purchaseNewSubscription">Zakoupit nové předplatné</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Zakoupit individuální předplatné</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Zakoupit institucionální předplatné</message>
-	<message key="user.subscriptions.expires">Vyprší</message>
-	<message key="user.subscriptions.expired">Vypršelo</message>
+	<message key="user.subscriptions.expires">Vyprší dne {$date}</message>
+	<message key="user.subscriptions.expired">Vypršelo dne {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Zobrazit dostupné typy předplatného</message>
 	<message key="user.subscriptions.form.typeId">Typy předplatného</message>
 	<message key="user.subscriptions.form.membership">Členství</message>
@@ -742,7 +736,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="about.sectionPolicies">Pravidla sekcí</message>
 	<message key="about.submissions">Příspěvky</message>
 	<message key="about.onlineSubmissions.login">Jít na přihlášení</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registrace a přihlášení je zapotřebí pro online zasílání příspěvků a kontrolu jejich aktuálního stavu.</message>
+	<message key="about.onlineSubmissions.registrationRequired">K podání příspěvku je třeba {$login} nebo {$register}</message>
 	<message key="about.authorGuidelines">Pokyny pro autory</message>
 	<message key="about.submissionPreparationChecklist">Kontrolní seznam pro přípravu příspěvku</message>
 	<message key="about.submissionPreparationChecklist.description">Jako součást procesu odesílání příspěvku je požadováno, aby autoři zaškrnutím potvrdili, že jejich příspěvek je v souladu se všemi následujícími položkami. Příspěvky, které nebudou v souladu s těmito pravidly, mohou být autorům vráceny.</message>
@@ -756,7 +750,6 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="about.delayedOpenAccess">Zpožděný otevřený přístup</message>
 	<message key="about.delayedOpenAccessDescription1">Obsah tohoto čísla bude dostupný ve formátu otevřeného přístupu</message>
 	<message key="about.delayedOpenAccessDescription2">měsíc(e) poté, co bylo číslo publikováno.</message>
-	<message key="about.authorSelfArchive">Vlastní archivování autora</message>
 	<message key="about.archiving">Archivování</message>
 	<message key="about.subscriptions">Předplatné</message>
 	<message key="about.subscriptions.individual">Předplatné pro jednotlivce</message>
@@ -826,7 +819,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
 
-<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README.md">README</a> soubor dodaný s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> soubor dodaný s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 
 <h4>Upgrade</h4>
 
@@ -864,7 +857,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 <p>2. Musí být vytvořen adresář pro ukládání nahraných souborů a nastaven jako zapsatelný (viz "Nastavení souborů" níže).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
 
-<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README.md">README</a> a <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> a <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Je <strong>důrazně doporučeno</strong>, abyste udělali zálohu vaší databáze, adresáře souborů a OJS instalace před tím, než budete pokračovat.</p>
 <p>Pokud máte zapnutý <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, ujistěte se prosím, že max_execution_time instrukce ve vašem php.ini konfiguračním souboru je nastaven na vysoký limit. Pokud bude tohoto nebo jakéhokoliv dalšího časového limitu (např. "Timeout" instrukce u Apache) dosaženo a bude přerušen proces upgradování, budou vyžadovány ruční zásahy.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Pro kompletní podporu Unicode (UTF-8) zvolte UTF-8 pro nastavení všech znakových sad. Vězte, že tato podpora aktuálně vyžaduje MySQL >= 4.1.1 nebo PostgreSQL >= 7.1 databázový server. Vězte prosím také, že plná Unicode podpora vyžaduje PHP >= 4.3.0 kompilované s podporou pro <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> knihovnu (ve výchozím nastavení povoleno ve většině nejnovějších instalací PHP). Pokud Váš server nesplňuje tyto požadavky, můžete se při používání rozšířených znakových sad střetnout s problémy.
@@ -903,8 +896,6 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 	<message key="log.author.documentRevised">{$authorName} pozměnil článek {$submissionId}. Nové ID souboru je {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} byl odebrán z recenzování příspěvku {$submissionId} v recenzním kole {$round}.</message>
 	<message key="log.review.reviewInitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo zahájeno.</message>
-	<message key="log.review.reviewReinitiated">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo znovu zahájeno.</message>
-	<message key="log.review.reviewCleared">Recenzní kolo {$round} prováděné recenzentem {$reviewerName} pro příspěvek {$submissionId} bylo vyčíštěno.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} byl ohodnocen pro recenzní kolo {$round} příspěvku {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Termín splnění recenzního kola {$round} příspěvku {$submissionId} recenzenta {$reviewerName} byl nastaven na {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Doporučení pro recenzní kolo {$round} příspěvku {$submissionId} od recenzenta {$reviewerName} bylo stanoveno.</message>
@@ -942,62 +933,9 @@ Váš server aktuálně podporuje mbstring: <strong>{$supportsMBString}</strong>
 
 	<message key="log.imported">{$userName} importoval článek {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Možnosti nástrojů pro čtení</message>
-
-	<message key="rt.admin.settings.description">Nástroje pro čtení se objeví v panelu vedle publikovaných položek v sekcích časopisu určených k indexování. Nástroje pro čtení sestávají ze sady volitelných nástrojů (uvedených níže) vztahujících se k publikované položce a ze sady nástrojů, které poskytují přístup k souvisejícím položkám uspořádaným podle oblasti a disciplíny.</message>
-	<message key="rt.admin.settings.enableReadingTools">Povolit nástroje pro čtení pro stanovené sekce časopisu.</message>
-	<message key="rt.admin.settings.relatedItems">Oblast</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Viz <a href="{$relatedItemsLink}" class="action">Sady souvisejících položek</a> pro zobrazení, přidání, opravu nebo smazání souvisejících položek pro každou oblast.]]></message>
-
-	<message key="rt.admin.options">Nástroje pro položku časopisu</message>
-	<message key="rt.admin.relatedItems">Nástroje pro související položku</message>
-
-	<message key="rt.admin.settings.addComment">Přidat komentář (umožňuje čtenářům zaslat komentář, manažer časopisu ho může smazat).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Uživatelé musí být registrováni a přihlášeni, aby mohli zaslat komntář. Anonymní komentáře nejsou povoleny.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Uživatelé musí být registrováni a přihlášení, aby mohli poslat komentář. Anonymní komentáře jsou povoleny.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Uživatelé nemusí být registrováni a přihlášeni, aby mohli poslat komentář. Anonymní komentáře jsou povoleny.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[URL adresy, které jsou možná neplatné pro vyhledávací stránky, jsou zobrazeny níže.<br />
-Měli byste ručně ověřit každou adresu URL označenou jako neplatnou, protože tento test není 100% přesný.<br />
-Ověřování může selhat při vyhledávání URL, které vyžadují "posted form data".]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Tvůrce</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Autorovo jméno, pracoviště, stát</message>
-	<message key="rt.metadata.pkp.peerReviewed">Recenzovaný článek</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Být informován pokud...</message>
-
-	<message key="rt.thisJournal">Prohledat časopis</message>
-
-
-	<message key="rt.context.authorTermsDescription">Pro vyhledání prací s podobným spoluautorstvím nechejte u položek s více než jedním autorem zaškrtnutá všechna jména. Zaškrtnutím jednoho jména můžete prohledávat autory postupně. Více o vyhledaných zdrojích se dozvíte klinutím na O ZDROJÍCH. Tyto zdroje byly vybrány pro svou relevantnost a otevřený (volný) přístup k části nebo k celému svému obsahu.</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Recenzovaný článek</message>
 
 	<!-- Notification Types -->
-
-	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
 	<message key="notification.type.galleyModified">Byla změněna sazebnice článku "{$title}".</message>
@@ -1053,9 +991,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="search.results.similarDocuments">podobné dokumenty</message>
 	<message key="plugins.categories.viewableFiles">Pluginy pro sazebnice článků</message>
 	<message key="plugins.categories.viewableFiles.description">Pluginy sazebnic článků přidávají podporu pro různé typy sazebnic článků.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems také podporuje systém <a href="http://clockss.org/" target="_blank"> CLOCKSS </a>  (Controlled Lots of Copies Keep Stuff Safe), aby byl zajištěn bezpečný a trvalý archiv časopisu. Systém CLOCKSS je založen na softwaru open source LOCKSS vyvinutém ve Stanfordské univerzitní knihovně, který umožňuje knihovnám uchovávat vybrané webové časopisy pravidelným vyhledáváním registrovaných webových stránek časopisů pro nově publikovaný obsah a jeho archivací. Každý archiv je neustále ověřován proti ostatním mezipaměti knihoven a pokud je obsah poškozen nebo ztracen, použijí se k jeho obnově ostatní mezipaměti nebo časopis.
-<br /> <br />
-Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po dokončení publikování.]]></message>
 	<message key="editor.issues.backIssues">Předchozí čísla</message>
 	<message key="editor.issues.futureIssues">Budoucí čísla</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Tato sazebnice bude dostupná na nové webové stránce.</message>
@@ -1107,4 +1042,16 @@ Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po do
 <P> 2. Adresář pro ukládání nahraných souborů musí být vytvořen a zapisovatelný (viz "Nastavení souborů" níže). </p>]]></message>
 	<message key="help.goToEditPage">Editovat {$sectionTitle}</message>
 	<message key="notification.type.submissionSubmitted">Nový článek s názvem "{$title}" byl vložen.</message>
+	<message key="subscriptions.status.noSubscription">Nemáte aktivní předplatné.</message>
+	<message key="reader.purchasePrice">{$price}) ({$currency}</message>
+	<message key="payment.type.publication.required">Je třeba uhradit publikační poplatek.</message>
+	<message key="payment.requestPublicationFee">Požadovaný publikační poplatek ({$feeAmount})</message>
+	<message key="payment.notFound">Byla požadována platba, ale termín požadavku vypršel. Podrobné informace získáte od správce časopisu.</message>
+	<message key="navigation.subscriptions">Předplatné</message>
+	<message key="log.editor.submissionExpedited">{$editorName} převzal redakční proces příspěvku {$submissionId}.</message>
+	<message key="manager.setup.porticoDescription">Portico je nezisková služba, která se zasazuje o uchování digitálních publikací, včetně e-časopisů, elektronických knih a digitalizovaných historických sbírek. Pokud podepsal váš časopis smlouvu s Portico, povolte tuto službu zde:</message>
+	<message key="log.editor.recommendation">Doporučení redaktora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}.</message>
+	<message key="user.register.form.emailConsentAllContexts">Ano, chci dostávat upozornění na nové články a dostávat nová upozornění v rámci všech časopisů, ke kterým jsem se zaregistroval.</message>
+	<message key="notification.type.public">Veřejné oznámení</message>
+	<message key="user.reviewerPrompt.optin">Ano, chci být kontaktován s požadavky na recenze příspěvků do tohoto časopisu.</message>
 </locale>

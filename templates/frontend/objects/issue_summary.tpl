@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/issue_summary.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Issue which displays a summary for use in lists
@@ -19,7 +19,7 @@
 
 	{if $issueCover}
 		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-			<img src="{$issueCover|escape}"{if $issue->getLocalizedCoverImageAltText() != ''} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
+			<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
 		</a>
 	{/if}
 

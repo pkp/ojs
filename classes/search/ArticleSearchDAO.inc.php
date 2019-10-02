@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearchDAO.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchDAO
@@ -18,7 +18,6 @@ import('classes.search.ArticleSearch');
 import('lib.pkp.classes.search.SubmissionSearchDAO');
 
 class ArticleSearchDAO extends SubmissionSearchDAO {
-
 	/**
 	 * Retrieve the top results for a phrases with the given
 	 * limit (default 500 results).
@@ -55,11 +54,11 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		if (!empty($publishedFrom)) {
-			$sqlWhere .= ' AND ps.date_published >= ' . $this->datetimeToDB($publishedFrom);
+			$sqlWhere .= ' AND p.date_published >= ' . $this->datetimeToDB($publishedFrom);
 		}
 
 		if (!empty($publishedTo)) {
-			$sqlWhere .= ' AND ps.date_published <= ' . $this->datetimeToDB($publishedTo);
+			$sqlWhere .= ' AND p.date_published <= ' . $this->datetimeToDB($publishedTo);
 		}
 
 		if (!empty($journal)) {
@@ -67,24 +66,23 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			$params[] = $journal->getId();
 		}
 
-		import('lib.pkp.classes.submission.Submission'); // STATUS_PUBLISHED
+		import('lib.pkp.classes.submission.PKPSubmission'); // STATUS_PUBLISHED
 		$result = $this->retrieveCached(
 			'SELECT
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
 				MAX(i.date_published) AS i_pub,
-				MAX(ps.date_published) AS s_pub,
+				MAX(p.date_published) AS s_pub,
 				COUNT(*) AS count
 			FROM
-				submissions s,
-				published_submissions ps,
-				issues i,
-				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
+				submissions s
+				JOIN publications p ON (p.publication_id = s.current_publication_id)
+				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name=\'issueId\')
+				JOIN issues i ON (i.issue_id = ps.setting_value)
+				JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
+				NATURAL JOIN ' . $sqlFrom . '
 			WHERE
-				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
-				ps.submission_id = s.submission_id AND
-				i.issue_id = ps.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id
 			ORDER BY count DESC
@@ -110,4 +108,4 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 	}
 }
 
-?>
+

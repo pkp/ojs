@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:40-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:40-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin für das Mitteilungs-Feed"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Dieses Plugin erstellt RSS/Atom-Feeds für Zeitschriften-Mitteilungen."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Einstellungen"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Feed-Links auf allen Zeitschriftenseiten anzeigen."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Feed-Links nur auf der Startseite und der Mitteilungsseite anzeigen."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Feed-Links nur auf der Mitteilungsseite anzeigen."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Feeds begrenzen auf"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "aktuellste Mitteilungen."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Geben Sie bitte eine positive ganze Zahl für aktuelle Mitteilungen an."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom-Logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1-Logo"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2-Logo"

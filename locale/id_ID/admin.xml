@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/admin.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -14,9 +14,7 @@
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="admin.hostedJournals">Jurnal yang Dikelola</message>
 	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message>
-	<message key="admin.settings.options">Pilihan</message>
 	<message key="admin.settings.journalRedirectInstructions">Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini berguna jika hanya ada satu jurnal yang dikelola.</message>
-	<message key="admin.settings.noJournalRedirect">Jangan dialihkan</message>
 	<message key="admin.languages.confirmDisable">Anda yakin hendak menonaktifkan bahasa ini? Hal ini dapat mempengaruhi semua jurnal yang menggunakannya.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Saat ini tidak dapat mengunduh paket bahasa dari server Public Knowledge Project karena:</p>
 	<ul>
@@ -53,7 +51,7 @@
 	<message key="admin.contexts.form.pathAlphaNumeric">Path hanya dapat berisi karakter alfanumerik, garis bawah, dan tanda hubung, dan harus dimulai dan diakhiri dengan karakter alfanumerik.</message>
 	<message key="admin.contexts.form.pathExists">Path sudah digunakan oleh jurnal lainnya.</message>
 	<message key="admin.journals.enableJournalInstructions">Tampilkan jurnal kepada publik di situs</message>
-	<message key="admin.journals.journalDescription">Deskripsi Jurnal</message>
+	<message key="admin.contexts.contextDescription">Deskripsi Jurnal</message>
 	<message key="admin.journal.pathImportInstructions">Path jurnal yang sudah ada atau path yang hendak dibuat (contoh: ojs).</message>
 	<message key="admin.journals.importSubscriptions">Impor Langganan</message>
 	<message key="admin.journals.transcode">Transcode metadata naskah dari ISO8859-1</message>
@@ -68,19 +66,6 @@
 	<message key="admin.mergeUsers.confirm">Apakah Anda hendak menggabungkan akun {$oldAccountCount} ke dalam akun "{$newUsername}"? Akun {$oldAccountCount} tidak akan ditampilkan lagi. Tindakan ini ireversibel.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Tidak ada pengguna yang terdaftar.</message>
 
-	<!-- Categories -->
-	<message key="admin.categories">Kategori</message>
-	<message key="admin.categories.enable.description">Administrator situs dapat menetapkan set kategori di sini untuk menata koleksi jurnal. Manajer Jurnal dapat memilih set kategori ini untuk jurnalnya, dan pembaca dapat menelusuri koleksi jurnal berdasar kategori.</message>
-	<message key="admin.categories.disableCategories">Jangan menata jurnal ke dalam kategori.</message>
-	<message key="admin.categories.enableCategories">Ijinkan Manajer Jurnal untuk menata jurnal ke dalam kategori.</message>
-	<message key="admin.categories.editTitle">Edit Kategori</message>
-	<message key="admin.categories.createTitle">Buat Kategori</message>
-	<message key="admin.categories.create">Buat Kategori Baru</message>
-	<message key="admin.categories.noneCreated">Belum ada kategori.</message>
-	<message key="admin.categories.confirmDelete">Anda yakin hendak menghapus kategori ini?</message>
-	<message key="admin.categories.name">Nama</message>
-	<message key="admin.categories.nameRequired">Diperlukan nama kategori.</message>
-	<message key="admin.presses.createInstructions">Secara otomatis Anda akan menjadi manajer jurnal ini. Setelah membuat jurnal baru, Anda akan dialihkan ke panduan pengaturan jurnal untuk menyelesaikan pengaturan awal</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Pengingat Masa Berakhir Langganan</message>
 	<message key="admin.scheduledTask.openAccessNotification">Pemberitahuan Open Access</message>
 	<message key="admin.scheduledTask.reviewReminder">Pengingat Review</message>

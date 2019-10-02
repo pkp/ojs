@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -105,6 +105,8 @@
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>
 	<message key="article.articles">Artikel</message>
+	<message key="common.publication">Artikel</message>
+	<message key="common.publications">Artikel</message>
 	<message key="article.submissionId">ID Naskah</message>
 	<message key="article.title">Judul</message>
 	<message key="article.authors">Penulis</message>
@@ -368,16 +370,8 @@
 	<message key="plugins.categories.auth.description">Plugin Otorisasi memungkinkan Open Journal Systems mendelegasikan otentikasi pengguna ke sistem eksternal, seperti server LDAP.</message>
 	<message key="plugins.categories.generic.description">Plugin Generik digunakan untuk menyediakan fungsi tambahan bagi Open Journal Systems melalui berbagai cara yang belum disediakan oleh plugin lainnya.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems mendukung <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) untuk memastikan pengarsipan jurnal yang aman dan permanen. LOCKSS merupakan piranti lunak open source karya Stanford University Library yang memungkinkan perpustakaan mengabadikan situs jurnalnya dengan mengirim setiap terbitan baru untuk disimpan. Secara berkala setiap simpanan divalidasi isinya terhadap simpanan di perpustakaan lain, dan jika isi di situs rusak atau hilang, simpanan di perpustakaan lain akan digunakan untuk mengembalikan data.
-<br /><br />
-Setting dukungan LOCKSS di Open Journal Systems tidak perlu dilakukan sebelum proses penerbitan benar-benar selesai.  Saat proses penerbitan telah selesai, lakukan dua langkah berikut:]]></message>
-
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems juga mendukung <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) untuk memastikan pengarsipan jurnal yang aman dan permanen. CLOCKSS dibuat berdasarkan LOCKSS, piranti lunak open source karya Stanford University Library yang memungkinkan perpustakaan mengabadikan situs jurnalnya dengan mengirim setiap terbitan baru untuk disimpan. Secara berkala setiap simpanan divalidasi isinya terhadap simpanan di perpustakaan lain, dan jika isi di situs rusak atau hilang, simpanan di perpustakaan lain akan digunakan untuk mengembalikan data.
-<br /><br />
-Setting dukungan LOCKSS di Open Journal Systems tidak perlu dilakukan sebelum proses penerbitan benar-benar selesai.]]></message>
-
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Contoh Pemberitahuan Pembuatan Creative Commons Copyright</h3>
+	<message key="manager.setup.copyrightNotice.sample"><![CDATA[<h3>Contoh Pemberitahuan Pembuatan Creative Commons Copyright</h3>
 <h4>1. Contoh Kebijakan Jurnal yang Menawarkan Open Access</h4>
 Penulis yang mempublikasikan naskahnya di jurnal ini menyetujui hal-hal berikut:
 <ol type="a">
@@ -790,7 +784,6 @@ Anda dapat memberi alasan penonaktifannya kepada pengguna.</message>
 	<message key="about.delayedOpenAccess">Delayed Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">Isi jurnal ini akan tersedia dalam format Open Access</message>
 	<message key="about.delayedOpenAccessDescription2">bulan setelah naskah diterbitkan.</message>
-	<message key="about.authorSelfArchive">Arsip Mandiri Penulis</message>
 	<message key="about.archiving">Pengarsipan</message>
 	<message key="about.subscriptions">Langganan</message>
 	<message key="about.subscriptions.individual">Langganan Individu</message>
@@ -937,8 +930,6 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 	<message key="log.author.documentRevised">{$authorName} telah merevisi naskah {$submissionId}. ID file baru adalah {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} telah dibebastugaskan dari review naskah {$submissionId} untuk ronde review {$round}.</message>
 	<message key="log.review.reviewInitiated">Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah dimulai.</message>
-	<message key="log.review.reviewReinitiated">Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah dimulai ulang.</message>
-	<message key="log.review.reviewCleared">Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah selesai.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} telah dinilai untuk ronde {$round} review naskah {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Tenggat waktu untuk ronde {$round} review naskah {$submissionId} oleh {$reviewerName} adalah tanggal {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Rekomendasi untuk ronde {$round} review naskah {$submissionId} oleh {$reviewerName} telah ditetapkan.</message>
@@ -976,62 +967,10 @@ Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>]]></
 
 	<message key="log.imported">{$userName} telah mengimpor naskah {$submissionId}.</message>
 
-	<!-- Reading Tools entries -->
-
-
-	<!-- RT Settings -->
-	<message key="rt.admin.settings">Pilihan Alat Baca</message>
-
-	<message key="rt.admin.settings.description">Alat baca ditampilkan dalam bingkai di sebelah item yang sudah diterbitkan di bagian jurnal yang telah ditentukan untuk pengindeksan. Alat baca terdiri dari satu set alat terkait item yang diterbitkan, seperti daftar berikut, dan satu set alat yang memberikan akses ke item yang relevan, disusun berdasar bidang dan disiplin ilmu.</message>
-	<message key="rt.admin.settings.enableReadingTools">Aktifkan Alat Baca di bagian jurnal yang telah ditentukan</message>
-	<message key="rt.admin.settings.relatedItems">Bidang</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Lihat <a href="{$relatedItemsLink}" class="action">Set Item Terkait</a> untuk melihat, tambah, koreksi, atau hapus item terkait untuk tiap bidang.]]></message>
-
-	<message key="rt.admin.options">Alat Item Jurnal</message>
-	<message key="rt.admin.relatedItems">Alat Item Terkait</message>
-
-	<message key="rt.admin.settings.addComment">Tambah komentar (memungkinkan pembaca mengirim komentar, yang dapat dihapus oleh Manajer Jurnal).</message>
-	<message key="rt.admin.settings.addComment.authenticated">Pengguna harus terdaftar dan login untuk dapat mengirim, tidak boleh anonim.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Pengguna harus terdaftar dan login untuk dapat mengirim, anonim diizinkan.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Pengguna tidak perlu terdaftar untuk dapat mengirim, anonim diizinkan.</message>
-
-
-	<!-- RT Versions -->
-
-	<!-- RT Contexts -->
-
-	<!-- RT Searches -->
-
-	<message key="rt.admin.validateUrls.description"><![CDATA[Kemungkinan URL invalid ditampilkan berikut ini.<br/>
-Anda harus memverifikasi manual semua URL yang ditandai invalid, karena tes ini tidak 100% akurat.<br/>
-Validasi mungkin gagal pada URL yang mensyaratkan form data yang dikirimkan.]]></message>
-
-	<!-- RT Entities -->
-
-
-
-
-	<message key="rt.metadata.dublinCore.primaryAuthor">Penulis</message>
-
-	<message key="rt.metadata.pkp.primaryAuthor">Nama penulis, afiliasi, negara</message>
-	<message key="rt.metadata.pkp.peerReviewed">Artikel Peer-review</message>
-
-
-
-
-
-	<message key="rt.beNotifiedWhen">Diberitahu saat....</message>
-
-	<message key="rt.thisJournal">Cari jurnal</message>
-
-
-	<message key="rt.context.authorTermsDescription">Untuk item dengan lebih dari satu penulis, biarkan semua nama tercentang untuk mencari naskah yang ditulis bersama, atau cari satu per satu dengan mencentang hanya satu nama.  Untuk mempelajari lebih lanjut pustaka yang dicari, klik TENTANG.  Pustaka ini telah dipilih karena relevansinya dan status Open Access untuk seluruh atau sebagian isinya</message>
-
-
+	<message key="metadata.pkp.peerReviewed">Artikel Peer-review</message>
 
 	<!-- Notification Types -->
 
-	<message key="notification.type.articleSubmitted">Naskah baru, "{$title}", telah diserahkan.</message>
 	<message key="notification.type.editing">Event Editing</message>
 	<message key="notification.type.submissionSubmitted">Naskah baru, "{$title}," telah diserahkan.</message>
 	<message key="notification.type.editorDecisionComment">Ada komentar terhadap keputusan editor bagi "{$title}."</message>

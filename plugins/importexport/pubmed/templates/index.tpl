@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/native/templates/index.tpl
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -33,11 +33,15 @@
 			{fbvFormArea id="submissionsXmlForm"}
 				{fbvFormSection}
 					{assign var="uuid" value=""|uniqid|escape}
-					<div id="export-submissions-list-handler-{$uuid}">
-						<script type="text/javascript">
-							pkp.registry.init('export-submissions-list-handler-{$uuid}', 'SelectSubmissionsListPanel', {$exportSubmissionsListData});
-						</script>
+					<div id="export-submissions-{$uuid}">
+						<select-submissions-list-panel
+							v-bind="components.exportSubmissionsListPanel"
+							@set="set"
+						/>
 					</div>
+					<script type="text/javascript">
+						pkp.registry.init('export-submissions-{$uuid}', 'Container', {$exportSubmissionsListData|json_encode});
+					</script>
 				{/fbvFormSection}
 				{fbvFormButtons submitText="plugins.importexport.native.exportSubmissions" hideCancel="true"}
 			{/fbvFormArea}

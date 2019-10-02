@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
+"PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Enviar un artículo"
+
+msgid "submission.submit.userGroup"
+msgstr "Enviar en mi rol como..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Elija el rol bajo el cual envía este artículo."
+
+msgid "submission.upload.selectComponent"
+msgstr "Seleccionar el componente del artículo"
+
+msgid "submission.title"
+msgstr "Título del artículo"
+
+msgid "submission.title.tip"
+msgstr "La tipología de envíos normalmente consiste en una imagen, texto u otros contenidos multimedia, como software o elementos interactivos. Por favor, elija el que sea más representativo para su envío. Puede encontrar ejemplos en <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>."
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Empezar un nuevo envío en"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nuevo envío"
+
+msgid "grid.action.workflow"
+msgstr "Flujo de trabajo del envío"
+
+msgid "submission.issueEntry"
+msgstr "Metadatos"
+
+msgid "submission.submit.whatNext.description"
+msgstr "La revista ha sido notificada acerca de su envío y se le enviará un correo electrónico de confirmación para sus registros. Cuando el editor haya revisado el envío, se contactará con usted."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "La galerada aparece en la entrada del número"
+
+msgid "grid.action.issueEntry"
+msgstr "Ver los metadatos de este envío"
+
+msgid "submission.publication"
+msgstr "Publicación"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "La galerada del artículo \"{$galleyFormatName}\" ya está disponible."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "La galerada del artículo \"{$galleyFormatName}\" ya no está disponible."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Identificadores públicos del envío actualizados."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Aceptación de formato"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Esta galerada <em>ya no estará disponible</em> para los lectores."
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Esta galerada <em>estará disponible</em> para los lectores."
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Hacer disponible esta galerada"
+
+msgid "submission.galleyFiles"
+msgstr "Archivos de galerada"
+
+msgid "submission.proofReadingDescription"
+msgstr "El maquetador/a carga aquí los archivos de producción listos que ha preparado para la publicación. Utilice <em>Asignar auditor</em> para designar autores/as u otros para corregir las galeradas con los archivos corregidos cargados para la aceptación previa a la publicación."
+
+msgid "grid.action.approveProof"
+msgstr "Aceptar esta prueba para incluirla en la galerada."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Esta prueba ha sido aceptada para su inclusión en la galerada."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Título y resumen"
+
+msgid "submission.submit.upload.description"
+msgstr "Cargue los archivos asociados con este envío, incluyendo artículo, multimedia, conjuntos de datos, material gráfico, etc."
+
+msgid "submission.pageProofs"
+msgstr "Corrección de pruebas"
+
+msgid "submission.confirmSubmit"
+msgstr "¿Está seguro de que desea enviar este artículo a la revista?"
+
+msgid "workflow.review.externalReview"
+msgstr "Revisión"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Enviar a revisión"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Los metadatos del envío han sido actualizados."
+
+msgid "submission.upload.fileContents"
+msgstr "Componente del artículo"
+
+msgid "submission.complete"
+msgstr "Aceptado"
+
+msgid "submission.incomplete"
+msgstr "Esperando aceptación"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Por favor, seleccione un idioma de envío."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Lista de verificación del envío"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Debe leer y verificar que ha completado los siguientes requisitos antes de continuar."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaración de privacidad"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rol del colaborador"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Se requiere por lo menos un autor."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "El nombre, los apellidos y el correo electrónico de cada autor son obligatorios."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, introduzca el título de su artículo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, introduzca el resumen de su artículo."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccione el rol del colaborador/a."
+
+msgid "submission.citationFormat.notFound"
+msgstr "El formato de cita solicitado no puede recuperarse."
+
+msgid "submission.metadataDescription"
+msgstr "Estas especificaciones se basan en el conjunto de metadatos Dublin Core, un estándar internacional utilizado para describir el contenido de una revista."
+
+msgid "section.any"
+msgstr "Cualquier sección"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "El resumen debe tener {$wordCount} palabras o menos."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "El resumen es demasiado largo, debería acortarlo para que se ajuste al límite marcado para esta sección."

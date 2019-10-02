@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:35-07:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Conteúdo"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Escolha a quais objetos serão atribuídos URNs."
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "URNs serão atribuídos a edições."
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "URNs serão atribuídos a artigos"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "URNs serão atribuídos a composições (ex.: arquivos HTML e/ou PDF)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Prefixo URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "O prefixo URN é a parte fixa, inalterável do URN (ex.: \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "O padrão de prefixo URN deve ser na forma \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Sufixo URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Por examplo, vol%viss%ipp%p poderiam criar um sufixo URN com estrutura \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "para edições"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "para artigos"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "para composições"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Informe um padrão de sufixo URN para edições."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Informe um padrão de sufixo URN para artigos."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Informe um padrão de sufixo URN para composições."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.default"
+msgstr "Usar padrões predefinidos."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Número de verificação"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "O número de verificação será automaticamente calculado e incluído no final, como o último dígito de um URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Namespace"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Escolha"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "O namespace identificador persistente é normalmente necessário para registro (por exemplo, na Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Limpar URNs"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Caso altere as configurações de URN, os já designados não serão afetados. Uma vez salva a configuração URN alterada, use este botão para limpar todos os URNs existente, para que as novas configurações tenham efeito sobre objetos existentes."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Deseja realmente excluir todos os URNs existentes?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.form.customIdentifierNotUnique"
+msgstr "O sufixo URN informado já está em uso por outro item publicado. Informe um sufixo URN único para cada item."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Número de verificação faltando."

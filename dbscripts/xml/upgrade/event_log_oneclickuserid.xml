@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * event_log_oneclickuserid.xml
+  *
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Add missing user id on event logs from 'one-click' reviews.
+  -->
+<data>
+	<sql>
+		<query driver="mysql"> <!-- pkp/pkp-lib#4263 -->
+			UPDATE event_log el JOIN ( event_log_settings els JOIN review_assignments ra ) ON ( els.log_id=el.log_id AND els.setting_name='reviewId' AND ra.review_id=els.setting_value )
+			SET el.user_id = ra.reviewer_id
+			WHERE el.user_id=0 AND el.event_type IN ( 1073741830, 1073741831, 1073741833, 1073741843 )
+		</query> <!-- SUBMISSION_LOG_REVIEW_ACCEPT, SUBMISSION_LOG_REVIEW_DECLINE, SUBMISSION_LOG_REVIEW_UNCONSIDERED, SUBMISSION_LOG_REVIEW_FILE -->
+		<query driver="mysqli"> <!-- pkp/pkp-lib#4263 -->
+			UPDATE event_log el JOIN ( event_log_settings els JOIN review_assignments ra ) ON ( els.log_id=el.log_id AND els.setting_name='reviewId' AND ra.review_id=els.setting_value )
+			SET el.user_id = ra.reviewer_id
+			WHERE el.user_id=0 AND el.event_type IN ( 1073741830, 1073741831, 1073741833, 1073741843 )
+		</query> <!-- SUBMISSION_LOG_REVIEW_ACCEPT, SUBMISSION_LOG_REVIEW_DECLINE, SUBMISSION_LOG_REVIEW_UNCONSIDERED, SUBMISSION_LOG_REVIEW_FILE -->
+		<query driver="postgres7">
+			UPDATE event_log el
+			SET user_id = ra.reviewer_id
+			FROM event_log_settings els, review_assignments ra
+			WHERE
+				el.user_id=0 AND el.event_type IN ( 1073741830, 1073741831, 1073741833, 1073741843 ) AND
+				els.log_id=el.log_id AND els.setting_name='reviewId' AND
+				ra.review_id=CAST(els.setting_value AS INTEGER)
+		</query><!-- SUBMISSION_LOG_REVIEW_ACCEPT, SUBMISSION_LOG_REVIEW_DECLINE, SUBMISSION_LOG_REVIEW_UNCONSIDERED, SUBMISSION_LOG_REVIEW_FILE -->
+	</sql>
+</data>
