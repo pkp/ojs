@@ -2,17 +2,18 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/dc/locale/it_IT/locale.xml
+  * plugins/oaiMetadataFormats/dc/locale/pt_BR/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the it_IT (Italiano) locale.
+  * * Localization strings to Portuguese - Brazil
+  * Translated by Job Diógenes Ribeiro Borges
   *
   -->
  
-<locale name="it_IT" full_name="Português BR">
+<locale name="pt_BR" full_name="Português BR">
 	<message key="plugins.oaiMetadata.dc.displayName">Formato de Metadados DC</message>
 	<message key="plugins.oaiMetadata.dc.description">Estrutura e metadados em conformidade com o formato DC (DublinCore).</message>
 </locale>

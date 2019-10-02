@@ -2,17 +2,19 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale/pt_BR/locale.xml
+  * plugins/generic/lucene/locale/pt_BR/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
+  *
+  * * Localization strings to Portuguese - Brazil
   * Translated by Job Diógenes Ribeiro Borges
-  * Localization strings.
+  *
   -->
 
-<locale name="pt_PT" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.lucene.displayName">Plugin de Pesquisa Lucene</message>
 	<message key="plugins.generic.lucene.faceting.title">refine a sua pesquisa</message>
 	<message key="plugins.generic.lucene.faceting.type">Método/Abordagem</message>

@@ -2,16 +2,20 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/dublinCoreMeta/locale/pt_PT/locale.xml
+  * plugins/generic/dublinCoreMeta/locale/pt_BR/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
+  *
+  * * Localization strings to Portuguese - Brazil
+  * Translated by Job Diógenes Ribeiro Borges
+  *
   -->
 
-<locale name="pt_PT" full_name="Português (Brasil)">
-	<message key="plugins.generic.dublinCoreMeta.name">Plugin Indexação Dublin Core</message>
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.dublinCoreMeta.name">Plugin de Indexação Dublin Core</message>
 	<message key="plugins.generic.dublinCoreMeta.description">Este plugin incorpora meta tags do Dublin Core nas visualizações de artigos para fins de indexação.</message>
 </locale>

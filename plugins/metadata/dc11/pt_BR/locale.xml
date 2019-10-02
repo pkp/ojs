@@ -2,16 +2,20 @@
 <!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * plugins/metadata/dc11/pt_BR/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
+  *
+  * * Localization strings to Portuguese - Brazil
+  * Translated by Job Diógenes Ribeiro Borges
+  *
   -->
 
-<locale name="en_US" full_name="Português BR">
+<locale name="pt_BR" full_name="Português BR">
 	<message key="plugins.metadata.dc11.articleAdapter.displayName">Adaptador Artigo DC 1.1</message>
 	<message key="plugins.metadata.dc11.articleAdapter.description">Extrai/injeta meta-dados de/em artigos.</message>
 </locale>
