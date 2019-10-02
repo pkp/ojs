@@ -12,7 +12,7 @@
   * Localization strings.
   -->
 
-<locale name="pt_PT" full_name="Português (Portugal)">
+<locale name="pt_PT" full_name="Português (Brasil)">
 	<message key="plugins.generic.lucene.displayName">Plugin de Pesquisa Lucene</message>
 	<message key="plugins.generic.lucene.faceting.title">refine a sua pesquisa</message>
 	<message key="plugins.generic.lucene.faceting.type">Método/Abordagem</message>
@@ -120,6 +120,6 @@
 		</ul>]]></message>
 	<message key="plugins.generic.lucene.settings.useProxySettings">Configurações de proxy</message>
 	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Use configurações de proxy do ficheiro config.inc.php para os pedidos ao serviço web Solr.</message>
-	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">O plugin Lucene/Solr permite-lhe ajustar o peso relativo dos artigos na lista de resultados para uma pesquisa específica. Aumentar ou diminuir o peso não coloca diretamente um artigo mais acima (ou abaixo) de todos os restantes artigos. No entanto, irá ordená-los melhor (ou pior) do que o que o faria sem estas configurações. Colocar esta opção em "nunca mostrar" irá  completamente excluir os artigos desta secção nos resultados de pesquisa.</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">O plugin Lucene/Solr permite-lhe ajustar o peso relativo dos artigos na lista de resultados para uma pesquisa específica. Aumentar ou diminuir o peso não coloca diretamente um artigo mais acima (ou abaixo) de todos os restantes artigos. No entanto, irá ordená-los melhor (ou pior) do que o que o faria sem estas configurações. Colocar esta opção em "nunca mostrar" irá  completamente excluir os artigos desta seção nos resultados de pesquisa.</message>
 	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Selecione um peso personalizado válido.</message>
 </locale>

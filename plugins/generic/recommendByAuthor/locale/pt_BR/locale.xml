@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendByAuthor/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Brasil)">
+	<message key="plugins.generic.recommendByAuthor.displayName">Artigos recomendados por Autor</message>
+	<message key="plugins.generic.recommendByAuthor.description">Este plugin insere uma lista de artigos do mesmo autor na página do resumo do artigo.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Artigos mais lidos do mesmo (s) autor (es)</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Obs.: Este plugin para ser ativado requer ao menos um plugin de estatísticas/relatório. Se os seus plugins de estatísticas fornecem mais de uma métrica, selecione a métrica principal na área de configurações do administrador do site e/ou nas configurações da revista.</message>
+</locale>
