@@ -52,7 +52,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * 		@option string orderDirection
 	 * }
 	 *
-	 * @return array
+	 * @return Iterator
 	 */
 	public function getMany($args = array()) {
 		$issueListQB = $this->_getQueryBuilder($args);
@@ -62,7 +62,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 		$result = $issueDao->retrieveRange($issueListQO->toSql(), $issueListQO->getBindings(), $range);
 		$queryResults = new DAOResultFactory($result, $issueDao, '_fromRow');
 
-		return $queryResults->toArray();
+		return $queryResults->toIterator();
 	}
 
 	/**

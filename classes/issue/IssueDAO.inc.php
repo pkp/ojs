@@ -562,7 +562,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * Get all issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange (optional)
-	 * @return ItemIterator
+	 * @return DAOResultFactory
 	 */
 	function getIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -577,7 +577,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * Get published issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
-	 * @return ItemIterator
+	 * @return DAOResultFactory
 	 */
 	function getPublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -592,7 +592,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * Get unpublished issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange
-	 * @return ItemIterator
+	 * @return DAOResultFactory
 	 */
 	function getUnpublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
