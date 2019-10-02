@@ -265,7 +265,7 @@ class ArticleSearch extends SubmissionSearch {
 				}
 
 				// Get the issue, storing in cache if necessary.
-				$issueId = $publishedSubmission->getIssueId();
+				$issueId = $publishedSubmission->getCurrentPublication()->getData('issueId');
 				if (!isset($issueCache[$issueId])) {
 					$issue = $issueDao->getById($issueId);
 					$issueCache[$issueId] = $issue;
