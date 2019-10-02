@@ -83,7 +83,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 			preg_match_all("/<\/?div[^>]*>/is", $subject, $divPosition, PREG_OFFSET_CAPTURE, $matches[$i][1]);
 			$divPosition = $divPosition[0];
 			for ($i2=0; $i2<count($divPosition); $i2++) {
-				if (eregi("\/", $divPosition[$i2][0])) {
+				if (preg_match('/\//i', $divPosition[$i2][0])) {
 					$closedDivs++;
 				} else {
 					$openDivs++;
