@@ -43,8 +43,8 @@ class WorkflowHandler extends PKPWorkflowHandler {
 	 * Setup variables for the template
 	 * @param $request Request
 	 */
-	function setupTemplate($request) {
-		parent::setupTemplate($request);
+	function setupIndex($request) {
+		parent::setupIndex($request);
 
 		$templateMgr = TemplateManager::getManager($request);
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
