@@ -52,7 +52,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * 		@option string orderDirection
 	 * }
 	 *
-	 * @return Iterator
+	 * @return \Iterator
 	 */
 	public function getMany($args = array()) {
 		$issueListQB = $this->_getQueryBuilder($args);

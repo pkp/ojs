@@ -43,7 +43,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 *    @option int count
 	 * 	  @option int offset
 	 * }
-	 * @return Iterator
+	 * @return \Iterator
 	 */
 	public function getMany($args = []) {
 		$galleyQB = $this->_getQueryBuilder($args);
