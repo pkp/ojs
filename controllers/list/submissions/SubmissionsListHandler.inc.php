@@ -46,21 +46,25 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_SUBMISSION,
 				'title' => __('manager.publication.submissionStage'),
+				'subfilters' => $this->getSubfilters(WORKFLOW_STAGE_ID_SUBMISSION),
 			),
 			array(
 				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
 				'title' => __('manager.publication.reviewStage'),
+				'subfilters' => $this->getSubfilters(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW),
 			),
 			array(
 				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_EDITING,
 				'title' => __('submission.copyediting'),
+				'subfilters' => $this->getSubfilters(WORKFLOW_STAGE_ID_EDITING),
 			),
 			array(
 				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_PRODUCTION,
 				'title' => __('manager.publication.productionStage'),
+				'subfilters' => $this->getSubfilters(WORKFLOW_STAGE_ID_PRODUCTION),
 			),
 		);
 	}
