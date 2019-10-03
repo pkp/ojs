@@ -69,9 +69,9 @@ class ArticleGalleyForm extends Form {
 			'articleGalley' => $this->_articleGalley,
 			'articleGalleyFile' => $this->_articleGalley->getFile(),
 		));
-		$journal = $request->getJournal();
+		$context = $request->getContext();
 		$templateMgr->assign(array(
-			'supportedLocales' => $journal->getSupportedSubmissionLocaleNames(),
+			'supportedLocales' => $context->getSupportedSubmissionLocaleNames(),
 			'submissionId' => $this->_submission->getId(),
 			'publicationId' => $this->_publication->getId(),
 		));
