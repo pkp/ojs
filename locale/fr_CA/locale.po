@@ -236,9 +236,6 @@ msgstr "Étape 3"
 msgid "submissions.queuedReview"
 msgstr "En évaluation"
 
-msgid "submissions.scheduled"
-msgstr "Planifiée"
-
 msgid "submissions.published"
 msgstr "Publiée"
 

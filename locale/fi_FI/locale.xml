@@ -163,7 +163,6 @@
 	<message key="submissions.step1">Vaihe 1</message>
 	<message key="submissions.step3">Vaihe 3</message>
 	<message key="submissions.queuedReview">Arvioitavana</message>
-	<message key="submissions.scheduled">Ajoitettu</message>
 	<message key="submissions.published">Julkaistu</message>
 	<message key="submissions.initial">Ensimmäinen</message>
 	<message key="submissions.proofread">Oikolue</message>

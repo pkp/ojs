@@ -145,7 +145,6 @@
 	<message key="submissions.step1">مرحله 1</message>
 	<message key="submissions.step3">مرحله 3</message>
 	<message key="submissions.queuedReview">در نوبت داوری</message>
-	<message key="submissions.scheduled">زیر چاپ</message>
 	<message key="submissions.published">چاپ شده</message>
 	<message key="submissions.initial">اولیه</message>
 	<message key="submissions.proofread">بازبینی</message>
