@@ -41,7 +41,7 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 		$this->logOut();
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
-		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
+		$this->waitForElementPresent('//a[contains(text(), \'Review\')]');
 		// Assign a recommendOnly section editor
 		$this->assignParticipant('Section editor', 'Minoti Inoue', true);
 		$this->logOut();
