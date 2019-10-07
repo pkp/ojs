@@ -224,11 +224,15 @@
 		<div class="entry_details">
 
 			{* Article/Issue cover image *}
-			{if $article->getLocalizedCoverImage() || ($issue && $issue->getLocalizedCoverImage())}
+			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
 				<div class="item cover_image">
 					<div class="sub_item">
-						{if $article->getLocalizedCoverImage()}
-							<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|escape|default:'null'}">
+						{if $publication->getLocalizedData('coverImage')}
+							{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
+							<img
+								src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
+								alt="{$coverImage.altText|escape|default:'null'}"
+							>
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">

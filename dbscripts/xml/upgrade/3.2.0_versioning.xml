@@ -57,7 +57,7 @@
 				LEFT JOIN submission_settings as ss
 					ON (ss.submission_id = s.submission_id)
 				WHERE (
-					setting_name IN ('abstract', 'cleanTitle', 'copyrightHolder', 'copyrightYear', 'coverage', 'coverImage', 'coverImageAltText', 'licenseUrl', 'locale', 'prefix', 'rights', 'source', 'subtitle', 'title', 'type')
+					setting_name IN ('abstract', 'cleanTitle', 'copyrightHolder', 'copyrightYear', 'coverage', 'coverImage', 'licenseUrl', 'locale', 'prefix', 'rights', 'source', 'subtitle', 'title', 'type')
 					OR setting_name LIKE '%pub-id%'
 				)
 		</query>

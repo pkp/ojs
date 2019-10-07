@@ -15,6 +15,30 @@
  */
 import('lib.pkp.classes.publication.PKPPublication');
 
-class Publication extends PKPPublication {}
+class Publication extends PKPPublication {
+
+	/**
+	 * Get the URL to a localized cover image
+	 *
+	 * @param int $contextId
+	 * @return string
+	 */
+	public function getLocalizedCoverImageUrl($contextId) {
+		$coverImage = $this->getLocalizedData('coverImage');
+
+		if (!$coverImage) {
+			return '';
+		}
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		return join('/', [
+			Application::get()->getRequest()->getBaseUrl(),
+			$publicFileManager->getContextFilesPath($contextId),
+			$coverImage['uploadName'],
+		]);
+	}
+}
 
 

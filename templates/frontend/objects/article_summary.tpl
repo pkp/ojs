@@ -21,10 +21,14 @@
 {/if}
 
 <div class="obj_article_summary">
-	{if $article->getLocalizedCoverImage()}
+	{if $article->getCurrentPublication()->getLocalizedData('coverImage')}
 		<div class="cover">
 			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
-				<img src="{$article->getLocalizedCoverImageUrl()|escape}" alt="{$article->getLocalizedCoverImageAltText()|escape|default:'null'}">
+				{assign var="coverImage" value=$article->getCurrentPublication()->getLocalizedData('coverImage')}
+				<img
+					src="{$article->getCurrentPublication()->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
+					alt="{$coverImage.altText|escape|default:'null'}"
+				>
 			</a>
 		</div>
 	{/if}
