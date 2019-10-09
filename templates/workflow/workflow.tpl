@@ -166,7 +166,7 @@
 								<pkp-form v-bind="components.{$smarty.const.FORM_CITATIONS}" @set="set" />
 							</tab>
 							<tab id="identifiers" label="{translate key="submission.identifiers"}">
-								.
+								<pkp-form v-bind="components.{$smarty.const.FORM_PUBLICATION_IDENTIFIERS}" @set="set" />
 							</tab>
 							{if $canAccessProduction}
 								<tab id="galleys" label="{translate key="submission.layout.galleys"}">

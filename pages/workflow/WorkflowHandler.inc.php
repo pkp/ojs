@@ -64,6 +64,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$latestPublicationApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
 		$temporaryFileApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
+		$issueApiUrl = $request->getDispatcher()->url($request, ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
 
 		import('classes.file.PublicFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -78,6 +79,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
 		$workflowData['components'][FORM_JOURNAL_ENTRY] = $journalEntryForm->getConfig();
 		$workflowData['publicationFormIds'][] = FORM_JOURNAL_ENTRY;
+		$workflowData['issueApiUrl'] = $issueApiUrl;
 		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
 
 		$templateMgr->assign('workflowData', $workflowData);

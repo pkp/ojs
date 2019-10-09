@@ -94,21 +94,19 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	}
 
 	/**
-	 * @copydoc PKPPubIdPlugin::getPubObjects()
+	 * @copydoc PKPPubIdPlugin::checkDuplicate()
 	 */
-	function getPubObjects($pubObjectType, $contextId) {
-		$objectsToCheck = null;
-		switch($pubObjectType) {
-			case 'Issue':
-				$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-				$issues = $issueDao->getIssues($contextId);
-				$objectsToCheck = $issues->toArray();
-				break;
-			default:
-				$objectsToCheck = parent::getPubObjects($pubObjectType, $contextId);
-				break;
+	function checkDuplicate($pubId, $pubObjectType, $excludeId, $contextId) {
+		foreach ($this->getPubObjectTypes() as $type) {
+			if ($type === 'Issue') {
+				$excludeTypeId = $type === $pubObjectType ? $excludeId : null;
+				if (DAORegistry::getDAO('IssueDAO')->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
+					return false;
+				}
+			}
 		}
-		return $objectsToCheck;
+
+		return parent::checkDuplicate($pubId, $pubObjectType, $excludeId, $contextId);
 	}
 
 	/**
