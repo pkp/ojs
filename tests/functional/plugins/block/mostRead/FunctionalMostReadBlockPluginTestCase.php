@@ -48,7 +48,6 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 		// Enable the "most read articles" plugin.
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
 		$pluginSettingsDao->updateSetting(2, 'MostReadBlockPlugin', 'enabled', true);
-		$pluginSettingsDao->updateSetting(2, 'MostReadBlockPlugin', 'context', BLOCK_CONTEXT_SIDEBAR);
 		$pluginSettingsDao->updateSetting(2, 'MostReadBlockPlugin', 'seq', 1);
 		
 		// Enable a metric-providing plugin.

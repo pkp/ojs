@@ -59,14 +59,6 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
-	 * @return array
-	 */
-	public function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_SIDEBAR);
-	}
-
-	/**
 	 * Override the builtin to get the correct plugin path.
 	 * @return string
 	 */

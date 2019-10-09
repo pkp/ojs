@@ -20,9 +20,5 @@
 		<name>seq</name>
 		<value>0</value>
 	</setting>
-	<setting type="int">
-		<name>context</name>
-		<value>1</value><!-- BLOCK_CONTEXT_SIDEBAR -->
-	</setting>
 </plugin_settings>
 
