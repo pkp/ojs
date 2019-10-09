@@ -356,7 +356,7 @@ class SectionDAO extends PKPSectionDAO {
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issueId,
 		]);
-		$sectionIds = array_unique(array_map(function($submissions) {
+		$sectionIds = array_unique(array_map(function($submission) {
 			return $submission->getCurrentPublication()->getData('sectionId');
 		}, $submissions));
 		$result = $this->retrieve(

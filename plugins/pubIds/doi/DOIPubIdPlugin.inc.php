@@ -26,15 +26,18 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 		if ($success && $this->getEnabled($mainContextId)) {
 			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
-			HookRegistry::register('Submission::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
-			HookRegistry::register('Submission::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Schema::get::publication', array($this, 'addToSchema'));
+			HookRegistry::register('Publication::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Publication::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Publication::validate', array($this, 'validatePublicationDoi'));
 			HookRegistry::register('Issue::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Issue::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
-			HookRegistry::register('Submission::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			HookRegistry::register('Publication::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			HookRegistry::register('Form::config::before', array($this, 'addPublicationFormFields'));
 		}
 		return $success;
 	}
@@ -275,6 +278,59 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	}
 
 	/**
+	 * Add properties to the publication schema
+	 *
+	 * @param $hookName string `Schema::get::publication`
+	 * @param $schema object Publication schema
+	 */
+	public function addToSchema($hookName, $schema) {
+		$schema->properties->{'pub-id::doi'} = json_decode('{
+			"type": "string",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		}');
+	}
+
+	/**
+	 * Validate a publication's DOI against the plugin's settings
+	 *
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	public function validatePublicationDoi($hookName, $args) {
+		$errors =& $args[0];
+		$action = $args[1];
+		$props =& $args[2];
+
+		if (empty($props['pub-id::doi']) && empty($props['doiSuffix'])) {
+			return;
+		}
+
+		if ($action === VALIDATE_ACTION_ADD) {
+			$submission = Services::get('submission')->get($props['submissionId']);
+		} else {
+			$publication = Services::get('publication')->get($props['id']);
+			$submission = Services::get('submission')->get($publication->getData('submissionId'));
+		}
+
+		$contextId = $submission->getData('contextId');
+		$doiPrefix = $this->getSetting($contextId, 'doiPrefix');
+
+		$doiErrors = [];
+		if (strpos($props['pub-id::doi'], $doiPrefix) !== 0) {
+			$doiErrors[] = __('plugins.pubIds.doi.editor.missingPrefix', ['doiPrefix' => $doiPrefix]);
+		}
+		if (!$this->checkDuplicate($props['pub-id::doi'], 'Publication', $submission->getId(), $contextId)) {
+			$doiErrors[] = $this->getNotUniqueErrorMsg();
+		}
+		if (!empty($doiErrors)) {
+			$errors['doi'] = $doiErrors;
+		}
+	}
+
+	/**
 	 * Add DOI to submission, issue or galley properties
 	 *
 	 * @param $hookName string <Object>::getProperties::summaryProperties or
@@ -290,7 +346,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	public function modifyObjectProperties($hookName, $args) {
 		$props =& $args[0];
 
-		$props[] = 'doi';
+		$props[] = 'pub-id::doi';
 	}
 
 	/**
@@ -316,9 +372,79 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			return;
 		}
 
-		if (in_array('doi', $props)) {
+		// DOIs are already available for Publications
+		if (get_class($object) === 'Publication') {
+			return;
+		}
+
+		if (in_array('pub-id::doi', $props)) {
 			$pubId = $this->getPubId($object);
-			$values['doi'] = $pubId ? $pubId : null;
+			$values['pub-id::doi'] = $pubId ? $pubId : null;
+		}
+	}
+
+	/**
+	 * Add DOI fields to the publication identifiers form
+	 *
+	 * @param $hookName string Form::config::before
+	 * @param $form FormComponent The form object
+	 */
+	public function addPublicationFormFields($hookName, $form) {
+
+		if ($form->id !== 'publicationIdentifiers') {
+			return;
+		}
+
+		$prefix = $this->getSetting($form->submissionContext->getId(), 'doiPrefix');
+
+		$suffixType = $this->getSetting($form->submissionContext->getId(), 'doiSuffix');
+		$pattern = '';
+		if ($suffixType === 'default') {
+			$pattern = '%j.v%vi%i.%a';
+		} elseif ($suffixType === 'pattern') {
+			$pattern = $this->getSetting($form->submissionContext->getId(), 'doiSubmissionSuffixPattern');
+		}
+
+		// Add a text field to enter the DOI if no pattern exists
+		if (!$pattern) {
+			$form->addField(new \PKP\components\forms\FieldText('pub-id::doi', [
+				'label' => __('metadata.property.displayName.doi'),
+				'description' => __('plugins.pubIds.doi.editor.doi.description', ['prefix' => $prefix]),
+				'value' => $form->publication->getData('pub-id::doi'),
+			]));
+		} else {
+			$fieldData = [
+				'label' => __('metadata.property.displayName.doi'),
+				'value' => $form->publication->getData('pub-id::doi'),
+				'prefix' => $prefix,
+				'pattern' => $pattern,
+				'contextInitials' => $form->submissionContext->getData('acronym', $form->submissionContext->getData('primaryLocale')) ?? '',
+				'submissionId' => $form->publication->getData('submissionId'),
+				'i18n' => [
+					'assignDoi' => __('plugins.pubIds.doi.editor.doi.assignDoi'),
+					'clearDoi' => __('plugins.pubIds.doi.editor.clearObjectsDoi'),
+				]
+			];
+			if ($form->publication->getData('pub-id::publisher-id')) {
+				$fieldData['publisherId'] = $form->publication->getData('pub-id::publisher-id');
+			}
+			if ($form->publication->getData('pages')) {
+				$fieldData['pages'] = $form->publication->getData('pages');
+			}
+			if ($form->publication->getData('issueId')) {
+				$issue = Services::get('issue')->get($form->publication->getData('issueId'));
+				if ($issue) {
+					$fieldData['issueNumber'] = $issue->getNumber() ?? '';
+					$fieldData['issueVolume'] = $issue->getVolume() ?? '';
+					$fieldData['year'] = $issue->getYear() ?? '';
+				}
+			}
+			if ($suffixType === 'default') {
+				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingIssue');
+			} else  {
+				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingParts');
+			}
+			$form->addField(new \PKP\components\forms\FieldDoi('pub-id::doi', $fieldData));
 		}
 	}
 }
