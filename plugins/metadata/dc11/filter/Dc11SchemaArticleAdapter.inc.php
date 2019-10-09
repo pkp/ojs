@@ -222,7 +222,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 		if ($licenseUrl = $article->getLicenseURL()) $dc11Description->addStatement('dc:rights', $licenseUrl);
 
-		Hookregistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, $article, $journal, $issue, &$dc11Description));
+		HookRegistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, $article, $journal, $issue, &$dc11Description));
 
 		return $dc11Description;
 	}
