@@ -25,7 +25,7 @@
 		{fbvFormSection list="true"}
 			<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.explainDois"}</p>
 			{fbvElement type="checkbox" id="enableIssueDoi" label="plugins.pubIds.doi.manager.settings.enableIssueDoi" maxlength="40" checked=$enableIssueDoi|compare:true}
-			{fbvElement type="checkbox" id="enableSubmissionDoi" label="plugins.pubIds.doi.manager.settings.enableSubmissionDoi" maxlength="40" checked=$enableSubmissionDoi|compare:true}
+			{fbvElement type="checkbox" id="enablePublicationDoi" label="plugins.pubIds.doi.manager.settings.enablePublicationDoi" maxlength="40" checked=$enablePublicationDoi|compare:true}
 			{fbvElement type="checkbox" id="enableRepresentationDoi" label="plugins.pubIds.doi.manager.settings.enableRepresentationDoi" maxlength="40" checked=$enableRepresentationDoi|compare:true}
 		{/fbvFormSection}
 	{/fbvFormArea}
@@ -53,7 +53,7 @@
 			{fbvElement type="radio" id="doiSuffixPattern" name="doiSuffix" value="pattern" label="plugins.pubIds.doi.manager.settings.doiSuffixPattern" checked=$doiSuffix|compare:"pattern"}
 			<p class="pkp_help">{translate key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"}</p>
 			{fbvElement type="text" id="doiIssueSuffixPattern" value=$doiIssueSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" id="doiSubmissionSuffixPattern" value=$doiSubmissionSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" id="doiPublicationSuffixPattern" value=$doiPublicationSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" id="doiRepresentationSuffixPattern" value=$doiRepresentationSuffixPattern label="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations" maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}
@@ -63,7 +63,7 @@
 			{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="doiSettingsForm"}
 		{/fbvFormSection}
 	{/fbvFormArea}
-	{if ($enableIssueDoi || $enableSubmissionDoi || $enableRepresentationDoi) && $doiPrefix && $doiSuffix && $doiSuffix != 'customId' }
+	{if ($enableIssueDoi || $enablePublicationDoi || $enableRepresentationDoi) && $doiPrefix && $doiSuffix && $doiSuffix != 'customId' }
 		{fbvFormArea id="doiAssignJournalWideFormArea" title="plugins.pubIds.doi.manager.settings.doiAssignJournalWide"}
 			{fbvFormSection}
 				<div class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"}</div>

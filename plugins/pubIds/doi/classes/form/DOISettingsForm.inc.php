@@ -60,15 +60,15 @@ class DOISettingsForm extends Form {
 
 		$form = $this;
 		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', function($enableIssueDoi) use ($form) {
-			return $form->getData('enableIssueDoi') || $form->getData('enableSubmissionDoi') || $form->getData('enableRepresentationDoi');
+			return $form->getData('enableIssueDoi') || $form->getData('enablePublicationDoi') || $form->getData('enableRepresentationDoi');
 		}));
 		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));
 		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', function($doiIssueSuffixPattern) use ($form) {
 			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enableIssueDoi')) return $doiIssueSuffixPattern != '';
 			return true;
 		}));
-		$this->addCheck(new FormValidatorCustom($this, 'doiSubmissionSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired', function($doiSubmissionSuffixPattern) use ($form) {
-			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enableSubmissionDoi')) return $doiSubmissionSuffixPattern != '';
+		$this->addCheck(new FormValidatorCustom($this, 'doiPublicationSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiPublicationSuffixPatternRequired', function($doiPublicationSuffixPattern) use ($form) {
+			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enablePublicationDoi')) return $doiPublicationSuffixPattern != '';
 			return true;
 		}));
 		$this->addCheck(new FormValidatorCustom($this, 'doiRepresentationSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired', function($doiRepresentationSuffixPattern) use ($form) {
@@ -148,12 +148,12 @@ class DOISettingsForm extends Form {
 	function _getFormFields() {
 		return array(
 			'enableIssueDoi' => 'bool',
-			'enableSubmissionDoi' => 'bool',
+			'enablePublicationDoi' => 'bool',
 			'enableRepresentationDoi' => 'bool',
 			'doiPrefix' => 'string',
 			'doiSuffix' => 'string',
 			'doiIssueSuffixPattern' => 'string',
-			'doiSubmissionSuffixPattern' => 'string',
+			'doiPublicationSuffixPattern' => 'string',
 			'doiRepresentationSuffixPattern' => 'string',
 		);
 	}

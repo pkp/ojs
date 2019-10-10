@@ -52,9 +52,9 @@
 {/if}
 {* issue pub object *}
 {if $pubObjectType == 'Issue'}
-	{assign var=enableSubmissionDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enableSubmissionDoi")}
+	{assign var=enablePublicationDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enablePublicationDoi")}
 	{assign var=enableRepresentationDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enableRepresentationDoi")}
-	{if $enableSubmissionDoi || $enableRepresentationDoi}
+	{if $enablePublicationDoi || $enableRepresentationDoi}
 		{if !$formArea}
 			{assign var="formAreaTitle" value="plugins.pubIds.doi.editor.doi"}
 		{else}
