@@ -35,7 +35,7 @@ msgstr "Please select the publishing objects that will have Digital Object Ident
 msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
 msgstr "Issues"
 
-msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Articles"
 
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
@@ -175,3 +175,15 @@ msgstr "The DOI {$pubId} has been assigned."
 
 msgid "plugins.pubIds.doi.editor.missingPrefix"
 msgstr "The DOI must begin with {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "The DOI for this publication will be {$doi}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "A DOI has not been assigned to this publication."
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Item"

@@ -130,17 +130,17 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		$submissionFile = ($pubObjectType == 'SubmissionFile' ? $pubObject : null);
 
 		// Get the context id.
-		if (in_array($pubObjectType, array('Issue', 'Submission'))) {
+		if ($pubObjectType === 'Issue') {
 			$contextId = $pubObject->getJournalId();
-		} else {
-			// Retrieve the submission.
-			assert(is_a($pubObject, 'Representation') || is_a($pubObject, 'SubmissionFile'));
-			$submissionDao = Application::getSubmissionDAO();
-			$submission = $submissionDao->getById($pubObject->getSubmissionId(), null, true);
-			if (!$submission) return null;
-			// Now we can identify the context.
+		} elseif ($pubObjectType === 'Representation') {
+			$publication = Services::get('publication')->get($pubObject->getData('publicationId'));
+			$submission = Services::get('submission')->get($publication->getData('submissionId'));
+			$contextId = $submission->getData('contextId');
+		} elseif (in_array($pubObjectType, ['Publication', 'SubmissionFile'])) {
+			$submission = Services::get('submission')->get($pubObject->getData('submissionId'));
 			$contextId = $submission->getData('contextId');
 		}
+
 		// Check the context
 		$context = $this->getContext($contextId);
 		if (!$context) return null;

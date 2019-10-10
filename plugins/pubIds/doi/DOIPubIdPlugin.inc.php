@@ -32,12 +32,14 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			HookRegistry::register('Publication::validate', array($this, 'validatePublicationDoi'));
 			HookRegistry::register('Issue::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Issue::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Schema::get::galley', array($this, 'addToSchema'));
 			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Form::config::before', array($this, 'addPublicationFormFields'));
+			HookRegistry::register('Form::config::before', array($this, 'addPublishFormNotice'));
 		}
 		return $success;
 	}
@@ -198,7 +200,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	function getSuffixPatternsFieldNames() {
 		return  array(
 			'Issue' => 'doiIssueSuffixPattern',
-			'Submission' => 'doiSubmissionSuffixPattern',
+			'Publication' => 'doiPublicationSuffixPattern',
 			'Representation' => 'doiRepresentationSuffixPattern'
 		);
 	}
@@ -304,7 +306,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$action = $args[1];
 		$props =& $args[2];
 
-		if (empty($props['pub-id::doi']) && empty($props['doiSuffix'])) {
+		if (empty($props['pub-id::doi'])) {
 			return;
 		}
 
@@ -402,7 +404,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if ($suffixType === 'default') {
 			$pattern = '%j.v%vi%i.%a';
 		} elseif ($suffixType === 'pattern') {
-			$pattern = $this->getSetting($form->submissionContext->getId(), 'doiSubmissionSuffixPattern');
+			$pattern = $this->getSetting($form->submissionContext->getId(), 'doiPublicationSuffixPattern');
 		}
 
 		// Add a text field to enter the DOI if no pattern exists
@@ -447,6 +449,73 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			$form->addField(new \PKP\components\forms\FieldDoi('pub-id::doi', $fieldData));
 		}
 	}
+
+	/**
+	 * Show DOI during final publish step
+	 *
+	 * @param $hookName string Form::config::before
+	 * @param $form FormComponent The form object
+	 */
+	public function addPublishFormNotice($hookName, $form) {
+
+		if ($form->id !== 'publish' || !empty($form->errors)) {
+			return;
+		}
+
+		$submission = Services::get('submission')->get($form->publication->getData('submissionId'));
+		$publicationDoiEnabled = $this->getSetting($submission->getData('contextId'), 'enablePublicationDoi');
+		$galleyDoiEnabled = $this->getSetting($submission->getData('contextId'), 'enableRepresentationDoi');
+		$warningIconHtml = '<span class="fa fa-exclamation-triangle pkpIcon--inline"></span>';
+
+		if (!$publicationDoiEnabled && !$galleyDoiEnabled) {
+			return;
+
+		// Use a simplified view when only assigning to the publication
+		} else if (!$galleyDoiEnabled) {
+			if ($form->publication->getData('pub-id::doi')) {
+				$msg = __('plugins.pubIds.doi.editor.preview.publication', ['doi' => $form->publication->getData('pub-id::doi')]);
+			} else {
+				$msg = '<div class="pkpNotification pkpNotification--warning">' . $warningIconHtml . __('plugins.pubIds.doi.editor.preview.publication.none') . '</div>';
+			}
+			$form->addField(new \PKP\components\forms\FieldHTML('doi', [
+				'description' => $msg,
+				'groupId' => 'default',
+			]));
+			return;
+
+		// Show a table if more than one DOI is going to be created
+		} else {
+			$doiTableRows = [];
+			if ($publicationDoiEnabled) {
+				if ($form->publication->getData('pub-id::doi')) {
+					$doiTableRows[] = [$form->publication->getData('pub-id::doi'), 'Publication'];
+				} else {
+					$doiTableRows[] = [$warningIconHtml . __('submission.status.unassigned'), 'Publication'];
+				}
+			}
+			if ($galleyDoiEnabled) {
+				foreach ((array) $form->publication->getData('galleys') as $galley) {
+					if ($galley->getStoredPubId('doi')) {
+						$doiTableRows[] = [$galley->getStoredPubId('doi'), __('plugins.pubIds.doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
+					} else {
+						$doiTableRows[] = [$warningIconHtml . __('submission.status.unassigned'),__('plugins.pubIds.doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
+					}
+				}
+			}
+			if (!empty($doiTableRows)) {
+				$table = '<table class="pkpTable"><thead><tr>' .
+					'<th>' . __('plugins.pubIds.doi.editor.doi') . '</th>' .
+					'<th>' . __('plugins.pubIds.doi.editor.preview.objects') . '</th>' .
+					'</tr></thead><tbody>';
+				foreach ($doiTableRows as $doiTableRow) {
+					$table .= '<tr><td>' . $doiTableRow[0] . '</td><td>' . $doiTableRow[1] . '</td></tr>';
+				}
+				$table .= '</tbody></table>';
+			}
+			$form->addField(new \PKP\components\forms\FieldHTML('doi', [
+				'description' => $table,
+				'groupId' => 'default',
+			]));
+		}
+	}
 }
-
-

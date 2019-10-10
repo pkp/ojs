@@ -26,6 +26,9 @@ class PublishForm extends FormComponent {
 	/** @copydoc FormComponent::$method */
 	public $method = 'PUT';
 
+	/** @var Publication */
+	public $publication;
+
 	/**
 	 * Constructor
 	 *
@@ -37,6 +40,7 @@ class PublishForm extends FormComponent {
 		$this->action = $action;
 		$this->successMessage = __('publication.publish.success');
 		$this->errors = $requirementErrors;
+		$this->publication = $publication;
 
 		// Set separate messages and buttons if publication requirements have passed
 		if (empty($requirementErrors)) {

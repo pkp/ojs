@@ -43,7 +43,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
 					$doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());
 					$templateMgr->assign(array(
-						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enableSubmissionDoi'),
+						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enablePublicationDoi'),
 						'exportIssues' => $doiPlugin->getSetting($context->getId(), 'enableIssueDoi'),
 						'exportRepresentations' => $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi'),
 					));
