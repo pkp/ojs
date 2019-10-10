@@ -135,7 +135,7 @@ class IssueHandler extends Handler {
 			'offset' => $offset,
 			'isPublished' => true,
 		);
-		$issues = $issueService->getMany($params);
+		$issues = iterator_to_array($issueService->getMany($params));
 		$total = $issueService->getMax($params);
 
 		$showingStart = $offset + 1;
