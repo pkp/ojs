@@ -215,6 +215,12 @@ class PublicationService extends PKPPublicationService {
 		if ($datePublished && strtotime($datePublished) > strtotime(\Core::getCurrentDate())) {
 			$newPublication->setData('status', STATUS_SCHEDULED);
 		}
+
+		// Update the metadata in the search index.
+		$submission = Services::get('submission')->get($newPublication->getData('submissionId'));
+		$articleSearchIndex = Application::getSubmissionSearchIndex();
+		$articleSearchIndex->submissionMetadataChanged($submission);
+		$articleSearchIndex->submissionChangesFinished();
 	}
 
 	/**
