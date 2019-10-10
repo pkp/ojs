@@ -22,7 +22,9 @@ class PublicationDAO extends PKPPublicationDAO {
 	 */
 	public function _fromRow($primaryRow) {
 		$publication = parent::_fromRow($primaryRow);
-		$publication->setData('galleys', Services::get('galley')->getMany(['publicationIds' => $publication->getId()]));
+		$publication->setData('galleys', iterator_to_array(
+			Services::get('galley')->getMany(['publicationIds' => $publication->getId()])
+		));
 		return $publication;
 	}
 }

@@ -43,7 +43,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 	 *    @option int count
 	 * 	  @option int offset
 	 * }
-	 * @return array
+	 * @return \Iterator
 	 */
 	public function getMany($args = []) {
 		$galleyQB = $this->_getQueryBuilder($args);
@@ -53,7 +53,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 		$result = $galleyDao->retrieveRange($galleyQO->toSql(), $galleyQO->getBindings(), $range);
 		$queryResults = new DAOResultFactory($result, $galleyDao, '_fromRow');
 
-		return $queryResults->toArray();
+		return $queryResults->toIterator();
 	}
 
 	/**
