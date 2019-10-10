@@ -29,13 +29,15 @@
 			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
 		</li>
 		<li class="current">
-			<h1>
+			{capture name="currentTitleH1"}
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}
 					{$currentTitle|escape}
 				{/if}
-			</h1>
+			{/capture}
+			{$smarty.capture.currentTitleH1}
 		</li>
 	</ol>
 </nav>
+<h1 class="pageCurrentTitle">{$smarty.capture.currentTitleH1}</h1>
