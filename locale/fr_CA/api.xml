@@ -12,5 +12,6 @@
   -->
 
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="api.submissions.403.unpublishedIssues">Vous n'êtes pas autorisé(e) à afficher les numéros non publiés.</message>
+	<message key="api.submissions.403.unpublishedIssues">Vous n'êtes pas autorisé-e à afficher les numéros non publiés.</message>
 </locale>
+
