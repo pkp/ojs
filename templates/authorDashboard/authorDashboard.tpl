@@ -41,6 +41,7 @@
 				<pkp-button
 					v-if="uploadFileUrl"
 					:label="i18n.uploadFile"
+					ref="uploadFileButton"
 					@click="openFileUpload"
 				></pkp-button>
 				<pkp-button
