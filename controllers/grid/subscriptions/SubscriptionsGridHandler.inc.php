@@ -93,34 +93,6 @@ abstract class SubscriptionsGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @copydoc GridHandler::renderFilter()
-	 */
-	function renderFilter($request, $filterData = array()) {
-		$context = $request->getContext();
-
-		// Import UserDAO to define the USER_FIELD_* constants.
-		import('lib.pkp.classes.user.UserDAO');
-		$fieldOptions = array(
-			IDENTITY_SETTING_GIVENNAME => 'user.givenName',
-			IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
-			USER_FIELD_USERNAME => 'user.username',
-			USER_FIELD_EMAIL => 'user.email'
-		);
-
-		$matchOptions = array(
-			'contains' => 'form.contains',
-			'is' => 'form.is'
-		);
-
-		$filterData = array(
-			'fieldOptions' => $fieldOptions,
-			'matchOptions' => $matchOptions
-		);
-
-		return parent::renderFilter($request, $filterData);
-	}
-
-	/**
 	 * @copydoc GridHandler::getFilterSelectionData()
 	 * @return array Filter selection data.
 	 */

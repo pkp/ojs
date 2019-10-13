@@ -202,9 +202,9 @@ class IssueForm extends Form {
 
 		$issue->setJournalId($journal->getId());
 		$issue->setTitle($this->getData('title'), null); // Localized
-		$issue->setVolume(empty($volume) ? 0 : $volume);
-		$issue->setNumber(empty($number) ? 0 : $number);
-		$issue->setYear(empty($year) ? 0 : $year);
+		$issue->setVolume(empty($volume) ? null : $volume);
+		$issue->setNumber(empty($number) ? null : $number);
+		$issue->setYear(empty($year) ? null : $year);
 		if (!$isNewIssue) {
 			$issue->setDatePublished($this->getData('datePublished'));
 		}

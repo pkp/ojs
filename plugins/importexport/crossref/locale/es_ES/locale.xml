@@ -23,6 +23,9 @@
 	<message key="plugins.importexport.crossref.error.noDOIContentObjects">No se han seleccionado artículos a los que asignar un idenficador público DOI, por lo tanto, el módulo no puede depositar o exportar nada.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Para un correcto depósito en CrossRef, se requieren los siguientes ítems.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Nombre del depositario</message>
+	
+	<message key="plugins.importexport.crossref.settings.form.validation">Validar XML. Utilice esta opción para descargar el XML para realizar el registro manual</message>
+	
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email del depositario</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Introduzca el nombre del depositario.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Introduzca el email del depositario.</message>
@@ -50,6 +53,7 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">Descargar XML</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Marcar activo</message>
+	<message key="plugins.importexport.crossref.action.register">Depositar</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">Tarea automática de registro en CrossRef</message>
 
@@ -62,5 +66,7 @@
 	<!--  notifications -->
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">No existe ningún número con el ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">No existe ningún artículo con el ID "{$articleId}".</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">El registro no pudo realizarse! El servidor de registro de DOI retornó un error.</message>
+	<message key="plugins.importexport.crossref.register.success.warning">El registro se realizó satisfactoriamente. Sin embargo, ocurrieron las siguientes advertencias: '{$param}'.</message>
 
 </locale>

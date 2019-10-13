@@ -15,10 +15,10 @@
 	<message key="plugins.importexport.native.displayName">Módulo XML nativo</message>
 	<message key="plugins.importexport.native.description">Importar y exportar libros en el formato XML nativo.</message>
 	<message key="plugins.importexport.native.import">Importar</message>
-	<message key="plugins.importexport.native.import.instructions">Por favor, selecciona un archivo XML para subir y pincha en "Iniciar subida". Cuando se haya completado la subida del archivo, pincha en "OK" para importarlo al gestor.</message>
+	<message key="plugins.importexport.native.import.instructions">Por favor, seleccione un archivo XML para subir y haga clic en "Iniciar subida". Cuando se haya completado la subida del archivo, haga clic en "OK" para importarlo al gestor.</message>
 	<message key="plugins.importexport.native.export">Exportar</message>
 	<message key="plugins.importexport.native.results">Resultados</message>
-	<message key="plugins.inportexport.native.uploadFile">Por favor, sube un archivo en "Importar" para continuar.</message>
+	<message key="plugins.inportexport.native.uploadFile">Por favor, suba un archivo en "Importar" para continuar.</message>
 	<message key="plugins.importexport.native.importComplete">La importación se ha completado con éxito. Se han importado los siguientes elementos:</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">El título de sección "{$section1Title}" y el título de sección "{$section2Title}" del número "{$issueTitle}" se corresponden con otras secciones de la revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMatch">El título de sección "{$sectionTitle}" del número "{$issueTitle}" se corresponde con una sección existente de la revista, pero otro título de esta sección no se corresponde con un título en la sección existente de la revista.</message>

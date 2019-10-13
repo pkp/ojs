@@ -810,7 +810,7 @@ Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikir
 Päätöksemme on: Käsikirjoitus on hylätty<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
+		<description>This email is sent to the author if the editor declines their submission initially, before the review stage</description>
 	</email_text>
 	<email_text key="EDITOR_RECOMMENDATION">
 		<subject>Toimittajan suositus</subject>

@@ -31,13 +31,13 @@
 	<message key="submission.submit.newSubmissionSingle">Nuevo envío</message>
 	<message key="grid.action.workflow">Flujo de trabajo del envío</message>
 	<message key="submission.issueEntry">Metadatos</message>
-	<message key="submission.submit.whatNext.description">La revista ha sido notificada acerca de su envío y a usted se le enviará un correo electrónico de confirmación para sus registros. Cuando el editor haya revisado el envío contactará con usted.</message>
+	<message key="submission.submit.whatNext.description">La revista ha sido notificada acerca de su envío y se le enviará un correo electrónico de confirmación para sus registros. Cuando el editor haya revisado el envío, se contactará con usted.</message>
 	<message key="grid.action.galleyInIssueEntry">La galerada aparece en la entrada del número</message>
 	<message key="grid.action.issueEntry">Ver los metadatos de este envío</message>
 	<message key="submission.issueEntry.modalTitle">Metadatos de envío y publicación</message>
 	<message key="submission.issueEntry.submissionMetadata">Envío</message>
 	<message key="submission.issueEntry.publicationMetadata">Publicación</message>
-	<message key="submission.issueEntry.confirm">Crear una entrada de número para este artículo basada en los metadatos siguientes.</message>
+	<message key="submission.issueEntry.confirm">Crear una entrada de número para este artículo basada en los siguientes metadatos.</message>
 	<message key="submission.event.articleGalleyMadeAvailable">La galerada del artículo "{$galleyFormatName}" ya está disponible.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">La galerada del artículo "{$galleyFormatName}" ya no está disponible.</message>
 	<message key="submission.event.publicIdentifiers">Identificadores públicos del envío actualizados.</message>
@@ -59,9 +59,9 @@
 	<message key="submission.upload.fileContents">Componente del artículo</message>
 	<message key="submission.complete">Aceptado</message>
 	<message key="submission.incomplete">Esperando aceptación</message>
-	<message key="submission.submit.form.localeRequired">Por favor, seleccione una lengua de envío.</message>
+	<message key="submission.submit.form.localeRequired">Por favor, seleccione un idioma de envío.</message>
 	<message key="submission.submit.submissionChecklist">Lista de verificación del envío</message>
-	<message key="submission.submit.submissionChecklistDescription">Debe leer y verificar que ha completado los requisitos siguientes antes de continuar.</message>
+	<message key="submission.submit.submissionChecklistDescription">Debe leer y verificar que ha completado los siguientes requisitos antes de continuar.</message>
 	<message key="submission.submit.privacyStatement">Declaración de privacidad</message>
 	<message key="submission.submit.contributorRole">Rol del colaborador</message>
 	<message key="submission.submit.form.authorRequired">Se requiere por lo menos un autor.</message>
