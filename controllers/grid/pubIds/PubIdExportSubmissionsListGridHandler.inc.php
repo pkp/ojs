@@ -33,17 +33,16 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 		if ($statusId) {
 			$pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
 		}
-		return [];
-		// return $publishedSubmissionDao->getExportable(
-		// 	$context->getId(),
-		// 	$this->_plugin->getPubIdType(),
-		// 	$title,
-		// 	$author,
-		// 	$issueId,
-		// 	$pubIdStatusSettingName,
-		// 	$statusId,
-		// 	$this->getGridRangeInfo($request, $this->getId())
-		// );
+		return Application::getSubmissionDAO()->getExportable(
+			$context->getId(),
+			$this->_plugin->getPubIdType(),
+			$title,
+			$author,
+			$issueId,
+			$pubIdStatusSettingName,
+			$statusId,
+			$this->getGridRangeInfo($request, $this->getId())
+		);
 	}
 
 	/**

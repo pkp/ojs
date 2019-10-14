@@ -59,7 +59,8 @@ class DOAJXmlFilter extends NativeExportFilter {
 		$doc->appendChild($rootNode);
 
 		foreach($pubObjects as $pubObject) {
-			$issueId = $pubObject->getIssueId();
+			$publication = $pubObject->getCurrentPublication();
+			$issueId = $publication->getData('issueId');
 			if ($cache->isCached('issues', $issueId)) {
 				$issue = $cache->get('issues', $issueId);
 			} else {
@@ -72,7 +73,7 @@ class DOAJXmlFilter extends NativeExportFilter {
 			$recordNode = $doc->createElement('record');
 			$rootNode->appendChild($recordNode);
 			// Language
-			$language = AppLocale::get3LetterIsoFromLocale($pubObject->getLocale());
+			$language = AppLocale::get3LetterIsoFromLocale($publication->getData('locale'));
 			if (!empty($language)) $recordNode->appendChild($node = $doc->createElement('language', $language));
 			// Publisher name (i.e. institution name)
 			$publisher = $context->getData('publisherInstitution');
@@ -86,10 +87,9 @@ class DOAJXmlFilter extends NativeExportFilter {
 			$eissn = $context->getData('onlineIssn');
 			if (!empty($eissn)) $recordNode->appendChild($node = $doc->createElement('eissn', $eissn));
 			// Article's publication date, volume, issue
-			if ($pubObject->getDatePublished()) {
-				$recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($pubObject->getDatePublished())));
-			}
-			else {
+			if ($publication->getData('datePublished')) {
+				$recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($publication->getData('datePublished'))));
+			} else {
 				$recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($issue->getDatePublished())));
 			}
 			$volume = $issue->getVolume();
@@ -101,26 +101,26 @@ class DOAJXmlFilter extends NativeExportFilter {
 			 * "page numbers" are; for example, some journals (eg. JMIR)
 			 * use the "e-location ID" as the "page numbers" in PubMed
 			 */
-			$startPage = $pubObject->getStartingPage();
-			$endPage = $pubObject->getEndingPage();
+			$startPage = $publication->getStartingPage();
+			$endPage = $publication->getEndingPage();
 			if (isset($startPage) && $startPage !== "") {
 				$recordNode->appendChild($node = $doc->createElement('startPage', htmlspecialchars($startPage, ENT_COMPAT, 'UTF-8')));
 				$recordNode->appendChild($node = $doc->createElement('endPage', htmlspecialchars($endPage, ENT_COMPAT, 'UTF-8')));
 			}
 			// DOI
-			$doi = $pubObject->getStoredPubId('doi');
+			$doi = $publication->getStoredPubId('doi');
 			if (!empty($doi)) $recordNode->appendChild($node = $doc->createElement('doi', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 			// publisherRecordId
-			$recordNode->appendChild($node = $doc->createElement('publisherRecordId', htmlspecialchars($pubObject->getId(), ENT_COMPAT, 'UTF-8')));
+			$recordNode->appendChild($node = $doc->createElement('publisherRecordId', htmlspecialchars($publication->getId(), ENT_COMPAT, 'UTF-8')));
 			// documentType
-			$type = $pubObject->getType($pubObject->getLocale());
+			$type = $publication->getLocalizedData('type', $publication->getData('locale'));
 			if (!empty($type)) $recordNode->appendChild($node = $doc->createElement('documentType', htmlspecialchars($type, ENT_COMPAT, 'UTF-8')));
 			// Article title
-			$articleTitles = (array) $pubObject->getTitle(null);
-			if (array_key_exists($pubObject->getLocale(), $articleTitles)) {
-				$titleInArticleLocale = $articleTitles[$pubObject->getLocale()];
-				unset($articleTitles[$pubObject->getLocale()]);
-				$articleTitles = array_merge(array($pubObject->getLocale() => $titleInArticleLocale), $articleTitles);
+			$articleTitles = (array) $publication->getData('title');
+			if (array_key_exists($publication->getData('locale'), $articleTitles)) {
+				$titleInArticleLocale = $articleTitles[$publication->getData('locale')];
+				unset($articleTitles[$publication->getData('locale')]);
+				$articleTitles = array_merge(array($publication->getData('locale') => $titleInArticleLocale), $articleTitles);
 			}
 			foreach ($articleTitles as $locale => $title) {
 				if (!empty($title)) {
@@ -131,9 +131,9 @@ class DOAJXmlFilter extends NativeExportFilter {
 			// Authors and affiliations
 			$authorsNode = $doc->createElement('authors');
 			$recordNode->appendChild($authorsNode);
-			$affilList = $this->createAffiliationsList($pubObject->getAuthors(), $pubObject);
-			foreach ($pubObject->getAuthors() as $author) {
-				$authorsNode->appendChild($this->createAuthorNode($doc, $pubObject, $author, $affilList));
+			$affilList = $this->createAffiliationsList((array) $publication->getData('authors'), $publication);
+			foreach ((array) $publication->getData('authors') as $author) {
+				$authorsNode->appendChild($this->createAuthorNode($doc, $publication, $author, $affilList));
 			}
 			if (!empty($affilList[0])) {
 				$affilsNode = $doc->createElement('affiliationsList');
@@ -144,11 +144,11 @@ class DOAJXmlFilter extends NativeExportFilter {
 				}
 			}
 			// Abstract
-			$articleAbstracts = (array) $pubObject->getAbstract(null);
-			if (array_key_exists($pubObject->getLocale(), $articleAbstracts)) {
-				$abstractInArticleLocale = $articleAbstracts[$pubObject->getLocale()];
-				unset($articleAbstracts[$pubObject->getLocale()]);
-				$articleAbstracts = array_merge(array($pubObject->getLocale() => $abstractInArticleLocale), $articleAbstracts);
+			$articleAbstracts = (array) $publication->getData('abstract');
+			if (array_key_exists($publication->getData('locale'), $articleAbstracts)) {
+				$abstractInArticleLocale = $articleAbstracts[$publication->getData('locale')];
+				unset($articleAbstracts[$publication->getData('locale')]);
+				$articleAbstracts = array_merge(array($publication->getData('locale') => $abstractInArticleLocale), $articleAbstracts);
 			}
 			foreach ($articleAbstracts as $locale => $abstract) {
 				if (!empty($abstract)) {
@@ -163,11 +163,11 @@ class DOAJXmlFilter extends NativeExportFilter {
 			// Keywords
 			$supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
 			$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-			$articleKeywords = $dao->getKeywords($pubObject->getCurrentPublication()->getId(), $supportedLocales);
-			if (array_key_exists($pubObject->getLocale(), $articleKeywords)) {
-				$keywordsInArticleLocale = $articleKeywords[$pubObject->getLocale()];
-				unset($articleKeywords[$pubObject->getLocale()]);
-				$articleKeywords = array_merge(array($pubObject->getLocale() => $keywordsInArticleLocale), $articleKeywords);
+			$articleKeywords = $dao->getKeywords($publication->getId(), $supportedLocales);
+			if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
+				$keywordsInArticleLocale = $articleKeywords[$publication->getData('locale')];
+				unset($articleKeywords[$publication->getData('locale')]);
+				$articleKeywords = array_merge(array($publication->getData('locale') => $keywordsInArticleLocale), $articleKeywords);
 			}
 			foreach ($articleKeywords as $locale => $keywords) {
 				$keywordsNode = $doc->createElement('keywords');
@@ -197,17 +197,17 @@ class DOAJXmlFilter extends NativeExportFilter {
 	/**
 	 * Generate the author node.
 	 * @param $doc DOMDocument
-	 * @param $article object Article
+	 * @param $publication object Article
 	 * @param $author object Author
 	 * @param $affilList array List of author affiliations
 	 * @return DOMElement
 	 */
-	function createAuthorNode($doc, $article, $author, $affilList) {
+	function createAuthorNode($doc, $publication, $author, $affilList) {
 		$deployment = $this->getDeployment();
 		$authorNode = $doc->createElement('author');
 		$authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(false), ENT_COMPAT, 'UTF-8')));
-		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
-			$authorNode->appendChild($node = $doc->createElement('affiliationId', htmlspecialchars(current(array_keys($affilList, $author->getAffiliation($article->getLocale()))), ENT_COMPAT, 'UTF-8')));
+		if(in_array($author->getAffiliation($publication->getData('locale')), $affilList)  && !empty($affilList[0])) {
+			$authorNode->appendChild($node = $doc->createElement('affiliationId', htmlspecialchars(current(array_keys($affilList, $author->getAffiliation($publication->getData('locale')))), ENT_COMPAT, 'UTF-8')));
 		}
 		return $authorNode;
 	}
@@ -215,14 +215,14 @@ class DOAJXmlFilter extends NativeExportFilter {
 	/**
 	 * Generate a list of affiliations among all authors of an article.
 	 * @param $authors object Array of article authors
-	 * @param $article Article
+	 * @param $publication Publication
 	 * @return array
 	 */
-	function createAffiliationsList($authors, $article) {
+	function createAffiliationsList($authors, $publication) {
 		$affilList = array();
 		foreach ($authors as $author) {
-			if(!in_array($author->getAffiliation($article->getLocale()), $affilList)) {
-				$affilList[] = $author->getAffiliation($article->getLocale()) ;
+			if(!in_array($author->getAffiliation($publication->getData('locale')), $affilList)) {
+				$affilList[] = $author->getAffiliation($publication->getData('locale')) ;
 			}
 		}
 		return $affilList;

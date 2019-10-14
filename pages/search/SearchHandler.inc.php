@@ -215,7 +215,7 @@ class SearchHandler extends Handler {
 
 			foreach ($submissions as $article) {
 				$articleId = $article->getId();
-				$issueId = $article->getIssueId();
+				$issueId = $article->getCurrentPublication()->getData('issueId');
 				$sectionId = $article->getSectionId();
 				$journalId = $article->getData('contextId');
 

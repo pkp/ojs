@@ -61,7 +61,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$context = $deployment->getContext();
 		$cache = $deployment->getCache();
 		assert(is_a($submission, 'Submission'));
-		$issueId = $submission->getIssueId();
+		$issueId = $submission->getCurrentPublication()->getData('issueId');
 		if ($cache->isCached('issues', $issueId)) {
 			$issue = $cache->get('issues', $issueId);
 		} else {
@@ -83,6 +83,8 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$request = Application::get()->getRequest();
+		$publication = $submission->getCurrentPublication();
+		$locale = $publication->getData('locale');
 		// Issue shoulld be set by now
 		$issue = $deployment->getIssue();
 
@@ -90,15 +92,16 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$journalArticleNode->setAttribute('publication_type', 'full_text');
 		$journalArticleNode->setAttribute('metadata_distribution_opts', 'any');
 
+
 		// title
 		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
 		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($submission->getTitle($submission->getLocale()), ENT_COMPAT, 'UTF-8')));
-		if ($subtitle = $submission->getSubtitle($submission->getLocale())) $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
+		if ($subtitle = $publication->getData('subtitle', $locale)) $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
 		$journalArticleNode->appendChild($titlesNode);
 
 		// contributors
 		$contributorsNode = $doc->createElementNS($deployment->getNamespace(), 'contributors');
-		$authors = $submission->getAuthors();
+		$authors = $publication->getData('authors');
 		$isFirst = true;
 		foreach ($authors as $author) {
 			$personNameNode = $doc->createElementNS($deployment->getNamespace(), 'person_name');
@@ -123,21 +126,20 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$journalArticleNode->appendChild($contributorsNode);
 
 		// abstract
-		if ($submission->getAbstract($submission->getLocale())) {
+		if ($abstract = $publication->getData('abstract', $locale)) {
 			$abstractNode = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:abstract');
-			$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', htmlspecialchars(html_entity_decode(strip_tags($submission->getAbstract($submission->getLocale())), ENT_COMPAT, 'UTF-8'), ENT_COMPAT, 'UTF-8')));
+			$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', htmlspecialchars(html_entity_decode(strip_tags($abstract), ENT_COMPAT, 'UTF-8'), ENT_COMPAT, 'UTF-8')));
 			$journalArticleNode->appendChild($abstractNode);
 		}
 
 		// publication date
-		$datePublished = $submission->getDatePublished() ? $submission->getDatePublished() : $issue->getDatePublished();
-		if ($datePublished) {
-			$journalArticleNode->appendChild($this->createPublicationDateNode($doc, $submission->getDatePublished()));
+		if ($datePublished = $publication->getData('datePublished')) {
+			$journalArticleNode->appendChild($this->createPublicationDateNode($doc, $datePublished));
 		}
 
 		// pages
 		// CrossRef requires first_page and last_page of any contiguous range, then any other ranges go in other_pages
-		$pages = $submission->getPageArray();
+		$pages = $publication->getPageArray();
 		if (!empty($pages)) {
 			$firstRange = array_shift($pages);
 			$firstPage = array_shift($firstRange);
@@ -167,18 +169,17 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 
 		// license
-		if ($submission->getLicenseUrl()) {
+		if ($publication->getData('licenseURL')) {
 			$licenseNode = $doc->createElementNS($deployment->getAINamespace(), 'ai:program');
 			$licenseNode->setAttribute('name', 'AccessIndicators');
-			$licenseNode->appendChild($node = $doc->createElementNS($deployment->getAINamespace(), 'ai:license_ref', htmlspecialchars($submission->getLicenseUrl(), ENT_COMPAT, 'UTF-8')));
+			$licenseNode->appendChild($node = $doc->createElementNS($deployment->getAINamespace(), 'ai:license_ref', htmlspecialchars($publication->getData('licenseURL'), ENT_COMPAT, 'UTF-8')));
 			$journalArticleNode->appendChild($licenseNode);
 		}
 
 		// DOI data
-		$doiDataNode = $this->createDOIDataNode($doc, $submission->getStoredPubId('doi'), $request->url($context->getPath(), 'article', 'view', $submission->getBestId(), null, null, true));
+		$doiDataNode = $this->createDOIDataNode($doc, $publication->getStoredPubId('doi'), $request->url($context->getPath(), 'article', 'view', $submission->getBestId(), null, null, true));
 		// append galleys files and collection nodes to the DOI data node
-		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleys = $articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId());
+		$galleys = $publication->getData('galleys');
 		// All full-texts, PDF full-texts and remote galleys for text-mining and as-crawled URL
 		$submissionGalleys = $pdfGalleys = $remoteGalleys = array();
 		// preferred PDF full-text for the as-crawled URL
@@ -186,7 +187,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// get immediatelly also supplementary files for component list
 		$componentGalleys = array();
 		$genreDao = DAORegistry::getDAO('GenreDAO');
-		while ($galley = $galleys->next()) {
+		foreach ($galleys as $galley) {
 			// filter supp files with DOI
 			if (!$galley->getRemoteURL()) {
 				$galleyFile = $galley->getFile();
@@ -201,7 +202,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 						$submissionGalleys[] = $galley;
 						if ($galley->isPdfGalley()) {
 							$pdfGalleys[] = $galley;
-							if (!$pdfGalleyInArticleLocale && $galley->getLocale() == $submission->getLocale()) {
+							if (!$pdfGalleyInArticleLocale && $galley->getLocale() == $locale) {
 								$pdfGalleyInArticleLocale = $galley;
 							}
 						}

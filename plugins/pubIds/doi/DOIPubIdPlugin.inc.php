@@ -374,8 +374,8 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			return;
 		}
 
-		// DOIs are already available for Publications
-		if (get_class($object) === 'Publication') {
+		// DOIs are already added to property values for Publications and Galleys
+		if (get_class($object) === 'Publication' || get_class($object) === 'ArticleGalley') {
 			return;
 		}
 
