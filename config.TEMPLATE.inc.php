@@ -259,6 +259,9 @@ salt = "YouMustSetASecretKeyHere!!"
 ; The unique secret used for encoding and decoding API keys
 api_key_secret = ""
 
+; The unique secret used for validation urls
+signed_page_key_secret = ""
+
 ; The number of seconds before a password reset hash expires (defaults to 7200 / 2 hours)
 reset_seconds = 7200
 

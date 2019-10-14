@@ -158,6 +158,19 @@ class NotificationManager extends PKPNotificationManager {
 		return parent::getMgrDelegate($notificationType, $assocType, $assocId);
 	}
 
+	/**
+	 * @copydoc PKPNotificationManager::getNotificationSettingsMap()
+	 */
+	public function getNotificationSettingsMap() {
+		$settingsMap = parent::getNotificationSettingsMap();
+		$settingsMap[NOTIFICATION_TYPE_PUBLISHED_ISSUE] = array(
+			'settingName' => 'notificationPublishedIssue',
+			'emailSettingName' => 'emailNotificationPublishedIssue',
+			'settingKey' => 'notification.type.issuePublished',
+		);
+		return $settingsMap;
+	}
+
 }
 
 

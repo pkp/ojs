@@ -20,7 +20,7 @@
 <br />
 Link: {$url}<br />
 <br />
-{$principalContactSignature}]]></body>
+{$principalContactSignature} {$unsubscribeLink}]]></body>
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">

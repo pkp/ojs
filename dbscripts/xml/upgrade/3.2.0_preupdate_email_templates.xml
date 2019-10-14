@@ -102,5 +102,10 @@
 			SET to_role_id=4097
 			WHERE to_role_id=768 OR to_role_id=8192
 		</query>
+		<sql>
+		<!-- unsubscribe url #5048 -->
+		<query>UPDATE email_templates_default_data SET body=concat(body, '{$unsubscribeLink}') where email_key = 'NOTIFICATION'</query>
+		<query>UPDATE email_templates_data SET body=concat(body, '{$unsubscribeLink}') where email_key = 'NOTIFICATION'</query>
+	</sql>
 	</sql>
 </data>
