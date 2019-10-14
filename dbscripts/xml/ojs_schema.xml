@@ -439,7 +439,7 @@
 			<NOTNULL />
 		</field>
 		<field name="current_publication_id" type="I8" />
-		<field name="date_status_modified" type="T"/>
+		<field name="date_last_activity" type="T"/>
 		<field name="date_submitted" type="T"/>
 		<field name="last_modified" type="T"/>
 		<field name="stage_id" type="I8">

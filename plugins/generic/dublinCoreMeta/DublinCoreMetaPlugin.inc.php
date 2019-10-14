@@ -83,7 +83,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		if ($issue && ($datePublished = $issue->getDatePublished())) {
 			$templateMgr->addHeader('dublinCoreDateIssued', '<meta name="DC.Date.issued" scheme="ISO8601" content="' . strftime('%Y-%m-%d', strtotime($issue->getDatePublished())) . '"/>');
 		}
-		if ($dateModified = $article->getDateStatusModified()) $templateMgr->addHeader('dublinCoreDateModified', '<meta name="DC.Date.modified" scheme="ISO8601" content="' . strftime('%Y-%m-%d', strtotime($dateModified)) . '"/>');
+		if ($dateModified = $article->getCurrentPublication()->getData('lastModified')) $templateMgr->addHeader('dublinCoreDateModified', '<meta name="DC.Date.modified" scheme="ISO8601" content="' . strftime('%Y-%m-%d', strtotime($dateModified)) . '"/>');
 
 		if ($publication) {
 			$i=0;

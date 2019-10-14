@@ -363,7 +363,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 						$dates[DATACITE_DATE_ACCEPTED] = $editDecision['dateDecided'];
 					}
 				}
-				// Last modified date (for articles): last$lastModifiede.
+				// Last modified date (for articles): last modified date.
 				$lastModified = $publication->getData('lastModified');
 				if (!empty($lastModified)) {
 					$dates[DATACITE_DATE_UPDATED] = $lastModified;
