@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+	* dbscripts/xml/upgrade/3.2.0_preupdate_last_activity.xml
+	*
+	* Copyright (c) 2013-2019 Simon Fraser University
+	* Copyright (c) 2003-2019 John Willinsky
+	* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+	*
+	* Migrate the old date_status_modified column in the submissions table to the
+	* new date_last_activity column.
+	*
+	-->
+
+<data>
+	<sql>
+		<query>
+			UPDATE submissions s SET date_last_activity = (
+				SELECT date_status_modified FROM temp_last_activity_submissions tlas WHERE tlas.submission_id = s.submission_id
+			)
+		</query>
+	</sql>
+</data>
