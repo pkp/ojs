@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:39-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:39-07:00\n"
+"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
+"PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
 "Language: \n"
 
 msgid "admin.hostedJournals"
@@ -18,19 +18,37 @@ msgid "admin.settings.journalRedirect"
 msgstr "Réacheminement vers la revue"
 
 msgid "admin.settings.journalRedirectInstructions"
-msgstr "Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue."
+msgstr "Les demandes faites au site principal seront réacheminées vers cette revue. Cela peut être utile si le site n'héberge, par exemple, qu'une seule revue."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seule une statistique d'utilisation doit être utilisée, par exemple pour afficher une liste ordonnée des articles les plus consultés ou pour classer les résultats de recherche. Veuillez sélectionner l'une des mesures configurées par défaut. "
+
+msgid "admin.languages.confirmDisable"
+msgstr "Êtes-vous certain-e de vouloir désactiver cette langue ? Ceci affectera toute revue actuellement hébergée utilisant cette langue."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Le téléchargement de fichiers de langue depuis le serveur web du Public Knowledge Project n'est pas disponible actuellement car : </p>\n"
+"<ul>\n"
+"<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU \"tar\". </li>\n"
+"<li>OJS est incapable de modifier le fichier de registre de langues, généralement \"registry/locales.xml\". </li>\n"
+"</ul>\n"
+"<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a href=\"http://pkp.sfu.ca\">site web PKP </a>.</p>"
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Cette langue sera la langue par défaut du site et de toute revue hébergée."
 
 msgid "admin.languages.supportedLocalesInstructions"
-msgstr "Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues."
+msgstr "Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (lequel peut être désactivé sur les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue ne s'affichera pas et les paramètres avançés de langue ne seront pas disponibles aux revues."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Les langues sélectionnées peuvent être incomplètes."
 
 msgid "admin.languages.confirmUninstall"
-msgstr "Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue."
+msgstr "Êtes-vous sûr de vouloir désinstaller cette langue ? Ceci affectera toute revue actuellement hébergée utilisant cette langue."
 
 msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées pas les revues hébergées. Lire la documentation d'OJS pour plus d'information sur la prise en charge de nouvelles langues."
+msgstr "Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées par les revues hébergées. Voir la documentation d'OJS pour plus de renseignements sur la prise en charge de nouvelles langues."
 
 msgid "admin.languages.downloadFailed"
 msgstr "Le téléchargement de la langue a échoué. Des explications sont contenues dans le message d'erreur ci-dessous."
@@ -42,31 +60,34 @@ msgid "admin.languages.download"
 msgstr "Télécharger la langue"
 
 msgid "admin.languages.download.cannotOpen"
-msgstr "Impossible d'ouvrir le descripteur de langue du site Web de PKP."
+msgstr "Impossible d'ouvrir le descripteur de langue depuis le site Web de PKP."
 
 msgid "admin.languages.download.cannotModifyRegistry"
-msgstr "Impossible d'ajouter la nouvelle langue au fichier de registre de langue, généralement \"registry/locales.xml\"."
+msgstr "Impossible d'ajouter la nouvelle langue au fichier de registre de langues, généralement \"registry/locales.xml\"."
 
 msgid "admin.auth.ojs"
 msgstr "Base de données utilisateur d'OJS"
 
 msgid "admin.auth.enableSyncProfiles"
-msgstr "Activer la synchronisation du profil de l'utilisateur (si prise en charge par ce plugiciel d'authentification). Les informations du profil de l'utilisateur seront automatiquement mises à jour depuis la source distante quand un utilisateur se connecte, et les modifications du profil (y compris le mot de passe) effectuées dans OJS vont automatiquement être mises à jour sur la source distante. Si cette option n'est pas activée, les informations du profil OJS vont rester séparées de celles du profil sur la source distante."
+msgstr "Activer la synchronisation du profil de l'utilisateur-trice (si prise en charge par ce plugiciel d'authentification). Les informations du profil de l'utilisateur-trice sont automatiquement mises à jour depuis la source distante quand un-e utilisateur-trice se connecte, et les modifications au profil (y compris le mot de passe) effectuées dans OJS sont automatiquement mises à jour sur la source distante. Si cette option n'est pas activée, les informations du profil OJS vont rester séparées de celles du profil sur la source distante."
 
 msgid "admin.auth.enableSyncPasswords"
-msgstr "Permettre la modification du mot de passe de l'utilisateur (si prise en charge par ce plugiciel d'authentification). Activer cette option permettra aux utilisateurs de modifier leurs mot de passe OJS et d'utiliser la fonction \"mot de passe oublié\" pour réinitialiser un mot de passe oublié. Ces fonctions ne seront pas disponibles pour les utilisateurs utilisant une source d'authentification où cette option n'est pas activée."
+msgstr "Permettre la modification du mot de passe de l'utilisateur-trice (si prise en charge par ce plugiciel d'authentification). Activer cette option permettra aux utilisateurs-trices de modifier leurs mot de passe OJS et d'utiliser la fonction « mot de passe oublié » pour réinitialiser un mot de passe oublié. Ces fonctions ne seront pas disponibles pour les utilisateurs-trices utilisant une source d'authentification où cette option n'est pas activée."
 
 msgid "admin.auth.enableCreateUsers"
-msgstr "Permettre la création d'utilisateurs (si supporté par ce plugiciel d'authentification).Les utilisateurs créés avec OJS à l'aide de cette source d'authentification vont automatiquement être ajoutés à la source d'authentification distante s'ils n'existent pas déjà. De plus, si cette source est la source d'authentification par défaut, les comptes OJS créés par l'intermédiaire d'une inscription d'utilisateur seront également ajoutés à la source distante d'authentification."
+msgstr "Permettre la création d'utilisateurs-trices (si supporté par ce plugiciel d'authentification). Les utilisateurs-trices créés-es avec OJS à l'aide de cette source d'authentification vont automatiquement être ajoutés-es à la source d'authentification distante s'ils n'existent pas déjà. De plus, si cette source est la source d'authentification par défaut, les comptes OJS créés par l'intermédiaire d'une inscription d'utilisateur-trice seront également ajoutés à la source distante d'authentification."
 
 msgid "admin.systemVersion"
-msgstr "Version OJS"
+msgstr "Version de OJS"
 
 msgid "admin.systemConfiguration"
-msgstr "Configuration OJS"
+msgstr "Configuration de OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "Paramètres de configuration OJS de <tt>config.inc.php</tt>."
+msgstr "Paramètres de configuration de OJS dans <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "Vous serez inscrit-e automatiquement en tant que directeur-trice de cette revue. Après avoir créé une nouvelle revue, vous serez redirigé-e vers l'assistant de configuration pour compléter la configuration initiale de la revue."
 
 msgid "admin.journals.journalSettings"
 msgstr "Paramètres de la revue"
@@ -74,35 +95,32 @@ msgstr "Paramètres de la revue"
 msgid "admin.journals.noneCreated"
 msgstr "Aucune revue n'a été créée."
 
-msgid "admin.contexts.confirmDelete"
-msgstr "Êtes-vous certain de vouloir supprimer définitivement cette revue et tout son contenu?"
-
 msgid "admin.contexts.create"
 msgstr "Créer une revue"
 
-msgid "admin.journals.createInstructions"
-msgstr "Vous serez inscrit automatiquement en tant que responsable de cette revue. Après avoir créé une nouvelle revue, entrez-y à titre de responsable pour poursuivre sa configuration et pour l'inscription à des rôles des utilisateurs."
-
 msgid "admin.journals.urlWillBe"
-msgstr "Ça devrait être un mot court ou un acronyme qui identifie la revue. L'URL de la revue sera {$sampleUrl}"
+msgstr "Ceci devrait être un mot court ou un acronyme qui identifie la revue. L'URL de la revue sera {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Un titre est requis."
 
 msgid "admin.contexts.form.pathRequired"
-msgstr "Le chemin est obligatoire."
+msgstr "Le chemin d'accès est obligatoire."
 
 msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr "Le chemin ne peut contenir que des caractères alphanumériques, des caractères de soulignement, et des tirets, et doit commencer et finir par un caractère alphanumérique."
+msgstr "Le chemin d'accès ne peut contenir que des caractères alphanumériques, des caractères de soulignement, ou des tirets, et doit commencer et finir par un caractère alphanumérique."
 
 msgid "admin.contexts.form.pathExists"
-msgstr "Le chemin sélectionné est déjà utilisé par une autre revue."
+msgstr "Le chemin d'accès sélectionné est déjà utilisé par une autre revue."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Permettre à cette revue d'apparaître publiquement sur le site"
 
-msgid "admin.contexts.contextDescription"
+msgid "admin.journals.contextDescription"
 msgstr "Description de la revue"
 
 msgid "admin.journal.pathImportInstructions"
-msgstr "Chemin d'accès à la revue existant ou à créer (par ex., \"ojs\")."
+msgstr "Chemin d'accès à la revue existant ou à créer (par exemple  « ojs »)."
 
 msgid "admin.journals.importSubscriptions"
 msgstr "Importer les abonnements"
@@ -120,37 +138,25 @@ msgid "admin.journals.importErrors"
 msgstr "L'importation a échoué"
 
 msgid "admin.mergeUsers"
-msgstr "Fusionner les utilisateurs"
+msgstr "Fusionner les utilisateurs-trices"
 
 msgid "admin.mergeUsers.mergeUser"
-msgstr "Fusionner l'utilisateur"
+msgstr "Fusionner l'utilisateur-trice"
 
 msgid "admin.mergeUsers.into.description"
-msgstr "Sélectionner un utilisateur à qui attribuer la paternité des textes, les assignations de révisions etc. de l'utilisateur précédent."
+msgstr "Sélectionner un-e utilisateur-trice à qui attribuer la paternité des textes, les assignations de révisions, etc. de l'utilisateur-trice précédent-e."
 
 msgid "admin.mergeUsers.from.description"
-msgstr "Sélectionner un utilisateur à fusionner au compte d'un autre utilisateur (par ex. : lorsque quelqu'un possède deux comptes utilisateur). Le compte sélectionné en premier sera supprimé et ses soumissions, assignations, etc. seront affectées au second compte."
+msgstr "Sélectionner un-e (ou plusieurs) utilisateur-trice-s à fusionner au compte d'un-e autre utilisateur-trice (par exemple lorsque quelqu'un possède deux comptes utilisateur). Le(s) compte(s) sélectionné(s) en premier seront supprimés et ses soumissions, assignations, etc. seront affectées au second compte."
 
 msgid "admin.mergeUsers.allUsers"
-msgstr "Tous les utilisateurs inscrits à des rôles"
+msgstr "Tous les utilisateurs-trices inscrits-es à des rôles"
 
 msgid "admin.mergeUsers.confirm"
-msgstr "Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur \"{$oldAccountCount}\" avec le compte portant le nom d'utilisateur \"{$newUsername}\"? Le compte portant le nom d'utilisateur \"{$oldAccountCount}\" sera supprimé. Cette action n'est pas réversible."
+msgstr "Êtes-vous certain-e de vouloir fusionner le compte portant le nom d'utilisateur-trice « {$oldAccountCount} » avec le compte portant le nom d'utilisateur-trice « {$newUsername} » ? Le compte portant le nom d'utilisateur-trice « {$oldAccountCount} » sera supprimé. Cette action est irréversible."
 
 msgid "admin.mergeUsers.noneEnrolled"
-msgstr "Aucun utilisateur inscrit."
-
-msgid "admin.locale.maybeIncomplete"
-msgstr "Les langues sélectionnées peuvent être incomplètes."
-
-msgid "admin.settings.defaultMetricDescription"
-msgstr "Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut."
-
-msgid "admin.languages.confirmDisable"
-msgstr "Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance."
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "Un titre est requis."
+msgstr "Utilisateurs-trices non inscrits-es."
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Rappel d'expiration d'abonnement"
@@ -160,12 +166,3 @@ msgstr "Avis de libre accès"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Rappel d'évaluation"
-
-msgid "admin.languages.downloadUnavailable"
-msgstr ""
-"<p>Le téléchargement de fichiers de langue depuis le serveur Web Public Knowledge Project n'est pas disponible actuellement car: </p>\n"
-"<ul>\n"
-"<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU \"tar\". </li>\n"
-"<li>OJS est incapable de modifier le fichier de registre régional, généralement \"registry/locales.xml\". </li>\n"
-"</ul>\n"
-"<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a href=\"http://pkp.sfu.ca\"> site Web PKP </a>. </p>"

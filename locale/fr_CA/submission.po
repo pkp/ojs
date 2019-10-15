@@ -7,54 +7,15 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:40-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:40-07:00\n"
+"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
+"PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
 "Language: \n"
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Les prénom, nom et adresse courriel de chaque auteur sont requis."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Inscrire le titre de votre article."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Inscrire le résumé de votre article."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Sélectionner le rôle du contributeur."
-
-msgid "submission.citationFormat.notFound"
-msgstr "Le format de citation n'a pas été repéré."
-
-msgid "submission.metadataDescription"
-msgstr "Ces spécifications sont basées sur l'ensemble d'éléments de métadonnées de Dublin Core, une norme internationale utilisée pour décrire les contenus d'une revue."
-
-msgid "submission.incomplete"
-msgstr "En attente d'approbation"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Sélectionner une langue pour la soumission"
-
-msgid "submission.submit.submissionChecklist"
-msgstr "Liste de vérification de la soumission"
-
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Lire et cocher les éléments suivants pour indiquer que vous répondez aux exigences."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Déclaration de confidentialité"
-
-msgid "submission.submit.contributorRole"
-msgstr "Rôle du contributeur"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Au moins un auteur est requis."
 
 msgid "submission.submit.title"
 msgstr "Soumettre un article"
 
 msgid "submission.submit.userGroup"
-msgstr "Rôle"
+msgstr "Soumettre en tant que (rôle)..."
 
 msgid "submission.submit.userGroupDescription"
 msgstr "Choisissez le rôle sous lequel vous soumettez votre article."
@@ -66,7 +27,7 @@ msgid "submission.title"
 msgstr "Titre de l'article"
 
 msgid "submission.title.tip"
-msgstr "voici une variable avec une valeur erronée"
+msgstr "Par type de soumission, on entend « image », « texte » ou d'autres formats multimédias, y compris « logiciel » et « ressource interactive ». Veuillez choisir le type qui correspond le mieux à votre soumission. Vous trouverez des exemples au <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Commencer une nouvelle soumission dans"
@@ -77,86 +38,128 @@ msgstr "Nouvelle soumission"
 msgid "grid.action.workflow"
 msgstr "Processus éditorial pour la soumission"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "Le résumé doit contenir {$wordCount} mots ou moins."
+
 msgid "submission.issueEntry"
 msgstr "Métadonnées"
 
 msgid "submission.submit.whatNext.description"
-msgstr "La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers.  Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée."
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Envoyer en évaluation"
-
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Les métadonnées pour la publication de la soumission ont été mises à jour."
-
-msgid "submission.upload.fileContents"
-msgstr "Élément de l'article"
-
-msgid "submission.complete"
-msgstr "Approuvé"
-
-msgid "grid.action.issueEntry"
-msgstr "Voir les métadonnées de la soumission"
-
-msgid "submission.publication"
-msgstr "Publication"
+msgstr "La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Les épreuves se trouvent dans le dossier du numéro."
 
+msgid "grid.action.issueEntry"
+msgstr "Voir les métadonnées de la soumission"
+
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "L'article mis en page \"{$galleyFormatName}\" est disponible."
+msgstr "Les épreuves de l'article en format \"{$galleyFormatName}\" sont disponibles."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "L'article mis en page \"{$galleyFormatName}\" n'est pas disponible."
+msgstr "Les épreuves de l'article en format \"{$galleyFormatName}\" ne sont pas disponibles."
 
 msgid "submission.event.publicIdentifiers"
-msgstr "Identifiants publics mis à jour."
+msgstr "Identifiants publics de la soumission mis à jour."
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Approbation du format"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Ce mod`èle de mise en page <em>ne sera plus offert</em>aux lecteurs</p>."
+msgstr "<p>Ces épreuves <em>ne seront plus mises à la disposition</em> des lecteurs-trices</p>."
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Ce mod`èle de mise en page <em>sera offert</em>aux lecteurs</p>."
+msgstr "<p>Ces épreuves <em>seront mises à la disposition</em> des lecteurs</p>."
 
 msgid "grid.action.availableArticleGalley"
-msgstr "Rendre ce modèle de mise en page disponible"
+msgstr "Rendre ces épreuves disponibles"
 
 msgid "submission.galleyFiles"
-msgstr "Fichiers de mise en page"
+msgstr "Fichiers des épreuves"
 
 msgid "submission.proofReadingDescription"
-msgstr "Le responsable de la mise en page télécharge les fichiers qui ont été préparés pour publication ici.  Utiliser <em>Assigner un vérificateur</em> pour identifier les auteurs et les autres personnes qui reliront les articles mis en page, avec les fichiers corrigés téléchargés, pour approbation avant la publication."
+msgstr "Le ou la responsable de la mise en page téléverse ici les fichiers qui ont été préparés pour publication. Utiliser « Assigner un-e vérificateur-trice » pour identifier les auteurs-es et autres personnes qui vérifieront les épreuves, à partir des fichiers corrigés téléversés, pour approbation avant la publication."
 
 msgid "grid.action.approveProof"
-msgstr "Approuver cette épreuve."
+msgstr "Approuver cette version pour inclusion dans les épreuves."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Cette épreuve a été approuvée."
+msgstr "Cette version a été approuvée pour inclusion dans les épreuves."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Titre et résumé"
 
 msgid "submission.submit.upload.description"
-msgstr "Télécharger les fichier associés à la soumission, incluant l'article, les fichiers multimedia, les ensembles de données, les oeuvres d'art, etc."
+msgstr "Téléverser les fichier associés à cette soumission, incluant l'article, les fichiers multimédias, les ensembles de données, les oeuvres d'art, etc."
 
 msgid "submission.pageProofs"
 msgstr "Correction d'épreuve"
 
 msgid "submission.confirmSubmit"
-msgstr "Êtes-vous certain de vouloir soumettre cet article à la revue?"
+msgstr "Êtes-vous certain-e de vouloir soumettre cet article à la revue ?"
 
 msgid "workflow.review.externalReview"
 msgstr "Évaluation"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Le résumé doit contenir {$wordCount} mots ou moins."
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Envoyer en évaluation"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Les métadonnées du numéro de la soumission ont été mises à jour."
+
+msgid "submission.upload.fileContents"
+msgstr "Élément de l'article"
+
+msgid "submission.complete"
+msgstr "Approuvé-e"
+
+msgid "submission.incomplete"
+msgstr "En attente d'approbation"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Sélectionner une langue pour la soumission"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Liste de vérification de la soumission"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Vous devez lire et reconnaître que vous remplissez les conditions ci-dessous avant de pouvoir poursuivre."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Déclaration de confidentialité"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rôle du,de la contributeur-trice"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Au moins un-e auteur-e est requis-e."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Les prénom, nom et adresse courriel de chaque auteur-e sont requis."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Veuillez inscrire le titre de votre article."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Veuillez inscrire le résumé de votre article."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée."
+msgstr "Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée pour cette rubrique."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Sélectionner le rôle du,de la contributeur-trice."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Le format de citation n'a pas été repéré."
+
+msgid "submission.metadataDescription"
+msgstr "Ces spécifications sont basées sur le schéma de métadonnées du Dublin Core, une norme internationale utilisée pour décrire les contenus d'une revue."
 
 msgid "section.any"
-msgstr "Aucune rubrique"
+msgstr "Toute rubrique"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} titres"
+
+msgid "catalog.category.heading"
+msgstr "Tous les titres"

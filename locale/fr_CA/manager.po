@@ -7,27 +7,39 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-27T09:54:40-07:00\n"
-"PO-Revision-Date: 2019-09-27T09:54:40-07:00\n"
+"POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
+"PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
 "Language: \n"
 
+msgid "manager.website.archiving"
+msgstr "Archivage"
+
 msgid "manager.emails.confirmResetAll"
-msgstr "Êtes-vous certain de vouloir réinitialiser tous les modèles de courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées."
+msgstr "Êtes-vous certain-e de vouloir réinitialiser tous les modèles de courriels dans cette revue ? Vous allez perdre toutes les personnalisations que vous avez effectuées."
 
 msgid "manager.files.note"
-msgstr "Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement."
+msgstr "Note : L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement."
 
 msgid "manager.journalManagement"
 msgstr "Gestion de la revue"
+
+msgid "manager.language.ui"
+msgstr "Interface utilisateur"
+
+msgid "manager.language.submissions"
+msgstr "Soumissions"
+
+msgid "manager.language.forms"
+msgstr "Formulaires"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "Ceci remplacera n'importe quel paramètre de langue spécifique à une revue que vous aviez pour cette langue."
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS peut être mis à la disposition des utilisateurs dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br />Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS."
+msgstr "OJS peut être mis à la disposition des utilisateurs-trices dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs-trices d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br />Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur-trice de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS."
 
 msgid "manager.languages.noneAvailable"
-msgstr "Malheureusement, aucune autre langue n'est disponible. Veuillez communiquer avec votre administrateur de site si vous désirez utiliser d'autres langues avec cette revue."
+msgstr "Malheureusement, aucune autre langue n'est disponible. Veuillez communiquer avec votre administrateur-trice de site si vous désirez utiliser d'autres langues pour cette revue."
 
 msgid "manager.languages.primaryLocaleInstructions"
 msgstr "Cette langue sera la langue par défaut du site de la revue."
@@ -45,10 +57,10 @@ msgid "manager.payment.amount"
 msgstr "Montant"
 
 msgid "manager.payment.authorFees"
-msgstr "Droits d'auteur"
+msgstr "Frais de publication pour un article"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront à l'étape 1 du processus de soumission et dans la section À propos de la revue, sous Soumissions, ainsi qu'aux étapes où un paiement est requis."
+msgstr "Spécifier le montant des frais ci-dessous pour charger des frais de publication aux auteurs-es"
 
 msgid "manager.payment.currencymessage"
 msgstr "OJS n'effectue pas la conversion des devises. Si vous acceptez les paiements pour les abonnements, veuillez vous assurer que la devise d'abonnement correspond à celle spécifiée ici."
@@ -57,7 +69,7 @@ msgid "manager.payment.description"
 msgstr "Description"
 
 msgid "manager.payment.details"
-msgstr "Détails"
+msgstr "Renseignements"
 
 msgid "manager.payment.editSubscription"
 msgstr "Modification de l'abonnement"
@@ -69,13 +81,13 @@ msgid "manager.payment.feePaymentOptions"
 msgstr "Options de paiement des frais"
 
 msgid "manager.payment.form.numeric"
-msgstr "Tous les frais doivent avoir une valeur numérique positive (les signes décimaux sont permis)"
+msgstr "Tous les montants doivent avoir une valeur numérique positive (signes décimaux permis)"
 
 msgid "manager.payment.generalFees"
 msgstr "Frais généraux"
 
 msgid "manager.payment.generalFeesDescription"
-msgstr "L'adhésion à l'association apparaîtra dans À propos de la revue, sous Politiques, et le lien pour faire des dons apparaîtra au-dessus de la fonction de recherche, dans l'encadré latéral de droite."
+msgstr "L'adhésion à l'association apparaîtra dans « À propos » de la revue, sous « Politiques », et le lien pour faire des dons apparaîtra au-dessus de la fonction de recherche, dans l'encadré latéral de droite."
 
 msgid "manager.payment.generalOptions"
 msgstr "Options générales"
@@ -90,10 +102,13 @@ msgid "manager.payment.options"
 msgstr "Options"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
-msgstr "Cela activera l'application des paiements d'abonnements où les types, les frais et les utilisateurs sont gérés par le responsable des abonnements."
+msgstr "Cela activera l'application des paiements d'abonnements où les types, frais et périodes sont gérés par le,la responsable des abonnements de la revue."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Êtes-vous certain-e de vouloir supprimer cet abonnement ?"
 
 msgid "manager.payment.options.enablePayments"
-msgstr "Cliquez ici pour activer le module de Paiements. Vous devez remplir le formulaire ci-dessous pour configurer les paramètres de paiements. Veuillez noter que les utilisateurs doivent se connecter pour effectuer leurs paiements."
+msgstr "Les paiement seront activés pour cette revue. Veuillez noter que les utilisateurs-trices doivent se connecter pour effectuer des paiements."
 
 msgid "manager.payment.options.fee"
 msgstr "Frais"
@@ -108,19 +123,22 @@ msgid "manager.payment.options.membershipFee"
 msgstr "Adhésion à l'association"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "Limiter l'accès suniquement aux articles en format PDF"
+msgstr "Limiter l'accès uniquement aux articles et numéros en format PDF"
 
 msgid "manager.payment.options.publicationFee"
-msgstr "Publication d'article"
+msgstr "Frais de publication d'article"
 
 msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Acheter un article"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Acheter un numéro"
 
 msgid "manager.payment.options.text"
 msgstr "Description de la méthode de paiement"
 
 msgid "manager.payment.paymentId"
-msgstr "ID du paiement"
+msgstr "Identifiant (ID) du paiement"
 
 msgid "manager.payment.paymentMethod"
 msgstr "Mode de paiement"
@@ -138,73 +156,88 @@ msgid "manager.payment.readerFees"
 msgstr "Frais de lecture"
 
 msgid "manager.payment.readerFeesDescription"
-msgstr "Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront À propos de la revue, sous Politiques, ainsi qu'aux étapes où un paiement est requis."
+msgstr "Les options choisies, ainsi que leurs descriptions et frais (qui peuvent être modifiés ci-dessous) apparaîtront dans « À propos » de la revue, sous « Politiques », ainsi qu'aux endroits où un paiement est requis."
 
 msgid "manager.payment.records"
 msgstr "Enregistrements"
 
+msgid "manager.paymentTypes"
+msgstr "Types de paiement"
+
 msgid "manager.payment.userName"
-msgstr "ID du paiement"
+msgstr "Identifiant (ID) du paiement"
 
 msgid "manager.people.allEnrolledUsers"
-msgstr "Utilisateurs inscrits à cette revue"
+msgstr "Utilisateurs-trices inscrits-es à cette revue"
 
 msgid "manager.people.allJournals"
 msgstr "Toutes les revues"
 
 msgid "manager.people.allSiteUsers"
-msgstr "Inscrire un utilisateur à cette revue à partir de ce site"
+msgstr "Inscrire un-e utilisateur-trice à cette revue à partir de ce site"
+
+msgid "manager.people.showNoRole"
+msgstr "Afficher les utilisateurs-trices qui n'ont aucun rôle"
 
 msgid "manager.people.allUsers"
-msgstr "Tous les utilisateurs inscrits"
+msgstr "Tous (Toutes) les utilisateurs-trices inscrits-es"
 
 msgid "manager.people.confirmRemove"
-msgstr "Supprimer cet utilisateur de cette revue? Cette action désinscrira l'utilisateur de tous les rôles dans cette revue."
+msgstr "Supprimer cet ou cette utilisateur-trice de cette revue ? Cette action désinscrira l'utilisateur-trice de tous les rôles dans cette revue."
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Sélectionner un modèle"
 
 msgid "manager.people.enrollExistingUser"
-msgstr "Inscrire à un rôle un utilisateur actuel"
+msgstr "Inscrire à un rôle un-e utilisateur-trice actuel-elle"
 
 msgid "manager.people.enrollSyncJournal"
 msgstr "Avec la revue"
 
 msgid "manager.people.mergeUsers.from.description"
-msgstr "Choisir un utilisateur à fusionner dans un autre compte (par ex., quand quelqu'un a deux comptes utilisateurs). Le compte que vous choisissez en premier sera supprimé, et toutes les soumissions, assignations, etc. seront attribuées au second compte."
+msgstr "Choisir un-e ou plusieurs utilisateurs-trices à fusionner dans un autre compte (par exemple quand quelqu'un a deux comptes utilisateur). Le(s) compte(s) que vous choisissez en premier seront supprimés, et toutes les soumissions, assignations, etc. seront attribuées au second compte."
 
 msgid "manager.people.mergeUsers.into.description"
-msgstr "Sélecitonner un utilisateur à qui attribuer les privilèges et assignations de l'utilisateur précédent."
+msgstr "Sélectionner un-e utilisateur-trice à qui attribuer les privilèges et assignations de l'utilisateur-trice précédent-e."
 
 msgid "manager.people.roleEnrollment"
 msgstr "Inscription en tant que {$role}"
 
 msgid "manager.people.syncUserDescription"
-msgstr "La synchronisation de l'inscription inscrira tous les utilisateurs déjà inscrit à un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'utilisateurs (par ex., Évaluateurs) d'être synchronisés entre les différentes revues."
+msgstr "La synchronisation de l'inscription inscrira tous et toutes les utilisateurs-trices déjà inscrits-es à un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'utilisateurs-trices (par exemple « Évaluateurs-trices »)) d'être synchronisé entre les différentes revues."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Résumé non obligatoire"
 
+msgid "manager.section.noSectionEditors"
+msgstr "Aucun-e rédacteur-trice de rubrique n'a encore été désigné-e. Ajouter ce rôle à au moins un-e utilisateur-trice via « Administration > Paramètres > Rôles et utilisateurs-trices »."
+
 msgid "manager.sections.assigned"
-msgstr "Rédacteurs de cette rubrique"
+msgstr "Rédacteurs-trices de cette rubrique"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Êtes-vous certain-e de vouloir définitivement supprimer cette rubrique ?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Pour pouvoir supprimer cette rubrique, vous devez d'abord déplacer les articles qui y sont publiés dans d'autres rubriques."
 
 msgid "manager.sections.create"
 msgstr "Créer une rubrique"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Ajouter un Rédacteur de rubrique à cette rubrique afin que les soumissions soient automatiquement assignées à ce Rédacteur de rubrique. (Sinon, les Rédacteurs de rubriques peuvent être assignés manuellement, suite à la réception d'une soumission.) S'il a été ajouté, un Rédacteur de rubrique peut automatiquement être assigné pour superviser l'ÉVALUATION (évaluation par les pairs) et/ou la RÉVISION (révision, mise en page et correction d'épreuves) des soumissions de cette rubrique. Des Rédacteurs de rubrique peuvent être créés en cliquant sur Rédacteur de rubrique sous Rôles dans Gestion de la revue."
+msgstr "Ajouter un-e rédacteur-trice de rubrique à cette rubrique afin que les soumissions soient automatiquement assignées à ce ou cette rédacteur-trice de rubrique. (Sinon, les rédacteurs-trices de rubriques peuvent être assignés-es manuellement, suite à la réception d'une soumission.) S'il ou elle a été ajouté-e, un-e rédacteur-trice de rubrique peut automatiquement être assigné-e pour superviser l'ÉVALUATION (évaluation par les pairs) et/ou la RÉVISION (révision, mise en page et correction d'épreuves) des soumissions de cette rubrique. Des rédacteurs-trices de rubrique peuvent être créés-es en cliquant sur « Rédacteurs-trices de rubrique » sous « Rôles » dans « Gestion de la revue »."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Les articles ne peuvent être soumis que par les Rédacteurs et les Rédacteurs de rubrique."
+msgstr "Les articles ne peuvent être soumis que par les rédacteurs-trices et les rédacteurs-trices de rubrique."
 
 msgid "manager.sections.editors"
-msgstr "Rédacteurs de rubrique"
+msgstr "Rédacteurs-trices de rubrique"
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Un titre abrégé est obligatoire pour la rubrique"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "Veuillez vous assurer qu'au moins une case à cocher est sélectionnée pour chaque assignation à un Rédacteur de rubrique."
+msgstr "Veuillez vous assurer qu'au moins une case à cocher est sélectionnée pour chaque assignation à un-e rédacteur-trice de rubrique."
 
 msgid "manager.sections.form.reviewFormId"
 msgstr "Veuillez vous assurer que vous avez choisi un formulaire d'évaluation valide."
@@ -213,16 +246,16 @@ msgid "manager.sections.form.titleRequired"
 msgstr "Un titre est obligatoire pour la rubrique."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Omettre les noms des auteurs pour les articles de cette rubrique dans les sommaires des numéros."
+msgstr "Omettre les noms des auteurs-es pour les articles de cette rubrique dans les sommaires des numéros."
 
 msgid "manager.sections.hideTocTitle"
 msgstr "Omettre le titre de cette rubrique dans les sommaires des numéros."
 
 msgid "manager.sections.identifyType"
-msgstr "Identifier les articles publiés dans cette rubrique en tant que un(e)"
+msgstr "Identifier les articles publiés dans cette rubrique en tant que"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "Par exemple, « Article évalué par des pairs », « Compte-rendu de livre », « Note de recherche », etc."
+msgstr "(Par exemple : « Article évalué par des pairs », « Compte-rendu de livre », « Note de recherche », etc.)"
 
 msgid "manager.sections.indexed"
 msgstr "Indexé"
@@ -252,16 +285,43 @@ msgid "manager.section.submissionsToThisSection"
 msgstr "Soumissions faites à cette rubrique de la revue"
 
 msgid "manager.sections.unassigned"
-msgstr "Rédacteurs de rubrique disponibles"
+msgstr "Rédacteurs-trices de rubrique disponibles"
+
+msgid "manager.sections.wordCount"
+msgstr "Nombre de mots"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Limiter le nombre de mots du résumé pour cette rubrique (0 pour aucune limite)"
 
 msgid "manager.setup"
-msgstr "Configuration"
+msgstr "Configuration de la revue"
+
+msgid "manager.setup.masthead"
+msgstr "Bloc générique"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Comité éditorial"
+
+msgid "manager.setup.homepageContent"
+msgstr "Contenu de la page d'accueil de la revue"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "La page d'accueil de la revue consiste par défaut en liens pour la navigation. Des contenus additionnels peuvent y être ajoutés en utilisant une ou toutes les options suivantes, qui apparaîtront dans l'ordre indiqué."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Feuille de style de la revue"
+
+msgid "manager.setup.contextName"
+msgstr "Nom de la revue"
+
+msgid "manager.setup.pageHeader"
+msgstr "Page d'en-tête de la revue"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "Contenu"
 
 msgid "manager.setup.addAboutItem"
-msgstr "Ajouter un élément À propos"
+msgstr "Ajouter un élément « À propos »"
 
 msgid "manager.setup.addChecklistItem"
 msgstr "Ajouter un élément à la liste de vérification"
@@ -270,19 +330,19 @@ msgid "manager.setup.addItem"
 msgstr "Ajouter un élément"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "Ajouter un élément à afficher dans  « À propos de la revue »"
+msgstr "Ajouter un élément à afficher dans « À propos » de la revue"
 
-msgid "bon "
+msgid "manager.setup.addNavItem"
 msgstr "Ajouter un élément"
 
 msgid "manager.setup.addReviewerDatabaseLink"
 msgstr "Ajouter un nouveau lien de base de données"
 
 msgid "manager.setup.addSponsor"
-msgstr "Ajouter un commanditaire"
+msgstr "Ajouter un organisme commanditaire"
 
 msgid "manager.setup.alternateHeader"
-msgstr "En-tête secondaire"
+msgstr "En-tête alternatif"
 
 msgid "manager.setup.alternateHeaderDescription"
 msgstr "Au lieu du titre et du logo, une version HTML de l'en-tête peut aussi être insérée dans la zone de texte ci-dessous. Laisser la zone de texte vide si elle n'est pas obligatoire."
@@ -290,20 +350,26 @@ msgstr "Au lieu du titre et du logo, une version HTML de l'en-tête peut aussi �
 msgid "manager.setup.announcements"
 msgstr "Annonces"
 
-msgid "manager.setup.enableAnnouncements.description"
-msgstr "Des annonces peuvent être publiées pour informer les lecteurs de nouvelles et d'événements relatifs à la revue. Les annonces publiées apparaîtront sur la page des Annonces."
+msgid "manager.setup.announcementsDescription"
+msgstr "Des annonces peuvent être publiées pour informer les lecteurs-trices de nouvelles et d'événements relatifs à la revue. Les annonces publiées apparaîtront sur la page des Annonces."
 
 msgid "manager.setup.announcementsIntroduction.description"
-msgstr "Ajouter toute information additionnelle qui devrait être affichée aux lecteurs sur la page des Annonces."
+msgstr "Ajouter toute information additionnelle qui devrait être affichée aux lecteurs-trices sur la page des Annonces."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(À paraître dans À propos de la revue)"
+msgstr "(À paraître dans « À propos » de la revue)"
 
 msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "Les auteurs soumissionnaires doivent déposer une déclaration de conflits d'intérêts (CI) avec leur soumission."
+msgstr "Les auteurs-es soumissionnaires doivent déposer une déclaration de conflits d'intérêts avec leur soumission."
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Les évaluateurs doivent déposer une déclaration de CI avec chaque évaluation par les pairs qu'ils soumettent."
+msgstr "Les évaluateurs-trices doivent déposer une déclaration de conflits d'intérêts avec chaque évaluation par les pairs soumise."
+
+msgid "manager.setup.history"
+msgstr "Historique de la revue"
+
+msgid "manager.setup.historyDescription"
+msgstr "Ce texte apparaîtra dans la section « À propos » du site Web de la revue et peut être utilisé pour décrire tout changement au titre de la revue, au comité éditorial, et tout autre élément d'intérêt dans l'histoire de la publication de la revue."
 
 msgid "manager.setup.metadata.coverage"
 msgstr "Couverture"
@@ -318,28 +384,28 @@ msgid "manager.setup.customizingTheLook"
 msgstr "Étape 5. Personnalisation de l'apparence"
 
 msgid "manager.setup.customTags"
-msgstr "Étiquettes personnalisées"
+msgstr "Balises personnalisées"
 
 msgid "manager.setup.customTagsDescription"
-msgstr "Étiquettes de l'en-tête HTML personnalisées à insérer dans les en-têtes de chaque page (par ex., étiquettes META)."
+msgstr "Balises personnalisées de l'en-tête HTML à insérer dans les en-têtes de chaque page (par exemple balises META)."
 
 msgid "manager.setup.details"
-msgstr "Détails"
+msgstr "Renseignements"
 
 msgid "manager.setup.details.description"
-msgstr "Nom de la revue, ISSN, contacts, commanditaires, et moteurs de recherche."
+msgstr "Nom de la revue, ISSN, personnes-ressources, organismes commanditaires, et moteurs de recherche."
 
 msgid "manager.setup.disableUserRegistration"
-msgstr "Le Directeur de la revue inscrit tous les utilisateurs, alors que les Rédacteurs et Rédacteurs de rubrique ne peuvent inscrire que les évaluateurs."
+msgstr "Le directeur de la revue se chargera d'inscrire tous et toutes les utilisateurs-trices. Les rédacteurs-trices et rédacteurs-trices de rubrique peuvent inscrire des évaluateurs-trices."
 
 msgid "manager.setup.discipline"
 msgstr "Discipline et sous-disciplines académiques"
 
 msgid "manager.setup.disciplineDescription"
-msgstr "Utile lorsque la revue va au-delà des limites de la discipline ou lorsque les auteurs présentent des articles multidisciplinaires."
+msgstr "Utile lorsque la revue va au-delà des limites de la discipline ou lorsque les auteurs-es présentent des articles multidisciplinaires."
 
 msgid "manager.setup.disciplineExamples"
-msgstr "(Par ex., Histoire; Éducation; Sociologie; Psychologie; Études culturelles; Droit)"
+msgstr "(par exemple : Histoire ; Éducation ; Sociologie ; Psychologie ; Études culturelles ; Droit)"
 
 msgid "manager.setup.disciplineProvideExamples"
 msgstr "Donner des exemples de disciplines académiques pertinentes pour cette revue"
@@ -348,16 +414,16 @@ msgid "manager.setup.displayCurrentIssue"
 msgstr "Ajouter le sommaire pour le numéro courant (si disponible)."
 
 msgid "manager.setup.editorDecision"
-msgstr "Décision du rédacteur"
+msgstr "Décision du,de la rédacteur-trice"
 
 msgid "manager.setup.emailBounceAddress"
-msgstr "Adresse de courriel pour les messages non délivrés"
+msgstr "Adresse de courriel pour les messages non remis"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr "Tout courriel non délivré entraînera un message d'erreur envoyé à cette adresse."
+msgstr "Tout courriel non remis entraînera un message d'erreur envoyé à cette adresse."
 
 msgid "manager.setup.emailBounceAddress.disabled"
-msgstr "<strong>Note :</strong> Pour activer cette option, l'administrateur du site Web doit activer l'option <tt>allow_envelope_sender</tt> dans le fichier de configuration d'OJS. Une configuration supplémentaire sur le serveur peut être requise afin de prendre en charge cette fonctionnalité, laquelle n'est pas possible sur tous les serveurs, tel qu'indiqué dans la documentation d'OJS."
+msgstr "<strong>Note :</strong> Pour activer cette option, l'administrateur-trice du site Web doit activer l'option <tt>allow_envelope_sender</tt> dans le fichier de configuration d'OJS. Une configuration supplémentaire sur le serveur peut être requise afin de prendre en charge cette fonctionnalité, laquelle n'est pas possible sur tous les serveurs, tel qu'indiqué dans la documentation d'OJS."
 
 msgid "manager.setup.emails"
 msgstr "Identification par courriel"
@@ -366,31 +432,34 @@ msgid "manager.setup.emailSignature"
 msgstr "Signature"
 
 msgid "manager.setup.emailSignature.description"
-msgstr "La signature suivante sera ajoutée à la fin de chaque courriel préparé et envoyé par le système au nom de la revue."
+msgstr "La signature suivante sera ajoutée à la fin de chaque courriel prédéfini envoyé par le système au nom de la revue."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Permettre aux Directeurs de revues d'ajouter des annonces relatives à la revue."
 
-msgid "manager.setup.enablePublicIssueId"
-msgstr "Des identifiants personnalisés seront utilisés pour identifier les numéros."
-
 msgid "manager.setup.enableUserRegistration"
-msgstr "Les utilisateurs peuvent s'inscrire eux-mêmes à la revue."
+msgstr "Les utilisateurs-trices peuvent s'inscrire eux-mêmes et elles-mêmes à la revue."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Énoncé de mission"
 
+msgid "manager.setup.focusAndScope.description"
+msgstr "Décrire aux auteurs-es, aux lecteurs-trices et aux bibliothécaires les types d'articles et autres écrits publiés dans la revue."
+
 msgid "manager.setup.forAuthorsToIndexTheirWork"
-msgstr "Aide aux auteurs pour l'indexation de leur travail"
+msgstr "Aide aux auteurs-es pour l'indexation de leur travaux"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "OJS se conforme à l'<a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata Harvesting, qui devient la norme offrant un point d'accès bien indexé à des ressources de recherche numériques à l'échelle mondiale. Les auteurs utiliseront un modèle semblable pour fournir des métadonnées pour leur soumission. Le directeur de la revue doit sélectionner les catégories pour l'indexation et présenter aux auteurs des exemples pertinents afin de les aider à indexer leur travail, en séparant les termes par un point-virgule (par ex., terme1; terme2). Les entrées doivent être présentées comme des exemples selon la formule « Par ex., » ou « Par exemple, »."
+msgstr "OJS se conforme à l'<a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata Harvesting, qui constitue, à l'échelle mondiale, la nouvelle norme d'indexation des ressources numériques issues de la recherche. Les auteurs-es utiliseront un modèle semblable pour fournir des métadonnées pour leur soumission. Le,La directeur-trice de la revue devra sélectionner les catégories pour l'indexation et présenter aux auteurs-es des exemples pertinents afin de les aider à indexer leur travail."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "L'ISSN inscrit n'est pas valide."
 
 msgid "manager.setup.form.contactEmailRequired"
-msgstr "L'adresse de courriel du contact principal est obligatoire."
+msgstr "L'adresse de courriel de la personne-ressource principale est obligatoire."
 
 msgid "manager.setup.form.contactNameRequired"
-msgstr "Le nom du contact principal est obligatoire."
+msgstr "Le nom de la personne-ressource principale est obligatoire."
 
 msgid "manager.setup.form.journalInitialsRequired"
 msgstr "L'abbréviation de la revue est obligatoire."
@@ -399,19 +468,19 @@ msgid "manager.setup.form.journalTitleRequired"
 msgstr "Le titre de la revue est obligatoire."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "Le nombre d'évaluateurs par soumission est obligatoire."
+msgstr "Le nombre d'évaluateurs-trices par soumission est obligatoire."
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr "Le courriel du soutien est obligatoire."
+msgstr "Le courriel du,de la responsable du soutien technique est obligatoire."
 
 msgid "manager.setup.form.supportNameRequired"
-msgstr "Le nom du soutien est obligatoire."
+msgstr "Le nom du,de la responsable du soutien technique est obligatoire."
 
 msgid "manager.setup.generalInformation"
 msgstr "Information générale"
 
 msgid "manager.setup.gettingDownTheDetails"
-msgstr "Étape 1. Consignation des détails"
+msgstr "Étape 1. Consignation des renseignements"
 
 msgid "manager.setup.guidelines"
 msgstr "Directives"
@@ -419,47 +488,71 @@ msgstr "Directives"
 msgid "manager.setup.guidingSubmissions"
 msgstr "Étape 3. Orienter les soumissions"
 
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Pour les revues qui offrent le libre accès immédiatement ou en différé, ajouter une licence Creative Commons à toutes les publications au moment approprié."
+
 msgid "manager.setup.information"
 msgstr "Information"
 
 msgid "manager.setup.information.description"
-msgstr "De brèves descriptions de la revue pour les bibliothécaires, les auteurs et lecteurs potentiels sont disponibles dans la rubrique \" Renseignements \" du menu latéral."
+msgstr "Une brève description de la revue pour les bibliothécaires, les auteurs-es et lecteurs-trices potentiels-elles est disponible dans la section « Renseignements », lorsqu'ajoutée au menu latéral."
 
 msgid "manager.setup.information.forAuthors"
-msgstr "Pour les auteurs"
+msgstr "Pour les auteurs-es"
 
 msgid "manager.setup.information.forLibrarians"
 msgstr "Pour les bibliothécaires"
 
 msgid "manager.setup.information.forReaders"
-msgstr "Pour les lecteurs"
+msgstr "Pour les lecteurs-trices"
 
 msgid "manager.setup.initialIssue"
 msgstr "Numéro initial"
 
 msgid "manager.setup.initialIssueDescription"
-msgstr "Selon le format sélectionné, identifier le numéro, le volume, et/ou l'année du premier numéro à être publié avec OJS :"
+msgstr "Selon le format sélectionné, identifie le numéro, le volume, et/ou l'année du premier numéro à être publié avec OJS :"
 
 msgid "manager.setup.institution"
-msgstr "Institution"
+msgstr "Établissement"
 
 msgid "manager.setup.itemsDescription"
-msgstr "Éléments de la barre de navigation pouvant être ajoutés à l'ensemble actuel (Page d'accueil, À propos, Accueil de l'utilisateur, etc.) apparaissant en haut de la page."
+msgstr "Éléments de la barre de navigation pouvant être ajoutés à l'ensemble actuel (« Page d'accueil », « À propos », « Accueil de l'utilisateur-trice », etc.) apparaissant en haut de la page."
 
 msgid "manager.setup.itemsPerPage"
 msgstr "Éléments par page"
 
 msgid "manager.setup.journalAbbreviation"
-msgstr "Titre cours de la revue"
+msgstr "Titre court de la revue"
 
 msgid "manager.setup.journalArchiving"
 msgstr "Archivage de la revue"
+
+msgid "manager.setup.contextSummary"
+msgstr "Résumé de la revue"
+
+msgid "manager.setup.contextSummary.description"
+msgstr "Une brève description de votre revue qui peut être affichée dans une liste de revues."
+
+msgid "manager.setup.journalAbout"
+msgstr "À propos"
+
+msgid "manager.setup.journalAbout.description"
+msgstr "Inclure tout renseignement sur votre revue qui serait d'intérêt pour les lecteurs-trices, auteurs-es ou évaluateurs-trices. Cela peut comprendre votre politique de libre accès, l'énoncé de mission, les questions entourant le droit d'auteur, la divulgation de commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans tout système d'archives LOCKSS ou CLOCKSS."
+
+msgid "manager.setup.favicon"
+msgstr "Favicône de la revue"
+
+msgid "manager.setup.faviconDescription"
+msgstr "Ajoute une favicône pour cette revue qui sera affiché à côté de la barre de navigation lorsque les utilisateurs-trices visitent votre site."
+
+msgid "manager.setup.faviconInvalid"
+msgstr "Format de favicône invalide. Les formats acceptés sont .ico, .png et .gif."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Contenu de la page d'accueil de la revue"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Par défaut, la page d'accueil consiste en des liens de navigation. On peut ajouter d'autre contenu à la page d'accueil en utilisant une ou plusieurs des options suivantes, qui apparaîtront dans l'ordre indiqué. Notez que le numéro courant est toujours accessible par le lien Numéro courant dans la barre de navigation."
+msgstr "Par défaut, la page d'accueil consiste en des liens de navigation. On peut ajouter d'autre contenu à la page d'accueil en utilisant une ou plusieurs des options suivantes, qui apparaîtront dans l'ordre indiqué. Noter que le numéro courant est toujours accessible par le lien « Numéro courant » dans la barre de navigation."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "En-tête de la page d'accueil de la revue"
@@ -468,7 +561,7 @@ msgid "manager.setup.journalHomepageHeader.altText"
 msgstr "En-tête de la page d'accueil de la revue"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "Une version graphique du titre et du logo de la revue (tel un fichier .gif, .jpg, ou .png) peut être téléchargée pour la page d'accueil, qui remplacera la version textuelle qui y figure habituellement."
+msgstr "Une version graphique du titre et du logo de la revue (tel un fichier .gif, .jpg, ou .png) peut être téléversée pour la page d'accueil, laquelle remplacera la version textuelle qui y figure habituellement."
 
 msgid "manager.setup.contextInitials"
 msgstr "Abréviation de la revue"
@@ -477,7 +570,7 @@ msgid "manager.setup.journalLayout"
 msgstr "Mise en page de la revue"
 
 msgid "manager.setup.journalLayoutDescription"
-msgstr "Sélectionner un thème de revue et les composantes de la mise en page. Une feuille de style de revue peut également être téléchargée, afin d'être utilisée en remplacement des données de style utilisées dans toutes les feuilles de style du système et les feuilles de style du thème (lorsqu'un thème est sélectionné)."
+msgstr "Sélectionner ici un thème de revue et les composantes de mise en page. Une feuille de style de revue peut également être téléchargée, afin d'être utilisée en remplacement des données de style utilisées dans toutes les feuilles de style du système et les feuilles de style du thème (lorsqu'un thème est sélectionné)."
 
 msgid "manager.setup.journalLogo"
 msgstr "Logo de la revue"
@@ -489,7 +582,7 @@ msgid "manager.setup.journalPageFooter"
 msgstr "Pied de page de la revue"
 
 msgid "manager.setup.journalPageFooterDescription"
-msgstr "Cela est le pied de page de votre revue. Pour modifier ou mettre à jour le pied de page, copier le code HTML dans la zone de texte ci-dessous. Des exemples pourraient être une autre barre de navigation, un compteur, etc. Ce pied de page figurera dans toutes les pages."
+msgstr "Ceci est le pied de page de votre revue. Pour modifier ou mettre à jour le pied de page, copier le code HTML dans la zone de texte ci-dessous. Par exemple il pourrait s'agir d'une autre barre de navigation, d'un compteur, etc. Ce pied de page figurera sur toutes les pages."
 
 msgid "manager.setup.journalPolicies"
 msgstr "Étape 2. Politiques de la revue"
@@ -501,25 +594,73 @@ msgid "manager.setup.journalSetupUpdated"
 msgstr "La configuration de votre revue a été mise à jour."
 
 msgid "manager.setup.journalStyleSheetInvalid"
-msgstr "Format de feuille de style de la revue non valide. Le format accepté .css."
+msgstr "Format de feuille de style de la revue non valide. Le format accepté est le format .css."
 
 msgid "manager.setup.journalTheme"
 msgstr "Thème de la revue"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Vignette de la revue"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Un logo ou une petite image de la revue, laquelle peut être utilisée dans des listes de revues."
 
 msgid "manager.setup.contextTitle"
 msgstr "Titre de la revue"
 
 msgid "manager.setup.labelName"
-msgstr "Nom de l'étiquette"
+msgstr "Nom du libellé"
 
 msgid "manager.setup.lists"
 msgstr "Listes"
 
+msgid "manager.setup.plnPluginEnable"
+msgstr "Plugiciel PKP PN activé"
+
+msgid "manager.setup.plnDescription"
+msgstr "Le PKP Preservation Network (PN) fournit des services de préservation gratuits pour toutes les revues sur OJS qui répondent à quelques critères de base."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Cliquer sur le lien  « Paramètres » pour accepter les conditions d'utilisation de PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "Le PKP Preservation Network (PN) fournit des services de préservation gratuits pour toutes les revues sur OJS qui répondent à quelques critères de base. Le plugiciel PKP PN pour OJS 3 est présentement en développement et sera bientôt disponible dans la galerie de plugiciels."
+
+msgid "manager.setup.otherLockss"
+msgstr "Options d'archivage alternatives"
+
 msgid "manager.setup.lockssEnable"
-msgstr "Activer LOCKSS pour stocker et distribuer le contenu de la revue aux bibliothèques participantes via une page <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> LOCKSS. Une licence LOCKSS apparaîtra dans « À propos de la revue » sous Archivage :"
+msgstr "Activer LOCKSS pour stocker et distribuer le contenu de la revue aux bibliothèques participantes via une page <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> LOCKSS."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "Une licence LOCKSS apparaîtra dans la section « À propos » de cette revue sous « Archiver » : <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Licence LOCKSS</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Description de la licence LOCKSS"
 
 msgid "manager.setup.lockssRegister"
-msgstr "Identifier 6 à 10 bibliothèques qui enregistreront et mettreront en cache la revue. Par exemple, ayez recours à des institutions dont les Rédacteurs ou les Membres de la direction participent déjà à LOCKSS. Voir <a href=\"http://lockss.org/lockss/Libraries\" target=\"_blank\">les bibliothèques participantes</a>. Utiliser les invitations préparées pour les (i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">bibliothèques participantes dans LOCKSS</a> ou (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">bibliothèques non participantes dans LOCKSS</a>."
+msgstr "Identifier 6 à 10 bibliothèques qui enregistreront et mettreront en cache la revue. Ayez par exemple recours à des institutions dont les rédacteurs-trices ou les membres de la direction participent déjà à LOCKSS. Consulter <a href=\"http://www.lockss.org/community/\" target=\"_blank\">la communauté LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Activer CLOCKSS pour stocker et distribuer les contenus de la revue dans les bibliothèques participantes via une page CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "Une licence CLOCKSS apparaîtra dans la section « À propos » de cette revue sous « Archiver » : <a href=\"http://clockss.org/\" target=\"_blank\">Licence CLOCKSS</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Description de la licence CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Inscrivez-vous au service CLOCKSS en visitant le site Web de <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
 msgstr "L'apparence"
@@ -549,22 +690,22 @@ msgid "manager.setup.navigationBarDescription"
 msgstr "Ajouter ou supprimer d'autres éléments de la barre de navigation."
 
 msgid "manager.setup.navItemIsAbsolute"
-msgstr "L'URL est un URL absolu (par ex., « http://www.exemple.com ») plutôt qu'un chemin relatif au site (par ex., « /manager/setup »)"
+msgstr "L'URL est un URL absolu (par exemple « http://www.exemple.com ») plutôt qu'un chemin relatif au site (par exemple « /manager/setup »)"
 
 msgid "manager.setup.navItemIsLiteral"
-msgstr "La valeur de l'étiquette est une chaîne littérale (par ex., « Configuration de la revue ») plutôt qu'une clé de message de localisation (par ex., « manager.setup »)"
+msgstr "La valeur du libellé est une chaîne littérale (par exemple « Configuration de la revue ») plutôt qu'une clé de message localisé (par exemple « manager.setup »)"
 
 msgid "manager.setup.noImageFileUploaded"
-msgstr "Aucun fichier d'image téléchargé."
+msgstr "Aucun fichier d'image téléversé."
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr "Aucune feuille de style téléchargée."
+msgstr "Aucune feuille de style téléversée."
 
 msgid "manager.setup.note"
 msgstr "Note"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
-msgstr "<strong>Note :</strong> Le courriel d'accusé de réception est présentement désactivé. Pour utiliser cette fonctionnalité, veuillez activer le courriel SUBMISSION_ACK dans <a class=\"action\" href=\"{$preparedEmailsUrl}\">Courriels préparés</a>."
+msgstr "<strong>Note :</strong> Le courriel d'accusé de réception est présentement désactivé. Pour utiliser cette fonctionnalité, veuillez activer le courriel « Submission Ack » dans les « Courriels »."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Liens"
@@ -576,10 +717,10 @@ msgid "manager.setup.onlineIssn"
 msgstr "ISSN numérique"
 
 msgid "manager.distribution.publishingMode.openAccess"
-msgstr "La revue fournira l'accès libre à son contenu."
+msgstr "La revue offrira son contenu en libre accès."
 
 msgid "manager.setup.pageNumberIdentifier"
-msgstr "Option de numéro de page"
+msgstr "Option de numérotation des pages"
 
 msgid "manager.setup.policies"
 msgstr "Politiques"
@@ -594,13 +735,13 @@ msgid "manager.setup.proofingInstructions"
 msgstr "Directives pour la correction d'épreuves"
 
 msgid "manager.setup.proofingInstructionsDescription"
-msgstr "Les directives pour la correction d'épreuves seront mises à la disposition des Correcteurs d'épreuves, Auteurs, Responsable de la mise en page, et Rédacteurs de rubrique à l'étape de la Révision de la soumission. Vous trouverez ci-dessous un ensemble de directives par défaut en HTML, qui peuvent être modifiées ou remplacées par le Directeur de la revue en tout temps (en HTML ou texte brut)."
+msgstr "Les directives pour la correction d'épreuves seront mises à la disposition des correcteurs-trices d'épreuves, auteurs-es, responsables de la mise en page, et rédacteurs-trices de rubrique à l'étape de la révision de la soumission. Vous trouverez ci-dessous un ensemble de directives par défaut en HTML, qui peuvent être modifiées ou remplacées par le,la directeur-trice de la revue en tout temps (en HTML ou texte brut)."
 
 msgid "manager.setup.publicationSchedule"
 msgstr "Calendrier de publication"
 
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Les articles de la revue peuvent être publiés ensemble, comme partie  d'un numéro avec son propre sommaire. Il est aussi possible de publier des articles individuels dès qu'ils sont prêts, en les ajoutant au sommaire d'un numéro courant. Il convient de fournir aux lecteurs, dans la section \"À propos de la revue\", des informations quant à la manière de procéder de la revue et sur la périodicité de publication prévue."
+msgstr "Les articles de la revue peuvent être publiés ensemble, comme partie d'un numéro avec son propre sommaire. Il est aussi possible de publier des articles individuels dès qu'ils sont prêts, en les ajoutant au sommaire d'un numéro courant. Il convient de fournir aux lecteurs-trices, dans la section « À propos » de la revue, des informations quant à la manière de procéder de la revue et sur la périodicité de publication prévue."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Planification du calendrier de publication"
@@ -612,16 +753,16 @@ msgid "manager.setup.publisher"
 msgstr "Éditeur"
 
 msgid "manager.setup.publishingDescription"
-msgstr "Le nom de l'organisation qui publie la revue apparaîtra dans À propos de la revue."
+msgstr "Le nom de l'organisation qui publie la revue pourrait être inclus dans les métadonnées fournies aux agents d'achivage externes."
 
 msgid "manager.setup.referenceLinking"
 msgstr "Lien de référence"
 
 msgid "manager.setup.restrictArticleAccess"
-msgstr "Les utilisateurs doivent être inscrits et se connecter pour afficher le contenu en accès libre."
+msgstr "Les utilisateurs-trices doivent être inscrits-es et se connecter pour afficher le contenu en libre accès."
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr "Les utilisateurs doivent être inscrits et se connecter pour afficher le site de la revue."
+msgstr "Les utilisateurs-trices doivent être inscrits-es et se connecter pour afficher le site de la revue."
 
 msgid "manager.setup.reviewGuidelines"
 msgstr "Directives pour l'évaluation"
@@ -630,40 +771,37 @@ msgid "manager.setup.reviewOptions"
 msgstr "Options d'évaluation"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Des rappels automatiques par courriel (disponibles dans les Courriels par défaut d'OJS) peuvent être envoyés aux évaluateurs à deux moments précis (à tout moment, le rédacteur peut également envoyer un courriel à l'évaluateur directement)"
+msgstr "Rappels automatiques par courriel"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "<strong>Note :</strong> Pour activer ces options, l'administrateur du site doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Une configuration serveur supplémentaire peut être requise afin de prendre en charge cette fonctionnalité (laquelle n'est pas disponible sur tous les serveurs), tel que mentionné dans la documentation d'OJS."
+msgstr "Pour activer ces options, l'administrateur-trice du site doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Une configuration serveur supplémentaire peut être requise afin de prendre en charge cette fonctionnalité (laquelle n'est pas disponible sur tous les serveurs), tel que mentionné dans la documentation d'OJS."
 
 msgid "manager.setup.reviewOptions.blindReview"
 msgstr "Évaluation à l'aveugle"
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Temps habituellement alloué aux évaluations"
+msgstr "Nombre de semaines allouées pour compléter l'évaluation"
 
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr "Les rédacteurs noteront les évaluateurs sur une échelle qualitative de cinq points après chaque évaluation."
+msgstr "Les rédacteurs-trices noteront les évaluateurs-trices sur une échelle qualitative de cinq points après chaque évaluation."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
-msgstr "Les évaluateurs auront accès au fichier de soumission seulement après avoir accepté de l'évaluer."
+msgstr "Les évaluateurs-trices auront accès au fichier de soumission seulement après avoir accepté de l'évaluer."
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
-msgstr "Accès pour l'évaluateur"
+msgstr "Accès pour l'évaluateur-trice"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Activer l'accès en un clic pour l'évaluateur."
+msgstr "Activer l'accès en un clic pour l'évaluateur-trice."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Note :</strong> Le courriel d'invitation destiné aux évaluateurs contient une URL qui les mène directement à la page d'évaluation de la soumission. L'accès à toute autre page requiert de se connecter. Pour des raisons de sécurité, les rédacteurs ne peuvent pas modifier les adresses de courriel, ni ajouter des CC ou CCI avant d'envoyer une invitation aux évaluateurs."
+msgstr "<strong>Note :</strong> Le courriel d'invitation destiné aux évaluateurs-trices contient une URL qui les mène directement à la page d'évaluation de la soumission. L'accès à toute autre page requiert de se connecter. Pour des raisons de sécurité, les rédacteurs-trices ne peuvent pas modifier les adresses de courriel, ni ajouter des CC ou CCI avant d'envoyer une invitation aux évaluateurs-trices."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr "Notations de l'évaluateur"
+msgstr "Notations de l'évaluateur-trice"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "Rappels à l'évaluateur"
-
-msgid "manager.setup.reviewOptions.showEnsuringLink"
-msgstr "Fournir un lien vers <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Assurer une évaluation à l'aveugle</a> dans les pages où les auteurs et les évaluateurs peuvent télécharger des fichiers."
+msgstr "Rappels à l'évaluateur-trice"
 
 msgid "manager.setup.reviewPolicy"
 msgstr "Politique d'évaluation"
@@ -672,37 +810,37 @@ msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexation par les moteurs de recherche"
 
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Pour aider les moteurs de recherche à découvrir cette revue, fournir une brève description de la revue et des mots-clés pertinents (séparés par un point virgule)."
+msgstr "Fournir une brève description de la revue que les moteurs de recherche peuvent afficher lorsqu'ils listent la revue dans leurs résultats."
 
 msgid "manager.setup.sectionsAndSectionEditors"
-msgstr "Rubriques et Rédacteurs de rubrique"
+msgstr "Rubriques et rédacteurs-trices de rubrique"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(Si des rubriques ne sont pas ajoutées, les articles sont alors soumis par défaut à la rubrique Articles.)"
+msgstr "(Si des rubriques ne sont pas ajoutées, les articles sont alors soumis par défaut à la rubrique « Articles ».)"
 
 msgid "manager.setup.sectionsDescription"
-msgstr "Pour créer ou modifier des rubriques pour la revue (par ex., Articles, Comptes rendus de livres, etc.), aller à Gestion de rubrique.<br /><br />Lors de la soumission d'articles à la revue, les auteurs désigneront..."
+msgstr "Pour créer ou modifier des rubriques pour la revue (par exemple « Articles », « Comptes rendus de livres », etc.), aller à « Gestion de rubrique ».<br /><br />Lors de la soumission à la revue, les auteurs-es choisiront..."
 
 msgid "manager.setup.selectEditorDescription"
-msgstr "Le rédacteur de la revue qui suivra tout le processus éditorial."
+msgstr "Le,La rédacteur-trice de la revue qui suivra tout le processus éditorial."
 
 msgid "manager.setup.selectSectionDescription"
 msgstr "La rubrique de la revue pour laquelle l'article sera pris en considération."
 
 msgid "manager.setup.showGalleyLinksDescription"
-msgstr "Toujours afficher les liens des épreuves et indiquer l'accès restreint."
+msgstr "Toujours afficher les liens vers les épreuves et indiquer l'accès restreint."
 
 msgid "manager.setup.stepsToJournalSite"
-msgstr "Cinq étapes pour configurer votre revue"
+msgstr "Le site Web de votre revue en cinq étapes"
 
 msgid "manager.setup.subjectExamples"
-msgstr "(Par ex., Photosynthèse; Trous noirs; Cartes en quadrichromie; Théorème de Bayes)"
+msgstr "(par exemple : Photosynthèse ; Trous noirs ; Cartes en quadrichromie ; Théorème de Bayes)"
 
 msgid "manager.setup.subjectKeywordTopic"
 msgstr "Mots-clés"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr "Donner des exemples de mots-clés ou de sujets comme guide pour les auteurs"
+msgstr "Donner des exemples de mots-clés ou de sujets pour guider les auteurs-es"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Directives pour la soumission"
@@ -711,25 +849,31 @@ msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Liste de vérification de la soumission"
 
 msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Lors d'une soumission à la revue, on demande d'abord aux auteurs de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans Directives aux auteurs, sous À propos de la revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de la liste devront être cochés avant que les auteurs puissent poursuivre la procédure de soumission."
+msgstr "Lors d'une soumission à la revue, on demande d'abord aux auteurs-es de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans « Directives aux auteurs-es », sous « À propos » de la revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de la liste devront être cochés avant que les auteurs-es puissent poursuivre la procédure de soumission."
 
 msgid "manager.setup.submissions"
 msgstr "Soumissions"
 
 msgid "manager.setup.submissions.description"
-msgstr "Directeurs aux auteurs, droits d'auteur et indexation (comprenant l'inscription)."
+msgstr "Directives aux auteurs-es, droit d'auteur et indexation (comprenant l'inscription)."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr "La revue exigera un abonnement pour accéder à une partie ou à l'intégralité de son contenu."
 
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS ne sera pas utilisé pour publier le contenu de la revue en ligne."
+
+msgid "manager.setup.enableOai"
+msgstr "Permettre l'accès OAI au contenu"
+
 msgid "manager.setup.typeExamples"
-msgstr "(Par ex., Enquête historique; Quasi-expérimental; Analyse littéraire; Sondage/Entrevue)"
+msgstr "(par exemple : Enquête historique ; Quasi-expérimental ; Analyse littéraire ; Sondage/Entrevue)"
 
 msgid "manager.setup.typeMethodApproach"
 msgstr "Type (méthode/approche)"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "Proposer des exemples pertinents de types de recherche, méthodes, et approches pertinents pour ce domaine"
+msgstr "Proposer des exemples pertinents de types de recherche, méthodes, et approches pour ce domaine"
 
 msgid "manager.setup.uniqueIdentifier"
 msgstr "Identifiant unique"
@@ -740,20 +884,28 @@ msgstr "Les articles et les numéros peuvent être étiquetés avec un numéro d
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "La revue aura recours à un comité éditorial/d'évaluation."
 
+msgid "manager.setup.useThumbnail"
+msgstr "Vignette"
+
 msgid "manager.setup.useImageTitle"
 msgstr "Image du titre"
 
 msgid "manager.setup.userRegistration"
-msgstr "Inscription des utilisateurs"
+msgstr "Inscription des utilisateurs-trices"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Texte du titre"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"Votre revue est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.\n"
+"Il y a des cas où une statistique d'utilisation unique doit être utilisée, par exemple pour afficher une liste ordonnée des articles les plus consultés ou pour classer des résultats de recherche. Veuillez sélectionner l'une des mesures paramétrées par défaut."
 
 msgid "manager.statistics.statistics"
 msgstr "Statistiques de la revue"
 
 msgid "manager.statistics.statistics.articleViews"
-msgstr "Nombre de vues de l'article (pour les Auteurs seulement)"
+msgstr "Nombre de consultations de l'article (pour les auteurs-es seulement)"
 
 msgid "manager.statistics.statistics.count.accept"
 msgstr "Accepter"
@@ -771,16 +923,16 @@ msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Jours requis pour publier"
 
 msgid "manager.statistics.statistics.description"
-msgstr "OJS calcule les statistiques suivantes pour chaque revue. Les \"jours requis pour évaluer\" se rapportent au temps écoulé entre la réception d'une soumission (ou désignation de la Version d'évaluation) et la Décision initiale du rédacteur, tandis que les \"jours requis pour publier\" se rapportent au temps écoulé entre le premier téléchargement jusqu'à la publication d'une soumission acceptée."
+msgstr "OJS calcule les statistiques suivantes pour chaque revue. Les « jours requis pour évaluer » se rapportent au temps écoulé entre la réception d'une soumission (ou désignation de la version d'évaluation) et la décision initiale du rédacteur, tandis que les « jours requis pour publier » se rapportent au temps écoulé entre le premier téléchargement jusqu'à la publication d'une soumission acceptée."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Articles publiés"
 
 msgid "manager.statistics.statistics.makePublic"
-msgstr "Cochez les éléments qui seront disponibles aux lecteurs dans À propos de la revue."
+msgstr "Cocher les éléments qui seront disponibles aux lecteurs-trices dans « À propos » de la revue."
 
 msgid "manager.statistics.statistics.note"
-msgstr "Note : Les pourcentages pour les soumissions évaluées par les pairs ne sont pas forcément de 100%, puisque les articles soumis de nouveau sont acceptés, refusés ou encore en cours d'évaluation."
+msgstr "Note : Les pourcentages pour les soumissions évaluées par les pairs ne totalisent pas forcément 100%, puisque les articles soumis de nouveau sont soit acceptés, refusés ou encore en cours d'évaluation."
 
 msgid "manager.statistics.statistics.numIssues"
 msgstr "Numéros publiés"
@@ -789,22 +941,22 @@ msgid "manager.statistics.statistics.numSubmissions"
 msgstr "Nombre total de soumissions"
 
 msgid "manager.statistics.statistics.peerReviewed"
-msgstr "Évalué par les pairs"
+msgstr "Évalué-e-s par les pairs"
 
 msgid "manager.statistics.statistics.registeredReaders"
-msgstr "Lecteurs inscrits"
+msgstr "lecteurs-trices inscrits-es"
 
 msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Utilisateurs inscrits"
+msgstr "Utilisateurs-trices inscrits-es"
 
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Nb. d'assignations"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr "Évaluateurs"
+msgstr "Évaluateurs-trices"
 
 msgid "manager.statistics.statistics.reviewerScore"
-msgstr "Pointage du rédacteur"
+msgstr "Pointage du,de la rédacteur-trice"
 
 msgid "manager.statistics.statistics.reviewsPerReviewer"
 msgstr "Nb. d'évaluations"
@@ -815,56 +967,83 @@ msgstr "Sélectionner les rubriques afin de calculer les statistiques d'évaluat
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Abonnements"
 
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Téléchargements du fichier de l'article"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Consultations de la page du résumé de l'article"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Consultations de la page du résumé de l'article et téléchargements"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Consultations de la page principale de la revue"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Affiner les résultats par contexte (numéro et/ou article)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Affiner les résultats par type d'objet (revue, numéro, article, fichiers) et/ou par un ou plusieurs identifiants (ID) d'objet."
+
 msgid "manager.subscriptionPolicies"
 msgstr "Politiques d'abonnement"
 
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
-msgstr "Accès libre différé"
+msgstr "Libre accès différé"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Utiliser la boîte à cocher fournie à cet effet."
 
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Échéance de l'abonnement"
 
 msgid "manager.subscriptionPolicies.expiryDescription"
-msgstr "À l'échéance de l'abonnement, les lecteurs peuvent se voir refuser l'accès à tout contenu restreint ou peuvent conserver l'accès au contenu publié avant la date d'échéance de l'abonnement."
+msgstr "À l'échéance de l'abonnement, les lecteurs-trices peuvent se voir refuser l'accès à tout contenu restreint ou peuvent conserver l'accès au contenu publié avant la date d'échéance de l'abonnement."
 
 msgid "manager.subscriptionPolicies.expiryFull"
 msgstr "Échéance complète"
 
 msgid "manager.subscriptionPolicies.expiryFullDescription"
-msgstr "Les lecteurs se voient refuser l'accès à tout contenu restreint, à l'échéance de l'abonnement."
+msgstr "Les lecteurs-trices se voient refuser l'accès à tout contenu restreint, à l'échéance de l'abonnement."
 
 msgid "manager.subscriptionPolicies.expiryPartial"
 msgstr "Échéance partielle"
 
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
-msgstr "Les lecteurs se voient refuser l'accès au contenu restreint publié récemment, mais conservent l'accès au contenu publié avant la date d'échéance de l'abonnement."
+msgstr "Les lecteurs-trices se voient refuser l'accès au contenu restreint publié récemment, mais conservent l'accès au contenu publié avant la date d'échéance de l'abonnement."
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
-msgstr "Aviser les abonnés par courriel"
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mois"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
-msgstr "semaine(s) après la date d'échéance de l'abonnement."
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} semaines"
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
-msgstr "Aviser les abonnés par courriel"
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés-es."
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
-msgstr "semaine(s) avant la date d'échéance de l'abonnement."
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés-es."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés-es."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés-es."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Rappels de l'échéance de l'abonnement"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "Des courriels de rappel automatisés (disponibles pour modification par le Directeur de la revue, dans les Courriels préparés d'OJS) peuvent être envoyés aux abonnés, autant avant qu'après la date d'échéance de leur abonnement."
+msgstr "Des courriels de rappel automatisés (disponibles pour modification par le,la directeur-trice de la revue, dans les « Courriels » prédéfinis d'OJS) peuvent être envoyés aux abonnés-es, autant avant qu'après la date d'échéance de leur abonnement."
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr "<strong>Note :</strong> Pour activer ces options, l'administrateur du site Web doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Des configurations serveur supplémentaires peuvent être nécessaires afin de prendre en charge cette fonctionnalité (laquelle n'est pas possible sur tous les serveurs), tel que mentionné dans la documentation d'OJS."
+msgstr "<strong>Note :</strong> Pour activer ces options, l'administrateur-trice du site Web doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Des configurations serveur supplémentaires peuvent être nécessaires afin de prendre en charge cette fonctionnalité (laquelle n'est pas possible sur tous les serveurs), tel que mentionné dans la documentation d'OJS."
 
 msgid "manager.subscriptionPolicies.expirySelectOne"
-msgstr "En sélectionner un :"
+msgstr "Sélectionner une option parmi :"
 
 msgid "manager.subscriptionPolicies.htmlInstructions"
-msgstr "Du HTML peut être utilisé dans la zone de texte (pour la taille de police, la couleur, etc.), avec le bouton \"Entrée\" considéré comme <tt>&lt;br&gt;</tt>; l'éditeur HTML fonctionne avec les navigateurs Firefox."
+msgstr "Du code HTML peut être utilisé dans la zone de texte (pour la taille de police, la couleur, etc.). La touche « Entrée » est enregistrée comme <tt>&lt;br&gt;</tt>. L'éditeur HTML fonctionne avec le navigateur Firefox."
 
 msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
 msgstr "Veuillez sélectionner une valeur valide pour le nombre de mois suivant l'échéance de l'abonnement."
@@ -879,28 +1058,52 @@ msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderVali
 msgstr "Veuillez sélectionner une valeur valide pour le nombre de semaines avant l'échéance de l'abonnement."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
-msgstr "Les lecteurs enregistrés auront le choix de recevoir le sommaire par courriel quand un numéro devient en accès libre."
+msgstr "Les lecteurs-trices enregistrés-es auront la possibilité de recevoir le sommaire par courriel lorsqu'un numéro paraît en libre accès."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr "<strong>Note :</strong> Pour activer cette option, l'administrateur du site doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Une configuration serveur supplémentaire peut s'avérer nécessaire pour prendre en charge cette fonctionnalité (laquelle n'est pas forcément disponible sur tous les serveurs), tel qu'indiqué dans la documentation d'OJS."
+msgstr "<strong>Note :</strong> Pour activer cette option, l'administrateur-trice du site doit activer l'option <tt>scheduled_tasks</tt> dans le fichier de configuration d'OJS. Une configuration serveur supplémentaire peut s'avérer nécessaire pour prendre en charge cette fonctionnalité (laquelle n'est pas forcément disponible sur tous les serveurs), tel qu'indiqué dans la documentation d'OJS."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Avis de paiement en ligne"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Les avis automatisés par courriel peuvent être envoyés au responsable des abonnements au terme des paiements en ligne des abonnements."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Aviser le,la reponsable des abonnements par courriel lors de la souscription en ligne à un abonnement individuel."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Aviser le,la reponsable des abonnements par courriel lors de la souscription en ligne à un abonnement institutionnel (recommandé)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Aviser le,la reponsable des abonnements par courriel lors du renouvellement en ligne d'un Abonnement individuel."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Aviser le,la reponsable des abonnements par courriel lors du renouvellement en ligne d'un abonnement institutionnel."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Note :</strong> Les abonnements institutionnels souscrits en ligne nécessitent l'approbation du domaine et des plages d'adresses IP ainsi que l'activation de l'abonnement par le,la reponsable des abonnements."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Note :</strong> Pour activer ces options, le,la directeur-trice de la revue doit activer le module de paiement en ligne, incluant les paiements en ligne pour les abonnements, sous « Frais aux lecteurs-trices »."
 
 msgid "manager.subscriptionPolicies.openAccessOptions"
-msgstr "Options pour l'accès libre pour les revues sous abonnement"
+msgstr "Options pour le libre accès pour les revues sous abonnement"
 
 msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
-msgstr "Les revues sous abonnement peuvent fournir un accès libre différé à leur contenu publié, ainsi que permettre l'auto-archivage par l'auteur (les deux permettant d'augmenter le nombre de lecteurs et de citations du contenu)."
+msgstr "Les revues sous abonnement peuvent fournir un libre accès différé à leur contenu publié, ainsi que permettre l'auto-archivage par l'auteur-e (les deux permettant d'augmenter le nombre de lecteurs-trices et de citations du contenu)."
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
-msgstr "Information sur l'abonnement"
+msgstr "Renseignements sur l'abonnement"
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
-msgstr "Les types d'abonnement et la grille tarifaire seront automatiquement placés sous Abonnements sur la page À propos de la revue, au même titre que le nom et l'information de contact du Responsable des abonnements. Des informations supplémentaires concernant les abonnements, tel les modes de paiement ou le soutien pour les abonnés de pays en voie de développement peuvent être ajoutées ici."
+msgstr "Les types d'abonnement et la grille tarifaire seront automatiquement placés sous « Abonnements » sur la page « À propos » de la revue, au même titre que les coordonnées du,de la responsable des abonnements. Des renseignements supplémentaires concernant les abonnements, tel les modes de paiement ou le soutien pour les abonnés-es de pays en voie de développement peuvent être ajoutés ici."
 
 msgid "manager.subscriptionPolicies.subscriptionContact"
 msgstr "Responsable des abonnements"
 
 msgid "manager.subscriptionPolicies.subscriptionContactDescription"
-msgstr "Le contact indiqué sous Abonnements dans À propos de la revue."
+msgstr "La personne-ressource indiquée sous « Abonnements » dans « À propos » de la revue."
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
 msgstr "Veuillez saisir un courriel valide."
@@ -908,14 +1111,29 @@ msgstr "Veuillez saisir un courriel valide."
 msgid "manager.subscriptions"
 msgstr "Abonnements"
 
+msgid "manager.individualSubscriptions"
+msgstr "Abonnements individuels"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Abonnements institutionnels"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Êtes-vous certain-e de vouloir renouveler cet abonnement ?"
+
 msgid "manager.subscriptions.confirmDelete"
-msgstr "Êtes-vous certain de vouloir supprimer cet abonnement?"
+msgstr "Êtes-vous certain-e de vouloir supprimer cet abonnement ?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Aperçu des abonnements"
 
 msgid "manager.subscriptions.create"
 msgstr "Créer un nouvel abonnement"
 
 msgid "manager.subscriptions.createTitle"
 msgstr "Créer"
+
+msgid "manager.subscriptions.renew"
+msgstr "Renouveler"
 
 msgid "manager.subscriptions.dateEnd"
 msgstr "Terminer"
@@ -938,65 +1156,20 @@ msgstr "Modifier l'abonnement"
 msgid "manager.subscriptions.editTitle"
 msgstr "Modifier"
 
-msgid "manager.subscriptions.form.dateEnd"
-msgstr "Date de fin"
+msgid "manager.subscriptions.withStatus"
+msgstr "Avec le statut"
 
-msgid "manager.subscriptions.form.dateEndRequired"
-msgstr "La date de fin d'abonnement est obligatoire."
+msgid "manager.subscriptions.allStatus"
+msgstr "Tous"
 
-msgid "manager.subscriptions.form.dateEndValid"
-msgstr "Veuillez sélectionner une date de fin d'abonnement valide."
+msgid "manager.subscriptions.form.status"
+msgstr "Statut"
 
-msgid "manager.subscriptions.form.dateStart"
-msgstr "Date de début"
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Le statut de l'abonnement est obligatoire."
 
-msgid "manager.subscriptions.form.dateStartRequired"
-msgstr " La date de début d'abonnement est obligatoire."
-
-msgid "manager.subscriptions.form.dateStartValid"
-msgstr "Veuillez sélectionner une date de début d'abonnement valide."
-
-msgid "manager.subscriptions.form.domainInstructions"
-msgstr "Si un domaine est saisi ici, l'intervalle d'adresses IP est facultatif. Les valeurs valides sont les noms de domaine (par ex., lib.sfu.ca)."
-
-msgid "manager.subscriptions.form.domainIPRangeRequired"
-msgstr "Le type d'abonnement sélectionné requiert un domaine et/ou un intervalle d'adresses IP pour l'authentification d'abonnement."
-
-msgid "manager.subscriptions.form.domainValid"
-msgstr "Veuillez entrer un domaine valide."
-
-msgid "manager.subscriptions.form.ipRange"
-msgstr "Intervalle d'adresses IP"
-
-msgid "manager.subscriptions.form.ipRangeInstructions"
-msgstr "Si des intervalles d'adresses IP sont saisis ici, le domaine est facultatif.<br />Les valeurs valides peuvent inclure une adresse IP (par ex., 142.58.103.1), un intervalle d'adresses IP (par ex., 142.58.103.1 - 142.58.103.4), un intervalle d'adresses IP avec la troncature \"*\" (142.58.103.*) et un intervalle d'adresses IP avec CIDR (e.g. 142.58.100.0/24)."
-
-msgid "manager.subscriptions.form.ipRangeValid"
-msgstr "Veuillez entrer un intervalle d'adresses IP valide."
-
-msgid "manager.subscriptions.form.membership"
-msgstr "Adhésion"
-
-msgid "manager.subscriptions.form.membershipInstructions"
-msgstr "Saisir les informations d'adhésion si le type d'abonnement requiert que les abonnés soient appartiennent  à une association ou organisation."
-
-msgid "manager.subscriptions.form.membershipRequired"
-msgstr "Le type d'abonnement sélectionné requiert des informations d'adhésion."
-
-msgid "manager.subscriptions.form.notifyEmail"
-msgstr "Envoyer à l'utilisateur un courriel avec ses nom d'utilisateur et détails d'abonnement."
-
-msgid "manager.subscriptions.form.notifyEmailValid"
-msgstr "Veuillez utiliser la case à cocher fournie."
-
-msgid "manager.subscriptions.form.saveAndCreateAnother"
-msgstr "Enregistrer et en créer un autre"
-
-msgid "manager.subscriptions.form.subscriptionContactRequired"
-msgstr "Pour envoyer un avis par courriel à l'utilisateur, le nom et l'adresse de courriel du contact des abonnements doit être précisé dans la configuration de la revue."
-
-msgid "manager.subscriptions.form.subscriptionExists"
-msgstr "Cet utilisateur a déjà un abonnement à cette revue."
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Veuillez sélectionner un statut d'abonnement valide."
 
 msgid "manager.subscriptions.form.typeId"
 msgstr "Type d'abonnement"
@@ -1007,29 +1180,146 @@ msgstr "Le type d'abonnement est obligatoire."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Veuillez sélectionner un type d'abonnement valide."
 
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Date de début"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr " La date de début d'abonnement est obligatoire."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Veuillez sélectionner une date de début d'abonnement valide."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Date de fin"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "La date de fin d'abonnement est obligatoire."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Ce type d'abonnement est à durée indéfinie ; veuillez ne pas inscrire une date de début."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Ce type d'abonnement est à durée indéfinie ; veuillez ne pas inscrire une date de fin."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Veuillez sélectionner une date de fin d'abonnement valide."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Note : Tous les changements ci-dessous s'appliquent au profil de l'utilisateur-trice, à l'échelle du système."
+
 msgid "manager.subscriptions.form.userId"
-msgstr "Utilisateur"
+msgstr "Utilisateur-trice"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Coordonnées"
 
 msgid "manager.subscriptions.form.userIdRequired"
-msgstr "L'utilisateur est obligatoire."
+msgstr "L'utilisateur-trice est obligatoire."
 
 msgid "manager.subscriptions.form.userIdValid"
-msgstr "Veuillez sélectionner un utilisateur valide."
+msgstr "Veuillez sélectionner un-e utilisateur-trice valide."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Veuillez sélectionner un pays valide."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Envoyer à l'utilisateur-trice un courriel avec ses nom d'utilisateur-trice et renseignements d'abonnement."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Veuillez utiliser la case à cocher fournie à cet effet."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Adhésion"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Numéro de référence"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Saisir les informations d'adhésion si le type d'abonnement requiert que les abonnés-es appartiennent à une association ou organisation."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Le type d'abonnement sélectionné requiert des informations d'adhésion."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Notes"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domaine"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Nom de l'établissement"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Le nom de l'établissement est obligatoire."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Adresse de courrier"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Si un domaine est saisi ici, la plage d'adresses IP est facultative.<br />Les valeurs valides sont les noms de domaine (par exemple lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Le type d'abonnement sélectionné requiert un domaine et/ou une plage d'adresses IP pour l'authentification d'abonnement."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Veuillez entrer un domaine valide."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Plage d'adresses IP"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Si des plages d'adresses IP sont saisies ici, le domaine est facultatif.<br />Les valeurs valides peuvent inclure une adresse IP (par exemple 142.58.103.1), une plage d'adresses IP (par exemple 142.58.103.1 - 142.58.103.4), une plage d'adresses IP avec la troncature \"*\" (142.58.103.*) et une plage d'adresses IP avec CIDR (par exemple 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Veuillez entrer un plage d'adresses IP valide."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Supprimer"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Ajouter"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Enregistrer et en créer un-e autre"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Pour envoyer un avis par courriel à l'utilisateur-trice, les coordonnées de la personne-ressource des abonnements doivent être précisées dans la configuration de la revue."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Cet,Cette utilisateur-trice détient déjà un abonnement à cette revue."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Un type d'abonnement doit être créé avant que de nouveaux abonnements puissent être effectués."
 
 msgid "manager.subscriptions.ipRange"
-msgstr "Intervalles d'adresses IP"
+msgstr "Plage d'adresses IP"
 
 msgid "manager.subscriptions.membership"
 msgstr "Adhésion"
 
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Numéro de référence"
+
+msgid "manager.subscriptions.notes"
+msgstr "Notes"
+
 msgid "manager.subscriptions.noneCreated"
-msgstr "Aucun abonnement."
+msgstr "Aucun abonnement"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Sélectionner une personne-ressource des abonnements"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Sélectionner un-e utilisateur-trice"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Les privilèges d'accès d'abonnement sont automatiquement accordés aux directeurs-trices, rédacteurs-trices, rédacteurs-trices de rubrique, responsables de mise en page, réviseurs-es et correcteurs-trices d'épreuves de la revue."
 
 msgid "manager.subscriptions.select"
 msgstr "Sélectionner"
-
-msgid "manager.subscriptions.selectSubscriber.desc"
-msgstr "Les privilèges d'accès d'abonnement sont automatiquement accordés aux Directeurs, Rédacteurs, Rédacteurs de rubrique, Responsables de mise en page, Réviseurs et Correcteurs d'épreuves de la revue."
 
 msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
 msgstr "Création de l'abonnement réussie."
@@ -1038,16 +1328,31 @@ msgid "manager.subscriptions.subscriptionType"
 msgstr "Type d'abonnement"
 
 msgid "manager.subscriptions.user"
-msgstr "Utilisateur"
+msgstr "Utilisateur-trice"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nom de la personne-ressource"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Nom de l'établissement"
 
 msgid "manager.subscriptionTypes"
 msgstr "Types d'abonnement"
 
 msgid "manager.subscriptionTypes.confirmDelete"
-msgstr "Avertissement! Tous les abonnements qui ont ce type d'abonnement seront aussi supprimés. Êtes-vous certain de vouloir continuer et supprimer ce type d'abonnement?"
+msgstr "Avertissement ! Tous les abonnements qui ont ce type d'abonnement seront également supprimés. Êtes-vous certain-e de vouloir continuer et supprimer ce type d'abonnement ?"
 
 msgid "manager.subscriptionTypes.cost"
 msgstr "Coût"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Abonnements"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individuel"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institutionnel"
 
 msgid "manager.subscriptionTypes.create"
 msgstr "Créer un nouveau type d'abonnement"
@@ -1068,7 +1373,7 @@ msgid "manager.subscriptionTypes.form.cost"
 msgstr "Coût"
 
 msgid "manager.subscriptionTypes.form.costInstructions"
-msgstr "Saisir une valeur numérique (par ex., 40 ou 40,00) sans symbole (par ex., $)."
+msgstr "Saisir une valeur numérique (par exemple 40 ou 40,00) sans symbole (par exemple $)."
 
 msgid "manager.subscriptionTypes.form.costNumeric"
 msgstr "Le coût doit être une valeur numérique positive."
@@ -1088,11 +1393,23 @@ msgstr "Veuillez sélectionner une devise valide."
 msgid "manager.subscriptionTypes.form.description"
 msgstr "Description"
 
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Expire après"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "mois (par exemple 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "N'expire jamais"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Veuillez utiliser les options fournies à cet effet."
+
 msgid "manager.subscriptionTypes.form.duration"
 msgstr "Durée"
 
 msgid "manager.subscriptionTypes.form.durationInstructions"
-msgstr "La durée de l'abonnement, en nombre de mois (par ex., 12)."
+msgstr "La durée de l'abonnement, en nombre de mois (par exemple 12)."
 
 msgid "manager.subscriptionTypes.form.durationNumeric"
 msgstr "La durée doit être une valeur numérique positive."
@@ -1109,23 +1426,32 @@ msgstr "Le format du type d'abonnement est obligatoire."
 msgid "manager.subscriptionTypes.form.formatValid"
 msgstr "Veuillez sélectionner un format de type d'abonnement valide."
 
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Abonnements"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuel (les utilisateurs-trices sont validés-es via la connexion)"
+
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr "Institutionnel (les utilisateurs sont validés via une adresse IP ou un domaine)"
+msgstr "Institutionnel (les utilisateurs-trices sont validés-es via une adresse IP ou un domaine)"
 
 msgid "manager.subscriptionTypes.form.institutionalValid"
 msgstr "Veuillez utiliser les options fournies."
 
 msgid "manager.subscriptionTypes.form.membership"
-msgstr "Les abonnements requièrent l'information d'adhésion<br />(par ex., membre d'une association, d'une organisation, d'un consortium, etc.)"
+msgstr "Les abonnements requièrent l'information d'adhésion"
 
 msgid "manager.subscriptionTypes.form.membershipValid"
-msgstr "Veuillez utiliser les cases à cocher fournies."
+msgstr "Veuillez utiliser les cases à cocher fournies à cet effet."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Options"
 
 msgid "manager.subscriptionTypes.form.public"
-msgstr "Ne pas rendre ce type d'abonnement disponible publiquement ou visible<br />(p. ex. sous Abonnements dans À propos de la revue)."
+msgstr "Ne pas rendre ce type d'abonnement disponible publiquement ni visible sur le site Web."
 
 msgid "manager.subscriptionTypes.form.publicValid"
-msgstr "Veuillez utiliser les cases à cocher fournies."
+msgstr "Veuillez utiliser les cases à cocher fournies à cet effet."
 
 msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
 msgstr "Enregistrer et en créer un autre"
@@ -1148,369 +1474,55 @@ msgstr "Aucun type d'abonnement n'a été créé."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Création du type d'abonnement réussie."
 
-msgid "manager.language.ui"
-msgstr "IU"
+msgid "manager.distribution.access"
+msgstr "Accès"
 
-msgid "manager.language.forms"
-msgstr "Formulaires"
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Lien vers la page décrivant les abonnements offerts."
 
-msgid "manager.people.showNoRole"
-msgstr "Afficher les utilisateurs qui n'ont aucun rôle"
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Lien vers la page décrivant les abonnements courants et échus de l'utilisateur-trice."
 
-msgid "manager.sections.wordCount"
-msgstr "Nombre de mots"
-
-msgid "manager.sections.wordCountInstructions"
-msgstr "Limiter le nombre de mots du résumé pour cette rubrique (0 pour aucune limite)"
-
-msgid "manager.setup.history"
-msgstr "Historique de la revue"
-
-msgid "manager.setup.historyDescription"
-msgstr "Ce texte apparaîtra dans la section « À propos » du site Web de la revue et peut être utilisé pour décrire tout changement au titre de la revue, au comité éditorial, et tout autre élément d'intérêt dans l'histoire de la publication de la revue."
-
-msgid "manager.distribution.publishingMode.none"
-msgstr "OJS ne sera pas utilisé pour publier le contenu de la revue en ligne."
-
-msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
-msgstr "Avis de paiement en ligne"
-
-msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr "Les avis automatisés par courriel peuvent être envoyés au Responsable des abonnements au terme des paiements en ligne des abonnements."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "Aviser le Reponsable des abonnements par courriel lors de la souscription en ligne à un Abonnement individuel."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr "Aviser le Reponsable des abonnements par courriel lors de la souscription en ligne à un Abonnement institutionnel (recommandé)."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "Aviser le Reponsable des abonnements par courriel lors du renouvellement en ligne d'un Abonnement individuel."
-
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr "Aviser le Reponsable des abonnements par courriel lors du renouvellement en ligne d'un Abonnement institutionnel."
-
-msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
-msgstr "<strong>Note :</strong> Les abonnements institutionnels souscrits en ligne nécessitent l'approbation du domaine et des intervalles d'adresses IP ainsi que l'activation de l'abonnement par le Reponsable des abonnements."
-
-msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
-msgstr "<strong>Note :</strong> Pour activer ces options, le Directeur de la revue doit activer le module de paiement en ligne, incluant les paiements en ligne pour les abonnements, sous Frais de lecture."
-
-msgid "manager.individualSubscriptions"
-msgstr "Abonnements individuels"
-
-msgid "manager.institutionalSubscriptions"
-msgstr "Abonnements individuels"
-
-msgid "manager.subscriptions.summary"
-msgstr "Aperçu des abonnements"
-
-msgid "manager.subscriptions.renew"
-msgstr "Renouveler"
-
-msgid "manager.subscriptions.withStatus"
-msgstr "Avec le statut"
-
-msgid "manager.subscriptions.allStatus"
-msgstr "Tous"
-
-msgid "manager.subscriptions.form.status"
-msgstr "Statut"
-
-msgid "manager.subscriptions.form.statusRequired"
-msgstr "Le statut de l'abonnement est obligatoire."
-
-msgid "manager.subscriptions.form.statusValid"
-msgstr "Veuillez sélectionner un statut d'abonnement valide."
-
-msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr "Note : Tous les changements ci-dessous s'appliquent au profil de l'utilisateur, à l'échelle du système."
-
-msgid "manager.subscriptions.form.userContact"
-msgstr "Contact"
-
-msgid "manager.subscriptions.form.userCountryValid"
-msgstr "Veuillez sélectionner un pays valide."
-
-msgid "manager.subscriptions.form.referenceNumber"
-msgstr "Numéro de référence"
-
-msgid "manager.subscriptions.form.notes"
-msgstr "Notes"
-
-msgid "manager.subscriptions.form.domain"
-msgstr "Domaine"
-
-msgid "manager.subscriptions.form.institutionName"
-msgstr "Nom de l'institution"
-
-msgid "manager.subscriptions.form.institutionNameRequired"
-msgstr "Le nom de l'institution est obligatoire."
-
-msgid "manager.subscriptions.form.institutionMailingAddress"
-msgstr "Adresse de courrier"
-
-msgid "manager.subscriptions.form.ipRangeItem"
-msgstr "&#8226;"
-
-msgid "manager.subscriptions.form.deleteIpRange"
-msgstr "Supprimer"
-
-msgid "manager.subscriptions.form.addIpRange"
-msgstr "Ajouter"
-
-msgid "manager.subscriptions.form.typeRequired"
-msgstr "Un type d'abonnement doit être créé avant que de nouveaux abonnements puissent être effectués."
-
-msgid "manager.subscriptions.referenceNumber"
-msgstr "Numéro de référence"
-
-msgid "manager.subscriptions.notes"
-msgstr "Notes"
-
-msgid "manager.subscriptions.selectContact"
-msgstr "Sélectionner un contact des abonnements"
-
-msgid "manager.subscriptions.selectUser"
-msgstr "Sélectionner un utilisateur"
-
-msgid "manager.subscriptions.contact"
-msgstr "Nom du contact"
-
-msgid "manager.subscriptions.institutionName"
-msgstr "Nom de l'institution"
-
-msgid "manager.subscriptionTypes.subscriptions"
-msgstr "Abonnements"
-
-msgid "manager.subscriptionTypes.individual"
-msgstr "Individuel"
-
-msgid "manager.subscriptionTypes.institutional"
-msgstr "Institutionnel"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
-msgstr "Expire après"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.months"
-msgstr "mois (par ex. 12)"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
-msgstr "N'expire jamais"
-
-msgid "manager.subscriptionTypes.form.nonExpiringValid"
-msgstr "Veuillez utiliser les options fournies."
-
-msgid "manager.subscriptionTypes.form.subscriptions"
-msgstr "Abonnements"
-
-msgid "manager.subscriptionTypes.form.individual"
-msgstr "Individuel (utilisateurs sont validés via la connexion)"
-
-msgid "manager.subscriptionTypes.form.options"
-msgstr "Options"
-
-msgid "manager.language.submissions"
-msgstr "Soumissions"
-
-msgid "manager.setup.addNavItem"
-msgstr "Ajouter un élément"
-
-msgid "manager.payment.options.purchaseIssueFee"
-msgstr "Acheter un numéro"
-
-msgid "manager.sections.confirmDelete"
-msgstr "Êtes-vous sûr de vouloir définitivement supprimer cette section?"
-
-msgid "manager.sections.alertDelete"
-msgstr "Pour supprimer cette section, déplacez les articles qui la composent dans d'autres sections."
-
-msgid "manager.setup.journalThumbnail"
-msgstr "Vignette de la revue"
-
-msgid "manager.setup.useThumbnail"
-msgstr "Vignette"
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Ce lien sera affiché uniquement si l'utilisateur-trice est connecté-e."
 
 msgid "manager.setup.categories"
 msgstr "Catégories"
 
 msgid "manager.setup.categories.description"
-msgstr "Choisir les catégories les plus appropriées dans la liste ci-dessus. Les lecteurs pourront naviguer par catégorie parmi l'ensemble des revues disponibles."
-
-msgid "manager.setup.resetPermissions"
-msgstr "Réinitialiser les autorisations de l'article"
-
-msgid "manager.setup.copyrightYearBasis"
-msgstr "Baser l'année de mention de droit d'auteur du nouvel article sur :"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"Votre revue est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.\n"
-"Il y a des cas où seulement une seule statistique d'utilisation doit être utilisée , ex. pour afficher une liste ordonnée des articles les plus utilisés ou pour classer les résultats de recherche. Veuillez sélectionner l'une des mesures paramétrées comme celle par défaut."
-
-msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "Téléchargement du fichier de l'article"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "Vues de la page résumé de l'article"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Résumé de l'article et téléchargements"
-
-msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr "Vue de la page principale de la revue"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Affiner les résultats par contexte (numéro et/ou article)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Affiner les résultats par type d'objet (revue, numéro, article, épreuves PDF, autres épreuves) et/ou par un ou plusieurs ID(s) d'objet."
-
-msgid "plugins.importexport.common.settings"
-msgstr "Paramètres"
-
-msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "Afin d'utiliser ce plugiciel, veuillez aller à la catégorie \"identifiants publics\", activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide."
-
-msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "Ce plugiciel n'est pas entièrement configuré."
-
-msgid "plugins.importexport.common.settings.form.password"
-msgstr "Mot de passe"
-
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Veuillez noter que le mot de passe sera enregistré en plein texte, c-a-d pas encrypté"
-
-msgid "plugins.importexport.common.action.register"
-msgstr "Enregistrer"
-
-msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "Le fichier de sortie {$param} n'est pas accessible en écriture."
-
-msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "L'enregistrement a échoué! Le serveur d'enregistrement DOI a retourné une erreur: '{$param}'."
-
-msgid "plugins.importexport.common.register.success"
-msgstr "Enregistrement réussi!"
-
-msgid "manager.website.archiving"
-msgstr "Archivage"
-
-msgid "manager.setup.masthead"
-msgstr "Bloc générique"
-
-msgid "manager.setup.editorialTeam"
-msgstr "Comité éditorial"
-
-msgid "manager.setup.homepageContent"
-msgstr "Contenu de la page d'accueil de la revue"
-
-msgid "manager.setup.homepageContentDescription"
-msgstr "La page d'accueil de la revue consiste par défaut en liens pour la navigation. Des contenus additionnels peuvent être ajoutés en utilisant une ou toutes les options suivantes, qui apparaîtront dans l'ordre indiqué."
-
-msgid "manager.setup.useStyleSheet"
-msgstr "Feuille de style de la revue"
-
-msgid "manager.setup.contextName"
-msgstr "Titre de la revue"
-
-msgid "manager.setup.pageHeader"
-msgstr "En-tête"
-
-msgid "manager.distribution.access"
-msgstr "Accès"
+msgstr "Choisir les catégories les plus appropriées dans la liste ci-dessus. Les lecteurs-trices pourront naviguer par catégorie parmi l'ensemble des revues disponibles."
 
 msgid "grid.category.path"
 msgstr "Chemin d'accès"
 
 msgid "grid.action.addSection"
-msgstr "Ajouter une section"
+msgstr "Ajouter une rubrique"
 
 msgid "manager.setup.section.description"
-msgstr "Les articles publiés dans une revue sont organisés en sections, généralement par thème ou par type de contenu (par exemple, articles de révision, recherche, etc.)."
+msgstr "Les articles publiés dans une revue sont organisés en rubriques, généralement par thème ou par type de contenu (par exemple revues de la littérature, articles de recherche, etc.)."
 
 msgid "settings.roles.gridDescription"
 msgstr ""
-"Les rôles sont attribués aux utilisateurs de la revue afin de leur donner accès à différents niveaux d'autorisation et à différents flux de travail associés à la revue.\n"
-"Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à tout ce qui se trouve dans un journal (tous les contenus et les paramètres); Les Rédacteurs ont un accès complet à tout le contenu assigné; Les assistants de revue ont un accès limité aux seules soumissions qui leur ont été expressément attribuées par un éditeur; Les Évaluateurs peuvent voir et interagir avec les soumissions qui leur ont été assignés pour évaluation; Et les auteurs peuvent voir et interagir avec une quantité limitée d'informations en lien avec  leurs propres soumissions. En outre, il y a cinq différentes étapes auquelles les rôles peuvent avoir accès : soumission, évaluation interne, évaluation (review), édition (editorial) et production (production)."
-
-msgid "manager.section.noSectionEditors"
-msgstr "*Aucun Rédacteur de rubrique n'a été désigné. Ajouter ce rôle à au moins un utilisateur via Administration > Paramètres > Rôles et utilisateurs."
-
-msgid "manager.setup.journalThumbnail.description"
-msgstr "Un logo ou une image de la revue qui peut être utilisé dans des listes de revues."
-
-msgid "manager.setup.lockssLicenseDescription"
-msgstr "Une licence LOCKSS apparaîtra dans la section \"À propos\" de cette revue sous \"Archiver\": <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Licence LOCKSS</a>"
-
-msgid "manager.setup.lockssLicenseLabel"
-msgstr "Description de la licence LOCKSS"
-
-msgid "manager.setup.lockssTitle"
-msgstr "LOCKSS"
-
-msgid "manager.setup.clockssEnable"
-msgstr "Activer CLOCKSS pour stocker et distribuer les contenus de la revue dans les bibliothèques participantes via une page CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr "Une licence CLOCKSS apparaîtra dans la section \"À propos\" de cette revue\"sous \"Archiver\" : <a href=\"http://clockss.org/\" target=\"_blank\"> Licence CLOCKSS</a>"
-
-msgid "manager.setup.focusAndScope.description"
-msgstr "Décrire aux auteurs, aux lecteurs et aux bibliothécaires les types d'articles et autres objets publiés dans la revue."
-
-msgid "manager.setup.form.issnInvalid"
-msgstr "L'ISSN inscrit n'est pas valide."
-
-msgid "manager.setup.includeCreativeCommons"
-msgstr "Pour les revues qui offrent le libre accès immédiatement ou avec une barrière mobile, ajouter une licence Creative Commons à toutes les publications au moment approprié."
-
-msgid "plugins.importexport.common.status.registered"
-msgstr "Enregistré"
-
-msgid "plugins.importexport.common.action"
-msgstr "Action"
-
-msgid "plugins.importexport.common.action.markRegistered"
-msgstr "Marquer comme enregistré"
-
-msgid "plugins.importexport.common.error.noObjectsSelected"
-msgstr "Aucun objet sélectionné"
-
-msgid "plugins.importexport.common.error.validation"
-msgstr "Les objets sélectionnés n'ont pu être convertis."
-
-msgid "plugins.importexport.common.invalidXML"
-msgstr "XML invalide:"
-
-msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
-msgstr "Le préfixe du DOI est manquant pour la revue qui a le chemin d'accès {$path}."
-
-msgid "plugins.importexport.common.missingRequirements"
-msgstr "Exigences non satisfaites pour l'utilisation du plugiciel"
-
-msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "Aucune publication n'est sélectionnée pour l'attribution d'un DOI dans le plugiciel  \"DOI public identifier\", conséquemment il n'aura pas de dépôt ou d'exportation depuis le plugiciel."
-
-msgid "plugins.importexport.common.filter.issue"
-msgstr "Numéro"
-
-msgid "plugins.importexport.common.status.any"
-msgstr "Statut"
-
-msgid "plugins.importexport.common.status.notDeposited"
-msgstr "Non déposé"
-
-msgid "plugins.importexport.common.action.export"
-msgstr "Exporter"
+"Les rôles sont attribués aux utilisateurs-trices de la revue afin de leur donner accès à différents niveaux d'autorisation et à différentes chaînes de travail associés à la revue. \n"
+"Il existe cinq niveaux d'autorisation : Les directeurs-trices de revue ont accès à tout ce qui se trouve dans un journal (tous les contenus et les paramètres) ; Les rédacteurs-trices ont un accès complet à tout le contenu assigné ; Les assistants de revue ont un accès limité aux seules soumissions qui leur ont été expressément attribuées par un-e rédacteur-trice ; Les évaluateurs-trices peuvent voir et interagir avec les soumissions qui leur ont été assignées pour évaluation ; Et les auteurs-es peuvent voir et interagir avec une quantité limitée d'information en lien avec leurs propres soumissions. En outre, il y a cinq étapes différentes  auxquelles les rôles peuvent avoir accès : soumission, évaluation interne, évaluation, révision et production."
 
 msgid "manager.publication.library"
 msgstr "Bibliothèque de l'éditeur"
 
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Baser l'année de mention de droit d'auteur du nouvel article sur :"
+
 msgid "manager.setup.copyrightYearBasis.article"
-msgstr "Article (l'année par défaut sera celle de publication de l'article, comme pour le mode \"publish-as-you-go\")"
+msgstr "Article (l'année par défaut sera celle de publication de l'article, comme pour le mode « publier au fur et à mesure »)."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "Numéro (l'année par défaut sera celle de publication du numéro)"
+msgstr "Numéro (l'année par défaut sera celle de publication du numéro)."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Réinitialiser les autorisations de l'article"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Êtes-vous certain-e de vouloir réinitialiser les autorisations déjà rattachées à l'article ?"
 
 msgid "grid.genres.title.short"
 msgstr "Éléments"
@@ -1519,7 +1531,10 @@ msgid "grid.genres.title"
 msgstr "Éléments de l'article"
 
 msgid "grid.genres.description"
-msgstr "Ces éléments sont utilisés pour l'attribution de noms de fichiers et sont présentés dans un menu déroulant pour le téléchargement de fichiers. Les genres désignés ## permettent à l'utilisateur d'associer le fichier à l'ensemble de la soumission 99Z ou à un élément particulier par numéro (par exemple, 02)."
+msgstr "Ces éléments sont utilisés pour l'attribution de noms de fichiers et sont présentés dans un menu déroulant lors du téléversement de fichiers. Les genres désignés ## permettent à l'utilisateur-trice d'associer le fichier à l'ensemble de la soumission 99Z ou à un élément particulier par numéro (par exemple 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Paramètres"
 
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
 msgstr "Paramètres du plugiciel DOI"
@@ -1533,119 +1548,95 @@ msgstr "Numéros"
 msgid "plugins.importexport.common.export.representations"
 msgstr "Épreuves"
 
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Exigences non satisfaites pour l'utilisation du plugiciel"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Afin d'utiliser ce plugiciel, veuillez aller à la catégorie « identifiants publics », activez et configurez le plugiciel DOI et spécifiez un préfixe DOI valide."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Ce plugiciel n'est pas entièrement configuré."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Aucune publication n'est sélectionnée pour l'attribution d'un DOI dans le plugiciel  « DOI public identifier », conséquemment il n'aura pas de dépôt ou d'exportation depuis le plugiciel."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Mot de passe"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Veuillez noter que le mot de passe sera enregistré en plein texte et ne sera donc pas encrypté"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Tout numéro"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Tout statut"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Non déposé"
+
 msgid "plugins.importexport.common.status.markedRegistered"
 msgstr "Marqué comme enregistré"
 
-msgid "manager.setup.contextSummary"
-msgstr "Présentation de la revue"
+msgid "plugins.importexport.common.status.registered"
+msgstr "Enregistré"
 
-msgid "manager.setup.contextAbout"
-msgstr "À propos"
+msgid "plugins.importexport.common.action"
+msgstr "Action"
 
-msgid "manager.setup.contextAbout.description"
-msgstr "Inclure toute information sur votre revue qui pourrait intéresser les lecteurs, les auteurs ou les évaluateurs. Cela peut inclure votre politique de libre accès, les champs d'intérêt, les questions entourant les droits d'auteur, la divulgation des commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans n'importe quel système d'archives LOCKSS ou CLOCKSS."
+msgid "plugins.importexport.common.action.export"
+msgstr "Exporter"
 
-msgid "manager.setup.clockssLicenseLabel"
-msgstr "Description de la licence CLOCKSS"
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Marquer comme enregistré"
 
-msgid "manager.setup.clockssRegister"
-msgstr "Inscrivez-vous au service CLOCKSS en visitant le site <a href=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS </a>."
+msgid "plugins.importexport.common.action.register"
+msgstr "Enregistrer"
 
-msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
+msgid "plugins.importexport.common.validation"
+msgstr "Valider le XML avant l'exportation et l'enregistrement."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr "Utilisez la boîte à cocher fournie."
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Aucun objet sélectionné"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
-msgstr "Avertir les abonnés par courriel"
+msgid "plugins.importexport.common.error.validation"
+msgstr "Les objets sélectionnés n'ont pu être convertis."
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
-msgstr "mois après  la date d'échéance de l'abonnement."
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML invalide :"
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
-msgstr "Avertir les abonnés par courriel"
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Le fichier de sortie « {$param} » n'est pas accessible en écriture."
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
-msgstr "mois avant la date d'échéance de l'abonnement."
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Le fichier importé « {$param} » est illisible."
 
-msgid "manager.setup.resetPermissions.confirm"
-msgstr "êtes-vous certains de vouloir réinitialiser les autorisations déjà rattachées à l'article?"
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "L'enregistrement a échoué ! Le serveur d'enregistrement DOI a retourné une erreur : « {$param} »."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Enregistrement réussi !"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Le préfixe du DOI est manquant pour la revue ayant le chemin d'accès {$path}."
 
 msgid "plugins.importexport.common.cliError"
-msgstr "ERREUR:"
+msgstr "ERREUR :"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Le chemin « {$journalPath} » de la revue n'existe pas."
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "L'objet spécifié est introuvable."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "Envoyer une copie au contact principal identifié dans les paramètres de la revue."
+msgstr "Envoyer une copie à la personne-ressource principale identifiée dans les paramètres de la revue."
 
-msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "Le chemin pour la revue, \"{$journalPath}\", n'existe pas."
+msgid "stats.publishedSubmissions.details"
+msgstr "Renseignements sur l'article"
 
-msgid "manager.sections.hideAbout"
-msgstr "Omettre cette section dans \"À propos\" de cette revue."
+msgid "stats.publishedSubmissions.none"
+msgstr "Aucun article n'a été trouvé."
 
-msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Êtes-vous certain de vouloir supprimer cet abonnement?"
-
-msgid "manager.paymentTypes"
-msgstr "Types de paiement"
-
-msgid "manager.setup.plnPluginEnable"
-msgstr "Plugiciel PKP PN activé"
-
-msgid "manager.setup.plnDescription"
-msgstr "Le PKP Preservation Network (PN) fournit des services de préservation gratuits pour toutes les revues sur OJS répondant à quelques critères de base."
-
-msgid "manager.setup.plnSettingsDescription"
-msgstr "Cliquer sur le lien \"Paramètres\" pour accepter les conditions d'utilisation de PKP PN."
-
-msgid "manager.setup.plnPluginArchiving"
-msgstr "PKP Preservation Network (PN)"
-
-msgid "manager.setup.plnPluginNotInstalled"
-msgstr "Le PKP Preservation Network (PN) fournit des services de préservation gratuits pour toutes les revues sur OJS répondant à quelques critères de base. Le plugiciel PKP PN pour OJS 3 est présentement en développement et sera disponible dans la galerie de plugiciels bientôt."
-
-msgid "manager.setup.otherLockss"
-msgstr "Options d'archivage alternatives"
-
-msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} mois"
-
-msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} semaines"
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés"
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés"
-
-msgid "manager.subscriptions.confirmRenew"
-msgstr "Êtes-vous certain de vouloir renouveler cet abonnement?"
-
-msgid "manager.navigationMenus.subscriptions.description"
-msgstr "Lien vers la page décrivant les abonnements offerts."
-
-msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr "Lien vers la page décrivant les abonnements courants et passés aux utilisateurs."
-
-msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Ce lien sera affiché uniquement si l'utilisateur est connecté."
-
-msgid "plugins.importexport.common.validation"
-msgstr "Valider le XML avant l'exportation et l'enregistrement."
-
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "Le fichier importé {$param} est illisible."
-
-msgid "bon"
-msgstr "Ajouter un élément"
+msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
+msgstr "Nombre total de consultation des résumés de chaque article par date"
