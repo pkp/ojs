@@ -13,65 +13,66 @@
 
 <locale name="fr_CA" full_name="Français (Canada)">
 	<!-- Submission wizard -->
-
-	<!-- Submission Information Modal -->
-
-	<!-- events -->
-
-	<!-- galleys grid -->
-
-	<!-- galley files grid -->
-	<message key="submission.submit.form.authorRequiredFields">Les prénom, nom et adresse courriel de chaque auteur sont requis.</message>
-	<message key="submission.submit.form.titleRequired">Inscrire le titre de votre article.</message>
-	<message key="submission.submit.form.abstractRequired">Inscrire le résumé de votre article.</message>
-	<message key="submission.submit.form.contributorRoleRequired">Sélectionner le rôle du contributeur.</message>
-	<message key="submission.citationFormat.notFound">Le format de citation n'a pas été repéré.</message>
-	<message key="submission.metadataDescription">Ces spécifications sont basées sur l'ensemble d'éléments de métadonnées de Dublin Core, une norme internationale utilisée pour décrire les contenus d'une revue.</message>
-	<message key="submission.incomplete">En attente d'approbation</message>
-	<message key="submission.submit.form.localeRequired">Sélectionner une langue pour la soumission</message>
-	<message key="submission.submit.submissionChecklist">Liste de vérification de la soumission</message>
-	<message key="submission.submit.submissionChecklistDescription">Lire et cocher les éléments suivants pour indiquer que vous répondez aux exigences.</message>
-	<message key="submission.submit.privacyStatement">Déclaration de confidentialité</message>
-	<message key="submission.submit.contributorRole">Rôle du contributeur</message>
-	<message key="submission.submit.form.authorRequired">Au moins un auteur est requis.</message>
 	<message key="submission.submit.title">Soumettre un article</message>
-	<message key="submission.submit.userGroup">Rôle</message>
+	<message key="submission.submit.userGroup">Soumettre en tant que (rôle)...</message>
 	<message key="submission.submit.userGroupDescription">Choisissez le rôle sous lequel vous soumettez votre article.</message>
 	<message key="submission.upload.selectComponent">Sélectionner l'élément de l'article</message>
 	<message key="submission.title">Titre de l'article</message>
-	<message key="submission.title.tip">voici une variable avec une valeur erronée</message>
+	<message key="submission.title.tip"><![CDATA[Par type de soumission, on entend « image », « texte » ou d'autres formats multimédias, y compris « logiciel » et « ressource interactive ». Veuillez choisir le type qui correspond le mieux à votre soumission. Vous trouverez des exemples au <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
 	<message key="submission.submit.newSubmissionMultiple">Commencer une nouvelle soumission dans</message>
 	<message key="submission.submit.newSubmissionSingle">Nouvelle soumission</message>
 	<message key="grid.action.workflow">Processus éditorial pour la soumission</message>
+	<message key="submission.abstract.wordCount.description">Le résumé doit contenir {$wordCount} mots ou moins.</message>
 	<message key="submission.issueEntry">Métadonnées</message>
-	<message key="submission.submit.whatNext.description">La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers.  Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée.</message>
-	<message key="editor.submission.decision.sendExternalReview">Envoyer en évaluation</message>
-	<message key="submission.event.issueMetadataUpdated">Les métadonnées pour la publication de la soumission ont été mises à jour.</message>
-	<message key="submission.upload.fileContents">Élément de l'article</message>
-	<message key="submission.complete">Approuvé</message>
+	<message key="submission.submit.whatNext.description">La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée.</message>
+	<message key="grid.action.galleyInIssueEntry">Les épreuves se trouvent dans le dossier du numéro.</message>
 	<message key="grid.action.issueEntry">Voir les métadonnées de la soumission</message>
+	<!-- Submission Information Modal -->
 	<message key="submission.issueEntry.modalTitle">Métadonnées de la soumission et de la publication</message>
 	<message key="submission.issueEntry.submissionMetadata">Soumission</message>
 	<message key="submission.issueEntry.publicationMetadata">Publication</message>
 	<message key="submission.issueEntry.confirm">Assigner l'article à un numéro en vous basant sur les métadonnées ci-dessous.</message>
-	<message key="grid.action.galleyInIssueEntry">Les épreuves se trouvent dans le dossier du numéro.</message>
-	<message key="submission.event.articleGalleyMadeAvailable">L'article mis en page "{$galleyFormatName}" est disponible.</message>
-	<message key="submission.event.articleGalleyMadeUnavailable">L'article mis en page "{$galleyFormatName}" n'est pas disponible.</message>
-	<message key="submission.event.publicIdentifiers">Identifiants publics mis à jour.</message>
+	<!-- events -->
+	<message key="submission.event.articleGalleyMadeAvailable">Les épreuves de l'article en format "{$galleyFormatName}" sont disponibles.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">Les épreuves de l'article en format "{$galleyFormatName}" ne sont pas disponibles.</message>
+	<message key="submission.event.publicIdentifiers">Identifiants publics de la soumission mis à jour.</message>
+	<!-- galleys grid -->
 	<message key="grid.issueEntry.availableGalley.title">Approbation du format</message>
-	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Ce mod`èle de mise en page <em>ne sera plus offert</em>aux lecteurs</p>.]]></message>
-	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Ce mod`èle de mise en page <em>sera offert</em>aux lecteurs</p>.]]></message>
-	<message key="grid.action.availableArticleGalley">Rendre ce modèle de mise en page disponible</message>
-	<message key="submission.galleyFiles">Fichiers de mise en page</message>
-	<message key="submission.proofReadingDescription"><![CDATA[Le responsable de la mise en page télécharge les fichiers qui ont été préparés pour publication ici.  Utiliser <em>Assigner un vérificateur</em> pour identifier les auteurs et les autres personnes qui reliront les articles mis en page, avec les fichiers corrigés téléchargés, pour approbation avant la publication.]]></message>
-	<message key="grid.action.approveProof">Approuver cette épreuve.</message>
-	<message key="grid.action.pageProofApproved">Cette épreuve a été approuvée.</message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Ces épreuves <em>ne seront plus mises à la disposition</em> des lecteurs-trices</p>.]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Ces épreuves <em>seront mises à la disposition</em> des lecteurs</p>.]]></message>
+	<message key="grid.action.availableArticleGalley">Rendre ces épreuves disponibles</message>
+	<!-- galley files grid -->
+	<message key="submission.galleyFiles">Fichiers des épreuves</message>
+	<message key="submission.proofReadingDescription"><![CDATA[Le ou la responsable de la mise en page téléverse ici les fichiers qui ont été préparés pour publication. Utiliser « Assigner un-e vérificateur-trice » pour identifier les auteurs-es et autres personnes qui vérifieront les épreuves, à partir des fichiers corrigés téléversés, pour approbation avant la publication.]]></message>
+	<message key="grid.action.approveProof">Approuver cette version pour inclusion dans les épreuves.</message>
+	<message key="grid.action.pageProofApproved">Cette version a été approuvée pour inclusion dans les épreuves.</message>
 	<message key="submission.submit.titleAndSummary">Titre et résumé</message>
-	<message key="submission.submit.upload.description">Télécharger les fichier associés à la soumission, incluant l'article, les fichiers multimedia, les ensembles de données, les oeuvres d'art, etc.</message>
+	<message key="submission.submit.upload.description">Téléverser les fichier associés à cette soumission, incluant l'article, les fichiers multimédias, les ensembles de données, les oeuvres d'art, etc.</message>
 	<message key="submission.pageProofs">Correction d'épreuve</message>
-	<message key="submission.confirmSubmit">Êtes-vous certain de vouloir soumettre cet article à la revue?</message>
+	<message key="submission.confirmSubmit">Êtes-vous certain-e de vouloir soumettre cet article à la revue ?</message>
 	<message key="workflow.review.externalReview">Évaluation</message>
-	<message key="submission.abstract.wordCount.description">Le résumé doit contenir {$wordCount} mots ou moins.</message>
-	<message key="submission.submit.form.wordCountAlert">Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée.</message>
-	<message key="section.any">Aucune rubrique</message>
+	<message key="editor.submission.decision.sendExternalReview">Envoyer en évaluation</message>
+	<message key="submission.event.issueMetadataUpdated">Les métadonnées du numéro de la soumission ont été mises à jour.</message>
+	<message key="submission.upload.fileContents">Élément de l'article</message>
+	<message key="submission.complete">Approuvé-e</message>
+	<message key="submission.incomplete">En attente d'approbation</message>
+	<message key="submission.submit.form.localeRequired">Sélectionner une langue pour la soumission</message>
+	<message key="submission.submit.submissionChecklist">Liste de vérification de la soumission</message>
+	<message key="submission.submit.submissionChecklistDescription">Vous devez lire et reconnaître que vous remplissez les conditions ci-dessous avant de pouvoir poursuivre.</message>
+	<message key="submission.submit.privacyStatement">Déclaration de confidentialité</message>
+	<message key="submission.submit.contributorRole">Rôle du,de la contributeur-trice</message>
+	<message key="submission.submit.form.authorRequired">Au moins un-e auteur-e est requis-e.</message>
+	<message key="submission.submit.form.authorRequiredFields">Les prénom, nom et adresse courriel de chaque auteur-e sont requis.</message>
+	<message key="submission.submit.form.titleRequired">Veuillez inscrire le titre de votre article.</message>
+	<message key="submission.submit.form.abstractRequired">Veuillez inscrire le résumé de votre article.</message>
+	<message key="submission.submit.form.wordCountAlert">Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée pour cette rubrique.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Sélectionner le rôle du,de la contributeur-trice.</message>
+	<message key="submission.citationFormat.notFound">Le format de citation n'a pas été repéré.</message>
+	<message key="submission.metadataDescription">Ces spécifications sont basées sur le schéma de métadonnées du Dublin Core, une norme internationale utilisée pour décrire les contenus d'une revue.</message>
+	<message key="section.any">Toute rubrique</message>
+	<!-- categories -->
+
+	<message key="catalog.browseTitles">{$numTitles} titres</message>
+	<message key="catalog.category.heading">Tous les titres</message>
 </locale>
+
