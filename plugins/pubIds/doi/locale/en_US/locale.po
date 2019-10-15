@@ -35,7 +35,7 @@ msgstr "Please select the publishing objects that will have Digital Object Ident
 msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
 msgstr "Issues"
 
-msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Articles"
 
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
@@ -110,6 +110,12 @@ msgstr "Are you sure you wish to assign DOIs to all published objects that have 
 msgid "plugins.pubIds.doi.editor.doi"
 msgstr "DOI"
 
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "The DOI must begin with {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Assign DOI"
+
 msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
 msgstr "issue"
 
@@ -121,6 +127,12 @@ msgstr "galley"
 
 msgid "plugins.pubIds.doi.editor.customSuffixMissing"
 msgstr "The DOI cannot be assigned because the custom suffix is missing."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr "You can not generate a DOI until this publication has been assigned to an issue."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr "You can not generate a DOI because one or more parts of the DOI pattern are missing data. You may need to assign the publication to an issue, set a publisher ID or enter page numbers."
 
 msgid "plugins.pubIds.doi.editor.patternNotResolved"
 msgstr "The DOI cannot be assigned because it contains an unresolved pattern."
@@ -160,3 +172,18 @@ msgstr "The DOI {$pubId} cannot be assigned because it contains an unresolved pa
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
 msgstr "The DOI {$pubId} has been assigned."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "The DOI must begin with {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "The DOI for this publication will be {$doi}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "A DOI has not been assigned to this publication."
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Item"

@@ -29,7 +29,7 @@ msgstr "Escolha os objetos publicados que terão Identificadores de Objeto Digit
 msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
 msgstr "Edições"
 
-msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Artigos"
 
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"

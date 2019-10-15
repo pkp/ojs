@@ -65,7 +65,7 @@ class MedraInfoSender extends ScheduledTask {
 				}
 			}
 
-			if ($doiPubIdPlugin->getSetting($journal->getId(), 'enableSubmissionDoi')) {
+			if ($doiPubIdPlugin->getSetting($journal->getId(), 'enablePublicationDoi')) {
 				// Get unregistered articles
 				$unregisteredArticles = $plugin->getUnregisteredArticles($journal);
 				// If there are articles to be deposited

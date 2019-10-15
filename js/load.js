@@ -14,7 +14,7 @@ import PkpLoad from '../lib/pkp/js/load.js';
 import Container from '@/components/Container/Container.vue';
 import SettingsContainer from '@/components/Container/SettingsContainer.vue';
 import StatsContainer from '@/components/Container/StatsContainer.vue';
-import WorkflowContainer from '@/components/Container/WorkflowContainer.vue';
+import WorkflowContainer from '@/components/Container/WorkflowContainerOJS.vue';
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {

@@ -51,12 +51,12 @@ class O4DOIObjectCacheTest extends PKPTestCase {
 		$article->setIssueId('1');
 
 		self::assertFalse($cache->isCached('articles', $article->getId()));
-		self::assertFalse($cache->isCached('articlesByIssue', $article->getIssueId()));
-		self::assertFalse($cache->isCached('articlesByIssue', $article->getIssueId(), $article->getId()));
+		self::assertFalse($cache->isCached('articlesByIssue', $article->getCurrentPublication()->getData('issueId')));
+		self::assertFalse($cache->isCached('articlesByIssue', $article->getCurrentPublication()->getData('issueId'), $article->getId()));
 		$cache->add($article, $nullVar);
 		self::assertTrue($cache->isCached('articles', $article->getId()));
-		self::assertFalse($cache->isCached('articlesByIssue', $article->getIssueId()));
-		self::assertTrue($cache->isCached('articlesByIssue', $article->getIssueId(), $article->getId()));
+		self::assertFalse($cache->isCached('articlesByIssue', $article->getCurrentPublication()->getData('issueId')));
+		self::assertTrue($cache->isCached('articlesByIssue', $article->getCurrentPublication()->getData('issueId'), $article->getId()));
 
 		$retrievedArticle = $cache->get('articles', $article->getId());
 		self::assertEquals($article, $retrievedArticle);
@@ -81,24 +81,24 @@ class O4DOIObjectCacheTest extends PKPTestCase {
 		self::assertFalse($cache->isCached('galleys', $articleGalley->getId()));
 		self::assertFalse($cache->isCached('galleysByArticle', $article->getId()));
 		self::assertFalse($cache->isCached('galleysByArticle', $article->getId(), $articleGalley->getId()));
-		self::assertFalse($cache->isCached('galleysByIssue', $article->getIssueId()));
-		self::assertFalse($cache->isCached('galleysByIssue', $article->getIssueId(), $articleGalley->getId()));
+		self::assertFalse($cache->isCached('galleysByIssue', $article->getCurrentPublication()->getData('issueId')));
+		self::assertFalse($cache->isCached('galleysByIssue', $article->getCurrentPublication()->getData('issueId'), $articleGalley->getId()));
 		$cache->add($articleGalley, $article);
 		self::assertTrue($cache->isCached('galleys', $articleGalley->getId()));
 		self::assertFalse($cache->isCached('galleysByArticle', $article->getId()));
 		self::assertTrue($cache->isCached('galleysByArticle', $article->getId(), $articleGalley->getId()));
-		self::assertFalse($cache->isCached('galleysByIssue', $article->getIssueId()));
-		self::assertTrue($cache->isCached('galleysByIssue', $article->getIssueId(), $articleGalley->getId()));
+		self::assertFalse($cache->isCached('galleysByIssue', $article->getCurrentPublication()->getData('issueId')));
+		self::assertTrue($cache->isCached('galleysByIssue', $article->getCurrentPublication()->getData('issueId'), $articleGalley->getId()));
 
 		$retrievedArticleGalley1 = $cache->get('galleys', $articleGalley->getId());
 		self::assertEquals($articleGalley, $retrievedArticleGalley1);
 
-		$retrievedArticleGalley2 = $cache->get('galleysByIssue', $article->getIssueId(), $articleGalley->getId());
+		$retrievedArticleGalley2 = $cache->get('galleysByIssue', $article->getCurrentPublication()->getData('issueId'), $articleGalley->getId());
 		self::assertEquals($retrievedArticleGalley1, $retrievedArticleGalley2);
 
 		$cache->markComplete('galleysByArticle', $article->getId());
 		self::assertTrue($cache->isCached('galleysByArticle', $article->getId()));
-		self::assertFalse($cache->isCached('galleysByIssue', $article->getIssueId()));
+		self::assertFalse($cache->isCached('galleysByIssue', $article->getCurrentPublication()->getData('issueId')));
 	}
 
 	/**

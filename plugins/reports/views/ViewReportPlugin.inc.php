@@ -74,7 +74,7 @@ class ViewReportPlugin extends ReportPlugin {
 		]);
 		foreach ($submissions as $submission) {
 			$articleId = $submission->getId();
-			$issueId = $submission->getIssueId();
+			$issueId = $submission->getCurrentPublication()->getData('issueId');
 			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $submission->getLocalizedTitle() );
 
 			// Store the abstract view count

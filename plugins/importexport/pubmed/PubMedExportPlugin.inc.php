@@ -156,28 +156,15 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	 * @return string XML contents representing the supplied issue IDs.
 	 */
 	function exportIssues($issueIds, $context, $user) {
-		$submissionIds = array();
-		foreach ($issueIds as $issueId) {
-			$submissions = Services::get('submission')->getMany([
-				'issueIds' => $issueId,
-				'count' => 5000, // large upper limit
-			]);
-			foreach ($submissions as $submission) {
-				$submissionIds[] = $submission->getId();
-			}
-		}
-
-		$submissionDao = Application::getSubmissionDAO();
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
 		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($pubmedExportFilters);
-		$submissions = array();
-		foreach ($submissionIds as $submissionId) {
-			$submission = $submissionDao->getById($submissionId, $context->getId());
-			if ($submission) $submissions[] = $submission;
-		}
+		$submissions = Services::get('submission')->getMany([
+			'contextId' => $context->getId(),
+			'issueIds' => $issueIds,
+		]);
 		libxml_use_internal_errors(true);
 		$submissionXml = $exportFilter->execute($submissions, true);
 		$xml = $submissionXml->saveXml();
