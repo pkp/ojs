@@ -36,6 +36,7 @@
 			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
 		</li>
 		<li class="current">
+			<a href="{$currentUrl}" aria-current="page">
 			{capture name="currentTitleH1"}
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
@@ -44,6 +45,7 @@
 				{/if}
 			{/capture}
 			{$smarty.capture.currentTitleH1}
+			</a>
 		</li>
 	</ol>
 </nav>
