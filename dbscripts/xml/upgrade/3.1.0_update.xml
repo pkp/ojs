@@ -77,8 +77,12 @@
 	</sql>
 	<sql><!-- pkp/pkp-lib#2671 migrate crossref deposit status setting names -->
 		<!-- First remove the old settings if the new ones already exist, e.g. if already migrated and updated the statuses -->
-		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::depositStatus' AND submission_id IN (SELECT submission_id FROM (SELECT * FROM submission_settings) AS ss2 WHERE setting_name = 'crossref::status')</query>
-		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::depositStatusUrl' AND submission_id IN (SELECT submission_id FROM (SELECT * FROM submission_settings) AS ss2 WHERE setting_name = 'crossref::statusUrl')</query>
+		<query driver="mysql">DELETE s1 FROM submission_settings s1 LEFT JOIN submission_settings s2 ON (s1.submission_id = s2.submission_id AND s2.setting_name='crossref::status') WHERE s1.setting_name='crossref::depositStatus' AND s2.submission_id IS NOT NULL</query>
+		<query driver="mysql">DELETE s1 FROM submission_settings s1 LEFT JOIN submission_settings s2 ON (s1.submission_id = s2.submission_id AND s2.setting_name='crossref::statusUrl') WHERE s1.setting_name='crossref::depositStatusUrl' AND s2.submission_id IS NOT NULL</query>
+		<query driver="mysqli">DELETE s1 FROM submission_settings s1 LEFT JOIN submission_settings s2 ON (s1.submission_id = s2.submission_id AND s2.setting_name='crossref::status') WHERE s1.setting_name='crossref::depositStatus' AND s2.submission_id IS NOT NULL</query>
+		<query driver="mysqli">DELETE s1 FROM submission_settings s1 LEFT JOIN submission_settings s2 ON (s1.submission_id = s2.submission_id AND s2.setting_name='crossref::statusUrl') WHERE s1.setting_name='crossref::depositStatusUrl' AND s2.submission_id IS NOT NULL</query>
+		<query driver="postgres7">DELETE FROM submission_settings USING submission_settings AS s1 LEFT JOIN submission_settings AS s2 ON (s1.submission_id = s2.submission_id AND s2.setting_name='crossref::status') WHERE s1.setting_name='crossref::depositStatus' AND s2.submission_id IS NOT NULL AND s1.submission_id = submission_settings.submission_id AND s1.setting_name = submission_settings.setting_name</query>
+		<query driver="postgres7">DELETE FROM submission_settings USING submission_settings AS s1 LEFT JOIN submission_settings AS s2 ON (s1.submission_id = s2.submission_id AND s2.setting_name='crossref::statusUrl') WHERE s1.setting_name='crossref::depositStatusUrl' AND s2.submission_id IS NOT NULL AND s1.submission_id = submission_settings.submission_id AND s1.setting_name = submission_settings.setting_name</query>
 		<!-- Then change the old setting names -->
 		<query>UPDATE submission_settings SET setting_name = 'crossref::status' WHERE setting_name = 'crossref::depositStatus' </query>
 		<query>UPDATE submission_settings SET setting_name = 'crossref::statusUrl' WHERE setting_name = 'crossref::depositStatusUrl' </query>
