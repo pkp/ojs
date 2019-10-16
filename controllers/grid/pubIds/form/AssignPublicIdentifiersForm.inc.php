@@ -39,10 +39,10 @@ class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm {
 	/**
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('formParams', $this->getFormParams());
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	//

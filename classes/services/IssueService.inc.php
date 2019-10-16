@@ -52,7 +52,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * 		@option string orderDirection
 	 * }
 	 *
-	 * @return array
+	 * @return \Iterator
 	 */
 	public function getMany($args = array()) {
 		$issueListQB = $this->_getQueryBuilder($args);
@@ -62,7 +62,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 		$result = $issueDao->retrieveRange($issueListQO->toSql(), $issueListQO->getBindings(), $range);
 		$queryResults = new DAOResultFactory($result, $issueDao, '_fromRow');
 
-		return $queryResults->toArray();
+		return $queryResults->toIterator();
 	}
 
 	/**
@@ -296,8 +296,6 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getSummaryProperties()
 	 */
 	public function getSummaryProperties($issue, $args = null) {
-		\PluginRegistry::loadCategory('pubIds', true);
-
 		$props = array (
 			'id','_href','title','description','identification','volume','number','year',
 			'datePublished', 'publishedUrl', 'coverImageUrl','coverImageAltText','galleysSummary',
@@ -312,8 +310,6 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 	 * @copydoc \PKP\Services\interfaces\EntityPropertyInterface::getFullProperties()
 	 */
 	public function getFullProperties($issue, $args = null) {
-		\PluginRegistry::loadCategory('pubIds', true);
-
 		$props = array (
 			'id','_href','title','description','identification','volume','number','year','isPublished',
 			'isCurrent','datePublished','dateNotified','lastModified','publishedUrl','coverImageUrl',

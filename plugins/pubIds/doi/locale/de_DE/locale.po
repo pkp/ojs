@@ -35,7 +35,7 @@ msgstr "Bitte wählen Sie die Publikationsobjekte, denen Digital Object Identifi
 msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
 msgstr "Ausgaben"
 
-msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Artikel"
 
 msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"

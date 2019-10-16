@@ -178,7 +178,7 @@
 	<message key="issue.volume">Volume</message>
 	<message key="issue.number">Numéro</message>
 	<message key="issue.vol">Vol.</message>
-	<message key="issue.no">No.</message>
+	<message key="issue.no">No</message>
 	<message key="issue.year">Année</message>
 	<message key="issue.noIssues">Aucun numéro</message>
 	<message key="issue.toc">Sommaire</message>

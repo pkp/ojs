@@ -137,31 +137,31 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// related works:
 		// - includes articles-as-work
 		$submissionsByIssue = Services::get('submission')->getMany([
-			'issueIds' => $issue->getId(),
-			'count' => 5000, // large upper limit
+			'contextId' => $pubObject->getJournalId(),
+			'issueIds' => $pubObject->getId(),
+			'status' => STATUS_PUBLISHED,
 		]);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-		$galleysByIssue = array();
+		$relatedGalleys = [];
 		foreach ($submissionsByIssue as $relatedSubmission) {
 			$articleProprietaryId = $context->getId() . '-' . $pubObject->getId() . '-' . $relatedSubmission->getId();
 			$relatedSubmissionIds = array(O4DOI_ID_TYPE_PROPRIETARY => $articleProprietaryId);
 			$doi = $relatedSubmission->getStoredPubId('doi');
 			if (!empty($doi)) $relatedSubmissionIds[O4DOI_ID_TYPE_DOI] = $doi;
 			$issueNode->appendChild($this->createRelatedNode($doc, 'Work', O4DOI_RELATION_INCLUDES, $relatedSubmissionIds));
-			// Collect galleys by issue
-			$galleysByArticle = $galleyDao->getByPublicationId($relatedSubmission->getCurrentPublication()->getId())->toArray();
-			$galleysByIssue = array_merge($galleysByIssue, $galleysByArticle);
+			// related products:
+			// - includes articles-as-manifestation
+			$galleys = (array) $relatedSubmission->getCurrentPublication()->getData('galleys');
+			foreach ($galleys as $galley) {
+				$galleyProprietaryId = $context->getId() . '-' . $pubObject->getId() . '-' . $relatedSubmission->getId() . '-g' . $galley->getId();
+				$relatedGalleyIds = array(O4DOI_ID_TYPE_PROPRIETARY => $galleyProprietaryId);
+				$doi = $galley->getStoredPubId('doi');
+				if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
+				$issueNode->appendChild($this->createRelatedNode($doc, 'Product', O4DOI_RELATION_INCLUDES, $relatedGalleyIds));
+				unset($galley, $relatedGalleyIds);
+
+			}
 			unset($relatedSubmission, $relatedSubmissionIds);
-		}
-		// related products:
-		// - includes articles-as-manifestation
-		foreach($galleysByIssue as $relatedGalley) {
-			$galleyProprietaryId = $context->getId() . '-' . $pubObject->getId() . '-' . $relatedGalley->getSubmissionId() . '-g' . $relatedGalley->getId();
-			$relatedGalleyIds = array(O4DOI_ID_TYPE_PROPRIETARY => $galleyProprietaryId);
-			$doi = $relatedGalley->getStoredPubId('doi');
-			if (!empty($doi)) $relatedGalleyIds[O4DOI_ID_TYPE_DOI] = $doi;
-			$issueNode->appendChild($this->createRelatedNode($doc, 'Product', O4DOI_RELATION_INCLUDES, $relatedGalleyIds));
-			unset($relatedGalley, $relatedGalleyIds);
 		}
 
 		return $issueNode;

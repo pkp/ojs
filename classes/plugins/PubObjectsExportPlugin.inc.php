@@ -432,19 +432,18 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @return array
 	 */
 	function getUnregisteredArticles($context) {
-		// // Retrieve all published submissions that have not yet been registered.
-		// $publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
-		// $articles = $publishedSubmissionDao->getExportable(
-		// 	$context->getId(),
-		// 	null,
-		// 	null,
-		// 	null,
-		// 	null,
-		// 	$this->getDepositStatusSettingName(),
-		// 	EXPORT_STATUS_NOT_DEPOSITED,
-		// 	null
-		// );
-		// return $articles->toArray();
+		// Retrieve all published submissions that have not yet been registered.
+		$articles = Application::getSubmissionDAO()->getExportable(
+			$context->getId(),
+			null,
+			null,
+			null,
+			null,
+			$this->getDepositStatusSettingName(),
+			EXPORT_STATUS_NOT_DEPOSITED,
+			null
+		);
+		return $articles->toArray();
 	}
 	/**
 	 * Check whether we are in test mode.

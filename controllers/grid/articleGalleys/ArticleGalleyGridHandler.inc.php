@@ -275,7 +275,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getPublication()
 		);
 		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
@@ -372,7 +372,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getGalley()
 		);
 		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**

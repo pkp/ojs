@@ -35,7 +35,7 @@ msgstr "Veuillez choisir les objets publiés auxquels seront attribués des DOI:
 msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
 msgstr "Numéros"
 
-msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
 msgstr "Articles"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix"

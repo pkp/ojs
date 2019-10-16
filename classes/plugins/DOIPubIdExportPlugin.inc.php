@@ -43,7 +43,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
 					$doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());
 					$templateMgr->assign(array(
-						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enableSubmissionDoi'),
+						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enablePublicationDoi'),
 						'exportIssues' => $doiPlugin->getSetting($context->getId(), 'enableIssueDoi'),
 						'exportRepresentations' => $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi'),
 					));
@@ -127,18 +127,17 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function getUnregisteredArticles($context) {
 		// Retrieve all published submissions that have not yet been registered.
-		// $publishedSubmissionDao = DAORegistry::getDAO('PublishedSubmissionDAO'); /* @var $publishedSubmissionDao PublishedSubmissionDAO */
-		// $articles = $publishedSubmissionDao->getExportable(
-		// 	$context->getId(),
-		// 	$this->getPubIdType(),
-		// 	null,
-		// 	null,
-		// 	null,
-		// 	$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
-		// 	null,
-		// 	null
-		// );
-		// return $articles->toArray();
+		$articles = Application::getSubmissionDAO()->getExportable(
+			$context->getId(),
+			$this->getPubIdType(),
+			null,
+			null,
+			null,
+			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
+			null,
+			null
+		);
+		return $articles->toArray();
 	}
 
 	/**
