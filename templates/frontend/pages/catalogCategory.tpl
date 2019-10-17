@@ -71,7 +71,7 @@
 		<ul class="cmp_article_list articles">
 			{foreach from=$publishedSubmissions item=preprint}
 				<li>
-					{include file="frontend/objects/preprint_summary.tpl"}
+					{include file="frontend/objects/preprint_summary.tpl" preprint=$preprint hideGalleys=true}
 				</li>
 			{/foreach}
 		</ul>
