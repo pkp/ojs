@@ -23,7 +23,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Пожалуйста выберите объекты, которым должны быть присвоены DOI.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Пожалуйста выберите публикуемые объекты, которые будут иметь присвоенные идентификаторы цифровых объектов (Digital Object Identifier, DOI):</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Выпуски</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Статьи</message>
+	<message key="plugins.pubIds.doi.manager.settings.enablePublicationDoi">Статьи</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Гранки</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Префикс DOI</message>
@@ -46,7 +46,7 @@
 
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Переприсвоить DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Если вы измените вашу конфигурацию DOI, то она не затронет DOI, которые уже были присвоены. После сохранения конфигурации DOI используйте эту кнопку, чтобы удалить все существующие DOI для того, чтобы новые настройки повлияли на существующие объекты.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Вы уверены, что хотите удалить все существующие DOI?</message>	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Вы уверены, что хотите удалить все существующие DOI?</message>
 
 
 	<!-- форма метаданных -->
@@ -55,6 +55,8 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">статье</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">гранке</message>
 	<message key="plugins.pubIds.doi.editor.customSuffixMissing">DOI не может быть присвоен, так как отсутствует пользовательский суффикс.</message>
+	<message key="plugins.pubIds.doi.editor.missingIssue">Вы не можете сгенерировать DOI, пока эта публикация не будет назначена в конкретный выпуск.</message>
+	<message key="plugins.pubIds.doi.editor.missingParts">Вы не можете сгенерировать DOI, так как для одной или нескольких частей шаблона DOI не хватает данных. Вам может быть необходимо назначить публикацию в конкретный выпуск, задать ID издателя или ввести номера страниц.</message>
 	<message key="plugins.pubIds.doi.editor.patternNotResolved">DOI не может быть присвоен, так как он содержит не замененный шаблон.</message>
 	<message key="plugins.pubIds.doi.editor.canBeAssigned">Вы видите как будет выглядеть DOI. Поставьте галочку и сохраните форму для присвоения DOI.</message>
 	<message key="plugins.pubIds.doi.editor.assigned"> DOI присвоен {$pubObjectType}.</message>
@@ -69,4 +71,9 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI не может быть присвоен, так как отсутствует пользовательский суффикс.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} не может быть присвоен, так как он содержит не замененный шаблон.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} был присвоен.</message>
+	<message key="plugins.pubIds.doi.editor.missingPrefix">DOI должен начинаться с {$doiPrefix}.</message>
+	<message key="plugins.pubIds.doi.editor.preview.publication">DOI для этой публикации будет {$doi}.</message>
+	<message key="plugins.pubIds.doi.editor.preview.publication.none">DOI не был присвоен этой публикации.</message>
+	<message key="plugins.pubIds.doi.editor.preview.galleys">Гранка: {$galleyLabel}</message>
+	<message key="plugins.pubIds.doi.editor.preview.objects">Элемент</message>
 </locale>
