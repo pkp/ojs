@@ -71,7 +71,7 @@
 		<ul class="cmp_article_list articles">
 			{foreach from=$publishedSubmissions item=article}
 				<li>
-					{include file="frontend/objects/article_summary.tpl"}
+					{include file="frontend/objects/article_summary.tpl" article=$article hideGalleys=true}
 				</li>
 			{/foreach}
 		</ul>
