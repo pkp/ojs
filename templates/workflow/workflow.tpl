@@ -79,7 +79,7 @@
 			</tab>
 			{if $canAccessPublication}
 				<tab id="publication" label="{translate key="submission.publication"}">
-					<div class="pkpPublication" ref="publication" aria-live="polite">
+					<div class="pkpPublication" ref="publica§tion" aria-live="polite">
 						<pkp-header class="pkpPublication__header">
 							<span class="pkpPublication__status">
 								<strong>{{ i18n.status }}</strong>
