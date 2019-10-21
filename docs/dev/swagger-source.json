@@ -299,6 +299,13 @@
 						"type": "boolean"
 					},
 					{
+						"name": "daysInactive",
+						"description": "Filter the results by those which have not had activity for the last X days.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
 						"name": "sectionIds",
 						"description": "Filter the results by those assigned to a section.",
 						"in": "query",

@@ -59,6 +59,7 @@
 		<code function="migrateSubmissionCoverImages" />
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_last_activity.xml" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -246,6 +247,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REINSTATE" locales="en_US" />
 		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
 		<data file="dbscripts/xml/upgrade/3.2.0_versioning.xml" />
+		<data file="dbscripts/xml/upgrade/3.2.0_last_activity.xml" />
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
