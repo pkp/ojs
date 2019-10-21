@@ -256,9 +256,11 @@ Thank you for considering this request.
 		<subject>Article Review Request</subject>
 		<body>{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}" for {$journalName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date.
 
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
+I believe that you would serve as an excellent reviewer of the manuscript. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+
+Please log into the journal web site to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
 
 The review itself is due {$reviewDueDate}.
 
@@ -271,22 +273,27 @@ Thank you for considering this request.
 {$editorialContactSignature}
 
 
-
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_REMIND_AUTO_ATTACHED.)</description>
+		<description>This email is automatically sent when a reviewer's confirmation due date elapses (see Review Options under Settings &gt; Workflow &gt; Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Article Review Request</subject>
 		<body>{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+		<body>{$reviewerName}:
 
-Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
+Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}" for {$journalName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date.
+
+I believe that you would serve as an excellent reviewer of the manuscript. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
+
+Please log into the journal web site to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
 
 The review itself is due {$reviewDueDate}.
+
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}
 
 Submission URL: {$submissionReviewUrl}
 
@@ -295,12 +302,11 @@ Thank you for considering this request.
 {$editorialContactSignature}
 
 
-
-"{$articleTitle}"
+"{$submissionTitle}"
 
 {$abstractTermIfEnabled}
 {$articleAbstract}</body>
-		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
+		<description>This email is automatically sent when a reviewer's confirmation due date elapses (see Review Options under Settings &gt; Workflow &gt; Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Article Review Request</subject>
