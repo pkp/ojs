@@ -20,6 +20,7 @@ use \APP\Services\PublicationService;
 use \APP\Services\StatsEditorialService;
 use \APP\Services\StatsService;
 use \APP\Services\UserService;
+use \PKP\Services\PKPAnnouncementService;
 use \PKP\Services\PKPAuthorService;
 use \PKP\Services\PKPEmailTemplateService;
 use \PKP\Services\PKPSchemaService;
@@ -32,6 +33,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 	 * @param Pimple\Container $pimple
 	 */
 	public function register(Container $pimple) {
+
+		// Announcement service
+		$pimple['announcement'] = function() {
+			return new PKPAnnouncementService();
+		};
 
 		// Author service
 		$pimple['author'] = function() {
