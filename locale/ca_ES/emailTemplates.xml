@@ -175,6 +175,54 @@ Nom d'usuari: {$editorUsername}<br />
 Moltes gràcies.]]></body>
 		<description>Aquest missatge de correu electrònic notifica a l'editor de secció que l'editor li ha assignat la tasca de supervisar el procés editorial d'una tramesa. Proporciona informació sobre la tramesa i indica com s'ha d'accedir al lloc web de la revista.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Sol·licitud de revisió d'un article</subject>
+		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
+<br />
+Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
+<br />
+Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web de la revista és {$contextUrl}.<br />
+<br />
+La data límit per a la revisió és el {$reviewDueDate}.<br />
+<br />
+Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
+<br />
+URL de la tramesa: {$submissionReviewUrl}<br />
+<br />
+Gràcies per tenir en compte aquesta sol·licitud.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista (en cas contrari, vegeu el missatge de correu electrònic REVIEW_REQUEST_ATTACHED).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Sol·licitud de revisió d'un article</subject>
+		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
+<br />
+Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
+<br />
+Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació.<br />
+<br />
+La data límit per a la revisió és el {$reviewDueDate}.<br />
+<br />
+URL de la tramesa: {$submissionReviewUrl}<br />
+<br />
+Gràcies per tenir en compte aquesta sol·licitud.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Sol·licitud de revisió d'un article</subject>
 		<body><![CDATA[Benvolgut/uda {$reviewerName},<br />
