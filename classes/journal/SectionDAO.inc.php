@@ -352,13 +352,15 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	function getByIssueId($issueId) {
 		$issue = Services::get('issue')->get($issueId);
-		$submissions = Services::get('submission')->getMany([
+		$result = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issueId,
 		]);
-		$sectionIds = array_unique(array_map(function($submission) {
-			return $submission->getCurrentPublication()->getData('sectionId');
-		}, $submissions));
+		$sectionIds = [];
+		foreach ($result as $submission) {
+			$sectionIds[] = $submission->getCurrentPublication()->getData('sectionId');
+		}
+		$sectionIds = array_unique($sectionIds);
 		$result = $this->retrieve(
 			'SELECT s.*, COALESCE(o.seq, s.seq) AS section_seq
 				FROM sections s

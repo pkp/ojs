@@ -237,8 +237,8 @@ class PublicationService extends PKPPublicationService {
 	public function deletePublicationBefore($hookName, $args) {
 		$publication = $args[0];
 
-		$galleys = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
-		foreach ($galleys as $galley) {
+		$result = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
+		foreach ($result as $galley) {
 			Services::get('galley')->delete($galley);
 		}
 	}

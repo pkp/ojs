@@ -113,9 +113,9 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
 		if ($displayItems == 'recent' && $recentItems > 0) {
-			$submissions = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'count' => $recentItems]);
+			$result = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'count' => $recentItems]);
 			$submissionsInSections = [];
-			foreach ($submissions as $submission) {
+			foreach ($result as $submission) {
 				$submissionsInSections[]['articles'][] = $submission;
 			}
 		} else {

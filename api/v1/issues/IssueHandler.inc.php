@@ -168,13 +168,13 @@ class IssueHandler extends APIHandler {
 		}
 
 		$items = array();
-		$issues = $issueService->getMany($params);
-		if (!empty($issues)) {
+		$result = $issueService->getMany($params);
+		if ($result->valid()) {
 			$propertyArgs = array(
 				'request' => $request,
 				'slimRequest' => $slimRequest,
 			);
-			foreach ($issues as $issue) {
+			foreach ($result as $issue) {
 				$items[] = $issueService->getSummaryProperties($issue, $propertyArgs);
 			}
 		}
