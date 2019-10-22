@@ -62,17 +62,19 @@ class PreprintHandler extends Handler {
 		$urlPath = empty($args) ? 0 : array_shift($args);
 
 		// Look for a publication with a publisher-id that matches the url path
-		$publications = Services::get('publication')->getMany([
+		$result = Services::get('publication')->getMany([
 			'contextIds' => $request->getContext()->getId(),
 			'publisherIds' => $urlPath,
 		]);
-		if (!empty($publications)) {
-			$submissionId = $publications[0]->getData('submissionId');
+		$publicationWithMatchingUrl = null;
+		if ($result->valid()) {
+			$publicationWithMatchingUrl = $result->current();
+			$submissionId = $publicationWithMatchingUrl->getData('submissionId');
 		} elseif (ctype_digit($urlPath)) {
 			$submissionId = $urlPath;
 		}
 
-		if (!$submissionId) {
+		if (!isset($submissionId)) {
 			$request->getDispatcher()->handle404();
 		}
 
@@ -85,8 +87,8 @@ class PreprintHandler extends Handler {
 		// If we retrieved the submission from the publisher-id and it no longer
 		// matches the publisher-id of the current publication, redirect to the
 		// URL for the current publication
-		if ($urlPath && !empty($publications) &&
-				$submission->getCurrentPublication()->getData('pub-id::publisher-id') !== $publications[0]->getData('pub-id::publisher-id')) {
+		if ($urlPath && $publicationWithMatchingUrl &&
+				$submission->getCurrentPublication()->getData('pub-id::publisher-id') !== $publicationWithMatchingUrl->getData('pub-id::publisher-id')) {
 			$newUrlPath = $submission->getCurrentPublication()->getData('pub-id::publisher-id');
 			if (!$newUrlPath) {
 				$newUrlPath = $submission->getId();
