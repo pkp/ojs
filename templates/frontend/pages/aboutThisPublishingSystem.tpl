@@ -15,6 +15,9 @@
 
 <div class="page page_about_publishing_system">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutThisPublishingSystem"}
+	<h1 class="pageCurrentTitle">
+		{translate key="about.aboutThisPublishingSystem"}
+	</h1>
 
 	<p>
 		{if $currentJournal}

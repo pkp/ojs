@@ -30,16 +30,12 @@
 		</li>
 		<li class="current">
 			<a href="{$currentUrl}" aria-current="page">
-			{capture name="currentTitleH1"}
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}
 					{$currentTitle|escape}
 				{/if}
-			{/capture}
-			{$smarty.capture.currentTitleH1}
 			</a>
 		</li>
 	</ol>
 </nav>
-<h1 class="pageCurrentTitle">{$smarty.capture.currentTitleH1}</h1>
