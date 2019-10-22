@@ -170,6 +170,55 @@
 谢谢您]]></body>
 		<description>这封电子邮件通知一个区段编辑说，编辑已经指派他们透过编辑流程来审查一份稿件。邮件中含有关于稿件以及如何进入期刊网站的信息。</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>邀请您审查稿件</subject>
+		<body><![CDATA[{$reviewerName}您好：<br />
+<br />
+《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。<br />
+<br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：{$contextUrl}<br />
+<br />
+请注意审查工作的期限为：{$reviewDueDate}。<br />
+<br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
+<br />
+稿件网址：{$submissionReviewUrl}<br />
+<br />
+非常感谢您考虑我们的邀请。<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+〈{$submissionTitle}〉<br />
+<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项时，才会用到这份消息。(否则请见：REVIEW_REQUEST_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>审稿请求</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这项对我们来说相当重要的工作。<br />
+<br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。<br />
+<br />
+请注意审查工作的期限为：{$reviewDueDate}。<br />
+<br />
+稿件网址：{$submissionReviewUrl}<br />
+<br />
+非常感谢您考虑我们的邀请。<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+〈{$submissionTitle}〉<br />
+<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>这封电子邮件这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项，并且启用「审查人一点即往」的功能，才会用到这份消息。</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>邀请您审查稿件</subject>
 		<body><![CDATA[{$reviewerName}您好：<br />
