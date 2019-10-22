@@ -206,7 +206,7 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 		}
 
 		// issue ids
-		if (!is_null($this->issueIds)) {
+		if (!empty($this->issueIds)) {
 			$q->whereIn('i.issue_id', $this->issueIds);
 		}
 
