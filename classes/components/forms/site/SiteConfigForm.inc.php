@@ -46,7 +46,7 @@ class SiteConfigForm extends FormComponent {
 			'value' => $site->getData('title'),
 		]));
 
-		if ($result->valid()) {
+		if (count($result)) {
 			$options = [['value' => '', 'label' => '']];
 			foreach ($result as $context) {
 				$options[] = [

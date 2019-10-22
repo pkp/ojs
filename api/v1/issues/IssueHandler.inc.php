@@ -169,7 +169,7 @@ class IssueHandler extends APIHandler {
 
 		$items = array();
 		$result = $issueService->getMany($params);
-		if ($result->valid()) {
+		if (count($result)) {
 			$propertyArgs = array(
 				'request' => $request,
 				'slimRequest' => $slimRequest,

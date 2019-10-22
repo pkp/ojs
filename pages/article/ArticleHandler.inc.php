@@ -70,7 +70,7 @@ class ArticleHandler extends Handler {
 			'publisherIds' => $urlPath,
 		]);
 		$publicationWithMatchingUrl = null;
-		if ($result->valid()) {
+		if (count($result)) {
 			$publicationWithMatchingUrl = $result->current();
 			$submissionId = $publicationWithMatchingUrl->getData('submissionId');
 		} elseif (ctype_digit($urlPath)) {
