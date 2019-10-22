@@ -158,6 +158,54 @@ Erabiltzaile-izena: {$editorUsername}<br />
 Eskerrik asko.]]></body>
 		<description>Mezu honek Ataleko editore bati jakinarazten dio Editoreak bidalketa baten edizio-prozesua gainbegiratzeko izendatu duela. Artikuluari buruzko informazioa eta aldizkariaren gunean sartzeko datuak ematen ditu.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Artikulua ebaluatzeko eskaera</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
+<br />
+Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea {$contextUrl} da<br />
+<br />
+Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
+<br />
+Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
+<br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
+<br />
+Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean. (Bestela, ikus REVIEW_REQUEST_ATTACHED).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Artikulua ebaluatzeko eskaera</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
+<br />
+Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko.<br />
+<br />
+Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
+<br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
+<br />
+Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean, eta klik bakarreko ebaluatzaile-sarbidea gaitzen denean.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Artikulua ebaluatzeko eskaera</subject>
 		<body><![CDATA[{$reviewerName}:<br />
