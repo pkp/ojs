@@ -76,11 +76,7 @@ class SubmissionQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionQu
 		if (!empty($this->sectionIds)) {
 			$sectionIds = $this->sectionIds;
 			$q->leftJoin('publications as section_p', 'section_p.submission_id', '=', 's.submission_id')
-				->leftJoin('publication_settings as section_ps','section_p.publication_id','=','section_ps.publication_id')
-				->where(function($q) use ($sectionIds) {
-					$q->where('section_ps.setting_name', '=', 'sectionId');
-					$q->whereIn('section_ps.setting_value', $sectionIds);
-				});
+				->whereIn('section_p.section_id', $sectionIds);
 		}
 
 		return $q;
