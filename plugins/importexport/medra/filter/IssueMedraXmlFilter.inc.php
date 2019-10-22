@@ -136,14 +136,14 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// 4) issue (as-work and as-manifestation):
 		// related works:
 		// - includes articles-as-work
-		$submissionsByIssue = Services::get('submission')->getMany([
+		$result = Services::get('submission')->getMany([
 			'contextId' => $pubObject->getJournalId(),
 			'issueIds' => $pubObject->getId(),
 			'status' => STATUS_PUBLISHED,
 		]);
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 		$relatedGalleys = [];
-		foreach ($submissionsByIssue as $relatedSubmission) {
+		foreach ($result as $relatedSubmission) {
 			$articleProprietaryId = $context->getId() . '-' . $pubObject->getId() . '-' . $relatedSubmission->getId();
 			$relatedSubmissionIds = array(O4DOI_ID_TYPE_PROPRIETARY => $articleProprietaryId);
 			$doi = $relatedSubmission->getStoredPubId('doi');

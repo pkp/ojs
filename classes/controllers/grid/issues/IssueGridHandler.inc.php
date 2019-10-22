@@ -298,12 +298,12 @@ class IssueGridHandler extends GridHandler {
 		// remove all published submissions and return original articles to editing queue
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		$submissions = Services::get('submission')->getMany([
+		$result = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'count' => 5000, // large upper-limit
 			'issueIds' => $issue->getId(),
 		]);
-		foreach ($submissions as $submission) {
+		foreach ($result as $submission) {
 			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
 			if ($isBackIssue) {
 				$articleTombstoneManager->insertArticleTombstone($submission, $journal);
@@ -482,13 +482,13 @@ class IssueGridHandler extends GridHandler {
 		if (!$wasPublished) {
 			// Publish all related publications
 			import('classes.submission.Submission');
-			$submissions = Services::get('submission')->getMany([
+			$result = Services::get('submission')->getMany([
 				'contextId' => $issue->getJournalId(),
 				'issueIds' => $issue->getId(),
 				'status' => STATUS_SCHEDULED,
 				'count' => 5000, // large upper limit
 			]);
-			foreach ($submissions as $submission) {
+			foreach ($result as $submission) {
 				$publication = $submission->getLatestPublication();
 				if ($publication->getData('status') === STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
 					$publication = Services::get('publication')->publish($publication);
@@ -551,12 +551,12 @@ class IssueGridHandler extends GridHandler {
 		import('classes.submission.Submission');
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
-		$submissions = Services::get('submission')->getMany([
+		$result = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 			'count' => 5000, // large upper limit
 		]);
-		foreach ($submissions as $submission) {
+		foreach ($result as $submission) {
 			$articleTombstoneManager->insertArticleTombstone($submission, $journal);
 			$submission = Services::get('submission')->edit($submission, ['status' => STATUS_QUEUED], $request);
 		}

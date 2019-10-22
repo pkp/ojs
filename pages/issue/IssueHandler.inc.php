@@ -307,14 +307,14 @@ class IssueHandler extends Handler {
 		}, $primaryGenres);
 
 		import('classes.submission.Submission'); // import STATUS_ constants
-		$issueSubmissions = Services::get('submission')->getMany([
+		$result = Services::get('submission')->getMany([
 			'contextId' => $journal->getId(),
 			'issueIds' => [$issue->getId()],
 			'status' => STATUS_PUBLISHED,
 		]);
 
 		$issueSubmissionsInSection = [];
-		foreach ($issueSubmissions as $submission) {
+		foreach ($result as $submission) {
 			if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
 				continue;
 			}

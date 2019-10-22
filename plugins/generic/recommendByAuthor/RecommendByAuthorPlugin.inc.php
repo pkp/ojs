@@ -71,14 +71,15 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 			// false positives or miss some entries. But there's no other way
 			// until OJS allows users to consistently normalize authors (via name,
 			// email, ORCID, whatever).
-			$authorRecords = Services::get('author')->getMany([
+			$result = Services::get('author')->getMany([
 				'contextIds' => $displayedArticle->getData('contextId'),
 				'givenName' => $author->getLocalizedGivenName(),
 				'familyName' => $author->getLocalizedFamilyName(),
 			]);
-			$publicationIds = array_map(function($author) {
-				return $author->getData('publicationId');
-			}, $authorRecords);
+			$publicationIds = [];
+			foreach ($result as $author) {
+				$publicationIds[] = $author->getData('publicationId');
+			}
 			$submissionIds = array_map(function($publicationId) {
 				return Services::get('publication')->get($publicationId)->getData('submissionId');
 			}, array_unique($publicationIds));
