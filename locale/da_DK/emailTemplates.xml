@@ -158,6 +158,54 @@ Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$editorUsername}<br />
 Tak.]]></body>
 		<description>Denne e-mail underretter en sektionsredaktør om, at redaktøren har tildelt vedkommende opgaven med at følge et manuskript igennem redigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til tidsskriftets websted.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Jeg tror, at du vil være en fremragende bedømmer af manuskriptet &quot;{$submissionTitle}&quot;, der er blevet sendt til {$contextName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.<br />
+<br />
+Log på tidsskriftets websted inden den {$responseDueDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er {$contextUrl}<br />
+<br />
+Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
+<br />
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}<br />
+<br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
+<br />
+Tak for din overvejelse af denne forespørgsel.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+ {$submissionAbstract}]]></body>
+		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2. (Se ellers REVIEW_REQUEST_ATTACHED).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Forespørgsel om bedømmelse af artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Jeg tror, at du vil være en fremragende bedømmer af manuskriptet &quot;{$submissionTitle}&quot;, der er blevet sendt til {$contextName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.<br />
+<br />
+Log på tidsskriftets websted inden den {$responseDueDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling.<br />
+<br />
+Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
+<br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
+<br />
+Tak for din overvejelse af denne forespørgsel.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+ {$submissionAbstract}]]></body>
+		<description>Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at acceptere eller afvise at bedømme et manuskript. Den indeholder oplysninger om manuskriptet, f.eks. titel og resumé, forfaldsdato for bedømmelse, samt hvordan der kan oprettes adgang til selve manuskriptet. Denne meddelelse benyttes, hvis indstillingen Standardbedømmelsesproces er valgt under Konfiguration af tidsskrift, trin 2, og adgang for bedømmere ved hjælp af ét klik er aktiveret.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Forespørgsel om bedømmelse af artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
