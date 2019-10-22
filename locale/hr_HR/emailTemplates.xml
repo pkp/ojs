@@ -134,6 +134,48 @@ Korisničko ime: {$editorUsername}<br />
 Unaprijed hvala.]]></body>
 		<description>Ovim obrascem e-pošte glavni urednik obavještava urednika rubrike da mu je dodijeljen zadatak vođenja priloga kroz uređivački postupak. Obrazac pruža i osnovne informacije o prilogu.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Zamolba za recenziju članka</subject>
+		<body><![CDATA[Poštovana/i {$reviewerName},<br />
+<br />
+s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis {$contextName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
+<br />
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$responseDueDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. Mrežna stranica časopisa je {$contextUrl}<br />
+<br />
+U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stranicu časopisa, možete se koristiti ovom poveznicom kako biste promijenili lozinku (koju ćemo vam tada, zajedno s korisničkim imenom, poslati putem e-pošte). {$passwordResetUrl}<br />
+<br />
+Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.<br />
+<br />
+URL članka: {$submissionReviewUrl}<br />
+<br />
+Srdačno,<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji se recenzent može prijaviti u sustav. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa (Ako nije, koristi se Zamolba za recenziju članka u privitku)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Zamolba za recenziju članka</subject>
+		<body><![CDATA[Poštovana/i {$reviewerName},<br />
+<br />
+s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis {$contextName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />
+<br />
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$responseDueDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku.<br />
+<br />
+Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.<br />
+<br />
+Do priloga možete doći izravno prateći ovu kodiranu pozivnicu: {$submissionReviewUrl}<br />
+<br />
+Srdačno,<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti ili je prisiljen odbiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji  recenzent može pristupiti članku. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa, a recenzentu je omogućen pristup jednim klikom.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Zamolba za recenziju članka</subject>
 		<body><![CDATA[Poštovana/i {$reviewerName},<br />
