@@ -172,7 +172,7 @@
 		<!-- connect controlled vocab metadata to publications, 1048585 = ASSOC_TYPE_SUBMISSION, 1048588 = ASSOC_TYPE_PUBLICATION -->
 		<query>
 			UPDATE controlled_vocabs AS cv,
-			          submissions AS s
+				submissions AS s
 			SET cv.assoc_type = 1048588, cv.assoc_id = s.current_publication_id
 			WHERE cv.assoc_type = 1048585 AND s.submission_id = cv.assoc_id
 		</query>
@@ -187,6 +187,20 @@
 					ON s.submission_id = tc.submission_id
 				WHERE c.citation_id = tc.citation_id
 			)
+		</query>
+
+		<!-- update the DOI setting names -->
+		<query>
+			UPDATE plugin_settings
+			SET setting_name="doiPublicationSuffixPattern"
+			WHERE setting_name="doiSubmissionSuffixPattern"
+				AND plugin_name="doipubidplugin"
+		</query>
+		<query>
+			UPDATE plugin_settings
+			SET setting_name="enablePublicationDoi"
+			WHERE setting_name="enableSubmissionDoi"
+				AND plugin_name="doipubidplugin"
 		</query>
 
 		<!-- remove deprecated and temporary tables. should be last commands -->
