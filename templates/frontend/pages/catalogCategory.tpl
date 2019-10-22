@@ -23,6 +23,9 @@
 
 	{* Breadcrumb *}
 	{include file="frontend/components/breadcrumbs_catalog.tpl" type="category" parent=$parentCategory currentTitle=$category->getLocalizedTitle()}
+	<h1 class="pageCurrentTitle">
+		{$category->getLocalizedTitle()|escape}
+	</h1>
 
 	{* Count of articles in this category *}
 	<div class="article_count">

@@ -19,6 +19,9 @@
 
 <div class="page page_user_subscriptions">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.subscriptions.mySubscriptions"}
+	<h1 class="pageCurrentTitle">
+		{translate key="user.subscriptions.mySubscriptions"}
+	</h1>
 	{include file="frontend/components/subscriptionContact.tpl"}
 
 	{if $paymentsEnabled}

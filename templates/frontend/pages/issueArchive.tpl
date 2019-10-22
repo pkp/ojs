@@ -25,6 +25,9 @@
 
 <div class="page page_issue_archive">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
+	<h1 class="pageCurrentTitle">
+		{$pageTitle|escape}
+	</h1>
 
 	{* No issues have been published *}
 	{if empty($issues)}

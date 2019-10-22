@@ -21,6 +21,9 @@
 <div class="page page_search">
 
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="common.search"}
+	<h1 class="pageCurrentTitle">
+		{translate key="common.search"}
+	</h1>
 
 	{capture name="searchFormUrl"}{url op="search" escape=false}{/capture}
 	{$smarty.capture.searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
