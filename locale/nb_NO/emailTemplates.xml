@@ -131,6 +131,54 @@ Brukernavn: {$editorUsername}<br />
 Vennlig hilsen.]]></body>
 		<description>Denne e-posten varsler en Seksjonsredaktør om at Ansvarlig redaktør har oppnevnt seksjonsredaktøren til å føre et innsendt manuskript gjennom den redaksjonelle prosessen. E-posten gir informasjon om det innsendte manuskriptet, og om tilgangen til tidsskriftets nettsted.</description>
 	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Forespørsel om fagfellevurdering</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.<br />
+<br />
+Vennligst logg inn på tidsskriftets nettsted innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss. Adressen til nettstedet er {$contextUrl}<br />
+<br />
+Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.<br />
+<br />
+Hvis har mistet eller glemt brukernavnet og passordet ditt til tidsskriftets nettsted, kan du bruke denne lenken for å fornye passordet (som du så får tilsendt i en e-post, sammen med brukernavnet ditt). {$passwordResetUrl}<br />
+<br />
+Manuskriptets URL: {$submissionReviewUrl}<br />
+<br />
+Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2. (Ellers: se e-posten REVIEW_REQUEST_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Forespørsel om fagfellevurdering</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Vårt tidsskrift {$contextName} har fått tilsendt manuskriptet &quot;{$submissionTitle}&quot;. Vi håper du er villig til å gi en fagfellevurdering av dette manuskriptet, fordi vi mener dette kan passe med din vurderingskompetanse. Sammendraget som var vedlagt manuskriptet er skrevet inn nedenfor, og jeg håper du vil påta deg dette viktige oppdraget for oss.<br />
+<br />
+Vennligst logg inn på tidsskriftets nettsted innen {$responseDueDate}, for å bekrefte om du vil påta deg dette vurderingsoppdraget for oss eller ikke. Hvis du påtar deg oppdraget skal du også bruke nettstedet for å skrive inn vurderingen din, og for å registrere den anbefalingen du gir oss.<br />
+<br />
+Vi venter vurderingsoppdraget ferdigstilt innen {$reviewDueDate}.<br />
+<br />
+Manuskriptets URL: {$submissionReviewUrl}<br />
+<br />
+Takk for at du har sagt deg villig til å bidra til arbeidet vårt.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en ventet-ferdig dato for oppdraget, og 3) informasjon om pålogging og tilgang til manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er valgt i Tidsskriftoppsett, Trinn 2., og ettklikks tilgang for fagkonsulenter er slått på.</description>
+	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Forespørsel om fagfellevurdering</subject>
 		<body><![CDATA[{$reviewerName}:<br />
