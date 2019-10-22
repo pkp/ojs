@@ -35,6 +35,9 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 	/** @var boolean return published issues */
 	protected $isPublished = null;
 
+	/** @var array list of issue ids to retrieve */
+	protected $issueIds = [];
+
 	/** @var array return issues in volume(s) */
 	protected $volumes = null;
 
@@ -137,6 +140,18 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 	}
 
 	/**
+	 * Set issue id filter
+	 *
+	 * @param array $issueIds
+	 *
+	 * @return \APP\Services\QueryBuilders\IssueQueryBuilder
+	 */
+	public function filterByIds($issueIds) {
+		$this->issueIds = $issueIds;
+		return $this;
+	}
+
+	/**
 	 * Whether to return only a count of results
 	 *
 	 * @param bool $enable
@@ -188,6 +203,11 @@ class IssueQueryBuilder extends BaseQueryBuilder {
 		// years
 		if (!is_null($this->years)) {
 			$q->whereIn('i.year', $this->years);
+		}
+
+		// issue ids
+		if (!is_null($this->issueIds)) {
+			$q->whereIn('i.issue_id', $this->issueIds);
 		}
 
 		// Allow third-party query statements
