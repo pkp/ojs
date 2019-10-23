@@ -183,7 +183,7 @@ class OAIDAO extends PKPOAIDAO {
 		if ($isRecord) {
 			$submission = Services::get('submission')->get($articleId);
 			$issue = $this->getIssue($row['issue_id']);
-			$galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication())->toArray();
+			$galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
 
 			$record->setData('article', $submission);
 			$record->setData('journal', $journal);
