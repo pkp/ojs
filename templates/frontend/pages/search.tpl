@@ -21,7 +21,7 @@
 <div class="page page_search">
 
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="common.search"}
-	<h1 class="pageCurrentTitle">
+	<h1>
 		{translate key="common.search"}
 	</h1>
 
