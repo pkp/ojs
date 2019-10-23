@@ -25,7 +25,7 @@
 
 <div class="page page_issue_archive">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
-	<h1 class="pageCurrentTitle">
+	<h1>
 		{$pageTitle|escape}
 	</h1>
 
