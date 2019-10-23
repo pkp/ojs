@@ -77,8 +77,8 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 				'familyName' => $author->getLocalizedFamilyName(),
 			]);
 			$publicationIds = [];
-			foreach ($result as $author) {
-				$publicationIds[] = $author->getData('publicationId');
+			foreach ($result as $thisAuthor) {
+				$publicationIds[] = $thisAuthor->getData('publicationId');
 			}
 			$submissionIds = array_map(function($publicationId) {
 				return Services::get('publication')->get($publicationId)->getData('submissionId');
