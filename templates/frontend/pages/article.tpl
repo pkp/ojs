@@ -22,14 +22,6 @@
 	{else}
 		{include file="frontend/components/breadcrumbs_article.tpl" currentTitleKey="common.publication"}
 	{/if}
-	<h1 class="pageCurrentTitle">
-	{if $section}
-		{$section->getLocalizedTitle()|escape}
-	
-	{else}
-		{translate key="article.article"}
-	{/if}
-	</h1>
 
 	{* Show article overview *}
 	{include file="frontend/objects/article_details.tpl"}

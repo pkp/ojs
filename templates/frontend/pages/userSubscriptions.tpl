@@ -19,7 +19,7 @@
 
 <div class="page page_user_subscriptions">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.subscriptions.mySubscriptions"}
-	<h1 class="pageCurrentTitle">
+	<h1>
 		{translate key="user.subscriptions.mySubscriptions"}
 	</h1>
 	{include file="frontend/components/subscriptionContact.tpl"}

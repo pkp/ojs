@@ -12,7 +12,7 @@
 
 <div class="page page_subscriptions">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.subscriptions"}
-	<h1 class="pageCurrentTitle">
+	<h1>
 		{translate key="about.subscriptions"}
 	</h1>
 	{include file="frontend/components/subscriptionContact.tpl"}

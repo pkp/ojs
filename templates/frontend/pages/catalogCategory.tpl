@@ -23,7 +23,7 @@
 
 	{* Breadcrumb *}
 	{include file="frontend/components/breadcrumbs_catalog.tpl" type="category" parent=$parentCategory currentTitle=$category->getLocalizedTitle()}
-	<h1 class="pageCurrentTitle">
+	<h1>
 		{$category->getLocalizedTitle()|escape}
 	</h1>
 
