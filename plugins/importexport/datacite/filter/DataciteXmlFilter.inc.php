@@ -522,11 +522,11 @@ class DataciteXmlFilter extends NativeExportFilter {
 				break;
 			case isset($issue):
 				// Parts: articles in this issue.
-				$result = Services::get('submission')->getMany([
+				$submissionsIterator = Services::get('submission')->getMany([
 					'contextId' => $issue->getJournalId(),
 					'issueIds' => $issue->getId(),
 				]);
-				foreach ($result as $relatedArticle) {
+				foreach ($submissionsIterator as $relatedArticle) {
 					$doi = $relatedArticle->getStoredPubId('doi');
 					if (!empty($doi)) {
 						$relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
@@ -792,12 +792,12 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * @return string
 	 */
 	function getIssueToc($issue, $objectLocalePrecedence) {
-		$result = Services::get('submission')->getMany([
+		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 		]);
 		$toc = '';
-		foreach ($result as $submissionInIssue) {
+		foreach ($submissionsIterator as $submissionInIssue) {
 			$currentEntry = $this->getPrimaryTranslation($submissionInIssue->getTitle(null), $objectLocalePrecedence);
 			assert(!empty($currentEntry));
 			$pages = $submissionInIssue->getPages();

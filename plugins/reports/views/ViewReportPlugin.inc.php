@@ -67,11 +67,11 @@ class ViewReportPlugin extends ReportPlugin {
 		$articleIssueIdentificationMap = array();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$result = Services::get('submission')->getMany([
+		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $context->getId(),
 			'status' => STATUS_PUBLISHED,
 		]);
-		foreach ($result as $submission) {
+		foreach ($submissionsIterator as $submission) {
 			$articleId = $submission->getId();
 			$issueId = $submission->getCurrentPublication()->getData('issueId');
 			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $submission->getLocalizedTitle() );

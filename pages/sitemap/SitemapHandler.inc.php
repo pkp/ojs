@@ -39,10 +39,10 @@ class SitemapHandler extends PKPSitemapHandler {
 			while ($issue = $publishedIssues->next()) {
 				$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
 				// Articles for issue
-				$result = Services::get('submission')->getMany([
+				$submissionsIterator = Services::get('submission')->getMany([
 					'issueIds' => $issue->getId(),
 				]);
-				foreach($result as $submission) {
+				foreach($submissionsIterator as $submission) {
 					// Abstract
 					$root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', array($submission->getBestId()))));
 					// Galley files
