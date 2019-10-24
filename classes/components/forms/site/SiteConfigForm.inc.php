@@ -37,7 +37,7 @@ class SiteConfigForm extends FormComponent {
 		$this->successMessage = __('admin.settings.config.success');
 		$this->locales = $locales;
 
-		$result = \Services::get('context')->getMany(['isEnabled' => true]);
+		$contextsIterator = \Services::get('context')->getMany(['isEnabled' => true]);
 
 		$this->addField(new FieldText('title', [
 			'label' => __('admin.settings.siteTitle'),
@@ -46,9 +46,9 @@ class SiteConfigForm extends FormComponent {
 			'value' => $site->getData('title'),
 		]));
 
-		if (count($result)) {
+		if (count($contextsIterator)) {
 			$options = [['value' => '', 'label' => '']];
-			foreach ($result as $context) {
+			foreach ($contextsIterator as $context) {
 				$options[] = [
 					'value' => $context->getId(),
 					'label' => $context->getLocalizedData('name'),

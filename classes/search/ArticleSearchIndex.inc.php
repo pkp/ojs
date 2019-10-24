@@ -270,8 +270,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				if ($log) echo __('search.cli.rebuildIndex.indexing', array('journalName' => $journal->getLocalizedName())) . ' ... ';
 
-				$result = Services::get('submission')->getMany(['contextId' => $journal->getId()]);
-				foreach ($result as $submission) {
+				$submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId()]);
+				foreach ($submissionsIterator as $submission) {
 					if ($submission->getSubmissionProgress() == 0) { // Not incomplete
 						$this->submissionMetadataChanged($submission);
 						$this->submissionFilesChanged($submission);

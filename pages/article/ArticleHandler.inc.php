@@ -62,13 +62,13 @@ class PreprintHandler extends Handler {
 		$urlPath = empty($args) ? 0 : array_shift($args);
 
 		// Look for a publication with a publisher-id that matches the url path
-		$result = Services::get('publication')->getMany([
+		$publicationsIterator = Services::get('publication')->getMany([
 			'contextIds' => $request->getContext()->getId(),
 			'publisherIds' => $urlPath,
 		]);
 		$publicationWithMatchingUrl = null;
-		if (count($result)) {
-			$publicationWithMatchingUrl = $result->current();
+		if (count($publicationsIterator)) {
+			$publicationWithMatchingUrl = $publicationsIterator->current();
 			$submissionId = $publicationWithMatchingUrl->getData('submissionId');
 		} elseif (ctype_digit($urlPath)) {
 			$submissionId = $urlPath;

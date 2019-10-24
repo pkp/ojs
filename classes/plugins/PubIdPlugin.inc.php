@@ -261,12 +261,12 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 
-		$result = Services::get('submission')->getMany([
+		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $issue->getJournalId(),
 			'issueIds' => $issue->getId(),
 			'count' => 5000, // large upper limit
 		]);
-		foreach ($result as $submission) {
+		foreach ($submissionsIterator as $submission) {
 			if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
 				$submissionDao->deletePubId($submission->getId(), $pubIdType);
 			}
