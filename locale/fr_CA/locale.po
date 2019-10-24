@@ -9,7 +9,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T10:57:22 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 
 msgid "context.current"
 msgstr "Revue sélectionnée :"
@@ -77,6 +78,12 @@ msgstr "Informations à l'attention des auteurs-es"
 msgid "navigation.infoForLibrarians.long"
 msgstr "Informations à l'attention des bibliothécaires"
 
+msgid "navigation.skip.about"
+msgstr "Aller directement à la section « À propos » de la revue"
+
+msgid "navigation.skip.issue"
+msgstr "Aller directement au numéro courant"
+
 msgid "common.queue.long.submissionsUnassigned"
 msgstr "Non assignées"
 
@@ -137,10 +144,10 @@ msgstr "Article"
 msgid "article.articles"
 msgstr "Articles"
 
-msgid "common.publishedSubmission"
+msgid "common.publication"
 msgstr "Article"
 
-msgid "common.publishedSubmissions"
+msgid "common.publications"
 msgstr "Articles"
 
 msgid "article.submissionId"
@@ -349,6 +356,9 @@ msgstr "Mise en page terminée"
 
 msgid "submissions.proofreadingComplete"
 msgstr "Correction d'épreuves terminée"
+
+msgid "submission.search"
+msgstr "Recherche d'article"
 
 msgid "journal.currentIssue"
 msgstr "Numéro courant"
@@ -1941,9 +1951,6 @@ msgstr "Demander à un-e utilisateur-trice de créer les épreuves en utilisant 
 msgid "notification.type.awaitingRepresentations"
 msgstr "Épreuves en attente."
 
-msgid "notification.type.publicationScheduled"
-msgstr "La publication de cet article a été planifiée."
-
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Accès refusé ! Vous n'avez pas été désigné-e comme réviseur-e de cet article."
 
@@ -2024,3 +2031,4 @@ msgstr "Ordre des articles"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Veuillez choisir comment ordonner les articles de cette catégorie."
+

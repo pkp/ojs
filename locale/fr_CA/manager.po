@@ -9,7 +9,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T11:05:12 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
+
+msgid "manager.distribution.access"
+msgstr "Accès"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Préciser comment la date de copyright par défaut est sélectionnée pour un article. Cette valeur par défaut peut être remplacée au cas par cas. Si vous publiez selon le modèle « au fur et à mesure », n'utilisez pas la date de publication du numéro.""
+
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Utiliser la date de publication du numéro"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Utiliser la date de publication de l'article"
+
+msgid "manager.distribution.publication"
+msgstr "Publication"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Mode de publication"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS ne sera pas utilisé pour publier en ligne le contenu de la revue."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "La revue offrira son contenu en libre accès."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "La revue exigera un abonnement pour accéder à une partie ou à l'intégralité de son contenu."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Les informations de publication ont été mises à jour."
 
 msgid "manager.website.archiving"
 msgstr "Archivage"
@@ -106,6 +138,9 @@ msgstr "Cela activera l'application des paiements d'abonnements où les types, f
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Êtes-vous certain-e de vouloir supprimer cet abonnement ?"
+
+msgid "manager.payment.success"
+msgstr "Les paramètres de paiement ont été mis à jour."
 
 msgid "manager.payment.options.enablePayments"
 msgstr "Les paiement seront activés pour cette revue. Veuillez noter que les utilisateurs-trices doivent se connecter pour effectuer des paiements."
@@ -350,14 +385,20 @@ msgstr "Au lieu du titre et du logo, une version HTML de l'en-tête peut aussi �
 msgid "manager.setup.announcements"
 msgstr "Annonces"
 
-msgid "manager.setup.announcementsDescription"
-msgstr "Des annonces peuvent être publiées pour informer les lecteurs-trices de nouvelles et d'événements relatifs à la revue. Les annonces publiées apparaîtront sur la page des Annonces."
+msgid "manager.setup.announcements.success"
+msgstr "Les paramètres des annonces ont été mis à jour."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introduction"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr "Ajouter toute information additionnelle qui devrait être affichée aux lecteurs-trices sur la page des Annonces."
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(À paraître dans « À propos » de la revue)"
+
+msgid "manager.setup.archiving.success"
+msgstr "Les informations d'archivage de cette revue ont été mises à jour."
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Les auteurs-es soumissionnaires doivent déposer une déclaration de conflits d'intérêts avec leur soumission."
@@ -371,23 +412,14 @@ msgstr "Historique de la revue"
 msgid "manager.setup.historyDescription"
 msgstr "Ce texte apparaîtra dans la section « À propos » du site Web de la revue et peut être utilisé pour décrire tout changement au titre de la revue, au comité éditorial, et tout autre élément d'intérêt dans l'histoire de la publication de la revue."
 
-msgid "manager.setup.metadata.coverage"
-msgstr "Couverture"
-
-msgid "manager.setup.metadata.coverage.description"
-msgstr "Fait référence à l'emplacement géo-spatial, à la couverture historique ou chronologique, ou à des caractéristiques de l'échantillon de recherche."
+msgid "manager.setup.contact.success"
+msgstr "Les coordonnées de cette revue ont été mises à jour."
 
 msgid "manager.setup.currentIssue"
 msgstr "Numéro courant"
 
 msgid "manager.setup.customizingTheLook"
 msgstr "Étape 5. Personnalisation de l'apparence"
-
-msgid "manager.setup.customTags"
-msgstr "Balises personnalisées"
-
-msgid "manager.setup.customTagsDescription"
-msgstr "Balises personnalisées de l'en-tête HTML à insérer dans les en-têtes de chaque page (par exemple balises META)."
 
 msgid "manager.setup.details"
 msgstr "Renseignements"
@@ -435,7 +467,16 @@ msgid "manager.setup.emailSignature.description"
 msgstr "La signature suivante sera ajoutée à la fin de chaque courriel prédéfini envoyé par le système au nom de la revue."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Permettre aux Directeurs de revues d'ajouter des annonces relatives à la revue."
+msgstr "Activer les annonces"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Des annonces peuvent être publiées pour informer les lecteurs-trices au sujet des activités et événements de la revue. Les annonces publiées s'afficheront sur la page « Annonces »."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Afficher sur la page d'accueil"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "Préciser combien d'annonces doivent être affichées sur la page d'accueil. Laissez ce champ vide pour n'en afficher aucune."
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Les utilisateurs-trices peuvent s'inscrire eux-mêmes et elles-mêmes à la revue."
@@ -488,6 +529,9 @@ msgstr "Directives"
 msgid "manager.setup.guidingSubmissions"
 msgstr "Étape 3. Orienter les soumissions"
 
+msgid "manager.setup.identity"
+msgstr "Identité de la revue"
+
 msgid "manager.setup.includeCreativeCommons"
 msgstr "Pour les revues qui offrent le libre accès immédiatement ou en différé, ajouter une licence Creative Commons à toutes les publications au moment approprié."
 
@@ -506,6 +550,9 @@ msgstr "Pour les bibliothécaires"
 msgid "manager.setup.information.forReaders"
 msgstr "Pour les lecteurs-trices"
 
+msgid "manager.setup.information.success"
+msgstr "Les informations pour cette revue ont été mises à jour."
+
 msgid "manager.setup.initialIssue"
 msgstr "Numéro initial"
 
@@ -521,6 +568,9 @@ msgstr "Éléments de la barre de navigation pouvant être ajoutés à l'ensembl
 msgid "manager.setup.itemsPerPage"
 msgstr "Éléments par page"
 
+msgid "manager.setup.itemsPerPage.description"
+msgstr "Vous pouvez limiter le nombre d'éléments (par exemple : soumissions, utilisateurs-trices, ou assignations) à afficher dans une liste avant d'afficher, dans une autre page, les éléments subséquents."
+
 msgid "manager.setup.journalAbbreviation"
 msgstr "Titre court de la revue"
 
@@ -530,23 +580,11 @@ msgstr "Archivage de la revue"
 msgid "manager.setup.contextSummary"
 msgstr "Résumé de la revue"
 
-msgid "manager.setup.contextSummary.description"
-msgstr "Une brève description de votre revue qui peut être affichée dans une liste de revues."
+msgid "manager.setup.contextAbout"
+msgstr "À propos de la revue"
 
-msgid "manager.setup.journalAbout"
-msgstr "À propos"
-
-msgid "manager.setup.journalAbout.description"
-msgstr "Inclure tout renseignement sur votre revue qui serait d'intérêt pour les lecteurs-trices, auteurs-es ou évaluateurs-trices. Cela peut comprendre votre politique de libre accès, l'énoncé de mission, les questions entourant le droit d'auteur, la divulgation de commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans tout système d'archives LOCKSS ou CLOCKSS."
-
-msgid "manager.setup.favicon"
-msgstr "Favicône de la revue"
-
-msgid "manager.setup.faviconDescription"
-msgstr "Ajoute une favicône pour cette revue qui sera affiché à côté de la barre de navigation lorsque les utilisateurs-trices visitent votre site."
-
-msgid "manager.setup.faviconInvalid"
-msgstr "Format de favicône invalide. Les formats acceptés sont .ico, .png et .gif."
+msgid "manager.setup.contextAbout.description"
+msgstr "Inclure tout renseignement sur votre revue qui serait d'intérêt pour les lecteurs-trices, auteurs-es ou évaluateurs-trices. Cela peut comprendre votre politique de libre accès, l'énoncé de mission, l'avis de droit d'auteur, la divulgation de commandites, l'historique de la revue, une déclaration de confidentialité et l'inclusion dans tout système d'archives LOCKSS ou CLOCKSS."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Contenu de la page d'accueil de la revue"
@@ -608,8 +646,17 @@ msgstr "Un logo ou une petite image de la revue, laquelle peut être utilisée d
 msgid "manager.setup.contextTitle"
 msgstr "Titre de la revue"
 
+msgid "manager.setup.keyInfo"
+msgstr "Renseignements de base"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Fournir une brève description de votre revue et présenter les rédacteurs-trices, les directeurs-trices ainsi que les autres membres de votre équipe éditoriale."
+
 msgid "manager.setup.labelName"
 msgstr "Nom du libellé"
+
+msgid "manager.setup.lists.success"
+msgstr "Les paramètres de listes pour cette revue ont été mis à jour."
 
 msgid "manager.setup.lists"
 msgstr "Listes"
@@ -683,6 +730,9 @@ msgstr "Configuration de la gestion et de la publication"
 msgid "manager.setup.managingTheJournal"
 msgstr "Étape 4. Gérer la revue"
 
+msgid "manager.setup.masthead.success"
+msgstr "Les renseignements du bloc générique de cette revue ont été mis à jour."
+
 msgid "manager.setup.navigationBar"
 msgstr "Barre de navigation"
 
@@ -708,16 +758,13 @@ msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr "<strong>Note :</strong> Le courriel d'accusé de réception est présentement désactivé. Pour utiliser cette fonctionnalité, veuillez activer le courriel « Submission Ack » dans les « Courriels »."
 
 msgid "manager.setup.numPageLinks"
-msgstr "Liens"
+msgstr "Page de liens"
 
-msgid "manager.setup.publishingMode"
-msgstr "Accès au contenu de la revue"
+msgid "manager.setup.numPageLinks.description"
+msgstr "Limiter le nombre de liens à afficher sur les pages subséquentes de la liste."
 
 msgid "manager.setup.onlineIssn"
 msgstr "ISSN numérique"
-
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "La revue offrira son contenu en libre accès."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Option de numérotation des pages"
@@ -730,6 +777,9 @@ msgstr "Orientation, évaluation par les pairs, rubriques, confidentialité, sé
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN imprimé"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "La déclaration de confidentialité a été mise à jour."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Directives pour la correction d'épreuves"
@@ -748,6 +798,9 @@ msgstr "Planification du calendrier de publication"
 
 msgid "manager.setup.publicIdentifier"
 msgstr "Identification du contenu de la revue"
+
+msgid "manager.setup.publishing"
+msgstr "Renseignements au sujet de la publication"
 
 msgid "manager.setup.publisher"
 msgstr "Éditeur"
@@ -785,6 +838,9 @@ msgstr "Nombre de semaines allouées pour compléter l'évaluation"
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr "Les rédacteurs-trices noteront les évaluateurs-trices sur une échelle qualitative de cinq points après chaque évaluation."
 
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Restreindre l'accès aux fichiers"
+
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr "Les évaluateurs-trices auront accès au fichier de soumission seulement après avoir accepté de l'évaluer."
 
@@ -795,7 +851,10 @@ msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activer l'accès en un clic pour l'évaluateur-trice."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Note :</strong> Le courriel d'invitation destiné aux évaluateurs-trices contient une URL qui les mène directement à la page d'évaluation de la soumission. L'accès à toute autre page requiert de se connecter. Pour des raisons de sécurité, les rédacteurs-trices ne peuvent pas modifier les adresses de courriel, ni ajouter des CC ou CCI avant d'envoyer une invitation aux évaluateurs-trices."
+msgstr "Un lien sécurisé peut être envoyé aux évaluateurs-trices dans le courriel d'invitation, ce qui leur permettra d'accéder à l'évaluation sans avoir besoin de se connecter. L'accès à d'autres pages nécessite cependant de se connecter."
+"
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Include a secure link in the email invitation to reviewers."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Notations de l'évaluateur-trice"
@@ -809,8 +868,14 @@ msgstr "Politique d'évaluation"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Indexation par les moteurs de recherche"
 
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Les paramètres d'indexation par les moteurs de recherche ont été mis à jour."
+
 msgid "manager.setup.searchEngineIndexing.description"
-msgstr "Fournir une brève description de la revue que les moteurs de recherche peuvent afficher lorsqu'ils listent la revue dans leurs résultats."
+msgstr "Aider les moteurs de recherche comme Google à découvrir et à afficher votre site. Nous vous encourageons à envoyer votre <a href=\"{$sitemapUrl}\" target=\"_blank\">plan de site</a> (sitemap)."
+
+msgid "manager.setup.searchDescription.description"
+msgstr "Fournir une brève description de la revue (de 50 à 300 caractères) que les moteurs de recherche peuvent afficher lorsqu'ils affichent la revue parmi les résultats de recherche."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Rubriques et rédacteurs-trices de rubrique"
@@ -829,6 +894,12 @@ msgstr "La rubrique de la revue pour laquelle l'article sera pris en considérat
 
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Toujours afficher les liens vers les épreuves et indiquer l'accès restreint."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Accès au site"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Afficher le contenu de l'article"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Le site Web de votre revue en cinq étapes"
@@ -857,14 +928,11 @@ msgstr "Soumissions"
 msgid "manager.setup.submissions.description"
 msgstr "Directives aux auteurs-es, droit d'auteur et indexation (comprenant l'inscription)."
 
-msgid "manager.distribution.publishingMode.subscription"
-msgstr "La revue exigera un abonnement pour accéder à une partie ou à l'intégralité de son contenu."
-
-msgid "manager.distribution.publishingMode.none"
-msgstr "OJS ne sera pas utilisé pour publier le contenu de la revue en ligne."
-
 msgid "manager.setup.enableOai"
 msgstr "Permettre l'accès OAI au contenu"
+
+msgid "manager.setup.enableOai.description"
+msgstr "Fournir des métadonnées aux services d'indexation externes via l'<a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr "(par exemple : Enquête historique ; Quasi-expérimental ; Analyse littéraire ; Sondage/Entrevue)"
@@ -883,6 +951,9 @@ msgstr "Les articles et les numéros peuvent être étiquetés avec un numéro d
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "La revue aura recours à un comité éditorial/d'évaluation."
+
+msgid "manager.setup.userAccess.success"
+msgstr "Les informations d'accès de l'utilisateur-trice pour cette revue ont été mises à jour."
 
 msgid "manager.setup.useThumbnail"
 msgstr "Vignette"
@@ -978,6 +1049,9 @@ msgstr "Consultations de la page du résumé de l'article et téléchargements"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Consultations de la page principale de la revue"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Consultations de la page du sommaire du numéro"
 
 msgid "manager.statistics.reports.filters.byContext.description"
 msgstr "Affiner les résultats par contexte (numéro et/ou article)."
@@ -1097,13 +1171,13 @@ msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
 msgstr "Renseignements sur l'abonnement"
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
-msgstr "Les types d'abonnement et la grille tarifaire seront automatiquement placés sous « Abonnements » sur la page « À propos » de la revue, au même titre que les coordonnées du,de la responsable des abonnements. Des renseignements supplémentaires concernant les abonnements, tel les modes de paiement ou le soutien pour les abonnés-es de pays en voie de développement peuvent être ajoutés ici."
+msgstr "Les types d'abonnement et la grille tarifaire seront affichés sur la page d'abonnement à la revue, au même titre que les coordonnées du,de la responsable des abonnements. Des renseignements supplémentaires concernant les abonnements, tel les modes de paiement ou le soutien pour les abonnés-es de pays en voie de développement peuvent être ajoutés ici."
 
 msgid "manager.subscriptionPolicies.subscriptionContact"
 msgstr "Responsable des abonnements"
 
 msgid "manager.subscriptionPolicies.subscriptionContactDescription"
-msgstr "La personne-ressource indiquée sous « Abonnements » dans « À propos » de la revue."
+msgstr "Les coordonnées de cette personne-ressource seront affichées sur la page d'abonnement à la revue pour les clients-es ayant des questions au sujet des abonnements"
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
 msgstr "Veuillez saisir un courriel valide."
@@ -1474,9 +1548,6 @@ msgstr "Aucun type d'abonnement n'a été créé."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Création du type d'abonnement réussie."
 
-msgid "manager.distribution.access"
-msgstr "Accès"
-
 msgid "manager.navigationMenus.subscriptions.description"
 msgstr "Lien vers la page décrivant les abonnements offerts."
 
@@ -1523,6 +1594,12 @@ msgstr "Réinitialiser les autorisations de l'article"
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr "Êtes-vous certain-e de vouloir réinitialiser les autorisations déjà rattachées à l'article ?"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Supprimer la mention de copyright et les informations de licence pour chaque article publié, en rétablissant les paramètres par défaut actuels de la revue. Ceci supprimera  toutes les mentions de copyright et les licences antérieures liées aux articles et ce de façon permanente. Dans certains cas, il se peut que vous ne soyez pas légalement autorisé-e à attribuer une nouvelle licence à un travail publié sous une licence différente. Agissez avec prudence lorsque vous utilisez cet outil et ayez recours, au besoin, à une expertise juridique si vous ne savez pas exactement de quels droits vous disposez sur les articles publiés dans votre revue."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Les autorisations des articles ont bien été réinitialisées."
 
 msgid "grid.genres.title.short"
 msgstr "Éléments"
@@ -1632,11 +1709,23 @@ msgstr "L'objet spécifié est introuvable."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Envoyer une copie à la personne-ressource principale identifiée dans les paramètres de la revue."
 
-msgid "stats.publishedSubmissions.details"
+msgid "stats.publications.details"
 msgstr "Renseignements sur l'article"
 
-msgid "stats.publishedSubmissions.none"
-msgstr "Aucun article n'a été trouvé."
+msgid "stats.publications.none"
+msgstr "Aucun article n'a été trouvé avec des statistiques d'utilisation correspondant à ces paramètres."
 
-msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
-msgstr "Nombre total de consultation des résumés de chaque article par date"
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Total des consultations de résumés par date"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Total des consultations de fichiers par date"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} de {$total} articles"
+
+msgid "stats.publications.abstracts"
+msgstr "Résumés"
+
+msgid "stats.publications.galleys"
+msgstr "Fichiers"

@@ -9,7 +9,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T10:41:52 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 
 msgid "author.submit"
 msgstr "Nouvelle soumission"
@@ -319,3 +320,4 @@ msgstr "Fichier de l'auteur-e"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr "Un compte d'utilisateur-trice est obligatoire afin de soumettre à cette revue. Ceci permet aux rédacteurs-trices de faire le suivi de vos soumissions et d'entrer en contact avec vous lorsque le statut de votre soumission change, ou encore si des informations supplémentaires devaient vous être demandées."
+

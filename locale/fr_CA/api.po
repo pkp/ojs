@@ -9,7 +9,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T10:25:34 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Vous ne pouvez pas changer la revue d'une soumission."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "Vous n'êtes pas autorisé-e à afficher les numéros non publiés."
+msgstr "Vous n'êtes pas autorisé-e à faire afficher les numéros non publiés."
+
+msgid "api.submissions.403.contextRequired"
+msgstr "Pour effectuer ou modifier une soumission, vous devez effectuer une requête par suffixe URL à l'API de la revue."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Vous ne pouvez faire afficher que les revues qui ont été activées."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Vous n'avez pas la permission de faire afficher cette revue."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "Vous ne pouvez pas faire afficher ou modifier cette revue sauf si vous faites une requête via l'API de la revue ou encore l'API du site."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Vous ne pouvez pas modifier cette revue à partir de l'API du site."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Vous n'êtes pas autorisé-e à modifier cette revue."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Vous n'êtes pas autorisé-e à supprimer cette revue."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "La revue que vous avez demandée n'a pas été trouvée."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Vous n'êtes pas autorisé-e à déplacer ce modèle de courriel vers une autre revue."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Le mode de paiement que vous avez sélectionné n'est pas pris en charge."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "La publication que vous avez demandée ne fait pas partie de cette revue."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La publication que vous avez demandée ne fait pas partie de cette soumission."
+

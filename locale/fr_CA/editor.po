@@ -9,7 +9,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T10:49:41 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 
 msgid "editor.home"
 msgstr "Page d'accueil du,de la rédacteur-trice"
@@ -370,6 +371,18 @@ msgstr "Assignée à"
 
 msgid "editor.submissions.inSection"
 msgstr "Dans la rubrique"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Afficher la publication planifiée"
+
+msgid "editor.article.publishVersion"
+msgstr "Publier la version"
+
+msgid "editor.article.viewMetadata"
+msgstr "Afficher les métadonnées de la version"
+
+msgid "editor.article.editMetadata"
+msgstr "Modifier les métadonnées de la version"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Publication planifiée dans"

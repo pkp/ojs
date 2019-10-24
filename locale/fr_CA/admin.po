@@ -9,10 +9,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T10:06:18 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 
 msgid "admin.hostedJournals"
 msgstr "Revues hébergées"
+
+msgid "admin.settings.appearance.success"
+msgstr "Les paramètres d'apparence du site ont bien été mis à jour."
+
+msgid "admin.settings.config.success"
+msgstr "Les paramètres de configuration du site ont bien été mis à jour."
+
+msgid "admin.settings.info.success"
+msgstr "Les informations du site ont bien été mises à jour."
 
 msgid "admin.settings.journalRedirect"
 msgstr "Réacheminement vers la revue"
@@ -21,7 +31,11 @@ msgid "admin.settings.journalRedirectInstructions"
 msgstr "Les demandes faites au site principal seront réacheminées vers cette revue. Cela peut être utile si le site n'héberge, par exemple, qu'une seule revue."
 
 msgid "admin.settings.defaultMetricDescription"
-msgstr "Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seule une statistique d'utilisation doit être utilisée, par exemple pour afficher une liste ordonnée des articles les plus consultés ou pour classer les résultats de recherche. Veuillez sélectionner l'une des mesures configurées par défaut. "
+msgstr ""
+"\n"
+"\t\tVotre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.\n"
+"\t\tIl y a des cas où seule une statistique d'utilisation doit être utilisée, par exemple pour afficher une liste ordonnée des articles les plus consultés ou pour classer les résultats de recherche.\n"
+"\t\tVeuillez sélectionner l'une des mesures configurées par défaut.\n"
 
 msgid "admin.languages.confirmDisable"
 msgstr "Êtes-vous certain-e de vouloir désactiver cette langue ? Ceci affectera toute revue actuellement hébergée utilisant cette langue."
@@ -30,10 +44,10 @@ msgid "admin.languages.downloadUnavailable"
 msgstr ""
 "<p>Le téléchargement de fichiers de langue depuis le serveur web du Public Knowledge Project n'est pas disponible actuellement car : </p>\n"
 "<ul>\n"
-"<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU \"tar\". </li>\n"
-"<li>OJS est incapable de modifier le fichier de registre de langues, généralement \"registry/locales.xml\". </li>\n"
+"<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU  « tar ». </li>\n"
+"<li>OJS est incapable de modifier le fichier de registre de langues, généralement « registry/locales.xml ». </li>\n"
 "</ul>\n"
-"<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a href=\"http://pkp.sfu.ca\">site web PKP </a>.</p>"
+"<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a href=\"http://pkp.sfu.ca\">site Web PKP </a>.</p>"
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Cette langue sera la langue par défaut du site et de toute revue hébergée."
@@ -113,10 +127,16 @@ msgstr "Le chemin d'accès ne peut contenir que des caractères alphanumériques
 msgid "admin.contexts.form.pathExists"
 msgstr "Le chemin d'accès sélectionné est déjà utilisé par une autre revue."
 
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} a bien été créé-e."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} a bien été modifié-e."
+
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Permettre à cette revue d'apparaître publiquement sur le site"
 
-msgid "admin.journals.contextDescription"
+msgid "admin.contexts.contextDescription"
 msgstr "Description de la revue"
 
 msgid "admin.journal.pathImportInstructions"
@@ -166,3 +186,4 @@ msgstr "Avis de libre accès"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Rappel d'évaluation"
+

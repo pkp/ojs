@@ -9,7 +9,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2019-10-15T14:05:03-07:00\n"
-"Language: \n"
+"Language: fr_CA\n"
+# localization file for fr_CA. Last revision 2019-10-22T02:40:33 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 
 msgid "submission.submit.title"
 msgstr "Soumettre un article"
@@ -40,6 +41,9 @@ msgstr "Processus éditorial pour la soumission"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Le résumé doit contenir {$wordCount} mots ou moins."
+
+msgid "submission.submit.noContext"
+msgstr "La revue de cette soumission est introuvable."
 
 msgid "submission.issueEntry"
 msgstr "Métadonnées"
@@ -158,8 +162,52 @@ msgstr "Ces spécifications sont basées sur le schéma de métadonnées du Dubl
 msgid "section.any"
 msgstr "Toute rubrique"
 
+msgid "submission.sectionOptions"
+msgstr "Options de rubrique"
+
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} titres"
 
 msgid "catalog.category.heading"
 msgstr "Tous les titres"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Les épreuves de cette publication ne peuvent pas être modifiées car elles ont déjà été publiées."
+
+msgid "galley.publicationNotFound"
+msgstr "La publication de ces épreuves est introuvable."
+
+msgid "publication.datePublished.description"
+msgstr "La date de publication sera définie automatiquement lors de la publication du numéro. N'entrez pas de date de publication sauf si l'article a déjà été publié ailleurs et que vous devez l'antidater.""
+
+msgid "publication.invalidSection"
+msgstr "La rubrique de cette publication est introuvable."
+
+msgid "publication.invalidIssue"
+msgstr "Le numéro de cette publication est introuvable."
+
+msgid "publication.journalEntry"
+msgstr "Enregistrement de revue"
+
+msgid "publication.journalEntry.success"
+msgstr "Les renseignements de l'enregistrement de la revue ont été mis à jour."
+
+msgid "publication.publish.confirmation"
+msgstr "Toutes les exigences de publication ont été remplies. Êtes-vous certain-e de vouloir publier ceci ?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "Toutes les exigences de publication ont été remplies. Ceci sera publié quand {$issue} sera publié. Êtes-vous certain-e de vouloir programmer cette publication ?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "Toutes les exigences de publication ont été remplies. Ceci sera publié immédiatement dans {$issue}. Êtes-vous certain-e de vouloir publier ceci ?"
+
+msgid "publication.required.issue"
+msgstr "La publication doit être assignée à un numéro avant de pouvoir être publiée."
+
+msgid "publication.publishedIn"
+msgstr "Publié dans <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Publication prévue dans <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+
