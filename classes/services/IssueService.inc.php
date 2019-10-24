@@ -232,12 +232,12 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface {
 					break;
 				case 'articles':
 					$values[$prop] = array();
-					$result = Services::get('submission')->getMany([
+					$submissionsIterator = Services::get('submission')->getMany([
 						'contextId' => $issue->getJournalId(),
 						'issueIds' => $issue->getId(),
 						'count' => 1000, // large upper limit
 					]);
-					foreach ($result as $submission) {
+					foreach ($submissionsIterator as $submission) {
 						$values[$prop][] = \Services::get('submission')->getSummaryProperties($submission, $args);
 					}
 					break;

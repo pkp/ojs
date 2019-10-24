@@ -94,10 +94,10 @@ class ResolverPlugin extends GatewayPlugin {
 				if (!$issue || $issues->next()) break;
 				unset($issues);
 
-				$result = Services::get('submission')->getMany([
+				$submissionsIterator = Services::get('submission')->getMany([
 					'issueIds' => $issue->getId(),
 				]);
-				foreach ($result as $submission) {
+				foreach ($submissionsIterator as $submission) {
 					// Look for the correct page in the list of articles.
 					$matches = null;
 					if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $submission->getPages(), $matches)) {

@@ -193,10 +193,10 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$exportFilter->setDeployment($this->getDeployment());
 		$exportFilter->setIncludeSubmissionsNode(true);
 
-		$result = Services::get('submission')->getMany([
+		$submissionsIterator = Services::get('submission')->getMany([
 			'issueIds' => $issue->getId(),
 		]);
-		$articlesDoc = $exportFilter->execute(iterator_to_array($result));
+		$articlesDoc = $exportFilter->execute(iterator_to_array($submissionsIterator));
 		if ($articlesDoc->documentElement instanceof DOMElement) {
 			$clone = $doc->importNode($articlesDoc->documentElement, true);
 			$issueNode->appendChild($clone);

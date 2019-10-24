@@ -46,26 +46,26 @@ class JournalEntryForm extends FormComponent {
 
 		// Issue options
 		$issueOptions = [['value' => '', 'label' => '']];
-		$unpublishedResult = \Services::get('issue')->getMany([
+		$unpublishedIterator = \Services::get('issue')->getMany([
 			'contextId' => $publicationContext->getId(),
 			'isPublished' => false,
 		]);
-		if ($unpublishedResult->valid()) {
+		if (count($unpublishedIterator)) {
 			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
-			foreach ($unpublishedResult as $issue) {
+			foreach ($unpublishedIterator as $issue) {
 				$issueOptions[] = [
 					'value' => (int) $issue->getId(),
 					'label' => $issue->getIssueIdentification(),
 				];
 			}
 		}
-		$publishedResult = \Services::get('issue')->getMany([
+		$publishedIterator = \Services::get('issue')->getMany([
 			'contextId' => $publicationContext->getId(),
 			'isPublished' => true,
 		]);
-		if ($publishedResult->valid()) {
+		if (count($publishedIterator)) {
 			$issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
-			foreach ($publishedResult as $issue) {
+			foreach ($publishedIterator as $issue) {
 				$issueOptions[] = [
 					'value' => (int) $issue->getId(),
 					'label' => $issue->getIssueIdentification(),
