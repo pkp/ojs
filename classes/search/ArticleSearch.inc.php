@@ -315,7 +315,7 @@ class ArticleSearch extends SubmissionSearch {
 			if (is_a($article, 'PublishedArticle')) {
 				// Retrieve keywords (if any) for the current, submission, and primary locales.
 				$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
-				$searchTerms = array_filter($submissionSubjectDao->getSubjects($article->getId(), array_keys(AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale())));
+				$searchTerms = array_filter($submissionSubjectDao->getSubjects($article->getId(), array(AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale())));
 				// Take the first non-empty set of keywords.
 				$searchTerms = (array) array_shift($searchTerms);
 			}
