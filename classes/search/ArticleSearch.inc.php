@@ -309,10 +309,10 @@ class ArticleSearch extends SubmissionSearch {
 			$article = Services::get('submission')->get($submissionId);
 			if ($article->getData('status') === STATUS_PUBLISHED) {
 				// Retrieve keywords (if any).
-				$searchTerms = $article->getLocalizedSubject();
+				$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+				$searchTerms = array_filter($submissionSubjectDao->getSubjects($article->getId(), array_keys(AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale())));
 				// Tokenize keywords.
-				$searchTerms = trim(preg_replace('/\s+/', ' ', strtr($searchTerms, ',;', ' ')));
-				if (!empty($searchTerms)) $searchTerms = explode(' ', $searchTerms);
+				$searchTerms = (array) array_shift($searchTerms);
 			}
 		}
 
