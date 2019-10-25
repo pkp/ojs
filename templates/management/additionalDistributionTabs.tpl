@@ -9,14 +9,14 @@
  *}
 
 <tab id="access" label="{translate key="manager.distribution.access"}">
-	{help file="settings" section="distribution" class="pkp_help_tab"}
+	{help file="settings/distribution-settings" section="access" class="pkp_help_tab"}
 	<pkp-form
 		v-bind="components.{$smarty.const.FORM_ACCESS}"
 		@set="set"
 	/>
 </tab>
 <tab id="archive" label="{translate key="manager.website.archiving"}">
-	{help file="settings" section="distribution" class="pkp_help_tab"}
+	{help file="settings/distribution-settings" section="archiving" class="pkp_help_tab"}
 	<tabs :is-side-tabs="true">
 		<tab id="pln" label="{translate key="manager.setup.plnPluginArchiving"}">
 			<pkp-form
