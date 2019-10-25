@@ -88,6 +88,14 @@
 			.pkp_helpers_clear;
 		}
 
+		.cover {
+			float: left;
+			width: 25%;
+			height: auto;
+			max-height: none;
+			margin-right: @double;
+		}
+
 		.galleys,
 		.section {
 			position: relative;
@@ -122,6 +130,15 @@
 		.galleys,
 		.section {
 			margin: @triple -@triple;
+		}
+
+		.cover {
+			margin-right: @triple;
+			margin-bottom: @triple;
+
+			img {
+				max-height: none;
+			}
 		}
 	}
 }
