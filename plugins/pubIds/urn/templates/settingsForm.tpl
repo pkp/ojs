@@ -25,7 +25,7 @@
 		<p class="pkp_help">{translate key="plugins.pubIds.urn.manager.settings.explainURNs"}</p>
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enableIssueURN" id="enableIssueURN" maxlength="40" checked=$enableIssueURN|compare:true}
-			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enableSubmissionURN" id="enableSubmissionURN" maxlength="40" checked=$enableSubmissionURN|compare:true}
+			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enablePublicationURN" id="enablePublicationURN" maxlength="40" checked=$enablePublicationURN|compare:true}
 			{fbvElement type="checkbox" label="plugins.pubIds.urn.manager.settings.enableRepresentationURN" id="enableRepresentationURN" maxlength="40" checked=$enableRepresentationURN|compare:true}
 		{/fbvFormSection}
 	{/fbvFormArea}
@@ -53,7 +53,7 @@
 			{fbvElement type="radio" id="urnSuffixPattern" name="urnSuffix" value="pattern" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern" checked=$urnSuffix|compare:"pattern"}
 			<p class="pkp_help">{translate key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"}</p>
 			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues" id="urnIssueSuffixPattern" value=$urnIssueSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions" id="urnSubmissionSuffixPattern" value=$urnSubmissionSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions" id="urnPublicationSuffixPattern" value=$urnPublicationSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" label="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations" id="urnRepresentationSuffixPattern" value=$urnRepresentationSuffixPattern maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 	{/fbvFormArea}

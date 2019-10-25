@@ -32,7 +32,7 @@ msgstr "Sélectionner les objets publiés auxquels des URN seront attribués:"
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "Numéros"
 
-msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "Articles"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
@@ -71,7 +71,7 @@ msgstr "pour les galleys"
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Veuillez indiquer le modèle de suffixe URN pour les numéros."
 
-msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
 msgstr "Veuillez indiquer le modèle de suffixe URN pour les articles."
 
 msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"

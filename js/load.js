@@ -16,6 +16,9 @@ import SettingsContainer from '@/components/Container/SettingsContainer.vue';
 import StatsContainer from '@/components/Container/StatsContainer.vue';
 import WorkflowContainer from '@/components/Container/WorkflowContainerOJS.vue';
 
+// Required by the URN plugin
+import FieldText from '@/components/Form/fields/FieldText.vue';
+
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
@@ -25,3 +28,6 @@ window.pkp = Object.assign(PkpLoad, {
 		WorkflowContainer
 	}
 });
+
+// Required by the URN plugin
+window.pkp.Vue.component('field-text', FieldText);
