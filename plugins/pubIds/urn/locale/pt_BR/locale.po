@@ -23,7 +23,7 @@ msgstr "Escolha a quais objetos serão atribuídos URNs."
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "URNs serão atribuídos a edições."
 
-msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "URNs serão atribuídos a artigos"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
@@ -56,7 +56,7 @@ msgstr "para composições"
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Informe um padrão de sufixo URN para edições."
 
-msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
 msgstr "Informe um padrão de sufixo URN para artigos."
 
 msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"

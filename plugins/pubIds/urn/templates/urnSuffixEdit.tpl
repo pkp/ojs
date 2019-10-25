@@ -55,9 +55,9 @@
 {/if}
 {* issue pub object *}
 {if $pubObjectType == 'Issue'}
-	{assign var=enableSubmissionURN value=$pubIdPlugin->getSetting($currentContext->getId(), "enableSubmissionURN")}
+	{assign var=enablePublicationURN value=$pubIdPlugin->getSetting($currentContext->getId(), "enablePublicationURN")}
 	{assign var=enableRepresentationURN value=$pubIdPlugin->getSetting($currentContext->getId(), "enableRepresentationURN")}
-	{if $enableSubmissionURN || $enableRepresentationURN}
+	{if $enablePublicationURN || $enableRepresentationURN}
 		{if !$formArea}
 			{assign var="formAreaTitle" value="plugins.pubIds.urn.editor.urn"}
 		{else}

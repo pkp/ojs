@@ -32,7 +32,7 @@ msgstr "Please select the publishing objects that will have Uniform Resource Nam
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "Issues"
 
-msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "Articles"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
@@ -71,7 +71,7 @@ msgstr "for galleys"
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Please enter the URN suffix pattern for issues."
 
-msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
 msgstr "Please enter the URN suffix pattern for articles."
 
 msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
@@ -147,7 +147,7 @@ msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
 msgstr "The given URN suffix is already in use for another published item. Please enter a unique URN suffix for each item."
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN"
-msgstr "Clear URN"
+msgstr "Clear"
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
 msgstr "Are you sure you wish to delete the existing URN?"
@@ -178,3 +178,30 @@ msgstr "The URN {$pubId} has been assigned."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "The check number is missing."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "The URN must begin with {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Assign"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "You can not generate a URN until this publication has been assigned to an issue."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr "You can not generate a URN because one or more parts of the URN pattern are missing data. You may need to assign the publication to an issue, set a publisher ID or enter page numbers."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "The URN must begin with {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "The URN for this publication will be {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "A URN has not been assigned to this publication."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Item"

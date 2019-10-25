@@ -32,7 +32,7 @@ msgstr "Bitte wählen Sie die Publikationsobjekte, denen Uniform Resource Names 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "URN werden Ausgaben zugewiesen werden."
 
-msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
 msgstr "URN werden Artikeln zugewiesen werden."
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
@@ -71,7 +71,7 @@ msgstr "für Fahnen"
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Bitte geben Sie das URN-Suffix-Muster für Ausgaben ein."
 
-msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
 msgstr "Bitte geben Sie das URN-Suffix-Muster für Artikel ein."
 
 msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"

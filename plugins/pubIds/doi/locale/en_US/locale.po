@@ -114,7 +114,7 @@ msgid "plugins.pubIds.doi.editor.doi.description"
 msgstr "The DOI must begin with {$prefix}."
 
 msgid "plugins.pubIds.doi.editor.doi.assignDoi"
-msgstr "Assign DOI"
+msgstr "Assign"
 
 msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
 msgstr "issue"
@@ -147,7 +147,7 @@ msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr "The given DOI suffix is already in use for another published item. Please enter a unique DOI suffix for each item."
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
-msgstr "Clear DOI"
+msgstr "Clear"
 
 msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
 msgstr "Are you sure you wish to delete the existing DOI?"

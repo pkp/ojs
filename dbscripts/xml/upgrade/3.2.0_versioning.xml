@@ -203,6 +203,20 @@
 				AND plugin_name="doipubidplugin"
 		</query>
 
+		<!-- update the URN setting names -->
+		<query>
+			UPDATE plugin_settings
+			SET setting_name="urnPublicationSuffixPattern"
+			WHERE setting_name="urnSubmissionSuffixPattern"
+				AND plugin_name="urnpubidplugin"
+		</query>
+		<query>
+			UPDATE plugin_settings
+			SET setting_name="enablePublicationURN"
+			WHERE setting_name="enableSubmissionURN"
+				AND plugin_name="urnpubidplugin"
+		</query>
+
 		<!-- remove deprecated and temporary tables. should be last commands -->
 		<query>DROP TABLE submission_categories</query>
 		<query>DROP TABLE submission_galleys</query>
