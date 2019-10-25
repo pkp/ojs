@@ -566,8 +566,6 @@ class URNPubIdPlugin extends PubIdPlugin {
 				'priority' => STYLE_SEQUENCE_LAST,
 			]
 		);
-
-
 	}
 
 	//
