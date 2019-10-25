@@ -51,6 +51,7 @@
 
 	<!-- форма метаданных -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doi.assignDoi">Назначить</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">выпуску</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">статье</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">гранке</message>
@@ -61,7 +62,7 @@
 	<message key="plugins.pubIds.doi.editor.canBeAssigned">Вы видите как будет выглядеть DOI. Поставьте галочку и сохраните форму для присвоения DOI.</message>
 	<message key="plugins.pubIds.doi.editor.assigned"> DOI присвоен {$pubObjectType}.</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Заданный суффикс DOI уже используется для другого опубликованного элемента. Пожалуйста, введите уникальный суффикс DOI для каждого элемента.</message>
-	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Удалить DOI</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Удалить</message>
 	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Вы уверены, что хотите удалить существующий DOI?</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Удалить DOI у объектов выпуска</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Вы уверены, что хотите удалить существующие DOI у объектов выпуска?</message>

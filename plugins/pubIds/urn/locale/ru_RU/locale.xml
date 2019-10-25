@@ -22,7 +22,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Пожалуйста выберите объекты, которым должны быть присвоены URN.</message>
 	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Пожалуйста выберите публикуемые объекты, которые будут иметь присвоенные единообразные имена ресурсов (Uniform Resource Names, URN):</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Выпуски</message>
-	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Статьи</message>
+	<message key="plugins.pubIds.urn.manager.settings.enablePublicationURN">Статьи</message>
 	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Гранки</message>
 
 	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Префикс URN</message>
@@ -37,7 +37,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">для статей</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">для гранок</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для выпусков.</message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для статей.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для статей.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Пожалуйста, введите шаблон суффикса URN для гранок.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Использовать шаблоны по умолчанию.</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i для выпусков<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок.]]></message>
@@ -65,7 +65,7 @@
 	<message key="plugins.pubIds.urn.editor.canBeAssigned">Вы видите как будет выглядеть URN. Поставьте галочку и сохраните форму для присвоения URN.</message>
 	<message key="plugins.pubIds.urn.editor.assigned">URN присвоен {$pubObjectType}.</message>
 	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Заданный суффикс URN уже используется для другого опубликованного элемента. Пожалуйста, введите уникальный суффикс URN для каждого элемента.</message>
-	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Удалить URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Удалить</message>
 	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Вы уверены, что хотите удалить существующий URN?</message>
 	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Удалить URN у объектов выпуска</message>
 	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Вы уверены, что хотите удалить существующие URN у объектов выпуска?</message>
@@ -78,5 +78,14 @@
 	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} был присвоен.</message>
 	<!-- ошибки -->
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Контрольное число отсутствует.</message>
+	<message key="plugins.pubIds.urn.editor.urn.description">URN должен начинаться с {$prefix}.</message>
+	<message key="plugins.pubIds.urn.editor.urn.assignUrn">Назначить</message>
+	<message key="plugins.pubIds.urn.editor.missingIssue">Вы не можете сгенерировать URN, пока эта публикация не будет назначена в конкретный выпуск.</message>
+	<message key="plugins.pubIds.urn.editor.missingParts">Вы не можете сгенерировать URN, так как для одной или нескольких частей шаблона URN не хватает данных. Вам может быть необходимо назначить публикацию в конкретный выпуск, задать ID издателя или ввести номера страниц.</message>
+	<message key="plugins.pubIds.urn.editor.missingPrefix">URN должен начинаться с {$urnPrefix}.</message>
+	<message key="plugins.pubIds.urn.editor.preview.publication">URN для этой публикации будет {$urn}.</message>
+	<message key="plugins.pubIds.urn.editor.preview.publication.none">URN не был присвоен этой публикации.</message>
+	<message key="plugins.pubIds.urn.editor.preview.galleys">Гранка: {$galleyLabel}</message>
+	<message key="plugins.pubIds.urn.editor.preview.objects">Элемент</message>
 
 </locale>
