@@ -102,7 +102,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 
 		// If online or print + online, domain or at least one IP range has been provided
 		if ($subscriptionType->getFormat() != SUBSCRIPTION_TYPE_FORMAT_PRINT) {
-			$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'manager.subscriptions.form.domainIPRangeRequired', function($domain) use ($ipRangeProvided) {
+			$this->addCheck(new FormValidatorCustom($this, 'domain', 'optional', 'manager.subscriptions.form.domainIPRangeRequired', function($domain) use ($ipRangeProvided) {
 				return ($domain != '' || $ipRangeProvided) ? true : false;
 			}));
 		}
