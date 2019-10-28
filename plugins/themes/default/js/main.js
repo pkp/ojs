@@ -9,27 +9,54 @@
  */
 (function($) {
 
-	// Initialize dropdown navigation menus
+	// Initialize dropdown navigation menus on large screens
 	// See bootstrap dropdowns: https://getbootstrap.com/docs/4.0/components/dropdowns/
 	if (typeof $.fn.dropdown !== 'undefined') {
 		var $nav = $('#navigationPrimary, #navigationUser'),
 		$submenus = $('ul', $nav);
+		function toggleDropdowns() {
+			if (window.innerWidth > 992) {
+				$submenus.each(function(i) {
+					var id = 'pkpDropdown' + i;
+					$(this)
+						.addClass('dropdown-menu')
+						.attr('aria-labelledby', id);
+					$(this).siblings('a')
+						.attr('data-toggle', 'dropdown')
+						.attr('aria-haspopup', true)
+						.attr('aria-expanded', false)
+						.attr('id', id)
+						.attr('href', '#');
+				});
+				$('[data-toggle="dropdown"]').dropdown();
 
-		$submenus.each(function(i) {
-			var id = 'pkpDropdown' + i;
-			$(this)
-				.addClass('dropdown-menu')
-				.attr('aria-labelledby', id);
-			$(this).siblings('a')
-				.attr('data-toggle', 'dropdown')
-				.attr('aria-haspopup', true)
-				.attr('aria-expanded', false)
-				.attr('id', id)
-				.attr('href', '#');
+			} else {
+				$('[data-toggle="dropdown"]').dropdown('dispose');
+				$submenus.each(function(i) {
+					$(this)
+						.removeClass('dropdown-menu')
+						.removeAttr('aria-labelledby');
+					$(this).siblings('a')
+						.removeAttr('data-toggle')
+						.removeAttr('aria-haspopup')
+						.removeAttr('aria-expanded',)
+						.removeAttr('id')
+						.attr('href', '#');
+				});
+			}
+		}
+		window.onresize = toggleDropdowns;
+		$().ready(function() {
+			toggleDropdowns();
 		});
-
-		$('[data-toggle="dropdown"]').dropdown();
 	}
+
+	// Toggle nav menu on small screens
+	$('.pkp_site_nav_toggle').click(function(e) {
+  		$('.pkp_site_nav_menu').toggleClass('pkp_site_nav_menu--isOpen');
+  		$('.pkp_site_nav_toggle').toggleClass('pkp_site_nav_toggle--transform');
+	});
+
 
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
