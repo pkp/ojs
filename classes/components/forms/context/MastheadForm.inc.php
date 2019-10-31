@@ -20,8 +20,8 @@ class MastheadForm extends PKPMastheadForm {
 	/**
 	 * @copydoc PKPMastheadForm::__construct()
 	 */
-	public function __construct($action, $locales, $context) {
-		parent::__construct($action, $locales, $context);
+	public function __construct($action, $locales, $context, $imageUploadUrl) {
+		parent::__construct($action, $locales, $context, $imageUploadUrl);
 
 		$this->addField(new FieldText('abbreviation', [
 				'label' => __('manager.setup.journalAbbreviation'),

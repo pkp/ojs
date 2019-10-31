@@ -72,14 +72,34 @@ class WorkflowHandler extends PKPWorkflowHandler {
 
 		$journalEntryForm = new APP\components\forms\publication\JournalEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
+		$sectionWordLimits = [];
+		$sectionIterator = DAORegistry::getDAO('SectionDAO')->getByContextId($submissionContext->getId());
+		while ($section = $sectionIterator->next()) {
+			$sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
+		}
+
 		$templateMgr->setConstants([
 			'FORM_JOURNAL_ENTRY',
 		]);
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
+
+		// Add the word limit to the existing title/abstract form
+		if (!empty($workflowData['components'][FORM_TITLE_ABSTRACT]) &&
+				array_key_exists($submission->getLatestPublication()->getData('sectionId'), $sectionWordLimits)) {
+			$limit = (int) $sectionWordLimits[$submission->getLatestPublication()->getData('sectionId')];
+			foreach ($workflowData['components'][FORM_TITLE_ABSTRACT]['fields'] as $key => $field) {
+				if ($field['name'] === 'abstract') {
+					$workflowData['components'][FORM_TITLE_ABSTRACT]['fields'][$key]['wordLimit'] = $limit;
+					break;
+				}
+			}
+		}
+
 		$workflowData['components'][FORM_JOURNAL_ENTRY] = $journalEntryForm->getConfig();
 		$workflowData['publicationFormIds'][] = FORM_JOURNAL_ENTRY;
 		$workflowData['issueApiUrl'] = $issueApiUrl;
+		$workflowData['sectionWordLimits'] = $sectionWordLimits;
 		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
 
 		$templateMgr->assign('workflowData', $workflowData);

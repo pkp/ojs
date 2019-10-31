@@ -21,8 +21,8 @@ class AppearanceSetupForm extends PKPAppearanceSetupForm {
 	/**
 	 * @copydoc PKPAppearanceSetupForm::__construct()
 	 */
-	public function __construct($action, $locales, $context, $baseUrl, $temporaryFileApiUrl) {
-		parent::__construct($action, $locales, $context, $baseUrl, $temporaryFileApiUrl);
+	public function __construct($action, $locales, $context, $baseUrl, $temporaryFileApiUrl, $uploadImageUrl) {
+		parent::__construct($action, $locales, $context, $baseUrl, $temporaryFileApiUrl, $uploadImageUrl);
 
 		$this->addField(new FieldUploadImage('serverThumbnail', [
 				'label' => __('manager.setup.serverThumbnail'),
