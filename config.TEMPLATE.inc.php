@@ -214,6 +214,13 @@ files_dir = files
 ; Windows users should use forward slashes
 public_files_dir = public
 
+; The maximum allowed size in bytes of each user's public files
+; directory. This is where user's can upload images through the
+; tinymce editor to their bio. Editors can upload images for
+; some of the settings.
+; Set this to 0 to disallow such uploads.
+public_user_dir_size = 5000
+
 ; Permissions mask for created files and directories
 umask = 0022
 
