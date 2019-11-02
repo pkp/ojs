@@ -47,7 +47,7 @@
 	 -->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Ви впевнені, що хочете позначити це завдання як завершене? Після цього, ймовірно, ви не матимете можливості вносити зміни.</message>
 	<message key="common.payment">Платіж</message>
 	<message key="common.payments">Платежі</message>
@@ -185,7 +185,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Поточний номер</message>
-	<message key="journal.journals">Журнали</message>
+	<message key="context.contexts">Журнали</message>
 	<message key="journal.path">Шлях</message>
 	<message key="context.context">Журнал</message>
 	<message key="journal.issn">ISSN</message>

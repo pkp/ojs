@@ -23,7 +23,7 @@ msgstr "Haga clic en el icono para rellenar el formulario de revisión."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Rellene los campos obligatorios."
 
-msgid "common.openJournalSystems"
+msgid "common.software"
 msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
@@ -341,7 +341,7 @@ msgstr "Corregir pruebas"
 msgid "journal.currentIssue"
 msgstr "Número actual"
 
-msgid "journal.journals"
+msgid "context.contexts"
 msgstr "Revistas"
 
 msgid "journal.path"

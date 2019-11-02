@@ -12,9 +12,9 @@
   -->
 
 <locale name="sr_RS@latin" full_name="Srpski">
-	<message key="admin.hostedJournals">Izdanja</message>
-	<message key="admin.settings.journalRedirect">Redirekcija časopisa</message>
-	<message key="admin.settings.journalRedirectInstructions">Pristup sajtu će biti preusmeren na časopis. Ovo može biti korisno ako hostujete samo jedan časopis.</message>
+	<message key="admin.hostedContexts">Izdanja</message>
+	<message key="admin.settings.redirect">Redirekcija časopisa</message>
+	<message key="admin.settings.redirectInstructions">Pristup sajtu će biti preusmeren na časopis. Ovo može biti korisno ako hostujete samo jedan časopis.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Ovo će biti primarni jezik za sajt za sve časopise.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Odaberite lokalizacije koje želite da podržite na sajtu. One će biti dostupne za sve časopise i prikazivaće se u meniju za odabir jezika. Ukoliko ne odaberete ni jedan dodatni jezik meni za izbor jezika se neće prikazivati.</message>
 	<message key="admin.locale.maybeIncomplete">Markirane lokalizacije nisu kompletne.</message>

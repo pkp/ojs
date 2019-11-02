@@ -37,7 +37,7 @@
 	 *
 	-->
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">سامانه مجله باز</message>
+	<message key="common.software">سامانه مجله باز</message>
 	<message key="common.confirmComplete">آیا مطمئن هستید که می‌خواهید این وظیفه را به عنوان تکمیل شده علامت گذاری نمایید؟ پس از این عمل دیگر قادر به تغییر آن نخواهید بود.</message>
 	<message key="common.payment">پرداخت</message>
 	<message key="common.payments">پرداخت‌ها</message>
@@ -162,7 +162,7 @@
 	<!-- Submission Notes -->
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">شماره کنونی</message>
-	<message key="journal.journals">مجلات</message>
+	<message key="context.contexts">مجلات</message>
 	<message key="journal.path">مسیر</message>
 	<message key="context.context">مجله</message>
 	<message key="journal.issn">شاپا</message>

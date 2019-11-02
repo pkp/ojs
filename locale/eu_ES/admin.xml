@@ -13,9 +13,9 @@
   -->
 
 <locale name="eu_ES" full_name="Euskara">
-	<message key="admin.hostedJournals">Aldizkari ostatatuak</message>
-	<message key="admin.settings.journalRedirect">Aldizkarira birbideratu</message>
-	<message key="admin.settings.journalRedirectInstructions">Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako.</message>
+	<message key="admin.hostedContexts">Aldizkari ostatatuak</message>
+	<message key="admin.settings.redirect">Aldizkarira birbideratu</message>
+	<message key="admin.settings.redirectInstructions">Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza lehenetsia.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan.</message>
 	<message key="admin.languages.confirmUninstall">Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan.</message>

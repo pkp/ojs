@@ -15,10 +15,10 @@
   -->
 
 <locale name="el_GR" full_name="ελληνικά">
-	<message key="admin.hostedJournals">Φιλοξενούμενα περιοδικά</message>
-	<message key="admin.settings.journalRedirect">Προώθηση σε περιοδικό</message>
+	<message key="admin.hostedContexts">Φιλοξενούμενα περιοδικά</message>
+	<message key="admin.settings.redirect">Προώθηση σε περιοδικό</message>
 	<message key="admin.settings.options">Επιλογές</message>
-	<message key="admin.settings.journalRedirectInstructions">Αιτήματα που υποβάλλονται στον κεντρικό ιστότοπο του συστήματος θα προωθούνται στην ιστοσελίδα αυτού του περιοδικού. Η επιλογή είναι χρήσιμη αν ο ιστότοπος φιλοξενεί μόνο ένα περιοδικό.</message>
+	<message key="admin.settings.redirectInstructions">Αιτήματα που υποβάλλονται στον κεντρικό ιστότοπο του συστήματος θα προωθούνται στην ιστοσελίδα αυτού του περιοδικού. Η επιλογή είναι χρήσιμη αν ο ιστότοπος φιλοξενεί μόνο ένα περιοδικό.</message>
 	<message key="admin.settings.noJournalRedirect">Να μη γίνεται προώθηση</message>
 	<message key="admin.settings.defaultMetricDescription">Η εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, τα οποία εμφανίζονται σε διαφορετικά συγκείμενα.
 Σε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης (π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων ή για την ταξινόμηση των αποτελεσμάτων μίας αναζήτησης). Παρακαλούμε ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή.</message>

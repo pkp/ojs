@@ -29,7 +29,7 @@ msgstr "Clique no ícone para preencher o formulário de avaliação."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Preencha os campos obrigatórios."
 
-msgid "common.openJournalSystems"
+msgid "common.software"
 msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
@@ -347,7 +347,7 @@ msgstr "Leitura de Provas realizada"
 msgid "journal.currentIssue"
 msgstr "Edição Atual"
 
-msgid "journal.journals"
+msgid "context.contexts"
 msgstr "Revistas"
 
 msgid "journal.path"

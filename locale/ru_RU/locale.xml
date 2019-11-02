@@ -47,7 +47,7 @@
 	-->
 
 	<!-- Общие сообщения -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Вы уверены, что хотите отметить эту задачу как завершенную? После этого вы не сможете внести изменения.</message>
 	<message key="common.payment">Платеж</message>
 	<message key="common.payments">Платежи</message>
@@ -189,7 +189,7 @@
 
 	<!-- Общие термины журнала -->
 	<message key="journal.currentIssue">Текущий выпуск</message>
-	<message key="journal.journals">Журналы</message>
+	<message key="context.contexts">Журналы</message>
 	<message key="journal.path">Путь</message>
 	<message key="context.context">Журнал</message>
 	<message key="journal.issn">ISSN</message>

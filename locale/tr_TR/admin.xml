@@ -12,9 +12,9 @@
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
-	<message key="admin.hostedJournals">Yayınlanan Dergiler</message>
-	<message key="admin.settings.journalRedirect">Dergi Yönlendirmesi</message>
-	<message key="admin.settings.journalRedirectInstructions">Siteye yapılan girişler doğrudan derginin ana sayfasına yönlendirir. OJS üzerinde tek dergi yayınlanıyır ise yararlıdır.</message>
+	<message key="admin.hostedContexts">Yayınlanan Dergiler</message>
+	<message key="admin.settings.redirect">Dergi Yönlendirmesi</message>
+	<message key="admin.settings.redirectInstructions">Siteye yapılan girişler doğrudan derginin ana sayfasına yönlendirir. OJS üzerinde tek dergi yayınlanıyır ise yararlıdır.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Bu site ve yayınlanan dergiler için varsayılan dil olacaktır.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sitede kullanılacak dilleri seçiniz. Seçilen diller sitede sunulan tüm dergiler için kullanılabilir olacaktır ve özel dergi sayfaları dışında, seçtiğiniz dillerden oluşan bir dil seçme aracı tüm sayfalarda okuyucunun hizmetine sunulacaktır. Eğer birden çok dil seçilmez ise, dil seçim aracı gösterilmeyecektir ve dergiler için genişletilmiş dil olanakları çalışmayacaktır.</message>
 	<message key="admin.locale.maybeIncomplete">İşaretlenmiş diller tamamlanmamış olabilir.</message>

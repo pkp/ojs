@@ -29,7 +29,7 @@ msgstr "Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Bitte füllen Sie die benötigten Felder aus."
 
-msgid "common.openJournalSystems"
+msgid "common.software"
 msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
@@ -353,7 +353,7 @@ msgstr "Korrekturlektorat beendet"
 msgid "journal.currentIssue"
 msgstr "Aktuelle Ausgabe"
 
-msgid "journal.journals"
+msgid "context.contexts"
 msgstr "Zeitschriften"
 
 msgid "journal.path"

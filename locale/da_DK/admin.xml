@@ -13,9 +13,9 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="admin.hostedJournals">Tilknyttede tidsskrifter</message>
-	<message key="admin.settings.journalRedirect">Omdirigering af tidsskrift</message>
-	<message key="admin.settings.journalRedirectInstructions">Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift.</message>
+	<message key="admin.hostedContexts">Tilknyttede tidsskrifter</message>
+	<message key="admin.settings.redirect">Omdirigering af tidsskrift</message>
+	<message key="admin.settings.redirectInstructions">Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Dette er standardsproget for webstedet og alle tilknyttede tidsskrifter.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Vælg alle de landestandarder, der skal understøttes på webstedet. De valgte landestandarder kan benyttes af alle de tidsskrifter, der er tilknyttet webstedet, og vises også i en sprogvalgsmenu, der vises på hver enkelt side på webstedet (kan tilsidesættes på tidsskriftsspecifikke sider). Hvis der ikke vælges flere landestandarder, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke være tilgængelige for tidsskrifter.</message>
 	<message key="admin.languages.confirmUninstall">Er du sikker på, at du vil fjerne denne landestandard? Denne handling kan påvirke alle tilknyttede tidsskrifter, der i øjeblikket benytter landestandarden.</message>

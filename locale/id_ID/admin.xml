@@ -12,9 +12,9 @@
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
-	<message key="admin.hostedJournals">Jurnal yang Dikelola</message>
-	<message key="admin.settings.journalRedirect">Pengalihan Jurnal</message>
-	<message key="admin.settings.journalRedirectInstructions">Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini berguna jika hanya ada satu jurnal yang dikelola.</message>
+	<message key="admin.hostedContexts">Jurnal yang Dikelola</message>
+	<message key="admin.settings.redirect">Pengalihan Jurnal</message>
+	<message key="admin.settings.redirectInstructions">Permintaan ke situs utama akan dialihkan ke jurnal ini. Hal ini berguna jika hanya ada satu jurnal yang dikelola.</message>
 	<message key="admin.languages.confirmDisable">Anda yakin hendak menonaktifkan bahasa ini? Hal ini dapat mempengaruhi semua jurnal yang menggunakannya.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Saat ini tidak dapat mengunduh paket bahasa dari server Public Knowledge Project karena:</p>
 	<ul>

@@ -51,7 +51,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Esteu segur/a que voleu marcar aquesta tasca com a completa? Si ho feu, no hi podreu fer canvis més endavant.</message>
 	<message key="common.payment">Pagament</message>
 	<message key="common.payments">Pagaments</message>
@@ -188,7 +188,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Número actual</message>
-	<message key="journal.journals">Revistes</message>
+	<message key="context.contexts">Revistes</message>
 	<message key="journal.path">Ruta</message>
 	<message key="context.context">Revista</message>
 	<message key="journal.issn">ISSN</message>

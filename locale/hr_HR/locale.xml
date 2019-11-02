@@ -34,7 +34,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 
 	<!-- Common Form Messages -->
 	<!-- Common Email Messages -->
@@ -157,7 +157,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Trenutni broj</message>
-	<message key="journal.journals">Časopisi</message>
+	<message key="context.contexts">Časopisi</message>
 	<message key="journal.path">Putanja</message>
 	<message key="context.context">Časopis</message>
 

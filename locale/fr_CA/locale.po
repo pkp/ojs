@@ -30,7 +30,7 @@ msgstr "Cliquez sur l'icône pour compléter le formulaire d'évaluation."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Veuillez remplir les champs obligatoires."
 
-msgid "common.openJournalSystems"
+msgid "common.software"
 msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
@@ -363,7 +363,7 @@ msgstr "Recherche d'article"
 msgid "journal.currentIssue"
 msgstr "Numéro courant"
 
-msgid "journal.journals"
+msgid "context.contexts"
 msgstr "Revues"
 
 msgid "journal.path"

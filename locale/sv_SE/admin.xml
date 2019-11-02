@@ -12,9 +12,9 @@
   -->
 
 <locale name="sv_SE" full_name="Svenska">
-	<message key="admin.hostedJournals">Tidskrifter på den här webbplatsen</message>
-	<message key="admin.settings.journalRedirect">Omdirigering av tidskrift</message>
-	<message key="admin.settings.journalRedirectInstructions">Anrop till huvudsidan kommer att dirigeras om till den här tidskriften. Detta kan till exempel vara lämpligt om webbplatsen endast hyser en tidskrift.</message>
+	<message key="admin.hostedContexts">Tidskrifter på den här webbplatsen</message>
+	<message key="admin.settings.redirect">Omdirigering av tidskrift</message>
+	<message key="admin.settings.redirectInstructions">Anrop till huvudsidan kommer att dirigeras om till den här tidskriften. Detta kan till exempel vara lämpligt om webbplatsen endast hyser en tidskrift.</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Din OJS-installation är konfigurerad för att registrera mer än ett användningsmått. Användningsstatistiken kommer att presenteras i flera sammanhang.
 		Det finns fall där endast ett användningsmått måste användas, t.ex. för att visa en sorterad lista över de mest använda bidragen eller för

@@ -34,7 +34,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 
 	<!-- Common Form Messages -->
 
@@ -155,7 +155,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Numéro courant</message>
-	<message key="journal.journals">Revues</message>
+	<message key="context.contexts">Revues</message>
 	<message key="journal.path">Chemin</message>
 	<message key="context.context">Revue</message>
 

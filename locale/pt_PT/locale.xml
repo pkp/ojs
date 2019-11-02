@@ -32,7 +32,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Sistema Electrónico de Edição de Revistas</message>
+	<message key="common.software">Sistema Electrónico de Edição de Revistas</message>
 	<message key="navigation.current">Actual</message>
 	<message key="navigation.otherJournals">Outras revistas</message>
 	<message key="navigation.journalHelp">Ajuda do sistema</message>
@@ -141,7 +141,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Número Actual</message>
-	<message key="journal.journals">Revistas</message>
+	<message key="context.contexts">Revistas</message>
 	<message key="journal.path">Caminho</message>
 	<message key="context.context">Revista</message>
 

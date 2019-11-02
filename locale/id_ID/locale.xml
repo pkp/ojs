@@ -47,7 +47,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Apakah Anda yakin tugas ini telah selesai? Anda mungkin tidak bisa mengubahnya lagi.</message>
 	<message key="common.payment">Pembayaran</message>
 	<message key="common.payments">Pembayaran</message>
@@ -185,7 +185,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Terbitan Terkini</message>
-	<message key="journal.journals">Jurnal</message>
+	<message key="context.contexts">Jurnal</message>
 	<message key="journal.path">Path</message>
 	<message key="context.context">Jurnal</message>
 	<message key="journal.issn">ISSN</message>

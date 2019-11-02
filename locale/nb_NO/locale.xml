@@ -33,7 +33,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 
 	<!-- Common Form Messages -->
 
@@ -154,7 +154,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Nyeste utgave</message>
-	<message key="journal.journals">Tidsskrift</message>
+	<message key="context.contexts">Tidsskrift</message>
 	<message key="journal.path">Filsti</message>
 	<message key="context.context">Tidsskrift</message>
 

@@ -35,7 +35,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Er du sikker på, at du vil markere denne opgave som fuldført? Du kan muligvis ikke foretage ændringer senere.</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalinger</message>
@@ -160,7 +160,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Nyeste nummer</message>
-	<message key="journal.journals">Tidsskrifter</message>
+	<message key="context.contexts">Tidsskrifter</message>
 	<message key="journal.path">Sti</message>
 	<message key="context.context">Tidsskrift</message>
 

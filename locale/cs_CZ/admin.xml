@@ -12,9 +12,9 @@
   -->
 
 <locale name="cs_CZ" full_name="Čeština">
-	<message key="admin.hostedJournals">Hostované časopisy</message>
-	<message key="admin.settings.journalRedirect">Přesměrování časopisu</message>
-	<message key="admin.settings.journalRedirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
+	<message key="admin.hostedContexts">Hostované časopisy</message>
+	<message key="admin.settings.redirect">Přesměrování časopisu</message>
+	<message key="admin.settings.redirectInstructions">Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Toto bude výchozí jazyk pro stránku a všechny hostované časopisy.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné.</message>
 	<message key="admin.languages.confirmUninstall">Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají.</message>

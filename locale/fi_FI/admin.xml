@@ -12,9 +12,9 @@
   -->
 
 <locale name="fi_FI" full_name="Suomi">
-	<message key="admin.hostedJournals">Ylläpidetyt julkaisut</message>
-	<message key="admin.settings.journalRedirect">Julkaisun uudelleenohjaus</message>
-	<message key="admin.settings.journalRedirectInstructions">Pyynnöt pääsivustolle uudelleenohjataan tähän julkaisuun. Tämä saattaa olla hyödyllinen toiminto, jos sivustolla ylläpidetään vain yhtä julkaisua.</message>
+	<message key="admin.hostedContexts">Ylläpidetyt julkaisut</message>
+	<message key="admin.settings.redirect">Julkaisun uudelleenohjaus</message>
+	<message key="admin.settings.redirectInstructions">Pyynnöt pääsivustolle uudelleenohjataan tähän julkaisuun. Tämä saattaa olla hyödyllinen toiminto, jos sivustolla ylläpidetään vain yhtä julkaisua.</message>
 	<message key="admin.settings.defaultMetricDescription">
 OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näkyvät useassa yhteydessä.
 		Joissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletusarvoksi.

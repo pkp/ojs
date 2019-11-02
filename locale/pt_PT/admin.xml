@@ -12,9 +12,9 @@
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="admin.hostedJournals">Revistas Hospedadas</message>
-	<message key="admin.settings.journalRedirect">Redireccionamento para revista hospedada</message>
-	<message key="admin.settings.journalRedirectInstructions">Os pedidos realizados no Portal Principal serão direccionados a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
+	<message key="admin.hostedContexts">Revistas Hospedadas</message>
+	<message key="admin.settings.redirect">Redireccionamento para revista hospedada</message>
+	<message key="admin.settings.redirectInstructions">Os pedidos realizados no Portal Principal serão direccionados a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Este será o idioma padrão para o portal e todas as revistas hospedadas.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Os idiomas seleccionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desactivada individualmente por revista). Caso não sejam seleccionados vários idiomas, a lista de idiomas não estará disponível e a opção "configurações de idioma" não estará disponível para as revistas.</message>
 	<message key="admin.languages.confirmUninstall">Deseja realmente remover este idioma? A execução pode afectar revistas hospedas que podem estar utilizando o idioma.</message>

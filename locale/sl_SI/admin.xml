@@ -11,10 +11,10 @@
   * Localization strings.
   -->
 <locale name="sl_SI" full_name="Slovenščina">
-	<message key="admin.hostedJournals">Revije na tem spletišču</message>
-	<message key="admin.settings.journalRedirect">Preusmeritev revije</message>
+	<message key="admin.hostedContexts">Revije na tem spletišču</message>
+	<message key="admin.settings.redirect">Preusmeritev revije</message>
 	<message key="admin.settings.options">Nastavitve</message>
-	<message key="admin.settings.journalRedirectInstructions">Vse zahteve in obiski domače strani bodo preusmerjene na to revijo. To je uporabno, če na spletišču gostuje le ena revija.</message>
+	<message key="admin.settings.redirectInstructions">Vse zahteve in obiski domače strani bodo preusmerjene na to revijo. To je uporabno, če na spletišču gostuje le ena revija.</message>
 	<message key="admin.settings.noJournalRedirect">Ne preusmeri</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Vaša OJS namestitev beleži več kot le eno metriko uporabe, ki so prikazane v različnih kontekstih.

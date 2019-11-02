@@ -51,7 +51,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Ziur zaude bukatutako gisa markatu nahi duzula zeregin hau? Gero ezingo duzu aldaketarik egin.</message>
 	<message key="common.payment">Ordainketa</message>
 	<message key="common.payments">Ordainketak</message>
@@ -188,7 +188,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Uneko zenbakia</message>
-	<message key="journal.journals">Aldizkariak</message>
+	<message key="context.contexts">Aldizkariak</message>
 	<message key="journal.path">Bidea</message>
 	<message key="context.context">Aldizkaria</message>
 	<message key="journal.issn">ISSN</message>

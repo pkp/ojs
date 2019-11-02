@@ -47,7 +47,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">أنظمة المجلات المفتوحة</message>
+	<message key="common.software">أنظمة المجلات المفتوحة</message>
 	<message key="common.confirmComplete">هل أنت متأكد من رغبتك في تأشير هذه المهمة على أنها منجزة؟ قد لا تتمكن من إجراء تعديلات بعدها</message>
 	<message key="common.payment">دفع مال</message>
 	<message key="common.payments">أجور مدفوعة</message>
@@ -188,7 +188,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">العدد الحالي</message>
-	<message key="journal.journals">المجلات</message>
+	<message key="context.contexts">المجلات</message>
 	<message key="journal.path">المسار</message>
 	<message key="context.context">المجلة</message>
 	<message key="journal.issn">ISSN</message>
