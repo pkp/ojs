@@ -12,12 +12,12 @@
   -->
 
 <locale name="ru_RU" full_name="Русский">
-	<message key="admin.hostedJournals">Журналы на сайте</message>
+	<message key="admin.hostedContexts">Журналы на сайте</message>
 	<message key="admin.settings.appearance.success">Настройки оформления сайта были успешно обновлены.</message>
 	<message key="admin.settings.config.success">Настройки конфигурации сайта были успешно обновлены.</message>
 	<message key="admin.settings.info.success">Информация сайта была успешно обновлена.</message>
-	<message key="admin.settings.journalRedirect">Перенаправление журнала</message>
-	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
+	<message key="admin.settings.redirect">Перенаправление журнала</message>
+	<message key="admin.settings.redirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Ваша инсталляция OJS настроена на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.
 		Есть случаи, когда должна быть применена только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее используемых статей или проранжировать

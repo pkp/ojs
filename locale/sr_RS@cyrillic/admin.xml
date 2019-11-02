@@ -12,9 +12,9 @@
   -->
 
 <locale name="sr_RS@cyrillic" full_name="Cрпски">
-	<message key="admin.hostedJournals">Часописи</message>
-	<message key="admin.settings.journalRedirect">Редирекција часописа</message>
-	<message key="admin.settings.journalRedirectInstructions">Приступ сајту ће бити преусмерен на часопис. Ово може бити корисно ако хостујете само један часопис.</message>
+	<message key="admin.hostedContexts">Часописи</message>
+	<message key="admin.settings.redirect">Редирекција часописа</message>
+	<message key="admin.settings.redirectInstructions">Приступ сајту ће бити преусмерен на часопис. Ово може бити корисно ако хостујете само један часопис.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Ово ће бити примарни језик за сајт и све часописе.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Одаберите локализације које желите да подржите на сајту. Оне ће бити доступне за све часописе и приказиваће се у менију за одабир језика. Уколико не одаберете ни један додатни језик мени за избор језика се неће приказивати.</message>
 	<message key="admin.locale.maybeIncomplete">Маркиране локализације нису комплетне.</message>

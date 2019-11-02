@@ -41,7 +41,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Ste prepričani, da želite označiti to nalogo kot zaključeno? Kasneje tega ne boste mogli več spremeniti.</message>
 	<message key="common.payment">Plačilo</message>
 	<message key="common.payments">Plačila</message>
@@ -179,7 +179,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Trenutna številka</message>
-	<message key="journal.journals">Revije</message>
+	<message key="context.contexts">Revije</message>
 	<message key="journal.path">Pot revije</message>
 	<message key="context.context">Revija</message>
 	<message key="journal.issn">ISSN</message>

@@ -45,7 +45,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Haluatko varmasti merkitä tämän tehtävän suoritetuksi? Et voi välttämättä tehdä muutoksia enää myöhemmin.</message>
 	<message key="common.payment">Maksu</message>
 	<message key="common.payments">Maksut</message>
@@ -183,7 +183,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Uusin numero</message>
-	<message key="journal.journals">Julkaisut</message>
+	<message key="context.contexts">Julkaisut</message>
 	<message key="journal.path">Polku</message>
 	<message key="context.context">Julkaisu</message>
 	<message key="journal.issn">ISSN</message>

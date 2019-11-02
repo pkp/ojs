@@ -12,7 +12,7 @@ msgstr ""
 "Language: fr_CA\n"
 # localization file for fr_CA. Last revision 2019-10-22T10:06:18 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 
-msgid "admin.hostedJournals"
+msgid "admin.hostedContexts"
 msgstr "Revues hébergées"
 
 msgid "admin.settings.appearance.success"
@@ -24,10 +24,10 @@ msgstr "Les paramètres de configuration du site ont bien été mis à jour."
 msgid "admin.settings.info.success"
 msgstr "Les informations du site ont bien été mises à jour."
 
-msgid "admin.settings.journalRedirect"
+msgid "admin.settings.redirect"
 msgstr "Réacheminement vers la revue"
 
-msgid "admin.settings.journalRedirectInstructions"
+msgid "admin.settings.redirectInstructions"
 msgstr "Les demandes faites au site principal seront réacheminées vers cette revue. Cela peut être utile si le site n'héberge, par exemple, qu'une seule revue."
 
 msgid "admin.settings.defaultMetricDescription"

@@ -13,9 +13,9 @@
   -->
 
 <locale name="ca_ES" full_name="Català">
-	<message key="admin.hostedJournals">Revistes allotjades</message>
-	<message key="admin.settings.journalRedirect">Redirecció a la revista</message>
-	<message key="admin.settings.journalRedirectInstructions">Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple.</message>
+	<message key="admin.hostedContexts">Revistes allotjades</message>
+	<message key="admin.settings.redirect">Redirecció a la revista</message>
+	<message key="admin.settings.redirectInstructions">Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple.</message>
 	<message key="admin.settings.defaultMetricDescription">La vostra instal·lació de l'OJS està configurada per registrar més d'una mètrica d'utilització. Les estadístiques d'utilització es mostren en diferents contexts. Hi ha casos on només es fa servir una estadística d'ús, p. ex. per mostrar una llista ordenada dels articles més utilitzats o per ordenar resultats d'una cerca. Seleccioneu una de les mètriques configurades com a opció predeterminada.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Aquesta és la llengua predeterminada per al lloc web i per a qualsevol revista allotjada.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Seleccioneu totes les configuracions regionals que oferirà el lloc web. Les configuracions regionals seleccionades estan disponibles per al seu ús a totes les revistes allotjades al lloc web, i també apareixen a un menú de selecció d'idioma disponible a cada pàgina del lloc web (que es pot desactivar en pàgines concretes de les revistes). Si no se seleccionen diferents configuracions regionals, el menú de selecció de llengua no apareix i la configuració avançada de llengua no està disponible a les revistes.</message>

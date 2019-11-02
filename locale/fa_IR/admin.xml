@@ -10,10 +10,10 @@
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
   -->
 <locale name="fa_IR" full_name="فارسی">
-	<message key="admin.hostedJournals">مجلات میزبان</message>
-	<message key="admin.settings.journalRedirect">هدایت به سمت مجله</message>
+	<message key="admin.hostedContexts">مجلات میزبان</message>
+	<message key="admin.settings.redirect">هدایت به سمت مجله</message>
 	<message key="admin.settings.usePaging">قرار دادن لیست مجلات در چندین صفحه، برای سایت‌هایی که شامل تعداد زیادی مجله هستند</message>
-	<message key="admin.settings.journalRedirectInstructions">آدرس سایت اصلی به سمت نمایش این مجله هدایت می‌شود . این عمل زمانی کاربرد دارد که فقط یک مجله در سایت میزبان شود.</message>
+	<message key="admin.settings.redirectInstructions">آدرس سایت اصلی به سمت نمایش این مجله هدایت می‌شود . این عمل زمانی کاربرد دارد که فقط یک مجله در سایت میزبان شود.</message>
 	<message key="admin.settings.defaultMetricDescription">در تنظیمات نصب شما، چندین معیار اندازه‌گیری تعیین شده است. اما در برخی موارد نیاز است که از یک معیار استفاده شود، برای مثال در نمایش لیست مقالات بیشتر مشاهده شده. لطفاً یک معیار اندازه‌گیری را به عنوان معیار پیش‌فرض انتخاب کنید.</message>
 	<message key="admin.languages.confirmDisable">آیا مطمئن هستید که می‌خواهید این زبان را غیرفعال کنید؟ مجلاتی که از این زبان استفاده می‌کنند ممکن است دچار مشکل شوند!</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>  به یکی از دلایل زیر دانلود بسته زیان از سرور PKP در حال حاضر امکان‌پذیر نیست:  </p>  <ul>  <li>  سرور شما اجازه اجرای برنامه tar را نمی‌دهد  </li>  <li>  OJS قادر به تغییر فایل رجیستری زبان نیست (فایل )"registry/locales.xml"  </li>  </ul>  <p>  بسته‌های زبانی را می‌توان به روش دستی از سایت PKP  <a href="http://pkp.sfu.ca">  دانلود کرد.  </a>.</p>]]></message>

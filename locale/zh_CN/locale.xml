@@ -52,7 +52,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">开放期刊系统</message>
+	<message key="common.software">开放期刊系统</message>
 	<message key="common.confirmComplete">你确定要标记这个任务为完成状态吗？以后您可能无法进行更改。</message>
 	<message key="common.payment">支付</message>
 	<message key="common.payments">支付</message>
@@ -187,7 +187,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">最新一期</message>
-	<message key="journal.journals">期刊</message>
+	<message key="context.contexts">期刊</message>
 	<message key="journal.path">路径</message>
 	<message key="context.context">期刊</message>
 	<message key="journal.issn">ISSN</message>

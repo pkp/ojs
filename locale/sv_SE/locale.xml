@@ -47,7 +47,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete"> Är du säker på att du vill markera händelsen som avslutad? Ändringar i efterhand kan vara spärrade.</message>
 	<message key="common.payment">Betalning</message>
 	<message key="common.payments">Betalningar</message>
@@ -185,7 +185,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Senaste numret</message>
-	<message key="journal.journals">Tidskrifter</message>
+	<message key="context.contexts">Tidskrifter</message>
 	<message key="journal.path">Sökväg</message>
 	<message key="context.context">Tidskrift</message>
 	<message key="journal.issn">ISSN</message>

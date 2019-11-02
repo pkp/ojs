@@ -29,7 +29,7 @@ msgstr "Click on icon to fill in the review form."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Please fill in required fields."
 
-msgid "common.openJournalSystems"
+msgid "common.software"
 msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
@@ -362,7 +362,7 @@ msgstr "Article Search"
 msgid "journal.currentIssue"
 msgstr "Current Issue"
 
-msgid "journal.journals"
+msgid "context.contexts"
 msgstr "Journals"
 
 msgid "journal.path"

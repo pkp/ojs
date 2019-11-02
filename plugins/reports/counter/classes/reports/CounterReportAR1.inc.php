@@ -169,7 +169,7 @@ class CounterReportAR1 extends CounterReport {
 		$reportItem = array();
 		try {
 			$reportItem = new COUNTER\ReportItems(
-				__('common.openJournalSystems'),
+				__('common.software'),
 				$title,
 				COUNTER_LITERAL_ARTICLE,
 				$metrics,

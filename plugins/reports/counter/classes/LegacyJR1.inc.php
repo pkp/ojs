@@ -105,7 +105,7 @@ class LegacyJR1 {
 			$cols = array(
 				$journal->getLocalizedName(),
 				$journal->getData('publisherInstitution'),
-				__('common.openJournalSystems'), // Platform
+				__('common.software'), // Platform
 				$journal->getData('printIssn'),
 				$journal->getData('onlineIssn')
 			);

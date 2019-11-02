@@ -49,7 +49,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Açık Dergi Sistemleri</message>
+	<message key="common.software">Açık Dergi Sistemleri</message>
 	<message key="common.confirmComplete">Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir.</message>
 	<message key="common.payment">Ödeme</message>
 	<message key="common.payments">Ödemeler</message>
@@ -186,7 +186,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Yeni Sayı</message>
-	<message key="journal.journals">Dergiler</message>
+	<message key="context.contexts">Dergiler</message>
 	<message key="journal.path">Yol</message>
 	<message key="context.context">Dergi</message>
 	<message key="journal.issn">ISSN</message>

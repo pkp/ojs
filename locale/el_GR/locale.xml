@@ -50,7 +50,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Επιβεβαιώνετε τη σήμανση της εργασίας ως ολοκληρωμένη; Ενδέχεται να μην μπορείτε να κάνετε αλλαγές.</message>
 	<message key="common.payment">Πληρωμή</message>
 	<message key="common.payments">Πληρωμές</message>
@@ -188,7 +188,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Τρέχον τεύχος</message>
-	<message key="journal.journals">Περιοδικά</message>
+	<message key="context.contexts">Περιοδικά</message>
 	<message key="journal.path">Διαδρομή</message>
 	<message key="context.context">Περιοδικό</message>
 	<message key="journal.issn">ISSN</message>

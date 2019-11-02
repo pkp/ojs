@@ -11,13 +11,13 @@ msgstr ""
 "PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
 "Language: \n"
 
-msgid "admin.hostedJournals"
+msgid "admin.hostedContexts"
 msgstr "Zeitschriften auf dieser Website"
 
-msgid "admin.settings.journalRedirect"
+msgid "admin.settings.redirect"
 msgstr "Umleitung zu der Zeitschrift"
 
-msgid "admin.settings.journalRedirectInstructions"
+msgid "admin.settings.redirectInstructions"
 msgstr "Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird."
 
 msgid "admin.settings.defaultMetricDescription"

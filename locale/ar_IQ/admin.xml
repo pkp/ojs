@@ -12,12 +12,12 @@
   -->
 
 <locale name="ar_IQ" full_name="العربية">
-	<message key="admin.hostedJournals">المجلات المستضافة</message>
+	<message key="admin.hostedContexts">المجلات المستضافة</message>
 	<message key="admin.settings.appearance.success">إعدادات مظهر الموقع تغيرت بنجاح.</message>
 	<message key="admin.settings.config.success">إعدادات الموقع تغيرت بنجاح.</message>
 	<message key="admin.settings.info.success">معلومات تعريف الموقع تغيرت بنجاح.</message>
-	<message key="admin.settings.journalRedirect">إعادة توجيه موقع المجلة</message>
-	<message key="admin.settings.journalRedirectInstructions">إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال</message>
+	<message key="admin.settings.redirect">إعادة توجيه موقع المجلة</message>
+	<message key="admin.settings.redirectInstructions">إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال</message>
 	<message key="admin.settings.defaultMetricDescription">
         هذا النظام قادر على توثيق معطيات إحصائية عن استعماله بعدة معايير، وتلك المعايير يمكن إظهارها بسياقات متعددة. غير أن هناك حالات
         لا بد فيها من اختيار أحد معطيات الاستعمال دون غيرها... منها على سبيل المثال لا الحصر: استعراض قائمة مرتبة هجائياً لأكثر المقالات استعمالاً

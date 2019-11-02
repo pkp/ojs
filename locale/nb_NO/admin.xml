@@ -13,9 +13,9 @@
   -->
 
 <locale name="nb_NO" full_name="Norsk bokmål">
-	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
-	<message key="admin.settings.journalRedirect">Tidsskriftomdirigering</message>
-	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>
+	<message key="admin.hostedContexts">Nettstedets tidsskrift</message>
+	<message key="admin.settings.redirect">Tidsskriftomdirigering</message>
+	<message key="admin.settings.redirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Dette vil bli standard språk for nettstedet og alle de tidsskriftene det er vert for.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke sider). Hvis multiple lokalinnstillinger ikke er valgt, vil språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke være tilgjengelig for tidsskriftet.</message>
 	<message key="admin.languages.confirmUninstall">Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen.</message>

@@ -12,9 +12,9 @@
   *
   -->
 <locale name="fr_FR" full_name="Français (France)">
-	<message key="admin.hostedJournals">Revues hébergées</message>
-	<message key="admin.settings.journalRedirect">Réacheminement vers la revue</message>
-	<message key="admin.settings.journalRedirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
+	<message key="admin.hostedContexts">Revues hébergées</message>
+	<message key="admin.settings.redirect">Réacheminement vers la revue</message>
+	<message key="admin.settings.redirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner toutes les langues qui doivent être prises en charge sur le site. Les langues sélectionnées seront disponibles pour toutes les revues hébergées sur le site, et vont également apparaître dans un menu de sélection de langue présent sur chaque page (qui peut être désactivé pour les pages spécifiques à une revue). S'il n'y a qu'une seule langue qui est sélectionnée, le menu de sélection de langue n'apparaîtra pas et les paramètres d'extension de langues ne seront pas disponibles aux revues.</message>
 	<message key="admin.languages.confirmUninstall">Êtes-vous sûr de vouloir désinstaller cette langue? Ceci affectera toute revue actuellement hébergée utilisant cette langue.</message>

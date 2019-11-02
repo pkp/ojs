@@ -13,9 +13,9 @@
   -->
 
 <locale name="zh_CN" full_name="简体中文">
-	<message key="admin.hostedJournals">主办期刊</message>
-	<message key="admin.settings.journalRedirect">期刊重定向</message>
-	<message key="admin.settings.journalRedirectInstructions">到本站的请求将重定向到这本期刊，如果网站只有一本主办期刊的时候这个功能很有用。</message>
+	<message key="admin.hostedContexts">主办期刊</message>
+	<message key="admin.settings.redirect">期刊重定向</message>
+	<message key="admin.settings.redirectInstructions">到本站的请求将重定向到这本期刊，如果网站只有一本主办期刊的时候这个功能很有用。</message>
 	<message key="admin.languages.primaryLocaleInstructions">这将是本站和所有主办期刊的默认语言。</message>
 	<message key="admin.languages.supportedLocalesInstructions">选择这个网站支持的所有地区配置。本网站上的所有期刊皆可使用所选择的地区配置，而且会在每一期刊的网站出现(但是可以经由期刊特定的配置所覆盖)。如果只有一种语言被配置，语言选择表单将不会出现，而相关的语言配置也不会出现。</message>
 	<message key="admin.locale.maybeIncomplete">标记的语言环境也许没有完成.</message>

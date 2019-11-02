@@ -13,9 +13,9 @@
   -->
 
 <locale name="hr_HR" full_name="Hrvatski">
-	<message key="admin.hostedJournals">Časopisi u sustavu</message>
-	<message key="admin.settings.journalRedirect">Izravno preusmjeravanje na časopis</message>
-	<message key="admin.settings.journalRedirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>
+	<message key="admin.hostedContexts">Časopisi u sustavu</message>
+	<message key="admin.settings.redirect">Izravno preusmjeravanje na časopis</message>
+	<message key="admin.settings.redirectInstructions">Svi upiti i posjeti glavnoj stranici bit će preusmjereni na odabrani časopis. To može biti izuzetno korisno ako je na sustavu postavljen samo jedan časopis.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Ovo će biti standardni jezik stranice i svakog časopisa koji se na njoj nalazi.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Izaberite sve jezike za koje želite da budu podržani na stranici. Izabrane prijevode bit će moguće koristiti sa svim časopisima postavljenim u sustavu, te će se na svakoj stranici prikazivati i izbornik jezika (što se može uključiti ili isključiti na razini pojedinog časopisa). Ako je izabran samo jedan jezik, jezični izbornik se neće prikazivati, niti će glavnim urednicima pojedinih časopisa biti na raspolaganu jezične postavke.</message>
 	<message key="admin.languages.confirmUninstall">Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjecati na časopise koji trenutno koriste taj prijevod.</message>

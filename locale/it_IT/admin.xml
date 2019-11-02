@@ -12,9 +12,9 @@
   -->
 
 <locale name="it_IT" full_name="Italiano">
-	<message key="admin.hostedJournals">Riviste</message>
-	<message key="admin.settings.journalRedirect">Redirect</message>
-	<message key="admin.settings.journalRedirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
+	<message key="admin.hostedContexts">Riviste</message>
+	<message key="admin.settings.redirect">Redirect</message>
+	<message key="admin.settings.redirectInstructions">Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Questa sarà la lingua di default del sito e di ogni rivista.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue.</message>
 	<message key="admin.languages.confirmUninstall">Sei sicuro di voler disinstallare questa localizzazione? Questa operazione avrà effetto su tutte le lingue che la stanno utilizzando</message>

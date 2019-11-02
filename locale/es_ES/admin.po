@@ -11,13 +11,13 @@ msgstr ""
 "PO-Revision-Date: 2019-09-27T09:54:41-07:00\n"
 "Language: \n"
 
-msgid "admin.hostedJournals"
+msgid "admin.hostedContexts"
 msgstr "Revistas alojadas"
 
-msgid "admin.settings.journalRedirect"
+msgid "admin.settings.redirect"
 msgstr "Redirigir revista"
 
-msgid "admin.settings.journalRedirectInstructions"
+msgid "admin.settings.redirectInstructions"
 msgstr "Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo."
 
 msgid "admin.settings.defaultMetricDescription"

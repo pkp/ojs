@@ -12,12 +12,12 @@
   *
   -->
 <locale name="nl_NL" full_name="Nederlands">
-	<message key="admin.hostedJournals">Tijdschriften</message>
+	<message key="admin.hostedContexts">Tijdschriften</message>
 	<message key="admin.settings.appearance.success">De instellingen voor de weergave van de site zijn bijgewerkt.</message>
 	<message key="admin.settings.config.success">De instellingen voor de configuratie van de site zijn bijgewerkt.</message>
 	<message key="admin.settings.info.success">De informatie voor de site is bijgewerkt.</message>
-	<message key="admin.settings.journalRedirect">Doorsturen naar tijdschrift</message>
-	<message key="admin.settings.journalRedirectInstructions">Bezoekers van de hoofdsite worden doorgestuurd naar dit tijdschrift. Dit kan handig zijn als de site maar één tijdschrift bevat.</message>
+	<message key="admin.settings.redirect">Doorsturen naar tijdschrift</message>
+	<message key="admin.settings.redirectInstructions">Bezoekers van de hoofdsite worden doorgestuurd naar dit tijdschrift. Dit kan handig zijn als de site maar één tijdschrift bevat.</message>
 	<message key="admin.settings.defaultMetricDescription">Uw OJS installatie is geconfigureerd voor meer dan een gebruiksmeting. Gebruiksstatistieken worden in verschillende contexten getoond.
 		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikels te tonen of om
 		zoekresultaten te wegen. Kies een van de methodes als standaard.</message>

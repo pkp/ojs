@@ -12,9 +12,9 @@
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="admin.hostedJournals">Czasopisma</message>
-	<message key="admin.settings.journalRedirect">Przekieruj na czasopismo</message>
-	<message key="admin.settings.journalRedirectInstructions">Żądania wyświetlenia strony głównej będą przekierowane do wybranego czasopisma.</message>
+	<message key="admin.hostedContexts">Czasopisma</message>
+	<message key="admin.settings.redirect">Przekieruj na czasopismo</message>
+	<message key="admin.settings.redirectInstructions">Żądania wyświetlenia strony głównej będą przekierowane do wybranego czasopisma.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Domyślny język dla strony oraz wszystkich czasopism</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wybierz wszystkie języki wspierane w obrębie strony.</message>
 	<message key="admin.locale.maybeIncomplete">Zaznaczone języki mogą nie być przetłumaczone w pełni.</message>

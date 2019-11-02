@@ -46,7 +46,7 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.software">Open Journal Systems</message>
 	<message key="common.confirmComplete">Weet u zeker dat u deze taak als voltooid wilt markeren? U kunt dan geen veranderingen meer aanbrengen.</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalingen</message>
@@ -185,7 +185,7 @@
 
 	<!-- Common Journal Terms -->
 	<message key="journal.currentIssue">Huidig nummer</message>
-	<message key="journal.journals">Tijdschriften</message>
+	<message key="context.contexts">Tijdschriften</message>
 	<message key="journal.path">Pad</message>
 	<message key="context.context">Tijdschrift</message>
 	<message key="journal.issn">ISSN</message>
