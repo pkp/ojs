@@ -68,7 +68,7 @@ class IndexHandler extends PKPIndexHandler {
 				'pageTitleTranslated' => $site->getLocalizedTitle(),
 				'about' => $site->getLocalizedAbout(),
 				'journalFilesPath' => $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/',
-				'journals' => $journalDao->getAll(true)->toArray(),
+				'journals' => $journalDao->getAll(true),
 				'site' => $site,
 			));
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);

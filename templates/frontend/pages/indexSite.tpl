@@ -20,9 +20,9 @@
 
 	<div class="journals">
 		<h2>
-			{translate key="journal.journals"}
+			{translate key="context.contexts"}
 		</h2>
-		{if !count($journals)}
+		{if $journals->wasEmpty()}
 			{translate key="site.noJournals"}
 		{else}
 			<ul>
@@ -66,13 +66,6 @@
 					</li>
 				{/iterate}
 			</ul>
-
-			{if $journals->getPageCount() > 0}
-				<div class="cmp_pagination">
-					{page_info iterator=$journals}
-					{page_links anchor="journals" name="journals" iterator=$journals}
-				</div>
-			{/if}
 		{/if}
 	</div>
 
