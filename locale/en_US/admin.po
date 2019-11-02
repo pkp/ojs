@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
 "Language: \n"
 
-msgid "admin.hostedJournals"
+msgid "admin.hostedContexts"
 msgstr "Hosted Servers"
 
 msgid "admin.settings.appearance.success"
@@ -23,10 +23,10 @@ msgstr "The site configuration settings have been successfully updated."
 msgid "admin.settings.info.success"
 msgstr "The site information has been successfully updated."
 
-msgid "admin.settings.journalRedirect"
+msgid "admin.settings.redirect"
 msgstr "Server redirect"
 
-msgid "admin.settings.journalRedirectInstructions"
+msgid "admin.settings.redirectInstructions"
 msgstr "Requests to the main site will be redirected to this server. This may be useful if the site is hosting only a single server, for example."
 
 msgid "admin.settings.defaultMetricDescription"

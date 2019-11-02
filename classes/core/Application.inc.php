@@ -66,7 +66,7 @@ class Application extends PKPApplication {
 	 * @return string
 	 */
 	public function getNameKey() {
-		return('common.openJournalSystems');
+		return('common.software');
 	}
 
 	/**

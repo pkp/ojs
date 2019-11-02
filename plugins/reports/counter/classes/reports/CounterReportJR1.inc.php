@@ -149,7 +149,7 @@ class CounterReportJR1 extends CounterReport {
 		$journalPubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
 		$reportItem = array();
 		try {
-			$reportItem = new COUNTER\ReportItems(__('common.openJournalSystems'), $journalName, COUNTER_LITERAL_JOURNAL, $metrics, NULL, $journalPubIds);
+			$reportItem = new COUNTER\ReportItems(__('common.software'), $journalName, COUNTER_LITERAL_JOURNAL, $metrics, NULL, $journalPubIds);
 		} catch (Exception $e) {
 			$this->setError($e, COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL);
 		}

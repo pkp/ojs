@@ -23,8 +23,8 @@ msgstr "Categories"
 msgid "navigation.categories.browse"
 msgstr "Browse"
 
-msgid "common.openJournalSystems"
-msgstr "Open Preprint Systems"
+msgid "common.software"
+msgstr "Preprint Server"
 
 msgid "common.confirmComplete"
 msgstr "Are you sure you wish to mark this task as completed? You may not be able to make changes afterwards."
@@ -266,7 +266,7 @@ msgstr "Proofread"
 msgid "submission.search"
 msgstr "Preprint Search"
 
-msgid "journal.journals"
+msgid "context.contexts"
 msgstr "Servers"
 
 msgid "journal.path"
