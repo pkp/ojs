@@ -82,13 +82,6 @@ class TemplateManager extends PKPTemplateManager {
 					'disableUserReg' => $context->getData('disableUserReg'),
 				));
 
-				// Assign meta tags
-				$favicon = $context->getLocalizedFavicon();
-				if (!empty($favicon)) {
-					$faviconDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
-					$this->addHeader('favicon', '<link rel="icon" href="' . $faviconDir . '/' . $favicon['uploadName'] . '">');
-				}
-
 				// Get a link to the settings page for the current context.
 				// This allows us to reduce template duplication by using this
 				// variable in templates/common/header.tpl, instead of
