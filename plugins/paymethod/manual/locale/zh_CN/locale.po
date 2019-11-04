@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:14-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:14-08:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "人工支付"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "管理者将手动记录用户的付款收据(超出此软件)."
+
+msgid "plugins.paymethod.manual"
+msgstr "人工支付"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "人工支付设置"
+
+msgid "plugins.paymethod.manual.settings.instructions"
+msgstr "说明"
+
+msgid "plugins.paymethod.manual.settings.manualInstructions"
+msgstr "为选择人工费用支付的用户提供费用支付说明"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "发送支付通知"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "支付通知"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "支付通知已发送"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "项目"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "费用"

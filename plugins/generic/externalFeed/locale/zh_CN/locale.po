@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:13-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:13-08:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "外部Feeds"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "外部Feed单元"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "从网络联合供稿的ATOM/RSS提取内容发布。例如，从WordPress, Drupal, 或者OCS."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "无外部Feed"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "标题"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "已提交"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "更多..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "所有的外部Feed"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "设置"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "如果实现在边栏显示Feed内容, 到 <a href=\"{$setupStep56}\" target=\"_blank\">配置的第5.6</a>进行设置"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Title"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "首页显示"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "首页显示"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "首页不显示"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "单元显示"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "所有页面"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "在所有页面的单元"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "在所有页面没有单元"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "首页"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "只在首页有单元"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "又有首页没有单元"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "没有外部Feed"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "创建一个新的外部Feed"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "编辑外部Feed"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "您确认永久删除这个Feed吗?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "设置"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "定制外部Feed的显示项目."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "显示"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "外部Feed样式"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "自定义的Feed样式将替换掉默认的样式。默认的样式可以在这里预览。"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "自定义样式"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "标题"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "在首页和/或者单元显示的标题"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "请为这个Feed提供一个标题"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "请提供一个正确的Feed URL(包括 http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "外部ATOM/RSS的URL(例如 http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "显示"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "在首页显示"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "不在单元里显示"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "只在首页显示"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "在所有页面的单元显示"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "限制为"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "feed items"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "保存并创建其他的"

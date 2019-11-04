@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:13-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:13-08:00\n"
+"Language: \n"
+
+msgid "plugins.block.information.displayName"
+msgstr "消息单元"
+
+msgid "plugins.block.information.description"
+msgstr "本插件在边栏显示消息链接。"
+
+msgid "plugins.block.information.link"
+msgstr "消息"

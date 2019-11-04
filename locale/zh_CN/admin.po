@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:12-08:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "主办期刊"
+
+msgid "admin.settings.redirect"
+msgstr "期刊重定向"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "到本站的请求将重定向到这本期刊，如果网站只有一本主办期刊的时候这个功能很有用。"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "这将是本站和所有主办期刊的默认语言。"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "选择这个网站支持的所有地区配置。本网站上的所有期刊皆可使用所选择的地区配置，而且会在每一期刊的网站出现(但是可以经由期刊特定的配置所覆盖)。如果只有一种语言被配置，语言选择表单将不会出现，而相关的语言配置也不会出现。"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "标记的语言环境也许没有完成."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "您确认卸载这个语言环境?这个将影响使用该语言环境的主办期刊."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "安装额外的地区配置以在这个系统取得语言支持。地区配置必须先安装，系统上的期刊才能使用该地区语言。请参考OJS文件以取得关于增加语言支持的信息。"
+
+msgid "admin.languages.downloadFailed"
+msgstr "语言环境下载失败.错误提示信息描述如下."
+
+msgid "admin.languages.localeInstalled"
+msgstr "语言环境 \"{$locale}\" 已经被安装."
+
+msgid "admin.languages.download"
+msgstr "下载语言环境"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "无法从PKP网站打开语言描述."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "无法添加一个新的语言环境到注册文件\"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS用户数据库"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "启用用户配置文件同步 (如果支持这种身份验证插件). 当用户登录时，其帐户信息将被自动从远程的数据源更新,并且在OJS里帐户信息变化（包含密码改变）的时候，将更新到远程源. 如果这个选项没有激活，OJS的帐户信息将与远程的源信息保持差异."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "启用用户密码修改(如果支持这种身份验证插件). 启用此选项可以允许用户在OJS里修改其帐户密码，并且使用OJS的“丢失密码”来重置密码. 如果该选项是不启用这些功能将无法使用此验证来源的用户."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "启用用户创建(如果支持这种身份验证插件). 使用这个验证源在OJS里创建用户，如果远程源里该用户不存在时，该新用户将被自动添加到远程源. 另外，如果这个源是默认认证源, 通过注册的OJS帐户也将被添加到远程源."
+
+msgid "admin.systemVersion"
+msgstr "OJS 版本"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS 配置"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "设置<tt>config.inc.php</tt>对OJS进行配置."
+
+msgid "admin.journals.journalSettings"
+msgstr "杂志设置"
+
+msgid "admin.journals.noneCreated"
+msgstr "没有期刊已经建立."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "您确定要永久删除此期刊和其所有内容?"
+
+msgid "admin.contexts.create"
+msgstr "创建期刊"
+
+msgid "admin.journals.createInstructions"
+msgstr "您将自动注册为这个期刊管理员.在创建一个新期刊后，作为期刊管理员进入继续进行期刊的设置和用户的注册."
+
+msgid "admin.journals.urlWillBe"
+msgstr "应该是一个单一的短词或缩写来标识杂志，期刊URL将是 {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "路径是必须的"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "这个路径只能含有英文字母和数字符号，底线(_)和连字号(-)，而且一定要以英文字母和数字符号当做开头和结尾."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "选择的路径已经被其他期刊使用中."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "启用这个期刊使其公开显示在这个网站"
+
+msgid "admin.contexts.contextDescription"
+msgstr "期刊描述"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "已经存在的期刊路径或者将要创建的路径(例如 \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "导入订阅"
+
+msgid "admin.journals.transcode"
+msgstr "从ISO8859-1转码文章源数据"
+
+msgid "admin.journals.redirect"
+msgstr "生成的代码以从OJS1的URL映射到OJS2的URL"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "导入路径是必需的."
+
+msgid "admin.journals.importErrors"
+msgstr "未能成功完成导入"
+
+msgid "admin.mergeUsers"
+msgstr "合并用户"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "合并用户"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "选择一个用户用于将前一个用户的著作权，编辑指派等并入."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "选择一个账户与另外一个账户合并（例如有的用户有2个账户），首先选择的庄户将被删除，与其相关的投稿，角色指派等将并入第二个账户。"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "所有的注册用户"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "您确认将合并用户名为 \"{$oldUsername}\" 的帐户到用户名为 \"{$newUsername}\"的帐户里? 操作后用户名为 \"{$oldUsername}\"将不再存在. 这个操作不可撤销."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "没有登记的用户."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。\n"
+"在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。"

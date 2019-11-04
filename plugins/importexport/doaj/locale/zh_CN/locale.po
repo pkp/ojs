@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:14-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:14-08:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ导出插件"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "将期刊导出到DAOJ，并且将期刊信息电邮给DAOJ的成员"
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "联系DOAJ列入"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"用法:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

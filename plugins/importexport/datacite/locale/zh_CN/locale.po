@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:13-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:13-08:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "DataCite 导出/注册插件"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "导出或者注册DataCite格式的期次，文章，初次排版和附加文件元数据。"
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"如果您希望在Datacite注册DOI，请联系代管人<a href=\"http://datacite.org/contact\" target=\"_blank\">DataCite\n"
+"\t\t主页</a>，他将建议去当地DataCite会员。一旦您成为其中的会员，您将获得永久的DOI和注册相关元数据的服务。如果您没有自己的用户名和密码，您仍可以导出DataCiteXML格式。但是在OJS中 DataCite无法注册DOI。请注意，密码将被保存为纯文本，即不加密的，由于其datacite登记服务要求。"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "用户名（标志）"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "请输入Datacite分配的用户名（标志）。不能包含冒号。"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"使用方法：\n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

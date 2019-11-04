@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:12-08:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "此插件允许对外部LDAP数据源认证和用户帐户的同步。"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP设置"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "服务器主机名"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "E.g.,s\"ldap.example.com\", or \"ldaps://ldap.example.com\" (to use SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "服务器端口"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "可选。默认为389（LDAP）或636（SSL上的LDAP）"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "基本DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "E.g., \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "经理的DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "E.g., \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "管理员密码"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "管理者DN和密码，如果用户只需要配置/密码同步或用户创建选项被启用。如果将用于LDAP的身份验证，然后仅仅这些选项可以省略。"
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "帐户名称属性"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "该属性的值唯一标识一个对象，如用户的uid或CN或sAMAccountName"
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "密码加密"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL的设置（可选）"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mechanism"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "E.g., \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "领域"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "要求授权ID"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL的安全性能"

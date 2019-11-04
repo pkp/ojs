@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:14-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:14-08:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA 导出/注册插件"
+
+msgid "plugins.importexport.medra.description"
+msgstr "导出期次，文章和样稿元数据在Onix DOI (O4DOI)格式，并且在mEDRA 注册机构注册DOI。"
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"如果您想在mEDRA注册DOI，请遵照指示<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">mEDRA 首页</a>得到一个用户名和密码。如果您没有用户名和密码，仍可以导出 mEDRA XML格式，但是不能在OJS mEDRA注册DOI。请注意，密码将被保存为纯文本，即不加密的，按照\n"
+"medra注册服务要求。"
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "请配置 mEDRA 导出插件："
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "用户名"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "请输入mEDRA用户名，不能包含冒号。"
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "在mEDRA注册的机构名称。"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "请输入已在mEDRA注册的机构。"
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "技术咨询联系人："
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "机构"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "请输入负责DOI导出的机构（例如，负责托管您的服务器的机构）"
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "联系人"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "请输入一个技术联系人。"
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Email"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "请输入一个有效的技术员联系邮箱。"
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "请选择一个国家作为 “出版国家”。"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "你希望导出的文件为<a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'作品' 或者 '证明'</a>。"
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "运作"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "显示"
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB：指定DOI的文章导到 mEDRA为 <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works'</a>。指定DOI的样稿导出为 <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'证明'</a>。"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"使用方法：\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

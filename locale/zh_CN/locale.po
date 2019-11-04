@@ -1,0 +1,1749 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
+"PO-Revision-Date: 2019-11-04T08:59:12-08:00\n"
+"Language: \n"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "点击图标以填写审查表。"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "请填写必添项目"
+
+msgid "common.software"
+msgstr "开放期刊系统"
+
+msgid "common.confirmComplete"
+msgstr "你确定要标记这个任务为完成状态吗？以后您可能无法进行更改。"
+
+msgid "common.payment"
+msgstr "支付"
+
+msgid "common.payments"
+msgstr "支付"
+
+msgid "common.homePageHeader.altText"
+msgstr "主页头部"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "期刊主页图片"
+
+msgid "navigation.journalHelp"
+msgstr "期刊帮助"
+
+msgid "navigation.current"
+msgstr "最新一期"
+
+msgid "navigation.otherJournals"
+msgstr "其他杂志"
+
+msgid "navigation.browseByIssue"
+msgstr "通过刊期"
+
+msgid "navigation.browseByAuthor"
+msgstr "通过作者"
+
+msgid "navigation.infoForAuthors"
+msgstr "作者"
+
+msgid "navigation.infoForLibrarians"
+msgstr "图书管理员"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "利益冲突向导"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "作者须知"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "图书管理员须知"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "未指派"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "未指派"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "投稿编辑中"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "编辑中"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "投稿审阅中"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "审稿中"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "存档"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "存档"
+
+msgid "common.queue.long.active"
+msgstr "活动中的投稿"
+
+msgid "common.queue.short.active"
+msgstr "活动中"
+
+msgid "common.queue.long.completed"
+msgstr "存档"
+
+msgid "common.queue.short.completed"
+msgstr "存档"
+
+msgid "section.section"
+msgstr "栏目"
+
+msgid "section.sections"
+msgstr "期刊栏目"
+
+msgid "section.title"
+msgstr "栏目标题"
+
+msgid "section.abbreviation"
+msgstr "缩写"
+
+msgid "section.abbreviation.example"
+msgstr "(例如 Articles=ART)"
+
+msgid "article.article"
+msgstr "文章"
+
+msgid "article.articles"
+msgstr "文章"
+
+msgid "common.publication"
+msgstr "文章"
+
+msgid "common.publications"
+msgstr "文章"
+
+msgid "article.submissionId"
+msgstr "投稿ID"
+
+msgid "article.title"
+msgstr "标题"
+
+msgid "article.authors"
+msgstr "作者"
+
+msgid "article.indexingInformation"
+msgstr "索引信息"
+
+msgid "article.metadata"
+msgstr "源数据"
+
+msgid "article.journalSection"
+msgstr "期刊栏目"
+
+msgid "article.file"
+msgstr "文件"
+
+msgid "article.suppFile"
+msgstr "补充文件"
+
+msgid "article.suppFiles"
+msgstr "补充文件"
+
+msgid "article.suppFilesAbbrev"
+msgstr "补充文件"
+
+msgid "article.discipline"
+msgstr "学科和分学科"
+
+msgid "article.subject"
+msgstr "关键词"
+
+msgid "article.coverage"
+msgstr "覆盖"
+
+msgid "article.type"
+msgstr "形式，方法或途径"
+
+msgid "article.language"
+msgstr "语言"
+
+msgid "article.sectionEditor"
+msgstr "栏目编辑"
+
+msgid "article.commentsToEditor"
+msgstr "作者评论"
+
+msgid "article.submission"
+msgstr "投稿"
+
+msgid "article.submissions"
+msgstr "投稿"
+
+msgid "article.details"
+msgstr "详细"
+
+msgid "article.abstract"
+msgstr "摘要"
+
+msgid "article.coverPage.altText"
+msgstr "封面图片"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "开放存取"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "受限制的访问"
+
+msgid "article.comments.sectionDefault"
+msgstr "默认"
+
+msgid "article.comments.disable"
+msgstr "禁止"
+
+msgid "article.comments.enable"
+msgstr "启用"
+
+msgid "article.fontSize"
+msgstr "字体大小"
+
+msgid "submission.submissionEditing"
+msgstr "投稿编辑中"
+
+msgid "submission.changeSection"
+msgstr "更改为"
+
+msgid "submission.sent"
+msgstr "发送"
+
+msgid "submission.editorDecision"
+msgstr "编辑决策"
+
+msgid "submission.round"
+msgstr "回合&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "编辑审阅"
+
+msgid "submission.notifyAuthor"
+msgstr "通知作者"
+
+msgid "submission.notifyEditor"
+msgstr "通知编辑"
+
+msgid "submission.editorAuthorRecord"
+msgstr "编辑/作者电子邮件记录"
+
+msgid "submission.reviewersVersion"
+msgstr "审稿人的注释版本的文件"
+
+msgid "submission.postReviewVersion"
+msgstr "后审阅文件的版本"
+
+msgid "submission.editorVersion"
+msgstr "编辑版本"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "作者修订文件的版本"
+
+msgid "submission.authorVersion"
+msgstr "作者版本"
+
+msgid "submission.copyediting"
+msgstr "文字编辑中"
+
+msgid "submission.copyedit"
+msgstr "文字编辑"
+
+msgid "submission.proofreading"
+msgstr "校对中"
+
+msgid "submission.scheduling"
+msgstr "计划（Scheduling）"
+
+msgid "submission.scheduledIn"
+msgstr "在出版计划的 {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "Sec"
+
+msgid "submissions.step1"
+msgstr "步骤一"
+
+msgid "submissions.step3"
+msgstr "步骤三"
+
+msgid "submissions.queuedReview"
+msgstr "审稿中"
+
+msgid "submissions.published"
+msgstr "已出版"
+
+msgid "submissions.initial"
+msgstr "初始"
+
+msgid "submissions.proofread"
+msgstr "校对"
+
+msgid "submissions.initialProof"
+msgstr "初步证明"
+
+msgid "submissions.postAuthor"
+msgstr "Post-Author"
+
+msgid "submissions.reviewRound"
+msgstr "审稿回合"
+
+msgid "submissions.proof"
+msgstr "证明"
+
+msgid "submissions.editorDecision"
+msgstr "编辑决定"
+
+msgid "submissions.editorRuling"
+msgstr "编辑执行"
+
+msgid "submission.eventLog"
+msgstr "事件日志"
+
+msgid "submissions.copyeditComplete"
+msgstr "文字编辑完的"
+
+msgid "submissions.layoutComplete"
+msgstr "排版完的"
+
+msgid "submissions.proofreadingComplete"
+msgstr "校对完的"
+
+msgid "journal.currentIssue"
+msgstr "最新一期"
+
+msgid "context.contexts"
+msgstr "期刊"
+
+msgid "journal.path"
+msgstr "路径"
+
+msgid "context.context"
+msgstr "期刊"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "user.showAllJournals"
+msgstr "显示我的期刊"
+
+msgid "user.registerForOtherJournals"
+msgstr "注册到其他期刊"
+
+msgid "user.myJournals"
+msgstr "我的期刊"
+
+msgid "user.manageMySubscriptions"
+msgstr "管理我的期刊"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "您的帐户当前未与任何期刊进行关联，请进行选择："
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "您的庄户在这本期刊里没有任何角色，请从以下活动中选择:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "提交提案"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "投稿：作者注册当前处于关闭状态"
+
+msgid "user.noRoles.regReviewer"
+msgstr "注册为审稿人"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "注册为审稿人: 注册审稿人当前处于关闭状态"
+
+msgid "user.role.manager"
+msgstr "期刊管理员"
+
+msgid "user.role.subEditor"
+msgstr "栏目编辑"
+
+msgid "user.role.subscriptionManager"
+msgstr "订阅管理员"
+
+msgid "user.role.managers"
+msgstr "期刊管理员"
+
+msgid "user.role.subscriptionManagers"
+msgstr "订阅管理员"
+
+msgid "issue.issue"
+msgstr "期"
+
+msgid "issue.issues"
+msgstr "刊期"
+
+msgid "issue.title"
+msgstr "标题"
+
+msgid "issue.volume"
+msgstr "卷"
+
+msgid "issue.number"
+msgstr "编号"
+
+msgid "issue.vol"
+msgstr "卷"
+
+msgid "issue.no"
+msgstr "编号"
+
+msgid "issue.year"
+msgstr "年"
+
+msgid "issue.noIssues"
+msgstr "没有刊期"
+
+msgid "issue.toc"
+msgstr "目录"
+
+msgid "issue.abstract"
+msgstr "摘要"
+
+msgid "issue.coverPage.altText"
+msgstr "封面"
+
+msgid "subscriptionTypes.currency"
+msgstr "货币"
+
+msgid "subscriptionTypes.year"
+msgstr "年"
+
+msgid "subscriptionTypes.years"
+msgstr "年"
+
+msgid "subscriptionTypes.month"
+msgstr "月"
+
+msgid "subscriptionTypes.months"
+msgstr "月"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "没有到期"
+
+msgid "subscriptionTypes.format"
+msgstr "格式"
+
+msgid "subscriptionTypes.format.online"
+msgstr "在线"
+
+msgid "subscriptionTypes.format.print"
+msgstr "纸版"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "在线与纸版"
+
+msgid "subscriptions.inactive"
+msgstr "已停用"
+
+msgid "subscriptions.status"
+msgstr "状态"
+
+msgid "subscriptions.status.active"
+msgstr "活跃"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "需要的信息"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "需要审批"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "等待手动付款"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "等待在线付款"
+
+msgid "subscriptions.status.other"
+msgstr "其他，看注释"
+
+msgid "subscriptions.individualDescription"
+msgstr "个人订阅需要登录访问订阅内容。"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "机构订阅不需要登录。依据用户的域名和/或IP地址是用来提供访问订阅内容。"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "投稿事件"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "投稿已经发送的刊期计划队列中"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "投稿已经指派到期刊"
+
+msgid "submission.event.general.articlePublished"
+msgstr "文章已经发布"
+
+msgid "submission.event.author.authorRevision"
+msgstr "作者修订已经提交"
+
+msgid "submission.event.general.authorRevision"
+msgstr "作者的修订文件已经上传"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "编辑分配给投稿"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "编辑未分配给投稿"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "编辑决定已经提交"
+
+msgid "submission.event.editor.editorFile"
+msgstr "编辑文件已经上传"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "投稿发送的存档"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "投稿从存档中恢复"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "文本编辑已经指派给投稿"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "文本编辑未指派给投稿"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "文本编辑指派开始"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "文本编辑修订文件已经上传"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "初步文本编辑完成"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "最终文本编辑完成"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "文本编辑文件已经上传"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "校对编辑已经指派给投稿"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "校对未指派给投稿"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "校对指派开始"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "校对修订文件已经上传"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "校对指派完成"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "排版编辑已经指派给投稿"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "排版编辑未指派给投稿"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "排版已经开始"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "排版草稿已经上传"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "排版指派已经完成"
+
+msgid "reader.subscribersOnly"
+msgstr "只是订阅者"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "订阅所需的访问项目，需要登录期刊进行订阅验证."
+
+msgid "reader.openAccess"
+msgstr "开放存取"
+
+msgid "reader.subscriptionAccess"
+msgstr "订阅存取"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "订阅或者付费存取"
+
+msgid "comments.commentsOnArticle"
+msgstr "这篇文章的评论"
+
+msgid "comments.authenticated"
+msgstr "通过 <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>从PKP网站下载的语言包暂时不被支持，原因如下:</p>\n"
+"\t<ul>\n"
+"\t\t<li>您的服务器不支持GNU的tar包</li>\n"
+"\t\t<li>OJS的语言环境注册文件不能被修改\"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>语言包可以从<a href=\"http://pkp.sfu.ca\">PKP web site</a>手动下载.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"\n"
+"\t\t指定一个OJS之外的认证来源会有下列的好处：\n"
+"\t\t<ul>\n"
+"\t\t\t<li>如果一个用户想要在这个网站中，以一个在认证来源中（而非OJS的数据库中）已经存在的名称来注册一个新的帐号，只有在输入的密码对该用户帐号来说是有效的时候，才能完成注册程序。</li>\n"
+"\t\t</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>注意！</h4>\n"
+"<p>系统无法自动覆盖这个配置文件。要应用您的配置变更，您必须以适合的编辑器开启<tt>config.inc.php</tt>，并以下列文字栏位中的内容来替换其内容。</p>>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "订阅管理"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "个人订阅"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "机构订阅"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "订阅类型"
+
+msgid "plugins.categories.auth.description"
+msgstr "认证插件程序让OJS将用户认证的工作授权给其他的系统，像是LDAP服务器."
+
+msgid "plugins.categories.generic.description"
+msgstr "该类型插件以各种方式扩充OJS，让其他种类的WEB程序可以支持OJS."
+
+msgid "manager.setup.subjectClassificationDescription"
+msgstr ""
+"期刊会使用一个可在网路上取得的主题分类系统。<br />\n"
+"分类系统的标题"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"步骤：投稿稿件列表 &gt; 提交审稿意见书 &gt; 提交修订版本 &gt; 内容目录。<br /><br />\n"
+"选择一个处理这些编辑流程之步骤的模式（要指派一个执行编辑以及栏目编辑，请至「期刊管理员」中的「编辑」。）"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>为了让读者能找到按作者索引的文章的在线版本，如下选项可以是使用：</p>\n"
+"\t\t<ol>\n"
+"\t\t\t<li><strong>添加一个阅读工具</strong><p>期刊管理员可以随着出版项目在阅读工具里添加“查找参考文献”，使读者可以粘贴一个参考文献标题到已经选择好的学术数据库里以便查询。</p></li>\n"
+"\t\t\t<li><strong>在参考文献里激活链接</strong><p>排版编辑可以添加对应的链接到该参考文献。并且这个链接通过如下介绍（可编辑）可以被在线找到。</p></li>\n"
+"\t\t</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr "停用这个用户帐号？这会让这个用户无法再登入这个系统。您可以选择性地给这些用户一个理由，说明为什么停用他们的帐号."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"\n"
+"\t\t对不起，您对这个用户没有管理权限，这可能是因为：\n"
+"\t\t<ul>\n"
+"\t\t\t<li>这个用户是一个网站管理员</li>\n"
+"\t\t\t<li>这个用户是在您没有管理权限的期刊上活动</li>\n"
+"\t\t</ul>\n"
+"\t\t所要进行的动作，必须由网站管理员来完成。"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"<ol>\n"
+"\t<li>突出项目表明编辑要求需要处理的项目.</li>\n"
+"\t<li>「期限」是指离审稿截止日还剩下多少周或者已经过期多少(-)周。当一个审稿人接受审稿的邀请时就算开始计算.</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "活动的编辑指派"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "完成的编辑指派"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "无投稿指派"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "再次通知这个文字编辑会重新指派他们的编辑任务。您确定您想要这么做？"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "再次通知这位作者将会重新配置他们的编辑任务。您确定您要这么做？"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "再次通知这个版面编辑会重新指派他们的编辑任务。您确定您想要这么做？"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "再次通知这个校对者会重新指派他们的编辑任务。您确定您想要这么做？"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "遗憾"
+
+msgid "sectionEditor.regrets.title"
+msgstr ">#{$submissionId} 审稿人婉谢、取消 & 之前的审稿回合"
+
+msgid "sectionEditor.regrets"
+msgstr "遗憾"
+
+msgid "sectionEditor.regrets.link"
+msgstr "查看婉谢、取消、前一回合审稿"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "审稿，第{$round}回合审稿"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "编辑决定，第{$round}回合"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "审稿人婉谢 & 取消"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "婉谢"
+
+msgid "sectionEditor.regrets.result"
+msgstr "结果"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "指派审稿人角色给已存在的用户"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "建立一个新的审稿人"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "活动的编辑任务"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "完成的编辑任务"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "无活动的编辑任务"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "排版编辑任务"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "上传草稿格式"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "替换文件"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "上传附件"
+
+msgid "submission.layout.imageInvalid"
+msgstr "无效地俄图片格式，允许 .gif, .jpg, 和.png格式."
+
+msgid "reviewer.pendingReviews"
+msgstr "文章等待审阅"
+
+msgid "reviewer.completedReviews"
+msgstr "完成"
+
+msgid "reviewer.averageQuality"
+msgstr "等级"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "已经被审阅的文件"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "通知作者"
+
+msgid "reviewer.article.canDoReview"
+msgstr "将被审阅"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "不能审阅"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "如果审稿工作正在进行，文件就只能被查看"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "投稿编辑"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "输入或者粘贴审稿评论到这里"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "编辑要输入"
+
+msgid "reviewer.article.sendReminder"
+msgstr "发送提醒"
+
+msgid "reviewer.article.automatic"
+msgstr "(自动)"
+
+msgid "reviewer.article.recommendation"
+msgstr "建议"
+
+msgid "reviewer.article.submitReview"
+msgstr "提交审阅给编辑"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "评论"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "已经上传的文件"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "有审稿人上传的版本"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "（如果您想要在这份文件中做一些给编辑看的注解，请先将文件保存在您的磁盘上，然后使用「浏览＼上传」功能。）"
+
+msgid "reviewer.article.schedule.request"
+msgstr "编辑请求"
+
+msgid "reviewer.article.schedule.response"
+msgstr "您的回应"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "已经提交的审阅"
+
+msgid "reviewer.article.schedule.due"
+msgstr "由于审阅（Review Due）"
+
+msgid "reviewer.article.decision.accept"
+msgstr "接受投稿"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "需要修订"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "重新提交便于审阅"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "在其他地方重新提交"
+
+msgid "reviewer.article.decision.decline"
+msgstr "拒绝投稿"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "查看评论"
+
+msgid "reviewer.article.schedule"
+msgstr "计划"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "投稿待审阅"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "审稿安排"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "审稿步骤"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "审稿人向导"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first \"for author and editor,\" and the second \"for editor.\" Alternatively, the Journal Manager can create a peer review form under Review Forms. In all cases, editors will have the option of including the reviews in corresponding with the author."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr ">通知稿件负责编辑"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "你是否会进行审稿。"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "如果你要做审稿，参阅如下审稿准则."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "通过点击文件名称下载稿件，并审阅与稿件相关的文件"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "声明您是否有这方面的研究利益冲突 (参阅 <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;方针</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr ">竞争的利益（Competing Interests）"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "点图标击后，输入（或粘贴）您对本稿件的审稿意见。"
+
+msgid "reviewer.article.uploadFile"
+msgstr "此外，您可以将建议写成文件上传给编辑和/或作者。"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "选择一个建议选项并提交以完成流程，在选择之前您必须输入一个建议或者上传一个文件."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "没有选择任何建议选项。您必须选择发送一个建议选项。"
+
+msgid "reviewer.article.confirmDecision"
+msgstr "一旦您记录了一个决定，您将不再能够变更这份审稿意见书。您确定您要继续下一步？?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "对于文本编辑的文件"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "文本编辑文件"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "文本编辑文件"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "未指派校对"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"\t\t要上传初稿给本期刊，请完成下列步骤。\n"
+"\t\t<ol>\n"
+"\t\t<li>在本页中，点击「浏览」（或者「选择文件」）打开一个文件选择视窗，选择您的电脑磁盘上的文件路径）。</li>\n"
+"\t\t<li>选择您要上传的文件。</li>\n"
+"\t\t<li>点击文件选择视窗中的「开启」，将文件名称置入本页中。</li>\n"
+"\t\t<li>点击本页中的「上传」，从您的电脑中上传文件到期刊网站上，并且依照期刊的规定(自动)变更文件名。</li>\n"
+"\t\t<li>一旦稿件成功上传，请点击本页最下面的「存档并继续」按钮</li>\n"
+"\t\t</ol>\n"
+"\t\t您可以点击文件的名称来查看该份文件。可以上传一份新的或者修改过的文件，删除掉目前出现的这份文件。也可以（在下一步骤）使用「补充文件」来增加额外的文件。如果您上传稿件时出现问题，请联系 <a href=\"mailto:{$supportEmail}\">{$supportName}</a> ，透过电子邮件或电话 {$supportPhone}取得协助。"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "除非一份审稿版本在这里出现，否则要求发出的电子邮件无法寄出."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "除非文件在「编辑决定」、「审稿」页面被选择要进行文字编辑，否则要求发出的电子邮件无法寄出。"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "除非文件被上传进行文字编辑，否则要求发出的电子邮件无法寄出。."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "开始进行文字编辑"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "编辑的文字修改"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "作者的文字修改"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "最后文字编辑"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "C/E版本"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "指派文字编辑"
+
+msgid "submission.copyedit.useFile"
+msgstr "使用文件"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "文字编辑评论"
+
+msgid "submission.copyedit.instructions"
+msgstr "文字编辑指南"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "无（在发送请求之前上传最后的文字编辑版本作为排版版本）"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "公共草稿标识符"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "公共草稿标识符已经存在"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "指派排版编辑"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "替换排版编辑"
+
+msgid "submission.layout.layoutComments"
+msgstr "排版评论"
+
+msgid "submission.layout.instructions"
+msgstr "排版指南"
+
+msgid "submission.layout.referenceLinking"
+msgstr "参考文献链接"
+
+msgid "submission.proofreadingComments"
+msgstr "校对评论"
+
+msgid "submission.proofread.corrections"
+msgstr "校对修订"
+
+msgid "submission.proofread.instructions"
+msgstr "校对指南"
+
+msgid "submission.logType.article"
+msgstr "论文"
+
+msgid "submission.logType.author"
+msgstr "作者"
+
+msgid "submission.logType.editor"
+msgstr "编辑"
+
+msgid "submission.logType.review"
+msgstr "审阅"
+
+msgid "submission.logType.copyedit"
+msgstr "文字编辑"
+
+msgid "submission.logType.layout"
+msgstr "排版"
+
+msgid "submission.logType.proofread"
+msgstr "校对"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "作者／编辑通信"
+
+msgid "submission.comments.copyeditComments"
+msgstr "文本编辑评论"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"这个评论将于作者共享.<br />\n"
+"(保存后，可以添加更多评论.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "与作者和编辑"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "与编辑"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "寄发之后，显示一个可编辑的密件副本，寄给审稿人."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "给作者和编辑"
+
+msgid "submission.comments.forEditor"
+msgstr "给编辑"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "存档并电邮作者"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "存档并电邮编辑"
+
+msgid "user.register.noJournals"
+msgstr "本站目前尚无任何期刊可供注册."
+
+msgid "user.register.privacyStatement"
+msgstr "隐私权声明"
+
+msgid "user.register.loginToRegister"
+msgstr "要注册这份期刊，请输入您现有的用户名称以及密码."
+
+msgid "user.register.registrationDisabled"
+msgstr "这份期刊目前不接受用户注册."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "您输入的密码不够长."
+
+msgid "user.register.readerDescription"
+msgstr "当这份期刊出版新一期期刊时，请以电子邮件的方式通知我."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "当这份期刊有新一期的开放阅读期刊时，请以电子邮件通的方式知我"
+
+msgid "user.register.authorDescription"
+msgstr "可以向这份期刊投稿各种项目."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "愿意对投稿本期刊的稿件进行审稿工作."
+
+msgid "user.register.reviewerDescription"
+msgstr "愿意对投稿本期刊的稿件进行审稿工作。请指明审稿的偏好取向（研究领域与研究方法等）."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "我的订阅"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "个人订阅"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "机构订阅"
+
+msgid "user.subscriptions.renew"
+msgstr "续订"
+
+msgid "user.subscriptions.purchase"
+msgstr "购买"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "购买新的订阅"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "购买个人订阅"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "购买机构订阅"
+
+msgid "user.subscriptions.expires"
+msgstr "到期"
+
+msgid "user.subscriptions.expired"
+msgstr "到期"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "查看可订阅类型"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "订阅类型"
+
+msgid "user.subscriptions.form.membership"
+msgstr "会员"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "所选择的订阅类型，需要会员信息."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "请选择一个有效的订阅类型."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "此用户帐户已经有个人订阅."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "所选的订阅类型需要会员信息."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "机构名称"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "需要机构名称."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "通信地址"
+
+msgid "user.subscriptions.form.domain"
+msgstr "域名"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "如果一个域名在这里输入，IP范围是可选的.<br />有效值是域的名称（如lib.sfu.ca）."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "选定的订阅类型需要一个域名和/或IP范围用于验证订阅."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "请输入有效的网域."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP范围"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "如果在此输入了IP范围，域名是可选的.<br />有效的IP地址 (例如142.58.103.1), IP范围(例如142.58.103.1 - 142.58.103.4), 带有通配符'*'的IP范围 (例如 142.58.*.*), 和带有CIDR的IP范围 (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "请输入合法的IP范围."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "删除"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "添加"
+
+msgid "search.browseAuthorIndex"
+msgstr "浏览作者索引"
+
+msgid "search.searchFor"
+msgstr "搜索文章的"
+
+msgid "search.withinJournal"
+msgstr "范围"
+
+msgid "search.allJournals"
+msgstr "所有期刊"
+
+msgid "search.authorIndex"
+msgstr "浏览作者索引"
+
+msgid "search.authorDetails"
+msgstr "作者的详细信息"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>检索提示: </h4><ul>\n"
+"<li>检索的名词区分大小写</li>\n"
+"<li>常用字词将被忽略</li>\n"
+"<li>默认情况下只有在查询结果满足所有检索词才返回（例如，隐含AND）</li>\n"
+"<li>使用<em>OR</em>结合多个检索词，便于查找含有这些检索词的文章，例如<em>education OR research</em></li>\n"
+"<li>使用括号来创建更复杂的查询; 例如：<em>archive ((journal OR conference) NOT theses)</em></li>\n"
+"<li>使用引号检索一个完整的词组; 例如： <em>\"open access publishing\"</em></li>\n"
+"<li>使用<strong>-</strong>或者<em>NOT</em>排除一个检索词; 例如：<em>online -politics</em> or <em>online NOT politics</em></li>\n"
+"<li>在检索词里使用 <strong>*</strong>作为通配符匹配任何字符序列; 例如., <em>soci* morality</em> 将符合含有 \"sociological\" or \"societal\"的词语</li>\n"
+"</ul>"
+
+msgid "article.pdf.title"
+msgstr "便携文件格式(PDF)"
+
+msgid "article.nonpdf.title"
+msgstr "文章下载"
+
+msgid "article.nonpdf.note"
+msgstr "您选择的文件将开始自动下载。如果没有，请点击下面的链接。请注意，此文件可能需要一种特殊的工具或插件来查看.<br /><br />如果该文件不自动下载， <a href=\"{$url}\">请点击这里</a>."
+
+msgid "site.journalsHosted"
+msgstr "本网站主办的期刊"
+
+msgid "site.journalView"
+msgstr "查看期刊"
+
+msgid "site.journalRegister"
+msgstr "注册"
+
+msgid "site.journalCurrent"
+msgstr "最新一期"
+
+msgid "current.current"
+msgstr "当前的"
+
+msgid "current.noCurrentIssue"
+msgstr "无最新一期"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "本期刊并没有发表任何刊期."
+
+msgid "archive.archives"
+msgstr "过刊"
+
+msgid "archive.browse"
+msgstr "浏览以前的刊期"
+
+msgid "archive.issueUnavailable"
+msgstr "刊期不存在"
+
+msgid "about.statistics"
+msgstr "统计"
+
+msgid "about.history"
+msgstr "期刊历史"
+
+msgid "about.editorialTeam"
+msgstr "编辑团队"
+
+msgid "about.editorialTeam.biography"
+msgstr "简介（Biography）"
+
+msgid "about.editorialPolicies"
+msgstr "编辑政策"
+
+msgid "about.focusAndScope"
+msgstr "重点和范围"
+
+msgid "about.sectionPolicies"
+msgstr "栏目要求"
+
+msgid "about.submissions"
+msgstr "投稿"
+
+msgid "about.onlineSubmissions"
+msgstr "在线投稿"
+
+msgid "about.onlineSubmissions.login"
+msgstr "开始登录"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "投稿需要先注册和登录，而且需要在线检查当前投稿的状态."
+
+msgid "about.authorGuidelines"
+msgstr "作者指南"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "投稿准备清单"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "作为提交过程的一部分，作者必须核对其投稿的是否符合下列所有项目，当不遵守这些准则，投稿将被退回."
+
+msgid "about.copyrightNotice"
+msgstr "版权公告"
+
+msgid "about.privacyStatement"
+msgstr "隐私声明"
+
+msgid "about.authorFees"
+msgstr "作者费"
+
+msgid "about.authorFeesMessage"
+msgstr "这个期刊收取一下作者费用."
+
+msgid "about.peerReviewProcess"
+msgstr "同行评议流程"
+
+msgid "about.publicationFrequency"
+msgstr "出版周期"
+
+msgid "about.openAccessPolicy"
+msgstr "开放存取政策"
+
+msgid "about.delayedOpenAccess"
+msgstr "延迟开放存取"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "本期刊的内容将采用开发存取的格式"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "个月后期刊将出版."
+
+msgid "about.archiving"
+msgstr "存档"
+
+msgid "about.subscriptions"
+msgstr "订阅"
+
+msgid "about.subscriptions.individual"
+msgstr "个人订阅"
+
+msgid "about.subscriptions.institutional"
+msgstr "机构订阅"
+
+msgid "about.subscriptionsContact"
+msgstr "订阅联系方式"
+
+msgid "about.subscriptionTypes.name"
+msgstr "名称"
+
+msgid "about.subscriptionTypes.format"
+msgstr "格式"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "期限"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "费用"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "订阅类型"
+
+msgid "about.memberships"
+msgstr "会员资格"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "关于这个期刊系统"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS编审与出版流程"
+
+msgid "about.aboutOJSJournal"
+msgstr "本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。"
+
+msgid "help.ojsHelp"
+msgstr "开放期刊系统帮助"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS帮助"
+
+msgid "help.searchReturnResults"
+msgstr "反回到检索结果"
+
+msgid "donations.thankYou"
+msgstr "谢谢"
+
+msgid "donations.thankYouMessage"
+msgstr "感谢您作出的贡献。你的贡献是功不可没的。"
+
+msgid "payment.loginRequired"
+msgstr "您必须先登录才能进行付款。"
+
+msgid "payment.loginRequired.forArticle"
+msgstr "订阅或者购买文章等项目，需要先登录期刊，进行相关验证."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "您必须先登录才能作出捐赠."
+
+msgid "payment.paid"
+msgstr "已经支付"
+
+msgid "payment.payNow"
+msgstr "现在支付"
+
+msgid "payment.waive"
+msgstr "减免"
+
+msgid "payment.alreadyPaid"
+msgstr "已经支付"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "如果您为了完成投稿已经发送支付到这本期刊，请选择此框。投稿将在到付后被审阅，点击在支付介绍上边的“现在支付”."
+
+msgid "payment.paymentReceived"
+msgstr "支付已经收到"
+
+msgid "payment.paymentSent"
+msgstr "支付已经发送"
+
+msgid "payment.type.submission"
+msgstr "投稿费"
+
+msgid "payment.type.publication"
+msgstr "出版费"
+
+msgid "payment.type.fastTrack"
+msgstr "加急费"
+
+msgid "payment.type.membership"
+msgstr "个人会员会费"
+
+msgid "payment.type.purchaseArticle"
+msgstr "文章购买费"
+
+msgid "payment.type.subscription"
+msgstr "订阅费"
+
+msgid "payment.type.donation"
+msgstr "捐献"
+
+msgid "payment.donation.makeDonation"
+msgstr "捐献"
+
+msgid "payment.submission.paySubmission"
+msgstr "支付投稿费"
+
+msgid "payment.publication.payPublication"
+msgstr "支付出版费"
+
+msgid "payment.publication.publicationPaid"
+msgstr "出版费已经支付"
+
+msgid "payment.membership.buyMembership"
+msgstr "购买个人会员"
+
+msgid "payment.membership.renewMembership"
+msgstr "续订个人会员"
+
+msgid "payment.membership.ends"
+msgstr "结束"
+
+msgid "payment.subscription.purchase"
+msgstr "支付订阅"
+
+msgid "payment.subscription.renew"
+msgstr "续订"
+
+msgid "payment.subscription.expires"
+msgstr "到期"
+
+msgid "installer.appInstallation"
+msgstr "OJS安装"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS升级"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS版本 {$version}</h4>\n"
+"<p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href=\"{$baseUrl}/docs/README.md\">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">支持论坛</a>或者访问PKP的在线 <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href=\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>.</p>\n"
+"<h4>升级</h4>\n"
+"<p>如果您要升级现有的OJS 2.x的安装, <a href=\"{$upgradeUrl}\">点击这里</a> 开始.</p>\n"
+"<h4>推荐系统要求</h4>\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; 您现在使用的是 PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 或者 <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x 或者 >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>操作系统: 任何操作系统支持的上述软件, 包含 <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"<p>由于PKP没有资源来测试每一个可能的软件版本和平台的组合, 没有正确的操作或隐含保证支持.</p>\n"
+"<p>改变这些设置可以在安装后通过编辑在OJS根目录的文件 <tt>config.inc.php</tt> , 或者使用网站管理的WEB界面.</p>\n"
+"<h4>支持的数据库系统</h4>\n"
+"<p>OJS了目前只在MySQL和PostgreSQL进行了测试, 虽然其他数据库管理系统支持 <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> 也可以(全部或者部分). 兼容性报告和/ 或其他DBMS的代码补丁可以被发送到OJS团队.</p>\n"
+"<h4>预安装步骤</h4>\n"
+"<p>1. 下列文件和目录（及其内容）必须可写:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> 可写 (可选): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> 可写 : {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> 可写 : {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> 可写 : {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> 可写 : {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> 可写 : {$writable_db_cache}</li>\n"
+"</ul>\n"
+"<p>2. 一个目录来存放上传的文件，必须创建并可写 (参看下面的 \"文件设置\" ).</p>\n"
+"<h4>手动安装</h4>\n"
+"<p>选择 <strong>手动安装</strong> to 显示必要的 SQL语句来创建OJS数据库架构和初始数据，该数据库可以执行手动安装. 此选项可以用于调试安装问题，特别是不支持的平台。请注意，此安装方法将不会试图创建数据库或表，虽然配置文件将写入提供的数据库设置。</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+">\n"
+"\t\t<h4>OJS版本{$version}</h4>\n"
+"\t\t<p>谢谢您下载公共知识项目(Public Knowledge Project)的 <strong>开放期刊系统(Open Journal Systems)</strong>。在进行下一步之前，请先阅读这份软件中的<a href=\"{$baseUrl}/docs/README.md\">README</a>文件。想了解更多关于公共知识项目以及其软件计划，请见：<a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP网站</a>。如果您要回报关于开放期刊系统的错误信息或者有相关的技术支持问题，请见：<a href=\"http://forum.pkp.sfu.ca\">支持讨论区</a>，或者请见PKP的线上<a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">错误回报系统</a>。虽然我们比较希望以讨论区做为联系的管道，不过您也可以寄信给技术团队：<a href=\"mailto:pkp-support@sfu.ca\">pkp-support@sfu.ca</a>。</p>\n"
+"\t\t<p>我们<strong>强烈地建议您</strong>在继续下一步之前，请备份您的数据库、文件目录以及OJS的安装目录</p>\n"
+"\t\t<p>如果您正在执行<a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP安全模式</a>， 请确保在您的 php.ini 配置文件中配置max_execution_time指令一个高额的上限。如果这个或者其他的时间上限（例如Apache的 \"Timeout\"指令）已到，而升级程序遭到中断，您必须以手动的方式介入。</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"为了完整支持Unicode (UTF-8)编码，请选择以UTF-8作为编码位。注意，这项支持目前需要一个MySQL >= 4.1.1或者PostgreSQL >= 7.1 的数据库服务器。也请注意，完整的Unicode编码需要PHP >= 4.3.0搭配支持<a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a>库 (最新版本的PHP安装过程已经预设启动)。如果您的服务器没有满足这些条件的话，您可能在使用额外的字符集时会碰到问题<br /><br />\n"
+"您的服务器目前对mbstring的支持性：<strong>{$supportsMBString}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "使用本系统的主要语言。如果您有意支持不列在这里的语系，请参见OJS的说明文件."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "选择额外的语系以支持本系统。这些语言可以被本站的期刊所使用。也可以在任何时间点透过网站管理介面来安装额外的语系."
+
+msgid "installer.filesDirInstructions"
+msgstr "输入一个保存上传文件的既存目录的完整路径名称。这个目录不应该直接透过网页存取。<strong>请确定这个目录存在而且可写入</strong> Windows路径名称应该使用右斜线，例如：\"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS需要访问一个SQL数据库来存储它的数据。查看支持的数据库列表上面的系统要求。在下面的字段，提供设置用于连接到数据库。"
+
+msgid "installer.installApplication"
+msgstr "安装开放期刊系统"
+
+msgid "installer.upgradeApplication"
+msgstr "更新开放期刊系统"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>警告：</strong>如果安装失败部分是因为安装数据库的关系，在尝试重新安装数据库之前，您可能需要删除您的OJS数据库或者资料表。"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>重要！</h4>\n"
+"<p>安装档无法自动覆盖配置文件。在尝试使用本系统之前，请以合适的编辑器开启<tt>config.inc.php</tt>并且变更其内容为下列文字栏位中的内容。</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS已经成功安装！</p>\n"
+"<p>要开始使用本系统，请以您在上一个网页中输入的用户名称和密码进行<a href=\"{$loginUrl}\">登入</a></p>\n"
+"<p>如果您希望收到新闻和更新信息，请<strong>在<a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>注册。</strong> 如果您有问题或建议，请访问<a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">支持讨论区</a>.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>以成功升级OJS到 {$version}版本。</p>\n"
+"<p>别忘了在您的config.inc.php配置文件中将\"installed\"配置改成<em>On</em>。</p>\n"
+"<p>If you haven't already registered and wish to receive news and updates, 如果您尚未注册但希望收到新闻和更新信息，<strong>请在<a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>注册。</strong> 如果您有问题或建议，请访问<a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">支持讨论区</a>.</p>"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName}已经修改过文章{$submissionId}。新文件的 ID为{$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName}已经被取消指派对稿件{$submissionId}进行{$round}审."
+
+msgid "log.review.reviewInitiated"
+msgstr "{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经开始进行."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName}对稿件{$submissionId}进行{$round}审的工作已经受到评分."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "{$reviewerName}对稿件{$submissionId}进行{$round}审工作的截止期限日期已经被配置为{$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "{$reviewerName}已经对稿件{$submissionId}的{$round}审工作做出建议 ."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "编辑{$editorName}已对审稿人{$reviewerName}对稿件{$submissionId}进行{$round}审的审稿意见做出建议."
+
+msgid "log.review.resubmit"
+msgstr "稿件{$submissionId}已经被重新投稿以进行审阅."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName}已经婉谢对稿件{$submissionId}进行{$round}审."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName}已经接受对稿件{$submissionId}进行{$round}审."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName}代表{$reviewerName}已经拒绝文章{$submissionId}第{$round}回合的审阅."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName}已经代表{$reviewerName}接受对稿件{$submissionId}进行{$round}审."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "编辑{$userName}已经代表审稿人{$reviewerName}上传了稿件{$submissionId}在{$round}审时的审稿意见书文件."
+
+msgid "log.review.reviewerFile"
+msgstr "已上传一份审稿意见书."
+
+msgid "log.editor.decision"
+msgstr "对于稿件{$submissionId} 的编辑决策已经被{$editorName}记录."
+
+msgid "log.copyedit.initiate"
+msgstr "文字编辑{$copyeditorName}已对稿件{$submissionId}提出文字编辑意见."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "已经选择预设的文字编辑文件."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} 已经完成稿件{$submissionId}的初始文字编辑."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName}已经完成稿件{$submissionId}的最终文字编辑."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "稿件{$submissionId}的校样工作已经被指派给{$copyeditorName}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "已经上传一份此稿件文件的文字编辑版本."
+
+msgid "log.copyedit.authorFile"
+msgstr "已经上传一份此稿件文件的作者校模板本."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "稿件{$submissionId}的版面编辑工作已经被指派给版面编辑{$editorName}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "稿件{$submissionId}的版面编辑工作已经取消指派给版面编辑{$editorName}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName}已经完成稿件{$submissionId}的版面编辑工作."
+
+msgid "log.editor.metadataModified"
+msgstr "此文章的元数据已经被{$editorName}加以修改."
+
+msgid "log.editor.editorFile"
+msgstr "已经上传了一份此稿件的编辑版本."
+
+msgid "log.editor.archived"
+msgstr "稿件{$submissionId}已经被存档."
+
+msgid "log.editor.restored"
+msgstr "稿件{$submissionId}已经被复原至列表中."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName}被指派为稿件{$submissionId}的编辑."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} 已经被指派为{$proofreaderName}进行对稿件{$submissionId}的校对."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} 提交文章 {$submissionId} 用户组版."
+
+msgid "log.imported"
+msgstr "{$userName}导入文章{$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "同行评议的文章"
+
+msgid "notification.type.editing"
+msgstr "编辑事件"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "在编辑的决定里已经对 \"{$title}\"进行了评论"
+
+msgid "notification.type.galleyModified"
+msgstr "草稿已经被修改，关于\"{$title}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "一个刊期已经出版"
+
+msgid "notification.type.newAnnouncement"
+msgstr "一条新的公告已经被创建."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "一个关于 \"{$title}\"的审稿评论已经提交."
+
+msgid "notification.type.reviewing"
+msgstr "审稿事件"
+
+msgid "notification.type.site"
+msgstr "站点事件"
+
+msgid "notification.type.submissionComment"
+msgstr "一个编辑已经对\"{$title}\"进行了评论."
+
+msgid "notification.type.submissions"
+msgstr "投稿时间"
+
+msgid "notification.type.userComment"
+msgstr "一个读者对\"{$title}\"进行了评论"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "已经从XML载入货币列表：{$filename}"
+
+msgid "about.aboutOJSSite"
+msgstr "本站使用开放期刊系统（OJS  {$ojsVersion} ）.OJS是一个开源的期刊管理于出版软件，由<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>组织研发，遵循GNU General Public License."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "订阅状态"
+
+msgid "user.subscriptions.status"
+msgstr "状态"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "描述"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "订阅激活需要附加信息"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "订阅在激活前必须被审查"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "人工付费已经可以支付但是尚未收到。"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "在线支付已经被初始化但是被取消或者不完整"
+
+msgid "payment.authorFees"
+msgstr "作者费用"
+
+msgid "navigation.categories"
+msgstr "类别"
+
+msgid "navigation.categories.browse"
+msgstr "浏览"
+
+msgid "issue.fullIssue"
+msgstr "完整期次"
+
+msgid "issue.nonpdf.title"
+msgstr "期次下载"
+
+msgid "issue.viewIssue"
+msgstr "浏览期次"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"<ol>\n"
+"\t<![CDATA[<ol>\n"
+"\t<li>编辑要求突出标明项目显示行动，按照下列进行标注:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">在文字编辑阶段要求行动</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">在排版编辑阶段要求行动</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">在校对阶段要求行动</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "user.register.reviewerInterests"
+msgstr "识别审稿利益冲突 （实质性领域和研究方法）："
+
+msgid "user.subscriptions.statusInformation"
+msgstr "活跃和无效的订阅将会随着到期日列在下面。此外，下面的状态信息可以包含在每个订阅之中。"
+
+msgid "site.noJournals"
+msgstr "没有可用期刊。"
+
+msgid "payment.loginRequired.forIssue"
+msgstr "订阅或期刊订阅要求访问项目。核实订阅，访问先前的订购或购买期刊，请登录期刊。"
+
+msgid "payment.type.purchaseIssue"
+msgstr "免费购买期刊"
+
+msgid "installer.allowFileUploads"
+msgstr "您的服务器目前允许上传文件：<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "您的服务器目前支持的最大上传文件大小: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "有新版本的OJS可用。您目前使用OJS版本{$currentVersion}. 最新的版本为OJS {$latestVersion}. 请访问<a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\"页面 </a> 下载最新的版本并找到升级说明。"
+
+msgid "site.upgradeAvailable.manager"
+msgstr "有新版本的OJS可用。您目前使用OJS版本{$currentVersion}.最新的版本为OJS {$latestVersion}. 请联系您的网站管理员 ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>)通知他们最新版本已发布。更多详情可以在 <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>上看到。"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "拒绝访问！您不是该文章的排版编辑。"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "您正在试图访问不属于您文章栏目中的文章。"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "无效的排版编辑提交或没有要求的排版编辑提交！"
+
+msgid "user.profile.profileImage"
+msgstr "个人照片"
