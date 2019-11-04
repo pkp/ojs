@@ -55,18 +55,6 @@ class Journal extends Context {
 		return null;
 	}
 
-	/**
-	 * Get localized favicon
-	 * @return string
-	 */
-	function getLocalizedFavicon() {
-		$faviconArray = $this->getData('favicon');
-		foreach (array(AppLocale::getLocale(), AppLocale::getPrimaryLocale()) as $locale) {
-			if (isset($faviconArray[$locale])) return $faviconArray[$locale];
-		}
-		return null;
-	}
-
 	//
 	// Get/set methods
 	//
