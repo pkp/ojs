@@ -272,7 +272,7 @@
 					},
 					{
 						"name": "orderBy",
-						"description": "Order the results returned. Must be one of `dateSubmitted`, `lastModified` or `title`. Default is `dateSubmitted`.",
+						"description": "Order the results returned. Must be one of `dateSubmitted`, `dateLastActivity`, `lastModified` or `title`. Default is `dateSubmitted`.",
 						"in": "query",
 						"required": false,
 						"type": "string"
