@@ -77,7 +77,7 @@
 					{load_url_in_div id="submissionProgressBarDiv" url=$submissionProgressBarUrl}
 				</div>
 			</tab>
-			{if $canAccessPublication}
+			{if $canEditPublication}
 				<tab id="publication" label="{translate key="submission.publication"}">
 					<div class="pkpPublication" ref="publication" aria-live="polite">
 						<pkp-header class="pkpPublication__header">

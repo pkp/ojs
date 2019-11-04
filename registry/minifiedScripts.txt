@@ -71,6 +71,7 @@ lib/pkp/js/controllers/form/UserFormHandler.js
 lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js
 lib/pkp/js/controllers/grid/GridHandler.js
 lib/pkp/js/controllers/grid/CategoryGridHandler.js
+lib/pkp/js/controllers/grid/files/review/AuthorReviewRevisionsGridHandler.js
 lib/pkp/js/controllers/listbuilder/ListbuilderHandler.js
 lib/pkp/js/controllers/modal/ModalHandler.js
 lib/pkp/js/controllers/modal/ConfirmationModalHandler.js
