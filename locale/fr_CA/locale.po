@@ -319,10 +319,10 @@ msgid "submissions.queuedReview"
 msgstr "En évaluation"
 
 msgid "submissions.published"
-msgstr "Publiée"
+msgstr "Publié-e"
 
 msgid "submissions.initial"
-msgstr "Initiale"
+msgstr "Initial-e"
 
 msgid "submissions.proofread"
 msgstr "Corriger les épreuves"
