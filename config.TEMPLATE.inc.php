@@ -154,9 +154,13 @@ debug = Off
 ; - xcache: Use the xcache variable store
 ; - apc: Use the APC variable store
 ; - none: Use no caching.
+; WARNING: This setting is currently NOT RECOMMENDED.
+; (https://github.com/pkp/pkp-lib/issues/3304)
 object_cache = none
 
 ; Enable memcache support
+; WARNING: This setting is currently NOT RECOMMENDED.
+; (https://github.com/pkp/pkp-lib/issues/3304)
 memcache_hostname = localhost
 memcache_port = 11211
 
