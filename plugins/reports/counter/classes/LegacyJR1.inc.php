@@ -15,16 +15,16 @@
 class LegacyJR1 {
 
 	/**
-	 * @var string $_templatePath The location of the reportxml template
-	*/
-	var $_templatePath;
+	 * @var Plugin The COUNTER report plugin.
+	 */
+	var $_plugin;
 
 	/**
 	 * Constructor
-	 * @param string $templatePath
+	 * @param Plugin $plugin
 	 */
-	function LegacyJR1($templatePath) {
-		$this->_templatePath = $templatePath;
+	function LegacyJR1($plugin) {
+		$this->_plugin = $plugin;
 	}
 
 	/**
@@ -352,7 +352,9 @@ class LegacyJR1 {
 		list($begin, $end) = $this->_getLimitDates($year);
 
 		$this->_assignTemplateCounterXML($request, $templateManager, $begin, $end, $useLegacyStats);
-		$templateManager->display($this->_templatePath . 'reportxml.tpl', 'text/xml');
+		$reportContents = $templateManager->fetch($this->_plugin->getTemplateResource('reportxml.tpl'));
+		header('Content-type: text/xml');
+		echo $reportContents;
 	}
 
 }
