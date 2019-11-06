@@ -150,7 +150,7 @@ class CounterReportPlugin extends ReportPlugin {
 						Validation::redirectLogin();
 					}
 					import('plugins.reports.counter.classes.LegacyJR1');
-					$r3jr1 = new LegacyJR1($this->getTemplatePath());
+					$r3jr1 = new LegacyJR1($this);
 					$r3jr1->display($request);
 					return;
 				case 'fetch':
