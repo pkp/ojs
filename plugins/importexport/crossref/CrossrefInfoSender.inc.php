@@ -124,8 +124,8 @@ class CrossrefInfoSender extends ScheduledTask {
 			$exportXml = $plugin->exportXML(array($object), $filter, $journal);
 			// Write the XML to a file.
 			// export file name example: crossref-20160723-160036-articles-1-1.xml
-			$objectsFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-			$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectsFileNamePart, $journal, '.xml');
+			$objectsFileNamePartId = $objectsFileNamePart . '-' . $object->getId();
+			$exportFileName = $plugin->getExportFileName($plugin->getExportPath(), $objectsFileNamePartId, $journal, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
 			// Deposit the XML file.
 			$result = $plugin->depositXML($object, $journal, $exportFileName);
