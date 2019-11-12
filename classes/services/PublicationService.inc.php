@@ -134,7 +134,6 @@ class PublicationService extends PKPPublicationService {
 				}
 			}
 		}
-
 	}
 
 	/**
@@ -153,6 +152,21 @@ class PublicationService extends PKPPublicationService {
 	public function validatePublishPublication($hookName, $args) {
 		$errors =& $args[0];
 		$publication = $args[1];
+		$submission = $args[2];
+		$currentUser = Application::get()->getRequest()->getUser();
+
+		// If current user is an author
+		$isAuthor = false;
+		$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+		while ($assignment = $submitterAssignments->next()) {
+			if ($currentUser->getId() == $assignment->getUserId()) $isAuthor = true;
+		}
+		if ($isAuthor){
+			if (!$this->getCanAuthorPublish()){
+				$errors['authorCheck'] = __('publication.authorCanNotPublish');
+			}
+		}
 	}
 
 	/**
@@ -219,4 +233,18 @@ class PublicationService extends PKPPublicationService {
 			Services::get('galley')->delete($galley);
 		}
 	}
+
+	function getCanAuthorPublish() {
+		return true;
+
+		/*
+		Option 1: allow
+		Option 2: plugin error code
+		*/
+		/*
+		default $errors['authorCheck'] = __('publication.authorCanNotPublish');
+		*/
+	}
+
+
 }

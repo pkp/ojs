@@ -181,7 +181,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getSubmission(),
 			$this->getPublication(),
 			$this->canEdit()
-
 		);
 	}
 
