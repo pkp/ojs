@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
+"PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Preprints"
+
+msgid "section.default.abbrev"
+msgstr "PRE"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "Preprint Text"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "The submission has not been previously published, nor is it before another server for consideration (or an explanation has been provided in Comments to the Editor)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "The submission file is in OpenOffice, Microsoft Word, or RTF document file format."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Where available, URLs for the references have been provided."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge."
+
+msgid "default.groups.name.manager"
+msgstr "Server manager"
+
+msgid "default.groups.plural.manager"
+msgstr "Server managers"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Server editor"
+
+msgid "default.groups.plural.editor"
+msgstr "Server editors"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Series editor"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Series editors"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.genres.researchInstrument"
+msgstr "Research Instrument"
+
+msgid "default.genres.researchMaterials"
+msgstr "Research Materials"
+
+msgid "default.genres.researchResults"
+msgstr "Research Results"
+
+msgid "default.genres.transcripts"
+msgstr "Transcripts"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Data Analysis"
+
+msgid "default.genres.dataSet"
+msgstr "Data Set"
+
+msgid "default.genres.sourceTexts"
+msgstr "Source Texts"
+
+
+msgid "default.contextSettings.emailSignature"
+msgstr "<br/>"
+"________________________________________________________________________<br/>"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

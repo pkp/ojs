@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
+"PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Editor Home"
+
+msgid "editor.reassign"
+msgstr "Reassign"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Submissions and Publishing"
+
+msgid "editor.submissionQueue"
+msgstr "Submission Queue"
+
+msgid "editor.submissionArchive"
+msgstr "Submission Archive"
+
+msgid "editor.publishing"
+msgstr "Publishing"
+
+msgid "editor.allSections"
+msgstr "All Series"
+
+msgid "editor.allEditors"
+msgstr "All Editors"
+
+msgid "editor.me"
+msgstr "Me"
+
+msgid "editor.publicIdentificationExists"
+msgstr "The public identifier '{$publicIdentifier}' already exists for another object (preprint , galley or file). Please choose unique identifiers within your server."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "No submissions in the archive."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Are you sure you want to permanently delete this submission?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Are you sure you wish to record this decision?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed."
+
+msgid "editor.notifyUsers"
+msgstr "Notify Users"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "All readers ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "All published authors ({$count} users)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Notifying users..."
+
+msgid "editor.usersNotified"
+msgstr "Users Notified"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Send this message to all users associated with this server ({$count} users)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Send this message to the users associated with this server who have indicated that they wish to receive updates ({$count} users)"
+
+msgid "editor.editorAdministration"
+msgstr "Editor Administration"
+
+msgid "grid.action.addGalley"
+msgstr "Add galley"
+
+msgid "grid.action.publish"
+msgstr "Publish"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Designate the original file as the Review Version"
+
+msgid "editor.article.decision"
+msgstr "Decision"
+
+msgid "editor.submissions.showBy"
+msgstr "Show By"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Submit MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Active Assignments"
+
+msgid "editor.submissions.invite"
+msgstr "Invite"
+
+msgid "editor.submissions.accept"
+msgstr "Accept"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "No Submissions"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Latest"
+
+msgid "editor.submissions.averageTime"
+msgstr "Weeks"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Last Complete"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Assigned To"
+
+msgid "editor.submissions.inSection"
+msgstr "In Series"
+
+msgid "editor.article.schedulePublication"
+msgstr "Schedule For Publication"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Show Scheduled Publication"
+
+msgid "editor.article.publishVersion"
+msgstr "Publish Version"
+
+msgid "editor.article.viewMetadata"
+msgstr "View Version Metadata"
+
+msgid "editor.article.editMetadata"
+msgstr "Edit Version Metadata"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page."
+
+msgid "editor.article.remove"
+msgstr "Remove"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "The layout editor prepares these files for each galley and then uploads to the appropriate <span class=\"pkp_help_title\">Proofs</span> for proofreading."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Select Galley Files"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Final draft files in this list are transformed by a Copyeditor into copyedited versions, uploaded below under <span class=\"pkp_help_title\">Copyediting</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Any files that have already been uploaded to any submission stage can be added to the Proofreading listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your server."
+
+msgid "editor.article.coverImage"
+msgstr "Cover Image"

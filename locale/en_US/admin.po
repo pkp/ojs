@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
+"PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
+"Language: \n"
+
+msgid "admin.hostedJournals"
+msgstr "Hosted Servers"
+
+msgid "admin.settings.appearance.success"
+msgstr "The site appearance settings have been successfully updated."
+
+msgid "admin.settings.config.success"
+msgstr "The site configuration settings have been successfully updated."
+
+msgid "admin.settings.info.success"
+msgstr "The site information has been successfully updated."
+
+msgid "admin.settings.journalRedirect"
+msgstr "Server redirect"
+
+msgid "admin.settings.journalRedirectInstructions"
+msgstr "Requests to the main site will be redirected to this server. This may be useful if the site is hosting only a single server, for example."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "Your PPS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+"There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used preprint's or to rank"
+"search results. Please select one of the configured metrics as a default."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Are you sure you want to disable this locale? This may affect any hosted servers currently using the locale."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>"
+"\t<ul>"
+"\t\t<li>Your server does not have or allow execution of the GNU \"tar\" utility.</li>"
+"\t\t<li>OJS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>"
+"\t</ul>"
+"<p>Language packs can be manually downloaded from the <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "This will be the default language for the site and any hosted servers."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Select all locales to support on the site. The selected locales will be available for use by all servers hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on server-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to servers."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Marked locales may be incomplete."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Are you sure you want to uninstall this locale? This may affect any hosted servers currently using the locale."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted servers. See the PPS documentation for information on adding support for new languages."
+
+msgid "admin.languages.downloadFailed"
+msgstr "The locale download failed. The error message(s) below describe the failure."
+
+msgid "admin.languages.localeInstalled"
+msgstr "The "{$locale}" locale has been installed."
+
+msgid "admin.languages.download"
+msgstr "Download Locale"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Cannot open language descriptor from PKP web site."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Cannot add the new locale to the locale registry file, typically "registry/locales.xml"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS User Database"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within PPS will be automatically updated on the remote source. If this option is not enabled PPS profile information will be kept separate from remote source profile information."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Enable user password modification (if supported by this authentication plugin). Enabling this option allows users to modify their password from within PPS and to use the PPS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Enable user creation (if supported by this authentication plugin). Users created within PPS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, PPS accounts created through user registration will also be added to the remote authentication source."
+
+msgid "admin.systemVersion"
+msgstr "OJS Version"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS Configuration"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS configuration settings from <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "You will automatically be enrolled as the manager of this server. After creating a new server, you will be redirected to its settings wizard, to complete the initial server setup."
+
+msgid "admin.journals.journalSettings"
+msgstr "Server Settings"
+
+msgid "admin.journals.noneCreated"
+msgstr "No servers have been created."
+
+msgid "admin.contexts.create"
+msgstr "Create Server"
+
+msgid "admin.journals.urlWillBe"
+msgstr "This should be a single short word or acronym that identifies the server. The server's URL will be {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "A title is required."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "A path is required."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "The path can only include letters, numbers and the characters _ and -. It must begin and end with a letter or number."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "The path you provided is already in use by another server."
+
+msgid "admin.contexts.form.create.success"
+msgstr "{$name} was created successfully."
+
+msgid "admin.contexts.form.edit.success"
+msgstr "{$name} was edited successfully."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Enable this server to appear publicly on the site"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Server description"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Existing server path or path to create (e.g., "ojs")."
+
+msgid "admin.journals.transcode"
+msgstr "Transcode preprint metadata from ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generate code to map PPS 1 URLs to PPS 2 URLs"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "The import path is required."
+
+msgid "admin.journals.importErrors"
+msgstr "Importing failed to complete successfully"
+
+msgid "admin.mergeUsers"
+msgstr "Merge Users"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Merge User"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Select a user to whom to attribute the previous user's authorships, editing assignments, etc."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Select a user (or several) to merge into another user account (e.g., when someone has two user accounts). The account(s) selected first will be deleted and any submissions, assignments, etc. will be attributed to the second account."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "All Enrolled Users"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "No enrolled users."

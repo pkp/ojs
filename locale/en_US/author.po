@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
+"PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "New Submission"
+
+msgid "author.track"
+msgstr "Active Submissions"
+
+msgid "author.competingInterests">
+msgstr "Competing interests <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Submit a Preprint"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Five Steps to Submit"
+
+msgid "author.submit.startHereTitle"
+msgstr "Start a New Submission"
+
+msgid "author.submit.startHereLink">
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Click here</a> to go to step one of the five-step submission process."
+
+msgid "author.submit.step1"
+msgstr "Step 1. Starting the Submission"
+
+msgid "author.submit.step2"
+msgstr "Step 2. Uploading the Submission"
+
+msgid "author.submit.step3"
+msgstr "Step 3. Entering the Submission's Metadata"
+
+msgid "author.submit.step4"
+msgstr "Step 4. Uploading Supplementary Files"
+
+msgid "author.submit.step4a"
+msgstr "Step 4a. Add a Supplementary File"
+
+msgid "author.submit.step5"
+msgstr "Step 5. Confirming the Submission"
+
+msgid "author.submit.start"
+msgstr "Start"
+
+msgid "author.submit.upload"
+msgstr "Upload Submission"
+
+msgid "author.submit.metadata"
+msgstr "Enter Metadata"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Upload Supplementary Files"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmation"
+
+msgid "author.submit.nextSteps"
+msgstr "Next Steps"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "You can complete this submission at a later date by selecting Active Submissions from the Author home."
+
+msgid "author.submit.notAccepting"
+msgstr "This server is not accepting submissions at this time."
+
+msgid "author.submissions.confirmDelete"
+msgstr "Are you sure you want to delete this incomplete submission?"
+
+msgid "author.submissions.viewStatus"
+msgstr "View Status"
+
+msgid "author.submissions.noSubmissions"
+msgstr "No submissions."
+
+msgid "author.submit.journalSection"
+msgstr "Server Series"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Preprints must be submitted to one of the server's series."
+
+msgid "author.submit.verifyChecklist"
+msgstr "You must make sure all items in the submission checklist are satisfied before continuing."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this server (comments to the editor can be added below)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "You must agree to the terms of the Copyright Notice before continuing."
+
+msgid "submission.submit.coverNote"
+msgstr "Comments for the Editor"
+
+msgid "author.submit.comments"
+msgstr "Enter text (optional)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Please select an appropriate server series for this submission."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Please select a submission language."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Journal's Privacy Statement"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Reorder authors to appear in the order they will be listed on publication."
+
+msgid "author.submit.reorder"
+msgstr "Reorder author's name"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Principal contact for editorial correspondence."
+
+msgid "author.submit.addAuthor"
+msgstr "Add Author"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Delete Author"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample."
+
+msgid "author.submit.languageInstructions">
+msgstr "English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Additional codes</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "At least one author is required."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "The first name, last name, and email address of each author is required."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Please enter the title of your preprint ."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Please enter the abstract of your preprint ."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "You have exceeded the maximum word limit for abstracts in this series' track."
+
+msgid "author.submit.submissionFile"
+msgstr "Submission File"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Upload submission file"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Replace submission file"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "No submission file uploaded."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Are you sure you wish to continue without uploading a submission file?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Click Save to upload file (after which additional files can be uploaded)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Are you sure you wish to continue without uploading the supplementary file you have chosen?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "No supplementary files have been added to this submission."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Back to Supplementary Files"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Are you sure you want to delete this supplementary file?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Upload supplementary file"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Add a Supplementary File"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Edit a Supplementary File"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Supplementary File Metadata"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "To index this supplementary material, provide the following metadata for the uploaded supplementary file."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Supplementary File"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creator (or owner) of file"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Research Instrument"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Research Materials"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Research Results"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transcripts"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Data Analysis"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Data Set"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Source Text"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Brief description"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Use only with formally published materials."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Date when data was collected or instrument created."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Name of study or other point of origin."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Specify other"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "No file uploaded."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Please enter the title of this supplementary file."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Please enter a subject."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Please enter a description."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Public supplemental file identification already exists."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Public supplemental file identifier"
+
+msgid "author.submit.confirmationDescription"
+msgstr "To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the server web site. Thank you for your interest in publishing with {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "No files have been attached to this submission."
+
+msgid "author.submit.filesSummary"
+msgstr "File Summary"
+
+msgid "author.submit.finishSubmission"
+msgstr "Finish Submission"
+
+msgid "author.submit.submissionComplete"
+msgstr "Submission complete. Thank you for your interest in publishing with {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Upload Author Version"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Author File"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "A user account is required to submit to this server. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you."

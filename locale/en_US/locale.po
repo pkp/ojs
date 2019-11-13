@@ -1,0 +1,928 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-13T08:00:00+02:00\n"
+"PO-Revision-Date: 2019-11-13T08:00:00+02:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Current Server:"
+
+msgid "context.select"
+msgstr "Switch to another server:"
+
+msgid "navigation.categories"
+msgstr "Categories"
+
+msgid "navigation.categories.browse"
+msgstr "Browse"
+
+msgid "common.openJournalSystems"
+msgstr "Open Preprint Systems"
+
+msgid "common.confirmComplete"
+msgstr "Are you sure you wish to mark this task as completed? You may not be able to make changes afterwards."
+
+msgid "common.homePageHeader.altText"
+msgstr "Homepage Header"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Server Homepage Image"
+
+msgid "navigation.journalHelp"
+msgstr "Server Help"
+
+msgid "navigation.current"
+msgstr "Current"
+
+msgid "navigation.otherJournals"
+msgstr "Other Servers"
+
+msgid "navigation.browseByAuthor"
+msgstr "By Author"
+
+msgid "navigation.skip.about"
+msgstr "Skip to about the server"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Unassigned"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Unassigned"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Submissions in Editing"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "In Editing"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archives"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archives"
+
+msgid "common.queue.long.active"
+msgstr "Active"
+
+msgid "common.queue.short.active"
+msgstr "Active"
+
+msgid "common.queue.long.completed"
+msgstr "Archive"
+
+msgid "common.queue.short.completed"
+msgstr "Archive"
+
+msgid "section.section"
+msgstr "Series"
+
+msgid "section.sections"
+msgstr "Series"
+
+msgid "section.title"
+msgstr "Series title"
+
+msgid "section.abbreviation"
+msgstr "Abbreviation"
+
+msgid "section.abbreviation.example"
+msgstr "(For example, Preprints=PRE)"
+
+msgid "section.policy"
+msgstr "Series Policy"
+
+msgid "article.article"
+msgstr "Preprint"
+
+msgid "article.articles"
+msgstr "Preprints"
+
+msgid "common.publication"
+msgstr "Preprint"
+
+msgid "common.publications"
+msgstr "Preprints"
+
+msgid "article.submissionId"
+msgstr "Submission ID"
+
+msgid "article.title"
+msgstr "Title"
+
+msgid "article.authors"
+msgstr "Authors"
+
+msgid "article.indexingInformation"
+msgstr "Indexing Information"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Server Series"
+
+msgid "article.file"
+msgstr "File"
+
+msgid "article.suppFile"
+msgstr "Supplementary File"
+
+msgid "article.suppFiles"
+msgstr "Supplementary File(s)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Supp. files"
+
+msgid "article.discipline"
+msgstr "Academic discipline and sub-disciplines"
+
+msgid "article.subject"
+msgstr "Keywords"
+
+msgid "article.coverage"
+msgstr "Coverage"
+
+msgid "article.type"
+msgstr "Type, method or approach"
+
+msgid "article.language"
+msgstr "Language"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Author comments"
+
+msgid "article.submission"
+msgstr "Submission"
+
+msgid "article.submissions"
+msgstr "Submissions"
+
+msgid "article.details"
+msgstr "Details"
+
+msgid "article.abstract"
+msgstr "Abstract"
+
+msgid "article.coverPage.altText"
+msgstr "Cover Image"
+
+msgid "article.comments.sectionDefault"
+msgstr "Default"
+
+msgid "article.comments.disable"
+msgstr "Disable"
+
+msgid "article.comments.enable"
+msgstr "Enable"
+
+msgid "article.fontSize"
+msgstr "Font Size"
+
+msgid "article.fontSize.small.altText"
+msgstr "Small"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Medium"
+
+msgid "article.fontSize.large.altText"
+msgstr "Large"
+
+msgid "article.return"
+msgstr "Return to Preprint Details"
+
+msgid "submission.submissionEditing"
+msgstr "Submission Editing"
+
+msgid "submission.changeSection"
+msgstr "Change to"
+
+msgid "submission.sent"
+msgstr "Sent"
+
+msgid "submission.editorDecision"
+msgstr "Editor Decision"
+
+msgid "submission.notifyAuthor"
+msgstr "Notify Author"
+
+msgid "submission.notifyEditor"
+msgstr "Notify Editor"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Editor/Author Email Record"
+
+msgid "submission.editorVersion"
+msgstr "Editor Version"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Author's revised version of file"
+
+msgid "submission.authorVersion"
+msgstr "Author Version"
+
+msgid "submissions.sec"
+msgstr "Sec"
+
+msgid "submissions.step1"
+msgstr "Step 1"
+
+msgid "submissions.step3"
+msgstr "Step 3"
+
+msgid "submissions.published"
+msgstr "Published"
+
+msgid "submissions.proof"
+msgstr "Proof"
+
+msgid "submissions.editorDecision"
+msgstr "Editor Decision"
+
+msgid "submissions.editorRuling"
+msgstr "Editor Ruling"
+
+msgid "submission.eventLog"
+msgstr "Event Log"
+
+msgid "submissions.copyeditComplete"
+msgstr "Copyedited"
+
+msgid "submissions.layoutComplete"
+msgstr "Layout edited"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Proofread"
+
+msgid "submission.search"
+msgstr "Preprint Search"
+
+msgid "journal.journals"
+msgstr "Servers"
+
+msgid "journal.path"
+msgstr "Path"
+
+msgid "context.context"
+msgstr "Server"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Include users with no roles in this server."
+
+msgid "user.profile.profileImage"
+msgstr "Profile Image"
+
+msgid "user.showAllJournals"
+msgstr "Show My Servers"
+
+msgid "user.registerForOtherJournals"
+msgstr "Register for Other Servers"
+
+msgid "user.register.contextsPrompt"
+msgstr "Which servers on this site would you like to register with?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Request the following roles."
+
+msgid "user.myJournals"
+msgstr "My Servers"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Your account is not currently associated with any servers. Please choose a server:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Your account does not currently have any roles for this server. Please choose from the actions below:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Submit a Proposal"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Submit a Preprint: Author registration is currently disabled."
+
+msgid "user.role.manager"
+msgstr "Server Manager"
+
+msgid "user.role.subEditor"
+msgstr "Series Editor"
+
+msgid "user.role.managers"
+msgstr "Server Managers"
+
+msgid "user.role.subEditors"
+msgstr "Series Editors"
+
+msgid "user.role.journalAssistant"
+msgstr "Server Assistant"
+
+msgid "user.role.journalAssistants"
+msgstr "Server Assistants"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Submission event"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Preprint submitted"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Preprint published"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Author revision submitted"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Author revision file updated"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor assigned to submission"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor unassigned from submission"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Editor decision submitted"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Editor file updated"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Submission sent to archive"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Submission restored from archive"
+
+msgid "search.results.orderBy"
+msgstr "Order results by"
+
+msgid "search.results.orderBy.article"
+msgstr "Preprint Title"
+
+msgid "search.results.orderBy.author"
+msgstr "Author"
+
+msgid "search.results.orderBy.date"
+msgstr "Publication Date"
+
+msgid "search.results.orderBy.journal"
+msgstr "Server Title"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularity (All Time)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularity (Last Month)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevance"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascending"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descending"
+
+msgid "search.results.similarDocuments"
+msgstr "similar documents"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Specifying a default authentication source other than PPS has the following effects:</p>"
+"<ul>"
+"\t<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the PPS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTE!</h4>"
+"<p>The system could not automatically overwrite the configuration file. To apply your configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Preprint Galley Plugins"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Preprint Galley Plugins add support for displaying different document types as preprint galleys."
+
+msgid "plugins.categories.auth.description"
+msgstr "Authorization Plugins allow Preprint Server to delegate user authentication tasks to other systems, such as LDAP servers."
+
+msgid "plugins.categories.generic.description"
+msgstr "Generic plugins are used to extend Preprint Server in a variety of ways that are not supported by the other plugin categories."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Proposed Creative Commons Copyright Notices</h3>"
+"<h4>1. Proposed Policy for Servers That Offer Open Access</h4>"
+"Authors who publish with this server agree to the following terms:"
+"<ol type=\"a\">"
+"\t<li>Authors retain copyright and grant the server right of first publication with the work simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this server.</li>"
+"\t<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the server's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this server.</li>"
+"\t<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>"
+"</ol>"
+"<h4>2. Proposed Policy for Servers That Offer Delayed Open Access</h4>"
+"Authors who publish with this server agree to the following terms:"
+"<ol type=\"a\">"
+"\t<li>Authors retain copyright and grant the server right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this server.</li>"
+"\t <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the server's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this server.</li>"
+"\t <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open Access</a>).</li>"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr "Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />"
+"Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Series Editors, go to Editors in Server Management.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>"
+"<ol>"
+"\t<li><strong>Add a Reading Tool</strong><p>The Server Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>"
+"\t<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</p></li>"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr "Disable this user? This will prevent the user from logging into the system."
+"You may optionally provide the user with a reason for disabling their account."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr "Sorry, you do not have administrative rights over this user. This may be because:"
+"\t\t<ul>"
+"\t\t\t<li>The user is a site administrator</li>"
+"\t\t\t<li>The user is active in servers you do not manage</li>"
+"\t\t</ul>"
+"\tThis task must be performed by a site administrator."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Active Editorial Assignments"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Completed Editorial Assignments"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "No submissions assigned."
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Notifying this author again will restart their assignment. Are you sure you wish to do this?"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"<p>To upload a manuscript to this server, complete the following steps.</p>"
+"<ol>"
+"<li>On this page, click Browse (or Choose File) which opens a Choose File window for locating the file on the hard drive of your computer.</li>"
+"<li>Locate the file you wish to submit and highlight it.</li>"
+"<li>Click Open on the Choose File window, which places the name of the file on this page.</li>"
+"<li>Click Upload on this page, which uploads the file from the computer to the server's web site and renames it following the server's conventions.</li>"
+"<li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>"
+"</ol>"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Public Galley Identifier"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Public galley identification already exists."
+
+msgid "submission.layout.referenceLinking"
+msgstr "Reference Linking"
+
+msgid "submission.logType.article"
+msgstr "Preprint"
+
+msgid "submission.logType.author"
+msgstr "Author"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "user.register.selectContext"
+msgstr "Select a server to register with:"
+
+msgid "user.register.noJournals"
+msgstr "There are no servers you may register with on this site."
+
+msgid "user.register.privacyStatement"
+msgstr "Privacy Statement"
+
+msgid "user.register.registrationDisabled"
+msgstr "This server is currently not accepting user registrations."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "The password you entered is not long enough."
+
+msgid "user.register.readerDescription"
+msgstr "Notified by email on publication of an preprint of the server."
+
+msgid "user.register.authorDescription"
+msgstr "Able to submit items to the server."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Yes, I would like to be notified of new publications and announcements for all servers that I registered with."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Yes, I agree to have my data collected and stored according to this server's <a href=\"{$privacyUrl}\" target=\"_blank\">privacy statement</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "You must consent to the privacy statement for any server with which you are registering."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "You must consent to this site's privacy statement."
+
+msgid "search.browseAuthorIndex"
+msgstr "Browse Author Index"
+
+msgid "search.searchFor"
+msgstr "Search preprint's for"
+
+msgid "search.withinJournal"
+msgstr "Within"
+
+msgid "search.allJournals"
+msgstr "All Servers"
+
+msgid "search.authorIndex"
+msgstr "Browse Author Index"
+
+msgid "search.authorDetails"
+msgstr "Author Details"
+
+msgid "search.syntaxInstructions"
+msgstr "Search tips: <ul>"
+"<li>Search terms are case-insensitive</li>"
+"<li>Common words are ignored</li>"
+"<li>By default only preprint's containing <em>all</em> terms in the query are returned (i.e., <em>AND</em> is implied)</li>"
+"<li>Combine multiple words with <em>OR</em> to find preprint's containing either term; e.g., <em>education OR research</em></li>"
+"<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal OR conference) NOT theses)</em></li>"
+"<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em></li>"
+"<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g. <em>online -politics</em> or <em>online NOT politics</em></li>"
+"<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of characters; e.g., <em>soci* morality</em> would match documents containing "sociological" or "societal"</li>"
+</ul>"
+
+msgid "article.pageTitle"
+msgstr "View of {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Download this PDF file"
+
+msgid "article.pluginMissing"
+msgstr "<p>The PDF file you selected should load here if your Web browser has a PDF reader plugin installed (for example, a recent version of <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Preprint Download"
+
+msgid "article.nonpdf.note"
+msgstr "The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href=\"{$url}\">click here</a>."
+
+msgid "site.journalsHosted"
+msgstr "Servers hosted on this site"
+
+msgid "site.journalView"
+msgstr "View Server"
+
+msgid "site.journalRegister"
+msgstr "Register"
+
+msgid "site.noJournals"
+msgstr "There are no servers available."
+
+msgid "archive.archives"
+msgstr "Archives"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archives - Page {$pageNumber}"
+
+msgid "about.statistics"
+msgstr "Statistics"
+
+msgid "about.contact"
+msgstr "Contact"
+
+msgid "about.aboutContext"
+msgstr "About the Server"
+
+msgid "about.history"
+msgstr "Server History"
+
+msgid "about.editorialTeam"
+msgstr "Editorial Team"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biography"
+
+msgid "about.editorialPolicies"
+msgstr "Editorial Policies"
+
+msgid "about.focusAndScope"
+msgstr "Focus and Scope"
+
+msgid "about.sectionPolicies"
+msgstr "Series Policies"
+
+msgid "about.submissions"
+msgstr "Submissions"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Login"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Register"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} or {$register} to make a submission."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} or {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Make a new submission to the <a href=\"{$url}\">{$name}</a> series."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Make a new submission"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "view your pending submissions"
+
+msgid "about.authorGuidelines"
+msgstr "Author Guidelines"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Submission Preparation Checklist"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines."
+
+msgid "about.copyrightNotice"
+msgstr "Copyright Notice"
+
+msgid "about.privacyStatement"
+msgstr "Privacy Statement"
+
+msgid "about.archiving"
+msgstr "Archiving"
+
+msgid "about.memberships"
+msgstr "Memberships"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "About this Publishing System"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "PPS Editorial and Publishing Process"
+
+msgid "about.aboutOJSJournal"
+msgstr "This server uses Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "This site uses Preprint Server {$ojsVersion}, which is open source server management and publishing software developed, supported, and freely distributed by the <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> under the GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Preprint Server Help"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "PPS Help"
+
+msgid "help.searchReturnResults"
+msgstr "Return to Search Results"
+
+msgid "help.goToEditPage"
+msgstr "Edit {$sectionTitle}"
+
+msgid "installer.appInstallation"
+msgstr "PPS Installation"
+
+msgid "installer.ojsUpgrade"
+msgstr "PPS Upgrade"
+
+msgid "installer.installationInstructions"
+msgstr "<h4>PPS Version {$version}</h4>"
+"<p>Thank you for downloading the Public Knowledge Project's <strong>Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> file included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
+"<h4>Upgrade</h4>"
+"<p>If you are upgrading an existing installation of PPS, <a href=\"{$upgradeUrl}\">click here</a> to proceed.</p>"
+"<h4>Recommended system requirements</h4>"
+"<ul>"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; you are currently using PHP {$phpVersion}{$wrongPhpText}</li>"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>"
+"\t<li>Operating system: Any OS that supports the above software, including <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>"
+"</ul>"
+"<p>As PKP does not have the resources to test every possible combination of software versions and platforms, no guarantee of correct operation or support is implied.</p>"
+"<p>Changes to these settings can be made after installation by editing the file <tt>config.inc.php</tt> in the base PPS directory, or using the site administration web interface.</p>"
+"<h4>Supported database systems</h4>"
+"<p>PPS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the PPS team.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"<h4>Pre-Installation Steps</h4>"
+"<p>1. The following files and directories (and their contents) must be made writable:</p>"
+"<ul>"
+"\t<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>"
+"\t<li><tt>public/</tt> is writable: {$writable_public}</li>"
+"\t<li><tt>cache/</tt> is writable: {$writable_cache}</li>"
+"\t<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>"
+"\t<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>"
+"\t<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>"
+"</ul>"
+"<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>PPS Version {$version}</h4>"
+<p>Thank you for downloading the Public Knowledge Project's <strong>Preprint Server</strong>. Before proceeding, please read the <a href=\"{$baseUrl}/docs/README.md\">README</a> and <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> files included with this software. For more information about the Public Knowledge Project and its software projects, please visit the <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web site</a>. If you have bug reports or technical support inquiries about Preprint Server, see the <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> or visit PKP's online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">bug reporting system</a>. Although the support forum is the preferred method of contact, you can also email the team at <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>"
+"<p>It is <strong>strongly recommended</strong> that you back up your database, files directory, and PPS installation directory before proceeding.</p>"
+"<p>If you are running in <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, please ensure that the max_execution_time directive in your php.ini configuration file is set to a high limit. If this or any other time limit (e.g. Apache's "Timeout" directive) is reached and the upgrade process is interrupted, manual intervention will be required.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr "For complete Unicode (UTF-8) support, select UTF-8 for all character set settings. Please note that full Unicode support requires PHP to be compiled with support for the <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> library (enabled by default in most recent PHP installations). You may experience problems using extended character sets if your server does not meet these requirements."
+"<br /><br />"
+"Your server currently supports mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Your server currently allows file uploads: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Your server currently allows a maximum file upload size of: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "The primary language to use for this system. Please consult the PPS documentation if you are interested in support for languages not listed here."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Select any additional languages to support in this system. These languages will be available for use by servers hosted on the site. Additional languages can also be installed at any time from the site administration interface."
+
+msgid "installer.filesDirInstructions"
+msgstr "Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. "C:/myjournal/files"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "PPS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database."
+
+msgid "installer.installApplication"
+msgstr "Install Preprint Server"
+
+msgid "installer.upgradeApplication"
+msgstr "Upgrade Preprint Server"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your PPS database or database tables before attempting to reinstall the database."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr "<h4>IMPORTANT!</h4>
+<p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Installation of PPS has completed successfully.</p>"
+"<p>To begin using the system, <a href=\"{$loginUrl}\">login</a> with the username and password entered on the previous page.</p>"
+"<p>If you wish to be part of the PKP community, you can:</p>
+"<ol>"
+"\t<li>Read the <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> and follow the <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a> for news and updates.</li>"
+"\t<li>Visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a> if you have questions or comments.</li>"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr "<p>Upgrade of PPS to version {$version} has completed successfully.</p>"
+"<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>"
+"<p>If you have questions or comments, please visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please visit <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> to download the most recent version and find upgrade instructions."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} has revised preprint {$submissionId}. The new file ID is {$fileId}."
+
+msgid "log.editor.decision"
+msgstr "An editor decision ({$decision}) for preprint {$submissionId} was recorded by {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr "An editor recommendation ({$decision}) for preprint {$submissionId} was recorded by {$editorName}."
+
+msgid "log.editor.metadataModified"
+msgstr "The metadata for this preprint was modified by {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "An editor version of the submission file has been uploaded."
+
+msgid "log.editor.archived"
+msgstr "The submission {$submissionId} has been archived."
+
+msgid "log.editor.restored"
+msgstr "The submission {$submissionId} has been restored to the queue."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} has been assigned as editor to submission {$submissionId}."
+
+msgid "log.imported"
+msgstr "{$userName} has imported preprint {$submissionId}."
+
+msgid "notification.type.editing"
+msgstr "Editing Events"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "A new preprint , "{$title}," has been submitted."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "A comment has been left on the editor decision for "{$title}.""
+
+msgid "notification.type.galleyModified"
+msgstr "A galley has been modified for "{$title}.""
+
+msgid "notification.type.newAnnouncement"
+msgstr "A new announcement has been created."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "A review form review has been submitted for "{$title}.""
+
+msgid "notification.type.reviewing"
+msgstr "Reviewing Events"
+
+msgid "notification.type.site"
+msgstr "Site Events"
+
+msgid "notification.type.submissionComment"
+msgstr "An editor has made a comment on "{$title}.""
+
+msgid "notification.type.submissions"
+msgstr "Submission Events"
+
+msgid "notification.type.userComment"
+msgstr "A reader has made a comment on "{$title}""
+
+msgid "notification.type.public"
+msgstr "Public Announcements"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "A new preprint has been submitted to which an editor needs to be assigned."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Assign a user to create galleys using the Assign link in the Participants list."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Awaiting Galleys."
+
+msgid "user.authorization.noContext"
+msgstr "No server in context!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "You are trying to access a preprint that is not part of your series."
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Loaded currency list "{$filename}" from XML"
+
+msgid "grid.action.createContext"
+msgstr "Create a New Server"
+
+msgid "notification.type.approveSubmission"
+msgstr "This submission is currently awaiting approval."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Awaiting approval."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Register with other servers"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Hide other servers"
+
+msgid "article.view.interstitial"
+msgstr "Please choose a preprint file to download."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Approved"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Awaiting Approval"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Galley Approval"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Approve this galley for publication.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Remove approval of this galley.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexing "{$journalName}""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "This search implementation does not allow per-journal re-indexing."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "The given server path "{$journalPath}" could not be resolved to a server."
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} has taken the edit process for the preprint {$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "Order of preprint s"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Choose how to order preprint's in this category."
