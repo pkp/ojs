@@ -28,7 +28,8 @@
 
 	{* Journal Description *}
 	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
-		<div id="homepageAbout" class="homepage_about">
+		<div class="homepage_about" role="contentinfo">
+			<a id="homepageAbout"></a>
 			<h2>{translate key="about.aboutContext"}</h2>
 			{$currentContext->getLocalizedData('description')}
 		</div>
@@ -36,7 +37,8 @@
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
-		<div id="homepageAnnouncements" class="cmp_announcements highlight_first">
+		<div class="cmp_announcements highlight_first" role="contentinfo">
+			<a id="homepageAnnouncements"></a>
 			<h2>
 				{translate key="announcement.announcements"}
 			</h2>
@@ -66,7 +68,8 @@
 
 	{* Latest issue *}
 	{if $issue}
-		<div id="homepageIssue" class="current_issue">
+		<div class="current_issue" role="contentinfo">
+			<a id="homepageIssue"></a>
 			<h2>
 				{translate key="journal.currentIssue"}
 			</h2>
