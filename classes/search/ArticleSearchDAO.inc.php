@@ -54,15 +54,15 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		if (!empty($publishedFrom)) {
-			$sqlWhere .= ' AND ps.date_published >= ' . $this->datetimeToDB($publishedFrom);
+			$sqlWhere .= ' AND p.date_published >= ' . $this->datetimeToDB($publishedFrom);
 		}
 
 		if (!empty($publishedTo)) {
-			$sqlWhere .= ' AND ps.date_published <= ' . $this->datetimeToDB($publishedTo);
+			$sqlWhere .= ' AND p.date_published <= ' . $this->datetimeToDB($publishedTo);
 		}
 
 		if (!empty($journal)) {
-			$sqlWhere .= ' AND i.journal_id = ?';
+			$sqlWhere .= ' AND s.context_id = ?';
 			$params[] = $journal->getId();
 		}
 
@@ -71,20 +71,16 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			'SELECT
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
-				MAX(i.date_published) AS i_pub,
-				MAX(ps.date_published) AS s_pub,
+				MAX(p.date_published) AS s_pub,
 				COUNT(*) AS count
 			FROM
-				submissions s,
-				published_submissions ps,
-				issues i,
+				submissions s
+				JOIN publications p ON (p.publication_id = s.current_publication_id),
 				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
 				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
-				ps.submission_id = s.submission_id AND
-				i.issue_id = ps.issue_id AND
-				i.published = 1 AND ' . $sqlWhere . '
+				' . $sqlWhere . '
 			GROUP BY o.submission_id
 			ORDER BY count DESC
 			LIMIT ' . $limit,
