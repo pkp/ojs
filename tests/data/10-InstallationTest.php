@@ -21,6 +21,6 @@ class InstallationTest extends PKPInstallationTest {
 	 * @return string
 	 */
 	protected function _getInstallerText() {
-		return 'OJS Installation';
+		return 'PPS Installation';
 	}
 }
