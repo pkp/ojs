@@ -17,31 +17,31 @@
  * consists of the following:
  *
  * <!-- Wrapper class which provides proper spacing between components -->
- * <section class="item">
+ * <div class="item">
  *     <!-- Title/value combination -->
- *     <section class="label">Abstract</section>
- *     <section class="value">Value</section>
- * </section>
+ *     <div class="label">Abstract</div>
+ *     <div class="value">Value</div>
+ * </div>
  *
  * All styling should be applied by class name, so that titles may use heading
  * elements (eg, <h3>) or any element required.
  *
  * <!-- Example: component with multiple title/value combinations -->
- * <section class="item">
- *     <section class="sub_item">
- *         <section class="label">DOI</section>
- *         <section class="value">12345678</section>
- *     </section>
- *     <section class="sub_item">
- *         <section class="label">Published Date</section>
- *         <section class="value">2015-01-01</section>
- *     </section>
- * </section>
+ * <div class="item">
+ *     <div class="sub_item">
+ *         <div class="label">DOI</div>
+ *         <div class="value">12345678</div>
+ *     </div>
+ *     <div class="sub_item">
+ *         <div class="label">Published Date</div>
+ *         <div class="value">2015-01-01</div>
+ *     </div>
+ * </div>
  *
  * <!-- Example: component with no title -->
- * <section class="item">
- *     <section class="value">Whatever you'd like</section>
- * </section>
+ * <div class="item">
+ *     <div class="value">Whatever you'd like</div>
+ * </div>
  *
  * Core components are produced manually below, but can also be added via
  * plugins using the hooks provided:
@@ -70,13 +70,13 @@
 
 	{* Notification that this is an old version *}
 	{if $currentPublication->getID() !== $publication->getId()}
-		<section class="cmp_notification notice">
+		<div class="cmp_notification notice">
 			{capture assign="latestVersionUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
 			{translate key="submission.outdatedVersion"
 				datePublished=$publication->getData('datePublished')|date_format:$dateFormatShort
 				urlRecentVersion=$latestVersionUrl|escape
 			}
-		</section>
+		</div>
 	{/if}
 
 	<h1 class="page_title">
@@ -89,8 +89,8 @@
 		</h2>
 	{/if}
 
-	<section class="row">
-		<section class="main_entry">
+	<div class="row">
+		<div class="main_entry">
 
 			{if $publication->getData('authors')}
 				<ul class="item authors">
@@ -125,7 +125,7 @@
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-					<section class="item doi">
+					<div class="item doi">
 						<span class="label">
 							{capture assign=translatedDOI}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
 							{translate key="semicolon" label=$translatedDOI}
@@ -135,13 +135,13 @@
 								{$doiUrl}
 							</a>
 						</span>
-					</section>
+					</div>
 				{/if}
 			{/foreach}
 
 			{* Keywords *}
 			{if !empty($publication->getLocalizedData('keywords'))}
-			<section class="item keywords">
+			<div class="item keywords">
 				<span class="label">
 					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
 					{translate key="semicolon" label=$translatedKeywords}
@@ -151,7 +151,7 @@
 						{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
 					{/foreach}
 				</span>
-			</section>
+			</div>
 			{/if}
 
 			{* Abstract *}
@@ -182,8 +182,8 @@
 					</h2>
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
-							<section class="sub_item">
-								<section class="label">
+							<div class="sub_item">
+								<div class="label">
 									{if $author->getLocalizedData('affiliation')}
 										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
 										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedData('affiliation')|escape}</span>{/capture}
@@ -191,11 +191,11 @@
 									{else}
 										{$author->getFullName()|escape}
 									{/if}
-								</section>
-								<section class="value">
+								</div>
+								<div class="value">
 									{$author->getLocalizedData('biography')|strip_unsafe_html}
-								</section>
-							</section>
+								</div>
+							</div>
 						{/if}
 					{/foreach}
 				</section>
@@ -207,7 +207,7 @@
 					<h2 class="label">
 						{translate key="submission.citations"}
 					</h2>
-					<section class="value">
+					<div class="value">
 						{if $parsedCitations}
 							{foreach from=$parsedCitations item="parsedCitation"}
 								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
@@ -215,18 +215,18 @@
 						{else}
 							{$publication->getData('citationsRaw')|nl2br}
 						{/if}
-					</section>
+					</div>
 				</section>
 			{/if}
 
-		</section><!-- .main_entry -->
+		</div><!-- .main_entry -->
 
-		<section class="entry_details">
+		<div class="entry_details">
 
 			{* Article/Issue cover image *}
 			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
 				<section class="item cover_image">
-					<section class="sub_item">
+					<div class="sub_item">
 						{if $publication->getLocalizedData('coverImage')}
 							{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
 							<img
@@ -238,7 +238,7 @@
 								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:'null'}">
 							</a>
 						{/if}
-					</section>
+					</div>
 				</section>
 			{/if}
 
@@ -268,11 +268,11 @@
 
 			{if $publication->getData('datePublished')}
 			<section class="item published">
-				<section class="sub_item">
-					<section class="label">
+				<div class="sub_item">
+					<div class="label">
 						{translate key="submissions.published"}
-					</section>
-					<section class="value">
+					</div>
+					<div class="value">
 						{* If this is the original version *}
 						{if $firstPublication->getID() === $publication->getId()}
 							<span>{$firstPublication->getData('datePublished')|date_format:$dateFormatShort}</span>
@@ -280,13 +280,13 @@
 						{else}
 							<span>{translate key="submission.updatedOn" datePublished=$firstPublication->getData('datePublished')|date_format:$dateFormatShort dateUpdated=$publication->getData('datePublished')|date_format:$dateFormatShort}</span>
 						{/if}
-					</section>
-				</section>
+					</div>
+				</div>
 				{if count($article->getPublishedPublications()) > 1}
-					<section class="sub_item versions">
-						<section class="label">
+					<div class="sub_item versions">
+						<div class="label">
 							{translate key="submission.versions"}
-						</section>
+						</div>
 						<ul class="value">
 							{foreach from=array_reverse($article->getPublishedPublications()) item=iPublication}
 								{capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort versionId=$iPublication->getId()}{/capture}
@@ -301,7 +301,7 @@
 								</li>
 							{/foreach}
 						</ul>
-					</section>
+					</div>
 				{/if}
 			</section>
 			{/if}
@@ -309,19 +309,19 @@
 			{* How to cite *}
 			{if $citation}
 				<section class="item citation">
-					<section class="sub_item citation_display">
-						<section class="label">
+					<div class="sub_item citation_display">
+						<div class="label">
 							{translate key="submission.howToCite"}
-						</section>
-						<section class="value">
-							<section id="citationOutput" role="region" aria-live="polite">
+						</div>
+						<div class="value">
+							<div id="citationOutput" role="region" aria-live="polite">
 								{$citation}
-							</section>
-							<section class="citation_formats">
+							</div>
+							<div class="citation_formats">
 								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
 									{translate key="submission.howToCite.citationFormats"}
 								</button>
-								<section id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
 									<ul class="citation_formats_styles">
 										{foreach from=$citationStyles item="citationStyle"}
 											<li>
@@ -337,9 +337,9 @@
 										{/foreach}
 									</ul>
 									{if count($citationDownloads)}
-										<section class="label">
+										<div class="label">
 											{translate key="submission.howToCite.downloadCitation"}
-										</section>
+										</div>
 										<ul class="citation_formats_styles">
 											{foreach from=$citationDownloads item="citationDownload"}
 												<li>
@@ -351,10 +351,10 @@
 											{/foreach}
 										</ul>
 									{/if}
-								</section>
-							</section>
-						</section>
-					</section>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 			{/if}
 
@@ -363,27 +363,27 @@
 				<section class="item issue">
 
 					{if $issue}
-						<section class="sub_item">
-							<section class="label">
+						<div class="sub_item">
+							<div class="label">
 								{translate key="issue.issue"}
-							</section>
-							<section class="value">
+							</div>
+							<div class="value">
 								<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 									{$issue->getIssueIdentification()}
 								</a>
-							</section>
-						</section>
+							</div>
+						</div>
 					{/if}
 
 					{if $section}
-						<section class="sub_item">
-							<section class="label">
+						<div class="sub_item">
+							<div class="label">
 								{translate key="section.section"}
-							</section>
-							<section class="value">
+							</div>
+							<div class="value">
 								{$section->getLocalizedTitle()|escape}
-							</section>
-						</section>
+							</div>
+						</div>
 					{/if}
 				</section>
 			{/if}
@@ -396,10 +396,10 @@
 				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					<section class="item pubid">
-						<section class="label">
+						<div class="label">
 							{$pubIdPlugin->getPubIdDisplayType()|escape}
-						</section>
-						<section class="value">
+						</div>
+						<div class="value">
 							{if $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 								<a id="pub-id::{$pubIdPlugin->getPubIdType()|escape}" href="{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}">
 									{$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
@@ -407,7 +407,7 @@
 							{else}
 								{$pubId|escape}
 							{/if}
-						</section>
+						</div>
 					</section>
 				{/if}
 			{/foreach}
@@ -437,7 +437,7 @@
 
 			{call_hook name="Templates::Article::Details"}
 
-		</section><!-- .entry_details -->
-	</section><!-- .row -->
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
 
 </article>
