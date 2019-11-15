@@ -1058,11 +1058,13 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.submissions">Submission Events</message>
 	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
 	<message key="notification.type.public">Public Announcements</message>
+	<message key="notification.type.editorialReport">Statistics report summary.</message>
 	<message key="notification.savedIssueMetadata">Issue publication metadata saved.</message>
 	<message key="notification.type.editorAssignmentTask">A new article has been submitted to which an editor needs to be assigned.</message>
 	<message key="notification.type.assignProductionUser">Assign a user to create galleys using the Assign link in the Participants list.</message>
 	<message key="notification.type.awaitingRepresentations">Awaiting Galleys.</message>
 	<message key="notification.type.publicationScheduled">This submission has been scheduled for publication.</message>
+	<message key="notification.type.editorialReport.contents">This is a kind reminder for you to check your journal's health through the editorial report.</message>
 
 	<!--
 	 *

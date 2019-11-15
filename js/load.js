@@ -16,7 +16,8 @@ import SubmissionsListPanel from '@/components/ListPanel/submissions/Submissions
 import SelectListPanel from '@/components/SelectListPanel/SelectListPanel.vue';
 import SelectSubmissionsListPanel from '@/components/SelectListPanel/submissions/SelectSubmissionsListPanel.vue';
 import SelectReviewerListPanel from '@/components/SelectListPanel/users/SelectReviewerListPanel.vue';
-import Statistics from '@/components/Statistics/Statistics.vue';
+import StatisticsEditorial from '@/components/Statistics/StatisticsEditorial.vue';
+import StatisticsSubmissions from '@/components/Statistics/StatisticsSubmissions.vue';
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {
@@ -26,6 +27,7 @@ window.pkp = Object.assign(PkpLoad, {
 		SelectListPanel,
 		SelectSubmissionsListPanel,
 		SelectReviewerListPanel,
-		Statistics,
+		StatisticsEditorial,
+		StatisticsSubmissions,
 	},
 });

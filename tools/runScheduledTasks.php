@@ -32,5 +32,3 @@ class runScheduledTasks extends ScheduledTaskTool {
 
 $tool = new runScheduledTasks(isset($argv) ? $argv : array());
 $tool->execute();
-
-

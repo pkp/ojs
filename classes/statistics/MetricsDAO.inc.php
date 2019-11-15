@@ -20,10 +20,10 @@ class MetricsDAO extends PKPMetricsDAO {
 	/**
 	 * @copydoc PKPMetricsDAO::getMetrics()
 	 */
-	function &getMetrics($metricType, $columns = array(), $filters = array(), $orderBy = array(), $range = null, $nonAdditive = true) {
+	function &getMetrics($metricType, $columns = [], $filters = [], $orderBy = [], $range = null, $nonAdditive = true) {
 		// Translate the issue dimension to a generic one used in pkp library.
 		// Do not move this into foreach: https://github.com/pkp/pkp-lib/issues/1615
-		$worker = array(&$columns, &$filters, &$orderBy);
+		$worker = [&$columns, &$filters, &$orderBy];
 		foreach ($worker as &$parameter) { // Reference needed.
 			if ($parameter === $filters && array_key_exists(STATISTICS_DIMENSION_ISSUE_ID, $parameter)) {
 				$parameter[STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE] = ASSOC_TYPE_ISSUE;
@@ -81,7 +81,7 @@ class MetricsDAO extends PKPMetricsDAO {
 			}
 		}
 
-		return array($contextId, $sectionId, $assocObjType, $assocObjId, $submissionId, $representationId);
+		return [$contextId, $sectionId, $assocObjType, $assocObjId, $submissionId, $representationId];
 	}
 
 	/**
@@ -94,9 +94,8 @@ class MetricsDAO extends PKPMetricsDAO {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $contextId, true);
 		if ($publishedArticle) {
-			$returnArray = array(ASSOC_TYPE_ISSUE, $publishedArticle->getIssueId());
+			$returnArray = [ASSOC_TYPE_ISSUE, $publishedArticle->getIssueId()];
 		}
 		return $returnArray;
 	}
 }
-
