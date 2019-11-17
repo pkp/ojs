@@ -73,7 +73,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 
 		$workflowData = $templateMgr->getTemplateVars('workflowData');
 		$workflowData['components'][FORM_TITLE_ABSTRACT] = $titleAbstractForm->getConfig();
-		$workflowData['i18n']['schedulePublication'] = __('editor.article.schedulePublication');
+		$workflowData['i18n']['schedulePublication'] = __('editor.submission.schedulePublication');
 		$workflowData['i18n']['publish'] = __('publication.publish');
 		$workflowData['publishUrl'] = $publishUrl;
 		$workflowData['components']['publicationFormIds'] = [FORM_PUBLISH,
