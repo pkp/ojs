@@ -126,6 +126,34 @@
 									</ul>
 								</dropdown>
 							</span>
+							{if !$canAccessProduction}
+								<template slot="actions">
+									<pkp-button
+										v-if="workingPublication.status === getConstant('STATUS_QUEUED')"
+										ref="publish"
+										:label="submission.status === getConstant('STATUS_PUBLISHED') ? i18n.publish : i18n.schedulePublication"
+										@click="openPublish"
+									></pkp-button>
+									<pkp-button
+										v-else-if="workingPublication.status === getConstant('STATUS_SCHEDULED')"
+										label="{translate key="publication.unschedule"}"
+										:is-warnable="true"
+										@click="openUnpublish"
+									></pkp-button>
+									<pkp-button
+										v-else-if="workingPublication.status === getConstant('STATUS_PUBLISHED')"
+										label="{translate key="publication.unpublish"}"
+										:is-warnable="true"
+										@click="openUnpublish"
+									></pkp-button>
+									<pkp-button
+										v-if="canCreateNewVersion"
+										ref="createVersion"
+										label="{translate key="publication.createVersion"}"
+										@click="createVersion"
+									></pkp-button>
+								</template>
+							{/if}
 					</pkp-header>
 					<div
 						v-if="workingPublication.status === getConstant('STATUS_PUBLISHED')"

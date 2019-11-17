@@ -71,7 +71,7 @@
 	{* Notification that this is an old version *}
 	{if $currentPublication->getID() !== $publication->getId()}
 		<div class="cmp_notification notice">
-			{capture assign="latestVersionUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+			{capture assign="latestVersionUrl"}{url page="preprint" op="view" path=$preprint->getBestId()}{/capture}
 			{translate key="submission.outdatedVersion"
 				datePublished=$publication->getData('datePublished')|date_format:$dateFormatShort
 				urlRecentVersion=$latestVersionUrl|escape
@@ -156,7 +156,7 @@
 			{* Abstract *}
 			{if $publication->getLocalizedData('abstract')}
 				<div class="item abstract">
-					<h3 class="label">{translate key="preprint.abstract"}</h3>
+					<h3 class="label">{translate key="common.abstract"}</h3>
 					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
 				</div>
 			{/if}

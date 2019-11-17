@@ -90,7 +90,7 @@
 	{* Search results, finally! *}
 	<div class="search_results">
 		{iterate from=results item=result}
-			{include file="frontend/objects/article_summary.tpl" article=$result.publishedSubmission journal=$result.journal showDatePublished=true hideGalleys=true}
+			{include file="frontend/objects/preprint_summary.tpl" preprint=$result.publishedSubmission journal=$result.journal showDatePublished=true hideGalleys=true}
 		{/iterate}
 	</div>
 

@@ -39,7 +39,7 @@
 	{else}
 		{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
 	{/if}
-{/if}
+
 
 {* Don't be frightened. This is just a link *}
 <a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}" href="{url page=$page op="view" path=$path}"{if $labelledBy} aria-labelledby={$labelledBy}{/if}>

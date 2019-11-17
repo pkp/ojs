@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
+"PO-Revision-Date: 2019-09-30T11:58:35-07:00\n"
+"Language: \n"
+
+msgid "plugins.themes.default.name"
+msgstr "Tema Padrão"
+
+msgid "plugins.themes.default.description"
+msgstr "Este tema implementa o tema padrão."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Fonte"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Escolha uma combinação de fontes adequada a esta revista."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr "Noto Sans: Uma fonte digital-nativa projetada pelo Google para suporte extensivo de idiomas."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Uma variante serif da fonte digital-nativa do Google."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif / Noto Sans: Um complemento com cabeçalhos serif e corpo do texto sem serif."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr "Noto Serif / Noto Sans: Um complemento com cabeçalhos e corpo do texto sem serif."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Uma fonte sem-serif popular e moderna."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Uma fonte ampla de serifa boa para ler on-line."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr "Lora / Open Sans: Um complemento com cabeçalhos serif e corpo do texto sem serif."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Cor"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Escolha uma cor para o cabeçalho."

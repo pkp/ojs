@@ -25,6 +25,9 @@ class PreprintHandler extends Handler {
 	/** submission associated with the request **/
 	var $preprint;
 
+	/** publication associated with the request **/
+	var $publication;
+
 	/** galley associated with the request **/
 	var $galley;
 
@@ -56,20 +59,22 @@ class PreprintHandler extends Handler {
 	 * @param $args array Arguments list
 	 */
 	function initialize($request, $args = array()) {
-		$urlPath = isset($args[0]) ? $args[0] : 0;
+		$urlPath = empty($args) ? 0 : array_shift($args);
 
 		// Look for a publication with a publisher-id that matches the url path
-		$publications = Services::get('publication')->getMany([
+		$publicationsIterator = Services::get('publication')->getMany([
 			'contextIds' => $request->getContext()->getId(),
 			'publisherIds' => $urlPath,
 		]);
-		if (!empty($publications)) {
-			$submissionId = $publications[0]->getData('submissionId');
+		$publicationWithMatchingUrl = null;
+		if (count($publicationsIterator)) {
+			$publicationWithMatchingUrl = $publicationsIterator->current();
+			$submissionId = $publicationWithMatchingUrl->getData('submissionId');
 		} elseif (ctype_digit($urlPath)) {
 			$submissionId = $urlPath;
 		}
 
-		if (!$submissionId) {
+		if (!isset($submissionId)) {
 			$request->getDispatcher()->handle404();
 		}
 
@@ -82,8 +87,8 @@ class PreprintHandler extends Handler {
 		// If we retrieved the submission from the publisher-id and it no longer
 		// matches the publisher-id of the current publication, redirect to the
 		// URL for the current publication
-		if ($urlPath && !empty($publications) &&
-				$submission->getCurrentPublication()->getData('pub-id::publisher-id') !== $publications[0]->getData('pub-id::publisher-id')) {
+		if ($urlPath && $publicationWithMatchingUrl &&
+				$submission->getCurrentPublication()->getData('pub-id::publisher-id') !== $publicationWithMatchingUrl->getData('pub-id::publisher-id')) {
 			$newUrlPath = $submission->getCurrentPublication()->getData('pub-id::publisher-id');
 			if (!$newUrlPath) {
 				$newUrlPath = $submission->getId();
@@ -95,18 +100,33 @@ class PreprintHandler extends Handler {
 
 		$this->preprint = $submission;
 
-		if (in_array($request->getRequestedOp(), ['view', 'download'])) {
-			$galleyId = isset($args[1]) ? $args[1] : 0;
-			if ($galleyId) {
-				$this->galley = DAORegistry::getDAO('ArticleGalleyDAO')->getByBestGalleyId($galleyId, $submission->getCurrentPublication()->getId());
-				if (!$this->galley) {
-					$request->getDispatcher()->handle404();
+		// Get the requested publication or if none requested get the current publication
+		$subPath = empty($args) ? 0 : array_shift($args);
+		if ($subPath === 'version') {
+			$publicationId = (int) array_shift($args);
+			$galleyId = empty($args) ? 0 : array_shift($args);
+			foreach ((array) $this->preprint->getData('publications') as $publication) {
+				if ($publication->getId() === $publicationId) {
+					$this->publication = $publication;
 				}
+			}
+			if (!$this->publication) {
+				$request->getDispatcher()->handle404();
+			}
+		} else {
+			$this->publication = $this->preprint->getCurrentPublication();
+			$galleyId = $subPath;
+		}
+
+		if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
+			$this->galley = DAORegistry::getDAO('ArticleGalleyDAO')->getByBestGalleyId($galleyId, $this->publication->getId());
+			if (!$this->galley) {
+				$request->getDispatcher()->handle404();
 			}
 		}
 
-		if ($submission->getCurrentPublication()->getData('issueId')) {
-			$this->issue = DAORegistry::getDAO('IssueDAO')->getById($submission->getCurrentPublication()->getData('issueId'), $submission->getData('contextId'), true);
+		if ($this->publication->getData('issueId')) {
+			$this->issue = DAORegistry::getDAO('IssueDAO')->getById($this->publication->getData('issueId'), $submission->getData('contextId'), true);
 		}
 	}
 
@@ -117,15 +137,28 @@ class PreprintHandler extends Handler {
 	 */
 	function view($args, $request) {
 		$preprintId = array_shift($args);
-		$galleyId = array_shift($args);
-		$fileId = array_shift($args);
+		$subPath = array_shift($args);
+
+		if ($subPath === 'version') {
+			$publicationId = array_shift($args);
+			$galleyId = array_shift($args);
+			$fileId = array_shift($args);
+		} else {
+			$galleyId = $subPath;
+			$fileId = array_shift($args);
+		}
 
 		$context = $request->getContext();
 		$user = $request->getUser();
 		$preprint = $this->preprint;
+		$publication = $this->publication;
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'preprint' => $preprint,
+			'publication' => $publication,
+			'firstPublication' => reset($preprint->getData('publications')),
+			'currentPublication' => $preprint->getCurrentPublication(),
+			'galley' => $this->galley,
 			'fileId' => $fileId,
 		));
 		$this->setupTemplate($request);
@@ -133,12 +166,18 @@ class PreprintHandler extends Handler {
 		// TODO: this defaults to the current publication but should
 		// retrieve the publication requested from the URL if it is
 		// passed as an arg
-		$requestedPublication = $this->preprint->getCurrentPublication();
+		$templateMgr->assign([
+			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
+			'publication' => $publication,
+			'section' => DAORegistry::getDAO('SectionDAO')->getById($publication->getData('sectionId')),
+		]);
 
-		if (!$this->userCanViewGalley($request, $preprint->getId(), $galleyId)) fatalError('Cannot view galley.');
+		if ($this->galley && !$this->userCanViewGalley($request, $preprint->getId(), $this->galley->getId())) {
+			fatalError('Cannot view galley.');
+		}
 
 		// Get galleys sorted into primary and supplementary groups
-		$galleys = $preprint->getGalleys();
+		$galleys = $publication->getData('galleys');
 		$primaryGalleys = array();
 		$supplementaryGalleys = array();
 		if ($galleys) {
@@ -171,8 +210,8 @@ class PreprintHandler extends Handler {
 		));
 
 		// Citations
-		if ($requestedPublication->getData('citationsRaw')) {
-			$parsedCitations = DAORegistry::getDAO('CitationDAO')->getByPublicationId($requestedPublication->getId());
+		if ($publication->getData('citationsRaw')) {
+			$parsedCitations = DAORegistry::getDAO('CitationDAO')->getByPublicationId($publication->getId());
 			$templateMgr->assign([
 				'parsedCitations' => $parsedCitations->toArray(),
 			]);
@@ -181,34 +220,41 @@ class PreprintHandler extends Handler {
 		// Assign deprecated values to the template manager for
 		// compatibility with older themes
 		$templateMgr->assign([
-			'section' => DAORegistry::getDAO('SectionDAO')->getById($requestedPublication->getData('sectionId')),
 			'licenseTerms' => $context->getLocalizedData('licenseTerms'),
-			'licenseUrl' => $requestedPublication->getData('licenseUrl'),
-			'ccLicenseBadge' => Application::get()->getCCLicenseBadge($requestedPublication->getData('licenseUrl')),
-			'copyrightHolder' => $requestedPublication->getData('copyrightHolder'),
-			'copyrightYear' => $requestedPublication->getData('copyrightYear'),
+			'licenseUrl' => $publication->getData('licenseUrl'),
+			'copyrightHolder' => $publication->getData('copyrightHolder'),
+			'copyrightYear' => $publication->getData('copyrightYear'),
 			'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
-			'keywords' => $requestedPublication->getData('keywords'),
+			'keywords' => $publication->getData('keywords'),
 		]);
 
 		// Fetch and assign the galley to the template
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = $galleyDao->getByBestGalleyId($galleyId, $preprint->getCurrentPublication()->getId());
-		if ($galley && $galley->getRemoteURL()) $request->redirectUrl($galley->getRemoteURL());
+		if ($this->galley && $this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 
-		if (!$galley) {
+		if (empty($this->galley)) {
 			// No galley: Prepare the preprint landing page.
-			$templateMgr->assign('hasAccess', true);
 
-			if (!HookRegistry::call('PreprintHandler::view', array(&$request, &$issue, &$preprint))) {
+			// Ask robots not to index outdated versions and point to the canonical url for the latest version
+			if ($publication->getId() !== $preprint->getCurrentPublication()->getId()) {
+				$templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
+				$url = $request->getDispatcher()->url($request, ROUTE_PAGE, null, 'preprint', 'view', $preprint->getBestId());
+				$templateMgr->addHeader('canonical', '<link rel="canonical" href="' . $url . '">');
+			}
+
+			if (!HookRegistry::call('PreprintHandler::view', array(&$request, &$issue, &$preprint, $publication))) {
 				return $templateMgr->display('frontend/pages/preprint.tpl');
 			}
 		} else {
-			// Galley: Prepare the galley file download.
-			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$issue, &$galley, &$preprint))) {
-				$request->redirect(null, null, 'download', array($preprint->getId(), $galleyId));
+
+			// Ask robots not to index outdated versions
+			if ($publication->getId() !== $preprint->getCurrentPublication()->getId()) {
+				$templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
 			}
 
+			// Galley: Prepare the galley file download.
+			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$issue, &$this->galley, &$preprint, $publication))) {
+				$request->redirect(null, null, 'download', array($preprint->getId(), $this->galley->getId()));
+			}
 		}
 	}
 
