@@ -21,7 +21,8 @@
 	<group roleId="0x00000011" stages="1,3,4,5" name="default.groups.name.sectionEditor" plural="default.groups.plural.sectionEditor" abbrev="default.groups.abbrev.sectionEditor" />
 
 	<!-- Author Role -->
-	<group roleId="0x00010000" stages="1,3,4,5" name="default.groups.name.author" plural="default.groups.plural.author" abbrev="default.groups.abbrev.author" permitSelfRegistration="true" />
+	<group roleId="0x00010000" stages="1,3,4,5" name="default.groups.name.author" plural="default.groups.plural.author" abbrev="default.groups.abbrev.author" permitSelfRegistration="true" permitMetadataEdit="true" />
+
 	<group roleId="0x00010000" stages="1,3,4,5" name="default.groups.name.translator" plural="default.groups.plural.translator" abbrev="default.groups.abbrev.translator" />
 
 	<!-- Reader Role -->

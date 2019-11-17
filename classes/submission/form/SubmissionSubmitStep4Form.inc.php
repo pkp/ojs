@@ -37,7 +37,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 
 		$submission = $this->submission;
 
-		// Move the submission to production stage 
+		// PPS: Move the submission to production stage 
 		$submissionDao = Application::getSubmissionDAO();
 		$submission->setStageId(WORKFLOW_STAGE_ID_PRODUCTION);
 		$submissionDao->updateObject($submission);

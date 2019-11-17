@@ -124,7 +124,7 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 						$request,
 						ROUTE_PAGE,
 						$context->getPath(),
-						'article',
+						'preprint',
 						'view',
 						$submission->getBestId()
 					);
