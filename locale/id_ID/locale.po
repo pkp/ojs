@@ -1,0 +1,1995 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:25+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Jurnal:"
+
+msgid "context.select"
+msgstr "Lihat jurnal lain:"
+
+msgid "navigation.categories"
+msgstr "Kategori"
+
+msgid "navigation.categories.browse"
+msgstr "Telusuri"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klik di ikon untuk mengisi form review."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Isilah kolom berikut."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Apakah Anda yakin tugas ini telah selesai? Anda mungkin tidak bisa mengubahnya lagi."
+
+msgid "common.payment"
+msgstr "Pembayaran"
+
+msgid "common.payments"
+msgstr "Pembayaran"
+
+msgid "common.homePageHeader.altText"
+msgstr "Header Beranda"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Gambar Beranda Jurnal"
+
+msgid "navigation.journalHelp"
+msgstr "Bantuan Jurnal"
+
+msgid "navigation.current"
+msgstr "Terkini"
+
+msgid "navigation.otherJournals"
+msgstr "Jurnal Lain"
+
+msgid "navigation.browseByIssue"
+msgstr "Berdasarkan Terbitan"
+
+msgid "navigation.browseByAuthor"
+msgstr "Berdasarkan Penulis"
+
+msgid "navigation.infoForAuthors"
+msgstr "Untuk Penulis"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Untuk Pustakawan"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Panduan Konflik Kepentingan"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informasi untuk Penulis"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informasi untuk Pustakawan"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Belum Ditugaskan"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Belum Ditugaskan"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Naskah dalam Proses Edit"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Sedang Diedit"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Naskah dalam Proses Review"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Sedang Direview"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arsip"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arsip"
+
+msgid "common.queue.long.active"
+msgstr "Aktif"
+
+msgid "common.queue.short.active"
+msgstr "Aktif"
+
+msgid "common.queue.long.completed"
+msgstr "Arsip"
+
+msgid "common.queue.short.completed"
+msgstr "Arsip"
+
+msgid "section.section"
+msgstr "Bagian"
+
+msgid "section.sections"
+msgstr "Bagian"
+
+msgid "section.title"
+msgstr "Nama Bagian"
+
+msgid "section.abbreviation"
+msgstr "Singkatan"
+
+msgid "section.abbreviation.example"
+msgstr "(Sebagai contoh, Artikel=ART)"
+
+msgid "article.article"
+msgstr "Artikel"
+
+msgid "article.articles"
+msgstr "Artikel"
+
+msgid "common.publication"
+msgstr "Artikel"
+
+msgid "common.publications"
+msgstr "Artikel"
+
+msgid "article.submissionId"
+msgstr "ID Naskah"
+
+msgid "article.title"
+msgstr "Judul"
+
+msgid "article.authors"
+msgstr "Penulis"
+
+msgid "article.indexingInformation"
+msgstr "Informasi Pengindeksan"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Bagian Jurnal"
+
+msgid "article.file"
+msgstr "File"
+
+msgid "article.suppFile"
+msgstr "File Tambahan"
+
+msgid "article.suppFiles"
+msgstr "File Tambahan"
+
+msgid "article.suppFilesAbbrev"
+msgstr "File Tambahan"
+
+msgid "article.discipline"
+msgstr "Disiplin dan Sub-disiplin Ilmu"
+
+msgid "article.subject"
+msgstr "Kata Kunci"
+
+msgid "article.coverage"
+msgstr "Cakupan"
+
+msgid "article.type"
+msgstr "Tipe, Metode, atau Pendekatan"
+
+msgid "article.language"
+msgstr "Bahasa"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Komentar Penulis"
+
+msgid "article.submission"
+msgstr "Naskah"
+
+msgid "article.submissions"
+msgstr "Naskah"
+
+msgid "article.details"
+msgstr "Rincian"
+
+msgid "article.abstract"
+msgstr "Abstrak"
+
+msgid "article.coverPage.altText"
+msgstr "Gambar Sampul"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Open Access"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Akses Terbatas"
+
+msgid "article.comments.sectionDefault"
+msgstr "Default"
+
+msgid "article.comments.disable"
+msgstr "Matikan"
+
+msgid "article.comments.enable"
+msgstr "Aktifkan"
+
+msgid "article.fontSize"
+msgstr "Ukuran Huruf"
+
+msgid "article.fontSize.small.altText"
+msgstr "Kecil"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Sedang"
+
+msgid "article.fontSize.large.altText"
+msgstr "Besar"
+
+msgid "article.return"
+msgstr "Kembali ke Rincian Artikel"
+
+msgid "submission.submissionEditing"
+msgstr "Pengeditan Naskah"
+
+msgid "submission.changeSection"
+msgstr "Ubah ke"
+
+msgid "submission.sent"
+msgstr "Terkirim"
+
+msgid "submission.editorDecision"
+msgstr "Keputusan Editor"
+
+msgid "submission.round"
+msgstr "Ronde&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Review Editor"
+
+msgid "submission.notifyAuthor"
+msgstr "Beritahu Penulis"
+
+msgid "submission.notifyEditor"
+msgstr "Beritahu Editor"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Rekam Email Editor/Penulis"
+
+msgid "submission.reviewersVersion"
+msgstr "Versi Anotasi Reviewer"
+
+msgid "submission.postReviewVersion"
+msgstr "Versi Pasca-review"
+
+msgid "submission.editorVersion"
+msgstr "Versi Editor"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Versi Revisi Penulis"
+
+msgid "submission.authorVersion"
+msgstr "Versi Penulis"
+
+msgid "submission.copyediting"
+msgstr "Proses Copyedit"
+
+msgid "submission.copyedit"
+msgstr "Copyedit"
+
+msgid "submission.proofreading"
+msgstr "Proses Proofread"
+
+msgid "submission.scheduling"
+msgstr "Penjadwalan"
+
+msgid "submission.scheduledIn"
+msgstr "Dijadwalkan untuk diterbitkan di {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "Bag"
+
+msgid "submissions.step1"
+msgstr "Langkah 1"
+
+msgid "submissions.step3"
+msgstr "Langkah 3"
+
+msgid "submissions.queuedReview"
+msgstr "Dalam Review"
+
+msgid "submissions.published"
+msgstr "Diterbitkan"
+
+msgid "submissions.initial"
+msgstr "Awal"
+
+msgid "submissions.proofread"
+msgstr "Proofread"
+
+msgid "submissions.initialProof"
+msgstr "Proof Awal"
+
+msgid "submissions.postAuthor"
+msgstr "Pasca-Penulis"
+
+msgid "submissions.reviewRound"
+msgstr "Ronde Review"
+
+msgid "submissions.proof"
+msgstr "Proof"
+
+msgid "submissions.editorDecision"
+msgstr "Keputusan Editor"
+
+msgid "submissions.editorRuling"
+msgstr "Aturan Editor"
+
+msgid "submission.eventLog"
+msgstr "Log Kejadian"
+
+msgid "submissions.copyeditComplete"
+msgstr "Sudah Copyedit"
+
+msgid "submissions.layoutComplete"
+msgstr "Sudah Edit Layout"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Sudah Proofread"
+
+msgid "journal.currentIssue"
+msgstr "Terbitan Terkini"
+
+msgid "context.contexts"
+msgstr "Jurnal"
+
+msgid "journal.path"
+msgstr "Path"
+
+msgid "context.context"
+msgstr "Jurnal"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Lihat semua terbitan"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Ikutkan pengguna tanpa peran di jurnal ini."
+
+msgid "user.profile.profileImage"
+msgstr "Foto Profil"
+
+msgid "user.showAllJournals"
+msgstr "Tunjukkan jurnal saya"
+
+msgid "user.registerForOtherJournals"
+msgstr "Daftar ke jurnal Lain"
+
+msgid "user.reviewerPrompt"
+msgstr "Apakah Anda bersedia mereview naskah yang diserahkan ke jurnal ini?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ya, daftarkan saya sebagai {$userGroup}."
+
+msgid "user.register.contextsPrompt"
+msgstr "Jurnal mana saja yang Anda pilih?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Mendaftar ke peran berikut."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Jika Anda meminta peran sebagai reviewer, mohon sebutkan subjek yang Anda minati."
+
+msgid "user.myJournals"
+msgstr "Jurnal Saya"
+
+msgid "user.manageMySubscriptions"
+msgstr "Atur Langganan Saya"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Akun Anda tidak terdaftar ke jurnal apapun. Pilihlah satu jurnal:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Akun Anda sekarang tidak mempunyai peran apapun di jurnal ini.  Mohon tetapkan pilihan berikut:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Penyerahan Naskah"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Penyerahan Naskah: Pendaftaran penulis belum dibuka."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Pendaftaran Reviewer"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Pendaftaran Reviewer: Pendaftaran reviewer belum dibuka."
+
+msgid "user.role.manager"
+msgstr "Manajer Jurnal"
+
+msgid "user.role.subEditor"
+msgstr "Editor Bagian"
+
+msgid "user.role.subscriptionManager"
+msgstr "Manajer Langganan"
+
+msgid "user.role.managers"
+msgstr "Manajer Jurnal"
+
+msgid "user.role.subEditors"
+msgstr "Editor Bagian"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Manajer Langganan"
+
+msgid "user.role.journalAssistant"
+msgstr "Asisten Jurnal"
+
+msgid "user.role.journalAssistants"
+msgstr "Asisten Jurnal"
+
+msgid "issue.issue"
+msgstr "Terbitan"
+
+msgid "issue.issues"
+msgstr "Terbitan"
+
+msgid "issue.title"
+msgstr "Judul"
+
+msgid "issue.volume"
+msgstr "Volume"
+
+msgid "issue.number"
+msgstr "Nomor"
+
+msgid "issue.vol"
+msgstr "Vol"
+
+msgid "issue.no"
+msgstr "No"
+
+msgid "issue.year"
+msgstr "Tahun"
+
+msgid "issue.noIssues"
+msgstr "Tidak ada Terbitan"
+
+msgid "issue.toc"
+msgstr "Daftar Isi"
+
+msgid "issue.abstract"
+msgstr "Abstrak"
+
+msgid "issue.coverPage.altText"
+msgstr "Halaman Sampul"
+
+msgid "issue.fullIssue"
+msgstr "Terbitan Utuh"
+
+msgid "issue.nonpdf.title"
+msgstr "Unduhan Terbitan"
+
+msgid "issue.viewIssue"
+msgstr "Lihat Terbitan"
+
+msgid "issue.return"
+msgstr "Kembali ke Rincian Terbitan"
+
+msgid "subscriptionTypes.currency"
+msgstr "Mata Uang"
+
+msgid "subscriptionTypes.year"
+msgstr "Tahun"
+
+msgid "subscriptionTypes.years"
+msgstr "Tahun"
+
+msgid "subscriptionTypes.month"
+msgstr "Bulan"
+
+msgid "subscriptionTypes.months"
+msgstr "Bulan"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Abadi"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Cetak"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Cetak dan Online"
+
+msgid "subscriptions.inactive"
+msgstr "Tidak Aktif"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Aktif"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Butuh Informasi"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Butuh Persetujuan"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Menunggu Pembayaran Manual"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Menunggu Pembayaran Online"
+
+msgid "subscriptions.status.other"
+msgstr "Lainnya, Lihat Catatan"
+
+msgid "subscriptions.individualDescription"
+msgstr "Langganan individu perlu login untuk mengakses isi langganan."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Langganan institusi tidak perlu login. Domain pengguna dan/ atau alamat IP digunakan untuk menyediakan akses ke isi langganan."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Catatan:</strong> Langganan institusi yang dibeli secara online memerlukan persetujuan domain dan IP sebelum langganan diaktifkan."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Penyerahan Naskah"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Naskah diserahkan"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Naskah masuk ke penjadwalan"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Naskah dialokasikan ke terbitan"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Naskah diterbitkan"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revisi Penulis diserahkan"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Revisi Penulis telah diperbaharui"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor ditugaskan"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor batal ditugaskan untuk naskah"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Keputusan Editor diserahkan"
+
+msgid "submission.event.editor.editorFile"
+msgstr "File Editor diperbaharui"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Naskah dimasukkan ke arsip"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Naskah dikeluarkan dari arsip"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Copyeditor ditugaskan"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Copyeditor batal ditugaskan untuk naskah"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Copyedit dimulai"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Revisi Copyeditor diperbaharui"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Copyedit awal selesai"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Copyedit final selesai"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "File Copyedit diperbaharui"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Proofreader ditugaskan"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Proofreader batal ditugaskan"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Proofread dimulai"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Revisi proofreader diperbaharui"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Proofread selesai"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Layout Editor ditugaskan"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Layout Editor batal ditugaskan"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Layout dimulai"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Galley layout diperbaharui"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Layout selesai"
+
+msgid "reader.subscribersOnly"
+msgstr "Khusus Pelanggan"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Untuk akses item, login ke jurnal."
+
+msgid "reader.openAccess"
+msgstr "Open Access"
+
+msgid "reader.subscriptionAccess"
+msgstr "Perlu Langganan"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Perlu Langganan atau Biaya Akses"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komentar di artikel ini"
+
+msgid "comments.authenticated"
+msgstr "oleh <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Atur berdasar"
+
+msgid "search.results.orderBy.article"
+msgstr "Judul"
+
+msgid "search.results.orderBy.author"
+msgstr "Penulis"
+
+msgid "search.results.orderBy.date"
+msgstr "Tanggal Publikasi"
+
+msgid "search.results.orderBy.issue"
+msgstr "Terbitan"
+
+msgid "search.results.orderBy.journal"
+msgstr "Jurnal"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularitas (Sepanjang Masa)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularitas (Bulan Lalu)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevansi"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascending"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descending"
+
+msgid "search.results.similarDocuments"
+msgstr "dokumen serupa"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Menetapkan sumber otentikasi selain OJS akan menimbulkan dampak berikut:</p>\n"
+"<ul>\n"
+"\t<li>Jika pengguna hendak mendaftar akun baru ke situs ini dengan username yang telah ada di sumber otentikasi (namun belum ada di databasee OJS), pendaftaran hanya akan berhasil bila menggunakan password yang sama untuk username di sumber tersebut.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>Catatan!</h4>\n"
+"\t<p>Sistem tidak dapat secara otomatis menimpa file konfigurasi. Untuk menerapkan perubahan konfigurasi Anda, Anda harus membuka <tt>config.inc.php</tt> di text editor yang cocok dan mengganti isinya dengan isi text field di bawah ini.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Manajemen Langganan"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Langganan Pribadi"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Langganan Institusi"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Jenis Langganan"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Plugin Galley Artikel"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Plugin Galley Artikel memungkinkan ditampilkannya tipe dokumen yang berbeda sebagai galley artikel."
+
+msgid "plugins.categories.auth.description"
+msgstr "Plugin Otorisasi memungkinkan Open Journal Systems mendelegasikan otentikasi pengguna ke sistem eksternal, seperti server LDAP."
+
+msgid "plugins.categories.generic.description"
+msgstr "Plugin Generik digunakan untuk menyediakan fungsi tambahan bagi Open Journal Systems melalui berbagai cara yang belum disediakan oleh plugin lainnya."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Contoh Pemberitahuan Pembuatan Creative Commons Copyright</h3>\n"
+"<h4>1. Contoh Kebijakan Jurnal yang Menawarkan Open Access</h4>\n"
+"Penulis yang mempublikasikan naskahnya di jurnal ini menyetujui hal-hal berikut:\n"
+"<ol type=\"a\">\n"
+"\t<li>Hak cipta tetap pada penulis,  penulis memberikan kepada jurnal hak penerbitan pertama dan sekaligus melisensi karyanya mengikuti <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> yang mengizinkan orang lain untuk berbagi karya dengan penghargaan terhadap hak kepenulisan dan penerbitan pertama di jurnal ini.</li>\n"
+"\t<li>Penulis bisa mengikuti kontrak tambahan lain untuk distribusi non-ekslusif bagi karyanya tersebut (contoh: mempostingnya ke repositori institusi atau menerbitkannya dalam sebuah buku), dengan penghargaan terhadap penerbitan pertama di jurnal ini.</li>\n"
+"\t<li>Penulis diizinkan dan didorong untuk mem-posting karya mereka online (contoh: di repositori institusi atau di website mereka) sebelum dan selama proses penyerahan, karena dapat mengarahkan ke pertukaran produktif, seperti halnya sitiran yang lebih awal dan lebih banyak dari karya yang diterbitkan. (Lihat <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2.  Contoh Kebijakan Jurnal yang Menawarkan Delayed Open Access</h4>\n"
+"Penulis yang mempublikasikan naskahnya di jurnal ini menyetujui hal-hal berikut:\n"
+"<ol type=\"a\">\n"
+"\t<li>Hak cipta tetap pada penulis,  penulis memberikan kepada jurnal hak penerbitan pertama dan [TENTUKAN KURUN WAKTU] setelah penerbitan untuk melisensi karyanya mengikuti <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> yang mengizinkan orang lain untuk berbagi karya dengan penghargaan terhadap hak kepenulisan dan penerbitan pertama di jurnal ini.</li>\n"
+"\t<li>Penulis bisa mengikuti kontrak tambahan lain untuk distribusi non-ekslusif bagi karyanya tersebut (contoh: mempostingnya ke repositori institusi atau menerbitkannya dalam sebuah buku), dengan penghargaan terhadap penerbitan pertama di jurnal ini.</li>\n"
+"\t<li>Penulis diizinkan dan didorong untuk mem-posting karya mereka online (contoh: di repositori institusi atau di website mereka) sebelum dan selama proses penyerahan, karena dapat mengarahkan ke pertukaran produktif, seperti halnya sitiran yang lebih awal dan lebih banyak dari karya yang diterbitkan. (Lihat <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Langkah: Antrian Penyerahan Naskah &gt; Review Naskah &gt; Pengeditan Naskah &gt; Daftar Isi.<br /><br />\n"
+"Pilih model untuk menangani aspek-aspek proses editorial ini. (Untuk menunjuk Editor Pelaksana dan Editor Bagian, lihat menu Editor di Manajemen Jurnal)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Untuk memudahkan pembaca menemukan versi online yang disitasi seorang penulis, terdapat pilihan berikut.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Tambahkan Alat Baca</strong><p>Manajer Jurnal dapat menambahkan pilihan \"Cari Referensi\" ke Alat Baca yang menyertai naskah yang diterbitkan, sehingga pembaca dapat mengetikkan judul referensi dan mencari di pangkalan data publikasi ilmiah yang telah dipilih.</p></li>\n"
+"\t<li><strong>Berikan Tautan di Daftar Referensi</strong><p>Layout Editor dapat menambahkan tautan ke referensi yang dapat ditemukan online dengan mengikuti petunjuk berikut (dapat diedit).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Nonaktifkan pengguna ini? Pengguna tidak akan bisa login ke sistem.\n"
+"\n"
+"Anda dapat memberi alasan penonaktifannya kepada pengguna."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Maaf, Anda tidak mempunya hak administratif pada pengguna ini. Hal ini mungkin karena:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Pengguna adalah administrator situs</li>\n"
+"\t\t\t<li>Pengguna aktif di jurnal yang tidak Anda kelola</li>\n"
+"\t\t</ul>\n"
+"\tTugas ini harus dilakukan oleh administrator situs.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Item yang ditandai menunjukkan perlu dilakukan tindakan oleh editor, dengan label sebagai berikut:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Seorang reviewer telah ditugaskan namun belum diberitahu via email</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Semua reviewer telah mengumpulkan hasil review beserta komentarnya namun belum ada keputusan</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Penulis telah mengunggah naskah yang telah direvisi</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Reviewer telah melampaui tenggat konfirmasi undangan peer review</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Reviewer telah melampaui tenggat penyelesaian review</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Tenggat\" dicatat ketika reviewer menerima permohonan untuk mereview; ini menunjukkan jumlah minggu sebelum tanggal tenggat atau (-) minggu setelah tenggat terlampaui.</li>\n"
+"\t</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Item yang ditandai menunjukkan perlu dilakukan tindakan oleh editor, dengan label sebagai berikut:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Perlu tindakan di tahap copyediting</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Perlu tindakan di tahap layout editing</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Perlu tindakan di tahap proofreading</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Tugas Editorial Aktif"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Tugas Editorial Selesai"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Tidak ada naskah ditugaskan."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Memberitahu lagi copy editor ini akan memulai ulang tugas mereka. Apakah Anda yakin ingin melakukannya?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Memberitahu lagi penulis ini akan memulai ulang tugas mereka. Apakah Anda yakin ingin melakukannya?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Memberitahu lagi editor layout ini kan memulai ulang tugas mereka. Apakah Anda yakin ingin melakukannya?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Memberitahu lagi proofreader ini akan memulai ulang tugas mereka. Apakah Anda yakin ingin melakukannya?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Penyesalan"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Penyesalan Reviewer, Pembatalan & Ronde sebelumnya"
+
+msgid "sectionEditor.regrets"
+msgstr "Penyesalan"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Lihat penyesalan, Pembatalan, Ronde sebelumnya"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Peer Review, Ronde {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Keputusan Editor, Ronde {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Penyesalan Reviewer & Pembatalan"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Penyesalan"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Hasil"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Jadikan Pengguna sebagai Reviewer"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Buat Reviewer Baru"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Tugas Editorial Aktif"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Tugas Editorial yang telah selesai"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Tidak ada tugas editorial aktif."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Tugas Pengeditan Layout"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Unggah format galley"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Ganti File"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Unggah File Tambahan"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Format gambar invalid. Format yang diterima adalah .gif, .jpg, dan .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Galley ini tersedia di situs luar."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL pranala luar"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artikel Review Tertunda"
+
+msgid "reviewer.completedReviews"
+msgstr "Selesai"
+
+msgid "reviewer.averageQuality"
+msgstr "Penilaian"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "File untuk direview"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Beritahu Editor"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Akan melakukan review"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Tidak bisa melakukan review"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Naskah hanya dapat diakses jika reviewer bersedia mereview"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor Penyerahan"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Ketik atau tempel komentar review di sini"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor Untuk Dimasukkan"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Kirim Pengingat"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Rekomendasi"
+
+msgid "reviewer.article.submitReview"
+msgstr "Serahkan Review kepada Editor"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Komentar"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "File yang diunggah"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versi yang diunggah reviewer"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr " (Jika Anda ingin menambahkan anotasi pada file, untuk editor, simpan di hard drive dan gunakan Telusur/Unggah.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Permintaan Editor"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Respon Anda"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Review Dikumpulkan"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Tenggat Review"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Terima Naskah"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Perlu Revisi"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Kirim Ulang untuk Review"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Kirim Ulang di Lain Tempat"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Tolak Naskah"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Lihat Komentar"
+
+msgid "reviewer.article.schedule"
+msgstr "Jadwal"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Naskah untuk Direview"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Jadwal Review"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Langkah-langkah Review"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Panduan Reviewer"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Panduan Review akan memberi Reviewer kriteria untuk menilai kelayakan naskah untuk diterbitkan, dan dapat mencakup instruksi khusus apapun untuk menyiapkan review yang efektif. Dalam melakukan review, reviewer dihadapkan dengan dua kotak teks terbuka, yang pertama \"untuk penulis dan editor\", dan yang kedua \"untuk editor\". Sebagai alternatif, manajer jurnal dapat membuat form peer review di bawah Form Review. Dalam semua kasus, editor akan mempunyai pilihan termasuk menyertakan review dalam korespondensi dengan penulis."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Beritahu editor penyerahan"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "apakah Anda akan melakukan review."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Jika Anda akan melakukan review, lihat Panduan Reviewer di bawah ini."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Klik di nama file untuk mengunduh dan mereview (di layar atau dengan mencetak) file yang berkaitan dengan naskah ini."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Sebutkan ada tidaknya konflik kepentingan Anda dengan penelitian ini (lihat<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Konflik Kepentingan"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Klik di ikon untuk memasukkan review Anda terhadap naskah ini."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Sebagai tambahan, Anda dapat mengunggah file untuk menjadi acuan editor dan/atau penulis."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Pilih rekomendasi dan serahkan hasil review untuk menyelesaikan proses. Anda harus memasukkan review atau mengunggah file sebelum memilih rekomendasi."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Tetapkan atau atur rekomendasi reviewer."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Tidak ada rekomendasi dipilih. Anda harus memilih satu rekomendasi untuk diserahkan."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Saat Anda sudah menyimpan keputusan, Anda tidak akan bisa membuat perubahan untuk review ini. Apakah Anda yakin untuk melanjutkan?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "File untuk C/E"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "File Copyeditor"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "File Copyeditor"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Tidak Ada Penugasan Proofreading"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Untuk mengunggah naskah ke jurnal, lakukan langkah-langkah berikut.</p>\n"
+"<ol>\n"
+"<li>Pada halaman ini, klik Telusuri (atau Pilih File) yang akan membuka jendela Pilih File untuk mengambil file dari hard drive komputer Anda.</li>\n"
+"<li>Cari dan pilih file yang Anda hendak Anda kirim.</li>\n"
+"<li>Klik tombol Buka pada jendela Pilih File, yang akan menempatkan nama file pada halaman ini.</li>\n"
+"<li>Klik tombol Unggah pada halaman ini, untuk mengunggah file dari komputer ke situs jurnal dan ubah nama file sesuai peraturan jurnal ini.</li>\n"
+"<li>Setelah naskah berhasil di unggah, klik tombol Simpan dan Lanjutkan.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Email tidak bisa dikirim sampai Versi Review ada."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Email tidak bisa dikirim sampai file dipilih untuk proses copyedit dalam Keputusan Editor, halaman Review."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Email tidak bisa dikirim sampai file telah diunggah untuk proses copyedit."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Copyedit Awal"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Copyedit Editor"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Copyedit Penulis"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Copyedit Akhir"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versi C/E"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Tugaskan Copyeditor"
+
+msgid "submission.copyedit.useFile"
+msgstr "Gunakan File"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Komentar Copyedit"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instruksi Copyediting"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Tidak ada (Unggah versi copyedit akhir sebagai Versi Layout sebelum mengirim permintaan)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Indentifier Galley Publik"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Identifikasi galley umum sudah ada."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Tugaskan Layout Editor"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Ganti Layout Editor"
+
+msgid "submission.layout.layoutComments"
+msgstr "Komentar Layout"
+
+msgid "submission.layout.instructions"
+msgstr "Instruksi Layout"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Tautan Referensi"
+
+msgid "submission.proofreadingComments"
+msgstr "Komentar Proofreading"
+
+msgid "submission.proofread.corrections"
+msgstr "Koreksi Proofreading"
+
+msgid "submission.proofread.instructions"
+msgstr "Instruksi Proofing"
+
+msgid "submission.logType.article"
+msgstr "Artikel"
+
+msgid "submission.logType.author"
+msgstr "Penulis"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.review"
+msgstr "Reviewer"
+
+msgid "submission.logType.copyedit"
+msgstr "Copyedit"
+
+msgid "submission.logType.layout"
+msgstr "Layout"
+
+msgid "submission.logType.proofread"
+msgstr "Proofread"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Korespondensi Editor/Penulis"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Komentar Copyedit"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Komentar ini dapat dibagi dengan penulis.<br />\n"
+"(Setelah menyimpan, dapat ditambahkan komentar lebih lanjut.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Untuk penulis dan editor"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Untuk penulis"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Setelah mengirim, tampilkan salinan BCC yang dapat diedit untuk dikirim ke reviewer."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Untuk penulis dan editor"
+
+msgid "submission.comments.forEditor"
+msgstr "Untuk penulis"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Simpan dan Email Penulis"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Simpan dan Email Penulis"
+
+msgid "user.register.selectContext"
+msgstr "Pilih jurnal yang Anda kehendaki:"
+
+msgid "user.register.noJournals"
+msgstr "Tidak ada jurnal yang dapat Anda daftar di situs ini."
+
+msgid "user.register.privacyStatement"
+msgstr "Pernyataan Privasi"
+
+msgid "user.register.registrationDisabled"
+msgstr "Jurnal sedang tidak menerima pendaftaran pengguna."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Kata sandi yang Anda masukkan kurang panjang."
+
+msgid "user.register.readerDescription"
+msgstr "Beritahu melalui email saat ada terbitan baru."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Beritahu melalui email saat terbitan jurnal dibuat Open Access."
+
+msgid "user.register.authorDescription"
+msgstr "Dapat menyerahkan naskah ke jurnal."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Bersedia melakukan proses peer review naskah yang diserahkan jurnal."
+
+msgid "user.register.reviewerDescription"
+msgstr "Bersedia melakukan proses peer review naskah untuk penerbit."
+
+msgid "user.register.reviewerInterests"
+msgstr "Sebutkan bidang review (area substantif dan metode penelitian):"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Langganan Saya"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Status Langganan"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Langganan aktif dan yang sudah berakhir ditampilkan di bawah ini bersama dengan tanggal berakhir. Sebagai tambahan, informasi status berikut ini terdapat di tiap langganan."
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Deskripsi"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Diperlukan informasi tambahan sebelum langganan diaktifkan"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Langganan harus direview sebelum dapat diaktifkan"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Pembayaran manual telah dimulai tapi belum diterima"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Pembayaran online telah dimulai tapi dibatalkan atau tidak selesai"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Langganan Individu"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Langganan Institusi"
+
+msgid "user.subscriptions.renew"
+msgstr "Perbaharui"
+
+msgid "user.subscriptions.purchase"
+msgstr "Beli"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Beli Langganan Baru"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Beli Langganan Individu"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Beli Langganan Institusi"
+
+msgid "user.subscriptions.expires"
+msgstr "Jatuh Tempo"
+
+msgid "user.subscriptions.expired"
+msgstr "Telah Jatuh Tempo"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Lihat Tipe Langganan yang Tersedia"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tipe Langganan"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Keanggotaan"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Tipe langganan yang dipilih memerlukan informasi keanggotaan."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Pilih tipe langganan yang valid."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Akun pengguna ini sudah memiliki langganan individu."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Informasi keanggotaan dibutuhkan untuk tipe langganan yang dipilih."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Nama Institusi"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Nama insitusi dibutuhkan."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Alamat Surat Menyurat"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Jika domain dimasukkan di sini, IP range opsional.<br />Nilai valid adalah nama domain (contoh lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Tipe langganan yang dipilih memerlukan domain dan/atau IP range untuk otentikasi langganan."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Masukkan domain yang valid."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP ranges"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Jika IP ranges dimasukkan di sini, domain bersifat opsional.<br />Nilai valid termasuk alamat IP (contoh 142.58.103.1), IP range (contoh. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (contoh 142.58.*.*), and an IP range with CIDR (contoh 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Masukkan IP range yang valid."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Hapus"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Tambah"
+
+msgid "search.browseAuthorIndex"
+msgstr "Telusuri Indeks Penulis"
+
+msgid "search.searchFor"
+msgstr "Cari artikel untuk"
+
+msgid "search.withinJournal"
+msgstr "Dalam"
+
+msgid "search.allJournals"
+msgstr "Semua Jurnal"
+
+msgid "search.authorIndex"
+msgstr "Telusuri Indeks Penulis"
+
+msgid "search.authorDetails"
+msgstr "Rincian Penulis"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Tip Pencarian: <ul>\n"
+"<li>Istilah pencarian tidak mempedulikan besar-kecilnya huruf</li>\n"
+"<li>Kata-kata umum diabaikan</li>\n"
+"<li>Secara default hanya artikel yang berisi <em>semua</em> istilah dalam query akan ditampilkan</li>\n"
+"<li>Gabungkan beberapa kata dengan <em>ATAU</em> untuk mencari artikel yang berisi salah satu istilah; contoh: <em>pendidikan ATAU penelitian</em></li>\n"
+"<li>Gunakan tanda kurung tutup untuk menggunakan pencarian kompleks; contoh: <em>arsip ((jurnal ATAU konferensi) BUKAN tesis)</em></li>\n"
+"<li>Pencarian untuk frase utuh dengan meletakkannya di antara tanda petik dua; contoh: <em>\"penerbitan akses terbuka\"</em>atau <em>\"open access publishing\"</em></li>\n"
+"<li>Pengecualian kata dengan memberi awalan tanda (<strong>-</strong>) atau <em>BUKAN</em>; contoh: <em>online -politik</em> atau <em>online BUKAN politik</em></li>\n"
+"<li>Gunakan tanda bintang (<strong>*</strong>) dalam istilah untuk menghasilkan semua urutan karakter; contoh: <em>soci*</em> morality akan cocok dengan dokumen yang berisi \"sociological\" atau \"societal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Tampilan {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Unduh file PDF ini"
+
+msgid "article.pluginMissing"
+msgstr "<p>File PDF yang Anda pilih akan tampil di sini bila browser Anda memiliki PDF reader plug-in (misalnya, versi mutakhir <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Unduh Artikel"
+
+msgid "article.nonpdf.note"
+msgstr "File yang Anda pilih dapat meng-unggah secara otomatis. Jika tidak, klik tautan dibawah ini. Perhatikan file ini mungkin memerlukan plugin untuk dilihat.<br /><br />Jika file tidak meng-unggah secara otomatis <a href=\"{$url}\">klik disini</a>."
+
+msgid "site.journalsHosted"
+msgstr "Jurnal yang dimasukkan di situs ini"
+
+msgid "site.journalView"
+msgstr "Lihat Jurnal"
+
+msgid "site.journalRegister"
+msgstr "Daftar"
+
+msgid "site.journalCurrent"
+msgstr "Terbitan Terkini"
+
+msgid "site.noJournals"
+msgstr "Tidak ada jurnal."
+
+msgid "current.current"
+msgstr "Terkini"
+
+msgid "current.noCurrentIssue"
+msgstr "Tidak Ada Terbitan Terkini"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Jurnal ini belum mengeluarkan satu pun terbitan."
+
+msgid "archive.archives"
+msgstr "Arsip"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arsip - Halaman {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Menelusuri terbitan terdahulu"
+
+msgid "archive.issueUnavailable"
+msgstr "Terbitan tidak tersedia"
+
+msgid "about.statistics"
+msgstr "Statistik"
+
+msgid "about.contact"
+msgstr "Kontak"
+
+msgid "about.aboutContext"
+msgstr "Tentang Jurnal Ini"
+
+msgid "about.history"
+msgstr "Sejarah Jurnal"
+
+msgid "about.editorialTeam"
+msgstr "Dewan Editor"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografi"
+
+msgid "about.editorialPolicies"
+msgstr "Kebijakan Editorial"
+
+msgid "about.focusAndScope"
+msgstr "Fokus dan Ruang Lingkup"
+
+msgid "about.sectionPolicies"
+msgstr "Kebijakan Bagian"
+
+msgid "about.submissions"
+msgstr "Penyerahan"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Login"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Daftar"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Perlu {$login} atau {$register} untuk menyerahkan naskah."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} atau {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Serahkan naskah baru"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "cek naskah yang telah diserahkan"
+
+msgid "about.authorGuidelines"
+msgstr "Panduan Penulis"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Daftar Tilik Penyerahan Naskah"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Penulis yang ingin memasukkan naskah harus memperhatikan poin-poin di bawah ini. Jika naskah tidak sesuai dengan persyaratan yang telah dicantumkan, ada kemungkinan naskah tersebut akan dikembalikan."
+
+msgid "about.copyrightNotice"
+msgstr "Pemberitahuan Hak Cipta"
+
+msgid "about.privacyStatement"
+msgstr "Pernyataan Privasi"
+
+msgid "about.authorFees"
+msgstr "Biaya Penulis"
+
+msgid "about.authorFeesMessage"
+msgstr "Jurnal ini mengenakan biaya penulis berikut ini."
+
+msgid "about.peerReviewProcess"
+msgstr "Proses Peer Review"
+
+msgid "about.publicationFrequency"
+msgstr "Frekuensi Penerbitan"
+
+msgid "about.openAccessPolicy"
+msgstr "Kebijakan Open Access"
+
+msgid "about.delayedOpenAccess"
+msgstr "Delayed Open Access"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Isi jurnal ini akan tersedia dalam format Open Access"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "bulan setelah naskah diterbitkan."
+
+msgid "about.archiving"
+msgstr "Pengarsipan"
+
+msgid "about.subscriptions"
+msgstr "Langganan"
+
+msgid "about.subscriptions.individual"
+msgstr "Langganan Individu"
+
+msgid "about.subscriptions.institutional"
+msgstr "Langganan Institusi"
+
+msgid "about.subscriptionsContact"
+msgstr "Kontak Langganan"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nama"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Durasi"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Biaya"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tipe Langganan"
+
+msgid "about.memberships"
+msgstr "Keanggotaan"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Tentang Sistem Penerbitan"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Editorial OJS dan Proses Penerbitan"
+
+msgid "about.aboutOJSJournal"
+msgstr "Jurnal ini menggunakan Open Journal Systems {$ojsVersion}, yang merupakan perangkat lunak open source untuk pengelolaan dan penerbitan jurnal yang dikembangkan, didukung, dan didistribusikan bebas oleh <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> di bawah GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Situs ini menggunakan Open Journal Systems {$ojsVersion}, merupakan perangkat lunak open source untuk pengelolaan dan penerbitan jurnal yang dikembangkan, didukung, dan didistribusikan bebas oleh <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> di bawah GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Bantuan Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Bantuan OJS"
+
+msgid "help.searchReturnResults"
+msgstr "Kembali ke Hasil Pencarian"
+
+msgid "help.goToEditPage"
+msgstr "Edit {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Terima Kasih"
+
+msgid "donations.thankYouMessage"
+msgstr "Terima kasih untuk kontribusi Anda. Kontribusi Anda sangat kami hargai."
+
+msgid "payment.loginRequired"
+msgstr "Anda harus login untuk melakukan pembayaran."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Langganan atau pembelian artikel dibutuhkan untuk mengakses judul ini. Untuk verifikasi langganan, akses pembelian sebelumnya, atau untuk membeli artikel, silakan login ke jurnal."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Langganan atau pembelian terbitan dibutuhkan untuk mengakses judul ini.  Untuk verifikasi langganan, akses pembelian sebelumnya, atau untuk membeli terbitan, silakan login ke jurnal."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Anda harus login untuk memberi donasi."
+
+msgid "payment.paid"
+msgstr "Lunas"
+
+msgid "payment.payNow"
+msgstr "Bayar Sekarang"
+
+msgid "payment.waive"
+msgstr "Gratiskan"
+
+msgid "payment.alreadyPaid"
+msgstr "Sudah Bayar"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Pilih bila Anda telah mengirimkan pembayaran Anda ke jurnal untuk menyelesaikan penyerahan naskah.  Penyerahan naskah tidak akan direview hingga pembayaran diterima.  Klik BAYAR SEKARANG di atas untuk petunjuk pembayaran."
+
+msgid "payment.paymentReceived"
+msgstr "Pembayaran Diterima"
+
+msgid "payment.paymentSent"
+msgstr "Pembayaran telah dikirim"
+
+msgid "payment.authorFees"
+msgstr "Biaya Penulis"
+
+msgid "payment.type.submission"
+msgstr "Biaya Penyerahan Naskah"
+
+msgid "payment.type.publication"
+msgstr "Biaya Publikasi"
+
+msgid "payment.type.fastTrack"
+msgstr "Biaya Review FastTrack"
+
+msgid "payment.type.membership"
+msgstr "Biaya Keanggotaan Individu"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Biaya Pembelian Artikel"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Biaya Pembelian Terbitan"
+
+msgid "payment.type.subscription"
+msgstr "Biaya Langganan"
+
+msgid "payment.type.donation"
+msgstr "Donasi"
+
+msgid "payment.donation.makeDonation"
+msgstr "Berikan donasi"
+
+msgid "payment.submission.paySubmission"
+msgstr "Bayar Biaya Penyerahan Naskah"
+
+msgid "payment.publication.payPublication"
+msgstr "Bayar Publikasi"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Biaya Publikasi Lunas"
+
+msgid "payment.membership.buyMembership"
+msgstr "Beli Keanggotaan Individu"
+
+msgid "payment.membership.renewMembership"
+msgstr "Perbaharui Keanggotaan Individu"
+
+msgid "payment.membership.ends"
+msgstr "Akhiri"
+
+msgid "payment.subscription.purchase"
+msgstr "Beli Langganan"
+
+msgid "payment.subscription.renew"
+msgstr "Perbaharui Langganan"
+
+msgid "payment.subscription.expires"
+msgstr "Berakhir"
+
+msgid "installer.appInstallation"
+msgstr "Instalasi OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Upgrade OJS"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Versi OJS {$version}</h4>\n"
+"\n"
+"<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong> dari Public Knowledge Project. Sebelum melanjutkan, silakan membaca <a href=\"{$baseUrl}/docs/README.md\">README</a>. File disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silakan kunjungi <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">laman web PKP</a>. Jika Anda memiliki laporan bug atau memerlukan dukungan teknis mengenai OJS, lihat <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">forum dukungan</a> atau kunjungi PKP online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">Laporkan bug sistem</a>.  Selain itu Anda dapat menghubungi tim pengembang OJS melalui <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Upgrade</h4>\n"
+"\n"
+"<p>Jika Anda ingin mengupgrade instalasi OJS yang sudah ada, <a href=\"{$upgradeUrl}\">klik di sini</a>.</p>\n"
+"\n"
+"<h4>Rekomendasi Sistem</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; saat ini Anda menggunakan PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 atau <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x atau >= 2.0.4x atau Microsoft IIS 6</li>\n"
+"\t<li>Sistem operasi: Semua sistem operasi yang mendukung piranti lunak di atas, termasuk <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Karena PKP tidak memiliki kemampuan untuk menguji seluruh kemungkinan kombinasi versi dan platform piranti lunak, tidak ada jaminan maupun dukungan untuk keberhasilan pemakaian piranti lunak ini.</p>\n"
+"\n"
+"<p>Perubahan terhadap setting ini dapat dilakukan setelah instalasi dengan mengedit file <tt>config.inc.php</tt> di direktori OJS, atau menggunakan antarmuka Administrasi Situs.</p>\n"
+"\n"
+"<h4>Sistem Database yang Didukung</h4>\n"
+"\n"
+"<p>Saat ini OJS telah diuji hanya di sistem database MySQL dan PostgreSQL, walaupun mungkin dapat berjalan (penuh maupun parsial) di sistem manajemen database lain yang didukung oleh <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a>. Laporan kompabilitas dan/atau patch kode DBMS alternatif dapat dikirimkan ke Tim OJS.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Langkah Pra-Instalasi</h\n"
+"\n"
+"\n"
+"<p>1. File dan direktori berikut (beserta isinya) harus \"writable\":</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> writable (opsional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> writable: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> writable: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt>  writable: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt>  writable: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt>  writable: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"\t<p>2. Buat direktori khusus untuk menyimpan file unggahan dan buat \"writable\" (lihat Pengaturan File di bawah ini)</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Versi OJS {$version}</h4>\n"
+"\n"
+"<p>Terima kasih telah mengunduh <strong>Open Journal Systems</strong> dari Public Knowledge Project. Sebelum melanjutkan, silakan membaca <a href=\"{$baseUrl}/docs/README.md\">README</a> dan <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> yang disertakan dalam perangkat lunak ini. Untuk informasi lebih lanjut tentang Public Knowledge Project dan perangkat lunak ini, silakan kunjungi <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">web site PKP</a>. Jika Anda memiliki laporan bug atau butuh dukungan teknis mengenai OJS, lihat <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">forum dukungan</a> atau kunjungi PKP online <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">Laporkan bug sistem</a>.  Selain itu Anda dapat mengontak tim pengembang OJS melalui <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p><strong>Sangat disarankan agar</strong> Anda memback up database Anda, direktori file, dan direktori instalasi OJS sebelum melanjutkan.</p>\n"
+"<p>Jika Anda menjalankan <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, pastikan perintah max_execution_time di file konfigurasi php.ini diatur hingga batas tinggi. Jika batas ini atau batas lain (contoh: perintah \"Timeout\" Apache) telah terlewati dan proses upgrade terganggu, akan dibutuhkan intervensi manual.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Untuk dukungan lengkap Unicode (UTF-8), pilih UTF-8 untuk semua pengaturan karakter set. Perhatikan bahwa dukungan lengkap Unicode membutuhkan kompilasi PHP dengan dukungan terhadap pustaka <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> (tersedia secara default pada instalasi PHP terbaru). Anda mungkin akan menemui masalah menggunakan set karakter lengkap jika server Anda tidak memenuhi persyaratan.\n"
+"<br /><br />\n"
+"Server Anda sekarang support mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Server Anda saat ini mengijinkan unggah file: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Server Anda saat ini membatasi besar file yang diunggah maksimal: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Bahasa utama yang digunakan untuk sistem ini.  Mohon baca dokumentasi OJS jika Anda menghendaki bahasa yang tidak tercantum di daftar ini."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Pilih bahasa-bahasa tambahan yang hendak didukung sistem ini.  Bahasa-bahasa ini akan dapat digunakan oleh jurnal-jurnal yang dikelola di sistem ini.  Bahasa tambahan dapat juga diinstal kapan saja dari antarmuka administrasi situs."
+
+msgid "installer.filesDirInstructions"
+msgstr "Masukkan pathname lengkap direktori yang digunakan untuk menyimpan file yang diunggah. Direktori ini sebaiknya tidak bisa diakses langsung melalui web. <strong>Pastikan direktori ini sudah ada dan writable sebelum instalasi.</strong> Jendela pathname harus menggunakan forward slash (/), contoh \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS membutuhkan akses ke database SQL untuk menyimpan datanya. Lihat persyaratan sistem di atas untuk mengetahui sistem database yang didukung. Di kolom berikut, isikan pengaturan yang diperlukan untuk koneksi ke database."
+
+msgid "installer.installApplication"
+msgstr "Install Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Upgrade Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Peringatan:</strong> Jika terjadi kegagalan saat instalasi database, Anda harus menghapus database OJS atau tabel yang sudah dibuat sebelum menginstal ulang database."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>PENTING!</h4>\n"
+"<p>Installer tidak bisa secara otomatis menimpa file konfigurasi. Sebelum mencoba untuk menggunakan sistem, buka <tt>config.inc.php</tt> menggunakan text editor dan ganti isinya dengan isi kolom berikut ini.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Instalasi OJS telah berhasil.</p>\n"
+"<p>Untuk mulai menggunakan sistem, <a href=\"{$loginUrl}\">login</a> dengan nama pengguna dan kata sandi yang dimasukkan di halaman sebelumnya.</p>\n"
+"<p>Jika Anda ingin bergabung dengan komunitas PKP, Anda dapat:</p>\n"
+"<ol>\n"
+"\t<li>membaca <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">blog PKP</a> dan mengikuti <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS feed</a> untuk berita dan update.</li>\n"
+"\t<li>mengunjungi <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">forum dukungan</a> jika Anda memiliki pertanyaan atau komentar.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Upgrade OJS ke versi {$version} telah berhasil.</p>\n"
+"<p>Jangan lupa untuk mengembalikan status \"installed\" ke <em>On</em> dalam file config.inc.php.</p>\n"
+"<p>Jika Anda belum terdaftar dan ingin menerima berita dan update, <strong>silakan daftar di <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Jika Anda memiliki pertanyaan atau komentar, silakan kunjungi <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">forum dukungan</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Ada versi baru OJS! Anda saat ini menggunakan OJS {$currentVersion}. Versi terbaru adalah OJS {$latestVersion}. Silakan kunjungi <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">laman ini</a> untuk mengunduh versi terbaru dan membaca instruksi upgrade-nya."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Ada versi baru OJS! Anda saat ini menggunakan OJS {$currentVersion}. Versi terbaru adalah OJS {$latestVersion}.  Silakan hubungi Administrator Situs ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) untuk memberitahu mereka tentang versi baru ini. Informasi lebih lanjut dapat dibaca di <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">sini</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} telah merevisi naskah {$submissionId}. ID file baru adalah {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} telah dibebastugaskan dari review naskah {$submissionId} untuk ronde review {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "Ronde {$round} review oleh {$reviewerName} untuk naskah {$submissionId} telah dimulai."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} telah dinilai untuk ronde {$round} review naskah {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Tenggat waktu untuk ronde {$round} review naskah {$submissionId} oleh {$reviewerName} adalah tanggal {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Rekomendasi untuk ronde {$round} review naskah {$submissionId} oleh {$reviewerName} telah ditetapkan."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Rekomendasi untuk ronde {$round} review naskah {$submissionId} telah ditetapkan oleh editor, {$editorName}, atas nama reviewer, {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "Naskah {$submissionId} telah dikirim ulang untuk review."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} telah menolak ronde {$round} review naskah {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} telah menerima ronde {$round} review naskah {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "Atas nama {$reviewerName}, {$userName} telah menolak ronde {$round} review naskah {$submissionId}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "Atas nama {$reviewerName}, {$userName} telah menerima ronde {$round} review naskah {$submissionId}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Atas nama reviewer {$reviewerName}, Editor, {$userName}, telah mengunggah file review untuk ronde {$round} dari naskah {$submissionId}."
+
+msgid "log.review.reviewerFile"
+msgstr "File reviewer telah diunggah."
+
+msgid "log.editor.decision"
+msgstr "Keputusan editor ({$decision}) untuk naskah {$submissionId} telah dicatat oleh {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Copyediting naskah {$submissionId} telah dimulai oleh {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "File copyedit default telah dipilih."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} telah menyelesaikan copyedit awal naskah {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} telah menyelesaikan copyedit akhir naskah {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} telah ditugaskan untuk copyedit naskah {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "File naskah versi copyeditor telah diunggah."
+
+msgid "log.copyedit.authorFile"
+msgstr "File naskah versi copyedit penulis telah diunggah."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName}telah ditugaskan sebagai editor layout untuk naskah {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} telah dibebastugaskan sebagai editor layout untuk naskah {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} telah menyelesaikan pengeditan layout untuk naskah {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Metadata untuk artikel ini telah dimodifikasi oleh {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "File naskah versi editor telah diunggah."
+
+msgid "log.editor.archived"
+msgstr "Naskah {$submissionId} telah diarsipkan."
+
+msgid "log.editor.restored"
+msgstr "Naskah {$submissionId} telah dikembalikan ke antrian."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} telah ditugaskan sebagai editor untuk naskah {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} telah menugaskan {$proofreaderName} untuk proofread naskah {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} telah menyerahkan {$submissionId} untuk penjadwalan."
+
+msgid "log.imported"
+msgstr "{$userName} telah mengimpor naskah {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Artikel Peer-review"
+
+msgid "notification.type.editing"
+msgstr "Event Editing"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Naskah baru, \"{$title},\" telah diserahkan."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Ada komentar terhadap keputusan editor bagi \"{$title}.\""
+
+msgid "notification.type.galleyModified"
+msgstr "Modifikasi galley untuk \"{$title}.\""
+
+msgid "notification.type.issuePublished"
+msgstr "Ada terbitan baru."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ada pengumuman baru."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Form review telah dikirimkan untuk \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Event Reviewing"
+
+msgid "notification.type.site"
+msgstr "Event Situs"
+
+msgid "notification.type.submissionComment"
+msgstr "Editor memberi komentar terhadap \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Event Penyerahan Naskah"
+
+msgid "notification.type.userComment"
+msgstr "Pembaca memberi komentar terhadap \"{$title}\""
+
+msgid "notification.savedIssueMetadata"
+msgstr "Metadata terbitan disimpan."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Naskah baru telah diserahkan, perlu penugasan editor."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Tugaskan pengguna untuk membuat galley menggunakan tautan Tambah di daftar Partisipan."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Menunggu Galley."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Akses ditolak! Anda belum ditugaskan menjadi copyeditor untuk naskah ini."
+
+msgid "user.authorization.noContext"
+msgstr "Tidak ada jurnal yang sesuai!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Anda mencoba mengakses naskah yang bukan bagian Anda."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Terbitan Invalid!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Kiriman copyeditor invalid atau tidak ada permintaan kiriman copyeditor!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Memuat daftar mata uang \"{$filename}\" dari XML"
+
+msgid "grid.action.createContext"
+msgstr "Buat Jurnal Baru"
+
+msgid "editor.navigation.issues"
+msgstr "Terbitan"
+
+msgid "notification.type.approveSubmission"
+msgstr "Naskah ini masih menunggu persetujuan sebelum muncul di terbitan."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Menunggu Persetujuan."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Daftar ke jurnal lain"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Sembunyikan jurnal lain"
+
+msgid "article.view.interstitial"
+msgstr "Silakan pilih file untuk diunduh."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Disetujui"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Menunggu Persetujuan."
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Persetujuan Galley"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Setujui galley ini untuk publikasi.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Cabut persetujuan untuk galley ini.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Mengindeks \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Pencarian ini tidak memungkinkan pengindeksan ulang per jurnal."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Path jurnal yang diberikan \"{$journalPath}\" tidak mengarah ke jurnal apapun."
+
+msgid "editor.issues.backIssues"
+msgstr "Terbitan Terdahulu"
+
+msgid "editor.issues.futureIssues"
+msgstr "Terbitan Akan Datang"

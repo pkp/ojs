@@ -1,0 +1,1728 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Αρχειοθέτηση"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Επιβεβαιώνετε την επαναφορά στην αρχική μορφή όλων των προτύπων μηνυμάτων στο συγκεκριμένο περιοδικό; Όλες οι αλλαγές που έχετε πραγματοποιήσει θα χαθούν."
+
+msgid "manager.files.note"
+msgstr "Σημείωση: O Περιηγητής Αρχείων αποτελεί μια προηγμένη λειτουργία που επιτρέπει την άμεση προβολή και διαχείριση των αρχείων και καταλόγων που σχετίζονται με κάποιο περιοδικό."
+
+msgid "manager.journalManagement"
+msgstr "Διαχείριση περιοδικού"
+
+msgid "manager.language.ui"
+msgstr "Διεπαφή Χρήστη"
+
+msgid "manager.language.submissions"
+msgstr "Υποβολές"
+
+msgid "manager.language.forms"
+msgstr "Φόρμες"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Η ενέργεια θα αντικαταστήσει όλες τις ρυθμίσεις που έχετε κάνει για τη συγκεκριμένη γλώσσα."
+
+msgid "manager.languages.languageInstructions"
+msgstr "Η διεπαφή μπορεί να διατίθεται σε οποιαδήποτε από τις υποστηριζόμενες γλώσσες. Επίσης, το OJS μπορεί να λειτουργήσει ως ένα πολυγλωσσικό σύστημα, με τη δυνατότητα αλλαγής γλώσσας διεπαφής και εισαγωγής ορισμένων δεδομένων σε επιπρόσθετες γλώσσες.&lt;br /&gt;&lt;br /&gt;Εάν μία γλώσσα που υποστηρίζεται από το OJS δεν εμφανίζεται παρακάτω, απευθυνθείτε στον Διαχειριστή του ιστοτόπου για να εγκαταστήσει τη γλώσσα. Για οδηγίες σχετικά με την υποστήριξη νέων γλωσσών, παρακαλούμε ανατρέξτε στα έγγραφα τεκμηρίωσης του OJS."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Δεν υπάρχουν επιπλέον γλώσσες διαθέσιμες. Σε περίπτωση που επιθυμείτε να χρησιμοποιήσετε επιπρόσθετες γλώσσες για το περιοδικό, επικοινωνήστε με τον Διαχειριστή του ιστοτόπου."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Αυτή θα είναι η προεπιλεγμένη γλώσσα για τον ιστότοπο του περιοδικού."
+
+msgid "manager.managementPages"
+msgstr "Σελίδες διαχείρισης"
+
+msgid "manager.payment.action"
+msgstr "Ενέργεια"
+
+msgid "manager.payment.addPayment"
+msgstr "Προσθήκη πληρωμής"
+
+msgid "manager.payment.amount"
+msgstr "Ποσό"
+
+msgid "manager.payment.authorFees"
+msgstr "Εισφορές Συγγραφέων"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Εισάγετε παρακάτω τα προβλεπόμενα ποσά, ώστε να ενεργοποιηθούν τα τέλη επεξεργασίας για τους Συγγραφείς."
+
+msgid "manager.payment.currency"
+msgstr "Νόμισμα"
+
+msgid "manager.payment.currencymessage"
+msgstr "Το OJS δεν προβαίνει σε νομισματικές μετατροπές. Αν δέχεστε πληρωμές για συνδρομές, θα πρέπει να εξασφαλίσετε ότι το νόμισμα της συνδρομής ταιριάζει με αυτό που καθορίζεται εδώ."
+
+msgid "manager.payment.description"
+msgstr "Περιγραφή"
+
+msgid "manager.payment.details"
+msgstr "Λεπτομέρειες"
+
+msgid "manager.payment.editSubscription"
+msgstr "Επεξεργασία συνδρομής"
+
+msgid "manager.payment.enable"
+msgstr "Ενεργοποίηση"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Επιλογές πληρωμής εισφορών"
+
+msgid "manager.payment.form.numeric"
+msgstr "Όλα τα κόστη πρέπει να είναι θετικές αριθμητικές τιμές (επιτρέπονται δεκαδικά στοιχεία)"
+
+msgid "manager.payment.generalFees"
+msgstr "Γενικές εισφορές"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Τα συνεργαζόμενα μέλη θα εμφανίζονται κάτω από την ενότητα \"Πολιτικές\" στη σελίδα \"Σχετικά με το Περιοδικό\" και ο σύνδεσμος των δωρεών θα εμφανίζεται πάνω από τη λειτουργία \"Αναζήτηση\", στη δεξιά πλευρική στήλη της ιστοσελίδας."
+
+msgid "manager.payment.generalOptions"
+msgstr "Γενικές επιλογές"
+
+msgid "manager.payment.noPayments"
+msgstr "Καμία πληρωμή"
+
+msgid "manager.payment.notFound"
+msgstr "Δεν βρέθηκε"
+
+msgid "manager.payment.options"
+msgstr "Επιλογές"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Η επιλογή αυτή θα ενεργοποιήσει τις πληρωμές συνδρομών: Η διαχείριση των συνδρομών και των συνδρομητών πραγματοποιείται από τον Διαχειριστή Συνδρομών του περιοδικού."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Επιβεβαιώνετε τη διαγραφή αυτής της συνδρομής;"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Οι πληρωμές θα ενεργοποιηθούν για αυτό το περιοδικό. Οι Χρήστες θα πρέπει να συνδεθούν στο σύστημα για να κάνουν πληρωμές."
+
+msgid "manager.payment.options.fee"
+msgstr "Εισφορά"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Περιγραφή εισφοράς"
+
+msgid "manager.payment.options.feeName"
+msgstr "Όνομα εισφοράς"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Συνεργαζόμενα μέλη"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Περιορισμένη πρόσβαση μόνο στα PDF των τευχών και των άρθρων"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Τέλη επεξεργασίας άρθρου"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Αγορά άρθρου"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Αγορά τεύχους"
+
+msgid "manager.payment.options.text"
+msgstr "Περιγραφή της μεθόδου πληρωμής"
+
+msgid "manager.payment.paymentId"
+msgstr "ID πληρωμής"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Μέθοδος πληρωμής"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Από αυτή την οθόνη μπορείτε να ρυθμίσετε οποιαδήποτε από τα παρακάτω Πρόσθετα Μεθόδου Πληρωμής."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Μέθοδοι πληρωμής εισφορών"
+
+msgid "manager.payment.paymentType"
+msgstr "Τύπος πληρωμής"
+
+msgid "manager.payment.readerFees"
+msgstr "Εισφορές Αναγνωστών"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Οι επιλεγμένες ρυθμίσεις σχετικά με τις εισφορές (όπως θα διαμορφωθούν παρακάτω) θα εμφανίζονται στην ενότητα \"Πολιτικές\" της σελίδας \"Σχετικά με το Περιοδικό\", καθώς και στα σημεία εκείνα όπου απαιτείται πληρωμή."
+
+msgid "manager.payment.records"
+msgstr "Καταγραφές"
+
+msgid "manager.payments"
+msgstr "Πληρωμές"
+
+msgid "manager.paymentTypes"
+msgstr "Είδη πληρωμής"
+
+msgid "manager.payment.userName"
+msgstr "ID πληρωμής"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Εγγεγραμμένοι Χρήστες σε αυτό το περιοδικό"
+
+msgid "manager.people.allJournals"
+msgstr "Όλα τα περιοδικά"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Εγγραφή Χρήστη του ιστοτόπου σε αυτό το περιοδικό"
+
+msgid "manager.people.showNoRole"
+msgstr "Προβολή Χρηστών χωρίς ρόλο"
+
+msgid "manager.people.allUsers"
+msgstr "Όλοι οι εγγεγραμμένοι Χρήστες"
+
+msgid "manager.people.confirmRemove"
+msgstr "Κατάργηση του Χρήστη από το περιοδικό αυτό; Η συγκεκριμένη ενέργεια θα αφαιρέσει από τον Χρήστη όλους τους ρόλους που κατέχει στο περιοδικό αυτό."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Επιλέξτε πρότυπο"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Ανάθεση ρόλου σε υπάρχοντα Χρήστη"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Με το περιοδικό"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Επιλέξτε έναν ή περισσότερους Χρήστες για συγχώνευση με τον λογαριασμό ενός άλλου Χρήστη (π.χ. σε περίπτωση όπου ένας Χρήστης έχει δύο λογαριασμούς). Ο λογαριασμός(-οί) που επιλέχθηκε πρώτος θα διαγραφεί και όλες οι υποβολές, οι αναθέσεις, κτλ. θα αποδοθούν στον δεύτερο λογαριασμό."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Επιλέξτε έναν Χρήστη στον οποίο θα αποδοθούν οι εργασίες και αναθέσεις του προηγούμενου Χρήστη."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Ανάθεση ρόλου {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Ο συγχρονισμός ανάθεσης ρόλων πραγματοποιεί εγγραφή σε αυτό το περιοδικό όλων των Χρηστών με συγκεκριμένο ρόλο σε κάποιο άλλο περιοδικό. Οι νέοι Χρήστες θα εγγραφούν με τον ρόλο που κατέχουν στο άλλο περιοδικό. Η λειτουργία αυτή επιτρέπει σε ένα κοινό σύνολο Χρηστών (π.χ. Αξιολογητές) να συγχρονίζονται σε διάφορα περιοδικά."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Δεν απαιτούνται περιλήψεις"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Δεν υπάρχουν Χρήστες με ρόλο Επιμελητή Ενότητας. Προσθέστε πρώτα αυτόν τον ρόλο σε τουλάχιστον ένα Χρήστη, μέσω του μενού Διαχείριση > Ρυθμίσεις > Χρήστες &amp; Ρόλοι."
+
+msgid "manager.sections.assigned"
+msgstr "Επιμελητές της συγκεκριμένης ενότητας"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε οριστικά την ενότητα αυτή;"
+
+msgid "manager.sections.alertDelete"
+msgstr "Πριν διαγραφεί αυτή η ενότητα, θα πρέπει να μετακινήσετε τα δημοσιεύμενα άρθα της ενότητας σε άλλες ενότητες."
+
+msgid "manager.sections.create"
+msgstr "Δημιουργία ενότητας"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Υπάρχει η δυνατότητα αυτόματης ανάθεσης της εποπτείας των υποβολών σε έναν επιλεγμένο Επιμελητή Ενότητας. Προσθέστε τον Επιμελητή Ενότητας στον οποίο θα ανατίθενται αυτόματα οι υποβολές (εναλλακτικά, κάθε νέα υποβολή μπορεί να ανατίθεται σε κάποιον από τους Επιμελητές Ενότητας). Για να αναθέσετε ρόλο Επιμελητή Ενότητας, επιλέξτε τον σύνδεσμο \"Επιμελητές Ενότητας\" στο μενού \"Ρόλοι\" της σελίδας \"Διαχείριση Περιοδικού\"."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Άρθρα μπορούν να υποβληθούν μόνο από τους Επιμελητές και τους Επιμελητές Ενότητας."
+
+msgid "manager.sections.editors"
+msgstr "Επιμελητές Ενότητας"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Απαιτείται μια συντομογραφία για την ενότητα."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Παρακαλούμε εξασφαλίστε ότι τουλάχιστον ένα πλαίσιο ελέγχου έχει επιλεγεί για κάθε ανάθεση Επιμελητή Ενότητας."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Παρακαλούμε βεβαιωθείτε ότι έχετε επιλέξει μία έγκυρη φόρμα αξιολόγησης."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Απαιτείται ένας τίτλος για την ενότητα."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Παραλείψτε τα ονόματα των Συγγραφέων της ενότητας από τον πίνακα περιεχομένων."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Παραλείψτε τον τίτλο της ενότητας από τον πίνακα περιεχομένων."
+
+msgid "manager.sections.identifyType"
+msgstr "Χαρακτηρισμός κάθε τεκμηρίου που έχει δημοσιευτεί στην ενότητα αυτή ως:"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(για παράδειγμα, \"Άρθρο που έχει περάσει από ομότιμη αξιολόγηση\", \"Βιβλιοκρισία χωρίς κριτές\", \"Σχολιασμός κατόπιν προσκλήσεως\", κτλ.)"
+
+msgid "manager.sections.indexed"
+msgstr "Έχει ευρετηριαστεί"
+
+msgid "manager.sections.noneCreated"
+msgstr "Δεν έχουν δημιουργηθεί ενότητες."
+
+msgid "manager.sections.open"
+msgstr "Ανοικτές υποβολές"
+
+msgid "manager.sections.policy"
+msgstr "Πολιτική ενότητας"
+
+msgid "manager.sections.readingTools"
+msgstr "Εργαλεία ανάγνωσης"
+
+msgid "manager.sections.reviewed"
+msgstr "Έχει περάσει από ομότιμη αξιολόγηση."
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Δεν θα συμπεριληφθούν στην ευρετηρίαση του περιοδικού."
+
+msgid "manager.sections.submissionReview"
+msgstr "Δεν θα πραγματοποιηθεί ομότιμη αξιολόγηση."
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Υποβολές στη συγκεκριμένη ενότητα του περιοδικού"
+
+msgid "manager.sections.unassigned"
+msgstr "Διαθέσιμοι Επιμελητές Ενότητας"
+
+msgid "manager.sections.wordCount"
+msgstr "Καταμέτρηση λέξεων"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Καθορίστε ένα όριο λέξεων για τις περιλήψεις αυτής της ενότητας (εισάγετε 0 αν δεν υπάρχει όριο)."
+
+msgid "manager.setup"
+msgstr "Ρυθμίσεις περιοδικού"
+
+msgid "manager.setup.masthead"
+msgstr "Κύριος τίτλος"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Συντακτική ομάδα"
+
+msgid "manager.setup.editorialTeam.description"
+msgstr "Κατάλογος Επιμελητών, Διαχειριστικών Διευθυντών, και άλλων ατόμων που σχετίζονται με το περιοδικό."
+
+msgid "manager.setup.homepageContent"
+msgstr "Περιεχόμενο αρχικής σελίδας περιοδικού"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Η αρχική σελίδα του περιοδικού αποτελείται εκ προεπιλογής από συνδέσμους πλοήγησης. Επιπλέον περιεχόμενο μπορεί να προσαρτηθεί στην αρχική σελίδα, χρησιμοποιώντας μία ή περισσότερες από τις παρακάτω επιλογές, που θα εμφανίζονται με τη σειρά που φαίνεται."
+
+msgid "manager.setup.layout"
+msgstr "Διάταξη περιοδικού"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Αρχείο μορφοποίησης του περιοδικού"
+
+msgid "manager.setup.contextName"
+msgstr "Τίτλος του περιοδικού"
+
+msgid "manager.setup.pageHeader"
+msgstr "Κεφαλίδα σελίδας περιοδικού"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Περιεχόμενο"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Προσθήκη περιεχομένου στο μενού \"Σχετικά\""
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Προσθήκη αντικειμένου στη λίστα ελέγχου"
+
+msgid "manager.setup.addItem"
+msgstr "Προσθήκη περιεχομένου"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Προσθήκη περιεχομένου στο \"Σχετικά με το περιοδικό\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Προσθήκη περιεχομένου"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Προσθέστε νέο σύνδεσμο βάσης δεδομένων"
+
+msgid "manager.setup.addSponsor"
+msgstr "Προσθήκη οργανισμού χορηγίας"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Εναλλακτική κεφαλίδα"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Αντί του τίτλου και του λογότυπου, μπορείτε να εισάγετε στο παρακάτω πλαίσιο κειμένου μια έκδοση HTML της κεφαλίδας. Εάν δεν απαιτείται, αφήστε κενό το πλαίσιο κειμένου."
+
+msgid "manager.setup.announcements"
+msgstr "Ανακοινώσεις"
+
+msgid "manager.setup.announcementsDescription"
+msgstr "Οι δημοσιευμένες ανακοινώσεις θα εμφανίζονται στη σελίδα «Ανακοινώσεις»."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Πρόσθετες πληροφορίες"
+
+msgid "manager.setup.announcementsIntroductionDescription"
+msgstr "Εισάγετε οποιαδήποτε πρόσθετη πληροφορία θέλετε να εμφανίζεται στη σελίδα «Ανακοινώσεις»."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Προς εμφάνιση στη σελίδα «Σχετικά με το περιοδικό»)"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Απαιτείται από τους Συγγραφείς να καταθέτουν Δήλωση Αντικρουόμενων Συμφερόντων μαζί με την υποβολή."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Απαιτείται από τους Αξιολογητές να καταθέτουν Δήλωση Αντικρουόμενων Συμφερόντων μαζί με κάθε αξιολόγηση."
+
+msgid "manager.setup.history"
+msgstr "Ιστορικό περιοδικού"
+
+msgid "manager.setup.historyDescription"
+msgstr "Το κείμενο θα εμφανίζεται στην ενότητα \"Σχετικά\" του ιστοτόπου του περιοδικού παρουσιάζοντας το ιστορικό έκδοσης του περιοδικού."
+
+msgid "manager.setup.copyeditInstructions"
+msgstr "Οδηγίες επιμέλειας κειμένου"
+
+msgid "manager.setup.copyeditInstructionsDescription"
+msgstr "Οι οδηγίες επιμέλειας κειμένου θα είναι διαθέσιμες στους Επιμελητές κειμένου, τους Συγγραφείς και τους Επιμελητές ενοτήτων στο στάδιο επιμέλειας της υποβολής. Παρακάτω θα βρείτε σε μορφή HTML ένα προκαθορισμένο σύνολο οδηγιών, που μπορούν να τροποποιηθούν ή να αντικατασταθούν από τον Διαχειριστή του περιοδικού (σε μορφή HTML ή απλού κειμένου)."
+
+msgid "manager.setup.copyrightNotice"
+msgstr "Δήλωση Προστασίας Πνευματικών Δικαιωμάτων"
+
+msgid "manager.setup.coverage"
+msgstr "Κάλυψη"
+
+msgid "manager.setup.coverageDescription"
+msgstr "Αναφέρεται στη γεω-χωρική, τη χρονολογική ή ιστορική κάλυψη ή/και τα χαρακτηριστικά του δείγματος της έρευνας."
+
+msgid "manager.setup.currentIssue"
+msgstr "Τρέχον τεύχος"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Βήμα 5. Διαμόρφωση της όψης του περιοδικού"
+
+msgid "manager.setup.customTags"
+msgstr "Προσαρμοσμένες ετικέτες"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Προσαρμοσμένες ετικέτες κεφαλίδας HTML που προορίζονται για προσθήκη στην κεφαλίδα κάθε σελίδας (π.χ., ετικέτες META)."
+
+msgid "manager.setup.details"
+msgstr "Λεπτομέρειες"
+
+msgid "manager.setup.details.description"
+msgstr "Τίτλος περιοδικού, Διεθνής Πρότυπος Αριθμός Περιοδικής Έκδοσης (ISSN), πρόσωπα επικοινωνίας, χορηγοί και μηχανές αναζήτησης."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Ο Διαχειριστής του περιοδικού θα εγγράφει Χρήστες όλων των κατηγοριών, ενώ οι Επιμελητές και οι Επιμελητές Ενότητας θα μπορούν να εγγράφουν μόνο Αξιολογητές."
+
+msgid "manager.setup.discipline"
+msgstr "Επιστημονικά πεδία και υπο-πεδία"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Χρήσιμα όταν το περιοδικό δημοσιεύει άρθρα που καλύπτουν περισσότερα του ενός επιστημονικά πεδία."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(π.χ., Ιστορία, Εκπαίδευση, Κοινωνιολογία, Ψυχολογία, Πολιτισμικές σπουδές, Νομική)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Παραθέστε παραδείγματα συναφών επιστημονικών πεδίων για το περιοδικό."
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Προσθήκη του πίνακα περιεχομένων για το τρέχον τεύχος (εάν είναι διαθέσιμος)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Απόφαση Επιμελητή"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Διεύθυνση αποστολής σφαλμάτων"
+
+msgid "manager.setup.emailBounceAddressDescription"
+msgstr "Μηνύματα σφάλματος για μη επιτυχή παράδοση ηλεκτρονικών μηνυμάτων θα αποστέλονται στη συγκεκριμένη διεύθυνση."
+
+msgid "manager.setup.emailBounceAddressDisabled"
+msgstr "<strong>Σημείωση:</strong> Για να αποστέλλονται μηνύματα, ο Διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει την επιλογή <tt>allow_envelope_sender</tt> στο αρχείο ρυθμίσεων του OJS. Ενδέχεται να απαιτούνται πρόσθετες ρυθμίσεις στον εξυπηρετητή ώστε να υποστηριχθεί η συγκεκριμένη λειτουργία, όπως διευκρινίζεται στα έγγραφα τεκμηρίωσης του OJS."
+
+msgid "manager.setup.emails"
+msgstr "Αναγνώριση μηνυμάτων"
+
+msgid "manager.setup.emailSignature"
+msgstr "Υπογραφή"
+
+msgid "manager.setup.emailSignatureDescription"
+msgstr "Τα αυτοματοποιημένα μηνύματα που αποστέλλονται μέσω του συστήματος για λογαριασμό του περιοδικού θα φέρουν την ακόλουθη υπογραφή στο τέλος τους."
+
+msgid "manager.setup.enableAnnouncements"
+msgstr "Ενεργοποίηση της δυνατότητας προσθήκης ανακοινώσεων για τους Διαχειριστές του περιοδικού."
+
+msgid "manager.setup.enableAnnouncementsHomepage1"
+msgstr "Προβολή"
+
+msgid "manager.setup.enableAnnouncementsHomepage2"
+msgstr "των πιο πρόσφατων ανακοινώσεων στην αρχική σελίδα του περιοδικού."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Οι επισκέπτες μπορούν να εγγραφούν στο περιοδικό."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Θεματική περιοχή και περιεχόμενο"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Περιγραφή του θεματικού εύρους, του τύπου των άρθρων και των άλλων τεκμηρίων που δημοσιεύει το περιοδικό."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Οδηγίες προς τους Συγγραφείς για την ευρετηρίαση του έργου τους"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "Για την ευρετηρίαση των μεταδεδομένων, το OJS υλοποιεί το διεθνές πρότυπο &lt;a href=\"http://www.openarchives.org/\" target=\"_blank\"&gt;Open Archives Initiative&lt;/a&gt;. Οι Συγγραφείς θα χρησιμοποιούν ένα αντίστοιχο πρότυπο για την καταχώριση των μεταδεδομένων της υποβολής. Ο Διαχειριστής του περιοδικού θα πρέπει να επιλέξει τις κατηγορίες μεταδεδομένων προς ευρετηρίαση και να παρουσιάσει στους Συγγραφείς συναφή παραδείγματα."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Το συγκεκριμένο ISSN δεν είναι έγκυρο."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Απαιτείται η διεύθυνση ηλεκτρονικού ταχυδρομείου του κύριου προσώπου επαφής."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Απαιτείται το όνομα του κύριου προσώπου επαφής."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Απαιτούνται τα αρχικά του περιοδικού."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Απαιτείται ο τίτλος του περιοδικού."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Απαιτείται ο αριθμός των Αξιολογητών ανά υποβολή."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Απαιτείται η διεύθυνση ηλεκτρονικού ταχυδρομείου για την υποστήριξη Χρηστών."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Απαιτείται το όνομα του Υπεύθυνου Υποστήριξης."
+
+msgid "manager.setup.generalInformation"
+msgstr "Γενικές πληροφορίες"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Βήμα 1. Λεπτομέρειες"
+
+msgid "manager.setup.guidelines"
+msgstr "Κατευθυντήριες γραμμές"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Βήμα 3. Οδηγίες υποβολής"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Για περιοδικά που προσφέρουν άμεση ή καθυστερημένη ανοικτή πρόσβαση, συμπεριλάβετε μία άδεια Creative Commons με όλες τις δημοσιευμένες εργασίες."
+
+msgid "manager.setup.information"
+msgstr "Πληροφορίες"
+
+msgid "manager.setup.information.description"
+msgstr "Συνοπτική παρουσίαση του περιοδικού για τους Υπευθύνους βιβλιοθηκών, τους υποψήφιους Συγγραφείς και τους Αναγνώστες διατίθεται στην ενότητα “Πληροφορίες” στην δεξιά πλευρική στήλη της ιστοσελίδας."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Για Συγγραφείς"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Για Υπευθύνους βιβλιοθηκών"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Για Αναγνώστες"
+
+msgid "manager.setup.initialIssue"
+msgstr "Αρχικό τεύχος"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Με βάση την επιλεγμένη μορφή, προσδιορίστε τον αριθμό τεύχους, τον τόμο ή/και το έτος του πρώτου τεύχους που θα δημοσιευθεί με το OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Ίδρυμα"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Επιπλέον στοιχεία μπορούν να προστεθούν στη γραμμή πλοήγησης που βρίσκεται στην κορυφή της διεπαφής του περιοδικού."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Τεκμήρια ανά σελίδα"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Συντομογραφία περιοδικού"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Αρχειοθέτηση περιοδικού"
+
+msgid "manager.setup.journalSummary"
+msgstr "Περίληψη περιοδικού"
+
+msgid "manager.setup.journalSummary.description"
+msgstr "Μία σύντομη περιγραφή του περιοδικού που θα εμφανίζεται σε καταλόγους και βάσεις ευρετηριασμού περιοδικών."
+
+msgid "manager.setup.journalAbout"
+msgstr "Σχετικά με το περιοδικό"
+
+msgid "manager.setup.journalAbout.description"
+msgstr "Συμπεριλάβετε χρήσιμες πληροφορίες για το περιοδικό, όπως η Πολιτική Ανοικτής Πρόσβασης, η θεματική περιοχή και το περιεχόμενο, η Δήλωση Πνευματικών Δικαιωμάτων, το ιστορικό του περιοδικού, η Πολιτική Προστασίας Προσωπικών Δεδομένων και η αρχειοθέτηση στα συστήματα LOCKSS ή CLOCKSS."
+
+msgid "manager.setup.favicon"
+msgstr "Favicon του περιοδικού"
+
+msgid "manager.setup.faviconDescription"
+msgstr "Προσθέστε ένα favicon για το περιοδικό, για να εμφανίζεται στη γραμμή πλοήγησης όταν οι Χρήστες επισκέπτονται τον ιστότοπο."
+
+msgid "manager.setup.faviconInvalid"
+msgstr "Άκυρος τύπος αρχείου favicon. Οι αποδεκτοί τύποι είναι .ico, .png, and .gif."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Περιεχόμενo αρχικής σελίδας περιοδικού"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Εξ ορισμού, η αρχική σελίδα αποτελείται από συνδέσμους πλοήγησης. Επιπλέον περιεχόμενο μπορεί να προστεθεί μέσω των ακόλουθων επιλογών. Λάβετε υπόψη σας ότι το τρέχον τεύχος είναι πάντοτε προσβάσιμο μέσω του συνδέσμου «Τρέχον Τεύχος», στη γραμμή πλοήγησης."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Κεφαλίδα αρχικής σελίδας περιοδικού"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Κεφαλίδα Αρχικής Σελίδας Περιοδικού"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Μία γραφική έκδοση του τίτλου και του λογοτύπου του περιοδικού (ως αρχείο .gif, .jpg, ή .png) μπορεί να μεταφορτωθεί για την αρχική σελίδα."
+
+msgid "manager.setup.journalInitials"
+msgstr "Αρχικά περιοδικού"
+
+msgid "manager.setup.journalLayout"
+msgstr "Εμφάνιση περιοδικού"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Επιλέξτε ένα γραφικό θέμα και τα στοιχεία που θα διαμορφώσουν την διεπαφή του περιοδικού. Εναλλακτικά, μεταφορτώστε ένα αρχείο μορφοποίησης."
+
+msgid "manager.setup.journalLogo"
+msgstr "Λογότυπο περιοδικού"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Λογότυπο περιοδικού"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Υποσελίδο περιοδικού"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Αυτό είναι το υποσέλιδο του περιοδικού σας. Για να τροποποιήσετε το υποσέλιδο, εισάγετε τον σχετικό κώδικα HTML στο παρακάτω πλαίσιο κειμένου. Το υποσέλιδο θα εμφανίζεται σε όλες τις σελίδες."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Βήμα 2. Πολιτικές περιοδικού"
+
+msgid "manager.setup.journalSetup"
+msgstr "Ρυθμίσεις του περιοδικού"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Οι ρυθμίσεις του περιοδικού ενημερώθηκαν."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Μη έγκυρη μορφή αρχείου μορφοποίησης για το περιοδικό. Έγκυρη μορφή αρχείου είναι η .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Γραφικό θέμα περιοδικού"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Μικρογραφία περιοδικού"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Ένα μικρό λογότυπο ή εικόνα του περιοδικού, για χρήση σε καταλόγους περιοδικών."
+
+msgid "manager.setup.journalThumbnail.altText"
+msgstr "Εναλλακτικό κείμενο για μικρογραφία"
+
+msgid "manager.setup.journalTitle"
+msgstr "Τίτλος περιοδικού"
+
+msgid "manager.setup.labelName"
+msgstr "Όνομα πεδίου"
+
+msgid "manager.setup.layoutInstructions"
+msgstr "Οδηγίες σελιδοποίησης"
+
+msgid "manager.setup.layoutInstructionsDescription"
+msgstr "Οδηγίες σελιδοποίησης για την κατάλληλη μορφοποίηση των υπό δημοσίευση άρθρων μπορούν να εισαχθούν παρακάτω σε μορφή HTML ή απλού κειμένου. Οι οδηγίες Θα είναι διαθέσιμες στον Επιμελητή Σελιδοποίησης και τον Επιμελητή Ενότητας στη σελίδα «Επιμέλεια» κάθε υποβολής."
+
+msgid "manager.setup.layoutTemplates"
+msgstr "Πρότυπα σελιδοποίησης"
+
+msgid "manager.setup.layoutTemplatesDescription"
+msgstr "Τα μεταφορτωμένα Πρότυπα Σελιδοποίησης θα εμφανίζονται στο μενού «Διάταξη», για κάθε τύπο δημοσίευσης (π.χ., άρθρο, βιβλιοκρισία, κλπ.). Χρησιμοποιήστε οποιονδήποτε τύπο αρχείου (π.χ., pdf, doc, κτλ.) με πρόσθετους σχολιασμούς που καθορίζουν τη γραμματοσειρά, το μέγεθος, τα περιθώρια, κτλ., ως οδηγούς για τους Επιμελητές σελιδοποίησης και τους Επιμελητές των τυπογραφικών δοκιμίων."
+
+msgid "manager.setup.layoutTemplates.file"
+msgstr "Αρχείο προτύπου"
+
+msgid "manager.setup.layoutTemplates.title"
+msgstr "Τίτλος"
+
+msgid "manager.setup.lists"
+msgstr "Λίστες"
+
+msgid "manager.setup.listsDescription"
+msgstr "Εισάγετε τον μέγιστο αριθμό αντικειμένων (για παράδειγμα υποβολές, Χρήστες ή αναθέσεις επιμέλειας) που θα εμφανίζονται ανά σελίδα σε λίστες, καθώς και τον μέγιστο αριθμό των συνδέσμων που θα εμφανίζονται σε κάθε σελίδα της λίστας."
+
+msgid "manager.setup.enableArchive"
+msgstr "Ενεργοποίηση της αρχειοθέτησης"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Το Πρόσθετο Δικτύου Διαφύλαξης (PN) του PKP ενεργοποιήθηκε."
+
+msgid "manager.setup.plnDescription"
+msgstr "Το Δίκτυο Διαφύλαξης (PN) του PKP παρέχει δωρεάν υπηρεσίες διαφύλαξης περιεχομένου για περιοδικά του OJS που πληρούν ορισμένα βασικά κριτήρια."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Επιλέξτε τον σύνδεσμο \"Ρυθμίσεις\" για να αποδεχθείτε τους όρους χρήσης για το Πρόσθετο Δικτύου Διαφύλαξης (PN) του PKP."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Το Πρόσθετο Δικτύου Διαφύλαξης (PN) του PKP"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "Το Πρόσθετο Δικτύου Διαφύλαξης (PN) του PKP παρέχει δωρεάν υπηρεσίες διαφύλαξης για κάθε περιοδικό του OJS που πληροί ορισμένα βασικά κριτήρια. Το Πρόσθετο PN του PKP για το OJS 3 βρίσκεται υπό ανάπτυξη και θα είναι σύντομα διαθέσιμο."
+
+msgid "manager.setup.otherLockss"
+msgstr "Εναλλακτικές επιλογές αρχειοθέτησης"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Ενεργοποίηση του LOCKSS για τη διανομή και αποθήκευση του περιεχομένου σε βιβλιοθήκες που συμμετέχουν στο δίκτυο, μέσω της σελίδας &lt;a  href=\"{$lockssUrl}\" target=\"_blank\"&gt;Διακήρυξη του Εκδότη&lt;/a&gt; του LOCKSS."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "Η άδεια του LOCKSS θα εμφανίζεται στο μενού \"Σχετικά με το περιοδικό\", στην ενότητα \"Αρχειοθέτηση\": <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Άδεια LOCKSS</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Περιγραφή άδειας LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Προσδιορίστε 6-10 βιβλιοθήκες όπου θα αποθηκευτούν τα περιεχόμενα του περιοδικού.&lt;a href=\"http://www.lockss.org/community/\"  target=\"_blank\"&gt;η κοινότητα LOCKSS &lt;/a&gt;."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Ενεργοποίηση του CLOCKSS για τη διανομή και αποθήκευση του περιεχομένου σε βιβλιοθήκες που συμμετέχουν στο δίκτυο, μέσω της σελίδας <a href=\"{$clockssUrl}\" target=\"_blank\">Διακήρυξη του Εκδότη</a> του CLOCKSS."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "Η άδεια του CLOCKSS θα εμφανίζεται στο μενού \"Σχετικά με το περιοδικό\", στην ενότητα \"Αρχειοθέτηση\": <a href=\"http://clockss.org/\" target=\"_blank\">;Άδεια CLOCKSS</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Περιγραφή άδειας CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Μπορείτε να εγγραφείτε στην υπηρεσία CLOCKSS, μεταβαίνοντας <a href=\"http://clockss.org/\" target=\"_blank\">στον ιστότοπο CLOCKSS</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.porticoEnable"
+msgstr "Ενεργοποίηση του Portico για τη διανομή και αποθήκευση του περιεχομένου σε βιβλιοθήκες που συμμετέχουν στο δίκτυο."
+
+msgid "manager.setup.porticoTitle"
+msgstr "Portico"
+
+msgid "manager.setup.Issn"
+msgstr "ISSN"
+
+msgid "manager.setup.look"
+msgstr "Εμφάνιση του περιοδικού"
+
+msgid "manager.setup.look.description"
+msgstr "Κεφαλίδα αρχικής σελίδας, περιεχόμενο, κεφαλίδα περιοδικού, υποσέλιδο, γραμμή πλοήγησης και αρχείο μορφοποίησης."
+
+msgid "manager.setup.management"
+msgstr "Διαχείριση"
+
+msgid "manager.setup.management.description"
+msgstr "Πρόσβαση και ασφάλεια, προγραμματισμός, ανακοινώσεις, επιμέλεια κειμένων, σελιδοποίηση και διόρθωση τυπογραφικών δοκιμίων."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Διαχείριση βασικών βημάτων επιμέλειας"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Ρυθμίσεις διαχείρισης και δημοσίευσης"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Βήμα 4. Διαχείριση του περιοδικού"
+
+msgid "manager.setup.navigationBar"
+msgstr "Γραμμή πλοήγησης"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Προσθήκη ή αφαίρεση επιλογών στη γραμμή πλοήγησης."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "Ο σύνδεσμος αποτελείται από μία απόλυτη διαδρομή URL (π.χ., \"http://www.example.com\") και όχι από μία  διαδρομή σχετική με τον ιστότοπο(π.χ.,\"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Η τιμή της ετικέτας αποτελεί ακριβή περιγραφή (π.χ. \"Οργάνωση περιοδικού\") και όχι κάποιο κλειδί μηνύματος τοπικής προσαρμογής (π.χ.,  \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Δεν έχει μεταφορτωθεί κάποιο αρχείο εικόνας."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Δεν έχει μεταφορτωθεί κάποιο αρχείο μορφοποίησης."
+
+msgid "manager.setup.note"
+msgstr "Σημείωση"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Σημείωση:</strong> Η λειτουργία αποστολής μηνύματος επιβεβαίωσης υποβολής έχει απενεργοποιηθεί. Για να χρησιμοποιήσετε τη συγκεκριμένη λειτουργία, ενεργοποιήστε το μήνυμα \"Αναγνώριση Υποβολής\" στο μενού \"Μηνύματα\".."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Σύνδεσμοι σελίδας"
+
+msgid "manager.setup.onlineAccessManagement"
+msgstr "Πρόσβαση στο περιεχόμενο του περιοδικού"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Διαδικτυακό ISSN"
+
+msgid "manager.setup.openAccess"
+msgstr "Το περιοδικό παρέχει ανοικτή πρόσβαση στο περιεχόμενό του."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Επιλογή αρίθμησης σελίδων"
+
+msgid "manager.setup.policies"
+msgstr "Πολιτικές"
+
+msgid "manager.setup.policies.description"
+msgstr "Θεματική περιοχή, ομότιμη αξιολόγηση, ενότητες, προσωπικά δεδομένα, και άλλα στοιχεία σχετικά με το περιοδικό."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN εντύπου"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Οδηγίες διόρθωσης τυπογραφικών δοκιμίων"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Οι οδηγίες διόρθωσης των τυπογραφικών δοκιμίων θα είναι διαθέσιμες στους Επιμελητές Τυπογραφικών Δοκιμίων, τους Συγγραφείς, τους Επιμελητές Σελιδοποίησης και τους Επιμελητές Ενότητας στο στάδιο επιμέλειας της υποβολής. Παρακάτω θα βρείτε σε μορφή HTML ένα προκαθορισμένο σύνολο οδηγιών, που μπορούν να τροποποιηθούν ή να αντικατασταθούν από τους Επιμελητές του περιοδικού."
+
+msgid "manager.setup.provideRefLinkInstructions"
+msgstr "Παροχή οδηγιών στους Επιμελητές Σελιδοποίησης."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Πρόγραμμα δημοσίευσης"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Οι εργασίες μπορούν να δημοσιευθούν συλλογικά, ως τεύχος με δικό του πίνακα περιεχομένων. Εναλλακτικά, μεμονωμένα τεκμήρια μπορούν να δημοσιευθούν μεμονωμένα, προσθέτοντάς τα στον πίνακα περιεχομένων του “τρέχοντος” τόμου. Ενημερώστε τους Αναγνώστες σχετικά με το σύστημα δημοσίευσης του περιοδικού και την αναμενόμενη συχνότητα έκδοσης των τευχών."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Προγραμματισμός δημοσίευσης"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Αναγνώριση περιεχομένου περιοδικού"
+
+msgid "manager.setup.publisher"
+msgstr "Εκδότης"
+
+msgid "manager.setup.publisherDescription"
+msgstr "Η ονομασία του φορέα έκδοσης του περιοδικού μπορεί να συμπεριληφθεί στα μεταδεδομένα που θα δίνονται σε εξωτερικά συστήματα."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Σύνδεση αναφορών"
+
+msgid "manager.setup.refLinkInstructions.description"
+msgstr "Οδηγίες σελιδοποίησης για σύνδεση αναφορών"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Για την προβολή των περιεχομένων του περιοδικού, απαιτείται εγγραφή και σύνδεση των Χρηστών στον ιστότοπο."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Για την προβολή του ιστοτόπου του περιοδικού, απαιτείται εγγραφή και σύνδεση των Χρηστών."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Κατευθυντήριες γραμμές αξιολόγησης"
+
+msgid "manager.setup.reviewGuidelinesDescription"
+msgstr "Παρατίθενται τα κριτήρια αξιολόγησης των υποβολών και οδηγίες για τη διεξαγωγή μιας χρήσιμης αξιολόγησης. Οι Αξιολογητές έχουν τη δυνατότητα υποβολής σχολίων προς τους Συγγραφείς και τους Επιμελητές, καθώς και παρατηρήσεων αποκλειστικά προς τους Επιμελητές. "
+
+msgid "manager.setup.reviewOptions"
+msgstr "Επιλογές αξιολόγησης"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Αυτοματοποιημένες υπενθυμίσεις μέσω μηνυμάτων"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "Για την αποστολή υπενθυμίσεων, ο Διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει τις &lt;tt&gt;προγραμματισμένες εργασίες&lt;/tt&gt; στο αρχείο ρυθμίσεων του OJS. Ενδέχεται να απαιτούνται πρόσθετες ρυθμίσεις στον εξυπηρετητή για υποστήριξη της συγκεκριμένης λειτουργίας, όπως διευκρινίζεται στα έγγραφα τεκμηρίωσης του OJS."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "\"Τυφλή\" αξιολόγηση"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Χρονικό διάστημα (σε εβδομάδες) για την ολοκλήρωση της αξιολόγησης"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Κατά την ολοκλήρωση της αξιολόγησης, οι Επιμελητές του περιοδικού θα βαθμολογούν τους Αξιολογητές."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Οι Αξιολογητές θα έχουν πρόσβαση στο αρχείο υποβολής μόνο μετά από αποδοχή του αιτήματος αξιολόγησης."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Πρόσβαση Αξιολογητή"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Ενεργοποίηση πρόσβασης Αξιολογητή με ένα κλικ."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "&lt;strong&gt;Σημείωση:&lt;/strong&gt; Το αίτημα προς τους Αξιολογητές θα περιλαμβάνει έναν ειδικό σύνδεσμο που θα οδηγεί κατευθείαν στη σελίδα αξιολόγησης της υποβολής (με πρόσβαση και σε όλες τις άλλες σελίδες που απαιτούν σύνδεση). Για λόγους ασφαλείας, οι Επιμελητές δεν μπορούν να τροποποιούν τις διευθύνσεις ηλεκτρονικού ταχυδρομείου ή να προσθέτουν παραλήπτες κοινοποίησης πριν από την αποστολή αιτημάτων στους Αξιολογητές."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Βαθμολόγηση Αξιολογητή"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Υπενθυμίσεις προς τους Αξιολογητές"
+
+msgid "manager.setup.reviewOptions.showEnsuringLink"
+msgstr "Προβολή συνδέσμων &lt;a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\"&gt;Διασφάλιση \"τυφλής\" αξιολόγησης&lt;/a&gt; σε σελίδες όπου μεταφορτώνουν αρχεία οι Συγγραφείς και οι Αξιολογητές."
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Πολιτική αξιολόγησης"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Ευρετηρίαση μηχανών αναζήτησης"
+
+msgid "manager.setup.searchEngineIndexingDescription"
+msgstr "Εισάγετε μία σύντομη περιγραφή του περιοδικού που θα εμφανίζεται στις μηχανές αναζήτησης, όταν το περιοδικό συγκαταλέγεται στα αποτελέσματα της αναζήτησης."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Ενότητες και Επιμελητές ενότητας"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Εάν δεν προστεθούν ενότητες, τα τεκμήρια που υποβάλλονται καταχωρούνται αυτόματα στην ενότητα \"Άρθρα\".)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Για να δημιουργήσετε ή να τροποποιήσετε ενότητες του περιοδικού (π.χ., Άρθρα, Βιβλιοκρισίες, κτλ.), μεταβείτε στη \"Διαχείριση ενοτήτων\".&lt;br /&gt;&lt;br /&gt;Οι Συγγραφείς με την υποβολή των τεκμηρίων στο περιοδικό καθορίζουν..."
+
+msgid "manager.setup.securitySettings"
+msgstr "Ρυθμίσεις πρόσβασης και ασφάλειας"
+
+msgid "manager.setup.securitySettingsDescription"
+msgstr "Το OJS διαθέτει παραμετροποιήσιμες επιλογές ασφαλείας και πρόσβασης στο περιεχόμενο του περιοδικού, διατηρώντας επιπρόσθετες πληροφορίες σχετικά με τις υποβολές για την καλύτερη εποπτεία τους."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Ο Επιμελητής του περιοδικού που θα έχει την εποπτεία της επιμέλειας του τεκμηρίου."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Η ενότητα του περιοδικού στην οποία θα υποβληθεί το τεκμήριο."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Να προβάλλονται πάντα οι σύνδεσμοι των τυπογραφικών δοκιμίων και να υποδεικνύεται η περιορισμένη πρόσβαση."
+
+msgid "manager.setup.siteAccess"
+msgstr "Επιπρόσθετοι περιορισμοί πρόσβασης για τον ιστότοπο και τα άρθρα"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Πέντε βήματα για τη δημιουργία του ιστοτόπου του περιοδικού"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(π.χ., Φωτοσύνθεση; Μαύρες τρύπες; Πρόβλημα των χαρτών των τεσσάρων χρωμάτων; Θεωρία Bayes)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Λέξεις-κλειδιά"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Παραθέστε παραδείγματα λέξεων-κλειδιών ή θεμάτων για την καθοδήγηση των Συγγραφέων"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Οδηγίες υποβολής"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Λίστα ελέγχου προετοιμασίας υποβολής"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Κατά την υποβολή εργασιών στο περιοδικό, ζητείται από τους Συγγραφείς να επιβεβαιώσουν ότι η υποβολή συμβαδίζει με τις υποδείξεις της λίστας ελέγχου. Η λίστα ελέγχου εμφανίζεται επίσης στις «Οδηγίες για τους Συγγραφείς», στην σελίδα «Σχετικά με το περιοδικό». Μπορείτε να επεξεργαστείτε τα στοιχεία της λίστας παρακάτω. Για την ολοκλήρωση της υποβολής από τους Συγγραφείς, απαιτείται η επιβεβαίωση όλων των στοιχείων της λίστας."
+
+msgid "manager.setup.submissions"
+msgstr "Υποβολές"
+
+msgid "manager.setup.submissions.description"
+msgstr "Οδηγίες προς τους Συγγραφείς, πνευματικά δικαιώματα και ευρετηρίαση (συμπεριλαμβανομένης της εγγραφής)"
+
+msgid "manager.setup.subscription"
+msgstr "Το περιοδικό απαιτεί συνδρομή για την πρόσβαση σε μέρος ή στο σύνολο του περιεχομένου."
+
+msgid "manager.setup.subscriptionDescription"
+msgstr "Η λειτουργία αυτή απαιτεί την ανάθεση ρόλου Διαχειριστή Συνδρομών. Ο Διαχειριστής Συνδρομών έχει πρόσβαση στο μενού συνδρομών, το οποίο περιλαμβάνει επιπρόσθετες επιλογές σχετικά με την ανοικτή πρόσβαση, την αυτοαρχειοθέτηση, και τις ειδοποιήσεις μέσω αυτόματων μηνυμάτων."
+
+msgid "manager.setup.noPublishing"
+msgstr "Το OJS δεν θα χρησιμοποιηθεί για τη δημοσίευση των περιεχομένων του περιοδικού στο διαδίκτυο."
+
+msgid "manager.setup.typeExamples"
+msgstr "(π.χ., Ιστορική έρευνα, Πειραμα, Λογοτεχνική ανάλυση, Έρευνα/συνέντευξη)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Τύπος (Μέθοδος/Προσέγγιση)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Παραθέστε παραδείγματα σχετικών τύπων έρευνας, μεθόδων και προσεγγίσεων για το συγκεκριμένο πεδίο"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Μοναδικό αναγνωριστικό"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Τα άρθρα και τα τεύχη του περιοδικού μπορούν να σημανθούν με έναν αριθμό ή μία σειρά χαρακτήρων αναγνώρισης, εφαρμόζοντας μια μέθοδο ευρετηριασμού όπως το Digital Object Identifier (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Το περιοδικό θα διαθέτει Εκδοτική Επιτροπή."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Μικρογραφία"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Εικόνα τίτλου"
+
+msgid "manager.setup.useJournalStyleSheet"
+msgstr "Αρχείο μορφοποίησης περιοδικού"
+
+msgid "manager.setup.userRegistration"
+msgstr "Εγγραφή Χρήστη"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Κείμενο τίτλου"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\tΗ εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, τα οποία εμφανίζονται σε διάφορα συγκείμενα.\n"
+"\tΣε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης (π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων ή για την ταξινόμηση των αποτελεσμάτων μίας αναζήτησης). Παρακαλούμε ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή."
+
+msgid "manager.statistics.statistics"
+msgstr "Στατιστικά περιοδικού"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Μετρήσεις προβολών άρθρων (μόνο για Συγγραφείς)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Αποδοχή"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Απόρριψη"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Επανυποβολή"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Ημέρες για αξιολόγηση"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Ημέρες για δημοσίευση"
+
+msgid "manager.statistics.statistics.description"
+msgstr "Το OJS υπολογίζει τα ακόλουθα στατιστικά: Οι \"Ημέρες για αξιολόγηση\" υπολογίζονται από την ημερομηνία υποβολής (ή της σήμανσης των υποβεβλημένων αρχείων ως \"έκδοση αξιολόγησης\") μέχρι την αρχική απόφαση του Επιμελητή, ενώ οι \"Ημέρες  για δημοσίευση\" υπολογίζονται, για άρθρα που έχουν γίνει αποδεκτά, από την ημερομηνία της αρχικής μεταφόρτωσης του άρθρου μέχρι τη δημοσίευσή του."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Δημοσιευμένα τεκμήρια"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Επιλέξτε τα τεκμήρια που επιθυμείτε να είναι διαθέσιμα στους Αναγνώστες στη σελίδα \"Σχετικά με το Περιοδικό\"."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Σημείωση: Τα ποσοστά για τα αξιολογημένα άρθρα μπορεί να μη δίνουν άθροισμα 100%, καθώς άρθρα που υποβάλλονται εκ νέου είτε γίνονται αποδεκτά, είτε απορρίπτονται, είτε βρίσκονται ακόμη στη διαδικασία αξιολόγησης."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Δημοσιευμένα τεύχη"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Σύνολο υποβολών"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Αξιολογημένα τεκμήρια"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Εγγεγραμμένοι Αναγνώστες"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Εγγεγραμμένοι Χρήστες"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Αριθμός αναθέσεων"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Αξιολογητές"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Βαθμολογία Επιμελητή"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Αριθμός αξιολογήσεων"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Επιλέξτε τις ενότητες που θα χρησιμοποιηθούν για τον υπολογισμό των σχετικών με την ομότιμη αξιολόγηση στατιστικών του περιοδικού."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Συνδρομές"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Μεταφορτώσεις αρχείου άρθρου"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Προβολές σελίδας περίληψης άρθρου"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Προβολές σελίδας και μεταφορτώσεις περίληψης άρθρου"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Προβολές αρχικής σελίδας περιοδικού"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Προβολές σελίδας πίνακα περιεχομένων τεύχους"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Περιορίστε τα αποτελέσματα ανά κατηγορία τεκμηρίου (τεύχος ή/και άρθρο)"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Περιορίστε τα αποτελέσματα σύμφωνα με τον τύπο του αντικειμένου (περιοδικό, τεύχος, άρθρο, είδος αρχείου) ή/και σύμφωνα με ένα ή περισσότερα αναγνωριστικά (id) αντικειμένων."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Πολιτικές συνδρομών"
+
+msgid "manager.subscriptionPolicies.authorSelfArchive"
+msgstr "Πολιτική Αυτοαρχειοθέτησης Συγγραφέων"
+
+msgid "manager.subscriptionPolicies.authorSelfArchiveDescription"
+msgstr "Η Πολιτική Αυτοαρχειοθέτησης θα συμπεριληφθεί στην ενότητα \"Πολιτικές\" στη σελίδα \"Σχετικά με το περιοδικό\"."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Καθυστερημένη Ανοικτή Πρόσβαση"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Παρακαλούμε, χρησιμοποιήστε το πλαίσιο ελέγχου που διατίθεται."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Λήξη συνδρομής"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Με τη λήξη της συνδρομής, υπάρχει η δυνατότητα να αφαιρεθεί από τους Αναγνώστες το δικαίωμα πρόσβασης σε όλο το περιεχόμενο της συνδρομής, ή να διατηρηθεί το δικαίωμα πρόσβασης στο περιεχόμενο που δημοσιεύτηκε πριν την ημερομηνία λήξης της συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Πλήρης διακοπή"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Διακόπτεται η πρόσβαση σε όλο το συνδρομητικό περιεχόμενο με την λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Μερική διακοπή"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Διακόπτεται η πρόσβαση στο συνδρομητικό περιεχόμενο που δημοσιεύτηκε πρόσφατα, αλλά επιτρέπεται η πρόσβαση στο περιεχόμενο που δημοσιεύτηκε πριν τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Μήνες"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Εβδομάδες"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Ειδοποιήστε με μήνυμα τους Συνδρομητές μετά τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Ειδοποιήστε με μήνυμα τους Συνδρομητές μετά τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Ειδοποιήστε με μήνυμα τους Συνδρομητές πριν τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Ειδοποιήστε με μήνυμα τους Συνδρομητές πριν τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Υπενθυμίσεις λήξης συνδρομής"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Αυτοματοποιημένα μηνύματα υπενθύμισης (διαθέσιμα για επεξεργασία από τους Διαχειριστές μέσω της σελίδας \"Έτοιμα Emails\") μπορούν να αποσταλούν στους Συνδρομητές πριν και μετά τη λήξη μίας συνδρομής."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Σημείωση:</strong> Για να αποστέλλονται αυτοματοποιημένα μηνύματα, ο Διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει τις <tt>προγραμματισμένες_εργασίες</tt> στο αρχείο ρυθμίσεων του OJS. Για την υποστήριξη της συγκεκριμένης λειτουργίας ενδέχεται να απαιτηθούν πρόσθετες ρυθμίσεις στον εξυπηρετητή, όπως υποδεικνύεται και στα έγγραφα τεκμηρίωσης του OJS."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Επιλέξτε ένα από τα παρακάτω:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "Στην περιοχή κειμένου μπορεί να χρησιμοποιηθεί κώδικας HTML (για προσαρμογή του μεγέθους της γραμματοσειράς, του χρώματος, κτλ.), με το πλήκτρο \"return\" (αλλαγή γραμμής) να έχει την ίδια λειτουργία με το <tt>&lt;br&gt;</tt>. Το πρόγραμμα επεξεργασίας HTML λειτουργεί με τον φυλλομετρητή Firefox."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη τιμή για τον αριθμό των μηνών μετά από τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη τιμή για τον αριθμό των μηνών πριν από τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη τιμή για τον αριθμό των εβδομάδων μετά από τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη τιμή για τον αριθμό των εβδομάδων πριν από τη λήξη της συνδρομής."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Οι εγγεγραμμένοι Αναγνώστες θα έχουν τη δυνατότητα λήψης του πίνακα περιεχομένων μέσω μηνύματος όταν ένα τεύχος αποκτά ανοικτή πρόσβαση."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Σημείωση:</strong> Για να αποστέλλονται τα μηνύματα, ο Διαχειριστής του ιστοτόπου πρέπει να ενεργοποιήσει την επιλογή <tt>προγραμματισμένες_εργασίες</tt> στο αρχείο ρυθμίσεων του OJS. Για την υποστήριξη της συγκεκριμένης λειτουργίας ενδέχεται να απαιτηθούν πρόσθετες ρυθμίσεις στον εξυπηρετητή, όπως υποδεικνύεται και στα έγγραφα τεκμηρίωσης του OJS."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Ειδοποιήσεις διαδικτυακών πληρωμών"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Αυτοματοποιημένα μηνάμυατα ειδοποιήσεων (διαθέσιμα για επεξεργασία από τους Διαχειριστές μέσω της σελίδας \"Έτοιμα Emails\") μπορούν να αποστέλλονται στον Διαχειριστή Συνδρομών με την ολοκλήρωση των διαδικτυακών πληρωμών συνδρομών."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Ειδοποίηση του Διαχειριστή Συνδρομών με μήνυμα κατά τη διαδικτυακή προμήθεια μίας ατομικής συνδρομής."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Ειδοποίηση του Διαχειριστή Συνδρομών με μήνυμα κατά τη διαδικτυακή προμήθεια μίας ιδρυματικής συνδρομής (προτεινόμενο)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Ειδοποίηση του Διαχειριστή Συνδρομών με μήνυμα κατά τη διαδικτυακή ανανέωση μίας ατομικής συνδρομής."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Ειδοποίηση του Διαχειριστή Συνδρομών με μήνυμα κατά τη διαδικτυακή ανανέωση μίας ιδρυματικής συνδρομής."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Σημείωση:</strong> Οι ιδρυματικές συνδρομές που δημιουργούνται μέσω διαδικτύου απαιτούν την έγκριση των δηλωμένων περιοχών δικτύου (domain) και ΙΡ διευθύνσεων, καθώς και την ενεργοποίση της συνδρομής από τον Διαχειριστή Συνδρομών."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Σημείωση:</strong> Για την ενεργοποίηση αυτών των επιλογών, ο Διαχειριστής θα πρέπει να ενεργοποιήσει τη λειτουργικότητα των διαδικτυακών πληρωμών, συμπεριλαμβανομένων των διαδικτυακών πληρωμών για συνδρομές, στο μενού \"Εισφορές Αναγνωστών\"."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Επιλογές ανοικτής πρόσβασης για συνδρομητικά περιοδικά"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Για να αυξηθεί η αναγνωσιμότητα και ο αριθμός των ετεροαναφορών, τα συνδρομητικά περιοδικά μπορούν να παρέχουν “καθυστερημένη ανοικτή πρόσβαση” στο δημοσιευμένο περιεχόμενο, όπως και να επιτρέπουν την αυτοαρχειοθέτηση από τους Συγγραφείς."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Πληροφορίες συνδρομής"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Πληροφορίες για τους τύπους και το κόστος συνδρομών θα εμφανίζονται στη σελίδα συνδρομών, μαζί με το όνομα και τα στοιχεία επικοινωνίας του Διαχειριστή Συνδρομών. Επιπλέον πληροφορίες σχετικά με τις συνδρομές, όπως μέθοδοι πληρωμής ή υποστήριξη για τους Συνδρομητές από αναπτυσσόμενες χώρες, μπορούν να προστεθούν εδώ."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Διαχειριστής Συνδρομών"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Αυτά τα στοιχεία επικοινωνίας θα εμφανίζονται στη σελίδα συνδρομών."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Παρακαλούμε εισαγάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου."
+
+msgid "manager.subscriptions"
+msgstr "Συνδρομές"
+
+msgid "manager.individualSubscriptions"
+msgstr "Ατομικές συνδρομές"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Ιδρυματικές συνδρομές"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Επιβεβαιώνετε την ανανέωση της συνδρομής;"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Επιβεβαιώνετε τη διαγραφή της συνδρομής;"
+
+msgid "manager.subscriptions.summary"
+msgstr "Σύνοψη συνδρομών"
+
+msgid "manager.subscriptions.create"
+msgstr "Δημιουργία νέας συνδρομής"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Δημιουργία"
+
+msgid "manager.subscriptions.renew"
+msgstr "Ανανέωση"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Λήξη"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Ημερομηνία λήξης"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Έναρξη"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Ημερομηνία έναρξης"
+
+msgid "manager.subscriptions.domain"
+msgstr "Περιοχή δικτύου (domain)"
+
+msgid "manager.subscriptions.edit"
+msgstr "Επεξεργασία συνδρομής"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Επεξεργασία"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Σε κατάτασταση"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Όλα"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Κατάσταση"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Απαιτείται μία κατάσταση συνδρομής."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Παρακαλούμε εισάγετε μία έγκυρη κατάσταση συνδρομής."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Τύπος συνδρομής"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Απαιτείται ένας τύπος συνδρομής."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Παρακαλούμε επιλέξτε έναν έγκυρο τύπο συνδρομής."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Ημερομηνία έναρξης"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Απαιτείται μία ημερομηνία έναρξης συνδρομής."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη ημερομηνία έναρξης συνδρομής."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Ημερομηνία λήξης"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Απαιτείται μία ημερομηνία λήξης συνδρομής."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη ημερομηνία λήξης συνδρομής."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Σημείωση: Όλες οι παρακάτω αλλαγές αφορούν στο προφίλ του Χρήστη σε επίπεδο συστήματος."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Χρήστης"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Επικοινωνία"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Απαιτείται ένας Χρήστης."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Παρακαλούμε επιλέξτε έναν έγκυρο Χρήστη."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη χώρα."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Αποστολή μηνύματος στον Χρήστη με το όνομα Χρήστη και τις λεπτομέρειες της συνδρομής."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Παρακαλούμε χρησιμοποιήστε το πλαίσιο ελέγχου που παρέχεται."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Μέλος"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Αριθμός αναφοράς"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Εισάγετε πληροφορίες για την κατάσταση του μέλους σε περίπτωση που ο τύπος συνδρομής απαιτεί από τους Συνδρομητές να ανήκουν σε μία ένωση ή οργανισμό."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Ο επιλεγμένος τύπος συνδρομής απαιτεί πληροφορίες για την κατάσταση του μέλους."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Σημειώσεις"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Περιοχή δικτύου (domain)"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Όνομα ιδρύματος"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Απαιτείται ένα όνομα ιδρύματος."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Ταχυδρομική διεύθυνση"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Εάν καταχωρηθεί εδώ μία περιοχή δικτύου (domain), η εισαγωγή μίας περιοχής IP διευθύνσεων είναι προαιρετική. <br/>Έγκυρες τιμές είναι τα ονόματα περιοχών δικτύου (π.χ. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Ο επιλεγμένος τύπος συνδρομής απαιτεί τον ορισμό μίας περιοχής δικτύου (domain) ή/και μίας περιοχής IP διευθύνσεων για την πιστοποίηση της συνδρομής."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Παρακαλούμε εισάγετε μία έγκυρη περιοχή δικτύου (domain)."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Περιοχή IP διευθύνσεων"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Εάν εισάγετε εδώ μια περιοχή IP διευθύνσεων, η εισαγωγή της περιοχής δικτύου (domain) είναι προαιρετική.<br />Έγκυρες τιμές αποτελούν μία διεύθυνση IP (π.χ. 142.58.103.1), μία περιοχή διευθύνσεων IP (π.χ. 142.58.103.1 - 142.58.103.4), μία περιοχή διευθύνσεων IP με τον χαρακτήρα μπαλαντέρ '*' (π.χ. 142.58.*.*) και μία περιοχή διευθύνσεων IP τύπου CIDR (π.χ. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Παρακαλούμε εισάγετε μία έγκυρη περιοχή IP διευθύνσεων."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Διαγραφή"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Προσθήκη"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Αποθήκευση και δημιουργία νέου"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Για την αποστολή ειδοποίησης μέσω μηνύματος στον Χρήστη, θα πρέπει να καθοριστεί το όνομα και η διεύθυνση ηλεκτρονικού ταχυδρομείου του προσώπου επικοινωνίας για τις συνδρομές, στο μενού \"Οργάνωση περιοδικού\" ."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Ο Χρήστης αυτός είναι ήδη Συνδρομητής στο περιοδικό."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Πρέπει να δημιουργηθεί ένας τύπος συνδρομής πριν τη δημιουργία νέων συνδρομών."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Περιοχή διευθύνσεων IP"
+
+msgid "manager.subscriptions.membership"
+msgstr "Μέλος"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Αριθμός αναφοράς"
+
+msgid "manager.subscriptions.notes"
+msgstr "Σημειώσεις"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Δεν υπάρχουν συνδρομές"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Επιλέξτε πρόσωπο επικοινωνίας για τις συνδρομές"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Επιλέξτε Χρήστη"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Τα πρόνομια πρόσβασης που προκύπτουν από τη συνδρομή χορηγούνται αυτόματα στους Διαχειριστές, τους Επιμελητές, τους Επιμελητές Ενότητας, τους Επιμελητές Σελιδοποίησης, τους Επιμελητές Κειμένων και τους Επιμελητές Τυπογραφικών Δοκιμίων του περιοδικού."
+
+msgid "manager.subscriptions.select"
+msgstr "Επιλογή"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Η συνδρομή δημιουργήθηκε επιτυχώς."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Τύπος συνδρομής"
+
+msgid "manager.subscriptions.user"
+msgstr "Χρήστης"
+
+msgid "manager.subscriptions.contact"
+msgstr "Όνομα προσώπου επαφής"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Όνομα ιδρύματος"
+
+msgid "manager.subscriptionTypes"
+msgstr "Τύποι συνδρομών"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Προσοχή! Όλες οι συνδρομές αυτού του τύπου θα διαγραφούν επίσης. Επιβεβαιώνετε τη διαγραφή του συγκεκριμένου τύπου συνδρομής;"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Κόστος"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Συνδρομές"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Ατομική"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Ιδρυματική"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Δημιουργία νέου τύπου συνδρομής"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Δημιουργία"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Διάρκεια"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Επεξεργασία τύπου συνδρομής"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Επεξεργασία"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Κόστος"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Εισάγετε μία αριθμητική τιμή (π.χ. 40 ή 40,00) χωρίς σύμβολο νομίσματος."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Το κόστος πρέπει να είναι μία θετική αριθμητική τιμή."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Απαιτείται εισαγωγή κόστους."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Νόμισμα"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Απαιτείται η επιλογή νομίσματος."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Παρακαλούμε επιλέξτε ένα έγκυρο νόμισμα."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Περιγραφή"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Λήξη μετά από"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "μήνες (π.χ. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Χωρίς λήξη"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Παρακαλούμε χρησιμοποιήστε τις παρεχόμενες επιλογές."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Διάρκεια"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Η διάρκεια σε μήνες της συνδρομής (π.χ. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Η διάρκεια συνδρομής πρέπει να είναι μία θετική αριθμητική τιμή."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Απαιτείται η εισαγωγή της διάρκειας συνδρομής."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Μορφή"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Απαιτείται η εισαγωγή μορφής τύπου συνδρομής."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Παρακαλούμε επιλέξτε μία έγκυρη μορφή τύπου συνδρομής."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Συνδρομές"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Ατομική (οι Χρήστες ταυτοποιούνται μέσω σύνδεσης (login))"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Ιδρυματική (οι Χρήστες ταυτοποιούνται μέσω της περιοχής δικτύου [domain] ή της διεύθυνσης IP)."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Παρακαλούμε χρησιμοποιήστε τις επιλογές που παρέχονται."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Οι συνδρομές απαιτούν πληροφορίες μελών (π.χ. ενός ιδρύματος, ενός οργανισμού, μίας κοινοπραξίας, κτλ.)."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Παρακαλούμε χρησιμοποιήστε το πλαίσιο ελέγχου."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Επιλογές"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Ο συγκεκριμένος τύπος συνδρομής να μην είναι δημόσια διαθέσιμος ή ορατός στο διαδίκτυο."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Παρακαλούμε χρησιμοποιήστε το πλαίσιο ελέγχου."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Αποθήκευση και δημιουργία νέου"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Όνομα τύπου"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Ένας τύπος συνδρομής με αυτό το όνομα υπάρχει ήδη."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Απαιτείται ένα όνομα τύπου συνδρομής."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Τύπος συνδρομής"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Δεν έχουν δημιουργηθεί τύποι συνδρομών."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Ο τύπος συνδρομής δημιουργήθηκε επιτυχώς."
+
+msgid "manager.distribution.access"
+msgstr "Πρόσβαση"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Σύνδεσμος σε σελίδα που περιγράφει τις διαθέσιμες συνδρομές."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Σύνδεσμος σε σελίδα που περιγράφει τις τρέχουσες και τις περασμένες συνδρομές του Χρήστη."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Αυτός ο σύνδεσμος θα εμφανίζεται μόνο όταν ένας Χρήστης είναι συνδεδεμένος."
+
+msgid "manager.setup.categories"
+msgstr "Κατηγορίες"
+
+msgid "manager.setup.categories.description"
+msgstr "Επιλέξτε τις πλέον κατάλληλες κατηγορίες από την παραπάνω λίστα. Οι Αναγνώστες θα μπορούν να πλοηγηθούν ανά κατηγορία."
+
+msgid "grid.category.path"
+msgstr "Διαδρομή"
+
+msgid "grid.action.addSection"
+msgstr "Προσθήκη ενότητας"
+
+msgid "manager.setup.section.description"
+msgstr "Τα άρθρα που περιλαμβάνονται σε δημοσιευμένα τεύχη ενός περιοδικού οργανώνονται σε ενότητες, ανά θέμα ή τύπο περιεχομένου (π.χ. άρθρα ανασκόπησης, μελέτες, κτλ)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Οι ρόλοι είναι σύνολα Χρηστών στο περιοδικό, με διαβαθμισμένη πρόσβαση στις διαχειριστικές σελίδες και τις σχετικές ροές εργασιών στα πλαίσια του περιοδικού. Υπάρχουν πέντε διαφορετικές κατηγορίες ρόλων: οι Διαχειριστές του περιοδικού έχουν πρόσβαση σε όλο το περιεχόμενο και τις ρυθμίσεις∙ οι Επιμελητές Ενότητας έχουν πρόσβαση στις υποβολές που τους έχουν ανατεθεί∙ οι Βοηθοί του περιοδικού έχουν περιορισμένη πρόσβαση σε όλες τις υποβολές που τους έχουν ανατεθεί από έναν Επιμελητή∙ οι Αξιολογητές έχουν πρόσβαση στις υποβολές που τους ανατέθηκε να αξιολογήσουν∙ οι Συγγραφείς έχουν μερική πρόσβαση και δυνατότητα εκτέλεσης ενεργειών που αφορούν στις δικές τους υποβολές. Επιπροσθέτως, υπάρχουν πέντε διαφορετικές ροές εργασιών για τις οποίες μπορεί να δοθεί πρόσβαση στους ρόλους: Υποβολή, Εσωτερική αξιολόγηση, Αξιολόγηση, Σύνταξη και Παραγωγή."
+
+msgid "manager.publication.library"
+msgstr "Βιβλιοθήκη εκδότη"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Το έτος κατοχύρωσης πνευματικών δικαιωμάτων κάθε νέου άρθρου ορίζεται ανά"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Άρθρο: το έτος προκύπτει από την ημερομηνία δημοσίευσης του άρθρου, όπως στο μοντέλο δημοσίευσης \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Τεύχος: το έτος προκύπτει από την ημερομηνία δημοσίευσης του τεύχους."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Επανακαθορισμός δικαιωμάτων άρθρων"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Επιβεβαιώνετε τον επανακαθορισμό των δικαιωμάτων που συνδέονται ήδη με τα άρθρα;"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Η Δήλωση Πνευματικών Δικαιωμάτων και οι πληροφορίες αδειοδότησης θα είναι μόνιμα συνδεδεμένες με το δημοσιευμένο περιεχόμενο, διασφαλίζοντας ότι τα δεδομένα αυτά δεν θα αλλάξουν στην περίπτωση που ένα περιοδικό τροποποιήσει τις πολιτικές για τις νέες υποβολές. Για να επαναφέρετε τις αποθηκευμένες πληροφορίες αδειών που συνδέονται ήδη με το δημοσιευμένο περιεχόμενο, χρησιμοποιήστε το παρακάτω κουμπί."
+
+msgid "grid.genres.title.short"
+msgstr "Συνιστώσες"
+
+msgid "grid.genres.title"
+msgstr "Συνιστώσες άρθρου"
+
+msgid "grid.genres.description"
+msgstr "Αυτές οι συνιστώσες χρησιμοποιούνται με σκοπό την ονοματοδοσία αρχείων και παρουσιάζονται στο αναδιπλούμενο μενού (pull-down menu) κατά το \"ανέβασμα\" αρχείων. Τα είδη που ορίζονται με ## επιτρέπουν στον Χρήστη να συνδέσει το αρχείο είτε με ολόκληρη την υποβολή, είτε με μία συγκεκριμένη συνιστώσα μέσω αριθμού (π.χ., 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Ρυθμίσεις"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Ρυθμίσεις Πρόσθετου DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Άρθρα"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Τεύχη"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Τυπογραφικά δοκίμια"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Τα προαπαιτούμενα των Πρόσθετων δεν ικανοποιήθηκαν."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Για να χρησιμοποιήσετε αυτό το Πρόσθετο, μεταβείτε στην κατηγορία Πρόσθετων \"Δημόσιο Αναγνωριστικό\", ενεργοποιήστε το Πρόσθετο DOI και ορίστε ένα έγκυρο πρόθεμα DOI εκεί."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Το Πρόσθετο δεν εγκαταστάθηκε πλήρως."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Δεν έχουν επιλεγεί αντικείμενα προς δημοσίευση για να τους αποδοθεί DOI, συνεπώς δεν υπάρχει δυνατότητα κατάθεσης ή εξαγωγής σε αυτό το Πρόσθετο."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Κωδικός πρόσβασης"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Παρακαλούμε σημειώστε ότι ο κωδικός θα αποθηκευτεί ως απλό κείμενο και δεν θα είναι κρυπτογραφημένος."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Όλα τα τεύχη"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Όλες οι κατηγορίες"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Μη κατατεθιμένα"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Επισημειωμένα ως ευρετηριασμένα "
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Ευρετηριασμένα"
+
+msgid "plugins.importexport.common.action"
+msgstr "Ενέργεια"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Εξαγωγή"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Σήμανση ως ευρετηριασμένο"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Ευρετηρίαση"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Επικυρώστε το XML πριν από την εξαγωγή και την ευρετηρίαση."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Δεν έχουν επιλεγεί αντικείμενα."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Δεν έγινε μετατροπή των επιλεγμένων αντικειμένων."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Μη έγκυρο XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Το αρχείο εξόδου {$param} δεν είναι εγγράψιμο."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Το αρχείο εισόδου {$param} δεν είναι αναγνώσιμο."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Η εγγραφή απέτυχε! Ο διακομιστής καταχώρησης DOI επέστρεψε σφάλμα: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Η εγγραφή ήταν επιτυχής!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Το πρόθεμα DOI λείπει για το περιοδικό με τη διαδρομή {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "ΣΦΑΛΜΑ:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Η καθορισμένη διαδρομή περιοδικού, \"{$journalPath}\", δεν υπάρχει."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Τα καθορισμένα αντικείμενα δεν βρέθηκαν."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Αποστολή αντιγράφου στο κύριο πρόσωπο επικοινωνίας, που έχει οριστεί στις Ρυθμίσεις του Περιοδικού."

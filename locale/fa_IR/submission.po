@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "ارسال مقاله"
+
+msgid "submission.submit.userGroup"
+msgstr "ثبت مقاله به عنوان ..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "گروه کاربری که تحت عنوان آن مقاله را ارسال می کنید را انتخاب کنید."
+
+msgid "submission.upload.selectComponent"
+msgstr "انتخاب اجزاء مقاله"
+
+msgid "submission.title"
+msgstr "عنوان مقاله"
+
+msgid "submission.title.tip"
+msgstr "نوع داده ارسالی معمولاً متن، تصویر و یا محتوای چند رسانه ای مانند نرم‌افزار است. لطفاً نوع داده ای که بیشترین ارتباط را با محتوای شما دارد را انتخاب کنید. می توانید مثالهایی را در لینک زیر مشاهده کنید:   <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "آغاز ارسال مقاله در"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "ارسال جدید"
+
+msgid "grid.action.workflow"
+msgstr "گردش کار مقاله ارسالی"
+
+msgid "submission.issueEntry"
+msgstr "فراداده"
+
+msgid "submission.submit.whatNext.description"
+msgstr "مجله مقاله ارسالی شما را دریافت کرد، و یک  تاییدیه از طریق پست الکترونیکی برای شما ارسال شد. پس از بررسی مقاله ارسال شده توسط سردبیر، به شما از طریق ایمیل اطلاع داده خواهد شد."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "کلیشه چاپی شماره آماده شد."
+
+msgid "grid.action.issueEntry"
+msgstr "مشاهده فراداده‌های این مقاله ارسال شده"
+
+msgid "submission.publication"
+msgstr "انتشار"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "کلیشه چاپی \"{$galleyFormatName}\" مقاله در دسترس است"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "کلیشه چاپی \"{$galleyFormatName}\" مقاله در دسترس نیست"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "شناسه عمومی مقاله ارسال شده به روز رسانی شد."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "تأیید فرمت"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>این کلیشه چاپی دیگر برای خوانندگان <em> در دسترس نمی‌باشد</em></p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>این کلیشه چاپی برای خوانندگان <em> در دسترس است</em></p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "اجازه دسترسی به این کلیشه چاپی را فعال کن"
+
+msgid "submission.galleyFiles"
+msgstr "فایل‌های کلیشه چاپی"
+
+msgid "submission.proofReadingDescription"
+msgstr "صفحه‌آرا فایل آماده چاپ این مقاله را آپلود کرده است. از بخش <em>تعیین مخاطب</em> به خواننده اطلاع دهید تا قبل از چاپ مقاله محتوای نهایی آن را در فرمت آماده چاپ تایید نماید."
+
+msgid "grid.action.approveProof"
+msgstr "نسخه بازبینی نهایی را تأیید کنید تا وارد کلیشه چاپی شود"
+
+msgid "grid.action.pageProofApproved"
+msgstr "مقاله تأیید نهایی و در کلیشه چاپی گنجانده شد"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "عنوان و چکیده"
+
+msgid "submission.submit.upload.description"
+msgstr "فایل‌های مربوط به مقاله را آپلود کنید: شامل فایل‌های مقاله، مجموعه داده ها، داده های چندرسانه ای و ..."
+
+msgid "submission.pageProofs"
+msgstr "بازبینی نهایی"
+
+msgid "submission.confirmSubmit"
+msgstr "آیا از ارسال مقاله ی خود در این مجله اطمینان دارید؟"
+
+msgid "workflow.review.externalReview"
+msgstr "داوری"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "ارسال برای داوری"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "فراداده شماره مجله این مقاله به روز شد"
+
+msgid "submission.upload.fileContents"
+msgstr "هر جزء مقاله را به طور جداگانه انتخاب و آپلود نمایید"
+
+msgid "submission.complete"
+msgstr "کامل"
+
+msgid "submission.incomplete"
+msgstr "منتظر تایید"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "لطفاً زبان مقاله را انتخاب کنید"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "موارد ضروری برای ارسال"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "قبل از ورود به قسمت های بعدی نسبت به موارد زیر اطمینان حاصل کنید"
+
+msgid "submission.submit.privacyStatement"
+msgstr "بیانیه محرمانگی اطلاعات مجله"
+
+msgid "submission.submit.contributorRole"
+msgstr "نقش پدیدآورنده"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "تعریف حداقل یک نویسنده الزامی است"
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "وارد کردن نام، نام خانوادگی و ایمیل تمامی نویسندگان الزامی است"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "لطفاً عنوان مقاله خود را وارد کنید"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "لطفاً چکیده مقاله خود را وارد کنید"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "لطفا نقش مشارکت کننده را انتخاب کنید."
+
+msgid "submission.citationFormat.notFound"
+msgstr "فرمت درخواستی ارجاع قابل بازیابی نیست"
+
+msgid "submission.metadataDescription"
+msgstr "این مشخصات بر اساس مجموعه فراداده های هسته دوبلین تعریف شده اند، هسته دوبلین یک استاندارد بین المللی است که برای توصیف محتوای مجله استفاده می شود."
+
+msgid "section.any"
+msgstr "هر بخشی"

@@ -1,0 +1,417 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:28+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Homepage Redacteur"
+
+msgid "editor.reassign"
+msgstr "Opnieuw toekennen"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Inzendingen en Publiceren"
+
+msgid "editor.submissionQueue"
+msgstr "Wachtrij met inzendingen"
+
+msgid "editor.submissionArchive"
+msgstr "Archief met inzendingen"
+
+msgid "editor.publishing"
+msgstr "Publiceren"
+
+msgid "editor.publishedIssues"
+msgstr "Gepubliceerde nummers"
+
+msgid "editor.allSections"
+msgstr "Alle secties"
+
+msgid "editor.allEditors"
+msgstr "Alle redacteurs"
+
+msgid "editor.me"
+msgstr "Ik"
+
+msgid "editor.publicIdentificationExists"
+msgstr "De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object (nummer, artikel, proef of aanvullend bestand). Kies een unieke identificatie."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Geen inzendingen in het archief."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "De veranderingen aan de gearchiveerde inzendingen opslaan? Inzendingen die gemarkeerd zijn voor verwijdering worden definitief uit het systeem verwijderd."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Weet u zeker dat u deze inzending definitief wilt verwijderen?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Weet u zeker dat u deze beslissing wilt vastleggen?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Deze inzending wordt gearchiveerd nadat de bevestigings-e-mail naar de auteur is verstuurd of de Sla e-mail over functie is gekozen."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Gebruik de Bericht aan de auteur-link om de auteur van de beslissing op de hoogte te stellen en selecteer de te versturen versie, alvorens een inzending maar de tekstredactie te sturen,"
+
+msgid "editor.notifyUsers"
+msgstr "Gebruikers inlichten"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Alle lezers ({$count} gebruikers)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Alle gepubliceerde auteurs ({$count} gebruikers)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Alle individuele abonnees ({$count} gebruikers)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Alle institutionele abonnees ({$count} gebruikers)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Gebruikers inlichten..."
+
+msgid "editor.usersNotified"
+msgstr "Gebruikers ingelicht"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Stuur dit bericht naar alle gebruikers die geassocieerd zijn met dit tijdschrift ({$count} gebruikers)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Stuur dit bericht naar alle gebruikers die geassocieerd zijn aan dit tijdschrift en die aangegeven hebben op de hoogte gehouden te willen worden ({$count} gebruikers)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "De inhoudsopgave van dit nummer opnemen:"
+
+msgid "editor.editorAdministration"
+msgstr "Redactie administratie"
+
+msgid "editor.issues.createIssue"
+msgstr "Nummer aanmaken"
+
+msgid "editor.issues.editIssue"
+msgstr "Nummer beheer: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Huidig nummer"
+
+msgid "editor.issues.numArticles"
+msgstr "Items"
+
+msgid "editor.issues.noArticles"
+msgstr "Er is nog niets ingepland voor dit nummer."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Weet u zeker dat u dit nummer wilt verwijderen?"
+
+msgid "editor.issues.published"
+msgstr "Gepubliceerd"
+
+msgid "editor.issues.unpublished"
+msgstr "Ongepubliceerd"
+
+msgid "editor.issues.datePublished"
+msgstr "Publicatiedatum"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Volume is verplicht en moet een positief getal zijn."
+
+msgid "editor.issues.numberRequired"
+msgstr "Nummer is verplicht en moet een positief getal zijn."
+
+msgid "editor.issues.yearRequired"
+msgstr "Jaar is verplicht en moet een positief getal zijn."
+
+msgid "editor.issues.titleRequired"
+msgstr "De titel voor het nummer is verplicht."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Nummeridentificatie is verplicht. Kies minimaal één van de nummeridentificatie opties"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificatie van het nummer"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Publieke identificatie van het nummer"
+
+msgid "editor.issues.description"
+msgstr "Beschrijving"
+
+msgid "editor.issues.accessStatus"
+msgstr "Toegankelijkheidsstatus"
+
+msgid "editor.issues.accessDate"
+msgstr "Open access datum"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Vertraagde open access inschakelen"
+
+msgid "editor.issues.coverPage"
+msgstr "Omslagafbeelding"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Mogelijke formaten: .gif, .jpg, en .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Geladen"
+
+msgid "editor.issues.remove"
+msgstr "Verwijder"
+
+msgid "editor.issues.proofed"
+msgstr "Proefgelezen"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Verwijder omslagafbeelding?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "De omslagafbeelding die u wou verwijderen komt niet overeen met de omslagafbeelding voor dit nummer. Herlaad de pagina en probeer opnieuw."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "De omslagafbeelding die u wou verwijderen kon niet worden gevonden. Ze is mogelijk al verijwderd. Probeer de pagina te herladen."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Ongeldig formaat voor de omslagafbeelding. Geldige formaten zijn .gif, .jpg of .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stylesheet"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Ongeldig stylesheet formaat. Verzeker u ervan dat het opgegeven bestand geldige CSS bevat. (Merk op dat styleheets met commentaar aan het begin onbedoeld afgekeurd kunnen worden)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Verwijder stylesheet?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Omslagtitel"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Maak een omslag voor dit nummer met de volgende elementen."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Toon"
+
+msgid "editor.issues.openAccess"
+msgstr "Open access"
+
+msgid "editor.issues.subscription"
+msgstr "Abonnement"
+
+msgid "editor.issues.identification"
+msgstr "Identificatie"
+
+msgid "editor.issues.access"
+msgstr "Toegang"
+
+msgid "editor.issues.cover"
+msgstr "Omslag"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Alle artikels gaan terug naar de redactie-wachtrij en alle geassocieerde bestanden worden verwijderd. Weet u zeker dat u dit nummer wilt verwijderen?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Dit tijdschrift gebruikt een aangepaste ordening van de nummers. <a href=\"{$url}\" class=\"action\">Terugzetten naar de standaard</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Dit nummer gebruikt een aangepaste ordening van de secties. <a href=\"{$url}\" class=\"action\">Terugzetten naar de standaard.</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Gegevens van het nummer"
+
+msgid "editor.issues.saveChanges"
+msgstr "De aanpassingen aan de inhoudsopgave opslaan?"
+
+msgid "editor.issues.default"
+msgstr "Standaard"
+
+msgid "editor.issues.order"
+msgstr "Sorteren"
+
+msgid "editor.issues.publicId"
+msgstr "Publieke Identificatie"
+
+msgid "editor.issues.publishIssue"
+msgstr "Nummer publiceren"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Publicatie nummer terugdraaien"
+
+msgid "editor.issues.previewIssue"
+msgstr "Voorvertoning van het nummer"
+
+msgid "editor.issues.preview"
+msgstr "(Voorvertoning)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Weet u zeker dat u het nummer wilt publiceren?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Weet u zeker dat u de publicatie van dit nummer terug wilt draaien?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Weet u zeker dat u dit nummer als huidig nummer wilt instellen?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "De publieke identificatie van het nummer kan niet opgeslagen worden:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Geen actuele nummers"
+
+msgid "editor.issues.open"
+msgstr "Open"
+
+msgid "editor.issues.pages"
+msgstr "Pagina's"
+
+msgid "editor.issues.galleys"
+msgstr "Proeven van dit numer"
+
+msgid "editor.issues.galley"
+msgstr "Proef van het nummer"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Nummer-proef bekijken"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publiceer proeven met de inhoud van het hele nummer."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Er zijn geen nummer-proeven gepubliceerd"
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "een nummer-proef label is verplicht"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Een nummer-proef taalkode is verplicht."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Publieke identificatie van de nummer-proef bestaat al"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Terug naar de proeven van het nummer"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Weet u zeker dat u de proef van dit nummer wilt verwijderen?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identificatie"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Toekomstige nummers"
+
+msgid "grid.action.addGalley"
+msgstr "Voeg proef toe"
+
+msgid "grid.action.publish"
+msgstr "Publiceer nummer"
+
+msgid "grid.action.addIssue"
+msgstr "Maak nummer aan"
+
+msgid "grid.action.viewIssue"
+msgstr "Bekijk"
+
+msgid "grid.action.previewIssue"
+msgstr "Voorvertoning"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Maak proeven van het nummer aan"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Stel het huidige nummer in"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Oude nummers"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Wijs het originele bestand aan als de reviewversie"
+
+msgid "editor.article.decision"
+msgstr "Beslissing"
+
+msgid "editor.submissions.showBy"
+msgstr "Toon op"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Inzenden MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Actieve taken"
+
+msgid "editor.submissions.invite"
+msgstr "Uitnodigen"
+
+msgid "editor.submissions.accept"
+msgstr "Accepteren"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Geen inzendingen"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Nieuwste"
+
+msgid "editor.submissions.averageTime"
+msgstr "Weken"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Laatste voltooid"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Toegekend aan"
+
+msgid "editor.submissions.inSection"
+msgstr "In sectie"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Inplannen voor publicatie in"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Nog toe te wijzen"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Publicatiekosten niet betaald. Vraag de auteur om betaling of scheld die kwijt om het item voor publicatie in te plannen."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "De omslagafbeelding die u wou verwijderen kon niet worden gevonden. Ze is mogelijk al verijwderd. Probeer de pagina te herladen."
+
+msgid "grid.action.removeArticle"
+msgstr "Verwijder artikel uit nummer"
+
+msgid "editor.article.remove"
+msgstr "Verwijder"
+
+msgid "editor.article.remove.confirm"
+msgstr "Weet u zeker dat u dit artikel uit het nummer wil verwijderen? Het artikel zal beschikbaar blijven voor toewijzing aan een ander nummer."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Ongeldige toegangsdatum."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Bewerk proeven van het nummer"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "De opmaakredacteur bereidt de bestanden voor elke proef voor en plaatst ze onder <span class=\"pkp_help_title\">Proeven</span> voor proeflezing."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Selecteer bestanden voor de proef"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "De afgewerkte versies in deze lijst worden door een tekstredacteur herwerkt en opgeladen onder <span class=\"pkp_help_title\">Tekstredactie</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Bestanden die al waren opgeladen voor eender welke fase in het redactieproces kunnen worden toegevoegd aan de lijst voor proeflezing door de optie \"Opnemen\" hieronder aan te vinken en op Zoeken te klikken: alle beschikbare bestanden worden dan opgelijst en kunnen worden opgenomen voor proeflezing."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object van hetzelfde type. Kies een unieke identificatie voor objecten van hetzelfde type binnen uw tijdschrift."
+
+msgid "editor.article.coverImage"
+msgstr "Omslagafbeelding"

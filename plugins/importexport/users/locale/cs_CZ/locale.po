@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:47+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Plugin XML import/exprot uživatelů"
+
+msgid "plugins.importexport.users.description"
+msgstr "Zajišťuje import a export uživatelů"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Použití: {$scriptName} {$pluginName} [command] ...\n"
+"Příkazy:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ..."
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"Příiklady:\n"
+"\tImport uživatelů do myJournal z myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport všech uživatelů myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport uživatelů podle jejich ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Import uživatelů"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Vyberte datový soubor XML obsahující informace o uživateli, který chcete importovat do tohoto časopisu. Informace o formátu tohoto souboru naleznete v nápovědě časopisu. <br/> <br/>Pokud importovaný soubor obsahuje nějaká uživatelská jména nebo e-mailové adresy, které již v systému existují, uživatelská data pro tyto uživatele nebudou importovány a všechny nové role, které mají být vytvořeny, budou přiděleny stávajícím uživatelům."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Soubor dat o uživatelích"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Pošlete e-mailem každému importovanému uživateli upozornění, které obsahuje uživatelské jméno a heslo uživatele."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Pokračovat v importu ostatních uživatelů v případě výskytu chyby."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Následující uživatelé byli úspěšně importováni do systému."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Během importu došlo k chybě"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Potvrďte, že toto jsou uživatelé, které chcete importovat do systému"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Varování"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Nelze použít hesla s {$importHash}; OJS je konfigurován pro použití {$ojsHash}. Pokud budete pokračovat, budete muset obnovit hesla importovaných uživatelů."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Byl specifikován neznámý časopis \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Export uživatelů"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportovat podle role"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportovat všechny"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Během exportu došlo k chybám"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Do souboru \"{$fileName}\" nelze zapisovat."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Import byl úspěšně dokončen. Uživatelé s uživatelskými jmény a e-mailovými adresami, které se doposud nepoužívají, byli importováni společně s příslušnými uživatelskými skupinami."
+
+msgid "plugins.importexport.users.results"
+msgstr "Výsledky"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Pro pokračování nahrajte soubor v \"Import\"."

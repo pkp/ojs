@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:35+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Модуль веб-стрічок"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Створює стрічку веб-синдикації у форматах RSS/Atom для поточного випуску."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Налаштування"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Відображати посилання на стрічки лише на сторінках випуску."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Відображати посилання на стрічки лише на домашній сторінці сайту журналу та на сторінках випуску."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Відображати посилання на стрічки на всіх сторінках сайту журналу."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Відображати матеріали у поточному опублікованому випуску."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Відображати фіксовану кількість останніх опублікованих матеріалів."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Кількість останніх опублікованих матеріалів для відображення."
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Будь ласка, вкажіть додатнє ціле число для кількості останніх опублікованих матеріалів."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Логотип Atom"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Логотип RSS1"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Логотип RSS2"

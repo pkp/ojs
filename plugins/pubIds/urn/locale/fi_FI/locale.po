@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN-tunnus"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Tämä lisäosa mahdollistaa URN-tunnusten (Uniform Resource Name) määrittämisen OJS-järjestelmässä oleville numeroille, artikkeleille ja julkaistaville tiedostoille."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Määritä URN-lisäosa, jotta voit hallinnoida ja käyttää URN-tunnuksia OJS:ssä:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Julkaisun sisältö"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Valitse objektit, joille URN-tunnukset tulee määrittää."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Valitse julkaisun objektit, joille URN-tunnukset määritetään:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Numerot"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Artikkelit"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Julkaistavat tiedostot"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN-prefiksi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "URN-prefiksi on URN-tunnuksen kiinteä, muuttumaton osa (esim. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN-prefiksin muotoilun on oltava muotoa \"urn:\"&lt;NID&gt;\":\"&lt;NSS &gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN-suffiksi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "URN-suffiksi voi olla missä tahansa muodossa, mutta sen täytyy olla uniikki kaikkien julkaisun objektien joukossa, joille on määritelty sama URN-prefiksi:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Käytä alla annettua muotoilua luodaksesi URN-suffikseja. Käytä %j julkaisun alkukirjaimille, %v volyymin numerolle, %i numeron numerolle, %Y vuodelle, %a artikkelin tunnisteelle OJS:ssä, %g julkaistavan tiedoston tunnisteelle OJS:ssä, %f tiedoston tunnisteelle OJS:ssä, %p sivunumerolle ja %x \"Mukautetulle tunnisteelle\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Esimerkiksi muotoilu vol%viss%ipp%p voi luoda URN-suffiksin “vol3iss2pp230”."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "numeroille"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "artikkeleille"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "julkaistaville tiedostoille"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Anna URN-suffiksin muotoilu numeroita varten."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Anna URN-suffiksin muotoilu artikkeleita varten."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Anna URN-suffiksin muotoilu julkaistavia tiedostoja varten."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Käytä oletusmuotoiluja."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i numeroille<br />%j.v%vi%i.%a artikkeleille<br />%j.v%vi%i.%a.g%g julkaistaville tiedostoille."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Anna yksilöllinen URN-suffiksi jokaiselle julkaistulle kohteelle. Jokaisen kohteen metatietosivulla on lisäkenttä URN-tunnuksen syöttämistä varten."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Tarkistusnumero"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Tarkistusnumero määritetään ja lisätään URN-tunnuksen loppuun, viimeiseksi numeroksi, automaattisesti."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Nimiavaruus"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Valitse"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Pysyvän tunnisteen nimiavaruus tarvitaan yleensä rekisteröintiä varten (esim. Kansalliskirjastossa)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Resolveri-URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(esim. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Anna resolveri-URL."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Määritä URN-tunnukset uudelleen"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Jos muutat URN-määritystäsi, se ei vaikuta aiemmin määritettyihin URN-tunnuksiin. Kun URN-määritys on tallennettu, poista kaikki olemassa olevat URN-tunnukset tämän painikkeen avulla, jotta uudet asetukset alkavat päteä myös olemassa oleviin objekteihin."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Haluatko varmasti poistaa kaikki olemassa olevat URN-tunnukset?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN-tunnus"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "numero"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "artikkeli"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "julkaistava tiedosto"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN-tunnusta ei voida määrittää, koska mukautettu suffiksi puuttuu."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN-tunnusta ei voida määrittää, koska se sisältää resolvoitumattoman muotoilun."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Näet nyt URL-tunnuksen esikatselussa. Rastita valintaruutu ja tallenna muoto määrittääksesi URN:n."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN-tunnus on määritetty objektille {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Annettu URN-suffiksi on jo toisen julkaistun kohteen käytössä. Anna jokaiselle kohteelle uniikki URN-suffiksi."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Poista URN-tunnus"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Haluatko varmasti poistaa olemassa olevan URN-tunnuksen?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Poista numero-objektien URN-tunnukset"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Haluatko varmasti poistaa olemassa olevat numero-objektien URN-tunnukset?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Käytä seuraavaa valintaa poistaaksesi kaikkien tähän numeroon tällä hetkellä ajoitettujen objektien (artikkeleiden ja julkaistavien tiedostojen) URN-tunnukset."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Lisää tarkistusnumero"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Määritä URN-tunnus {$pubId} tälle objektille {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN-tunnusta ei voida määrittää, koska mukautettu suffiksi puuttuu."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN-tunnusta {$pubId} ei voida määrittää, koska se sisältää resolvoitumattoman muotoilun."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN-tunnus {$pubId} on määritetty."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Tarkistusnumero puuttuu."

@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Denne plugin gør det muligt at tildele Uniform Resource Names til numre, artikler og publiceringsfiler (satsskibe) i OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Konfigurer denne URN-plug-in så det bliver muligt at administrere og bruge URN i OJS:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Tidsskriftindhold"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Vælg de objekter, som skal have tildelt en URN."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Vælg de publiceringsobjekter, der skal have tildelt Uniform Resource Names (URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Numre"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Artikler"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Publiceringsfiler (satsskibe)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN-præfiks"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "URN-præfikset er den del af URN'en, der aldrig ændres (e.g. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN-præfiksets skal være i overensstemmese med følgende formular \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN-suffiks"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Et URN-suffiks kan formuleres frit, men skal være unikt blandt alle de publiceringsobjekter, der er tildelt samme URN-præfiks:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Anvend nedenstående mønster når URN-suffikset skal genereres. Brug %j til tidsskriftinitialer, %v til årgang, %i til nummer, %Y til år, %a til OJS-artiklens ID, %g til OJS-publiceringsfilens ID (satsskibes ID), %f til OJS filens ID, %p til sidenummer %x til \"Custom Identifier\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "For eksempel kan vol%viss%ipp%p generere URN-suffikset \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "til numre"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "til artikler"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "til publiceringsfiler (satsskibe)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Indsæt URN-suffiksmønsteret til numre."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Indsæt URN-suffiksmønsteret til artikler."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Indsæt URN-suffiksmønsteret til publiceringsfiler (satsskibe)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Anvend stadardmønstre."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g til publiceringsfiler (satsskibe)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Indsæt et individuelt URN-suffiks for hvert publiceret element. Du finder et ekstra URN-indtastningsfelt på hvert elements metadata-side."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Kontrolnummer"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Kontrolnummeret beregnes automatisk og tilføjes i slutningen som det sidste ciffer i en URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Navnerum"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Vælg"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Det persistente identifikationsnavnerum, der normalt behøves til registreringen (f.eks. På Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Resolver-URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(e.g. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Indsæt resolver-URL."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Omfordel URN'er"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Hvis du ændrer din URN-konfiguration, vil de URN'er, der allerede er blevet tildelt, ikke blive påvirket. Når URN-konfigurationen er gemt, skal du bruge denne knap til at slette alle eksisterende URN'er, så de nye indstillinger træder i kraft med eksisterende objekter."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Er du sikker på, at du vil slette alle eksisterende URN'er?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "nummer"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "publiceringsfil (satsskibe)"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN'en kan ikke tildeles, da det brugerdefinerede suffiks mangler."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN'en kan ikke tildeles, da den indeholder et uopløst mønster."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Det du ser er en forhåndsvisning af URN'en. Marker afkrydsningsfeltet og gem formularen for at tildele URN'en."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN'en er tildelt dette {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Det angivne URN-suffiks er allerede i brug i forbindelse med et anden publiceret element. Indtast et unikt URN-suffiks for hvert element."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Fjern URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Er du sikker på, at du vil slette den eksisterende URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Fjern nummerelementers URN'er"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Er du sikker på, at du vil slette de eksisterende nummerelementers URN'er?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Brug følgende mulighed for at fjerne URN'er fra alle elementer (artikler og publiceringsfiler/satsskibe) der er planlagt i forbindelse med dette nummer."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Tilføj tjeknummer"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Tildel URN'en {$pubId} til dette {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN'en kan ikke tildeles, da det brugerdefinerede suffiks mangler."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN'en {$pubId} kan ikke tildeles, da den indeholder et uopløst mønster."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN'en {$pubId} er blevet tildelt."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Tjeknummeret mangler."

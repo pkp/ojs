@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Ylläpidetyt julkaisut"
+
+msgid "admin.settings.redirect"
+msgstr "Julkaisun uudelleenohjaus"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Pyynnöt pääsivustolle uudelleenohjataan tähän julkaisuun. Tämä saattaa olla hyödyllinen toiminto, jos sivustolla ylläpidetään vain yhtä julkaisua."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näkyvät useassa yhteydessä.\n"
+"\t\tJoissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletusarvoksi.\n"
+""
+
+msgid "admin.languages.confirmDisable"
+msgstr "Haluatko varmasti poistaa tämän kielialueen käytöstä? Se saattaa vahingoittaa muita ylläpidettyjä julkaisuja, joilla on tämä kielialue käytössä."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Kielipakettien lataaminen Public Knowledge Projectin verkkopalvelimelta ei ole juuri nyt mahdollista, koska:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Palvelimellasi ei ole GNU:n tar-ohjelmaa tai palvelin ei salli sen suorittamista.</li>\n"
+"\t\t<li>OJS ei voi muuntaa kielialueen rekisteritiedostoa, yleensä \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Kielipaketteja voidaan ladata manuaalisesti <a href=\"http://pkp.sfu.ca\">PKP:n verkkosivustolta</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Tätä kieltä käytetään sivuston ja kaikkien ylläpidettyjen julkaisujen oletuskielenä."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Valitse kaikki sivustolla tuettavat kielialueet. Valitut kielialueet ovat kaikkien sivustolla ylläpidettävien julkaisujen käytössä. Ne esiintyvät myös kielivalikossa, joka näkyy jokaisella sivuston sivulla (tämä voidaan ohittaa julkaisukohtaisilla sivuilla). Mikäli valitaan vain yksi kielialue, kielivalikko ei tule näkyviin ja laajennetut kieliasetukset eivät ole julkaisujen käytettävissä."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Merkityt kielialueet saattavat olla vaillinaisia."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Haluatko varmasti poistaa tämän kielialueen? Se saattaa vahingoittaa muita ylläpidettyjä julkaisuja, joilla on tämä kielialue käytössä."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Valitse mitä tahansa lisäkielialueita asentaaksesi tuen tässä järjestelmässä. Kielialueet täytyy asentaa ennen kuin ylläpidetyt julkaisut voivat käyttää niitä. Katso OJS:n ohjeista tietoja siitä, kuinka uusille kielille lisätään tuki."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Kielialueen lataaminen epäonnistui. Tarkemmat tiedot ongelmasta alla."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Kielialue \"{$locale}\" on asennettu."
+
+msgid "admin.languages.download"
+msgstr "Lataa kielialue"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Kielenkuvausta ei voitu avata PKP:n verkkosivustosta."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Uutta kielialuetta ei voitu lisätä kielialueiden rekisteritiedostoon, yleensä \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS:n käyttäjätietokanta"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Ota käyttäjäprofiilin synkronointi käyttöön (jos tämä todentamislisäosa tukee sitä). Käyttäjäprofiilin tiedot päivittyvät automaattisesti etälähteestä käyttäjän kirjautuessa sisään. OJS:ssä profiiliin tehtävät muutokset (myös salasanan vaihto) päivittyvät automaattisesti etälähteeseen. Jos tämä valinta ei ole käytössä, OJS:n profiilitiedot pidetään erillään etälähteen profiilitiedoista."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Ota käyttäjän salasanan muuttaminen käyttöön (jos tämä todentamislisäosa tukee sitä). Tämä valinta sallii käyttäjien muuttaa salasanaansa OJS:ssä ja käyttää OJS:n \"Unohditko salasanasi\"-ominaisuutta salasanan palauttamiseksi/vaihtamiseksi. Nämä toiminnot eivät ole käytettävissä tämän todentamislähteen yhteydessä, mikäli tämä valinta ei ole käytössä."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Ota käyttäjän luonti käyttöön (jos tämä todentamislisäosa tukee sitä). Tällä todentamislähteellä OJS:ssä luodut käyttäjät lisätään automaattisesti etätodentamislähteeseen, mikäli niitä ei siellä vielä ole. Lisäksi, jos tämä lähde on oletusarvoinen todentamislähde, rekisteröitymisen yhteydessä luodut OJS-käyttäjätilit lisätään myös etätodentamislähteeseen."
+
+msgid "admin.systemVersion"
+msgstr "OJS-versio"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS:n määritys"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS:n määritysasetukset tiedostosta <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "Sinut lisätään automaattisesti tämän julkaisun hallinnoijaksi. Uuden julkaisun luonnin jälkeen sinut uudelleenohjataan ohjattuun asetusten luontiin julkaisun aloitusasetusten loppuun saattamiseksi."
+
+msgid "admin.journals.journalSettings"
+msgstr "Julkaisun asetukset"
+
+msgid "admin.journals.noneCreated"
+msgstr "Yhtään julkaisua ei ole luotu."
+
+msgid "admin.contexts.create"
+msgstr "Luo julkaisu"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Tämän tulee olla yksittäinen lyhyt sana tai akronyymi, joka identifioi julkaisun. Julkaisun URL-osoitteeksi tulee {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Nimi vaaditaan."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Polku vaaditaan."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Polku voi sisältää vain aakkosnumeerisia merkkejä, alaviivoja ja yhdysmerkkejä, ja sen täytyy alkaa ja päättyä aakkosnumeeriseen merkkiin."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Valittu polku on jo toisen julkaisun käytössä."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Näytä tämä julkaisu julkisesti sivustolla"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Julkaisun kuvaus"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Olemassa oleva julkaisupolku tai luotava polku (esim. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Tuo tilaukset"
+
+msgid "admin.journals.transcode"
+msgstr "Muunna artikkelin metatiedot ISO8859-1 -merkistöstä"
+
+msgid "admin.journals.redirect"
+msgstr "Luo koodi muuntaaksesi OJS 1 URL-osoitteet OJS 2 URL-osoitteiksi"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Tuontipolku vaaditaan."
+
+msgid "admin.journals.importErrors"
+msgstr "Tuonti epäonnistui"
+
+msgid "admin.mergeUsers"
+msgstr "Yhdistä käyttäjät"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Yhdistä käyttäjä"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Valitse käyttäjä, kenelle aiemman käyttäjän kirjoittajahenkilöllisyys, toimitustoimeksiannot jne. siirretään."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Valitse yksi (tai useampi) käyttäjä, joka yhdistetään toiseen käyttäjätiliin (esim. jos jollakulla on kaksi käyttäjätiliä). Ensin valitut tilit poistetaan ja käsikirjoitukset, toimeksiannot jne. siirretään toiselle tilille."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Kaikki käyttäjät, joilla on rooleja"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Haluatko varmasti yhdistää valitut tilit {$oldAccountCount} tiliin, jolla on käyttäjätunnus \"{$newUsername}\"? Valitut tilit {$oldAccountCount} poistetaan kokonaan. Tätä toimintoa ei voi kumota."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ei rooliin lisättyjä käyttäjiä. "
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Muistutus tilauksen päättymisestä"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open Access -ilmoitus"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Muistutus arvioinnista"

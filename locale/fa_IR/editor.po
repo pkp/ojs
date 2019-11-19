@@ -1,0 +1,417 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "صفحه دبیر"
+
+msgid "editor.reassign"
+msgstr "انتساب دوباره"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "مقالات ارسالی و چاپ شده"
+
+msgid "editor.submissionQueue"
+msgstr "صف مقالات ارسالی"
+
+msgid "editor.submissionArchive"
+msgstr "بایگانی مقالات ارسالی"
+
+msgid "editor.publishing"
+msgstr "چاپ"
+
+msgid "editor.publishedIssues"
+msgstr "شماره‌های چاپ شده"
+
+msgid "editor.allSections"
+msgstr "تمام انواع مقاله"
+
+msgid "editor.allEditors"
+msgstr "همه دبیران"
+
+msgid "editor.me"
+msgstr "مرا"
+
+msgid "editor.publicIdentificationExists"
+msgstr "شناسه  «{$publicIdentifier}» برای عنوان دیگری (شماره مجله، مقاله، کلیشه چاپی و یا فایل) اختصاص یافته است. لطفاً شناسه دیگری انتخاب کنید."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "هیچ مقاله ارسالی در بایگانی نیست"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "آیا تغییرات در بایگانی مقالات ارسالی ذخیره شود؟ مقالاتی که جهت حذف انتخاب شده‌اند برای همیشه از سیستم حذف خواهند شد."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "آیا می‌خواهید برای همیشه این مقاله ارسالی را حذف کنید؟"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "آیا از تصمیم گرفته شده مطمئن هستید؟"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "با توجه به اینکه بر روی لینک «بایگانی کردن» کلیک کرده‌اید چنانچه در صفحه بعد (ارسال ایمیل) دکمه ارسال یا انجام بدون ارسال را بزنید در هر حال مقاله بایگانی خواهد شد' مگر اینکه دکمه انصراف را کلیک کنید."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "قبل از ارسال مقاله برای ویراستاری، با استفاده از لینک با خبرسازی نویسنده، تصمیم خود را به اطلاع وی برسانید و سپس نسخه ارسالی به ویراستار را انتخاب کنید."
+
+msgid "editor.notifyUsers"
+msgstr "اطلاع‌رسانی به کاربران"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "تمام خوانندگان: {$count} کاربر"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "تمام نویسندگان دارای مقاله چاپ شده: {$count} کاربر"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "تمام مشترکین: {$count} کاربر"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "تمام مؤسسات مشترک: {$count} کاربر"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "اطلاع‌رسانی به کاربران ..."
+
+msgid "editor.usersNotified"
+msgstr "کاربران اطلاع‌رسانی شدند"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "این پیغام را به تمام کاربران این مجله بفرست  ({$count} کاربر)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "ارسال این پیغام به تمام کاربران این مجله که برای دریافت تازه‌های چاپ اظهار تمایل کرده‌اند. ({$count}  کاربر)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "همچنین فهرست مقالات این شماره را نیز ضمیمه کن:"
+
+msgid "editor.editorAdministration"
+msgstr "اقدامات دبیری"
+
+msgid "editor.issues.createIssue"
+msgstr "ایجاد شماره جدید"
+
+msgid "editor.issues.editIssue"
+msgstr "مدیریت شماره: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "شماره جاری"
+
+msgid "editor.issues.numArticles"
+msgstr "موارد"
+
+msgid "editor.issues.noArticles"
+msgstr "هیچ موردی در حال حاضر برای این شماره در نظر گرفته نشده است."
+
+msgid "editor.issues.confirmDelete"
+msgstr "آیا می‌خواهید این شماره مجله را برای همیشه حذف کنید؟"
+
+msgid "editor.issues.published"
+msgstr "چاپ شده"
+
+msgid "editor.issues.unpublished"
+msgstr "چاپ نشده"
+
+msgid "editor.issues.datePublished"
+msgstr "تاریخ انتشار"
+
+msgid "editor.issues.volumeRequired"
+msgstr "ذکر دوره مجله برای این شماره لازم است"
+
+msgid "editor.issues.numberRequired"
+msgstr "ذکر شماره برای این شماره از مجله لازم است"
+
+msgid "editor.issues.yearRequired"
+msgstr "ذکر سال این شماره لازم است"
+
+msgid "editor.issues.titleRequired"
+msgstr "تعیین عنوان برای شماره مجله الزامی است"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "مشخصات شناسه‌ شماره مجله الزامی است. لطفاً حداقل یکی از گزینه‌های مربوط به اطلاعات شناسه‌ای شماره مجله را انتخاب کنید."
+
+msgid "editor.issues.issueIdentification"
+msgstr "شناسایی هر شماره مجله"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "شناسه عمومی شماره مجله"
+
+msgid "editor.issues.description"
+msgstr "توصیف"
+
+msgid "editor.issues.accessStatus"
+msgstr "وضعیت دستیابی"
+
+msgid "editor.issues.accessDate"
+msgstr "تاریخ دسترسی آزاد"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "فعال‌سازی دسترسی آزاد (با تأخیر)"
+
+msgid "editor.issues.coverPage"
+msgstr "تصویر جلد"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "فرمت‌های مجاز: .gif, jpg, یا .png"
+
+msgid "editor.issues.uploaded"
+msgstr "آپلود شد"
+
+msgid "editor.issues.remove"
+msgstr "حذف کن"
+
+msgid "editor.issues.proofed"
+msgstr "بازبینی نهایی شد"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "حذف تصویر جلد"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "تصویری که می‌خواهید حذف کنید، تصویر این شماره از مجله نیست، لطفاً صفحه رو از اول بارگذاری کرده و دوباره تلاش کنید."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "تصویری که می‌خواهید حذف کنید در حافظه یافت نشد. احتمالاً این تصویر پیشتر پاک شده است. لطفاً صفحه را از اول بارگذاری کرده و دوباره بررسی کنید."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "تصویر ورودی غیر معتبر است. فرمت‌های مورد پشتیبانی شامل gif، jpg و png است."
+
+msgid "editor.issues.styleFile"
+msgstr "استایل شیت"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "فرمت استایل شیت انتخاب شده غلط است. فایل مورد نظر می‌بایست یک فایل CSS معتبر باشد. توجه کنید که فایل استایل شیت که دارای توضیحاتی در شروع فایل است ممکن است باعث نامعتبر شدن فایل استایل شیت شود"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "آیا استایل شیت حذف شود؟"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "عنوان جلد"
+
+msgid "editor.issues.showCoverPage"
+msgstr "ایجاد صفحه جلد دلخواه برای این شماره با عناصر زیر"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "نمایش"
+
+msgid "editor.issues.openAccess"
+msgstr "دستیابی آزاد"
+
+msgid "editor.issues.subscription"
+msgstr "اشتراک"
+
+msgid "editor.issues.identification"
+msgstr "شناسایی"
+
+msgid "editor.issues.access"
+msgstr "دستیابی"
+
+msgid "editor.issues.cover"
+msgstr "پشت جلد"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "تمام مقالات این شماره به نوبت ویراستاری بازخواهند گشت و تمام فایل‌های همراه آن‌ها به‌طور دائمی از بین خواهد رفت. آیا می‌خواهید این شماره مجله را حذف کنید؟"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "در این مجله ترتیب بخش‌ها در هر شماره مجله قابل تغییر می‌باشد.  <a href=\"{$url}\" class=\"action\">برگرداندن به حالت اولیه</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "در این شماره ترتیب انواع مقالات به صورت اختصاصی است. <a href=\"{$url}\" class=\"action\">برگشت به حالت پیش‌فرض</a>"
+
+msgid "editor.issues.issueData"
+msgstr "داده‌های شماره"
+
+msgid "editor.issues.saveChanges"
+msgstr "ذخیره تغییرات فهرست مطالب؟"
+
+msgid "editor.issues.default"
+msgstr "پیش‌فرض"
+
+msgid "editor.issues.order"
+msgstr "ترتیب"
+
+msgid "editor.issues.publicId"
+msgstr "شناسه عمومی"
+
+msgid "editor.issues.publishIssue"
+msgstr "انتشار این شماره"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "لغو چاپ شماره"
+
+msgid "editor.issues.previewIssue"
+msgstr "مشاهده این شماره"
+
+msgid "editor.issues.preview"
+msgstr "مشاهده"
+
+msgid "editor.issues.confirmPublish"
+msgstr "آیا می‌خواهید این شماره جدید را منتشر کنید؟"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "آیا مطمئن هستید که می‌خواهید چاپ این شماره را لغو کنید؟"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "آیا مطمئنید که می‌خواهید این شماره را به عنوان شماره جاری ثبت کنید"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "شناسه  عمومی مقاله قابل ذخیره نیست"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "هیچ شماره مجله‌ای وجود ندارد"
+
+msgid "editor.issues.open"
+msgstr "باز کردن"
+
+msgid "editor.issues.pages"
+msgstr "صفحات"
+
+msgid "editor.issues.galleys"
+msgstr "کلیشه‌های چاپی شماره‌ها"
+
+msgid "editor.issues.galley"
+msgstr "کلیشه چاپی شماره"
+
+msgid "editor.issues.viewingGalley"
+msgstr "مشاهده کلیشه چاپی شماره"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "کلیشه چاپی را با تمامی محتویات شماره آن منتشر کن"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "هیچ کلیشه چاپی شماره مجله‌ای منتشر نشده است."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "وارد کردن برچسب کلیشه چاپی شماره الزامی است"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "وارد کردن زبان کلیشه چاپی شماره الزامی است."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "این شناسه کلیشه چاپی شماره موجود است."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "برگشت به کلیشه چاپی شماره"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "آیا مطمئنید که می‌خواهید این کلیشه چاپی شماره را حذف کنید."
+
+msgid "editor.issues.identifiers"
+msgstr "شناسه‌ها"
+
+msgid "editor.navigation.futureIssues"
+msgstr "شماره‌های آتی مجله"
+
+msgid "grid.action.addGalley"
+msgstr "افزودن کلیشه چاپی"
+
+msgid "grid.action.publish"
+msgstr "انتشار شماره"
+
+msgid "grid.action.addIssue"
+msgstr "ایجاد شماره‌ی جدید"
+
+msgid "grid.action.viewIssue"
+msgstr "مشاهده"
+
+msgid "grid.action.previewIssue"
+msgstr "بازنگری"
+
+msgid "grid.action.addIssueGalley"
+msgstr "ایجاد کلیشه چاپی  شماره"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "تنظیم شماره جاری"
+
+msgid "editor.navigation.issueArchive"
+msgstr "شماره‌های گذشته مجله"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "تعیین فایل اصلی به عنوان نسخه داوری"
+
+msgid "editor.article.decision"
+msgstr "تصمیم"
+
+msgid "editor.submissions.showBy"
+msgstr "نشان دادن برحسب"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "ارسال مقاله MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "انتسابات فعال"
+
+msgid "editor.submissions.invite"
+msgstr "دعوت کردن"
+
+msgid "editor.submissions.accept"
+msgstr "پذیرفتن"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "هیچ مقاله ارسالی وجود ندارد"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "آخرین"
+
+msgid "editor.submissions.averageTime"
+msgstr "هفته"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "آخرین داوری کامل شده"
+
+msgid "editor.submissions.assignedTo"
+msgstr "منتسب شده به"
+
+msgid "editor.submissions.inSection"
+msgstr "برای مقالات از نوع"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "کاندید پذیرش"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "قرار است انتساب یابد"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "هزینه چاپ پرداخت نشده است. برای قرار دادن در نوبت چاپ به نویسنده اطلاع دهید تا هزینه را پرداخت کند"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "تصویری که می‌خواهید حذف کنید در حافظه یافت نشد. احتمالاً این تصویر پیشتر پاک شده است. لطفاً صفحه را از اول بارگذاری کرده و دوباره بررسی کنید."
+
+msgid "grid.action.removeArticle"
+msgstr "حذف مقاله از شماره"
+
+msgid "editor.article.remove"
+msgstr "حذف"
+
+msgid "editor.article.remove.confirm"
+msgstr "آیا مطمئنید که می‌خواهید این مقاله را از شماره حذف کنید؟ البته همچنان مقاله برای انتشار در شمارات آینده در سیستم باقی می‌ماند."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "تاریخ دستیابی ذکر شده معتبر نیست"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "ویرایش کلیشه چاپی"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "صفحه‌آرا فایل‌ها را برای هر کلیشه چاپی آماده می‌سازد و برای <span class=\"pkp_help_title\"> بازبینی نهایی</span> در سیستم آپلود می‌کند."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "انتخاب فایل‌های کلیشه‌های چاپی"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "آخرین نسخه از فایل توسط ویراستیار به عنوان نسخه <span class=\"pkp_help_title\">ویراستیاری شده</span> در سیستم آپلود شده است."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "هر فایلی که در مراحل ارسال مقاله در سامانه آپلود شده است را می‌توان با انتخاب گزینه زیر به لیست بازبینی نهایی اضافه کرد."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "شناسه عمومی «{$publicIdentifier}» برای موجودیت دیگری از همین نوع تعریف شده است. لطفاً برای تمامی موجودیت‌های داخل مجله یک شناسه عمومی منحصربه‌فرد انتخاب کنید."
+
+msgid "editor.article.coverImage"
+msgstr "تصویر جلد"

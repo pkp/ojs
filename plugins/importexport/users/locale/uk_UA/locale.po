@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Модуль \"Користувачі в XML\""
+
+msgid "plugins.importexport.users.description"
+msgstr "Імпортує та експортує користувачів"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Використання: {$scriptName} {$pluginName} [command] ...\n"
+"Команди:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Приклади:\n"
+"\tІмпортувати користувачів в myJournal з файлу myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tЕкспортувати усіх користувачів з myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tЕкспортувати усіх користувачів, вказаних своїми ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Імпортувати користувачів"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Виберіть файл даних XML, що містить інформацію про користувача для імпорту в цей журнал. Докладніше про формат цього файлу дивіться у довідці журналу.<br /><br />Зауважте, що якщо імпортований файл містить будь-які імена користувачів або адреси електронної пошти, які вже існують у системі, дані користувача для цих користувачів не будуть імпортовані і будь-які нові ролі, які мали б бути створені, будуть призначені існуючим користувачам.."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Файл з даними користувачів"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Надіслати кожному імпортованому користувачу електронною поштою ім'я користувача та його пароль."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Продовжити імпортувати інших користувачів, якщо трапилася помилка."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Наступні користувачі були успішно імпортовані до системи"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Під час імпорту трапилися помилки"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Підтвердьте, що це користувачі, яких ви хочете імпортувати в систему"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Попередження"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Не можна використовувати паролі, хешовані алгоритмом {$importHash}; OJS налаштовано на використання {$ojsHash}. Якщо ви продовжите, вам доведеться скинути паролі імпортованих користувачів."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Вказано невідомий шлях журналу \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Експортувати користувачів"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Експортувати за ролями"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Експортувати усіх"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Під час експорту трапилися помилки"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "Не вдалося записати у файл \"{$fileName}\"."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Імпорт завершено успішно. Користувачі з іменами користувачів та адресами електронної пошти, які ще не використовувалися, імпортуються разом із відповідними групами користувачів."
+
+msgid "plugins.importexport.users.results"
+msgstr "Результати"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Будь ласка, завантажте файл у розділ \"Імпортувати користувачів\" щоб продовжити."

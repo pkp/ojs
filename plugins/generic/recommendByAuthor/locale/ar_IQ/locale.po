@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:20+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "أعمال أخرى للمؤلف"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "هذه الإضافة تدرج قائمة بأعمال أخرى لنفس المؤلف في صفحة ملخص المقالة."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "الأعمال الأكثر قراءة لنفس المؤلف/المؤلفين"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "عذراً: هذه الإضافة تتطلب تمكين إضافة إحصائيات/تقارير واحدة على الأقل حتى تتمكن من العمل. إن كانت إضافات الإحصائيات لديك تقدم أكثر من مقياس واحد، فعليك أيضاً اختيار مقياس رئيسي منها عند صفحة إعدادات الموقع و/أو عند صفحات الإدارة الخاصة برئيس تحرير المجلة."

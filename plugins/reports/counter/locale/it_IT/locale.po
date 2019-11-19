@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:08+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "Il plugin COUNTER permette la registrazione e il report in formato <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> sull'attività nel sito."
+
+msgid "plugins.reports.counter"
+msgstr "Statistiche COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "Versione COUNTER"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Report più vecchi"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "I parametri del report non sono validi."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Il report richiesto non è valido."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Questo report non dà risultati."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "I risultati non possono essere rappresentati in XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr "Questi link generano report COUNTER-ready basati sulla versione Release3.0, ormai obsoleta. Questo report copre tutte le riviste del sito. Utilizza invece la versione più recente, quando possibile."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Report COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML version"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTER Journal Report 1 (R3): Full-Text degli articoli richiesti per mese e rivista"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Journal Report 1 (R3): Full-Text degli articoli richiesti per mese e rivista"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Journal Report 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Numero dei full-Text degli articoli richiesti con successo (Anno {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Data di esecuzione:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Editore"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Piattaforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "e-ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Total"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Totale epr tutte le riviste"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonimo"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "I link sottostanti generano report obsoleti, utilizzando i vecchi dati del plugin, che non sono COUNTER-ready. Se vuoi generare un report COUNTER aggiornato utilizzando il nuovo tipo di metrica OJS COUNTER metric type, usa i link qui sopra."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Tutti gli utenti"

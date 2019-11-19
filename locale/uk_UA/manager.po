@@ -1,0 +1,1619 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:37+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Архівування"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Ви впевнені, що хочете скинути всі шаблони листів цього журналу? Всі зміни, зроблені у шаблонах, будуть втрачені."
+
+msgid "manager.files.note"
+msgstr "Примітка: браузер файлів - це потужний інструмент, що дозволяє переглядати і управляти файлами та каталогами, пов'язаними з цим журналом."
+
+msgid "manager.journalManagement"
+msgstr "Менеджмент журналу"
+
+msgid "manager.language.ui"
+msgstr "Інтерфейс"
+
+msgid "manager.language.submissions"
+msgstr "Подання"
+
+msgid "manager.language.forms"
+msgstr "Форми"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Ця дія скасує всі налаштування журналу, повязані з цією локалізацією."
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS може бути доступна для користувачів будь-якою з підтримуваних мов. Крім того, OJS може функціонувати як багатомовна система, дозволяючи користувачам змінювати мову з будь-якої сторінки сайту та забезпечуючи можливість вносити дані кількома додатковими мовами.<br /><br />Якщо потрібна мова підтримується OJS, але Ви не знаходите її у списку нижче, зверніться до адміністратора сайту з проханням встановити цю мову за допомогою його інтерфейсу. Для отримання інструкцій щодо додавання нових мов, будь ласка, перегляньте документацію OJS."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Вибачте, наразі підтримка додатковиими мовами недоступна. Щоб встановити додаткові мови для цього журналу, повідомте про адміністратора сайту."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Це буде основна мова сайту журналу."
+
+msgid "manager.managementPages"
+msgstr "Сторінки менеджменту"
+
+msgid "manager.payment.action"
+msgstr "Дія"
+
+msgid "manager.payment.addPayment"
+msgstr "Додати платіж"
+
+msgid "manager.payment.amount"
+msgstr "Розмір"
+
+msgid "manager.payment.authorFees"
+msgstr "Платежі авторів"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться на Кроці 1 процесу подання рукопису, у розділі \"Подання\" сторінки \"Про журнал\", а також на сторінках, що стосуються цих платежів."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS не передбачає можливості перерахунку валют. Якщо журнал приймає платежі за передплату, переконайтеся, що валюта збігається із вказаною тут."
+
+msgid "manager.payment.description"
+msgstr "Опис"
+
+msgid "manager.payment.details"
+msgstr "Подробиці"
+
+msgid "manager.payment.editSubscription"
+msgstr "Редагувати передплату"
+
+msgid "manager.payment.enable"
+msgstr "Дозволити"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Налаштування платежів"
+
+msgid "manager.payment.form.numeric"
+msgstr "Всі розміри платежів повинні мати позитивні цифрові значення (дозволяються крапкові десяткові розділювачі)"
+
+msgid "manager.payment.options.acceptGiftSubscriptionPayments"
+msgstr "У цьому пункті активуються платежі за подарункові передплати. Це дозволить читачам журналу купувати передплати як подарунки іншим читачам."
+
+msgid "manager.payment.generalFees"
+msgstr "Загальні платежі"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Посилання \"Членство у асоціації\" з'явиться у розділі \"Політика\" сторінки \"Про журнал\", кнопка для пожертв з'явиться над блоком пошуку правої бічної панелі."
+
+msgid "manager.payment.generalOptions"
+msgstr "Загальні налаштування"
+
+msgid "manager.payment.noPayments"
+msgstr "Немає платежів"
+
+msgid "manager.payment.notFound"
+msgstr "Не знайдено"
+
+msgid "manager.payment.options"
+msgstr "Налаштування"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Активація платежів за передплати; типи, вартість, тривалість передплат та переліки передплатників налаштовуються менеджером передплати."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Ви впевнені, що хочете видалити дану підписку?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Оберіть цей пункт, щоб включити модуль платежів. Заповніть форму нижче, щоб налаштувати платежі. Зауважте, що користувачі повинні увійти до системи, щоб здійснити платіж."
+
+msgid "manager.payment.options.fee"
+msgstr "Розмір платежу"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Опис платежу"
+
+msgid "manager.payment.options.feeName"
+msgstr "Назва платежу"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Членство у асоціації"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Обмежити доступ тільки до PDF-версій випусків і статей"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Публікація статті"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Придбання статті"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Купити випуск"
+
+msgid "manager.payment.options.text"
+msgstr "Опис платіжного методу"
+
+msgid "manager.payment.paymentId"
+msgstr "ID платежу"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Метод здійснення платежу"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "На цій сторінці Ви зможете налаштувати всі нижчезазначені Модулі платіжних методів."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Методи здійснення платежів"
+
+msgid "manager.payment.paymentType"
+msgstr "Тип платежу"
+
+msgid "manager.payment.readerFees"
+msgstr "Платежі читачів"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Інформація про обрані платежі, разом з їх описами та сумами внесків, які можна відредагувати нижче, з'явиться у розділі \"Політика\" сторінки \"Про журнал\", а також на сторінках, що стосуються цих платежів."
+
+msgid "manager.payment.records"
+msgstr "Історія"
+
+msgid "manager.paymentTypes"
+msgstr "Типи платежів"
+
+msgid "manager.payment.userName"
+msgstr "ID платежу"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Користувачі, які мають ролі у цьому журналі"
+
+msgid "manager.people.allJournals"
+msgstr "Всі журнали"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Надати роль у цьому журналі користувачу, зареєстрованому на сайті"
+
+msgid "manager.people.showNoRole"
+msgstr "Показати користувачів, які не мають ролей"
+
+msgid "manager.people.allUsers"
+msgstr "Всі користувачі, які мають ролі"
+
+msgid "manager.people.confirmRemove"
+msgstr "Видалити цього користувача з цього журналу? Ця дія скасує всі призначення користувача в межах цього журналу."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Обрати шаблон"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Надати нову роль існуючому користувачу"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "З журналом"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Оберіть користувача, якого потрібно включити до облікового запису іншого користувача (наприклад, якщо одна особа має два облікові записи). Перший обраний обліковий запис буде видалений, а його подання, редакційні призначення, тощо будуть асоційовані з другим обраним обліковим записом."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Оберіть користувача, якому слід передати права попереднього користувача (авторство, редакційні призначення, тощо)."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Призначення на роль \"{$role}\""
+
+msgid "manager.people.syncUserDescription"
+msgstr "Синхронізація реєстрацій дозволяє зареєструвати усіх користувачів, які виконують певну роль у певному журналі, у тих же ролях у цьому журналі. Дана функція дозволяє синхронізувати між журналами певні групи користувачів, наприклад рецензентів."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Можуть бути без анотацій"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Наразі немає редактори розділів. Спочатку призначте на цю роль хоча б одного користувача через Менеджмент > Налаштування > Користувачі > Ролі."
+
+msgid "manager.sections.assigned"
+msgstr "Редактори цього розділу"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Ви впевнені, що хочете назавжди видалити цей розділ?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів."
+
+msgid "manager.sections.create"
+msgstr "Створити розділ"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Додайте для цього розділу редактора, який автоматично буде призначатися для роботи з поданнями. У іншому випадку, редакторів розділу, відповідальних за кожне окреме подання, потрібно буде призначати вручну. Доданий редактор розділу автоматично ставатиме відповідальним за нагляд за процесами наукового рецензування та редакційної обробки (літературного редагування, верстки та коректури) рукописів, поданих для публікації у цьому розділі. Створити нових редакторів розділів можна, натиснувши посилання \"Редактори розділів\" у розділі \"Ролі\" сторінки \"Менеджмент журналу\"."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Об'єкти можуть надсилатись лише Редакторами та Редакторами розділів."
+
+msgid "manager.sections.editors"
+msgstr "Редактори розділу"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Необхідно вказати абревіатуру для цього розділу"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Будь ласка, переконайтеся, що обрано принаймні по одному прапорцю для кожного призначення редактора розділу."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Будь ласка, переконайтеся, що Ви коректно обрали форму рецензування."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Необхідно вказати назву цього розділу."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Не вказувати імена авторів на сторінках змісту випусків для цього розділу."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Не вказувати назву цього розділу на сторінках змісту випусків."
+
+msgid "manager.sections.identifyType"
+msgstr "Ідентифікувати об'єкти, опубліковані у цьому розділі, як"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(наприклад, \"рецензована стаття\", \"рецензія на книгу\", \"коментар фахівця\", тощо)"
+
+msgid "manager.sections.indexed"
+msgstr "Індексується"
+
+msgid "manager.sections.noneCreated"
+msgstr "Не було створено жодного розділу."
+
+msgid "manager.sections.open"
+msgstr "Приймаються рукописи"
+
+msgid "manager.sections.policy"
+msgstr "Політика розділу"
+
+msgid "manager.sections.readingTools"
+msgstr "Інструментарій для читання"
+
+msgid "manager.sections.reviewed"
+msgstr "Рецензується"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Не будуть індексуватись"
+
+msgid "manager.sections.submissionReview"
+msgstr "Не будуть рецензуватись"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Рукописи, подані у цей розділ журналу"
+
+msgid "manager.sections.unassigned"
+msgstr "Доступні редактори розділів"
+
+msgid "manager.sections.wordCount"
+msgstr "Кількість слів"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Обмежити кількість слів у анотаціях статей цього розділу (0 - без обмеження)"
+
+msgid "manager.setup"
+msgstr "Налаштування журналу"
+
+msgid "manager.setup.masthead"
+msgstr "Вихідні данні"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Редакційний штат"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Головна сторінка журналу за замовчуванням складається з навігаційних посилань. Додатковий контент на головній сторінці може бути доданий за допомогою одного або декількох наступних параметрів, що з'являться в показаному порядку."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Таблиця стилів"
+
+msgid "manager.setup.contextName"
+msgstr "Назва журналу"
+
+msgid "manager.setup.pageHeader"
+msgstr "Верхній колонтитул сторінки журналу"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Зміст"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Додати підрозділ \"Про журнал\""
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Додати пункт вимог"
+
+msgid "manager.setup.addItem"
+msgstr "Додати елемент"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Додати власний підрозділ до розділу \"Політика\" сторінки \"Про журнал\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Додати елемент"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Додати нове посилання на базу даних"
+
+msgid "manager.setup.addSponsor"
+msgstr "Додати організацію-спонсора"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Альтернативний заголовок"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Альтернативно, замість назви та логотипу, у поле нижче можна ввести HTML-версію заголовку сторінки. Залиште текстове поле порожнім, якщо альтернативний заголовок не потрібен."
+
+msgid "manager.setup.announcements"
+msgstr "Анонси"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Для інформування читачів про новини та події редакція журналу може публікувати окрему сторінку \"Анонси\"."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Додайте будь-яку інформацію, що відображатиметься для читачів, на сторінці \"Анонси\"."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(показувати на сторінці \"Про журнал\")"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Вимагати від авторів декларувати відсутність конфлікту інтересів щодо поданих матеріалів."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Вимагати від рецензентів декларувати відсутність конфлікту інтересів щодо призначених їм на рецензування матеріалів."
+
+msgid "manager.setup.history"
+msgstr "Історія журналу"
+
+msgid "manager.setup.historyDescription"
+msgstr "Цей текст з'явиться в розділі «Про журнал» на сайті, він може бути використаний для опису зміни назв журналу, складу редакції та іншої інформації, пов'язаної з історією журналу."
+
+msgid "manager.setup.metadata.coverage"
+msgstr "Тематичне покриття"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Геопросторове, хронологічне або історичне покриття та/або основні характеристики дослідження."
+
+msgid "manager.setup.currentIssue"
+msgstr "Поточний випуск"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Крок 5. Налаштування вигляду"
+
+msgid "manager.setup.customTags"
+msgstr "Власні теги"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Власні HTML-теги, які мають бути включені до заголовків всіх сторінок сайту журналу (наприклад, теги META)"
+
+msgid "manager.setup.details"
+msgstr "Основні відомості"
+
+msgid "manager.setup.details.description"
+msgstr "Назва журналу, ISSN, контакти, спонсори та інформація для пошукових систем."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Менеджер журналу реєструє всіх користувачів; редактори журналу та редактори розділів мають змогу реєструвати лише рецензентів."
+
+msgid "manager.setup.discipline"
+msgstr "Академічні дисципліни та напрямки"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Корисно для міждисциплінарних журналів, що публікують статті у кількох галузях знання."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(наприклад, Історія; Освіта; Соціологія; Психологія; Культурологія; Правознавство)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Наведіть приклади академічних дисциплін, що відповідають проблематиці цього журналу"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Додати сторінку змісту поточного випуску, якщо він існує."
+
+msgid "manager.setup.editorDecision"
+msgstr "Рішення редактора"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Адреса повернення"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "На цю адресу будуть надсилатися повідомлення про всі недоставлені листи."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "<strong>Примітка:</strong> Щоб активувати цю опцію, адміністратор повинен дозволити директиву <tt>allow_envelope_sender</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може вимагати також додаткових конфігурацій (що можливо не на всіх серверах)."
+
+msgid "manager.setup.emails"
+msgstr "Налаштування листування"
+
+msgid "manager.setup.emailSignature"
+msgstr "Підпис"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Підготовлені листи, які будуть розсилатися системою від імені журналу, матимуть у кінці зазначений нижче підпис. Посилання для редагування змісту шаблонів листів доступне на сторінці \"Менеджмент журналу\"."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Дозволити менеджерам журналу додавати анонси журналу."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Відвідувачі можуть зареєструвати обліковий запис у журналі."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Галузь та проблематика"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Опишіть для авторів, читачів і бібліотек діапазон статей або інших матеріалів, що будуть публікуватись у журналі."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Для авторів щодо індексації їх праць"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS підтримує Протокол для збору метаданих <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, який є стандартом забезпечення ефективного доступу до електронних наукових ресурсів у глобальному середовищі. Авторам варто надати можливість використання готових шаблонів для введення метаданих про роботи, які вони подають для публікації у журналі. Для цього менеджер журналу повинен обрати категорії термінів, за якими будуть індексуватися матеріали журналу, та надати привести приклади термінів як вказівку для майбутніх авторів. Розділяти приклади слід крапкою з комою (наприклад, термін1; термін2). Варто також вказати, що наведені терміни - це лише приклади; перед термінами у полях нижче треба написати слово \"Наприклад,\"."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Вказано некоректний ISSN."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Необхідно вказати email основної контактної особи."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Необхідно вказати основну контактну особу."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Необхідно вказати абревіатуру журналу."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Необхідно вказати назву журналу."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Необхідно вказати кількість рецензентів подання."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Необхідно вказати email контактної особи з технічних питань."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Необхідно вказати контактну особу з технічних питань."
+
+msgid "manager.setup.generalInformation"
+msgstr "Загальна інформація"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Крок 1. Основні відомості"
+
+msgid "manager.setup.guidelines"
+msgstr "Керівництва"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Крок 3. Керівництво щодо подання"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Включити у відповідний момент ліцензію Creative Commons для всіх опублікованих робіт в журналах, що надають відкритий доступ відразу або через деякий час."
+
+msgid "manager.setup.information"
+msgstr "Інформація"
+
+msgid "manager.setup.information.description"
+msgstr "Короткий опис журналу для бібліотекарів, потенційних авторів та читачів, що буде доступний на бічній панелі у розділі \"Інформація\"."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Для авторів"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Для бібліотекарів"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Для читачів"
+
+msgid "manager.setup.initialIssue"
+msgstr "Перший випуск"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Залежно від обраного формату вкажіть том, номер та/або рік першого випуску, що буде опублікований в OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Організація"
+
+msgid "manager.setup.itemsDescription"
+msgstr "До поточного набору елементів навігаційної панелі, які відображаються у верхній частині сторінки (\"Домашня сторінка\", \"Про нас\", \"Тека користувача\", тощо), можна додати додаткові елементи."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Елементів на сторінці"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Абревіатура журналу"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Архівування журналу"
+
+msgid "manager.setup.contextSummary"
+msgstr "Короткий опис журналу"
+
+msgid "manager.setup.contextAbout"
+msgstr "Про журнал"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Вкажіть основні відомості про журнал, що зацікавлять читачів, авторів або рецензентів. Це можуть бути положення про відкритий доступ, концепція журналу, умови передачі авторських прав, інформація про спонсорів, історія журналу, політика конфіденційності або відомості про включення матеріалів в архівну систему LOCKSS або CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Зміст домашньої сторінки журналу"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "За замовчуванням, на домашній сторінці розміщені лише навігаційні посилання. Використовуючи наступні опції можливо налаштувати домашню сторінку на відображення певного додаткового змісту. Зауважте, що зміст поточного випуску журналу завжди доступний за посиланням \"Поточний випуск\" на навігаційній панелі."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Заголовок домашньої сторінки"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Заголовок домашньої сторінки"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Замість тексту, який відображається на домашній сторінці за замовчуванням, можна вивантажити графічну версію назви та логотипу журналу (як файл формату .gif, .jpg або .png)."
+
+msgid "manager.setup.contextInitials"
+msgstr "Абревіатура журналу"
+
+msgid "manager.setup.journalLayout"
+msgstr "Макет журналу"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Оберіть тему журналу та визначте компоненти макету. Крім того, можна вивантажити таблиці стилів, які будуть застосовані над загальносистемними даними та таблицями стилів теми (якщо вона обрана)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Логотип журналу"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Логотип журналу"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Нижній колонтитул сторінки"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Це нижній колонтитул сторінок Вашого журналу. Щоб змінити або оновити нижній колонтитул, вставте код HTML у поле нижче. Наприклад, у нижньому колонтитулі може розміщуватись ще одна навігаційна панель, лічильник тощо. Нижній колонтитул з'явиться на всіх сторінках сайту журналу."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Крок 2. Політика журналу"
+
+msgid "manager.setup.journalSetup"
+msgstr "Налаштування журналу"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Налаштування Вашого журналу оновлені."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Неприпустимий формат таблиці стилю. Дозволений лише формат .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Тема стилю журналу"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Мініатюрне зображення журналу"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Маленький логотип або обкладинка журналу, які можуть використовуватися в списку журналів."
+
+msgid "manager.setup.contextTitle"
+msgstr "Назва журналу"
+
+msgid "manager.setup.labelName"
+msgstr "Назва елементу"
+
+msgid "manager.setup.lists"
+msgstr "Списки"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Плагін PKP PN увімкнено"
+
+msgid "manager.setup.plnDescription"
+msgstr "Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють кілька базових критеріїв."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Клацніть по посиланню \"Налаштування\" щоб прийняти умови використання PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Мережа архівування PKP (PKP Preservation Network, PKP PN))"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "Мережа архівування PKP (PKP Preservation Network, PKP PN) надає безкоштовні сервіси архівування для будь-яких журналів на OJS, що задовольняють декілька базових критеріїв. Плагін PKP PN для OJS 3 зараз знаходиться у розробці та незабаром буде доступним у галереї плагінів."
+
+msgid "manager.setup.otherLockss"
+msgstr "Альтернативні варіанти архівування"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Дозволити LOCKSS для збереження та розповсюдження змісту журналу бібліотеками, що беруть участь у проекті, через сторінку <a href=\"{$lockssUrl}\" target=\"_blank\">Видавничий маніфест LOCKSS</a>. Ліцензія LOCKSS з'явиться на сторінці \"Про журнал\" у розділі \"Архівування\":"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "Ліцензія LOCKSS з'явиться в розділі «Про журнал» під заголовком «Архівація журналу»: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Ліцензія LOCKSS</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Опис ліцензії LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Визначте 6-10 бібліотек, які будуть архівувати журнал. Наприклад, це можуть бути установи, у яких працюють редактори або члени редколегії та/або установи, що вже беруть участь у проекті LOCKSS. Див. <a href=\"http://www.lockss.org/community/\" target=\"_blank\">бібліотеки-учасниці</a>. Використайте шаблонні запрошення для (i) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">бібліотек, що беруть участь у LOCKSS</a> або (ii) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">бібліотек, які поки не є учасницями LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Дозволити CLOCKSS для збереження та розповсюдження змісту журналу бібліотеками, що беруть участь у проекті, через сторінку <a href=\"{$clockssUrl}\" target=\"_blank\">Видавничий маніфест CLOCKSS</a> page."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "Ліцензія CLOCKSS з'явиться в розділі «Про журнал» під заголовком «Архівація журналу»: <a href=\"http://clockss.org/\" target=\"_blank\">Ліцензія CLOCKSS</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Опис ліцензії CLOCKSS "
+
+msgid "manager.setup.clockssRegister"
+msgstr "Підпишіться на сервіс CLOCKSS, відвідавши <a href=\"http://clockss.org/\" target=\"_blank\">веб-сайт CLOCKSS</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Вигляд"
+
+msgid "manager.setup.look.description"
+msgstr "Заголовок домашньої сторінки, зміст, заголовок журналу, підпис, навігаційна панель та таблиці стилів."
+
+msgid "manager.setup.management"
+msgstr "Менеджмент"
+
+msgid "manager.setup.management.description"
+msgstr "Доступ, безпека, планування, анонси, літературне редагування, верстка та коректура."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Менеджмент основних кроків редакційної роботи"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Налаштування менеджменту та публікації"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Крок 4. Менеджмент журналу"
+
+msgid "manager.setup.navigationBar"
+msgstr "Навігаційна панель"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Додавайте або виключайте додаткові навігаційні елементи."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "Наведена абсолютна URL-адреса (наприклад, \"http://www.example.com\"), а не відносний шлях від кореневої теки сайту (наприклад, \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Значення назви елементу є рядковим літералом (наприклад, \"Налаштування\"), а не ключем файлу локалізації (наприклад, \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Файл зображення не вивантажений."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Таблиця стилю не вивантажена."
+
+msgid "manager.setup.note"
+msgstr "Примітка"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Примітка:</strong> Наразі розсилання листів подяки відключене. Щоб користуватися цією функціональністю дозвольте лист SUBMISSION_ACK на сторінці <a class=\"action\" href=\"{$preparedEmailsUrl}\">Шаблони листів</a>."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Посилань на сторінки"
+
+msgid "manager.setup.publishingMode"
+msgstr "Доступ до змісту журналу"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN онлайнової версії"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Журнал надаватиме відкритий доступ до свого змісту."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Налаштування пагінації"
+
+msgid "manager.setup.policies"
+msgstr "Політика"
+
+msgid "manager.setup.policies.description"
+msgstr "Проблематика, рецензування, розділи, приватність, безпека та додаткові відомості про журнал."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN друкованої версії"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Інструкції з коректури"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Інструкції з коректури стануть доступними коректорам, авторам, редакторам верстки та редакторам розділів на етапі редагування подань. Нижче подано стандартний набір інструкцій у форматі HTML. Менеджер журналу в будь-який час може змінювати або замінювати ці інструкції (у текстовому або гіпертекстовому форматі)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Графік публікації"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Статті журналу можуть збиратися у випуски з власними сторінками змісту. Можливо також публікувати матеріали по мірі їх редакційного опрацювання, додаючи готові до друку статті до сторінки змісту \"поточного\" випуску журналу. Надайте читачам журналу інформацію щодо принципу, який використовуватиме цей журнал, та щодо очікуваної періодичності видання."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Планування публікації"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Ідентифікація змісту журналу"
+
+msgid "manager.setup.publisher"
+msgstr "Видавець"
+
+msgid "manager.setup.publishingDescription"
+msgstr "Назва установи-видавця журналу, яка має бути відображена на сторінці \"Про журнал\"."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Гіперпосилання у пристатейній бібліографії"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Користувачі мають бути зареєстровані для перегляду змісту у відкритому доступі."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Користувачі мають бути зареєстровані для перегляду веб-сайту журналу."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Керівництво для рецензентів"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Налаштування рецензування"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Хоча редактор завжди може особисто контактувати з рецензентами по email, можливі також два варіанта налаштування автоматичного розсилання нагадувань (зміст листів-нагадувань можна змінити у розділі \"Шаблони листів\")"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "<strong>Примітка:</strong> Щоб активувати цю опцію адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може потребувати додаткових конфігурацій (що можливо не на всіх серверах)."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Анонімне рецензування"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Типовий період, необхідний для проведення рецензування"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Після кожного рецензування редактори зможуть оцінювати рецензентів за п'ятибальною шкалою."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Рецензенти будуть мати доступ до рукописів лише після згоди рецензувати їх."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Доступ рецензентів"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Дозволити доступ рецензента \"єдиним натисканням\"."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Примітка:</strong> Листи-запрошення рецензентів включатимуть спеціальний прямий URL до сторінки з поданням (при цьому для доступу до всіх інших сторінок їм буде необхідно зайти у систему з іменем/паролем). З міркувань безпеки, за умов використання цієї опції, редактори не зможуть змінювати адреси email або додавати додаткові адреси (CC та BCC) під час написання листів-запрошень рецензентів."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Рейтинги рецензентів"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Нагадування рецензентам"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Політика рецензування"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Індексування пошуковими системами"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Щоб допомогти користувачам пошукових систем знаходити журнал, надайте короткий опис журналу та набір релевантних ключових слів (розділених крапкою з комою)."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Розділи та редактори розділів"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Якщо розділи не додані, матеріали будуть надсилатися до розділу статей за замовчуванням)."
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Щоб додати або змінити розділи журналу (наприклад, Статті, Рецензії тощо), перейдіть на сторінку \"Розділи журналу\".<br /><br />Автори рукописів вказуватимуть..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Редактор журналу, який наглядатиме за редакційним процесом."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Розділ журналу для об'єктів."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Завжди відображати посилання на повні тексти та повідомляти про обмежений доступ."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "П'ять кроків для створення веб-сайту журналу"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(наприклад, Фотосинтез; Чорні діри; Проблема чотирьох фарб; Теорема Баєса)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Ключові слова"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Наведіть приклади ключових слів або тематичних рубрик як вказівку для авторів"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Керівництво щодо подання"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Вимоги до подання"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Під час подання рукопису до журналу автори не зможуть завершити цей процес, поки вони не підтвердять відповідність рукопису всім встановленим вимогам. Список вимог також з'явиться у розділі \"Керівництво для авторів\" сторінки \"Про журнал\". Поданий нижче список вимог можна редагувати, але зауважте, що автор повинен буде підтвердити відповідність рукопису кожному з пунктів вимог, без цього він не зможе завершити процес подання рукопису до журналу."
+
+msgid "manager.setup.submissions"
+msgstr "Подання"
+
+msgid "manager.setup.submissions.description"
+msgstr "Інформація для авторів, авторські права та індексування (в тому числі, реєстрація)."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Для доступу до змісту журналу (всього або деякого) буде потрібна передплата."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS не буде використовуватись для електронної публікації змісту журналу."
+
+msgid "manager.setup.typeExamples"
+msgstr "(наприклад, Історичний екскурс; Результати експерименту; Огляд літератури; Опитування/Інтерв'ю)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Тип дослідження (методологія/підходи)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Наведіть приклади термінів, які автори можуть застосовувати для характеристики типу дослідження, методології та використаних ними підходів"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Унікальний ідентифікатор"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Статті та випуски можуть бути асоційовані з ідентифікаційними номерами або кодами однієї з реєстраційних систем, наприклад, системи цифрових ідентифікаторів об'єктів (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Редколегія та/або Рада рецензентів журналу."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Мініатюра"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Зображення заголовку"
+
+msgid "manager.setup.userRegistration"
+msgstr "Реєстрація користувачів"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Текст заголовку"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\tВаш журнал налаштований на запис декількох метрик використання. Статистика використання буде відображатися в декількох контекстах.\n"
+"\tЄ випадки, коли повинен бути використаний тільки один вид статистики використання, наприклад, щоб відобразити упорядкований список найбільш часто використовуваних статей або для ранжування результатів пошуку.\n"
+"\tБудь ласка, виберіть одну з налаштованих метрик як метрику за замовчуванням.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Статистика журналу"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Показники перегляду статей (лише для авторів)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Прийнято"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Відхилено"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Повторно надіслано"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Днів на рецензування"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Днів до публікації"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS вираховує наступну статистику по кожному журналу. Період \"днів до рецензування\" вираховується від дати подання рукопису (або вказання версії рецензії) до прийняття початкового рішення редактором; період \"днів до публікації\" позначає термін від початкового вивантаження автором рукопису до остаточної публікації."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Одиниць опубліковано"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Оберіть пункти, які Ви хочете публікувати у розділі \"Про журнал\"."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Примітка: Відсоткове співвідношення рецензованих подань може не дорівнювати 100%, оскільки деякі матеріали, завантажені повторно, були прийняті, відхилені або все ще знаходяться в роботі."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Номерів опубліковано"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Всього отримано від авторів"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Рецензовано"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Зареєстрованих читачів"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Зареєстрованих користувачів"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Запитів на рецензування"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Рецензентів"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Оцінка редактора"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Кількість рецензій"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Оберіть розділи для підрахунку статистики процесу рецензування по цьому журналу."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Передплати"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Скачування файлу статті"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Перегляди сторінки анотації статті"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Скачування і перегляди анотації статті"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Перегляди головної сторінки журналу"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Перегляди сторінки зі змістом випуску"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Фільтрувати результати по контексту (випуску і/або статті)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Фільтрувати результати за типом об'єкта (журнал, випуск, стаття, типи файлів) і/або по одному або декільком ID об'єктів."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Політика передплат"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Відстрочений відкритий доступ"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Будь ласка, поставте галочку."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Завершення передплати"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Після завершення передплати читачі можуть втратити доступ до всього передплатного контенту або можуть мати доступ до змісту, опублікованого до дати завершення передплати."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Повне завершення"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Після завершення передплати читачі втрачатимуть доступ до всього передплатного змісту."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Часткове завершення"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Після завершення передплати читачі втрачатимуть доступ до нового передплатного контенту, але продовжуватимуть мати доступ до змісту, опублікованого до дати завершення передплати."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} місяців"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} тижнів"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Сповістити учасників електронною поштою після закінчення терміну підписки"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Сповістити учасників електронною поштою після закінчення терміну підписки."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Сповістити учасників електронною поштою після закінчення терміну підписки."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Сповістити учасників електронною поштою після закінчення терміну підписки."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Нагадування про завершення передплати"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Автоматизовані поштові нагадування (зміст яких може редагувати менеджер журналу у розділі \"Шаблони листів\") можуть розсилатись передплатникам як до, так і після завершення їх передплат."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Примітка:</strong> Щоб активувати цї опції адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цих опцій може вимагати також додаткових конфігурацій (що можливо не на всіх серверах)."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Оберіть одне з наступного:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "У текстовому полі може застосовуватись розмітка HTML (теги font size, color, тощо); перехід на наступний рядок трактується як тег <tt>&lt;br&gt;</tt>; редактор HTML працює з браузерами Firefox."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Будь ласка, вкажіть коректне значення кількості місяців після завершення передплати."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Будь ласка, вкажіть коректне значення кількості місяців до завершення передплати."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Будь ласка, вкажіть коректне значення кількості тижнів після завершення передплати."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Будь ласка, вкажіть коректне значення кількості тижнів до завершення передплати."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Зареєстровані читачі матимуть можливість автоматизовано отримувати поштою сторінки змісту випусків, що з'явилися у відкритому доступі."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Примітка:</strong> Щоб активувати цю опцію адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації OJS. Крім того, як зазначено у документації OJS, налаштування цієї опції може вимагати додаткових конфігурацій (що можливо не на всіх серверах)."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Електронні повідомлення про платежі"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Повідомлення про платежі (зміст яких може редагувати менеджер журналу у розділі \"Шаблони листів\") можуть автоматизовано надсилатись менеджеру передплати після завершення користувачами процедури оплати передплат."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Повідомляти менеджера передплати поштою про придбання індивідуальних передплат."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Повідомляти менеджера передплати поштою про придбання інституційних передплат (рекомендується)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Повідомляти менеджера передплати поштою про поновлення індивідуальних передплат."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Повідомляти менеджера передплати поштою про поновлення інституційних передплат."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Примітка:</strong> Передплати, придбані установами в електронному режимі, потребують перевірки наданих даних про домени і діапазони IP-адрес та подальшої активації менеджером передплати."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Примітка:</strong> Щоб активувати цю опцію менеджер журналу повинен включити модуль платежів та дозволити платежі за передплату в розділі \"Платежі читачів\" сторінки \"Налаштування платежів\"."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Налаштування відкритого доступу для передплатних журналів"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Передплатні журнали можуть надавати відстрочений відкритий доступ до опублікованого контенту, а також дозволяти депонування авторами їх робіт у зовнішніх Інтернет-сховищах (обидві ці можливості покращують читаність та цитованість змісту журналу)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Інформація про передплату"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Інформація про типи передплат та структуру цін буде автоматично розміщена у розділі \"Передплати\" сторінки \"Про журнал\" разом з контактною інформацією менеджера передплати. Тут можна вказати додаткову інформацію, наприклад, про методи платежів або про підтримку передплатників з країн, що розвиваються."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Менеджер передплати"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Ця контактна особа буде вказана у розділі \"Передплати\" сторінки \"Про журнал\"."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Будь ласка, вкажіть коректну email адресу."
+
+msgid "manager.subscriptionPolicies.subscriptionPoliciesSaved"
+msgstr "Ваші налаштування політики передплати були оновлені."
+
+msgid "manager.subscriptions"
+msgstr "Передплати"
+
+msgid "manager.individualSubscriptions"
+msgstr "Індивідуальні передплати"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Інституційні передплати"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Ви впевнені, що хочете продовжити дану підписку?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Ви впевнені, що хочете видалити цю передплату?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Загальна інформація про передплати"
+
+msgid "manager.subscriptions.create"
+msgstr "Створити нову передплату"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Створити"
+
+msgid "manager.subscriptions.renew"
+msgstr "Поновити"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Завершення"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Дата завершення"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Початок"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Дата початку"
+
+msgid "manager.subscriptions.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.edit"
+msgstr "Редагувати передплату"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Редагувати"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Зі статусом"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Всі"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Статус"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Необхідно вказати статус передплати."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Будь ласка, коректно вкажіть статус передплати."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Тип передплати"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Необхідно вказати тип передплати."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Будь ласка, вкажіть коректний тип передплати."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Дата початку"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Необхідно вказати дату початку передплати."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Будь ласка, вкажіть коректну дату початку передплати."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Дата завершення"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Необхідно вказати дату завершення передплати."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Будь ласка, вкажіть коректну дату завершення передплати."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Примітка: Всі зміни нижче стосуються загальносистемного профілю користувача."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Користувач"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Контактна особа"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Необхідно обрати користувача."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Будь ласка, коректно визначіть користувача."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Будь ласка, коректно вкажіть державу."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Надіслати передплатнику лист з іменем користувача та подробицями передплати."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Для налаштування опції надсилання листа, будь ласка, користуйтеся відповідним прапорцем."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Реєстраційний номер"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Якщо тип передплати вимагає членства передплатників у певній асоціації або організації, вкажіть інформацію про необхідне членство."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Обраний тип передплати потребує вказання інформації про членство."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Примітки"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Назва установи"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Необхідно вказати назву установи"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Поштова адреса"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Якщо це передплата для установи, вкажіть домен передплатника. Якщо вказується доменне ім'я, вказувати діапазон IP-адрес необов'язково. Доменні імена повинні бути коректними (наприклад, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Обраний тип передплати потребує вказання домену та/або діапазону IP-адрес для аутентифікації передплатника."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Будь ласка, вкажіть коректний домен."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Діапазон IP-адрес"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Якщо це передплата для установи, вкажіть діапазон IP-адрес передплатника. Якщо вказується діапазон IP-адрес, вказувати домен необов'язково. Можуть вказуватись окремі IP-адреси (наприклад, 142.58.103.1), IP-маски CIDR (наприклад, 142.58.100.0/24), звичайні діапазони IP-адрес (наприклад, 142.58.103.1 - 142.58.103.4), діапазони IP-адрес з символами '*' (наприклад, 142.58.103.*) або будь-які комбінації вищезазначених варіантів, розподілені крапкою з комою (';') (наприклад, 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Будь ласка, вкажіть коректний діапазон IP-адрес."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Видалити"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Додати"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Зберегти та створити іншу"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Для того, щоб надіслати повідомлення користувачу, у налаштуваннях журналу необхідно вказати ім'я та email контактної особи з питань передплати."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Цей користувач вже має передплату на цей журнал."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Перш ніж нова передплата буде створена, необхідно вказати її тип."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Діапазон IP-адрес"
+
+msgid "manager.subscriptions.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Реєстраційний номер"
+
+msgid "manager.subscriptions.notes"
+msgstr "Примітки"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Немає передплат"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Оберіть контактну особу для передплати"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Оберіть користувача"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Права передплатників автоматично надаються менеджерам журналу, редакторам, редакторам розділів, редакторам верстки, літературним редакторам та коректорам."
+
+msgid "manager.subscriptions.select"
+msgstr "Оберіть"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Передплата створена успішно."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Тип передплати"
+
+msgid "manager.subscriptions.user"
+msgstr "Користувач"
+
+msgid "manager.subscriptions.contact"
+msgstr "Ім'я контактної особи"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Назва установи"
+
+msgid "manager.subscriptionTypes"
+msgstr "Типи передплат"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Попередження! Всі передплати цього типу будуть видалені. Ви впевнені, що хочете продовжити та видалити цей тип передплати?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Вартість"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Передплати"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Індивідуальна"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Інституційна"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Створити новий тип передплати"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Створити"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Тривалість"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Редагувати тип передплати"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Редагувати"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Вартість"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Вкажіть цифрове значення (наприклад, 40 або 40.00) без додаткових символів (наприклад, $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Вартість має бути позитивним цифровим значенням."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Необхідно вказати вартість."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Валюта"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Необхідно вказати валюту."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Будь ласка, оберіть коректну валюту."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Опис"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Завершується через"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "місяців (наприклад, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Необмежена"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Будь ласка, оберіть один із запропонованих варіантів."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Тривалість"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Тривалість передплати у місяцях (наприклад, 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Тривалість має бути позитивним цифровим значенням."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Необхідно вказати тривалість."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Формат"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Необхідно вказати формат типу передплати."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Будь ласка, оберіть коректний формат типу передплати."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Передплати"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Індивідуальна (користувачі аутентифікуються за іменем користувача/паролем)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Передплатники розпізнаватимуться за допомогою аутентифікації за доменом або IP-адресою."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Для налаштування типу аутентифікації, будь ласка, скористайтеся відповідним прапорцем."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Передплатники мають бути членами певної асоціації або організації."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Для налаштування передплати для членів асоціації/організації, будь ласка, скористайтеся відповідним прапорцем."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Додаткові налаштування"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Інформація про цей тип передплати не буде публікуватися<br />(наприклад, у розділі \"Передплати\" сторінки \"Про журнал\")."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Для налаштування публічності типу передплати, будь ласка, скористайтеся відповідним прапорцем."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Зберегти та створити інший"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Назва типу"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Тип передплати з такою назвою вже існує."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Необхідно вказати назву типу передплати."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Тип передплати"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Жодного типу передплати не було створено."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Тип передплати створений успішно."
+
+msgid "manager.distribution.access"
+msgstr "Доступ"
+
+msgid "manager.setup.categories"
+msgstr "Категорії"
+
+msgid "manager.setup.categories.description"
+msgstr "Оберіть найбільш відповідні категорії зі списку нижче. Читачі зможуть переглядати статті за обраними категоріями."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Посилання на сторінку, що описує підписки, які ви пропонуєте."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Посилання на сторінку, що описує поточні та минулі підписки користувача."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Це посилання відображатиметься лише у випадку, коли користувач увійшов до системи."
+
+msgid "grid.category.path"
+msgstr "Шлях"
+
+msgid "grid.action.addSection"
+msgstr "Додати розділ"
+
+msgid "manager.setup.section.description"
+msgstr "Статті в опублікованих випусках журналу групуються в розділи, зазвичай за темою або типом контенту, наприклад «оглядові статті», «наукові статті», тощо."
+
+msgid "settings.roles.gridDescription"
+msgstr "Ролі - це групи користувачів, яким надається доступ різного рівня до різних робочих процесів журналу. Передбачено 5 різних рівнів доступу: Менеджери жураналу мають доступ до всього контенту і налаштувань; Редактори розділів мають повний доступ до всього призначеного їм контенту; Асистенти журналу мають обмежений доступ до рукописів, що були їм призначені Редактором; Рецензенти можуть переглядати і рецензувати призначені їм рукописи; Автори можуть переглядати і оперувати даними про їх власні рукописи. Крім того, є п'ять різних етапів призначень, для яких можуть призначатись ролі: подання, внутрішнє рецензування, рецензування, редагування та публікація."
+
+msgid "manager.publication.library"
+msgstr "Бібліотека видавця"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Рік авторського права нової статті визначається"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Стаття: рік за замовчуванням буде відповідати даті публікації статті, виходячи з принципу «публікація по ходу роботи»."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Випуск: рік за замовчуванням буде відповідати даті публікації випуску."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Скинути дозволи статей"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Ви впевнені, що хочете скинути дозволи статей, які вже задані?"
+
+msgid "grid.genres.title.short"
+msgstr "Компоненти"
+
+msgid "grid.genres.title"
+msgstr "Компоненти статті"
+
+msgid "grid.genres.description"
+msgstr "Ці компоненти використовуються з метою надання імен файлам і відображаються у випадаючому меню в процесі їх вивантаженння.  Жанри, позначені ##, дозволяють користувачу пов'язувати файл як з усім відправленим матеріалом 99Z, так і з конкретним компонентом за номером (наприклад 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Налаштування"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Налаштування модуля DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Статті"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Випуски"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Гранки"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Вимоги модуля не виконані"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів \"Публічні ідентифікатори\", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Модуль не був повністю підключений."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Не обрано жодного опублікованого об'єкта для призначення DOI, тому неможливо здійснити депонування або експорт у модулі публічного ідентифікатора DOI."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Пароль"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Зверніть увагу, що пароль буде збережений у вигляді звичайного тексту, тобто не буде зашифрований."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Будь-який випуск"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Будь-який статус"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Не депонований"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Відмічений як зареєстрований"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Зареєстрований"
+
+msgid "plugins.importexport.common.action"
+msgstr "Дія"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Експорт"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Відмітити зареєстрованим"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Зареєструвати"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Перевіряти XML перед експортом та реєстрацією."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Немає обраних об'єктів."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Неможливо конвертувати вибрані об'єкти."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Невірний XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Файл результатів {$param} не доступний для запису."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Вхідний файл {$param} не доступний для читання."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Реєстрація пройшла невдало! Реєстраційний сервер DOI повернув помилку: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Реєстрація пройшла успішно!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Відсутній префікс DOI для журналу з адресою {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "ПОМИЛКА:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Вказаний шлях журналу \"{$journalPath}\" не існує."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Не вдалось знайти вказані об'єкти."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Надіслати копію основній контактній особі, вказаній в налаштуваннях журналу."

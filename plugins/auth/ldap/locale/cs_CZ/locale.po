@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:36+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem k externímu LDAP zdroji ověření."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "nastavení LDAP"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "hostname serveru"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "Např.: \"ldap.example.com\" nebo \"ldaps://ldap.example.com\" (při použití SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port serveru"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Volitelné. Výchozí na to 389 (LDAP) nebo 636 (LDAP přes SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Např.: \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Správce DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Např.: \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Heslo správce"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Správce DN a heslo jsou požadovány pouze pokud jsou povoleny možnosti synchronizace uživatelských profilů/hesel nebo vytváření uživatelů. Pokud bude LDAP použito pouze pro ověřování, je možné tyto možnosti vynechat."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atribut jména účtu"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Atribut jehož hodnota jedinečně identifikuje uživatelský objekt, jako uid nebo cn nebo sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Šifrování hesla"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL nastavení (volitelné)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mechanizmus"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Např.: \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Oblast"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Požadované autorizační ID"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Vlastnosti bezpečnosti SASL"

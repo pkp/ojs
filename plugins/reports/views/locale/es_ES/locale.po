@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:16+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.views.displayName"
+msgstr "Informe de vistas"
+
+msgid "plugins.reports.views.description"
+msgstr "Este módulo genera un informe CSV que muestra las lecturas de cada artículo."
+
+msgid "plugins.reports.views.articleId"
+msgstr "ID del artículo"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Título del artículo"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Fecha de publicación"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Vistas del resumen"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Total de vistas de la galerada"

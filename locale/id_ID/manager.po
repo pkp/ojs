@@ -1,0 +1,1580 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Pengarsipan"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Apakah Anda yakin Anda ingin mengatur ulang seluruh template email di jurnal ini? Anda akan kehilangan semua penyesuaian yang sudah Anda buat."
+
+msgid "manager.files.note"
+msgstr "Catatan: Berkas Penelusuran adalah fitur canggih yang memungkinkan file dan direktori yang terkait dengan jurnal untuk dilihat dan dimanipulasi secara langsung."
+
+msgid "manager.journalManagement"
+msgstr "Manajemen Jurnal"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Naskah"
+
+msgid "manager.language.forms"
+msgstr "Form"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Ini akan menggantikan pengaturan jurnal bahasa khusus apapun yang Anda miliki untuk bahasa ini"
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS dapat digunakan dalam bahasa apa pun yang tersedia (bahasa yang didukung oleh OJS). OJS juga dapat beroperasi sebagai sistem multilingual yang memungkinkan pengguna untuk berpindah dari satu bahasa ke bahasa lain pada halaman yang sama, dan memungkinkan data tertentu untuk dimasukkan ke dalam beberapa bahasa tambahan.<br /><br />Jika bahasa yang didukung oleh OJS tidak terdaftar di bawah ini, tanya Administrator Situs Anda untuk menginstal bahasa pendukung tersebut dari antarmuka administrasi situs. Untuk instruksi penambahan dukungan untuk bahasa baru, berkonsultasilah dengan dokumentasi OJS"
+
+msgid "manager.languages.noneAvailable"
+msgstr "Maaf, tidak tersedia bahasa tambahan dalam situs ini. Hubungi administrator situs Anda jika Anda ingin menggunakan bahasa pendukung untuk jurnal ini."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Bahasa default untuk situs jurnal."
+
+msgid "manager.managementPages"
+msgstr "Halaman Manajemen"
+
+msgid "manager.payment.action"
+msgstr "Aksi"
+
+msgid "manager.payment.addPayment"
+msgstr "Tambah Pembayaran"
+
+msgid "manager.payment.amount"
+msgstr "Jumlah"
+
+msgid "manager.payment.authorFees"
+msgstr "Biaya Penulis"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Pilihan yang dipilih, dengan deskripsi dan biaya (yang dapat diedit di bawah ini), akan ditampilkan di Langkah 1 proses penyerahan naskah dan di Tentang Jurnal di bawah penyerahan naskah, serta di bagian mana pun pembayaran diperlukan."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS tidak menyediakan konversi mata uang apa pun. Jika menerima pembayaran untuk langganan, Anda harus pastikan bahwa mata uang langganan sesuai dengan yang ada di sini."
+
+msgid "manager.payment.description"
+msgstr "Deskripsi"
+
+msgid "manager.payment.details"
+msgstr "Detail"
+
+msgid "manager.payment.editSubscription"
+msgstr "Edit Langganan"
+
+msgid "manager.payment.enable"
+msgstr "Tidak Bisa"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Pilihan Pembayaran Biaya"
+
+msgid "manager.payment.form.numeric"
+msgstr "Semua biaya harus dalam nilai numerik positif (desimal dibolehkan)"
+
+msgid "manager.payment.generalFees"
+msgstr "Biaya Umum"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Keanggotaan Asosiasi akan ditampilkan di Tentang Jurnal di bawah kebijakan, dan tautan donasi akan muncul di atas fungsi cari di frame sebelah kanan."
+
+msgid "manager.payment.generalOptions"
+msgstr "Opsi Umum"
+
+msgid "manager.payment.noPayments"
+msgstr "Tidak Ada Pembayaran"
+
+msgid "manager.payment.notFound"
+msgstr "Tidak ditemukan"
+
+msgid "manager.payment.options"
+msgstr "Opsi"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Aktifkan pembayaran untuk Langganan, di mana tipe, biaya, durasi dan langganan diatur oleh Manajer (Langganan) Jurnal."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Klik di sini untuk memungkinkan modul Pembayaran. Anda harus mengkonfigurasi pengaturan pembayaran dengan mengisi form di bawah ini. Catatan: Pengguna harus log in untuk melakukan pembayaran."
+
+msgid "manager.payment.options.fee"
+msgstr "Biaya"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Deskripsi Biaya"
+
+msgid "manager.payment.options.feeName"
+msgstr "Nama Biaya"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Keanggotaan Asosiasi"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Hanya batasi akses versi PDF dari terbitan dan artikel"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Penerbitan Artikel"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Beli Artikel"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Beli Terbitan"
+
+msgid "manager.payment.options.text"
+msgstr "Deskripsi Metode Pembayaran"
+
+msgid "manager.payment.paymentId"
+msgstr "ID Pembayaran"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Metode Pembayaran"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Anda bisa mengkonfigurasikan Plugin Metode Pembayaran berikut ini dari layar ini."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Metode Pembayaran Biaya"
+
+msgid "manager.payment.paymentType"
+msgstr "Tipe Pembayaran"
+
+msgid "manager.payment.readerFees"
+msgstr "Biaya Pembaca"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Pilihan ini, bersama dengan deskripsi dan biaya (yang dapat diedit di bawah ini), akan muncul di Tentang Jurnal di bawah Kebijakan, serta di bagian mana pun pembayaran diperlukan."
+
+msgid "manager.payment.records"
+msgstr "Rekam"
+
+msgid "manager.payment.userName"
+msgstr "ID Pembayaran"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Pengguna yang Terdaftar"
+
+msgid "manager.people.allJournals"
+msgstr "Semua Jurnal"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Daftarkan Pengguna Situs ini di Jurnal"
+
+msgid "manager.people.showNoRole"
+msgstr "Tampilkan Pengguna Tanpa Peran"
+
+msgid "manager.people.allUsers"
+msgstr "Semua Pengguna yang Terdaftar"
+
+msgid "manager.people.confirmRemove"
+msgstr "Hapus pengguna ini dari jurnal? Tindakan ini akan membatalkan pendaftaran pengguna dari semua peran dalam jurnal ini."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Pilih template"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Daftarkan Pengguna yang Sudah Ada"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Dengan jurnal"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Pilih pengguna (atau beberapa) untuk digabungkan dengan akun pengguna lain (contoh saat seseorang mempunyai dua akun pengguna). Akun yang lebih dahulu dipilih akan dihapus dan penyerahan, penugasan, dll akan dikirimkan ke akun yang kedua."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Pilih pengguna yang diberikan kepengarangan pengguna, tugas pengeditan, dll."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Pendaftaran {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Sinkronisasi Pendaftaran akan mendaftarkan semua pengguna yang terdaftar di peran yang telah ditentukan di jurnal yang telah ditentukan ke dalam peran yang sama di jurnal ini. Fungsi ini membuat sejumlah pengguna (contoh: Reviewer) akan disinkronisasikan antar jurnal."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Tidak membutuhkan abstrak"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Belum ada Editor Bagian.  Tambahkan terlebih dahulu peran ini ke setidaknya satu pengguna via Manajemen > Pengaturan > Pengguna &amp; Peran."
+
+msgid "manager.sections.assigned"
+msgstr "Editor Bagian ini"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Apakah Anda yakin ingin menghapus bagian ini secara permanen? Setelah ini, Anda harus menerbitkan ulang semua artikel di bagian ini."
+
+msgid "manager.sections.alertDelete"
+msgstr "Sebelum bagian ini dapat dihapus, Anda harus memindah artikel yang dipublikasikan di bagian ini ke bagian lain."
+
+msgid "manager.sections.create"
+msgstr "Tambah Bagian"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Tambahkan Editor Bagian ke bagian ini agar naskah secara otomatis ditugaskan kepada Editor Bagian. (jika tidak, Editor Bagian akan ditugaskan secara manual, setelah naskah masuk). Jika ditambahkan, Editor Bagian secara otomatis dapat ditugaskan untuk mengawasi REVIEW (peer review) dan/ atau PENGEDITAN (copyediting, layout, dan proofreading) naskah ke bagian ini. Editor Bagian dibuat dengan mengklik Editor Bagian di bawah Peran di Manajemen Jurnal."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Item hanya bisa diserahkan oleh editor dan editor bagian."
+
+msgid "manager.sections.editors"
+msgstr "Editor Bagian"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Judul singkat diperlukan untuk bagian ini"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Pastikan bahwa setidaknya satu pilihan telah diisi untuk masing-masing tugas Editor Bagian."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Pastikan Anda telah memilih form review yang valid."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Judul diperlukan untuk bagian ini."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Hilangkan nama penulis untuk item bagian dari daftar isi terbitan."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Hilangkan judul bagian ini dari daftar isi terbitan."
+
+msgid "manager.sections.identifyType"
+msgstr "Identifikasi item yang diterbitkan di bagian ini sebagai sebuah"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "Sebagai contoh: \"Artikel yang telah di-peer-review\", \"Review Buku Non-refereed?\", \"komentar yang diundang\", dll."
+
+msgid "manager.sections.indexed"
+msgstr "Diindeks"
+
+msgid "manager.sections.noneCreated"
+msgstr "Tidak ada bagian yang dibuat."
+
+msgid "manager.sections.open"
+msgstr "Buka Penyerahan Naskah"
+
+msgid "manager.sections.policy"
+msgstr "Kebijakan Bagian"
+
+msgid "manager.sections.readingTools"
+msgstr "Alat Baca"
+
+msgid "manager.sections.reviewed"
+msgstr "Telah di-Peer review"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Tidak akan dimasukkan ke dalam pengindeksan jurnal"
+
+msgid "manager.sections.submissionReview"
+msgstr "Tidak akan di-peer review"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Naskah yang diserahkan ke bagian jurnal ini"
+
+msgid "manager.sections.unassigned"
+msgstr "Editor Bagian yang tersedia"
+
+msgid "manager.sections.wordCount"
+msgstr "Jumlah Kata"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Batasi jumlah kata abstrak untuk bagian ini (0 jika tidak ada batasan):"
+
+msgid "manager.setup"
+msgstr "Pengaturan Jurnal"
+
+msgid "manager.setup.masthead"
+msgstr "Tajuk"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Dewan Editor"
+
+msgid "manager.setup.homepageContent"
+msgstr "Konten Beranda Jurnal"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Beranda jurnal secara default terdiri dari tautan navigasi. Konten lainnya dapat ditambahkan dengan satu atau semua opsi berikut, yang akan muncul sesuai urutan."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Jurnal stylesheet"
+
+msgid "manager.setup.contextName"
+msgstr "Nama Jurnal"
+
+msgid "manager.setup.pageHeader"
+msgstr "Header Halaman Jurnal"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Konten"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Tambahkan Item Tentang"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Tambahkan Item Checklist"
+
+msgid "manager.setup.addItem"
+msgstr "Tambahkan Item"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Tambahkan item di \"Tentang Jurnal\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Tambahkan Item"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Tambahkan Tautan Database Baru"
+
+msgid "manager.setup.addSponsor"
+msgstr "Tambahkan Organisasi Sponsor"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Header Alternatif"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Selain judul atau logo, dapat disisipkan versi HTML header ke dalam textbox di bawah ini. Biarkan teks kosong jika tidak diperlukan."
+
+msgid "manager.setup.announcements"
+msgstr "Pengumuman"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Pengumuman bisa diterbitkan untuk menginformasikan kepada pembaca tentang berita dan agenda jurnal. Pengumuman yang diterbitkan akan ditampilkan di halaman Pengumuman."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Masukkan informasi tambahan yang harus ditampilkan kepada pembaca di halaman Pengumuman."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Untuk ditampilkan di Tentang Jurnal) "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Mengharuskan Penulis untuk memberikan pernyataan Konflik Kepentingan dalam naskah mereka."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Mengharuskan Reviewer untuk memberikan pernyataan Konflik Kepentingan dalam tiap peer review yang mereka serahkan."
+
+msgid "manager.setup.history"
+msgstr "Sejarah Jurnal"
+
+msgid "manager.setup.historyDescription"
+msgstr "Teks ini akan ditampilkan di bagian website jurnal \"Tentang Jurnal\" dan dapat digunakan untuk mendeskripsikan perubahan pada judul, Dewan editorial, dan item lain yang relevan dengan penerbitan jurnal."
+
+msgid "manager.setup.metadata.coverage"
+msgstr "Cakupan"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Mengacu ke lokasi geospasial, cakupan kronologis atau historis, dan/atau karakteristik sampel riset."
+
+msgid "manager.setup.currentIssue"
+msgstr "Terbitan Terkini"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Langkah 5. Menyesuaikan Tampilan"
+
+msgid "manager.setup.customTags"
+msgstr "Tag Khusus"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Tag HTML untuk dimasukkan di header setiap halaman (contoh: META tag)."
+
+msgid "manager.setup.details"
+msgstr "Detail"
+
+msgid "manager.setup.details.description"
+msgstr "Nama jurnal, ISSN, kontak, sponsor, dan mesin pencari."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Manajer Jurnal mendaftarkan semua pengguna. Editor atau Editor Bagian bisa mendaftarkan pengguna menjadi reviewer."
+
+msgid "manager.setup.discipline"
+msgstr "Disiplin dan Sub Disiplin Ilmu"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Bermanfaat saat jurnal keluar dari batasan disiplin ilmu dan/atau penulis menyerahkan item multidisiplin."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(Contoh: Sejarah, Pendidikan, Sosiologi, Psikologi, Ilmu Budaya, hukum)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Masukkan disiplin ilmu yang relevan untuk jurnal ini."
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Tambahkan daftar isi untuk terbitan terkini (jika tersedia)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Keputusan Editor"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Bounce Address"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Setiap email yang tidak terkirim akan menghasilkan pesan eror ke alamat ini."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>allow_envelope_sender</tt> di file konfigurasi OJS. Konfigurasi server tambahan mungkin diperlukan untuk mendukung fungsi ini (tidak semua server bisa), seperti yang tercantum di dokumentasi OJS."
+
+msgid "manager.setup.emails"
+msgstr "Identifikasi Email"
+
+msgid "manager.setup.emailSignature"
+msgstr "Tandatangan"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Email yang disiapkan dan dikirim oleh sistem atas nama jurnal akan memiliki tandatangan berikut ini di akhir pesan."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Memungkinkan manajer jurnal untuk menambahkan pengumuman jurnal."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Penunjung dapat membuat akun pengguna."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Fokus dan Ruang Lingkup"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Jelaskan kepada penulis, pembaca, dan pustakawan bahasan artikel dan item lain yang akan dipublikasikan oleh jurnal."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Untuk Penulis Mengindeks Naskah Mereka"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS mengikuti Protocol for Metadata Harvesting dari <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, yang merupakan standar untuk menyediakan akses pengindeksan dengan baik ke sumber riset elektronik di skala global. Penulis akan menggunakan template untuk metadata naskah mereka. Manajer Jurnal harus memilih kategori untuk pengindeksan dan memberi Penulis contoh-contoh yang relevan untuk membantu mereka dalam mengindeks naskah mereka."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "ISSN yang diisikan tidak valid."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Email kontak utama harus ada."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Nama kontak utama harus ada."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Inisial jurnal harus ada."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Nama jurnal harus ada."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Jumlah Reviewer tiap naskah harus ada."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Email dukungan harus ada."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Nama dukungan harus ada."
+
+msgid "manager.setup.generalInformation"
+msgstr "Informasi Umum"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Langkah 1. Melengkapi Detail"
+
+msgid "manager.setup.guidelines"
+msgstr "Panduan"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Langkah 3. Memandu Penyerahan"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Untuk jurnal yang menawarkan kebijakan Open Access segera atau delayed, sertakan lisensi Creative Commons pada semua karya di waktu yang tepat."
+
+msgid "manager.setup.information"
+msgstr "Informasi"
+
+msgid "manager.setup.information.description"
+msgstr "Deskripsi singkat jurnal untuk pustakawan dan calon penulis dan pembaca. Deskripsi ini akan tampil di bagian \"Informasi\"."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Untuk Penulis"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Untuk Pustakawan"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Untuk Pembaca"
+
+msgid "manager.setup.initialIssue"
+msgstr "Terbitan Awal"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Tergantung pada format yang dipilih, mengidentifikasi terbitan, volume, dan/atau tahun terbitan pertama untuk diterbitkan dengan OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Institusi"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Item navigasi bisa ditambahkan ke set yang ada saat ini (Beranda, Tentang, Beranda Pengguna, dll) yang ditampilkan di bagian atas halaman."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Item per halaman"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Singkatan Jurnal"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Pengarsipan Jurnal"
+
+msgid "manager.setup.contextSummary"
+msgstr "Ringkasan Jurnal"
+
+msgid "manager.setup.contextAbout"
+msgstr "Tentang Jurnal"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Tuliskan semua informasi tentang jurnal Anda yang mungkin bermanfaat bagi pembaca, penulis atau reviewer. Hal ini dapat mencakup kebijakan Open Access, fokus dan lingkup jurnal, pernyataan hak cipta, pernyataan sponsorship, sejarah jurnal, pernyataan privasi, dan keterlibatan di sistem pengarsipan LOCKSS maupun CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Konten Beranda Jurnal"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Secara default, beranda terdiri dari tautan navigasi. Konten tambahan beranda dapat ditambahkan dengan menggunakan salah satu atau semua pilihan berikut ini, yang akan ditampilkan dalam urutan yang benar. Perhatikan bahwa terbitan terkini selalu dapat diakses melalui tautan Terkini di navigasi."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Header Beranda Jurnal"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Header Beranda Jurnal"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Versi grafis judul dan logo jurnal (dalam bentuk file .gif, .jpg, atau .png) dapat diunggah untuk beranda, yang akan menggantikan versi teks."
+
+msgid "manager.setup.contextInitials"
+msgstr "Inisial Jurnal"
+
+msgid "manager.setup.journalLayout"
+msgstr "Layout Jurnal"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Pilih tema jurnal dan komponen layout di sini. Stylesheet jurnal juga boleh diunggah, yang dapat digunakan untuk menggantikan stylesheet dan tema default sistem."
+
+msgid "manager.setup.journalLogo"
+msgstr "Logo Jurnal"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logo Jurnal"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Footer Halaman Jurnal"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Ini adalah footer jurnal Anda. Untuk mengganti atau meng-update footer, salin kode HTML pada textbox di bawah. Sebagai contoh dapat berisi navigasi lain, counter, dll. Footer ini akan tampil di tiap halaman."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Langkah 2. Kebijakan Jurnal"
+
+msgid "manager.setup.journalSetup"
+msgstr "Setup Jurnal"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Setup jurnal Anda telah di-update."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Format stylesheet jurnal invalid. Format yang diterima adalah .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Tema Jurnal"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Thumbnail Jurnal"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Logo atau gambar kecil yang mewakili jurnal untuk digunakan di daftar jurnal."
+
+msgid "manager.setup.contextTitle"
+msgstr "Nama Jurnal"
+
+msgid "manager.setup.labelName"
+msgstr "Nama Label"
+
+msgid "manager.setup.lists"
+msgstr "Daftar"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Aktifkan LOCKSS untuk menyimpan dan mendistribusikan konten jurnal ke perpustakaan yang berpartisipasi melalui halaman <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> LOCKSS."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "Lisensi LOCKSS akan muncul di Tentang Jurnal di bawah Pengarsipan: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Deskripsi Lisensi LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Identifikasikan 6-10 perpustakaan yang akan mendaftarkan dan menyimpan jurnal. Sebagai contoh, beralih ke institusi di mana editor atau anggota dewan editor bekerja dan/atau institusi yang berpartisipasi dalam LOCKSS. Lihat <a href=\"http://www.lockss.org/community/\" target=\"_blank\">komunitas LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Aktifkan CLOCKSS untuk menyimpan dan mendistribusikan konten jurnal ke perpustakaan yang berpartisipasi melalui halaman <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> CLOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "Lisensi CLOCKSS  akan muncul di Tentang Jurnal di bawah Pengarsipan: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Deskripsi Lisensi CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Daftar ke layanan CLOCKSS dengan mengunjungi <a href=\"http://clockss.org/\" target=\"_blank\">website CLOCKSS</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Tampilan"
+
+msgid "manager.setup.look.description"
+msgstr "Header beranda, isi jurnal, header jurnal, footer, navigasi dan stylesheet."
+
+msgid "manager.setup.management"
+msgstr "Manajemen"
+
+msgid "manager.setup.management.description"
+msgstr "Akses dan keamanan, penjadwalan, pengumuman, copyediting, layout dan proofreading."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Manajemen Langkah Editorial Dasar"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Setup Manajemen dan Penerbitan"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Langkah 4. Mengatur Jurnal"
+
+msgid "manager.setup.navigationBar"
+msgstr "Bilah Navigasi"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Tambahkan atau pindahkan item tambahan bilah navigasi."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL adalah sebuah URL mutlak (e.g., \"http://www.example.com\") bukan path direktori situs (contoh:\"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Nilai label adalah literal string (contoh \"Setup Jurnal\") bukan kunci pesan lokalisasi (contoh: \"setup.manajer\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Tidak ada file gambar yang diunggah."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Tidak ada stylesheet yang diunggah."
+
+msgid "manager.setup.note"
+msgstr "Catatan"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Catatan:</strong> Email pemberitahuan penyerahan saat ini tidak diaktifkan. Untuk menggunakan fitur ini, aktifkan email SUBMISSION_ACK di menu Email</a>."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Tautan Halaman"
+
+msgid "manager.setup.publishingMode"
+msgstr "Akses ke Konten Jurnal"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN Online"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Jurnal akan mendukung Open Access untuk konten jurnal."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Pilihan Nomor Halaman"
+
+msgid "manager.setup.policies"
+msgstr "Kebijakan"
+
+msgid "manager.setup.policies.description"
+msgstr "Fokus, peer review, bagian, privasi, keamanan, dan item tambahan tentang kami."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN Cetak"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Instruksi Proofing"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Instruksi Proofreading merupakan instruksi untuk Proofreader, Penulis, Layout Editor, dan Editor Bagian di tahap pengeditan naskah. Di bawah ini serangkaian instruksi default di HTML, yang dapat diedit atau diganti oleh Manajer Jurnal kapanpun. (dalam HTML atau teks biasa)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Jadwal Penerbitan"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Item jurnal dapat diterbitkan secara kolektif, sebagai bagian dari suatu terbitan dengan Daftar Isi sendiri. Item juga bisa diterbitkan segera setelah mereka siap, dengan menambahkan mereka ke Daftar Isi volume terkini. Dalam Tentang Jurnal, berikan pembaca keterangan mengenai sistem yang akan digunakan jurnal ini dan rencana frekuensi penerbitan."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Penjadwalan Penerbitan"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identifikasi Konten Jurnal"
+
+msgid "manager.setup.publisher"
+msgstr "Penerbit"
+
+msgid "manager.setup.publishingDescription"
+msgstr "Nama organisasi yang menerbitkan jurnal dapat disertakan dalam metadata yang diberikan ke badan pengarsipan luar."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Tautan Referensi"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Pengguna harus terdaftar dan login untuk melihat konten Akses Terbuka."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Pengguna harus terdaftar dan login untuk melihat situs jurnal."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Panduan Review"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Pilihan Review"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Email pengingat otomatis"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>scheduled_tasks</tt> di file konfigurasi jurnal. Konfigurasi server tambahan mungkin diperlukan untuk mendukung fungsi ini (tidak semua server bisa), seperti ditunjukkan di dokumentasi OJS."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Review Anonim"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Jangka waktu review (dalam minggu)"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Editor akan menilai reviewer dengan skala kualitas lima poin setiap selesai mereview."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Reviewer akan memiliki akses ke file naskah hanya setelah setuju untuk mereviewnya."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Akses Review"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Memberi akses One-Click review."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Catatan:</strong>  email undangan ke Reviewer akan berisi URL yang akan membawa Reviewer yang diundang secara langsung ke halaman review untuk naskah (untuk akses ke halaman lain mengharuskan mereka untuk login). Untuk alasan keamanan dengan pilihan ini, editor tidak bisa memodifikasi alamat email atau menambahkan CCs atau BCCs sebelum mengirimkan undangan kepada Reviewer."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Rating Review"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Pengingat Review"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Kebijakan Review"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Pengindeksan Mesin Pencari"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Untuk membantu pengguna dalam menemukan jurnal pada search engine, masukkan deskripsi singkat tentang kami dan kata kunci yang relevan (dipisahkan oleh titik koma)."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Bagian dan Editor Bagian"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Jika bagian tidak diisi, secara default item akan diserahkan kepada bagian Artikel.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Untuk membuat atau memodifikasi bagian untuk jurnal (contoh: artikel, review buku, dll), pergi ke Manajemen Bagian.<br /><br /> Penulis dalam menyerahkan item untuk jurnal akan menentukan...."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Editor jurnal yang akan menyelesaikan proses editorial."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Bagian jurnal di mana item akan dipertimbangkan."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Selalu tampilkan tautan galley dan tunjukkan bahwa akses dibatasi."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "5 Langkah ke Website Jurnal"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(contoh: Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Kata Kunci"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Masukkan kata kunci atau topik sebagai petunjuk untuk Penulis"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Petunjuk Penyerahan Naskah"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Daftar Tilik Pra-Penyerahan Naskah"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Saat melakukan penyerahan naskah untuk jurnal, Penulis terlebih dahulu diminta untuk mengecek kelengkapan item di daftar ini, sebelum melanjutkan proses. Daftar tersebut juga ditampilkan di Panduan Penulis, di bawah Tentang Jurnal.  Daftar ini dapat diedit, tapi terlebih dahulu diberi tanda centang sebelum diproses."
+
+msgid "manager.setup.submissions"
+msgstr "Penyerahan Naskah"
+
+msgid "manager.setup.submissions.description"
+msgstr "Panduan Penulis, hak cipta, dan pengindeksan (termasuk registrasi)."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Jurnal akan mensyaratkan langganan untuk mengakses beberapa atau semua konten jurnal."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS tidak akan digunakan untuk menerbitkan konten jurnal secara online."
+
+msgid "manager.setup.typeExamples"
+msgstr "(Contoh: Survey; Wawancara; Analisis Sastra)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tipe (Metode/Pendekatan)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Masukkan tipe riset yang relevan, metode, dan pendekatan untuk bidang ini."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Identifier Unik"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Artikel dan terbitan dapat di-tag dengan angka atau string identifikasi, memakai sistem registrasi seperti Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Dewan reviewer/editorial akan digunakan oleh jurnal."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Thumbnail"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Gambar judul"
+
+msgid "manager.setup.userRegistration"
+msgstr "Registrasi Pengguna"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Nama"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tJurnal Anda diatur untuk mencatat lebih dari satu parameter penggunaan.  Statistik penggunaan akan ditampilkan dalam beberapa konteks.\n"
+"\t\tTerdapat kondisi tertentu yang mengharuskan pemakaian satu parameter saja, misalnya untuk menampilkan urutan naskah yang paling banyak dibaca atau membuat peringkat\n"
+"\t\thasil pencarian. Silakan pilih salah satu paket parameter sebagai default.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Statistik Jurnal"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Hitung Lihat Artikel (hanya untuk Penulis)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Terima"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Tolak"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Kirim Ulang"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Hari untuk review"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Hari untuk penerbitan"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS menghitung statistik berikut ini untuk masing-masing jurnal. \"Hari untuk review\" dihitung dari tanggal penyerahan naskah (atau penetapan Versi Review) hingga Keputusan Editor awal, sedangkan \"hari untuk penerbitan\" diukur untuk penyerahan naskah yang diterima dari saat diunggah hingga penerbitannya."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Item yang telah diterbitkan"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Centang item agar tersedia untuk pembaca di Tentang Jurnal."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Catatan: persentase untuk naskah yang menjalani peer-review mungkin tidak sampai 100%, karena item yang dikirimkan ulang bisa diterima, ditolak, atau masih dalam proses."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Terbitan yang telah terbit"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Total penyerahan"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Telah di-peer review"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Pembaca terdaftar"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Pengguna terdaftar"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "No. Ditugaskan"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Reviewer"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Skor editor"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "No. Review"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Pilih bagian untuk menghitung statistik peer review jurnal."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Unduhan file artikel"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Kunjungan halaman abstrak artikel"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Abstrak dan unduhan artikel"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Kunjungan ke halaman utama jurnal"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Kunjungan ke halaman daftar isi terbitan"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Persempit hasil berdasar konteks (terbitan dan/atau artikel)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Persempit hasil berdasar tipe objek (jurnal, terbitan, artikel, tipe file) dan/atau satu atau lebih id objek."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Kebijakan Langganan"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Delayed Open Access"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Silakan gunakan checkbox yang disediakan."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Masa Berlaku Langganan"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Saat langganannya berakhir, pembaca dapat dihentikan aksesnya ke semua isi langganan atau masih diperbolehkan bisa mengakses ke isi langganan yang diterbitkan sebelum tanggal berakhir langganan."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Berakhir Total"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Saat langganannya berakhir, pembaca ditolak aksesnya ke semua isi langganan."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Berakhir Parsial"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Pembaca ditolak aksesnya ke isi langganan yang diterbitkan setelah tanggal berakhir langganan, tetapi masih bisa mengakses ke isi langganan yang diterbitkan sebelum tanggal berakhir langganan."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
+msgstr "Beritahu pelanggan melalui email"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
+msgstr "bulan setelah langganan berakhir."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
+msgstr "Beritahu pelanggan melalui email"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
+msgstr "minggu setelah langganan berakhir."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
+msgstr "Beritahu pelanggan melalui email"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
+msgstr "bulan sebelum langganan berakhir."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
+msgstr "Beritahu pelanggan melalui email"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
+msgstr "minggu sebelum masa berakhir langganan."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Pengingat masa berakhir langganan"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Email pengingat otomatis (dapat diedit oleh Manajer Jurnal di menu Email OJS) dapat dikirimkan ke pelanggan sebelum atau sesudah langganan berakhir."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong> Catatan:</strong> Untuk mengaktifkan pilihan ini, Administrator situs harus mengaktifkan pilihan <tt>scheduled_tasks</tt> di file konfigurasi OJS. Konfigurasi server tambahan mungkin diperlukan untuk mendukung fungsi ini (tidak semua server bisa), seperti ditunjukkan di dokumentasi OJS."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Pilih satu dari berikut ini:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML dapat digunakan di area teks (untuk ukuran huruf, warna, dll.), dengan \"enter\" diperlakukan sebagai <tt>&lt;br&gt;</tt>; Editor HTML bekerja dengan peramban firefox."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Pilih nilai valid untuk jumlah bulan setelah masa berakhir langganan."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Pilih nilai valid untuk jumlah bulan sebelum masa berakhir langganan."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Pilih nilai valid untuk jumlah minggu setelah masa berakhir langganan."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Pilih nilai valid untuk jumlah minggu sebelum masa berakhir langganan."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Pembaca terdaftar akan mempunyai pilihan menerima daftar isi melalui email saat terbitan menjadi Open Access."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong> Catatan:</strong> Untuk mengaktifkan pilihan ini, administrator situs harus mengaktifkan pilihan <tt>scheduled_tasks</tt> di file konfigurasi OJS. Konfigurasi server tambahan mungkin diperlukan untuk mendukung fungsi ini (tidak semua server bisa), seperti ditunjukkan di dokumentasi OJS."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Notifikasi Pembayaran Online"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Notifikasi email otomatis (dapat diedit oleh Manajer Jurnal di menu Email OJS) dapat dikirim ke Manajer Langganan setelah penyelesaian pembayaran online langganan."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Memberitahu manajer langganan melalui email setelah pembelian online Langganan Individu."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Memberitahu manajer langganan melalui email setelah pembelian online Langganan Institusi."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Memberitahu manajer langganan melalui email setelah pembaruan online langganan individu."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Memberitahu manajer langganan melalui email setelah pembaruan online langganan institusi."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Catatan:</strong> Langganan Institusi yang dibayar online membutuhkan persetujuan domain dan IP range serta aktivasi langganan oleh Manajer Langganan."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, Manajer Jurnal harus mengaktifkan modul pembayaran online, termasuk pembayaran online untuk langganan di menu Biaya Pembaca."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Open Access untuk Jurnal Langganan"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Jurnal langganan dapat menyediakan Delayed Open Access ke konten yang sudah diterbitkan, serta mengizinkan \"pengarsipan mandiri penulis\" (dua-duanya meningkatkan pembacaan dan sitiran)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informasi Langganan"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Tipe langganan dan struktur biaya akan secara otomatis ditempatkan di menu Langganan di halaman Tentang Jurnal, bersama dengan nama dan informasi kontak Manajer Langganan. Informasi tambahan tentang langganan, seperti metode pembayaran atau dukungan untuk pelanggan dari negara berkembang, dapat ditambahkan di sini."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Manajer Langganan"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Kontak yang ditampilkan pada informasi Langganan di Tentang Jurnal."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Masukkan email yang valid."
+
+msgid "manager.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.individualSubscriptions"
+msgstr "Langganan Individu"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Langganan Institusi"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Apakah Anda yakin ingin menghapus langganan ini?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Ringkasan Langganan"
+
+msgid "manager.subscriptions.create"
+msgstr "Buat Langganan Baru"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Buat"
+
+msgid "manager.subscriptions.renew"
+msgstr "Memperbaharui"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Akhiri"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Tanggal Berakhir"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Mulai"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Tanggal Mulai"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.edit"
+msgstr "Edit Langganan"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Edit"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Dengan Status"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Semua"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Status"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Status langganan harus ada."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Pilih status langganan yang valid."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tipe langganan"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Tipe langganan harus ada."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Pilih tipe langganan yang valid."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Tanggal Mulai"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Tanggal mulai langganan harus ada."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Pilih tanggal mulai langganan yang valid."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Tanggal Akhir"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Tanggal akhir langganan harus ada."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Pilih tanggal akhir langganan yang valid."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Catatan: semua perubahan di bawah ini adalah untuk profile system-wide."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Pengguna"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontak"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Pengguna harus ada."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Pilih pengguna valid."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Pilih negara yang valid."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Kirim pengguna email dengan nama pengguna mereka dan detail langganan."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Gunakan checkbox yang disediakan."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Keanggotaan"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Nomor Acuan"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Masukkan informasi keanggotaan jika tipe langganan membutuhkan bahwa pelanggan adalah asosiasi atau organisasi."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Tipe langganan yang dipilih memerlukan informasi keanggotaan."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Rekam"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Nama institusi"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Nama institusi harus ada."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Alamat Surat Menyurat"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Jika domain dimasukkan di sini, IP ranges opsional.<br /> Nilai valid adalah nama domain (contoh: lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Tipe langganan yang dipilih memerlukan domain dan/ atau IP range untuk pengesahan langganan."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Masukkan domain valid."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP ranges"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Jika IP ranges dimasukkan di sini, domain opsional.<br /> Nilai valid termasuk alamat IP (contoh: 142.58.103.1), IP range (contoh: 142.58.103.1 - 142.58.103.4), IP range dengan wildcard '*' (contoh: 142.58.*.*), dan IP range dengan CIDR (e.g. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Masukkan IP range yang valid."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Hapus"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Tambahkan"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Simpan dan Buat yang Lain"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Untuk mengirim pengguna email pemberitahuan, nama kontak dan alamat email langganan harus ditentukan di setup jurnal."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Pengguna ini sudah memiliki langganan untuk jurnal ini."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Tipe langganan harus dibuat sebelum langganan baru dapat dibuat."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP Range"
+
+msgid "manager.subscriptions.membership"
+msgstr "Keanggotaan"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Nomor Acuan"
+
+msgid "manager.subscriptions.notes"
+msgstr "Rekam"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Tidak ada langganan"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Pilih Kontak Langganan"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Pilih Pengguna"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Hak istimewa akses langganan secara otomatis diberikan untuk manajer jurnal, editor, editor bagian, editor layout, copy editor, dan proofreader."
+
+msgid "manager.subscriptions.select"
+msgstr "Pilih"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Langganan sukses dibuat."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tipe Langganan"
+
+msgid "manager.subscriptions.user"
+msgstr "Pengguna"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nama Kontak"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Nama Institusi"
+
+msgid "manager.subscriptionTypes"
+msgstr "Tipe Langganan"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Peringatan! Semua langganan dengan tipe langganan ini juga akan dihapus. Apakah Anda yakin ingin melanjutkan dan menghapus tipe langganan ini?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Biaya"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individu"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institusi"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Buat Langganan Baru"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Buat"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Durasi"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Edit Tipe Langganan"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Edit"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Biaya"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Masukkan nilai numerik (contoh: 40 atau 40,00) tanpa simbol (contoh: $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Biaya harus nilai numerik, positif."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Biaya harus ada."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Mata Uang"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Mata uang harus ada."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Pilih mata uang yang valid."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Deskripsi"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Berakhir setelah"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "bulan (contoh: 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Tidak pernah berakhir"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Gunakan pilihan yang tersedia."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Durasi"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Jumlah bulan langganan berlangsung (contoh: 12) ."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Durasi harus nilai numerik, positif."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Durasi harus ada."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Format tipe langganan harus ada."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Pilih format tipe langganan yang valid."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individu (pengguna divalidasi melalui login)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institusi (pengguna divalidasi melalui domain atau alamat IP)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Gunakan pilihan yang tersedia."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Langganan memerlukan informasi keanggotaan<br /> (contoh: asosiasi, organisasi, konsorsium, dll.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Gunakan checkbox yang tersedia."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Pilihan"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Tidak boleh membuat tipe langganan ini tersedia atau bisa dilihat<br /> (contoh: di bawah langganan di Tentang Jurnal)."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Gunakan checkbox yang tersedia."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Simpan dan Buat yang Lain"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Nama Tipe"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Tipe langganan dengan nama ini sudah ada."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Nama tipe langganan harus ada."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tipe langganan"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Tidak ada tipe langganan telah dibuat."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Tipe langganan sukses dibuat."
+
+msgid "manager.distribution.access"
+msgstr "Akses"
+
+msgid "manager.setup.categories"
+msgstr "Kategori"
+
+msgid "manager.setup.categories.description"
+msgstr "Pilih kategori yang paling sesuai. Pembaca akan dapat menelusuri berdasar kategori."
+
+msgid "grid.category.path"
+msgstr "Path"
+
+msgid "grid.action.addSection"
+msgstr "Tambah Bagian"
+
+msgid "manager.setup.section.description"
+msgstr "Artikel di terbitan jurnal dikelompokkan dalam Bagian-bagian, biasanya berdasarkan tema atau tipe konten (misalnya Tinjauan Pustaka, Penelitian, dll)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Peran adalah kelompok pengguna dalam jurnal yang diberikan akses ke berbagai derajat wewenang dan alur kerja terkait dalam jurnal. Ada lima macam derajat wewenang: Manajer Jurnal memiliki akses ke semua hal dalam jurnal (semua konten dan pengaturan); Editor Bagian memiliki akses penuh ke semua konten yang ditugaskan kepadanya; Asisten Jurnal mempunyai akses terbatas ke semua naskah yang secara eksplisit ditugaskan kepadanya oleh editor; Reviewer dapat melihat dan mereview naskah yang menjadi tugasnya; dan Penulis dapat melihat dan berinteraksi beberapa informasi terkait penyerahan naskah mereka. Sebagai tambahan, ada lima macam tahap penugasan yang peran-peran tersebut dapat diberi akses untuknya: Penyerahan Naskah, Review Internal, Review, Editorial, dan Produksi."
+
+msgid "manager.publication.library"
+msgstr "Pustaka Penerbit"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Tahun hak cipta artikel baru dibuat berdasarkan"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Artikel: secara default akan diambil dari tanggal publikasi artikel, semacam \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Terbitan: secara default tahun akan diambil dari tanggal publikasi terbitan."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Reset Permission Artikel"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Anda yakin hendak melakukan reset permission untuk data yang telah melekat di artikel?"
+
+msgid "grid.genres.title.short"
+msgstr "Komponen"
+
+msgid "grid.genres.title"
+msgstr "Komponen Artikel"
+
+msgid "grid.genres.description"
+msgstr "Komponen ini digunakan untuk penamaan file dan ditampilkan dalam pull-down menu saat pengunggahan file. Genre yang ditandai ## memungkinkan pengguna untuk menghubungkan file dengan naskah 99Z atau komponen tertentu dengan merujuk angkanya (misalnya, 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Pengaturan"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Pengaturan Plugin DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artikel"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Terbitan"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galley"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Persyaratan plugin tidak terpenuhi"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Untuk menggunakan plugin ini silakan lihat ke kategori plugin \"Identifier Publik\", aktifkan dan atur plugin DOI dan berikan prefiks DOI yang valid."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Plugin belum selesai diatur."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Tidak ada objek penerbitan yang dipilih untuk pemberian DOI di plugin identifier publik DOI sehingga tidak dapat dilakukan deposit atau ekspor di plugin ini."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Katakunci"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Mohon diperhatikan bahwa katakunci akan disimpan dalam bentuk plain text, tidak dienkripsi."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Semua Terbitan"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Semua Status"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Tidak Dideposit"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Ditandai terdaftar"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Terdaftar"
+
+msgid "plugins.importexport.common.action"
+msgstr "Tindakan"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Ekspor"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Tandai terdaftar"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Daftar"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Tidak ada objek yang dipilih."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Tidak dapat mengubah objek yang dipilih."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Invalid XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "File output {$param} tidak writable."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Registrasi tidak berhasil! Server registrasi DOI memberikan error: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registrasi berhasil!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Prefix DOI tidak ditemukan untuk jurnal dengan path {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "ERROR:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Path jurnal yang Anda cari, \"{$journalPath}\", tidak ada."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Objek yang Anda cari tidak dapat ditemukan."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Kirim salinan ke kontak utama yang disebutkan di Pengaturan Jurnal."

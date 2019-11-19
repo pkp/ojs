@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Tidskrifter på den här webbplatsen"
+
+msgid "admin.settings.redirect"
+msgstr "Omdirigering av tidskrift"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Anrop till huvudsidan kommer att dirigeras om till den här tidskriften. Detta kan till exempel vara lämpligt om webbplatsen endast hyser en tidskrift."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tDin OJS-installation är konfigurerad för att registrera mer än ett användningsmått. Användningsstatistiken kommer att presenteras i flera sammanhang.\n"
+"\t\tDet finns fall där endast ett användningsmått måste användas, t.ex. för att visa en sorterad lista över de mest använda bidragen eller för\n"
+"\t\tatt rangordna sökresultat. Välj ett av de konfigurerade värdena som default.\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr "Är du säker på att du vill inaktivera detta språk/region? Det kan påverka tidskrifter som använder språket nu."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Det går för tillfället inte att ladda ned språkpaket från Public Knowledge Projects webbserver eftersom:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Din server har inte eller tillåter inte körning av GNU \"tar\"-verktyget.</li>\n"
+"\t\t<li>OJS kan inte ändra på språkets registerfil, vanligtvis \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Språkpaket kan laddas ned manuellt från <a href=\"http://pkp.sfu.ca\">PKP:s webbplats</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Det här kommer att vara förvalt språk för webbplatsen och samtliga tillhörande tidskrifter."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Välj språk/regioner som webbplatsen ska stödja. Valda språk/regioner kommer finnas tillgängliga för sidans alla tidskrifter, och även finnas tillgänglig på sidans språkmeny, (som kan tas bort på enskilda tidskriftsspecifika sidor). Om endast ett språk är valt, kommer språkmenyn inte synas och utökade språkinställningar kommer inte finnas tillgängliga."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "De markerade språken/regionerna kan vara ofullständigt översatta."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Är du säker på att du vill avinstallera språket/regionen? Det kan komma att påverka de tidskrifter som stöds av språket/regionen."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Välj ytterligare språk/regioner som ska stödjas i systemet. Språken/regionerna måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk/regioner."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Nedladdningen av språket/regionen misslyckades. Se felmeddelanden nedan för information."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Språket/regionen \"{$locale}\" har installerats."
+
+msgid "admin.languages.download"
+msgstr "Ladda ned språk/region"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Kan ej öppna språkbeskrivning från PKP:s hemsida."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Kan ej lägga till nya språk/regioner till språkregistreringsfilen, vanligtvis \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS Användardatabas"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Aktivera användarprofilsynkronisering (om detta stöds av det här pluginet för autentisering). Information om användarprofilen kommer uppdateras automatiskt från den externa källan när en användare loggar in, även profiländringar (inklusive lösenordsändringar) gjorda i OJS kommer automatiskt uppdateras på den externa källan. Om den här valmöjligheten inte är aktiverad så kommer OJS-profilinformation skötas separat från den externa källans profilinformation."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Aktivera ändring av lösenord (om detta stöds av det här pluginet för autentisering). Aktivering av den här valmöjligheten möjliggör för användaren att ändra sitt lösenord inifrån OJS och användningen av OJS \"glömt lösenord\"-funktion för att skaffa ett nytt lösenord. Dessa funktioner kommer inte vara tillgängliga för användare hos den här autentiseringskällan, om valmöjligheten inte är aktiverad."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Aktivera användarskapande (om detta stöds av det här pluginet för autentisering). Användare skapade inom OJS på den här autentiseringskällan kommer automatiskt att läggas till den externa autentiseringskälla, om de inte redan finns där. Om den här källan är förvald autentiseringskälla kommer OJS-konton skapade genom användarregistrering att läggas till den externa autentiseringskällan."
+
+msgid "admin.systemVersion"
+msgstr "OJS-version"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-konfiguration"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS konfigurationsinställningar från <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "Du kommer automatiskt att läggas till som tidskriftsansvarig för den här tidskriften. Efter du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide, där du kan göra de första inställningarna."
+
+msgid "admin.journals.journalSettings"
+msgstr "Tidskriftsinställningar"
+
+msgid "admin.journals.noneCreated"
+msgstr "Inga tidskrifter skapade."
+
+msgid "admin.contexts.create"
+msgstr "Skapa tidskrift"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Det här ska vara ett enskilt, kort ord eller en akronym som identifierar tidskriften. Tidskriftens URL kommer att vara: {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "En titel krävs."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "En sökväg krävs."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Sökvägen får endast innehålla alfanumeriska tecken, understreck, och bindestreck, samt måste inledas och avslutas med ett alfanumeriskt tecken."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Vald sökväg används redan av en annan tidskrift."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Gör tidskriften publik."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Beskrivning av tidskriften"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Existerande sökväg till tidskriften eller sökväg som ska skapas (t.ex. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importera prenumerationer"
+
+msgid "admin.journals.transcode"
+msgstr "Konvertera artikelns metadata med ISO 8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Skapa kod för att omvandla OJS 1-URL:er till OJS 2-URL:er"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Importerad sökväg är obligatorisk."
+
+msgid "admin.journals.importErrors"
+msgstr "Importen misslyckades"
+
+msgid "admin.mergeUsers"
+msgstr "Slå ihop användare"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Slå ihop användare"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Välj användare som du ska tillskriva den tidigare användarens författarskap, redaktionsuppgifter, etc., till."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Välj en användare (eller flera) som ska slås ihop med ett annat användarkonto (t.ex. när någon har två användarkonton). Det först valda kontot kommer att raderas och alla bidrag, uppdrag, etc. kommer att knytas till det andra kontot."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Alla registrerade användare"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Är du säker på att du vill slå ihop kontot med användarnamnet \"{$oldUsername}\" med kontot med användarnamnet \"{$newUsername}\"? Kontot med användarnamnet \"{$oldUsername}\" kommer inte längre att existera efteråt. Åtgärden kan inte ångras."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Inga registrerade användare."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Påminnelse om att prenumeration löper ut"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open access-avisering"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Granskningspåminnelse"

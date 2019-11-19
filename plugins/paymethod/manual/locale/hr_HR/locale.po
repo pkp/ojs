@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:57+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:57+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Ručna uplata naknada"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Administrator pretplate će ručno evidentirati primitak korisnikove uplate (izvan ovog programa)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Ručna uplata naknada"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Postavke ručne uplate"
+
+msgid "plugins.paymethod.manual.settings.instructions"
+msgstr "Upute"
+
+msgid "plugins.paymethod.manual.settings.manualInstructions"
+msgstr "Upute za uplatu naknada za korisnike koji izaberu ručnu uplatu naknada"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Naziv"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Iznos"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Pošalji obavijest o plaćanju"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Obavijest o plaćanju"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Obavijest o plaćanju poslana"

@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Revistes allotjades"
+
+msgid "admin.settings.redirect"
+msgstr "Redirecció a la revista"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "La vostra instal·lació de l'OJS està configurada per registrar més d'una mètrica d'utilització. Les estadístiques d'utilització es mostren en diferents contexts. Hi ha casos on només es fa servir una estadística d'ús, p. ex. per mostrar una llista ordenada dels articles més utilitzats o per ordenar resultats d'una cerca. Seleccioneu una de les mètriques configurades com a opció predeterminada."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Aquesta és la llengua predeterminada per al lloc web i per a qualsevol revista allotjada."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Seleccioneu totes les configuracions regionals que oferirà el lloc web. Les configuracions regionals seleccionades estan disponibles per al seu ús a totes les revistes allotjades al lloc web, i també apareixen a un menú de selecció d'idioma disponible a cada pàgina del lloc web (que es pot desactivar en pàgines concretes de les revistes). Si no se seleccionen diferents configuracions regionals, el menú de selecció de llengua no apareix i la configuració avançada de llengua no està disponible a les revistes."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Les configuracions regionals marcades poden estar incompletes."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Esteu segurs que voleu suprimir aquesta configuració regional? Aquesta acció pot afectar les revistes allotjades que fan servir aquesta configuració regional."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Cal que instal·leu les configuracions regionals abans que les revistes allotjades les puguin fer servir. Consulteu la documentació de l'OJS per obtenir més informació sobre com instal·lar llengües addicionals."
+
+msgid "admin.languages.downloadFailed"
+msgstr "La descàrrega de la configuració regional ha fallat. El missatge d'error a continuació descriu el problema."
+
+msgid "admin.languages.localeInstalled"
+msgstr "La configuració regional \"{$locale}\" s'ha instal·lat."
+
+msgid "admin.languages.download"
+msgstr "Descarrega la configuració regional"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "No s'ha pogut obrir el descriptor de llengua des del lloc web de PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "No s'ha pogut afegir la nova configuració regional al fitxer de registre de configuracions regionals, normalment «registry/locales.xml»."
+
+msgid "admin.auth.ojs"
+msgstr "Base de dades d'usuaris/àries de l'OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Habilita la sincronització de perfils d'usuari/ària (si ho admet aquest connector d'autenticació). La informació del perfil d'usuari/ària s'actualitza automàticament des de la font remota quan un usuari/ària inicia la sessió, i els canvis al perfil (també els canvis de contrasenya) fets dins de l'OJS s'actualitzen automàticament a la font remota. Si aquesta opció no està habilitada, la informació de perfil de l'OJS es mantindrà separada de la de la font remota."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Habilita la modificació de contrasenyes d'usuari/ària (si ho admet aquest connector d'autenticació). L'habilitació d'aquesta opció permet que els usuaris/àries modifiquin la seva contrasenya de l'OJS i facin servir la característica «recuperar contrasenya» per restablir la contrasenya oblidada. Si no s'habilita l'opció, aquestes funcions no estan disponibles pels usuaris/àries amb aquesta font d’autenticació."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Habilita la creació d'usuaris/àries (si ho admet aquest connector d'autenticació). Els usuaris/àries creats a l'OJS amb aquesta font d'autenticació s'afegeixen automàticament a la font d’autenticació remota si és que encara no hi són. A més, si aquesta font és la font d'autenticació predeterminada, els comptes de l'OJS creats mitjançant el registre d'usuaris/àries també s'afegeixen a la font d'autenticació remota."
+
+msgid "admin.systemVersion"
+msgstr "Versió de l'OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Configuració de l'OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Configuració de l'OJS a <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Configuració de la revista"
+
+msgid "admin.journals.noneCreated"
+msgstr "No s'ha creat cap revista."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Esteu segurs que voleu suprimir aquesta revista i els seus continguts de manera permanent?"
+
+msgid "admin.contexts.create"
+msgstr "Crea una revista"
+
+msgid "admin.journals.createInstructions"
+msgstr "Rebreu automàticament el rol de director d'aquesta revista. Després de crear una revista nova, entreu-hi com a administradors per continuar amb la configuració i l'alta d'usuaris/àries."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Introduïu una paraula curta o un acrònim que identifiqui la revista. L'URL de la revista és {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Cal que introduïu una ruta."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "La ruta només pot contenir caràcters alfanumèrics, guions baixos i guionets i ha de començar i acabar amb un caràcter alfanumèric."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Ja hi ha una altra revista que utilitza la ruta seleccionada."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Permet que aquesta revista aparegui públicament al lloc web"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descripció de la revista"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Ruta existent a la revista o ruta que s'ha de crear (p. ex., «ojs»)."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importa subscripcions"
+
+msgid "admin.journals.transcode"
+msgstr "Metadades de l'article Transcode de l’ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Genera el codi per mapar els URL OJS 1 amb els URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Cal que introduïu una ruta d'importació."
+
+msgid "admin.journals.importErrors"
+msgstr "La importació no s'ha completat."
+
+msgid "admin.mergeUsers"
+msgstr "Fusiona els usuaris/àries"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fusiona l’usuari/ària"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Seleccioneu l’usuari/ària al qual vulgueu assignar les autories, encàrrecs d’edició, etc. de l’usuari/ària anterior."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Seleccioneu un usuari/ària (o més d'un) que vulgueu fusionar amb un altre compte d’usuari/ària (p. ex, un usuari/ària que en tingui dos de diferents). Amb aquesta acció se suprimeix el primer compte (o el primer grup de comptes) que hàgiu seleccionat i les seves trameses, assignacions, etc., s’assignen al segon compte."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Tots els usuaris/àries donats d’alta"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Esteu segurs que voleu fusionar el comptes seleccionats {$oldAccountCount} amb el compte amb nom d’usuari/ària «{$newUsername}»? Si ho feu, els comptes amb el nom d’usuari/ària {$oldAccountCount} ja no existiran. Aquesta acció no es pot desfer."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "No s’ha donat d’alta cap usuari/ària."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Esteu segur que voleu desactivar aquesta configuració regional? Això podria afectar a totes les revistes allotjades que actualment utilitzin aquesta configuració regional."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>La descàrrega de paquets d'idiomes des del servidor web de Public Knowledge Project no està disponible actualment perquè:</p>\n"
+"\t<ul>\n"
+"\t\t<li>El seu servidor no té o no permet l'execució de la utilitat GNU \"tar\".</li>\n"
+"\t\t<li>OJS no pot modificar l'arxiu de registre de configuració regional, normalment \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Els paquets d'idiomes poden descarregarse manualment des de la pàgina web de PKP: <a href=\"http://pkp.sfu.ca\"></a>.</p>"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Recordatori de caducitat de la subscripció"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificació d'accés obert"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Recordatori de revisió"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Es necessita un títol."

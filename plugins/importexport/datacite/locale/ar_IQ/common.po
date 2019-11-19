@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "لغرض استعمال هذه الإضافة، لطفاً، إذهب إلى فئة إضافة \"المعرف العام\"، قم بتمكين وتعريف إضافة DOI وقم بتحديد بادئة DOI صحيحة هناك."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "هذه الإضافة غير مهيئة بالكامل."
+
+msgid "plugins.importexport.common.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "كلمة المرور"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "لطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر."
+
+msgid "plugins.importexport.common.settings.form.passwordRequired"
+msgstr "لطفاً، أدخل كلمة المرور."
+
+msgid "plugins.importexport.common.register"
+msgstr "تسجيل"
+
+msgid "plugins.importexport.common.registerDescription"
+msgstr "أنقر هذا الزر لتسجيل هذا المكون في وكالة التسجيل للمرة الأولى. هذا الأمر ينجح فقط عندما لا يكون قد سبق لك تسجيل المكون قبلاً!"
+
+msgid "plugins.importexport.common.registerDescription.multi"
+msgstr "أنقر هذا الزر لتسجيل البيانات الوصفية لهذا المكون أو تحديثها مع وكالة التسجيل."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "التسجيل لم ينجح! أبلغ ملقم تسجيل DOI عن خطأ: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "نجحت عملية التسجيل!"
+
+msgid "plugins.importexport.common.register.warning"
+msgstr "تسجيل العديد من المكونات قد يستغرق مقتاً طويلاً. لذا لطفاً، تحل بالصبر بعد النقر على زر \"التسجيل\". سيتم إعلامك عند اكتمال التسجيل."
+
+msgid "plugins.importexport.common.register.noCredentials"
+msgstr "التسجيل المباشر معطل حالياً. لطفاً، <a href=\"{$settingsUrl}\">عرف</a> اسم مستخدم وكلمة مرور لتتمكن من تسجيل المكونات مباشرة مع وكالة التسجيل."
+
+msgid "plugins.importexport.common.markRegistered"
+msgstr "أشره مسجلاً"
+
+msgid "plugins.importexport.common.markRegisteredDescription"
+msgstr "أنقر هذا الزر لتأشير المكونات على أنها مسجلة (مثلاً: عندما تكون مسجلة سابقاً أو يدوياً)."
+
+msgid "plugins.importexport.common.update"
+msgstr "تحديث"
+
+msgid "plugins.importexport.common.updateDescription"
+msgstr "إنقر هذا الزر لتحديث البيانات الوصفية لهذا المكون مع وكالة التسجيل. هذا ينجح فقط إذا سبق لك تسجيل المكون قبل الآن!"
+
+msgid "plugins.importexport.common.export"
+msgstr "تصدير البيانات"
+
+msgid "plugins.importexport.common.export.unAvailable"
+msgstr "تصدير البيانات غير متاح حالياً. لطفاً، تحقق من متطلبات هذه الإضافة."
+
+msgid "plugins.importexport.common.export.unregistered"
+msgstr "تصدير كل الأعداد غير المسجلة، والمقالات وألواحها الطباعية"
+
+msgid "plugins.importexport.common.export.selectUnregistered"
+msgstr "إختر الأعداد غير المسجلة، والمقالات وألواحها الطباعية"
+
+msgid "plugins.importexport.common.export.noUnregistered"
+msgstr "كل الأعداد المنشورة، والمقالات وألواحها الطباعية، قد تم تسجيلها مسبقاً (أو ليس لأي منها DOI معين لها)."
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "تصدير الأعداد"
+
+msgid "plugins.importexport.common.export.selectIssue"
+msgstr "إختر الأعداد"
+
+msgid "plugins.importexport.common.export.noIssues"
+msgstr "ليس لأي عدد حالياً DOI معين له."
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "تصدير المقالات"
+
+msgid "plugins.importexport.common.export.selectArticle"
+msgstr "إختر المقالات"
+
+msgid "plugins.importexport.common.export.noArticles"
+msgstr "ليس لأي مقالة حالياً DOI معين لها."
+
+msgid "plugins.importexport.common.export.galleys"
+msgstr "تصدير الألواح الطباعية"
+
+msgid "plugins.importexport.common.export.selectGalley"
+msgstr "إختر الألواح الطباعية"
+
+msgid "plugins.importexport.common.export.noGalleys"
+msgstr "ليس لأي لوح طباعي حالياً DOI معين له."
+
+msgid "plugins.importexport.common.exportDescription"
+msgstr "أنقر هذا الزر لتصدير بيانات XML للمكون المحدد إلى ملف محلي بدون تسجيله مع وكالة التسجيل. هذا الأمر قد يكون مفيداً إذا أردت من طرف ثالث تسجيل DOI لك، أو إذا أردت فحص صيغة XML قبل تسجيلها."
+
+msgid "plugins.importexport.common.export.error.issueNotFound"
+msgstr "لا توجد أعداد تطابق رمز التعريف المحدد: {$param}."
+
+msgid "plugins.importexport.common.export.error.articleNotFound"
+msgstr "لا توجد مقالة تطابق رمز التعريف المحدد: {$param}."
+
+msgid "plugins.importexport.common.export.error.galleyNotFound"
+msgstr "لا يوجد لوح طباعي يطابق رمز التعريف المحدد: {$param}."
+
+msgid "plugins.importexport.common.export.error.noDoiAssigned"
+msgstr "إن المكون ذو رمز العريف {$param} ليس له DOI معين له."
+
+msgid "plugins.importexport.common.export.error.unknownJournal"
+msgstr "لا توجد مجلة تطابق المسار المحدد: {$param}."
+
+msgid "plugins.importexport.common.export.error.unknownObjectType"
+msgstr "إن نوع المكون {$param} لا يمكن تصديره."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "الملف الخارجي {$param} غير قابل للكتابة."
+
+msgid "plugins.importexport.common.notification.exportSuccessful"
+msgstr "تم بنجاح تصدير المكونات المحددة إلى '{$param}'"
+
+msgid "plugins.importexport.common.cliError"
+msgstr "خطأ:"

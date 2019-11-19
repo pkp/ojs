@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Bu eklenti, Tekbiçim Kaynak İsimlerinin OJS'deki dizgi tablaları, makalelere ve galerilere atanmasını sağlar."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "OJS’de URN’leri yönetmek ve kullanmak için lütfen URN eklentisini yapılandırın:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Dergi İçeriği"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Lütfen URN'lerin atanması gereken öğeleri seçiniz."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Lütfen Tekbiçim Kaynak İsimlerine (URN) sahip olacak yayın öğelerini seçin:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Sayılar"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Makaleler"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Dizgi Tablaları"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN Ön Eki"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "The URN prefix is the fix, never changing part of the URN (e.g. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN öneki şablonu şu biçiminde olmalıdır: \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN Son Eki"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Bir URN son eki herhangi bir biçimde olabilir, ancak atanan aynı URN öneki ile tüm yayınlanan öğeler arasında tekil olmalıdır:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "URN soneklerini oluşturmak için aşağıda girilen şablonu kullanın. Dergi için %j, cilt numarası için %v, sayı için %i, yıl için %Y, OJS makale ID'si için %a, OJS dizgi tablası ID'si için %g, OJS dosya kimliği için %f, sayfa numarası için %p ve \"Özel Tanımlayıcı\" için %x kullanın."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Örneğin, vol%viss%ipp%p, \"vol3iss2pp230\" URN sonekini oluşturabilir."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "sayılar için"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "makaleler için"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "dizgi tablaları için"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Lütfen sayılar için URN sonek şablonunu girin."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Lütfen makaleler için URN sonek biçimini girin."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Lütfen dizgi tablaları için URN sonek şablonunu girin."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Varsayılan şablonu kullanın."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "Sayılar için %j.v%vi%i, <br />makaleler için %j.v%vi%i.%a<br />, dizgi tablaları için %j.v%vi%i.%a.g%g."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Yayınlanan her bir öğe için tek bir URN sonek girin. Her öğenin üst veri sayfasında ek bir URN giriş alanı bulacaksınız."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Kontrol Numarası"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Kontrol numarası otomatik olarak bir URN'nin son hanesi olarak hesaplanacak ve eklenecektir."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Ad alanı"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Kalıcı tanımlayıcı ad alanı genellikle kayıt için gereklidir (ör. Deutsche Nationalbibliothek'te)."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Seç"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL Çözümleyici"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(Ör. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Lütfen çözümleyici URL'sini girin."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "URN'leri Yeniden Ata"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "URN yapılandırmanızı değiştirirseniz, önceden atanan URN'ler bundan etkilenmez. URN yapılandırması kaydedildikten sonra, mevcut tüm URN'leri temizlemek için bu düğmeyi kullanın, böylece yeni ayarlar mevcut öğelerle etkinleşecektir."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Mevcut tüm URN'leri silmek istediğinizden emin misiniz?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "sayı"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "makale"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "dizgi tablası"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "Özel sonek eksik olduğundan URN atanamaz."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "Çözümlenmemiş bir şablon içerdiğinden URN atanamaz."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Gördüğünüz şey, URN'nin bir önizlemesi. Onay kutusunu seçin ve URN atamak için formu kaydedin."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN, bu {$pubObjectType} öğesine atanmıştır."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Verilen URN son eki, başka bir yayınlanan öğe için zaten kullanılıyor. Lütfen her bir öğe için tekil bir URN son eki girin."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "URN Temizle"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Mevcut URN'yi silmek istediğinizden emin misiniz?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Sayı Öğe URN'lerini Temizle"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Mevcut sayı öğe URN'lerini silmek istediğinizden emin misiniz?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Bu sayı için şu anda planlanmış tüm öğelerin (makale ve dizgi tablaları) URN'lerini temizlemek için aşağıdaki seçeneği kullanın."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Kontrol Numarası Ekle"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "URN {$pubId}'yı bu {$pubObjectType}'ye atayın."
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "Özel sonek eksik olduğundan URN atanamaz."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "Çözümlenmemiş bir şablon içerdiğinden URN {$pubId} atanamaz."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} atandı."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Kontrol numarası eksik."

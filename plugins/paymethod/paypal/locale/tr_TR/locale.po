@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:00+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:00+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Paypal ile Ücret Ödeme"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "Ödemeler PayPal servisi kullanılarak yapılacaktır."
+
+msgid "plugins.paymethod.paypal"
+msgstr "Paypal ile Ücret Ödeme"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Paypal Ödeme Ayarları"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Test Modu"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Hesap Adı"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "Müşteri ID'si"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Gizli"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr "Bir işlem hatası oluştu. Detaylar için lütfen dergi yöneticisine başvurun."

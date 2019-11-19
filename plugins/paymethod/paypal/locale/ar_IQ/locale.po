@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:58+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:58+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "دفع الرسوم عبر Paypal"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "معالجة المدفوعات ستتم عبر خدمة PayPal."
+
+msgid "plugins.paymethod.paypal"
+msgstr "دفع الرسوم عبر Paypal"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "إعدادات الدفع المالي عبر Paypal"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "نمط الاختبار"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "اسم الحساب"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "الرمز التعريفي للعميل"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "الرمز السري"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr "حدث خطأ في المناقلة المالية. لطفاً، راسل رئيس تحرير المجلة لمعرفة التفاصيل."

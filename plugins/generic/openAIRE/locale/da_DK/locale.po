@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:14+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:14+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.openAIRE.displayName"
+msgstr "OpenAIRE"
+
+msgid "plugins.generic.openAIRE.description"
+msgstr "OpenAIRE plugin’en tilføjer et projektID-element til artiklens metadata og udvider OAI-PMH-grænsefladen i overensstemmelse med OpenAIRE Guidelines 1.1, og  gør det dermed muligt for OJS-tidsskrifter at blive OpenAIRE-kompatible."
+
+msgid "plugins.generic.openAIRE.projectID"
+msgstr "OpenAIRE ProjektID"
+
+msgid "plugins.generic.openAIRE.projectIDValid"
+msgstr "Indfør et gyldigt projektID (6 cifre)"
+
+msgid "plugins.generic.openAIRE.projectID.description"
+msgstr "Hvis denne forskning er resultatet af et EU-initiativ, der overholder metadataplatformen <a href=\"https://www.openaire.eu/\" target=\"_blank\"> OpenAIRE </a>, skal du medtage ProjectID, en seks- cifret nummer, der svarer til tilskudsaftalen."

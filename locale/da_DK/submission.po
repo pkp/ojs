@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:19+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Ny indsendelse"
+
+msgid "submission.submit.title"
+msgstr "Indsend en artikel"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Indsendelsestjekliste"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Læs og accept´er venligst nedenstående før du fortsætter."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikelmateriale"
+
+msgid "submission.upload.selectComponent"
+msgstr "Vælg artikelelement"
+
+msgid "submission.confirmSubmit"
+msgstr "Ønsker du at indsende denne artikel til tidsskriftet?"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Tidsskriftet er blevet underrettet om din indsendelse, og du har modtaget en e-mailbekræftelse. Så snart redaktionen har gennemset indsendelsen, vil du blive kontaktet."
+
+msgid "submission.metadataDescription"
+msgstr "Disse specifikationer er baseret på Dublin Core, en international metadata standard til beskrivelse af tidsskrifters indhold."
+
+msgid "workflow.review.externalReview"
+msgstr "Bedømmelse"
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Send til bedømmelse"
+
+msgid "submission.title"
+msgstr "Artiklens titel"
+
+msgid "submission.publication"
+msgstr "Publikation"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Indsendelsens nummer-metadata blev opdateret."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vælg bidragyderens rolle"
+
+msgid "submission.submit.contributorRole"
+msgstr "Bidragyders rolle"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Mindst en forfatter er påkrævet"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Vælg sprog."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Indskriv artiklens titel."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Tilføj artiklens resumé."
+
+msgid "submission.submit.userGroup"
+msgstr "Indsend i min rolle som..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Vælg i hvilken egenskab du indsender denne artikel."
+
+msgid "submission.title.tip"
+msgstr "Indsendelsestypen er som regel enten 'billede', 'tekst' eller anden multimedietype.  Vælg den, der er mest relevant i forbindelse med din indsendelse.  Eksempler kan ses her: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Påbegynd en ny indsendelse"
+
+msgid "grid.action.workflow"
+msgstr "Indsendelses-workflow"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Publiceringsversionen fremvises i nummeradgangen"
+
+msgid "grid.action.issueEntry"
+msgstr "Se denne indsendelses metadata"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Artiklens publiceringsversion  \"{$galleyFormatName}\" er blevet gjort tilgængelig."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Artiklens publiceringsversion \"{$galleyFormatName}\" er ikke længere tilgængelig."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Indsendelsens 'public identifiers' blev opdateret."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formatgodkendelse"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Denne publiceringsversion vil <em>ikke længere  blive gjort tilgængelig</em> for læsere.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Denne publiceringsversion <em>vil blive gjort tilgængelig</em> for læsere.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Gør denne publiceringsversion tilgængelig"
+
+msgid "submission.galleyFiles"
+msgstr "Publiceringsklare filer"
+
+msgid "submission.proofReadingDescription"
+msgstr "Layoutredaktøren uploader de produktionklare filer, der er blevet færdiggjort til publicering her. Brug <em>Tilføj auditør</em> for at vælge forfattere og andre til korrekturlæsning af filerne, med de tilrettede filer uploadet til godkendelse forud for publicering."
+
+msgid "grid.action.approveProof"
+msgstr "Godkend, at korrektur indgår som publiceringsversion ."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Denne korrektur er blevet godkendt til at indgå som publiceringsversion."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Titel og resumé"
+
+msgid "submission.submit.upload.description"
+msgstr "Upload filer tilknyttet denne indsendelse, inklusiv artiklen, multimedi, datasæt, illustretioner osv."
+
+msgid "submission.pageProofs"
+msgstr "Korrekturlæsning"
+
+msgid "submission.complete"
+msgstr "Godkendt"
+
+msgid "submission.incomplete"
+msgstr "Mangler godkendelse"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Erklæring om beskyttelse af personlige oplysninger"
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Fornavn, efternavn og e-mailadresse for hver forfatter er påkrævet."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Det ønskede citationsformat kunne ikke genfindes."
+
+msgid "section.any"
+msgstr "Enhver sektion"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Resumeet skal være på {$wordCount} ord eller derunder."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Dit resume er for langt. Forkort det venligst til under den ordgrænse, der er angivet for dette afsnit."

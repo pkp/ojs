@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:07+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "El módulo COUNTER permite generar informes sobre la actividad del sitio web."
+
+msgid "plugins.reports.counter"
+msgstr "Informe COUNTER"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Informe de la revista 1 (R3): solicitudes de artículos completos por mes y revista"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Informe de la revista 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Número de solicitudes aceptadas de artículos completos por mes y revista (año {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Fecha de inicio:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Editorial"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Plataforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN impreso"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN en línea"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Totales del último año"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "HTML del último año"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "PDF del último año"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Total para todas las revistas"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "Los siguientes enlaces generan informes mediante datos antiguos del módulo COUNTER. Si desea generar informes COUNTER mediante el nuevo tipo de métrica COUNTER de OJS, utilice los siguientes enlaces."
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "versión XML"
+
+msgid "plugins.reports.counter.release"
+msgstr "Versión COUNTER"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Informes del sitio antiguo"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Los parámetros del informe no eran válidos."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "La petición de informe no es válida."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "No se han encontrado resultados para este informe."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Los resultados no se han podido formatear como XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr "Estos enlaces generan informes listos para COUNTER basados en la obsoleta versión 3.0. Este informe abarca todas las revistas del sitio. De todos modos, use la versión más reciente tan pronto como pueda."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Informe COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "Informe de revista COUNTER 1 (R3): solicitudes de artículos completos por mes y revista"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anónimo"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Todos los clientes"

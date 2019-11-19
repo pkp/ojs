@@ -1,0 +1,438 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Urednička"
+
+msgid "editor.article.confirmChangeReviewForm"
+msgstr "Važno: Menjanje recenzentskog obrasca uticaće na sve odgovore koje su recenzenti dali korišćenjem obrasca.  Da li ste sigurni da želite da nastavite?"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Predaje i objavljivanja"
+
+msgid "editor.submissionQueue"
+msgstr "Lista predaja"
+
+msgid "editor.submissionArchive"
+msgstr "Arhiva predaja"
+
+msgid "editor.publishing"
+msgstr "Objavljivanje"
+
+msgid "editor.publishedIssues"
+msgstr "Objavljeni brojevi"
+
+msgid "editor.allSections"
+msgstr "Sve sekcije"
+
+msgid "editor.allEditors"
+msgstr "Svi urednici"
+
+msgid "editor.me"
+msgstr "Ја"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Nema predaja u arhivi."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Sačuvaj izmene u arhiviranim predajama? Predaje koje su označene za brisanje će biti trajno obrisane."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Da li želite da trajno obrišete predaje?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Da li želite da zabeležite ovu odluku?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Predaja će biti arhivirana nakon što se pošalje imejl autoru ili se klikne dugme \"preskoči imejl\"."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Pre slanja prijave na lekturu iskoristite link \"Obavesti autora\" da biste ga obavestili o odluci i definisali koju verziju rada poslati."
+
+msgid "editor.notifyUsers"
+msgstr "Obavesti autora"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Pošalji ovu poruku svim korisnicima koji imaju veze sa ovim časopisom ({$count} korisnika)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Svi čitaoci ({$count} korisnika)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Svi objavljeni autori ({$count} korisnika)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Svi individualni pretplatnici ({$count} korisnika)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Svi institucionalni pretplatnici ({$count} korisnika)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Obaveštavam korisnike..."
+
+msgid "editor.usersNotified"
+msgstr "Korisnici su obavešteni"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Pošalji ovu poruku svim korisnicima koji su naveli da žele da primaju obaveštenja o promenama ({$count} korisnika)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Uključi i sadržaj iz ovog broja:"
+
+msgid "editor.editorAdministration"
+msgstr "Urednička administracija"
+
+msgid "editor.issues.createIssue"
+msgstr "Napravi broj časopisa"
+
+msgid "editor.issues.backIssues"
+msgstr "Prethodni brojevi"
+
+msgid "editor.issues.futureIssues"
+msgstr "Budući brojevi"
+
+msgid "editor.issues.currentIssue"
+msgstr "Trenutni broj"
+
+msgid "editor.issues.numArticles"
+msgstr "Stavke"
+
+msgid "editor.issues.noArticles"
+msgstr "Nema stavki koje su predviđene za ovaj broj."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Da li ste sigurni da trajno želite da obrišete ovaj broj?"
+
+msgid "editor.issues.published"
+msgstr "Objavljeno"
+
+msgid "editor.issues.unpublished"
+msgstr "Neobjavljeno"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Sveska/vol. je obavezna i mora biti pozitivan broj."
+
+msgid "editor.issues.numberRequired"
+msgstr "Broj je obavezan i mora biti pozitivan broj."
+
+msgid "editor.issues.yearRequired"
+msgstr "Godina je obavezna i mora biti pozitivan broj."
+
+msgid "editor.issues.titleRequired"
+msgstr "Naslov je obavezan."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Identifikacija broja je obavezna. Izaberite barem jedan identifikator."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identifikatori broja"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Javni identifikator"
+
+msgid "editor.issues.description"
+msgstr "Opis"
+
+msgid "editor.issues.accessStatus"
+msgstr "Status pristupa"
+
+msgid "editor.issues.accessDate"
+msgstr "Datum otvorenog pristupa"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Omogući odloženi otvoreni pristup"
+
+msgid "editor.issues.coverPage"
+msgstr "Slika naslovnice"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Podržani formati: .gif, .jpg, ili .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Dodato"
+
+msgid "editor.issues.remove"
+msgstr "Ukloni"
+
+msgid "editor.issues.proofed"
+msgstr "Odobreno"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Ukloni naslovnicu?"
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "Neispravan format naslovnice. Podržani formati su .gif, .jpg, ili .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stranica stila"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Neispravan stylesheet format. Fajl mora biti ispravan CSS. (Imajte na umu da fajlovi sa komentarim na početku mogu biti odbijeni.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Ukloni stranicu stila?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Naslov naslovnice"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Napravite naslovnicu za ovaj broj sa sledećim elementima."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Prikaži"
+
+msgid "editor.issues.hideCoverPageArchives"
+msgstr "Ne prikazuj sličice naslovnica prilikom izlistavanja časopisa."
+
+msgid "editor.issues.hideCoverPageCover"
+msgstr "Ne prikazuj naslovnicu pre sadržaja."
+
+msgid "editor.issues.openAccess"
+msgstr "Otvoren pristup"
+
+msgid "editor.issues.subscription"
+msgstr "Pretplate"
+
+msgid "editor.issues.identification"
+msgstr "Identifikacija"
+
+msgid "editor.issues.access"
+msgstr "Pristup"
+
+msgid "editor.issues.cover"
+msgstr "Naslovnica"
+
+msgid "editor.reassign"
+msgstr "Ponovo dodeli"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Ovaj javni identifikator  '{$publicIdentifier}' već postoji za drugi objekt (izdanje, članak, korekturna kopija ili dopunska datoteka). Odaberite jedinstvene identifikatore vašeg časopisa."
+
+msgid "editor.issues.galleys"
+msgstr "Konačne verzije izdanjа"
+
+msgid "editor.issues.galley"
+msgstr "Konačna verzija izdanja"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Pogledaj konačnu verziju izdanja"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Objavi konačnu verziju izdanja sa celim sadržajem"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Nije objavljena nijedna konačna verzija izdanja."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Potrebna je etiketa za konačnu verziju izdanja."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Potrebno je odrediti jezik konačne verzije izdanja."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Javna identifikacija za konačnu verziju izdanja već postoji."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Povratak na konačnu verziju izdanja"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Da li ste sigurni da želite izbrisati ovu konačnu verziju izdanja?"
+
+msgid "editor.issues.editIssue"
+msgstr "Uređivanje broja: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Datum objavljivanja"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Neispravna vrsta fajla slike. Dozvoljeni formati su .gif, .jpg i .png."
+
+msgid "editor.issues.issueData"
+msgstr "Podaci o broju"
+
+msgid "editor.issues.saveChanges"
+msgstr "Sačuvajte izmene u sadržaju"
+
+msgid "editor.issues.default"
+msgstr "Početno"
+
+msgid "editor.issues.order"
+msgstr "Poredak"
+
+msgid "editor.issues.publicId"
+msgstr "Javni ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Objavi broj"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Vrati u neobjavljeno"
+
+msgid "editor.issues.previewIssue"
+msgstr "Prikaži broj"
+
+msgid "editor.issues.preview"
+msgstr "Prikaži"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Da li ste sigurni da želite da objavite novi broj?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Da li ste sigurni da želite da vratite u neobjavljeno?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Ne mogu da sačuvam javni id fa članak:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Nema živih brojeva"
+
+msgid "editor.issues.open"
+msgstr "Otvori"
+
+msgid "editor.issues.pages"
+msgstr "Strane"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatori"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Budući brojevi"
+
+msgid "grid.action.addGalley"
+msgstr "Dodaj fajl prikaza"
+
+msgid "grid.action.publish"
+msgstr "Objavi broj"
+
+msgid "grid.action.addIssue"
+msgstr "Napravi broj"
+
+msgid "grid.action.viewIssue"
+msgstr "Pogledaj"
+
+msgid "grid.action.previewIssue"
+msgstr "Prikaži"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Napravi fajl prikaza broja"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Prethodni brojevi"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Slika naslovne strane koju ste hteli da obrišete se ne slaže sa naslovnom stranom ovog broja. Ponovo učitajte stranu i pokušajte ponovo."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Slika nslovne strane koju ste hteli da obrišete se ne može pronaći. Možda je već obrisana. Pokušajte da ponovo učitate stranu."
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Svi članci će biti vraćeni u red redakciju i svi dodatni fajlovi će biti obrisani. Da li ste sigurni da želite obrisati ovaj broj?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Ovaj časopis ima poseban način brojanja brojeva.<a href=\"{$url}\" class=\"action\">Vrati na početno</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Ovaj broj ima poseban način poretka sekcija/rubrika.<a href=\"{$url}\" class=\"action\">Vrati na početno</a>"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Odredite izvorni fajl kao recenzentsku verziju"
+
+msgid "editor.article.decision"
+msgstr "Odluka"
+
+msgid "editor.article.decision.accept"
+msgstr "Prihvati prijavljen članak"
+
+msgid "editor.article.decision.pendingRevisions"
+msgstr "Potrebna revizija"
+
+msgid "editor.article.decision.resubmit"
+msgstr "Ponovo prijavi za recenziju"
+
+msgid "editor.article.decision.decline"
+msgstr "Ne prihvatiti prijavljen članak"
+
+msgid "editor.submissions.showBy"
+msgstr "Pokaži do"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Prijavi članak MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktivne prijave"
+
+msgid "editor.submissions.invite"
+msgstr "Pozovi"
+
+msgid "editor.submissions.accept"
+msgstr "Prihvati"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Nema prijavljenih članaka"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Najkasnije"
+
+msgid "editor.submissions.averageTime"
+msgstr "Nedelja"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Poslednje kompletirano"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Dodeljeno za"
+
+msgid "editor.submissions.inSection"
+msgstr "U sekciji/rubrici"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Dodeli za objavljivanje u"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Biće dodeljen"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Naknada za objavljivanje nije plaćena. Da bi se rad objavio obavestite autora da plati naknadu ili da traži izuzeće od plaćanja."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Slika naslovne strane koju ste hteli da obrišete nije nađena. Možda je već obrisana. Pokušajte da ponovo učitate stranu."
+
+msgid "grid.action.removeArticle"
+msgstr "Ukloni članak iz broja"
+
+msgid "editor.article.remove"
+msgstr "Ukloni"
+
+msgid "editor.article.remove.confirm"
+msgstr "Da li ste sigurni da želite da uklonite članak iz ovog broja? Članak će biti dostupan za dodelu sledećem broju."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Datum pristupa nije ispravan"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Uredi završnu kopiju broja"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Odaberi završne kopije"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Grafički urednik će pripremiti ove fajlove za svaku završnu kopiju i postaviti ih na server u odgovarajuće <span class=\"pkp_help_title\">Odobrene kopije</span> za konačnu proveru."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Finalni probni fajlovi na ovoj listi su pretvoreni od strane korektora u korigovane verzije i postavljene na server u <span class=\"pkp_help_title\">Korektura</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Bilo koji fajl koji je već bio postavljen na server u bilo kojoj fazi prijave članka može biti dodat na lsitu za Korekturu označavanjem Uključi kutije ispod i klikom na Pretraga: svi dostupni fajlovi će biti izlistani i odabrani za uključenje."
+
+msgid "editor.article.coverImage"
+msgstr "Slika naslovne strane"

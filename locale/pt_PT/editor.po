@@ -1,0 +1,417 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:30+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Página Inicial do Editor"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Submissões e Publicações"
+
+msgid "editor.submissionQueue"
+msgstr "Fila de Submissão"
+
+msgid "editor.submissionArchive"
+msgstr "Arquivo de Submissões"
+
+msgid "editor.publishing"
+msgstr "Publicação"
+
+msgid "editor.publishedIssues"
+msgstr "Edições Publicadas"
+
+msgid "editor.allSections"
+msgstr "Todas as Secções"
+
+msgid "editor.allEditors"
+msgstr "Todos os editores"
+
+msgid "editor.me"
+msgstr "Eu"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Nenhuma submissão no arquivo."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Guardar alterações a submissões arquivadas? Submissões marcadas para exclusão serão excluídas permanentemente do sistema."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Deseja realmente eliminar esta submissão?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Deseja realmente registar a decisão?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Esta submissão será arquivada após a mensagem de Notificar Autor ser enviada ou pressionado o botão \"Não enviar e-mail\"."
+
+msgid "editor.notifyUsers"
+msgstr "Notificar Utilizadores"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Notificando utilizadores..."
+
+msgid "editor.usersNotified"
+msgstr "Utilizadores Notificados"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Enviar esta mensagem a todos os utilizadores associados a esta revista ({$count} utilizadores)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Enviar esta mensagem a todos os utilizadores associados a esta revista que indicaram desejar receber notificações ({$count} utilizadores)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Incluir sumário da edição:"
+
+msgid "editor.editorAdministration"
+msgstr "Administração do Editor"
+
+msgid "editor.issues.createIssue"
+msgstr "Criar Edição"
+
+msgid "editor.issues.currentIssue"
+msgstr "Edição Actual"
+
+msgid "editor.issues.numArticles"
+msgstr "Artigos"
+
+msgid "editor.issues.noArticles"
+msgstr "Nenhum artigo agendado para esta edição."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Deseja realmente eliminar esta edição permanentemente?"
+
+msgid "editor.issues.published"
+msgstr "Publicado"
+
+msgid "editor.issues.unpublished"
+msgstr "Não publicado"
+
+msgid "editor.issues.volumeRequired"
+msgstr "O volume é obrigatório para a edição, devendo ser um número positivo inteiro."
+
+msgid "editor.issues.numberRequired"
+msgstr "O número é obrigatório para a edição, devendo ser um número positivo inteiro."
+
+msgid "editor.issues.yearRequired"
+msgstr "O ano é obrigatório para a edição, devendo ser um número positivo inteiro."
+
+msgid "editor.issues.titleRequired"
+msgstr "É obrigatório o título."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "A identificação da Edição é obrigatória. Escolha pelo menos uma das opções de identificação para a edição."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificação de Edição"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificador Público de edição"
+
+msgid "editor.issues.description"
+msgstr "Descrição"
+
+msgid "editor.issues.accessStatus"
+msgstr "Tipo de Acesso"
+
+msgid "editor.issues.accessDate"
+msgstr "Data para Acesso Livre"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "A data para acesso é inválida."
+
+msgid "editor.issues.coverPage"
+msgstr "Capa"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formatos permitidos: .gif, .jpg ou .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Enviado"
+
+msgid "editor.issues.remove"
+msgstr "Remover"
+
+msgid "editor.issues.proofed"
+msgstr "Corrigido"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Remover imagem da capa?"
+
+msgid "editor.issues.styleFile"
+msgstr "Folha de Estilos"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "O formato de Folha de Estilos é inválido. Certifique-se que o documento enviado é um documento CSS válido! Documentos CSS com comentários no início poderão ser rejeitados. Verifique as configurações de MimeType do servidor e permissões de pastas."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Eliminar Folha de Estilos?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Legenda da capa"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Criar capa personalizada para esta edição."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Exibir"
+
+msgid "editor.issues.openAccess"
+msgstr "Acesso Livre"
+
+msgid "editor.issues.subscription"
+msgstr "Subscrição"
+
+msgid "editor.issues.identification"
+msgstr "Identificação"
+
+msgid "editor.issues.access"
+msgstr "Acesso"
+
+msgid "editor.issues.cover"
+msgstr "Capa"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Todos os artigos voltarão à fila de espera e todos os documentos associados serão eliminados permanentemente. Deseja realmente eliminar esta edição?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Esta revista utiliza ordenação personalizada de edições. <a href=\"{$url}\" class=\"action\">Restaurar para a configuração padrão.</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Esta edição usa uma ordenação de secções personalizada. <a href=\"{$url}\" class=\"action\">Restaurar ordenação padrão?</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Dados da Edição"
+
+msgid "editor.issues.saveChanges"
+msgstr "Guardar alterações ao sumário?"
+
+msgid "editor.issues.default"
+msgstr "Padrão"
+
+msgid "editor.issues.order"
+msgstr "Ordem"
+
+msgid "editor.issues.publicId"
+msgstr "Id Público"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publicar Edição"
+
+msgid "editor.issues.previewIssue"
+msgstr "Pré-visualizar Edição"
+
+msgid "editor.issues.preview"
+msgstr "(Pré-visualizar)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Deseja realmente publicar a nova edição?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Não foi possível guardar id público para o artigo:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Nenhuma edição em produção"
+
+msgid "editor.issues.open"
+msgstr "Aberto"
+
+msgid "editor.issues.pages"
+msgstr "Páginas"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Edições Futuras"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Edições Anteriores"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Designar documento original como Versão para Revisão"
+
+msgid "editor.article.decision"
+msgstr "Decisão"
+
+msgid "editor.submissions.showBy"
+msgstr "Exibir por"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Enviar MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Tarefas Activas"
+
+msgid "editor.submissions.invite"
+msgstr "Convidar"
+
+msgid "editor.submissions.accept"
+msgstr "Aceitar"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Sem submissões"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Última"
+
+msgid "editor.submissions.averageTime"
+msgstr "Dias"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Última Concluída"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Designado a"
+
+msgid "editor.submissions.inSection"
+msgstr "Na secção"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Agendar para publicar em"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "A Agendar"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "A Taxa para Publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação."
+
+msgid "editor.article.remove"
+msgstr "Eliminar"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Activar acesso livre adiado"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Despublicar edição"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Deseja realmente despublicar esta edição?"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Antes de enviar a submissão para Copyediting, use o link Notificar Autor para informá-lo sobre a decisão e seleccionar a versão que vai ser enviada."
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Todos os leitores ({$count} utilizadores)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Todos os autores publicados ({$count} utilizadores)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Todos os assinantes individuais ({$count} utilizadores)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Todos os assinantes institucionais ({$count} utilizadores)"
+
+msgid "editor.reassign"
+msgstr "Re-atribuir"
+
+msgid "editor.publicIdentificationExists"
+msgstr "O identificador público '{$publicIdentifier}' já existe para outro objecto (número, artigo, edição ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista."
+
+msgid "editor.issues.galleys"
+msgstr "Número Edições"
+
+msgid "editor.issues.galley"
+msgstr "Número Edição"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Visualizando Edição"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publicar edição com todos os conteúdos do número."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Nenhuma edição do número publicada."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "É obrigatório indicar uma categoria para a edição do número"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "É obrigatório indicar uma edição local do número."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "A identificação pública da edição já existe."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Voltar à edição"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Tem a certeza que pretende eliminar esta edição?"
+
+msgid "editor.issues.editIssue"
+msgstr "Gestão Número: {$issueIdentification}"
+
+msgid "editor.issues.datePublished"
+msgstr "Data Publicação"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "A imagem da capa que solicitou para eliminar não corresponde à imagem da capa para este número. Por favor, recarregue a página e tente novamente."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido eliminada. Tente recarregar a página."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Formato de página de rosto inválido. Os formatos permitidos são .gif, .jpg ou .png."
+
+msgid "editor.issues.identifiers"
+msgstr "Identificadores"
+
+msgid "grid.action.addGalley"
+msgstr "Adicionar edição"
+
+msgid "grid.action.publish"
+msgstr "Publicar Número"
+
+msgid "grid.action.addIssue"
+msgstr "Criar Número"
+
+msgid "grid.action.viewIssue"
+msgstr "Ver Número"
+
+msgid "grid.action.previewIssue"
+msgstr "Prévisualizar Número"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Criar Edição"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido elimindas. Tente recarregar a página."
+
+msgid "grid.action.removeArticle"
+msgstr "Remover Artigo de Número"
+
+msgid "editor.article.remove.confirm"
+msgstr "Tem certeza de que deseja remover este artigo do número? O artigo estará disponível para agendamento noutro número."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Editar Edição"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "O editor de layout prepara estes ficheiros para cada edição e, em seguida, carrega para o <span class =\"pkp_help_title\">Provas</span></span> para leitura de provas."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Seleccionar Ficheiros Edição"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Os ficheiros de rascunho finais nesta lista são transformados por um Copyeditor em versões copiadas, carregadas abaixo em <span class =\"pkp_help_title\">Copyediting </span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Todos os ficheiros que já foram enviados para qualquer etapa de submissão podem ser adicionados à Listagem de Revisão, marcando a caixa de selecção Incluir abaixo e clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem ser escolhidos para inclusão."
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Deseja realmente definir esta edição como a atual?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Definir como Edição Atual"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor escolha identificadores únicos para os objetos do mesmo tipo da sua revista."
+
+msgid "editor.article.coverImage"
+msgstr "Imagem de capa"

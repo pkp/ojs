@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP poslužitelj"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Ovaj dodatak služi za provjeru vjerodostojnosti i usklađivanje korisničkih računa preko LDAP poslužitelja."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Postavke LDAP poslužitelja"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Naziv poslužitelja"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "Npr. \"ldap.primjer.com\", ili \"ldaps://ldap.primjer.com\" (koristeći SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port poslužitelja"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Po izboru. Standardno 389 (LDAP) ili 636 (LDAP preko SSL-a)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Osnovni naziv domene"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Npr. \"ou=osobe,dc=primjer,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Administratorov naziv domene"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Npr., \"cn=Administrator,dc=primjer,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Administratorova lozinka"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Administratorov naziv domene i lozinka su obavezni  ako je omogućena sinkronizacija korisničkog profila/lozinke ili ako su omogućene opcije kreiranja korisnika. Ako će se LDAP poslužitelj koristiti isključivo za provjeru vjerodostojnosti korisničkih računa, tada ove opcije mogu biti isključene."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Enkripcija lozinke"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Postavke SASL sučelja (po izboru)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mehanizam"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Npr. \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Područje"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Zatražen autorizacijski ID "
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Sigurnosne opcije SASL sučelja"
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atributi korisničkog imena"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Atributi čija vrijednost jedinstveno identificira objekt korisnika, kao što je uid ili cn ili sAMAccountName."

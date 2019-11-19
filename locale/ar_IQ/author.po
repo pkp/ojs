@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "طلب نشر جديد"
+
+msgid "author.track"
+msgstr "طلب نشر قيد المعالجة"
+
+msgid "author.competingInterests"
+msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">سياسة</a> المصالح&nbsp;التنافسية"
+
+msgid "author.submit.submitArticle"
+msgstr "قدم مقالاً"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "خمس خطوات لتقديم المقال"
+
+msgid "author.submit.startHereTitle"
+msgstr "إبدأ طلباً جديداً للنشر"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">أنقر هنا</a> للذهاب إلى الخطوة الأولى من الخطوات الخمس لتقديم الطلب."
+
+msgid "author.submit.step1"
+msgstr "الخطوة الأولى: الشروع بالتقديم"
+
+msgid "author.submit.step2"
+msgstr "الخطوة الثانية: تحميل الملفات"
+
+msgid "author.submit.step3"
+msgstr "الخطوة الثالثة: إدخال البيانات الوصفية"
+
+msgid "author.submit.step4"
+msgstr "الخطوة الرابعة: تحميل الملفات التكميلية"
+
+msgid "author.submit.step4a"
+msgstr "الخطوة الرابعة (أيضاً): أضف ملفاً تكميلياً"
+
+msgid "author.submit.step5"
+msgstr "الخطوة الخامسة: تأكيد الطلب"
+
+msgid "author.submit.start"
+msgstr "البدء"
+
+msgid "author.submit.upload"
+msgstr "إرفع ملفات الطلب"
+
+msgid "author.submit.metadata"
+msgstr "أدخل البيانات الوصفية"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "إرفع الملفات التكميلية"
+
+msgid "author.submit.confirmation"
+msgstr "تأكيد الطلب"
+
+msgid "author.submit.nextSteps"
+msgstr "الخطوة التالية"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين"
+
+msgid "author.submit.notAccepting"
+msgstr "النشر في هذه المجلة معلق حالياً"
+
+msgid "author.submit.requestWaiver"
+msgstr "إلتمس خصماً مالياً"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "لطفاً، خذ بنظر الاعتبار خصم رسوم النشر لهذه المقالة"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "لطفاً، استعمل خانة الملاحظات أدناه لتوضح لنا أسباب مطالبتك إيانا بالخصم المالي."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "ما دمت قد طالبت بخصم رسوم النشر، لا بد لك من الوقوف على المبررات التي دفعتك لذلك. نتوقع منك إدخالها في الخانة المخصصة لطفاً"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "رهن التقييم، الجولة {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "رهن التقييم: التقييمات لا بد منها"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "قيد التحرير: تمت المطالبة بنسخة التحرير"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "قيد التحرير: تمت المطالبة بالتصحيحات الإملائية والنحوية"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "تحميل نسخة قابلة للتحرير"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "التصحيحات الإملائية والنحوية"
+
+msgid "author.submissions.confirmDelete"
+msgstr "هل أنت متأكد من رغبتك في حذف طلب النشر هذا رغم عدم إكتماله؟"
+
+msgid "author.submissions.viewStatus"
+msgstr "عرض الموقف"
+
+msgid "author.submissions.noSubmissions"
+msgstr "لا توجد تقديمات"
+
+msgid "author.submit.journalSection"
+msgstr "قسم المجلة"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "إختر القسم الأنسب لطلب النشر هذا (أنظر الأقسام وسياسات النشر <a href=\"{$aboutUrl}\" target=\"_new\">في المجلة</a>)"
+
+msgid "author.submit.verifyChecklist"
+msgstr "عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة"
+
+msgid "submission.submit.coverNote"
+msgstr "ملاحظات للمحرر"
+
+msgid "author.submit.comments"
+msgstr "أدخل نصاً (إختياري)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "لطفاً إختر قسم المجلة الذي يتناسب وطلب النشر هذا"
+
+msgid "author.submit.form.localeRequired"
+msgstr "لطفا، إختر أحد اللغات لطلب النشر"
+
+msgid "submission.submit.privacyStatement"
+msgstr "بيان الخصوصية للمجلة"
+
+msgid "author.submit.reorderInstructions"
+msgstr "أعد ترتيب المؤلفين بالشكل الذي سيتم فيه سرد أسمائهم عند النشر"
+
+msgid "author.submit.reorder"
+msgstr "أعد ترتيب أسماء المؤلفين"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "جهة الاتصال الأساسية بالنسبة لهيئة التحرير"
+
+msgid "author.submit.addAuthor"
+msgstr "أضف مؤلفاً"
+
+msgid "author.submit.deleteAuthor"
+msgstr "إحذف مؤلفاً"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "أضف عبارات لفهرسة طلب النشر، إفصل بين العبارات بفارزة منقوطة (بالحرف الإنجليزي رجاءً) لتظهر بالشكل: (عبارة1; عبارة2; عبارة3)"
+
+msgid "author.submit.coverageInstructions"
+msgstr "إشارات إلى المواقع الجغرافية أو الأحداث التاريخية المتتابعة زمانياً و /أو خصائص عينات البحث"
+
+msgid "author.submit.languageInstructions"
+msgstr "English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">رموز لغات أخرى</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "مؤلف واحد على الأقل مطلوب حتماً"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "بيانات: (الاسم الأول، الاسم الأخير، عنوان البريد الالكتروني) لكل مؤلف مطلوبة حتماً"
+
+msgid "author.submit.form.titleRequired"
+msgstr "لطفاً، أدخل عنوان المؤلَّف أو المقالة"
+
+msgid "author.submit.form.abstractRequired"
+msgstr "لطفاً، أدخل ملخص المؤلَّف أو المقالة"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "لقد تجاوزت الحد الأقصى من الكلمات المتاحة للملخص حسبما افترضه هذا القسم"
+
+msgid "author.submit.submissionFile"
+msgstr "ملف طلب النشر"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "رفع ملف طلب النشر"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "استبدل ملف طلب النشر"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "لم يتم رفع أي ملف بعد"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "هل أنت متأكد من رغبتك في المتابعة دون رفع ملف طلب النشر؟"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "هذه الخطوة الإختيارية تسمح بإضافة ملفات تكميلية لطلب النشر. هذه الملفات (والتي لها أن تكون من أي نوع) قد تتضمن: (أ) أدوات البحث، (ب) جداول بيانات، تلك التي تنسجم مع شروط ومعايير التقييم لأخلاقيات البحث العلمي، (ج) المصادر التي لو أغفلت، لتعذر على القارئ الحصول عليها، (د) أشكال أو جداول يتعذر إقحامها في نص المؤلَّف... أو أي مواد أخرى تسهم في تعزيز قيمة العمل"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "أنقر (حفظ) لرفع الملف، ولك أن ترفع ملفات أخرى بعد ذلك تباعاً"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "هل أنت متأكد من رغبتك في المتابعة دون رفع الملف التكميلي الذي اخترته تواً؟"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "لم تتم إضافة أي ملف تكميلي إلى طلب النشر هذا بعد"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "الرجوع إلى الملفات التكميلية"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "هل أنت متأكد من رغبتك في حذف الملف التكميلي؟"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "رفع الملف التكميلي"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "أضف ملفاً تكميلياً"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "عدل على الملف التكميلي"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "البيانات الوصفية للملف التكميلي"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "لفهرسة هذه المادة التكميلية، زود الموقع بالبيانات الوصفية للملف التكميلي"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "الملف التكميلي"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "منشئ (أو مالك) الملف"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "أداة بحث"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "مواد بحث"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "نتائج بحث"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "نصوص"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "تحليل بيانات"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "مجموعة بيانات"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "نص مصدر"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "وصف موجز"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "قدم الملف إلى المحكمين (بدون البيانات الوصفية)، إذ أن ذلك لا يتعارض مع التحكيم السري"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "يستعمل مع المواد المنشورة رسمياً فقط"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "أرخ لجمع البيانات أو لإنشاء الأدوات"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "اسم الدراسة أو منبع الأصل الآخر"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "حدد إضافياً"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "لم يتم رفع أي ملف"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "لطفاً، أدخل عنوان هذا الملف التكميلي"
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "لطفاً، أدخل الموضوع"
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "لطفاً، أدخل وصفاً"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "معرَّف الملف التكميلي موجود سلفاً"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "معرِّف الملف التكميلي"
+
+msgid "author.submit.confirmationDescription"
+msgstr "لتقديم مؤلَّفِك إلى {$journalTitle} أنقر (إنهاء التقديم). جهة الاتصال الأساسية لطلب النشر ستتلقى إشعاراً عبر البريد الالكتروني، وستكون قادرة على متابعة مراحل النشر لدى هيئة التحرير عبر الولوج إلى موقع المجلة. نشكر لك إهتمامك بالنشر في {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "لم يتم ربط أي مرفقات بطلب النشر هذا"
+
+msgid "author.submit.filesSummary"
+msgstr "ملخص ملفات طلب النشر"
+
+msgid "author.submit.finishSubmission"
+msgstr "إنهاء التقديم"
+
+msgid "author.submit.submissionComplete"
+msgstr "التقديم قد إكتمل. نشكر لك إهتمامك بالنشر في {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "إرفع نسخة المؤلف"
+
+msgid "author.article.copyeditedFile"
+msgstr "ملف النسخة المحررة"
+
+msgid "author.article.authorRevisedFile"
+msgstr "ملف المؤلف"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "لا بد من إنشاء حساب في الموقع لغرض النشر في هذه المجلة. هذا يسمح لهيئة التحرير بمتابعة طلبك، كما يتيح لهم الاتصال بك عند تغير موقفه لديهم، أو إن لزم عليك تزويدهم بمعلومات إضافية"

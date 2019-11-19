@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:32+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Revije na tem spletišču"
+
+msgid "admin.settings.redirect"
+msgstr "Preusmeritev revije"
+
+msgid "admin.settings.options"
+msgstr "Nastavitve"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Vse zahteve in obiski domače strani bodo preusmerjene na to revijo. To je uporabno, če na spletišču gostuje le ena revija."
+
+msgid "admin.settings.noJournalRedirect"
+msgstr "Ne preusmeri"
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tVaša OJS namestitev beleži več kot le eno metriko uporabe, ki so prikazane v različnih kontekstih.\n"
+"\t\tV nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni red najbolj branih člankov ali vrstni red iskalnih rezultatof. Prosimo izberite eno od konfiguriranih metrik kot privzeto.\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr "Ste prepričani, da želite onemogočiti ta jezik? To lahko vpliva na revije, ki ga trenutno uporabljajo."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Prenos jezikovnega paketa iz Public Knowledge Project spletne strani trenutno ni mogoče zaradi:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Vaš srežnik nima ali ni mogoče uporabljati orodja \"tar\".</li>\n"
+"\t\t<li>OJS ne more spremeniti lokalne konfiguracijske datoteke, običajno \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Jezikovni paket lahko ročno prenesete iz <a href=\"http://pkp.sfu.ca\">PKP spletne strani</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "To bo privzeti jezik za spletišče in vse gostujoče revije."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Izberite vse jezike, ki bodo podprti na tem spletišču. Izbrani jeziki bodo na voljo za vse gostujoče revije in se bodo pojavili na meniju možnih jezikov na vsaki spletni strani (to lahko spremenite na specifičnih straneh revije). Če ne bo izbranih več jezikov, se na spletnih straneh ne bo pojavil meni za jezikovno nastavitev."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Označeni jeziki so lahko nepopolni."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Ste prepričani, da želite odstraniti ta jezik? To lahko vpliva na vse gostujoče revije."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Izberite dodatne jezike, ki jih želite imeti na voljo na spletišču. Vsak jezik mora biti nameščen pred uporabo. V OJS dokumentaciji lahko najdete več informacij o podpori novih jezikov."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Prenos jezika ni uspel. Spodaj je opis napak(e)."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Nameščen je bil jezik \"{$locale}\"."
+
+msgid "admin.languages.download"
+msgstr "Prenesi jezik"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Jezikovnega deskriptorja ni bilo mogoče odpreti na PKP spletni strani."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Dodajenje novega jezika v nastavitveno datoteko ni bilo mogoče, običajno je to  \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS uporabniška baza podatkov"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Omogoči sinhroniziranje uporabniških računov (če je podprto s tem avtentikacijskim dodatkom). Uporabniški račun bo avtomatsko posodobljen iz oddaljenega vira, ko se uporbnik prijavi v sistem. Hkrati se bodo vse spremembe uporabniškega računa (tudi gesla) v OJS, avtomatsko posodobile na oddaljenem viru. Če ta opcija ni omogočena, bo OJS uporabniški račun ločen od uporabniškega računa na oddaljenem viru."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Omogoči spreminjanje gesla (če je omogočeno s tem avtentikacijskim dodatkom). Ta opcija dovoljuje uporabnikom, da spremenijo svoje geslo v OJSju in da lahko uporabijo OJS-jevo funkcijo \"izgubljeno geslo\" za ponastavitev pozabljenega gesla. Če ta opcija ni omogočena, te funkcije uporabnikom, ki uporabljajo ta avtentikacijski vir, ne bodo na voljo."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Omogoči ustvarjanje uporabnikov (če je ta avtentikacijski dodatek to podpira). Uporabniki, ki bodo ustvarjeni v OJS s tem avtentikacijskim virom, bodo avtomatsko dodani tudi v oddaljenem avtentikacijskem viru, če še ne obstajajo. Če je ta vir privzet avtentikacijski vir, bodo enako dodani tudi vsi uporabniki, ki bodo svoj račun ustvarili v postopku uporabniške registracije."
+
+msgid "admin.systemVersion"
+msgstr "Verzija OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfiguracija"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Nastavitve OJS iz <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr "Avtomatsko boste določeni za upravitelja revije. Ko ustvarite revijo, se prijavite kot upravitelj in nadaljujte z nastavljanjem revije in določanjem uporabnikov."
+
+msgid "admin.journals.journalSettings"
+msgstr "Nastavitve revije"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nobena revija ni bila ustvarjena."
+
+msgid "admin.contexts.create"
+msgstr "Ustvari revijo"
+
+msgid "admin.journals.urlWillBe"
+msgstr "To naj bo ena kratka beseda ali kratica, ki identificira revijo. URL revije bo potem {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Naslov je obvezen."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Pot je obvezna."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Pot lahko vsebuje le alfanumerične znake, podčrtaj in pomišljaj ter se mora začeti in končati z alfanumeričnim znakom."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Izbrano pot že uporablja druga revija."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Omogoči, da se revija pojavlja javno na spletišču"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Opis revije"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Obstoječa pot revije ali pot, ki jo želite ustvariti (npr. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Uvozi naročnine"
+
+msgid "admin.journals.transcode"
+msgstr "Prekodiraj metapodatke prenesenih člankov iz ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generiraj kodo za preslikavo OJS 1 URL-ev v OJS 2 URL-je"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Uvozna pot je obvezna"
+
+msgid "admin.journals.importErrors"
+msgstr "Uvoz ni uspel v celoti"
+
+msgid "admin.mergeUsers"
+msgstr "Združi uporabnike"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Združi uporabnika"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Izberite uporabnika, ki mu želite pripisati vsa avtorska dela, uredniške zadolžitve, itd. prejšnjega uporabnika."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Izberite račun uporabnika (ali več), ki jih želite zružiti v drug uporabniški račun (npr. če kdo uporablja več uporabniških računov). Vsi oddani članki, zadolžitve in ostalo, prvoizbranega uporabniškega računa (ali več njih) bodo zbrisani in preneseni na drug uporabniški račun."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Vsi evidentirani uporabniki"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Ali ste prepričani, da želite združiti izbran uporabniški račun (ali več njih) {$oldAccountCount} v uporabniški račun z imenom \"{$newUsername}\"? Izbrani uporabniški računi {$oldAccountCount} ne bodo več obstajali. Ta akcija je nerevezibilna!"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ni vpisanih uporabnikov."
+
+msgid "admin.categories"
+msgstr "Kategorije"
+
+msgid "admin.categories.enable.description"
+msgstr "Administrator spletišča lahko definira množico kategorij, ki pomagajo organizirati veliko število revij. Glavni uredniki revij lahko izberejo več teh kategorij za vsako revijo. Bralci lahko brskajo po revijah s pomočjo teh kategorij."
+
+msgid "admin.categories.disableCategories"
+msgstr "Ne organiziraj revij po kategorijah."
+
+msgid "admin.categories.enableCategories"
+msgstr "Dovoli glavnim urednikom revij, da jih organizirajo po kategorijah."
+
+msgid "admin.categories.editTitle"
+msgstr "Uredi kategorije"
+
+msgid "admin.categories.createTitle"
+msgstr "Ustvari kategorijo"
+
+msgid "admin.categories.create"
+msgstr "Ustvari novo kategorijo"
+
+msgid "admin.categories.noneCreated"
+msgstr "Nobene kategorije ni bilo ustvarjene"
+
+msgid "admin.categories.confirmDelete"
+msgstr "Ste prepričani, da želite zbrisati to kategorijo?"
+
+msgid "admin.categories.name"
+msgstr "Ime"
+
+msgid "admin.categories.nameRequired"
+msgstr "Ime kategorije je obvezno."
+
+msgid "admin.presses.createInstructions"
+msgstr "Avtomatsko boste vpisani kot upravnik revije. Ko bo revija ustvarjena, boste preusmerjeni na čarovnika za dokončanje vseh nastavitev revije."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Opomnik za potek naročnine"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Obvestilo o prostem dostopu"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Opomnik za recenzijo"

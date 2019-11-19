@@ -1,0 +1,1881 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "مجله جاری:"
+
+msgid "context.select"
+msgstr "تعویض به مجله دیگر"
+
+msgid "navigation.categories"
+msgstr "حوزه"
+
+msgid "navigation.categories.browse"
+msgstr "پیمایش"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "لطفاً بر روی  آیکون کلیک کنید تا به فرم داوری بروید"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "لطفاً فیلدهای ضروری را پر کنید."
+
+msgid "common.software"
+msgstr "سامانه مجله باز"
+
+msgid "common.confirmComplete"
+msgstr "آیا مطمئن هستید که می‌خواهید این وظیفه را به عنوان تکمیل شده علامت گذاری نمایید؟ پس از این عمل دیگر قادر به تغییر آن نخواهید بود."
+
+msgid "common.payment"
+msgstr "پرداخت"
+
+msgid "common.payments"
+msgstr "پرداخت‌ها"
+
+msgid "common.homePageHeader.altText"
+msgstr "بخش سرتیتر صفحه اصلی"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "تصویر صفحه خانگی مجله"
+
+msgid "navigation.journalHelp"
+msgstr "راهنمای مجله"
+
+msgid "navigation.current"
+msgstr "شماره جاری"
+
+msgid "navigation.otherJournals"
+msgstr "مجلات دیگر"
+
+msgid "navigation.browseByIssue"
+msgstr "مرور بر اساس شماره"
+
+msgid "navigation.browseByAuthor"
+msgstr "مرور بر اساس نویسنده"
+
+msgid "navigation.infoForAuthors"
+msgstr "برای نویسندگان"
+
+msgid "navigation.infoForLibrarians"
+msgstr "برای کتابداران"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "دستورالعمل‌های مربوط به تضاد منافع."
+
+msgid "navigation.infoForAuthors.long"
+msgstr "اطلاعات برای نویسندگان"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "اطلاعات برای کتابداران"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "انتساب نشده"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "انتساب نشده"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "مقالات ارسالی در حال ویراستاری"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "در حال ویراستاری"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "مقالات ارسالی در حال داوری"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "در حال داوری"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "بایگانی"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "بایگانی‌ها"
+
+msgid "common.queue.long.active"
+msgstr "مقالات ارسالی فعال"
+
+msgid "common.queue.short.active"
+msgstr "فعال"
+
+msgid "common.queue.long.completed"
+msgstr "تکمیل شده"
+
+msgid "common.queue.short.completed"
+msgstr "بایگانی"
+
+msgid "section.section"
+msgstr "نوع مقاله"
+
+msgid "section.sections"
+msgstr "انواع مقالات"
+
+msgid "section.title"
+msgstr "عنوان نوع مقاله"
+
+msgid "section.abbreviation"
+msgstr "اختصار"
+
+msgid "section.abbreviation.example"
+msgstr "(برای مثال م ق = مقاله)"
+
+msgid "article.article"
+msgstr "مقاله"
+
+msgid "article.articles"
+msgstr "مقالات"
+
+msgid "common.publication"
+msgstr "مقاله"
+
+msgid "common.publications"
+msgstr "مقالات"
+
+msgid "article.submissionId"
+msgstr "شناسه مقاله ارسالی"
+
+msgid "article.title"
+msgstr "عنوان"
+
+msgid "article.authors"
+msgstr "نویسندگان"
+
+msgid "article.indexingInformation"
+msgstr "اطلاعات نمایه‌ای"
+
+msgid "article.metadata"
+msgstr "فراداده"
+
+msgid "article.journalSection"
+msgstr "نوع مقاله"
+
+msgid "article.file"
+msgstr "فایل"
+
+msgid "article.suppFile"
+msgstr "فایل مکمل"
+
+msgid "article.suppFiles"
+msgstr "فایل(‌های) مکمل"
+
+msgid "article.suppFilesAbbrev"
+msgstr "فایل‌های مکمل"
+
+msgid "article.discipline"
+msgstr "رشته و گرایش علمی"
+
+msgid "article.subject"
+msgstr "کلمات کلیدی"
+
+msgid "article.coverage"
+msgstr "پوشش"
+
+msgid "article.type"
+msgstr "نوع، روش یا راهکار"
+
+msgid "article.language"
+msgstr "زبان مقاله"
+
+msgid "article.sectionEditor"
+msgstr "دبیر بخش"
+
+msgid "article.commentsToEditor"
+msgstr "نظرات نویسنده"
+
+msgid "article.submission"
+msgstr "مقاله ارسالی"
+
+msgid "article.submissions"
+msgstr "مقالات ارسالی"
+
+msgid "article.details"
+msgstr "جزئیات"
+
+msgid "article.abstract"
+msgstr "چکیده"
+
+msgid "article.coverPage.altText"
+msgstr "تصویر روی جلد"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "دسترسی آزاد"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "دسترسی محدود"
+
+msgid "article.comments.sectionDefault"
+msgstr "پیش‌فرض"
+
+msgid "article.comments.disable"
+msgstr "غیرفعال"
+
+msgid "article.comments.enable"
+msgstr "فعال"
+
+msgid "article.fontSize"
+msgstr "اندازه فونت"
+
+msgid "article.fontSize.small.altText"
+msgstr "کوچک"
+
+msgid "article.fontSize.medium.altText"
+msgstr "متوسط"
+
+msgid "article.fontSize.large.altText"
+msgstr "بزرگ"
+
+msgid "article.return"
+msgstr "بازگشت به جزئیات مقاله"
+
+msgid "submission.submissionEditing"
+msgstr "ویرایش مقاله ارسالی"
+
+msgid "submission.changeSection"
+msgstr "تغییر نوع مقاله به"
+
+msgid "submission.sent"
+msgstr "ارسال شد"
+
+msgid "submission.editorDecision"
+msgstr "تصمیم دبیر"
+
+msgid "submission.round"
+msgstr "نوبت داوری {$round}"
+
+msgid "submission.editorReview"
+msgstr "داوری دبیر"
+
+msgid "submission.notifyAuthor"
+msgstr "اطلاع به نویسنده"
+
+msgid "submission.notifyEditor"
+msgstr "اطلاع به دبیر"
+
+msgid "submission.editorAuthorRecord"
+msgstr "سوابق مکاتبات دبیر / نویسنده"
+
+msgid "submission.reviewersVersion"
+msgstr "نسخه حاشیه نویسی شده داور"
+
+msgid "submission.postReviewVersion"
+msgstr "نسخه پس از داوری"
+
+msgid "submission.editorVersion"
+msgstr "نسخه دبیر"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "نسخه اصلاح شده فایل توسط نویسنده"
+
+msgid "submission.authorVersion"
+msgstr "نسخه نویسنده"
+
+msgid "submission.copyediting"
+msgstr "ویراستاری"
+
+msgid "submission.copyedit"
+msgstr "ویرایش"
+
+msgid "submission.proofreading"
+msgstr "بازبینی نهائی"
+
+msgid "submission.scheduling"
+msgstr "زمان‌بندی"
+
+msgid "submission.scheduledIn"
+msgstr "زمان‌بندی شده برای انتشار در  {$issueName}"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.sec"
+msgstr "نوع"
+
+msgid "submissions.step1"
+msgstr "مرحله 1"
+
+msgid "submissions.step3"
+msgstr "مرحله 3"
+
+msgid "submissions.queuedReview"
+msgstr "در نوبت داوری"
+
+msgid "submissions.published"
+msgstr "چاپ شده"
+
+msgid "submissions.initial"
+msgstr "اولیه"
+
+msgid "submissions.proofread"
+msgstr "بازبینی"
+
+msgid "submissions.initialProof"
+msgstr "بازبینی اولیه"
+
+msgid "submissions.postAuthor"
+msgstr "پس از نویسنده"
+
+msgid "submissions.reviewRound"
+msgstr "دور داوری"
+
+msgid "submissions.proof"
+msgstr "بازبینی"
+
+msgid "submissions.editorDecision"
+msgstr "تصمیم دبیر"
+
+msgid "submissions.editorRuling"
+msgstr "اتخاذ تصمیم دبیر"
+
+msgid "submission.eventLog"
+msgstr "سوابق مقاله"
+
+msgid "submissions.copyeditComplete"
+msgstr "ویراستاری شده"
+
+msgid "submissions.layoutComplete"
+msgstr "صفحه بندی شده"
+
+msgid "submissions.proofreadingComplete"
+msgstr "بازبینی"
+
+msgid "journal.currentIssue"
+msgstr "شماره کنونی"
+
+msgid "context.contexts"
+msgstr "مجلات"
+
+msgid "journal.path"
+msgstr "مسیر"
+
+msgid "context.context"
+msgstr "مجله"
+
+msgid "journal.issn"
+msgstr "شاپا"
+
+msgid "journal.viewAllIssues"
+msgstr "نمایش همه‌ی شماره‌ها"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "وارد کردن کاربران بدون گروه کاربری در این مجله"
+
+msgid "user.profile.profileImage"
+msgstr "تصویر پروفایل"
+
+msgid "user.showAllJournals"
+msgstr "مجلات مرا نشان بده"
+
+msgid "user.registerForOtherJournals"
+msgstr "ثبت‌نام برای دیگر مجلات"
+
+msgid "user.reviewerPrompt"
+msgstr "آیا مایل هستید با این مجله در امر داوری مقالات همکاری نمایید؟"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "بله. درخواست نقش {$userGroup}"
+
+msgid "user.register.contextsPrompt"
+msgstr "تمایل دارید که در کدام یک از مجلات این سایت ثبت‌نام کنید؟"
+
+msgid "user.register.otherContextRoles"
+msgstr "درخواست نقش های زیر."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "اگر تمایل دارید که به عنوان داور در این مجله ثبت‌نام کنید لطفاً زمینه های کاری خود را وارد کنید."
+
+msgid "user.myJournals"
+msgstr "مجلات من"
+
+msgid "user.manageMySubscriptions"
+msgstr "مدیریت اشتراکات من"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "حساب کاربری شما در حال حاضر وابسته به هیچ مجله ای نیست. لطفا یک مجله را انتخاب کنید"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "حساب کاربری شما در حال حاضر هیچ نقشی در این مجله ندارد. لطفا یکی از موارد زیر را انتخاب کنید"
+
+msgid "user.noRoles.submitArticle"
+msgstr "ارسال پروپوزال"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "ارسال مقاله: در حال حاضر ثبت‌نام نویسندگان غیرفعال است"
+
+msgid "user.noRoles.regReviewer"
+msgstr "ثبت‌نام به عنوان داور"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "ثبت‌نام به عنوان داور: در حال حاضر ثبت‌نام داوران غیرفعال است"
+
+msgid "user.role.manager"
+msgstr "مدیر مجله"
+
+msgid "user.role.sectionEditor"
+msgstr "دبیر مقاله"
+
+msgid "user.role.subscriptionManager"
+msgstr "مدیر اشتراک"
+
+msgid "user.role.managers"
+msgstr "مدیران مجله"
+
+msgid "user.role.subEditor"
+msgstr "دبیر بخش"
+
+msgid "user.role.subEditors"
+msgstr "دبیران بخش"
+
+msgid "user.role.subscriptionManagers"
+msgstr "مدیران اشتراک"
+
+msgid "user.role.assistant"
+msgstr "دستیار"
+
+msgid "user.role.journalAssistant"
+msgstr "دستیار مجله"
+
+msgid "user.role.journalAssistants"
+msgstr "دستیاران مجله"
+
+msgid "issue.issue"
+msgstr "شماره"
+
+msgid "issue.issues"
+msgstr "شماره‌ها"
+
+msgid "issue.title"
+msgstr "عنوان"
+
+msgid "issue.volume"
+msgstr "دوره"
+
+msgid "issue.number"
+msgstr "شماره"
+
+msgid "issue.vol"
+msgstr "دوره"
+
+msgid "issue.no"
+msgstr "شماره"
+
+msgid "issue.year"
+msgstr "سال"
+
+msgid "issue.noIssues"
+msgstr "خالی"
+
+msgid "issue.toc"
+msgstr "فهرست مطالب"
+
+msgid "issue.abstract"
+msgstr "چکیده"
+
+msgid "issue.coverPage.altText"
+msgstr "پشت جلد"
+
+msgid "issue.fullIssue"
+msgstr "شماره کامل"
+
+msgid "issue.nonpdf.title"
+msgstr "دانلود شماره"
+
+msgid "issue.viewIssue"
+msgstr "مشاهده شماره"
+
+msgid "issue.return"
+msgstr "بازگشت به جزئیات شماره"
+
+msgid "subscriptionTypes.currency"
+msgstr "واحد پول"
+
+msgid "subscriptionTypes.year"
+msgstr "سال"
+
+msgid "subscriptionTypes.years"
+msgstr "سال ها"
+
+msgid "subscriptionTypes.month"
+msgstr "ماه"
+
+msgid "subscriptionTypes.months"
+msgstr "ماه ها"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "منقضی نشده"
+
+msgid "subscriptionTypes.format"
+msgstr "ساختار"
+
+msgid "subscriptionTypes.format.online"
+msgstr "آنلاین"
+
+msgid "subscriptionTypes.format.print"
+msgstr "چاپ"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "چاپ و آنلاین"
+
+msgid "subscriptions.inactive"
+msgstr "غیرفعال"
+
+msgid "subscriptions.status"
+msgstr "وضعیت"
+
+msgid "subscriptions.status.active"
+msgstr "فعال"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "نیازمند اطلاعات"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "نیازمند تایید"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "منتظر پرداخت دستی"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "منتظر پرداخت آنلاین"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "شما هیچ اشتراک فعالی ندارید."
+
+msgid "subscriptions.status.other"
+msgstr "غیره، نگاه کنید به نکات"
+
+msgid "subscriptions.individualDescription"
+msgstr "اشتراک فردی نیاز به ورود به سیستم دارد تا به محتوای اشتراک یافته دسترسی یابید."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "اشتراک سازمانی نیازی به ورود به سیستم ندارد. دامنه و یا آدرس IP کاربر برای تایید هویت وی بکار خواهد رفت."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>مهم:</strong> اشتراک سازمانی خریداری شده از طریق آنلاین قبل از فعال شدن، نیاز به تایید دامنه یا آدرس IP دارد."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "رخدادهای ارسال مقاله"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "مقاله اراسل شد."
+
+msgid "submission.event.general.issueScheduled"
+msgstr "مقاله ارسالی در نوبت چاپ قرار گرفت."
+
+msgid "submission.event.general.issueAssigned"
+msgstr "مقاله ارسالی در یک شماره قرار داده شد.."
+
+msgid "submission.event.general.articlePublished"
+msgstr "مقاله چاپ شد"
+
+msgid "submission.event.author.authorRevision"
+msgstr "اصلاح نویسنده"
+
+msgid "submission.event.general.authorRevision"
+msgstr "فایل اصلاح شده توسط نویسنده آپلود شد."
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "دبیر مقاله ارسالی تعیین شد"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "دبیر تعیین شده لغو شد."
+
+msgid "submission.event.editor.editorDecision"
+msgstr "تصمیم دبیر"
+
+msgid "submission.event.editor.editorFile"
+msgstr "فایل دبیر"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "مقاله ارسالی بایگانی شد"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "بازیابی مقاله ارسالی از بایگانی"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "ویراستار مقاله ارسالی تعیین شد"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "ویراستار انتخاب شده لغو شد."
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "ویراستاری آغاز شد"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "فایل اصلاحات ویراستار به روز رسانی شد"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "ویراستاری اولیه تکمیل شد"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "ویراستاری نهایی تکمیل شد"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "فایل ویراستاری نهایی به روز رسانی شد"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "انتساب بازبین نهایی به مقاله"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "لغو بازبین"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "شروع بازبینی نهایی"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "نسخه بازبینی نهایی"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "انتساب بازبین نهایی انجام شد"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "تعیین صفحه‌آرا"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "لغو صفحه‌آرا"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "شروع صفحه‌آرائی"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "صفحه‌آرا کلیشه چاپی به روز رشانی شد."
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "انتساب صفحه‌آرا انجام شد."
+
+msgid "reader.subscribersOnly"
+msgstr "مخصوص مشترکین"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "برای دستیابی به این مورد نیاز به اشتراک دارید. برای تأیید اشتراک ابتدا وارد سیستم شوید."
+
+msgid "reader.openAccess"
+msgstr "دسترسی آزاد"
+
+msgid "reader.subscriptionAccess"
+msgstr "دسترسی با اشتراک"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "دسترسی با اشتراک یا نقدی"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "نظرات در مورد مقاله"
+
+msgid "comments.authenticated"
+msgstr "توسط  <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "مرتب‌سازی نتایج برحسب"
+
+msgid "search.results.orderBy.article"
+msgstr "عنوان مقاله"
+
+msgid "search.results.orderBy.author"
+msgstr "نویسنده"
+
+msgid "search.results.orderBy.date"
+msgstr "تاریخ انتشار"
+
+msgid "search.results.orderBy.issue"
+msgstr "شماره"
+
+msgid "search.results.orderBy.journal"
+msgstr "عنوان مجله"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "میزان محبوبیت (در کل مدت)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "میزان محبوبیت (در ماه گذشته)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "میزان ارتباط"
+
+msgid "search.results.orderDir.asc"
+msgstr "صعودی"
+
+msgid "search.results.orderDir.desc"
+msgstr "نزولی"
+
+msgid "search.results.similarDocuments"
+msgstr "اسناد مشابه"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr "مشخص نمودن یک منبع احراز هویت پیش‌فرض جدای از OJS دارای مزیت‌های زیر است:\t  <ul>\t\t  <li>\t\t  چنانچه کاربری بخواهد در این سایت با نام کاربری که در منبع احراز هویت خارجی  و نه در خود سیستم OJS وجود دارد ثبت‌نام کند، ثبت‌نام زمانی انجام خواهد شد که رمز عبور مناسب سیستم خارجی را وارد کند.\t\t  </li>\t  </ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr "<h4>\t  توجه!\t  </h4>\t  <p>\t  سیستم به‌طور خودکار نمی‌تواند بر روی فایل پیکربندی بنویسد. برای اعمال تنظیمات مورد نظر می‌بایست خود فایل\t  <tt>config.inc.php</tt>\t  در یک ویرایشگر مناسب ویرایش کرده و تنظیمات مورد نظر خود را اعمال کنید.\t  </p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "مدیریت اشتراکها"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "اشتراکات شخصی"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "اشتراکات سازمانی"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "انواع اشتراک"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "افزونه کلیشه چاپی مقاله"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "افزونه‌های کلیشه چاپی مقاله امکان افزون فرمت‌های مختلف به کلیشه چاپی مقاله را فراهم می‌سازند."
+
+msgid "plugins.categories.auth.description"
+msgstr "افزونه‌های احراز هویت عمل تأیید هویت را به سیستم‌های خارجی احراز هویت مانند سرور LDAP واگذار می‌کنند."
+
+msgid "plugins.categories.generic.description"
+msgstr "افزونه‌های عمومی برای گسترش سیستم مجله‌های آزاد به روش‌های مختلف که توسط افزونه‌های دیگر پشتیبانی نمی‌شوند به کار می‌روند"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr "<h3>\t  بیانیه حق نشر پیشنهادی Creative Commons\t  </h3>\t  <h4>\t  ۱. سیاست پیشنهادی برای مجلاتی که دسترسی آزاد عرضه می‌کنند\t  </h4>\t  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:\t  <ol type=\"a\">\t\t  <li>\t\t  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند. هردو این امر تحت مجوز\t  <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">\t  واگذاری Creative Commons\t  </a>\t  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.\t  </li>\t\t  <li>\t\t  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.\t  </li>\t\t  <li>\t\t  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله\t  (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)</li>\t  </ol>\t\t<h4>\t  سیاست پیشنهادی برای مجلاتی که دسترسی آزاد با تأخیر عرضه می‌کنند\t  </h4>\t  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:\t  <ol type=\"a\">\t\t  <li>\t\t  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند و این مقاله [تأخیر زمانی] مدت پس از چاپ تحت مجوز\t  <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">\t  واگذاری Creative Commons\t  </a>\t  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.\t\t  </li>\t\t  <li>\t\t\t  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.\t\t  </li>\t\t  <li>\t\t\t  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله\t  (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)\t\t  </li>\t  </ol>"
+
+msgid "manager.setup.citations.enable"
+msgstr "فعال‌سازی دستیار نشانه‌گذاری ارجاعات"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr "مراحل: نوبت مقاله ارسالی &lt; داوری مقاله ارسالی &lt;  ویراستاری مقاله ارسالی &lt; فهرست مقالات.<br /><br />\t  انتخاب مدلی برای اداره این جوانب روند دبیری. (برای انتساب یک سردبیر و دبیر بخش به قسمت دبیران در مدیریت مجله بروید.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr "<p>\t  برای اینکه خوانندگان بتوانند نسخه آنلاین مراجعی که نویسنده ارجاع داده است را پیدا کنند, گزینه‌های زیر موجود می‌باشد.\t  </p>\t\t<ol>\t\t  <li><strong>\t  افزودن یک ابزار مطالعه\t  </strong><p>\t  مدیر مجله می‌تواند لینک«یافتن مراجع» را به لیست ابزارهای مطالعه همراه با مقاله چاپ شده بی افزاید تا خوانندگان بتوانند متن ارجاع به یک مرجع را کپی کرده و سپس در پایگاه‌های اطلاعاتی به جستجوی آن بپردازند.\t  </p></li>\t\t  <li><strong>\t  نهادن لینک مراجع در متن مقاله\t  </strong><p>\t  صفحه‌آرا می‌تواند لینک آنلاین مراجع مختلف را با دستورالعمل زیر در داخل مقاله قرار دهد.\t  </p></li>\t  </ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr "آیا این کاربر غیرفعال شود؟ این اقدام از ورود کاربر به سیستم جلوگیری می‌کند. می‌توانید دلیل این اقدام را به کاربر خاطر نشان سازید."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr "متأسفانه شما نمی‌توانید این کاربر را تغییر دهید. علت این موضوع ممکن است یکی از موارد زیر باشد:  <ul>  <li>کاربر مورد نظر مدیر سایت است</li>  <li>کاربر مربوط به مجله دیگری است که شما در آن نقش مدیریتی ندارید</li>  </ul> این عمل باید توسط مدیر سایت انجام شود"
+
+msgid "editor.submissionReview.notes"
+msgstr "<ol>\t\t  <li>موارد پر رنگ نشان دهنده لزوم انجام کاری توسط دبیر است. <ul> <li class=\"highlightReviewerNotNotified\">داور انتساب داده شده است اما از طریق ایمیل به ایشان اطلاع‌رسانی انجام نشده است</li> <li class=\"highlightNoDecision\">تمام داوران نظرات خود را اعمال کرده‌اند اما هنوز تصمیمی اتخاذ نشده است</li> <li class=\"highlightRevisedCopyUploaded\">نویسنده مقاله اصلاح شده را آپلود کرده است</li> <li \"highlightReviewerConfirmationOverdue\">مهلت داور برای تأیید اصلاحات  سپری شده است</li> <li class=\"highlightReviewerCompletionOverdue\">مهلت داور برای تکمیل داوری سپری شده است</li> </ul> </li>\t\t <li>فیلد «مهلت» وقتی تکمیل می‌شود که داور قبول کند که داوری را انجام دهد. در این صورت نشان دهنده تعداد هفته مانده به پایان مهلت می‌باشد. اگر منفی باشد هفته‌های گذشته از مهلت را نشان می‌دهد.</li>\t  </ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr "<ol>\t\t  <li>موارد برجسته شده، کارهایی است که باید توسط دبیر انجام گیرد:\t\t\t  <ul>  <li class=\"highlightCopyediting\">tفعالیت‌های ضروری در مرحله ویراستاری</li>  <li class=\"highlightLayoutEditing\"> tفعالیت‌های ضروری در مرحله صفحه‌آرایی</li>  <li class=\"higlightProofreading\"> tفعالیت‌های ضروری در مرحله بازبینی نهایی</li>\t\t\t  </ul>\t\t  </li>\t  </ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "موارد جاری واگذار شده از سوی سردبیر"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "موارد کامل شده واگذار شده از سوی سردبیر"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "موردی انتساب نشده است"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "چنانچه بخواهید دوباره به این ویراستار اطلاع دهید عمل انتساب ویراستار از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "چنانچه بخواهید دوباره به این نویسنده اطلاع دهید عمل انتساب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "چنانچه بخواهید دوباره به این صفحه‌آرا اطلاع دهید عمل انتساب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "چنانچه بخواهید دوباره به این بازبین نهائی اطلاع دهید عمل انتساب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "انصراف"
+
+msgid "sectionEditor.regrets.title"
+msgstr "موارد عدم تمایل برای داوری، موارد کنسل شده و  دورهای قبلی مقاله با شناسه {$submissionId}"
+
+msgid "sectionEditor.regrets"
+msgstr "موارد انصراف"
+
+msgid "sectionEditor.regrets.link"
+msgstr "مشاده: موارد عدم تمایل به انجام داوری، موارد کنسل شده ،دورهای قبل."
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "دور داوری {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "تصمیم دبیر, دور: {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "موارد عدم تمایل به انجام داوری و موارد کنسل شده"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "انصراف"
+
+msgid "sectionEditor.regrets.result"
+msgstr "نتیجه"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "اعطای نقش داور به کاربران موجود"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "ایجاد داور جدید"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "انتسابات فعال دبیری"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "تکمیل انتسابات دبیری"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "هیچ انتساب فعالی وجود ندارد"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "انتسابات صفحه‌آرا"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "آپلود کلیشه چاپی"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "جایگزینی فایل"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "جایگزینی فایل مکمل"
+
+msgid "submission.layout.imageInvalid"
+msgstr "فرمت تصویر انتخاب شده نامناسب است. فقط gif, jpg, png"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "این کلیشه چاپی در یک وب‌سایت جداگانه در دسترس خواهد بود."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "آدرس محتوای خارجی"
+
+msgid "reviewer.pendingReviews"
+msgstr "مقالات منتظر داوری"
+
+msgid "reviewer.completedReviews"
+msgstr "انجام شده"
+
+msgid "reviewer.averageQuality"
+msgstr "امتیاز"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "فایلی که باید داوری شود"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "اطلاع به دبیر"
+
+msgid "reviewer.article.canDoReview"
+msgstr "داوری را انجام می‌دهم"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "داوری را انجام نمی‌دهم"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "در صورت تقبل داوری فایل مقاله قابل رؤیت است"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "دبیر مقاله ارسالی"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "نظر داوری خود را در این قسمت وارد کنید"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "وارد کردن توسط دبیر"
+
+msgid "reviewer.article.sendReminder"
+msgstr "ارسال ایمیل یادآور"
+
+msgid "reviewer.article.automatic"
+msgstr "(خودکار)"
+
+msgid "reviewer.article.recommendation"
+msgstr "توصیه"
+
+msgid "reviewer.article.submitReview"
+msgstr "ارسال داوری به دبیر"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "نظرات"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "فایل‌های آپلود شده"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "نسخه آپلود شده به‌وسیله داور"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "در صورت تمایل می‌توانید در فایل اصلی مقاله مطالبی به عنوان یادداشت تایپ کنید و سپس فایل را آپلود کنید."
+
+msgid "reviewer.article.schedule.request"
+msgstr "درخواست دبیر"
+
+msgid "reviewer.article.schedule.response"
+msgstr "پاسخ شما"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "داوری ارسال شد"
+
+msgid "reviewer.article.schedule.due"
+msgstr "مهلت داوری"
+
+msgid "reviewer.article.decision.accept"
+msgstr "پذیرش مقاله ارسالی"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "اصلاحات لازم است"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "ارسال برای داوری مجدد"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "ارسال به مجله دیگر"
+
+msgid "reviewer.article.decision.decline"
+msgstr "رد مقاله ارسالی"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "نظراتم را ببینید"
+
+msgid "reviewer.article.schedule"
+msgstr "زمان‌بندی کردن"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "مقالات ارسالی که باید داوری شود"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "زمان‌بندی داوری"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "مراحل داوری"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "دستورالعمل داوری"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "راهنمای داوری شامل ضوابط داوری در مورد مناسب بودن مقاله جهت چاپ در مجله می‌باشد، و ممکن است شامل دستورالعمل‌های خاص مجله برای تهیه متن مناسب داوری نیز بشود. در روند داوری به داوران دو جعبه متن ارائه می‌شود که اولی برای نویسنده و دبیر و دومی برای دبیر است. همچنین مدیر مجله می‌تواند یک فرم داوری را با استفاده از ابزار موجود در فرم‌های داوری طراحی کند. در تمام این حالات انتخاب نهائی با دبیر است که آیا حاصل داوری یک داور را در معرض دید نویسنده قرار بدهد یا خیر."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "خبر به دبیر مقاله"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "که آیا این داوری را به عهده می‌گیرید"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "چنانچه داوری را به عهده می‌گیرید, متن راهنمای داوری در پائین این صفحه را مطالعه فرمایید."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "با کلیک بر روی نام فایل‌های متعلق به این مقاله ارسالی می‌توانید آن‌ها را دانلود کرده و بر روی کامپیوتر خود باز کنید و یا آن‌ها را پرینت کنید"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "هرگونه تضاد منافعی که در رابطه با این مقاله یا پژوهش دارید را اعلام نمایید. برای اطلاعات بیشتر لطفاً به آدرس زیر مراجعه کنید:  <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">سیاست تضاد منافع</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "تضاد منافع"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "بر روی آیکون کلیک کرده و سپس نتیجه داوری خود را در مورد این مقاله وارد کنید"
+
+msgid "reviewer.article.uploadFile"
+msgstr "همچنین می‌توانید فایل یا فایل‌هایی را نیز آپلود کنید"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "یک توصیه را انتخاب کنید."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "تنظیم یا به‌روزرسانی توصیه داور"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "هیچ توصیه‌ای انتخاب نشده است.  می‌بایست یکی از توصیه‌ها را برای ثبت، انتخاب کنید."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "در صورتی که تصمیم خود را ثبت کردید دیگر نمی‌توانید تغییری در این داوری بدهید.  آیا می‌خواهید این کار را انجام دهید؟"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "فایل به ویراستار"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "فایل ویراستار"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "فایل ویراستار"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "هیچ بازبینی نهائی انتساب نشده است"
+
+msgid "author.submit.uploadInstructions"
+msgstr "برای آپلود مقاله خود به این مجله مراحل زیر را انجام دهید.\t<ol>  <li>در همین صفحه بر روی پیمایش کلیک کنید و یا نام و آدرس کامل فایل را وارد کنید. با کلیک بر روی پیمایش، پنجره انتخاب فایل باز می‌شود که از طریق آن می‌توانید فایل مورد نظرتان را بر روی کامپیوتر خود پیدا کنید.</li>  <li>پس از یافتن فایل مقاله بر روی آن کلیک کنید تا انتخاب شود.</li>  <li>بر روی Open در پنجره انتخاب فایل کلیک کنید. در این صورت نام و آدرس کامل فایل در قسمت مربوطه در همین صفحه وارد می‌شود.</li>  <li>بر روی آپلود در همین صفحه کلیک کنید. بدین ترتیب فایل مورد نظر از کامپیوتر شما بر روی وب‌سایت مجله آپلود می‌شود و نام آن مطابق با استاندارد مجله تغییر پیدا می‌کند.</li>  <li>پس از آپلود فایل‌های مقاله بر روی «ذخیره و ادامه» در پائین همین صفحه کلیک کنید.</li>  </ol> با کلیک کردن بر روی نام فایل می‌توانید آن را دانلود و مشاهده کنید. در صورتی روند انتخاب و آپلود فایل را تکرار کنید فایل جدید جایگزین فایل قبلی می‌شود.  فایل‌های تکمیلی در قسمت فایل‌های مکمل در مرحله بعد قابل افزودن است. در صورت بروز هر گونه مشکل هنگام آپلود فایل لطفاً با <a href=\"mailto:{$supportEmail}\">{$supportName}</a> از طریق ایمیل و یا با تلفن {$supportPhone} تماس حاصل نمایید."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr " تا قبل از مشخص نمودن نسخه داوری درخواست داوری مقدور نیست."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "تا قبل از مشخص نمودن نسخه ویراستار،  درخواست ویراستاری مقدور نیست."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "تا قبل از مشخص نمودن نسخه ویراستار، درخواست ویراستاری مقدور نیست."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "ویراستاری اولیه"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "ویراستاری دبیر"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "ویراستاری نویسنده"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "ویراستاری نهائی"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "نسخه ویراستار"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "انتخاب ویراستار"
+
+msgid "submission.copyedit.useFile"
+msgstr "استفاده از فایل"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "نظرات ویراستار"
+
+msgid "submission.copyedit.instructions"
+msgstr "دستورالعمل ویراستاری"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "هیچ (لطفا ابتدا آخرین نسخه ویراستاری شده را به عنوان نسخه صفحه‌آرا آپلود کنید تا بتوانید در خواست صفحه‌آرائی ارسال کنید)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "شناسه عمومی کلیشه چاپی"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "این شناسه عمومی کلیشه چاپی قبلا بکار رفته است"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "انتساب صفحه‌آرا"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "جایگزینی صفحه‌آرا"
+
+msgid "submission.layout.layoutComments"
+msgstr "نظرات صفحه‌آرا"
+
+msgid "submission.layout.instructions"
+msgstr "دستوالعمل صفحه‌آرائی"
+
+msgid "submission.layout.referenceLinking"
+msgstr "لینک به مراجع"
+
+msgid "submission.proofreadingComments"
+msgstr "نظرات بازبین نهائی"
+
+msgid "submission.proofread.corrections"
+msgstr "تصحیحات بازبین نهائی"
+
+msgid "submission.proofread.instructions"
+msgstr "دستورالعمل بازبینی نهائی"
+
+msgid "submission.logType.article"
+msgstr "مقاله"
+
+msgid "submission.logType.author"
+msgstr "نویسنده"
+
+msgid "submission.logType.editor"
+msgstr "دبیر"
+
+msgid "submission.logType.review"
+msgstr "داور"
+
+msgid "submission.logType.copyedit"
+msgstr "ویراستار"
+
+msgid "submission.logType.layout"
+msgstr "صفحه‌آرا"
+
+msgid "submission.logType.proofread"
+msgstr "بازبین نهائی"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "مکاتبات دبیر/ نویسنده"
+
+msgid "submission.comments.copyeditComments"
+msgstr "نظرات ویراستار"
+
+msgid "submission.comments.viewableDescription"
+msgstr "این نظرات را میتوانید به رویت نویسنده برسانید.<br />  پس از ذخیره باز هم میتوانید به این کار ادامه داده و نظرات بیشتری وارد کنید"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "برای نویسنده و دبیر"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "فقط برای دبیر"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "پس از ارسال این ایمیل یک رونوشت محرمانه نیز برای ارسال به داوران آماده کن."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "برای نویسنده و دبیر"
+
+msgid "submission.comments.forEditor"
+msgstr "فقط برای دبیر"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "ذخیره و ایمیل به نویسنده"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "ذخیره و ایمیل به دبیر"
+
+msgid "user.register.selectContext"
+msgstr "انتخاب مجله برای ثبت‌نام:"
+
+msgid "user.register.noJournals"
+msgstr "مجله ای برای ثبت‌نام در این سایت وجود ندارد."
+
+msgid "user.register.privacyStatement"
+msgstr "بیانیه حریم خصوصی"
+
+msgid "user.register.registrationDisabled"
+msgstr "این مجله در حال حاضر ثبت‌نام کاربر نمی پذیرد"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "طول رمز عبور انتخاب شده کافی نیست"
+
+msgid "user.register.readerDescription"
+msgstr "اطلاع از انتشار شماره جدید مجله"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "اطلاع از آزاد شدن دستیابی به یک شماره مجله"
+
+msgid "user.register.authorDescription"
+msgstr "میتوانید به این مجله مقاله ارسال کنید"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "مایلم برای این مجله مقاله داوری کنم"
+
+msgid "user.register.reviewerDescription"
+msgstr "مایلم برای این مجله مقاله داوری کنم. زمینه های داوری به قرار زیر است."
+
+msgid "user.register.reviewerInterests"
+msgstr "مشخص نمودن علائق داوری: زمینه ها و روش‌های پژوهشی "
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "اشتراکات من"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "وضعیت اشتراک"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "اشتراکات فعال و منقضی هر دو در زیر همراه با تاریخ انقضا آن‌ها نشان داده شده اند. به علاوه به ازای هر اشتراک اطلاعات وضعیتی زیر نیز ممکن است نشان داده شوند."
+
+msgid "user.subscriptions.status"
+msgstr "وضعیت"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "توصیف"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "قبل از فعال کردن اشتراک اطلاعات بیشتری لازم است"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "قبل از فعال‌سازی اشتراک می بایست بررسی گردد"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "پرداخت دستی راه‌اندازی شده است ولی هنوز وصول نشده است"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "پرداخت آنلاین شروع شده است ولی کامل نشده است"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "اشتراک شخصی"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "اشتراک سازمانی"
+
+msgid "user.subscriptions.renew"
+msgstr "تجدید"
+
+msgid "user.subscriptions.purchase"
+msgstr "خرید"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "خرید اشتراک جدید"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "خرید اشتراک شخصی"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "خرید اشتراک سازمانی"
+
+msgid "user.subscriptions.expires"
+msgstr "تاریخ انقضا : {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "منقضی شده در:  {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "دیدن انواع اشتراکات موجود"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "نوع اشتراک"
+
+msgid "user.subscriptions.form.membership"
+msgstr "عضویت"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "این نوع اشتراک انتخاب شده نیاز به اطلاعات عضویت دارد"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "لطفا نوع معتبری از اشتراک را انتخاب کنید"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "این حساب کاربری در حال حاضر دارای یک اشتراک شخصی میباشد."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "اطلاعات عضویت در صورتی که برای نوع اشتراک انتخاب شده لازم شود"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "نام سازمان"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "نام سازمان لازم است"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "آدرس پستی"
+
+msgid "user.subscriptions.form.domain"
+msgstr "دامنه"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "در صورتی که نام دامنه را در این قسمت وارد میکنید، وارد کردن بازه IP اختیاری است.<br />\t  (مانند  lib.sfu.ca)"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "نوع اشتراک انتخاب شده نیاز به نام دامنه یا بازه IP دارد تا بکمک آن اشتراک تایید شود."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "لطفا یک نام دامنه معتبری وارد کنید."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "بازه های IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "در صورت وارد کردن بازه های IP در این قسمت وارد کردن نام دامنه اختیاری است.<br />\t  مقادیر معتبر عبارتند از یک آدرس IP مانند\t  142.58.103.1 ،\t  یک بازه IP مانند\t  142.58.103.1 - 142.58.103.4 ،\t  بازه IP همرا با کاراکتر سرکش * مانند:\t  142.58.*.*\t  و یک بازه IP بهمراه CIDR مانند\t  142.58.100.0/24."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "لطفا بازه IP معتبری وارد کنید."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "حذف"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "اضافه"
+
+msgid "search.browseAuthorIndex"
+msgstr "پیمایش لیست نویسندگان"
+
+msgid "search.searchFor"
+msgstr "جستجوی مقالات برای"
+
+msgid "search.withinJournal"
+msgstr "درون"
+
+msgid "search.allJournals"
+msgstr "تمام مجلات"
+
+msgid "search.authorIndex"
+msgstr "پیمایش لیست نویسندگان"
+
+msgid "search.authorDetails"
+msgstr "جزئیات نویسندگان"
+
+msgid "search.syntaxInstructions"
+msgstr "<h4>نکاتی در مورد جستجو: </h4>\t  <ul>\t\t  <li>حروف کوچک وبزرگ فرقی ندارند</li>\t\t  <li>کلمات رایج در عبارت جستجو نادیده گرفته میشوند</li>\t\t  <li>بصورت پیش‌فرض فقط مقالاتی که دارای <i>همه</i> کلمات جستجو هستند برگردانده میشوند. مثل وقتی که عملگر <i>و</i> اعمال میشود</li>\t\t  <li>ترکیب کلمات با <i>یا</i> مقالاتی را برمیگرداند که هرکدام از کلمات را داشته باشد</li>\t\t  <li>هنگام تشکیل عبارت های جستجوی پیچیده سعی کنید قسمت های مختلف را با پرانتز از هم جدا کنید. مانند <i>بایگانی (مجله یا کنفرانس) نه پایان نامه)</i></li>\t\t  <li>اگر بخواهید یک عبارت را دقیقا به صورتی است جستجو کنید آن را داخل دابل کوتیشن قرار دهید مانند  <i>\"مقالات دسترسی آزاد\"</i></li>\t\t  <li>برای حذف یک کلمه از جستجو به نحوی که حاصل جستجو فاقد آن کلمه باشد ، قبل از آن کلمه <b>-</b> یا <i>نه</i> بیاورید مانند  <i>آنلاین -آرشیو</i> یا <i>نه آنلاین politics</i></li>\t\t  <li>از ستاره یعنی <b>*</b> در کلمات به عنوان علامت سرکش استفاده کنید تا جایگزین هر تعداد حروف شود. مثلا  <i>soci* morality</i> معادل  \"sociological\" یا \"societal\" میباشد</li>\t  </ul>"
+
+msgid "article.pageTitle"
+msgstr "{$title}"
+
+msgid "article.pdf.title"
+msgstr "فايل PDF"
+
+msgid "article.download"
+msgstr "دانلود این فایل PDF"
+
+msgid "article.pluginMissing"
+msgstr "<p>در صورتی که مرورگر شما دارای افزونه نمایش فایل‌های PDF باشد ( برای مثال <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>)، فایل PDF در مرورگر شما نمایش داده می‌شود.</p>"
+
+msgid "article.nonpdf.title"
+msgstr "دانلود مقاله"
+
+msgid "article.nonpdf.note"
+msgstr "فایل انتخاب شده به‌صورت خودکار دانلود خواهد شد. در غیر این صورت بر روی لینک زیر کلیک کنید. توجه داشته باشید که برای دیدن محتویات این فایل ممکن است ابزار خاصی احتیاج داشته باشید.<br /><br />چنانچه فایل به‌صورت خودکار دانلود نشد ، <a href=\"{$url}\">اینجا</a> را کلیک کنید."
+
+msgid "site.journalsHosted"
+msgstr "لیست مجلات موجود بر روی این سایت"
+
+msgid "site.journalView"
+msgstr "مشاهده مجله"
+
+msgid "site.journalRegister"
+msgstr "ثبت‌نام"
+
+msgid "site.journalCurrent"
+msgstr "شماره جاری"
+
+msgid "site.noJournals"
+msgstr "هیچ مجله ای در دسترس نیست"
+
+msgid "current.current"
+msgstr "جاری"
+
+msgid "current.noCurrentIssue"
+msgstr "هیچ شماره جاری وجود ندارد"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "این مجله هنوز شماره‌ای منتشر نکرده است"
+
+msgid "archive.archives"
+msgstr "بایگانی"
+
+msgid "archive.archivesPageNumber"
+msgstr "بایگانی - صفحه {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "مرور شماره‌های گذشته"
+
+msgid "archive.issueUnavailable"
+msgstr "شماره مجله‌ای موجود نیست"
+
+msgid "about.statistics"
+msgstr "آمار"
+
+msgid "about.contact"
+msgstr "اطلاعات تماس"
+
+msgid "about.aboutContext"
+msgstr "درباره‌ی مجله"
+
+msgid "about.history"
+msgstr "تاریخچه مجله"
+
+msgid "about.editorialTeam"
+msgstr "تیم سردبیری"
+
+msgid "about.editorialTeam.biography"
+msgstr "بیوگرافی"
+
+msgid "about.editorialPolicies"
+msgstr "سیاست‌های تیم سردبیری"
+
+msgid "about.focusAndScope"
+msgstr "زمینه مطالعاتی"
+
+msgid "about.sectionPolicies"
+msgstr "سیاست‌های بخش"
+
+msgid "about.submissions"
+msgstr "ارسال مقاله"
+
+msgid "about.onlineSubmissions.login"
+msgstr "ورود به سامانه"
+
+msgid "about.onlineSubmissions.register"
+msgstr "ثبت‌نام"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "برای ارسال مقاله نیاز به {$register} و {$login} است."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} یا {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "ارسال مقاله‌ی جدید"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "مشاهده مقالات ارسالی در حال انتظار"
+
+msgid "about.authorGuidelines"
+msgstr "راهنمای نویسندگان"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "چک‌لیست آماده‌سازی برای ارسال مقاله"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "به‌عنوان مرحله‌ای از روند ارسال مقاله ، لازم است که نویسندگان از مهیا بودن اقلام مختلف برای ارسال مقاله اطمینان حاصل کنند. برای این کار لازم است که اقلام موجود در چک‌لیست زیر را بررسی نموده و در صورت مهیا بودن جلوی آن تیک بزنند."
+
+msgid "about.copyrightNotice"
+msgstr "بیانیه حق نشر"
+
+msgid "about.privacyStatement"
+msgstr "بیانیه محرمانگی"
+
+msgid "about.authorFees"
+msgstr "هزینه‌های چاپ مقاله"
+
+msgid "about.authorFeesMessage"
+msgstr "این مجله شامل هزینه‌های زیر برای چاپ مقالات می‌باشد"
+
+msgid "about.peerReviewProcess"
+msgstr "روند داوری"
+
+msgid "about.publicationFrequency"
+msgstr "تعداد انتشار"
+
+msgid "about.openAccessPolicy"
+msgstr "سیاست دسترسی آزاد"
+
+msgid "about.delayedOpenAccess"
+msgstr "دسترسی آزاد (با تأخیر)"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "محتوای این مجله به‌صورت آزاد قابل دسترسی است."
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "ماه پس از انتشار یک شماره"
+
+msgid "about.archiving"
+msgstr "بایگانی"
+
+msgid "about.subscriptions"
+msgstr "اشتراک"
+
+msgid "about.subscriptions.individual"
+msgstr "اشتراک‌های شخصی"
+
+msgid "about.subscriptions.institutional"
+msgstr "اشتراک‌های سازمانی"
+
+msgid "about.subscriptionsContact"
+msgstr "اطلاعات تماس اشتراک"
+
+msgid "about.subscriptionTypes.name"
+msgstr "نام"
+
+msgid "about.subscriptionTypes.format"
+msgstr "فرمت"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "مدت"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "قیمت"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "انواع اشتراک"
+
+msgid "about.memberships"
+msgstr "عضویت"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "درباره این سامانه انتشاراتی"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "روند داوری و انتشار در سامانه OJS"
+
+msgid "about.aboutOJSJournal"
+msgstr "این مجله از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href=\"http://pkp.sfu.ca/\">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است."
+
+msgid "about.aboutOJSSite"
+msgstr "این سایت از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href=\"http://pkp.sfu.ca/\">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است."
+
+msgid "help.ojsHelp"
+msgstr "راهنمای سیستم مجلات آزاد"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "راهنمای OJS"
+
+msgid "help.searchReturnResults"
+msgstr "برگشت به نتایج جستجو"
+
+msgid "help.goToEditPage"
+msgstr "ویرایش {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "متشکرم"
+
+msgid "donations.thankYouMessage"
+msgstr "از مشارکت شما متشکرم. این مشارکت برای ما بسیار گرامی است"
+
+msgid "payment.loginRequired"
+msgstr "برای پرداخت می‌بایست وارد شوید"
+
+msgid "payment.loginRequired.forArticle"
+msgstr "برای مشاهده این مورد باید مشترک باشید یا هزینه آن را بپرداخت. برای تأیید اشتراک یا برای پرداخت هزینه ابتدا وارد مجله شوید"
+
+msgid "payment.loginRequired.forIssue"
+msgstr "برای دسترسی به این بخش باید مشترک مجله باشید و یا هزینه دسترسی به این شماره را پرداخت کنید. برای این منظور ابتدا وارد سایت شوید."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "برای کمک به مجله ابتدا باید وارد شوید"
+
+msgid "payment.paid"
+msgstr "پرداخت شده"
+
+msgid "payment.payNow"
+msgstr "اکنون پرداخت کن"
+
+msgid "payment.waive"
+msgstr "چشم‌پوشی"
+
+msgid "payment.alreadyPaid"
+msgstr "قبلاً پرداخته شده است."
+
+msgid "payment.alreadyPaidMessage"
+msgstr "چنانچه قبلاً هزینه را پرداخت کرده‌اید این گزینه را انتخاب کنید تا ارسال مقاله را کامل کنید. مادامی‌که پرداخت شما وصول نگردد مقاله شما جهت داوری ارسال نخواهد شد."
+
+msgid "payment.paymentReceived"
+msgstr "هزینه پرداختی واصل کردید"
+
+msgid "payment.paymentSent"
+msgstr "هزینه قبلاً پرداخت شده است"
+
+msgid "payment.authorFees"
+msgstr "هزینه‌های نویسنده"
+
+msgid "payment.type.submission"
+msgstr "هزینه ارسال مقاله"
+
+msgid "payment.type.publication"
+msgstr "هزینه چاپ"
+
+msgid "payment.type.publication.required"
+msgstr "در انتظار پرداخت هزینه چاپ"
+
+msgid "payment.type.fastTrack"
+msgstr "هزینه پردازش سریع"
+
+msgid "payment.type.membership"
+msgstr "هزینه برای اعضا"
+
+msgid "payment.type.purchaseArticle"
+msgstr "هزینه خرید مقاله"
+
+msgid "payment.type.purchaseIssue"
+msgstr "هزینه خرید شماره"
+
+msgid "payment.type.subscription"
+msgstr "هزینه اشتراک"
+
+msgid "payment.type.donation"
+msgstr "کمک مالی"
+
+msgid "payment.requestPublicationFee"
+msgstr "درخواست هزینه چاپ ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "پرداختی باید انجام می‌شد که زمان آن منقضی شده است. برای اطلاعات بیشتر با مدیر مجله تماس حاصل فرمایید."
+
+msgid "payment.donation.makeDonation"
+msgstr "کمک مالی"
+
+msgid "payment.submission.paySubmission"
+msgstr "پرداخت هزینه ارسال شده"
+
+msgid "payment.publication.payPublication"
+msgstr "پرداخت برای چاپ"
+
+msgid "payment.publication.publicationPaid"
+msgstr "هزینه چاپ پرداخت شد"
+
+msgid "payment.membership.buyMembership"
+msgstr "پرداخت حق عضویت فردی"
+
+msgid "payment.membership.renewMembership"
+msgstr "تمدید عضویت فردی"
+
+msgid "payment.membership.ends"
+msgstr "اتمام عضویت"
+
+msgid "payment.subscription.purchase"
+msgstr "خرید اشتراک"
+
+msgid "payment.subscription.renew"
+msgstr "تمدید اشتراک"
+
+msgid "payment.subscription.expires"
+msgstr "منقضی می‌شود"
+
+msgid "installer.appInstallation"
+msgstr "نصب OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "بروز رسانی OJS"
+
+msgid "installer.installationInstructions"
+msgstr "<h4>OJS نسخه {$version}</h4>\t  <p>از دانلود <strong>سیستم مجلات آزاد </strong> پروژه دانش عمومی تشکر می‌کنیم. قبل از ادامه لطفاً متن فایل  <a href=\"{$baseUrl}/docs/README.md\">README</a>  همراه با این سامانه را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه‌های نرم‌افزاری آن لطفاً از <a href=\"http://pkp.sfu.ca/\" target=\"_blank\"> وب‌سایت PKP</a> بازدید بفرمائید. اگر می‌خواهید گزارش اشکال بدهید و یا به دنبال حمایت تکنیکی برای سیستم مجلات آزاد هستید به <a href=\"http://forum.pkp.sfu.ca\">انجمن پشتیبانی</a> مراجعه و یا از  <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه ف انجمن پشتیبانی روش ترجیحی تماس می‌باشد ، شما می‌توانید به تیم حمایت کننده به آدرس <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> ایمیل بزنید. </p>\t  <h4>به‌روزرسانی</h4>\t  <p>چنانچه می‌خواهید نسخه موجود را ارتقاء دهید  <a href=\"{$upgradeUrl}\">اینجا را کلیک </a> کنید.</p>\t  <h4>نیازمندی‌های توصیه شده برای نصب این سامانه</h4>   <ul>  <li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; نسخه کنونی PHP {$phpVersion}{$wrongPhpText}</li>  <li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 یا <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>  <li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x or >= 2.0.4x یا Microsoft IIS 6</li>  <li>سیستم‌عامل: هر سیستم‌عاملی که بتواند نیازمندی‌های فوق را دارا باشد که می‌تواند شامل:<a href=\"http://www.linux.org/\" target=\"_blank\">لینوکس</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">سولاریس</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">ویندوز</a></li>  </ul>\t   <p>از آنجا که PKP  دارای تمام امکانات برای تست کردن بر روی هر گونه ترکیب احتمالی  از نسخه‌های مختلف نرم‌افزارهای فوق و سیستم‌های عامل نیست ، هیچ‌گونه تضمینی در مورد عملکرد صحیح و یا حمایت از آن را نمی‌توانیم عهده‌دار شویم</p>\t  <p>پس از خاتمه نصب برنامه می‌توانید این تنظیمات را از طریق ویرایش فایل  <tt>config.inc.php</tt> در شاخه اصلی OJS ، و یا از طریق صفحه مدیریت سایت تغییر دهید.</p>\t  <h4>سیستم‌های بانک اطلاعاتی مورد پشتیبانی</h4>\t  <p>OJS در حال حاضر بر روی MySQL  و PostgreSQL تست شده است. با سایر سیستم‌های بانک اطلاعاتی که توسط <a href=\"http://php.weblogs.com/adodb/\" target=\"_blank\">ADOdb</a> حمایت می‌شوند نیز ممکن است به‌صورت نسبی یا تمام عیار کار کند. گزارشات سازگاری و یا کدهای وصله‌ای برای سایر سیستم‌های بانک اطلاعاتی را می‌توانید به تیم OJS بفرستید</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr "<h4>مراحل پیش از نصب</h4>\t  <p>1. فایل‌ها و پوشه‌های زیر (به همراه فایل‌های درون پوشه‌ها) باید قابل نوشتن باشند</p>\t  <ul>\t\t  <li><tt>config.inc.php</tt> قابل نوشتن است (اختیاری): {$writable_config}</li>\t\t  <li><tt>public/</tt> قابل نوشتن است: {$writable_public}</li>\t\t  <li><tt>cache/</tt> قابل نوشتن است: {$writable_cache}</li>\t\t  <li><tt>cache/t_cache/</tt> قابل نوشتن است: {$writable_templates_cache}</li>\t\t  <li><tt>cache/t_compile/</tt> قابل نوشتن است: {$writable_templates_compile}</li>\t\t  <li><tt>cache/_db</tt> قابل نوشتن است: {$writable_db_cache}</li>\t  </ul>\t  <p>2. پوشه فایل‌ها باید ایجاد شده و قابل نوشتن باشد (بخش تنظیمات فایل‌ها را مشاهده کنید)</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr "<h4>OJS نسخه {$version}</h4>\t  <p>با تشکر به خاطر دانلود  <strong>سیستم مجلات آزاد</strong> پروژه دانش عمومی. قبل از ادامه ، فایل  <a href=\"{$baseUrl}/docs/README.md\">README</a> و فایل <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> همراه با این نرم‌افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه‌های نرم‌افزاری آن از  <a href=\"http://pkp.sfu.ca/\" target=\"_blank\"> وب‌سایت PKP</a> دیدن فرمایید. چنانچه می‌خواهید گزارش اشکال بدهید و یا ب9 دنبال حمایت تکنیکی در مورد سیستم مجلات آزاد هستید به  <a href=\"http://forum.pkp.sfu.ca\">انجمن پشتیبانی</a> بروید و یا از  <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه انجمن پشتیبانی روش ترجیحی تماس است. همچنین می‌توانید به آدرس ایمیل  <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\t  <p> پیغام بفرستید. <strong>شدیداً توصیه می‌شود</strong>  که از بانک اطلاعاتی و پوشه فایل‌ها و پوشه نصب OJS نسخه پشتیبان تهیه کنید.</p>\t  <p>چنانچه سامانه را در حالت  <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\"> PHP Safe Mode </a> اجرا می‌کنید ، لطفاً توجه کنید که گزینه  max_execution_time را در فایل تنظیمات  php.ini برابر با مقدار بالائی گذاشته شود. چنانچه زمان به‌روزرسانی از این مقدار و یا سایر محدوده‌ها مانند مقدار Apache's \"Timeout\"  بیشتر شود و روند به‌روزرسانی قطع شود، دخالت دستی لازم می‌شود.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr "برای پشتیبانی کامل از تمام کاراکترها، برای تمام تنظیمات سیستم کاراکتری  UTF-8 را انتخاب کنید.  توجه کنید که این نوع سیستم کاراکتری نیاز به  MySQL >= 4.1.1 یا PostgreSQL >= 7.1 دارد. همچنین توجه کنید که حمایت از UTF-8 نیاز به PHP >= 4.3.0 همراه با کتابخانه <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> دارد. کتابخانه mbstring به‌صورت پیش‌فرض در نسخه‌های جدید نصب PHP فعال است. چنانچه سرور شما از این ملزومات پشتیبانی نکند شما ممکن است هنگام استفاده از این سیستم کاراکتری مشکلاتی را تجربه کنید.<br /><br />سرور شما در حال حاضر mbstring را حمایت می‌کند: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "سرور شما اجازه آپلود فایل را می‌دهد: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "بزرگ‌ترین حجم فایل که سرور شما اجازه آپلود آن را می‌دهد: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "زبان اصلی برای استفاده در این سیستم. در صورتی علاقه‌مند به پشتیبانی از زبان‌های دیگری هستید که در این لیست نیامده است به مستندات OJS مراجعه کنید."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "زبان‌های اضافی را که مایلید این سیستم پشتیبانی کند انتخاب کنید. این زبان‌ها در دسترس مجلات این سایت برای استفاده قرار خواهند گرفت. البته زبان‌های اضافی را در زمان‌های دیگر نیز می‌توانید از طریق صفحه مدیریت سایت نصب کنید."
+
+msgid "installer.filesDirInstructions"
+msgstr "آدرس کامل پوشه‌ای که قرار است فایل‌های آپلود شده را نگه دارد. بهتر است این پوشه مستقیماً قابل دستیابی از طریق وب نباشد.  <strong>لطفاً قبل از نصب برنامه اطمینان حاصل کنید که این پوشه وجود دارد و قابل نوشتن است.</strong> برای وارد کردن آدرس در سیستم‌عامل ویندوز از «/» به جای «\\» استفاده کنید .مانند \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS برای ذخیره داده‌های خود نیاز به دسترسی به یک بانک اطلاعاتی SQL دارد. لطفاً شرایط مورد لزوم ذکر شده در بالای این صفحه را برای دیدن لیست بانک‌های اطلاعاتی سازگار مشاهده کنید. سپس در قسمت زیر تنظیمات لازم برای ایجاد ارتباط با بانک اطلاعاتی را وارد کنید"
+
+msgid "installer.installApplication"
+msgstr "نصب سیستم‌های مجله آزاد"
+
+msgid "installer.upgradeApplication"
+msgstr "به‌روزرسانی سیستم‌های مجله آزاد"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<b>اخطار:</b> چنانچه نصب به‌صورت نیمه کاره رها شود ممکن است لازم شود بانک اطلاعاتی و یا جداول ایجاد شده را حذف کنید و سپس اقدام به نصب مجدد نمایید."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr "<h4>مهم!</h4>\t  <p>کد نصب سامانه نمی‌تواند به‌طور خودکار در فایل تنظیمات تغییرات اعمال کند. قبل از شروع کار با سیستم لطفاً فایل <tt>config.inc.php</tt> را در یک ویرایشگر مناسب متنی باز کرده و محتوای آن را با محتوای جعبه متن زیر عوض کنید..</p>"
+
+msgid "installer.installationComplete"
+msgstr "<p>نصب OJS با موفقیت پایان یافت.</p>\t  <p>برای شروع کار با سیستم ، با استفاده از نام کاربری و رمز عبوری که در مرحله قبل وارد کردید به سیستم  <a href=\"{$loginUrl}\">وارد</a> شوید.</p>\t  <p>چنانچه مایلید اخبار و تازه‌ها را دریافت کنید <strong>لطفاً در  <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> ثبت‌نام کنید.</strong> چنانچه سؤال یا نظری دارید لطفاً از  <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">انجمن پشتیبانی</a> بازدید کنید.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr "<p>به‌روزرسانی  OJS به نسخه {$version} با موفقیت پایان یافت.</p>\t  <p>فراموش نکنید که مقدار \"installed\" را در فایل تنظیمات  config.inc.php را دوباره به <i>On</i> برگردانید.</p>\t  <p>چنانچه تا کنون ثبت‌نام نکرده‌اید و مایل هستید تا اخبار و تازه‌ها را دریافت کنید ، <strong>لطفاً در سایت  <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> ثبت‌نام کنید.</strong>  چنانچه سؤال و یا نظری دارید لطفاً از  <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\"> انجمن پشتیبانی </a> دیدن نمایید.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "نسخه جدیدی از OJS در دسترس است. شما در حال استفاده از نسخه {$currentVersion} هستید در حالی که آخرین نسخه موجود، نسخه {$latestVersion} است. لطفاً به <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">این صفحه</a> مراجعه کرده، آخرین نسخه را دانلود نمونه و دستورالعمل‌های به‌روزرسانی را مطالعه کنید."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "نسخه جدیدی از OJS در دسترس است. شما در حال استفاده از نسخه {$currentVersion} هستید در حالی که آخرین نسخه موجود، نسخه {$latestVersion} است. لطفاً به مدیر سایت ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) در این مورد اطلاع دهید. اطلاعات بیشتری را می توانید در این <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">لینک</a> مشاهده کنید."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} مقاله  {$submissionId} را اصلاح کرد. شناسه فایل جدید  {$fileId} می‌باشد."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} از داوری مقاله {$submissionId} برای دور  {$round} معزول شد."
+
+msgid "log.review.reviewInitiated"
+msgstr "دور  {$round} داوری {$reviewerName} برای مقاله  {$submissionId} شروع شد."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName}  امتیاز دور  {$round} داوری مقاله {$submissionId} را وارد نمود."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "مهلت داوری دور  {$round} مقاله  {$submissionId} توسط {$reviewerName} به  {$dueDate} تغییر یافت."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "{$reviewerName} دور {$round} داوری برای مقاله  {$submissionId} را توصیه کرد."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "توصیه داوری دور  {$round} مقاله  {$submissionId} توسط دبیر مقاله, {$editorName} ، از طرف  {$reviewerName} وارد شد."
+
+msgid "log.review.resubmit"
+msgstr "مقاله {$submissionId} برای داوری مجدداً ثبت شد."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} از انجام داوری دور  {$round} برای مقاله  {$submissionId} سر باز زد."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} برای داوری دور  {$round}  مقاله  {$submissionId} اظهار آمادگی کرد."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} از طرف {$reviewerName} از قبول داوری مقاله {$submissionId}  در دور {$round} خودداری کرده است"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} برای داوری دور  {$round} مقاله  {$submissionId} از طرف  {$reviewerName} اظهار آمادگی کرد."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "دبیر ({$userName}) یک فایل داوری برای دور  {$round} مقاله  {$submissionId} از طرف داور ،  {$reviewerName} آپلود کرد."
+
+msgid "log.review.reviewerFile"
+msgstr "یک فایل داوری آپلود شد"
+
+msgid "log.editor.decision"
+msgstr "تصمیم ({$decision}) برای مقاله {$submissionId} توسط {$editorName} اتخاذ گردید."
+
+msgid "log.editor.recommendation"
+msgstr "توصیه دبیر ({$decision}) در مورد مقاله {$submissionId} توسط {$editorName} ثبت شد."
+
+msgid "log.copyedit.initiate"
+msgstr "ویراستار مقاله  {$submissionId} توسط  {$copyeditorName} شروع شد."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "فایل پیش‌فرض ویراستاری انتخاب شد."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} ویراستاری اولیه مقاله   {$submissionId} را تمام کرد."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} ویراستاری نهائی مقاله  {$submissionId} را تمام کرد."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} برای ویراستاری مقاله  {$submissionId} انتخاب شد."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "یک نسخه ویراستاری شده از مقاله ارسالی آپلود شد."
+
+msgid "log.copyedit.authorFile"
+msgstr "یک نسخه فایل ویراستاری شده از مقاله ارسالی توسط نویسنده آپلود شد."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} به عنوان صفحه‌آرای مقاله  {$submissionId} انتخاب شد."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} از صفحه‌آرائی مقاله  {$submissionId} عزل شد."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} صفحه‌آرائی مقاله  {$submissionId} را کامل کرد."
+
+msgid "log.editor.metadataModified"
+msgstr "فراداده این مقاله توسط  {$editorName} تغییر یافت."
+
+msgid "log.editor.editorFile"
+msgstr "یک نسخه دبیری مقاله ارسالی آپلود شد."
+
+msgid "log.editor.archived"
+msgstr "مقاله  {$submissionId} بایگانی شد."
+
+msgid "log.editor.restored"
+msgstr "مقاله {$submissionId} به صف بازگشت داده شد"
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} به عنوان دبیر مقاله  {$submissionId} انتخاب شد."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName}، {$proofreaderName}  را برای بازبینی نهائی مقاله  {$submissionId} انتخاب کرد."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} مقاله {$submissionId} را برای قرارگیری در نوبت ثبت کرد."
+
+msgid "log.imported"
+msgstr "{$userName} مقاله  {$submissionId} را وارد کرد."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "مقاله داوری شده"
+
+msgid "notification.type.editing"
+msgstr "ویرایش رویدادها"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "یک مقاله با عنوان  \"{$title}\" ارسال شده است"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "نقطه‌نظری در خصوص تصمیم دبیر درباره \"{$title}\" برجا گذاشته شده است."
+
+msgid "notification.type.galleyModified"
+msgstr "کلیشه چاپی \"{$title}\" تغییر یافته است."
+
+msgid "notification.type.issuePublished"
+msgstr "یک شماره مجله منتشر شده است"
+
+msgid "notification.type.newAnnouncement"
+msgstr "یک اطلاعیه جدید ایجاد شده است"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "یک فرم داوری در خصوص \"{$title}\" ثبت شده است"
+
+msgid "notification.type.reviewing"
+msgstr "رخدادهای داوری"
+
+msgid "notification.type.site"
+msgstr "رویدادهای سایت"
+
+msgid "notification.type.submissionComment"
+msgstr "دبیر نظری در مورد \"{$title}\" داده است."
+
+msgid "notification.type.submissions"
+msgstr "رویدادهای ارسال شده"
+
+msgid "notification.type.userComment"
+msgstr "یک خواننده نظری در مورد \"{$title}\" داده است"
+
+msgid "notification.savedIssueMetadata"
+msgstr "فراداده‌های انتشار شماره ذخیره شد."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "مقاله‌ی جدیدی ثبت شده است ، لطفاً داوری برای آن مشخص نمایید"
+
+msgid "notification.type.assignProductionUser"
+msgstr "افزودن یک کاربر برای ایجاد کلیشه چاپی با انتخاب گزینه افزودن لینک در بخش همکاران"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "در انتظار کلیشه‌های چاپی."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "دسترسی رد شد! شما به عنوان ویراستار این مقاله انتخاب نشده اید."
+
+msgid "user.authorization.noContext"
+msgstr "هیچ مجله ای تعریف نشده است"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "شما در حال تلاش برای دسترسی به مقاله ای هستید که در بخش شما نمی باشد."
+
+msgid "user.authorization.invalidIssue"
+msgstr "درخواست شماره نامعتبر!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "فایل ارسالی ویراستار نامعتبر است یا فایلی ارسال نشده است!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "لیست واحدهای پول (بارگذاری شده از فایل «\"{$filename}»)"
+
+msgid "grid.action.createContext"
+msgstr "ایجاد مجله جدید"
+
+msgid "editor.navigation.issues"
+msgstr "شماره"
+
+msgid "notification.type.approveSubmission"
+msgstr "قبل از اینکه این مقاله در شماره مورد نظر چاپ شود بایستی مورد تأیید قرار گیرد"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "در انتظار تأیید"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "ثبت‌نام در مجله دیگر"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "پنهان کردن سایر مجلات"
+
+msgid "article.view.interstitial"
+msgstr "لطفاً فایل مقاله مورد نظر را برای دانلود انتخاب نمایید."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "تأیید شده"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "در انتظار تأیید"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "تأیید کلیشه چاپی"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>تأیید این کلیشه چاپی برای انتشار</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>عدم تأیید این کلیشه چاپی </p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "نمایه‌سازی \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "در سامانه جستجو این وب‌سایت نمایه‌سازی دوباره به ازای هر مجله امکانپدیر نمیباشد"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "آدرس \"{$journalPath}\" به عنوان آدرس مجله معتبر نمی باشد"
+
+msgid "editor.issues.backIssues"
+msgstr "شماره‌های گذشته"
+
+msgid "editor.issues.futureIssues"
+msgstr "شماره‌های آینده"
+
+msgid "navigation.subscriptions"
+msgstr "اشتراک‌ها"

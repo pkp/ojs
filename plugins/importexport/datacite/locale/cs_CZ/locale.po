@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Plugin pro export/registraci DataCite"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Exportovat, nebo registrovat číslo, článek, sazebnici, nebo doplňkový soubor ve formátu DataCite."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"Pokud chcete registrovat čísla DOI v rámci DataCite, kontaktujte, prosím Managing Agenta pomocí odkazu <a href=\"http://datacite.org/contact\" target=\"_blank\">Domovská stránka DataCite\n"
+"\t\t</a>, který vás odkáže na vašeho lokálního správce členů DataCite. Jakmile navážete vztah s členskou organizací, održíte přístupové údaje pro DataCite služby pro čísla (DOIs) a nahrávání příslušných metadat. Pokud nemáte vlastní login a heslo, budete mít stále možnost vyexportovat DOI informace pro DataCite v XML formátu. Uvědomte si, prosím, že heslo je ukládáno jako prostý text, tedy nezakódované kvůli požadavkům služeb DataCite."
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Uživatel (symbol)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Vložte, prosím, uživatelské jméno (symbol), který jste dostali od DataCite. Uživatelské jméno nesmí obsahovat dvojtečku."
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Použití:\n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Nakonfigurujte, prosím, plugin pro DataCite export před jeho prvním použitím."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS automaticky uloží DOI do DataCite. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny neregistrované DOI."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Použijte testovací prefix DataCite pro registraci DOI. Nezapomeňte tuto možnost odstranit pro produkční fázi."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "Automatická úloha registrace DataCite."

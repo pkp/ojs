@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:34+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Plugin för webbflöde"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Det här pluginet lägger till RSS/Atom-syndikeringsflöden för senaste nummer."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Inställningar"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Visa länkar till RSS/Atom-flöden enbart på nummersidor."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Visa länkar till RSS/Atom-flöden enbart på förstasidan och nummersidor."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Visa länkar till RSS/Atom-flöden på alla tidskriftens sidor."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Visa poster i det senast publicerade numret."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Visa ett bestämt antal av de senaste posterna."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Antal poster att visa"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Vänligen ange ett positivt antal för senast publicerade poster."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom-logotyp"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1-logotyp"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2-logotyp"

@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Questo plugin permette l'autenticazione e la sincronizzazione degli account degli utenti attraverso un LDAP esterno"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Impostazioni LDAP"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Nome dell'host LDAP"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "Es. \"ldap.example.com\", o \"ldaps://ldap.example.com\" (se si utilizza SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Porta server"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Opzionale. Default a 389 (LDAP) o 636 (LDAP su SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Es. \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Amministratore DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Es. \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Password"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Manager DN e password sono richiesti solo se la sincronizzazione profilo/password utente o le opzioni di creazione utente sono disabilitate. Se LDAP verrà usato solamente per l'autenticazione, queste opzioni possono essere tralasciate."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Password criptata"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Formato Hash per le password conservate nel server. È raccomandato SSHA (richiede PHP >= 4.3.0)."
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Impostazioni SASL (opzionale)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Usa SASL invece di un'autenticazione semplice (richiede PHP >= 5)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mechanism"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "E.g., \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Richiesto ID di autorizzazione"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL proprietà di sicurezza"
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Attributi del nome dell'account"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Attributi il cui valore identifica univocamente un oggetto, come ad esempio un uid o cn o sAMAccountName."

@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:36+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "CrossRef XML dodatak za izvoz"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Izvezi metapodatke članaka u CrossRef XML format."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Korišćenje: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] članci [articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] broj [issueId]"
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Zahtevi"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Svi zahtevi za rad dodatka su ispunjeni"
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Iuzdavač časopisa nije podešen! Morate dodati izdavačku instituciju na <a href=\"{$journalSettingsUrl}\" target=\"_blank\">stranici podešavanja časopisa</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "ISSN nije podešen, morate ga dodati na <a href=\"{$journalSettingsUrl}\" target=\"_blank\">stranici podešavanja časopisa</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Članci nisu obeleženi za dodavanje DOI javnog identifikatora pa stoga nema materijala za deponovanje ili izvoz."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Sledeći elementi su neophodni za supešno deponovanje kod CrossRef-a."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Ime deponenta"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Imejl deponenta"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Unesite ime deponenta."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Unesite imejl adresu deponenta."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Korisničko ime"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Unesite korisničko ime koje je registrovano kod CrossRef-a."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS će automatski deponovati DOI-je kod CrossRef-a. Imajte na umu da će ovo potrajati neko vreme nakon procesa objavljivanja. U svakom momentu možete proveriti neregistrovane DOI-je."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Koristite CrossRef test API (okruženje za testiranje) za deponovanje DOI-ja. Ne zaboravite da isključite ovu opciju u proizvodnom okruženju."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Napomena: samo brojevi (ne i članci) će ući u opciju za izvoz/deponovanje."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Neuspešno"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktivno"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Obeleži kao aktivno"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Preuzmi XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Obeleži aktivno"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRef zadatak automatske registracije"
+
+msgid "plugins.importexport.crossref.cliError"
+msgstr "GREŠKA:"
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Ni jedna jedinica se ne poklapa sa specifikovanim ID-jem jedinice \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Ni jedan članak se ne poklapa sa specifikovanim ID-jem članka \"{$articleId}\"."
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"<p>Statusi deponovanja:</p>\n"
+"\t\t<p>\n"
+"\t\t- Nije deponovano: nema pokušaja deponovanja za ovaj .<br />\n"
+"\t\t- Aktivan: DOI je deponovan i uspešno se iščitava.<br />\n"
+"\t\t- Neuspešno: Deponovanje DOI-ja nije uspelo.<br />\n"
+"\t\t- Označi kao aktivno: DOI je ručno označen kao aktivan.\n"
+"\t\t</p>\n"
+"\t\t<p>Samo je status poslednjeg deponovanja prikazan.</p>\n"
+"\t\t<p>Ukoliko deponovanje ne uspe, rešite problem i pokušajte ponovno deponovanje DOI-ja.</p>"

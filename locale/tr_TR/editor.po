@@ -1,0 +1,414 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Editör Ana Sayfa"
+
+msgid "editor.reassign"
+msgstr "Yeniden Ata"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Gönderiler ve Yayımlama"
+
+msgid "editor.submissionQueue"
+msgstr "Gönderi Kuyruğu"
+
+msgid "editor.submissionArchive"
+msgstr "Gönderi Arşivi"
+
+msgid "editor.publishing"
+msgstr "Yayımlama"
+
+msgid "editor.publishedIssues"
+msgstr "Yayımlanmış Sayılar"
+
+msgid "editor.allSections"
+msgstr "Tüm Bölümler"
+
+msgid "editor.allEditors"
+msgstr "Tüm Editörler"
+
+msgid "editor.me"
+msgstr "Ben"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri seçiniz."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Arşivde kayıtlı gönderi yok"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Arşivlenmiş gönderilerdeki değişiklikleri kaydet. Silinmek üzere işaretli kayıtlı yazılar sistemden tamamen silinecektir."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Bu kaydı tamamen silmek istediğinizden emin misiniz?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Bu kararı kaydetmek istediğinizden emin misiniz?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. Arşivleme için \"Gönder\" veya \"E-posta Göndermeden\" seçeneklerinin hangisinin kullanıldığı fark etmez."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek Dosya Gönder seçeneğini tıklayınız."
+
+msgid "editor.notifyUsers"
+msgstr "Kullanıcıları Bilgilendir"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Tüm okuyucular ({$count} kişidir)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Tüm yayınlanan yazarlar ({$count} kişidir)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Tüm bireysel aboneler ({$count} kişidir)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Tüm kurumsal aboneler ({$count} üye)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Kullanıcıları bilgilendir..."
+
+msgid "editor.usersNotified"
+msgstr "Kullanıcılar bilgilendirildi"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Bu mesajı dergi ile bağlantılı tüm kullanıcılara gönder ({$count} users)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Bu mesajı dergi ile bağlantılı ve değişikliklerden haberdar olmak isteyen tüm kullanıcılara gönder ({$count} üye)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Bu sayının içindekiler listesini ekle:"
+
+msgid "editor.editorAdministration"
+msgstr "Editör Yönetimi"
+
+msgid "editor.issues.createIssue"
+msgstr "Sayı Oluştur"
+
+msgid "editor.issues.editIssue"
+msgstr "Sayı Yönetimi: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Şimdiki Sayı"
+
+msgid "editor.issues.numArticles"
+msgstr "Öğeler"
+
+msgid "editor.issues.noArticles"
+msgstr "Bu sayı için seçilmiş öğe yok"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Bu sayıyı kalıcı olarak silmek istediğinizden emin misiniz?"
+
+msgid "editor.issues.published"
+msgstr "Yayımlanmış"
+
+msgid "editor.issues.unpublished"
+msgstr "Yayımlanmamış"
+
+msgid "editor.issues.datePublished"
+msgstr "Yayımlanma Tarihi"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Cilt gerekli. Pozitif, numerik değer olmalıdır."
+
+msgid "editor.issues.numberRequired"
+msgstr "Sayı gerekli.  Pozitif, numerik değer olmalıdır."
+
+msgid "editor.issues.yearRequired"
+msgstr "Yıl gerekli.  Pozitif, numerik değer olmalıdır."
+
+msgid "editor.issues.titleRequired"
+msgstr "Bu sayı için bir başlık gerekli."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Sayı belirteci gereklidir. Lütfen sayı belirteçlerinden en az bir tanesini seçiniz."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Sayı belirteci"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Genel sayı belirleyici"
+
+msgid "editor.issues.description"
+msgstr "Tanımlama"
+
+msgid "editor.issues.accessStatus"
+msgstr "Erişim durumu"
+
+msgid "editor.issues.accessDate"
+msgstr "Açık erişim tarihi"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Ertelenmiş açık erişimi etkinleştir"
+
+msgid "editor.issues.coverPage"
+msgstr "Kapak Görseli"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Uygun dosya biçimleri: .gif, .jpg veya .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Yüklenmiş"
+
+msgid "editor.issues.remove"
+msgstr "Kaldır"
+
+msgid "editor.issues.proofed"
+msgstr "Düzeltilmiş"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Kapak sayfası görselini kaldır?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Silmek istediğiniz kapak resmi ile eşleşme sağlanamadı. Lütfen sayfayı yenileyin ve tekrar deneyin."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Silmek istediğiniz kapak resmi bulunamadı. Silinmiş olabilir. Sayfayı yenilemeyi deneyin."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Geçersiz kapak sayfası biçimi. Kabul edilebilir biçimler: .gif, .jpg veya .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Sayfa Sitili"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Uygunsuz sayfa sitil dosyası. Gönderdiğiniz dosyanın geçerli bir biçimlendirme dosyası olduğundan emin olunuz (CSS). (Note: Başlangıcında yorumlar olan biçimlendirme dosyaları reddedilebilir.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Sayfa Stilini Kaldır?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Kapak başlığı"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Bu sayı için aşağıdaki öğeler ile bir kapak oluşturunuz."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Görüntüle"
+
+msgid "editor.issues.openAccess"
+msgstr "Açık erişim"
+
+msgid "editor.issues.subscription"
+msgstr "Abonelik"
+
+msgid "editor.issues.identification"
+msgstr "Tanımlama"
+
+msgid "editor.issues.access"
+msgstr "Erişim"
+
+msgid "editor.issues.cover"
+msgstr "Kapak"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Tüm yazılar yayın bekleme kuyruğuna geri gönderilecek ve tüm ilişkili dosyalar kaldırılacaktır. Bu sayıyı kaldırmak istediğinizden emin misiniz?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Bu dergi özel sayı sıralaması kullanır. <a href=\"{$url}\" class=\"action\">Varsayılana dön</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Bu sayı özelleştirilmiş bölüm sıralaması kullanır. <a href=\"{$url}\" class=\"action\">Varsayılana dön</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Sayı Verisi"
+
+msgid "editor.issues.saveChanges"
+msgstr "İçindekiler sayfasındaki değişiklikler kaydedilsin mi?"
+
+msgid "editor.issues.default"
+msgstr "Varsayılan"
+
+msgid "editor.issues.order"
+msgstr "Sıra"
+
+msgid "editor.issues.publicId"
+msgstr "Genel Sıra"
+
+msgid "editor.issues.publishIssue"
+msgstr "Sayıyı Yayınla"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Yayından Kaldır"
+
+msgid "editor.issues.previewIssue"
+msgstr "Sayı Önizleme"
+
+msgid "editor.issues.preview"
+msgstr "(Önizleme)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Yeni sayıyı yayınlamak istediğinizden emin misiniz?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Yeni sayıyı yayından kaldırmak istediğinizden emin misiniz?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Bu sayıyı güncel sayı olarak belirlemek istediğinizden emin misiniz?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Aşağıdaki makale için Genel Sayı kaydedilemiyor:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Yayınlanan Sayı Yok"
+
+msgid "editor.issues.open"
+msgstr "Aç"
+
+msgid "editor.issues.pages"
+msgstr "Sayfalar"
+
+msgid "editor.issues.galleys"
+msgstr "Sayı Dizgileri"
+
+msgid "editor.issues.galley"
+msgstr "Sayı Dizgisi"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Sayı Dizgisi Gösterimi"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Tüm konu içeriği ile dizgileri yayınla."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Hiçbir sayı dizgisi yayınlanmamıştır."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Sayı dizgi etiketi gerekli."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Sayı dizgi dili gerekli."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Genel sayı dizgi kimliği zaten var."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Sayı dizgilerine geri dön"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Bu sayı dizgisini silmek istediğinizden emin misiniz?"
+
+msgid "editor.issues.identifiers"
+msgstr "Tanımlayıcılar"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Gelecek Sayılar"
+
+msgid "grid.action.addGalley"
+msgstr "Dizgiye Ekle"
+
+msgid "grid.action.publish"
+msgstr "Sayıyı Yayınla"
+
+msgid "grid.action.addIssue"
+msgstr "Yeni Sayı Yarat"
+
+msgid "grid.action.viewIssue"
+msgstr "Bakış"
+
+msgid "grid.action.previewIssue"
+msgstr "Önizleme"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Sayı Dizgisi Yarat"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Güncel Sayı Belirle"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Önceki Sayılar"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Orjinal dosyayı Değerlendirme Sürümü olarak belirle"
+
+msgid "editor.article.decision"
+msgstr "Karar"
+
+msgid "editor.submissions.showBy"
+msgstr "Göster"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Başvur AA-GG"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktif Atamalar"
+
+msgid "editor.submissions.invite"
+msgstr "Davet Et"
+
+msgid "editor.submissions.accept"
+msgstr "Kabul"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Başvuru Yok"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "En Son"
+
+msgid "editor.submissions.averageTime"
+msgstr "Haftalar"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Son Tamamlanan"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Atanan"
+
+msgid "editor.submissions.inSection"
+msgstr "Bölümde"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Yayınlanmak üzere planlandığı sayı:"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Yayın Planı Yapılacak"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Yayın ücreti ödenmedi. Öğenin yayın planına alınabilmesi için yazara ödeme veya feragat bilgilendirmesi yap."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Silmek istediğiniz kapak resmi bulunamadı. Zaten silinmiş olabilir. Sayfayı yeniden yüklemeyi deneyin."
+
+msgid "grid.action.removeArticle"
+msgstr "Makale Sayıdan Silinsin"
+
+msgid "editor.article.remove"
+msgstr "Sil"
+
+msgid "editor.article.remove.confirm"
+msgstr "Makaleyi bu sayıdan silmek istediğinizden emin misiniz ? Bu makale bir başka sayı içinde yayınlanabilir."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Giriş tarihi geçerli değil."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Sayı Dizgisini Düzenle"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Mizanpaj editörü bu dosyaları her dizgi için hazırlar ve sağlama <span class=\"pkp_help_title\">Sağlama</span> için yükler."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Dizgi dosyalarını seç"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Bu listedeki nihai taslak dosyalar altında aşağıda yüklendi copyedited sürümleri, bir sayfa düzenleyici tarafından dönüştürülür.<span class=\"pkp_help_title\">Copyediting</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Zaten herhangi bir başvuru aşamasında yüklenmiş olan tüm dosyalar için aşağıdaki onay kutusunu ve tıklayarak Dahil kontrol ederek Redaksiyon liste eklenebilir. Arama: Tüm mevcut dosyalar listelenir ve dahil edilmesi için seçilebilir."
+
+msgid "editor.article.coverImage"
+msgstr "Kapak Görseli"

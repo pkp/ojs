@@ -1,0 +1,2090 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Παρόν περιοδικό:"
+
+msgid "context.select"
+msgstr "Ανακατεύθυνση σε άλλο περιοδικό:"
+
+msgid "navigation.categories"
+msgstr "Κατηγορίες"
+
+msgid "navigation.categories.browse"
+msgstr "Πλοήγηση"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Πατήστε το εικονίδιο για να συμπληρώσετε τη φόρμα αξιολόγησης."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Παρακαλούμε συμπληρώστε τα υποχρεωτικά πεδία."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Επιβεβαιώνετε τη σήμανση της εργασίας ως ολοκληρωμένη; Ενδέχεται να μην μπορείτε να κάνετε αλλαγές."
+
+msgid "common.payment"
+msgstr "Πληρωμή"
+
+msgid "common.payments"
+msgstr "Πληρωμές"
+
+msgid "common.homePageHeader.altText"
+msgstr "Κεφαλίδα αρχικής σελίδας"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Εικόνα αρχικής σελίδας περιοδικού"
+
+msgid "navigation.journalHelp"
+msgstr "Βοήθεια περιοδικού"
+
+msgid "navigation.current"
+msgstr "Τρέχον"
+
+msgid "navigation.otherJournals"
+msgstr "Άλλα περιοδικά"
+
+msgid "navigation.browseByIssue"
+msgstr "Κατά τεύχος"
+
+msgid "navigation.browseByAuthor"
+msgstr "Κατά Συγγραφέα"
+
+msgid "navigation.infoForAuthors"
+msgstr "Για Συγγραφείς"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Για Υπεύθυνους βιβλιοθηκών"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Σχετικά με τα αντικρουόμενα συμφέροντα"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Πληροφορίες για Συγγραφείς"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Πληροφορίες για Υπευθύνους βιβλιοθηκών"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Χωρίς ανάθεση"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Χωρίς ανάθεση"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Σε επιμέλεια"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Σε επιμέλεια"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Υπό αξιολόγηση"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Υπό αξιολογηση"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Αρχεία"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Αρχεία"
+
+msgid "common.queue.long.active"
+msgstr "Ενεργό"
+
+msgid "common.queue.short.active"
+msgstr "Ενεργό"
+
+msgid "common.queue.long.completed"
+msgstr "Αρχείο"
+
+msgid "common.queue.short.completed"
+msgstr "Αρχείο"
+
+msgid "section.section"
+msgstr "Ενότητα"
+
+msgid "section.sections"
+msgstr "Ενότητες"
+
+msgid "section.title"
+msgstr "Τίτλος ενότητας"
+
+msgid "section.abbreviation"
+msgstr "Συντομογραφία"
+
+msgid "section.abbreviation.example"
+msgstr "(π.χ. Άρθρα=ΑΡΘ)"
+
+msgid "article.article"
+msgstr "Άρθρο"
+
+msgid "article.articles"
+msgstr "Άρθρα"
+
+msgid "common.publication"
+msgstr "Άρθρο"
+
+msgid "common.publications"
+msgstr "Άρθρα"
+
+msgid "article.submissionId"
+msgstr "Αναγνωριστικό υποβολής"
+
+msgid "article.title"
+msgstr "Τίτλος"
+
+msgid "article.authors"
+msgstr "Συγγραφείς"
+
+msgid "article.indexingInformation"
+msgstr "Πληροφορίες ευρετηρίασης"
+
+msgid "article.metadata"
+msgstr "Μεταδεδομένα"
+
+msgid "article.journalSection"
+msgstr "Ενότητα περιοδικού"
+
+msgid "article.file"
+msgstr "Αρχείο κειμένου"
+
+msgid "article.suppFile"
+msgstr "Συμπληρωματικό αρχείο"
+
+msgid "article.suppFiles"
+msgstr "Συμπληρωματικό(-ά) Αρχείο(-α)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Συμπ. αρχεία"
+
+msgid "article.discipline"
+msgstr "Επιστημονικός κλάδος και υποκατηγορίες"
+
+msgid "article.subject"
+msgstr "Λέξεις-κλειδιά"
+
+msgid "article.coverage"
+msgstr "Κάλυψη"
+
+msgid "article.type"
+msgstr "Τύπος, μέθοδος ή προσέγγιση"
+
+msgid "article.language"
+msgstr "Γλώσσα"
+
+msgid "article.sectionEditor"
+msgstr "Επιμελητής Ενότητας"
+
+msgid "article.commentsToEditor"
+msgstr "Σχόλια Συγγραφέα"
+
+msgid "article.submission"
+msgstr "Υποβολή"
+
+msgid "article.submissions"
+msgstr "Υποβολές"
+
+msgid "article.details"
+msgstr "Λεπτομέρειες"
+
+msgid "article.abstract"
+msgstr "Περίληψη"
+
+msgid "article.coverPage.altText"
+msgstr "Εικόνα εξωφύλλου"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Ανοικτή πρόσβαση"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Περιορισμένη πρόσβαση"
+
+msgid "article.comments.sectionDefault"
+msgstr "Προεπιλογή"
+
+msgid "article.comments.disable"
+msgstr "Απενεργοποίηση"
+
+msgid "article.comments.enable"
+msgstr "Ενεργοποίηση"
+
+msgid "article.fontSize"
+msgstr "Μέγεθος γραμματοσειράς"
+
+msgid "article.fontSize.small.altText"
+msgstr "Μικρά"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Μέτρια"
+
+msgid "article.fontSize.large.altText"
+msgstr "Μεγάλα"
+
+msgid "article.return"
+msgstr "Επιστροφή στα στοιχεία του άρθρου"
+
+msgid "submission.submissionEditing"
+msgstr "Επιμέλεια υποβολής"
+
+msgid "submission.changeSection"
+msgstr "Αλλαγή σε"
+
+msgid "submission.sent"
+msgstr "Απεσταλμένο"
+
+msgid "submission.editorDecision"
+msgstr "Απόφαση Επιμελητή"
+
+msgid "submission.round"
+msgstr "Γύρος&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Αξιολόγηση Επιμελητή"
+
+msgid "submission.notifyAuthor"
+msgstr "Ενημέρωση Συγγραφέα"
+
+msgid "submission.notifyEditor"
+msgstr "Ενημέρωση Επιμελητή"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Ηλεκτρονική επικοινωνία Επιμελητή/Συγγραφέα"
+
+msgid "submission.reviewersVersion"
+msgstr "Έκδοση αρχείου με σχόλια του Αξιολογητή"
+
+msgid "submission.postReviewVersion"
+msgstr "Έκδοση αρχείου μετά την αξιολόγηση"
+
+msgid "submission.editorVersion"
+msgstr "Έκδοση Επιμελητή"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Αναθεωρημένη έκδοση Συγγραφέα"
+
+msgid "submission.authorVersion"
+msgstr "Έκδοση Συγγραφέα"
+
+msgid "submission.copyediting"
+msgstr "Επιμέλεια κειμένου"
+
+msgid "submission.copyedit"
+msgstr "Επιμέλεια κειμένου"
+
+msgid "submission.proofreading"
+msgstr "Διόρθωση τυπογραφικού δοκιμίου"
+
+msgid "submission.scheduling"
+msgstr "Προγραμματισμός"
+
+msgid "submission.scheduledIn"
+msgstr "Προγραμματισμός για δημοσίευση στο {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "Δεν έχει προγραμματισθεί"
+
+msgid "submissions.sec"
+msgstr "Sec"
+
+msgid "submissions.step1"
+msgstr "Βήμα 1"
+
+msgid "submissions.step3"
+msgstr "Βήμα 3"
+
+msgid "submissions.queuedReview"
+msgstr "Υπό αξιολόγηση"
+
+msgid "submissions.published"
+msgstr "Δημοσιευμένα"
+
+msgid "submissions.initial"
+msgstr "Αρχική"
+
+msgid "submissions.proofread"
+msgstr "Διόρθωση τυπογραφικού δοκιμίου"
+
+msgid "submissions.initialProof"
+msgstr "Αρχική διόρθωση τυπογραφικού δοκιμίου"
+
+msgid "submissions.postAuthor"
+msgstr "Μετά τον Συγγραφέα"
+
+msgid "submissions.reviewRound"
+msgstr "Γύρος αξιολόγησης"
+
+msgid "submissions.proof"
+msgstr "Διόρθωση τυπογραφικού δοκιμίου"
+
+msgid "submissions.editorDecision"
+msgstr "Απόφαση Επιμελητή"
+
+msgid "submissions.editorRuling"
+msgstr "Κρίση Επιμελητή"
+
+msgid "submission.eventLog"
+msgstr "Ημερολόγιο συμβάντων"
+
+msgid "submissions.copyeditComplete"
+msgstr "Επιμελημένα κείμενα"
+
+msgid "submissions.layoutComplete"
+msgstr "Σελιδοποιημένα κείμενα"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Διορθωμένα τυπογραφικά δοκίμια"
+
+msgid "journal.currentIssue"
+msgstr "Τρέχον τεύχος"
+
+msgid "context.contexts"
+msgstr "Περιοδικά"
+
+msgid "journal.path"
+msgstr "Διαδρομή"
+
+msgid "context.context"
+msgstr "Περιοδικό"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Προβολή όλων των τευχών"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Περιλαμβάνονται Χρήστες που δεν τους έχουν ανατεθεί ρόλοι σε αυτό το περιοδικό."
+
+msgid "user.profile.profileImage"
+msgstr "Εικόνα προφίλ"
+
+msgid "user.showAllJournals"
+msgstr "Τα περιοδικά μου"
+
+msgid "user.registerForOtherJournals"
+msgstr "Εγγραφείτε σε άλλα περιοδικά"
+
+msgid "user.reviewerPrompt"
+msgstr "Θα θέλατε να αξιολογείτε υποβολές σε αυτό το περιοδικό;"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ναι, ζητήστε τον ρόλο {$userGroup}."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Επιθυμώ να λαμβάνω αιτήματα για αξιολόγηση υποβολών σε αυτό το περιοδικό."
+
+msgid "user.register.contextsPrompt"
+msgstr "Σε ποια περιοδικά της πλατφόρμας θέλετε να εγγραφείτε;"
+
+msgid "user.register.otherContextRoles"
+msgstr "Ζητήστε τους ακόλουθους ρόλους"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Αν αιτηθήκατε εγγραφή ως Αξιολογητής σε κάποιο περιοδικό, παρακαλούμε εισάγετε τα θεματικά αντικείμενα που σας ενδιαφέρουν."
+
+msgid "user.myJournals"
+msgstr "Τα περιοδικά μου"
+
+msgid "user.manageMySubscriptions"
+msgstr "Διαχείριση των συνδρομών μου"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Ο λογαριασμός σας δεν συνδέεται προς το παρόν με κανένα περιοδικό. Παρακαλούμε επιλέξτε ένα περιοδικό:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Ο λογαριασμός σας δεν έχει προς το παρόν κανένα συνδεδεμένο ρόλο σε αυτό το περιοδικό. Παρακαλούμε επιλέξτε κάποια από τις παρακάτω ενέργειες:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Υποβολή μίας πρότασης"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Υποβολή ενός άρθρου: Η εγγραφή Συγγραφέα είναι προς το παρόν απενεργοποιημένη."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Εγγραφείτε ως Αξιολογητής"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Εγγραφείτε ως Αξιολογητής: Η εγγραφή Αξιολογητή είναι προς το παρόν απενεργοποιημένη"
+
+msgid "user.role.manager"
+msgstr "Διαχειριστής Περιοδικού"
+
+msgid "user.role.subEditor"
+msgstr "Επιμελητής Ενότητας"
+
+msgid "user.role.subscriptionManager"
+msgstr "Διαχειριστής Συνδρομών"
+
+msgid "user.role.managers"
+msgstr "Διαχειριστές Περιοδικών"
+
+msgid "user.role.subEditors"
+msgstr "Επιμελητές Ενότητας"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Διαχειριστές Συνδρομών"
+
+msgid "user.role.journalAssistant"
+msgstr "Βοηθός Περιοδικού"
+
+msgid "user.role.journalAssistants"
+msgstr "Βοηθοί Περιοδικού"
+
+msgid "issue.issue"
+msgstr "Τεύχος"
+
+msgid "issue.issues"
+msgstr "Τεύχη"
+
+msgid "issue.title"
+msgstr "Τίτλος"
+
+msgid "issue.volume"
+msgstr "Τόμος"
+
+msgid "issue.number"
+msgstr "Αριθμός"
+
+msgid "issue.vol"
+msgstr "Τόμ."
+
+msgid "issue.no"
+msgstr "Αρ."
+
+msgid "issue.year"
+msgstr "Έτος"
+
+msgid "issue.noIssues"
+msgstr "Δεν υπάρχουν τεύχη"
+
+msgid "issue.toc"
+msgstr "Πίνακας περιεχομένων"
+
+msgid "issue.abstract"
+msgstr "Περίληψη"
+
+msgid "issue.coverPage.altText"
+msgstr "Σελίδα εξωφύλλου"
+
+msgid "issue.fullIssue"
+msgstr "Πλήρες τεύχος"
+
+msgid "issue.nonpdf.title"
+msgstr "Λήψη τεύχους"
+
+msgid "issue.viewIssue"
+msgstr "Προβολή τεύχους"
+
+msgid "issue.return"
+msgstr "Επιστροφή στις πληροφορίες για το τεύχος"
+
+msgid "subscriptionTypes.currency"
+msgstr "Νόμισμα"
+
+msgid "subscriptionTypes.year"
+msgstr "Έτος"
+
+msgid "subscriptionTypes.years"
+msgstr "Έτη"
+
+msgid "subscriptionTypes.month"
+msgstr "Μήνας"
+
+msgid "subscriptionTypes.months"
+msgstr "Μήνες"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Χωρίς λήξη"
+
+msgid "subscriptionTypes.format"
+msgstr "Μορφή"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Διαδικτυακή"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Έντυπη"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Έντυπη & Διαδικτυακή"
+
+msgid "subscriptions.inactive"
+msgstr "Ανενεργή"
+
+msgid "subscriptions.status"
+msgstr "Κατάσταση"
+
+msgid "subscriptions.status.active"
+msgstr "Ενεργή"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Απατούνται πληροφορίες"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Απαιτείται έγκριση"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Αναμονή χειρωνακτικής πληρωμής"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Αναμονή διαδικτυακής πληρωμής"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Δεν έχετε καμία ενεργή συνδρομή."
+
+msgid "subscriptions.status.other"
+msgstr "Άλλο, δείτε τις σημειώσεις."
+
+msgid "subscriptions.individualDescription"
+msgstr "Οι μεμονωμένες συνδρομές απαιτούν σύνδεση στο σύστημα για πρόσβαση στο περιεχόμενο της συνδρομής."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Οι ιδρυματικές συνδρομές δεν απαιτούν σύνδεση στο σύστημα. Η περιοχή δικτύου (domain) ή/και οι διευθύνσεις ΙΡ χρησιμοποιούνται για την πρόσβαση στο περιεχόμενο της συνδρομής."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Σημείωση:</strong> Οι ιδρυματικές συνδρομές που συνάπτονται μέσω διαδικτύου απαιτούν την έγκριση της σχετικής περιοχής δικτύου (domain) και διευθύνσεων ΙΡ πριν ενεργοποιηθεί η συνδρομή."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Λήψη νέας υποβολής"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Υποβληθέν άρθρο"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Η υποβολή βρίσκεται στο στάδιο προγραμματισμού για δημοσίευση στο τεύχος."
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Η υποβολή προγραμματίστηκε για δημοσίευση στο τεύχος."
+
+msgid "submission.event.general.articlePublished"
+msgstr "Το άρθρο δημοσιεύτηκε."
+
+msgid "submission.event.author.authorRevision"
+msgstr "Το αναθεωρημένο κείμενο του Συγγραφέα υποβλήθηκε."
+
+msgid "submission.event.general.authorRevision"
+msgstr "Το αναθεωρημένο αρχείο του Συγγραφέα ενημερώθηκε."
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Ανάθεση υποβολής σε Επιμελητή"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Ακύρωση ανάθεσης σε Επιμελητή"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Υποβολή απόφασης Επιμελητή"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Ενημέρωση αρχείου Επιμελητή"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Η υποβολή αρχειοθετήθηκε."
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Επαναφορά υποβολής από τα αρχειοθετημένα"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Ανάθεση υποβολής σε Επιμελητή Κειμένου"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Ακύρωση ανάθεσης σε Επιμελητή Κειμένου"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Ανάθεση επιμέλειας κειμένου"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Το αρχείο του Επιμελητή Κειμένου ενημερώθηκε."
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Η αρχική επιμέλεια κειμένου ολοκληρώθηκε."
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Η τελική επιμέλεια κειμένου ολοκληρώθηκε."
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "To αρχείο επιμέλειας κειμένου ενημερώθηκε."
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Ανάθεση υποβολής σε Επιμελητή Τυπογραφικού Δοκιμίου"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Ακύρωση ανάθεσης σε Επιμελητή Τυπογραφικού Δοκιμίου"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Ανάθεση επιμέλειας τυπογραφικού δοκιμίου"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Το αρχείο επιμέλειας τυπογραφικού δοκιμίου ενημερώθηκε."
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Η επιμέλεια του τυπογραφικού δοκιμίου ολοκληρώθηκε."
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Ανάθεση υποβολής σε Επιμελητή Σελιδοποίησης"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Ακύρωση ανάθεσης σε Επιμελητή Σελιδοποίησης"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Ανάθεση επιμέλειας σελιδοποίησης"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Το σελιδοποιημένο τυπογραφικό δοκίμιο ενημερώθηκε."
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Η σελιδοποίηση ολοκληρώθηκε."
+
+msgid "reader.subscribersOnly"
+msgstr "Μόνο Συνδρομητές"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Απαιτείται συνδρομή για την πρόσβαση στο άρθρο. Για να πιστοποιήσετε την συνδρομή σας, συνδεθείτε στο περιοδικό."
+
+msgid "reader.openAccess"
+msgstr "Ανοικτή πρόσβαση"
+
+msgid "reader.subscriptionAccess"
+msgstr "Απαιτείται συνδρομή"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Απαιτείται συνδρομή ή πληρωμή για την πρόσβαση"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Σχόλια σε αυτό το άρθρο"
+
+msgid "comments.authenticated"
+msgstr "από <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Διάταξη αποτελεσμάτων ανά:"
+
+msgid "search.results.orderBy.article"
+msgstr "Τίτλο άρθρου"
+
+msgid "search.results.orderBy.author"
+msgstr "Συγγραφέα"
+
+msgid "search.results.orderBy.date"
+msgstr "Ημερομηνία δημοσίευσης"
+
+msgid "search.results.orderBy.issue"
+msgstr "Τεύχος"
+
+msgid "search.results.orderBy.journal"
+msgstr "Τίτλος περιοδικού"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Επισκεψιμότητα (σε όλο το χρονικό διάστημα)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Επισκεψιμότητα (τον τελευταίο μήνα)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Συνάφεια"
+
+msgid "search.results.orderDir.asc"
+msgstr "Με αύξουσα σειρά"
+
+msgid "search.results.orderDir.desc"
+msgstr "Με φθίνουσα σειρά"
+
+msgid "search.results.similarDocuments"
+msgstr "Παρόμοια έγγραφα"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Η επιλογή μιας πηγής πιστοποίησης διαφορετικής από το OJS συνεπάγεται τα παρακάτω:</p>\n"
+"       <ul>\n"
+"       <li>Εάν ένας Χρήστης προσπαθήσει να δημιουργήσει νέο λογαριασμό στον ιστότοπο αυτό χρησιμοποιώντας ένα όνομα Χρήστη που υπάρχει ήδη στην πηγή πιστοποίησης (αλλά όχι στην βάση δεδομένων του OJS), η εγγραφή επιτρέπεται μόνο εάν ο κωδικός πρόσβασης που θα δοθεί είναι έγκυρος για τον ήδη υπάρχοντα Χρήστη.</li>\n"
+"       </ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ΣΗΜΕΙΩΣΗ!</h4>\n"
+"        <p>Δεν ήταν δυνατή η αυτόματη αντικατάσταση του αρχείου ρυθμίσεων από το σύστημα. Για να εφαρμόσετε τις αλλαγές, θα πρέπει να ανοίξετε το <tt>config.inc.php</tt> με έναν κατάλληλο επεξεργαστή κειμένου και να αντικαταστήσετε τα περιεχόμενά του με τα περιεχόμενα του παρακάτω πεδίου κειμένου.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Διαχείριση συνδρομών"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Ατομικές συνδρομές"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Ιδρυματικές συνδρομές"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Τύποι συνδρομών"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Πρόσθετα Τυπογραφικού Δοκιμίου"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Τα Πρόσθετα Τυπογραφικού Δοκιμίου υποστηρίζουν την προβολή διαφορετικών ειδών εγγράφων ως τυπογραφικά δοκίμια άρθρου."
+
+msgid "plugins.categories.auth.description"
+msgstr "Τα Πρόσθετα Πιστοποίησης επιτρέπουν στο Open Journal Systems την ανάθεση εργασιών πιστοποίησης Χρηστών σε άλλα συστήματα, όπως τους διακομιστές LDAP."
+
+msgid "plugins.categories.generic.description"
+msgstr "Τα Γενικά Πρόσθετα χρησιμοποιούνται για επέκταση των λειτουργικοτήτων του Open Journal Systems με τρόπους που δεν υποστηρίζονται από άλλες κατηγορίες Πρόσθετων."
+
+msgid "manager.setup.lockssDescription"
+msgstr "Το OJS υποστηρίζει το σύστημα LOCKSS (Lots of Copies Keep Stuff Safe) για τη διαφύλαξη του περιεχομένου των εκδόσεων. Αν το περιεχόμενό σας αρχειοθετείται ήδη στο Παγκόσμιο Δίκτυο LOCKSS (Global LOCKSS Network) ή συμμετέχετε σε κάποιο Ιδιωτικό Δίκτυο LOCKSS (Private LOCKSS Network) διαφορετικό από το PKP PN, ενεργοποιήστε το εδώ:"
+
+msgid "manager.setup.clockssDescription"
+msgstr "Το OJS υποστηρίζει επίσης το σύστημα CLOCKSS (Controlled Lots of Copies Keep Stuff Safe) για τη διαφύλαξη του περιεχομένου των εκδόσεων. Αν έχετε συνδρομή στο Αρχείο CLOCKSS, ενεργοποιήστε τη εδώ:"
+
+msgid "manager.setup.porticoDescription"
+msgstr "Το Portico είναι μία μη κερδοσκοπική υπηρεσία για τη διαφύλαξη ψηφιακου περιεχομένου, όπως ηλεκτρονικά περιοδικά (e-journals), ηλεκτρονικά βιβλία (e-books) και ψηφιοποιημένες ιστορικές συλλογές. Αν έχετε συνδρομή στο Portico, ενεργοποιήστε τη εδώ:"
+
+msgid "manager.setup.authorCopyrightNotice.sample"
+msgstr ""
+"<h3>Πρότυπα Δηλώσεων Προστασίας Πνευματικών Δικαιωμάτων (Creative Commons)</h3>\n"
+"&lt;h4&gt;1. Προτεινόμενη Πολιτική για περιοδικά ανοικτής πρόσβασης&lt;/h4&gt;\n"
+"Οι Συγγραφείς που δημοσιεύουν εργασίες τους σε αυτό το περιοδικό αποδέχονται τους παρακάτω όρους:\n"
+"&lt;ol type=\"a\"&gt;\n"
+"\t&lt;li&gt;Οι Συγγραφείς διατηρούν τα πνευματικά δικαιώματα και εκχωρούν στο περιοδικό το δικαίωμα της πρώτης δημοσίευσης. Τα πνευματικά δικαιώματα της εργασίας προστατεύονται από την άδεια &lt;a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\"&gt;Creative Commons Attribution License&lt;/a&gt; που επιτρέπει τον διαμοιρασμό από τρίτους, με την προϋπόθεση της αναφοράς στους δημιουργούς και στην αρχική δημοσίευση σε αυτό το περιοδικό.&lt;/li&gt;\n"
+"\t&lt;li&gt;Οι Συγγραφείς μπορούν να συνάπτουν ξεχωριστές, πρόσθετες συμβάσεις για την μη αποκλειστική διανομή της δημοσιευμένης στο περιοδικό αυτό μορφής της εργασίας (π.χ. κατάθεση σε ιδρυματικό αποθετήριο ή δημοσίευση σε βιβλίο), με την προϋπόθεση της αναγνώρισης της πρώτης δημοσίευσης σε αυτό το περιοδικό.&lt;/li&gt;\n"
+"\t&lt;li&gt;Οι Συγγραφείς επιτρέπεται, και ενθαρρύνονται, να αναρτούν τις εργασίες τους διαδικτυακά (π.χ. σε ιδρυματικά αποθετήρια ή στις προσωπικές τους ιστοσελίδες) πριν ή κατά τη διάρκεια της διαδικασίας υποβολής, καθώς αυτό μπορεί να οδηγήσει σε παραγωγικές αλλαγές, όπως επίσης και σε ταχύτερες και περισσότερες αναφορές στη δημοσιευμένη εργασία (Δείτε σχετικά &lt;a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"&gt;Ο αντίκτυπος της Ανοικτής Πρόσβασης&lt;/a&gt;).&lt;/li&gt;\n"
+"&lt;/ol&gt;\n"
+"\n"
+"&lt;h4&gt;2. Προτεινόμενη Πολιτική για περιοδικά που προσφέρουν καθυστερημένη ανοικτή πρόσβαση&lt;/h4&gt;\n"
+"Οι Συγγραφείς που δημοσιεύουν εργασίες τους σε αυτό το περιοδικό αποδέχονται τους παρακάτω όρους:\n"
+"&lt;ol type=\"a\"&gt;\n"
+"\t&lt;li&gt;Οι Συγγραφείς διατηρούν τα πνευματικά δικαιώματα και εκχωρούν στο περιοδικό το δικαίωμα της πρώτης δημοσίευσης. [ΠΡΟΣΔΙΟΡΙΣΤΕ ΧΡΟΝΙΚΗ ΠΕΡΙΟΔΟ] μετά την δημοσίευση, τα πνευματικά δικαιώματα της εργασίας προστατεύονται από την &lt;a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\"&gt;Creative Commons Attribution License&lt;/a&gt; που επιτρέπει το διαμοιρασμό από τρίτους, με την προϋπόθεση της αναφοράς στον δημιουργό και στην αρχική δημοσίευση σε αυτό το περιοδικό.&lt;/li&gt;\n"
+"\t &lt;li&gt;Οι Συγγραφείς μπορούν να συνάπτουν ξεχωριστές, πρόσθετες συμβάσεις για την μη αποκλειστική διανομή της δημοσιευμένης στο περιοδικό αυτό μορφής της εργασίας (π.χ. κατάθεση σε ιδρυματικό αποθετήρια ή δημοσίευση σε βιβλίο), με την προϋπόθεση της αναγνώρισης της πρώτης δημοσίευσης σε αυτό το περιοδικό.&lt;/li&gt;\n"
+"\t &lt;li&gt;Οι Συγγραφείς επιτρέπεται, και ενθαρρύνονται, να αναρτούν τις εργασίες τους διαδικτυακά (π.χ. σε ιδρυματικά αποθετήρια ή στις προσωπικές τους ιστοσελίδες) πριν ή κατά τη διάρκεια της διαδικασίας υποβολής, καθώς αυτό μπορεί να οδηγήσει σε παραγωγικές αλλαγές, όπως επίσης και σε ταχύτερες και περισσότερες αναφορές στη δημοσιευμένη εργασία (Δείτε &lt;a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"&gt;Ο αντίκτυπος της Ανοικτής Πρόσβασης&lt;/a&gt;).&lt;/li&gt;\n"
+"&lt;/ol&gt;"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Βήματα: Σειρά αναμονής υποβολών &gt; Αξιολόγηση υποβολής &gt; Επεξεργασία υποβολής &gt; Πίνακας Περιεχομένων.&lt;br /&gt;&lt;br /&gt;\n"
+"        Επιλέξτε ένα μοντέλο διαχείρισης της ροής έκδοσης. (Για να ορίσετε έναν Επιμελητή Διαχείρισης και Επιμελητές Ενοτήτων, μεταβείτε στο μενού «Επιμελητές» στη «Διαχείριση Περιοδικού».)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Για να έχουν οι Αναγνώστες δυνατότητα εντοπισμού διαδικτυακών εκδόσεων των εργασιών που αναφέρονται από έναν Συγγραφέα, οι παρακάτω επιλογές είναι διαθέσιμες:</p>\n"
+"\n"
+"\t\t\t\t&lt;ol&gt;\n"
+"\t\t\t\t&lt;li&gt;&lt;strong&gt;Προσθήκη ενός Εργαλείου Μελέτης&lt;/strong&gt;&lt;p&gt;Ο Διαχειριστής του περιοδικού προσθέτει την επιλογή \"Εύρεση Αναφορών\" στα Εργαλεία Μελέτης που συνοδεύουν τα δημοσιευμένα τεκμήρια. Οι αναγνώστες επικολλούν τον τίτλο μιας αναφοράς και μετά αναζητούν την αντίστοιχη εργασία σε προεπιλεγμένες επστημονικές βάσεις δεδομένων.&lt;/p&gt;&lt;/li&gt;\n"
+"\t\t\t\t&lt;li&gt;&lt;strong&gt;Ενσωμάτωση συνδέσμων στις αναφορές&lt;/strong&gt;&lt;p&gt;Ο Επιμελητής Σελιδοποίησης προσθέτει έναν σύνδεσμο στις πηγές που είναι προσβάσιμες στο διαδίκτυο, χρησιμοποιώντας τις παρακάτω οδηγίες (οι οποίες επιδέχονται επεξεργασία).&lt;/p&gt;&lt;/li&gt;\n"
+"\t\t\t\t&lt;/ol&gt;"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Απενεργοποίηση του Χρήστη; Δεν θα επιτρέπεται στον Χρήστη τη σύνδεση στο σύστημα.\n"
+"\n"
+"        Προαιρετικά, μπορείτε να ενημερώσετε τον Χρήστη για τους λόγους απενεργοποίησης του λογαριασμού του."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Δεν έχετε δικαιώματα διαχείρισης για τον συγκεκριμένο Χρήστη. Αυτό μπορεί να οφείλεται στα παρακάτω:\n"
+"        &lt;ul&gt;\n"
+"        &lt;li&gt;Ο Χρήστης είναι ο Διαχειριστής του ιστοτόπου&lt;/li&gt;\n"
+"       &lt;li&gt;Ο Χρήστης κατέχει ενεργό ρόλο σε περιοδικά που δεν διαχειρίζεστε&lt;/li&gt;\n"
+"       &lt;/ul&gt;\n"
+"       Η εργασία αυτή πρέπει να εκτελεστεί από κάποιον Διαχειριστή του ιστοτόπου."
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"&lt;ol&gt;\n"
+"\t&lt;li&gt;Οι τονισμένοι τίτλοι τεκμηρίων υποδεικνύουν ότι απαιτείται μία ενέργεια από κάποιον Επιμελητή, όπως παρακάτω:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Ένας Αξιολογητής ορίστηκε αλλά δεν ειδοποιήθηκε με μήνυμα</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Όλοι οι Αξιολογητές έχουν υποβάλει τα σχόλιά τους, ωστόσο δεν υπάρχει καταγεγραμμένη απόφαση</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Ο Συγγραφέας έχει μεταφορτώσει ένα αναθεωρημένο κείμενο</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Ο Αξιολογητής έχει καθυστερήσει να επιβεβαιώσει την αποδοχή του αιτήματος για αξιολόγηση</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Ο Αξιολογητής έχει καθυστερήσει να ολοκληρώσει την αξιολόγηση</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t</li>Το πεδίο \"Προθεσμία αξιολόγησης\" ενημερώνεται όταν ο Αξιολογητής αποδέχεται το αίτημα για αξιολόγηση και εμφανίζει τον αριθμό των εβδομάδων μέχρι την καταληκτική ημερομηνία αξιολόγησης, ή (στην περίπτωση που εμφανίζεται το \"-\") τον αριθμό των εβδομάδων που η αξιολόγηση είναι εκπρόθεσμη.&lt;/li&gt;\n"
+"&lt;/ol&gt;"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"<ol>\n"
+"\t&lt;li&gt;Οι τονισμένοι τίτλοι τεκμηρίων υποδεικνύουν ότι απαιτείται μία ενέργεια από κάποιον Επιμελητή, όπως παρακάτω:\n"
+"\t\t&lt;ul&gt;\n"
+"\t\t\t&lt;li class=\"highlightCopyediting\"&gt;Απαιτείται μία ενέργεια στο στάδιο της επιμέλειας κειμένου&lt;/li&gt;\n"
+"\t\t\t&lt;li class=\"highlightLayoutEditing\"&gt;Απαιτείται μία ενέργεια στο στάδιο της σελιδοποίησης&lt;/li&gt;\n"
+"\t\t\t&lt;li class=\"higlightProofreading\"&gt;Απαιτείται μία ενέργεια στο στάδιο της διόρθωσης τυπογραφικού δοκιμίου &lt;/li&gt;\n"
+"\t\t&lt;/ul&gt;\n"
+"\t&lt;/li&gt;\n"
+"&lt;/ol&gt;"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Ενεργές αναθέσεις Επιμελητή"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Ολοκληρωμένες αναθέσεις Επιμελητή"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Δεν έχουν ανατεθεί υποβολές."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Ενημερώνοντας ξανά τον συγκεκριμένο Επιμελητή Κειμένων, θα επανεκκινήσουν οι εργασίες που του έχουν ανατεθεί. Επιβεβαιώνετε την ενέργεια;"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Ενημερώνοντας ξανά τον συγκεκριμένο Συγγραφέα, θα επανεκκινήσουν οι εργασίες που του έχουν ανατεθεί. Επιβεβαιώνετε την ενέργεια;"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Ενημερώνοντας ξανά τον συγκεκριμένο Επιμελητή Σελιδοποίησης, θα επανεκκινήσουν οι εργασίες που του έχουν ανατεθεί. Επιβεβαιώνετε την ενέργεια;"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Ενημερώνοντας ξανά τον συγκεκριμένο Επιμελητή Τυπογραφικών Δοκιμίων, θα επανεκκινήσουν οι εργασίες που του έχουν ανατεθεί. Επιβεβαιώνετε την ενέργεια;"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Υπαναχωρήσεις"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Υπαναχωρήσεις Αξιολογητή, Ακυρώσεις & Αρχικοί κύκλοι αξιολόγησης"
+
+msgid "sectionEditor.regrets"
+msgstr "Υπαναχωρήσεις"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Προβολή υπαναχωρήσεων, ακυρώσεων, προηγούμενων κύκλων αξιολόγησης"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Ομότιμη αξιολόγηση, κύκλος {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Απόφαση Επιμελητή, κύκλος {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Υπαναχωρήσεις Αξιολογητών & Ακυρώσεις"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Υπαναχώρηση"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Αποτέλεσμα"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Ορισμός υπάρχοντος Χρήστη ως Αξιολογητή"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Δημιουργία νέου Αξιολογητή"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Ενεργές αναθέσεις Επιμελητών"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Ολοκληρωμένες αναθέσεις Επιμελητών"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Δεν υπάρχουν ενεργές αναθέσεις Επιμελητών."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Αναθέσεις Επιμελητών Σελιδοποίησης"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Μεταφόρτωση τύπου τυπογραφικών δοκιμίων"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Αντικατάσταση αρχείου"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Μεταφόρτωση συμπληρωματικού αρχείου"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Μη έγκυρος τύπος αρχείου εικόνας. Οι αποδεκτοί τύποι αρχείων είναι .gif, .jpg και .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Αυτό το τυπογραφικό δοκίμιο θα είναι διαθέσιμο σε έναν ξεχωριστό ιστότοπο."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Σύνδεσμος περιεχομένου που φιλοξενείται σε εξωτερικό ιστότοπο."
+
+msgid "reviewer.pendingReviews"
+msgstr "Άρθρα για τα οποία εκκρεμεί αξιολόγηση"
+
+msgid "reviewer.completedReviews"
+msgstr "Ολοκληρώθηκε"
+
+msgid "reviewer.averageQuality"
+msgstr "Βαθμολογία"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Αρχείο προς αξιολόγηση"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Ενημέρωση του Επιμελητή"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Θα αναλάβει την αξιολόγηση"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Δεν μπορεί να αναλάβει την αξιολόγηση"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Η υποβολή θα είναι διαθέσιμη αν και όταν ο Αξιολογητής αναλάβει την αξιολόγηση."
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Επιμελητής Υποβολής"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Πληκτρολογήστε ή επικολλήστε σχόλια αξιολόγησης εδώ."
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Καταχώρηση από τον Επιμελητή"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Αποστολή υπενθύμισης"
+
+msgid "reviewer.article.automatic"
+msgstr "(Αυτόματα)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Εισήγηση"
+
+msgid "reviewer.article.submitReview"
+msgstr "Υποβολή αξιολόγησης στον Επιμελητή"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Σχόλια"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Αρχεία που έχουν μεταφορτωθεί"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Έκδοση που έχει μεταφορτωθεί από τον Αξιολογητή."
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Εάν επιθυμείτε να εισάγετε επισημειώσεις για τον Επιμελητή στο αρχείο, αποθηκεύστε το στον υπολογιστή σας και χρησιμοποιήστε τις επιλογές Εύρεση/Μεταφόρτωση.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Αίτημα Επιμελητή"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Η απάντησή σας"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Υποβολή αξιολόγησης"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Προσθεσμία αξιολόγησης"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Αποδοχή υποβολής"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Απαιτούνται αναθεωρήσεις"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Επανυποβολή για αξιολόγηση"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Επανυποβολή αλλού"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Απόρριψη υποβολής"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Ανατρέξτε στα σχόλια"
+
+msgid "reviewer.article.schedule"
+msgstr "Πρόγραμμα"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Υποβολή προς αξιολόγηση"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Πρόγραμμα αξιολόγησης"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Βήματα αξιολόγησης"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Οδηγίες προς Αξιολογητές"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Οι Οδηγίες αξιολόγησης ενημερώνουν τους Αξιολογητές σχετικά με τα κριτήρια καταλληλότητας μίας υποβολής για δημοσίευση και περιλαμβάνουν οδηγίες για τη διεξαγωγή μίας χρήσιμης και αποτελεσματικής αξιολόγησης. Κατά την αξιολόγηση, είναι διαθέσιμα στους Αξιολογητές δύο πλαίσια κειμένου: \"για τον Συγγραφέα και τον Επιμελητή\" και \"για τον Επιμελητή\". Εναλλακτικά, ο Διαχειριστής του περιοδικού μπορεί να δημιουργήσει μία φόρμα αξιολόγησης από το μενού \"Φόρμες αξιολόγησης\". Σε κάθε περίπτωση, οι Επιμελητές μπορούν να συμπεριλάβουν τις αξιολογήσεις στην επικοινωνία τους με τους Συγγραφείς."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Ενημέρωση του Επιμελητή της υποβολής"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "για το αν θα αναλάβετε την αξιολόγηση."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Εάν αναλάβετε την αξιολόγηση, συμβουλευτείτε τις \"Οδηγίες προς Αξιολογητές\"."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Πατήστε στα ονόματα των αρχείων για να μεταφορτώσετε τα αρχεία της υποβολής."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Δηλώστε αν υπάρχουν ή όχι αντικρουόμενα συμφέροντα σχετικά με την αξιολόγηση, εκ μέρους σας, αυτής της εργασίας (βλ. &lt;a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\"&gt;Πολιτική&nbsp;Αντικρουόμενων&nbsp;Συμφερόντων&lt;/a&gt;)."
+
+msgid "reviewer.competingInterests"
+msgstr "Αντικρουόμενα συμφέροντα"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Πατήστε στο εικονίδιο για να εισάγετε (ή να επικολλήσετε) την αξιολόγησή σας για αυτή την υποβολή."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Επιπρόσθετα, μπορείτε να μεταφορτώσετε αρχεία για τον Επιμελητή ή/και τον Συγγραφέα."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Υποβάλετε την εισήγηση και την αξιολόγησή σας, για την ολοκλήρωση της διαδικασίας. Πριν υποβάλετε την εισήγηση, θα πρέπει να εισάγετε τα σχόλιά σας, ή να μεταφορτώσετε κάποιο αρχείο με την αξιολόγηση."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Καθορίστε ή προσαρμόστε την εισήγηση του Αξιολογητή."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Δεν έχει επιλεχθεί εισήγηση. Επιλέξτε μία εισήγηση πριν υποβάλετε την αξιολόγηση."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Μετά την καταχώρηση της απόφασης, δεν θα μπορείτε πλέον να πραγματοποιήσετε αλλαγές στη συγκεκριμένη αξιολόγηση. Επιβεβαιώνετε την ενέργεια;"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Αρχείο προς επιμέλεια κειμένου"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Αρχείο Επιμελητή Κειμένου"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Αρχείο Επιμελητή Κειμένου"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Καμία ανάθεση για διόρθωση τυπογραφικών δοκιμίων"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"<p>Για να μεταφορτώσετε το αρχείο της εργασίας σας στο περιοδικό, ακολουθήστε τα παρακάτω βήματα:</p>\n"
+"        &lt;ol&gt;\n"
+"        &lt;li&gt;Σε αυτή τη σελίδα, κάντε κλικ στο \"Περιήγηση\" (ή \"Επιλογή αρχείου\"), για να εντοπίσετε το αρχείο στον σκληρό δίσκο του υπολογιστή σας.&lt;/li&gt;\n"
+"        &lt;li&gt;Όταν εντοπίσετε το αρχείο που επιθυμείτε να υποβάλετε, επισημάνετέ το.&lt;/li&gt;\n"
+"        &lt;li&gt;Στο παράθυρο \"Επιλογή Αρχείου\", επιλέξτε \"Άνοιγμα\".&lt;/li&gt;\n"
+"        &lt;li&gt;Επιλέξτε \"Μεταφόρτωση\" στη σελίδα αυτή, για να μεταφορτώσετε το αρχείο στον ιστότοπο του περιοδικού. Το αρχείο θα μετονομασθεί ακολουθώντας τους κανόνες κωδικοποίησης του περιοδικού.&lt;/li&gt;\n"
+"        &lt;li&gt;Μόλις ολοκληρωθεί η μεταφόρτωση της υποβολής, κάντε κλικ στο \"Αποθήκευση και Συνέχεια\" στο κάτω μέρος αυτής της σελίδας.&lt;/li&gt;\n"
+"        &lt;/ol&gt;"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Το αίτημα δεν μπορεί να αποσταλεί μέχρι να υπάρξει μία έκδοση αξιολόγησης."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Το αίτημα δεν μπορεί να αποσταλεί, μέχρι ένα αρχείο να επιλεγεί για επιμέλεια από την ενότητα \"Απόφαση Επιμελητή\" στην σελίδα \"Αξιολόγηση\"."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Το αίτημα δεν μπορεί να αποσταλεί, μέχρι να μεταφορτωθεί ένα αρχείο για επιμέλεια κειμένου."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Αρχική επιμέλεια κειμένου"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Επιμέλεια κειμένου από τον Επιμελητή Περιοδικού"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Επιμέλεια κειμένου από τον Συγγραφέα"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Τελική επιμέλεια κειμένου"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Έκδοση επιμελημένου κειμένου"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Ανάθεση Επιμελητή Κειμένου"
+
+msgid "submission.copyedit.useFile"
+msgstr "Χρήση αρχείου"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Σχόλια επιμέλειας κειμένου"
+
+msgid "submission.copyedit.instructions"
+msgstr "Οδηγίες επιμέλειας κειμένου"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Κανένα (Μεταφορτώστε την τελική έκδοση του επιμελημένου κειμένου ως έκδοση σελιδοποίησης πριν την αποστολή αιτήματος σελιδοποίησης)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Δημόσιο αναγνωριστικό τυπογραφικού δοκιμίου"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Το δημόσιο αναγνωριστικό του τυπογραφικού δοκιμίου υπάρχει ήδη."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Ανάθεση Επιμελητή Σελιδοποίησης"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Αντικατάσταση Επιμελητή Σελιδοποίησης"
+
+msgid "submission.layout.layoutComments"
+msgstr "Σχόλια σελιδοποίησης"
+
+msgid "submission.layout.instructions"
+msgstr "Οδηγίες σελιδοποίησης"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Σύνδεση αναφορών"
+
+msgid "submission.proofreadingComments"
+msgstr "Σχόλια διόρθωσης τυπογραφικών δοκιμίων"
+
+msgid "submission.proofread.corrections"
+msgstr "Διορθώσεις τυπογραφικών δοκιμίων"
+
+msgid "submission.proofread.instructions"
+msgstr "Οδηγίες διόρθωσης τυπογραφικών δοκιμίων"
+
+msgid "submission.logType.article"
+msgstr "Άρθρο"
+
+msgid "submission.logType.author"
+msgstr "Συγγραφέας"
+
+msgid "submission.logType.editor"
+msgstr "Επιμελητής"
+
+msgid "submission.logType.review"
+msgstr "Αξιολόγηση"
+
+msgid "submission.logType.copyedit"
+msgstr "Επιμέλεια κειμένου"
+
+msgid "submission.logType.layout"
+msgstr "Σελιδοποίηση"
+
+msgid "submission.logType.proofread"
+msgstr "Διόρθωση τυπογραφικών δοκιμίων"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Αλληλογραφία Επιμελητή/Συγγραφέα"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Σχόλια επιμέλειας κειμένου"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Τα συγκεκριμένα σχόλια μπορούν να γνωστοποιηθούν και στους Συγγραφείς.&lt;br /&gt;\n"
+"        (Μετά από την αποθήκευση, είναι δυνατή η προσθήκη επιπλέον σχολίων.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Για τον Συγγραφέα και τον Επιμελητή"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Για τον Επιμελητή"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Μετά από την αποστολή, παρουσιάστε ένα αντίγραφο BCC με δυνατότητα τροποποίησης για αποστολή στους Αξιολογητές."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Για τον Συγγραφέα και τον Επιμελητή"
+
+msgid "submission.comments.forEditor"
+msgstr "Για τον Επιμελητή"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Αποθήκευση και αποστολή μηνύματος στον Συγγραφέα"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Αποθήκευση και αποστολή μηνύματος στον Επιμελητή"
+
+msgid "user.register.selectContext"
+msgstr "Επιλέξτε ένα περιοδικό για να εγγραφείτε:"
+
+msgid "user.register.noJournals"
+msgstr "Δεν υπάρχουν περιοδικά στα οποία μπορείτε να εγγραφείτε."
+
+msgid "user.register.privacyStatement"
+msgstr "Πολιτική Προστασίας Προσωπικών Δεδομένων"
+
+msgid "user.register.registrationDisabled"
+msgstr "Το περιοδικό αυτό προς το παρόν δεν δέχεται εγγραφές Χρηστών."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Ο κωδικός πρόσβασης που εισάγατε περιέχει λιγότερους χαρακτήρες από τον ελάχιστο επιτρεπτό αριθμό χαρακτήρων."
+
+msgid "user.register.readerDescription"
+msgstr "Ειδοποίηση μέσω μηνυμάτων κατά τη δημοσίευση νέου τεύχους του περιοδικού."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Ειδοποίηση μέσω μηνυμάτων κατά τη διάθεση ενός τεύχους με ανοικτή πρόσβαση."
+
+msgid "user.register.authorDescription"
+msgstr "Δυνατότητα υποβολής άρθρων στο περιοδικό"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Εκδήλωση ενδιαφέροντος για τη διεξαγωγή αξιολογήσεων για το περιοδικό."
+
+msgid "user.register.reviewerDescription"
+msgstr "Εκδήλωση ενδιαφέροντος για τη διεξαγωγή αξιολογήσεων σε περιοδικά του ιστότοπου."
+
+msgid "user.register.reviewerInterests"
+msgstr "Ενδιαφέροντα αξιολόγησης (θεματικά πεδία και ερευνητικές μέθοδοι):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Επιθυμώ να ενημερώνομαι για νέες δημοσιεύσεις και ανακοινώσεις, για όλα τα περιοδικά στα οποία έχω εγγραφεί."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Οι συνδρομές μου"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Κατάσταση συνδρομής"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Οι ενεργές και ανενεργές συνδρομές παρουσιάζονται παρακάτω, μαζί με την ημερομηνία λήξης τους. Οι παρακάτω πληροφορίες μπορεί να συμπεριλαμβάνονται και σε κάθε συνδρομή ξεχωριστά."
+
+msgid "user.subscriptions.status"
+msgstr "Κατάσταση"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Περιγραφή"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Απαιτούνται πρόσθετες πληροφορίες πριν ενεργοποιηθεί η συνδρομή."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Η συνδρομή θα πρέπει να ελεγχθεί πριν ενεργοποιηθεί."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Η χειρωνακτική πληρωμή έχει ξεκινήσει αλλά δεν έχει ολοκληρωθεί."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Μία διαδικτυακή πληρωμή έχει ξεκινήσει, αλλά ακυρώθηκε ή δεν ολοκληρώθηκε."
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Ατομική συνδρομή"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Ιδρυματικές συνδρομές"
+
+msgid "user.subscriptions.renew"
+msgstr "Ανανέωση"
+
+msgid "user.subscriptions.purchase"
+msgstr "Ενεργοποίηση"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Ενεργοποίηση νέας συνδρομής"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Ενεργοποίηση ατομικής συνδρομής"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Ενεργοποίηση ιδρυματικής συνδρομής"
+
+msgid "user.subscriptions.expires"
+msgstr "Λήγει: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Έχει λήξει: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Εμφάνιση διαθέσιμων τύπων συνδρομών"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Τύπος συνδρομής"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Μέλη"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Ο επιλεγμένος τύπος συνδρομής απαιτεί πληροφορίες μέλους."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Παρακαλούμε επιλέξτε έναν έγκυρο τύπο συνδρομής."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Αυτός ο λογαρισμός Χρήστη έχει ήδη μία ατομική συνδρομή."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Πληροφορίες μέλους, αν απαιτούνται για τον επιλεγμένο τύπο συνδρομής."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Όνομασία ιδρύματος"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Απαιτείται μια ονομασία ιδρύματος."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Ταχυδρομική διεύθυνση"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Περιοχή δικτύου (domain)"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Εάν εισαχθεί εδώ μία περιοχή δικτύου, οι περιοχές ΙΡ διευθύνσεων είναι προαιρετικές.&lt;br /&gt;Έγκυρες τιμές είναι οι περιοχές δικτύου (π.χ. upatras.gr)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Ο επιλεγμένος τύπος συνδρομής απαιτεί μία περιοχή δικτύου ή/και μία περιοχή ΙΡ διευθύνσεων για ταυτοποίηση της συνδρομής."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Παρακαλούμε εισάγετε μία έγκυρη περιοχή δικτύου."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Περιοχή ΙΡ διευθύνσεων"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Αν οριστούν εδώ περιοχές ΙΡ διευθύνσεων, η περιοχή δικτύου είναι προαιρετική.&lt;br /&gt;Έγκυρες τιμές αποτελούν μία IP διεύθυνση (π.χ. 142.58.103.1), μία περιοχή IP διευθύνσεων (π.χ.. 142.58.103.1 - 142.58.103.4), μία περιοχή IP διευθύνσεων με χαρακτήρες παραμετροποίησης '*' (π.χ. 142.58.*.*), και μία περιοχή IP διευθύνσεων τύπου CIDR (π.χ. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Παρακαλούμε εισάγετε μία έγκυρη περιοχή ΙΡ διευθύνσεων."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Διαγραφή"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Προσθήκη"
+
+msgid "search.browseAuthorIndex"
+msgstr "Πλοήγηση στο Ευρετήριο Συγγραφέων"
+
+msgid "search.searchFor"
+msgstr "Αναζήτηση άρθρων για"
+
+msgid "search.withinJournal"
+msgstr "Μέσα σε"
+
+msgid "search.allJournals"
+msgstr "Όλα τα περιοδικά"
+
+msgid "search.authorIndex"
+msgstr "Πλοήγηση στο Ευρετήριο Συγγραφέων"
+
+msgid "search.authorDetails"
+msgstr "Στοιχεία Συγγραφέα"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Συμβουλές αναζήτησης: &lt;/h4&gt;&lt;ul&gt;\n"
+"        &lt;li&gt;Δεν γίνεται διάκριση πεζών-κεφαλαίων στους όρους αναζήτησης&lt;/li&gt;\n"
+"        &lt;li&gt;Οι συνήθεις λέξεις αγνοούνται κατά την αναζήτηση&lt;/li&gt;\n"
+"        &lt;li&gt;Εξ ορισμού, τα αποτελέσματα της αναζήτησης περιλαμβάνουν μόνο άρθρα που περιέχουν &lt;em&gt;όλους&lt;/em&gt; τους όρους αναζήτησης (δηλ. χρησιμοποιείται ο τελεστής &lt;em&gt;AND&lt;/em&gt;)&lt;/li&gt;\n"
+"        &lt;li&gt;Συνδυάστε περισσότερες της μίας λέξεις με τον τελεστή &lt;em&gt;OR&lt;/em&gt; για να ανακτήσετε άρθρα που περιέχουν μία τουλάχιστον από αυτές, π.χ., &lt;em&gt;εκπαίδευση OR έρευνα&lt;/em&gt;&lt;/li&gt;\n"
+"        &lt;li&gt;Χρησιμοποιήστε παρενθέσεις για πιο σύνθετες αναζητήσεις, π.χ. &lt;em&gt;αρχείο ((άρθρο OR συνέδριο) NOT διατριβές)&lt;/em&gt;&lt;/li&gt;\n"
+"        &lt;li&gt;Χρησιμοποιήστε εισαγωγικά για να αναζητήσετε μία ακριβή έκφραση, π.χ &lt;em&gt;\"εκδόσεις ανοικτής πρόσβασης\"&lt;/em&gt;&lt;/li&gt;\n"
+"        &lt;li&gt;Μπορείτε να εξαιρέσετε μία λέξη με τη χρήση του συμβόλου &lt;strong&gt;-&lt;/strong&gt; ή του τελεστή&lt;em&gt;NOT&lt;/em&gt;; π.χ. &lt;em&gt;διαδικτυακά - πολιτική&lt;/em&gt; ή &lt;em&gt;διαδικτυακά NOT πολιτική&lt;/em&gt;&lt;/li&gt;\n"
+"        &lt;li&gt;Με τη χρήση του συμβόλου &lt;strong&gt;*&lt;/strong&gt; σε έναν όρο αναζήτησης μπορείτε να ανακτήσετε οποιονδήποτε όρο που τον περιέχει, π.χ. η αναζήτηση με τον όρο &lt;em&gt;\"συνεργά*\"&lt;/em&gt; θα επιστρέψει αποτελέσματα που θα περιέχουν τους όρους \"συνεργάτες\" ή \"συνεργάται\" ή \"συνεργάτης\" κ.ο.κ.&lt;/li&gt;\n"
+"        &lt;/ul&gt;"
+
+msgid "article.pageTitle"
+msgstr "Προβολή του {$title}"
+
+msgid "article.pdf.title"
+msgstr "PDF (Portable Document Format) "
+
+msgid "article.download"
+msgstr "Μεταφορτώστε αυτό το αρχείο PDF"
+
+msgid "article.pluginMissing"
+msgstr "<p>Αν το πρόγραμμα πλοήγησης στο διαδίκτυο που χρησιμοποιείτε διαθέτει εγκατεστημένο Πρόσθετο PDF reader, το αρχείο PDF που επιλέξατε θα φορτωθεί εδώ.</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Μεταφόρτωση άρθρου"
+
+msgid "article.nonpdf.note"
+msgstr "Η μεταφόρτωση του αρχείου θα εκκινήσει αυτόματα. Εάν δεν ολοκληρωθεί, επιλέξτε τον παρακάτω σύνδεσμο. Για την προβολή του συγκεκριμένου αρχείου μπορεί να απαιτείται ένα ειδικό πρόγραμμα προβολής ή κάποιο πρόσθετο.&lt;br /&gt;&lt;br /&gt; Εάν το αρχείο δεν κατέβει αυτόματα, &lt;a href=\"{$url}\"&gt; κάντε κλικ εδώ&lt;/a&gt;."
+
+msgid "site.journalsHosted"
+msgstr "Περιοδικά που φιλοξενούνται σε αυτόν το ιστότοπο"
+
+msgid "site.journalView"
+msgstr "Προβολή περιοδικού"
+
+msgid "site.journalRegister"
+msgstr "Εγγραφή"
+
+msgid "site.journalCurrent"
+msgstr "Τρέχον τεύχος"
+
+msgid "site.noJournals"
+msgstr "Δεν υπάρχουν διαθέσιμα περιοδικά."
+
+msgid "current.current"
+msgstr "Τρέχον"
+
+msgid "current.noCurrentIssue"
+msgstr "Δεν υπάρχει τρέχον τεύχος"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Δεν υπάρχουν δημοσιευμένα τεύχη για το περιοδικό αυτό."
+
+msgid "archive.archives"
+msgstr "Αρχείο τευχών"
+
+msgid "archive.archivesPageNumber"
+msgstr "Αρχείο - Σελίδα {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Περιηγηθείτε σε παλαιότερα τεύχη"
+
+msgid "archive.issueUnavailable"
+msgstr "Μη διαθέσιμο τεύχος"
+
+msgid "about.statistics"
+msgstr "Στατιστικά"
+
+msgid "about.contact"
+msgstr "Επικοινωνία"
+
+msgid "about.aboutContext"
+msgstr "Σχετικά με το περιοδικό"
+
+msgid "about.history"
+msgstr "Ιστορικό περιοδικού"
+
+msgid "about.editorialTeam"
+msgstr "Συντακτική ομάδα"
+
+msgid "about.editorialTeam.biography"
+msgstr "Βιογραφικό"
+
+msgid "about.editorialPolicies"
+msgstr "Πολιτικές Σύνταξης"
+
+msgid "about.focusAndScope"
+msgstr "Θεματική περιοχή και περιεχόμενο"
+
+msgid "about.sectionPolicies"
+msgstr "Πολιτικές ενότητας"
+
+msgid "about.submissions"
+msgstr "Υποβολές"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Συνδεθείτε"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Εγγραφείτε"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} ή {$register} για να κάνετε μία υποβολή."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} ή {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Ξεκινήστε μία νέα υποβολή."
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Προβολή των υποβολών που εκκρεμούν."
+
+msgid "about.authorGuidelines"
+msgstr "Οδηγίες για τους Συγγραφείς"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Λίστα Ελέγχου Προετοιμασίας Υποβολής"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Κατά την υποβολή εργασιών στο περιοδικό, ζητείται από τους Συγγραφείς να επιβεβαιώσουν ότι η υποβολή ανταποκρίνεται στα ακόλουθα κριτήρια. Μη συμβατές υποβολές ενδέχεται να επιστραφούν στους Συγγραφείς."
+
+msgid "about.copyrightNotice"
+msgstr "Δήλωση Πνευματικών Δικαιωμάτων"
+
+msgid "about.privacyStatement"
+msgstr "Πολιτική Προστασίας Προσωπικών Δεδομένων"
+
+msgid "about.authorFees"
+msgstr "Εισφορά Συγγραφέα"
+
+msgid "about.authorFeesMessage"
+msgstr "Το περιοδικό αυτό επιβαρύνει τους Συγγραφείς με τις παρακάτω εισφορές:"
+
+msgid "about.peerReviewProcess"
+msgstr "Διαδικασία Ομότιμης Αξιολόγησης"
+
+msgid "about.publicationFrequency"
+msgstr "Συχνότητα δημοσίευσης"
+
+msgid "about.openAccessPolicy"
+msgstr "Πολιτική ανοικτής πρόσβασης"
+
+msgid "about.delayedOpenAccess"
+msgstr "Καθυστερημένη ανοικτή πρόσβαση"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Το περιεχόμενο του συγκεκριμένου περιοδικού θα είναι διαθέσιμο με ανοικτή πρόσβαση"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "μήνα(-ες) μετά από τη δημοσίευση τεύχους."
+
+msgid "about.authorSelfArchive"
+msgstr "Αυτοαρχειοθέτηση Συγγραφέων"
+
+msgid "about.archiving"
+msgstr "Αρχειοθέτηση"
+
+msgid "about.subscriptions"
+msgstr "Συνδρομές"
+
+msgid "about.subscriptions.individual"
+msgstr "Ατομικές συνδρομές"
+
+msgid "about.subscriptions.institutional"
+msgstr "Ιδρυματικές συνδρομές"
+
+msgid "about.subscriptionsContact"
+msgstr "Πρόσωπο επικοινωνίας για συνδρομές"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Όνομα"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Τύπος"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Διάρκεια"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Κόστος"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Τύποι συνδρομών"
+
+msgid "about.memberships"
+msgstr "Μέλη"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Σχετικά με αυτό το λογισμικό"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Διαδικασία επιμέλειας και δημοσίευσης"
+
+msgid "about.aboutOJSJournal"
+msgstr "Το περιοδικό αυτό χρησιμοποιεί το OJS (Open Journal Systems) {$ojsVersion}, ένα λογισμικό ανοιχτού κώδικα για τη διαχείριση και δημοσίευση ηλεκτρονικών περιοδικών, που έχει αναπτυχθεί υποστηρίζεται και διατίθεται ελεύθερα από το &lt;a href=\"http://pkp.sfu.ca/\"&gt;Public Knowledge Project&lt;/a&gt; υπό την άδεια GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Ο ιστότοπος αυτός χρησιμοποιεί το OJS (Open Journal Systems) {$ojsVersion}, ένα λογισμικό ανοικτού κώδικα για τη διαχείριση και δημοσίευση ηλεκτρονικών περιοδικών, που έχει αναπτυχθεί υποστηρίζεται και διατίθεται ελεύθερα από το &lt;a href=\"http://pkp.sfu.ca/\"&gt;Public Knowledge Project&lt;/a&gt; υπό την άδεια GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Βοήθεια για το OJS"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Βοήθεια για το OJS"
+
+msgid "help.searchReturnResults"
+msgstr "Επιστροφή στα αποτελέσματα της αναζήτησης"
+
+msgid "help.goToEditPage"
+msgstr "Επεξεργασία {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Σας ευχαριστούμε"
+
+msgid "donations.thankYouMessage"
+msgstr "Σας ευχαριστούμε πολύ για την συνεισφορά σας. Εκτιμούμε ιδιαίτερα την υποστήριξή σας."
+
+msgid "payment.loginRequired"
+msgstr "Πρέπει να συνδεθείτε στο σύστημα για να προχωρήσετε στην πληρωμή."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Για την πρόσβαση στο άρθρο απαιτείται συνδρομή στο περιοδικό ή αγορά του άρθρου. Για να επικυρώσετε τη συνδρομή σας, να αποκτήσετε πρόσβαση σε άρθρα που έχετε προμηθευτεί ή να αγοράσετε ένα άρθρο, συνδεθείτε στο περιοδικό."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Για την πρόσβαση στο τεύχος απαιτείται συνδρομή στο περιοδικό ή αγορά του τεύχους. Για να επικυρώσετε τη συνδρομή σας, να αποκτήσετε πρόσβαση σε τεύχη που έχετε προμηθευτεί ή να αγοράσετε ένα τεύχος, συνδεθείτε στο περιοδικό."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Πρέπει να είστε συνδεδεμένος/η στο σύστημα για να κάνετε μία δωρεά."
+
+msgid "payment.paid"
+msgstr "Πληρώθηκε"
+
+msgid "payment.payNow"
+msgstr "Πληρωμή τώρα"
+
+msgid "payment.waive"
+msgstr "Απαλλαγή εισφοράς"
+
+msgid "payment.alreadyPaid"
+msgstr "Έχει ήδη πληρωθεί"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Επιλέξτε εδώ αν έχετε ήδη αποστείλει την πληρωμή σας στο περιοδικό, ώστε να ολοκληρωθεί η διαδικασία υποβολής. Η διαδικασία αξιολόγησης της υποβολής σας δεν θα προχωρήσει μέχρι την παραλαβή της πληρωμής σας. Επιλέξτε \"Πληρωμή τώρα\" για τις οδηγίες πληρωμής."
+
+msgid "payment.paymentReceived"
+msgstr "Η πληρωμή ελήφθη"
+
+msgid "payment.paymentSent"
+msgstr "Η πληρωμή έχει ήδη αποσταλεί"
+
+msgid "payment.authorFees"
+msgstr "Εισφορές Συγγραφέα"
+
+msgid "payment.type.submission"
+msgstr "Εισφορά υποβολής"
+
+msgid "payment.type.publication"
+msgstr "Εισφορά δημοσίευσης"
+
+msgid "payment.type.publication.required"
+msgstr "Η εισφορά δημοσίευσης οφείλεται να πληρωθεί."
+
+msgid "payment.type.fastTrack"
+msgstr "Εισφορά γρήγορης αξιολόγησης"
+
+msgid "payment.type.membership"
+msgstr "Εισφορά ατομικής συνδρομής"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Εισφορά αγοράς άρθρου"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Εισφορά αγοράς τεύχους"
+
+msgid "payment.type.subscription"
+msgstr "Εισφορά συνδρομής"
+
+msgid "payment.type.donation"
+msgstr "Δωρεές"
+
+msgid "payment.requestPublicationFee"
+msgstr "Ζητήστε εισφορά δημοσίευσης ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Έχει ζητηθεί μια πληρωμή, αλλά το αίτημα έληξε. Επικοινωνήστε με τον Διαχειριστή του Περιοδικού για λεπτομέριες."
+
+msgid "payment.donation.makeDonation"
+msgstr "Κάντε μία δωρεά"
+
+msgid "payment.submission.paySubmission"
+msgstr "Πληρώστε την εισφορά υποβολής."
+
+msgid "payment.publication.payPublication"
+msgstr "Πληρώστε την εισφορά δημοσίευσης."
+
+msgid "payment.publication.publicationPaid"
+msgstr "Η εισφορά δημοσίευσης πληρώθηκε."
+
+msgid "payment.membership.buyMembership"
+msgstr "Ενεργοποιήστε ατομική συνδρομή."
+
+msgid "payment.membership.renewMembership"
+msgstr "Ανανεώστε την ατομική συνδρομή."
+
+msgid "payment.membership.ends"
+msgstr "Λήγει"
+
+msgid "payment.subscription.purchase"
+msgstr "Ενεργοποιήστε συνδρομή."
+
+msgid "payment.subscription.renew"
+msgstr "Ανανεώστε τη συνδρομή."
+
+msgid "payment.subscription.expires"
+msgstr "Λήγει"
+
+msgid "installer.appInstallation"
+msgstr "Εγκατάσταση του OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Αναβάθμιση του OJS"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"&lt;h4&gt;Έκδοση OJS {$version}&lt;/h4&gt;\n"
+"        &lt;p&gt;Σας ευχαριστούμε που προτιμήσατε το &lt;strong&gt;Open Journal Systems&lt;/strong&gt; του Public Knowledge Project. Πριν προχωρήσετε, παρακαλούμε συμβουλευτείτε το αρχείο &lt;a href=\"{$baseUrl}/docs/README\"&gt;README&lt;/a&gt; που παρέχεται μαζί με αυτό το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project, επισκεφτείτε τον &lt;a href=\"http://pkp.sfu.ca/\" target=\"_blank\"&gt;ιστότοπο του PKP&lt;/a&gt;. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο  &lt;a href=\"http://forum.pkp.sfu.ca\"&gt;φόρουμ υποστήριξης&lt;/a&gt; ή επισκεφτείτε το &lt;a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\"&gt;σύστημα σύνταξης αναφορών σφαλμάτων&lt;/a&gt; του PKP στο διαδίκτυο. Αν και το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου, στη διεύθυνση &lt;a href=\"mailto:pkp.contact@gmail.com\"&gt;pkp.contact@gmail.com&lt;/a&gt;.&lt;/p&gt;\n"
+"\n"
+"        &lt;h4&gt;Αναβάθμιση&lt;/h4&gt;\n"
+"\n"
+"        &lt;p&gt;Εάν πραγματοποιείτε αναβάθμιση μιας υπάρχουσας εγκατάστασης του OJS, &lt;a href=\"{$upgradeUrl}\"&gt;πατήστε εδώ&lt;/a&gt; για να προχωρήσετε.&lt;/p&gt;\n"
+"\n"
+"        &lt;h4&gt; Συνιστώμενα χαρακτηριστικά Συστήματος&lt;/h4&gt;\n"
+"\n"
+"        &lt;ul&gt;\n"
+"\t&lt;li&gt;&lt;a href=\"http://www.php.net/\" target=\"_blank\"&gt;PHP&lt;/a&gt; &gt;= {$phpRequiredVersion}. Αυτή τη στιγμή χρησιμοποιείτε την έκδοση PHP {$phpVersion}{$wrongPhpText}&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;a href=\"http://www.mysql.com/\" target=\"_blank\"&gt;MySQL&lt;/a&gt; &gt;= 4.1 ή &lt;a href=\"http://www.postgresql.org/\" target=\"_blank\"&gt;PostgreSQL&lt;/a&gt; &gt;= 9.1.5&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;a href=\"http://httpd.apache.org/\" target=\"_blank\"&gt;Apache&lt;/a&gt; &gt;= 1.3.2x or &gt;= 2.0.4x ή Microsoft IIS 6&lt;/li&gt;\n"
+"        &lt;li&gt;Λειτουργικό σύστημα: οποιοδήποτε λειτουργικό σύστημα υποστηρίζει το προαναφερόμενο λογισμικό, συμπεριλαμβανομένων των &lt;a href=\"http://www.linux.org/\" target=\"_blank\"&gt;Linux&lt;/a&gt;, &lt;a href=\"http://www.bsd.org/\" target=\"_blank\"&gt;BSD&lt;/a&gt;, &lt;a href=\"http://www.oracle.com/sun/\" target=\"_blank\"&gt;Solaris&lt;/a&gt;, &lt;a href=\"http://www.apple.com/\" target=\"_blank\"&gt;Mac OS X&lt;/a&gt;, &lt;a href=\"http://www.microsoft.com/\"&gt;Windows&lt;/a&gt;&lt;/li&gt;\n"
+"        &lt;/ul&gt;\n"
+"\n"
+"        &lt;p&gt;Εφόσον το PKP δεν διαθέτει τους πόρους για να δοκιμάζει κάθε πιθανό συνδυασμό εκδόσεων λογισμικού και πλατφορμών, δεν παρέχεται εγγύηση σωστής λειτουργίας ή πλήρης υποστήριξη.&lt;/p&gt;\n"
+"\n"
+"        &lt;p&gt;Αλλαγές στις συγκεκριμένες ρυθμίσεις μπορούν να πραγματοποιηθούν μετά την εγκατάσταση, διαμορφώνοντας το αρχείο &lt;tt&gt;config.inc.php&lt;/tt&gt; στον βασικό φάκελο του OJS, ή χρησιμοποιώντας τη διεπαφή διαχείρισης του ιστοτόπου.&lt;/p&gt;\n"
+"\n"
+"        &lt;h4&gt;Υποστηριζόμενα συστήματα βάσεων δεδομένων&lt;/h4&gt;\n"
+"\n"
+"        &lt;p&gt;Το OJS έχει προς το παρόν δοκιμαστεί μόνο σε MySQL και PostgreSQL, παρόλο που και άλλα συστήματα διαχείρισης βάσεων δεδομένων που υποστηρίζονται από &lt;a href=\"http://php.weblogs.com/adodb/\" target=\"_blank\"&gt;ADOdb&lt;/a&gt; ενδέχεται να λειτουργούν (πλήρως ή εν μέρει). Αναφορές συμβατότητας ή/και επιρράματα κώδικα για εναλλακτικά DBMS μπορούν να αποσταλούν στην ομάδα του OJS.&lt;/p&gt;"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"\t\t&lt;h4&gt;Βήματα προετοιμασίας της εγκατάστασης&lt;/h4&gt;\n"
+"\n"
+"        &lt;p&gt;1. Τα ακόλουθα αρχεία και κατάλογοι (και τα περιεχόμενα αυτών) πρέπει να καταστούν εγγράψιμα:&lt;/p&gt;\n"
+"        &lt;ul&gt;\n"
+"        &lt;li&gt;&lt;tt&gt;config.inc.php&lt;/tt&gt; είναι εγγράψιμο (προαιρετικό) {$writable_config}&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;tt&gt;public/&lt;/tt&gt; είναι εγγράψιμο: {$writable_public}&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;tt&gt;cache/&lt;/tt&gt; είναι εγγράψιμο: {$writable_cache}&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;tt&gt;cache/t_cache/&lt;/tt&gt; είναι εγγράψιμο: {$writable_templates_cache}&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;tt&gt;cache/t_compile/&lt;/tt&gt; είναι εγγράψιμο: {$writable_templates_compile}&lt;/li&gt;\n"
+"        &lt;li&gt;&lt;tt&gt;cache/_db&lt;/tt&gt; είναι εγγράψιμο: {$writable_db_cache}&lt;/li&gt;\n"
+"        &lt;/ul&gt;\n"
+"\n"
+"        &lt;p&gt;2. Πρέπει να δημιουργηθεί και να καταστεί εγγράψιμος ένας κατάλογος για αποθήκευση των αρχείων που έχουν μεταφορτωθεί (βλέπε «Ρυθμίσεις αρχείου» παρακάτω).&lt;/p&gt;"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"&lt;h4&gt;Έκδοση OJS{$version}&lt;/h4&gt;\n"
+"\n"
+"\t\t\t\t&lt;p&gt;Σας ευχαριστούμε που προτιμήσατε το &lt;strong&gt;Open Journal Systems&lt;/strong&gt; του Public Knowledge Project. Πριν προχωρήσετε παρακάτω, συμβουλευτείτε τα αρχεία &lt;a href=\"{$baseUrl}/docs/README\"&gt;README&lt;/a&gt; και &lt;a href=\"{$baseUrl}/docs/UPGRADE\"&gt;UPGRADE&lt;/a&gt; που παρέχονται μαζί με αυτό το λογισμικό. Για περισσότερες πληροφορίες σχετικά με το Public Knowledge Project, επισκεφτείτε τον &lt;a href=\"http://pkp.sfu.ca/\" target=\"_blank\"&gt; ιστότοπο του PKP&lt;/a&gt;. Εάν έχετε αναφορές σφαλμάτων ή ερωτήματα για την τεχνική υποστήριξη σχετικά με το Open Journal Systems, ανατρέξτε στο &lt;a href=\"http://forum.pkp.sfu.ca\"&gt;φόρουμ υποστήριξης&lt;/a&gt; ή επισκεφτείτε το &lt;a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\"&gt;σύστημα σύνταξης αναφορών&lt;/a&gt; του PKP στο διαδίκτυο. Αν και το φόρουμ υποστήριξης είναι η προτιμώμενη μέθοδος επικοινωνίας, μπορείτε επίσης να επικοινωνήσετε με την ομάδα μέσω ηλεκτρονικού ταχυδρομείου στη διεύθυνση &lt;a href=\"mailto:pkp.contact@gmail.com\"&gt;pkp.contact@gmail.com&lt;/a&gt;.&lt;/p&gt;\n"
+"\t\t\t\t&lt;p&gt;&lt;strong&gt;Συνιστάται&lt;/strong&gt; η δημιουργία εφεδρικών αντιγράφων ασφαλείας της βάσης δεδομένων, του καταλόγου αρχείων και του καταλόγου εγκατάστασης του OJS πριν να προχωρήσετε παρακάτω.&lt;/p&gt;\n"
+"\t\t\t\t&lt;p&gt;Εάν εκτελείτε το πρόγραμμα σε &lt;a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\"&gt;Ασφαλή λειτουργία PHP&lt;/a&gt;, παρακαλούμε βεβαιωθείτε ότι η οδηγία max_execution_time στο αρχείο ρυθμίσεων php.ini έχει οριστεί σε υψηλό όριο. Εάν το συγκεκριμένο ή οποιοδήποτε άλλο χρονικό όριο (π.χ. η οδηγία \"Timeout\" του Apache) ξεπεραστεί και η διαδικασία αναβάθμισης διακοπεί, θα χρειαστεί χειροκίνητη παρέμβαση.&lt;/p&gt;"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+" Για ολοκληρωμένη υποστήριξη Unicode (UTF-8), επιλέξτε UTF-8 για όλες τις ρυθμίσεις του συνόλου χαρακτήρων. Παρακαλούμε σημειώστε ότι η πλήρης υποστήριξη Unicode απαιτεί η PHP να μεταγλωττιστεί με υποστήριξη για τη &lt;a href=\"http://www.php.net/mbstring\" target=\"_blank\"&gt;mbstring&lt;/a&gt; βιβλιοθήκη (είναι ενεργοποιημένο εξ'ορισμού στις πιο πρόσφατες εγκαταστάσεις της PHP). Ενδέχεται να αντιμετωπίσετε προβλήματα με τη χρήση των επεκτάσεων συνόλων χαρακτήρων σε περίπτωση όπου ο εξυπηρετητής σας δε συμμορφώνεται με τις συγκεκριμένες απαιτήσεις.\n"
+"\t\t\t\t&lt;br /&gt;&lt;br /&gt;\n"
+"\t\t\t\tΟ διακομιστής σας επί του παρόντος υποστηρίζει το mbstring: &lt;strong&gt;{$supportsMBString}&lt;/strong&gt;"
+
+msgid "installer.allowFileUploads"
+msgstr "Ο διακομιστής σας επί του παρόντος επιτρέπει το ανέβασμα αρχείων: &lt;strong&gt;{$allowFileUploads}&lt;/strong&gt;"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Ο διακομιστής σας επί του παρόντος επιτρέπει το ανέβασμα αρχείων με μέγιστο μέγεθος: &lt;strong&gt;{$maxFileUploadSize}&lt;/strong&gt;"
+
+msgid "installer.localeInstructions"
+msgstr "Η κύρια γλώσσα για χρήση από το συγκεκριμένο Σύστημα. Παρακαλούμε, ανατρέξτε στα έγγραφα τεκμηρίωσης του OJS, εάν επιθυμείτε να εισάγετε γλώσσες που δεν περιλαμβάνονται εδώ."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Επιλέξτε πρόσθετες γλώσσες για χρήση στο συγκεκριμένο Σύστημα. Οι γλώσσες αυτές θα είναι διαθέσιμες για χρήση από περιοδικά που φιλοξενούνται στον ιστότοπο. Επιπρόσθετες γλώσσες μπορούν επίσης να εγκατασταθούν ανά πάσα στιγμή από τη διεπαφή διαχείρισης του ιστοτόπου."
+
+msgid "installer.filesDirInstructions"
+msgstr "Εισαγάγετε την πλήρη διαδρομή προς έναν υπάρχοντα φάκελο όπου θα φυλάσσονται τα αρχεία που έχουν μεταφορτωθεί. Ο φάκελος αυτός δεν πρέπει να είναι άμεσα προσβάσιμος μέσω του Παγκόσμιου Ιστού.&lt;strong&gt;Παρακαλούμε βεβαιωθείτε ότι ο φάκελος αυτός υπάρχει ήδη και είναι εγγράψιμος πριν από την εγκατάσταση.&lt;/strong&gt; Τα ονόματα των διαδρομών στα Windows πρέπει να χρησιμοποιούν καθέτους, π.χ. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "Το OJS απαιτεί πρόσβαση σε μία βάση δεδομένων SQL για να αποθηκεύει τα δεδομένα του. Συμβουλευτείτε τις απαιτήσεις Συστήματος παραπάνω για μία λίστα υποστηριζόμενων βάσεων δεδομένων. Στα παρακάτω πεδία, συμπληρώστε τις απαραίτητες ρυθμίσεις για την σύνδεση με τη βάση δεδομένων."
+
+msgid "installer.installApplication"
+msgstr "Εγκατάσταση Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Αναβάθμιση Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "&lt;strong&gt;Προσοχή:&lt;/strong&gt; Αν η διαδικασία εγκατάστασης απέτυχε κατά το στάδιο της εγκατάστασης της βάσης δεδομένων, ίσως χρειαστεί να διαγράψετε τη βάση δεδομένων του OJS ή τους πίνακες της βάσης πριν επιχειρήσετε εκ νέου εγκατάσταση της βάσης δεδομένων."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"&lt;h4&gt;ΣΗΜΑΝΤΙΚΟ!&lt;/h4&gt;\n"
+"        &lt;p&gt;Το πρόγραμμα εγκατάστασης δεν κατάφερε να αντικαταστήσει αυτόματα το αρχείο ρυθμίσεων. Πριν επιχειρήσετε να χρησιμοποιήσετε το σύστημα, παρακαλούμε ανοίξτε το αρχείο &lt;tt&gt;config.inc.php&lt;/tt&gt; με κατάλληλο πρόγραμμα επεξεργασίας κειμένου και αντικαταστήστε τα περιεχόμενά του με τα περιεχόμενα του παρακάτω πεδίου κειμένου.&lt;/p&gt;"
+
+msgid "installer.installationComplete"
+msgstr ""
+"&lt;p&gt;Η εγκατάσταση του OJS έχει ολοκληρωθεί επιτυχώς.&lt;/p&gt;\n"
+"        &lt;p&gt;Για να ξεκινήσετε τη χρήση του συστήματος, &lt;a href=\"{$loginUrl}\"&gt;συνδεθείτε&lt;/a&gt; με το όνομα Χρήστη και τον κωδικό πρόσβασης που εισαγάγατε στην προηγούμενη σελίδα.&lt;/p&gt;\n"
+"        &lt;p&gt;Εάν επιθυμείτε να είστε μέλος της κοινότητας του PKP: &lt;/p&gt;\n"
+"&lt;ol&gt;\n"
+"<li>Διαβάστε το <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">ιστολόγιο του PKP</a> και ακολουθήστε τις <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">ροές RSS (RSS feeds)</a> για νέα και ενημερώσεις.</li>\n"
+"\t<li>Επισκεφθείτε το <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">φόρουμ υποστήριξης</a> εάν έχετε ερωτήσεις ή σχόλια.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"&lt;p&gt;Η αναβάθμιση του OJS στην έκδοση{$version} ολοκληρώθηκε επιτυχώς.&lt;/p&gt;\n"
+"        &lt;p&gt;Μην παραλείψετε να θέσετε τη ρύθμιση \"εγκατεστημένο\" στο αρχείο ρυθμίσεων \"config.inc.php\" ξανά σε &lt;em&gt;Ναι&lt;/em&gt;.&lt;/p&gt;\n"
+"        &lt;p&gt;Εάν δεν έχετε ήδη εγγραφεί και επιθυμείτε να λαμβάνετε ειδήσεις και ενημερώσεις, &lt;strong&gt;παρακαλούμε εγγραφείτε στο &lt;a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\"&gt;http://pkp.sfu.ca/ojs/register&lt;/a&gt;.&lt;/strong&gt; Εάν έχετε ερωτήσεις ή σχόλια, παρακαλούμε επισκεφθείτε το &lt;a href=\"http://forum.pkp.sfu.ca\" target=\"_new\"&gt;φόρουμ υποστήριξης&lt;/a&gt;.&lt;/p&gt;"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Υπάρχει διαθέσιμη μία νέα έκδοση OJS! Αυτήν τη στιγμή χρησιμοποιείτε το OJS {$currentVersion}. Η τελευταία έκδοση είναι η {$latestVersion}. Παρακαλούμε επισκεφθείτε &lt;a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\"&gt;αυτή τη σελίδα&lt;/a&gt; για να κατεβάσετε την τελευταία έκδοση και βρείτε τις οδηγίες αναβάθμσης."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Υπάρχει διαθέσιμη μία νέα έκδοση OJS! Αυτήν τη στιγμή χρησιμοποιείτε το OJS {$currentVersion}. Η τελευταία έκδοση είναι η {$latestVersion}. Παρακαλούμε επικοινωνήστε με τον Διαχειριστή του ιστοτόπου σας  ({$siteAdminName}, &lt;a href=\"mailto:{$siteAdminEmail}\"&gt;{$siteAdminEmail}&lt;/a&gt;) για να τον ενημερώσετε για την νέα αυτή έκδοση. Περισσότερες πληροφορίες μπορείτε να βρείτε &lt;a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\"&gt;εδώ&lt;/a&gt;."
+
+msgid "log.author.documentRevised"
+msgstr "O/H {$authorName} αναθεώρησε την υποβολή {$submissionId}. Το νέο ID του αρχείου είναι {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "Έχει ακυρωθεί η ανάθεση της αξιολόγησης {$submissionId} στον/ην {$reviewerName} για τον γύρο αξιολόγησης {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "Ξεκίνησε ο γύρος αξιολόγησης {$round} από τον/ην {$reviewerName} για την υποβολή {$submissionId}."
+
+msgid "log.review.reviewerRated"
+msgstr "Ο/Η {$reviewerName} βαθμολογήθηκε για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Ως ημερομηνία λήξης για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον/την {$reviewerName} έχει οριστεί η {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} από τον/την {$reviewerName} έχει καταχωρηθεί."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Η εισήγηση για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} έχει καταχωρηθεί από τον Επιμελητή {$editorName}, εκ μέρους του Αξιολογητή {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "Η υποβολή {$submissionId} υποβλήθηκε εκ νέου για αξιολόγηση."
+
+msgid "log.review.reviewDeclined"
+msgstr "Ο/Η {$reviewerName} έχει απορρίψει το αίτημα αξιολόγησης του {$round}ου γύρου για την υποβολή {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "Ο/Η {$reviewerName} έχει αποδεχτεί το αίτημα αξιολόγησης του {$round}ου γύρου για την υποβολή {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "Ο/Η {$userName} έχει απορρίψει το αίτημα αξιολόγησης του {$round}ου γύρου για την υποβολή {$submissionId}, εκ μέρους του/της {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "Ο/Η {$userName} έχει αποδεχτεί το αίτημα αξιολόγησης του {$round}ου γύρου για την υποβολή {$submissionId}, εκ μέρους του/της {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Ο Επιμελητής του περιοδικού {$userName} έχει μεταφορτώσει ένα αναθεωρημένο αρχείο για τον γύρο αξιολόγησης {$round} της υποβολής {$submissionId} εκ μέρους του Αξιολογητή {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Έχει μεταφορτωθεί ένα αρχείο Αξιολογητή."
+
+msgid "log.editor.decision"
+msgstr "Μία απόφαση Επιμελητή ({$decision}) για το άρθρο {$submissionId} καταχωρήθηκε από τον/την {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr "Μία εισήγηση Επιμελητή ({$decision}) για το άρθρο {$submissionId} καταχωρήθηκε από τον/την {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Η επιμέλεια του κειμένου στην υποβολή {$submissionId} έχει ξεκινήσει από τον/την {$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Το αρχείο επιμέλειας κειμένου έχει επιλεχθεί."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "Ο/Η {$copyeditorName} έχει ολοκληρώσει την αρχική επιμέλεια του κειμένου της υποβολής {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "Ο/Η {$copyeditorName} έχει ολοκληρώσει την τελική επιμέλεια του κειμένου της υποβολής {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "Ο/Η {$copyeditorName} έχει αναλάβει την επιμέλεια του κειμένου της υποβολής {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Μία έκδοση του Επιμελητή Κειμένων για το αρχείο της υποβολής έχει μεταφορτωθεί."
+
+msgid "log.copyedit.authorFile"
+msgstr "Μία έκδοση του αρχείου της υποβολής, με επιμέλεια από τον Συγγραφέα, έχει μεταφορτωθεί."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "Ο/Η {$editorName} έχει αναλάβει την επιμέλεια σελιδοποίησης της υποβολής {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "Έχει ακυρωθεί η ανάθεση της επιμέλειας σελιδοποίησης της υποβολής {$submissionId} στον/ην {$editorName}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "Ο/Η {$editorName} έχει ολοκληρώσει την επιμέλεια σελιδοποίησης για την υποβολή {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Τα μεταδεδομένα για το συγκεκριμένο άρθρο τροποποιήθηκαν από τον/την {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "Έχει μεταφορτωθεί μία έκδοση του αρχείου της υποβολής από τον Επιμελητή του περιοδικού."
+
+msgid "log.editor.archived"
+msgstr "Η υποβολή {$submissionId} αρχειοθετήθηκε."
+
+msgid "log.editor.restored"
+msgstr "Η υποβολή {$submissionId} επανατοποθετήθηκε στη σειρά αναμονής."
+
+msgid "log.editor.editorAssigned"
+msgstr "Ο/Η {$editorName} έχει αναλάβει ως Επιμελητής της υποβολής {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "Ο/Η {$assignerName} ανέθεσε στον/ην {$proofreaderName} τη διόρθωση του τυπογραφικού δοκιμίου της υποβολής {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "Ο/Η {$proofreaderName} υπέβαλε το {$submissionId} για προγραμματισμό."
+
+msgid "log.imported"
+msgstr "Ο/Η {$userName} έχει εισάγει το άρθρο {$submissionId}."
+
+msgid "rt.admin.settings"
+msgstr "Επιλογές Εργαλείων Μελέτης"
+
+msgid "rt.admin.settings.description"
+msgstr "Τα Εργαλεία Μελέτης αποτελούν ένα σύνολο προαιρετικών εργαλείων, σχετιζόμενων με το δημοσιευμένο τεκμήριο και την παροχή πρόσβασης σε σχετιζόμενα τεκμήρια, οργανωμένα κατά πεδίο και επιστημονικό κλάδο. Τα Εργαλεία Μελέτης εμφανίζονται σε ένα πλαίσιο δίπλα στα δημοσιευμένα τεκμήρια, στις ενότητες του περιοδικού που έχουν καθοριστεί για ευρετηρίαση."
+
+msgid "rt.admin.settings.enableReadingTools"
+msgstr "Ενεργοποίηση Εργαλείων Μελέτης για καθορισμένες ενότητες του περιοδικού."
+
+msgid "rt.admin.settings.relatedItems"
+msgstr "Πεδίο"
+
+msgid "rt.admin.settings.relatedItemsLink"
+msgstr "Ανατρέξτε στο &lt;a href=\"{$relatedItemsLink}\" class=\"action\"&gt;Συλλογές σχετιζόμενων τεκμηρίων&lt;/a&gt; για να δείτε, να προσθέσετε, να διορθώσετε ή να διαγράψετε σχετιζόμενα τεκμήρια για κάθε πεδίο."
+
+msgid "rt.admin.options"
+msgstr "Εργαλεία Τεκμηρίων περιοδικού"
+
+msgid "rt.admin.relatedItems"
+msgstr "Εργαλεία Σχετιζόμενων Τεκμηρίων"
+
+msgid "rt.admin.settings.addComment"
+msgstr "Προσθήκη σχολίου (παρέχει τη δυνατότητα στους αναγνώστες να δημοσιεύουν σχόλια, τα οποία ο Διαχειριστής του περιοδικού μπορεί να διαγράψει)."
+
+msgid "rt.admin.settings.addComment.authenticated"
+msgstr "Οι Χρήστες θα πρέπει να εγγραφούν και να συνδεθούν στο σύστημα για να αποστείλουν σχόλια. Η προσθήκη ανώνυμων σχολίων ΔΕΝ επιτρέπεται."
+
+msgid "rt.admin.settings.addComment.anonymous"
+msgstr "Οι Χρήστες θα πρέπει να εγγραφούν και συνδεθούν στο σύστημα για να αποστείλουν σχόλια. Η προσθήκη ανώνυμων σχολίων επιτρέπεται."
+
+msgid "rt.admin.settings.addComment.unauthenticated"
+msgstr "Οι Χρήστες δεν είναι απαραίτητο να εγγραφούν στο σύστημα για να αποστείλουν σχόλια. Η προσθήκη ανώνυμων σχολίων επιτρέπεται."
+
+msgid "rt.admin.validateUrls.description"
+msgstr ""
+"Τα πιθανώς μη έγκυροι σύνδεσμοι για ιστοτόπους αναζήτησης εμφανίζονται παρακάτω.&lt;br /&gt;\n"
+"        Πρέπει να επαληθεύσετε χειροκίνητα κάθε σύνδεσμο που θεωρείται μη έγκυρος, επειδή ο συγκεκριμένος έλεγχος δεν είναι απόλυτα ακριβής.&lt;br /&gt;\n"
+"        Η επικύρωση ενδέχεται να αποτύχει σε συνδέσμους αναζήτησης τα οποία απαιτούν δεδομένα που θα έχουν αποσταλεί από φόρμα."
+
+msgid "rt.metadata.dublinCore.primaryAuthor"
+msgstr "Δημιουργός"
+
+msgid "rt.metadata.pkp.primaryAuthor"
+msgstr "Όνομα Συγγραφέα, φορέας και χώρα"
+
+msgid "rt.metadata.pkp.peerReviewed"
+msgstr "Άρθρο το οποίο έχει περάσει από ομότιμη αξιολόγηση."
+
+msgid "rt.beNotifiedWhen"
+msgstr "Ενημέρωση όταν:"
+
+msgid "rt.thisJournal"
+msgstr "Αναζήτηση στο περιοδικό"
+
+msgid "rt.context.authorTermsDescription"
+msgstr "Για τεκμήρια με δύο ή περισσότερους Συγγραφείς, αφήστε επιλεγμένα όλα τα ονόματα για αναζήτηση εργασιών στις οποίες είναι επίσης συν-συγγραφείς ή πραγματοποιήστε αναζήτηση επιλέγοντας ένα μόνο όνομα κάθε φορά. Για περισσότερες πληροφορίες σχετικά με τους πόρους στους οποίους πραγματοποιήθηκε αναζήτηση, κάντε κλικ στο \"ΣΧΕΤΙΚΑ\". Οι πόροι αυτοί έχουν επιλεχθεί με βάση τη συνάφειά τους και την παροχή ανοικτής πρόσβασης σε όλα τα περιεχόμενά τους ή σε τμήμα αυτών."
+
+msgid "notification.type.articleSubmitted"
+msgstr "Ένα νέο άρθρο, με τίτλο \"{$title}\", έχει υποβληθεί."
+
+msgid "notification.type.editing"
+msgstr "Επεξεργασία συμβάντων"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Ένα νέο άρθρο, με τίτλο \"{$title},\" έχει υποβληθεί."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Ένα σχόλιο έχει εισαχθεί σχετικά με την απόφαση του Επιμελητή στο \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "Ένα τυπογραφικό δοκίμιο έχει τροποποιηθεί για το \"{$title}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "Ένα τεύχος έχει δημοσιευτεί."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Μία νέα ανακοίνωση έχει δημιουργηθεί."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Μία φόρμα αξιολόγησης έχει υποβληθεί για το \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Συμβάντα αξιολόγησης"
+
+msgid "notification.type.site"
+msgstr "Συμβάντα ιστοτόπου"
+
+msgid "notification.type.submissionComment"
+msgstr "Ένας Επιμελητής έχει κάνει ένα σχόλιο για το \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "Συμβάντα υποβολής"
+
+msgid "notification.type.userComment"
+msgstr "Ένας Αναγνώστης έχει κάνει ένα σχόλιο για το \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Δημόσιες ανακοινώσεις"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Τα μεταδεδομένα της έκδοσης του τεύχους αποθηκεύτηκαν."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Ένα νέο άρθρο υποβλήθηκε. Εκκρεμεί η ανάθεση σε Επιμελητή."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Αναθέστε σε έναν Χρήστη να δημιουργήσει τυπογραφικά δοκίμια, χρησιμοποιώντας τον σύνδεσμο \"Ανάθεση\" στον κατάλογο των συμμετεχόντων."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Αναμονή για τυπογραφικά δοκίμια"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Η πρόσβαση δεν σας επιτρέπεται. Δεν σας έχει ανατεθεί ο ρόλος του Επιμελητή Κειμένου για αυτό το άρθρο."
+
+msgid "user.authorization.noContext"
+msgstr "Δεν υπάρχουν περιοδικά!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Προσπαθείτε να προσπελάσετε ένα άρθρο που δεν ανήκει στην ενότητά σας."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Ζητήθηκε μη έγκυρο τεύχος!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Μη έγκυρη υποβολή Επιμελητή Κειμένου ή δεν έχει ζητηθεί υποβολή Επιμελητή Κειμένου!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Η λίστα νομισματικών μονάδων \"{$filename}\" φορτώθηκε από το αρχείο XML"
+
+msgid "grid.action.createContext"
+msgstr "Δημιουργία νέου περιοδικού"
+
+msgid "editor.navigation.issues"
+msgstr "Τεύχη"
+
+msgid "notification.type.approveSubmission"
+msgstr "Αυτή η υποβολή βρίσκεται σε αναμονή έγκρισης πριν τη δημοσίευση στο τεύχος."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Σε αναμονή έγκρισης"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Εγγραφή σε άλλα περιοδικά"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Απόκρυψη άλλων περιοδικών"
+
+msgid "article.view.interstitial"
+msgstr "Παρακαλούμε επιλέξτε ένα αρχείο άρθρου για μεταφόρτωση."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Εγκρίθηκε"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Σε αναμονή έγκρισης"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Έγκριση τυπογραφικού δοκιμίου"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Εγκρίνετε αυτό το τυπογραφικό δοκίμιο για δημοσίευση.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Αποσύρετε την έγκριση για αυτό το τυπογραφικό δοκίμιο.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Ευρετηρίαση του \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Αυτή η εφαρμογή αναζήτησης δεν επιτρέπει επανα-ευρετηρίαση ανά περιοδικό."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Η συγκεκριμένη διαδρομή περιοδικού \"{$journalPath}\" δε μπορεί να καταλήξει σε περιοδικό."
+
+msgid "editor.issues.backIssues"
+msgstr "Παλαιά τεύχη"
+
+msgid "editor.issues.futureIssues"
+msgstr "Μελλοντικά τεύχη"
+
+msgid "navigation.subscriptions"
+msgstr "Συνδρομές"
+
+msgid "log.editor.submissionExpedited"
+msgstr "Ο/Η {$editorName} έχει επιταχύνει τη συντακτική διαδικασία για το άρθρο {$submissionId}."

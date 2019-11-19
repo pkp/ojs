@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:55+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:55+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Модуль стрічки анонсів"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Створює стрічку веб-синдикації RSS/Atom для анонсів журналу стрічки ."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Налаштування"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Показувати посилання на стрічки на всіх сторінках журналу."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Показувати посилання на стрічки лише на домашній сторінці та сторінці анонсів."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Показувати посилання на стрічки лише на сторінці анонсів."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Скоротити стрічку до"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "найновіших анонсів."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Будь ласка, введіть додатнє ціле число для кількості найновіших анонсів."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Логотип Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Логотип RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Логотип RSS2"

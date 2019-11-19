@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:04+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:04+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Externe feeds"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Externe feed blok"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Toont materiaal uit externe Atom/RSS webfeeds. Bijvoorbeeld uit een externe WordPress, Drupal of OCS installatie"
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Geen externe feeds"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Titel"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Verzonden"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Meer..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Externe feeds"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Instellingen"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "Ga naar <a href=\"{$setupStep56}\" target=\"_blank\">Setup stap 5.6</a> om materiaal uit feeds in de sidebarblokken te tonen."
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Titel"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Weergeven op homepage"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Weergeven op homepage"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Niet weergeven op homepage"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Weergave van het blok"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Alle pagina's"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Een blok op alle pagina's"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Een blok geen enkele pagina"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Homepage"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Blok alleen op de homepage"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Alleen op de homepage geen blok"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Geen externe feeds"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Maak een nieuwe externe feed"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Bewerk externe feed"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Weet u zeker dat u deze feed wilt verwijderen?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Instellingen"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "De weergave van de externe feeds aanpassen."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Weergave"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Externe feed stylesheet"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "Er kan een aangepaste stylesheet gebruikt worden ter vervanging van de standaard stylesheet. De standaard stylesheet wordt hier getoond"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Aangepaste stylesheet"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Titel"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "De titel voor de homepage en/of blok weergave"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Geef een titel voor deze feed"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Geef een geldige feed URL (met de http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "De URL van de externel Atom/RSS feed (bv. http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Weergave"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Weergeven op de homepage"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Niet in blok weergeven"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Alleen in het blok op de homepage weergeven"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Op alle pagina's in het blok weergeven"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Beperk tot"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "feed onderdelen"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Opslaan en nog een maken"

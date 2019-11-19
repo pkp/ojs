@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:35+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Plugin exportu do XML pro CrossRef"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Export metadat článku v XML formátu CrossRef."
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Použití:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Uživatelské jméno"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Vložte, prosím, uživatelské jméno, které jste dostali od CrossRef."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Požadavky"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Všechna požadavky pluginu byly uspokojeny."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Následujáící položky je třeba pro úspěšné uložení do CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Jméno vkládajícího"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Email vkládajícího"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Vložte, prosím, jméno vkládajícího."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Vložte, prosím, e-mail vkládajícího."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Vydavatel časopisu nebyl nakonfigurován! Musíte přidat instituci vydavatele na <a href=\"{$journalSettingsUrl}\" target=\"_blank\"> Stránce nastavení časopisu </a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "ISSN časopisu nebylo nakonfigurováno! Musíte přidat ISSN na <a href=\"{$journalSettingsUrl}\" target=\"_blank\"> Stránce nastavení časopisu </a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Nejsou vybrány články pro přiřazení veřejných identifikátorů DOI, takže v tomto pluginu není žádná možnost uložení nebo exportu."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Chcete-li tento plugin použít k registraci identifikátorů digitálních objektů (DOI) přímo s CrossRef, budete potřebovat uživatelské jméno a heslo (k dispozici na adrese <a href=\"http://www.crossref.org\" target=\"_blank\"> CrossRef </a>), abyste tak učinili. Pokud nemáte vlastní uživatelské jméno a heslo, můžete exportovat do formátu CrossRef XML, ale nemůžete zaregistrovat své DOI v CrossRef přímo z OJS."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS uloží přiřazené DOI automaticky do CrossRef. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny neregistrované DOI."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Použijte testovací rozhraní API CrossRef (zkušební prostředí) pro vklad DOI. Nezapomeňte tuto možnost odstranit před reálným používání časopisu."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Poznámka: Pro účely exportu/registrace zde budou zohledněny pouze čísla (a nikoliv jejich články)."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Selhalo"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktivní"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Označeno jako aktivní"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"<p>Stav ukládání:</p>\n"
+"<p>\n"
+"- Není uloženo: pro tento DOI nebyl proveden žádný pokus o uložení. <br/>\n"
+"- Aktivní: DOI byl uložen a je aktivní. <br/>\n"
+"- Selhalo: vklad DOI selhal. <br/>\n"
+"- Označeno jako aktivní: DOI byl ručně označen jako aktivní.\n"
+"</p>\n"
+"<p> Zobrazí se pouze stav posledního pokusu o uložení. </p>\n"
+"<P> Pokud uložení selhalo, vyřešte problém a pokuste se znovu zaregistrovat DOI. </p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Stáhnout XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Označit jako aktivní"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Úloha automatické registrace CrossRef"
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Žádné číslo neodpovídá tomuto ID čísla: \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "¨Žádný článek neodpovídá tomuto ID článku \"{$articleId}\"."

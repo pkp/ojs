@@ -1,0 +1,1732 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:32+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Arhiviranje"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Ste prepričani, da želite ponastaviti vse  e-poštne predloge te revije? S tem boste izgubili vse prilagoditve, ki ste jih naredili."
+
+msgid "manager.files.note"
+msgstr "Opomba: Brskalnik datotek je napredna funkcionalnost, ki omogoča, da se lahko datoteke in mape povezane s revijo neposredno pregledujejo in urejajo."
+
+msgid "manager.journalManagement"
+msgstr "Upravljanje revije"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Oddani prispevki"
+
+msgid "manager.language.forms"
+msgstr "Obrazci"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "To bo nadomestilo vse jezikovno specifične nastavitve revije, ki ste jih naredili za ta jezik"
+
+msgid "manager.languages.languageInstructions"
+msgstr "Sistem OJS podpira več jezikov. Enako OJS lahko deluje večjezično, kar pomeni, da lahko uporabniki preklapljajo med različnimi jeziki na vsaki spletni strani OJSja in omogoča, da se določeni podatki vpišejo v večih jezikih.<br /><br/>Če jezik, ki ga OJS podpira, ni naštet spodaj, potem prosite administratorja spletišča, da ga naloži s pomočjo administratorskega vmesnika. Za navodila o dodajanju novih jezikov, si oglejte dokumentacijo OJS."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Oprostite, na voljo ni nobenega dodatnega jezika. Prosite administratorja spletišča, če bi želeli uporabljati dodatne jezike."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Ta jezik bo privzet za celotno spletišče."
+
+msgid "manager.managementPages"
+msgstr "Upravljavske strani"
+
+msgid "manager.payment.action"
+msgstr "Akcija"
+
+msgid "manager.payment.addPayment"
+msgstr "Dodaj plačilo"
+
+msgid "manager.payment.amount"
+msgstr "Znesek"
+
+msgid "manager.payment.authorFees"
+msgstr "Pristojbina avtorja"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Izbrane možnosti, skupaj z opisi in pristojbinami (ki jih lahko urejate spodaj), se bodo prikazale v prvem koraku procesa oddaje prispevka in v meniju O reviji, pod Oddani prispevki, enako kot na straneh, kjer je potrebno plačilo."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS ne dela nobenih valutnih pretvorb. Če želite sprejemati plačila v določeni valuti, morate sami vpisati pravilno vrednost naročnine v valuti."
+
+msgid "manager.payment.description"
+msgstr "Opis"
+
+msgid "manager.payment.details"
+msgstr "Podrobnosti"
+
+msgid "manager.payment.editSubscription"
+msgstr "Uredi naročnino"
+
+msgid "manager.payment.enable"
+msgstr "Omogoči"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Način plačila"
+
+msgid "manager.payment.form.numeric"
+msgstr "Vsi zneski morajo biti pozitivna števila (decimalke so dovoljene)"
+
+msgid "manager.payment.generalFees"
+msgstr "Splošna pristojbina"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Možnost članstva bo objavljena na strani O reviji pod Politike. V slučaju aktivacije opcije, se bo donatorska povezava pokazala nad funkcijo iskanja na desni strani okvirja."
+
+msgid "manager.payment.generalOptions"
+msgstr "Splošne nastavitve"
+
+msgid "manager.payment.noPayments"
+msgstr "Brez naročnin"
+
+msgid "manager.payment.notFound"
+msgstr "Ni bilo najdeno"
+
+msgid "manager.payment.options"
+msgstr "Nastavitve"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "To bo aktiviralo modul za plačilo naročnin, kjer bodo uredniki revij lahko urejali tipe naročnin, pristojbine in trajanje naročnin."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Kliknite za vključitev plačilnega modula. Nastavitve za plačevanje morate nastaviti v obrazcu spodaj."
+
+msgid "manager.payment.options.fee"
+msgstr "Pristojbina"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Opis pristojbine"
+
+msgid "manager.payment.options.feeName"
+msgstr "Ime pristojbine"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Članarina"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Omejen dostop do PDF verzij številk in prispevkov"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Objava prispevka"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Nakup prispevka"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Nakup številke"
+
+msgid "manager.payment.options.text"
+msgstr "Opis metode plačila"
+
+msgid "manager.payment.paymentId"
+msgstr "ID plačila"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Metoda plačila"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Na tej strani lahko nastavite dodatke za naslednje metode plačil."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Metode plačil pristojbin"
+
+msgid "manager.payment.paymentType"
+msgstr "Tip plačila"
+
+msgid "manager.payment.readerFees"
+msgstr "Pristojbina za branje"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Izbrane opcije (ki se lahko urejajo spodaj) bodo prikazane na strani O reviji pod politikami in na točkah, kjer bo potrebno plačilo"
+
+msgid "manager.payment.records"
+msgstr "Zapisi"
+
+msgid "manager.payment.userName"
+msgstr "ID plačila"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Vsi registrirani uporabniki revije"
+
+msgid "manager.people.allJournals"
+msgstr "Vse revije"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Registriraj obstoječega uporabnika za to revijo"
+
+msgid "manager.people.showNoRole"
+msgstr "Pokaži uporabnike brez vloge"
+
+msgid "manager.people.allUsers"
+msgstr "Vsi evidentirani uporabniki"
+
+msgid "manager.people.confirmRemove"
+msgstr "Odstrani uporabnika iz te revije? Ta akcija bo uporabniku zbrisala tudi vse vloge, ki jih ima pri tej reviji."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Izberite predlogo"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Registriraj obstoječega uporabnika"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Za revijo"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Izberite račun uporabnika (ali več), ki jih želite zružiti v drug uporabniški račun (npr. če kdo uporablja več uporabniških računov). Vsi oddani prispevki, zadolžitve in ostalo, prvoizbranega uporabniškega računa (ali več njih) bodo zbrisani in preneseni na drug uporabniški račun."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Izberite uporabnika, ki mu želite pripisati vsa avtorska dela, uredniške zadolžitve, itd. prejšnjega uporabnika."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Dodelitev vloge {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Ta funkcija se lahko uporablja le, če je na spletišču več revij. Sinhronizacija dodeljene vloge bo vsem uporabnikom, ki imajo dodeljeno vlogo v izbrani reviji dodelila enako vlogo v tej reviji. Ta možnost se uporablja pri sinhroniziranju običajnih skupin uporabnikov (npr. recenzentov) med revijami, ki se nahajajo na istem spletišču."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Povzetek ni obvezen"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Ne obstaja noben urednik rubrike. Najprej dodajte to vlogo vsaj enemu uporabniku preko Upravljanje > Nastavitve > Uporabniki &amp; vloge."
+
+msgid "manager.sections.assigned"
+msgstr "Uredniki te rubrike"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Ste prepričani, da želite trajno zbrisati to rubriko?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Pred brisanjem rubrike, morate objavljene prispevke iz te rubrike premakniti v drugo rubriko."
+
+msgid "manager.sections.create"
+msgstr "Ustvari rubriko"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Dodaj urednika rubrike, ki mu bodo avtomatsko dodeljeni vsi oddani prispevki za to rubriko. (Drugače se lahko dodeli urednika za vsak prispevek posebej, ko je oddan.) Če je urednik rubrike dodan, bo avtomatsko dodeljen za nadzorovanje procesa recenzije in/ali urejanja (lektoriranje, grafično oblikovanje in korektura) prispevkov za to rubriko. Urednike rubrik ustvari te s klikom na Uredniki rubrik pod Vlogami v Upravljanju revije."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Samo uredniki (rubrik) lahko oddajajo prispevke za to rubriko"
+
+msgid "manager.sections.editors"
+msgstr "Uredniki rubrik"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Za rubriko je potreben skrajšan naslov"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Preverite, da je za vsako vlogo urednika rubrike izbrano vsaj eno potrditveno polje."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Preverite, da ste izbrali veljaven recenzijski obrazec."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Za rubriko je potreben naslov."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Izpusti ime avtorjev za rubriko v kazalu vsebine te številke."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Izpusti naslov te rubriko v kazalu vsebine te številke."
+
+msgid "manager.sections.identifyType"
+msgstr "Pri kreiranju metapodatkov, bodo vsi prispevki v tej rubriki označeni kot:"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(na primer, \"prispevek\", \"povabljen komentar\", \"uvodnik\", itd.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indeksirano"
+
+msgid "manager.sections.noneCreated"
+msgstr "Ustvarejno ni bilo nobene rubrike"
+
+msgid "manager.sections.open"
+msgstr "Odprto za oddajanje prispevkov"
+
+msgid "manager.sections.policy"
+msgstr "Politika rubrike"
+
+msgid "manager.sections.readingTools"
+msgstr "Orodja za branje"
+
+msgid "manager.sections.reviewed"
+msgstr "Recenzirano"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Ne bo vključeno v indeksiranje revije"
+
+msgid "manager.sections.submissionReview"
+msgstr "Ne bo recenzirano"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Prispevki oddani v to rubriko revije"
+
+msgid "manager.sections.unassigned"
+msgstr "Uredniki rubrik, ki so na voljo"
+
+msgid "manager.sections.wordCount"
+msgstr "Število besed"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Omeji število besed v izvlečku v tej rubriki na (0 za neomejeno):"
+
+msgid "manager.setup"
+msgstr "Nastavitve"
+
+msgid "manager.setup.masthead"
+msgstr "Kolofon"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Uredništvo"
+
+msgid "manager.setup.editorialTeam.description"
+msgstr "Naštejte urednike, odgovorne urednike in ostale posameznike, ki sodelujejo pri reviji."
+
+msgid "manager.setup.homepageContent"
+msgstr "Vsebina domače strani revije"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Domača stran revije privzeto vsebuje navigacijske povezave. Dodatne vsebine domače strani lahko dodate s pomočjo ene ali več spodnjih močnosti, ki se bodo prikazale v prikazanem vrstnem redu."
+
+msgid "manager.setup.layout"
+msgstr "Izgled revije"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Stilska tablica revije"
+
+msgid "manager.setup.contextName"
+msgstr "Ime revije"
+
+msgid "manager.setup.pageHeader"
+msgstr "Glava revije"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Vsebina"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Dodaj postavko"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Dodaj postavko za kontrolni seznem"
+
+msgid "manager.setup.addItem"
+msgstr "Dodaj postavko"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Dodaj postavko v \"O reviji\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Dodaj postavko"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Dodaj novo povezavo do baze podatkov"
+
+msgid "manager.setup.addSponsor"
+msgstr "Dodaj sponzorsko organizacijo"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Nadomestna glava"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Namesto naslova in logotipa lahko vstavite HTML besedilo glave v polje z besedilom spodaj. Če tega ne želite, pustite polje prazno."
+
+msgid "manager.setup.announcements"
+msgstr "Obvestila"
+
+msgid "manager.setup.announcementsDescription"
+msgstr "Obvestila lahko uporabljate za obveščanje bralcev o novostih in dogodkih glede revije. Obvestila bodo vidna na strani Obvestila."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Dodatne informacije"
+
+msgid "manager.setup.announcementsIntroductionDescription"
+msgstr "Vpišite dodatne informacije, ki jih želite bralcem prikazati na strani z obvestili."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Pojavlja se na strani O reviji)"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Zahtevaj od avtorjev izjavo o konfliktu interesov med procesom oddaje prispevka."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Zahtevaj od recenzentov izjavo o konfliktu interesov pri vsaki opravljeni recenziji."
+
+msgid "manager.setup.history"
+msgstr "Zgodovina revije"
+
+msgid "manager.setup.historyDescription"
+msgstr "To besedilo bo na strani O reviji in ga lahko uporabite, da napišete spremembe naslovov, uredniškega odbora in ostalih stvari, ki so pomembne za zgodovino revije"
+
+msgid "manager.setup.copyeditInstructions"
+msgstr "Lektorska navodila"
+
+msgid "manager.setup.copyeditInstructionsDescription"
+msgstr "Lektorska navodila bodo na voljo lektorjem, avtorjem in urednikom rubrik me procesom urejanja prispevkov. Spodaj so privzeta navodila v HTML formatu in jih lahko urednik revije kadarkoli spremeni (v HTML formatu ali kot prosto besedilo)."
+
+msgid "manager.setup.copyrightNotice"
+msgstr "Avtorske pravice"
+
+msgid "manager.setup.metadata.coverage"
+msgstr "Obseg"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/ali karakteristike raziskovanega vzorca."
+
+msgid "manager.setup.currentIssue"
+msgstr "Trenutna številka"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Korak 5. Prilagajanje izgleda"
+
+msgid "manager.setup.customTags"
+msgstr "Posebne HTML oznake"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Posebne HTML oznake glave bodo vpisane v glavo vsake strani te revije (npr. META oznake)."
+
+msgid "manager.setup.details"
+msgstr "Podrobnosti"
+
+msgid "manager.setup.details.description"
+msgstr "Ime revije, ISSN, kotaktni podatki, sponzorji in iskalniki."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Glavni urednik revije registrira vse uporabnike, s tem da lahko uredniki sami registrirajo recenzente."
+
+msgid "manager.setup.discipline"
+msgstr "Akademska veda in pod-veda"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Uporabno kadar revija prečka meje ene vede in/ali je avtorski prispevek multidisciplinaren"
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(npr. zgodovina; izobraževanje; sociologija; psihologija; kulturne študije; pravo; itd.)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Navedite primere relevantnih akademskih ved za to revijo"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Dodaj kazalo vsebine za trenutno številko (če je na voljo)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Odločitev urednika"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Naslov za obvestilo o neuspeli dostavi"
+
+msgid "manager.setup.emailBounceAddressDescription"
+msgstr "Vsaka nedostavljena e-pošta bo povzročil sporočilo z napako na ta e-poštni naslov."
+
+msgid "manager.setup.emailBounceAddressDisabled"
+msgstr "<strong>Obvestilo:</strong> Za aktiviranje te možnosti mora administrator spletišča omogočiti <tt>allow_envelope_sender</tt> opcijo v OJS nastavitveni datoteki. Za podporo te možnosti so morda potrebne dodatne nastavitve strežnika, kot lahko razberete iz OJS dokumentacije."
+
+msgid "manager.setup.emails"
+msgstr "Identifikacija e-poštnega naslova"
+
+msgid "manager.setup.emailSignature"
+msgstr "Podpis"
+
+msgid "manager.setup.emailSignatureDescription"
+msgstr "Predpripravlje e-pošte, ki so poslane avtomatsko v imenu revije, bodo imele na dnu spodnji podpis. Vsebino predpripravljenih e-pošt lahko pripravite pod Upravljanje revije."
+
+msgid "manager.setup.enableAnnouncements"
+msgstr "Omogoči, da uredniki revije na spletno stran revije dodajajo obvestila."
+
+msgid "manager.setup.enableAnnouncementsHomepage1"
+msgstr "Prikaži"
+
+msgid "manager.setup.enableAnnouncementsHomepage2"
+msgstr "zadnjih obvestil na domači strani revije."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Uporabniki se lahko sami registrirajo za eno ali več spodnjih vlog pri reviji:"
+
+msgid "manager.setup.focusAndScope"
+msgstr "Namen in cilji revije"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Razložite avtorjem, bralcem in knjižničarjem obseg prispevdkov in ostale stvari, ki jih bo revija izdajala."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Avtorsko indeksiranje del"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS se naslanja na <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> protokol za zbiranje metapodatkov, ki je standard v nastajanju za dobro indeksiran dostop do elektronskih raziskovalnih virov na globalni ravni. Avtorji bodo uporabljali podobne predloge za določanje metapodatkov svojih prispevkov. Upravnik revije mora izbrati kategorije za indeksiranje in predstaviti avtorjem relevantne primere, ki jim bodo pomagali pri indeksiranju njihovih prispevkov."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "The specified ISSN is not valid."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "E-pošta glavnega kontakta je obvezna"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Ime glavnega kontakta je obvezno"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Začetnice revije so obvezne"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Naslov revije je obvezen"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Število recenzentov na oddan prispevek je obvezno."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "E-pošta kontakta pomoči je obvezna."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Ime kontakta pomoči je obvezen."
+
+msgid "manager.setup.generalInformation"
+msgstr "Splošne informacije"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Korak 1. Priti do podrobnosti"
+
+msgid "manager.setup.guidelines"
+msgstr "Navodila"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "korak 3. Vodenje oddajanja prispevka"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Za revije, ki nudijo prost dostop ali prost dostop z zamikom, v primernem času vključite tudi \"Creative Commons\" licenco za vse izdane prispevke."
+
+msgid "manager.setup.information"
+msgstr "Informacije"
+
+msgid "manager.setup.information.description"
+msgstr "Kratek opis revije za knjižničarje ter bodoče avtorje in bralce je na voljo pod razdelkom Informacije na stranskem robnem stolpcu."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Za avtorje"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Za knjižničarje"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Za bralce"
+
+msgid "manager.setup.initialIssue"
+msgstr "Prva številka"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Glede na izbrani format določite številko, letnik in leto prve izdaje, ki bo objavljena preko OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Institucija"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Na navigacijski trak se lahko poleg obstoječih povezav (Domača stran, O reviji, Dom uporabnika,itd) dodajo tudi druge povezave, ki se pojavljajo na vrhu vsake strani."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Postavk na stran"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Kratica za revijo"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Arhiviranje revije"
+
+msgid "manager.setup.contextSummary"
+msgstr "Povzetek revije"
+
+msgid "manager.setup.contextSummary.description"
+msgstr "Kratek opis revije, ki se bo prikazoval na seznamu vseh revij na tem spletišču."
+
+msgid "manager.setup.contextAbout"
+msgstr "O reviji"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Vključite vse informacije o reviji, ki so lahko zanimive za bralce, avtorje in recenzente. To lahko vključuje politiko prostega dostopa, fokus in obseg revije, izjava o avtorskih pravicah, politiko sponzorstva, zgodovino revije, izjavo o vrovanju osebnih podatkov in vključitev v LOCKSS ali CLOCKSS sistem arhiviranja."
+
+msgid "manager.setup.favicon"
+msgstr "Favicon revije"
+
+msgid "manager.setup.faviconDescription"
+msgstr "Dodajte favikon revije, ki se bo prikazoval poleg navigacijske vrstice, ko bodo uporabniki obiskali vašo spletno stran."
+
+msgid "manager.setup.faviconInvalid"
+msgstr "Napačen format slike za favicon.Dovoljeni formati so .ico, .png, and .gif."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Vsebina domače strani revije"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Privzeto domača stran revije vsebuje navigacijske povezave. Poleg tega lahko domača stran revije vsebuje tudi eno ali več spodnjih opcij, ki se bodo pojavile v spodnjem vrstnem redu. Trenutna številka revije je vendo dostopna preko povezave Trenutna številka v navigacijskem traku."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Glava domače strani revije"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Glava domače strani revije"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Naložite lahko grafično verzijo naslova in logotipa revije (kot .gif, .jpg ali .png datoteka), ki bo zamenjala besedilno verzijo, ki se drugače pojavlja."
+
+msgid "manager.setup.contextInitials"
+msgstr "Inicialke revije"
+
+msgid "manager.setup.journalLayout"
+msgstr "Izgled revije"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Izberite stilsko temo in razpored elementov naslovnice revije. Hkrati lahko postavite tudi stilsko tablico revije, ki bo zamenjala sistemsko določeno stilsko tablico ali tematsko stilsko tablico (če je določena)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Logotip revije"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logotip revije"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Noga strani revije"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "To je noga strani revije. Za spreminjanje vnesite HTML besedilo v besedilno polje spodaj. Primeri so lahko drug navigacijski trak, števec in podobno. Ta noga bo na vsaki strani revije."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Korak 2. Politike revije"
+
+msgid "manager.setup.journalSetup"
+msgstr "Namestitev revije"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Namestitev vaše revije je bila posodobljena."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Napačen format stilske tablice. Dovoljen format je .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Stilska tema revije"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Ikona revije"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Mahen logo oziroma grafična predstavitev revije, ki se bo uporabila na seznamu revij na tem spletišču."
+
+msgid "manager.setup.journalThumbnail.altText"
+msgstr "Nadomestno besedilo za sličico"
+
+msgid "manager.setup.contextTitle"
+msgstr "Naslov revije"
+
+msgid "manager.setup.labelName"
+msgstr "Ime oznake"
+
+msgid "manager.setup.layoutInstructions"
+msgstr "Navodila za prelom"
+
+msgid "manager.setup.layoutInstructionsDescription"
+msgstr "Tukaj lahko priložite navodila za prelom prispevkov objavljenih v reviji. Pripravljena so Lahko kot navadno besedilo ali HTML. Vidna bodo grafičnim urednikom in urednikom rubrik med urejanjem prispevkov. (Vsaka revija ima lahko svoj format datotek, bibilografske standarde, stilske tabele, itd, privzeto niso na voljo nobena navodila)"
+
+msgid "manager.setup.layoutTemplates"
+msgstr "Predloge preloma"
+
+msgid "manager.setup.layoutTemplatesDescription"
+msgstr "Za vsak standarden tip elementa v reviji (prispevek, prikaz knjige, itd.) lahko naložite predloge za prelom za katerikoli format datotek (npr. pdf, doc, itd.). Te predloge določajo pisavo, velikost črk, zamikov, itd. in služijo grafičnim urednikom in korektorjem kot smernice za pripravo preloma."
+
+msgid "manager.setup.layoutTemplates.file"
+msgstr "Datoteka predloge"
+
+msgid "manager.setup.layoutTemplates.title"
+msgstr "Naslov"
+
+msgid "manager.setup.lists"
+msgstr "Izpis seznama"
+
+msgid "manager.setup.enableArchive"
+msgstr "Omogoči arhiviranje"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN vtičnik je omogočen"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP Preservation Network (PN) brezplačno zagotavlja servis za ohranjanje za vse OJS revije, ki zadostujejo nekaj osnovnih kriterijev."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Kliknite na povezavo za sprejem pogojev uporabe za PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP Preservation Network (PN) brezplačno zagotavlja servis za ohranjanje za vse OJS revije, ki zadostujejo nekaj osnovnih kriterijev. PKP PN vtičnik za OJS 3 je trenutno v razvoju in bo kmalu na voljo v katalogu vtičnikov."
+
+msgid "manager.setup.otherLockss"
+msgstr "Možnosti alternativnega arhiviranja"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Omogočite sistemu LOCKSS, da shranjuje in distribuira vsebino revije po knjižnicah, ki sodelujejo v LOCKSS sistemu. Več o LOCKSS na <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> strani."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "LOCKSS licenca se bo pojavila na strani O reviji pod Arhiviranje: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Razlaga LOCKSS licence"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Identificirajte 6-10 knjižnic, ki se bodo registrirale in shranjevale revijo. Na primer institucije kjer delujejo uredniki ali člani uredništva in/ali institucije, ki že sodelujejo v LOCKSS-u. Poglejte <a href=\"http://www.lockss.org/community/\" target=\"_blank\">LOCKSS skupnost</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Omogočite sistemu CLOCKSS, da shranjuje in distribuira vsebino revije po knjižnicah, ki sodelujejo v CLOCKSS sistemu. Več o  na <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> strani."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "A CLOCKSS cenca se bo pojavila na strani O reviji pod Arhiviranje: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS licenca</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Razlaga CLOCKSS licence"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Prijavite se za storitev CLOCKSS na <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS spletni strani</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.Issn"
+msgstr "ISSN"
+
+msgid "manager.setup.look"
+msgstr "Izgled"
+
+msgid "manager.setup.look.description"
+msgstr "Glava domače strani, vsebina, glava revije, noga, navigacijski trak in stilska tablica"
+
+msgid "manager.setup.management"
+msgstr "Uredniški postopki"
+
+msgid "manager.setup.management.description"
+msgstr "Dostopnost in varnost, urnik objavljanja revije, objavljanje obvestil, postavke lekture, korekture in preloma."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Upravljanje z osnovnimi uredniškimi koraki"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Nastavitev upravljanja in objavljanja"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Korak 4. upravljanje revij"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigacijski trak"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Dodaj ali odstrani postavke na navigacijskem traku."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL je absoluten naslov (npr. \"http://www.example.com\") in ne relativen na spletišče (npr. \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Naziv povezave naj bo opisno besedilo (npr.  \"Registracija uporabnika\") in ne ključ iz lokalizacijskega kataloga (npr. \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nobena slika ni naložena."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Nobena stilska tablica ni naložena."
+
+msgid "manager.setup.note"
+msgstr "Opomba"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Opozorilo:</strong> E-pošta za potrditev uspešne oddaje prispevka je trenutno izključen. Za uporabo te funkcije vključite opcijo SUBMISSION_ACK e-pošta nastavitvah Emaili."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Število prikazanih strani"
+
+msgid "manager.setup.onlineAccessManagement"
+msgstr "Dostop do vsebine revije"
+
+msgid "manager.setup.onlineIssn"
+msgstr "E-ISSN"
+
+msgid "manager.setup.openAccess"
+msgstr "Revija bo imela odprt dostop do vsebine."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Določanje številke strani"
+
+msgid "manager.setup.policies"
+msgstr "Politike"
+
+msgid "manager.setup.policies.description"
+msgstr "Fokus, recenzija, rubrike, zasebnost, varnost in ostale informacije o reviji."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN tiskane izdaje"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Navodila za korekturo"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Navodila za korekturo bodo videli korektorji, avtorji, grafični uredniki in uredniki rubrik v procesu urejanja prispevka. Spodaj so privzeta navodila v HTML formatu, ki jih lahko kadarkoli glavni urednik revije spremeni (HTML ali navadno besedilo)."
+
+msgid "manager.setup.provideRefLinkInstructions"
+msgstr "Podajte navodila za grafičnega urednika."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Urnik izdajanja"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Prispevki se običajno izdajajo skupaj v posamezni številki revije s kazalom vsebine. Alternativno se lahko posamezni prispevki objavijo takoj, ko so končani, tako da se dodajo v kazalo vsebine trenutne številke. Na strani O reviji predstavite bralcem princip objavljanja, ki ga bo revija uporabljala in pričakovano frekvenco izhajanja."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Časovno razporejanje revije"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identifikacija vsebine revije"
+
+msgid "manager.setup.publisher"
+msgstr "Izdajatelj"
+
+msgid "manager.setup.publisherDescription"
+msgstr "Ime organizacije, ki izdaja revijo, ki bo napisano na strani O reviji"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Bibliografske povezave"
+
+msgid "manager.setup.refLinkInstructions.description"
+msgstr "Navodila za grafično oblikovanje povezav za citiranje"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Uporabniki morajo biti registrirani in prijavljeni, da lahko vidijo prosto dostopno vsebino."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Uporabniki morajo biti registrirani in prijavljeni, da lahko vidijo spletno stran revije."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Navodila recenzentom"
+
+msgid "manager.setup.reviewGuidelinesDescription"
+msgstr "Napišite kratka navodila recenzentom s smernicami za oceno primernosti prispevkov za objavo v reviji. Vsebujejo lahko tudi dodatna navodila za izvedbo učinkovite in uporane recenzije. Med postopkom recenzije lahko recenzenti podajo komentarje za avtorja in urendika ter posebej samo za urednika."
+
+msgid "manager.setup.reviewOptions"
+msgstr "Nastavitve recenzije"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Avtomatizirani e-poštni opomniki (na voljo v OJS privzetih e-poštah) se lahko pošljejo recenzentom v dveh primerih (urednik lahko sam vedno pošlje e-pošto recenzentu)."
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "Za aktivacijo teh opcij mora administrator spletišča aktivirati nastavitev <tt>scheduled_tasks</tt>v nastavitveni datoteki OJS. Morda bodo potrebne tudi dodatne nastavitve strežnika, da bo ta opcija podprta kot je opisano v OJS dokumentaciji."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Anonimnost recenzije"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Tipični rok za končanje recenzije"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Po opravljeni posamezni recenziji bodo uredniki ocenjevali kvaliteto recenzije in sodelovanja z oceno od 1 do 5."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Recenzenti bodo imeli dostop do oddanega prispevka šele po tem, ko bodo sprejeli recenzijo tega prispevka."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Dostop za recenzente"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Omogoči recenzentom dostop z enim klikom."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Opozorilo:</strong> E-poštna povabila recenzentom vsebujejo posebne URL povezave, ki vodijo recenzente direktno na stran za opravljanje recenzije prispevka (za dostop do drugih strani se morajo najprej prijaviti). Iz varnostnih razlogov uredniki ne morejo spreminjati e-poštnega naslova ali dodati kopijo ali skrito kopijo e-poštnega naslova pred pošiljanjem e-pošte recenzentom."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Ocene recenzentov"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Opomniki recenzentom"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Recenzijska politika"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indeksiranje revije za iskalnike"
+
+msgid "manager.setup.searchEngineIndexingDescription"
+msgstr "Opišite na kratko revijo in relevantne ključne besede (ločene s podpičji), ki bodo pomagali uporabnikom raznih iskalnikov najti to revijo."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "rubrike in uredniki rubrik"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Če rubrike niso definirane, bodo vsi prispevki dodeljeni splošni rubriki \"prispevki\".)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Za kreiranje ali spreminjanje rubrik revije (npr. Prispevki, Recenzije knjig,...) pojdite na Upravljanje rubrik.<br /><br />Avtorji bodo ob oddaji prispevkov za revijo določili..."
+
+msgid "manager.setup.securitySettings"
+msgstr "Nastavitve varnosti in dostopa"
+
+msgid "manager.setup.securitySettingsDescription"
+msgstr "OJS omogoča več varnostnih opcij, ki se lahko uporabijo za omejitev dostopa do vsebine revije in dostopa do informacij o poteku urejanja posameznih prispevkov, ki se lahko uporabijo za kasnejše revidiranje postopkov dela."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Urednik revije, ki bo to videl skozi uredniški postopek."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "rubrika revije, za katero bo prispevek predviden."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Vedno pokaži povezavo na celoten prispevek, z oznako omejenega pristopa."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Pet korakov za postavitev spletne strani revije"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(npr. fotosinteza; črne luknje; pokojninska reforma; Bayesova teorija)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Ključne besede"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "V pomoč avtorjem podajte primere ključnih besed ali vsebin."
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Navodila za oddajo prispevka"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Kontrolni seznam za oddajo prispevka"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Ob oddaji prispevka za revijo morajo avtorji najprej potrditi, da njihov prispevek zadovoljuje vsako postavko na kontrolnem seznamu za oddajo prispevka. Kontrolni seznam za oddajo prispevka je tudi na strani O reviji pod rubriko Navodila avtorjem. Kontrolni seznam lahko urejate spodaj, avtorji pa morajo vedno s kljukico označiti vsak postavko kot izpolnjeno, preden lahko oddajo prispevek."
+
+msgid "manager.setup.submissions"
+msgstr "Oddani prispevki"
+
+msgid "manager.setup.submissions.description"
+msgstr "Navodila avtorjem, avtorske pravice in indeksiranje vsebine revije."
+
+msgid "manager.setup.subscription"
+msgstr "Revija bo zahtevala naročnino za dostop do določenih ali vseh vsebin."
+
+msgid "manager.setup.subscriptionDescription"
+msgstr "To zahteva dodelitev vloge urednika naročnin, ki ima dostop do modula za naročnine in vsebuje tudi opcije za odprt dostop do vsebin, arhiviranje in e-poštnega obveščanje."
+
+msgid "manager.setup.noPublishing"
+msgstr "OJS ne bo uporabljen za izdajanje revije na spletu."
+
+msgid "manager.setup.typeExamples"
+msgstr "(npr. zgodovinsko raziskovanje; naravni eksperiment; književna analiza; ankete/intervju)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tip (metoda/pristop)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Podajte primere ustreznih iskalnih tipov, metod in pristopov za to področje"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Unikaten identifikator"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Prispevki in številke revije so lahko označene z identifikacijsko številko ali nizom znakov, predvidenim v registracijskem sistemu, kot je recimo Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Revija bo imela uredniški/recenzijski odbor."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Sličica"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Slika naslova"
+
+msgid "manager.setup.useJournalStyleSheet"
+msgstr "Stilska tablica revije"
+
+msgid "manager.setup.userRegistration"
+msgstr "Registracija uporabnikov"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Besedilo naslova"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tVaša OJS namestitev beleži več kot le eno metriko uporabe, ki so prikazane v različnih kontekstih.\n"
+"\t\tV nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni red najbolj branih člankov ali vrstni red iskalnih rezultatof. Prosimo izberite eno od konfiguriranih metrik kot privzeto.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Statistike revije"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Števec pristopov do prispevka (samo za avtorje)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Sprejetih"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Zavrnjenih"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Ponovno preštej"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Število dni do recenzije"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Število dni do objave"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS izračuna spodnje statisike za vsako leto revijo. Število dni do recenzije je povprečen čas od datuma oddaje prispevka (oziroma oddaje priloge za recenzijo) do prve uredniške odločitve. Število dni do objave se računa le za sprejete prispevke in je povprečen čas od oddaje rokopisa do njegove objave v reviji."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Število objavljenih prispevkov"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Izberite postavke, ki bodo na voljo bralcem na strani O reviji."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Opozorilo: Ni nujno, da se odstotki recenziranih prispevkov seštejejo v f100%, ker so ponovno oddani prispevki ali potrjeni ali zavrnjeni ali pa so še v procesu."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Število objavljenih številk"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Skupno prispevkov"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Opravljenih recenzij"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registriranih bralcev"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Registriranih uporabnikov"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Število recenzentov"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Recenzenti"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Urednikova ocena"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Število recenzij"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Izberite rubrike za izračun recenzentske statistike revije."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Naročnine"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Prenosi datoteke prispevka"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Vpogledi v stran s povzetkom prispevka"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Vpogledi v stran s povzetkom in prenos datotek prispevka"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Vpogledi na osnovno stran revije"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Vpogledi na stran s kazalom"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Zožaj območje rezultato z izbiro konteksta (številke in/ali prispevki)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Zožaj območje rezultato z izbiro tipa objekta (revija, številka, prispevek, tip datoteke) in/ali eno ali več IDjev objekta/ov."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Naročniška politika"
+
+msgid "manager.subscriptionPolicies.authorSelfArchive"
+msgstr "Politika avtorjevega samo-arhiviranja"
+
+msgid "manager.subscriptionPolicies.authorSelfArchiveDescription"
+msgstr "Spodnja politika avtorjevega samo-arhiviranja bo objavljena na strani O reviji pod Politikami."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Prost dostop z zamikom"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Prosimo izberite določeno potrditveno polje."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Iztek naročnine"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Po izteku naročnine je bralcem lahko zavrnjen dostop do vseh naročenih vsebin ali pa ohranijo dostop do vsebin, ki so mu bile na voljo pred iztekom naročnine."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Popolno končanje naročnine"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Bralcem je zavrnjen dostop do vseh vsebin po izteku naročnine."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Delno končanje naročnine"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Bralcem je zavrnjen dostop do vsebin, ki izidejo po datumu izteka naročnine, obdržijo pa dostop do vsebin, ki so bile objavljene pred iztekom naročnine."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Opomniki o izteku naročnine"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Naročnikom se lahko avtomatsko pošlje e-poštne opomnike pred in po izteku naročnine. Predloge e-pošte urejajo glavni uredniki revije v OJS e-poštnih predlogah."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Opozorilo:</strong> a aktivacijo teh opcij mora administrator spletišča aktivirati nastavitev <tt>scheduled_tasks</tt>  v nastavitveni datoteki OJS. Morda bodo potrebne tudi dodatne nastavitve strežnika, da bo ta opcija podprta kot je opisano v OJS dokumentaciji"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Izberite eno izmed spodnjih možnosti:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "Dovoljena je uporaba HTML-ja v besedilnih poljih (za pisavo, velikost, barvo itd), s tem, da se tipka \"enter\" obravnava kot <tt>&lt;br&gt;</tt>; HTML urejevalnik deluje v brskalniku Firefox."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Prosimo izberite veljavno vrednost za število mesecev po izteku naročnine."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Prosimo izberite veljavno vrednost za število mesecev pred iztekom naročnine."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Prosimo izberite veljavno vrednost za število tednov po izteku naročnine."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Prosimo izberite veljavno vrednost za število tednov pred iztekom naročnine."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Registrirani uporabniki bodo imeli možnost prejemanja e-poštnih obvestil s kazalom vsebine, ko bo revija imela odprt dostop do vsebine."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Opozorilo:</strong> Za aktivacijo teh opcij mora administrator spletišča aktivirati nastavitev <tt>scheduled_tasks</tt> v nastavitveni datoteki OJS. Morda bodo potrebne tudi dodatne nastavitve strežnika, da bo ta opcija podprta kot je opisano v OJS dokumentaciji."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Obvestilo o plačilu prek spleta"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Po končanem plačilu naročnine preko spleta, se lahko pošlje avtomatsko e-poštno obvestilo upravitelju naročnin (ki ga lahko urejajo upravitelj revije med OJS predpripravljenimi e-poštami)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Obvesti upravitelja naročnin preko e-pošte o nakupu individualne naročnine preko spleta."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Obvesti upravitelja naročnin preko e-pošte o nakupu institucionalne naročnine preko spleta (priporočljivo)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Obvesti upravitelja naročnin preko e-pošte o podaljšanju individualne naročnine preko spleta."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Obvesti upravitelja naročnin preko e-pošte o podaljšanju institucionalne naročnine preko spleta."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Opozorilo:</strong> Nakup institucionalne naročnine preko spleta zahteva potrditev posredovane domena in IP območja in ročno aktivacijo naročnine, ki jo opravi upravitelj naročnin."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Opozorilo:</strong> Za vklop teh možnosti, mora Upravitelj revije omogočiti modul za plačilo preko spleta in možnost plačila naročnine preko spleta pod Pristojbine bralcev."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Možnosti prostega dostopa za revije, ki zahtevajo naročnino"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Revije, ki zahtevajo naročnino, imajo lahko prost dostop z zamikom do objavljenih vsebin ali dovoljenje za avtorjevo samo-arhiviranje (oboje povečuje branost in možnost citiranja vsebine)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informacije o naročnini"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Tipi naročnine in struktura pristojbin bo napisana avtomatsko na strani O reviji, pod razdelkom Naročnine, skupaj z imenom in kontaktnimi informacijami upravitelja naročnin. Tukaj lahko dodate dodatne informacije o naročninah, kot so metode plačila ali podpora za naročnine iz nerazvitih držav."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Upravitelj naročnin"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Kontakt napisan pod rubriko Naročnine na strani O reviji"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Prosimo vnesite veljaven naslov e-pošte."
+
+msgid "manager.subscriptions"
+msgstr "Naročnine"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individualne naročnine"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institucionalne naročnine"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Ste prepričani, da želite zbrisati to naročnino?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Povzetek naročnin"
+
+msgid "manager.subscriptions.create"
+msgstr "Ustvari novo naročnino"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Ustvari"
+
+msgid "manager.subscriptions.renew"
+msgstr "Obnovi"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Konec"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Datum konca"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Začetek"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Datum začetka"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domena"
+
+msgid "manager.subscriptions.edit"
+msgstr "Uredi naročnino"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Uredi"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "S statusom"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Vse"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Status"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Status naročnine je obvezen."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Prosimo izberite veljaven status naročnine."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tip naorčnine"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Tip naročnine je obvezen"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Prosimo izberite veljaven tip naročnine."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Datum začetka"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Datum začetka naročnine je obvezen."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Prosimo izberite veljaven datum začetka naročnine."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Datum prenehanja"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Datum prenehanja naročnine je obvezen."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Prosimo izberite veljaven datum prenehanja naročnine."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Opozorilo: Vse spodnje spremembe se nanašajo na uporabnikov račun v celotnem sistemu."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Uporabnik"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontakt"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Uporabnik je obvezen"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Prosimo izberite veljavnega uporabnika."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Prosimo izberite veljavno državo."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Pošlji uporabniku e-pošto z njegovim uporabniškim imenom in podrobnostmi naročnine."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Prosimo uporabite potrditveno polje."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Članarina"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referenčna številka"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Vpišite članske podatke, če ta tip naročnine zahteva, da je naročnik član združenja ali organizacije."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Izbran tip naročnine zahteva članske podatke."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Beležke"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domena"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Ime institucije"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Ime institucije je obvezno."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Poštni naslov"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Če je tu vpisana domena, je IP območje neobvezno.<br />Veljavne vrednosti so imena domen (npr. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Izbran tip naročnine zahteva ime domene in/ali IP območje za avtentikacijo naročnine."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Prosimo vnesite veljavno domeno."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP območje"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Če je tukaj vpisano IP območje, je ime domene neobvezno.<br />Veljavne vrednosti so IP naslov (npr. 142.58.103.1), IP območje (npr. 142.58.103.1 - 142.58.103.4), IP območje z nadomestnim znakom '*' (npr. 142.58.*.*) in IP območje s CIDR (npr. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Prosimo vnesite veljavno IP območje"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Zbriši"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Dodaj"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Shrani in ustvari novo"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Če želite poslati uporabniku e-pošto z obvestilom, mora imeti naročniški kontakt v nastavitvah revije specificirano ime in e-poštni naslov."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Ta uporabnik ima že veljavno naročnino za to revijo."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Pred novo naročnino mora biti ustvarjen nov tip naročnine."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP območje"
+
+msgid "manager.subscriptions.membership"
+msgstr "Članstvo"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referenčna številka"
+
+msgid "manager.subscriptions.notes"
+msgstr "Beležke"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Ni naročnin"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Izberite kontakt za naročnino"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Izberi uporabnika"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Glavni urednik revije, uredniki, uredniki rubrik, grafični uredniki, lektorji in korektorji imajo avtomatsko dodeljene naročniške pravice."
+
+msgid "manager.subscriptions.select"
+msgstr "Izberi"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Naročnina je bila uspešno ustvarjena."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tip naročnine"
+
+msgid "manager.subscriptions.user"
+msgstr "Uporabnik"
+
+msgid "manager.subscriptions.contact"
+msgstr "Ime kontakta"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Ime institucije"
+
+msgid "manager.subscriptionTypes"
+msgstr "Tip naročnine"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Opozorilo! Zbrisane bodo tudi vse naročnine tega tipa. Ste prepričani, da želite zbrisati ta tip naročnine?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Pristojbine"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Naročnine"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individualna"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucionalna"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Ustvari nov tip naročnine"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Ustvari"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Trajanje"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Uredi tip naročnine"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Uredi"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Znesek"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Vnestie le numerično vrednost (npr. 40 ali 40.00), brez enote za valuto (npr. $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Znesek mora biti pozitivno število."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Znesek je obvezen"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valuta"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Valuta je obvezna."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Prosimo izberite veljavno valuto"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Opis"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Izteče po"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "mesecih (npr. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nikoli ne poteče"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Prosimo izberite eno od ponujenih možnosti."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Trajanje"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Število mesecev trajanja naročnine (npr. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Trajanje mora biti pozitivno število."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Trajanje je obvezen podatek."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Format tipa naročnine je obvezen."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Prosimo izberite veljaven format tipa naročnine."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Naročnine"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individualna (uporabniki se validirajo preko prijave)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institucionalna (uporabniki se validirajo preko domene ali IP naslova)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Prosimo izberite ponujeno možnost."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Naročnine zahtevajo podatke o članstvu (npr. združenje, organizacija, itd.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Prosimo uporabite potrditveno polje."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Možnosti"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Ta vrsta naročnine naj ne bo vidna javno (npr. pod Naročnine na strani O reviji)."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Prosimo uporabite potrditveno polje."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Shrani in ustvari novega"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Ime tipa"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Tip naročnine s tem imenom že obstaja."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Ime tipa naročnine je obvezno."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tip naročnine"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nobenega tipa naročnine ni bilo ustvarjenega."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Tip naročnine je bil uspešno ustvarjen."
+
+msgid "manager.distribution.access"
+msgstr "Dostop"
+
+msgid "manager.setup.categories"
+msgstr "Kategorije"
+
+msgid "manager.setup.categories.description"
+msgstr "Izberite najbolj primerne kategorije izmed možnosti naštetih zgoraj. Bralci bodo lahko pregledovali revije po kategorijah."
+
+msgid "grid.category.path"
+msgstr "Path"
+
+msgid "grid.action.addSection"
+msgstr "Add Section"
+
+msgid "manager.setup.section.description"
+msgstr "Articles within published issues of a journal are organized in Sections, typically by theme or content type (e.g. Review Articles, Research, etc)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Roles are groups of users in the journal who are given access to different permission levels and associated workflows within the journal. There are five different permission levels: Journal Managers have access to everything in the journal (all content and settings); Section Editors have complete access to all assigned content; Journal Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production."
+
+msgid "manager.publication.library"
+msgstr "Knjižnica dokumentov"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Za leto avtorstva prispevka naj se uporabi"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Article: default year will be drawn from the article's publication date, as in \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Issue: default year will be drawn from the issue's publication date."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Ponastavi dovoljenja prispevkov"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Are you sure you wish to reset permissions data already attached to articles?"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Izjava o avtorskih pravicah in licenci bo trajno zapisana poleg objavljenih vsebin, ter s tem zagotavljala, da se ti podatki ne bodo spreminjali v primeru, da revija spremeni politiko novih prispevkov. Za ponastavitev shranjenih dovoljenj, ki so že zapisane poleg objavljenih vsebin, uporabite spodnji gumb."
+
+msgid "grid.genres.title.short"
+msgstr "Komponente"
+
+msgid "grid.genres.title"
+msgstr "Komponente prispevka"
+
+msgid "grid.genres.description"
+msgstr "Te komponente se uporabljajo za poimenovanje datotek in so prikazane kot spustni meni pri nalaganju datotek. Oštevilčenje omogoča, da uporabnik poveže datoteko ali s celotnim prispevkom ali le določeno komponento prispevka."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Nastavitve"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Nastavitve DOI vtičnika"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Prispevki"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Številke"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Prelomi"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Zahteve vtičnika niso izpolnjene"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Za uporabo tega vtičnika morate omogočiti in nastaviti DOI vtičnik v kategoriji \"Javni identivikatorji\" in vnesti veljaven DOI prefix."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Vtičnik ni popolnoma nastavljen."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "V vtičniku za DOI ni izbrana nobena entiteta za dodeljevanje DOI-ja, zato ni mogoč noben izvoz ali deponiranje v tem vtičniku."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Geslo"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Prosimo, da se zavedate, da bo geslo shranjeno v prostem besedilu, torej ne bo enkriptirano."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Katerakoli številka"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Katerikoli status"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Ni deponiran"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Označen kot registriran"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registriran"
+
+msgid "plugins.importexport.common.action"
+msgstr "Akcija"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Izvoz"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Označi kot registriran"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Registriraj"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Preveri XML datoteko pred izvozom in registracijo."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Noben objekt ni izbran."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Izbranih objektov ni bilo mogoče pretvoriti."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Napačen XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "V izhodno datoteko {$param} ni mogoče pisati."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Registracija ni bila uspešna! Registracijski strežnik za DOI je vrnil napako: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registracija je bila uspešna!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Revija s potjo {$path} nima DOI prefiksa."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "NAPAKA:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Podana pot revije, \"{$journalPath}\", ne obstaja."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Izbranih objektov ni bilo mogoče najti."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Pošlji kopijo glavnemu kontaktu revije, ki je določen v nastavitvah revije."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Ste prepričani, da želite odstraniti to naročnino?"
+
+msgid "manager.paymentTypes"
+msgstr "Načini plačila"
+
+msgid "manager.setup.porticoEnable"
+msgstr "Omogoči Portico za hranjene in distribucijo vsebine revije po knjižnicah vključenih v Portico."
+
+msgid "manager.setup.porticoTitle"
+msgstr "Portico"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mesecev"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} tednov"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Pošlji email obvestilo naročniku, ko poteče naročnina."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Pošlji email obvestilo naročniku, ko poteče naročnina."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Pošlji email obvestilo naročniku pred potekom naročnine."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Pošlji email obvestilo naročniku pred potekom naročnine."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Ste prepričani, da želite obnoviti naročnino?"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Povezava do strani, kjer imate opis naročnin, ki jih omogočate."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Povezava do strani, kjer so opisane vse naročnine uporabnika, sedanja in pretekle."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Povezava bo prikazana le, ko bo uporabnik prijavljen."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Vhodna datoteka {$param} ni berljiva."
+
+msgid "manager.setup.enableOai"
+msgstr "Omogoči OAI dostop do vsebin"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "To je časovno neomejena naročnina; prosimo ne določite začetnega datuma."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "To je časovno neomejena naročnina; prosimo ne določite končnega datuma."
+
+msgid "stats.publishedSubmissions.details"
+msgstr "Podrobnosti članka"
+
+msgid "stats.publishedSubmissions.none"
+msgstr "Najdenih ni bilo nobenih člankov."
+
+msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
+msgstr "Skupno število vpogledov v povzetek posameznega članka po datumih"

@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:42+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:42+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA Export/Registration dodatak"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Izvezite metapodatke jedinice, članka ili prikaza u Onix za DOI (O4DOI) format i registrujte DOI-e u mEDRA agenciji."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"Ako želite da registrujete DOI-e u mEDRA, pratite uputstva na\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">mEDRA stranici</a>\n"
+"\t\tda biste dobili korisničko ime i lozinku. Ukoliko nemate korisničko ime i lozinku i dalje ćete biti u mogućnosti da izvezete u mEDRA XML format (Onix za DOI)\n"
+"\t\tali ne možete da registrujete vaše DOI-e sa mEDRA iz OJS-a. \n"
+"\t\tLozinka će biti sačuvana kao tekst, bez enkripcije u skladu sa potrebama mEDRA servisa."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Podesite mEDRA dodatak:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Korisničko ime"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Unesite mEDRA korisničko ime."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Ime institucije registrovane kod mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Unesite ime institucije."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Osoba koja može biti kontaktirana u slučaju potrebe:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Institucija"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Unesite instituciju koja je tehnički odgovorna za izvoz DOI podataka (npr. institucija gde je hostovan server)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Kontakt osoba"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Unesite tehničku kontakt osobu."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "Imejl"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Unesite ispravnu imejl adresu tehničkog kontakta."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Odaberite zemlju."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Odaberite da li želite da jedinicu izvozite kao <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'radove' ili 'manifestacije'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "rad"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestacija"
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NAPOMENA: DOI-i dodeljeni člancima biće izvezeni u  mEDRA kao <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'radovi'</a>. DOI-i dodeljeni prikazima biće izvezeni kao<a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestacije'</a>."
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Korišćenje: \n"
+"{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ..."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Izvezi jedinicu kao"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS će automatski registrovati dedeljene DOI-je u mEDRA. Ovo će potrajati neko vreme nakon procesa objavljivanja. U svakom momentu možete proveriti neregistrovane DOI-je."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Koristite mEDRA test API (test okruženje) za registraciju DOI-ja. Ne zaboravite da uklonite ovo u proizvodnom okruženju."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "mEDRA zadatak za automatsku registraciju"

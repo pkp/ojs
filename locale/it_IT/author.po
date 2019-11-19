@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Nuova proposta"
+
+msgid "author.track"
+msgstr "Proposte attive"
+
+msgid "author.competingInterests"
+msgstr "Interessi&nbsp;concorrenziali vedi la policy sul<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Conflitto d'interessi</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Proponi un articolo"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "I cinque passaggi per la proposta"
+
+msgid "author.submit.startHereTitle"
+msgstr "Invia una nuova proposta"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Clicca qui</a> per andare al primo passo dei cinque passi del processo di proposta."
+
+msgid "author.submit.step1"
+msgstr "Fase 1. Inizio della proposta"
+
+msgid "author.submit.step2"
+msgstr "Fase 2. Caricamento del file"
+
+msgid "author.submit.step3"
+msgstr "Fase 3. Metadati del contributo"
+
+msgid "author.submit.step4"
+msgstr "Fase 4. Caricamento di file supplementari"
+
+msgid "author.submit.step4a"
+msgstr "Fase 4a. Aggiungi un file supplementare"
+
+msgid "author.submit.step5"
+msgstr "Fase 5. Conferma la proposta"
+
+msgid "author.submit.start"
+msgstr "Inizio"
+
+msgid "author.submit.metadata"
+msgstr "Inserisci i metadati"
+
+msgid "author.submit.upload"
+msgstr "Carica il file della proposta"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Carica i file supplementari"
+
+msgid "author.submit.confirmation"
+msgstr "Conferma"
+
+msgid "author.submit.notAccepting"
+msgstr "In questo momento la rivista non accetta nessuna proposta."
+
+msgid "author.submit.requestWaiver"
+msgstr "Richiedi un'esenzione"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Chiedo di essere esonerato dal pagamento della  quota di submission per questa proposta."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Utilizza la casella di commento sotto per specificare i motivi della richiesta di esonero dal pagamento."
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Invia la versione corretta"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Correzioni sulle bozze"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Sei sicuro di cancellare questa proposta incompleta?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Vedi lo stato"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Nessuna proposta."
+
+msgid "author.submit.journalSection"
+msgstr "Sezione della rivista"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Scegli la sezione più adatta alla tua proposta (Vedi le politiche delle sezioni in <a href=\"{$aboutUrl}\" target=\"_new\">Info</a> )."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Assicurati di aver spuntato tutte le voci della lista prima di continuare"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Gli autori acconsentono ai termini di questa nota sul Copyright, che sarà applicata al loro contributo se e quando verrà pubblicato (commenti per l'editor possono essere aggiunti sotto)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Devi accettare i termini della nota di Copyright prima di continuare."
+
+msgid "submission.submit.coverNote"
+msgstr "Commenti per l'Editor"
+
+msgid "author.submit.comments"
+msgstr "Inserisci il testo (opzionale)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Devi scegliere la sezione per il tuo contributo."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Tutela della privacy"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Ordina gli autori nel modo in cui vuoi che appaiano sulla pubblicazione."
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Contatto di corrispondenza con la redazione."
+
+msgid "author.submit.addAuthor"
+msgstr "Aggiungi un autore"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Cancella autore"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Fornisci i termini per indicizzare la proposta; separa i termini con un punto e virgola (termine1; termine2; termine3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche del campione della ricerca."
+
+msgid "author.submit.languageInstructions"
+msgstr "Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Altri codici</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Inserisci almeno un autore."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Inserisci nome, cognome e indirizzo email di ciascun autore."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Inserisci il titolo del contributo."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Inserisci l'abstract del contributo."
+
+msgid "author.submit.submissionFile"
+msgstr "File del contributo"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Carica il file del contributo"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Sostituisci il file del contributo"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Non hai caricato alcun file."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Sei sicuro di voler continuare senza caricare il file del contributo?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Questo passo facoltativo permette di aggiungere ulteriori file a una proposta. I file, che possono essere in qualsiasi formato, potrebbero includere (a) strumenti di ricerca, (b) un insieme di dati, che rispettino i termini dell'etica di ricerca e di studio della rivista (c) risorse che altrimenti non sarebbero disponibili ai lettori, (d) immagini e tabelle che non possono essere integrate nel testo stesso, o altri materiali che si aggiungono al lavoro."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Clicca Salva per caricare il file (in seguito si potranno caricare file supplementari)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Sei sicuro di voler continuare senza caricare il file aggiuntivo che hai scelto?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Non è stato aggiunto nessun file supplementare per questa proposta."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Torna ai file supplementari"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Sei sicuro di voler cancellare questo file supplementare?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Carica un  file aggiuntivo"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Inserisci un file aggiuntivo"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Modifica un file aggiuntivo"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadati del file supplementare"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Per ciascun file supplementare, inserisci i metadati necessari."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "File supplementare"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creatore (o proprietario) del file"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Strumento di ricerca"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Materiali di ricerca"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Risultati di ricerca"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Trascrizioni"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analisi di dati"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Set di dati"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Testo della fonte"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Breve descrizione"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Mostra il file ai revisori (senza metadati), in quanto non comprometterà la blind review."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Utilizza solo con materiali ufficialmente pubblicati."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Data di creazione dello strumento o di raccolta dei dati."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Nome dello studio o altro punto di partenza."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Specifica altro"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Non hai caricato alcun file."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Inserisci il titolo del file aggiuntivo."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Inserisci un argomento."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Inserisci una descrizione."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Esiste già l'identificazione del file pubblico supplementare."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identificatore pubblico del file supplementare"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Per inviare il tuo lavoro a {$journalTitle} clicca  il tasto \"Completa la proposta\". L'autore che hai indicato per la corrispondenza con la Redazione riceverà una notifica via email e potrà controllare, effettuando il log in al sito web della rivista, lo stato di avanzamento della proposta nel processo editoriale. Grazie per il tuo interessamento a pubblicare con {$journalTitle}"
+
+msgid "author.submit.noFiles"
+msgstr "Non hai caricato alcun file per questa proposta."
+
+msgid "author.submit.filesSummary"
+msgstr "Riepilogo dei file"
+
+msgid "author.submit.finishSubmission"
+msgstr "Completa la proposta"
+
+msgid "author.submit.submissionComplete"
+msgstr "Invio della proposta completato. Grazie per l'interesse che dimostri nel voler pubblicare su {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Carica la versione dell'autore"
+
+msgid "author.article.copyeditedFile"
+msgstr "Copyedited File"
+
+msgid "author.article.authorRevisedFile"
+msgstr "File dell'autore"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "E' necessario un account utente per inviare proposte a questa rivista. Questo permette ai nostri editor di seguire le tue submission e contattarti quando lo stato della tua proposta cambia, o se sono necessarie ulteriori informazioni da parte tua."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "In revisione: {$round} round"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "In revisione: Richieste modifiche"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "In lavorazione: Richiesto copyediting"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "In lavorazione: Richiesta correzione di bozze"
+
+msgid "author.submit.reorder"
+msgstr "Riordina i nomi degli autori"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Hai superato il numero massimo di parole previsto per l'abstract degli articoli da pubblicare in questa sezione."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Se stai chiedendo un esonero, devi indicarne il motivo."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Seleziona una lingua per la proposta."
+
+msgid "author.submit.nextSteps"
+msgstr "Passi successivi"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Puoi completare questa proposta successivamente selezionado \"Proposte attive\" dalla home dell'autore"

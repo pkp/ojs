@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:29+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Stuur een artikel in"
+
+msgid "submission.submit.userGroup"
+msgstr "Stuur in als..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Kies de hoedanigheid waarin u dit artikel instuurt."
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecteer een onderdeel"
+
+msgid "submission.title"
+msgstr "Titel van het artikel"
+
+msgid "submission.title.tip"
+msgstr "De inzending is doorgaans een 'afbeelding', 'tekst' of ander multimediatype, zoals 'software' of 'interactief'. Kies het meest relevante type voor uw inzending. Voorbeelden kunnen worden gevonden op <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>."
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Begin een nieuwe inzending in"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nieuwe inzending"
+
+msgid "grid.action.workflow"
+msgstr "Stappen voor inzending"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "De samenvatting mag maximaal {$wordCount} bevatten."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Uw inzending heeft het tijdschrift goed bereikt; daarvan werd u via e-mail een bevestiging gestuurd. Zodra de redacteur de inzending heeft beoordeeld, wordt u gecontacteerd."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Proef wordt getoond in het nummer"
+
+msgid "grid.action.issueEntry"
+msgstr "Bekijk de metadata voor deze inzending"
+
+msgid "submission.publication"
+msgstr "Publicatie"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "De proef voor dit artikel \"{$galleyFormatName}\" is nu beschikbaar."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "De proef voor dit artikel \"{$galleyFormatName}\" is niet meer beschikbaar."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "De publieke identificatie van de inzending is bijgewerkt."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Goedkeuring formaat"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Deze proef zal <em>niet langer beschikbaar</em> zijn voor lezers.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Deze proef zal <em>beschikbaar</em> zijn voor lezers.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Maak deze proef beschikbaar"
+
+msgid "submission.galleyFiles"
+msgstr "Proefbestanden"
+
+msgid "submission.proofReadingDescription"
+msgstr "Hier plaatst de opmaakredacteur de afgewerkte bestanden die werden voorbereid voor publicatie. Gebruik <em>Wijs corrector toe</em> om auteurs en andere proeflezers aan te wijzen die de finale versie moeten lezen en goedkeuren voor publicatie."
+
+msgid "grid.action.approveProof"
+msgstr "Accepteer deze proef."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Deze proef werd geaccepteerd."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Titel en Samenvatting"
+
+msgid "submission.submit.upload.description"
+msgstr "Laad bestanden op die geassocieerd zijn met deze inzending: het artikel zelf, multimedia, dataverzamelingen, illustraties, enz."
+
+msgid "submission.pageProofs"
+msgstr "Proeflezing"
+
+msgid "submission.confirmSubmit"
+msgstr "Weet u zeker dat u dit artikel wil indienen voor het tijdschrift?"
+
+msgid "workflow.review.externalReview"
+msgstr "Review"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Stuur naar reviewer"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "De metadata voor de inzending is bijgewerkt."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikel onderdeel"
+
+msgid "submission.complete"
+msgstr "Geaccepteerd"
+
+msgid "submission.incomplete"
+msgstr "In afwachting van goedkeuring"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Selecteer een taal voor de inzending."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Checklist voor inzendingen"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Geef aan dat uw inzending aan onderstaande vereisten voldoet."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Privacy verklaring"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rol van de bijdrager"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Er is minimaal één auteur vereist."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "De voornaam, familienaam en e-mailadres van elke auteur moet worden ingevuld."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vul de titel van uw artikel in."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vul de samenvatting van uw artikel in."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "De samenvatting is te lang. Verkort het tot de maximumlengte voor dit onderdeel."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecteer de rol van de bijdrager."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Het gevraagde citatieformaat kon niet worden gevonden."
+
+msgid "submission.metadataDescription"
+msgstr "Deze bepalingen zijn gebaseerd op de Dublin Core metadata specificatie, een internationale standaard voor de beschrijving van de inhoud van tijdschriften."
+
+msgid "section.any"
+msgstr "Alle secties"

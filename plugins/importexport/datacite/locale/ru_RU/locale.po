@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:38+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:38+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Модуль «Экспорт/регистрация DataCite»"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Экспортирует или регистрирует метаданные выпуска, статьи, гранки и дополнительных файлов в формате DataCite."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Пожалуйста, настройте модуль экспорта DataCite перед его первым использованием."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tЕсли вы хотите зарегистрировать DOI в DataCite, пожалуйста, свяжитесь с управляющим\n"
+"\t\tагентом через <a href=\"http://datacite.org/contact\" target=\"_blank\">главную страницу\n"
+"\t\tDataCite</a>, который перенаправит вас к вашему региональному члену DataCite. Как только вы\n"
+"\t\tустановите отношения с организацией-членом DataCite, вы будете получить\n"
+"\t\tдоступ к службе DataCite для выдачи постоянных идентификаторов (DOI)\n"
+"\t\tи регистрации связанных с ними метаданных. Если у вас нет вашего собственного имени пользователя и\n"
+"\t\tпароля, вы все равно сможете экспортировать в формат DataCite XML, но\n"
+"\t\tне сможете зарегистрировать ваши DOI в DataCite из OJS.\n"
+"\t\tПожалуйста, обратите внимание, что пароль будет сохраняться как простой текст, то есть не будет шифроваться,\n"
+"\t\tэто требования службы регистрации DataCite.\n"
+"\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Имя пользователя (символ)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Пожалуйста, введите имя пользователя (символ), который вы получили от DataCite. Имя пользователя не может содержать двоеточия."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS будет депонировать DOI автоматически в DataCite. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные DOI."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Использовать тестовый префикс DataCite для регистрации DOI. Пожалуйста, не забудьте убрать этот параметр этот параметр для реальной работы."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "Задача автоматической регистрации DataCite"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Вызов:\n"
+"{$scriptName} {$pluginName} export [ИмяФайлаВывода] [путь_журнала] {issues|articles|galleys} IdОбъекта1 [IdОбъекта2] ...\n"
+"{$scriptName} {$pluginName} register [путь_журнала] {issues|articles|galleys} IdОбъекта1 [IdОбъекта2] ...\n"
+""

@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:46+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:46+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "إضافة XML للمستخدمين"
+
+msgid "plugins.importexport.users.description"
+msgstr "استيراد وتصدير المستخدمين"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"الاستعمال: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"أمثلة:\n"
+"\tاستيراد المستخدمين إلى myJournal من myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tتصدير كل المستخدمين من myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tتصدير المستخدمين المحددين باستعمال رموزهم التعريفية:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "استيراد المستخدمين"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "إختر ملف بيانات بصيغة XML يتضمن معلومات المستخدمين لاستيرادها إلى هذه المجلة. أنظر ملف المساعدة الخاص بالمجلة للحصول على تفاصيل عن صيغة هذا الملف.<br /><br />لاحظ أنه إن كان الملف المستورد يتضمن أي أسماء مستخدمين أو عناوين بريد الكتروني موجودة سلفاً في النظام، فإن بيانات هؤلاء المستخدمين لن يتم استيرادها، مع منحهم أي أدوار جديدة فيما لو جاءت مستوردة من الملف المعني، أي بعبارة أخرى، سيتم التعامل مع المستخدمين المكررين على أنهم معروفون سابقاً في النظام."
+
+msgid "plugins.importexport.users.import.failedToImportUser"
+msgstr "استيراد المستخدم لم ينجح"
+
+msgid "plugins.importexport.users.import.failedToImportRole"
+msgstr "تعذر منح المستخدم دور"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "ملف بيانات المستخدم"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "أرسل إشعاراً بالبريد الالكتروني إلى كل مستخدم تم استيراده متضمناً اسم المستخدم وكلمة مروره."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "تابع استيراد المستخدمين الآخرين عند حدوث خطأ ما."
+
+msgid "plugins.importexport.users.import.noFileError"
+msgstr "لم يتم رفع أي ملف!"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "المستخدمون الآتية أسماؤهم تم استيرادهم بنجاح إلى النظام"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "حدثت أخطاء خلال عملية الاستيراد"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "أكد أن هؤلاء المستخدمون الذين تريد استيرادهم إلى النظام"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "تحذير"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "لا يمكن استعمال كلمات المرور المرمزة بواسطة {$importHash}؛ نظام المجلات المفتوحة مصمم لاستعمال {$ojsHash}. إذا تابعت الأمر، سيكون عليك إعادة ضبط كلمات مرور المستخدمين الذين ستستورد حساباتهم إلى النظام."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "مسار مجلة \"{$journalPath}\" غير معروف تم تحديده."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "تصدير المستخدمين"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "التصدير حسب الدور"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "تصدير الكل"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "حدثت أخطاء خلال عملية التصدير"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "تعذرت الكتابة إلى الملف \"{$fileName}\"."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "إكتملت عملية الاستيراد بنجاح. اسماء المستخدمين وعناوينهم البريدية من الذين لم يسبق معرفتهم قد تم استيرادها فضلاً عن المجموعات المصاحبة لهم."
+
+msgid "plugins.importexport.users.results"
+msgstr "النتائج"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "لطفاً، إرفع ملفاً ضمن \"استيراد\" للمتابعة."

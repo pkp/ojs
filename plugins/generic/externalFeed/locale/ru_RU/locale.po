@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:05+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:05+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Модуль «Внешние ленты»"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Блок «Внешняя лента»"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Публикует контент из внешних лент новостей Atom/RSS. Например, из внешней инсталляции WordPress, Drupal или OCS."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Нет внешних лент"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Заголовок"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Опубликовано"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Подробнее..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Внешние ленты"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Настройки"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "Чтобы отобразить содержимое ленты новостей в блоках на боковой панели, перейдите к <a href=\"{$setupStep56}\" target=\"_blank\">шагу 5.6 настройки</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Название"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Показывать на главной странице"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Показывать на главной странице"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Не показывать на главной странице"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Показывать блок"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Все страницы"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Показывать блок на всех страницах"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Не показывать блок на всех страницах"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Главная страница"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Показывать блок только на главной странице"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Не показывать блок только на главной странице"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Нет внешних лент"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Создать новую внешнюю ленту"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Редактировать внешнюю ленту"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Вы уверены, что хотите навсегда удалить эту ленту?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Настройки"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Настройте отображение элементов внешней ленты."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Показывать"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Таблица стилей внешней ленты"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "Таблица стилей пользователя может использоваться для замены таблицы стилей по умолчанию для этого модуля. Таблицу стилей по умолчанию можно просмотреть здесь"
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Таблица стилей пользователя"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Название"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "Название для отображения на главной странице и/или в блоке"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Пожалуйста, введите название для этой ленты"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL-адрес"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Пожалуйста, введите правильный URL-адрес ленты (включая http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "URL-адрес внешней ленты новостей в формате Atom/RSS (например, http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Показывать"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Показывать на главной странице"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Не показывать в блоке"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Показывать в блоке только на главной странице"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Показывать в блоке на всех страницах"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Ограничить"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "элементами ленты"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Сохранить и создать новую"

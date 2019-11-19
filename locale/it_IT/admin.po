@@ -1,0 +1,177 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:26+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Riviste"
+
+msgid "admin.settings.redirect"
+msgstr "Redirect"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Prevede un redirect dal sito principale a una rivista. Può essere utile, ad esempio, se il sito ospita solo una rivista."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Questa sarà la lingua di default del sito e di ogni rivista."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Seleziona tutte le localizzazioni supportate dal sito. Le lingue scelte saranno disponibili per tutte le riviste ospitate e saranno visibili nel menu presente in tutte le pagine del sito (in ogni caso il layout potrà sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate più lingue, il menu di selezione non sarà presente e non saranno disponibili le impostazioni estese per le lingue."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Sei sicuro di voler disinstallare questa localizzazione? Questa operazione avrà effetto su tutte le lingue che la stanno utilizzando"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Seleziona le localizzazioni da installare nel sistema. I file di localizzazione vanno installati, prima che le riviste possano utilizzarli. Leggi la documentazione di OJS per ulteriori informazioni su come aggiungere nuove lingue"
+
+msgid "admin.languages.downloadFailed"
+msgstr "Lo scaricamento della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive il motivo dell'insuccesso."
+
+msgid "admin.languages.localeInstalled"
+msgstr "La lingua \"{$locale}\" è stata installata."
+
+msgid "admin.languages.download"
+msgstr "Scarica localizzazione"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Non è possibile aprire il descrittore della lingua dal sito web del PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Non è possibile aggiungere la nuova lingua al file di registro della lingua, solitamente \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "Database degli utenti OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Abilita la sincronizzazione del profilo dell'utente (se supportato da questo plug-in di autenticazione). Le informazione sul profilo dell'utente saranno automaticamente aggiornate in remoto quando un utente accede, e i cambiamenti del profilo (inclusi cambi di password) fatti all'interno di OJS saranno automaticamente aggiornati in remoto. Se questa opzione è disabilitata le informazioni del profilo OJS  saranno mantenute separate dalle informazioni del profilo in remoto."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Abilita la modifica della password dell'utente (se supportato da questo plug-in di autenticazione). L'abilitazione di questa opzione permette agli utenti di modificare la password all'interno di OJS and e di usare il comando OJS \"password smarrita\"  per resettare una password dimenticata. Queste funzioni non saranno disponibili all'utente con questa fonte di autenticazione se questa opzione è disabilitata ."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Abilita la creazione di un utente (se supportato da questo plug-in di autenticazione). Gli utenti creati all'interno di OJS con questa fonte di autenticazione  saranno automaticamente aggiunti alla fonte di autenticazione in remoto se ancora non esiste. Inoltre, se questa fonte è la fonte di autenticazione di default, gli account di OJS creati  tramite la registrazione dello user  saranno aggiunti alla fonte di autenticazione in remoto."
+
+msgid "admin.systemVersion"
+msgstr "Versione di OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Configurazione di OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Impostazioni di configurazione di OJS prese da <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Impostazioni della rivista"
+
+msgid "admin.journals.noneCreated"
+msgstr "Non è stata creata nessuna rivista."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Sei sicuro di voler cancellare definitivamente questa rivista e tutti i suoi contenuti?"
+
+msgid "admin.contexts.create"
+msgstr "Crea una nuova rivista"
+
+msgid "admin.journals.createInstructions"
+msgstr "Sarai automaticamente registrato come manager di questa rivista. Dopo aver creato una nuova rivista, effettua il log in come manager per continuare il setup e registrare gli utenti."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Utilizzare un termine breve o un acronimo. La URL della rivista sarà {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Inserire un path."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Il path può contenere solo caratteri alfanumerici, underscore e trattini. Deve iniziare e finire con un carattere alfanumerico e non può contenere spazi."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Il path indicato è già utilizzato da un'altra rivista."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Mostra pubblicamente la rivista sul sito"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descrizione della rivista"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Path di una rivista esistente o path da creare (es. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importa abbonamenti"
+
+msgid "admin.journals.transcode"
+msgstr "Converti i metadata dell'articolo da ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Genera il codice per mappare le URL di OJS1 verso quelle di OJS2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "È richiesto il path dell'importazione."
+
+msgid "admin.journals.importErrors"
+msgstr "Importazione fallita"
+
+msgid "admin.mergeUsers"
+msgstr "Fusione utenti"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fondi l'utente"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Seleziona l'utente al quale si vogliono attribuire le autorizzazioni dell'utente precedente, modificando gli incarichi assegnati ecc."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Seleziona un utente da fondere sull'account di un altro utente (es. quando qualcuno ha due account da utente). L'account selezionato sarà cancellato e le sue submission, gli incarichi ecc. saranno attribuiti al secondo account."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Tutti gli utenti iscritti"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Sei sicuro di voler fondere {$oldAccountCount} account selezionato(i) con l'account con il nome utente \"{$newUsername}\"? I vecchi {$oldAccountCount} account non esisteranno più. Questa azione non è reversibile."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Non ci sono utenti iscritti"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "I file marcati potrebbero essere incompleti."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"Questa installazione OJS è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti.\n"
+"Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca.\n"
+"Selezionare una delle metriche configurate come predefinita."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Sei sicuro di voler disabilitare questa traduzione. Questo impatterà tutte le riviste che la usano attualmente"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Scaricare i pacchetti linguistici dal Public Knowledge Project web server non è attualmente possibile perchè:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Il tuo server non ha o non permette l'esecuzione di GNU \"tar\".</li>\n"
+"\t\t<li>OJS non può modificare il file che registrata le traduzioni, di solito \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>I pachetti linguistici posso essere scaricati dal <href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Un titolo è richiesto"
+
+msgid "admin.presses.createInstructions"
+msgstr "Verrai automaticamente inserito come manager di questa rivista. Dopo aver creato una nuova rivista sarai ridiretto ail setup wizard, per completare il setup iniziale."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Avviso per ricordare la scadenza dell'abbonamento"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notifica Open Access"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Avviso per il revisore"

@@ -1,0 +1,2028 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:23+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Valittu julkaisu:"
+
+msgid "context.select"
+msgstr "Vaihda toiseen julkaisuun:"
+
+msgid "navigation.categories"
+msgstr "Kategoriat"
+
+msgid "navigation.categories.browse"
+msgstr "Selaa"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klikkaa kuvaketta täyttääksesi arviointilomakkeen."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Haluatko varmasti merkitä tämän tehtävän suoritetuksi? Et voi välttämättä tehdä muutoksia enää myöhemmin."
+
+msgid "common.payment"
+msgstr "Maksu"
+
+msgid "common.payments"
+msgstr "Maksut"
+
+msgid "common.homePageHeader.altText"
+msgstr "Etusivun ylätunniste"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Julkaisun etusivun kuva"
+
+msgid "navigation.journalHelp"
+msgstr "Julkaisun ohje"
+
+msgid "navigation.current"
+msgstr "Uusin numero"
+
+msgid "navigation.otherJournals"
+msgstr "Muut julkaisut"
+
+msgid "navigation.browseByIssue"
+msgstr "Numeron mukaan"
+
+msgid "navigation.browseByAuthor"
+msgstr "Kirjoittajan mukaan"
+
+msgid "navigation.infoForAuthors"
+msgstr "Kirjoittajille"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Kirjastonhoitajille"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Sidonnaisuuksien ilmoittaminen"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Tietoa kirjoittajille"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Tietoa kirjastonhoitajille"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Osoittamattomat"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Osoittamattomat"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Toimitettavana olevat käsikirjoitukset"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Toimitettavana"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Arvioitavana olevat käsikirjoitukset"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Arvioitavana"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arkistot"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arkistot"
+
+msgid "common.queue.long.active"
+msgstr "Aktiiviset"
+
+msgid "common.queue.short.active"
+msgstr "Aktiiviset"
+
+msgid "common.queue.long.completed"
+msgstr "Arkisto"
+
+msgid "common.queue.short.completed"
+msgstr "Arkisto"
+
+msgid "section.section"
+msgstr "Osasto"
+
+msgid "section.sections"
+msgstr "Osastot"
+
+msgid "section.title"
+msgstr "Osaston nimi"
+
+msgid "section.abbreviation"
+msgstr "Lyhenne"
+
+msgid "section.abbreviation.example"
+msgstr "(Esimerkiksi: artikkelit = ART)"
+
+msgid "article.article"
+msgstr "Artikkeli"
+
+msgid "article.articles"
+msgstr "Artikkelit"
+
+msgid "common.publication"
+msgstr "Artikkeli"
+
+msgid "common.publications"
+msgstr "Artikkelit"
+
+msgid "article.submissionId"
+msgstr "Käsikirjoituksen tunniste"
+
+msgid "article.title"
+msgstr "Otsikko"
+
+msgid "article.authors"
+msgstr "Kirjoittajat"
+
+msgid "article.indexingInformation"
+msgstr "Indeksointitiedot"
+
+msgid "article.metadata"
+msgstr "Metatiedot"
+
+msgid "article.journalSection"
+msgstr "Julkaisun osasto"
+
+msgid "article.file"
+msgstr "Tiedosto"
+
+msgid "article.suppFile"
+msgstr "Liitetiedosto"
+
+msgid "article.suppFiles"
+msgstr "Liitetiedosto(t)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Liitetiedostot"
+
+msgid "article.discipline"
+msgstr "Akateeminen tieteenala ja alatieteet"
+
+msgid "article.subject"
+msgstr "Avainsanat"
+
+msgid "article.coverage"
+msgstr "Kattavuus"
+
+msgid "article.type"
+msgstr "Tyyppi, menetelmä tai lähestymistapa"
+
+msgid "article.language"
+msgstr "Kieli"
+
+msgid "article.sectionEditor"
+msgstr "OT"
+
+msgid "article.commentsToEditor"
+msgstr "Kirjoittajan kommentit"
+
+msgid "article.submission"
+msgstr "Käsikirjoitus"
+
+msgid "article.submissions"
+msgstr "Käsikirjoitukset"
+
+msgid "article.details"
+msgstr "Tiedot"
+
+msgid "article.abstract"
+msgstr "Abstrakti"
+
+msgid "article.coverPage.altText"
+msgstr "Kansikuva"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Avoin saatavuus"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Rajoitettu saatavuus"
+
+msgid "article.comments.sectionDefault"
+msgstr "Oletus"
+
+msgid "article.comments.disable"
+msgstr "Poista käytöstä"
+
+msgid "article.comments.enable"
+msgstr "Ota käyttöön"
+
+msgid "article.fontSize"
+msgstr "Kirjasinkoko"
+
+msgid "article.fontSize.small.altText"
+msgstr "Pieni"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Keskikokoinen"
+
+msgid "article.fontSize.large.altText"
+msgstr "Suuri"
+
+msgid "article.return"
+msgstr "Palaa artikkelin tietoihin"
+
+msgid "submission.submissionEditing"
+msgstr "Käsikirjoituksen toimittaminen"
+
+msgid "submission.changeSection"
+msgstr "Muuta"
+
+msgid "submission.sent"
+msgstr "Lähetetty"
+
+msgid "submission.editorDecision"
+msgstr "Toimittajan päätös"
+
+msgid "submission.round"
+msgstr "Kierros&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Toimittajan arviointi"
+
+msgid "submission.notifyAuthor"
+msgstr "Ilmoita kirjoittajalle"
+
+msgid "submission.notifyEditor"
+msgstr "Ilmoita toimittajalle"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Toimittajien/Kirjoittajien sähköpostirekisteri"
+
+msgid "submission.reviewersVersion"
+msgstr "Arvioijan selityksin varustettu tiedostoversio"
+
+msgid "submission.postReviewVersion"
+msgstr "Arvioinnin jälkeinen tiedostoversio"
+
+msgid "submission.editorVersion"
+msgstr "Toimittajan versio"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Kirjoittajan korjaama tiedostoversio"
+
+msgid "submission.authorVersion"
+msgstr "Kirjoittajan versio"
+
+msgid "submission.copyediting"
+msgstr "Tekninen toimittaminen"
+
+msgid "submission.copyedit"
+msgstr "Tekninen toimittaminen"
+
+msgid "submission.proofreading"
+msgstr "Oikoluku"
+
+msgid "submission.scheduling"
+msgstr "Aikataulutus"
+
+msgid "submission.scheduledIn"
+msgstr "Ajoitettu julkaistavaksi numerossa {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(ilmoitetaan myöhemmin)"
+
+msgid "submissions.sec"
+msgstr "Os."
+
+msgid "submissions.step1"
+msgstr "Vaihe 1"
+
+msgid "submissions.step3"
+msgstr "Vaihe 3"
+
+msgid "submissions.queuedReview"
+msgstr "Arvioitavana"
+
+msgid "submissions.published"
+msgstr "Julkaistu"
+
+msgid "submissions.initial"
+msgstr "Ensimmäinen"
+
+msgid "submissions.proofread"
+msgstr "Oikolue"
+
+msgid "submissions.initialProof"
+msgstr "Ensimmäinen korjausvedos"
+
+msgid "submissions.postAuthor"
+msgstr "Kirjoittajan tarkistama"
+
+msgid "submissions.reviewRound"
+msgstr "Arviointikierros"
+
+msgid "submissions.proof"
+msgstr "Korjausvedos"
+
+msgid "submissions.editorDecision"
+msgstr "Toimittajan päätös"
+
+msgid "submissions.editorRuling"
+msgstr "Toimittajan määräys"
+
+msgid "submission.eventLog"
+msgstr "Tapahtumaloki"
+
+msgid "submissions.copyeditComplete"
+msgstr "Teknisesti toimitettu"
+
+msgid "submissions.layoutComplete"
+msgstr "Taitettu"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Oikoluettu"
+
+msgid "journal.currentIssue"
+msgstr "Uusin numero"
+
+msgid "context.contexts"
+msgstr "Julkaisut"
+
+msgid "journal.path"
+msgstr "Polku"
+
+msgid "context.context"
+msgstr "Julkaisu"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Näytä kaikki numerot"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Sisällytä käyttäjät, joilla ei ole roolia tässä julkaisussa."
+
+msgid "user.profile.profileImage"
+msgstr "Profiilikuva"
+
+msgid "user.showAllJournals"
+msgstr "Näytä omat julkaisut"
+
+msgid "user.registerForOtherJournals"
+msgstr "Rekisteröidy muihin julkaisuihin"
+
+msgid "user.reviewerPrompt"
+msgstr "Haluaisitko arvioida tähän julkaisuun lähetettyjä käsikirjoituksia?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Kyllä, pyydä {$userGroup}-roolia."
+
+msgid "user.register.contextsPrompt"
+msgstr "Minkä tällä sivustolla olevien julkaisuiden käyttäjäksi haluat rekisteröityä?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Pyydä seuraavia rooleja."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Jos pyysit jonkin julkaisun arvioijan roolia, ilmoita sinua kiinnostavat aiheet."
+
+msgid "user.myJournals"
+msgstr "Julkaisut, joihin olen rekisteröitynyt"
+
+msgid "user.manageMySubscriptions"
+msgstr "Omien tilausten hallinnointi"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Tiliäsi ei ole tällä hetkellä liitetty yhteenkään julkaisuun. Valitse julkaisu:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Tililläsi ei ole tällä hetkellä yhtään roolia tässä julkaisussa. Valitse alla olevista toiminnoista:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Lähetä ehdotus"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Lähetä artikkeli: Kirjoittajaksi rekisteröityminen ei ole juuri nyt mahdollista."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Rekisteröidy arvioijaksi"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Rekisteröidy arvioijaksi: Arvioijaksi rekisteröityminen ei ole juuri nyt mahdollista."
+
+msgid "user.role.manager"
+msgstr "Julkaisun hallinnoija"
+
+msgid "user.role.subEditor"
+msgstr "Osastotoimittaja"
+
+msgid "user.role.subscriptionManager"
+msgstr "Tilaussihteeri"
+
+msgid "user.role.managers"
+msgstr "Julkaisun hallinnoijat"
+
+msgid "user.role.subEditors"
+msgstr "Osastotoimittajat"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Tilaussihteerit"
+
+msgid "user.role.journalAssistant"
+msgstr "Avustaja"
+
+msgid "user.role.journalAssistants"
+msgstr "Avustajat"
+
+msgid "issue.issue"
+msgstr "Numero"
+
+msgid "issue.issues"
+msgstr "Numerot"
+
+msgid "issue.title"
+msgstr "Otsikko"
+
+msgid "issue.volume"
+msgstr "Vuosikerta"
+
+msgid "issue.number"
+msgstr "Numero"
+
+msgid "issue.vol"
+msgstr "Vol"
+
+msgid "issue.no"
+msgstr "Nro"
+
+msgid "issue.year"
+msgstr "Vuosi"
+
+msgid "issue.noIssues"
+msgstr "Ei numeroita"
+
+msgid "issue.toc"
+msgstr "Sisällysluettelo"
+
+msgid "issue.abstract"
+msgstr "Abstrakti"
+
+msgid "issue.coverPage.altText"
+msgstr "Kansilehti"
+
+msgid "issue.fullIssue"
+msgstr "Koko numero"
+
+msgid "issue.nonpdf.title"
+msgstr "Numeron lataaminen"
+
+msgid "issue.viewIssue"
+msgstr "Näytä numero"
+
+msgid "issue.return"
+msgstr "Palaa numeron tietoihin"
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuutta"
+
+msgid "subscriptionTypes.year"
+msgstr "vuosi"
+
+msgid "subscriptionTypes.years"
+msgstr "vuodet"
+
+msgid "subscriptionTypes.month"
+msgstr "kuukausi"
+
+msgid "subscriptionTypes.months"
+msgstr "kuukaudet"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Jatkuva"
+
+msgid "subscriptionTypes.format"
+msgstr "Muoto"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Painettu"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Painettu ja online"
+
+msgid "subscriptions.inactive"
+msgstr "Pois käytöstä"
+
+msgid "subscriptions.status"
+msgstr "Tila"
+
+msgid "subscriptions.status.active"
+msgstr "Aktiivinen"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Tarvitaan tietoja"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Tarvitaan hyväksyntä"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Odotetaan manuaalista maksua"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Odotetaan verkkomaksua"
+
+msgid "subscriptions.status.other"
+msgstr "Muu, katso huomautukset"
+
+msgid "subscriptions.individualDescription"
+msgstr "Yksittäistilaukset vaativat sisäänkirjautumisen, jotta tilaaja pääsee lukemaan tilattavaa sisältöä."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Instituutiotilaukset eivät vaadi kirjautumista. Käyttäjän verkkotunnus ja/tai IP-osoite antavat pääsyn tilauksen sisältöön."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Huomaa:</strong> Verkossa tehdyt instituutiotilaukset vaativat verkkotunnuksen ja IP-osoitealueen hyväksymisen ennen kuin tilaus aktivoituu."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Käsikirjoitukseen liittyvä tapahtuma"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikkeli lähetetty"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Käsikirjoitus lähetetty numeron ajoitusjonoon"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Käsikirjoitus osoitettu numeroon"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikkeli julkaistu"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Kirjoittajan korjaukset lähetetty"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Kirjoittajan korjaama tiedosto päivitetty"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Toimittaja valittu käsikirjoitukselle"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Käsikirjoituksen toimittaja poistettu"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Toimittajan päätös lähetetty"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Toimittajan tiedosto päivitetty"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Käsikirjoitus lähetetty arkistoon"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Käsikirjoitus palautettu arkistosta"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Tekninen toimittaja valittu käsikirjoitukselle"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Käsikirjoituksen tekninen toimittaja poistettu"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Toimeksiannon tekninen toimittaminen aloitettu"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Teknisen toimittajan korjaama tiedosto päivitetty"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Ensimmäinen tekninen toimittaminen valmis"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Lopullinen tekninen toimittaminen valmis"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Teknisen toimittamisen tiedosto päivitetty"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Oikolukija valittu käsikirjoitukselle"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Käsikirjoituksen oikolukija poistettu"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Toimeksiannon oikoluku aloitettu"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Oikolukijan korjaama tiedosto päivitetty"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Toimeksiannon oikoluku valmis"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Taittaja valittu käsikirjoitukselle"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Käsikirjoituksen taittaja poistettu"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Toimeksiannon taitto aloitettu"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Julkaistava tiedosto päivitetty"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Toimeksiannon taitto valmis"
+
+msgid "reader.subscribersOnly"
+msgstr "Vain tilaajille"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Kohteeseen pääsy vaatii tilauksen. Vahvistaaksesi tilauksen, kirjaudu julkaisuun."
+
+msgid "reader.openAccess"
+msgstr "Avoin saatavuus"
+
+msgid "reader.subscriptionAccess"
+msgstr "Vaatii tilauksen"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Vaatii tilauksen tai käyttömaksun"
+
+msgid "comments.commentsOnArticle"
+msgstr "Kommentteja tästä artikkelista"
+
+msgid "comments.authenticated"
+msgstr "Kommentoija <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Järjestä tulokset seuraavan ominaisuuden mukaan"
+
+msgid "search.results.orderBy.article"
+msgstr "Artikkelin otsikko"
+
+msgid "search.results.orderBy.author"
+msgstr "Kirjoittaja"
+
+msgid "search.results.orderBy.date"
+msgstr "Julkaisupäivämäärä"
+
+msgid "search.results.orderBy.issue"
+msgstr "Numero"
+
+msgid "search.results.orderBy.journal"
+msgstr "Julkaisun nimi"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Suosio (aina)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Suosio (viime kuussa)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevanssi"
+
+msgid "search.results.orderDir.asc"
+msgstr "Nouseva"
+
+msgid "search.results.orderDir.desc"
+msgstr "Laskeva"
+
+msgid "search.results.similarDocuments"
+msgstr "samankaltaisia asiakirjoja"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Mikäli oletustodentamislähteeksi määritetään OJS:n sijaan jokin muu lähde, sillä on seuraavia vaikutuksia:</p>\n"
+"<ul>\n"
+"\t<li>Jos käyttäjä yrittää rekisteröidä tällä sivustolla uuden tilin käyttäjätunnuksella, joka on olemassa todentamislähteessä (mutta ei OJS:n tietokannassa), rekisteröinti sallitaan vain, jos annettu salasana kuuluu kyseiselle käyttäjätilille.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>HUOM!</div>\n"
+"<p>Järjestelmä ei voinut korvata määritystiedostoa automaattisesti. Ottaaksesi määritysmuutokset käyttöön avaa <tt>config.inc.php</tt> sopivassa tekstieditorissa ja korvaa sen sisältö alla olevan tekstikentän sisällöllä.</p></h4>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Tilausten hallinnointi"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Yksittäistilaukset"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Instituutiotilaukset"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tilausvaihtoehdot"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Artikkelien julkaistavien tiedostojen lisäosat"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Artikkelien julkaistavien tiedostojen lisäosat tukevat sitä, että julkaistavia tiedostoja voidaan näyttää eri tiedostomuodoissa."
+
+msgid "plugins.categories.auth.description"
+msgstr "Käyttöoikeus-lisäosa sallii Open Journal Systemsin siirtää käyttäjän todentamiseen liittyviä tehtäviä muiden järjestelmien, kuten LDAP-palvelimien, hoidettavaksi."
+
+msgid "plugins.categories.generic.description"
+msgstr "Yleisiä lisäosia käytetään laajentamaan Open Journal Systemsiä sellaisilla eri tavoilla, joita ei tueta muissa lisäosakategorioissa."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Ehdotetut Creative Commons-tekijänoikeushuomautukset</h3>\n"
+"<h4>1. Ehdotettu käytäntö julkaisuille, jotka tarjoavat avoimen saatavuuden (Open Access)</h4>\n"
+"Tässä julkaisussa julkaisevat kirjoittajat hyväksyvät seuraavat ehdot:\n"
+"<ol type=\"a\">\n"
+"\t<li>Kirjoittajat säilyttävät tekijänoikeuden ja myöntävät julkaisulle oikeuden julkaista työn ensimmäisenä. Samanaikaisesti työ lisensoidaan <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> -lisenssillä, joka sallii muiden jakaa työtä vain, jos työn alkuperäinen tekijä sekä sen ensijulkaisu tässä lehdessä mainitaan.</li>\n"
+"\t<li>Kirjoittajat voivat tehdä erillisiä, muita sopimuksia työn tässä julkaisussa julkaistun version levittämisestä ilman yksityisoikeutta (esim. lähettää sen julkaisuarkistoon tai julkaista sen kirjassa) vain, jos työn ensijulkaisu tässä julkaisussa mainitaan.</li>\n"
+"\t<li>Kirjoittajilla on lupa lähettää työnsä verkkoon (esim. julkaisuarkistoihin tai omille verkkosivuilleen) sekä ennen käsikirjoituksen lähetysprosessia että sen aikana. Kirjoittajia myös kannustetaan toimimaan näin, koska se voi johtaa hyödyllisiin kanssakäymisiin sekä siihen, että julkaistuun työhön viitataan jo aikaisessa vaiheessa ja enemmän. (Lisää <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">avoimen saatavuuden vaikutuksesta</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>Ehdotettu käytäntö julkaisuille, jotka tarjoavat viiveellisen avoimen saatavuuden (Delayed Open Access) </h4>\n"
+"Tässä julkaisussa julkaisevat kirjoittajat hyväksyvät seuraavat ehdot:\n"
+"<ol type=\"a\">\n"
+"\t<li> Kirjoittajat säilyttävät tekijänoikeuden ja myöntävät julkaisulle oikeuden julkaista työn ensimmäisenä. [MÄÄRITÄ AJANJAKSO] julkaisemisen jälkeen työ samanaikaisesti lisensoidaan <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a>-lisenssillä, joka sallii muiden jakaa työtä vain, jos työn alkuperäinen tekijä sekä sen ensijulkaisu tässä lehdessä mainitaan.</li>\n"
+"\t <li>Kirjoittajat voivat tehdä erillisiä, muita sopimuksia työn tässä julkaisussa julkaistun versio levittämisestä ilman yksityisoikeutta (esim. lähettää sen julkaisuarkistoon tai julkaista sen kirjassa) vain, jos työn ensijulkaisu tässä julkaisussa mainitaan.</li>\n"
+"\t <li>Kirjoittajilla on lupa lähettää työnsä verkkoon (esim. julkaisuarkistoihin tai omille verkkosivuilleen) sekä ennen käsikirjoituksen lähetysprosessia että sen aikana. Kirjoittajia myös kannustetaan toimimaan näin, koska se voi johtaa hyödyllisiin kanssakäymisiin sekä siihen, että julkaistuun työhön viitataan jo aikaisemmassa vaiheessa ja enemmän. (Lisää <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">avoimen saatavuuden vaikutuksesta</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Vaiheet: Käsikirjoitusjono &gt; Käsikirjoituksen arviointi &gt; Käsikirjoituksen toimittaminen&gt; Sisällysluettelo.<br /><br />\n"
+"Valitse malli näiden toimitusprosessin kohtien käsittelyä varten. (Valitaksesi hallinnoivan toimittajan ja osastotoimittajat mene Toimittajat-kohtaan Julkaisun hallinnointi -sivulla.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Kun lukijoiden halutaan löytävän verkkoversiot töistä, joihin kirjoittaja viittaa, seuraavat vaihtoehdot ovat käytettävissä.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Lisää lukutyökalu</strong><p>Julkaisun hallinnoija voi lisätä “Etsi lähdeviitteitä” julkaistujen kohteiden lukutyökaluihin, mahdollistaen sen, että lukijat voivat liittää lähdeviitteen otsikon ja etsiä viitattua työtä etukäteen valituista tieteellisistä tietokannoista.</p></li>\n"
+"\t<li><strong>Upota linkit lähdeviitteisiin</strong><p>Taittaja voi lisätä linkin verkosta löytyviin lähdeviitteisiin seuraamalla seuraavia ohjeita (joita voidaan muokata).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Estä tämä käyttäjä? Tämä estää käyttäjän kirjautumisen järjestelmään.\n"
+"\n"
+"Voit halutessasi kertoa käyttäjälle syyn siihen, miksi hänen käyttäjätilinsä on poistettu käytöstä."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Sinulla ei ole hallinnollisia oikeuksia tähän käyttäjään. Syynä tähän voi olla:\n"
+"<ul>\n"
+"\t\t\t<li>Käyttäjä on sivuston ylläpitäjä</li>\n"
+"\t\t\t<li>Käyttäjä on aktiivisena julkaisuissa, joita sinä et hallinnoi</li>\n"
+"\t\t</ul>\n"
+"Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.\n"
+""
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Korostetut kohdat osoittavat, että toimittajalta edellytetään seuraavanlaisia toimia:\n"
+"<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Arvioija on valittu, mutta siitä ei ole ilmoitettu sähköpostitse</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Kaikki arvioijat ovat palauttaneet kommenttinsa, mutta päätöstä ei ole tallennettu</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Kirjoittaja on ladannut korjatun käsikirjoituksen</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Arvioija ei ole vahvistanut vertaisarvioijakutsua määräaikaan mennessä</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Arvioija ei ole suorittanut arviointia määräaikaan mennessä</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Määräaika\"-kohta täytetään arvioijan hyväksyttyä arviointipyynnön. Kohta näyttää montako viikkoa arvioinnin määräpäivään on jäljellä tai montako (-) viikkoa se on myöhässä.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Korostetut kohdat osoittavat, että toimittajalta edellytetään seuraavanlaisia toimia:\n"
+"<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Teknisen toimittamisen vaihe edellyttää toimia</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Taittovaihe edellyttää toimia</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Oikolukuvaihe edellyttää toimia</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktiiviset toimitukselliset toimeksiannot"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Valmiit toimitukselliset toimeksiannot"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Ei osoitettuja käsikirjoituksia."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Uuden ilmoituksen lähettäminen tälle tekniselle toimittajalle käynnistää hänen toimeksiantonsa uudelleen. Haluatko varmasti tehdä tämän?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Uuden ilmoituksen lähettäminen tälle kirjoittajalle käynnistää hänen toimeksiantonsa uudelleen. Haluatko varmasti tehdä tämän?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Uuden ilmoituksen lähettäminen tälle taittajalle käynnistää hänen toimeksiantonsa uudelleen. Haluatko varmasti tehdä tämän?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Uuden ilmoituksen lähettäminen tälle oikolukijalle käynnistää hänen toimeksiantonsa uudelleen. Haluatko varmasti tehdä tämän?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Kieltäytymiset"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Arvioijan kieltäytymiset, peruutukset & aikaisemmat kierrokset"
+
+msgid "sectionEditor.regrets"
+msgstr "Kieltäytymiset"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Näytä kieltäytymiset, peruutukset, edelliset kierrokset"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Vertaisarviointi, kierros {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Toimittajan päätös, kierros {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Arvioijan kieltäytymiset & peruutukset"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Kieltäytyminen"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Tulos"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Lisää olemassa oleva käyttäjä arvioijaksi"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Luo uusi arvioija"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktiiviset toimitukselliset toimeksiannot"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Valmiit toimitukselliset toimeksiannot"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Ei aktiivisia toimituksellisia toimeksiantoja."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Taittotoimeksiannot"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Lataa julkaistava tiedosto"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Korvaa tiedosto"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Lataa liitetiedosto"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Väärä kuvatiedostomuoto. Hyväksytyt tiedostomuodot ovat .gif, .jpg, ja .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Tämä julkaistava tiedosto tulee saataville erilliselle verkkosivustolle."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Etä-ylläpidetyn sisällön URL-osoite"
+
+msgid "reviewer.pendingReviews"
+msgstr "Arviointia odottavat artikkelit"
+
+msgid "reviewer.completedReviews"
+msgstr "Suoritettu"
+
+msgid "reviewer.averageQuality"
+msgstr "Arvostelu"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Arvioitava tiedosto"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Ilmoita toimittajalle"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Suorittaa arvioinnin"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Ei voi suorittaa arviointia"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Käsikirjoitus tulee saataville, jos ja kun arvioija lupautuu suorittamaan arvioinnin"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Käsikirjoituksen toimittaja"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Kirjoita tai liitä arviointikommentit tähän"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Toimittaja täyttää"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Lähetä muistutus"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Suositus"
+
+msgid "reviewer.article.submitReview"
+msgstr "Lähetä arviointi toimittajalle"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Kommentit"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Ladatut tiedostot"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Arvioijan lataama versio"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Jos haluat lisätä tiedostoon selityksiä toimittajalle, tallenna se kovalevyllesi ja käytä Selaa/Lataa-toimintoja.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Toimittajan pyyntö"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Vastauksesi"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Arviointi lähetetty"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Arvioinnin määräpäivä"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Hyväksy käsikirjoitus"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Vaatii korjauksia"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Lähetä uudelleen arvioitavaksi"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Lähetä toiseen julkaisuun"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Hylkää käsikirjoitus"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Katso kommentit"
+
+msgid "reviewer.article.schedule"
+msgstr "Aikataulu"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Arvioitava käsikirjoitus"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Arviointiaikataulu"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Arvioinnin vaiheet"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Arvioijan ohjeet"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Arviointiohjeet tarjoavat arvioijille kriteerit, joiden perusteella he arvioivat soveltuuko käsikirjoitus julkaistavaksi julkaisussa. Ohjeet voivat sisältää myös erityisiä ohjeita vaikuttavan ja hyödyllisen arvion kirjoittamiseksi. Arviointia tehtäessä, näytölle ilmestyy kaksi tekstikenttää kommenteille, ensimmäinen \"kirjoittajalle ja toimittajalle\" ja toinen \"toimittajalle\". Vaihtoehtoisesti julkaisun hallinnoija voi luoda vertaisarviointilomakkeen Arviointilomakkeet -kohdassa. Kaikissa tapauksissa toimittajilla on mahdollisuus sisällyttää arviot kirjoittajan kanssa käytävään kirjeenvaihtoon."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Ilmoita käsikirjoituksen toimittajalle"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "mikäli suostut arvioimaan käsikirjoituksen."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Jos aiot suorittaa arvioinnin, tutustu alla arvioijan ohjeisiin."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Klikkaa tiedostojen nimiä ladataksesi ja arvioidaksesi (näytöllä tai tulostamalla) käsikirjoitukseen liittyvät tiedostot."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Ilmoita onko sinulla sidonnaisuuksia tähän tutkimukseen liittyen (ks. <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Sidonnaisuuksien ilmoittaminen</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Sidonnaisuudet"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Klikkaa kuvaketta syöttääksesi (tai liittääksesi) arviosi käsikirjoituksesta."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Lisäksi voit ladata tiedostoja toimittajan ja/tai kirjoittajan katsottavaksi."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Valitse suositus ja lähetä arviointi päättääksesi arviointiprosessin. Syötä arviointi tai lataa tiedosto ennen suosituksen valintaa."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Aseta tai muuta arvioijan suositusta."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Yhtään suositusta ei valittu. Et voi lähettää arviointia, ennen kuin valitset suosituksen."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Kun olet tallentanut päätöksesi, et voi enää tehdä muutoksia arviointiisi. Haluatko varmasti jatkaa?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Teknisesti toimitettava tiedosto"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Teknisen toimittajan tiedosto"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Teknisen toimittajan tiedosto"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Ei oikolukutoimeksiantoja"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Ladataksesi käsikirjoituksen tähän julkaisuun, suorita seuraavat vaiheet.</p>\n"
+"<ol>\n"
+"<li>Klikkaa tällä sivulla Selaa-painiketta (tai Valitse tiedosto -painiketta). Valitse tiedosto -ikkuna aukeaa ja paikallistat sen kautta tiedoston tietokoneesi kovalevyltä.</li>\n"
+"<li>Etsi tiedosto, jonka haluat lähettää ja korosta se.</li>\n"
+"<li>Klikkaa Valitse tiedosto-ikkunassa Avaa-painiketta, mikä tuo tiedoston nimen tälle sivulle.</li>\n"
+"<li>Klikkaa tällä sivulla Lataa-painiketta, mikä lataa tiedoston tietokoneelta julkaisun verkkosivustoon ja nimeää sen uudelleen julkaisun käytäntöjen mukaisesti.</li>\n"
+"<li>Kun käsikirjoitus on ladattu, klikkaa Tallenna ja jatka -kohtaa tämän sivun alalaidassa.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Pyyntöä ei voi lähettää sähköpostitse, ennen kuin arvioitava versio on paikoillaan."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Pyyntöä ei voi lähettää sähköpostitse, ennen kuin tiedosto on valittu teknisesti toimitettavaksi arviointisivulla, Toimittajan päätös -kohdassa."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Pyyntöä ei voi lähettää sähköpostitse, ennen kuin tiedosto on ladattu teknisesti toimitettavaksi."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Ensimmäinen tekninen toimittaminen"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Toimittajan suorittama tekninen toimittaminen"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Kirjoittajan suorittama tekninen toimittaminen"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Lopullinen tekninen toimittaminen"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Teknisesti toimitettu versio"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Valitse tekninen toimittaja"
+
+msgid "submission.copyedit.useFile"
+msgstr "Käytä tiedostoa"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Tekniseen toimittamiseen liittyvät kommentit"
+
+msgid "submission.copyedit.instructions"
+msgstr "Teknisen toimittamisen ohjeet"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Ei mitään (Lataa lopullinen teknisesti toimitettu versio taittoversioksi ennen pyynnön lähettämistä)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Julkaistavan tiedoston julkinen tunniste"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Julkaistavan tiedoston julkinen tunnistetieto on jo olemassa."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Valitse taittaja"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Korvaa taittaja"
+
+msgid "submission.layout.layoutComments"
+msgstr "Taiton kommentit"
+
+msgid "submission.layout.instructions"
+msgstr "Taitto-ohjeet"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Lähdeviitteiden linkitys"
+
+msgid "submission.proofreadingComments"
+msgstr "Oikoluvun kommentit"
+
+msgid "submission.proofread.corrections"
+msgstr "Oikoluvun korjaukset"
+
+msgid "submission.proofread.instructions"
+msgstr "Oikolukuohjeet"
+
+msgid "submission.logType.article"
+msgstr "Artikkeli"
+
+msgid "submission.logType.author"
+msgstr "Kirjoittaja"
+
+msgid "submission.logType.editor"
+msgstr "Toimittaja"
+
+msgid "submission.logType.review"
+msgstr "Arviointi"
+
+msgid "submission.logType.copyedit"
+msgstr "Tekninen toimittaminen"
+
+msgid "submission.logType.layout"
+msgstr "Taitto"
+
+msgid "submission.logType.proofread"
+msgstr "Oikoluku"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Toimittajan/kirjoittajan kirjeenvaihto"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Tekniseen toimittamiseen liittyvät kommentit"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Nämä kommentit voidaan jakaa kirjoittajan kanssa.<br />\n"
+"(Kommentteja voidaan lisätä tallentamisen jälkeen.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Kirjoittajalle ja toimittajalle"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Toimittajalle"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Lähettämisen jälkeen, tee muokattava piilokopio arvioijille lähetettäväksi."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Kirjoittajalle ja toimittajalle"
+
+msgid "submission.comments.forEditor"
+msgstr "Toimittajalle"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Tallenna ja lähetä sähköposti kirjoittajalle"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Tallenna ja lähetä sähköposti toimittajalle"
+
+msgid "user.register.selectContext"
+msgstr "Valitse julkaisu, johon haluat rekisteröityä:"
+
+msgid "user.register.noJournals"
+msgstr "Et voi rekisteröityä tämän sivuston julkaisuihin."
+
+msgid "user.register.privacyStatement"
+msgstr "Tietosuojaseloste"
+
+msgid "user.register.registrationDisabled"
+msgstr "Tämän julkaisun käyttäjäksi ei voi rekisteröityä juuri nyt."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Kirjoittamasi salasana ei ole tarpeeksi pitkä."
+
+msgid "user.register.readerDescription"
+msgstr "Uuden numeron julkaisemisesta ilmoitetaan sähköpostitse."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Numeron avoimen saatavuuden alkamisesta ilmoitetaan sähköpostitse."
+
+msgid "user.register.authorDescription"
+msgstr "Kohteiden lähetys julkaisuun sallittu."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Halukas vertaisarvioimaan julkaisuun lähetettyjä käsikirjoituksia."
+
+msgid "user.register.reviewerDescription"
+msgstr "Halukas vertaisarvioimaan sivustolle lähetettyjä käsikirjoituksia."
+
+msgid "user.register.reviewerInterests"
+msgstr "Kerro kiinnostavat arviointiaiheet (olennaiset alueet ja tutkimusmenetelmät):"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Omat tilaukset"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Tilauksen tila"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktiiviset ja vanhentuneet tilaukset sekä niiden päättymispäivämäärät näkyvät alla. Lisäksi seuraavat tiedot tilasta voidaan sisällyttää jokaiseen tilaukseen."
+
+msgid "user.subscriptions.status"
+msgstr "Tila"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Kuvaus"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Lisätietoja tarvitaan, ennen kuin tilaus voidaan aktivoida"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Tilaus on arvioitava, ennen kuin se voidaan aktivoida"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuaalinen maksu on aloitettu, mutta sitä ei ole vielä vastaanotettu"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Verkkomaksu on aloitettu, mutta se on peruutettu tai keskeneräinen"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Yksittäistilaus"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Instituutiotilaukset"
+
+msgid "user.subscriptions.renew"
+msgstr "Uusi"
+
+msgid "user.subscriptions.purchase"
+msgstr "Osto"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Osta uusi tilaus"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Osta yksittäistilaus"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Osta instituutiotilaus"
+
+msgid "user.subscriptions.expires"
+msgstr "Päättyy: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Päättynyt: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Näytä tarjolla olevat tilausvaihtoehdot"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tilausvaihtoehto"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Jäsenyys"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Valittu tilausvaihtoehto edellyttää jäsenyystietoja."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Valitse kelvollinen tilausvaihtoehto."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Tällä käyttäjätilillä on jo yksittäistilaus."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Valittu tilausvaihtoehto edellyttää jäsenyystietoja."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Instituution nimi"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Instituution nimi vaaditaan."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Postiosoite"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Verkkotunnus (domain)"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Jos verkkotunnus syötetään tähän, IP-osoitealueet ovat valinnaisia.<br />Verkkotunnusten nimet (esim. lib.sfu.ca) ovat kelvollisia arvoja."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Valittu tilausvaihtoehto edellyttää verkkotunnusta ja IP-osoitealuetta tilauksen todentamiseksi."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Syötä kelvollinen verkkotunnus."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP-osoitealueet"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Jos IP-osoitealueita syötetään tähän, verkkotunnus on valinnainen.<br />Kelvollisia arvoja ovat mm. IP-osoite (esim. 142.58.103.1), IP-osoitealue (esim. 142.58.103.1 - 142.58.103.4), IP-osoitealue ja jokerimerkki \"*\" (esim. 142.58. *. *) ja IP-osoitealue ja CIDR (esim. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Syötä kelvollinen IP-osoitealue."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Poista"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Lisää"
+
+msgid "search.browseAuthorIndex"
+msgstr "Selaa kirjoittajahakemistoa"
+
+msgid "search.searchFor"
+msgstr "Etsi artikkeleista"
+
+msgid "search.withinJournal"
+msgstr "Tästä julkaisusta"
+
+msgid "search.allJournals"
+msgstr "Kaikista julkaisuista"
+
+msgid "search.authorIndex"
+msgstr "Selaa kirjoittajahakemistoa"
+
+msgid "search.authorDetails"
+msgstr "Kirjoittajatiedot"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Hakuvinkkejä:<ul>\n"
+"<li>Hakusanat ovat merkkikoosta riippumattomia</li>\n"
+"<li>Yleisimpiä sanoja (prepositiot, artikkelit jne.) ei huomioida</li>\n"
+"<li>Oletusarvoisesti tuloksissa näytetään vain artikkelit, jotka sisältävät <em>kaikki</em> käytetyt hakusanat (käytettäessä <em>AND</em> -operaattoria)</li>\n"
+"<li>Yhdistä useita sanoja <em>OR</em>-operaattorilla löytääksesi kumman tahansa sanan sisältäviä artikkeleita, esim. <em>koulutus OR tutkimus</em></li>\n"
+"<li>Sulkeiden avulla voit luoda monimutkaisempia kyselyitä; esim. <em>arkisto ((julkaisu OR konferenssi) NOT opinnäyte)</em></li>\n"
+"<li>Hae tiettyä tekstin osaa tai ilmaisua lainausmerkkejä käyttämällä, esim. <em>\"open access -julkaiseminen\"</em></li>\n"
+"<li>Jätä sana haun ulkopuolelle laittamalla sen eteen <strong>-</strong> tai <em>NOT</em>, esim. <em>verkko- politiikka</em> tai <em>verkko NOT politiikka</em></li>\n"
+"<li>Käytä <strong>*</strong>-merkkiä jokerimerkkinä etsiessäsi erilaisia muotoja sanasta, esim. <em>kasvatustie*</em> etsii asiakirjat, jotka sisältävät mm. \"kasvatustiede\" ja \"kasvatustieteellinen\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "{$title} näkymä"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Lataa tämä PDF-tiedosto"
+
+msgid "article.pluginMissing"
+msgstr "<p>Valitsemasi PDF-tiedosto latautuu tässä, jos verkkoselaimeesi on asennettu PDF-lukuohjelma-lisäosa (esim. <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader -ohjelman</a> viimeisin versio).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Artikkelin lataus"
+
+msgid "article.nonpdf.note"
+msgstr "Valitsemasi tiedosto latautuu automaattisesti. Jos näin ei tapahdu, klikkaa alla olevaa linkkiä. Tiedoston katselu saattaa vaatia erityisen katseluohjelman tai lisäosan.<br /><br />Jos tiedosto ei lataudu automaattisesti, <a href=\"{$url}\">klikkaa tästä</a>."
+
+msgid "site.journalsHosted"
+msgstr "Tällä sivustolla ylläpidetyt julkaisut"
+
+msgid "site.journalView"
+msgstr "Näytä julkaisu"
+
+msgid "site.journalRegister"
+msgstr "Rekisteröidy"
+
+msgid "site.journalCurrent"
+msgstr "Uusin numero"
+
+msgid "site.noJournals"
+msgstr "Julkaisuja ei saatavilla."
+
+msgid "current.current"
+msgstr "Uusin numero"
+
+msgid "current.noCurrentIssue"
+msgstr "Ei uusinta numeroa"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Tämän julkaisu ei ole julkaissut yhtään numeroa."
+
+msgid "archive.archives"
+msgstr "Arkistot"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arkistot - sivu {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Selaa vanhempia numeroita"
+
+msgid "archive.issueUnavailable"
+msgstr "Numero ei saatavilla"
+
+msgid "about.statistics"
+msgstr "Tilastot"
+
+msgid "about.contact"
+msgstr "Yhteystiedot"
+
+msgid "about.aboutContext"
+msgstr "Tietoa julkaisusta"
+
+msgid "about.history"
+msgstr "Julkaisun historiaa"
+
+msgid "about.editorialTeam"
+msgstr "Toimituskunta"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografia"
+
+msgid "about.editorialPolicies"
+msgstr "Toimitukselliset käytännöt"
+
+msgid "about.focusAndScope"
+msgstr "Tarkoitus ja toimintaperiaatteet"
+
+msgid "about.sectionPolicies"
+msgstr "Osastojen käytännöt"
+
+msgid "about.submissions"
+msgstr "Käsikirjoitukset"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Kirjaudu sisään"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Rekisteröidy"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} tai {$register} lähettääksesi käsikirjoituksen."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} tai {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Lähetä uusi käsikirjoitus"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "katso odottavia käsikirjoituksiasi"
+
+msgid "about.authorGuidelines"
+msgstr "Kirjoittajan ohjeet"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Käsikirjoituksen lähettämisen tarkistuslista"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Kirjoittajien tulee varmistaa, että heidän käsikirjoituksensa noudattaa kaikkia seuraavia kohtia. Jos näitä ohjeita ei noudateta, käsikirjoitus palautetaan kirjoittajalle."
+
+msgid "about.copyrightNotice"
+msgstr "Tekijänoikeushuomautus"
+
+msgid "about.privacyStatement"
+msgstr "Tietosuojaseloste"
+
+msgid "about.authorFees"
+msgstr "Kirjoittajamaksut"
+
+msgid "about.authorFeesMessage"
+msgstr "Tämän julkaisu veloittaa seuraavat kirjoittajamaksut."
+
+msgid "about.peerReviewProcess"
+msgstr "Vertaisarviointiprosessi"
+
+msgid "about.publicationFrequency"
+msgstr "Julkaisutiheys"
+
+msgid "about.openAccessPolicy"
+msgstr "Avoimen saatavuuden periaate"
+
+msgid "about.delayedOpenAccess"
+msgstr "Viiveellinen avoin saatavuus"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Tämän julkaisun sisältö tulee avoimesti saataville"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "kuukautta numeron julkaisemisen jälkeen."
+
+msgid "about.archiving"
+msgstr "Arkistointi"
+
+msgid "about.subscriptions"
+msgstr "Tilaukset"
+
+msgid "about.subscriptions.individual"
+msgstr "Yksittäistilaukset"
+
+msgid "about.subscriptions.institutional"
+msgstr "Instituutiotilaukset"
+
+msgid "about.subscriptionsContact"
+msgstr "Tilausten yhteyshenkilö"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nimi"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Muoto"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Kesto"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kustannukset"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tilausvaihtoehdot"
+
+msgid "about.memberships"
+msgstr "Jäsenyydet"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Tietoja julkaisujärjestelmästä"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS:n toimitus- ja julkaisuprosessit"
+
+msgid "about.aboutOJSJournal"
+msgstr "Tämä julkaisu käyttää Open Journal Systems {$ojsVersion} -järjestelmää, joka on <a href=\"http://pkp.sfu.ca/\">Public Knowledge Projectin</a> kehittämä, tukema ja GNU General Public License -lisenssillä vapaasti jakama avoimen lähdekoodin julkaisunhallinta- ja julkaisuohjelmisto."
+
+msgid "about.aboutOJSSite"
+msgstr "Tämä sivusto käyttää Open Journal Systems {$ojsVersion} -järjestelmää, joka on <a href=\"http://pkp.sfu.ca/\">Public Knowledge Projectin</a> kehittämä, tukema ja GNU General Public License -lisenssillä vapaasti jakama avoimen lähdekoodin julkaisunhallinta- ja julkaisuohjelmisto."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems -ohje"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS-ohje"
+
+msgid "help.searchReturnResults"
+msgstr "Takaisin hakutuloksiin"
+
+msgid "help.goToEditPage"
+msgstr "Muokkaa {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Kiitos"
+
+msgid "donations.thankYouMessage"
+msgstr "Kiitos lahjoituksesta. Arvostamme sitä suuresti."
+
+msgid "payment.loginRequired"
+msgstr "Voit maksaa vain sisäänkirjautuneena."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Tähän kohteeseen pääsy edellyttää tilausta tai artikkelin ostoa. Vahvistaaksesi tilauksen, päästäksesi edelliseen tilaukseen tai ostaaksesi artikkelin sinun on kirjauduttava julkaisuun."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Tähän kohteeseen pääsy edellyttää tilausta tai numeron ostoa. Vahvistaaksesi tilauksen, päästäksesi edelliseen tilaukseen tai ostaaksesi numeron sinun on kirjauduttava julkaisuun."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Voit tehdä lahjoituksen vain sisäänkirjautuneena."
+
+msgid "payment.paid"
+msgstr "Maksettu"
+
+msgid "payment.payNow"
+msgstr "Maksa nyt"
+
+msgid "payment.waive"
+msgstr "Luovu maksusta"
+
+msgid "payment.alreadyPaid"
+msgstr "Maksettu aiemmin"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Valitse tämä ruutu, jos olet jo lähettänyt maksun julkaisulle päättääksesi käsikirjoituksen lähetysprosessin. Käsikirjoituksia ei arvioida ennen kuin maksu on vastaanotettu. Klikkaa MAKSA NYT yllä nähdäksesi maksuohjeet."
+
+msgid "payment.paymentReceived"
+msgstr "Maksu vastaanotettu"
+
+msgid "payment.paymentSent"
+msgstr "Maksu on jo lähetetty"
+
+msgid "payment.authorFees"
+msgstr "Kirjoittajamaksut"
+
+msgid "payment.type.submission"
+msgstr "Käsikirjoituksen lähetysmaksu"
+
+msgid "payment.type.publication"
+msgstr "Julkaisumaksu"
+
+msgid "payment.type.fastTrack"
+msgstr "Nopeutetun arvioinnin maksu"
+
+msgid "payment.type.membership"
+msgstr "Yksittäisjäsenyyden maksu"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Osta artikkeli -maksu"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Osta numero -maksu"
+
+msgid "payment.type.subscription"
+msgstr "Tilausmaksu"
+
+msgid "payment.type.donation"
+msgstr "Lahjoitukset"
+
+msgid "payment.donation.makeDonation"
+msgstr "Tee lahjoitus"
+
+msgid "payment.submission.paySubmission"
+msgstr "Maksa käsikirjoituksen lähetysmaksu"
+
+msgid "payment.publication.payPublication"
+msgstr "Maksa, jotta voit julkaista"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Julkaisumaksu maksettu"
+
+msgid "payment.membership.buyMembership"
+msgstr "Osta yksittäisjäsenyys"
+
+msgid "payment.membership.renewMembership"
+msgstr "Yksittäisjäsenyyden uusiminen"
+
+msgid "payment.membership.ends"
+msgstr "Päättyy"
+
+msgid "payment.subscription.purchase"
+msgstr "Osta tilaus"
+
+msgid "payment.subscription.renew"
+msgstr "Tilauksen uusiminen"
+
+msgid "payment.subscription.expires"
+msgstr "Päättyy"
+
+msgid "installer.appInstallation"
+msgstr "OJS:n asennus"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS:n päivitys"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS:n versio {$version}</h4>\n"
+"\n"
+"<p>Kiitos, että latasit Public Knowledge Projectin <strong>Open Journal Systems</strong>-järjestelmän. Ennen kuin jatkat, lue <a href=\"{$baseUrl}/docs/README\">README</a> -tiedosto, joka tulee tämän ohjelmiston mukana. Löydät lisätietoja Public Knowledge Projectista ja sen ohjelmistoprojekteista <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP:n verkkosivustolta</a>. Jos haluat ilmoittaa ohjelmistovirheestä tai ottaa yhteyttä Open Journal Systemsin tekniseen tukeen, katso <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">tukifoorumi</a> tai mene PKP:n online- <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">virheilmoitusjärjestelmään</a>. Yhteydenotot mieluiten tukifoorumin kautta, mutta voit myös lähettää sähköpostia osoitteeseen <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Päivitys</h4>\n"
+"\n"
+"<p>Jos päivität aiemman OJS-asennuksen, <a href=\"{$upgradeUrl}\">klikkaa tästä</a> päästäksesi eteenpäin.</p>\n"
+"\n"
+"<h4>Suositellut järjestelmävaatimukset</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> > = {$phpRequiredVersion}; sinulla on tällä hetkellä käytössä PHP-versio {$phpVersion} {$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> > = 4.1 tai <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> > = 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> > = 1.3.2x tai > = 2.0.4x tai Microsoft IIS 6</li>\n"
+"\t<li>Käyttöjärjestelmä: Mikä tahansa käyttöjärjestelmä, joka tukee edellä mainittua ohjelmistoa, mm. <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Koska PKP:llä ole resursseja testata kaikkia mahdollisia versioiden ja alustojen yhdistelmiä, järjestelmän virheetöntä toimintaa tai tukea ei voida taata.</p>\n"
+"\n"
+"<p>Näitä asetuksia voidaan muuttaa asennuksen jälkeen muokkaamalla OJS:n perushakemistossa tiedostoa <tt>config.inc.php</tt> tai sivuston ylläpitoverkkokäyttöliittymän avulla.</p>\n"
+"\n"
+"<h4>Tuetut tietokantajärjestelmät</h4>\n"
+"\n"
+"<p>OJS:iä on tällä hetkellä testattu vain MySQL- ja PostgreSQL-järjestelmien osalta, vaikka muutkin <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a>:n tukemat tietokantojen hallintajärjestelmät voivat toimia (kokonaan tai osittain). OJS-tiimille voi lähettää yhteensopivuusraportteja ja/tai koodinkorjaustiedostoja vaihtoehtoisiin tietokantajärjestelmiin liittyen.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Esiasennuksen vaiheet</h4>\n"
+"\n"
+"\n"
+"<p>1. Seuraavista tiedostoista ja kansioista (ja niiden sisällöstä) on tehtävä kirjoituskelpoisia:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.Inc.php</tt> on kirjoituskelpoinen (valinnainen): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> on kirjoituskelpoinen: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> on kirjoituskelpoinen: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> on kirjoituskelpoinen: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> on kirjoituskelpoinen: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> on kirjoituskelpoinen: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Ladattaville tiedostoille on luotava hakemisto ja siitä on tehtävä kirjoituskelpoinen (ks. \"Tiedostoasetukset\" alla).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS:n versio {$version}</h4>\n"
+"\n"
+"<p>Kiitos, että latasit Public Knowledge Projectin <strong>Open Journal Systems</strong>-järjestelmän. Ennen kuin jatkat, lue <a href=\"{$baseUrl}/docs/README\">README</a> ja <a href=\"{$baseUrl}/docs/UPGRADE\">UPGRADE</a> -tiedostot, jotka tulevat tämän ohjelmiston mukana. Löydät lisätietoja Public Knowledge Projectista ja sen ohjelmistoprojekteista <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP:n verkkosivustolta</a>. Jos haluat ilmoittaa ohjelmistovirheestä tai ottaa yhteyttä Open Journal Systemsin tekniseen tukeen, katso <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">tukifoorumi</a> tai mene PKP:n online- <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">virheilmoitusjärjestelmään</a>. Yhteydenotot mieluiten tukifoorumin kautta, mutta voit myös lähettää sähköpostia osoitteeseen <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>On <strong>erittäin suositeltavaa,</strong> että varmuuskopioit tietokannan, tiedostohakemiston ja OJS-asennushakemiston ennen jatkamista.</p>\n"
+"<p>Jos käytät <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>-vikasietotilaa, varmista, että max_execution_time-direktiivi php.ini -asetustiedostossa on määritetty korkeaksi. Jos tämä tai jokin muu määräaikaraja (esim. Apachen \"Aikakatkaisu\"-direktiivi) täyttyy ja päivitysprosessi keskeytetään, vaaditaan manuaalisia toimia.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Saadaksesi täyden Unicode (UTF-8) -tuen, valitse UTF-8 kaikkiin merkistöasetuksiin. Huomioithan, että täysi Unicode-tuki edellyttää, että PHP on käännetty tukemaan <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a>-kirjastoa (oletuksena viimeisimmissä PHP-asennuksissa). Saatat kohdata ongelmia käyttäessäsi laajennettuja merkistöjä, jos palvelimesi ei täytä näitä vaatimuksia.\n"
+"<br /><br />\n"
+"Palvelimesi tukee tällä hetkellä mbstringiä: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Palvelimesi sallii tällä hetkellä seuraavat tiedostojen lataukset: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Palvelimesi sallima latausten enimmäiskoko tällä hetkellä: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Pääkieli, jota käytetään tässä järjestelmässä. Jos olet kiinnostunut muiden kuin tässä lueteltujen kielten tuesta, katso lisätietoja OJS:n käyttöohjeista."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Valitse muita tässä järjestelmässä tuettavia kieliä. Nämä kielet ovat sivustolla ylläpidettyjen julkaisujen käytettävissä. Lisää kieliä voidaan asentaa milloin tahansa myös sivuston ylläpitokäyttöliittymän kautta."
+
+msgid "installer.filesDirInstructions"
+msgstr "Kirjoita koko polun nimi olemassa olevaan hakemistoon, jossa ladattavia tiedostoja säilytetään. Tähän hakemistoon ei tulisi olla suoraa pääsyä verkosta. <strong>Varmista ennen asennusta, että tämä hakemisto on olemassa ja kirjoituskelpoinen.</strong> Windowsin polkujen nimissä tulee käyttää vinoviivaa, esim. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "Voidakseen tallentaa tietoja OJS edellyttää pääsyä SQL-tietokantaan. Katso järjestelmävaatimukset (yllä) nähdäksesi luettelon tuetuista tietokannoista. Anna alla olevissa kentissä asetukset, joita käytetään muodostettaessa yhteys tietokantaan."
+
+msgid "installer.installApplication"
+msgstr "Asenna Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Päivitä Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Varoitus:</strong> Jos asennus epäonnistui kesken tietokannan asennusta, voit joutua poistamaan OJS:n tietokannan tai tietokantataulukot ennen kuin yrität asentaa tietokannan uudestaan."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>HUOM!</h4>\n"
+"<p>Järjestelmä ei voinut korvata määritystiedostoa automaattisesti. Ennen kuin aloitat järjestelmän käytön, avaa <tt>config.inc.php</tt> sopivassa tekstieditorissa ja korvaa sen sisältö alla olevan tekstikentän sisällöllä.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS on asennettu onnistuneesti.</p>\n"
+"<p>Aloittaaksesi järjestelmän käytön<a href=\"{$loginUrl}\">kirjaudu sisään</a> käyttäjätunnuksella ja salasanalla, jotka syötettiin edellisellä sivulla.</p>\n"
+"<p>Jos haluat olla osa PKP-yhteisöä, voit toimia seuraavasti:</p>\n"
+"<ol>\n"
+"\t<li>Lue <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP:n blogia</a> ja seuraa <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS-syötettä</a> saadaksesi tiedot uutisista ja päivityksistä.</li>\n"
+"\t<li>Käy <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">tukifoorumi-sivulla</a>, jos sinulla on kysymyksiä tai kommentteja.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>OJS on päivitetty onnistuneesti versioon {$version}.</p>\n"
+"<p>Muista laittaa config.inc.php-määritystiedoston \"asennettu\" -asetus takaisin <em>päälle (On)</em>.</p>\n"
+"<p>Jos et ole vielä rekisteröinyt, mutta haluat saada uutiset ja päivitykset, <strong>rekisteröidy osoitteessa <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Jos sinulla on kysymyksiä tai kommentteja, käy <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">tukifoorumi-sivulla</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "OJS:stä on saatavilla uusi versio! Käytät tällä hetkellä versiota OJS {$currentVersion}. Viimeisin versio on OJS {$latestVersion}. Lataa uusin versio ja tutustu päivitysohjeisiin <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">täällä</a>."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "OJS:stä on saatavilla uusi versio! Käytät tällä hetkellä versiota OJS {$currentVersion}. Viimeisin versio on OJS {$latestVersion}. Ota yhteyttä sivustosi ylläpitäjään ({$siteAdminName} <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) ja kerro tästä uudesta julkaisusta. Lisätietoja löytyy <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">täältä</a>."
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} on korjannut artikkelia {$submissionId}. Uusi tiedostotunniste on {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} on poistettu käsikirjoituksen {$submissionId} arvioinnista arviointikierroksella {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "{$reviewerName} on aloittanut käsikirjoituksen {$submissionId} arvioinnin kierroksella {$round}."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} on arvosteltu käsikirjoituksen {$submissionId} arvioinnista kierroksella {$round}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Kierroksen {$round} määräpäivä {$reviewerName}:n arvioinnille käsikirjoituksesta {$submissionId} on {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "{$reviewerName} on antanut suosituksen kierroksen {$round} arvioinnista käsikirjoitusta {$submissionId} koskien."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Toimittaja {$editorName} on antanut arvioijan {$reviewerName} puolesta suosituksen kierroksen {$round} arvioinnista käsikirjoitusta {$submissionId} koskien."
+
+msgid "log.review.resubmit"
+msgstr "Käsikirjoitus {$submissionId} on lähetetty uudelleen arvioitavaksi."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} on kieltäytynyt arvioimasta käsikirjoitusta {$submissionId} kierroksella {$round}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} on suostunut arvioimaan käsikirjoituksen {$submissionId} kierroksella {$round}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} on ilmoittanut arvioijan {$reviewerName} puolesta tämän kieltäytyvän arvioimasta käsikirjoitusta {$submissionId} kierroksella {$round}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} on ilmoittanut arvioijan {$reviewerName} puolesta tämän suostuvan arvioimaan käsikirjoituksen {$submissionId} kierroksella {$round}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Toimittaja {$userName} on ladannut arvioijan {$reviewerName} puolesta kierroksen {$round} arviointitiedoston käsikirjoitusta {$submissionId} koskien."
+
+msgid "log.review.reviewerFile"
+msgstr "Arvioijan tiedosto on ladattu."
+
+msgid "log.editor.decision"
+msgstr "Toimittaja {$editorName} on tallentanut toimittajan päätöksen ({$decision}) artikkelille {$submissionId}."
+
+msgid "log.copyedit.initiate"
+msgstr "{$copyeditorName} on aloittanut käsikirjoituksen {$submissionId} teknisen toimittamisen."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Teknisen toimittamisen oletustiedosto on valittu."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} on suorittanut käsikirjoituksen {$submissionId} ensimmäisen teknisen toimittamisen."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} on suorittanut käsikirjoituksen {$submissionId} lopullisen teknisen toimittamisen."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} on valittu teknisesti toimittamaan käsikirjoitus {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Teknisen toimittajan versio käsikirjoitustiedostosta on ladattu."
+
+msgid "log.copyedit.authorFile"
+msgstr "Kirjoittajan teknisesti toimittama käsikirjoitustiedoston versio on ladattu."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} on valittu käsikirjoituksen {$submissionId} taittajaksi."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} on poistettu käsikirjoituksen {$submissionId} taitosta."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} on suorittanut käsikirjoituksen {$submissionId} taiton."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} on muuttanut tämän artikkelin metatietoja."
+
+msgid "log.editor.editorFile"
+msgstr "Toimittajan versio käsikirjoitustiedostosta on ladattu."
+
+msgid "log.editor.archived"
+msgstr "Käsikirjoitus {$submissionId} on arkistoitu."
+
+msgid "log.editor.restored"
+msgstr "Käsikirjoitus {$submissionId} on palautettu jonoon."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} on valittu käsikirjoituksen {$submissionId} toimittajaksi."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} on valinnut käyttäjän {$proofreaderName} oikolukemaan käsikirjoituksen {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} on lähettänyt käsikirjoituksen {$submissionId} aikataulutukseen."
+
+msgid "log.imported"
+msgstr "{$userName} on tuonut artikkelin {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Vertaisarvioitu artikkeli"
+
+msgid "notification.type.editing"
+msgstr "Toimittamiseen liittyvät tapahtumat"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Uusi artikkeli, \"{$title}\", on lähetetty."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Toimittajan kohdetta \"{$title}\" koskevaa päätöstä on kommentoitu."
+
+msgid "notification.type.galleyModified"
+msgstr "Kohteen \"{$title}\" julkaistavaa tiedostoa on muutettu."
+
+msgid "notification.type.issuePublished"
+msgstr "Numero on julkaistu."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Uusi tiedote on luotu."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Arviointilomake kohteesta \"{$title}\" on jätetty."
+
+msgid "notification.type.reviewing"
+msgstr "Arviointitapahtumat"
+
+msgid "notification.type.site"
+msgstr "Sivuston tapahtumat"
+
+msgid "notification.type.submissionComment"
+msgstr "Toimittaja on kommentoinut kohdetta \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Käsikirjoitukseen liittyvät tapahtumat"
+
+msgid "notification.type.userComment"
+msgstr "Lukija on kommentoinut kohdetta \"{$title}.\""
+
+msgid "notification.savedIssueMetadata"
+msgstr "Numeron julkaisemista koskevat metatiedot tallennettu."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Uusi artikkeli on lähetetty ja sille tulee valita toimittaja."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Valitse käyttäjä laatimaan julkaistavia tiedostoja Osallistujat-listan Lisää-linkin avulla."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Odottavat julkaistavat tiedostot."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Pääsy evätty! Sinua ei ole valittu tämän artikkelin tekniseksi toimittajaksi."
+
+msgid "user.authorization.noContext"
+msgstr "Julkaisua ei valittuna!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Yrität päästä artikkeliin, joka ei kuulu osastoosi."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Pyyntöä vastaavaa numeroa ei ole!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Virheellinen teknisen toimittajan lähettämä käsikirjoitus tai teknisen toimittajan lähetystä ei pyydetty!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "XML-muodosta ladattu valuuttaluettelo \"{$filename}\""
+
+msgid "grid.action.createContext"
+msgstr "Luo uusi julkaisu"
+
+msgid "editor.navigation.issues"
+msgstr "Numerot"
+
+msgid "notification.type.approveSubmission"
+msgstr "Tämä käsikirjoitus odottaa hyväksyntää, joka tarvitaan ennen kuin se näkyy numerossa."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Odottaa hyväksyntää."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Rekisteröidy muihin julkaisuihin"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Piilota muut julkaisut"
+
+msgid "article.view.interstitial"
+msgstr "Valitse ladattava artikkelitiedosto."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Hyväksytty"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Odottaa hyväksyntää"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Julkaistavan tiedoston hyväksyntä"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Hyväksy tämä tiedosto julkaistavaksi.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Poista tämän julkaistavan tiedoston hyväksyntä.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indeksointi \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Tämä haun toteutus ei salli julkaisukohtaista uudelleenindeksointia."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Annettu julkaisupolku \"{$journalPath}\" ei johtanut julkaisuun."
+
+msgid "editor.issues.backIssues"
+msgstr "Vanhat numerot"
+
+msgid "editor.issues.futureIssues"
+msgstr "Tulevat numerot"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Ole hyvä ja täytä kaikki pakolliset kentät."
+
+msgid "navigation.subscriptions"
+msgstr "Tilaukset"
+
+msgid "log.editor.recommendation"
+msgstr "{$editorName} tallensi päätöksen ({$decision}) käsikirjoitukselle {$submissionId}."
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Sinulla ei ole aktiivista tilausta."
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "payment.type.publication.required"
+msgstr "Julkaisumaksu tulee maksettavaksi."
+
+msgid "payment.requestPublicationFee"
+msgstr "Pyydä julkaisumaksua ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Maksua on pyydetty, mutta pyyntö on vanhentunut. Ota yhteyttä julkaisuun."
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} on nopeuttanut käsikirjoituksen {$submissionId} käsittelyä."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Kyllä, minulle voi lähettää vertaisarviointeja koskevia pyyntöjä tästä julkaisusta."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Kyllä, haluan uusia numeroita ja tiedotteita koskevia ilmoituksia kaikista julkaisuista, joihin olen rekisteröitynyt."
+
+msgid "notification.type.public"
+msgstr "Julkiset tiedotteet"

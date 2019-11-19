@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Articles"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "La tramesa no s'ha publicat anteriorment ni s'ha presentat abans a cap altra revista (o s'ha enviat una explicació a «Comentaris per a l'editor/a»)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "El fitxer de la tramesa està en format de document de l'OpenOffice, Microsoft Word, RTF o WordPerfect."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Sempre que ha estat possible s'han proporcionat els URL per a les referències."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "El text utilitza un espaiat senzill, lletra de mida 12 i en cursiva, més que no pas subratllat, excepte a les adreces URL. Pel que fa a totes les il·lustracions, figures i taules, es col·loquen al lloc corresponent del text i no al final."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "El text compleix els requisits estilístics i bibliogràfics descrits a les instruccions de l'autor/a a <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Indicacions de l’autor/a</a>, que es troben a «Sobre la revista»."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Els noms i les adreces de correu electrònic que hi ha al lloc web de la revista només s'utilitzaran per als usos indicats en aquesta revista i no estaran disponibles per cap altre ús ni per terceres parts.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "La revista proporciona accés lliure immediat al contingut basant-se en el principi que fer que la cerca estigui disponible al públic facilita un intercanvi de coneixement més ampli i global."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Animem els lectors/ores que s’inscriguin al servei de notificació de publicació a la revista. Utilitzeu l’enllaç <a href=\"{$indexUrl}{$contextPath}/user/register\">Registre</a> a l’inici de la pàgina inicial de la revista. Un cop el lector/a s’hagi registrat, rebrà la taula de continguts per correu electrònic per cada nou número de la revista. Aquesta llista també permet que la revista pugui demostrar que té un cert nivell de seguiment o de lectors/ores. Vegeu la <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Declaració de privacitat</a> de la revista, que assegura als lectors/ores que el seu nom i correu electrònic no s'utilitzarà per a cap altra finalitat."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Esteu interessat/da a trametre a aquesta revista? Reviseu la secció de les polítiques de la revista a <a href=\"{$indexUrl}{$contextPath}/about\">Informació de la revista</a> i <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Indicacions de l’autor/a</a>. Els autors/ores s'han de <a href=\"{$indexUrl}{$contextPath}/user/register\">registrar</a> a la pàgina de la revista abans d'enviar una tramesa. Si ja s'han registrat, poden <a href=\"{$indexUrl}/index/login\">iniciar sessió</a> i començar el procés de cinc passos."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Recomanem als bibliotecaris/àries que incloguin la revista als catàlegs de revistes electròniques de la seva biblioteca. La revista també és un sistema de publicació de codi obert i és adequat per a les biblioteques per tal que l'utilitzin els membres de la facultat que treballen en l’edició de revistes Open Journal Systems (veieu <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "La revista utilitza el sistema LOCKSS per crear un sistema d'arxivament distribuït entre totes les biblioteques que hi participen. A més, permet a les biblioteques que creïn documents permanents de la revista per a conservar-la i restaurar-la. <a href=\"http://lockss.org/\">More...</a>"
+
+msgid "default.genres.article"
+msgstr "Text de l'article"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Aquesta revista utilitza el sistema CLOCKSS per crear un sistema d'arxius distribuït entre les biblioteques participants i permet que aquestes biblioteques creïn arxius permanents de la revista amb finalitats de preservació i restauració. <a href=\"http://clockss.org/\">Més...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Gestor/a de la revista"
+
+msgid "default.groups.plural.manager"
+msgstr "Gestors/es de la revista"
+
+msgid "default.groups.abbrev.manager"
+msgstr "GR"
+
+msgid "default.groups.name.editor"
+msgstr "Editor/a de la revista"
+
+msgid "default.groups.plural.editor"
+msgstr "Editors/es de la revista"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ER"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor/a convidada"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editors/es convidades"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "EC"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor/a de secció"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editors/es de secció"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ESec"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Gestor/a de subscripció"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Gestors/es de subscripció"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "GSubs"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrument de recerca"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materials de recerca"
+
+msgid "default.genres.researchResults"
+msgstr "Resultats de la recerca"
+
+msgid "default.genres.transcripts"
+msgstr "Transcripcions"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Anàlisis de dades"
+
+msgid "default.genres.dataSet"
+msgstr "Conjunt de dades"
+
+msgid "default.genres.sourceTexts"
+msgstr "Textos font"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Revisor/a"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Revisors/es"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"

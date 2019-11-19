@@ -1,0 +1,168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Hostované časopisy"
+
+msgid "admin.settings.redirect"
+msgstr "Přesměrování časopisu"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být užitečné například pokud stránka hostuje pouze jeden časopis."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Toto bude výchozí jazyk pro stránku a všechny hostované časopisy."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Vyberte všechny jazykové lokalizace, které mají být podporovány na této stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech hostovaných na této stránce a objeví se také v menu pro výběr jazyka na všech stránkách (toto nastavení může být přepsáno na stránkách specifických stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové nastavení nebude pro časopisy dostupné."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou lokalizaci používají."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Vyberte další jazykové lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Stahování jazykové lokalizace selhalo. Níže uvedené chybové hlášení popisuje selhání."
+
+msgid "admin.languages.localeInstalled"
+msgstr "Tato \"{$locale}\" lokalizace byla nainstalována."
+
+msgid "admin.languages.download"
+msgstr "Stáhnout jazykovou lokalizaci"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Nelze otevřít popisovač jazyka z webové stránky PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Nelze přidat novou jazykovou lokalizaci do registračního souboru lokalizací - typicky \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "Databáze OJS uživatelů"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Umožnit synchronizaci uživatelských profilů (pokud je podporována tímto ověřovacím pluginem). Informace v profilu uživatele budou automaticky aktualizovány ze vzdáleného zdroje, jakmile se uživatel přihlásí a změní se jeho profil (včetně změn hesla) v rámci OJS. Pokud není tato možnost povolena, informace v OJS profilu budou uchovávány odděleně od informací vzdáleného zdroje."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Umožnit změnu hesla uživatele (pokud je podporována tímto ověřovacím pluginem). Povolení této možnosti umožní uživatelům změnit své heslo v rámci OJS a využít funkci \"ztracené heslo\" pro obnovení zapomenutého hesla. Tyto funkce nebudou dostupné uživatelům s tímto zdrojem ověření pokud není povolena tato možnost."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Umožnit vytvoření uživatele (pokud je podporováno tímto ověřovacím pluginem). Uživatelé vytvoření v rámci OJS tímto zdrojem ověření budou, pokud již neexistují, automaticky přidáni do vzdáleného zdroje ověření. Navíc, pokud je tento zdroj výchozím zdrojem ověření, OJS účty vytvořené v průběhu registrace uživatele budou přidány do vzdáleného zdroje ověření."
+
+msgid "admin.systemVersion"
+msgstr "Verze OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurace OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Nastavení konfigurace OJS z <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Nastavení časopisu"
+
+msgid "admin.journals.noneCreated"
+msgstr "Žádné časopisy nebyly vytvořeny."
+
+msgid "admin.contexts.create"
+msgstr "Vytvořit časopis"
+
+msgid "admin.journals.createInstructions"
+msgstr "Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho nastavení a zápisu uživatelů."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Toto má být krátké slovo nebo akronym, které identifikuje časopis. URL časopisu bude {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Je vyžadována cesta."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Zvolená cesta již je využívána jiným časopisem."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Povolte pro tento časopis, aby byl na těchto stránkách veřejně zobrazen"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Popis časopisu"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Existující cesta k časopisu nebo cesta, která má být vytvořena (např. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importovat předplatné"
+
+msgid "admin.journals.transcode"
+msgstr "Překódovat metadata článků z ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generovat kód pro přesměrování adres URL OJS 1 na adresy URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Je vyžadována cesta importu."
+
+msgid "admin.journals.importErrors"
+msgstr "Úspěšné dokončení importu selhalo"
+
+msgid "admin.mergeUsers"
+msgstr "Sloučit uživatele"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Sloučit uživatele"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Vyberte uživatele, kterému mají být přiřazena autorství, přidělené úlohy atd. předchozího uživatele."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Vyberte uživatele, který má být sloučen s jiným uživatelským účtem (např., pokud má někdo dva uživatelské účty). Prvně zvolený účet bude vymazán a jeho příspěvky, úlohy atd. budou přiřazeny ke druhému účtu."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Všichni zaregistrovaní uživatelé"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Jste si jistý, že chcete sloučit vybraný účet/účty   \"{$oldAccountCount}\" do účtu s uživatelským jménem \"{$newUsername}\"? Vybraný účet/účty  \"{$oldAccounCount}\" poté přestane/přestanou existovat. Tato akce je nevratná."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Žádní zapsaní uživatelé."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Označené soubory lokalizace mohou být nekompletní."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "Vaše instalace OJS je konfigurována k zaznamenávání více metrik. Statistiky čtenosti budou zobrazeny ve více kontextech. V některých případech musí být použita jedna statistika čtenosti, např. při zobrazování seznamu nejčtenějších článků, nebo při zobrazení rozsahu hledání. Vyberte si, prosím, jednu z následujících metrik jako standardní."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na všechny časopisy, které tuto lokalizaci využívají."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Stahování jazykových balíčků z webu Public Knowledge Project je momentálně nedostupné protože:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Váš server nemá, nebo nepovoluje využití GNU utility \"tar\".</li>\n"
+"\t\t<li>OJS nemůže změnit lokální soubor registrace lokalizace, typicky \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Jazykové balíčky lze stáhnout manuálně z <a href=\"http://pkp.sfu.ca\">webu PKP</a>.</p>"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Je třeba zadat název."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Připomenutí vypršení předplatného"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Upozornění na otevřený přístup (Open Access)"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Připomínka recenze"

@@ -1,0 +1,182 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Queto plugin permette l'assegnazione di Uniform Resource Names ai fascicoli, agli articoli, ai file / gabbie in OJS"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Per favore configura il plugin URN per gestire e usare gli URN in OJS"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Contenuto della rivista"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Scegliere gli oggetti ai quali assegnare gli URN."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Per favore seleziona glim oggetti che avranno assegnati gli Uniform Resource Names (URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Gli URN verranno assegnati ai fascicoli."
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "Gli URN verranno assegnati agli articoli."
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Gli URN verranno assegnati alle gabbie (cioè ai file HTML o PDF degli articoli)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Prefisso URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "The URN prefix is the fix, never changing part of the URN (e.g. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "Il pattern del prefisso deve essere nella forma \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Suffisso URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Un suffisso URN può prendere ogni forma ma deve essere univoco tra tutto il pubblicato con lo stesso prefisso URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Usa la struttura inserita qua sotto per generare i suffisso URN. Usa %j per le iniziali della ribista, %v per il numero voluime, %i per il numero fascicolo, %Y oer l'anno, %a per l' OJS id dell'articolo, %g per l'id OJS della gabbia / file, %f  per l'id OJS del file, %p per il numero di pagina e %x per \"suffisso personalizzato\""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Per esempio, vol%vfasc%ipp%p creerebbe un suffisso \"vol3fasc2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "per i fascicoli"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "per gli articoli"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "per le gabbie"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Inserisci il pattern del suffisso URN per i fascicoli."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "Inserisci il pattern del suffisso URN per gli articoli."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Inserisci il pattern del suffisso URN per le gabbie."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Usa il pattern di default."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i per i fascicoli<br />%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per le gabbie / files."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Inserisci un suffisso URN per ogni pubblicazione, un suffisso personalizzato. Troverai un campo di input URN in ogni pagina di creazione metadati."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Numero di controllo"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Il numero di controllo verrà calcolato automaticamente e aggiunto come ultima cifra di ogni URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Namespace"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Scegli"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Il namespace dell'identificatore persistente normalmente è necessario per la registrazione (es. con \n"
+" la  Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL del resolver"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(es. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Inserisci la URL del resolver."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Cancella URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Se cambi la configurazione degli URN, gli identificatori già assegnati non verranno modificati. Per forzarne la modifica, usa questo tasto per fare in modo che le nuove impostazioni abbiano effetto sugli oggetti già esistenti."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Sei sicuro di cancellare tutte gli URN esistenti?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "fascicolo"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "articolo"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "gabbia / file"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "L'URN non può essere assegnato perchè il suffisso personalizzato manca."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "L'URN non può essere assegnato perchè ci sono problemi sui dati e/o sulla sintassi del pattern che serve a crearlo."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Quello che stai vedendo è una preview dell'URN. Seleziona il checkboc e salva il form per assegnare l'URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "L'url è stato asseganto a questo {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Il suffisso dell'URN è già in uso su di un altro oggetto pubblicato. Per favore inserisci un suffisso URN univoco per ogni oggetto."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Cancella URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Sei sicuro di voler cancellare gli URN esistenti?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Cancella gli URN collegati al fascicolo"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Sei sicuro di voler cancellare gli URN esistenti collegati a questo fascicolo?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Usa la seguente opzione per cancellare tutti gli URN attualmente programmanti per questo fascicolo."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Aggiungi numero di controllo"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Assegna l'URN {$pubId} a questo {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "L'URN non può essere assegnato perche il suffisso personalizzato manca."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "L'URN {$pubId} non può essere assegnato perchè ci sono problemi sui dati e/o sulla sintassi del pattern che serve a crearlo."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "L'URN {$pubId} è stato assegnato."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Manca il numero di controllo."

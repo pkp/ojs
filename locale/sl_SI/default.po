@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:32+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Prispevki"
+
+msgid "section.default.abbrev"
+msgstr "PRS"
+
+msgid "default.genres.article"
+msgstr "Besedilo prispevka"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Prispevek še ni bil nikjer objavljen, niti ni v procesu objavljanja v kakšni drugi reviji (oziroma je razlaga podana v polju Komentarji uredniku)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Datoteka oddanega prispevka je v formatu OpenOffice, Microsoft Word, RTF ali WordPerfect dokumenta."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Kjer je možno, so objavljene URL povezave do literature."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Besedilo ima enojni razmak; uporabljena pisava je velikosti 12 točk; za poudarjene besede uporabite stil poševno, podčrtano le za URL povezave; in vse ilustracije, slike in tabele so na pravih mestih v besedilu, namesto na kupu na koncu besedila."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Besedilo ustreza stilskim in bibliotehničnim zahtevam navodilih za avtorje."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Imena in e-poštni naslovi vpisani v tem spletišču se bodo striktno uporabljala le za navedene namene te revije in ne bodo predane nobeni tretji osebi.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Revija je takoj prosto dostopna vsem v prepričanju, da prosta dostopnost do rezultatov raziskav vzpodbuja večjo izmenjavo znanja."
+
+msgid "default.contextSettings.authorSelfArchivePolicy"
+msgstr "Ta revija dovoljuje in vzpodbuja avtorje, da prispevke, objavljene v tej reviji, objavljajo na osebnih spletni straneh ali bazah podatkov institucije, pred ali po objavi s tem, da navedejo bibliografske podatke, da je bil prispevek objavljen v tej reviji."
+
+msgid "default.contextSettings.copyeditInstructions"
+msgstr ""
+"Lektoriranje je namenjeno izboljšavi poteka, jasnosti, slovnice, izbiri besed in obliki prispevka. Predstavlja zadnjo možnost, da avtor naredi večje spremembe besedila, ker so naslednji koraki omejeni le na tiskarske škrate in oblikovne popravke.\n"
+"\n"
+"Datoteka za lektoriranje je v Word ali .rtf formatu in se lahko enostavno ureja z urejevalnikom besedil. Navodila spodaj predlagajo dva pristopa k lektoriranju. Prvi temelji na uporabi funkcije \"Sledenje spremembam\" urejevalnika besedil Microsoft Word in zahteva, da imajo lektor, urednik in avtor dostop do tega programa. Drugi pristop je neodvisen od urejevalnika besedil in je bil sposojen, z dovoljenjen, iz Harvard Eductional Review-ja. Glavni urednik lahko spremeni ta navodila in jih lahko nadgradi za potrebe te revije.\n"
+"\n"
+"<h4>Sistem za lektoriranje</h4>\n"
+"\n"
+"<strong>1. Funkcionalnost \"Sledenje spremembam\" Microsoft Word-a</strong>\n"
+"\n"
+"V meniju Orodja vklop funkcije Sledenje spremembam omogoča lektorju, da dodaja besedilo (ki se obarva) ali briše besedilo (zbrisano besedilo je prečrtano in obarvano). Lektor lahko pošlje vprašanja tako avtorju (Vprašanja za avtorja) kot uredniku (Vprašanja za urednika) tako, da vprašanja zapiše v oglate oklepaje. Lektorirana verzija je potem pošlje uredniku skupaj z obvestilom. Urednik pregleda besedilo in o tem obvesti avtorja.\n"
+"\n"
+"Urednik in avtor obdržita spremembe v besedilu, ki se jima zdijo smiselne. Če so potrebne še dodatne spremembe, lahko urednik in avtor spremenita začetne vnose ali brisanja oziroma, vstavita ali zbrišeta besedilo na poljubnem mestu. Avtor in urednik morata odgovoriti na vsa njima zastavljena vprašanja in odgovore vpisati v oglate oklepaje.\n"
+"\n"
+"o besedilo pregledata urednik in avtor, lektor naredi še zadnji pregled in potrdi spremembe v besedilu in pripravi besedilo za fazo grafičnega oblikovanja.\n"
+"\n"
+"\n"
+"<strong>2. Harvard Educational Review</strong>\n"
+"\n"
+"<strong>Navodila za elektronske spremembe rokopisa</strong>\n"
+"\n"
+"Prosimo sledite spodnjemu protokolu za elektronsko spreminjanje rokopisa:\n"
+"\n"
+"<strong>Odgovarjanje na svetovane spremembe.</strong>\n"
+"&nbsp; Za vsako spremembo, ki jo sprejmente, izključite poudarjeno besedilo.\n"
+"&nbsp; Za vsako spremembo, ki jo zavrnete, ponovno vpišite prvotno besedilo in jo <strong>poudarite</strong> it.\n"
+"\n"
+"<strong>Dodajanje in brisanje besedila.</strong>\n"
+"&nbsp; Dodano besedilo označite s <strong>poudarjeno</strong> pisavo.\n"
+"&nbsp; Izbrisano besedilo označite z: <strong>[izbrisano besedilo]</strong>.\n"
+"&nbsp; Če zbrišete enega ali več stavkov, to označite z obvestilom, npr. <strong>[zbrisana 2 stavka]</strong>.\n"
+"\n"
+"<strong>Odgovarjanje na vprašanja avtorju.</strong>\n"
+"&nbsp; Obdržite vsa vprašanja avtorju nedotaknjena in s poudarjeno pisavo.\n"
+"&nbsp; Na vprašanje odgovorite s komentarjem za vprašanjem. Komentar naj bo ločen z uporabo:\n"
+"<strong>[Komentar:]</strong>\n"
+"&nbsp; e.g., <strong>[Komentar: Razširite diskusijo o metodologiji, kot ste predlagali.]</strong>.\n"
+"\n"
+"<strong>Komentiranje besedila.</strong>\n"
+"&nbsp; Komentarje uporabite za razlago organizacijskih popravkov ali večjih sprememb\n"
+"&nbsp; npr. <strong>[Komentar: Gornji odstavek je prestavljen s strani 5 na stran 7].</strong>\n"
+"&nbsp; Opozorilo: Ko se sklicujete na številke strani, uporabite številke strani, ki so na natisnjeni kopiji rokopisa, ki vam je bil poslan. To je pomembno, ker se številke strani lahko spreminjajo med elektronskim spreminjanjem dokumenta.\n"
+"\n"
+"<h4>An Potek elektronskih sprememb</h4>\n"
+"\n"
+"<ol>\n"
+"<li><strong>Originalen rokopis.</strong> Lektor revije najprej uredi besedilo, da izbolša potek besedila, jasnost, slovnico, besedišče in formatiranje ter po potrebi zastavi avtorju vprašanja. Ko je prvotno lektoriranje končano, lektor naloži popravljeno besedilo preko spletne strani revije in obvesti avtroja, da je lektorirano besedilo na voljo za pregled.</li>\n"
+"<li><strong>Avtorjevo lektoriranje.</strong> Preden avtor naredi večje spremembe v strukturi in organicaciji lektoriranega besedila, se mora posvetovati z lektorjem, ki je zadolžen za tisti del besedila. Avtor mora sprejeti/zavrniti vsako spremembo, ki je bila narejena med prvotnim lektoriranjem in odgovoriti na vsa vprašanja za avtorja. Ko konča s spremembami, mora avtor preimenovati datoteko ic AvtorImeVA.doc v AvtorImeVAP. (npr. iz MatejVA.doc v MatejVAP.doc) in po navodilih naloži popravljen dokument preko spletne strani revije.</li>\n"
+"<li><strong>Končno lektoriranje.</strong> Lektor revije bo preveril spremembe, ki jih je naredil avtor, in pregledal avtorjeve odgovore in ustvaril končni rokopis. Ko konča, lektor naloži končni dokument preko spletne strani revije in o tem obvesti grafičnega urednika, ki dokonča oblikovanje prispevka.</li>\n"
+"</ol>"
+
+msgid "default.contextSettings.refLinkInstructions"
+msgstr ""
+"<h4>Dodajanje povezav na literaturo v procesu preloma</h4>\n"
+"\t<p>Ko preoblikujete prispevek v HTML ali PDF, preverite, da vse hiperpovezave v prispevku delujejo.</p>\n"
+"\t<h4>A. Ko avtor prispeva povezavo z literaturo</h4>\n"
+"\t<ol>\n"
+"\t<li>Ko je prispevek še v formatu za urejanej besedil (npr. Word), dodajte frazo POGLEJ POVEZAVO na konec literature, ki ima URL.</li>\n"
+"\t<li>To frazo spremenite v hiperpovezavo, tako da frazo izberete in uporabite Word-ovo orodje Vstavi Hiperlink, ter URL, ki je pripravljen v koraku 2.</li>\n"
+"\t</ol>\n"
+"\t<h4>B. Omogočite bralcem uporabo Google Scholar-ja za iskanje literature</h4>\n"
+"\t<ol>\n"
+"\t\t<li>Ko je prispevek še v formatu za urejanej besedil (npr. Word), skopirajte naslov citiranega prispevka v seznam literature (če je naslov preveč generičen, potem skopirajte avtorja in naslov).</li>\n"
+"\t\t<li>Vstavite naslov literature tako, da se začne in konča s %22, med besede v naslovu pa vstavite + : http://scholar.google.com/scholar?q=%22TUKAJ+VSTAVITE+NASLOV%22.</li>\n"
+"\n"
+"\t<li>Dodajte Google Search frazo na koncu vsake reference v seznamu referenc prispevka.</li>\n"
+"\t<li>Spremenite to frazo v hiperpovezavo tako, da jo označite in uporabite Wordovo fukncionalnost Vstavi hiperpovezavo in naslov literature iz točke 2.</li>\n"
+"\t</ol>\n"
+"\t<h4>C. Omogočite bralcem uporabo DOI-ja za iskanje referenc</h4>\n"
+"\t<ol>\n"
+"\t<li>Ko je prispevek še v Word obliki, skopirajte vse reference v CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>\n"
+"\t<li>Skopirajte vsak DOI, ki vam ga najde Query v naslednjo povezavo (med = in &): http://www.cmaj.ca/cgi/external_ref?access_num=TUKAJ VSTAVI DOI&link_type=DOI.</li>\n"
+"\t<li>Dodajte CrossRef frazo na konec vsake v seznamu referenc prispevka.</li>\n"
+"\t<li>Spremenite to frazo v hiperpovezavo tako, da jo označite in uporabite Wordovo fukncionalnost Vstavi hiperpovezavo in naslov literature iz točke 2.</li>\n"
+"\t</ol>"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Bralce vzpodbujamo, da se prijavijo na obvestila o izdajah revije. Uporabite povezavo <a href=\"{$indexUrl}{$contextPath}/user/register\">Registracija</a> na vrhu domače strani revije. Po registraciji boste po e-pošti prejemali kazalo vsebine vsake nove izdaje revije. Spisek tako registriranih bralcev pomeni za revijo tudi določeno podporo s strani bralcev. Preverite <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Izjavo o varstvu podatkov</a>, revije, ki zagotavlja, da se imena in e-poštni naslovi bralcev ne bodo zlorabili."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Vas zanima objavljanje v tej reviji? Predlagamo, da pogledate spletno stran <a href=\"{$indexUrl}{$contextPath}/about\">O reviji</a> za uredniško politiko revije in <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Navodila avtorjem</a>. Avtorji se morajo pred objavljanjem <a href=\"{$indexUrl}{$contextPath}/user/register\">registrirati</a> pri reviji, če pa so že registrirani, potem se enostavno <a href=\"{$indexUrl}/index/login\">prijavijo</a> in začnejo s procesom oddaje prispevka."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Vzpodbujamo, da znanstvene knjižnice uvrstijo to revijo v svojo evidenco elektronskih revij. Enako velja poudariti, da je ta sistem za elektronsko izdajanje odprtokodni sistem, namenjen knjižnicam za gostovanje in izdajanje revij svoje institucije (več <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Ta revija uporablja sistem LOCKSS za vzpostavitev distribuiranega sistema za arhiviranje med sodelujočimi knjižnicami in dovoljuje tem knjižnicam, da trajno arhivirajo revijo za namene ohranjanja in restavriranja. <a href=\"http://www.lockss.org/\">Več...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr " Ta revija uporablja CLOCKSS sistem za vzpostavitev distribuiranega sistema arhiviranja med sodelujočimi knjižnicami in dovoljuje tem knjižnicam, da trajno arhivirajo revijo za namene ohranjaja in restavriranja. <a href=\"http://clockss.org/\">Več...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Upravljalec revije"
+
+msgid "default.groups.plural.manager"
+msgstr "Upravljalci revije"
+
+msgid "default.groups.abbrev.manager"
+msgstr "UP"
+
+msgid "default.groups.name.editor"
+msgstr "Urednik revije"
+
+msgid "default.groups.plural.editor"
+msgstr "Uredniki revije"
+
+msgid "default.groups.abbrev.editor"
+msgstr "UP"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Gostujoči urednik"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Gostujoči uredniki"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GU"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Urednik rubrike"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Uredniki rubrike"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "UR"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Urednik naročnin"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Uredniki naročnin"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "UN"
+
+msgid "default.genres.researchInstrument"
+msgstr "Raziskovalni instrumenti"
+
+msgid "default.genres.researchMaterials"
+msgstr "Raziskovalni materiali"
+
+msgid "default.genres.researchResults"
+msgstr "Rezultati raziskave"
+
+msgid "default.genres.transcripts"
+msgstr "Prepis"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analiza podatkov"
+
+msgid "default.genres.dataSet"
+msgstr "Podatkovni niz"
+
+msgid "default.genres.sourceTexts"
+msgstr "Izvorna besedila"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenti"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzent"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"_______________________________________________________________________<br/>\n"
+"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"
+
+msgid "section.default.policy"
+msgstr "Uredniška politika"

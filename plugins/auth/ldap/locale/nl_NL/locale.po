@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Deze plugin verzorgt authenticatie bij, en synchronisatie van, user accounts met een externe LDAP directory."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP Instellingen"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Servernaam"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "Bijvoorbeeld \"ldap.example.com\" of \"ldaps://ldap.example.com\" (voor SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Server poort"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Optioneel. Standaard 389 (LDAP) of 636 (LDAP over SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Bijvoorbeeld \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Begeerder DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Bv. \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Beheerderswachtwoord"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Beheerder DN en wachtwoord zijn alleen nodig als de gebruikersprofiel/wachtwoord synchronisatie of gebruikers creatie opties ingeschakeld zijn. Ze kunnen overgeslagen worden als LDAP alleen voor authenticatie wordt gebruikt."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Accountnaam attribuut"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Het attribuut dat het gebruikersobject uniek identificeert, zoals uid of cn of sAMAccountName"
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Wachtwoordencryptie"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Hash formaat voor wachtwoorden die op de server worden bewaard. SSHA wordt aanbevolen."
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL Instellingen (optioneel)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Gebruik SASL in plaats van eenvoudige authenticatie"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL mechanisme"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Bijvoorbeeld \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Domein"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Gevraagd authorisatie ID"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL beveiligingseigenschappen"

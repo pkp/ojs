@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Članci"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Rad koji prilažem nije ranije objavljivan, niti se nalazi u procesu razmatranja u drugom časopisu (ili je objašnjenje obezbeđeno u komentarima uredniku)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Fajl koji prilažem je u formatu OpenOffice, Microsoft Word, RTF, ili WordPerfect."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Gde je moguće URL-ovi referenci su priloženi."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Tekst ima prored 1,5, koristi font Times New Roman veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima ili na kraju."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">Упутства за ауторе</a>, koja se nalaze u sekciji \"O časopisu\"."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Ovaj časopis pruža otvoreni pristup sadržaju po principu koji omogućuje istraživački rad besplatno dostupan javnosti, a sve u cilju veće globalne razmene znanja."
+
+msgid "default.groups.name.manager"
+msgstr "Tehnički sekretar"
+
+msgid "default.groups.plural.manager"
+msgstr "Tehnički sekretari"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Urednik časopisa"
+
+msgid "default.groups.plural.editor"
+msgstr "Urednici časopisa"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Gostujući urednik"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Gostujući urednici"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Urednik sekcije"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Urednici sekcije"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Upravnik za pretplatu"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Upravnici za pretplatu"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "Istraživački instrument"
+
+msgid "default.genres.researchMaterials"
+msgstr "Istraživački materijal"
+
+msgid "default.genres.researchResults"
+msgstr "Istraživački rezultati"
+
+msgid "default.genres.transcripts"
+msgstr "Transkript"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analiza podataka"
+
+msgid "default.genres.dataSet"
+msgstr "Skup podataka"
+
+msgid "default.genres.sourceTexts"
+msgstr "Izvorni tekstovi"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzent"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenti"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"
+
+msgid "default.genres.article"
+msgstr "Tekst članka"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href=\"http://www.lockss.org/\">Više...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href=\"http://www.lockss.org/\">Više...</a>"
+
+msgid "default.contextSettings.forReaders"
+msgstr "Ohrabrujemo čitaoce da se upišu za obaveštenje kad izađe novi broj časopisa. Koristite <a href=\"{$indexUrl}{$contextPath}/user/register\">Registracija</a> vezu na vrhu početne strane časopisa. Ova registracija će za rezultat imati to da će čitaoci primiti Sadržaj porukom za svaki novi broj časopisa. Ova lista daje pravo čsopisu da traži od čitaoca izvesni vid podrške. Pogledajte  <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Izjava o privatnosti</a> časopisa koji garantuje čitaocima da njihovo ime i e-adresa neće biti upotrebljene za druge svrhe."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Zainteresovani ste da prijavite članak za ovaj časopis? Predlažemo da pogledate stranicu <a href=\"{$indexUrl}{$contextPath}/about\">O časopisu</a> kako bi se upoznali o sekcijama časopisa kao i <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Uputstvo za autore</a>.  potrebno je da se autori registruju <a href=\"{$indexUrl}{$contextPath}/user/register\">registruj</a> u časopis pre prijave članka ili ako su već registrovani da se jednostavno <a href=\"{$indexUrl}/index/login\">prijave</a> i da započnu proces prijave članka od pet koraka."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Ohrabrujemo naučne bibliotekare da uvrste ovaj časopis u listu bibliotečkih časopisa. Može biti vredno da se napomene da ovaj časopis koristi sistem otvorenog koda za objavljivanje koji je pogodan za biblioteke za njihove fakultetske članove da ga koriste sa časopisima u kojima su uključeni u procesu redakcije   (see <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."

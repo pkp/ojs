@@ -1,0 +1,2058 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Текущий журнал:"
+
+msgid "context.select"
+msgstr "Переключиться к другому журналу:"
+
+msgid "navigation.categories"
+msgstr "Категории"
+
+msgid "navigation.categories.browse"
+msgstr "Обзор"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Щелкните на значке, чтобы заполнить форму рецензии."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Пожалуйста, заполните обязательные поля."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Вы уверены, что хотите отметить эту задачу как завершенную? После этого вы не сможете внести изменения."
+
+msgid "common.payment"
+msgstr "Платеж"
+
+msgid "common.payments"
+msgstr "Платежи"
+
+msgid "common.homePageHeader.altText"
+msgstr "Заголовок главной страницы"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Изображение главной страницы журнала"
+
+msgid "navigation.journalHelp"
+msgstr "Помощь"
+
+msgid "navigation.current"
+msgstr "Текущий выпуск"
+
+msgid "navigation.otherJournals"
+msgstr "Другие журналы"
+
+msgid "navigation.browseByIssue"
+msgstr "По выпускам"
+
+msgid "navigation.browseByAuthor"
+msgstr "По авторам"
+
+msgid "navigation.infoForAuthors"
+msgstr "Для авторов"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Для библиотек"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Руководство по заполнению Декларации о конфликте интересов"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Информация для авторов"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Информация для библиотек"
+
+msgid "navigation.skip.about"
+msgstr "Сразу перейти к информации о журнале"
+
+msgid "navigation.skip.issue"
+msgstr "Сразу перейти к текущему выпуску"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Не назначенные"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Новые"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Материалы в процессе редактирования"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "На редакции"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Материалы в процессе рецензирования"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "На рецензии"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архивы"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архивы"
+
+msgid "common.queue.long.active"
+msgstr "В работе"
+
+msgid "common.queue.short.active"
+msgstr "В работе"
+
+msgid "common.queue.long.completed"
+msgstr "Архив"
+
+msgid "common.queue.short.completed"
+msgstr "Архив"
+
+msgid "section.section"
+msgstr "Раздел"
+
+msgid "section.sections"
+msgstr "Разделы журнала"
+
+msgid "section.title"
+msgstr "Название раздела"
+
+msgid "section.abbreviation"
+msgstr "Аббревиатура"
+
+msgid "section.abbreviation.example"
+msgstr "(Например, Статьи=СТ)"
+
+msgid "section.policy"
+msgstr "Правила раздела"
+
+msgid "article.article"
+msgstr "Статья"
+
+msgid "article.articles"
+msgstr "Статьи"
+
+msgid "common.publication"
+msgstr "Статья"
+
+msgid "common.publications"
+msgstr "Статьи"
+
+msgid "article.submissionId"
+msgstr "ID материала"
+
+msgid "article.title"
+msgstr "Название"
+
+msgid "article.authors"
+msgstr "Авторы"
+
+msgid "article.indexingInformation"
+msgstr "Информация для индексирования"
+
+msgid "article.metadata"
+msgstr "Метаданные"
+
+msgid "article.journalSection"
+msgstr "Раздел журнала"
+
+msgid "article.file"
+msgstr "Файл"
+
+msgid "article.suppFile"
+msgstr "Дополнительный файл"
+
+msgid "article.suppFiles"
+msgstr "Дополнительные файлы"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Доп. файлы"
+
+msgid "article.discipline"
+msgstr "Академические дисциплины и разделы дисциплин"
+
+msgid "article.subject"
+msgstr "Ключевые слова"
+
+msgid "article.coverage"
+msgstr "Охват"
+
+msgid "article.type"
+msgstr "Тип, метод или подход"
+
+msgid "article.language"
+msgstr "Язык"
+
+msgid "article.sectionEditor"
+msgstr "РР"
+
+msgid "article.commentsToEditor"
+msgstr "Комментарии автора"
+
+msgid "article.submission"
+msgstr "Материал"
+
+msgid "article.submissions"
+msgstr "Материалы"
+
+msgid "article.details"
+msgstr "Подробности"
+
+msgid "article.abstract"
+msgstr "Аннотация"
+
+msgid "article.coverPage.altText"
+msgstr "Изображение на обложке"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Открытый доступ"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ограниченный доступ"
+
+msgid "article.comments.sectionDefault"
+msgstr "По умолчанию"
+
+msgid "article.comments.disable"
+msgstr "Выключить"
+
+msgid "article.comments.enable"
+msgstr "Включить"
+
+msgid "article.fontSize"
+msgstr "Размер шрифта"
+
+msgid "article.fontSize.small.altText"
+msgstr "Мелкий"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Средний"
+
+msgid "article.fontSize.large.altText"
+msgstr "Крупный"
+
+msgid "article.return"
+msgstr "Вернуться к Подробностям о статье"
+
+msgid "submission.submissionEditing"
+msgstr "Редактирование отправленного материала"
+
+msgid "submission.changeSection"
+msgstr "Изменить на"
+
+msgid "submission.sent"
+msgstr "Отправлен"
+
+msgid "submission.editorDecision"
+msgstr "Решение редактора"
+
+msgid "submission.round"
+msgstr "Раунд&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Отзыв редактора"
+
+msgid "submission.notifyAuthor"
+msgstr "Уведомить автора"
+
+msgid "submission.notifyEditor"
+msgstr "Уведомить редактора"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Запись переписки «Редактор/Автор»"
+
+msgid "submission.reviewersVersion"
+msgstr "Версия файла с замечаниями рецензента"
+
+msgid "submission.postReviewVersion"
+msgstr "Версия файла после рецензирования"
+
+msgid "submission.editorVersion"
+msgstr "Версия редактора"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Версия файла, исправленная автором"
+
+msgid "submission.authorVersion"
+msgstr "Версия автора"
+
+msgid "submission.copyediting"
+msgstr "Литературное редактирование"
+
+msgid "submission.copyedit"
+msgstr "Лит.Ред."
+
+msgid "submission.proofreading"
+msgstr "Корректура"
+
+msgid "submission.scheduling"
+msgstr "Планирование"
+
+msgid "submission.scheduledIn"
+msgstr "Запланировано к публикации в выпуске «{$issueName}»."
+
+msgid "submission.scheduledIn.tba"
+msgstr "Будет назначено позже"
+
+msgid "submissions.sec"
+msgstr "Раздел"
+
+msgid "submissions.step1"
+msgstr "Шаг 1"
+
+msgid "submissions.step3"
+msgstr "Шаг 3"
+
+msgid "submissions.queuedReview"
+msgstr "На рецензии"
+
+msgid "submissions.published"
+msgstr "Опубликован"
+
+msgid "submissions.initial"
+msgstr "Первоначальный"
+
+msgid "submissions.proofread"
+msgstr "Корректура"
+
+msgid "submissions.initialProof"
+msgstr "Первоначальная корректура"
+
+msgid "submissions.postAuthor"
+msgstr "После автора"
+
+msgid "submissions.reviewRound"
+msgstr "Раунд рецензирования"
+
+msgid "submissions.proof"
+msgstr "Корр."
+
+msgid "submissions.editorDecision"
+msgstr "Решение редактора"
+
+msgid "submissions.editorRuling"
+msgstr "Правила редактора"
+
+msgid "submission.eventLog"
+msgstr "Журнал действий"
+
+msgid "submissions.copyeditComplete"
+msgstr "Прошел литературное редактирование"
+
+msgid "submissions.layoutComplete"
+msgstr "Прошел верстку"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Прошел корректуру"
+
+msgid "submission.search"
+msgstr "Поиск по статьям"
+
+msgid "journal.currentIssue"
+msgstr "Текущий выпуск"
+
+msgid "context.contexts"
+msgstr "Журналы"
+
+msgid "journal.path"
+msgstr "Путь"
+
+msgid "context.context"
+msgstr "Журнал"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Показать все выпуски"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Включить пользователей без назначенных ролей в этом журнале."
+
+msgid "user.profile.profileImage"
+msgstr "Изображение профиля"
+
+msgid "user.showAllJournals"
+msgstr "Показать мои журналы"
+
+msgid "user.registerForOtherJournals"
+msgstr "Зарегистрировать для других журналов"
+
+msgid "user.reviewerPrompt"
+msgstr "Хотите ли вы рецензировать материалы для этого журнала?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Да, запросить роль «{$userGroup}»."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Да, Я хочу, чтобы ко мне обращались с запросами на рецензирование материалов для этого журнала."
+
+msgid "user.register.contextsPrompt"
+msgstr "В каких журналах на этом сайте вы хотите зарегистрироваться?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Запросить следующие роли."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Если вы запрашиваете роль рецензента в каком-то журнале, пожалуйста, введите темы, которые интересуют Вас как рецензента."
+
+msgid "user.myJournals"
+msgstr "Мои журналы"
+
+msgid "user.manageMySubscriptions"
+msgstr "Управление моими подписками"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Ваша учетная запись сейчас не связана ни с одним журналом. Пожалуйста, выберите журнал:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Вашей учетной записи сейчас в этом журнале не задана ни одна роль. Пожалуйста, выберите одно из предложенных ниже действий:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Отправить предложение"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Отправить статью: регистрация авторов сейчас закрыта."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Зарегистрироваться в качестве рецензента"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Зарегистрироваться в качестве рецензента: регистрация рецензентов сейчас закрыта."
+
+msgid "user.role.manager"
+msgstr "Управляющий журнала"
+
+msgid "user.role.subEditor"
+msgstr "Редактор раздела"
+
+msgid "user.role.subscriptionManager"
+msgstr "Менеджер по подписке"
+
+msgid "user.role.managers"
+msgstr "Управляющие журналом"
+
+msgid "user.role.subEditors"
+msgstr "Редакторы разделов"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Менеджеры по подписке"
+
+msgid "user.role.journalAssistant"
+msgstr "Ассистент журнала"
+
+msgid "user.role.journalAssistants"
+msgstr "Ассистенты журнала"
+
+msgid "issue.issue"
+msgstr "Выпуск"
+
+msgid "issue.issues"
+msgstr "Выпуски"
+
+msgid "issue.title"
+msgstr "Название"
+
+msgid "issue.volume"
+msgstr "Том"
+
+msgid "issue.number"
+msgstr "Номер"
+
+msgid "issue.vol"
+msgstr "Том"
+
+msgid "issue.no"
+msgstr "№"
+
+msgid "issue.year"
+msgstr "Год"
+
+msgid "issue.noIssues"
+msgstr "Нет выпусков"
+
+msgid "issue.toc"
+msgstr "Содержание"
+
+msgid "issue.abstract"
+msgstr "Аннотация"
+
+msgid "issue.coverPage.altText"
+msgstr "Обложка"
+
+msgid "issue.fullIssue"
+msgstr "Весь выпуск"
+
+msgid "issue.nonpdf.title"
+msgstr "Скачать выпуск"
+
+msgid "issue.viewIssue"
+msgstr "Просмотреть выпуск"
+
+msgid "issue.return"
+msgstr "Вернуться к Подробностям о выпуске"
+
+msgid "subscriptionTypes.currency"
+msgstr "Валюта"
+
+msgid "subscriptionTypes.year"
+msgstr "год"
+
+msgid "subscriptionTypes.years"
+msgstr "годы"
+
+msgid "subscriptionTypes.month"
+msgstr "месяц"
+
+msgid "subscriptionTypes.months"
+msgstr "месяцы"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Бессрочная"
+
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Электронная"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Печатная"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Печатная и электронная"
+
+msgid "subscriptions.inactive"
+msgstr "Неактивна"
+
+msgid "subscriptions.status"
+msgstr "Статус"
+
+msgid "subscriptions.status.active"
+msgstr "Активна"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Требуется информация"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Требуется подтверждение"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Ожидание оплаты вручную"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Ожидание онлайн-оплаты"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "У вас нет активной подписки."
+
+msgid "subscriptions.status.other"
+msgstr "Другое, смотрите примечания"
+
+msgid "subscriptions.individualDescription"
+msgstr "Идивидуальные подписки требуют входа на сайт для доступа к контенту, предоставляемому по подписке."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Подписки на организацию не требуют входа пользователей на сайт. Для доступа к контенту, предоставляемому по подписке, используется домен пользователя и/или IP-адрес."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Примечание:</strong> Подписки на организацию, покупаемые через сайт, требуют подтверждения домена и диапазонов IP-адресов прежде чем подписка будет активирована."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Событие отправки"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Статья отправлена"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Статья отправлена в очередь запланированных в номер"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Статья назначена в выпуск"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Статья опубликована"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Автор прислал исправленную версию"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Файл авторской правки обновлен"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Назначен редактор для материала"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Отозван редактор для материала"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Отправлено решение редактора"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Файл редактора обновлен"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Материал отправлен в архив"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Материал восстановлен из архива"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Назначен литературный редактор для материала"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Отозван литературный редактор для материала"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Начато литературное редактирование"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Файл с правками литературного редактора обновлен"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Первоначальное литературное редактирование завершено"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Финальное литературное редактирование завершено"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Файл с литературной правкой обновлен"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Назначен корректор для материала"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Отозван корректор для материала"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Корректура начата"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Файл с правками корректора обновлен"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Корректура завершена"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Назначен верстальщик для материала"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Отозван верстальщик для материала"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Верстка начата"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Гранка обновлена"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Верстка завершена"
+
+msgid "reader.subscribersOnly"
+msgstr "Только для подписчиков"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Для доступа к этому материалу нужна подписка. Для проверки наличия подписки войдите на сайт журнала под своей учетной записью."
+
+msgid "reader.openAccess"
+msgstr "Открытый доступ"
+
+msgid "reader.subscriptionAccess"
+msgstr "Требуется подписка"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Требуется подписка или оплата"
+
+msgid "reader.purchasePrice"
+msgstr "({$price} {$currency})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Комментарии к этой статье"
+
+msgid "comments.authenticated"
+msgstr "(<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>)"
+
+msgid "search.results.orderBy"
+msgstr "Сортировать результаты по"
+
+msgid "search.results.orderBy.article"
+msgstr "названию статьи"
+
+msgid "search.results.orderBy.author"
+msgstr "автору"
+
+msgid "search.results.orderBy.date"
+msgstr "дате публикации"
+
+msgid "search.results.orderBy.issue"
+msgstr "выпуску"
+
+msgid "search.results.orderBy.journal"
+msgstr "названию журнала"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "популярности (за все время)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "популярности (за последний месяц)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "релевантности"
+
+msgid "search.results.orderDir.asc"
+msgstr "по возрастанию"
+
+msgid "search.results.orderDir.desc"
+msgstr "по убыванию"
+
+msgid "search.results.similarDocuments"
+msgstr "похожие документы"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>Указание источника аутентификации по умолчанию, отличного от OJS, имеет следующий эффект:</p>\n"
+"<ul>\n"
+"\t<li>Если пользователь пытается зарегистрировать на этом сайте новую учетную запись с именем пользователя, которое уже существует в источнике аутентификации (но не в базе данных OJS), попытка регистрации будет разрешена только в том случае, если пользователь введет пароль, соответствующий этой учетной записи в источнике аутентификации.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ВНИМАНИЕ!</h4>\n"
+"<p>Система не сможет автоматически перезаписать файл конфигурации. Чтобы применить ваши измененные настройки конфигурации, вам нужно открыть <tt>config.inc.php</tt> в подходящем текстовом редакторе и заменить его содержимое содержимым текстового поля ниже.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Управление подписками"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Индивидуальные подписки"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Подписки на организацию"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Типы подписок"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Модули гранок статей"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Модули гранок статей добавляют поддержку отображения документов различных типов в качестве гранок статьи."
+
+msgid "plugins.categories.auth.description"
+msgstr "Модули авторизации позволяют Open Journal Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера."
+
+msgid "plugins.categories.generic.description"
+msgstr "Общие модули используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями модулей."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>\n"
+"<h4>1. Предлагаемая политика для журналов, предлагающих открытый доступ</h4>\n"
+"Авторы, которые публикуются в данном журнале, соглашаются со следующими условиями:\n"
+"<ol type=\"a\">\n"
+"\t<li>Авторы сохраняют за собой авторские права на работу и передают журналу право первой публикации вместе с работой, одновременно лицензируя ее на условиях <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">лицензии Creative Commons Attribution</a>, которая позволяет другим распространять данную работу с обязательным указанием авторства данной работы и ссылкой на оригинальную публикацию в этом журнале.</li>\n"
+"\t<li>Авторы сохраняют право заключать отдельные, дополнительные контрактные соглашения на неисключительное распространение версии работы, опубликованной этим журналом (например, разместить ее в университетском хранилище или опубликовать ее в книге), со ссылкой на оригинальную публикацию в этом журнале.</li>\n"
+"\t<li>Авторам разрешается размещать их работу в сети Интернет (например, в университетском хранилище или на их персональном веб-сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению, а также к большему количеству ссылок на данную опубликованную работу (Смотрите <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Предлагаемая политика для журналов, предлагающих отложенный открытый доступ</h4>\n"
+"Авторы, которые публикуются в данном журнале, соглашаются со следующими условиями:\n"
+"<ol type=\"a\">\n"
+"\t<li>Авторы сохраняют за собой авторские права на работу и передают журналу право первой публикации вместе с работой, лицензируя ее по истечении [УКАЖИТЕ ПЕРИОД ВРЕМЕНИ] после публикации на условиях <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">лицензии Creative Commons Attribution</a>, которая позволяет другим распространять данную работу с обязательным указанием авторства данной работы и ссылкой на оригинальную публикацию в этом журнале.</li>\n"
+"\t<li>Авторы сохраняют право заключать отдельные, дополнительные контрактные соглашения на неэксклюзивное распространение версии работы, опубликованной этим журналом (например, разместить ее в университетском хранилище или опубликовать ее в книге), со ссылкой на оригинальную публикацию в этом журнале.</li>\n"
+"\t<li>Авторам разрешается размещать их работу в сети Интернет (например, в университетском хранилище или на их персональном веб-сайте) до и во время процесса рассмотрения ее данным журналом, так как это может привести к продуктивному обсуждению, а также к большему количеству ссылок на данную опубликованную работу (Смотрите <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Шаги: Очередь материалов &gt; Реценизрование материала &gt; Редактирование материала &gt; Содержание выпуска.<br /><br />\n"
+"Выберите модель для управления этими аспектами редакционного процесса. (Чтобы определить выпускающего редактора и редакторов разделов, перейдите в «Редакторы» в разделе «Управление журналом».)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Чтобы дать возможность читателям находить онлайн-версии работ, на которые ссылается автор, доступны следующие возможности.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Добавить инструмент читателя</strong><p>Управляющий журналом может добавить «Поиск ссылок» в Инструменты читателя, которые сопутствуют опубликованным материалам. Это позволит читателям вставлять название источника, на который ссылается автор, а затем искать его по предварительно выбранным базам данных научных работ.</p></li>\n"
+"\t<li><strong>Встроить гиперссылки в список литературы</strong><p>Верстальщик может добавить гиперссылку на источники, которые могут быть найдены в Интернет, используя следующие инструкции (инструкции могут быть отредактированы).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Отключить этого пользователя? Это запретит пользователю входить в систему под его учетной записью.\n"
+"\n"
+"Вы также (при необходимости) можете указать пользователю причину отключения его учетной записи."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Извините, у вас нет достаточных административных прав для управления записью этого пользователя. Возможные причины:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Этот пользователь является администратором сайта</li>\n"
+"\t\t\t<li>Этот пользователь активен в журналах, которыми вы не можете управлять</li>\n"
+"\t\t</ul>\n"
+"\tЭта задача должна быть выполнена администратором сайта.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Выделенные строки означают, что редактор должен выполнить определенные действия, при этом используются следующие обозначения:</li>\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Рецензент был назначен, но не был уведомлен электронной почтой</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Все рецензенты прислали свои рецензии с комментариями, но решение не было принято</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Автор загрузил на сайт исправленную версию материала</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Рецензент не подтвердил свое участие в рецензировании до указанного срока</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Рецензент не предоставил рецензию до указанного срока</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>Поле «Срок выполнения» заполняется, когда рецензент соглашается принять участие в рецензировании; оно показывает количество недель до истечения срока, отведенного на рецензирование, или (со знаком минус) количество недель, на которые срок предоставления рецензии просрочен.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Выделенные строки означают, что редактор должен выполнить определенные действия, при этом используются следующие обозначения:</li>\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Требуется действие на стадии литературного редактирования</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Требуется действие на стадии верстки</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Требуется действие на стадии корректуры</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Активные редакционные задания"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Выполненные редакционные задания"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Нет назначенных материалов."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Уведомление этого литературного редактора приведет к повторному запуску задания с самого начала. Вы уверены, что хотите это сделать?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Уведомление этого автора приведет к повторному запуску задания с самого начала. Вы уверены, что хотите это сделать?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Уведомление этого верстальщика приведет к повторному запуску задания с самого начала. Вы уверены, что хотите это сделать?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Уведомление этого корректора приведет к повторному запуску задания с самого начала. Вы уверены, что хотите это сделать?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Отказы"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Отказы рецензентов, отмены и предыдущие раунды"
+
+msgid "sectionEditor.regrets"
+msgstr "Отказы"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Просмотреть отказы, отмены и предыдущие раунды"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Рецензирование, раунд {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Решение редактора, раунд {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Отказы рецензентов и отмены"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Отказ"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Результат"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Назначить существующего пользователя рецензентом"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Создать нового рецензента"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Активные редакционные задания"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Выполненные редакционные задания"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Нет активных редакционных заданий."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Задания на верстку"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Загрузить формат гранок"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Заменить файл"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Загрузить дополнительный файл"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Неверный формат изображения. Разрешенные форматы: .gif, .jpg, и .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Эта гранка будет доступна на отдельном веб-сайте."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL контента, размещаемого на внешнем ресурсе"
+
+msgid "reviewer.pendingReviews"
+msgstr "Статьи, ожидающие рецензии"
+
+msgid "reviewer.completedReviews"
+msgstr "Завершены"
+
+msgid "reviewer.averageQuality"
+msgstr "Рейтинг"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Файл, который нужно отрецензировать"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Уведомить редактора"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Согласен на рецензирование"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Отказываюсь от рецензирования"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Рукопись будет доступна только в том случае, если рецензент согласится на рецензирование"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Редактор материала"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Введите или вставьте здесь комментарии рецензента"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Редактор для ввода"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Отправить напоминание"
+
+msgid "reviewer.article.automatic"
+msgstr "(Авто)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Рекомендация"
+
+msgid "reviewer.article.submitReview"
+msgstr "Отправить рецензию редактору"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Комментарии"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Загруженные файлы"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Версия, загруженная рецензентом"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Если вы хотите добавить свои пометки в файл для редактора, сохраните файл на свой компьютер и используйте Обзор/Загрузить.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Запрос редактора"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Ваш ответ"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Рецензия отправлена"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Срок отправки рецензии"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Принять материал"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Требуется доработка"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Отправить на рецензию повторно"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Отправить в другое место"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Отклонить статью"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Смотри комментарии"
+
+msgid "reviewer.article.schedule"
+msgstr "Расписание"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Материал на рецензию"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Расписание рецензирования"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Шаги рецензирования"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Руководство для рецензентов"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Руководство для рецензентов знакомит рецензентов с критериями оценки степени соответствия материала для публикации в данном журнале, и может включать любые дополнительные инструкции по подготовке эффективной и полезной рецензии. При написании рецензии у рецензентов есть два текстовых поля: первое «Для автора и редактора» и второе «Для редактора». В качестве альтернативы управляющий журналом может создать форму рецензии в разделе «Формы для рецензий». В любом из этих случаев редакторы будут иметь возможность дать авторам возможность ознакомиться с рецензиями."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Уведомить редактора материала ("
+
+msgid "reviewer.article.notifyEditorB"
+msgstr ") о том, что вы согласны дать рецензию."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Если вы собираетесь дать рецензию, ознакомьтесь с Руководством для рецензентов, приведенным ниже."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Щелкайте на именах файлов, чтобы скачать и просмотреть файлы, связанные с этим материалом (отобразить их на экране или распечатать)."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Укажите наличие или отсутствие конфликта интересов в отношении данного исследования (смотриье <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Руководство по заполнению Декларации о конфликте интересов</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Конфликт интересов"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Щелкните на значке, чтобы ввести (или вставить) Вашу рецензию на эту статью."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Кроме того, Вы можете загрузить файлы для редактора и/или автора для консультации."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Выберите рекомендацию и отправьте рецензию для завершения процесса редактирования. Вы должны ввести рецензию или загрузить файл до выбора рекомендации."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Задать или изменить рекомендацию рецензента."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Рекомендация не была выбрана. Вы должны выбрать рекомендацию для отправки."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Как только Вы запишите свое решение, Вы больше не сможете вносить изменения в эту рецензию. Вы уверены, что хотите продолжить?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Файл для литературного редактирования"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Файл литературного редактора"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Файл литературного редактора"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Нет заданий на корректуру"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Чтобы отправить материал в этот журнал, выполните следующие шаги.</p>\n"
+"<ol>\n"
+"<li>На этой странице щелкните на «Обзор» (или «Выбрать файл»), после чего откроется диалоговое окно для выбора файла на жестком диске Вашего компьютера.</li>\n"
+"<li>Найдите файл, который Вы хотите отправить, и выберите его.</li>\n"
+"<li>Щелкните на «Открыть» в окне «Выбор файла» — имя выбранного Вами файла будет добавлено на эту страницу.</li>\n"
+"<li>Щелкните на «Загрузить на сервер» на этой странице — файл будет загружен с компьютера на веб-сайт журнала и переименован в соответствии с правилами журнала.</li>\n"
+"<li>После того как материал будет загружен, щелкните на «Сохранить и продолжить» в нижней части этой страницы.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Письмо с запросом не может быть отправлено до тех пор, пока не будет загружен файл с версией для рецензента."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Письмо с запросом не может быть отправлено до тех пор, пока не будет выбран файл для литературного редактирования в разделе «Решение редактора» на странице «Рецензирование»."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Письмо с запросом не может быть отправлено до тех пор, пока не будет загружен файл для литературного редактирования."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Первоначальное литературное редактирование"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Литературное редактирование редактором"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Литературное редактирование автором"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Окончательное литературное редактирование"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Версия для литературного редактирования"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Назначить литературного редактора"
+
+msgid "submission.copyedit.useFile"
+msgstr "Использовать файл"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Комментарии к литературному редактированию"
+
+msgid "submission.copyedit.instructions"
+msgstr "Руководство по литературному редактированию"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Отсутствует (Перед отправкой запроса загрузите окончательную версию из литературного редактирования как версию для верстки)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Открытый идентификатор гранки"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Открытый идентификатор гранки уже существует."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Назначить верстальщика"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Заменить верстальщика"
+
+msgid "submission.layout.layoutComments"
+msgstr "Комментарии к верстке"
+
+msgid "submission.layout.instructions"
+msgstr "Руководство по верстке"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Вставка гиперссылок на источники"
+
+msgid "submission.proofreadingComments"
+msgstr "Комментарии к корректуре"
+
+msgid "submission.proofread.corrections"
+msgstr "Корректорские правки"
+
+msgid "submission.proofread.instructions"
+msgstr "Руководство по корректуре"
+
+msgid "submission.logType.article"
+msgstr "Статья"
+
+msgid "submission.logType.author"
+msgstr "Автор"
+
+msgid "submission.logType.editor"
+msgstr "Редактор"
+
+msgid "submission.logType.review"
+msgstr "Рецензирование"
+
+msgid "submission.logType.copyedit"
+msgstr "Литературное редактирование"
+
+msgid "submission.logType.layout"
+msgstr "Верстка"
+
+msgid "submission.logType.proofread"
+msgstr "Корректура"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Переписка «Редактор/Автор»"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Комментарии к литературному редактированию"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Эти комментарии могут быть показаны автору.<br />\n"
+"(После сохранения могут быть добавлены дополнительные комментарии.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Для автора и редактора"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Для редактора"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "После отправки показать редактируемую копию для индивидуальной отправки (BCC) рецензентам."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Для автора и редактора"
+
+msgid "submission.comments.forEditor"
+msgstr "Для редактора"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Сохранить и отправить автору"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Сохранить и отправить редактору"
+
+msgid "user.register.selectContext"
+msgstr "Выбрать журнал для регистрации:"
+
+msgid "user.register.noJournals"
+msgstr "На сайте нет журналов, в которых Вы могли бы зарегистрироваться."
+
+msgid "user.register.privacyStatement"
+msgstr "Заявление о конфиденциальности"
+
+msgid "user.register.registrationDisabled"
+msgstr "Этот журнал сейчас в настоящий момент не регистрирует новых пользователей."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Введенный Вами пароль слишком короткий."
+
+msgid "user.register.readerDescription"
+msgstr "Получает сообщения по электронной почте о публикации нового выпуска журнала."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Получает уведомления по электронной почте, когда к выпуску журнала предоставляется открытый доступ."
+
+msgid "user.register.authorDescription"
+msgstr "Может отправлять статьи в журнал."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Согласен участвовать в рецензировании материалов для этого журнала."
+
+msgid "user.register.reviewerDescription"
+msgstr "Согласен участвовать в рецензировании материалов для этого сайта."
+
+msgid "user.register.reviewerInterests"
+msgstr "Укажите Ваши интересы как рецензента (основная тематика, методы исследования):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Да, я хочу, чтобы меня уведомляли о новых публикациях и объявлениях во всех журналах, в которых я зарегистрирован."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "Да, я даю согласие на сбор и хранение моих данных в рамках <a href=\"{$privacyUrl}\" target=\"_blank\">политики конфиденциальности</a> этого журнала."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "Вы должны согласиться с политикой конфиденциальности любого журнала, в котором вы регистрируетесь."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Вы должны согласиться с политикой конфиденциальности этого сайта."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Мои подписки"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Статус подписки"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Активные и истекшие подписки отображаются ниже вместе с датой их окончания. Помимо этого, в каждую подписку может быть включена следующая информация о статусе."
+
+msgid "user.subscriptions.status"
+msgstr "Статус"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Описание"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Перед активацией подписки необходима дополнительная информация"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Перед активацией подписки ее необходимо просмотреть"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Оплата вручную была инициирована, но еще не получена"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Онлайн-оплата была инициирована, но затем была отменена или не была завершена"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Индивидуальная подписка"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Подписки на организацию"
+
+msgid "user.subscriptions.renew"
+msgstr "Продлить"
+
+msgid "user.subscriptions.purchase"
+msgstr "Приобрести"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Приобрести новую подписку"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Приобрести индивидуальную подписку"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Приобрести подписку на организацию"
+
+msgid "user.subscriptions.expires"
+msgstr "Заканчивается: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Закончилась: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Показать доступные типы подписки"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Тип подписки"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Выбранный тип подписки требует информацию о членстве."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Пожалуйста, выберите правильный тип подписки."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Пользователь с этой учетной записью уже имеет индивидуальную подписку."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Информация о членстве (если необходима для выбранного типа подписки)."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Название организации"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Название организации обязательно."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Почтовый адрес"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Если здесь введен домен, то диапазоны IP-адресов вводить необязательно.<br />Допустимые значения — доменные имена (например, lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Выбранный тип подписки требует указания домена и/или диапазона IP-адресов для аутентификации по подписке."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Пожалуйста, введите верное доменное имя."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Диапазоны IP-адресов"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Если здесь введены диапазоны IP-адресов, то указание домена необязательно.<br />Допустимыми значениями являются IP-адрес (например, 142.58.103.1), диапазон IP-адресов (например, 142.58.103.1 - 142.58.103.4), диапазон IP-адресов с символом подстановки «*» (например, 142.58.*.*) и диапазон IP-адресов с маской при бесклассовой маршрутизации (например, 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Пожалуйста, введите правильный диапазон IP-адресов."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Удалить"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Добавить"
+
+msgid "search.browseAuthorIndex"
+msgstr "Просмотреть список авторов"
+
+msgid "search.searchFor"
+msgstr "Поиск статей"
+
+msgid "search.withinJournal"
+msgstr "В журнале"
+
+msgid "search.allJournals"
+msgstr "Все журналы"
+
+msgid "search.authorIndex"
+msgstr "Просмотреть список авторов"
+
+msgid "search.authorDetails"
+msgstr "Информация об авторе"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Советы по поиску: <ul>\n"
+"<li>Поиск ведется без учета регистра (строчные и прописные буквы не различаются)</li>\n"
+"<li>Общие слова игнорируются</li>\n"
+"<li>По умолчанию отображаются только статьи, содержащие <em>все</em> слова из запроса (то есть предполагается условие <em>AND</em>)</li>\n"
+"<li>Для поиска статей, содержащих один из терминов, разделяйте слова с помощью <em>OR</em>, например, <em>образование OR обучение</em></li>\n"
+"<li>Используйте круглые скобки для создания более сложных запросов, например, <em>архив ((журнал OR конференция) NOT диссертации)</em></li>\n"
+"<li>Для поиска точного совпадения фразы используйте кавычки, например, <em>\"издания в открытом доступе\"</em></li>\n"
+"<li>Исключайте слово из поиска, поставив перед ним <strong>-</strong> (дефис) или <em>NOT</em>, например <em>конкурс -красоты</em> или <em>конкурс NOT красоты</em></li>\n"
+"<li>Используйте <strong>*</strong> в качестве специального символа, заменяющего любую последовательность символов, например, <em>соц* мораль</em> найдет документы, содержащие «социальная» или «социологическая»</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Просмотр «{$title}»"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Скачать этот файл PDF"
+
+msgid "article.pluginMissing"
+msgstr "<p>Выбранный Вами файл PDF должен загружаться здесь, если у Вашего веб-браузера установлен модуль для чтения PDF (например, последняя версия <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Скачать статью"
+
+msgid "article.nonpdf.note"
+msgstr "Выбранный файл должен начать скачиваться автоматически. Если это не произошло, щелкните на ссылке ниже. Обратите внимание, что этот файл может потребовать специальной программы или модуля для просмотра.<br /><br />Если файл не начал скачиваться автоматически, <a href=\"{$url}\">щелкните здесь</a>."
+
+msgid "site.journalsHosted"
+msgstr "Журналы, размещенные на этом сайте"
+
+msgid "site.journalView"
+msgstr "Посмотреть журнал"
+
+msgid "site.journalRegister"
+msgstr "Зарегистрироваться"
+
+msgid "site.journalCurrent"
+msgstr "Текущий выпуск"
+
+msgid "site.noJournals"
+msgstr "Нет доступных журналов."
+
+msgid "current.current"
+msgstr "Текущий"
+
+msgid "current.noCurrentIssue"
+msgstr "Нет текущего выпуска"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "У этого журнала нет опубликованных выпусков."
+
+msgid "archive.archives"
+msgstr "Архивы"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архивы - Страница {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Просмотреть старые выпуски"
+
+msgid "archive.issueUnavailable"
+msgstr "Выпуск недоступен"
+
+msgid "about.statistics"
+msgstr "Статистика"
+
+msgid "about.contact"
+msgstr "Контакты"
+
+msgid "about.aboutContext"
+msgstr "О журнале"
+
+msgid "about.history"
+msgstr "История журнала"
+
+msgid "about.editorialTeam"
+msgstr "Редакция"
+
+msgid "about.editorialTeam.biography"
+msgstr "Биография"
+
+msgid "about.editorialPolicies"
+msgstr "Редакционная политика"
+
+msgid "about.focusAndScope"
+msgstr "Концепция журнала"
+
+msgid "about.sectionPolicies"
+msgstr "Правила разделов журнала"
+
+msgid "about.submissions"
+msgstr "Отправка материалов"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Войти в систему"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Зарегистрироваться"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Для отправки материала вам нужно {$login} или {$register}."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} или {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Отправить новый материал в раздел <a href=\"{$url}\">«{$name}»</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Отправить новый материал"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "просмотреть ранее отправленные материалы"
+
+msgid "about.authorGuidelines"
+msgstr "Руководство для авторов"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Контрольный список подготовки материала к отправке"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "В качестве одного из этапов процесса отправки авторы должны проверить соответствие их материала всем следующим пунктам, материалы могут быть возвращены авторам, если они не соответствуют этим требованиям."
+
+msgid "about.copyrightNotice"
+msgstr "Условия передачи авторских прав"
+
+msgid "about.privacyStatement"
+msgstr "Заявление о конфиденциальности"
+
+msgid "about.authorFees"
+msgstr "Платежи авторов"
+
+msgid "about.authorFeesMessage"
+msgstr "Этот журнал взымает с авторов следующие платежи."
+
+msgid "about.peerReviewProcess"
+msgstr "Процесс рецензирования"
+
+msgid "about.publicationFrequency"
+msgstr "Периодичность издания"
+
+msgid "about.openAccessPolicy"
+msgstr "Политика открытого доступа"
+
+msgid "about.delayedOpenAccess"
+msgstr "Отложенный открытый доступ"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Содержимое этого журнала будет опубликовано в открытом доступе через"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "месяцев после публикации выпуска."
+
+msgid "about.archiving"
+msgstr "Архивация"
+
+msgid "about.subscriptions"
+msgstr "Подписки"
+
+msgid "about.subscriptions.individual"
+msgstr "Индивидуальные подписки"
+
+msgid "about.subscriptions.institutional"
+msgstr "Подписки на организацию"
+
+msgid "about.subscriptionsContact"
+msgstr "Контактное лицо для подписки"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Имя"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Продолжительность"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Цена"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Типы подписок"
+
+msgid "about.memberships"
+msgstr "Членства"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Об этой издательской системе"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Редакционный и издательский процесс OJS"
+
+msgid "about.aboutOJSJournal"
+msgstr "Этот журнал использует Open Journal Systems {$ojsVersion}, которая является программным обеспечением с открытым исходным кодом для управления журналами и их публикации. Данное программное обеспечение разработано, поддерживается и свободно распространяется <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> по лицензии GNU General Public License."
+
+msgid "about.aboutOJSSite"
+msgstr "Этот сайт использует Open Journal Systems {$ojsVersion}, которая является программным обеспечением с открытым исходным кодом для управления журналами и их публикации. Данное программное обеспечение разработано, поддерживается и свободно распространяется <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> по лицензии GNU General Public License."
+
+msgid "help.ojsHelp"
+msgstr "Помощь по Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Помощь по OJS"
+
+msgid "help.searchReturnResults"
+msgstr "Вернуться к результатам поиска"
+
+msgid "help.goToEditPage"
+msgstr "Редактировать {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Спасибо"
+
+msgid "donations.thankYouMessage"
+msgstr "Спасибо вам за ваш вклад. Мы высоко ценим вашу поддержку."
+
+msgid "payment.loginRequired"
+msgstr "Для осуществления платежа вам необходимо войти в систему."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Для доступа требуется подписка или приобретенный доступ к этой статье. Чтобы проверить Вашу подписку, получить доступ к предыдущим покупкам или купить статью, пожалуйста, войдите в систему."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Для доступа требуется подписка или приобретенный доступ к этому выпуску. Чтобы проверить Вашу подписку, получить доступ к предыдущим покупкам или купить выпуск, пожалуйста, войдите в систему."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Для внесения пожертвования вам необходимо войти в систему."
+
+msgid "payment.paid"
+msgstr "Оплачено"
+
+msgid "payment.payNow"
+msgstr "Оплатить сейчас"
+
+msgid "payment.waive"
+msgstr "Отменить платеж"
+
+msgid "payment.alreadyPaid"
+msgstr "Уже оплачено"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Выберите этот пункт, если вы уже отправили свой платеж в журнал для завершения процесса отправки материала. Материал не будет рассматриваться до прихода платежа. Щелкните на «Оплатить сейчас» выше, чтобы увидеть инструкции по оплате."
+
+msgid "payment.paymentReceived"
+msgstr "Платеж получен"
+
+msgid "payment.paymentSent"
+msgstr "Платеж уже был отправлен"
+
+msgid "payment.authorFees"
+msgstr "Платежи авторов"
+
+msgid "payment.type.submission"
+msgstr "Плата за отправку"
+
+msgid "payment.type.publication"
+msgstr "Плата за публикацию"
+
+msgid "payment.type.publication.required"
+msgstr "Необходимо внести плату за публикацию."
+
+msgid "payment.type.fastTrack"
+msgstr "Плата за ускоренное рассмотрение"
+
+msgid "payment.type.membership"
+msgstr "Плата за индивидуальное членство"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Плата за покупку статьи"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Плата за покупку номера"
+
+msgid "payment.type.subscription"
+msgstr "Плата за подписку"
+
+msgid "payment.type.donation"
+msgstr "Пожертвования"
+
+msgid "payment.requestPublicationFee"
+msgstr "Запросить плату за публикацию ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Платёж был запрошен, но срок оплаты прошёл. Свяжитесь с управляющим журнала для получения подробной информации."
+
+msgid "payment.donation.makeDonation"
+msgstr "Сделать пожертвование"
+
+msgid "payment.submission.paySubmission"
+msgstr "Оплатить отправку материала"
+
+msgid "payment.publication.payPublication"
+msgstr "Оплатить публикацию"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Публикация оплачена"
+
+msgid "payment.membership.buyMembership"
+msgstr "Приобрести индивидуальное членство"
+
+msgid "payment.membership.renewMembership"
+msgstr "Продлить индивидуальное членство"
+
+msgid "payment.membership.ends"
+msgstr "Заканчивается"
+
+msgid "payment.subscription.purchase"
+msgstr "Приобрести подписку"
+
+msgid "payment.subscription.renew"
+msgstr "Продлить подписку"
+
+msgid "payment.subscription.expires"
+msgstr "Истекает"
+
+msgid "installer.appInstallation"
+msgstr "Установка OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Обновление OJS"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Версия OJS {$version}</h4>\n"
+"\n"
+"<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href=\"{$baseUrl}/docs/README.md\">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">веб-сайт PKP</a>. Если вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">форум поддержки</a> или посетите онлайновую <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Обновление</h4>\n"
+"\n"
+"<p>Если вы обновляете существующую инсталляцию OJS, <a href=\"{$upgradeUrl}\">щелкните здесь</a> для продолжения.</p>\n"
+"\n"
+"<h4>Рекомендуемые требования к системе</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; вы сейчас используете PHP {$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 или <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x или >= 2.0.4x или Microsoft IIS 6</li>\n"
+"\t<li>Операционная система: любая ОС, которая поддерживает вышеперечисленное программное обеспечение, включая <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Поскольку у PKP нет ресурсов, чтобы тестировать все возможные комбинации версий программного обеспечения и платформ, то не предполагается никаких гарантий правильной работы или поддержки.</p>\n"
+"\n"
+"<p>Изменения этих параметров могут быть сделаны после установки системы путем редактирования файла <tt>config.inc.php</tt>, лежащего в основном каталоге OJS, или с помощью веб-интерфейса администрирования сайта.</p>\n"
+"\n"
+"<h4>Поддерживаемые СУБД</h4>\n"
+"\n"
+"<p>OJS на текущий момент была протестирована только на MySQL и PostgreSQL, хотя другие СУБД, поддерживаемые <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a>, также могут работать (полностью или частично). Отчеты о совместимости и/или исправления кода для альтернативных СУБД можно высылать команде проекта OJS.</p>\n"
+""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Шаги подготовки к установке</h4>\n"
+"\n"
+"\n"
+"<p>1. Следующие файлы и каталоги (и их содержимое) необходимо сделать доступными для записи:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> доступен для записи (не обязательно): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> доступен для записи: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> доступен для записи: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> доступен для записи: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> доступен для записи: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> доступен для записи: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Каталог для хранения загруженных файлов должен быть создан и сделан доступным для записи (смотри «Настройки файлов» ниже).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Версия OJS {$version}</h4>\n"
+"\n"
+"<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href=\"{$baseUrl}/docs/README.md\">README</a> и <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">форум поддержки</a> или посетите онлайновую <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Перед продолжением <strong>настоятельно рекомендуется</strong> создать резервную копию базы данных, каталога с файлами и каталога с установленной системой OJS.</p>\n"
+"<p>Если PHP запущен у вас в режиме <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP Safe Mode</a>, пожалуйста, убедитесь, что значение max_execution_time в файле конфигурации php.ini задано достаточно большим. Если это или какое-либо другое ограничение по времени (например, значение Timeout для Apache) будет достигнуто и процес обновления будет прерван, потребуется ручное вмешательство в процесс обновления.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Для полной поддержки Unicode (UTF-8), выберите UTF-8 для всех настроек кодировки символов. Пожалуйста, обратите внимание, что полная поддержка Unicode требует PHP, откомпилированного с поддержкой библиотеки <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> (включена по умолчанию в большинстве современных инсталляций PHP). У Вас могут возникнуть проблемы с расширенными кодировками, если сервер не соответствует этим требованиям.\n"
+"<br /><br />\n"
+"Ваш сервер сейчас поддерживает mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "Ваш сервер сейчас разрешает загрузку файлов: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Ваш сервер сейчас разрешает максимальный размер загружаемого файла, равный: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Основной язык, который будет использоваться для этой системы. Пожалуйста, обратитесь к документации OJS, если вы заинтересованы в поддержке языков, отсутствующих в этом списке."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Выберите любые дополнительные языки, которые будут поддерживаться в этой системе. Эти языки будут доступны для использования в журналах, размещенных на сайте. Дополнительные языки могут также быть установлены в любой момент из интерфейса администрирования сайта."
+
+msgid "installer.filesDirInstructions"
+msgstr "Введите полный путь к существующему каталогу, в котором будут храниться загруженные файлы. Этот каталог не должен быть напрямую доступен через сеть Интернет. <strong>Пожалуйста, убедитесь, что каталог существует и доступен для записи перед установкой.</strong> Пути к каталогам в Windows должны использовать прямые слэши, например, «C:/myjournal/files»."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS для хранения своих данных требует доступ к базе данных, поддерживающей язык SQL. Выше, в требованиях к системе, указаны поддерживаемые базы данных. В полях ниже укажите настройки, которые будут использованы для соединения с базой данных."
+
+msgid "installer.installApplication"
+msgstr "Установить Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Обновить Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Предупреждение:</strong> Если установка завершится неудачей в процессе установки базы данных, вам может потребоваться удалить Вашу базу данных OJS или таблицы из базы данных, после чего предпринять попытку переустановить базу данных."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ВАЖНО!</h4>\n"
+"<p>Установщик не смог автоматически перезаписать файл конфигурации. Прежде чем попытаться воспользоваться системой, пожалуйста, откройте <tt>config.inc.php</tt> в подходящем текстовом редакторе и замените его содержимое содержимым текстового поля ниже.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Установка OJS была успешно завершена.</p>\n"
+"<p>Чтобы начать использовать систему, <a href=\"{$loginUrl}\">войдите в систему</a> с именем пользователя и паролем, который вы ввели на предыдущей странице.</p>\n"
+"<p>Если вы хотите стать частью сообщества PKP, вы можете:</p>\n"
+"<ol>\n"
+"\t<li>Читать <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">блог PKP</a> и подписаться на <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">ленту RSS</a> для получения новостей и обновлений.</li>\n"
+"\t<li>Посещать <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">форум поддержки</a>, если у Вас есть вопросы или комментарии.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Обновление OJS до версии {$version} было успешно завершено.</p>\n"
+"<p>Не забудьте установить параметр installed в файле конфигурации config.inc.php обратно в значение <em>On</em>.</p>\n"
+"<p>Если вы еще не зарегистрированы и хотите получать новости и обновления, <strong>пожалуйста, зарегистрируйтесь на <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Если у Вас есть вопросы или предложения, пожалуйста, посетите <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">форум поддержки</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. Самая последняя версия — OJS {$latestVersion}. Пожалуйста, зайдите на <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">эту страницу</a>, чтобы скачать самую последнюю версию и получить инструкции по обновлению."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. Самая последняя версия — OJS {$latestVersion}. Пожалуйста, свяжитесь с вашим администратором сайта ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>), чтобы уведомить его об этой новой версии. Более подробную информацию можно найти <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">здесь</a>."
+
+msgid "log.author.documentRevised"
+msgstr "Автор {$authorName} исправил статью {$submissionId}. Новый ID файла — {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "Рецензент {$reviewerName} был освобожден от рецензирования материала {$submissionId} на {$round}-м раунде рецензирования."
+
+msgid "log.review.reviewInitiated"
+msgstr "{$round}-й раунд рецензирования рецензентом {$reviewerName} для материала {$submissionId} был начат."
+
+msgid "log.review.reviewerRated"
+msgstr "Рецензенту {$reviewerName} был присвоен рейтинг на {$round}-м раунде рецензирования материала {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "Срок выполнения рецензии в рамках {$round}-го раунда рецензирования материала {$submissionId} рецензентом {$reviewerName} был установлен равным {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "Рекомендация на {$round}-м раунде рецензирования материала {$submissionId} рецензентом {$reviewerName} была задана."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Рекомендация на {$round}-м раунде рецензирования материала {$submissionId} была задана редактором ({$editorName}) по поручению рецензента ({$reviewerName})."
+
+msgid "log.review.resubmit"
+msgstr "Материал {$submissionId} был снова отправлен на рецензирование."
+
+msgid "log.review.reviewDeclined"
+msgstr "Рецензент {$reviewerName} отказался дать рецензию на {$round}-м раунде рецензирования для материала {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "Рецензент {$reviewerName} согласился дать рецензию на {$round}-м раунде рецензирования для материала {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "Редактор {$userName} внес отказ дать рецензию на {$round}-м раунде рецензирования для материала {$submissionId} по поручению рецензента ({$reviewerName})."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "Редактор {$userName} внес согласие дать рецензию на {$round}-м раунде рецензирования для материала {$submissionId} по поручению рецензента ({$reviewerName})."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Редактор {$userName} загрузил файл рецензии на {$round}-м раунде рецензирования материала {$submissionId} по поручению рецензента {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Файл рецензента был загружен на сайт."
+
+msgid "log.editor.decision"
+msgstr "Решение редакции ({$decision}) по статье {$submissionId} было введено редактором ({$editorName})."
+
+msgid "log.editor.recommendation"
+msgstr "Рекомендация редактора ({$decision}) по статье {$submissionId} была введена редактором {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "Литературное редактирование материала {$submissionId} было начато литературным редактором ({$copyeditorName})."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Для литературного редактирования был выбран файл по умолчанию."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "Литературный редактор {$copyeditorName} завершил первоначальное литературное редактирование материала {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "Литературный редактор {$copyeditorName} завершил окончательное литературное редактирование материала {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "Литературный редактор {$copyeditorName} был назначен для литературного редактирования материала {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Версия материала, исправленная литературным редактором, была загружена на сайт."
+
+msgid "log.copyedit.authorFile"
+msgstr "Версия материала, исправленная автором на этапе литературного редакторования, была загружена на сайт."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "Верстальщик {$editorName} был назначен верстальщиком материала {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "Верстальщик {$editorName} был освобожден от верстки материала {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "Верстальщик {$editorName} завершил верстку материала {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "Метаданные для этой статьи были изменены редактором ({$editorName})."
+
+msgid "log.editor.editorFile"
+msgstr "Версия материала, исправленная редактором, была загружена на сайт."
+
+msgid "log.editor.archived"
+msgstr "Материал {$submissionId} был перемещен в архив."
+
+msgid "log.editor.restored"
+msgstr "Материал {$submissionId} был восстановлен из архива в очередь."
+
+msgid "log.editor.editorAssigned"
+msgstr "Редактор {$editorName} был назначен редактором материала {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "Пользователь {$assignerName} назначил пользователя {$proofreaderName} корректором материала {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "Корректор {$proofreaderName} отправил материала {$submissionId} для размещения в выпуске."
+
+msgid "log.imported"
+msgstr "Пользователь {$userName} импортировал статью {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Рецензированная статья"
+
+msgid "notification.type.editing"
+msgstr "События редактирования"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Новая статья «{$title}» была отправлена."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Добавлен комментарий о решении редакции для «{$title}»."
+
+msgid "notification.type.galleyModified"
+msgstr "Изменена гранка для «{$title}»."
+
+msgid "notification.type.issuePublished"
+msgstr "Опубликован новый выпуск."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Создано новое обьявление."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Форма рецензии была отправлена для «{$title}»."
+
+msgid "notification.type.reviewing"
+msgstr "События рецензирования"
+
+msgid "notification.type.site"
+msgstr "События сайта"
+
+msgid "notification.type.submissionComment"
+msgstr "Редактор оставил комментарий к «{$title}»."
+
+msgid "notification.type.submissions"
+msgstr "События процесса отправки"
+
+msgid "notification.type.userComment"
+msgstr "Читатель добавил комментарий к «{$title}»"
+
+msgid "notification.type.public"
+msgstr "Публичные объявления"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Сохранены метаданные публикации выпуска."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Была отправлена новая статья, которой нужно назначить редактора."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Назначить пользователя для создания гранок с помощью ссылки «Назначить» в списке «Участники»."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Ожидающие гранок."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Доступ запрещен! Вы не были назначены литературным редактором этой статьи."
+
+msgid "user.authorization.noContext"
+msgstr "Нет журнала в контексте!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Вы пытаетесь получить доступ к статье, которая не относится к Вашему разделу."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Запрошен неправильный выпуск!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Версия, отправленная литературным редактором, является неправильной или запрос на литературное редактирование не был отправлен!"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "Загружен список валют «{$filename}» из XML"
+
+msgid "grid.action.createContext"
+msgstr "Создать новый журнал"
+
+msgid "editor.navigation.issues"
+msgstr "Выпуски"
+
+msgid "notification.type.approveSubmission"
+msgstr "Этот материал сейчас ожидает одобрения, после чего он появится в выпуске."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Ожидает одобрения."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Зарегистрироваться в других журналах"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Скрыть другие журналы"
+
+msgid "article.view.interstitial"
+msgstr "Пожалуйста, выберите файл статьи для скачивания."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Одобрен"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Ожидает одобрения"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Одобрение гранок"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Одобрить эту гранку для публикации.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Отменить одобрение этой гранки.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Индексирование «{$journalName}»"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Эта реализация поиска не разрешает пожурнальную переиндексацию."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "По данному пути к журналу «{$journalPath}» не удается найти журнал."
+
+msgid "editor.issues.backIssues"
+msgstr "Прошлые выпуски"
+
+msgid "editor.issues.futureIssues"
+msgstr "Будущие выпуски"
+
+msgid "navigation.subscriptions"
+msgstr "Подписки"
+
+msgid "log.editor.submissionExpedited"
+msgstr "Редактор {$editorName} взялся за процесс редактирования по статье {$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "Сортировка статей"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Выберите способ сортировки статей в этой категории."

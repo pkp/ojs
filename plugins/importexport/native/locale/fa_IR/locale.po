@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:43+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:43+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "افزونه XML مقالات و شماره ها"
+
+msgid "plugins.importexport.native.description"
+msgstr "درون ریزی یا برون دهی مقالات و شماره ها"
+
+msgid "plugins.importexport.native.import"
+msgstr "درون ریزی"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "آپلود یک فایل XML برای درون ریزی"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "مقاله مورد نظر برای برون دهی را انتخاب کنید."
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "برون دهی مقالات"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "برون دهی شماره ها"
+
+msgid "plugins.importexport.native.results"
+msgstr "نتایج"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "برای ادامه ابتدا یک فایل را در قسمت \"درون ریزی\" آپلود کنید"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "درون ریزی با موفقیت انجام شد، موارد زیر به سیستم درون ریزی شد:"
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr "نحوه استفاده: {$scriptName} {$pluginName} [command] ...  فرامین:  import [xmlFileName] [journal_path] [user_name] ...  export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...  export [xmlFileName] [journal_path] article [articleId]  export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...  export [xmlFileName] [journal_path] issue [issueId]\tبرای وارد کردن داده ها پارامترهای دیگری به شرح ذیل بسته به root node سند XML لازم است:  چنانچه root node موجود <article> و یا <articles> باشد پارامترهای دیگری نیز لازم است. الگوهای زیر قابل قبول است:\t{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]  issue_id [issueId] section_id [sectionId]\t{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]  issue_id [issueId] section_name [name]\t{$scriptName} {$pluginName} import [xmlFileName] [journal_path]  issue_id [issueId] section_abbrev [abbrev]"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "بخش ناشناس {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "کاربر ذکر شده \"{$userName}\" وجود ندارد."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr "نوع مقاله ذکر شده \"{$section1Title}\" و \"{$section2Title}\" در شماره مجله \"{$issueTitle}\" برای نوع دیگری از مقاله در این مجله بکار رفته است."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr "عنوان نوع مقاله \"{$sectionTitle}\" در شماره مجله \"{$issueTitle}\" برای یک نوع دیگز مقاله بکار رفته است ولی عنوان دیگر این نوع مقاله تکراری نیست."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr "علامت اختصاری نوع مقاله اول \"{$section1Abbrev}\" و دوم \"{$section2Abbrev}\" در مجله شماره \"{$issueTitle}\" مطابقت با مجلات مختلفی دارند."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr "علامت اختصاری \"{$sectionAbbrev}\" در شماره مجله \"{$issueTitle}\" مطابق با مجله موجودی است ولی علامت اختصاری دیگر آن مطابقت ندارد."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "هیچ یا چندی شماره با این شناسه یافت شد. \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr "شماره موجود با شناسه {$issueId} با شناسه داده شده «{$issueIdentification}» مطابقت دارد. اطلاعات کلی شماره تغییری نخواهد کرد و تنها مقالات به آن افزوده خواهد شد."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "شناسه شماره مقاله «{$articleTitle}» یافت نشد."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "مقاله «{$articleTitle}» در داخل شماره‌ای گنجانده شده است، اما دارای تاریخ انتشاری نمی‌باشد."

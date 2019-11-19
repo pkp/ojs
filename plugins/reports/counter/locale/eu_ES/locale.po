@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:07+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "COUNTER pluginak webgunearen jarduera erregistratzen du eta <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> moduko txostena ematen du."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER estatistikak"
+
+msgid "plugins.reports.counter.migrate"
+msgstr "Migratu log-fitxategia"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Aldizkariaren 1. txostena (R3): Testu osoko artikulu-eskaerak hilabetez eta aldizkariz"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Aldizkariaren 1. txostena (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Testu osoko artikulu-eskaera zuzenak hilabetez eta egunkariz ({$year} urtea)"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Data:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Argitaratzailea"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Plataforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Inprimatzeko ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Lineako ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Aurten guztira"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Aldizkari guztien totala"

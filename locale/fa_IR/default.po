@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:21+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "مقالات"
+
+msgid "section.default.abbrev"
+msgstr "م ق"
+
+msgid "section.default.policy"
+msgstr "0"
+
+msgid "default.genres.article"
+msgstr "متن مقاله"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "مقاله ارسالی قبلاً چاپ نشده و هم در هیچ مجله دیگری تحت داوری برای چاپ نمی‌باشد. "
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "فایل ارسال شده به فرمت OpenOffice, Microsoft Word, RTF, یا WordPerfect می‌باشد."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "در صورت امکان لینک مراجع در داخل متن قرار داده شده است."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "فاصله سطور در متن مقاله تک فاصله‌ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب و یا در انتهای متن قرار داده شده است."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "متن مقاله بر طبق اصول مقاله‌نویسی و مرجع‌نگاری اشاره شده در <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\"> راهنمای نویسندگان </a> می‌باشد. این راهنما در قسمت درباره مجله قابل مشاهده است."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>نام‌ها و ایمیل‌های وارد شده در سایت مجله، فقط در اهداف بیان شده بکار می‌رود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "این مجله دستیابی فوری به محتوی خود را به‌صورت آزاد دارا می‌باشد به این امید که پژوهشی که به‌صورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی می‌شود"
+
+msgid "default.contextSettings.forReaders"
+msgstr "به خوانندگان عزیز توصیه می‌کنیم که برای دریافت خبرهای انتشاراتی این مجله  با کلیک کردن بر روی لینک  <a href=\"{$indexUrl}{$contextPath}/user/register\">ثبت‌نام</a> در بالای صفحات ثبت‌نام کنند. در نتیجه شما از طریق ایمیل فهرست مطالب هر شماره جدید را دریافت خواهید داشت. برای اطلاع از محرمانگی اطلاعاتی که وارد می‌کنید  <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">بیانیه محرمانگی</a> مجله را مطالعه نمایید. در این بیانیه آمده است که ایمیل‌هایی که وارد می‌کنید برای مقاصد دیگر بکار نخواهد رفت."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "آیا می‌خواهید به این مجله مقاله بفرستید؟ توصیه می‌شود که متن <a href=\"{$indexUrl}{$contextPath}/about\">درباره مجله</a>  که شامل سیاست‌های حاکم بر انواع مقالات؛ و متن  <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">راهنمای نویسندگان</a> را مطالعه فرمایید. برای ارسال مقاله لازم است در سامانه این مجله ثبت‌نام کنید. چنانچه تا کنون  در این مجله <a href=\"{$indexUrl}{$contextPath}/user/register\">ثبت‌نام</a> نکرده‌اید نسبت به این کار اقدام کنید. چنانچه قبلاً ثبت‌نام کرده‌اید فقط کافی است که به سامانه   <a href=\"{$indexUrl}{$contextPath}/login\">وارد</a> شوید  و مراحل پنجگانه ارسال مقاله را شروع کنید."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "به کتابخانه‌های پژوهشی توصیه می‌شود که این مجله را در لیست اقلام خود قرار دهند. همچنین می‌توانید به افرادی که در موسسه شما درگیر کار انتشار مجله هستند توصیه کنید که از این سیستم مجلات آزاد برای مجله خود استفاده کنند. جهت کسب اطلاعات بیشتر به سایت <a href=\"http://pkp.sfu.ca/ojs\">سامانه مجلات آزاد </a> مراجعه کنید."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "این مجله از سیستم LOCKSS  برای ایجاد یک بایگانی گسترده در کتابخانه‌های عضو این پروژه استفاده می‌کند و بدین وسیله یک بایگانی دائمی از محتویات خود ایجاد می‌کند. <a href=\"http://www.lockss.org/\">اطلاعات بیشتر...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "این مجله از سیستم CLOCKSS  برای ایجاد یک بایگانی گسترده در کتابخانه‌های عضو این پروژه استفاده می‌کند و بدین وسیله یک بایگانی همیشگی از محتویات خود ایجاد می‌کند. <a href=\"http://clockss.org/\">اطلاعات بیشتر...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "مدیر مجله"
+
+msgid "default.groups.plural.manager"
+msgstr "مدیران مجله"
+
+msgid "default.groups.abbrev.manager"
+msgstr "مدیر.م"
+
+msgid "default.groups.name.editor"
+msgstr "سردبیر مجله"
+
+msgid "default.groups.plural.editor"
+msgstr "سردبیران مجله"
+
+msgid "default.groups.abbrev.editor"
+msgstr "سردبیر"
+
+msgid "default.groups.name.guestEditor"
+msgstr "دبیر مهمان"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "دبیران مهمان"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "دبیر.م"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "دبیر"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "دبیران"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "دبیر"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "مدیر اشتراک"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "مدیران اشتراک"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "م.اشتراک"
+
+msgid "default.genres.researchInstrument"
+msgstr "ابزارهای پژوهش"
+
+msgid "default.genres.researchMaterials"
+msgstr "مواد مورد استفاده"
+
+msgid "default.genres.researchResults"
+msgstr "نتایج پژوهش"
+
+msgid "default.genres.transcripts"
+msgstr "رونوشت‌ها"
+
+msgid "default.genres.dataAnalysis"
+msgstr "آنالیز داده‌ها"
+
+msgid "default.genres.dataSet"
+msgstr "مجموعه‌ی داده‌ها"
+
+msgid "default.genres.sourceTexts"
+msgstr "منابع"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "داور"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "داوران"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "داور"
+
+msgid "default.contextSettings.emailSignature"
+msgstr "<br/>  ________________________________________________________________________<br/>  <a href=\"{$contextUrl}\">{$contextName}</a>"

@@ -1,0 +1,423 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:37+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "Тека редактора"
+
+msgid "editor.reassign"
+msgstr "Повторно призначити"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Подання та публікація"
+
+msgid "editor.submissionQueue"
+msgstr "Редакційна черга"
+
+msgid "editor.submissionArchive"
+msgstr "Архів матеріалів"
+
+msgid "editor.publishing"
+msgstr "Публікація"
+
+msgid "editor.publishedIssues"
+msgstr "Опубліковані випуски"
+
+msgid "editor.allSections"
+msgstr "Всі розділи"
+
+msgid "editor.allEditors"
+msgstr "Всі редактори"
+
+msgid "editor.me"
+msgstr "Я"
+
+msgid "editor.publicIdentificationExists"
+msgstr "Ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту (випуску, статті, гранки або супровідного файлу). Будь ласка, вкажіть унікальний ідентифікатор для цього журналу."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "В архіві немає матеріалів."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "Зберегти зміни для архівованих матеріалів? Подання, помічені для видалення, будуть остаточно видалені з системи."
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "Ви впевнені, що хочете остаточно видалити це подання?"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ви впевнені, що хочете записати це рішення?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "Це подання буде архівоване після того, як буде надіслане повідомлення автору або після натискання кнопки \"Пропустити надсилання листа\"."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "Перш ніж надсилати подання на літературне редагування, за допомогою посилання \"Сповістити автора\", інформуйте автора про прийняте Вами рішення та визначіть версію для літературного редагування."
+
+msgid "editor.submissionReview.sendToCopyediting"
+msgstr "Надіслати на літературне редагування"
+
+msgid "editor.notifyUsers"
+msgstr "Повідомити користувачів"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Надіслати це повідомлення всім користувачам, асоційованим з цим журналом ({$count} користувачів)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Всім читачам ({$count} користувачів)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Всім опублікованим авторам ({$count} користувачів)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Всім індивідуальним передплатникам ({$count} користувачів)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Всім установам-передплатникам ({$count} користувачів)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Повідомлення розсилаються користувачам ..."
+
+msgid "editor.usersNotified"
+msgstr "Користувачам повідомлено"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Надіслати це повідомлення лише тим користувачам журналу, які виявили бажання отримувати новини ({$count} користувачів)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Включити сторінку змісту цього випуску:"
+
+msgid "editor.editorAdministration"
+msgstr "Редактор: Адміністрування"
+
+msgid "editor.issues.createIssue"
+msgstr "Створити випуск"
+
+msgid "editor.issues.editIssue"
+msgstr "Управління випуском: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Поточний випуск"
+
+msgid "editor.issues.numArticles"
+msgstr "Кількість статей"
+
+msgid "editor.issues.noArticles"
+msgstr "Ні одної статті поки не заплановано для публікації у цьому випуску."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ви впевнені, що хочете назавжди видалити цей випуск?"
+
+msgid "editor.issues.published"
+msgstr "Опубліковані"
+
+msgid "editor.issues.unpublished"
+msgstr "Неопубліковані"
+
+msgid "editor.issues.datePublished"
+msgstr "Дата публікації"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Необхідно ввести позитивне числове значення для номеру тому."
+
+msgid "editor.issues.numberRequired"
+msgstr "Необхідно ввести позитивне числове значення для номеру випуску."
+
+msgid "editor.issues.yearRequired"
+msgstr "Необхідно ввести позитивне числове значення для року видання."
+
+msgid "editor.issues.titleRequired"
+msgstr "Необхідно вказати назву цього випуску."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Необхідно ввести ідентифікатор випуску. Будь ласка, оберіть принаймні один з варіантів ідентифікації."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Ідентифікація випуску"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Публічний ідентифікатор випуску"
+
+msgid "editor.issues.description"
+msgstr "Опис"
+
+msgid "editor.issues.accessStatus"
+msgstr "Статус доступу"
+
+msgid "editor.issues.accessDate"
+msgstr "Дата відкриття доступу"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Дозволити відтермінований відкритий доступ"
+
+msgid "editor.issues.coverPage"
+msgstr "Обкладинка"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(дозволені формати: .gif, .jpg або .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Вивантажено"
+
+msgid "editor.issues.remove"
+msgstr "Видалити"
+
+msgid "editor.issues.proofed"
+msgstr "Перевірено"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Видалити зображення обкладинки?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Зображення обкладинки, яке ви хочете видалити, не відповідає зображенню обкладинки для цього випуску. Будь ласка, перезавантажте сторінку і спробуйте знову."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Зображення обкладинки, якеу ви хочете видалити, не вдається знайти. Можливо воно вже було видалено. Спробуйте перезавантажити сторінку."
+
+msgid "editor.issues.invalidCoverPageFormat"
+msgstr "Неприпустимий формат зображення обкладинки. Дозволеними форматами є .gif, .jpg або .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Таблиця стилів"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Неприпустимий формат файлу таблиці стилю. Переконайтеся, що файл використовує коректний формат CSS. (Зауважте, що таблиці стилів, які починаються з коментарів, не можуть бути прийняті)."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Видалити таблицю стилю?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Підпис обкладинки"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Створити для цього випуску обкладинку з наступними елементами."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Показати"
+
+msgid "editor.issues.openAccess"
+msgstr "Відкритий доступ"
+
+msgid "editor.issues.subscription"
+msgstr "Передплата"
+
+msgid "editor.issues.identification"
+msgstr "Ідентифікація"
+
+msgid "editor.issues.access"
+msgstr "Доступ"
+
+msgid "editor.issues.cover"
+msgstr "Обкладинка"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Всі статті повернуться до редакційної черги, а всі файли, асоційовані з випуском, будуть видалені назавжди. Ви впевнені, що хочете видалити цей випуск?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Цей журнал використовує нестандартне сортування випусків. <a href=\"{$url}\" class=\"action\">Скинути сортування до стандартного</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Цей випуск використовує нестандартне сортування розділів. <a href=\"{$url}\" class=\"action\">Скинути сортування до стандартного</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Дані про випуск"
+
+msgid "editor.issues.saveChanges"
+msgstr "Зберегти зміни в змісті випуска?"
+
+msgid "editor.issues.default"
+msgstr "За замовчуванням"
+
+msgid "editor.issues.order"
+msgstr "Сортування"
+
+msgid "editor.issues.publicId"
+msgstr "Ідентифікатор"
+
+msgid "editor.issues.publishIssue"
+msgstr "Опублікувати випуск"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Скасувати публікацію випуску"
+
+msgid "editor.issues.previewIssue"
+msgstr "Переглянути випуск"
+
+msgid "editor.issues.preview"
+msgstr "(Попередній перегляд)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ви впевнені, що хочете опублікувати новий випуск?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ви впевнені, що хочете скасувати публікацію цього опублікованого випуску?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ви впевнені, що хочете зробити даний випуск поточним?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Неможливо зберегти публічний ідентифікатор статті:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Немає опублікованих випусків"
+
+msgid "editor.issues.open"
+msgstr "Відкритий"
+
+msgid "editor.issues.pages"
+msgstr "Сторінки"
+
+msgid "editor.issues.galleys"
+msgstr "Гранки випуску"
+
+msgid "editor.issues.galley"
+msgstr "Гранка випуску"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Переглядів гранки випуску"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Публікувати гранки з повним змістом випуску"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Жодної гранки випуску не було опубліковано."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Необхідно вказати мітку гранки випуску."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Необхідно вказати локалізацію гранки випуску."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Вказаний ідентифікатор гранки випуску вже існує."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Повернутися до гранок випуску"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ви впевнені, що хочете видалити цю гранку випуску?"
+
+msgid "editor.issues.identifiers"
+msgstr "Ідентифікатори"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Майбутні випуски"
+
+msgid "grid.action.addGalley"
+msgstr "Додати гранку"
+
+msgid "grid.action.publish"
+msgstr "Опублікувати випуск"
+
+msgid "grid.action.addIssue"
+msgstr "Створити випуск"
+
+msgid "grid.action.viewIssue"
+msgstr "Переглянути"
+
+msgid "grid.action.previewIssue"
+msgstr "Попередній перегляд"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Створити гранку випуску"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Задати поточний випуск"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Попередні випуски"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Позначити оригінальний файл як версію для рецензування"
+
+msgid "editor.article.decision"
+msgstr "Рішення"
+
+msgid "editor.submissions.showBy"
+msgstr "Сортувати за"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Відправити ММ-ДД"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Активні призначення"
+
+msgid "editor.submissions.invite"
+msgstr "Запросити"
+
+msgid "editor.submissions.accept"
+msgstr "Прийняти"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Немає матеріалів"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Остання"
+
+msgid "editor.submissions.averageTime"
+msgstr "Тижнів"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Остання завершена"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Призначено"
+
+msgid "editor.submissions.inSection"
+msgstr "У розділі"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Запланувати для публікації у"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Буде визначено"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Плата за публікацію не отримана. Щоб внести статтю до графіку публікації, нагадайте автору про необхідність сплати рахунку або зробіть виняток та скасуйте плату."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Зображення обкладинки, яке ви хочете видалити, не вдається знайти. Можливо воно вже було видалено. Спробуйте перезавантажити сторінку."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Хибний формат зображення обкладинки. Дозволені формати: .gif, .jpg, .png."
+
+msgid "grid.action.removeArticle"
+msgstr "Видалити статтю з випуску"
+
+msgid "editor.article.remove"
+msgstr "Видалити"
+
+msgid "editor.article.remove.confirm"
+msgstr "Ви впевнені, що хочете видалити цю статтю з випуску? Стаття буде доступна для планування в інший випуск."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Дата доступа не корректна."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Редагувати гранку випуску"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Верстальник підготує файли кожної гранки та завантажить їх у відповідні місця розділу <span class=\"pkp_help_title\">«Коректура»</span> for proofreading."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Вибрати файли гранок"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Готові файли чернеток з цього списку, пройшовши літературне редагування, завантажені літературним редактором в розділ <span class=\"pkp_help_title\">«Літературне редагування»</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Всі файли, які були завантажені на будь-якому етапі подання рукопису, можуть бути додані в список «Коректура», для цього потрібно поставити галочку «Включити» нижче і клацнути на кнопці «Пошук»: всі доступні файли будуть показані в списку і можуть бути обрані для включення."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Публічний ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту такого ж типу. Будь ласка, обирайте унікальні Ідентифікатори для об'єктів одного типу у Вашому журналі."
+
+msgid "editor.article.coverImage"
+msgstr "Зображення обкладинки"

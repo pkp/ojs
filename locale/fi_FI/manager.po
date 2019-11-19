@@ -1,0 +1,1618 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:23+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Arkistointi"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Haluatko varmasti palauttaa kaikki tämän julkaisun sähköpostipohjat oletusarvoisiksi? Menetät kaikki tekemäsi mukautukset."
+
+msgid "manager.files.note"
+msgstr "Huom. Tiedostoselain (Files Browser) on erikoisominaisuus, jonka avulla julkaisuun liittyviä tiedostoja ja hakemistoja voidaan katsoa ja käsitellä suoraan."
+
+msgid "manager.journalManagement"
+msgstr "Julkaisun hallinnointi"
+
+msgid "manager.language.ui"
+msgstr "Käyttöliittymä"
+
+msgid "manager.language.submissions"
+msgstr "Käsikirjoitukset"
+
+msgid "manager.language.forms"
+msgstr "Lomakkeet"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Tämä korvaa kaikki tähän kielialueeseen liittyvät, kielialuekohtaiset julkaisun asetukset"
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS voidaan tarjota käyttäjien saataville millä tahansa tuetuista kielistä. Lisäksi OJS voi toimia monikielisenä järjestelmänä, jolloin se antaa käyttäjille mahdollisuuden sekä vaihdella kieliä jokaisella sivulla että syöttää tiettyjä tietoja useilla kielillä.<br /><br/>Jos jokin OJS:n tukemista kielistä puuttuu alla olevasta listasta, pyydä sivuston ylläpitäjää asentamaan kieli sivuston ylläpitokäyttöliittymän kautta. Lisätietoja tuen lisäämisestä uusille kielille löytyy OJS:n käyttöohjeista."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Valitettavasti muita kieliä ei ole käytettävissä. Jos haluat käyttää tässä julkaisussa muita kieliä, ota yhteyttä sivuston ylläpitäjään."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Tätä kieltä käytetään julkaisun sivuston oletuskielenä."
+
+msgid "manager.managementPages"
+msgstr "Hallinnointisivut"
+
+msgid "manager.payment.action"
+msgstr "Toiminto"
+
+msgid "manager.payment.addPayment"
+msgstr "Lisää maksu"
+
+msgid "manager.payment.amount"
+msgstr "Summa"
+
+msgid "manager.payment.authorFees"
+msgstr "Kirjoittajamaksut"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Valitut vaihtoehdot kuvauksineen ja maksuineen (joita voidaan muokata alla), näkyvät lähetysprosessin ensimmäisessä vaiheessa, Tietoa julkaisusta -sivulla Käsikirjoitukset-kohdassa sekä sellaisissa kohdissa, joissa vaaditaan maksu."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS ei muunna valuuttoja. Jos hyväksyt tilausmaksuja, muista varmistaa, että tilauksen valuutta vastaa tässä määritettyä valuuttaa."
+
+msgid "manager.payment.description"
+msgstr "Kuvaus"
+
+msgid "manager.payment.details"
+msgstr "Tiedot"
+
+msgid "manager.payment.editSubscription"
+msgstr "Muokkaa tilausta"
+
+msgid "manager.payment.enable"
+msgstr "Ota käyttöön"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Maksuihin liittyvät valinnat"
+
+msgid "manager.payment.form.numeric"
+msgstr "Kaikkien hintojen tulee olla positiivia numeerisia arvoja (desimaalipilkut sallitaan)"
+
+msgid "manager.payment.generalFees"
+msgstr "Yleiset maksut"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Yhdistyksen jäsenyys näkyy Tietoa julkaisusta -sivulla Toimintaperiaatteet-kohdassa ja lahjoituslinkki näkyy hakutoiminnon yläpuolella, oikeanpuoleisessa kehyksessä."
+
+msgid "manager.payment.generalOptions"
+msgstr "Yleiset valinnat"
+
+msgid "manager.payment.noPayments"
+msgstr "Ei maksuja"
+
+msgid "manager.payment.notFound"
+msgstr "Ei löydetty"
+
+msgid "manager.payment.options"
+msgstr "Valinnat"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Tämä aktivoi sellaisten tilausten maksut, joissa julkaisun hallinnoija (tai tilaussihteeri) hallinnoi tilausvaihtoehtoja, hintoja, kestoja ja tilauksia."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Klikkaa tästä ottaaksesi maksutoiminnot käyttöön.  Maksuasetukset on määritettävä täyttämällä alla oleva lomake.  Huomaa, että käyttäjien täytyy kirjautua sisään suorittaakseen maksuja."
+
+msgid "manager.payment.options.fee"
+msgstr "Maksu"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Maksun kuvaus"
+
+msgid "manager.payment.options.feeName"
+msgstr "Maksun nimi"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Yhdistyksen jäsenyys"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Rajoita pääsyä ainoastaan numeroiden ja artikkeleiden PDF-versioihin"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Artikkelin julkaiseminen"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Osta artikkeli"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Osta numero"
+
+msgid "manager.payment.options.text"
+msgstr "Maksutavan kuvaus"
+
+msgid "manager.payment.paymentId"
+msgstr "Maksun tunniste"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Maksutapa"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Voit määrittää minkä tahansa seuraavista maksutapa-lisäosista tässä näytössä."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Maksutavat"
+
+msgid "manager.payment.paymentType"
+msgstr "Maksutyyppi"
+
+msgid "manager.payment.readerFees"
+msgstr "Lukijamaksut"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Valitut vaihtoehdot kuvauksineen ja maksuineen (joita voidaan muokata alla), näkyvät Tietoa julkaisusta -sivulla Toimintaperiaatteet-otsikon alla, sekä sellaisissa kohdissa, joissa vaaditaan maksu."
+
+msgid "manager.payment.records"
+msgstr "Maksutietueet"
+
+msgid "manager.paymentTypes"
+msgstr "Maksutyypit"
+
+msgid "manager.payment.userName"
+msgstr "Maksun tunniste"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Tähän julkaisuun lisätyt käyttäjät"
+
+msgid "manager.people.allJournals"
+msgstr "Kaikki julkaisut"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Lisää tämän sivuston käyttäjä tähän julkaisuun"
+
+msgid "manager.people.showNoRole"
+msgstr "Näytä käyttäjät, joilla ei ole roolia"
+
+msgid "manager.people.allUsers"
+msgstr "Kaikki käyttäjät, joilla on rooleja"
+
+msgid "manager.people.confirmRemove"
+msgstr "Poistetaanko tämä käyttäjä tästä julkaisusta? Tämä toiminto poistaa käyttäjän kaikista tähän julkaisuun liittyvistä rooleista."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Valitse pohja"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Lisää olemassa oleva käyttäjä rooliin"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Julkaisuun"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Valitse yksi (tai useampi) käyttäjä, joka yhdistetään toiseen käyttäjätiliin (esim. jos jollakulla on kaksi käyttäjätiliä). Ensin valitut tilit poistetaan ja käsikirjoitukset, toimeksiannot jne. siirretään toiselle tilille."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Valitse käyttäjä, kenelle aiemman käyttäjän kirjoittajahenkilöllisyys, toimitustoimeksiannot jne. siirretään."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role}-roolin lisääminen"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Rooliin lisäämisen synkronointi lisää kaikki määrätyn julkaisun määrätyssä roolissa olevat käyttäjät, tämän julkaisun vastaavaan rooliin. Tämä toiminto mahdollistaa sen, että samankaltaisten käyttäjien joukko (esim. arvioijat) voidaan synkronoida julkaisujen välillä."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Älä vaadi abstrakteja"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Osastotoimittajia ei vielä ole. Lisää ensin tämä rooli vähintään yhdelle käyttäjälle seuraavaasti: Hallinnointi > Asetukset > Käyttäjät &amp; Roolit."
+
+msgid "manager.sections.assigned"
+msgstr "Tämän osaston toimittajat"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Haluatko varmasti poistaa tämän osaston pysyvästi?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Ennen kuin tämä osasto voidaan poistaa, sinun on siirrettävä kyseisessä osastossa julkaistut artikkelit muihin osastoihin."
+
+msgid "manager.sections.create"
+msgstr "Luo osasto"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Lisää tälle osastolle osastotoimittaja, jolloin käsikirjoitukset osoitetaan automaattisesti hänelle. (Muutoin osastotoimittajat voidaan valita manuaalisesti käsikirjoituksen saapuessa). Jos osastotoimittaja lisätään, hänet voidaan automaattisesti valita valvomaan tämän osaston käsikirjoitusten ARVIOINTIA (vertaisarviointi) ja/tai TOIMITTAMISTA (tekninen toimittaminen, taitto ja oikoluku). Osastotoimittajat luodaan klikkaamalla Julkaisun hallinnoinnissa Roolit-otsikon alla olevaa Osastotoimittajat -kohtaa."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Ainoastaan toimittajat ja osastotoimittajat voivat lähettää kohteita."
+
+msgid "manager.sections.editors"
+msgstr "Osastotoimittajat"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Osastolle vaaditaan lyhennetty nimi"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Varmista, että vähintään yksi valintaruutu on rastitettu kunkin osastotoimittajan valinnan kohdalla."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Varmista, että olet valinnut oikein muotoillun arviointilomakkeen."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Osastolle vaaditaan nimi."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Poista kirjoittajien nimet tämän osaston kohteista sisällysluettelossa."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Poista tämän osaston nimi sisällysluettelosta."
+
+msgid "manager.sections.identifyType"
+msgstr "Merkitse tässä osastossa julkaistut kohteet seuraavasti"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Esim. “Vertaisarvioitu artikkeli”, “Arvioimaton kirja-arvostelu”, “Artikkeliesittely” jne.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indeksoitu"
+
+msgid "manager.sections.noneCreated"
+msgstr "Yhtään osastoa ei ole luotu."
+
+msgid "manager.sections.open"
+msgstr "Käsikirjoitukset vapaasti lähetettävissä"
+
+msgid "manager.sections.policy"
+msgstr "Osaston käytännöt"
+
+msgid "manager.sections.readingTools"
+msgstr "Lukutyökalut"
+
+msgid "manager.sections.reviewed"
+msgstr "Vertaisarvioitu"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Ei sisällytetä julkaisun indeksointiin"
+
+msgid "manager.sections.submissionReview"
+msgstr "Ei vertaisarvioida"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Tähän julkaisun osastoon lähetetyt käsikirjoitukset"
+
+msgid "manager.sections.unassigned"
+msgstr "Saatavilla olevat osastotoimittajat"
+
+msgid "manager.sections.wordCount"
+msgstr "Sanamäärä"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Rajaa tämän osaston abstraktien sanamäärät (0 ei rajoitusta)"
+
+msgid "manager.setup"
+msgstr "Julkaisun asetukset"
+
+msgid "manager.setup.masthead"
+msgstr "Tunnuslaatikko"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Toimituskunta"
+
+msgid "manager.setup.homepageContent"
+msgstr "Julkaisun etusivun sisältö"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Julkaisun etusivu koostuu oletusarvoisesti siirtymälinkeistä. Muuta sisältöä etusivulle voidaan liittää käyttämällä yhtä tai kaikkia seuraavista vaihtoehdoista, jotka ilmestyvät esitetyssä järjestyksessä."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Julkaisun tyylitiedosto"
+
+msgid "manager.setup.contextName"
+msgstr "Julkaisun nimi"
+
+msgid "manager.setup.pageHeader"
+msgstr "Julkaisun sivun ylätunniste"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Sisältö"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Lisää Tietoa -kohta"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Lisää tarkistuslistan kohta"
+
+msgid "manager.setup.addItem"
+msgstr "Lisää kohde"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Lisää kohta näkyviin Tietoa julkaisusta -sivulle"
+
+msgid "manager.setup.addNavItem"
+msgstr "Lisää kohta"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Lisää uusi tietokantalinkki"
+
+msgid "manager.setup.addSponsor"
+msgstr "Lisää tukiorganisaatio"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Vaihtoehtoinen ylätunniste"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Vaihtoehtoisesti alla olevaan tekstikenttään voidaan otsikon ja logon sijaan sijoittaa HTML-versio ylätunnisteesta. Jätä tekstikenttä tyhjäksi, mikäli et halua tehdä näin."
+
+msgid "manager.setup.announcements"
+msgstr "Ilmoitukset"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Ilmoituksia julkaisemalla, lukijoille voidaan kertoa julkaisun uutisista ja tapahtumista. Julkaistut ilmoitukset näkyvät Ilmoitukset-sivulla."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Syötä mitä tahansa lisätietoja, joiden halutaan näkyvän Ilmoitukset-sivun lukijoille."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Näkyy Tietoa julkaisusta -sivulla) "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Vaadi käsikirjoituksen lähettäviä kirjoittajia jättämään Sidonnaisuudet-lausunto lähetyksen yhteydessä."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Vaadi arvioijia jättämään Sidonnaisuudet-lausunto jokaisen lähettämänsä vertaisarvioinnin yhteydessä."
+
+msgid "manager.setup.history"
+msgstr "Julkaisun historiaa"
+
+msgid "manager.setup.historyDescription"
+msgstr "Tämä teksti tulee näkymään julkaisun verkkosivuston \"Tietoa\"-osassa ja sitä voidaan käyttää kuvaamaan titteleiden, toimituskunnan ja muiden julkaisuhistorian kannalta olennaisten asioiden muutoksia."
+
+msgid "manager.setup.metadata.coverage"
+msgstr "Kattavuus"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Viittaa geospatiaaliseen sijaintiin, kronologiseen tai historialliseen kattavuuteen ja/tai tutkimusotoksen ominaisuuksiin."
+
+msgid "manager.setup.currentIssue"
+msgstr "Uusin numero"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Vaihe 5. Ulkoasun mukauttaminen"
+
+msgid "manager.setup.customTags"
+msgstr "Mukautetut tagit"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Mukautetut HTML-muotoiset ylätunnisteen tagit, jotka sijoitetaan joka sivun ylätunnisteeseen (esim. meta-tagit)."
+
+msgid "manager.setup.details"
+msgstr "Tiedot"
+
+msgid "manager.setup.details.description"
+msgstr "Julkaisun nimi, ISSN-tunnus, yhteyshenkilöt, tukijat ja hakukoneet."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Julkaisun hallinnoija rekisteröi kaikki käyttäjätilit. Toimittajat tai osastotoimittajat saattavat rekisteröidä käyttäjätilejä arvioijille."
+
+msgid "manager.setup.discipline"
+msgstr "Akateeminen tieteenala ja alatieteet"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Hyödyllinen, kun julkaisu ylittää tieteenalojen väliset rajat ja/tai kun tekijät lähettävät monitieteellisiä nimikkeitä."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(Esim. historia; koulutus; sosiologia; psykologia; kulttuurintutkimus; laki)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Anna esimerkkejä olennaisista akateemisista tieteenaloista tähän julkaisuun liittyen"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Lisää uusimman numeron sisällysluettelo (jos saatavilla)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Toimittajan päätös"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Palautusosoite"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Tähän osoitteeseen lähetetään virheilmoitus aina, kun sähköpostia ei voida toimittaa perille."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "<strong>Huom.</strong> Aktivoidakseen tämän valinnan sivuston ylläpitäjän täytyy ottaa käyttöön <tt>allow_envelope_sender</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
+
+msgid "manager.setup.emails"
+msgstr "Sähköpostitunnistautuminen"
+
+msgid "manager.setup.emailSignature"
+msgstr "Allekirjoitus"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Valmiisiin sähköposteihin, jotka järjestelmä lähettää julkaisun puolesta, lisätään seuraava allekirjoitus."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Salli julkaisun hallinnoijien lisätä julkaisuun liittyviä ilmoituksia."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Vierailijat voivat rekisteröidä käyttäjätilin julkaisuun."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Tarkoitus ja toimintaperiaatteet"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Kuvaile kirjoittajille, lukijoille ja kirjastonhoitajille millaisia artikkeleita ja muita kohteita julkaisu julkaisee."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Kirjoittajille töiden indeksointia varten"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS noudattaa <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiativen</a> protokollaa metatietojen haravoinnista, joka on nouseva standardi elektronisten tutkimusresurssien hyvin indeksoidun saatavuuden tarjoamisessa maailmanlaajuisesti. Kirjoittajat käyttävät samanlaista mallipohjaa antaessaan käsikirjoitustensa metatiedot. Julkaisun hallinnoijan tulee valita käytettävät indeksointikategoriat ja avustaa kirjoittajia töidensä indeksoinnissa olennaisia esimerkkejä tarjoamalla."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Määritelty ISSN on virheellinen."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Ensisijainen sähköposti yhteydenottoja varten vaaditaan."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Ensisijainen yhteyshenkilö vaaditaan."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Julkaisun alkukirjaimet vaaditaan."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Julkaisun nimi vaaditaan."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Arvioijien määrä käsikirjoitusta kohti vaaditaan."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Teknisen tuen sähköposti vaaditaan."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Teknisen tuen henkilö vaaditaan."
+
+msgid "manager.setup.generalInformation"
+msgstr "Yleisiä tietoja"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Vaihe 1. Perustiedot"
+
+msgid "manager.setup.guidelines"
+msgstr "Ohjeet"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Vaihe 3. Käsikirjoituksen lähettämiseen liittyviä ohjeita"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Sellaisten julkaisujen kohdalla, joiden sisältö on välittömästi tai viiveellisesti avoimesti saatavilla, sisällytä Creative Commons -lisenssi kaikkiin julkaistuihin töihin asiaankuuluvaan aikaan."
+
+msgid "manager.setup.information"
+msgstr "Tietoa"
+
+msgid "manager.setup.information.description"
+msgstr "Lyhyet kuvaukset julkaisusta kirjastonhoitajille, mahdollisille kirjoittajille ja lukijoille. Kuvaukset tulevat näkyville sivuston sivupalkkiin, kun Tietoa-lohko on lisätty."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Kirjoittajille"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Kirjastonhoitajille"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Lukijoille"
+
+msgid "manager.setup.initialIssue"
+msgstr "Ensimmäinen numero"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Valitusta muodosta riippuen, tunnista ensimmäisen OJS:ssä julkaistavan numeron numero, volyymi ja/tai vuosi:"
+
+msgid "manager.setup.institution"
+msgstr "Instituutio"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Navigointipalkkiin voidaan lisätä kohtia nykyisten (Etusivu, Tietoa, Käyttäjän etusivu jne.), sivun yläreunassa näkyvien lisäksi."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Kohteita per sivu"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Julkaisun lyhenne"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Julkaisun arkistointi"
+
+msgid "manager.setup.contextSummary"
+msgstr "Julkaisu lyhyesti"
+
+msgid "manager.setup.contextAbout"
+msgstr "Tietoa julkaisusta"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Sisällytä tähän mitä tahansa tietoa julkaisusta, joka saattaa kiinnostaa lukijoita, kirjoittajia ja arvioijia. Kiinnostavia tietoja voivat olla esim. avoimen saatavuuden periaate, julkaisun tarkoitus ja toimintaperiaatteet, tekijänoikeushuomautus, tiedonanto tukemista koskien, julkaisun historia, tietosuojaseloste ja LOCKSS tai CLOCKSS-arkistojärjestelmiin kuuluminen."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Julkaisun etusivun sisältö"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Oletusarvoisesti etusivu koostuu siirtymälinkeistä. Muuta sisältöä etusivulle voidaan liittää käyttämällä yhtä tai kaikkia seuraavista vaihtoehdoista, jotka ilmestyvät esitetyssä järjestyksessä. Huomaa, että uusimpaan numeroon pääsee aina navigointipalkin Uusin numero -linkin kautta."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Julkaisun etusivun ylätunniste"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Julkaisun etusivun ylätunniste"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Etusivulle voidaan ladata myös julkaisun nimen ja logon graafinen versio (.gif, .jpg, tai .png -muodossa), joka korvaa sivustolla muutoin näkyvän tekstimuotoisen nimen."
+
+msgid "manager.setup.contextInitials"
+msgstr "Julkaisun alkukirjaimet"
+
+msgid "manager.setup.journalLayout"
+msgstr "Julkaisun taitto"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Valitse julkaisulle teema sekä taiton osat tässä. Myös julkaisun tyylitiedosto voidaan ladata. Sen avulla voidaan syrjäyttää koko järjestelmän kattavien tyylitiedostojen ja teeman tyylitiedoston (jos teema valitaan) sisältämät tyylitiedot."
+
+msgid "manager.setup.journalLogo"
+msgstr "Julkaisun logo"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Julkaisun logo"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Julkaisun alatunniste"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Tämä on julkaisusi alatunniste. Muuttaaksesi alatunnistetta tai päivittääksesi sen liitä HTML-koodi alla olevaan tekstikenttään. Voit lisätä alapalkkiin esimerkiksi toisen navigointipalkin tai laskurin. Tämä alatunniste tulee näkymään jokaisella sivulla."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Vaihe 2. Julkaisun toimintaperiaatteet"
+
+msgid "manager.setup.journalSetup"
+msgstr "Julkaisun asetukset"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Julkaisun asetukset on päivitetty."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Virheellinen julkaisun tyylitiedoston muoto. Hyväksytty muoto on .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Julkaisun teema"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Julkaisun pikkukuva"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Pieni logo tai julkaisua edustava kuva, jota voidaan käyttää julkaisulistassa."
+
+msgid "manager.setup.contextTitle"
+msgstr "Julkaisun nimi"
+
+msgid "manager.setup.labelName"
+msgstr "Selitteen nimi"
+
+msgid "manager.setup.lists"
+msgstr "Listat"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Tallentaaksesi ja jakaaksesi julkaisun sisältöä osallistuvissa kirjastoissa, ota LOCKSS käyttöön LOCKSS:in <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> -sivun kautta."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "LOCKSS-lisenssi näkyy Tietoa julkaisusta sivulla Arkistointi-kohdassa: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS-lisenssi</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS-lisenssin kuvaus"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Tunnista 6-10 kirjastoa, jotka rekisteröivät ja varastoivat julkaisun. Käänny esimerkiksi sellaisten instituutioiden puoleen, joissa toimittajat tai johtokunnan jäsenet työskentelevät ja/tai jotka osallistuvat jo LOCKSS:iin. Katso <a href=\"http://www.lockss.org/community/\" target=\"_blank\">LOCKSS-yhteisö</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Tallentaaksesi ja jakaaksesi julkaisun sisältöä osallistuvissa kirjastoissa, ota CLOCKSS käyttöön CLOCKSS:in <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> -sivun kautta."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "CLOCKSS-lisenssi näkyy Tietoa julkaisusta sivulla Arkistointi-kohdassa: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS-lisenssi</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS-lisenssin kuvaus"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Rekisteröidy CLOCKSS-palveluun <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS:in verkkosivustolla</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Ulkoasu"
+
+msgid "manager.setup.look.description"
+msgstr "Etusivun ylätunniste, sisältö, julkaisun ylätunniste, alatunniste, navigointipalkki ja tyylitiedosto."
+
+msgid "manager.setup.management"
+msgstr "Hallinnointi"
+
+msgid "manager.setup.management.description"
+msgstr "Pääsy ja turvallisuus, aikataulutus, ilmoitukset, tekninen toimittaminen, taitto ja oikoluku."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Toimituksellisten perusvaiheiden hallinnointi"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Hallinnoinnin ja julkaisemisen asetukset"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Vaihe 4. Julkaisun hallinnointi"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigointipalkki"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Lisää tai poista navigointipalkin kohtia."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL-osoite on absoluuttinen URL-osoite (esim. \"http://www.example.com\"), ei sivustoon liittyvä polku (esimerkiksi \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Selitteen arvo on kirjoitettu merkkijono (esim. “Julkaisun asetukset”), ei lokalisoinnin sanoma-avain (esim. “julkaisu.asetukset”)"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Kuvatiedostoa ei ladattu."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Tyylitiedostoa ei ladattu."
+
+msgid "manager.setup.note"
+msgstr "Huomautus"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Huom.</strong> Käsikirjoituksen vastaanotosta ilmoittava sähköposti on tällä hetkellä pois käytöstä. Käyttääksesi tätä ominaisuutta, ota \"Käsikirjoituksen vastaanottaminen\"-sähköposti käyttöön Sähköpostit-kohdassa."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Sivun linkit"
+
+msgid "manager.setup.publishingMode"
+msgstr "Julkaisun sisällön saatavuus"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Verkkojulkaisun ISSN"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Julkaisun sisältö on avoimesti saatavilla."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Sivunumerovalinta"
+
+msgid "manager.setup.policies"
+msgstr "Toimintaperiaatteet"
+
+msgid "manager.setup.policies.description"
+msgstr "Julkaisun tarkoitus, vertaisarviointi, osastot, yksityisyyden suoja, turvallisuus, ja lisätietoja kohteista."
+
+msgid "manager.setup.printIssn"
+msgstr "Painetun julkaisun ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Oikolukuohjeet"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Oikoluvun ohjeet tulevat oikolukijoiden, kirjoittajien, taittajien ja osastotoimittajien saataville käsikirjoituksen toimittamisvaiheessa. Alla HTML-muotoiset oletusohjeet, joita julkaisun hallinnoija voi muokata tai korvata missä tahansa vaiheessa (HTML-muodossa tai pelkkänä tekstinä)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Julkaisuaikataulu"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Julkaisun kohteet voidaan julkaista kollektiivisesti osana numeroa, jolla on oma sisällysluettelonsa. Vaihtoehtoisesti yksittäisiä kohteita voidaan julkaista heti niiden ollessa valmiita, lisäämällä ne uusimman volyymin sisällysluetteloon. Kerro lukijoille tämän julkaisun käytännöstä asian suhteen sekä oletetusta julkaisutiheydestä Tietoa julkaisusta -sivulla."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Julkaisun aikataulutus"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Julkaisun sisällön tunnistetiedot"
+
+msgid "manager.setup.publisher"
+msgstr "Julkaisija"
+
+msgid "manager.setup.publishingDescription"
+msgstr "Julkaisevan organisaation nimi saatetaan sisällyttää metatietoihin, jotka annetaan ulkopuolisille arkistointielimille."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Lähdeviitteiden linkitys"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Käyttäjien tulee olla rekisteröityneitä ja sisäänkirjautuneita katsellakseen avoimesti saatavilla olevaa sisältöä."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Käyttäjien tulee olla rekisteröityneitä ja sisäänkirjautuneita katsellakseen julkaisun sivustoa."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Arviointiohjeet"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Arviointiin liittyvät valinnat"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automaattiset sähköpostimuistutukset"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "Aktivoidakseen nämä valinnat sivuston ylläpitäjän täytyy ottaa käyttöön <tt>scheduled_tasks</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Sokkoarviointi"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Arvioinnin suorittamiseen annettava aika (viikkoa)"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Toimittajat arvostelevat arvioijat viisiportaisella laatuasteikolla jokaisen arviointitapahtuman jälkeen."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Arvioijilla on pääsy käsikirjoitustiedostoon vasta suostuttuaan arvioimaan sen."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Arvioijan pääsy käsikirjoitukseen"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Salli arvioijalle pääsy yhdellä klikkauksella."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Huom.</strong> Arvioijille lähetettävässä sähköpostikutsussa on erityinen URL-osoite, jonka kautta arvioijat pääsevät suoraan käsikirjoituksen arviointisivulle (muille sivuille pääsy vaatii sisäänkirjautumista). Tietoturvasyistä tämän valinnan kohdalla toimittajat eivät voi muokata sähköpostiosoitteita tai lisätä kopioita tai piilokopioita ennen viestin lähettämistä."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Arvioijien arvostelu"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Arvioijan muistutukset"
+
+msgid "manager.setup.reviewOptions.showEnsuringLink"
+msgstr "Anna linkki kohtaan <a href=\"javascript:openHelp('{$blindReviewHelpId}')\" class=\"action\">Sokkoarvioinnin varmistaminen</a> sellaisilla sivuilla, joissa kirjoittajat ja arvioijat lataavat tiedostoja."
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Arviointiperiaatteet"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Hakukoneindeksointi"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Anna julkaisusta lyhyt kuvaus, jonka hakukoneet voivat näyttää listatessaan julkaisun hakutuloksissa."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Osastot ja osastotoimittajat"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Jos osastoja ei ole lisätty, kohteet lähetetään oletusarvoisesti artikkeliosastoon.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Luodaksesi tai muokataksesi julkaisun osastoja (esim. artikkelit, kirja-arvostelut jne.) mene Osaston hallinnointi -kohtaan.<br /><br />Julkaisuun kohteita lähettävät kirjoittajat nimittävät..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Julkaisun toimittaja, joka on mukana toimitusprosessin alusta loppuun asti."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Julkaisun osasto, johon kohdetta harkitaan."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Näytä aina julkaistavien tiedostojen linkit ja ilmaise rajoitettu saatavuus."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Julkaisun verkkosivuston luomisen viisi vaihetta"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(Esim. fotosynteesi; mustat aukot; neliväriteoreema; Bayesin teoreema)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Avainsanat"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Anna esimerkkejä avainsanoista tai aiheista kirjoittajien avuksi"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Käsikirjoituksen lähettämisen ohjeet"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Käsikirjoituksen lähettämisen tarkistuslista"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "Käsikirjoituksen lähetettäessä kirjoittajia pyydetään ennen jatkamista vahvistamaan (rastittamalla kohdat), että käsikirjoitus noudattaa tarkistuslistan jokaista kohtaa. Tarkistuslista on näkyvillä myös Kirjoittajan ohjeet -sivun Tietoa julkaisusta -kohdassa. Listaa voidaan muokata alla, mutta kaikki listan kohdat on rastitettava ennen kuin kirjoittaja voi jatkaa lähetysprosessia."
+
+msgid "manager.setup.submissions"
+msgstr "Käsikirjoitukset"
+
+msgid "manager.setup.submissions.description"
+msgstr "Ohjeet kirjoittajille, tekijänoikeudet ja indeksointi (sis. rekisteröinnin)."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Julkaisun joidenkin osien tai koko sisällön saatavuus edellyttää tilausta."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS:iä ei käytetä julkaisun sisällön julkaisuun verkossa."
+
+msgid "manager.setup.typeExamples"
+msgstr "(Esim. historiatutkimus; kvasikokeellinen, kirjallisuusanalyysi; kysely/haastattelu)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tyyppi (menetelmä/lähestymistapa)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Anna esimerkkejä tälle alalle oleellisista tutkimustyypeistä ja -menetelmistä sekä lähestymistavoista"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Yksilöivä tunniste"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Artikkelit ja numerot voidaan merkitä tunnistenumerolla tai -merkkijonolla käyttämällä sellaista rekisteröintijärjestelmää kuten Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Julkaisu käyttää toimitus-/arviointineuvostoa."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Pikkukuva"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Otsikon kuva"
+
+msgid "manager.setup.userRegistration"
+msgstr "Käyttäjärekisteröinti"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Otsikon teksti"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näkyvät useassa yhteydessä.\n"
+"\t\tJoissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletusarvoksi.\n"
+""
+
+msgid "manager.statistics.statistics"
+msgstr "Julkaisun tilastot"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Artikkelin katselukerrat (vain kirjoittajille)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Hyväksy"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Hylkää"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Lähetä uudelleen"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Arviointiaika (pv)"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Julkaisemisaika (pv)"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS laskee seuraavat tilastot jokaiselle julkaisulle: \"Arviointiaika\" lasketaan käsikirjoituksen lähettämispäivästä (tai arviointiversion nimeämisestä) ensimmäiseen toimittajan päätökseen. \"Julkaisemisaika\" puolestaan lasketaan hyväksytyille käsikirjoituksille käsikirjoituksen alkuperäisestä järjestelmään lataamisesta sen julkaisemiseen."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Kohteita julkaistu"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Rastita kohteet, jotka näytetään lukijoille Tietoa julkaisusta -kohdassa."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Huom. Vertaisarvioitujen käsikirjoitusten prosentuaalinen kokonaismäärä ei ehkä ole 100 %, koska uudelleen lähetetyt kohteet ovat joko hyväksyttyjä tai hylättyjä, tai edelleen toimitusprosessissa."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Numeroita julkaistu"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Käsikirjoituksia yhteensä"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Vertaisarvioitu"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Rekisteröityneet lukijat"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Rekisteröityneet käyttäjät"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Valittujen määrä"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Arvioijat"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Toimittajan arvosana"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Arviointien määrä"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Valitse osastot tämän julkaisun vertaisarvioinnin tilastojen laskemista varten."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Tilaukset"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Artikkelitiedoston lataukset"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Artikkelin abstraktisivun katselukerrat"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Artikkelin tiivistelmä ja lataukset"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Lehden pääsivun katselukerrat"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Numeron sisällysluettelosivun katselukerrat"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Rajaa tuloksia sisällön (numerot ja/tai artikkeli) perusteella."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Rajaa tuloksia kohteen tyypin (julkaisu, numero, artikkeli, tiedostotyypit) ja/tai yhden tai useamman kohteen tunnisteen perusteella."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Tilauskäytännöt"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Viiveellinen avoin saatavuus"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Käytä valintaruutua."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Tilauksen päättyminen"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Tilauksen päättyessä lukijoilta voidaan evätä pääsy kaikkeen tilauksen sisältöön tai he voivat säilyttää edelleen pääsyn tilauksen päättymispäivää ennen julkaistuun sisältöön."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Täysi päättyminen"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Lukijoilta evätään pääsy kaikkeen tilauksen sisältöön tilauksen päättyessä."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Osittainen päättyminen"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Lukijoilta evätään pääsy tilauksen äskettäin julkaistuun sisältöön, mutta he säilyttävät pääsyn tilauksen päättymispäivää ennen julkaistuun sisältöön."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} kuukautta"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} viikkoa"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Muistutukset tilauksen päättymisestä"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Tilaajille voidaan lähettää automaattisia sähköpostimuistutuksia (julkaisun hallinnoijien muokattavissa OJS:n sähköpostit -kohdassa) tilauksen päättymistä ennen tai sen jälkeen."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Huom.</strong> Aktivoidakseen nämä valinnat sivuston ylläpitäjän täytyy ottaa käyttöön <tt>scheduled_tasks</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Valitse jokin seuraavista:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML-muotoa voidaan käyttää tekstialueessa (kirjasinkokoa, väriä jne. varten), yksittäinen kappaleenvaihto (return/enter) katsotaan rivinvaihdoksi (<tt>&lt;br&gt;</tt>); HTML-editori toimii Firefox-selaimissa."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Valitse kelvollinen arvo: kuukautta tilauksen päättymisen jälkeen."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Valitse kelvollinen arvo: kuukautta ennen tilauksen päättymistä."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Valitse kelvollinen arvo: viikkoa tilauksen päättymisen jälkeen."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Valitse kelvollinen arvo: viikkoa ennen tilauksen päättymistä."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Rekisteröityneillä lukijoilla on mahdollisuus saada sisällysluettelo sähköpostitse, kun numero tulee avoimesti saataville."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Huom.</strong> Aktivoidakseen tämän valinnan sivuston ylläpitäjän täytyy ottaa käyttöön <tt>scheduled_tasks</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Verkkomaksuilmoitukset"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Tilaussihteerille voidaan lähettää automaattisia sähköposti-ilmoituksia (julkaisun hallinnoijien muokattavissa OJS:n sähköpostit -kohdassa) aina, kun tilauksen verkkomaksu on suoritettu."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Ilmoita tilaussihteerille sähköpostitse yksittäistilauksen verkko-ostosta."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Ilmoita tilaussihteerille sähköpostitse instituutiotilauksen verkko-ostosta (suositellaan)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Ilmoita tilaussihteerille sähköpostitse verkossa tehdystä yksittäistilauksen uusimisesta."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Ilmoita tilaussihteerille sähköpostitse verkossa tehdystä instituutiotilauksen uusimisesta."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Huom.</strong> Verkossa tehdyt instituutiotilaukset vaativat verkkotunnuksen ja IP-osoitealueen hyväksymisen sekä tilaussihteerin tekemän tilauksen aktivoinnin."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Huom.</strong> Ottaakseen nämä valinnat käyttöön julkaisun hallinnoijan on otettava käyttöön verkkomaksujen toiminnot, mukaan lukien tilausten verkkomaksut Lukijamaksut -kohdassa."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Tilattavien julkaisujen Open Access -valinnat"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Tilattavat julkaisut voivat antaa \"viiveellisen avoimen saatavuuden\" julkaistuun sisältöönsä sekä sallia \"kirjoittajan rinnakkaistallentamisen\" (molemmat kasvattavat sekä lukijakuntaa että sisältöön viittaamista)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Tietoa tilauksista"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Tilausvaihtoehdot ja maksujen rakenne sijoitetaan automaattisesti Tilaukset-kohtaan Tietoa julkaisusta -sivulle, samoin kuin tilaussihteerin nimi ja yhteystiedot. Tässä voidaan antaa tilauksiin liittyviä lisätietoja, kuten tietoa maksutavoista tai kehitysmaista oleville tilaajille myönnettävästä tuesta."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Tilaussihteeri"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Yhteyshenkilö, joka merkitään Tilaukset-kohtaan Tietoa julkaisusta -sivulle."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Anna kelvollinen sähköpostiosoite."
+
+msgid "manager.subscriptions"
+msgstr "Tilaukset"
+
+msgid "manager.individualSubscriptions"
+msgstr "Yksittäistilaukset"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Instituutiotilaukset"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Haluatko varmasti poistaa tämän tilauksen?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Tilausten yhteenveto"
+
+msgid "manager.subscriptions.create"
+msgstr "Luo uusi tilaus"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Luo"
+
+msgid "manager.subscriptions.renew"
+msgstr "Uusi"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Loppu"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Päättymispäivämäärä"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Alku"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Alkamispäivämäärä"
+
+msgid "manager.subscriptions.domain"
+msgstr "Verkkotunnus (domain)"
+
+msgid "manager.subscriptions.edit"
+msgstr "Muokkaa tilausta"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Muokkaa"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Joiden tila on"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Kaikki"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Tila"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Tilauksen tila vaaditaan."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Valitse kelvollinen tilauksen tila."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tilausvaihtoehto"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Tilausvaihtoehto vaaditaan."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Valitse kelvollinen tilausvaihtoehto."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Alkamispäivämäärä"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Tilauksen alkamispäivämäärä vaaditaan."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Valitse kelvollinen tilauksen alkamispäivämäärä."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Päättymispäivämäärä"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Tilauksen päättymispäivämäärä vaaditaan."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Valitse kelvollinen tilauksen päättymispäivämäärä."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Huom. Kaikki alla olevat muutokset vaikuttavat käyttäjän profiiliin koko järjestelmän laajuisesti."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Käyttäjä"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Yhteyshenkilö"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Käyttäjä vaaditaan."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Valitse kelvollinen käyttäjä."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Valitse kelvollinen maa."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Lähetä käyttäjälle sähköposti, jossa on hänen käyttäjätunnuksensa ja tilauksen tiedot."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Käytä valintaruutua."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Jäsenyys"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Viitenumero"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Syötä jäsenyystieto, jos tilausvaihtoehto vaatii, että tilaajat kuuluvat johonkin yhdistykseen tai järjestöön."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Valittu tilausvaihtoehto edellyttää jäsenyystietoja."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Huomautukset"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Verkkotunnus (domain)"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Instituution nimi"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Instituution nimi vaaditaan."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Postiosoite"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Jos verkkotunnus syötetään tähän, IP-osoitealueet ovat valinnaisia.<br />Verkkotunnusten nimet (esim. lib.sfu.ca) ovat kelvollisia arvoja."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Valittu tilausvaihtoehto edellyttää verkkotunnusta ja IP-osoitealuetta tilauksen todentamiseksi."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Syötä kelvollinen verkkotunnus."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP-osoitealueet"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Jos IP-osoitealueita syötetään tähän, verkkotunnus on valinnainen.<br />Kelvollisia arvoja ovat mm. IP-osoite (esim. 142.58.103.1), IP-osoitealue (esim. 142.58.103.1 - 142.58.103.4), IP-osoitealue ja jokerimerkki \"*\" (esim. 142.58. *. *) ja IP-osoitealue ja CIDR (esim. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Syötä kelvollinen IP-osoitealue."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Poista"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Lisää"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Tallenna ja luo uusi"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Jotta käyttäjälle voidaan lähettää ilmoitussähköposti, tilauksen yhteyshenkilön nimi ja sähköpostiosoite on määriteltävä julkaisun asetuksissa."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Tällä käyttäjällä on jo tämän julkaisun tilaus."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Tilausvaihtoehto pitää luoda ennen kuin uusia tilauksia voidaan tehdä."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP-osoitealue"
+
+msgid "manager.subscriptions.membership"
+msgstr "Jäsenyys"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Viitenumero"
+
+msgid "manager.subscriptions.notes"
+msgstr "Huomautukset"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Ei tilauksia"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Valitse tilauksen yhteyshenkilö"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Valitse käyttäjä"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Julkaisujen hallinnoijille, toimittajille, osastotoimittajille, taittajille, teknisille toimittajille ja oikolukijoille myönnetään automaattisesti etuoikeudet tilausperusteiseen saatavuuteen."
+
+msgid "manager.subscriptions.select"
+msgstr "Valitse"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Tilaus luotiin onnistuneesti."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tilausvaihtoehto"
+
+msgid "manager.subscriptions.user"
+msgstr "Käyttäjä"
+
+msgid "manager.subscriptions.contact"
+msgstr "Yhteyshenkilön nimi"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Instituution nimi"
+
+msgid "manager.subscriptionTypes"
+msgstr "Tilausvaihtoehdot"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Varoitus! Kaikki tilaukset, joissa on tämä tilausvaihtoehto, poistetaan myös. Haluatko varmasti jatkaa ja poistaa tämän tilausvaihtoehdon?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Hinta"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Tilaukset"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Yksittäistilaus"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Instituutiotilaus"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Luo uusi tilausvaihtoehto"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Luo"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Kesto"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Muokkaa tilausvaihtoehtoa"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Muokkaa"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Hinta"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Anna numeerinen arvo (esim. 40 tai 40,00) ilman valuuttasymbolia (esim. €)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Hinnan tulee olla positiivinen numeerinen arvo."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Hinta vaaditaan."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valuutta"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Valuutta vaaditaan."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Valitse kelvollinen valuutta."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Kuvaus"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Päättyy"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "kuukauden kuluttua (esim. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Ei pääty koskaan (jatkuva)"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Käytä annettuja vaihtoehtoja."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Kesto"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Tilauksen kesto kuukausina (esim. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Keston tulee olla positiivinen numeerinen arvo."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Kesto vaaditaan."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Muoto"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Tilausvaihtoehdon muoto vaaditaan."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Valitse kelvollinen tilausvaihtoehdon muoto."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Tilaukset"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Yksittäistilaus (käyttäjät vahvistetaan kirjautumisen kautta)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Instituutiotilaus (käyttäjät vahvistetaan verkkotunnuksen tai IP-osoitealueen kautta)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Käytä annettuja vaihtoehtoja."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Tilaukset vaativat jäsenyystietoja<br>(esim. yhdistyksen, järjestön, konsortion tms. jäsenyys)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Käytä valintaruutua."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Valinnat"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Älä aseta tätä tilausvaihtoehtoa julkisesti saataville tai näkyviin<br />(esim. Tietoa julkaisusta -sivun Tilaukset-kohtaan)."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Käytä valintaruutua."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Tallenna ja luo uusi"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Vaihtoehdon nimi"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Tämänniminen tilausvaihtoehto on jo olemassa."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Tilausvaihtoehdon nimi vaaditaan."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tilausvaihtoehto"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Yhtään tilausvaihtoehtoa ei ole luotu."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Tilausvaihtoehto luotiin onnistuneesti."
+
+msgid "manager.distribution.access"
+msgstr "Saatavuus"
+
+msgid "manager.setup.categories"
+msgstr "Kategoriat"
+
+msgid "manager.setup.categories.description"
+msgstr "Valitse sopivimmat kategoriat yllä olevasta listasta. Lukijat voivat selailla koko julkaisujoukkoa kategorioittain."
+
+msgid "grid.category.path"
+msgstr "Polku"
+
+msgid "grid.action.addSection"
+msgstr "Lisää osasto"
+
+msgid "manager.setup.section.description"
+msgstr "Julkaisun julkaistujen numeroiden artikkelit järjestetään osastoihin, yleensä teeman tai sisältötyypin mukaan (esim. arvioartikkelit, tutkimus jne)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Roolit ovat julkaisun käyttäjäryhmiä, joille annetaan pääsy eri käyttöoikeustasoille ja niihin liittyviin julkaisun työnkulkuihin. Käyttöoikeustasoja on viisi erilaista: Julkaisun hallinnoijilla on pääsy koko julkaisuun (kaikki sisältö ja asetukset); osastotoimittajilla on täydet käyttöoikeudet kaikkeen heille osoitettuun sisältöön; avustajilla on rajoitettu pääsy niihin kaikkiin käsikirjoituksiin, jotka toimittaja on erikseen heille osoittanut; arvioijat näkevät heille arvioitaviksi osoitetut käsikirjoitukset ja voivat suorittaa niitä koskevat tehtävät; ja kirjoittajat näkevät käsikirjoituksiinsa liittyvän rajoitetun tietomäärän ja voivat olla myös vuorovaikutuksessa tiedon kanssa. Lisäksi on viisi eri työvaiheisiin liittyvää toimeksiantoa, joihin rooleille voidaan antaa pääsy: käsikirjoitusten vastaanotto, sisäinen arviointi, arviointi, toimituksellinen ja tuotanto."
+
+msgid "manager.publication.library"
+msgstr "Julkaisijakirjasto"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Valitse uuden artikkelin tekijänoikeuden alkamisvuoden perustaksi"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Artikkeli: oletusvuosi asetetaan artikkelin julkaisemispäivämäärän mukaan, samoin kuin heti julkaistaessakin."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Numero: oletusvuosi asetetaan numeron julkaisupäivämäärän mukaan."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Palauta artikkelin käyttöoikeudet oletusarvoisiksi"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Haluatko varmasti palauttaa oletusarvoisiksi käyttöoikeustiedot, jotka on jo liitetty artikkeleihin?"
+
+msgid "grid.genres.title.short"
+msgstr "Osat"
+
+msgid "grid.genres.title"
+msgstr "Artikkelin osat"
+
+msgid "grid.genres.description"
+msgstr "Näitä osia käytetään tiedostojen nimeämistarkoituksiin ja ne näytetään vetovalikossa tiedostojen lataamisen yhteydessä. ##-merkityt lajityypit mahdollistavat sen, että käyttäjät voivat yhdistää tiedoston joko koko käsikirjoitukseen 99Z tai vain tiettyyn osaan numerolla (esim. 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Asetukset"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI-lisäosan asetukset"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artikkelit"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Numerot"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Julkaistavat tiedostot"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Lisäosan vaatimukset eivät täyty"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Käyttääksesi tätä lisäosaa mene “Julkinen tunniste” -lisäosakategoriaan, ota DOI-lisäosa käyttöön ja määritä se, sekä määritä siellä kelvollinen DOI-prefiksi."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Lisäosaa ei ole täysin asennettu."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "DOI-tunnisteiden määrittämisessä käytettäviä julkaisukohteita ei ole valittu DOI-tunnistelisäosassa, joten tässä lisäosassa ei ole talletus- tai vientimahdollisuutta."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Salasana"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Huomaathan, että salasana tallennetaan pelkkänä tekstinä, eli ei salatussa muodossa."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Mikä tahansa numero"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Mikä tahansa tila"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Ei talletettu"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Merkityt rekisteröidyt"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Rekisteröity"
+
+msgid "plugins.importexport.common.action"
+msgstr "Toiminto"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Vie"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Merkitse rekisteröidyt"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Rekisteröi"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Yhtään kohdetta ei ole valittu."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Valittuja kohteita ei voitu muuntaa."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Virheellinen XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Kohdetiedosto {$param} ei ole kirjoituskelpoinen."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Kohdetiedostoa {$param} ei voi lukea."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Rekisteröinti ei onnistunut! DOI:n rekisteröintipalvelin tuotti virheen: ‘{$param}’."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Rekisteröinti onnistui!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Julkaisulta, jonka polku on {$path}, puuttuu DOI-prefiksi."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "VIRHE:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Annettua lehden polkua, \"{$journalPath}\", ei löydy."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Annettuja kohteita ei löytynyt."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Lähetä kopio pääasialliselle yhteyshenkilölle, joka on määritelty julkaisun asetuksissa."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt."
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Haluatko varmasti uusia tämän tilauksen?"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validoi XML ennen vientiä ja rekisteröintiä."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Oletko varma, että haluat poistaa tämän tilauksen?"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Linkki lehden tilausvaihtoehtoja koskevalle sivulle."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Linkki käyttäjän tilaushistoriaa koskevalle sivulle."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Tämä linkki näytetään vain käyttäjän ollessa kirjautuneena sisään."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN -lisäosa otettu käyttöön"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP Preservation Network (PN) tarjoaa ilmaisen pitkäaikaissäilytyspalvelun mille tahansa kriteerit täyttävälle OJS-lehdelle."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Hyväksy PKP PN -palvelun ehdot painamalla asetukset-linkkiä."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP Preservation Network (PN) tarjoaa ilmaisen pitkäaikaissäilytyspalvelun mille tahansa kriteerit täyttävälle OJS-lehdelle. OJS3-yhteensopiva lisäosa on parhaillaan kehitettävä ja se on pian saatavissa lisäosagallerian kautta."
+
+msgid "manager.setup.otherLockss"
+msgstr "Muut arkistointivalinnat"

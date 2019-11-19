@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:18+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.default.name"
+msgstr "Domyślny motyw"
+
+msgid "plugins.themes.default.description"
+msgstr "Motyw domyślny OJS3."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Typografia"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Wybierz ustawienia krojów pisma które najlepiej pasują do Twojego czasopisma."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr "Noto Sans: Krój projektowany z myślą o wyświetlaniu na ekranach, zaprojektowany przez Google z dużym wsparciem dla języków."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Wersja szeryfowa kroju Noto Sans."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif/Noto Sans: Kombinacja kroju szeryfowego dla nagłówków oraz bezszeryfowego dla tekstu głównego."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr "Noto Sans/Noto Serif: Kombinacja kroju bezszeryfowego dla nagłówków oraz szeryfowego dla tekstu głównego."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Popularny krój bezszeryfowy polskiego autorstwa."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Szeroki font szeryfowy dobry do czytania z ekranu."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr "Lora/Open Sans: Kombinacja kroju szeryfowego dla nagłówków oraz bezszeryfowego dla tekstu głównego."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Kolor"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Wybierz kolor nagłówka."

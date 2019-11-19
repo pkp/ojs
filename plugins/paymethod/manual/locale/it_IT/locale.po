@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:57+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:57+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Pagamenti offline"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "L'amministratore può registrare i dettagli del pagamento effettuato da un utente al di fuori da OJS."
+
+msgid "plugins.paymethod.manual"
+msgstr "Pagamento offline"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Impostazioni dei pagamenti offline"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Invia notifica di pagamento"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Notifica di pagamento"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Notifica di pagamento inviata"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Titolo"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Tariffa"

@@ -1,0 +1,1613 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:35+00:00\n"
+"Language: \n"
+
+msgid "manager.website.archiving"
+msgstr "Arkivering"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Är du säker på att du vill återställa alla tidskriftens e-postmallar till ursprungligt utseende? Egna inställningar kommer att raderas"
+
+msgid "manager.files.note"
+msgstr "Observera: Filutforskaren är en avancerad funktion som gör det möjligt att ändra och visa en tidskrifts innehåll och filer direkt."
+
+msgid "manager.journalManagement"
+msgstr "Hantera tidskrift"
+
+msgid "manager.language.ui"
+msgstr "Användargränssnitt"
+
+msgid "manager.language.submissions"
+msgstr "Bidrag"
+
+msgid "manager.language.forms"
+msgstr "Formulär"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Det här kommer att ersätta alla språkspecifika tidskriftsinställningar som finns för det här språket/regionen."
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br /> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur ytterligare språk läggs till, se OJS-dokumentationen."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Tyvärr, det finns inga ytterligare språk tillgängliga. Kontakta huvudadministratören om du vill lägga till språk i den här tidskriften."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Detta blir defaultspråk för tidskriftens webbplats."
+
+msgid "manager.managementPages"
+msgstr "Administrationssidor"
+
+msgid "manager.payment.action"
+msgstr "Aktivitet"
+
+msgid "manager.payment.addPayment"
+msgstr "Lägg till betalning"
+
+msgid "manager.payment.amount"
+msgstr "Summa"
+
+msgid "manager.payment.authorFees"
+msgstr "Författaravgifter"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Mata in avgifter nedan för att aktivera författaravgifter."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS stöder inte valutaomvandling. Om du accepterar betalning, försäkra dig om att prenumerationspriset överensstämmer med följande belopp:"
+
+msgid "manager.payment.description"
+msgstr "Beskrivning"
+
+msgid "manager.payment.details"
+msgstr "Detaljer"
+
+msgid "manager.payment.editSubscription"
+msgstr "Redigera prenumerationsuppgifter"
+
+msgid "manager.payment.enable"
+msgstr "Aktivera"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Betalningsalternativ"
+
+msgid "manager.payment.form.numeric"
+msgstr "Alla kostnader måste ha positiva numeriska värden (decimaltecken är tillåtna)"
+
+msgid "manager.payment.generalFees"
+msgstr "Allmänna avgifter"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Föreningsprenumeranters medlemsskap kommer att synas under Policyer i Om Tidskriften. Donationslänkarna kommer att synas ovanför sökrutan i högermenyn."
+
+msgid "manager.payment.generalOptions"
+msgstr "Generella alternativ"
+
+msgid "manager.payment.noPayments"
+msgstr "Inga betalningar"
+
+msgid "manager.payment.notFound"
+msgstr "Saknas"
+
+msgid "manager.payment.options"
+msgstr "Alternativ"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Detta aktiverar betalningar för Prenumerationer, där former, kostnader, prenumerationstid och prenumerationer hanteras av prenumerationsansvarig."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Är du säker på att du vill radera den här prenumerationen?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Betalningar kommer att aktiveras för den här tidskriften. Observera att användare måste logga in för att göra betalningar."
+
+msgid "manager.payment.options.fee"
+msgstr "Avgift"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Beskrivning av avgift"
+
+msgid "manager.payment.options.feeName"
+msgstr "Namn på avgift"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Föreningsmedlemskap"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Endast begränsad tillgång till artiklarnas PDF-versioner."
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Avgift för artikelpublicering"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Köp artikel"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Köp helt nummer"
+
+msgid "manager.payment.options.text"
+msgstr "Beskrivning av betalningsmetod"
+
+msgid "manager.payment.paymentId"
+msgstr "Betalnings-ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Betalningsmetod"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Du kan konfigurera plugins för betalningsmetoderna från den här sidan."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Betalningsmetoder"
+
+msgid "manager.payment.paymentType"
+msgstr "Typ av betalning"
+
+msgid "manager.payment.readerFees"
+msgstr "Läsaravgifter"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Följande alternativ, inklusive beskrivningar och avgifter (redigeras nedan), visas under Policyer i Om tidskriften, liksom vid de ställen där betalning krävs."
+
+msgid "manager.payment.records"
+msgstr "Register"
+
+msgid "manager.paymentTypes"
+msgstr "Betalningsformer"
+
+msgid "manager.payment.userName"
+msgstr "Betalnings-ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Tillagda användare till tidskriften"
+
+msgid "manager.people.allJournals"
+msgstr "Alla tidskrifter"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Lägg till en användare till tidskriften"
+
+msgid "manager.people.showNoRole"
+msgstr "Visa användare utan tilldelad roll"
+
+msgid "manager.people.allUsers"
+msgstr "Alla tillagda användare"
+
+msgid "manager.people.confirmRemove"
+msgstr "Vill du ta bort den här användaren från tidskriften? Användaren kommer då att avaktiveras från alla funktioner inom tidskriften"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Välj en mall"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Lägg till en befintlig användare"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Med tidskrift"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Välj en användare (eller flera) för att slå samman med ett annat användarkonto (t. ex. när någon har två användarkonton). Det först valda kontot kommer då att raderas och alla manuskript, uppdrag, etc. kommer att flyttas över till det andra kontot."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Välj användare till vilken du vill överföra föregående användares författarskap, redaktörsuppdrag etc."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Lägg till {$roll}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Synkroniserad tilldelning innebär att samtliga användare inom en specifik tidskrift kan tilldelas samma roll/funktion i den här tidskriften. Funktionen gör det möjligt för en vald grupp av användare/funktioner (t.ex., granskare) att synkroniseras mellan olika tidskrifter."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Abstracts ej obligatoriskt."
+
+msgid "manager.section.noSectionEditors"
+msgstr "Det finns ingen redaktör för sektionen än. Lägg till åtminstone en användare till rollen under Administration > Inställningar > Användare &amp; Roller först."
+
+msgid "manager.sections.assigned"
+msgstr "Sektionens redaktörer"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Vill du ta bort sektionen?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Innan sektionen kan tas bort, måste sektionens artiklar flyttas till en annan  sektion."
+
+msgid "manager.sections.create"
+msgstr "Skapa en sektion"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Lägg till en sektionsredaktör till sektionen, som då automatiskt får tillgång till bidragen inom sektionen. (Alternativt kan sektionsredaktören kopplas till inkommande bidrag manuellt.) Sektionsredaktören kan kopplas automatiskt till att hantera granskning (sakkunniggranskningen) och/eller redigering (manusredigering, layout och korrekturläsning). En sektionsredaktör skapas genom att klicka på Sektionsredaktör under Roller i Tidskriftsadministration."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Bidrag kan bara skickas in av redaktörer och sektionsredaktörer."
+
+msgid "manager.sections.editors"
+msgstr "Sektionsredaktörer"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Ange en förkortning till sektionens namn"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Åtminstone ett alternativ måste vara markerat för varje sektionsredaktörs-uppdrag."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Välj ett giltligt granskningsformulär."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Ange ett namn på sektionen."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Utelämna författarnamnen på sektionsmaterial från numrets innehållsförteckning"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Utelämna titeln på sektionen från numrets innehållsförteckning."
+
+msgid "manager.sections.identifyType"
+msgstr "Beskriv artiklar publicerad i sektionen som en/ett"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(t.ex. \"Sakkunniggranskad artikel\", \"Icke-sakkunniggranskad bokrecension\", \"Inbjuden kommentar\", etc.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indexerad"
+
+msgid "manager.sections.noneCreated"
+msgstr "Inga sektioner har skapats."
+
+msgid "manager.sections.open"
+msgstr "Bidrag mottas"
+
+msgid "manager.sections.policy"
+msgstr "Sektionspolicy"
+
+msgid "manager.sections.readingTools"
+msgstr "Läsverktyg"
+
+msgid "manager.sections.reviewed"
+msgstr "Sakkunniggranskad"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Kommer inte omfattas av tidskriftens indexering"
+
+msgid "manager.sections.submissionReview"
+msgstr "Kommer inte att bli sakkunniggranskad"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Bidrag inskickade till den här sektionen"
+
+msgid "manager.sections.unassigned"
+msgstr "Tillgängliga sektionsredaktörer"
+
+msgid "manager.sections.wordCount"
+msgstr "Antal ord"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Begränsa antal tillåtna ord i abstract för den här sektionen (0 innebär obegränsat)"
+
+msgid "manager.setup"
+msgstr "Tidskriftsinställningar"
+
+msgid "manager.setup.masthead"
+msgstr "Redaktionsruta"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Redaktion"
+
+msgid "manager.setup.homepageContent"
+msgstr "Innehåll på tidskriftens förstasida"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Tidskriftens försasida innehåller navigationslänkar som förval. Ytterligare innehåll på webbsidan kan läggas till genom att använda en eller alla av följande alternativ, som kommer att visas i de ordning som de står."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Stilmall för tidskriften"
+
+msgid "manager.setup.contextName"
+msgstr "Tidskriftens namn"
+
+msgid "manager.setup.pageHeader"
+msgstr "Sidhuvud för tidskriften"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Innehåll"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Lägg till en rubrik under \"Om\" "
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Lägg till en rubrik i checklistan"
+
+msgid "manager.setup.addItem"
+msgstr "Lägg till en rubrik"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Lägg till rubriker under \"Om tidskriften\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Lägg till rubrik"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Lägg till ny länk till en databas"
+
+msgid "manager.setup.addSponsor"
+msgstr "Lägg till sponsor"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternativt sidhuvud"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Istället för namn och logotyp kan en HTML-version av sidhuvudet skrivas in i textrutan nedan. Lämna textrutan tom om den inte behövs."
+
+msgid "manager.setup.announcements"
+msgstr "Meddelanden"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Meddelanden kan publiceras för att informera tidskriftens läsare om nyheter och olika händelser. Publicerade meddelanden kommer att synas under \"Meddelanden\"."
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Lägg till ytterligare information som ska visas för läsare under Meddelanden."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Kommer att visas under Om tidskriften)"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Författare måste skicka in en intressekonfliktsförklaring i samband med att bidraget skickas in."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Granskare måste skicka med en intressekonfliktsförklaring i samband med varje sakkunniggranskning som görs."
+
+msgid "manager.setup.history"
+msgstr "Utgivningshistorik"
+
+msgid "manager.setup.historyDescription"
+msgstr "Den här texten visas under rubriken \"Om\" och är till för att beskriva exempelvis förändringar av titel, redaktionens sammansättning, eller andra relevanta detaljer rörande tidskriftens utgivningshistorik."
+
+msgid "manager.setup.metadata.coverage"
+msgstr "Täckning"
+
+msgid "manager.setup.metadata.coverage.description"
+msgstr "Hänvisar till geografisk, kronologisk eller historisk täckning, och/eller speciella ämnesegenskaper för det publicerade materialet."
+
+msgid "manager.setup.currentIssue"
+msgstr "Senaste numret"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Steg 5. Anpassa utseendet"
+
+msgid "manager.setup.customTags"
+msgstr "Anpassade taggar"
+
+msgid "manager.setup.customTagsDescription"
+msgstr "Anpassade HTML-taggar som kan läggas in på varje sidas huvud (t.ex META-taggar)."
+
+msgid "manager.setup.details"
+msgstr "Detaljer"
+
+msgid "manager.setup.details.description"
+msgstr "Namn på tidskriften, ISSN, kontaktuppgifter, sponsorer, sökmotorer."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Tidskriftsansvarig registrerar alla användarkonton. Redaktörer och sektionsredaktörer kan endast registrera konton för granskare."
+
+msgid "manager.setup.discipline"
+msgstr "Akademisk disciplin och underdiscipliner."
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Användbar för att bekriva en tvärvetenskaplig tidskrift och/eller om författare kan skicka in artiklar inom tvärvetenskapliga ämnen."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(t.ex., Historia; Pedagogik; Sociologi; Psykologi; Kulturstudier; Juridik)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Ange exempel på relevanta akademiska discipliner för tidskriften."
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Lägg till en innehållsförteckning för det senaste numret (om det finns)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Redaktörens beslut"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Bounce-adress"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "E-postmeddelanden som inte kan levereras producerar ett felmeddelande som skickas till denna e-postadress."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "<strong>Observera:</strong> För att välja det här alternativet måste sidadministratören aktivera <tt>allow_envelope_sender</tt> i OJS konfigureringsfil. Ytterligare serverkonfigurering kan komma att bli nödvändiga för att stödja den här funktionaliteten (något som inte alla servrar tillåter, se OJS-dokumentationen för information.)"
+
+msgid "manager.setup.emails"
+msgstr "E-post-identifiering"
+
+msgid "manager.setup.emailSignature"
+msgstr "Signatur"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Färdiga e-postmeddelanden som skickas från tidskriften kommer ha följande signatur infogad sist i e-posten."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Möjliggör för tidskriftsansvariga att lägga till meddelanden."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Besökare kan skapa ett användarkonto för tidskriften."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Ämne och fokus"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Beskriv för författare, läsare och bibliotekarier vilken typ av artiklar som tidskriften publicerar."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Författarens indexering av det egna arbetet"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS är ansluten till <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protokoll för Metadata Harvesting, är en väletablerad standard som stöder tillgängliggörandet av välindexerad data i en global kontext. Författare använder ett generellt formulär för att beskriva bidragets metadata. Den tidskriftsansvarige anger indexeringskategorier och förse författare med relevanta exempel som kan vara till hjälp vid indexeringen"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "ISSN numret är ogiltligt."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Huvudkontaktens e-post är obligatoriskt."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Huvudkontaktens namn är obligatoriskt."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Initialer för tidskriften är obligatoriskt."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "En tidskriftstitel är obligatorisk."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Att ange antal granskare per manuskript är obligatoriskt."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "E-post till supportkontakten är obligatoriskt."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Namn på supportkontakt är obligatoriskt."
+
+msgid "manager.setup.generalInformation"
+msgstr "Allmän information"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Steg 1. Detaljer"
+
+msgid "manager.setup.guidelines"
+msgstr "Riktlinjer"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Steg 3. Skicka in bidrag"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "För tidskrifter som erbjuder omedelbar eller fördröjd open access, lägg till en Creative Commons-licens till allt publicerat arbete vid lämplig tidpunkt."
+
+msgid "manager.setup.information"
+msgstr "Information"
+
+msgid "manager.setup.information.description"
+msgstr "En kortfattad beskrivning av tidskriftens innehåll för bibliotekarier, potentiella författare och läsare. Informationen visas i sidans sidomeny när Informations-blocket har aktiverats."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "För författare"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "För bibliotekarier"
+
+msgid "manager.setup.information.forReaders"
+msgstr "För läsare"
+
+msgid "manager.setup.initialIssue"
+msgstr "Första numret"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Beroende på utgivningsmönster, uppge nummer, volym, och/eller år för det första numret som ska publiceras i OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Institution"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Lägg till rubriker i navigeringsfältets (Hem, Om, Min sida, etc.) som syns överst på sidan."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Artiklar per sida"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Förkortning för tidskriften"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Tidskriftsarkivering"
+
+msgid "manager.setup.contextSummary"
+msgstr "Kort beskrivning av tidskriften"
+
+msgid "manager.setup.contextAbout"
+msgstr "Om tidskriften"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Skriv här information om tidskriften som kan vara intressant för läsare, författare eller sakkunniggranskare. Det kan vara tidskriftens open access-policy, ämne och målgrupp, upphovsrättsvillkor, sponsorer, tidskriftens historia och om tidskriften ingår i arkivsystem som LOCKSS eller CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Innehåll på tidskriftens förstasida"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Förstasidan består av förvalda navigeringslänkar. Ytterliggare innehåll kan läggas till genom följande alternativ. Alternativen visas i den ordningen som de står nedan. Observera att du alltid kan nå det senaste numret genom att klicka Senaste i navigeringsmenyn."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Webbsidans sidhuvud"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Webbsidans sidhuvud"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "En grafisk version av tidskriftens titel och logotyp (som .gif, .jpg, eller .png fil) kan laddas upp och ersätta den textverion som annars visas på webbsidan."
+
+msgid "manager.setup.contextInitials"
+msgstr "Tidskriftens initialer"
+
+msgid "manager.setup.journalLayout"
+msgstr "Tidskriftens layout"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Välj tema och layout för tidskriften här. En stilmall för tidskriften kan också laddas upp och ersätter då de förvalda teman och layouter."
+
+msgid "manager.setup.journalLogo"
+msgstr "Tidskriftens logotyp"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Tidskriftens logotyp"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Tidskriftens sidfot"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Det här är tidskriftens sidfot. För att ändra eller uppdatera sidfoten, klistra in HTML-koden i rutan nedan. Det kan t.ex. vara en besöksräknare, ett annat navigeringsfält etc. Sidfoten kommer att synas på varje sida."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Steg 2. Tidskriftens policyer"
+
+msgid "manager.setup.journalSetup"
+msgstr "Inställningar för tidskriften"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Inställningarna för tidskriften har uppdaterats."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Ogiltigt style sheet-format (Godkända format: .css.)"
+
+msgid "manager.setup.journalTheme"
+msgstr "Tema för tidskriften"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Miniatyrbild"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "En liten logotyp för tidskriften som kan användas i tidskriftslistan."
+
+msgid "manager.setup.contextTitle"
+msgstr "Tidskriftens titel"
+
+msgid "manager.setup.labelName"
+msgstr "Etikettsnamn"
+
+msgid "manager.setup.lists"
+msgstr "Listor"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN-pluginet aktiverat"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP Preservation Network (PN) tillhandahåller kostnadsfria tjänster för arkivering och bevarande för alla OJS-tidskrifter som uppfyller några grundläggande krav."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Klicka på Settings-länken för att acceptera villkoren för att ansluta sig till PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP Preservation Network (PN) tillhandahåller kostnadsfria tjänster för arkivering och bevarande för alla OJS-tidskrifter som uppfyller några grundläggande krav. PKP PN-pluginet i OJS 3 är för närvarande under utveckling och kommer vara tillgängligt i plugin-galleriet inom kort."
+
+msgid "manager.setup.otherLockss"
+msgstr "Andra alternativ för arkivering"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Aktivera LOCKSS för att arkivera och distribuera tidskriftens innehåll till deltagande bibliotek via LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Utgivarmanifest</a> sida."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "En LOCKSS-licens kommer då att visas i ”Om tidskriften” under ”Arkivering”: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\"target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Beskrivning av LOCKSS-licensen"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Sök fram 6-10 bibliotek som kan registrera och cacha tidskriften. Vänd dig exempelvis till institutioner där redaktörer eller redaktionsmedlemmar arbetar, eller till organisationer som redan deltar i LOCKSS. Se <a href=\"http://www.lockss.org/community/\" target=\"_blank\">LOCKSS community</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Aktivera CLOCKSS för att arkivera och distribuera tidskriftens innehåll till deltagande bibliotek via CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Utgivarmanifest</a> sida."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "En CLOCKSS-licens kommer då att visas i \"Om\" tidskriften under \"Arkivering\": <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS Licens</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Beskrivning av CLOCKSS-licensen"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Anmälan till CLOCKSS tjänster görs på <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS webbplats</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look.description"
+msgstr "Webbplatsens sidhuvud, innehåll, tidskriftens sidhuvud, sidfot, navigeringsfält, style sheet."
+
+msgid "manager.setup.management"
+msgstr "Administration"
+
+msgid "manager.setup.management.description"
+msgstr "Tillgänglighet och säkerhet, utgivningsmönster, meddelanden, manusredigering, layout och korrekturläsning."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Administration av grundläggande redaktionella steg"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Installation av administration och publicering"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Steg 4. Administration av tidskriften"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigeringsfält"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Lägg till eller ta bort ytterligare fält till navigeringsmenyn."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL är en absolut URL (ex. \"http://www.example.com\") snarare än en lokal sökväg (t.ex. \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Etikettsvärdet är en bokstavlig sträng (t.ex., \"Installation av tidskriften\") snarare än en lokaliseringsnyckel (t.ex., \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Ingen bildfil har laddats upp"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Inget style sheet har uppladdats upp."
+
+msgid "manager.setup.note"
+msgstr "Anteckning"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Anmärkning:</strong> Funktionen för utskick av e-post som bekräftar att bidrag har emottagits är avstängd. För att använda funktionen, aktivera \"SUBMISSION ACK\"-e-postmeddelandet i E-postmeddelanden."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Sidlänkar"
+
+msgid "manager.setup.publishingMode"
+msgstr "Tillgång till tidskriftens innehåll"
+
+msgid "manager.setup.onlineIssn"
+msgstr "e-ISSN"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Tidskriftens innehåll är tillgängligt som open access."
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Alternativ för sidnumrering"
+
+msgid "manager.setup.policies"
+msgstr "Policyer"
+
+msgid "manager.setup.policies.description"
+msgstr "Tidskriftens fokus, sakkunninggranskning, sektioner, personuppgifter, säkerhet och övrigt."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Instruktioner för korrekturläsning"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Instruktioner för korrekturläsning finns tillgängliga för Korrekturläsare, Författare, Layoutredaktörer, och Sektionsredaktörer i samband med redigering av manuskriptet. Nedan finns standardinstruktioner i HTML som kan redigeras eller ersättas av Tidskriftsansvarig när som helst (i HTML eller plain text)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Utgivningsmönster"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Flera artiklar kan publiceras samtidigt som del av ett nummer med egen innehållsförteckning. Eller så publiceras materialet separat i takt med att det färdigställs och läggs till i det aktuella numrets innehållsförteckning. Informera läsare om tidskriftens planerade utgivningsfrekvens under \"Om tidskriften\"."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Utgivningsmönster"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identifiering av innehållet i tidskriften"
+
+msgid "manager.setup.publisher"
+msgstr "Utgivare"
+
+msgid "manager.setup.publishingDescription"
+msgstr "Namn på tidskriftens utgivare som kan inkluderas i metadatan som skickas till tredje parts arkiv."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Länka referenser"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Användare måste vara registrerade och inloggade för att se open access-innehållet."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Användare måste vara registrerade och inloggade för att se tidskriften."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Riktlinjer för granskare"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Alternativ för granskning"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automatiska e-postpåminnelser"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "För att aktivera dessa alternativ måste den webbplatsansvarige aktivera <tt>scheduled_tasks</tt> funktionen i OJS:s konfigurationsfil. Ytterligare serverkonfiguration kan komma att behöva göras för att stödja denna funktion (något som inte är möjligt på alla typer av servrar) som beskrivs i OJS-dokumentationen."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Anonym granskning"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Det antal veckor som granskningen av artikel/artiklar högst får ta"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Redaktörerna betygsätter granskarna utifrån en fempoängs-skala efter avslutad granskning."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Granskarna kommer endast ha tillgång till bidragsfilen efter att de har accepterat att vara granskare."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Granskarens tillgång"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Aktivera granskning utan inloggning."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "<strong>Observera:</strong> Inbjudan via e-post till granskare innehåller en URL som pekar direkt till sidan för granskning av bidraget (med tillgång till andra sidor som kräver inloggning). Av säkerhetsskäl kan inte redaktörer cc:a eller lägga till andras e-postadresser när de skickar inbjudan till granskare."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Granskarens bedömning"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Påminnelse (för granskare)"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Granskningspolicy"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indexering för sökmotorer"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Lägg till en kort beskrivning av tidskriften som sökmotorer kan visa när tidskriften visas i sökresultatet"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Sektioner och sektionsredaktörer"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Om inga sektioner har skapats så kommer bidragen automatiskt att läggas under sektionen Artikel.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "För att skapa eller redigera tidskriftens sektioner (t.ex.; Artiklar, Bokrecensioner, etc.), gå till Hantera sektioner.<br /><br />Författare som skickar in bidrag till tidskriften kommer att ange..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Tidskriftsredaktören som kommer att följa bidraget genom den redaktionella processen."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Lämplig tidskriftssektion för bidraget."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Visa alltid länkar till publiceringsversionerna och markera när tillgången är begränsad."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Fem steg som skapar en webbplats för tidskriften"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(t.ex., Fotosyntes; Svarta hål; Zenons paradoxer)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Nyckelord"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Ger exempel på nyckelord eller ämnen som är till hjälp för författarna"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Riktlinjer för bidrag"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Checklista för insändning av bidrag."
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "När ett bidrag skickas in till tidskriften måste författaren först kontrollera de olika momenten i Checklista för insändning av bidrag. Checklistan syns också i Författarinstruktioner under Om tidskriften. Checklistan kan redigeras nedan men alla delmoment på listan måste markeras av författaren innan bidraget skickas in."
+
+msgid "manager.setup.submissions"
+msgstr "Bidrag"
+
+msgid "manager.setup.submissions.description"
+msgstr "Riktlinjer för författare, upphovsrätt, och indexering (även registrering)."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Tidskriften kräver prenumeration för hela eller delar av innehållet."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS kommer inte användas för att publicera tidskriftens innehåll online."
+
+msgid "manager.setup.typeExamples"
+msgstr "(t.ex., Historiska studier; Experimentella studier; Litteraturanalyser; Enkäter och intervjuer)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Metod och/eller tillvägagångssätt"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Anger exempel på typer av metoder och tillvägagångssätt inom ämnesområdet"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Unik identifierare"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Artiklar och tidskriftsnummer kan taggas med ett id-nummer eller en id-sträng som stöds av ett identifikationssystem som t.ex. Digital Object Identifier System (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr " Tidskriften har ett redaktionsråd och/eller ett granskningssråd."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Miniatyrbild"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Titel som bild"
+
+msgid "manager.setup.userRegistration"
+msgstr "Användarregistrering"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Titel i text"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\tTidskriften är konfigurerad så att mer än ett användarmått registreras. Användarstatistiken kommer att visas i olika sammanhang.\n"
+"\tVid visa tillfällen kan bara en enskild användarstatistik användas, t.ex. för att visa en lista över de mest använda artiklarna eller för att rangordna\n"
+"\tsökresultat. Välj ett av de konfigurerade måtten som förval.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Tidskriftsstatistik"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Antal visningar av artikeln (endast för författare)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Accepterat"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Refuserat"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Skicka in igen"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Dagar för granskning"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Dagar till publicering"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS genererar följande statistik för respektive tidskrift. Dagar för granskning, räknar dagar från det att bidraget skickats in (eller att granskningsversionen tagits fram) till redaktören beslut. \"Dagar till publicering\", beräknar tiden från det att bidraget har accepterats till att det har publicerats i tidskriften."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Publicerade artiklar"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Välj artiklar som ska vara tillängliga för läsare i Om tidskriften."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Anmärkning: Procentsatsen för sakkunniggranskade bidrag behöver inte vara 100% eftersom statusen på återsända bidrag kan vara antingen accepterade, refuserade eller fortfarande under arbete."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Publicerade nummer"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Totalt antal bidrag"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Sakkunniggranskad"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registrerade läsare"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Registrerade användare"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Antal utsedda"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Granskare"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Redaktörens bedömning"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Antal granskningar"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Välj sektioner för att beräkna statistik över tidskriftens sakkunniggranskade artiklar."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Prenumerationer"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Nedladdningar av artiklar"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Visningar av abstracts"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Visningar av abstracts och nedladdningar av artiklar"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Visningar av tidskriftens förstasida"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Visningar av numrets innehållsförteckning"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Begränsa resultaten med nummer och/eller artikel."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Begränsa resultaten med objektstyp (tidskrift, nummer, artikel, filtyp) och/eller med en eller flera identifikatorer."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Prenumerationspolicyer"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Fördröjd open access"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Använd den kryssruta som finns."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Prenumerationen förfaller"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "När prenumerationen förfaller kan läsarna nekas tillgång till allt innehåll i prenumerationen eller ha fortsatt tillgång till prenumerationens innehåll som har publicerats innan det datum då prenumerationen upphörde."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Upphör helt"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Läsarna nekas tillgång till allt innehåll som ingår i prenumerationen när prenumerationen upphör."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Upphör delvis"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Läsarna nekas tillgång till det senaste publicerade innehållet i prenumerationen, men behåller tillgång till innehåll som publicerats före det datum då prenumerationen upphörde."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} månader"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} veckor"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Meddela prenumeranter via e-post efter prenumerationens förfallodatum"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Meddela prenumeranter via e-post efter prenumerationens förfallodatum."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Meddela prenumeranter via e-post före prenumerationens förfallodatum."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Meddela prenumeranter via e-post före prenumerationens förfallodatum."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Påminnelse om prenumerationens förfallande"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Automatiska e-postpåminnelser (redigeras av tidskriftsansvarig under e-postmallar) kan skickas till prenumeranter både före och efter att en prenumeration har förfallit."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Anmärkning:</strong> För att aktivera alternativen måste webbplatsadministratören aktivera <tt>scheduled_tasks</tt> alternativen i OJS:s konfigurationsfil. Ytterligare serverkonfigurationer kan behövas för att stödja funktionaliten (vilket inte är möjlig på alla servrar), som beskrivs i OJS-dokumentationen."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Välj en av följande:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML kan användas i textavsnitt (för textstorlek, färg, etc.), med \"returns\" behandlas som <tt>&lt;br&gt;</tt> HTML editor fungerar i Firefox webbläsare."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Välj ett giltligt värde på hur många månader det var sedan prenumerationen förföll."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Välj ett giltligt värde på antalet månader innan prenumerationen förfaller."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Välj ett giltligt värde på hur många veckor det var sedan prenumerationen prenumerationen förföll."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Välj ett giltligt värde på antalet veckor innan prenumerationen förfaller."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Registrerade läsare har möjligheten att få innehållsförteckningen e-postade till sig när numret blir open access."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Anmärkning:</strong> För att aktivera det här alternativet måste webbplatsadministratören aktivera <tt>scheduled_tasks</tt> i OJS konfigureringsfilen. Ytterligare serverkonfigurering kan komma att krävas för att stödja den här typen av funktionalitet (vilket inte är möjligt på alla servrar), som beskrivs i OJS-dokumentationen."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Avisering av betalning online"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Automatisk aviseringar via e-post (tidskriftsansvarig har tillgång till redigering via tidskriftsadministrationen i OJS:s E-post) kan skickas till den prenumerationsansvarige vid online betalning av prenumerationen."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Meddela den prenumerationsansvarige via e-post vid online-köp av en individuell prenumeration."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Meddela den prenumerationsansvarige via e-post vid online-köp av en institutionell prenumeration (rekomenderas)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Meddela den prenumerationsansvarige via e-post vid online-förnyelse av en individuell prenumeration."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Meddela den prenumerationsansvarige via e-post vid online förnyelse av en institutionell prenumeration."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Anmärkning:</strong>Institutionsprenumerationer som köps online kräver godkännande av domän och IP-omfång och att den prenumerationsansvarige aktiverar prenumerationen."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Anmärkning:</strong> För att aktivera dessa alternativ måste den tidskriftansvarige aktivera modulen för betalning online, inklusive online-betalning för prenumerationer under Läsaravgifter."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Open access-alternativ för prenumerationstidskrifter."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Prenumerationstidskrifter kan tillåta såväl \"fördröjd open access\" som \"parallellpublicering\" av det publicerade materialet (båda alternativen ökar spridningen samt citeringen av innehållet)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Prenumerationsinformation"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Typer av prenumerationer och prissättning kommer automatiskt att visas under Prenumerationer i Om tidskriften, tillsammans med kontaktinformation till den prenumerationsansvarige. Ytterligare information om prenumerationer, som betalningsmetod eller support till prenumeranter i utvecklingsländer kan läggas till här."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Prenumerationsansvarig"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Kontaktinformationn listad under Prenumerationer i Om tidskriften."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Fyll i en giltlig e-postadress."
+
+msgid "manager.subscriptions"
+msgstr "Prenumerationer"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individuella prenumerationer"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institutionella prenumerationer"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Är du säker på att du vill förnya den här prenumerationen?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Är du säker på att du vill ta bort den här prenumerationen?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Prenumerationer sammanfattning"
+
+msgid "manager.subscriptions.create"
+msgstr "Skapa en ny prenumeration"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Skapa"
+
+msgid "manager.subscriptions.renew"
+msgstr "Förnya"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Slutdatum"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Slutdatum"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Startdatum"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Startdatum"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domän"
+
+msgid "manager.subscriptions.edit"
+msgstr "Redigera prenumeration"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Redigera"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Med status"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Alla"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Status"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Status för prenumerationen krävs."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Välj en giltlig prenumerationsstatus."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Prenumerationsform"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "En prenumerationsform krävs."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Välj en giltlig prenumerationsform."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Startdatum"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Ange ett startdatum för prenumerationen."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Ange ett giltigt startdatum för prenumerationen."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Slutdatum"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Ange ett slutdatum för prenumerationen."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Ange ett giltigt slutdatum för prenumerationen."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Anmärkning: Alla ändringar nedan ändrar användarens profil i hela systemet."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Användare"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontakt"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Lägg till en användare."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Lägg till en giltlig användare."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Välj ett giltligt land."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Skicka en e-post med information om användarnamn och prenumerationssdetaljer till användaren."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Klicka i kryssrutan."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Medlemskap"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referens nummer"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Fyll i medlemskapsinformation om prenumertionsformen kräver att prenumeranten tillhör en organisation eller  en förening."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Den valda prenumerationsformen kräver medlemskapsinformation."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Anmärkningar"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domän"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Institutionsnamn"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Ett institutionsnamn krävs."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Postadress"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Om en domän är ifylld här, är det optimalt att ange IP-omfånget.<br />Giltliga domännamn är (t.ex. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Den valda prenumerationsformen kräver en domän och/eller ett IP-omfång för prenumerationsverifiering."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Ange en giltig domän."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP-omfång"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Om ett IP-intervall är ifyllt här, är det optimalt att ange domänen.<br />Giltligt värde inkluderar en IP-adress (t.ex. 142.58.103.1), IP-omfgång (t.ex. 142.58.103.1 - 142.58.103.4), IP-omfång med jokertecken '*' (t.ex. 142.58.*.*), och ett IP-omfång med CIDR (t.ex. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Ange ett giltligt IP-omfång."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Ta bort"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Lägg till"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Spara och skapa ny"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "För att kunna skicka meddelanden till användarna via e-post, måste kontaktinformation som namn och e-post finnas med i tidskiftens inställningar.."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Användaren prenumrerar redan på den här tidskriften."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "En prenumerationsform måste skapas innan en ny prenumeration kan göras."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP-omfång"
+
+msgid "manager.subscriptions.membership"
+msgstr "Medlemskap"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referensnummer"
+
+msgid "manager.subscriptions.notes"
+msgstr "Anmärkningar"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Inga prenumerationer."
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Välj prenumerationskontakt"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Välj användare"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Tidskriftens redaktörer, tidskriftsansvarige, sektionsredaktörer, layoutredaktörer, manusredaktörer och korrekturläsare tilldelas prenumerationsrättigheter automatiskt."
+
+msgid "manager.subscriptions.select"
+msgstr "Välj"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "En prenumeration har skapats."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Prenumerationsform"
+
+msgid "manager.subscriptions.user"
+msgstr "Användare"
+
+msgid "manager.subscriptions.contact"
+msgstr "Kontakt, namn"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Kontakt, institution"
+
+msgid "manager.subscriptionTypes"
+msgstr "Prenumerationsform"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Varning! Alla prenumeranter till den här prenumerationsformen kommer också att raderas. Är du säker på att du vill radera den här prenumerationsformen?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Pris"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Prenumerationer"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individuella"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institutionella"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Skapa ny prenumerationsform"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Skapa"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Varaktighet"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Redigera prenumerationsformen"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Redigera"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Pris"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Ange numerisk värde (t.ex. 40 eller 40.00) utan symboler (t ex. £, $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Priset måste vara ha ett positivt numeriskt värde."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Det är obligatoriskt att ange ett pris."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valuta"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Det är obligatoriskt att ange en valuta."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Välj en giltig valuta."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Beskrivning"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Upphör efter"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "månader (t ex 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Upphör aldrig"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Använd de befintliga alternativen."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Varaktighet"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Antalet månader som prenumerationen löper (ex. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Prenumerationsformens varaktighet måste anges i ett positivt numeriskt värde."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Ange prenumerationsformens varaktighet."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Ange format på prenumerationsformen."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Välj ett giltigt format."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Prenumerationer"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuella (användare valideras via login)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institutionella (användare valideras via domän eller IP-adress)."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Använd den befintliga kryssrutan."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Prenumerationer kräver information om medlemskap (t ex om en förening, organisation, consortium, etc.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Använd den befintliga kryssrutan."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Alternativ"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Gör inte den här prenumerationsformen publikt tillgänglig eller synlig (t.ex. under Prenumerationer i Om tidskriften)."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Please use the checkbox provided."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Spara och skapa en ny"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Namn"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Det finns redan en prenumerationsform med det här namnet."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Ett namn på prenumerationsformen är krävs."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Prenumerationsform"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Inga prenumerationsformer har skapats."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "En prenumerationsform har skapats."
+
+msgid "manager.distribution.access"
+msgstr "Tillgång"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Länka till en sida som beskriver era prenumerationsalternativ."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Länka till en sida som beskriver besökarens aktuella och tidigare prenumerationer."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Den här länken kommer bara att visas om besökaren är inloggad."
+
+msgid "manager.setup.categories"
+msgstr "Kategorier"
+
+msgid "manager.setup.categories.description"
+msgstr "Välj en lämplig kategori från listan nedan. Läsare kommer att kunna bläddra i tidskriftslistan via kategori."
+
+msgid "grid.category.path"
+msgstr "Väg"
+
+msgid "grid.action.addSection"
+msgstr "Lägg till sektion"
+
+msgid "manager.setup.section.description"
+msgstr "Artiklarna i ett publicerat nummer organiseras i olika sektioner, med olika teman eller olika typer av artiklar (t ex översiktsartiklar, forskningsartiklar, recensioner, osv)"
+
+msgid "settings.roles.gridDescription"
+msgstr "Roller är grupper av tidskriftens användare som har tillgång till olika funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och alla inställningar); Sektionsredaktör har fullständig tillgång till allt innehåll i tidskriften; Redaktionssekreterare har begränsad tillgång till inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se och arbeta med inskickade bidrag som  de har tilldelats att granska; och Författare kan se och interagera med begränsad information om deras egna bidrag. Dessutom finns det fem olika steg som de olika rollerna kan få tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redigering, och Produktion."
+
+msgid "manager.publication.library"
+msgstr "Utgivarens publikationer"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Basera nya artiklars upphovsrättsår på"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Artiklar: förvalt år kommer att skapas av artikelns publiceringsdatum, som i \"publish-as-you-go\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Nummer: förvalt år kommer att skapas av numrets publiceringsdatum."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Återställ villkor för artikel"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Är du säker på att du vill återställa villkorsinformation som redan är kopplade till artiklar?"
+
+msgid "grid.genres.title.short"
+msgstr "Förkortningar"
+
+msgid "grid.genres.title"
+msgstr "Förkortningar för artiklar"
+
+msgid "grid.genres.description"
+msgstr "De här förkortningarna används för att namnge filer och visas i menyn för uppladdade filer. Tecknet ## gör att användaren kan associera till filen antingen med hela bidragets 99Z eller en speciell del av nummer (t ex 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Inställningar"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Inställningar för DOI-pluginet"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artiklar"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Nummer"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Publiceringsversion"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Pluginets krav är inte uppfyllda"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "För att använda dettaa plugin gå till kategorin \"Publika identifikatorer\" för plugins, aktivera och konfigurera DOI-pluginet och ange här ett giltligt DOI prefix."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Pluginet är inte helt installerat."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Inget publiceringsmaterial har valts för DOI-tilldelning i DOI-pluginet. Det är därför inte möjligt att leverera eller exportera via pluginet."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Lösenord"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Lösenordet kommer att sparas i text, det är alltså inte krypterad."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Något nummer"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Någon status"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Inte deponerad"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Marked registered"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registrerad"
+
+msgid "plugins.importexport.common.action"
+msgstr "Aktivitet"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Export"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Markera som registrerad"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Register"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validera XML före export och registrering."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Inga objekt har valts."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Kunde inte omvandla valda objekt."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Ogiltlig XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Den producerade filen {$param} är inte skrivbar."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Input-filen {$param} är inte läsbar."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Det gick inte att registrera! Servern för DOI-registrering skickade ett felmeddelande: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registreringen lyckades!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI-prefix saknas för tidskriften med sökvägen {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "FEL:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Sökvägen för tidskriften, \"{$journalPath}\", existerar inte."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Det önskade objektet kunde inte hittas."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Skicka en kopia till tidskriftens kontaktperson, som finns angiven i Inställningarna för tidskriften."

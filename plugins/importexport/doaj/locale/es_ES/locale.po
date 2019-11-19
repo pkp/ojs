@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:39+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Módulo de exportación DOAJ"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Exportar la revista a DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Contactar con DOAJ para la inclusión"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Si desea registrar artículos desde el propio OJS, introduzca su clave API DOAJ. Si no lo hace, todavía podrá exportarlos al formato DOAJ XML, pero no podrá registrar los artículos con DOAJ desde OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Clave API DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Encontrará su clave API en su página de usuario/a de DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS depositará los artículos automáticamente en DOAJ. Tenga en cuenta que este proceso puede llevar cierto tiempo tras la publicación (p.ej. en función de la configuración cron). Puede comprobar todos los artículos no registrados."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Utilice la API de prueba de DOAJ (entorno de prueba) para el registro. No olvide desactivar esta opción en la versión de producción."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Tarea de registro automático de DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "¡El depósito no tuvo éxito! La API DOAJ informó de un error: '{$param}'."

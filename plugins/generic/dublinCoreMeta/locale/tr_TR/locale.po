@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.dublinCoreMeta.name"
+msgstr "Dublin Core İndeksleme Eklentisi"
+
+msgid "plugins.generic.dublinCoreMeta.description"
+msgstr "Bu eklenti, dizin oluşturma amacıyla makale görünümlerinde Dublin Core veri etiketlerini yerleştirir."

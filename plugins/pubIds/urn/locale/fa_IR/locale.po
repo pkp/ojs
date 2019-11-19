@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:02+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "این افزونه امکان اضافه کردن شناسه برای مقالات، شماره ها و کلیشه های چاپی را فراهم می سازد."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "برای استفاده و مدیریت شناسه URN لطفاً تنظیمات آن را پیکربندی نمایید:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "محتوای مجله"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "لطفاً مواردی که بایستی شنایه URN دریافت کنند را مشخص منید."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "لطفاً مواردی از محتویات چاپی که باید به آنها شناسه URN اختصاص داده شود انتخاب کنید:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "شماره ها"
+
+msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
+msgstr "مقالات"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "کلیشه های چاپی"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "پیشوند URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "پیشوند URN قسمت ثابت شناسه است (برای مثال \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "پیشوند URN دارای فرمتی به شکل \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt; می باشد"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "پسوند URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "پشوند URN میتواند در هر فرمتی باشد فقط باید توجه شود که به ازای یک پیشوند اختصاص داده شده ,URN، این پسوندها منحصر به فرد باشد"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "برای تولید پسوندهای URN از الگوی زیر استفاده کنید. %j برای مجله، %v برای دوره، %i برای شماره، %Y برای سال، %a برای شناسه مقاله، %g برای شناسه کلیشه چاپی، %f برای شناسه فایل، %p برای شماره صفحه و %x برای شناسه سفارشی."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "برای مثال از الگوی, vol%viss%ipp%p شناسه URN هایی به صورت 10.1234/vol3iss2pp230 تولید می شود."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "برای شماره ها"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "برای مقالات"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "برای کلیشه های چاپی"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "لطفاً الگوی پسوند شناسه URN برای شماره ها را وارد کنید"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired"
+msgstr "لطفاً الگوی پسوند شناسه URN برای مقالات را وارد کنید"
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "لطفاً الگوی پسوند شناسه URN برای کلیشه های چاپی را وارد "
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "استفاده از الگوی پیشفرض"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i برای شماره ها<br />%j.v%vi%i.%a برای مقالات<br />%j.v%vi%i.%a.g%g برای کلیشه های چاپی."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "یک پسوند URN منحصر به فرد برای هر مورد منتشر شده وارد کنید. یک فیلد URN در صفحه فراداده های هر مورد مشاهده خواهید کرد."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "شماره بررسی"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "شماره بررسی به صورت خودکار محاسبه شده و به انتهای شناسه های URN افزوده میشود"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "فضای نامی"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "انتخاب"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "معمولاً برای ثبت نام مشخص کردن فضای اسمی مورد نیاز است (برای مثال at the Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "آدرس URL مرکز URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(برای مثال http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "لطفآدرس URL مرکز URN را وارد کنید"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "اختصاص مجدد شناسه هاس URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "اگر شما پیکربندی URN خود را تغییر دهید، URN هایی که قبلا تعیین شده اند تحت تاثیر قرار نمی گیرند. هنگامی که پیکربندی URN ذخیره می شود، از این دکمه برای پاک کردن تمام URN های موجود استفاده کنید تا تنظیمات جدید به تمامی موارد موجود نیز اعمال شود."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "آیا مطمئنید که می خواهید تمامی شناسه های URN موجود را حذف کنید؟"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "شماره"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "مقاله"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "کلیشه چاپی"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه URN  قابل انجام نیست."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص شناسه URN قابل انجام نیست."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "چیزی که هم اکنون مشاهده می کنید یک پیش نمایش است، برای اختصاص شناسه URN چک باکس را تیک زده و فرم را ذخیره کنید."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "شناسه URN به {$pubObjectType} اختصاص داده شد."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "این پسوند از پیش استفاده شده است. لطفاً برای هر مورد یک پسوند منحصر به فرد اختصاص دهید."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "پاک کردن شناسه URN"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "آیا مطمئنید که می خواهید شناسه URN موجود را حذف کنید؟"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "پاک کردن شناسه URN شماره"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "آیا مطمئنید که می خواهید تمامی شناسه های URN این شماره را حذف نمایید؟"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "برای پاک کردن شناسه URN تمامی موارد (مقالات و کلیشه های چاپی) این شماره، از گزینه زیر استفاده نمایید."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "افزودن شماره بررسی"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "اختصاص شناسه {$pubId} به {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه URN  قابل انجام نیست."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص شناسه {$pubId} قابل انجام نیست."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "شنایه {$pubId} اختصاص داده شد."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "شماره بررسی تعریف نشده است"

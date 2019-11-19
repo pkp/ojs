@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:40+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:40+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Vtičnik za DOAJ izvoz"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Izvozi revijo za DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Kontaktirajte DOAJ za vključitev"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Če bi želeli registrirati prispevke direktno iz OJS, prosimo vnesite vaš DOAJ API ključ. Če nimate svojega DOAJ API ključa, lahko še vedno izvozite podatke v DOAJ XML obliki, ampak ne morete registrirati DOI-jev pri DOAJ direktno iz OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API ključ"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Svoj DAOJ API ključ lahko najdete na vaši DOAJ uporabniški strani."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS bo avtomatsko opravil depozit prispevkov na DOAJ. Prosimo upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite novo številko. Lahko preverite vse nedeponirane prispevke."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Uporabi DOAJ test API (testno okolje) za registracijo. Ne pozabite odstraniti te možnosti za produkcijo"
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Opravilo avtomatske registracije pri DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Depozit ni bil uspešen! DOAJ API je vrnil napako: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Uporaba:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

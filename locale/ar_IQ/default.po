@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "المقالات"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "نص المقال"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "هذا المؤلَّف لم يسبق له النشر، ولم يُعرض على مجلة علمية أخرى للنظر فيه (أو هناك توضيح بشأن هذا الأمر مقدم إلى هيئة التحرير في خانة التعليقات)"
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "ملف التقديم هو بإحدى الصيغ الآتية: OpenOffice, Microsoft Word, RTF, WordPerfect"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "حيثما تطلب الأمر، أضيفت روابط للمراجع المستعملة في المؤلَّف (الروابط هي وصلات إلى العناوين على الشبكة العنكبوتية)"
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "فقرات النص ذات تباعد مفرد للأسطر، بحجم خط (12) نقطة، تم فيه استعمال الخط المائل بدلاً عن الخط التحتاني (باستثناء عناوين الروابط)، وجميع الرسوم والأشكال والجداول متوضعة ضمن النص المتعلق بها عوضاً عن تجميعها في نهاية الملف"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "إن نص المؤلَّف مقيد بالمتطلبات النمطية والأسلوبية الواردة في <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">دليل المؤلِّف</a>, الموجود في النص التعريفي بالمجلة ضمن هذا الموقع"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>أسماء الأشخاص وعناوين البريد الالكتروني المحفوظة في موقع المجلة هذا ستتم الاستفادة منها حصرياً للأغراض المنصوص عليها من قبل المجلة، ولن تكون متاحة لأي أغراض أخرى أو لأي طرف ثالث</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "هذه المجلة العلمية تسمح بالوصول المفتوح والمباشر إلى محتوياتها من مبدأ أن إتاحة البحوث العلمية مجاناً للعامة يخدم وبشكل أكبر تبادل المعارف والعلوم بين بني الإنسان"
+
+msgid "default.contextSettings.forReaders"
+msgstr "نحن نشجع القراء على التسجيل في خدمة إشعار النشر المتاحة في هذه المجلة. إستعمل <a href=\"{$indexUrl}{$contextPath}/user/register\">رابط التسجيل</a> المتواجد في أعلى الصفحة الرئيسية للمجلة. هذا التسجيل سيقدم لصاحبه رسالة بالبريد الكتروني تتضمن جدولاً بعمليات النشر الجديدة في المجلة. ذلك الجدول أو القائمة تساعد المجلة على استقطاب القراء مما يساعدها على الانتشار ويكسب لها سمعة في الوسط العلمي. أنظر <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">بيان الخصوصية</a> الذي يؤكد أن أسماء الأشخاص المسجلين في الموقع وعناوينهم البريدية لن تكون متاحة إلا للأغراض المتعلقة بإجراء النشر."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "ألديك اهتمام بالنشر في هذه المجلة؟ نوصيك إذن بمراجعة صفحة <a href=\"{$indexUrl}{$contextPath}/about\">عن المجلة</a> للاطلاع على سياسة عمل هذا القسم في المجلة، فضلاً عن <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">دليل المؤلفين</a>. يحتاج المؤلفون إلى <a href=\"{$indexUrl}{$contextPath}/user/register\">التسجيل</a> في المجلة ليتمكون من إرسال طلباتهم للنشر فيها، أو إن سبق لهم التسجيل فيها، <a href=\"{$indexUrl}/index/login\">تسجيل الدخول</a> والشروع بالخطوات الخمس لتقديم طلب النشر."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "نحن نشجع العاملين في مكتبات البحوث العلمية على تضمين هذه المجلة في قوائم مكتباتهم المنشورة على الإنترنت للمجلات العلمية الناشرة للبحوث والمقالات العلمية. كما أنه من الناجع الإشارة إلى أن الموقع المستضيف لهذه المجلة يعمل بنظام يتناسب مع حاجات هذه المكتبات من حيث إمكانية حفظ حسابات منتسبيها ليتمكنوا من المشاركة في هيئة تحريرها. (أنظر <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "هذه المجلة تستعمل نظام LOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href=\"http://www.lockss.org/\">للمزيد أنظر...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "هذه المجلة تستعمل نظام CLOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href=\"http://clockss.org/\">للمزيد أنظر...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "رئيس تحرير المجلة"
+
+msgid "default.groups.plural.manager"
+msgstr "رؤساء التحرير"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ر ت"
+
+msgid "default.groups.name.editor"
+msgstr "محرر"
+
+msgid "default.groups.plural.editor"
+msgstr "محررو المجلة"
+
+msgid "default.groups.abbrev.editor"
+msgstr "م"
+
+msgid "default.groups.name.guestEditor"
+msgstr "محرر مستضاف"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "محررون مستضافون"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "م ض"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "محرر قسم"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "محررو أقسام"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "م ق"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "مدير الاشتراكات"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "مديرو الاشتراكات"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "م ش"
+
+msgid "default.genres.researchInstrument"
+msgstr "أدوات البحث العلمي"
+
+msgid "default.genres.researchMaterials"
+msgstr "مواد البحث العلمي"
+
+msgid "default.genres.researchResults"
+msgstr "نتائج البحث العلمي"
+
+msgid "default.genres.transcripts"
+msgstr "النسخ"
+
+msgid "default.genres.dataAnalysis"
+msgstr "تحليل البيانات"
+
+msgid "default.genres.dataSet"
+msgstr "جداول البيانات"
+
+msgid "default.genres.sourceTexts"
+msgstr "نصوص المصادر"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "محكم"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "محكمون"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "ح"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
+"Language: \n"
+
+msgid "section.default.title"
+msgstr "Artikkelit"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr ""
+
+msgid "default.genres.article"
+msgstr "Artikkelin teksti"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Tätä käsikirjoitusta ei ole aiemmin julkaistu, eikä sitä ole lähetetty toiseen julkaisuun (tai asiasta on annettu selvitys Kommentteja toimittajalle -kohdassa)."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Käsikirjoitustiedosto on OpenOffice-, Microsoft Word- tai RTF-asiakirjan tiedostomuodossa."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Lähteiden URL-osoitteet on annettu, mikäli ne ovat saatavilla."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Tekstin riviväli on yksi; kirjasinkoko on 12; tekstissä käytetään kursiivia, ei alleviivausta (paitsi URL-osoitteissa); ja kaikki kuvat, kuviot ja taulukot on sijoitettu ensisijaisesti sopiviin kohtiin tekstin lomaan, ei tekstin loppuun."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Teksti noudattaa kirjoittajan ohjeissa määriteltyjä stilistisiä ja bibliografisia vaatimuksia."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Tämän julkaisun sivustolle syötettyjä nimiä ja sähköpostiosoitteita käytetään yksinomaan tämän julkaisun tarkoituksiin, eikä niitä luovuteta mihinkään muuhun tarkoitukseen tai muille osapuolille.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Tämä julkaisun sisällöt ovat välittömästi avoimesti saatavilla noudattaen periaatetta, jonka mukaan tutkimuksen tekeminen vapaasti saatavilla olevaksi suurelle yleisölle tukee suurempaa globaalia tiedonvaihtoa."
+
+msgid "default.contextSettings.forReaders"
+msgstr "Kehotamme lukijoita rekisteröitymään palveluun, joka ilmoittaa tämän julkaisun uusista julkaisuista. Käytä tämän julkaisun etusivun yläosassa olevaa <a href=\"{$indexUrl}{$contextPath}/user/register\">Rekisteröidy</a> -linkkiä. Rekisteröitymisen tuloksena lukijalle lähetetään sähköpostitse julkaisun jokaisen uuden numeron sisällysluettelo. Tämän palvelun käyttäjälistan avulla julkaisu myös saa tietoa kannattajamääristään ja lukijakunnastaan. Julkaisun <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Tietosuojaseloste</a> takaa, että lukijoiden nimiä ja sähköpostiosoitteita ei käytetä muihin tarkoituksiin."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Kiinnostaako tähän julkaisuun kirjoittaminen? Suosittelemme, että tutustut <a href=\"{$indexUrl}{$contextPath}/about\">Tietoa julkaisusta</a> -sivulla julkaisun osastoiden käytäntöihin sekä ohjeisiin sivulla <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Kirjoittajan ohjeet</a>. Kirjoittajien tulee <a href=\"{$indexUrl}{$contextPath}/user/register\">rekisteröityä</a> julkaisun käyttäjäksi ennen lähettämistä tai jo rekisteröidyttyään <a href=\"{$indexUrl}/index/login\">kirjautua sisään</a> aloittaakseen viisiportaisen prosessin."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Kannustamme tutkimuskirjastojen hoitajia lisäämään tämän julkaisun kirjastojensa elektronisten julkaisujen kokoelmaan. Huomionarvoista on myös, että kirjastot voivat ylläpitää tämän julkaisun avoimen lähdekoodin julkaisujärjestelmää, ja tarjota sen tiedekuntien jäsenten käyttöön tieteellisten julkaisujen toimittamistarkoituksiin (ks. <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Tämä julkaisu hyödyntää LOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href=\"http://www.lockss.org/\">Lisää...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr "Tämä julkaisu hyödyntää CLOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href=\"http://clockss.org/\">Lisää...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Julkaisun hallinnoija"
+
+msgid "default.groups.plural.manager"
+msgstr "Julkaisun hallinnoijat"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JH"
+
+msgid "default.groups.name.editor"
+msgstr "Julkaisun toimittaja"
+
+msgid "default.groups.plural.editor"
+msgstr "Julkaisun toimittajat"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JT"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Vieraileva toimittaja"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Vierailevat toimittajat"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "VT"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Osastotoimittaja"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Osastotoimittajat"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "OT"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Tilaussihteeri"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Tilaussihteerit"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "TS"
+
+msgid "default.genres.researchInstrument"
+msgstr "Tutkimusväline"
+
+msgid "default.genres.researchMaterials"
+msgstr "Tutkimusaineisto"
+
+msgid "default.genres.researchResults"
+msgstr "Tutkimustulokset"
+
+msgid "default.genres.transcripts"
+msgstr "Transkriptiot"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Data-analyysi"
+
+msgid "default.genres.dataSet"
+msgstr "Tietoaineisto"
+
+msgid "default.genres.sourceTexts"
+msgstr "Lähdetekstit"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Arvioija"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Arvioijat"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "A"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/>\n"
+"<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>"

@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:21+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Makaleleri Yazara Göre Öner"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Bu eklenti, makale yazarı sayfasında aynı yazarın makalelerini listeler."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Aynı yazarın en çok okunan makaleleri."
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "Uyarı: Bu eklenti etkinleştirilecek en az bir istatistik / rapor eklentisi gerektirir. İstatistik eklentileriniz birden fazla metrik sağlıyorsa, lütfen yöneticinin site ayarları sayfasında ve / veya günlük yöneticisinin ayarlar sayfalarında bir ana metrik seçin."

@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:48+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:48+00:00\n"
+"Language: \n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Blok předplatného"
+
+msgid "plugins.block.subscription.description"
+msgstr "Tento plugin přidá do postranního panelu blok s informací o předplatném."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Předplatné"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Vyprší"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Přístup poskytl: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Přichází z IP: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Přístupy"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Přihlaste se pro přístup k zdrojům s omezeným přístupem."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Pro přístup k některým zdrojům je třeba předplatné."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Více informací"

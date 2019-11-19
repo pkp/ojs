@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:07+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "Το COUNTER plugin επιτρέπει την καταγραφή και την σύνταξη αναφορών συμβατών με το <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> για τα στατιστικά του ιστοτόπου."
+
+msgid "plugins.reports.counter"
+msgstr "Στατιστικά COUNTER"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Αναφορά Περιοδικού 1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Αναφορά Περιοδικού 1 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Αριθμός Επιτυχημένων Αιτημάτων για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό (Έτος {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Ημερομηνία:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Εκδότης"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Πλατφόρμα"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN Εντύπου"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Σύνολο"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Σύνολο για όλα τα περιοδικά"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr "Οι παρακάτω σύνδεσμοι παράγουν αναφορές με τη χρήση του παλιού COUNTER plugin. Αν θέλετε να δημιουργήσετε COUNTER αναφορές με τη χρήση του νέου OJS COUNTER μετρικού συστήματος, χρησιμοποιείστε τους παραπάνω συνδέσμους."

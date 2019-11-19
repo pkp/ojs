@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:58+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:58+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Platba pomocí služby PayPal"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "Platba bude provedena s využítím služby PayPal."
+
+msgid "plugins.paymethod.paypal"
+msgstr "Platba pomocí služby PayPal"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Nastavení plateb PayPal"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Testovací mód"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Jméno účtu"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "ID klienta"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Tajemství"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr "Došlo k chybě transakce. Podrobné informace získáte od správce časopisu."

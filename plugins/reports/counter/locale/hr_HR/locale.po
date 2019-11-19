@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:08+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "COUNTER je dodatak koji omogućava bilježenje aktivnosti na stranicama časopisa i izvještavanje o njima u skladu s <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> inicijativom."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER statistike"
+
+msgid "plugins.reports.counter.clearLog"
+msgstr "Izbriši evidenciju"
+
+msgid "plugins.reports.counter.confirmClear"
+msgstr "Želite li sigurno izbrisati evidenciju? Ovaj postupak se ne može opozvati."
+
+msgid "plugins.reports.counter.browseLog"
+msgstr "Pregledaj evidenciju"
+
+msgid "plugins.reports.counter.browseLog.logBrowser"
+msgstr "Preglednik evidencije"
+
+msgid "plugins.reports.counter.entry.timestamp"
+msgstr "Vrijeme"
+
+msgid "plugins.reports.counter.entry.site"
+msgstr "Stranica"
+
+msgid "plugins.reports.counter.entry.journal"
+msgstr "Časopis"
+
+msgid "plugins.reports.counter.entry.user"
+msgstr "Korisnik"
+
+msgid "plugins.reports.counter.sessionNumber"
+msgstr "Sesija #{$sessionNumber}"
+
+msgid "plugins.reports.counter.entry.type"
+msgstr "Tip"
+
+msgid "plugins.reports.counter.entry.type.article"
+msgstr "Članak"
+
+msgid "plugins.reports.counter.entry.type.search"
+msgstr "Pretraživanje"
+
+msgid "plugins.reports.counter.entry.value"
+msgstr "Vrijednost"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Izvješće časopisa 1 (R3): Broj zahtjeva za punim tekstom članka po mjesecu i časopisu"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Izvješće časopisa 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Broj uspješno ispunjenih zahtjeva za punim tekstom članka po mjesecu i časopisu (Godina: {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Datum izvršavanja:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Nakladnik"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN tiskanog izdanja"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "E-ISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Ukupno od početka godine"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "HTML-ova od početka godine"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "PDF-ova od početka godine"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Ukupno za sve časopise"

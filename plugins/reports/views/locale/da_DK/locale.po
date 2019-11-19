@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:16+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.views.displayName"
+msgstr "Se rapport"
+
+msgid "plugins.reports.views.description"
+msgstr "Denne plugin genererer en CSV-rapport som viser antal læsere for hver enkelt artikel."
+
+msgid "plugins.reports.views.articleId"
+msgstr "Artikel-ID"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Artikeltitel"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Publiceringsdato"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Resume-visninger"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Totalvisning af publiceringsversion"

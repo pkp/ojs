@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:52+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:52+00:00\n"
+"Language: \n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Resolver Plugin"
+
+msgid "plugins.gateways.resolver.description"
+msgstr "This plugin resolves issues and articles based on citation information."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr "Unable to resolve a single entity using the specified citation information. Please ensure that the citation information is comprehensive and refers to an entity in this deployment of OJS."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Export Holdings"

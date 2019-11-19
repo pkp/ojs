@@ -1,0 +1,429 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "editor.home"
+msgstr "صفحة المحرر الرئيسية"
+
+msgid "editor.reassign"
+msgstr "إعادة تعيين"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "الطلبات والنشر"
+
+msgid "editor.submissionQueue"
+msgstr "طابور طلبات النشر"
+
+msgid "editor.submissionArchive"
+msgstr "أرشيف طلبات النشر"
+
+msgid "editor.publishing"
+msgstr "النشر"
+
+msgid "editor.publishedIssues"
+msgstr "قضايا النشر"
+
+msgid "editor.allSections"
+msgstr "جميع الأقسام"
+
+msgid "editor.allEditors"
+msgstr "كل أعضاء هيئة التحرير"
+
+msgid "editor.me"
+msgstr "أنا"
+
+msgid "editor.publicIdentificationExists"
+msgstr "المعرَّف العام '{$publicIdentifier}' موجود مسبقاً لشيء آخر (قضية، مقالة، كيان أو ملف تكميلي). لطفاً، إختر معرَّفاً فريداً لمكونات مجلتك"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "لا توجد طلبات للنشر في الأرشيف"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "هل تريد حفظ التعديلات على طلبات النشر المحفوظة؟ الطلبات المؤشر عليها بأن تحذف ستحذف نهائياً من النظام"
+
+msgid "editor.submissionArchive.confirmDelete"
+msgstr "هل أنت متأكد من رغبتك في حذف طلب النشر هذا نهائياً؟"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "هل أنت متأكد من رغبتك في تسجيل هذا القرار؟"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "طلب النشر هذا سيُؤرشف بعد إرسال إشعار للمؤلف عبر البريد الالكتروني أو عندما يتم اختيار الزر الخاص بتخطي إرسال ذلك الإشعار"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "قبل إرسال طلب النشر إلى المحكمين، إستعمل رابط (إشعار المؤلف) لإبلاغه واختر النسخة التي تريد إرسالها"
+
+msgid "editor.notifyUsers"
+msgstr "أعلم المستخدمين"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "جميع القراء والبالغ عددهم ({$count} قارئ)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "جميع المؤلفين والبالغ عددهم ({$count} مؤلف)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "جميع المشتركين المنفردين والبالغ عددهم ({$count} مشترك)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "جميع المؤسسات المشتركة والبالغ عددها ({$count} مؤسسة)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "أعلم المستخدمين..."
+
+msgid "editor.usersNotified"
+msgstr "تم إعلام المستخدمين"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "أرسل هذه الرسالة لجميع المستخدمين المرتبطين بهذه المجلة والبالغ عددهم ({$count} مستخدم)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "أرسل هذه الرسالة لجميع المستخدمين المرتبطين بهذه المجلة الذين أشاروا إلى رغبتهم بالحصول على التحديثات دورياً ({$count} مستخدم)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "ضمِّن جدول المحتويات لهذا العدد:"
+
+msgid "editor.editorAdministration"
+msgstr "إدارة هيئة التحرير"
+
+msgid "editor.issues.createIssue"
+msgstr "أنشئ عدداً"
+
+msgid "editor.issues.editIssue"
+msgstr "إدارة العدد: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "العدد الحالي"
+
+msgid "editor.issues.numArticles"
+msgstr "الفقرات"
+
+msgid "editor.issues.noArticles"
+msgstr "لا توجد فقرات مجدولة حالياً لهذا العدد"
+
+msgid "editor.issues.confirmDelete"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا العدد نهائياً؟"
+
+msgid "editor.issues.published"
+msgstr "منشورة"
+
+msgid "editor.issues.unpublished"
+msgstr "غير منشورة"
+
+msgid "editor.issues.datePublished"
+msgstr "تاريخ النشر"
+
+msgid "editor.issues.volumeRequired"
+msgstr "رقم المجلد مطلوب حتماً، ويجب أن يكون رقماً موجباً"
+
+msgid "editor.issues.numberRequired"
+msgstr "رقم العدد مطلوب حتماً، ويجب أن يكون رقماً موجباً"
+
+msgid "editor.issues.yearRequired"
+msgstr "السنة مطلوبة حتماً، ويجب أن تكون رقماً موجباً"
+
+msgid "editor.issues.titleRequired"
+msgstr "عنوان العدد مطلوب حتماً"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "معرَّف العدد مطلوب حتماً. لطفاً إختر واحداً على الأقل من طرق تعريف العدد"
+
+msgid "editor.issues.issueIdentification"
+msgstr "معرَّف العدد"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "معرَّف العدد العام"
+
+msgid "editor.issues.description"
+msgstr "الوصف"
+
+msgid "editor.issues.accessStatus"
+msgstr "موقف الوصول"
+
+msgid "editor.issues.accessDate"
+msgstr "تاريخ الوصول المفتوح"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "مكن تأخير الوصول المفتوح"
+
+msgid "editor.issues.coverPage"
+msgstr "صورة الغلاف"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(الصيغ المتاحة: .gif, .jpg, or .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "مرفوعة إلى الموقع"
+
+msgid "editor.issues.remove"
+msgstr "إزالة"
+
+msgid "editor.issues.proofed"
+msgstr "مدقق"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "أتريد إزالة صورة صفحة الغلاف؟"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "إن صورة الغلاف التي تريد حذفها لا تطابق صورة غلاف هذا العدد. لطفاً، قم بتنشيط الصفحة ثم حاول مجدداً."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "صيغة ملف صورة الغلاف غير مدعومة. الصيغ المدعومة هي: .gif, .jpg, or .png."
+
+msgid "editor.issues.styleFile"
+msgstr "ورقة أنماط"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "صيغة ورقة الأنماط غير صحيحة. تأكد من أن ملف ورقة الأنماط بصيغة CSS صحيحة. (خذ بنظر الإعتبار أن ملف ورقة الأنماط الذي يبدأ بسطر ملاحظات قد يتم اعتباره خاطئاً ومرفوضاً)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "أتريد إزالة ورقة الأنماط؟"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "تسمية الغلاف"
+
+msgid "editor.issues.showCoverPage"
+msgstr "أنشئ غلافاً لهذا العدد مستعملاً العناصر الآتية"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "العرض"
+
+msgid "editor.issues.openAccess"
+msgstr "الوصول المفتوح"
+
+msgid "editor.issues.subscription"
+msgstr "الاشتراك"
+
+msgid "editor.issues.identification"
+msgstr "التعريف"
+
+msgid "editor.issues.access"
+msgstr "الوصول"
+
+msgid "editor.issues.cover"
+msgstr "الغلاف"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "جميع المؤلفات ستعاد إلى طابور التحرير وكل ما يتعلق بها من ملفات ستحذف نهائياً. هل أنت متأكد من رغبتك في حذف هذا العدد؟"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "هذه المجلة تستعمل طريقة خاصة لترقيم أعدادها. <a href=\"{$url}\" class=\"action\">استعادة الإعدادات الإفتراضية</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "هذا العدد يستعمل طريقة خاصة لترقيم الأقسام. <a href=\"{$url}\" class=\"action\">استعادة الإعدادات الإفتراضية</a>"
+
+msgid "editor.issues.issueData"
+msgstr "تاريخ العدد"
+
+msgid "editor.issues.saveChanges"
+msgstr "أتريد حفظ التعديلات في جدول المحتويات؟"
+
+msgid "editor.issues.default"
+msgstr "الإفتراضي"
+
+msgid "editor.issues.order"
+msgstr "الترتيب"
+
+msgid "editor.issues.publicId"
+msgstr "رمز التعريف العام"
+
+msgid "editor.issues.publishIssue"
+msgstr "أنشر العدد"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "لا تنشر العدد"
+
+msgid "editor.issues.previewIssue"
+msgstr "معاينة العدد"
+
+msgid "editor.issues.preview"
+msgstr "(معاينة)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "هل أنت متأكد من رغبتك في نشر العدد الجديد؟"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "هل أنت متأكد من رغبتك في التراجع عن نشر هذا العدد الذي سبق نشره؟"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "هل أنت متأكد من رغبتك في جعل هذا العدد هو العدد الحالي؟"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "تعذر حفظ رمز التعريف العام للمؤلَّف:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "لا أعداد صادرة"
+
+msgid "editor.issues.open"
+msgstr "فتح"
+
+msgid "editor.issues.pages"
+msgstr "الصفحات"
+
+msgid "editor.issues.galleys"
+msgstr "تنضيدات العدد"
+
+msgid "editor.issues.galley"
+msgstr "تنضيد العدد"
+
+msgid "editor.issues.viewingGalley"
+msgstr "معاينة تنضيد العدد"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "عمم التنضيدات على كل محتوى العدد"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "لم يتم نشر أي تنضيدات للعدد بعد"
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "لا بد من تسمية تنضيد العدد"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "لا بد من إختيار لغة ما لتنضيد العدد"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "المعرف العام لتنضيد العدد موجود سلفاً"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "العودة إلى تنضيدات العدد"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا التنضيد؟"
+
+msgid "editor.issues.identifiers"
+msgstr "المعرفات"
+
+msgid "editor.navigation.futureIssues"
+msgstr "الأعداد القادمة"
+
+msgid "grid.action.addGalley"
+msgstr "أضف لوحاً طباعياً"
+
+msgid "grid.action.publish"
+msgstr "أنشر العدد"
+
+msgid "grid.action.addIssue"
+msgstr "أنشئ عدداً"
+
+msgid "grid.action.viewIssue"
+msgstr "معاينة"
+
+msgid "grid.action.previewIssue"
+msgstr "معاينة"
+
+msgid "grid.action.addIssueGalley"
+msgstr "أنشئ اللوح الطباعي للعدد"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "إجعله العدد الحالي"
+
+msgid "editor.navigation.issueArchive"
+msgstr "الأعداد السابقة"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "إعتبر الملف الأصلي بمثابة النسخة المنقحة أو المحكمة"
+
+msgid "editor.article.decision"
+msgstr "القرار"
+
+msgid "editor.submissions.showBy"
+msgstr "أظهر بواسطة"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "قدم MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "التعيينات الفعالة"
+
+msgid "editor.submissions.invite"
+msgstr "أُدْعُ"
+
+msgid "editor.submissions.accept"
+msgstr "إقبل"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "لا طلبات تقديم"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "الأخير"
+
+msgid "editor.submissions.averageTime"
+msgstr "أسابيع"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "آخر المكتمل"
+
+msgid "editor.submissions.assignedTo"
+msgstr "معين إلى"
+
+msgid "editor.submissions.inSection"
+msgstr "في قسم"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "أظهر ما هو مجدول من المنشورات"
+
+msgid "editor.article.publishVersion"
+msgstr "رقم إصدار النشر"
+
+msgid "editor.article.viewMetadata"
+msgstr "معاينة البيانات الوصفية للإصدار"
+
+msgid "editor.article.editMetadata"
+msgstr "تعديل البيانات الوصفية للإصدار"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "جدوله للنشر في"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "ليتم تعيينه"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "لم يتم دفع رسم النشر. لجدولة الفقرة لغرض النشر، أشعر المؤلف بدفع الرسم أو أخصمه له"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة."
+
+msgid "grid.action.removeArticle"
+msgstr "إزالة المقالة من هذا العدد"
+
+msgid "editor.article.remove"
+msgstr "أزلها"
+
+msgid "editor.article.remove.confirm"
+msgstr "هل أنت متأكد من رغبتك في إزالة هذه المقالة من العدد؟ ستكون المقالة متاحة للجدولة في عدد آخر."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "تاريخ الوصول غير صحيح"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "تعديل اللوح الطباعي للعدد"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "يقوم المصمم الطباعي بتحضير هذه الملفات لكل لوح طباعي ومن ثم يرفعها إلى <span class=\"pkp_help_title\">التصحيحات</span> المناسبة من أجل القراءة التصحيحية."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "إختر ملفات اللوح الطباعي"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "الملفات المسودة النهائية ضمن هذه القائمة يتم تحويلها من قبل المدقق إلى نسخ مدققة، يتم رفعها أدناه ضمن باب <span class=\"pkp_help_title\">التدقيق</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "أي ملفات سبق رفعها إلى أي مرحلة من مراحل طلب النشر يمكن إضافتها إلى قائمة القراءة التصحيحية عبر تأشير خانة تضمين الملفات أدناه ومن ثم النقر على زر البحث. كل الملفات المتاحة سيتم عرضها وستكون جاهزة لهذا الغرض."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "المعرف العام '{$publicIdentifier}' موجود سلفاً لمكون آخر من نفس النوع. لطفاً، إختر معرفات فريدة للمكونات التي من نفس النوع ضمن مجلتك."
+
+msgid "editor.article.coverImage"
+msgstr "صورة الغلاف"

@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:18+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Odeslat článek"
+
+msgid "submission.submit.userGroup"
+msgstr "Vložit v rámci mé následující role..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Zvolte roli, pod kterou odesíláte tento článek."
+
+msgid "submission.upload.selectComponent"
+msgstr "Zvolte komponentu článku"
+
+msgid "submission.title"
+msgstr "Název článku"
+
+msgid "submission.title.tip"
+msgstr "Typ odesílání je obvykle jeden z následujících 'obrázek', 'text' nebo některý jiný multimediální typ, včetně 'software' nebo 'interaktivní'. Zvolte prosím ten, který je pro váš příspěvek nejrelevantnější. Příklady lze nalézt na adrese <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Začít nový příspěvek v"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nový příspěvek"
+
+msgid "grid.action.workflow"
+msgstr "Workflow příspěvku"
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Redakce časopisu byla informována o vašem příspěvku a byl vám zaslán email s potvrzením o vašem příspěvku. Jakmile redaktor zkontroluje příspěvek, bude vás kontaktovat."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Ve vstupu do čísla je sazebnice"
+
+msgid "grid.action.issueEntry"
+msgstr "Prohlédněte si metadata příspěvku"
+
+msgid "submission.publication"
+msgstr "Publikace"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Sazebnice článku \"{$galleyFormatName}\" byla zpřístupněna."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Sazebnice článku \"{$galleyFormatName}\" byla znepřístupněna."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Veřejné identifikátory příspěvku byly aktualizovány."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Schválen formátu"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Tato sazebnice <em>již nebude dostupná čtenářům</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Tato sazebnice <em>bude dostupná čtenářům</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Zpřístupnit tuto sazebnici"
+
+msgid "submission.galleyFiles"
+msgstr "Soubory sazebnice"
+
+msgid "submission.proofReadingDescription"
+msgstr "Editor layoutu zde načte soubory připravené k publikování. Pomocí <em> Přiřadit auditora </ em> určíte autory a další, aby provedli korektur sazebnice, a opravené soubory nahráli ke schválení před publikací."
+
+msgid "grid.action.approveProof"
+msgstr "Schválit tuto korekturu k vložení do sazebnice."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Korektura byla schválena k vložení do sazebnice."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Název a abstrakt"
+
+msgid "submission.submit.upload.description"
+msgstr "Nahrajte soubory spojené s tímto příspěvkem, včetně článku, multimédií, datových sad, kreseb atd."
+
+msgid "submission.pageProofs"
+msgstr "Korektury"
+
+msgid "submission.confirmSubmit"
+msgstr "Jste si jisti, že chcete odeslat tento článek do časopisu?"
+
+msgid "workflow.review.externalReview"
+msgstr "Recenze"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Odeslat k recenzi"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadata příspěvku byla aktualizována"
+
+msgid "submission.upload.fileContents"
+msgstr "Komponenty článku"
+
+msgid "submission.complete"
+msgstr "Schváleno"
+
+msgid "submission.incomplete"
+msgstr "Čeká se na schválení"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Vyberte, prosím, jazyk příspěvku."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Kontrolní seznam pro příspěvek"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené požadavky."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Prohlášení o ochraně soukromí"
+
+msgid "submission.submit.contributorRole"
+msgstr "Úloha přispěvatele"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadován minimálně jeden autor."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Křestní jméno, příjmení a emailová adresa jsou vyžadovány pro každého autora."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, název vašeho článku."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vašeho článku."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvolte, prosím, roli přispěvatele."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Požadovaný citační formát nelze načíst."
+
+msgid "submission.metadataDescription"
+msgstr "Tyto specifikace vycházejí z množiny metadat Dublin Core, což je mezinárodní standard používaný k popisu obsahu časopisu."
+
+msgid "section.any"
+msgstr "Libovolná sekce"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstrakt musí obsahovat maximálně {$wordCount} slov."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."

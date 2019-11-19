@@ -1,0 +1,1730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
+"Language: \n"
+
+msgid "manager.distribution.access"
+msgstr "Доступ"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Выберите способ определения по умолчанию даты копирайта для статьи. Это значение по умолчанию может быть изменено в каждом конкретном случае. Если вы публикуете статьи «по ходу поступления», не используйте дату публикации выпуска."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Использовать дату публикации выпуска"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Использовать дату публикации статьи"
+
+msgid "manager.distribution.publication"
+msgstr "Публикация"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Режим публикации"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS не будет использоваться для онлайн-публикации контента журнала."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Журнал будет предоставлять открытый доступ к своему контенту."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Журнал будет требовать подписки для доступа к части своего контента или ко всему контенту."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "Информация о публикации журнала была обновлена."
+
+msgid "manager.website.archiving"
+msgstr "Архивирование"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "Вы уверены, что хотите заменить все шаблоны писем для данного журнала на шаблоны по умолчанию? Вы потеряете все изменения, которые вы сделали."
+
+msgid "manager.files.note"
+msgstr "Внимание: файловый менеджер — это дополнительная возможность, которая позволяет напрямую просматривать и управлять файлами и каталогами, связанными с этим журналом."
+
+msgid "manager.journalManagement"
+msgstr "Управление журналом"
+
+msgid "manager.language.ui"
+msgstr "Интерфейс пользователя"
+
+msgid "manager.language.submissions"
+msgstr "Отправленные материалы"
+
+msgid "manager.language.forms"
+msgstr "Формы"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Это заменит все настройки журнала, связанные с конкретным языком, которые вы сделали для этого языка"
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS может быть доступна пользователям на любом из поддерживаемых системой языков. В то же время, OJS может работать как многоязычная система, позволяя пользователям переключаться между языками на каждой странице и вводить определенные данные на нескольких дополнительных языках.<br /><br />Если поддерживаемый OJS не указан в списке ниже, попросите администратора сайта установить язык из интерфейса администрирования сайта. Смотрите в документации OJS инструкции по добавлению поддержки новых языков."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Извините, дополнительные языки не доступны. Свяжитесь с администратором сайта, если вы хотите добавить дополнительные языки в этот журнал."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Этот язык будет языком по умолчанию для сайта журнала."
+
+msgid "manager.managementPages"
+msgstr "Страницы управления"
+
+msgid "manager.payment.action"
+msgstr "Действие"
+
+msgid "manager.payment.addPayment"
+msgstr "Добавить платеж"
+
+msgid "manager.payment.amount"
+msgstr "Сумма"
+
+msgid "manager.payment.authorFees"
+msgstr "Платежи автора"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Введите суммы платежей ниже, чтобы включить платежи автора."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS не выполняет конвертацию валют. Если вы принимаете платежи за подписки, убедитесь, что валюта платежа за подписку соответствует указанной здесь валюте."
+
+msgid "manager.payment.description"
+msgstr "Описание"
+
+msgid "manager.payment.details"
+msgstr "Детали"
+
+msgid "manager.payment.editSubscription"
+msgstr "Редактировать подписку"
+
+msgid "manager.payment.enable"
+msgstr "Включить"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Параметры платежей"
+
+msgid "manager.payment.form.numeric"
+msgstr "Все цены должны быть положительными числами (можно использовать дробные значения)"
+
+msgid "manager.payment.generalFees"
+msgstr "Общие платежи"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Ссылка «Ассоциированное членство» появится на странице «О журнале» в разделе «Правила», а ссылка для пожертвований появится над полем поиска во фрейме справа."
+
+msgid "manager.payment.generalOptions"
+msgstr "Общие параметры"
+
+msgid "manager.payment.noPayments"
+msgstr "Нет платежей"
+
+msgid "manager.payment.notFound"
+msgstr "Не найдено"
+
+msgid "manager.payment.options"
+msgstr "Параметры"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Вы уверены, что хотите удалить эту подписку?"
+
+msgid "manager.payment.success"
+msgstr "Настройки платежей были обновлены."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Платежи будут включены для этого журнала. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью."
+
+msgid "manager.payment.options.fee"
+msgstr "Платеж"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Описание платежа"
+
+msgid "manager.payment.options.feeName"
+msgstr "Название платежа"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Ассоциированное членство"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Ограничить доступ только PDF-версиями выпусков и статей"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Платеж за обработку статьи"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Купить статью"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Купить выпуск"
+
+msgid "manager.payment.options.text"
+msgstr "Описание метода платежа"
+
+msgid "manager.payment.paymentId"
+msgstr "ID платежа"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Метод платежа"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "С этой страницы вы можете настроить любой из следующих модулей методов платежей."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Методы платежей"
+
+msgid "manager.payment.paymentType"
+msgstr "Тип платежа"
+
+msgid "manager.payment.readerFees"
+msgstr "Платежи читателя"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Выбранные варианты, вместе с их описаниями и ценами (они могут быть изменены ниже), появятся на странице «О журнале» в разделе «Правила», а также во всех местах, где требуется оплата."
+
+msgid "manager.payment.records"
+msgstr "Записи"
+
+msgid "manager.paymentTypes"
+msgstr "Виды платежей"
+
+msgid "manager.payment.userName"
+msgstr "ID платежа"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Пользователи, записанные в этот журнал"
+
+msgid "manager.people.allJournals"
+msgstr "Все журналы"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Записать пользователя с этого сайта в данный журнал"
+
+msgid "manager.people.showNoRole"
+msgstr "Показать пользователей, не имеющих роли"
+
+msgid "manager.people.allUsers"
+msgstr "Все записанные пользователи"
+
+msgid "manager.people.confirmRemove"
+msgstr "Удалить этого пользователя из данного журнала? Это действие отменит все роли, назначенные этому пользователю в данном журнале."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Выбрать шаблон"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Записать существующего пользователя"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "С журналом"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Выберите пользователя (или нескольких) для слияния в другую учетную запись пользователя (например, когда кто-то завел себе две учетные записи). Учетная запись (записи), выбранная первой, будет удалена, а все связанные с ней материалы, редакционные задания и т. д. будут присоединены к второй учетной записи."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Выберите пользователя, которому будет передано авторство предыдущих пользователей, их редакционные задания и т. д."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Назначить роль «{$role}»"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Синхронизация назначений запишет всех пользователей, которым назначена определенная роль в определенном журнале, на ту же роль в этом журнале. Эта функция позволяет синхронизировать общий набор пользователей (например, рецензентов) между журналами."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Не требовать аннотации"
+
+msgid "manager.section.noSectionEditors"
+msgstr "Редакторы разделов пока отсутствуют. Сначала добавьте эту роль хотя бы одному пользователю через Администрирование > Настройки > Пользователи &amp; Роли."
+
+msgid "manager.sections.assigned"
+msgstr "Редакторы данного раздела"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Вы уверены, что хотите навсегда удалить этот раздел?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Перед удалением этого раздела вы должны переместить опубликованные статьи в другие разделы."
+
+msgid "manager.sections.create"
+msgstr "Создать раздел"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Добавьте редактора раздела в этот раздел, чтобы статьи автоматически назначались редактору раздела. (В другом варианте, редакторы разделов могут назначаться вручную, после поступления материала). Если редактор раздела назначен, то он может автоматически назначаться на контроль процесса «РЕЦЕНЗИРОВАНИЕ» и/или процесса «РЕДАКТИРОВАНИЕ» (литературное редактирование, верстка и корректура) для материалов, направленных в данный раздел. Создаются редакторы раздела щелчком на ссылке «Редакторы разделов» под заголовком «Роли» в разделе «Управление журналом»."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Статьи могут отправляться только редакторами и редакторами разделов."
+
+msgid "manager.sections.editors"
+msgstr "Редакторы разделов"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Требуется аббревиатура названия для раздела"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Пожалуйста, убедитесь, что поставлена хотя бы одна галочка для каждого назначения редактора раздела."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Пожалуйста, убедитесь, что вы выбрали правильную форму рецензии."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Требуется название для раздела."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Убрать имена авторов для материалов этого раздела из содержания выпусков."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Убрать название этого раздела из содержания выпусков."
+
+msgid "manager.sections.identifyType"
+msgstr "Обозначать материалы, опубликованные в этом разделе как"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Например, «Рецензируемая статья», «Обзор книги», «Комментарий специалиста» и т. д.)"
+
+msgid "manager.sections.indexed"
+msgstr "Индексируется"
+
+msgid "manager.sections.noneCreated"
+msgstr "Разделы не созданы."
+
+msgid "manager.sections.open"
+msgstr "Открыт для приема материалов"
+
+msgid "manager.sections.policy"
+msgstr "Правила раздела"
+
+msgid "manager.sections.readingTools"
+msgstr "Инструменты читателя"
+
+msgid "manager.sections.reviewed"
+msgstr "Рецензируется"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Не будет учитываться при индексировании журнала"
+
+msgid "manager.sections.submissionReview"
+msgstr "Не будет рецензироваться"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Материалы, поданные в этот раздел журнала"
+
+msgid "manager.sections.unassigned"
+msgstr "Доступные редакторы разделов"
+
+msgid "manager.sections.wordCount"
+msgstr "Количество слов"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Ограничить количество слов в аннотации для этого раздела (0 — без ограничений)"
+
+msgid "manager.setup"
+msgstr "Настройки журнала"
+
+msgid "manager.setup.masthead"
+msgstr "Выходные данные"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Редакция"
+
+msgid "manager.setup.homepageContent"
+msgstr "Контент главной страницы журнала"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Главная страница журнала по умолчанию состоит из навигационных ссылок. Дополнительный контент на главной странице может быть добавлен с помощью одного или нескольких следующих параметров, которые появятся на странице в показанном порядке."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Таблица стилей журнала"
+
+msgid "manager.setup.contextName"
+msgstr "Название журнала"
+
+msgid "manager.setup.pageHeader"
+msgstr "Верхний колонтитул страницы журнала"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Контент"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Добавить информацию о журнале"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Добавить элемент в контрольный список"
+
+msgid "manager.setup.addItem"
+msgstr "Добавить элемент"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Добавить элемент на страницу «О журнале»"
+
+msgid "manager.setup.addNavItem"
+msgstr "Добавить элемент"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Добавить новую ссылку на базу данных"
+
+msgid "manager.setup.addSponsor"
+msgstr "Добавить организацию-спонсора"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Альтернативный заголовок"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "В качестве альтернативы, вместо названия и логотипа, в текстовое поле ниже может быть вставлена HTML-версия заголовка. Оставьте текстовое поле пустым, если альтернативный заголовок не нужен."
+
+msgid "manager.setup.announcements"
+msgstr "Объявления"
+
+msgid "manager.setup.announcements.success"
+msgstr "Настройки объявлений были обновлены."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Описание"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Введите любую информацию, которая будет показана на странице «Объявления»."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(появится в разделе «О журнале»)"
+
+msgid "manager.setup.archiving.success"
+msgstr "Информация об архивировании для этого журнала была обновлена."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "Требовать от авторов представлять Декларацию о конфликте интересов вместе с отправляемым материалом."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Требовать от рецензентов представлять Декларацию о конфликте интересов с каждой отправляемой рецензией."
+
+msgid "manager.setup.history"
+msgstr "История журнала"
+
+msgid "manager.setup.historyDescription"
+msgstr "Этот текст появится в разделе «О журнале» на сайте, он может быть использован для описания изменения названий журнала, состава редакции и другой информации, связанной с историей публикации журнала."
+
+msgid "manager.setup.contact.success"
+msgstr "Контактная информация для этого журнала была обновлена."
+
+msgid "manager.setup.currentIssue"
+msgstr "Текущий выпуск"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Шаг 5. Настройка внешнего вида"
+
+msgid "manager.setup.details"
+msgstr "Детали"
+
+msgid "manager.setup.details.description"
+msgstr "Название журнала, ISSN, контакты, спонсоры и поисковые машины."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Управляющий журнала будет регистрировать всех пользователей. Редакторы или редакторы разделов могут регистрировать учетные записи для рецензентов."
+
+msgid "manager.setup.discipline"
+msgstr "Академические дисциплины и разделы дисциплин"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Полезно использовать, когда журнал выходит за рамки одной дисциплины и/или авторы присылают междисциплинарные материалы."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(Например: История; Образование; Социология; Психология; Культурология; Право)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Приведите примеры соответствующих академических дисциплин для этого журнала"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Добавить содержание для текущего выпуска (если оно доступно)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Решение редакции"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Адрес для ошибок"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "В случае возникновения проблем с доставкой письма электронной почты сообщение об ошибке будет направлено на этот адрес."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "Чтобы отправлять недоставленные письма на адрес для ошибок, администратор сайта должен включить параметр <code>allow_envelope_sender</code> в конфигурационном файле сайта. Также может потребоваться настройка сервера, описание этой настройки приведено в документации OJS."
+
+msgid "manager.setup.emails"
+msgstr "Идентификация в письме электронной почты"
+
+msgid "manager.setup.emailSignature"
+msgstr "Подпись"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Подготовленные письма, отправляемые системой от имени журнала, будут содержать следующую подпись, добавленную в конце письма."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Включить объявления"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Объявления можно публиковать, чтобы информировать читателей о новостях и событиях журнала. Опубликованные объявления будут появляться на странице «Объявления»."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Показывать на главной странице"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "Сколько объявлений показывать на главной странице. Оставьте поле пустым, если вы не хотите показывать объявления на главной странице."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Посетители могут зарегистрировать учетную запись в журнале."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Концепция журнала"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Опишите для авторов, читателей и библиотек диапазон статей и других материалов, которые будет публиковать журнал."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Для авторов, чтобы проиндексировать их работу"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS поддерживает протокол сбора метаданных <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, который становится стандартом для обеспечения хорошо индексированного доступа к электронным исследовательским ресурсам в мировом масштабе. Авторы будут использовать аналогичный шаблон для предоставления метаданных о своем материале. Управляющий журналом должен выбрать категории для индексирования и предоставить авторам соответствующие примеры, чтобы помочь в индексировании их работ."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Указан некорректный ISSN."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Адрес электронной почты контактного лица обязателен."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Имя контактного лица обязательно."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Аббревиатура названия журнала обязательна."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Название журнала обязательно."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Количество рецензентов для одного материала обязательно."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Адрес электронной почты лица, обеспечивающего техническую поддержку, обязателен."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Имя лица, обеспечивающего техническую поддержку, обязательно."
+
+msgid "manager.setup.generalInformation"
+msgstr "Общая информация"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Шаг 1. Подробности о журнале"
+
+msgid "manager.setup.guidelines"
+msgstr "Руководство"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Шаг 3. Отправка материалов"
+
+msgid "manager.setup.identity"
+msgstr "Айдентика журнала"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Включить в соответствующий момент лицензию Creative Commons для всех опубликованных работ в журналах, сразу или через некоторое время предоставляющих открытый доступ."
+
+msgid "manager.setup.information"
+msgstr "Информация"
+
+msgid "manager.setup.information.description"
+msgstr "Краткие описания журнала для библиотек, потенциальных авторов и читателей. Описания будут доступны в боковой панели сайта, когда будет добавлен блок «Информация»."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Для авторов"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Для библиотек"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Для читателей"
+
+msgid "manager.setup.information.success"
+msgstr "Информация для этого журнала была обновлена."
+
+msgid "manager.setup.initialIssue"
+msgstr "Первый выпуск"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "В зависимости от выбранного формата укажите выпуск, том и/или год выхода первого выпуска, который будет опубликован с помощью OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Организация"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Элементы панели навигации могут быть добавлены к текущему набору («Главная», «О журнале», «Страница пользователя», и т. д.), который отображается в верхней части страницы."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Элементов на странице"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "Ограничение количества элементов (например, материалов, пользователей или заданий на редактирование), показываемых в списке. Идущие далее элементы будут показаны на следующей странице."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Аббревиатура названия журнала"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Архивация журнала"
+
+msgid "manager.setup.contextSummary"
+msgstr "Обзор журнала"
+
+msgid "manager.setup.contextAbout"
+msgstr "О журнале"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Включите сюда любую информацию о журнале, которая может быть интересна читателям, авторам или рецензентам. Это могут быть правила открытого доступа, концепция журнала, условия передачи авторских прав, информация о спонсорах, история журнала, заявление о конфиденциальности и включение материалов в архивную систему LOCKSS или CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Контент главной страницы журнала"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Главная страница журнала по умолчанию состоит из навигационных ссылок. Дополнительный контент на главной странице может быть добавлен с помощью одного или нескольких следующих параметров, которые появятся на странице в показанном порядке. Обратите внимание, что текущий выпуск всегда доступен по ссылке «Текущий выпуск» на панели навигации."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Заголовок главной страницы журнала"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Заголовок главной страницы журнала"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Графическая версия названия и логотипа журнала (в виде файла в формате .gif, .jpg или .png) может быть загружена на главную страницу. Эта версия заменит текстовую версию, отображаемую по умолчанию."
+
+msgid "manager.setup.contextInitials"
+msgstr "Аббревиатура названия журнала"
+
+msgid "manager.setup.journalLayout"
+msgstr "Макет журнала"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Выберите здесь тему оформления журнала и компоненты макета. Таблица стилей журнала также может быть загружена на сайт и использована для переопределения стиля, заданного системными таблицами стилей и таблицей стилей темы (если выбрана тема)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Логотип журнала"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Логотип журнала"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Нижний колонтитул страницы журнала"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Это нижний колонтитул вашего журнала. Чтобы изменить или обновить нижний колонтитул, вставьте код HTML в текстовое поле ниже. В колонтитуле, например, может быть другая панель навигации, счетчик и т. д. Этот нижний колонтитул будет показываться на каждой странице."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Шаг 2. Правила журнала"
+
+msgid "manager.setup.journalSetup"
+msgstr "Настройка журнала"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Ваша настройка журнала была обновлена."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Неверный формат таблицы стилей журнала. Разрешен формат .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Тема оформления журнала"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Миниатюра журнала"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Маленький логотип или обложка журнала, которые могут использоваться в списке журналов."
+
+msgid "manager.setup.contextTitle"
+msgstr "Название журнала"
+
+msgid "manager.setup.keyInfo"
+msgstr "Ключевая информация"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Введите краткое описание журнала и укажите редакторов, управляющих и других членов редколлегии."
+
+msgid "manager.setup.labelName"
+msgstr "Название метки"
+
+msgid "manager.setup.lists.success"
+msgstr "Настройки списков для этого журнала были обновлены."
+
+msgid "manager.setup.lists"
+msgstr "Списки"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Включить модуль PKP PN"
+
+msgid "manager.setup.plnDescription"
+msgstr "Сеть архивирования PKP (PKP Preservation Network, PKP PN) предоставляет бесплатные сервисы архивирования для любых журналов на OJS, удовлетворяющих нескольким базовым критериям."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "Посмотрите <button>настройки модуля</button>, чтобы принять условия использования PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Сеть архивирования PKP (PKP Preservation Network, PKP PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "Сеть архивирования PKP (PKP Preservation Network, PKP PN) предоставляет бесплатные сервисы архивирования для любых журналов на OJS, удовлетворяющих нескольким базовым критериям. Модуль PKP PN для OJS 3 сейчас находится в разработке и будет вскоре доступен в галерее модулей."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS и CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr "Включить LOCKSS для хранения и распространения контента журнала по участвующим библиотекам через страницу <a href=\"{$lockssUrl}\" target=\"_blank\">Манифеста издателя</a> LOCKSS."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "Лицензия LOCKSS появится в разделе «О журнале» под заголовком «Архивация журнала»: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Лицензия LOCKSS</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Описание лицензии LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Определите 6-10 библиотек, которые будут регистрировать и кэшировать журнал. Например, обратитесь к организациям, где работают редакторы или члены редакционного совета, и/или организациям уже участвующим в LOCKSS. Смотрите подробнее в <a href=\"http://www.lockss.org/community/\" target=\"_blank\">сообществе LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "Включить CLOCKSS для хранения и распространения контента журнала по участвующим библиотекам через страницу <a href=\"{$clockssUrl}\" target=\"_blank\">Манифеста издателя</a> CLOCKSS."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "Лицензия CLOCKSS появится в разделе «О журнале» под заголовком «Архивация журнала»: <a href=\"http://clockss.org/\" target=\"_blank\">лицензия CLOCKSS</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Описание лицензии CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Подпишитесь на сервис CLOCKSS, посетив <a href=\"http://clockss.org/\" target=\"_blank\">веб-сайт CLOCKSS</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Внешний вид журнала"
+
+msgid "manager.setup.look.description"
+msgstr "Верхний колонтитул главной страницы, контент, колонтитулы журнала, панель навигации и таблица стилей."
+
+msgid "manager.setup.management"
+msgstr "Управление"
+
+msgid "manager.setup.management.description"
+msgstr "Доступ и безопасность, планирование, объявления, литературное редактирование, верстка и корректура."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Управление основными шагами редакционного процесса"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Управление и настройка процесса публикации"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Шаг 4. Управление журналом"
+
+msgid "manager.setup.masthead.success"
+msgstr "Выходные данные для этого журнала были обновлены."
+
+msgid "manager.setup.navigationBar"
+msgstr "Панель навигации"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Добавить или удалить дополнительные элементы панели навигации."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL — это абсолютный URL (например, «http://www.example.com»), а не относительный путь на сайте (например, «/manager/setup»)"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Значение метки — текстовая строка (например, «Настройка журнала»), а не ключ сообщения для локализации (например, «manager.setup»)"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Файл изображения не загружен."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Таблица стилей не загружена."
+
+msgid "manager.setup.note"
+msgstr "Примечание"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>Обратите внимание:</strong> Отправка письма с подтверждением отправки материала в журнал сейчас отключена. Чтобы использовать эту возможность, включите письмо «Подтверждение отправки» в разделе «Письма электронной почты»."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Ссылки на страницы"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ограничение числа ссылок, показываемых на последующих страницах в списке."
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN онлайн-версии"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Настройка нумерации страниц"
+
+msgid "manager.setup.policies"
+msgstr "Правила"
+
+msgid "manager.setup.policies.description"
+msgstr "Концепция журнала, рецензирование, разделы, конфиденциальность, безопасность и дополнительная информация о журнале."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN печатной версии"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "Заявление о конфиденциальности было обновлено."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Руководство по корректуре"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Руководство по корректуре будет доступно корректорам, авторам, верстальщикам и редакторам разделов на этапе редактирования материала. Ниже приведен набор инструкций по умолчанию в формате HTML, который может быть в любой момент изменен или заменен управляющим журнала (в формате HTML или простого текста)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Планирование публикаций"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Материалы журнала могут публиковаться вместе, как часть выпуска со своим собственным содержанием. В качестве альтернативы, отдельные материалы могут публиковаться по мере готовности, добавляясь в содержание «текущего» тома. Опишите читателям (на странице «О журнале») систему публикации, которую использует этот журнал, и ожидаемую периодичность публикации."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Планирование выпусков"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Идентификация контента журнала"
+
+msgid "manager.setup.publishing"
+msgstr "Информация о публикации журнала"
+
+msgid "manager.setup.publisher"
+msgstr "Издатель"
+
+msgid "manager.setup.publishingDescription"
+msgstr "Эта информация может быть включена в метаданные, предоставляемые системам архивирования сторонних разработчиков."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Вставка гиперссылок на источники"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Пользователи должны быть зарегистрированы и войти в систему под своей учетной записью, чтобы просмотреть находящийся в открытом доступе контент."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Пользователи должны быть зарегистрированы и войти в систему под своей учетной записью, чтобы просматривать сайт журнала."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Руководство для рецензентов"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Параметры рецензирования"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Автоматические напоминания по электронной почте"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "Для отправки автоматических писем-напоминаний, администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера, описание настройки приведено в документации OJS."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "Слепое рецензирование"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Число недель на выполнение рецензии"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Редакторы будут оценивать качество работы рецензентов по пятибалльной шкале после каждой рецензии."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Ограничить доступ к файлам"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Рецензенты не получат доступ к файлам материала до тех пор, пока не согласятся его рецензировать."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Доступ рецензента"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Прямой доступ для рецензента"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "Рецензентам может быть отправлена безопасная ссылка в письме-приглашении, по которой можно получить доступ к рецензированию материала без входа в систему. Для доступа к другим страницам необходимо будет войти в систему."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Добавить безопасную ссылку в письмо-приглашение для рецензентов."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Рейтинги рецензентов"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Напоминания рецензентам"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Правила рецензирования"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Индексация для поиска"
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "Настройки индексации для поиска были обновлены."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Помогите поисковым машинам вроде Google находить и показывать ваш сайт. Рекомендуется отправить <a href=\"{$sitemapUrl}\" target=\"_blank\">карту вашего сайта</a>."
+
+msgid "manager.setup.searchDescription.description"
+msgstr "Введите краткое описание (50-300 знаков) журнала, которое будут отображать поисковые машины, при показе журнала в своих результатах выдачи."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Разделы и редакторы разделов"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Если разделы не добавлены, то все отправляемые материалы направляются в раздел «Статьи» по умолчанию.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Для создания или изменения разделов журнала (например, «Статьи», «Обзоры книг» и т. д.), перейдите в «Управление разделами».<br /><br />Авторы при отправке материалов в журнал смогут выбрать..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Редактор журнала, который будет контролировать прохождение материала через редакционный процесс."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Раздел журнала, в котором будет расссматриваться данный материал."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Всегда показывать ссылки на гранки и уведомлять об ограниченном доступе."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Доступ к сайту"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Показывать содержимое статей"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Пять шагов к веб-сайту журнала"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(Например, Фотосинтез; Черные дыры; Проблема четырех красок; Теория Байеса)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Ключевые слова"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Введите примеры ключевых слов или тем, на которые могут ориентироваться авторы"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Руководство по отправке материала"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Контрольный список подготовки материала к отправке"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "При отправке в журнал авторам будет предложено проверить соответствие материала всем пунктам «Контрольного списка подготовки материала к отправке» и отметить их как выполненные, прежде чем они отправят материал. Этот контрольный список также отображается в «Руководстве для авторов» на странице «О журнале». Список можно отредактировать ниже, но все пункты этого списка должны быть отмечены, прежде чем авторы смогут продолжить отправку материала."
+
+msgid "manager.setup.submissions"
+msgstr "Отправка материалов"
+
+msgid "manager.setup.submissions.description"
+msgstr "Руководство для авторов, авторские права и индексирование (включая регистрацию)."
+
+msgid "manager.setup.enableOai"
+msgstr "Включить OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr "Предоставлять метаданные сервисам индексирования сторонних разработчиков через <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.typeExamples"
+msgstr "(Например, Историческая справка; Квазиэкспериментальный; Литературный анализ; Исследование/Опрос)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Тип (метод/подход)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Введите примеры соответствующих типов исследования, методов и подходов для данной области"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Уникальный идентификатор"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Статьи и выпуски могут быть помечены идентификационным номером или строкой, используя такую систему регистрации, как система Digital Object Identifier (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Журнал будет использовать редакционную коллегию/коллегию рецензентов."
+
+msgid "manager.setup.userAccess.success"
+msgstr "Информация о доступе пользователей к этому журналу была обновлена."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Миниатюра"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Изображение заголовка"
+
+msgid "manager.setup.userRegistration"
+msgstr "Регистрация пользователей"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Текст заголовка"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tВаша журнал настроен на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.\n"
+"\t\tЕсть случаи, когда должна быть использована только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее часто используемых статей или отранжировать\n"
+"\t\tрезультаты поиска. Пожалуйста, выберите одну из настроенных метрик в качестве метрики по умолчанию.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "Статистика журнала"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Количество просмотров статьи (только для авторов)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Принято"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Отклонено"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Отправлено после доработки"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Дней на рецензию"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Дней на публикацию"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJS рассчитывает следующую статистику для каждого журнала. Значение «Дней на рецензию» отсчитывается с даты отправки материала (или назначения версии для рецензирования) до принятия первоначального решения редакции, в то время как значение «Дней на публикацию» рассчитывается для принятых материалов с момента их загрузки на сайт до момента их публикации."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Опубликовано материалов"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Отметьте параметры, которые будут доступны читателям на странице «О журнале»."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Примечание: Сумма процентов для рецензируемых материалов может быть не равна 100%, так как повторно отправленные материалы могут быть либо приняты, либо отклонены, либо все еще быть в работе."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Опубликовано выпусков"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Отправлено материалов"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Отрецензировано"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Зарегистрировано читателей"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "Зарегистрировано пользователей"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Назначено рецензентам"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Рецензенты"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Оценка редактором"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Количество рецензий"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Выберите разделы для вычисления статистики по рецензированию для этого журнала."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Подписки"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Скачивания файла статьи"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Просмотры страницы аннотации статьи"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Скачивания и просмотры аннотации статьи"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Просмотры главной страницы журнала"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Просмотры страницы с содержанием выпуска"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Фильтровать результаты по контексту (выпуску и/или статье)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "Фильтровать результаты по типу объекта (журнал, выпуск, статья, типы файлов) и/или по одному или нескольким ID объектов."
+
+msgid "manager.subscriptionPolicies"
+msgstr "Правила подписки"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Отложенный открытый доступ"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Пожалуйста, поставьте галочку."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Окончание срока подписки"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "По окончании срока подписки читателям может быть запрещен доступ ко всему контенту, предоставляемому по подписке, или доступ может быть сохранен только к предоставляемому по подписке контенту, который был опубликован до даты окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Полное окончание подписки"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "По окончании срока подписки читателям будет запрещен доступ ко всему контенту, предоставляемому по подписке."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Частичное окончание подписки"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "По окончании срока подписки читателям будет запрещен доступ к недавно опубликованному контенту, предоставляемому по подписке, но они сохранят доступ к предоставляемому по подписке контенту, который был опубликован до даты окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} месяцев"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} недель"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Уведомить подписчиков по электронной почте после окончания срока подписки"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Уведомить подписчиков по электронной почте после окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Уведомить подписчиков по электронной почте до окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Уведомить подписчиков по электронной почте до окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Напоминания об окончании срока подписки"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Автоматические напоминания по электронной почте (доступные для редактирования управляющими журналов в разделе «Письма электронной почты» OJS) могут быть отправлены подписчикам до и после истечения срока их подписки."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>Обратите внимание:</strong> Чтобы активировать эти параметры, администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Выберите одно из следующих:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML можно использовать в поле ввода (для изменения размера шрифта, цвета и т. д.), нажатие «Enter» будет рассматриваться как <tt>&lt;br&gt;</tt>; редактор HTML работает c браузерами Firefox."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Пожалуйста, выберите правильное значение для числа месяцев после окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Пожалуйста, выберите правильное значение для числа месяцев до окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Пожалуйста, выберите правильное значение для числа недель после окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Пожалуйста, выберите правильное значение для числа недель до окончания срока подписки."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Зарегистрированные читатели будут иметь возможность получить содержание выпуска по электронной почте, когда выпуск появится в открытом доступе."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>Обратите внимание:</strong> Чтобы активировать этот параметр, администратор сайта должен включить параметр <tt>scheduled_tasks</tt> в конфигурационном файле OJS. Также может потребоваться дополнительная настройка сервера для поддержки этой возможности (выполнить такую настройку может быть невозможно на конкретном сервере), описание этой настройки приведено в документации OJS."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Уведомления об онлайн-платежах"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Автоматические уведомления по электронной почте (доступные для редактирования управляющими журналов в разделе «Письма электронной почты» OJS) могут быть отправлены менеджеру по подписке после завершения онлайн-платежа за подписку."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Уведомить менеджера по подписке по электронной почте об онлайн-покупке индивидуальной подписки."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Уведомить менеджера по подписке по электронной почте об онлайн-покупке подписки на организацию (рекомендуется)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Уведомить менеджера по подписке по электронной почте об онлайн-покупке продления индивидуальной подписки."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Уведомить менеджера по подписке по электронной почте об онлайн-покупке продления подписки на организацию."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>Обратите внимание:</strong> Приобретенная онлайн подписка на организацию требует подтверждения предоставленного домена и диапазонов IP-адресов и требует активации подписки менеджером по подписке."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>Обратите внимание:</strong> Для включения этих параметров управляющий журнала должен включить модуль онлайн-платежей, включая онлайн-платежи за подписку в разделе «Платежи читателя»."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Настройки открытого доступа для журналов с платной подпиской"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Журналы с платной подпиской могут предоставлять «отложенный открытый доступ» к своему опубликованному контенту, а также разрешать «самостоятельное создание архива автором» (все это увеличивает читательскую аудиторию и количество цитирований контента)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Информация о подписке"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Типы подписок и структура платежей будет отображаться на странице подписок, вместе с именем и контактной информацией менеджера по подписке. Здесь также можно добавить дополнительную информацию о подписках, такую как методы оплаты или способы поддержки подписчиков из развивающихся стран."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Менеджер по подписке"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Эта информация о контактном лице будет показана на странице подписок для пользователей наряду с запросами, связанными с подписками."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Пожалуйста, введите правильный адрес электронной почты."
+
+msgid "manager.subscriptions"
+msgstr "Подписки"
+
+msgid "manager.individualSubscriptions"
+msgstr "Индивидуальные подписки"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Подписки на организацию"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Вы уверены, что хотите продлить эту подписку?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Вы уверены, что хотите удалить эту подписку?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Общая информация о подписках"
+
+msgid "manager.subscriptions.create"
+msgstr "Создать новую подписку"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Создать"
+
+msgid "manager.subscriptions.renew"
+msgstr "Продлить"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Конец"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Дата окончания"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Начало"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Дата начала"
+
+msgid "manager.subscriptions.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.edit"
+msgstr "Редактировать подписку"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Редактировать"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Со статусом"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Все"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Статус"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Статус подписки обязателен."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Пожалуйста, выберите правильный статус подписки."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Тип подписки"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Тип подписки обязателен."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Пожалуйста, выберите правильный тип подписки."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Дата начала"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Дата начала подписки обязательна."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Пожалуйста, выберите правильную дату начала подписки."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Дата окончания"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Дата окончания подписки обязательна."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Срок действия этого типа подписки не ограничен; пожалуйста, не указывайте дату начала подписки."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Срок действия этого типа подписки не ограничен; пожалуйста, не указывайте дату окончания подписки."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Пожалуйста, выберите правильную дату окончания подписки."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Обратите внимание: Все изменения ниже отразятся в профиле пользователя во всей системе."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Пользователь"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Контакт"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Пользователь обязателен."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Пожалуйста, выберите правильного пользователя."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Пожалуйста, выберите правильную страну."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Отправить пользователю письмо с его именем пользователя и информацией о подписке."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Пожалуйста, поставьте галочку."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Регистрационный номер"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Введите информацию о членстве, если выбранный тип подписки требует, чтобы подписчики были членами ассоциации или организации."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Выбранный тип подписки требует информацию о членстве."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Примечания"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Название организации"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Название организации обязательно."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Почтовый адрес"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Если здесь введен домен, то диапазон IP-адресов вводить необязательно. <br />Допустимые значения — доменные имена (например, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Выбранный тип подписки требует указания домена и/или диапазона IP-адресов для аутентификации по подписке."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Пожалуйста, введите правильное доменное имя."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Диапазон IP-адресов"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Если здесь введен диапазон IP-адресов, то указание домена необязательно.<br />Допустимыми значениями являются IP-адрес (например, 142.58.103.1), диапазон IP-адресов (например, 142.58.103.1 - 142.58.103.4), диапазон IP-адресов с символом подстановки «*» (например, 142.58.*.*) и диапазон IP-адресов с маской при бесклассовой маршрутизации (например, 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Пожалуйста, введите правильный диапазон IP-адресов."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Удалить"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Добавить"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Сохранить и создать новый"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Для отправки пользователю письма с уведомлением при настройке журнала должны быть указаны имя контактного лица по подписке и его адрес электронной почты."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Этот пользователь уже имеет подписку на этот журнал."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Тип подписки должен быть создан до того, как будут сделаны новые подписки."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Диапазон IP-адресов"
+
+msgid "manager.subscriptions.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Регистрационный номер"
+
+msgid "manager.subscriptions.notes"
+msgstr "Примечания"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Нет подписок"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Выберите контактное лицо для подписки"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Выберите пользователя"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Права доступа по подписке автоматически предоставляются управляющим журналов, редакторам, редакторам разделов, верстальщикам, литературным редакторам и корректорам данного журнала."
+
+msgid "manager.subscriptions.select"
+msgstr "Выбрать"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Подписка успешно создана."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Тип подписки"
+
+msgid "manager.subscriptions.user"
+msgstr "Пользователь"
+
+msgid "manager.subscriptions.contact"
+msgstr "Имя контактного лица"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Название организации"
+
+msgid "manager.subscriptionTypes"
+msgstr "Типы подписок"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Внимание! Все подписки этого типа также будут удалены. Вы уверены, что хотите продолжить и удалить этот тип подписки?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Цена"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Подписки"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Индивидуальная"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "На организацию"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Создать новый тип подписки"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Создать"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Продолжительность"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Редактировать тип подписки"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Редактировать"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Цена"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Введите число (например, 40 или 40.00) без символа валюты (например, $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Цена должна быть положительным числом."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Цена обязательна."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Валюта"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Валюта обязательна."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Пожалуйста, выберите правильную валюту."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Описание"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Истекает через"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "месяцев (например, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Никогда не истекает"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Пожалуйста, выберите один из предложенных вариантов."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Продолжительность"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Количество месяцев действия подписки (например, 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Продолжительность должна быть положительным числом."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Продолжительность обязательна."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Формат"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Формат типа подписки обязателен."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Пожалуйста, выберите правильный формат типа подписки."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Подписки"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Индивидуальная (пользователи проверяются по входу в систему под своей учетной записью)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "На организацию (пользователи проверяются по домену или IP-адресу)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Пожалуйста, выберите один из предложенных вариантов."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Подписки требуют информацию о членстве (например, в ассоциации, организации, консорциуме и т. д.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Пожалуйста, поставьте галочку."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Параметры"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Не делать этот тип подписки доступным всем или видимым на веб-сайте."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Пожалуйста, поставьте галочку."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Сохранить и создать новый"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Имя типа"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Тип подписки с таким именем уже существует."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Имя типа подписки обязательно."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Тип подписки"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Типы подписки не были созданы."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Тип подписки успешно создан."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Ссылка на страницу, описывающую предлагаемые вами подписки."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Ссылка на страницу, описывающую текущие и прошлые подписки пользователя."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Эта ссылка будет показываться только в случае, когда посетитель уже вошел в систему."
+
+msgid "manager.setup.categories"
+msgstr "Категории"
+
+msgid "manager.setup.categories.description"
+msgstr "Выберите наиболее подходящие категории из списка, приведенного выше. Читатели смогут просматривать статьи по категориям из полного набора категорий журнала."
+
+msgid "grid.category.path"
+msgstr "Путь"
+
+msgid "grid.action.addSection"
+msgstr "Добавить раздел"
+
+msgid "manager.setup.section.description"
+msgstr "Статьи в опубликованных выпусках журнала организуются в разделы, обычно по теме или типу контента (например, «Статьи-рецензии», «Исследования» и т. д.)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Роли — это группы пользователей в журнале, которым предоставляется доступ с разными уровнями прав, эти группы связаны с разными рабочими процессам в журнале. Есть пять разных уровней прав: Управляющие журналом имеют доступ ко всему в журнале (ко всему контенту и настройкам); Редакторы разделов имеют полный доступ ко всему назначенному им контенту; Ассистенты журнала имеют ограниченный доступ ко всем материалам, которые были им явно назначены редактором; Рецензенты могут видеть и рецензировать те материалы, которые им были назначены; Авторы могут видеть и взаимодействовать с определенной информацией об их собственных материалах, отправленных в журнал. Кроме того, есть пять разных этапов назначений, к которым роли могут иметь доступ: Отправка, Внутреннее рецензирование, Рецензирование, Редактирование и Публикация."
+
+msgid "manager.publication.library"
+msgstr "Библиотека издателя"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Год авторского права новой статьи определяется"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "По статье: год по умолчанию будет браться из даты публикации статьи, как в «публикации-по-ходу»."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "По выпуску: год по умолчанию будет браться из даты публикации выпуска."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Сбросить разрешения для статей"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Вы уверены, что хотите сбросить данные о разрешениях для всех статей? Это действие нельзя будет отменить."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Удаляет информацию о копирайте и о лицензии для каждой опубликованной статьи, возвращая их к текущим настройкам по умолчанию для журнала. Это действие навсегда удаляет всю предыдущую информацию о лицензии и копирайте, прикрепленную к статьям. В некоторых случаях у вас может не быть юридических прав изменять лицензию для работы, опубликованной ранее под другой лицензией. Пожалуйста, будьте осторожны, используя этот инструмент, проконсультируйтесь с экспертами-юристами, если вы не уверены в тех правах, которые у вас есть на статьи, опубликованные в вашем журнале."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Разрешения для статей были успешно сброшены."
+
+msgid "grid.genres.title.short"
+msgstr "Компоненты"
+
+msgid "grid.genres.title"
+msgstr "Компоненты статьи"
+
+msgid "grid.genres.description"
+msgstr "Эти компоненты используются для задания имен файлам и отображаются в выпадающем меню на загружаемых файлах. Обозначенные ## жанры позволяют пользователю связывать файл либо со всем отправленным материалом 99Z, либо с конкретным компонентом по номеру (например, 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Настройки"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Настройки модуля DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Статьи"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Выпуски"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Гранки"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Требования модуля не выполнены"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "Для того чтобы использовать этот модуль, пожалуйста, перейдите в категорию модулей «Модули открытых идентификаторов», включите и настройте модуль DOI и укажите там верный префикс DOI."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Модуль не полностью настроен."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "Нет опубликованных объектов, которые были выбраны для назначения DOI в модуле открытых идентификаторов DOI, поэтому невозможно депонировать или экспортировать в этом модуле."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Пароль"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Обратите внимание, что пароль будет сохранен в виде обычного текста, то есть не будет зашифрован."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Любой выпуск"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Любой статус"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Не депонирован"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Отмечен как зарегистрированный"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Зарегистрирован"
+
+msgid "plugins.importexport.common.action"
+msgstr "Действие"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Экспорт"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Отметить как зарегистрированный"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Зарегистрировать"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Проверять XML перед экспортом и регистрацией."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Нет выбранных объектов."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Невозможно конвертировать выбранные объекты."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Неправильный XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Выходной файл {$param} не доступен для записи."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Входной файл {$param} не доступен для чтения."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Регистрация завершилась неудачей! Сервер регистрации DOI вернул ошибку: «{$param}»."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Регистрация прошла успешно!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Отсутствует префикс DOI для журнала с адресом {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "ОШИБКА:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "Указанный путь журнала «{$journalPath}» не существует."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Указанные объекты не удается найти."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Отправить копию основному контактному лицу, указанному в настройках журнала."
+
+msgid "stats.publications.details"
+msgstr "Информация о статье"
+
+msgid "stats.publications.none"
+msgstr "Не найдено статей со статистикой использования, которая соответствует данным параметрам."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Общее число просмотров аннотации по датам"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Общее число просмотров файлов по датам"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} из {$total} статей"
+
+msgid "stats.publications.abstracts"
+msgstr "Аннотации"
+
+msgid "stats.publications.galleys"
+msgstr "Файлы"

@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "DataCite Eksport/Registrerings Plug-in"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Ekporter eller registrer metadata fra numre, artikler, satsskib og supplerende fil i DataCite- format."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr "Hvis du vil registrere DOI'er hos DataCite, skal du kontakte administrationsagenten via <a href=\"http://datacite.org\" target=\"_blank\">DataCite-hjemmesiden</a>, som vil henvise til dit lokale DataCite-medlem. Når du har etableret kontakt til medlemsorganisationen, får du adgang til DataCite-tjenesten så du vedvarende kan generere DOI'er og registrere tilknyttet metadata. Hvis du ikke har dit eget brugernavn og kodeord, kan du stadig eksportere i DataCite XML-formatet, men du kan ikke registrere dine DOI'er hos DataCite inde fra OJS. Vær opmærksom på, at adgangskoden bliver gemt som klartekst, dvs. ikke krypteret på grund af kravet om registrering af DataCite-registrering."
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Brugernavn (symbol)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Indtast brugernavnet (symbolet), du fik fra DataCite. Brugernavnet må muligvis ikke indeholde kolon."
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Brug:\n"
+"{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ..."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Husk at konfigurere Datacite Eksport-programmet, før du bruger det første gang."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "OJS vil automatisk deponere DOI'er til DataCite. Bemærk, at der kan gå lidt tid efter offentliggørelsen inden det registreres. Du kan tjekke for eventuelt uregistrerede DOI'er."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Brug DataCite test-præfix til DOI registrering. Husk at fjerne denne mulighed i forbindelse med produktionen."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite automatisk registreringsopgave"

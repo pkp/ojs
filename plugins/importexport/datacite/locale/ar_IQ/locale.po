@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "إضافة التصدير/التسجيل DataCite"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "تصدير أو استيراد البيانات الوصفية للأعداد، المقالات، الألواح الطباعية، والملفات التكميلية بصيغة DataCite."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "لطفاً، <a href=\"{$settingsUrl}\">عرف</a> إضافة التصدير DataCite قبل استعمالها للمرة الأولى."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tإذا أردت تسجيل DOI مع DataCite، لطفاً، تواصل مع الوكيل الإداري\n"
+"\t\tعبر <a href=\"http://datacite.org/contact\" target=\"_blank\">الصفحة الرئيسية DataCite\n"
+"\t\t</a>، الذي سيقوم بتوجيهك إلى العضو المحلي لـ DataCite. بمجرد تأسيسك لعلاقة\n"
+"\t\tمع منظمة هذاالعضو، سيتم منحك حق الوصول إلى خدمة DataCite لمنح معرفات دائمية\n"
+"        (DOIs) وتسجيل البيانات الوصفية ذات الصلة. إن لم يكن لك اسم المستخدم\n"
+"\t\tوكلمة المرور الخاصين لك، سيكون بإمكانك أيضاً التصدير إلى DataCite بصيغة XML لكن\n"
+"\t\tلن تستطيع تسجيل DOI الخاصة بك مع DataCite من داخل نظام المجلات المفتوحة.\n"
+"\t\tلطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر نظراً لمتطلبات\n"
+"\t\tخدمة التسجيل في DataCite.\n"
+"\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "اسم المستخدم (الرمز)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "لطفاً، أدخل اسم المستخدم (الرمز) الذي حصلت عليه من DataCite. لا ينبغي أن يتضمن اسم المستخدم على علامات تنقيط."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "نظام المجلات المفتوحة سيقوم تلقائياً بإيداع DOIs في DataCite بمجرد نشر المقالات. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعد النشر بسبب متطلبات المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك التحقق من وجود DOIs غير مسجلة عبر <a href=\"{$unregisteredURL}\">قائمة المؤلفات غير المسجلة</a>."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "استعمل بادئة إختبار DataCite لتسجيل المكون الرقمي DOI. لطفاً، لا تنس إزالة هذا الخيار عند التشغيل الفعلي."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "مهمة التسجيل التلقائي لـ DataCite"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"الاستعمال: \n"
+"{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...\n"
+""

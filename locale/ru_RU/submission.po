@@ -1,0 +1,210 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:31+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Отправить статью"
+
+msgid "submission.submit.userGroup"
+msgstr "Отправить, используя мою роль ..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Выберите роль, под которой вы отправляете статью."
+
+msgid "submission.upload.selectComponent"
+msgstr "Выбрать компонент статьи"
+
+msgid "submission.title"
+msgstr "Заголовок статьи"
+
+msgid "submission.title.tip"
+msgstr "Тип материала обычно что-то из «изображение», «текст» или другие типы мультимедиа, включая «программное обеспечение» или «интерактив». Пожалуйста, выберите один наиболее подходящий тип для вашего материала. Примеры можно найти на <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Начать отправку нового материала в"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Новый материал"
+
+msgid "grid.action.workflow"
+msgstr "Процесс отправки"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Аннотация должна содержать не более {$wordCount} слов."
+
+msgid "submission.submit.noContext"
+msgstr "Журнал для этого материала не удаётся найти."
+
+msgid "submission.issueEntry"
+msgstr "Метаданные"
+
+msgid "submission.submit.whatNext.description"
+msgstr "Журнал был уведомлен об отправке Вами материала, подтверждение записи были направлено на Вашу электронную почту. Как только редактор просмотрит ваш материал, мы свяжемся с вами."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Гранка появилась в выпуске"
+
+msgid "grid.action.issueEntry"
+msgstr "Показать метаданные этого материала"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Гранка статьи «{$galleyFormatName}» сделана доступной."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Гранка статьи «{$galleyFormatName}» сделана недоступной."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Открытые идентификаторы отправленного материала обновлены."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Одобрение формата"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Эту гранку <em>больше нельзя сделать доступной</em> читателям.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Эта гранку <em>можно сделать доступной</em> читателям.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Сделать эту гранку доступной"
+
+msgid "submission.galleyFiles"
+msgstr "Файлы гранок"
+
+msgid "submission.proofReadingDescription"
+msgstr "Верстальщик загружает сюда полностью готовые файлы, которые подготовлены для публикации. Используйте <em>Назначить аудитора</em>, чтобы определить авторов и других пользователей для корректуры гранок, с загрузкой откорректированных файлов и их одобрением перед публикацией."
+
+msgid "grid.action.approveProof"
+msgstr "Одобрить этот черновик для включения в гранку."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Этот черновик был одобрен для включения в гранку."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Название и аннотация"
+
+msgid "submission.submit.upload.description"
+msgstr "Загрузить файлы, связанные с этим материалом: статью, мультимедиа, наборы данных, произведения искусства и т. д."
+
+msgid "submission.pageProofs"
+msgstr "Корректура"
+
+msgid "submission.confirmSubmit"
+msgstr "Вы уверены, что хотите отправить эту статью в журнал?"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензирование"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Отправить на рецензию"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метаданные выпуска для материала были обновлены."
+
+msgid "submission.upload.fileContents"
+msgstr "Компонент статьи"
+
+msgid "submission.complete"
+msgstr "Одобрен"
+
+msgid "submission.incomplete"
+msgstr "Ждет одобрения"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Пожалуйста, выберите язык отправляемого материала."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Контрольный список подготовки материала к отправке"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Вы должны прочитать и подтвердить, что вы выполнили все перечисленные ниже требования прежде чем продолжить отправку материала."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Заявление о конфиденциальности"
+
+msgid "submission.submit.contributorRole"
+msgstr "Роль отправителя"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Требуется как минимум один автор."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Для каждого автора необходимо указать имя, фамилию и адрес электронной почты."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Пожалуйста, введите название Вашей статьи."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Пожалуйста, введите аннотацию Вашей статьи."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ваша аннотация слишком длинная. Пожалуйста, сократите ее до количества слов, заданного для этого раздела."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Пожалуйста, выберите роль отправителя."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Запрошенный формат оформления библиографических ссылок не удается получить."
+
+msgid "submission.metadataDescription"
+msgstr "Эти спецификации основаны на наборе метаданных Dublin Core — международном стандарте, используемом для описания контента журнала."
+
+msgid "section.any"
+msgstr "Любой раздел"
+
+msgid "submission.sectionOptions"
+msgstr "Параметры раздела"
+
+msgid "catalog.browseTitles"
+msgstr "Число категорий: {$numTitles}"
+
+msgid "catalog.category.heading"
+msgstr "Все категории"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Гранки этой публикации нельзя редактировать, так как она уже опубликована."
+
+msgid "galley.publicationNotFound"
+msgstr "Публикацию для этой гранки не удаётся найти."
+
+msgid "publication.datePublished.description"
+msgstr "Дата публикации будет автоматически проставлена, когда выпуск будет опубликован. Не вводите дату публикации, кроме случаев, когда статья ранее была где-то опубликована и вам необходимо проставить дату публикации задним числом."
+
+msgid "publication.invalidSection"
+msgstr "Раздел для этой публикации не удаётся найти."
+
+msgid "publication.invalidIssue"
+msgstr "Выпуск для этой публикации не удаётся найти."
+
+msgid "publication.journalEntry"
+msgstr "Запись в журнале"
+
+msgid "publication.journalEntry.success"
+msgstr "Информация о записи в журнале была обновлена."
+
+msgid "publication.publish.confirmation"
+msgstr "Все требования к публикации были выполнены. Вы уверены, что хотите опубликовать этот материал?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "Все требования к публикации были выполнены. Материал будет опубликован при публикации выпуска «{$issue}». Вы уверены, что хотите запланировать этот материал к публикации?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "Все требования к публикации были выполнены. Материал будет опубликован прямо сейчас в выпуске «{$issue}». Вы уверены, что хотите опубликовать этот материал?"
+
+msgid "publication.required.issue"
+msgstr "Публикация должна быть назначена в выпуск до её опубликования."
+
+msgid "publication.publishedIn"
+msgstr "Опубликовано в <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Запланировано к публикации в <a href=\"{$issueUrl}\">{$issueName}</a>."

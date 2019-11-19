@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:09+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:09+00:00\n"
+"Language: \n"
+
+msgid "plugins.reports.counter.description"
+msgstr "Modulul COUNTER permite înregistrarea cu raportarea conform <a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a> a activităţii de pe site."
+
+msgid "plugins.reports.counter"
+msgstr "Statistici COUNTER"
+
+msgid "plugins.reports.counter.migrate"
+msgstr "Migrează fișierul de log"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr "Raportul pentru revista 1 (R3): Solicitări de text integral pe lună şi pe revistă"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Raportul pentru revista 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr "Numărul de cereri înregistrate cu succes pentru articole cu text integral pe lună şi pe revistă (Anul {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Data:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Editor"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platformă"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN pentru tipar"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN online"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Total YTD"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "HTML YTD"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "PDF YTD"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Totalul pentru reviste"

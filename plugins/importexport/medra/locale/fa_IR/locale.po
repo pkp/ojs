@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:41+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:41+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "افزونه ی ثبت‌نام و خروجی گرفتن Medra "
+
+msgid "plugins.importexport.medra.description"
+msgstr "خروجی گرفتن از شماره ها ، مقالات ، فایل چاپ شده در اونیکس برای قالب DOI و ثبت‌نام DOI  با ثبت‌نام در آژانس Medra"
+
+msgid "plugins.importexport.medra.intro"
+msgstr "اگر می خواهید DOI ها توسط mEDRA ثبت کنید، لطفا دستورالعمل های موجود در <a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">وبسایت mEDRA</a> را برای دریافت نام کاربری و رمز عبور مطالعه کنید. اگر شما نام کاربری و رمز عبور خود را ندارید، همچنان قادر به برون دهی به فرمت XML mEDRA (Onix for DOI) هستید، اما شما نمیتوانید DOI خود را با mEDRA از داخل سامانه ثبت کنید. لطفا توجه داشته باشید که در mEDRA، رمز عبور به صورت متن ساده ذخیره می شود، یعنی رمزگذاری نشده است."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "لطفاً افزونه برون دهی mEDRA  را پیکربندی کنید:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "نام کاربری"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "لطفا نام کاربری mEDRA خود را وارد کنید نام کاربری ممکن است کولون را نداشته باشد."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "نام موسسه ثبت شده در mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "لطفا موسسه که در mEDRA ثبت شده را وارد کنید"
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "شخصی که در مورد سوالات فنی از طرف mEDRA با آن تماس گرفته می شود:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "موسسه"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "لطفا موسسه ای را که از لحاظ فنی مسئولیت برون دهی DOI را دارد، وارد کنید.(به عنوان مثال موسسه میزبان وب سرور خود)"
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "شخص مسئول"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "لطفا نام فرد مربوط به تماس فنی را وارد کنید"
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "ایمیل"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "لطفا یک ایمیل معتبر تماس فنی وارد کنید"
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "لطفا کشوری که به عنوان \"کشور ناشر\"  در mEDRA ثبت خواهد شد را انتخاب کنید."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "لطفاً انتخاب کنید که می خواهید شماره ها به چه عنوانی برون دهی شوند: <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'کارها' or 'موارد نمایشی'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "کار"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "موارد نمایشی"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "برون دهی شماره ها به عنوان"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS به طور خودکار DOI های اختصاص داده شده را در mEDRA ثبت می کند. لطفا توجه داشته باشید که ممکن است پس از انتشار زمان کوتاهی برای پردازش سپری شود. شما می توانید تمام DOI مقالات ثبت نشده را تیک بزنید."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "از API تست mEDRA (محیط آزمایش) برای ثبت DOI استفاده کنید. لطفا فراموش نکنید که این گزینه را در زمان انتشار محتویات حذف کنید."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr ""
+"شناسه های DOI اختصاص داده شده به مقالات به عنوان\n"
+"<a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">\n"
+"'کارها'\n"
+"</a>\n"
+"برون دهی می شوند.\n"
+"شناسه های DOI اختصاص داده شده به کلیشه های چاپی به عنوان\n"
+"<a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'موارد نمایشی'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "ثبت خودکار وظایف mEDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"نحوه استفاده: \n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...  {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ..."

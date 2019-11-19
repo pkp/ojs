@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Plugin för export av CrossRef-XML"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Exporterar artikelmetadata i CrossRefs XML-format."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Krav"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Alla krav för pluginet är uppfyllda."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "En utgivare för tidskriften saknas! Lägg till en utgivare i <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Inställningar för tidskriften</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "Ett ISSN saknas för tidskriften! Lägg till ett ISSN i <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Inställningar för tidskriften</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Inga artiklar har valts för tilldelning av DOI i DOI-pluginet, därför är det inte möjligt att deponera eller exportera via pluginet."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Följande objekt krävs för att deponeringen till CrossRef ska fungera."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Deponerarens namn"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Deponerarens e-post"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Ange deponerarens namn."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Ange deponerarens e-post."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Om du vill använda det här pluginet för att registrera Digital Object Identifiers (DOIs) direkt hos CrossRef behöver du användarnamn och lösenord (finns att få på <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>). Om du inte har ett eget användarnamn och lösenord kan du ändå exportera i XML format, men du kan inte registrera dina DOI:er hos CrossRef via OJS."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Användarnamn"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Logga in med ditt användarnamn från från CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS deponerar automatiskt tilldelade DOI:er till CrossRef. Det kan ta ett kort tag efter publiceringen innan deponeringen behandlas. Du kan kontrollera alla oregistrerade DOI:er."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Använd CrossRefs test-API (testmiljö) för DOI-deponering. Kom ihåg att ta bort alternativet när tidskriften går i produktion."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Observera: Bara nummer (inte deras artiklar) kommer att exporteras/registreras här."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Misslyckades"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Aktiv"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Markerad som aktiv"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Deposit status:</p>\n"
+"\t\t<p>\n"
+"\t\t- Inte deponerad: inget deponeringsförsök har gjorts för detta DOI.<br />\n"
+"\t\t- Aktiv: ett DOI har deponerats och är korrekt.<br />\n"
+"\t\t- Misslyckats: deponeringen av DOI har misslyckats.<br />\n"
+"\t\t- Markerad som aktiv: DOI har manuellt markerats som aktiv.\n"
+"\t\t</p>\n"
+"\t\t<p>Bara den senaste deponeringen visas.</p>\n"
+"\t\t<p>Om deponeringen misslyckas, vänligen lös problemet och registrera DOI:t en gång till.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Ladda ner XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Markera som aktiv"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "CrossRefs automatiska registreringsfunktion"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Användning:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] artiklar objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] artiklar objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Inga nummer motsvarade det här numrets ID \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Inga artiklar motsvarade den här artikelns ID \"{$articleId}\"."

@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:01+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:01+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.description"
+msgstr "Wtyczka umożliwia przydzielanie DOI dla numerów, artykułów oraz plików publikowanych w OJS."
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr "Skonfiguruj wtyczkę DOI aby móc zarządzać DOI w OJS:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Zawartość czasopisma"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Wybierz obiekt dla którego powinno zostać przypisane DOI."
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Wybierz publikowane obiekty, dla których zostanie przypisane DOI:"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Numery"
+
+msgid "plugins.pubIds.doi.manager.settings.enableSubmissionDoi"
+msgstr "Artykuły"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Pliki"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "Prefiks DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr "Prefiks DOI jest przydzielany przez organizacje rejestrujące, np. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a> i posiada format 10.xxxx (np. 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "Prefiks DOI jest wymagany i musi posiadać formę 10.xxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Sufiks DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr "Sufiks DOI może przyjmować dowolną formę, ale musi być jednakowy dla wszystkich obiektów z takim samym prefiksem:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr "Podaj wzór do generowania sufiksu DOI. Użyj %j dla inicjałów czasopisma, %v dla wolumenu, %i dla numeru, %Y dla roku, %a dla ID artykułu, %g dla ID pliku z tekstem, %f dla ID pliku OJS, %p dla numeru strony oraz %x dla własnego parametru."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "Przykładowo, vol%viss%ipp%p utworzy DOI 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "dla numerów"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "dla artykułów"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "dla plików finalnych"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Korzystaj z domyślnego wzoru."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i dla numerów<br />%j.v%vi%i.%a dla artykułów<br />%j.v%vi%i.%a.g%g dla plików finalnych."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Podaj indywidualny sufiks DOI dla każdego z opublikowanych elementów. W zakładce metadanych znajdziesz odpowiednie pole, gdzie będziesz mógł podać własny sufiks DOI dla obiektu."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Podaj wzór sufiksu DOI dla numerów."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Podaj wzór sufiksu DOI dla artykułów."
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Podaj wzór sufiksu DOI dla plików finalnych."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Przydziel ponownie DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr "Jeżeli zmienisz konfigurację DOI, przydzielone DOI nie będą zmienione. Po zapisaniu konfiguracji wykorzystaj ten przycisk aby wyczyścić istniejące DOI i przydzielić numerację ponownie dla istniejących obiektów."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Czy na pewno usunąć wszystkie istniejące DOI?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Przydziel DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Przydziel DOI dla wszystkich obiektów w czasopiśmie dla których nie zostały przydzielone. To działanie nie może zostać zrealizowane z indywidualną konfiguracją sufiksu. Jeżeli zmodyfikowałeś konfigurację DOI powyżej, zapisz swoje zmiany przed wykonaniem tego działania. Przydzielanie DOI może chwilę potrwać - w zależności od numerów opublikowanych obiektów w czasopiśmie."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Czy na pewno przydzielić DOI dla wszystkich opublikowanych obiektów dla których nie zostały przydzielone DOI?"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "numer"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "artykuł"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "pliki finalne"
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI nie może zostać przydzielone, ponieważ brakuje własnego sufiksu."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "DOI nie może zostać przydzielone, ponieważ posiada niezrozumiały wzór."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr "Podgląd DOI. Zaznacz pole wyboru i zapisz formularz aby przydzielić DOI."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI jest przydzielone do tego {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Podany sufiks DOI jest już w użyciu przez inny obiekt. Podaj unikatowy sufiks dla każdego typu obiektów."
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Wyczyść DOI"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Czy na pewno usunąć istniejące DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Wyczyść DOI dla obiektów czasopisma"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Czy na pewno usunąć DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr "Skorzystaj z tej opcji jeżeli chcesz wyczyścić DOI dla wszystkich obiektów czasopisma (artykułów oraz plików finalnych) przydzielonych dla tego numeru."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Przydziel DOI {$pubId} dla {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI nie może zostać przydzielone, ponieważ indywidualny sufiks nie istnieje."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} nie może zostać przydzielone, ponieważ posiada nierozwiązany wzór."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} zostało przydzielone."

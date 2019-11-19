@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:28+00:00\n"
+"Language: \n"
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "U heeft geen rechten om ongepubliceerde nummers te bekijken."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "U kan uitsluitend tijdschriften bekijken die ingeschakeld zijn."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "U heeft geen rechten om dit tijdschrift te bekijken."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "U kan dit tijdschrift alleen bekijken of bewerken via de API van het tijdschrift of de hele site."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "U kan dit tijdschrift niet bewerken via de API voor de hele site."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "U heeft geen rechten om dit tijdschrift te bewerken."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "U heeft geen rechten om dit tijdschrift te verwijderen."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Het tijdschrift werd niet gevonden."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "De betaalwijze die u selecteerde wordt niet ondersteund."

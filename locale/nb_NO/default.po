@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:27+00:00\n"
+"Language: \n"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "Manuskriptet er ikke tidligere publisert, og er heller ikke til vurdering i noe annet tidsskrift (eller gi forklaring i feltet 'Kommentarer til redaktøren')."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "Manuskriptfilen er levert i Microsoft Word eller RTF filformat."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Så langt det går an er URL-adresser oppgitt til alle siterte kilder som foreligger på nett. URL-adressene skal være klikkbare (som for eks. <a href=\"http://pkp.sfu.ca\">http://pkp.sfu.ca</a>)."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "Teksten bruker enkel linjeavstand; 12-punkts skrifttype som normalskrift (helst Times New Roman); kursiv i stedet for understreking (unntatt i URL-adresser); bruker aldri fet skrift (unntatt i overskrifter: kursiv er ellers eneste uthevingsmåte); og alle illustrasjoner, figurer og tabeller er satt inn på rett plass i teksten."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "Teksten følger formatkravene for stil og bibliografisk formatering, slik de er angitt i <a href=\"submissions#authorGuidelines\" target=\"_blank\">Forfatterinstruksen</a>, som finnes i <i>Om tidsskriftet</i>."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>Navn og e-postadresser som skrives inn til dette tidsskriftet og nettstedet vil kun bli brukt for de formålene som er oppgitt for tidsskriftet eller som følger av gyldig rettslig pålegg, og vil ikke bli gjort tilgjengelig verken for andre formål eller for uvedkommende.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr "Tidsskriftet kommer til å gi alle brukere åpen tilgang <i>(Open Access)</i>, det vil si fri og gratis tilgang til alt publisert innhold."
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"________________________________________________________________________<br>\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>\n"
+""
+
+msgid "default.contextSettings.forReaders"
+msgstr "Vi oppfordrer alle lesere til å registrere seg for å motta publiseringsvarsel fra dette tidsskriftet. Bruk <a href=\"{$indexUrl}{$contextPath}/user/register\">Registrer</a> lenken øverst på hjemmesiden for tidsskriftet. Da vil du få tilsendt en e-post med innholdsoversikten for hver nye utgivelse fra tidsskriftet. På denne måten kan tidsskriftet dessuten dokumentere leserkretsen sin. Se gjerne tidsskriftets <a href=\"{$indexUrl}{$contextPath}/about/submissions#privacyStatement\">Erklæring om personopplysninger</a>, som skal sikre at leserenes navn og e-postadresser ikke brukes for uvedkommende formål."
+
+msgid "default.contextSettings.forAuthors"
+msgstr "Ønsker du å sende inn bidrag til dette tidsskriftet? I så fall bør du sette deg inn i  retningslinjene for tidsskriftetsseksjonene under <a href=\"{$indexUrl}{$contextPath}/about\">Om tidsskriftet</a>, og <a href=\"{$indexUrl}{$contextPath}/about/submissions#authorGuidelines\">Forfatterinstruksen</a>. Forfattere må <a href=\"{$indexUrl}{$contextPath}/user/register\">registrere</a> seg i tidsskriftet før de kan sende inn bidrag. Hvis du allerede er registrert, kan du ganske enkelt <a href=\"{$indexUrl}/index/login\">logge inn</a> og starte innsendingsprosessen."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr "Vi oppfordrer alle forskningsbibliotekarer til å føre dette tidsskriftet inn i den elektroniske tidsskriftbeholdningen ved deres bibliotek. Dessuten gjør vi oppmerksom på at dette tidsskriftets open source programvare egner seg for bibliotek som vil være vertskap for fagansattes arbeid med fagtidsskrift (se <a href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr "Dette tidsskriftet benytter LOCKSS systemet for å utvikle et distribuert arkivsystem sammen med andre tilsluttete bibliotek, og tillater disse bibliotekene å opprette permanente fullstendige arkiv av tidsskriftet, til bevarings- og gjenopprettingsformål . <a href=\"http://www.lockss.org/\">Mer...</a>"
+
+msgid "section.default.title"
+msgstr "Artikler"
+
+msgid "section.default.abbrev"
+msgstr "ART"

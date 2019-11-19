@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:40+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:40+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ exportplugin"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Exportera tidskrift för DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Kontakta DOAJ för inkludering"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Om du vill registrera artiklar inifrån OJS, fyll i din DOAJ API-nyckel. Om inte kan du fortfarande exportera till DOAJ XML-format, men inte registrera dina artiklar hos DOAJ inifrån OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API-nyckel"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Du hittar din API-nyckel på din DOAJ-sida."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS kommer att lägga in artiklar i DOAJ automatiskt. Notera att processen kan ta en kort stund att efter publicering. Du kan söka efter alla oregistrerade artiklar."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Använd DOAJ:s test-API (testmiljö) för registreringen. Glöm inte att ta bort detta alternativ innan produktion."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Automatisk registrering hos DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Registreringen slutfördes inte! DOAJ:s API gav ett felmeddelande: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Användning:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

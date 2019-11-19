@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Часописи"
+
+msgid "admin.settings.redirect"
+msgstr "Редирекција часописа"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Приступ сајту ће бити преусмерен на часопис. Ово може бити корисно ако хостујете само један часопис."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Ово ће бити примарни језик за сајт и све часописе."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Одаберите локализације које желите да подржите на сајту. Оне ће бити доступне за све часописе и приказиваће се у менију за одабир језика. Уколико не одаберете ни један додатни језик мени за избор језика се неће приказивати."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Маркиране локализације нису комплетне."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Да ли сте сигурни да желите да обришете локазлизацију? Ово може утицати на часописе који се налазе у систему и користе ту локализацију."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Одаберите додатне локализације које желите да инсталирате.Погледајте ОЈС документацију за више информација како да обезбедите подршку за нове језике."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Преузимање локализације није успело. Порука о грешкама ниже објашњава разлоге."
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" локализација је инсталирана."
+
+msgid "admin.languages.download"
+msgstr "Преузми локализацију"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Не могу да отворим дескриптор језика са PKP wеб сајта."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Не могу да додам нову локализацију у локални registry фајл, обично \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "OJS корисничка база података"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Укључи синхронизацију корисничких профила (уколико је подржано додатком за аутентификацију). Информације о корисничким профилима биће аутоматски синхронизоване са удаљеним извором када се корисник пријави, а профил промени."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Омогући модификације лозинки корисника (уколико је поржано додатком за аутентификацију). Укључивањем овог додатка корисници ће моћи да модификуу своје лозинке и користе сервис \"изгубљена лозинка\"."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Укључи креирање корисника (уколико је подржано додатком за аутентификацију). Корисници који су креирани помоћу овог извора аутентификације аутоматски ће се креирати и на удаљеном серверу."
+
+msgid "admin.systemVersion"
+msgstr "OJS верзија"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурација"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS конфигурација из <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Подешавања часописа"
+
+msgid "admin.journals.noneCreated"
+msgstr "Нема креираних часописа."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Да ли сте сигурни да желите трајно обрисати овај часопис и њеов садржај?"
+
+msgid "admin.contexts.create"
+msgstr "Направи часопис"
+
+msgid "admin.journals.createInstructions"
+msgstr "Аутоматски ћете бити додељени часопису као менаджер. Након што направите нови часопис, приступите му као менаджер како бисте завршили подешавања и додељивање улога."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Ово би требала да буде једна кратка реч или акроним који идентификује часопис. УРЛ часописа ће бити {$sampleUrl}"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Путања је обавезна."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Путања може да садржи само алфанумеричке карактере, подвлаке и цртице и мора почињати и завршавати са алфанумеричким карактером"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Дата путања се већ користи за други часопис."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Дозволи да се часопис јавно приказује на сајту"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Опис часописа"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Постојећа путања или путања за креирање (нпр. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Увези претплате"
+
+msgid "admin.journals.transcode"
+msgstr "Препиши метаподатке чланака из ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Генериши код за мапирање OJS 1 URL-ове у OJS 2 URL-ове"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Путања за увоз је обавезна."
+
+msgid "admin.journals.importErrors"
+msgstr "Увоз није успешно завршен"
+
+msgid "admin.mergeUsers"
+msgstr "Споји кориснике"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Споји корисника"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Одабери корисника којем ће се приписати ауторства, задужења и остварени радови претходног корисника."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Одабери корисника или више њих који ће се спојити у нови кориснички налог. Сви атрибути корисника приписаће се другом налогу."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Сви корисници који имају улоге"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Да ли сте сигурни да желите да спојите корисничке налоге {$oldAccountCount} у налог са корисничким именом \"{$newUsername}\"? одабрани налози {$oldAccountCount} више неће постојати."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Нема корисника са додељеним улогама."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr "Ваша OJS инсталација је конфигурисана да може сачувати резултате једног или више начина мерења употребе. Статистика употребе ће бити приказана у неколико контекста. У случајевима кад мора бити употребљен само један начин мерења, нпр. да би се приказала листа најчешће употребљених чланак или за рангирање резултата претраге.  Одаберите један од подешених мерења као претпостављен."
+
+msgid "admin.languages.confirmDisable"
+msgstr "Да ли сте сигурни да желите да онемогућите ову локализацију? Ово ће утицати на часописе који ју користе."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Наслов је обавезан."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Подсетник о истеку претплате"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Обавештење о Отвореном приступу"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Подсетник о рецензирању"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Није тренутно могуће преузети пакете за преводе са сервера Public Knowledge Project јер:</p>\n"
+"\t<ul>\n"
+"\t\t<li> Ваш сервер не дозвољава извршење GNU \"tar\" алата.</li><li>OJS  није у могућности да модификује локални регистарски фајл \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p> Пакети превод на језик могу да се преузму ручно са<a href=\"http://pkp.sfu.ca\">PKP web сајта</a>.</p>"

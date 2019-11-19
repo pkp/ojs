@@ -1,0 +1,327 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Нова предаја"
+
+msgid "author.track"
+msgstr "Активне предаје"
+
+msgid "author.competingInterests"
+msgstr "Сукоб интереса <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">TI&nbsp;Правила</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Предај чланак"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Пет корака за предају"
+
+msgid "author.submit.startHereTitle"
+msgstr "Започни нову предају"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">Кликните овде</a> да одете на први корак предаје."
+
+msgid "author.submit.step1"
+msgstr "Корак 1. почетак предаје"
+
+msgid "author.submit.step2"
+msgstr "Корак 2. Додавање рада"
+
+msgid "author.submit.step3"
+msgstr "Корак 3. Унос метаподатака"
+
+msgid "author.submit.step4"
+msgstr "Корак 4. Додавање додатних докумената"
+
+msgid "author.submit.step4a"
+msgstr "Корак 4а. Додавање додатних докумената"
+
+msgid "author.submit.step5"
+msgstr "Корак 5. Потврда предаје"
+
+msgid "author.submit.start"
+msgstr "Почетак"
+
+msgid "author.submit.upload"
+msgstr "Додавање рада"
+
+msgid "author.submit.metadata"
+msgstr "Унос метаподатака"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Додавање додатних докумената"
+
+msgid "author.submit.confirmation"
+msgstr "Потврда"
+
+msgid "author.submit.cancelSubmission"
+msgstr "Можете завршити предају касније одабиром \"Активних предаја\" у ауторском налогу."
+
+msgid "author.submit.notAccepting"
+msgstr "Часопис тренутно не прихвата предаје радова."
+
+msgid "author.submit.requestWaiver"
+msgstr "Захтевај ослобађањ"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Користите поље за унос испод да наведете разлоге за ослобађање од накнаде."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Уколико захтевате ослобађање, морате навести разлоге."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "У рецензентском кругу {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "У рецензији: захтева преглед"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "У уређивању: захтева лектуру"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "У уређивању: захтева коректуру"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Додај лекторисану верзију"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Коректорске исправке"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Да ли сте сигурни да желите да обришете незавршену предају."
+
+msgid "author.submissions.viewStatus"
+msgstr "Види статус"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Нема предаја."
+
+msgid "author.submit.journalSection"
+msgstr "Секције часописа"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Одаберите одговарајућу секцију у часопису (погледајте секције и правила у <a href=\"{$aboutUrl}\" target=\"_new\">О часопису</a>)."
+
+msgid "author.submit.submissionLocale"
+msgstr "Језик предаје"
+
+msgid "author.submit.submissionLocaleDescription"
+msgstr "Овај часопис прихвата радове не неколико језика. Одаберите примарни језик рада из менија."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Морате бити сигурни да су све ставке у предаји задовољене пре наставка."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Аутор се слаже са ауторским правима која ће бити примењена на овај рад ако и када буде објављен у часопису (коментаре за уредника може испод додат)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Морате се сложити са Ауторским правима пре наставка."
+
+msgid "submission.submit.coverNote"
+msgstr "Коментари за уредника"
+
+msgid "author.submit.comments"
+msgstr "Унесите текст (опционо)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Одаберите одговарајућу секцију часописа за рад."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Одаберите језик рада."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Изјава о приватности"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Редослед којим ће аутори бити приказани у часопису."
+
+msgid "author.submit.reorder"
+msgstr "Редослед имена аутора"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Контакт за уредничку коресподенцију."
+
+msgid "author.submit.addAuthor"
+msgstr "Додај аутора"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Обриши аутора"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Унесите термине за индексирање  (кључне речи); одвојите их , (термин1, термин2, термин3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Односи се на геопросторне локације, хронолошки или историјски период и/или карактеристике истраживачког поступка."
+
+msgid "author.submit.languageInstructions"
+msgstr "српски=sr; енглески=en; француски=fr; шпански=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Додатни кодови</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Морате навести најмање једног аутора."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Име, презиме и имејл адреса су неопходни за сваког аутора."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Унесите наслов чланка."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Унесите апстракт чланка."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Прешли сте дозвољен број речи за апстракт"
+
+msgid "author.submit.submissionFile"
+msgstr "Фајл предаје"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Додај фајл предаје"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Замени фајл предаје"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Фајл предаје није дода"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Да ли сте сигурни да желите да наставите без додатог фајла предаје?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Опциони корак дозвољава додавање додатних фајлова уз предају. Фајлови могу бити у било ком формату могу да садрже информације о инструментима истраживања, базе података, изворе који бу другачије били недоступни читаоцима, слике и табеле које не могу бити интегрисане у сам текст или неки други материјал који има везе са радом."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Кликните сачувај да додате фајл (након тога можете додавати још фајлова)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Да ли сте сигурни да желите да наставите без додавања додатног фајлакоји сте одабрали?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Додатни фајлови нису додати уз ову пријаву."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Повратак на додатне фајлове"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Да ли сте сигурни да желите да обришете додатни фајл?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Додај додатни фајл"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Додај додатни фајл"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Измени додатни фајл"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Мета подаци додатног фајла"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "За индексирање додатног материјала унесите метаподатке за додатни фајл"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Додатни фајл"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Аутор (или власник) фајла"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Инструменти истраживања"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Истраживачки материјал"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Резултати истраживања"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Транскрипт"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Анализа података"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Сет податак"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Изворни текст"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Кратак опис"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Презентујте фајл рецензентима (без метаподатака), што неће угрозити \"слепу рецензију\"."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Користити само са формално објављеним материјалима."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Датум када су подаци сакупљени или инструмент сачињен."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Назив студије или друге тачке порекла."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Дефиниши друго"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Фајл није додат."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Унесите назив додатног фајла."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Унесите субјекат."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Унесите опис."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Идентификација јавног додатног фајла већ постоји."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Идентификатор јавног додатног фајла."
+
+msgid "author.submit.confirmationDescription"
+msgstr "Да бисте предали ваш рукопис у {$journalTitle} kliknitena \"Završi predaju\". кликнитена \"Заврши предају\". Директор пердаје ће примити обавештење о предаји путем имејла и биће у могућности да види прогрес предаје путем уредничког процеса. Хвала Вам на интересовању да објављујете радове у {$journalTitle}."
+
+msgid "author.submit.noFiles"
+msgstr "Фајлови нису додати уз ову пријаву."
+
+msgid "author.submit.filesSummary"
+msgstr "Резиме фајлова"
+
+msgid "author.submit.finishSubmission"
+msgstr "Заврши предају"
+
+msgid "author.submit.submissionComplete"
+msgstr "Предаја рада је завршена. Хвала Вам на интересовању да објављујете радове у {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Додај ауторску верзију"
+
+msgid "author.article.copyeditedFile"
+msgstr "Лекторски фајл"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Ауторски фајл"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Кориснички налог је обавезан како бисте предали рад у овај часопис. Ово омогућује уредницима да прате статус вашег рада и да вас контактирају уколико дође до промена или су потребне додатне информације."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Молим вас да размислите о одрицању од плаћања цене за подношење чланка."
+
+msgid "author.submit.nextSteps"
+msgstr "Следећи кораци"

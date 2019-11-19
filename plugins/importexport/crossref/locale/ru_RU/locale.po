@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:36+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.crossref.displayName"
+msgstr "Модуль «Экспорт CrossRef XML»"
+
+msgid "plugins.importexport.crossref.description"
+msgstr "Экспортирует метаданные статьи в формате CrossRef XML."
+
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Требования"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Все требования модуля выполнены."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Издатель журнала не был настроен! Вы должны добавить организацию издателя на странице <a href=\"{$journalSettingsUrl}\" target=\"_blank\">настройки журнала</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "ISSN журнала не был настроен! Вы должны добавить ISSN на странице <a href=\"{$journalSettingsUrl}\" target=\"_blank\">настройки журнала</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Не выбраны статьи для присвоения DOI в модуле открытых идентификаторов DOI, поэтому нет возможности депонировать или экспортировать в этом модуле."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Следующая информация необходима для успешной передачи в депозитарий CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Имя ответственного"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "E-mail ответственного"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Пожалуйста, введите имя ответственного."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr ">Пожалуйста, введите адрес электронной почты ответственного."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Если вы хотите использовать этот модуль для регистрации идентификаторов цифровых объектов(DOI) напрямую в CrossRef, то для этого вам потребуется имя пользователя и пароль (можно получить на <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>). Если у вас нет собственного имени пользователя и пароля вы сможете экспортировать в формат CrossRef XML, но не сможете зарегистрировать ваши DOI в CrossRef из OJS."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Имя пользователя"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Пожалуйста, введите имя пользователя, которое вы получили от CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "OJS будет депонировать присвоенные DOI автоматически в CrossRef. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные DOI."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Использовать тестовый API CrossRef (среда тестирования) для депонирования DOI. Пожалуйста, не забудьте убрать этот параметр для реальной работы."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr "Проверка XML. Используйте этот параметр, чтобы скачать XML для ручной регистрации DOI."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Примечание: Здесь для экспорта/регистрации будут рассматриваться только выпуски (а не статьи в этих выпусках)."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "Ошибка"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "Активный"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Отмечен как активный"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Депонировать"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr ""
+"\n"
+"\t\t<p>Статус депонирования:</p>\n"
+"\t\t<p>\n"
+"\t\t- Не депонирован: этот DOI не пытались депонировать.<br />\n"
+"\t\t- Активный: этот DOI был депонирован и корректно интерпретируется.<br />\n"
+"\t\t- Ошибка: депонирование DOI потерпело неудачу.<br />\n"
+"\t\t- Отмечен как активный: DOI был вручную отмечен как активный.\n"
+"\t\t</p>\n"
+"\t\t<p>Отображается только статус последней попытки депонирования.</p>\n"
+"\t\t<p>Если депонирование потерпело неудачу, пожалуйста, решите проблему и попробуйте зарегистрировать DOI снова.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Скачать XML"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Отметить как активный"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Задача автоматической регистрации CrossRef"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Вызов:\n"
+"{$scriptName} {$pluginName} export [ИмяФайлаXML] [путь_журнала] articles IdОбъекта1 [IdОбъекта2] ...\n"
+"{$scriptName} {$pluginName} register [путь_журнала] articles IdОбъекта1 [IdОбъекта2] ...\n"
+""
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Регистрация не была полностью успешной! Сервер регистрации DOI вернул ошибку."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "Регистрация прошла успешно, но было получено следующее предупреждение: «{$param}»."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Нет выпуска, соответствующего указанному ID выпуска «{$issueId}»."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Нет статьи, соответствующей указанному ID статьи «{$articleId}»."

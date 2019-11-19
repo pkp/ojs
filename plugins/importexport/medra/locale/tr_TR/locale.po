@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:42+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:42+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "mEDRA İhraç/Kayıt Eklentisi"
+
+msgid "plugins.importexport.medra.description"
+msgstr "mEDRA kayıt ajansı ile DOI (O4DOI) biçimi ve DOI'lere kayıt için Onix'de sayı, makale ve dizgi ihracı."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Lütfen mEDRA ihraç eklentisini yapılandırınız:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Kullanıcı adı"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Lütfen mEDRA kullanıcı adınızı giriniz. Kullanıcı adı virgül içeremez."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "The name of the institution registered at mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Please enter the institution that is registered at mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Person to be contacted by mEDRA in case of technical inquiries:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Kurulum"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Please enter the institution that is technically responsible for DOI export (e.g. the institution hosting your web server)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "İletişim Kurulacak Kişi"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Lütfen iletişim kurulacak teknik kişi giriniz."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-posta"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Lütfen teknik bir iletişim e-postası giriniz."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "iş"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "ortaya koyma"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Kullanım:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""
+
+msgid "plugins.importexport.medra.intro"
+msgstr "DOI'leri mEDRA ile kaydetmek istiyorsanız, lütfen kullanıcı adı ve şifre almak için <a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">mEDRA Ana Sayfasın</a>daki talimatları izleyin. Eğer kendi kullanıcı adınız ve şifreniz yoksa, mEDRA XML biçimine (DOI için Onix) aktarma imkanınız olacaktır, bu durumda DOI'lerinizi mEDRA'ya OJS içinden kaydedemezsiniz. Şifrenin mEDRA kayıt hizmeti gereksinimleri nedeniyle düz metin (şifreli değil) olarak kaydedileceğini lütfen unutmayın."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Lütfen mEDRA'ya 'yayınlan ülkeyi' olarak bildirilecek ülkeyi seçiniz."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Lütfen sayıları <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'iş' veya 'görünüm'</a> olarak dışa aktarmak isteyip istemediğinizi belirtin."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Sayıları şu şekilde ihraç et:"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS atanmış DOI'leri otomatik olarak mEDRA'ya kaydeder. Lütfen bunu yayınlanma işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız tüm DOI'leri kontrol edebilirsiniz."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "DOI kaydı için mEDRA test API'sini (test ortamı) kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "Not: Makalelere atanan DOI'ler mEDRA'ya <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'iş'</a> olarak ihraç edilecek. Dizgi'lere atanan DOI'ler <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'görünüm'</a> olarak ihraç edilecek."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "mEDRA otomatik kayıt görevi"

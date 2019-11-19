@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
+"Language: \n"
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr "Denne programutvidelsen gir mulighet til å autentisere og synkronisere brukerkonti mot en ekstern LDAP-datakilde."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP-innstillinger"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Vertserverens navn"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr "F.eks. \"ldap.example.com\" eller \"ldaps://ldap.example.com\" (for bruk av SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Serverport"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Valgfritt. Standard er 389 (LDAP) eller 636 (LDAP over SSL)"
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Base DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "F.eks. \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Manager DN"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "F.eks. \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Managerpassord"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Manager-DN og -passord er bare påkrevet hvis brukerprofil/passord-synkronisering eller brukeropprettings-opsjonen er slått på. Hvis LDAP bare skal brukes til autentisering kan disse opsjonene utelates."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Kontonavnattributt"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Den attributtverdien som gir unik identifikasjon av et brukerobjekt, slik som uid eller cn eller sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Passordkryptering"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "SASL-innstillinger (valgfritt)"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "SASL-mekanisme"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "For eks. \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Påkrevet autorisasjons-ID"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "SASL sikkerhetsegenskaper"

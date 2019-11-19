@@ -1,0 +1,1834 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:21+00:00\n"
+"Language: \n"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Egin klik ikono batean ebaluazio-inprimakia betetzeko."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Nahitaezko eremuak bete egin behar dira."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr "Ziur zaude bukatutako gisa markatu nahi duzula zeregin hau? Gero ezingo duzu aldaketarik egin."
+
+msgid "common.payment"
+msgstr "Ordainketa"
+
+msgid "common.payments"
+msgstr "Ordainketak"
+
+msgid "common.homePageHeader.altText"
+msgstr "Hasierako orriaren goiburua"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Aldizkariaren hasierako orriko irudia"
+
+msgid "navigation.journalHelp"
+msgstr "Aldizkariaren laguntza"
+
+msgid "navigation.current"
+msgstr "Unekoa"
+
+msgid "navigation.otherJournals"
+msgstr "Beste aldizkari batzuk"
+
+msgid "navigation.browseByIssue"
+msgstr "Zenbakiz"
+
+msgid "navigation.browseByAuthor"
+msgstr "Egilez"
+
+msgid "navigation.infoForAuthors"
+msgstr "Egileentzat"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Liburuzainentzat"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Interes-gatazketarako gidalerroak"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Egileentzako informazioa"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Liburuzainentzako informazioa"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Esleitu gabe"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Esleitu gabe"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Editatzen ari diren bidalketak"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Editatzen"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Ebaluatzen ari diren bidalketak"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Ebaluatzen"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Artxiboak"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Artxiboak"
+
+msgid "common.queue.long.active"
+msgstr "Bidalketa aktiboak"
+
+msgid "common.queue.short.active"
+msgstr "Aktibo"
+
+msgid "common.queue.long.completed"
+msgstr "Artxiboa"
+
+msgid "common.queue.short.completed"
+msgstr "Artxiboa"
+
+msgid "section.section"
+msgstr "Atala"
+
+msgid "section.sections"
+msgstr "Aldizkariaren atalak"
+
+msgid "section.title"
+msgstr "Atalaren titulua"
+
+msgid "section.abbreviation"
+msgstr "Laburdura"
+
+msgid "section.abbreviation.example"
+msgstr "(Adibidez, Artikuluak=ART)"
+
+msgid "article.article"
+msgstr "Artikulua"
+
+msgid "article.articles"
+msgstr "Artikuluak"
+
+msgid "common.publication"
+msgstr "Artikulua"
+
+msgid "common.publications"
+msgstr "Artikuluak"
+
+msgid "article.submissionId"
+msgstr "Bidalketa ID"
+
+msgid "article.title"
+msgstr "Titulua"
+
+msgid "article.authors"
+msgstr "Egileak"
+
+msgid "article.indexingInformation"
+msgstr "Indexatzeko informazioa"
+
+msgid "article.metadata"
+msgstr "Metadatuak"
+
+msgid "article.journalSection"
+msgstr "Aldizkariaren atala"
+
+msgid "article.file"
+msgstr "Fitxategia"
+
+msgid "article.suppFile"
+msgstr "Fitxategi osagarria"
+
+msgid "article.suppFiles"
+msgstr "Fitxategi osagarria(k)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Fitxat. osag."
+
+msgid "article.discipline"
+msgstr "Diziplina eta azpidiziplina akademikoak"
+
+msgid "article.subject"
+msgstr "Gako-hitzak"
+
+msgid "article.coverage"
+msgstr "Estaldura"
+
+msgid "article.type"
+msgstr "Mota, metodoa edo hurbilketa"
+
+msgid "article.language"
+msgstr "Hizkuntza"
+
+msgid "article.sectionEditor"
+msgstr "AE"
+
+msgid "article.commentsToEditor"
+msgstr "Egilearen oharrak"
+
+msgid "article.submission"
+msgstr "Bidalketa"
+
+msgid "article.submissions"
+msgstr "Bidalketak"
+
+msgid "article.abstract"
+msgstr "Laburpena"
+
+msgid "article.details"
+msgstr "Xehetasunak"
+
+msgid "article.coverPage.altText"
+msgstr "Azaleko irudia"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Sarrera librea"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Sarrera mugatua"
+
+msgid "article.comments.sectionDefault"
+msgstr "Lehenetsia"
+
+msgid "article.comments.disable"
+msgstr "Desgaitu"
+
+msgid "article.comments.enable"
+msgstr "Gaitu"
+
+msgid "article.fontSize"
+msgstr "Letra-tamaina"
+
+msgid "article.fontSize.small.altText"
+msgstr "Txikia"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Tartekoa"
+
+msgid "article.fontSize.large.altText"
+msgstr "Handia"
+
+msgid "submission.submissionEditing"
+msgstr "Bidalketaren edizioa"
+
+msgid "submission.changeSection"
+msgstr "Aldatu hona:"
+
+msgid "submission.sent"
+msgstr "Bidalita"
+
+msgid "submission.editorDecision"
+msgstr "Editorearen erabakia"
+
+msgid "submission.round"
+msgstr "{$round}. buelta"
+
+msgid "submission.editorReview"
+msgstr "Editorearen ebaluazioa"
+
+msgid "submission.notifyAuthor"
+msgstr "Jakinarazi egileari"
+
+msgid "submission.notifyEditor"
+msgstr "Jakinarazi editoreari"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Editore/Egile arteko mezu el.en erregistroa"
+
+msgid "submission.reviewersVersion"
+msgstr "Ebaluatzailearen oharrak dituen fitxategi-bertsioa"
+
+msgid "submission.postReviewVersion"
+msgstr "Ebaluatu osteko fitxategi-bertsioa"
+
+msgid "submission.editorVersion"
+msgstr "Edizio-bertsioa"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Egileak berrikusitako fitxategi-bertsioa"
+
+msgid "submission.authorVersion"
+msgstr "Egilearen bertsioa"
+
+msgid "submission.copyediting"
+msgstr "Zuzenketa"
+
+msgid "submission.copyedit"
+msgstr "Zuzendu"
+
+msgid "submission.proofreading"
+msgstr "Proba-zuzenketa"
+
+msgid "submission.scheduling"
+msgstr "Programazioa"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName} zenbakian argitaratzeko programatua."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Adieraziko den)"
+
+msgid "submissions.sec"
+msgstr "Atl"
+
+msgid "submissions.step1"
+msgstr "1. urratsa"
+
+msgid "submissions.step3"
+msgstr "3. urratsa"
+
+msgid "submissions.queuedReview"
+msgstr "Ebaluatzen"
+
+msgid "submissions.published"
+msgstr "Argitaratuta"
+
+msgid "submissions.initial"
+msgstr "Lehenengoa"
+
+msgid "submissions.proofread"
+msgstr "Probak zuzenduta"
+
+msgid "submissions.initialProof"
+msgstr "Lehen proba"
+
+msgid "submissions.postAuthor"
+msgstr "Post-Author"
+
+msgid "submissions.reviewRound"
+msgstr "Ebaluazio-buelta"
+
+msgid "submissions.proof"
+msgstr "Proba"
+
+msgid "submissions.editorDecision"
+msgstr "Editorearen erabakia"
+
+msgid "submissions.editorRuling"
+msgstr "Editorearen ebazpena"
+
+msgid "submission.eventLog"
+msgstr "Gertaeren loga"
+
+msgid "submissions.copyeditComplete"
+msgstr "Zuzenduta"
+
+msgid "submissions.layoutComplete"
+msgstr "Maketazioa eginda"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Probak zuzenduta"
+
+msgid "journal.currentIssue"
+msgstr "Uneko zenbakia"
+
+msgid "context.contexts"
+msgstr "Aldizkariak"
+
+msgid "journal.path"
+msgstr "Bidea"
+
+msgid "context.context"
+msgstr "Aldizkaria"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "user.showAllJournals"
+msgstr "Erakutsi nire aldizkariak"
+
+msgid "user.registerForOtherJournals"
+msgstr "Erregistratu beste aldizkari batzuetan"
+
+msgid "user.myJournals"
+msgstr "Nire aldizkariak"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Zure kontua ez dago ezein aldizkarirekin lotuta. Aukeratu aldizkari bat:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Zure kontuak ez du funtziorik aldizkari honetan. Aukeratu beheko ekintzetako bat:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Bidali proposamen bat"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Bidali artikulu bat: Egile-erregistratzea desgaituta dago orain."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Erregistratu ebaluatzaile gisa"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Erregistratu ebaluatzaile gisa: Ebaluatzaile-erregistratzea desgaituta dago orain."
+
+msgid "user.role.manager"
+msgstr "Aldizkariaren kudeatzailea"
+
+msgid "user.role.subEditor"
+msgstr "Ataleko editorea"
+
+msgid "user.role.subscriptionManager"
+msgstr "Harpidetza-kudeatzailea"
+
+msgid "user.role.managers"
+msgstr "Aldizkariaren kudeatzaileak"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Harpidetza-kudeatzaileak"
+
+msgid "issue.issue"
+msgstr "Zenbakia"
+
+msgid "issue.issues"
+msgstr "Zenbakiak"
+
+msgid "issue.title"
+msgstr "Titulua"
+
+msgid "issue.volume"
+msgstr "Bolumena"
+
+msgid "issue.number"
+msgstr "Zenbakia"
+
+msgid "issue.vol"
+msgstr "bol:"
+
+msgid "issue.no"
+msgstr "zk:"
+
+msgid "issue.year"
+msgstr "Urtea"
+
+msgid "issue.noIssues"
+msgstr "Zenbakirik ez"
+
+msgid "issue.toc"
+msgstr "Aurkibidea"
+
+msgid "issue.abstract"
+msgstr "Laburpena"
+
+msgid "issue.coverPage.altText"
+msgstr "Azala"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Bidalketako gertaera"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Artikulua argitaratzera bidali"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Artikulua zenbaki batera esleitu"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikulua argitaratu"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Egilearen berrikuspena bidali"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Egilearen berrikuspen-fitxategia eguneratu"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editorea izendatu"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editorea kendu"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Editorearen erabakia bidali"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Edizio-fitxategia eguneratu"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Artikulua artxibora bidali"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Artikulua artxibotik leheneratu"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Zuzentzailea izendatu"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Zuzentzailea kendu"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Zuzenketa hasi"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Zuzentzailearen aldaketen fitxategia eguneratu"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Lehenengo zuzenketa bukatu"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Azken zuzenketa bukatu"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Zuzenketa-fitxategia eguneratu"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Proba-zuzentzailea izendatu"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Proba-zuzentzailea kendu"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Proba-zuzenketa hasi"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Proba-zuzentzailearen aldaketen fitxategia eguneratu"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Proba-zuzenketa bukatu"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Maketatzailea izendatu"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Maketatzailea kendu"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Maketaziosi"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Maketazioko galerada eguneratu"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Maketazioa bukatu"
+
+msgid "reader.subscribersOnly"
+msgstr "Harpidedunak bakarrik"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Harpidetuta egon behar da lan hau atzitzeko. Harpidetza egiaztatzeko, hasi saioa aldizkarian."
+
+msgid "reader.openAccess"
+msgstr "Sarrera librea"
+
+msgid "reader.subscriptionAccess"
+msgstr "Harpidedunen sarrera"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Harpidetza edo Sarrera librea"
+
+msgid "comments.commentsOnArticle"
+msgstr "Artikulu honi buruzko iruzkinak"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Orain ezin da hizkuntza-paketerik deskargatu Public Knowledge Project web-zerbitzaritik:</p>\n"
+"\t<ul>\n"
+"\t\t<li>Zure zerbitzariak ez dauka edo ez du uzten exekutatzen GNUren \"tar\" utilitatea</li>\n"
+"\t\t<li>OJSk ezin du aldatu localeen erregistro-fitxategia, normalean \"registry/locales.xml\".</li>\n"
+"\t</ul>\n"
+"<p>Hizkuntza-paketeak eskuz deskarga daitezke <a href=\"http://pkp.sfu.ca\">PKP webgunetik</a>.</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>OJS ez den autentifikazio-iturburu bat lehenetsi gisa ezartzeak, ondorio hauek izango ditu:</p>\n"
+"<ul>\n"
+"\t<li>Erabiltzaile bat saiatzen bada gune honetan kontu berri bat erregistratzen, lehendik autentifikazio-iturburuan dagoen (baina OJS datu-basean ez dagoen) erabiltzaile-izen batekin, ematen den pasahitza erabiltzaile-kontu horrentzat baliozkoa bada bakarrik onartuko da erregistratzeko ahalegina.</li>\n"
+"</ul>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ABISUA!</h4>\n"
+"<p>Sistemak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Konfigurazio-aldaketak aplikatzeko, testu-editore egoki batekin ireki beharko duzu <tt>config.inc.php</tt> eta bertako edukia aldatu beheko testu-eremuaren edukiarekin.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Harpidetzen kudeaketa"
+
+msgid "plugins.categories.auth.description"
+msgstr "Baimena emateko pluginen bidez, erabiltzaile-autentifikazioa beste sistema batzuei delega diezaieke Open Journal Systems-ek, esate baterako LDAP zerbitzariei."
+
+msgid "plugins.categories.generic.description"
+msgstr "Plugin generikoek Open Journal Systems hedatzen dute, gainerako plugin kategoriek egin ezin dituzten hainbat gauzatarako."
+
+msgid "manager.setup.reviewProcessEmailDescription"
+msgstr ""
+"Ebaluazioa\n"
+"egiteko eskaerarekin batera, bidalketa eransten die ebaluatzaileei mezu\n"
+"elektronikoan editoreak. Ebaluatzaileek mezu elektronikoz erantzuten diote\n"
+"editoreari onartzen duten ala ez, eta bide beretik bidaltzen dizkiote ebaluazioa\n"
+"eta gomendioa ere. Ebaluatzaileen onarpena (edo ezespena), eta ondorengo\n"
+"ebaluazio-txostena eta gomendioa Editoreek sartzen dute bidalketaren\n"
+"Ebaluazio-orrian, ebaluazio-prozesua erregistratuta uzteko."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Creative Commons Copyright informazio proposatuak</h3>\n"
+"<h4>1. Sarrera librea ematen duten Aldizkarientzat proposatutako politika</h4>\n"
+"Aldizkari honetan argitaratzen duten egileak ados daude baldintza hauekin:\n"
+"<ol type=\"a\">\n"
+"\t<li>Egileek atxikitzen dituzte egile-eskubideak, lanaren lehen argitalpena egiteko eskubidea aldizkariari ematen diote eta aldi berean <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> lizentzia onartzen dute, beste batzuek lana partekatu ahal izan dezaten lanaren egilea eta aldizkari honetan egindako lehen argitalpena aipatuz.</li>\n"
+"\t<li>Egileek beste kontratu-hitzarmen osagarri batzuk ere egin ditzakete aldizkarian argitaratutako bertsioaren banaketa ez-esklusiboa egiteko (adib., gordailu instituzional batean jartzeko, edo liburu batean argitaratzeko), betiere aldizkari honetan egindako lanaren hasierako argitalpena aitortuz.</li>\n"
+"\t<li>Egileek beren lana Interneten jartzeko baimena dute (adib., gordailu instituzionaletan edo beren webgunean), eta horretara animatzen dira gainera, bidalketa egin aurretik eta bidalketa-prozesuan zehar, elkartruke produktiboak sorraraz ditzakeelako eta lanaren aipamenak lehenago hasiko direlako eta ugariagoak izango direlako (Ikusi <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Sarrera librearen eragina</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>Sarrera libre geroratua ematen duten Aldizkarientzat proposatutako politika</h4>\n"
+"Aldizkari honetan argitaratzen duten egileak ados daude baldintza hauekin:\n"
+"<ol type=\"a\">\n"
+"\t<li>Egileek atxikitzen dituzte egile-eskubideak, lanaren lehen argitalpena egiteko eskubidea aldizkariari ematen diote eta aldi berean argitaratu eta handik [ZEHAZTU ZENBAT DENBORARA] <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> lizentzia onartzen dute, beste batzuek lana partekatu ahal izan dezaten lanaren egilea eta aldizkari honetan egindako lehen argitalpena aipatuz.</li>\n"
+"\t <li>Egileek beste kontratu-hitzarmen osagarri batzuk ere egin ditzakete aldizkarian argitaratutako bertsioaren banaketa ez-esklusiboa egiteko (adib., gordailu instituzional batean jartzeko, edo liburu batean argitaratzeko), betiere aldizkari honetan egindako lanaren hasierako argitalpena aitortuz.</li>\n"
+"\t <li>Egileek beren lana Interneten jartzeko baimena dute (adib., gordailu instituzionaletan edo beren webgunean), eta horretara animatzen dira gainera, bidalketa egin aurretik eta bidalketa-prozesuan zehar, elkartruke produktiboak sorraraz ditzakeelako eta lanaren aipamenak lehenago hasiko direlako eta ugariagoak izango direlako (Ikusi <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">Sarrera librearen eragina</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.subjectClassificationDescription"
+msgstr ""
+"[Interneten erabilgarri dagoen sistema bat erabiliko du aldizkariak gaika sailkatzeko.<br />\n"
+"Sailkapen-sistemaren titulua"
+
+msgid "manager.setup.registerJournalForIndexingDescription"
+msgstr ""
+"Aldizkari honen edukia datu-baseetan bilaketak egiteko sistema banatu batean indexatuta edukitzeko, <a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">erregistratu</a> zuen gunearen URLa Public Knowledge Project-en <a href=\"http://pkp.sfu.ca/harvester/\" target=\"_blank\">harvester</a> metadatu-biltzailean. Tresna horrek aldizkari honetako elementu indexatu guztien metadatuak bilduko ditu, bilaketa zehatzak eta kolektiboak egin ahal izateko <a href=\"http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction\" target=\"_blank\">Open Archives Initiative Protocol for Metadata Harvesting</a> protokoloari atxikitako bilaketa-guneen bitartez.\n"
+"<br /><br />\n"
+"Kontuan izan, zuen gune-administratzaileak dagoeneko gunea erregistratu badu PKP Harverster biltzailean, zuen aldizkaria automatikoki indexatuko dela eta ez daukazula aldizkaria erregistratu beharrik.\n"
+"<br /><br />\n"
+"<a href=\"http://pkp.sfu.ca/harvester/add.php\" target=\"_blank\">Egin klik hemen</a> eta sartu <span class=\"highlight\">{$siteUrl}</span> <strong>Gunearen URLa</strong>n, eta <span class=\"highlight\">{$oaiUrl}</span> <span class=\"highlight\">OAI base URL</span> eremuan."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Urratsak: Bidalketen ilara &gt; Bidalketen ebaluazioa &gt; Bidalketen edizioa &gt; Aurkibidea.<br /><br />\n"
+"Hautatu eredu bat prozesu editorialaren alderdi horiek maneiatzeko. (Editore nagusia eta Ataleko editoreak izendatzeko, joan Aldizkariaren kudeaketara eta hautatu Editoreak"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Irakurleei egileak aipatutako lan baten lineako bertsioa aurkitzen laguntzeko, aukera hauek ematen dira:</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Irakurtzeko tresna bat gehitu</strong><p>Aldizkariaren kudeatzaileak \"Bilatu erreferentziak\" aukera gehi dezake argitaratutako lanen Irakurtzeko tresnetan, irakurleek erreferentzia baten titulua itsatsi ahal izan dezaten, aipatutako lana aldez aurretik hautatutako datu-base unibertsitarioetan bilatzeko.</p></li>\n"
+"\t<li><strong>EStekak kapsulatu erreferentzietan</strong><p>Erreferentzia\n"
+"Interneten\n"
+"aurki daitekeenean, erreferentziara joateko esteka bat gehi dezake Maketatzaileak, instrukzio hauei jarraituz (alda daitezke):</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Erabiltzailea desgaitu?  Ezingo da sisteman sartu aurrerantzean.\n"
+"\n"
+"Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Ez daukazu administratzaile-eskubiderik erabiltzaile horren gainean. Arrazoia izan daiteke:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Erabiltzaile hori gune-administratzailea izatea</li>\n"
+"\t\t\t<li>Erabiltzaile hori zuk kudeatzen ez duzun aldizkariren batean aktibo egotea.</li>\n"
+"\t\t</ul>\n"
+"\tLan hau gune-administratzaile batek egin behar du.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"<ol>\n"
+"\t<li>Elementu nabarmenduak editorearen ekintza behar duela adierazten du.</li>\n"
+"\t<li>\"Epea\" ebaluatzaileak ebaluazioa egitea onartzen duenean sartzen da. Mugaegunerako zenbat aste falta diren adierazten du edo, (-) zeinua badu, zenbat aste pasatu diren mugaegunetik.</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Edizio-lan aktiboak"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Bukatutako lanak"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Ez dago bidalketarik esleituta."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Zuzentzaile honi berriz jakinarazteak esleipena berrabiaraziko du. Ziur zaude hori egin nahi duzula?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Egileari berriz jakinarazteak esleipena berrabiaraziko du. Ziur zaude hori egin nahi duzula?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Maketatzaile honi berriz jakinarazteak esleipena berrabiaraziko du. Ziur zaude hori egin nahi duzula?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Proba-zuzentzaile honi berriz jakinarazteak esleipena berrabiaraziko du. Ziur zaude hori egin nahi duzula?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Desenkusa"
+
+msgid "sectionEditor.regrets.title"
+msgstr "{$submissionId} Ebaluatzailearen desenkusak, ezerezteak eta aurreko bueltak"
+
+msgid "sectionEditor.regrets"
+msgstr "Desenkusa"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Ikusi Desenkusak, Ezerezteak, Aurreko bueltak"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Adituen ebaluazioa, {$round}. buelta."
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Editorearen erabakia, {$round}. buelta."
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Ebaluatzailearen Desenkusak eta Ezerezteak"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Desenkusa"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Emaitza"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Inskribatu lehendik dagoen erabiltzaile bat Ebaluatzaile gisa"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Sortu Ebaluatzaile berria"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Edizio-lan aktiboak"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Bukatutako lanak"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Ez dago lan aktiborik"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Maketazio-lan aktiboak"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Kargatu galerada-formatua"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Ordeztu fitxategia"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Kargatu fitxategi osagarria"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Irudi-formatua ez da baliozkoa: .gif, .jpg, eta .png formatuak bakarrik onartzen dira."
+
+msgid "reviewer.pendingReviews"
+msgstr "Ebaluazioa egiteko zain dauden artikuluak"
+
+msgid "reviewer.completedReviews"
+msgstr "Eginda"
+
+msgid "reviewer.averageQuality"
+msgstr "Balorazioa"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Ebaluatzeko fitxategia"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Jakinarazi Editoreari"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Egingo du ebaluazioa"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Ezingo du egin ebaluazioa"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Ebaluatzaileak ebaluazioa egitea onartzen duenean izango du erabilgarri bidalketa"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Bidalketaren Editorea"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr ""
+"Idatzi edo\n"
+"itsatsi ebaluazioko oharrak hemen"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editoreak sartzeko"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Bidali oroigarria"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Hautatu gomendio bat era bidali ebaluazioa prozesua osatzeko. Gomendio bat hautatu aurretik, ebaluazio bat sartu behar duzu edo fitxategi bat kargatu."
+
+msgid "reviewer.article.recommendation"
+msgstr "Gomendioa"
+
+msgid "reviewer.article.submitReview"
+msgstr "Bidali Ebaluazioa Editoreari"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Iruzkinak"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Kargatutako fitxategiak"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Ebaluatzaileak kargatutako bertsioa"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Fitxategiari oharrak egin nahi badizkiozu, editorearentzat, gorde zure disko gogorrean eta erabili Arakatu/Kargatu)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Editorearen eskaera"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Zure erantzuna"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Ebaluazioa bidalita"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Ebaluazioaren epea"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Onartu bidalketa"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Berrikusi egin behar da"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Birbidali ebaluatzeko"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Birbidali beste norabait"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Ez onartu bidalketa"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Ikusi oharrak"
+
+msgid "reviewer.article.schedule"
+msgstr "Programazioa"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Ebaluatzeko bidalketa"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Ebaluazioen programazioa"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Ebaluazioaren urratsak"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Ebaluatzaileen gidalerroak"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Jakinarazi bidalketaren editoreari"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "ebaluazioa egiteko prest zauden ala ez."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Ebaluazioa egin behar baduzu, irakurri behean ematen diren Ebaluatzailearen gidalerroak."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Egin klik fitxategi-izenetan, bidalketa honi lotutako fitxategiak deskargatzeko eta ebaluatzeko (pantailan edo inprimatuta)."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Deklaratu interes-gatazkarik daukazun ikerketa honi buruz (ikus <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Interes-gatazketako politika</a>)"
+
+msgid "reviewer.competingInterests"
+msgstr "Interes-gatazka"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Egin klik ikonoan bidalketari egin diozun ebaluazioa idazteko (edo itsasteko)."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Gainera, fitxategiak karga ditzakezu editoreak eta/edo egileak kontsulta ditzaten."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Ez da gomendiorik hautatu. Gomendio bat aukeratu behar duzu bidaltzeko."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Erabaki bat grabatzen duzunean, ezingo duzu aldaketarik egin ebaluazio honetan. Ziur zaude jarraitu nahi duzula?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Zuzentzeko fitxategia"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Zuzentzailearen fitxategia"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Zuzentzailearen fitxategia"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Ez da Proba-zuzenketarik esleitu"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+" <p>Eskuizkribu bat aldizkari honetan\n"
+"kargatzeko, ondorengo urratsak egin behar dituzu.</p> <ol> <li>Orri honetan, sakatu Arakatu (edo\n"
+"Aukeratu fitxategia) eta Fitxategia aukeratzeko leiho bat irekiko da, bidali nahi duzun fitxategia zure\n"
+"ordenagailuan bilatzeko.</li> <li>Lokalizatu bidali nahi duzun fitxategia eta nabarmendu.</li> <li>Fitxategia\n"
+"aukeratzeko leihoan, sakatu Ireki, eta zure fitxategiaren izena orri honetan azalduko da.</li> <li>Orri\n"
+"honetan, sakatu Kargatu eta zure fitxategia zure ordenagailutik aldizkariaren webgunera kargatuko da\n"
+"eta izena aldatuko zaio aldizkariaren izendapen-ohituretara egokitzeko.</li> <li>Bidalketa\n"
+"kargatutakoan, sakatu orri honen behealdeko 'Gorde eta jarraitu' botoia.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Eskaera egiteko mezu elektronikoa ezin da bidali Ebaluazio-bertsioa prest egon arte."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Eskaera egiteko mezua ezin\n"
+"da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen erabakian."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Eskaera egiteko mezua ezin da bidali fitxategia zuzentzeko kargatuta egon arte."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Lehenengo zuzenketa"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Editorearen Zuzenketa"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Egilearen zuzenketa"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Azken zuzenketa"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Zuzenketa-bertsioa"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Izendatu Zuzentzailea"
+
+msgid "submission.copyedit.useFile"
+msgstr "Erabili fitxategia"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Zuzentzailearen oharrak"
+
+msgid "submission.copyedit.instructions"
+msgstr "Zuzenketak egiteko instrukzioak"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Bat ere ez (eskaera bidali aurretik, kargatu azken zuzenketa-bertsioa Maketazio-bertsio gisa)"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Galerada-identifikatzaile publikoa"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Galerada-identifikazio publikoa badago lehendik."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Izendatu Maketatzailea"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Ordeztu Maketatzailea"
+
+msgid "submission.layout.layoutComments"
+msgstr "Maketazio-oharrak"
+
+msgid "submission.layout.instructions"
+msgstr "Maketatzeko instrukzioak"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Erreferentziarako esteka"
+
+msgid "submission.proofreadingComments"
+msgstr "Proba-zuzenketako oharrak"
+
+msgid "submission.proofread.corrections"
+msgstr "Proba-zuzenketako zuzenketak"
+
+msgid "submission.proofread.instructions"
+msgstr "Probak zuzentzeko instrukzioak"
+
+msgid "submission.logType.article"
+msgstr "Artikulua"
+
+msgid "submission.logType.author"
+msgstr "Egilea"
+
+msgid "submission.logType.editor"
+msgstr "Editorea"
+
+msgid "submission.logType.review"
+msgstr "Ebaluazioa"
+
+msgid "submission.logType.copyedit"
+msgstr "Zuzenketa"
+
+msgid "submission.logType.layout"
+msgstr "Maketazioa"
+
+msgid "submission.logType.proofread"
+msgstr "Proba-zuzenketa"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Editore/Egile arteko korrespondentzia"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Zuzentzailearen oharrak"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Ohar hauek egileak ere ikus ditzake.<br />\n"
+"(Gorde ondoren, ohar gehiago erantsi ahal izango dira.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Egilearentzat eta editorearentzat"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Editorearentzat"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Bidali ondoren, aurkeztu BCC kopia editagarri bat ebaluatzaileei bidaltzeko."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Egilearentzat eta editorearentzat"
+
+msgid "submission.comments.forEditor"
+msgstr "Editorearentzat"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Gorde eta bidali mezua Egileari"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Gorde eta bidali mezua Editoreari"
+
+msgid "user.register.noJournals"
+msgstr "Gune honetan ez dago zu erregistratzeko moduko aldizkaririk."
+
+msgid "user.register.privacyStatement"
+msgstr "Pribatutasun-deklarazioa"
+
+msgid "user.register.loginToRegister"
+msgstr "Aldizkari honetan erregistratzeko, sartu zure oraingo erabiltzaile-izena eta pasahitza."
+
+msgid "user.register.registrationDisabled"
+msgstr "Aldizkari honek ez du erabiltzaile berriak erregistratzeko aukerarik ematen orain."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Sartu duzun pasahitza laburregia da."
+
+msgid "user.register.readerDescription"
+msgstr "Posta elektronikoz jakinarazpena jaso aldizkariaren zenbaki bat argitaratzen denean."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Posta elektronikoz jakinarazpena jaso aldizkariaren zenbaki bat sarrera libreko bihurtzen denean."
+
+msgid "user.register.authorDescription"
+msgstr "Aldizkarira lanak bidaltzeko aukera."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Aldizkarira bidalitako lanen adituen ebaluazioa egiteko prest."
+
+msgid "user.register.reviewerDescription"
+msgstr "Aldizkarira bidalitako lanen adituen ebaluazioa egiteko prest. Adierazi ebaluatzeko interesak (arloak eta ikerketa-metodoak)"
+
+msgid "search.browseAuthorIndex"
+msgstr "Arakatu egileen indizea"
+
+msgid "search.searchFor"
+msgstr "Bilatu artikuluetan"
+
+msgid "search.withinJournal"
+msgstr "Non"
+
+msgid "search.allJournals"
+msgstr "Aldizkari guztiak"
+
+msgid "search.authorIndex"
+msgstr "Arakatu egileen indizea"
+
+msgid "search.authorDetails"
+msgstr "Egilearen xehetasunak"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>Bilatzeko aholkuak: </h4><ul>\n"
+"<li>Bilatu beharreko hitzetan ez da maiuskula/minuskularik bereizten</li>\n"
+"<li>Hitz arruntei ez ikusi egiten zaie</li>\n"
+"<li>Lehenespenez, galderan sartutako termino <em>guztiak</em> dauzkaten artikuluak erakusten dira (hau da, <em>ETA</em> ulertzen da)</li>\n"
+"<li>Terminoetako bat daukaten artikuluak bilatzeko, erabili <em>EDO</em> hitzak konbinatzeko; adib. <em>hezkuntza EDO ikerketa</em></li>\n"
+"<li>Bilaketa konplexuagoak egiteko, erabili parentesiak; adib., <em>artxiboa ((aldizkaria EDO konferentzia) EZ tesia)</em></li>\n"
+"<li>Esaldiak zehazki bilatzeko, idatzi komatxo artean; adib., <em>\"sarrera libreko argitalpenak\"</em></li>\n"
+"<li>Hitz bat bilaketatik kanpo uzteko, jarri aurretik <strong>-</strong> edo <em>EZ</em>; adib. <em>gizartea -politika</em> edo <em>gizartea EZ politika</em></li>\n"
+"<li>Komodin gisa, hainbat karaktere adierazteko, erabili <strong>*</strong>; adib. <em>soziologi*</em> , \"soziologia\" edo \"soziologiko\" bilatzeko, forma deklinatu guztiak barne.</li>\n"
+"</ul>"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.nonpdf.title"
+msgstr "Artikulua deskargatu"
+
+msgid "article.nonpdf.note"
+msgstr "Zuk hautatutako fitxategia automatikoki hasi behar da deskargatzen. Ez bada hasten, egin klik beheko estekan. Kontuan izan, fitxategi hau ikusteko ikustaile edo plugin berezi bat behar dela.<br /><br />Fitxategia ez bada automatikoki deskargatzen, <a href=\"{$url}\">egin klik hemen</a>."
+
+msgid "site.journalsHosted"
+msgstr "Gune honetan ostatatutako aldizkariak"
+
+msgid "site.journalView"
+msgstr "Aldizkaria ikusi"
+
+msgid "site.journalRegister"
+msgstr "Erregistratu"
+
+msgid "site.journalCurrent"
+msgstr "Uneko zenbakia"
+
+msgid "current.current"
+msgstr "Unekoa"
+
+msgid "current.noCurrentIssue"
+msgstr "Ez dago uneko zenbakirik"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Aldizkari honek ez du zenbaki bat ere argitaratu."
+
+msgid "archive.archives"
+msgstr "Artxiboak"
+
+msgid "archive.browse"
+msgstr "Arakatu zenbaki zaharragoak"
+
+msgid "archive.issueUnavailable"
+msgstr "Zenbakia ez dago erabilgarri"
+
+msgid "about.statistics"
+msgstr "Estatistikak"
+
+msgid "about.editorialTeam"
+msgstr "Talde editoriala"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografia"
+
+msgid "about.editorialPolicies"
+msgstr "Politika editoriala"
+
+msgid "about.focusAndScope"
+msgstr "Orientazioa eta esparrua"
+
+msgid "about.sectionPolicies"
+msgstr "Atalen politika"
+
+msgid "about.submissions"
+msgstr "Bidalketak"
+
+msgid "about.onlineSubmissions"
+msgstr "Lineako bidalketak"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Joan saioa hastera"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Lanak linean bidaltzeko eta bidalitako lanen egoera ikusteko, erregistratuta egon behar da eta saioa hasi behar da."
+
+msgid "about.authorGuidelines"
+msgstr "Egileentzako gidalerroak"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Bidalketa prestatzeko zerrenda"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Bidalketa-prozesuan, egileek egiaztatu behar dute beren bidalketak betetzen dituela ondoren eskatzen diren guztiak, eta onartu behar dute baldintza horiek bete ezean lana bueltatu egingo dietela."
+
+msgid "about.copyrightNotice"
+msgstr "Copyright informazioa"
+
+msgid "about.privacyStatement"
+msgstr "Pribatutasun-deklarazioa"
+
+msgid "about.authorFees"
+msgstr "Egile-tarifak"
+
+msgid "about.authorFeesMessage"
+msgstr "Hauek dira aldizkari honek egileei kobratzen dizkien tarifak."
+
+msgid "about.peerReviewProcess"
+msgstr "Adituen ebaluazio-prozesua"
+
+msgid "about.publicationFrequency"
+msgstr "Argitalpen-maiztasuna"
+
+msgid "about.openAccessPolicy"
+msgstr "Sarrera libreko politika"
+
+msgid "about.delayedOpenAccess"
+msgstr "Sarrera libre geroratua"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Aldizkari honen edukia, argitaratu eta handik"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "hilabetera egongo da erabilgarri sarrera libreko formatuan."
+
+msgid "about.archiving"
+msgstr "Artxibatzea"
+
+msgid "about.subscriptions"
+msgstr "Harpidetzak"
+
+msgid "about.subscriptionsContact"
+msgstr "Harpidetzen kontaktua"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Harpidetza motak"
+
+msgid "about.memberships"
+msgstr "Kidetzak"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Argitalpen-sistema honi buruz"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr ""
+"OJSren\n"
+"Prozesu editoriala eta argitaratze-prozesua"
+
+msgid "about.aboutOJSJournal"
+msgstr "Aldizkari honek Open Journal Systems {$ojsVersion} (OJS) erabiltzen du. Aldizkariak kudeatzeko eta argitaratzeko iturburu irekiko software bat da OJS; <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> proiektuak garatzen eta sostengatzen du, eta doan banatzen du GNUren lizentzia publiko orokorrarekin (General Public License)."
+
+msgid "about.aboutOJSSite"
+msgstr "Gune honek Open Journal Systems {$ojsVersion} erabiltzen du (OJS). Aldizkariak kudeatzeko eta argitaratzeko iturburu irekiko software bat da OJS; <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> proiektuak garatzen eta sostengatzen du, eta doan banatzen du GNUren lizentzia publiko orokorrarekin (General Public License)."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems-en laguntza"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS laguntza"
+
+msgid "help.searchReturnResults"
+msgstr "Itzuli bilaketaren emaitzara"
+
+msgid "donations.thankYou"
+msgstr "Eskerrik asko"
+
+msgid "donations.thankYouMessage"
+msgstr "Eskerrik asko zure ekarpenagatik.  Benetan eskertzen dizugu."
+
+msgid "payment.loginRequired"
+msgstr "Ordainketa egiteko, saioa hasi behar duzu."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Harpidetuta egon behar da edo artikulua erosi behar da lan hau atzitzeko. Harpidetza egiaztatzeko edo artikulua erosteko, aldizkarian saioa hasi behar da."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Dohaintzak egiteko, saioa hasi behar duzu."
+
+msgid "payment.paid"
+msgstr "Ordainduta"
+
+msgid "payment.payNow"
+msgstr "Ordaindu orain"
+
+msgid "payment.waive"
+msgstr "Salbuetsi"
+
+msgid "payment.alreadyPaid"
+msgstr "Dagoeneko ordainduta"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Hautatu lauki hau, bidalketa-prozesua amaitzeko falta den ordainketa dagoeneko bidali baduzu aldizkarira.  Bidalketa ez da ebaluatuko harik eta ordainketa iritsi arte.  Ordaintzeko instrukzioak ikusteko, sakatu ORDAINDU ORAIN."
+
+msgid "payment.paymentReceived"
+msgstr "Ordainketa iritsi da"
+
+msgid "payment.paymentSent"
+msgstr "Ordainketa dagoeneko bidalita dago"
+
+msgid "payment.type.submission"
+msgstr "Bidalketa-tarifa"
+
+msgid "payment.type.publication"
+msgstr "Argitalpen-tarifa"
+
+msgid "payment.type.fastTrack"
+msgstr "Ebaluazio azkarraren tarifa"
+
+msgid "payment.type.membership"
+msgstr "Bazkide-tarifa"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Artikulua erosteko tarifa"
+
+msgid "payment.type.subscription"
+msgstr "Harpidetza-tarifa"
+
+msgid "payment.type.donation"
+msgstr "Dohaintzak"
+
+msgid "payment.donation.makeDonation"
+msgstr "Egin dohaintza bat"
+
+msgid "payment.submission.paySubmission"
+msgstr "Ordaindu bidalketa-tarifa"
+
+msgid "payment.publication.payPublication"
+msgstr "Ordaindu argitaratzeko"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Argitalpen-tarifa ordainduta"
+
+msgid "payment.membership.buyMembership"
+msgstr "Egin bazkide"
+
+msgid "payment.membership.renewMembership"
+msgstr "Berritu bazkidetza"
+
+msgid "payment.membership.ends"
+msgstr "Amaiera"
+
+msgid "payment.subscription.renew"
+msgstr "Berritu harpidetza"
+
+msgid "payment.subscription.expires"
+msgstr "Iraungi"
+
+msgid "installer.appInstallation"
+msgstr "OJS instalazioa"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS bertsio-berritzea"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS {$version} bertsioa</h4>\n"
+"\n"
+"<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur ezazu mesedez software honekin batera ematen den <a href=\"{$baseUrl}/docs/README.md\">README</a> fitxategia. Public Knowledge Project-i eta dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href=\"http://forum.pkp.sfu.ca\">laguntza teknikoko foroa</a> edo PKPren <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere mezua ere bidal diezaiokezu taldeari <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> helbidera.</p>\n"
+"\n"
+"<h4>Bertsio-berritzea</h4>\n"
+"\n"
+"<p>Lehendik daukazun OJS 2.x bertsioa berritzera bazoaz, egin klik <a href=\"{$upgradeUrl}\">hemen</a>.</p>\n"
+"\n"
+"<h4>Gomendatutako sistema-eskakizunak</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}; orain PHP {$phpVersion}{$wrongPhpText} daukazu.</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 edo <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x edo >= 2.0.4x edo Microsoft IIS 6</li>\n"
+"\t<li>Sistema eragilea: Goiko softwarea onartzen duen edozein SE, besteak beste: <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Hala ere, PKPk ez dauka software-bertsio eta plataforma konbinazio posible guztiak probatzeko adina baliabide eta, beraz, ezin du bermatu denek ondo funtzionatuko dutenik.</p>\n"
+"\n"
+"<p>Instalazioa egin ondoren ezarpen hauek aldatu ahal izango dira, OJSren\n"
+"oinarriko direktorioko <tt>config.inc.php</tt> fitxategia editatuz, edo gune-administratzailearen web interfazearen bidez.</p>\n"
+"\n"
+"<h4>Onartzen diren datu-base sistemak</h4>\n"
+"\n"
+"<p>OJS MySQL eta PostgreSQL sistemetan bakarrik probatu da oraingoz, baina <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a>k onartzen dituen datu-baseak kudeatzeko beste sistema batzuek ere funtziona dezakete (guztiz edo zati batean). Beste DBMS batzuen bateragarritasunari buruzko txostenak eta/edo kode-adabakiak OJS taldeari bidal dakizkioke.</p>\n"
+"\n"
+"<h4>Instalatu aurreko urratsak</h4>\n"
+"\n"
+"<p>1. Ondorengo fitxategi eta direktorioetan (eta bertako edukian) idazteko baimena eduki behar da:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> idazgarria da (aukerakoa): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> idazgarria da: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> idazgarria da: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> idazgarria da: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> idazgarria da: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> idazgarria da: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Direktorio idazgarri bat sortu behar da kargatutako fitxategiak gordetzeko (ikus \"Fitxategi-ezarpenak\" beherago).</p>\n"
+"\n"
+"<h4>Eskuzko instalazioa</h4>\n"
+"\n"
+"<p>Datu-basea eskuz instalatu ahal izateko, hautatu <strong>Eskuzko\n"
+"instalazioa</strong> OJS datu-basearen eskema eta hasierako datuak sortzeko SQL\n"
+"instrukzioak bistaratzeko. Aukera hau praktikoa da instalazioan sortzen diren\n"
+"problemak konpontzeko, batez ere euskarri gabeko plataformetan. Kontuan izan\n"
+"instalazio-metodo hau ez dela saiatuko datu-basea edo taulak sortzen,\n"
+"datu-basearen ezarpenak konfigurazio-fitxategian idatziko diren\n"
+"arren.</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS {$version} bertsioa</h4>\n"
+"\n"
+"<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href=\"{$baseUrl}/docs/README.md\">README</a> eta <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href=\"http://forum.pkp.sfu.ca\">laguntza teknikoko foroa</a> edo PKPren <a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> helbidera.</p>\n"
+"<p>Aurrera jarraitu aurretik, <strong>biziki gomendatzen dizugu</strong> datu-basearen, fitxategien direktorioaren eta OJSren instalazio-direktorioaren kopiak egitea.</p>\n"
+"<p><a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP modu seguruan</a> exekutatzen ari bazara, ziurtatu zure php.ini konfigurazio-fitxategiko max_execution_time direktibaren muga altu jarrita dagoela. Muga horretara edo besteren batera (adib. Apache-ren \"Timeout\" direktibarenera) heltzen bada eta bertsio-berritzeko prozesua geratzen bada, eskuz konpondu behar da.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Unicode (UTF-8) euskarri osoa edukitzeko, hautatu UTF-8 karaktere-joko guztien ezarpenetan. Kontuan izan, euskarri horrek MySQL >= 4.1.1 edo PostgreSQL >= 7.1 datu-base zerbitzaria eskatzen duela. Kontuan izan, halaber, Unicode euskarri osoa edukitzeko, PHP >= 4.3.0 eduki behar dela <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> liburutegirako euskarriarekin konpilatuta (lehenespenez gaitzen da PHP instalazio berrietan). Zure zerbitzariak baldintza horiek betetzen ez baditu, problemak izan ditzakezu karaktere-joko hedatuak erabiltzeko.\n"
+"<br /><br />\n"
+"Zure zerbitzariak mbstring hau onartzen du: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Sistema honetan erabiltzeko lehenengo hizkuntza: Zerrendan ez dagoen hizkuntzaren bat erabili nahi baduzu, kontsultatu OJS dokumentazioa."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Hautatu sistema honetan erabili nahi dituzun beste hizkuntzak. Hizkuntza horiek erabilgarri egongo dira gune honetan ostatatutako aldizkarietan. Hizkuntzak edozein unetan instala daitezke gune-administratzailearen interfazetik."
+
+msgid "installer.filesDirInstructions"
+msgstr "Idatzi dagoeneko sortuta dagoen direktorio baten bide-izen osoa, kargatutako fitxategiak gordetzeko. Ez da komeni direktorio horretan zuzenean Internetetik sartu ahal izatea. <strong>Instalazioa egiten hasi aurretik, ziurtatu direktorio hori sortuta dagoela eta idazgarria dela.</strong> Windows-eko bide-izenetan barrak erabiltzen dira, adib.: \"C:/aldizkaria/fitxategiak\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJSk SQL datu-baserako sarbidea behar du datuak gordetzeko. Goian azaltzen dira onartutako datu-baseen sistema-eskakizunak. Zehaztu beheko eremuetan datu-basearekin konektatzeko erabiliko diren ezarpenak."
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Kontuz:</strong> Datu-basea instalatzean huts egin badu instalazioak, zure OJS datu-basea edo datu-baseko taulak askatu beharko dituzu datu-basea instalatzen saiatu aurretik."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>GARRANTZITSUA!</h4>\n"
+"<p>Instalatzaileak ezin izan du automatikoki gainidatzi konfigurazio-fitxategia. Sistema erabiltzen saiatu aurretik, ireki <tt>config.inc.php</tt> testu-editore egoki batekin eta ordeztu bertako edukia beheko testu-eremuaren edukiarekin.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS ondo instalatu da.</p>\n"
+"<p>Sistema erabiltzen hasteko, <a href=\"{$loginUrl}\">hasi saioa</a> aurreko orrian sartutako erabiltzaile-izenarekin eta pasahitzarekin.</p>\n"
+"<p>Albisteen eta eguneratzeen berri jakin nahi baduzu, <strong>erregistratu <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> helbidean.</strong> Galderarik edo oharrik egin nahi baduzu, bisitatu <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">laguntza teknikoko foroa</a>.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>Ondo berritu da OJS {$version} bertsiora.</p>\n"
+"<p>Ez ahaztu config.inc.php konfigurazio-fitxategiko \"installed\" ezarpena berriro ere <em>On</em> jartzeaz.</p>\n"
+"<p>Oraindik ez bazara erregistratu, eta albisteen eta eguneratzeen berri jakin nahi baduzu, <strong>erregistratu <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> helbidean.</strong> Galderarik edo oharrik egin nahi baduzu, bisitatu <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">laguntza teknikoko foroa</a>.</p>"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} egileak {$submissionId} artikulua berrikusi du. Fitxategi ID berria {$fileId} da."
+
+msgid "log.review.reviewerAssigned"
+msgstr ""
+"{$reviewerName} izendatu da {$submissionId}\n"
+"artikulua ebaluatzeko {$round}. bueltan."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} ebaluatzaileari {$submissionId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan."
+
+msgid "log.review.reviewInitiated"
+msgstr "{$reviewerName} {$submissionId} artikula {$round}. bueltan ebaluatzen hasi da."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} {$submissionId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltaren mugaeguna {$dueDate} izango da."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltako gomendioa ezarri da."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "{$submissionId} artikuluaren {$round}. ebaluazio-bueltako gomendioa {$editorName} editoreak ezarri du, {$reviewerName} ebaluatzailearen izenean."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} artikulua berriro bidali da ebaluatzeko."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} ebaluatzaileak ez du onartu {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} ebaluatzaileak {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k ez du onartu {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$reviewerName} ebaluatzailearen izenean, {$userName}(e)k {$submissionId} artikuluaren {$round}. ebaluazio-buelta egitea onartu du."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "{$userName} editoreak {$submissionId} artikuluaren {$round}. bueltako ebaluazio-fitxategia kargatu du, {$reviewerName} ebaluatzailearen izenean."
+
+msgid "log.review.reviewerFile"
+msgstr "Ebaluazio-fitxategi bat kargatu da."
+
+msgid "log.editor.decision"
+msgstr "{$editorName} editoreak {$submissionId} artikuluari buruzko erabakia ({$decision}) grabatu du."
+
+msgid "log.copyedit.initiate"
+msgstr "{$copyeditorName} hasi da {$submissionId} artikulua zuzentzen."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Zuzenketa-fitxategi lehenetsia aukeratu da."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} zuzentzaileak amaitu du {$submissionId} artikuluaren lehenengo zuzenketa."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} zuzentzaileak amaitu du {$submissionId} artikuluaren azken zuzenketa."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} zuzentzaileari esleitu zaio {$submissionId} artikuluaren zuzenketa."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Bidalketa-fitxategiaren zuzenketa-bertsio bat kargatu da."
+
+msgid "log.copyedit.authorFile"
+msgstr "Egileak zuzendutako bidalketa-fitxategiaren bertsio bat kargatu da."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} maketatzaileari esleitu zaio {$submissionId} artikuluaren maketazioa."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} maketatzaileari kendu egin zaio {$submissionId} artikuluaren maketazioa egiteko esleipena."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} maketatzaileak bukatu du {$submissionId} artikuluaren maketazioa."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} editoreak artikulu honen metadatuak aldatu ditu."
+
+msgid "log.editor.editorFile"
+msgstr "Bidalketa-fitxategiaren edizio-bertsio bat kargatu da."
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} artikulua artxibatu da."
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} artikulua ilarara itzuli da."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} editoreari esleitu zaio {$submissionId} artikulua."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} editoreak {$proofreaderName} izendatu du {$submissionId}\n"
+"artikuluaren probak zuzentzeko."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} proba-zuzentzaileak programatzeko bidali du {$submissionId}."
+
+msgid "log.imported"
+msgstr "{$userName} erabiltzaileak {$submissionId} artikulua inportatu du."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Adituek ebaluatutako artikulua"
+
+msgid "debug.notes.currencyListLoad"
+msgstr "{$filename} moneta-zerrenda XMLtik kargatu da"
+
+msgid "user.manageMySubscriptions"
+msgstr "Kudeatu nire harpidetzak"
+
+msgid "subscriptionTypes.currency"
+msgstr "Moneta:"
+
+msgid "subscriptionTypes.year"
+msgstr "urtea"
+
+msgid "subscriptionTypes.years"
+msgstr "urteak"
+
+msgid "subscriptionTypes.month"
+msgstr "hilabetea"
+
+msgid "subscriptionTypes.months"
+msgstr "hilabeteak"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Ez da iraungitzen"
+
+msgid "subscriptionTypes.format"
+msgstr "Formatua"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Linean"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Inprimatu"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Inprimatu eta linean"
+
+msgid "subscriptions.inactive"
+msgstr "Inaktibo"
+
+msgid "subscriptions.status"
+msgstr "Egoera"
+
+msgid "subscriptions.status.active"
+msgstr "Aktibo"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Informazioa behar du."
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Onarpena behar du"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Eskuzko ordainketaren zain"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Lineako ordainketaren zain"
+
+msgid "subscriptions.status.other"
+msgstr "Bestela, ikus oharrak."
+
+msgid "subscriptions.individualDescription"
+msgstr "Harpidetza indibidualek saioa hasi behar dute harpidetza-edukira sartzeko."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Harpidetza instituzionalek ez dute zertan saiorik hasi. Erabiltzailearen domeinua eta/edo IP helbidea erabiliko da harpidetza-edukira sartzeko."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Oharra:</strong>Linean erositako harpidetza instituzionalek domeinua eta IP barrutia onartuta izan behar dituzte harpidetza aktibatu baino lehen."
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Harpidetza indibidualak"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Harpidetza instituzionalak"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Harpidetza motak"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Ebaluatzaileen Gidalerroak hainbat irizpide eskainiko dizkie ebaluatzaileei, aldizkarian argitaratzeko aurkezpenak duen egokitasunari buruz erabakiak hartzeko, eta zenbait jarraibide berezi izan dituzte ebaluazio eraginkorra eta lagungarria prestatzeko. Ebaluazioa egiteko, ebaluatzaileei bi testu-koadro irekitzen zaizkie: lehenengoa “Egilearentzat eta editorearentzat”; eta, bigarrena, “Editorearentzat”. Osterantzean, aldizkariaren kudeatzaileak adituen ebaluazio-inprimaki bat sor dezake, “Ebaluazio Inprimakiak” atalean. Nolanahi ere, editoreek aukera izango dute ebaluazioak sartzeko egileekin bat datozenean."
+
+msgid "user.register.reviewerInterests"
+msgstr "Identifikatu interesak ebaluatzen (arlo eta ikerketa-metodo garrantzitsuak):"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Nire harpidetzak"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Harpidetza-egoera"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktibatuta eta iraungita dauden harpidetzak agertzen dira azpian, bakoitzaren iraungitze-datarekin. Horrez gain, harpidetza bakoitzean egoerari buruzko informazioa sar daiteke."
+
+msgid "user.subscriptions.status"
+msgstr "Egoera"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Deskribapena"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Informazio osagarria zehaztu behar da harpidetza aktibatu baino lehen."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Harpidetza ebaluatu behar da aktibatu baino lehen."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Eskuzko ordainketa hasi da, baina ez da jaso oraindik."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Lineako ordainketa hasi da, baina ezeztatu egin da edo ez da burutu."
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Harpidetza indibiduala"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Harpidetza instituzionalak"
+
+msgid "user.subscriptions.renew"
+msgstr "Berritu"
+
+msgid "user.subscriptions.purchase"
+msgstr "Erosi"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Erosi harpidetza berria"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Erosi harpidetza indibiduala"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Erosi harpidetza instituzionala"
+
+msgid "user.subscriptions.expires"
+msgstr "Iraungitze-data"
+
+msgid "user.subscriptions.expired"
+msgstr "Iraungita"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Ikusi erabilgarri dauden harpidetza motak"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Harpidetza mota"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Kidea"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Harpidetza mota horrek kideei buruzko informazioa eskatzen du."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Mesedez, aukeratu baliozko harpidetza mota bat."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Erabiltzaile-kontu honek badu dagoeneko harpidetza indibiduala."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Aukeratutako harpidetza motak kideei buruzko informazioa eskatzen du."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Erakundearen izena"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Erakunde baten izena zehaztu behar da."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Posta-helbidea"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domeinua"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Hemen domeinu bat sartzen bada, IP barrutiak aukerakoak dira. <br />Domeinu-izenak dira baliozko balioak (adib., lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "Aukeratutako harpidetza motak domeinua eta/edo IP barruti bat eskatzen du harpidetza autentifikatzeko."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Mesedez, sartu baliozko domeinu bat."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP barrutiak"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "Hemen IP barrutia sartzen bada, domeinua aukerakoa da. <br /> Baliozkoak dira: IP helbide bat (adib., 142.58.103.1), IP barruti bat (adib., 142.58.103.1 - 142.58.103.4), izartxodun ('*') IP barruti bat (adib., 142.58.*.*), eta CIDR IP barruti bat (adib., 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Mesedez, sartu baliozko IP barruti bat."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Ezabatu"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Gehitu"
+
+msgid "about.history"
+msgstr "Aldizkariaren historia"
+
+msgid "about.subscriptions.individual"
+msgstr "Harpidetza indibidualak"
+
+msgid "about.subscriptions.institutional"
+msgstr "Harpidetza instituzionalak"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Izena"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formatua"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Iraupena"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kostua"
+
+msgid "payment.authorFees"
+msgstr "Egile-tarifak"
+
+msgid "payment.subscription.purchase"
+msgstr "Erosi harpidetza"
+
+msgid "installer.installApplication"
+msgstr "Instalatu Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Bertsio-berritu Open Journal Systems"
+
+msgid "notification.type.editing"
+msgstr "Gertaerak editatzen"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Editoreak erabakitzeko iruzkin bat utzi da \"{$title}\" artikuluan."
+
+msgid "notification.type.galleyModified"
+msgstr "Galerada bat aldatu da \"{$title}\" artikuluan."
+
+msgid "notification.type.issuePublished"
+msgstr "Gai bat argitaratu da."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Jakinarazpen berria sortu da."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Ebaluazio-inprimaki baten ebaluazioa bidali da \"{$title}\" artikuluarentzat."
+
+msgid "notification.type.reviewing"
+msgstr "Gertaerak ebaluatzen"
+
+msgid "notification.type.site"
+msgstr "Guneko gertaerak"
+
+msgid "notification.type.submissionComment"
+msgstr "Editore batek iruzkin bat egin du \"{$title}\" artikuluari buruz."
+
+msgid "notification.type.submissions"
+msgstr "Aurkezpenen gertaerak"
+
+msgid "notification.type.userComment"
+msgstr "Irakurle batek iruzkin bat egin du  \"{$title}\" artikuluari buruz."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Zure atalekoa ez den artikulu batean sartu nahi duzu."
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!"
+
+msgid "navigation.categories"
+msgstr "Kategoriak"
+
+msgid "navigation.categories.browse"
+msgstr "Arakatu"
+
+msgid "issue.fullIssue"
+msgstr "Edizio osoa"
+
+msgid "issue.nonpdf.title"
+msgstr "Edizioa jaistea"
+
+msgid "issue.viewIssue"
+msgstr "Ikus edizioa"
+
+msgid "site.noJournals"
+msgstr "Ez dago aldizkaririk eskuragarri."
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Harpidetza edo alearen erosketa eskatzen da itemera sartzeko. Harpidetza egiaztatzeko, sartu aurreko erosketan, edo ale erosketan, hasi aldizkariaren saioa."
+
+msgid "payment.type.purchaseIssue"
+msgstr "Erosi ale bat"
+
+msgid "installer.allowFileUploads"
+msgstr "Zure zerbitzariak fitxategiak gora kargatzen uzten du gaur egun: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Zure zerbitzariak gehienez tamaina hau duten fitxategiak gora kargatzen uzten du gaur egun: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr "OJSren bertsio berri bat dago eskuragarri! Gaur egun OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, zoaz <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> orrira azken bertsioa kargatzeko eta eguneratzeko argibideak aurkitzeko."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "OJSren bertsio berri bat dago eskuragarri! Une honetan OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, jarri harremanetan zure Webguneko Administratzailearekin ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) bertsio berria atera dela jakinarazteko. Informazio gehiago aurki daiteke hemen: <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>."
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"<ol>\n"
+"\t<![CDATA[<ol>\n"
+"\t<li>Azpimarratutako itemek editore batek esku hartzea beharrezkoa dela adierazten dute; honela etikatuta daude:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Beharrezkoa da esku hartzea berrikuspen fasean</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Beharrezkoa da esku hartzea edizio diseinuaren fasean</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Beharrezkoa da esku hartzea zuzenketa fasean</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"

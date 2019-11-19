@@ -1,0 +1,321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:32+00:00\n"
+"Language: \n"
+
+msgid "author.submit"
+msgstr "Nov prispevek"
+
+msgid "author.track"
+msgstr "Aktivni prispevki"
+
+msgid "author.competingInterests"
+msgstr "Konflikt interesov <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Politika konflikta interesov</a>"
+
+msgid "author.submit.submitArticle"
+msgstr "Oddaj prispevek"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Pet korakov za oddajo prispevka"
+
+msgid "author.submit.startHereTitle"
+msgstr "Začni oddajo novega prispevka"
+
+msgid "author.submit.startHereLink"
+msgstr "Za prvi korak oddaje prispevka <a href=\"{$submitUrl}\" class=\"action\">Kliknite tukaj</a>."
+
+msgid "author.submit.step1"
+msgstr "Korak 1. Začni z oddajo"
+
+msgid "author.submit.step2"
+msgstr "Korak 2. Naloži prispevek"
+
+msgid "author.submit.step3"
+msgstr "Korak 3. Vnesi meta podatke prispevka"
+
+msgid "author.submit.step4"
+msgstr "Korak 4. Naloži dodatne datoteke"
+
+msgid "author.submit.step4a"
+msgstr "Korak 4a. Dodaj dodatno datoteko"
+
+msgid "author.submit.step5"
+msgstr "Korak 5. Potrdi oddajo"
+
+msgid "author.submit.start"
+msgstr "Začetek"
+
+msgid "author.submit.upload"
+msgstr "Naloži prispevek"
+
+msgid "author.submit.metadata"
+msgstr "Vpiši metapodatke"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Dodaj dodatne datoteke"
+
+msgid "author.submit.confirmation"
+msgstr "Potrdi"
+
+msgid "author.submit.nextSteps"
+msgstr "Naslednji koraki"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "Oddajo prispevka lahko kasneje dokončate, če izberete Aktivni prispevki v meniju Dom avtorja."
+
+msgid "author.submit.notAccepting"
+msgstr "Revija trenutno ne sprejema prispevkov."
+
+msgid "author.submit.requestWaiver"
+msgstr "Prosite za izjemo"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Prosim za oprostitev pristojbine objave tega prispevka"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Prosimo označite razlog za oprositev pristojbine objave prispevka."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Če prosite za oprostitev pristojbine objave prispevka, morate navesti razlog za to."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "V recenzentskem krogu {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "V recenziji: obvezni popravki"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "V urejanju: zahtevano lektoriranje"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "V urejanju: zahtevana korektura"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Naloži lektorirano verzijo"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korektorski popravki"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ste prepričani, da želite zbrisati to nedokončano oddajo prispevka?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Poglej status"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Nobenega oddanega prispevka"
+
+msgid "author.submit.journalSection"
+msgstr "Rubrika revije"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Prispevek mora biti oddan v eno od rubrik."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Prosimo potrdite, da so vsi zahtevani pogoji izpolnjeni."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "Avtorji se strinjajo z navedenimi pogoji o avtorskih pravicah, ki se nanašajo na oddan prispevek in objavo v reviji (komentarje uredniku lahko vpišete spodaj)."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Pred nadaljevanjem se morate strinjati s pogoji z navedenimi pogoji o avtorskih pravicah."
+
+msgid "submission.submit.coverNote"
+msgstr "Sporočilo za urednika"
+
+msgid "author.submit.comments"
+msgstr "Vpišite besedilo (opcijsko)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Prosimo izberite ustrezno rubriko v reviji za vaš prispevek."
+
+msgid "author.submit.form.localeRequired"
+msgstr "Prosimo izberite jezik za oddan prispevek"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Izjava o zasebnosti revije"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Avtorje navedite v zaporedju, kakor bodo objavljeni v reviji."
+
+msgid "author.submit.reorder"
+msgstr "Vrstni red avtorjev"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Glavni kontakt za korespondenco z urednikom."
+
+msgid "author.submit.addAuthor"
+msgstr "Dodaj avtorja"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Zbriši avtorja"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Navedite področja za iskanja, ki opisujejo prispevek. Področja med seboj ločite s podpičji (področje1;področje2)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Nanaša se na geografsko lokacijo, zgodovinsko obdobje in/ali karakteristike raziskovalnih vzorcev."
+
+msgid "author.submit.languageInstructions"
+msgstr "Slovenščina=sl; Angleško=en; Francosko=fr. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Ostale kode</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Potreben je vsaj en avtor"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Ime, priimek in e-poštni naslov je obvezen za vsakega avtorja."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Prosimo vnesite naslov vašega prispevka."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Prosimo vnesite izvleček vašega prispevka."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Prekoračili ste največje dovoljeno število znakov za izvleček."
+
+msgid "author.submit.submissionFile"
+msgstr "Datoteka s prispevkom"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Naloži datoteko s prispevkom"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Zamenjaj datoteko s prispevkom"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Datoteka sprispevkom ni naložena."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Na prejšnji strani niste pritisnili gumba Shrani, zato se datoteka ni shranila. Ste prepričani, da želite nadaljevati brez naložene datoteke s prispevkom?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Ta neobvezen korak omogoča dodajanje dodatnih datotek k prispevku. Te datoteke so lahko v poljubnem formatu in lahko vključujejo informacije o instrumentih raziskave, uporabljenih bazah podatkov, ki bi bile drugače nedostopne bralcem, slike in tabele, ki se ne morejo vključiti v samo besedilo in druge stvari, ki so povezane s prispevkom."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Kliknite Shrani za nalaganje datoteke (dodatne datoteke lahko naložite kasneje)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Ste prepričani, da želite nadaljevati brez da bi naložili dodatno datoteko, ki ste jo izbrali?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Nobena dodatna datoteka ni bila dodata k temu prispevku."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Nazaj na dodatne datoteke"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Ste prepričani, da želite zbristi to dodatno datoteko?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Naloži dodatno datoteko"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Dodaj dodatno datoteko"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Uredi dodatno datoteko"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metapodatki dodatne datoteke"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Za indeksiranje dodanega dopolnilnega materiala vnesite spodnje metapodatke."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Dodatna datoteka"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Avtor (ali lastnik) datoeke"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Instrument raziskave"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Raziskovalni materiali"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Rezultati raziskave"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Prepisi"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analiza podatkov"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Baza podatkov"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Izvorno besedilo"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Kratek opis"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Želim, da je ta datoteka dostopna recenzentom, s tem, da ne ogrozim anonimnost recenzije."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Uporabite le uradno objavljene materiale."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Datum zbranih podatkov oziroma instrument ustvarjen."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Ime študije oziroma drugega vira."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Navedite drugo"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Nobena datoteka ni naložena."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Prosimo vnesite naslov dopolnilne datoteke."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Prosimo vnesite naslov."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Prosimo vnesite opis"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Javni identifikator dopolnilne datoteke že obstaja."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Javni identifikator dopolnilne datoteke"
+
+msgid "author.submit.confirmationDescription"
+msgstr "Za končanje postopka oddaje vašega rokopisa za {$journalTitle} kliknite gumb Končaj oddajo. O uspešni oddaji boste dobili potrditev preko e-pošte. Informacije o uredniškem postopku boste lahko spremljali preko prijave na spletišču revije. Hvala lepa za izkazan interes in oddajo prispevka."
+
+msgid "author.submit.noFiles"
+msgstr "Nobena datoteka ni bila priložena oddaji."
+
+msgid "author.submit.filesSummary"
+msgstr "Povzetek datotek"
+
+msgid "author.submit.finishSubmission"
+msgstr "Končaj oddajo"
+
+msgid "author.submit.submissionComplete"
+msgstr "Oddaja končana. Hvala lepa za izkazan interes in oddajo prispevka v {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Naloži avtorjevo verzijo"
+
+msgid "author.article.copyeditedFile"
+msgstr "Lektorirana datoteka"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Avtorjeva datoteka"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "Za oddajo prispevka v to revijo potrebujete uporabniško ime. S tem omogočite urednikom, da spremljajo vaše oddane prispevke, vas obveščajo o statusu oddanih prispevkov in vas kontaktirajo, če potrebujejo dodatne informacije od vas."

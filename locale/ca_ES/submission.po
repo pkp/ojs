@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:17+00:00\n"
+"Language: \n"
+
+msgid "submission.submit.title"
+msgstr "Enviar un article"
+
+msgid "submission.submit.userGroup"
+msgstr "Enviar en el meu rol com a..."
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Esculli el rol sota el qual envia aquest article."
+
+msgid "submission.upload.selectComponent"
+msgstr "Seleccioni el component de l'article"
+
+msgid "submission.title"
+msgstr "Títol de l'article"
+
+msgid "submission.title.tip"
+msgstr "Els tipus de tramesa normalment consisteixen en imatges, text o altres continguts multimèdia, com programari o elements interactius. Esculli la tipologia més representativa per a la seva tramesa, si us plau. Pot trobar exemples a <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Tramesa nova"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Començar una tramesa nova a"
+
+msgid "grid.action.workflow"
+msgstr "Flux de treball de la tramesa"
+
+msgid "submission.issueEntry"
+msgstr "Metadades"
+
+msgid "submission.submit.whatNext.description"
+msgstr "La revista ha rebut la seva tramesa i li enviarà un correu electrònic de confirmació per als seus registres. Quan l'editor/a hagi revisat la tramesa contactarà amb vostè."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "La galerada apareix a l'entrada del número"
+
+msgid "grid.action.issueEntry"
+msgstr "Veure les metadades de la tramesa"
+
+msgid "submission.publication"
+msgstr "Publicació"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "La galerada de l'article \"{$galleyFormatName}\" ja està disponible."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "La galerada de l'article \"{$galleyFormatName}\" ja no està disponible."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Els identificadors públics de la tramesa s'han actualitzat."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Acceptació de format"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Aquesta galerada <em>ja no estarà disponible</em> per als lectors/es.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Aquesta galerada <em>estarà disponible</em> per als lectors/es.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Fer disponible aquesta galerada"
+
+msgid "submission.galleyFiles"
+msgstr "Arxius de galerada"
+
+msgid "submission.proofReadingDescription"
+msgstr "El maquetador/a carrega aquí els arxius llestos per a la producció que ha preparat per a la publicació. Utilitzi <em>Asignar auditor/a</em> per nombrar autors/es o altres per revisar les galerades amb els arxius corregits carregats per a la seva acceptació abans de publicar-los."
+
+msgid "grid.action.approveProof"
+msgstr "Acceptar aquesta prova per incloure-la a la galerada."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Aquesta prova ha estat acceptada per incloure-la a la galerada."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Títol i resum"
+
+msgid "submission.submit.upload.description"
+msgstr "Carregui els arxius associats amb aquesta tramesa, incloent l'article, els elements multimèdia, els conjunts de dades, el material gràfic, etc."
+
+msgid "submission.pageProofs"
+msgstr "Correcció de proves"
+
+msgid "submission.confirmSubmit"
+msgstr "Segur que voleu enviar aquest article a la revista?"
+
+msgid "workflow.review.externalReview"
+msgstr "Revisió"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Enviar a revisió"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Les metadades del número s'han actualitzat."
+
+msgid "submission.upload.fileContents"
+msgstr "Component de l'article"
+
+msgid "submission.complete"
+msgstr "Acceptat"
+
+msgid "submission.incomplete"
+msgstr "Esperant acceptació"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Seleccioni un idioma de tramesa, si us plau."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Llista de comprovació de la tramesa"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "Ha de llegir i comprovar que ha completat els requisits següents abans de continuar."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaració de privacitat"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rol del col·laborador"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Es requereix un autor com a mínim."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "El nom, els cognoms i el correu electrònic de cada autor/a són obligatoris."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Introdueixi el títol del seu article, si us plau."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Introdueixi el resum del seu article, si us plau."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccioni el rol del col·laborador, si us plau."
+
+msgid "submission.citationFormat.notFound"
+msgstr "El format de cita sol·licitat no ha pogut ser recuperat."
+
+msgid "submission.metadataDescription"
+msgstr "Aquestes especificacions estan basades en el conjunt de metadades Dublin Core, un estàndard internacional usat per descriure el contingut de les revistes."
+
+msgid "section.any"
+msgstr "Qualsevol secció"

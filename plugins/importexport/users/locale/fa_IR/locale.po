@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:47+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "افزونه XML کاربران"
+
+msgid "plugins.importexport.users.description"
+msgstr "ورود و خروج کاربران"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr "کاربرد: {$scriptName} {$pluginName} [command] ...  Commands:  import [xmlFileName] [journal_path]  export [xmlFileName] [journal_path]  export [xmlFileName] [journal_path] [userId1] [userId2] ..."
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr "مثال: درون ریزی کاربران به مجله myJournal از فایل  myImportFile.xml:  {$scriptName} {$pluginName} import myImportFile.xml myJournal\tبرون دهی تمامی کاربران مجله myJournal:  {$scriptName} {$pluginName} export myExportFile.xml myJournal\tبرون دهی کاربران خاصی بر اساس شناسه آنها:  {$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "انتقال کاربران"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "فایل داده حاوی اطلاعات کاربران را انتخاب کنید تا انتقال یابد. برای اطلاع از فورمت این فایل به راهنمای مجله مراجعه کنید.  چنانچه فایل منتقل شده حاوی نام کاربری یا ایمیل های باشد که از قبل در سیستم موجود باشند اطلاعات آن کاربران منتقل نمیشود و تنها نقشهای جدید به آنان انتساب داده میشود."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "فایل داده کاربر"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "ارسال ایمیل اطلاع رسانی به کاربران منتقل شده و ارسال نام کاربری و روز عبور ."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "در صورت بروز خطا عمل انتقال بقیه کاربران را ادامه بده."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "کاربران زیر بداخل سیستم منتقل شدند."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "خطا هنگام انتقال"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "تایید کنید که این کاربران را میخواهید منتقل کنید."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "هشدار"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "رمزهای عبور کدگذاری شده به {$importHash} را نمیتواند منتقل کند. تنظیم نصب این سامانه به نحوی بوده است که فقط از {$ojsHash} استفاده میکند. اگر ادامه بدهید، بایستی رمز عبور تمامی کاربران درون ریزی شده را رست کنید."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "مسیر مجله داده شده \"{$journalPath}\" نامعلوم است."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "استخراج کاربران"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "استخراج بر حسب نقش"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "استخراج همه"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "بروز خطا هنگام استخراج"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "نوشتن در فایل \"{$fileName}\" ممکن نیست."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "درون ریزی با موفقیت انجام شد. نام کاربران، ایمیل و گروه کاربری آنها وارد سیستم شد."
+
+msgid "plugins.importexport.users.results"
+msgstr "نتایج"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "لطفاً برای ادامه فایلی را در بخش «درون ریزی» وارد کنید"

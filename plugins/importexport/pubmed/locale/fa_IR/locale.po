@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:45+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "افزونه برون دهی PubMed XML"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "برون دهی فراداده‌های مقالات در فرمت PubMed XML برای نمایه‌سازی در MEDLINE"
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "برون دهی داده‌ها"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "برون دهی شماره‌ها"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "انتخاب شماره‌ها برای برون دهی"
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "برون دهی مقالات"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "انتخاب مقالات برای برون دهی"
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr "کارکرد:  {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ... {$scriptName} {$pluginName} [xmlFileName] [journal_path]  issue  [issueId]"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "خطا"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "هیچ شماره‌ای با شناسه «{$issueId}» موجود نیست"
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "هیچ مقاله‌ای با شناسه «{$articleId}» موجود نیست"

@@ -1,0 +1,2058 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "context.current"
+msgstr "Güncel Dergi:"
+
+msgid "context.select"
+msgstr "Başka bir dergi seçin:"
+
+msgid "navigation.categories"
+msgstr "Kategoriler"
+
+msgid "navigation.categories.browse"
+msgstr "Listele"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Değerlendirme formunu doldurmak için simgeye tıklayınız:"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Lütfen gerekli alanları doldurunuz."
+
+msgid "common.software"
+msgstr "Açık Dergi Sistemleri"
+
+msgid "common.confirmComplete"
+msgstr "Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir."
+
+msgid "common.payment"
+msgstr "Ödeme"
+
+msgid "common.payments"
+msgstr "Ödemeler"
+
+msgid "common.homePageHeader.altText"
+msgstr "Ana Sayfa Başlığı"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Dergi Ana Sayfa Görseli"
+
+msgid "navigation.journalHelp"
+msgstr "Yardım"
+
+msgid "navigation.current"
+msgstr "Son Sayı"
+
+msgid "navigation.otherJournals"
+msgstr "Diğer Dergiler"
+
+msgid "navigation.browseByIssue"
+msgstr "Sayılara Göre"
+
+msgid "navigation.browseByAuthor"
+msgstr "Yazarlara Göre"
+
+msgid "navigation.infoForAuthors"
+msgstr "Yazarlar İçin"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Kütüphaneciler İçin"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Çıkar Çelişkisi Rehberi"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Yazarlar İçin Bilgi"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Kütüphaneciler İçin Bilgi"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Yeni Başvurular"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Yeni Başvurular"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Düzenlemedeki Gönderiler"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Sonuçlananlar"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Hakemlik Sürecindekiler"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Hakemdekiler"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arşivlenenler"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arşivlenenler"
+
+msgid "common.queue.long.active"
+msgstr "Etkin Gönderiler"
+
+msgid "common.queue.short.active"
+msgstr "Etkin"
+
+msgid "common.queue.long.completed"
+msgstr "Arşiv"
+
+msgid "common.queue.short.completed"
+msgstr "Arşiv"
+
+msgid "section.section"
+msgstr "Bölüm"
+
+msgid "section.sections"
+msgstr "Dergi Bölümleri"
+
+msgid "section.title"
+msgstr "Bölüm başlığı"
+
+msgid "section.abbreviation"
+msgstr "Kısaltma"
+
+msgid "section.abbreviation.example"
+msgstr "(Örneğin, Makaleler=MAK)"
+
+msgid "article.article"
+msgstr "Makale"
+
+msgid "article.articles"
+msgstr "Makaleler"
+
+msgid "common.publication"
+msgstr "Makale"
+
+msgid "common.publications"
+msgstr "Makaleler"
+
+msgid "article.submissionId"
+msgstr "Gönderi ID'si"
+
+msgid "article.title"
+msgstr "Başlık"
+
+msgid "article.authors"
+msgstr "Yazarlar"
+
+msgid "article.indexingInformation"
+msgstr "Dizinleme Bilgisi"
+
+msgid "article.metadata"
+msgstr "Üst Veri"
+
+msgid "article.journalSection"
+msgstr "Dergi Bölümü"
+
+msgid "article.file"
+msgstr "Dosya"
+
+msgid "article.suppFile"
+msgstr "Ek Dosya"
+
+msgid "article.suppFiles"
+msgstr "Ek Dosya(lar):"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Ek Dosyalar"
+
+msgid "article.discipline"
+msgstr "Akademik Bölüm ve Alt-Bölümler"
+
+msgid "article.subject"
+msgstr "Anahtar Kelimeler"
+
+msgid "article.coverage"
+msgstr "Kapsam"
+
+msgid "article.type"
+msgstr "Tür, yöntem veya yaklaşım"
+
+msgid "article.language"
+msgstr "Dil"
+
+msgid "article.sectionEditor"
+msgstr "BE"
+
+msgid "article.commentsToEditor"
+msgstr "Yazar yorumları"
+
+msgid "article.submission"
+msgstr "Başvuru"
+
+msgid "article.submissions"
+msgstr "Başvurular"
+
+msgid "article.details"
+msgstr "Ayrıntılar"
+
+msgid "article.abstract"
+msgstr "Özet"
+
+msgid "article.coverPage.altText"
+msgstr "Kapak Görseli"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Açık Erişim"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Sınırlandırılmış Erişim"
+
+msgid "article.comments.sectionDefault"
+msgstr "Varsayılan"
+
+msgid "article.comments.disable"
+msgstr "Pasifleştir"
+
+msgid "article.comments.enable"
+msgstr "Etkinleştir"
+
+msgid "article.fontSize"
+msgstr "Font Büyüklüğü"
+
+msgid "article.fontSize.small.altText"
+msgstr "Küçük"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Orta"
+
+msgid "article.fontSize.large.altText"
+msgstr "Büyük"
+
+msgid "article.return"
+msgstr "Makale Detayına Dönün"
+
+msgid "submission.submissionEditing"
+msgstr "Gönderi Düzenleme"
+
+msgid "submission.changeSection"
+msgstr "Değişiklik yap"
+
+msgid "submission.sent"
+msgstr "Gönder"
+
+msgid "submission.editorDecision"
+msgstr "Editör Kararı"
+
+msgid "submission.round"
+msgstr "&nbsp;{$round}. Tur"
+
+msgid "submission.editorReview"
+msgstr "Editör Değerlendirmesi"
+
+msgid "submission.notifyAuthor"
+msgstr "Yazarı Bilgilendir"
+
+msgid "submission.notifyEditor"
+msgstr "Editörü Bilgilendir"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Editör/Yazar e-posta Kaydı"
+
+msgid "submission.reviewersVersion"
+msgstr "Hakem notlarını içeren dosya sürümü"
+
+msgid "submission.postReviewVersion"
+msgstr "Değerlendirme sonrası dosya sürümü"
+
+msgid "submission.editorVersion"
+msgstr "Editör Sürümü"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Yazar tarafından düzeltilmiş dosya sürümü"
+
+msgid "submission.authorVersion"
+msgstr "Yazar Sürümü"
+
+msgid "submission.copyediting"
+msgstr "Baskı Hazırlığı"
+
+msgid "submission.copyedit"
+msgstr "Baskı Hazırlık"
+
+msgid "submission.proofreading"
+msgstr "Dizgi Düzeltme"
+
+msgid "submission.scheduling"
+msgstr "Yayın Zamanlaması"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName} sayısında yayınlanacak."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Bildirilecek)"
+
+msgid "submissions.sec"
+msgstr "Böl."
+
+msgid "submissions.step1"
+msgstr "Adım 1"
+
+msgid "submissions.step3"
+msgstr "Adım 3"
+
+msgid "submissions.queuedReview"
+msgstr "Değerlendirmede"
+
+msgid "submissions.published"
+msgstr "Yayınlanmış"
+
+msgid "submissions.initial"
+msgstr "Öncelikli"
+
+msgid "submissions.proofread"
+msgstr "Dizgi Düzeltme"
+
+msgid "submissions.initialProof"
+msgstr "İlk Dizgi"
+
+msgid "submissions.postAuthor"
+msgstr "Yazardan Ssonra"
+
+msgid "submissions.reviewRound"
+msgstr "Değerlendirme Turu"
+
+msgid "submissions.proof"
+msgstr "Dizgi"
+
+msgid "submissions.editorDecision"
+msgstr "Editör Kararı"
+
+msgid "submissions.editorRuling"
+msgstr "Editör Düzenlemesi"
+
+msgid "submission.eventLog"
+msgstr "Kayıt Defteri"
+
+msgid "submissions.copyeditComplete"
+msgstr "Baskı Hazırlığı Tamamlanmış"
+
+msgid "submissions.layoutComplete"
+msgstr "Mizanpaj Tamam"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Dizgi onaylanmış"
+
+msgid "journal.currentIssue"
+msgstr "Yeni Sayı"
+
+msgid "context.contexts"
+msgstr "Dergiler"
+
+msgid "journal.path"
+msgstr "Yol"
+
+msgid "context.context"
+msgstr "Dergi"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "user.showAllJournals"
+msgstr "Dergilerimi Göster"
+
+msgid "user.registerForOtherJournals"
+msgstr "Diğer Dergiler için Başvur"
+
+msgid "user.myJournals"
+msgstr "Dergilerim"
+
+msgid "user.manageMySubscriptions"
+msgstr "Aboneliklerimi Yönet"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Hesabınız şu halde herhangi bir dergide aktif değil. Lütfen bir dergi seçiniz:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "Bu dergide hesabınız aktif değil ve herhangi bir yetkilendirmeniz yoktur. Lütfen aşağıdaki seçenklerden birini seçiniz:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Bir Öneri Gönder"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Bir makale gönder: Yazar kaydı şu halde aktif değil."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Hakem olarak kayıt ol"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Hakem olarak kayıt ol: Hakem kaydı şu halde aktif değil."
+
+msgid "user.role.manager"
+msgstr "Dergi Yöneticisi"
+
+msgid "user.role.subEditor"
+msgstr "Bölüm Editörü"
+
+msgid "user.role.subscriptionManager"
+msgstr "Abone Yöneticisi"
+
+msgid "user.role.managers"
+msgstr "Dergi Yöneticileri"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Abone Yöneticileri"
+
+msgid "issue.issue"
+msgstr "Sayı"
+
+msgid "issue.issues"
+msgstr "Sayılar"
+
+msgid "issue.title"
+msgstr "Başlık"
+
+msgid "issue.volume"
+msgstr "Cilt"
+
+msgid "issue.number"
+msgstr "Sayı"
+
+msgid "issue.vol"
+msgstr "Cilt"
+
+msgid "issue.no"
+msgstr "Sayı"
+
+msgid "issue.year"
+msgstr "Yıl"
+
+msgid "issue.noIssues"
+msgstr "Sayı Yok"
+
+msgid "issue.toc"
+msgstr "İçindekiler"
+
+msgid "issue.abstract"
+msgstr "Özet"
+
+msgid "issue.coverPage.altText"
+msgstr "Kapak Sayfası"
+
+msgid "subscriptionTypes.currency"
+msgstr "Para Birimi"
+
+msgid "subscriptionTypes.year"
+msgstr "Yıl"
+
+msgid "subscriptionTypes.years"
+msgstr "Yıllar"
+
+msgid "subscriptionTypes.month"
+msgstr "Ay"
+
+msgid "subscriptionTypes.months"
+msgstr "Aylar"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Süresiz"
+
+msgid "subscriptionTypes.format"
+msgstr "Biçim"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Basılı"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Basılı ve Çevrimiçi"
+
+msgid "subscriptions.inactive"
+msgstr "Pasif"
+
+msgid "subscriptions.status"
+msgstr "Durum"
+
+msgid "subscriptions.status.active"
+msgstr "Aktif"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Bilgi Gerekli"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Onay Gerekli"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Manuel Ödeme Bekleniyor"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Çevrimiçi Ödeme Bekleniyor"
+
+msgid "subscriptions.status.other"
+msgstr "Diğer, Notlara Bakınız"
+
+msgid "subscriptions.individualDescription"
+msgstr "Bireysel abonelik içeriğe erişmek için giriş yapılmasını gerektirir."
+
+msgid "subscriptions.institutionalDescription"
+msgstr "Kurumsal abonelik giriş yapılmasını gerektirmez. Kurumsal abone kullanıcıları alan ve/veya IP adresi kontrollü olarak içeriğe erişebilirler."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>Not:</strong>Online kurumsal aboneliklerde abonelik aktivasyonundan önce alan ve IP aralığının onaylanması gerkir."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Gönderi Durumu"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Gönderi sayı zamanlama kuyruğuna gönderdi."
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Gönderi sayıya eklendi"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Makale yayımlandı"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Yazar düzeltmeleri gönderildi"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Yazar düzeltme dosyası güncellendi"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Gönderiye editör atandı"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editör gönderi görevinden alındı"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Editör kararı gönderildi"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Editör dosyası güncellendi"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Gönderi arşivlendi"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Gönderi arşivden geri alındı"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Gönderiye sayfa düzenleyici atandı"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Sayfa düzenleyici gönderi görevinden alındı"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Sayfa düzenleyici ataması başlatıldı"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Sayfa düzenleyici dosyası güncellendi"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Başlangıç sayfa düzeni tamamlandı"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Sayfa düzeni tamamlandı"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Sayfa düzeni dosyası güncellendi"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Gönderi için düzeltmen atandı"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Gönderinin düzetlmen görevi geri alındı"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Düzeltmen ataması başlatıldı"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Düzeltmen değişiklik dosyası güncellendi"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Düzeltmen işlemi tamamlandı"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Gönderiye mizanpajcı atandı"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Mizanpajcısı başvuru görevinden alındı"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Mizanpajcı ataması başlatıldı"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Mizanpaj dizgisi güncellendi"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Mizanpaj ataması tamamlandı"
+
+msgid "reader.subscribersOnly"
+msgstr "Sadece Aboneler"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "Öğeye erişmek için abonelik gereklidir. Aboneliğinizi doğrulamak için, dergide oturum açınız."
+
+msgid "reader.openAccess"
+msgstr "Açık Erişim"
+
+msgid "reader.subscriptionAccess"
+msgstr "Abonelik Erişimi"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Abonelik veya Erişim Ücreti"
+
+msgid "comments.commentsOnArticle"
+msgstr "Bu makale hakkındaki yorumlar"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a> tarafınan"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOT!</h4>\n"
+"<p>Sistem otomatik olarak yapılanma dosyasının üzerine yazamaz. Yapılanma değişikliklerini uygulayabilmek için <tt>config.inc.php</tt> dosyasını uygun bir yazı düzenleyicide açmak ve içeriğini aşağıdaki yazı alanında belirtilen içerikle değiştirmeniz gerekir. </p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Abone Yönetimi"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Bireysel Abonelik"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Kurumsal abonelik"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Abonelik Türleri"
+
+msgid "plugins.categories.auth.description"
+msgstr "ADS Yetkilendirme Eklentileri, LDAP sunucuları gibi diğer sistemlere kullanıcı kimlik doğrulaması için izin verir."
+
+msgid "plugins.categories.generic.description"
+msgstr "Genel eklentiler, diğer eklenti kategorileri tarafından desteklenmeyen çeşitli yollarla Açık Dergi Sistemleri kullanımını genişletmekte kullanılır."
+
+msgid "manager.setup.lockssDescription"
+msgstr ""
+"Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href=\"http://www.lockss.org/\" target=\"_blank\">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.\n"
+"<br /><br />\n"
+"Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Basamaklar: Başvuru Kuyruğu &gt; Başvuru Değerlendirilmesi &gt; Yazıların Düzenlenmesi &gt; Yayın bekleme kuyruğu &gt; İçindekiler.<br /><br />\n"
+"Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model seçin. (Yönetici editör, bölüm editörü atamak için Dergi Yönetimindeki Editörler bölümüne gidiniz.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Okuyucuların bir yazar tarafından atıf yapılan çevrimiçi bir çalışmanın sürümlerini bulması için aşağıdaki seçenekleri etkinleştirilebilir.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Okuma Aracı Ekle</strong><p>Dergi yöneticisi yayımlanmış öğelere eşlik eden Okuma Araçları için \"Referans Bulma\" ekleyebilir. Atıf yapılan çalışmaların referans başlıklarının yapıştırılamsı suretiyle ön seçimli akademik veri tabanında araştırılması için okuyucular etkinleştirilebilir.</p></li>\n"
+"\t<li><strong>Referanslara Bağlantı Ekle</strong><p>Mizanpajcı aşağıdaki yönergeleri (düzenlenebilir) kullanarak çevrimiçi bulunabilir bir bağlantı ekleyebilir..</p></li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Üzgünüz, bu kullanıcı üzerinde idari hakkınız yoktur. Bunun sebebi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Kullanıcı site yöneticisidir</li>\n"
+"\t\t\t<li>Kullanıcı idare etmediğiniz dergilerde etkindir</li>\n"
+"\t\t</ul>\n"
+"\tBu görev site yöneticisi tarafından yerine getirilmelidir.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Aşağıda belirtilen öğeler editör işlemi beklemektedir:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Bir Hakem atanandı ancak e-posta ile bilgilendirilmedi</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Tüm hakemler yorumlarını gönderdi, ancak hiçbir karar kaydedilmedi</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Yazar gözden geçirilmiş makaleyi yükledi</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Hakem değerlendirme davetini onaylamak için gecikmiş</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Hakem değerlendirmeyi tamamlamakta gecikmiş</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Son tarih\" hakemler değerlendirmeyi kabul edince doldurulur; hakemlere verilen değerlendirme süresinin hafta sayısını listeler ve (-) ile belirtilenler gecikmiş hafta sayısıdır.</li>\n"
+"\t</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktif Editöryal Atamalar"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Tamamlanmış Editöryal Atamalar"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Başvuru ataması yapılmamış."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "Bu bildirimle Sayfa Düzenleyici atamaları yeniden başlayacaktır. Bunu yapmak istediğinizden emin misiniz?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "Bu bildirimle, yazar atamaları yeniden başlayacaktır. Bunu yapmak istediğinizden emin misiniz?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "Bu bildirimle, mizanpajcı atamaları yeniden başlayacaktır. Bunu yapmak istediğinizden emin misiniz?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "Bu bildirimle, düzeltmen atamaları yeniden başlayacaktır. Bunu yapmak istediğinizden emin misiniz?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "İtirazlar"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Hakem İtirazları, İptaller & Önceki Basamaklar"
+
+msgid "sectionEditor.regrets"
+msgstr "İtirazlar"
+
+msgid "sectionEditor.regrets.link"
+msgstr "İtiraz, İptal ve Önceki Basamaklar"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Hakem Değerlendirmesi: Tur {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Editör Görüşü: Tur {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Hakem İtirazları & İptaller"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "İtiraz"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Sonuç"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Üyeyi Hakem Olarak Kaydet"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Yeni Hakem Oluştur"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktif Editöryal Atamalar"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Tamamlanmış Editöryal Atamalar"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Aktif editöryal ataması yok."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Mizanpajcı Atamaları"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Dizgi biçimini yükle"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Dosyayı Değiştir"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Ek dosya yükle"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Hatalı görsel biçimi. Geçerli biçimler: .gif, .jpg ve .png."
+
+msgid "reviewer.pendingReviews"
+msgstr "Değerlendirme Bekleyen Makaleler"
+
+msgid "reviewer.completedReviews"
+msgstr "Tamamlanmış"
+
+msgid "reviewer.averageQuality"
+msgstr "Derecelendirme"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Değerlendirilecek dosya"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Editörü Bilgilendir"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Değerlendirmeyi Yapacağım"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Değerlendirmeyi Yapamayacağım"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Hakem değerlendirmeyi kabul  ederse gönderi erişilebilir olacak."
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Gönderi Editörü"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Hakem yorumlarını buraya yazınız veya yapıştırınız"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editörün girmesi için"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Uyarı Gönder"
+
+msgid "reviewer.article.automatic"
+msgstr "(Otomatik)"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "Alttaki karar seçeneklerinin aktif hale gelmesi için dördüncü adımdaki sürecin tamamlanması gerekir. Değerlendirmenin editöre iletilebilmesi için \"Hakem Kararı\" kutusundaki seçereklerden uygun olanının seçilmesi ve kaydedilmesi gerekir."
+
+msgid "reviewer.article.recommendation"
+msgstr "Öneri"
+
+msgid "reviewer.article.submitReview"
+msgstr "Değerlendirmeyi Editöre Gönder"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Yorumlar"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Yüklenmiş dosyalar:"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Hakem tarafından yüklenen sürüm"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "(Dosyayla ilgili olarak editöre açıklama yazacaksanız, kendi bilgisayarınıza kaydedin ve Listele/Yükle seçeneğini kullanın.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Editörün İsteği"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Cevabınız"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Değerlendirme Gönderildi"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Değerlendirme Süresi"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Yayımlanması Uygundur"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Düzeltmeler Yapıldıktan Sonra Yayımlanabilir"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Düzeltmelerden Sonra İncelenmesi Gerekir"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Yayımlanmaması Daha Uygundur"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Yayımlanamaz"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Başka Bir Hakeme Gönderiniz"
+
+msgid "reviewer.article.schedule"
+msgstr "Zaman Çizelgesi"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Değerlendirilecek Başvurular"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Değerlendirme Zamanlaması"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Değerlendirme Basamakları"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Hakem Rehberi"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr "Hakem Rehberleri dergide yayımlanmak üzere yapılan gönderilerin uygunluğunu denetlemek üzere hazırlanan kriterleri ve değerlendirmeye yardımcı olan anlaşılabilir kimi talimatları içermelidir. Değerlendirme sırasında hakeme iki açılabilir kutu sunulur. Bunlardan ilki \"yazar ve editöre\" ikincisi ise sadece \"editöre\" yorum ve mesaj göndermek içindir. Alternatif olarak Dergi Yöneticisi Değerlendirme Formları altında  özel bir değerlendirme formu oluşturabilir. Editörler her koşulda değerlendirme dahil tüm seçeneklere sahip olacaktır."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Editörü bilgilendiriniz."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "Değerlendirmeyi kabul edip-etmediğinizi otomatik olarak oluşturulacak e-posta aracılığıyla editöre iletmek için lütfen ilgili simgeye tıklayınız."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Değerlendirmeyi yapacaksanız, aşağıdaki Hakem Rehberine bakınız."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Makaleyi ve varsa eklerini görüntülemek veya yazdırmak için dosya ismine tıklayınız."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr "Bu araştırma ile ilgili rekabet koşullarını kabul edip etmediğinizi bildiriniz (bkz. <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Politikası</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Çıkar Çelişkisi"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Makaleyle ilgili görüş ve yorumlarınızı editöre iletmek için simgeye tıklayınız."
+
+msgid "reviewer.article.uploadFile"
+msgstr "İsteğe bağlı olarak, editörün ve/veya yazarın bilgisine sunmak üzere görüşlerinizi, düzeltmelerinizi içeren dosya/dosyaları yükleyebilirsiniz."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Başvurunun kabülüne yönelik bir öneride bulunmadınız. İşlemin tamamlanması için bir öneride bulunmanız gerekiyor."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "Kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız! Devam etmek istiyor musunuz?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "S/D'ye dosya"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Sayfa Düzenleyici Dosyası"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Sayfa Düzenleyici Son Dosyası"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Düzeltmen Ataması Yapılmamış"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"<p>Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.</p>\n"
+"\n"
+"<ol>\n"
+"<li>Bu sayfada dosya seçimi penceresini açarak kendi bilgisayarınızın sabit sürücüsünde bulunan dosyayı bulmanıza yarayacak Gözat/Browse'a  tıklayınız. </li>\n"
+"<li>Başvuru dosyanızın yerini belirleyip işaretleyiniz.</li>\n"
+"<li>Dosya seçimi penceresinde Aç/Open'a tıklayınız, bu işlem dosya yolunu sayfa üzerine yerleştirecektir. </li>\n"
+"<li>Dosya Gönder butonunu tıklayarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>\n"
+"<li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve Devam et'e tıklayınız.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Değerlendirme sürümü hazırlanmadan istek e-postası gönderilemez."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr "Değerlendirme Sayfası, Editör Kararında sayfa düzeni için dosya seçilene kadar istek e-postası gönderilemez."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Dosya sayfa düzeni için yüklenmeden istek e-postası gönderilemez."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Başlangıç Sayfa Düzeni"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Editörün Sayfa Düzeni"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Yazar Sayfa Düzeni"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Son Sayfa Düzeni"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "S/D Sürümü"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Sayfa Düzenleyici Ata"
+
+msgid "submission.copyedit.useFile"
+msgstr "Dosya Kullan"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Sayfa Düzeni Yorumları"
+
+msgid "submission.copyedit.instructions"
+msgstr "Sayfa Düzeni Yönergesi"
+
+msgid "submission.layout.publicGalleyId"
+msgstr "Genel Dizigi Belirleyici"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Yerel dizigi kimliği zaten var."
+
+msgid "submission.layout.noLayoutFile"
+msgstr "Hiçbiri (İstek göndermeden önce son kopya düzenleme sürümünü mizanpaj sürümü gibi yükle)"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Mizanpajcı Ata"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Mizanpajcıyı Değiştir"
+
+msgid "submission.layout.layoutComments"
+msgstr "Mizanpaj Yorumları"
+
+msgid "submission.layout.instructions"
+msgstr "Mizanpaj Yönergesi"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Referans Bağlama"
+
+msgid "submission.proofreadingComments"
+msgstr "Düzeltmen Yorumları"
+
+msgid "submission.proofread.corrections"
+msgstr "Düzeltmen Önerileri"
+
+msgid "submission.proofread.instructions"
+msgstr "Düzeltmen Yönergesi"
+
+msgid "submission.logType.article"
+msgstr "Makale"
+
+msgid "submission.logType.author"
+msgstr "Yazar"
+
+msgid "submission.logType.editor"
+msgstr "Editör"
+
+msgid "submission.logType.review"
+msgstr "Görüşlerinizi yazmak için simgeye tıklayınız:"
+
+msgid "submission.logType.copyedit"
+msgstr "Sayfa Düzeni"
+
+msgid "submission.logType.layout"
+msgstr "Mizanpaj"
+
+msgid "submission.logType.proofread"
+msgstr "Dizgi Kontrolü"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Editör/Yazar İletişimi"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Sayfa Düzeni Yorumları"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Bu yorumlar yazarla paylaşılabilir.<br />\n"
+"(Kaydettikten sonra yeni yorumlar eklenebilir.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Yazar ve editör için"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Editör için"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "Editör kararı gönderildiğinde, hakemlere gönderilmek üzere isimsiz bir kopyayı (BCC) düzenlemek için oluştur."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Yazar ve editör için"
+
+msgid "submission.comments.forEditor"
+msgstr "Editör için"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Kaydet ve Yazara E-posta Gönder"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Kaydet ve Editöre E-posta Gönder"
+
+msgid "user.register.noJournals"
+msgstr "Bu sitede kayıt olabileceğiniz bir dergi yok."
+
+msgid "user.register.privacyStatement"
+msgstr "Gizlilik Bildirimi"
+
+msgid "user.register.registrationDisabled"
+msgstr "Bu dergi şu anda kullanıcı kayıtlarını kabul etmemektedir."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Girdiğiniz şifre yeterince uzun değildir."
+
+msgid "user.register.readerDescription"
+msgstr "Derginin sayısı yayınlandığında e-posta ile bildirilecektir."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Derginin açık erişime verilen sayısı e-posta ile bildirilecektir."
+
+msgid "user.register.authorDescription"
+msgstr "Hazırlanmış yazılar dergiye gönderilebilir."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Dergiye yapılan gönderilerin hakemliğini yapmaya istekli."
+
+msgid "user.register.reviewerDescription"
+msgstr "Dergiye yapılan gönderilen hakemliğini yapmaya istekli olma. İlgi alanlarınızı tanımlayın (bağımsız alanlar ve araştırma yöntemleri)."
+
+msgid "user.register.reviewerInterests"
+msgstr "İlgi / uzmanlık alanlarınız (Uzmanlık alanı terimlerini açılır menüden seçiniz):"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Aboneliklerim"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Abonelik Durumu"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "Aktif ve süresi dolmuş abonelikleri sona erme tarihi ile birlikte aşağıda görüntülenmektedir. Buna ek olarak, aşağıdaki durum bilgileri her abonelik ile birlikte gelebilir."
+
+msgid "user.subscriptions.status"
+msgstr "Durum"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Açıklama"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Abonelik devreye sokulmadan önce ek bilgiye ihtiyaç vardır."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Abonelik etkinleştirilmeden önce gözden geçirilmelidir."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuel ödeme başlatıldı ancak henüz alınamadı."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Çevrimiçi ödeme başlatıldı ancak iptal edilmedi veya tamamlanmadı."
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Bireysel Abonelik"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Kurumsal Abonelik"
+
+msgid "user.subscriptions.renew"
+msgstr "Yenile"
+
+msgid "user.subscriptions.purchase"
+msgstr "Satın Alma"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Yeni Abonelik Başlat"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Bireysle Abonelik Başlat"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Kurumsal Abonelik Başlat"
+
+msgid "user.subscriptions.expires"
+msgstr "Bitiş tarihi: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Sona Tarih: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Mevcut Abonelik Türlerini  Görüntüle"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Abonelik Türü"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Üyelik"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Seçilmiş abonelik türleri üyelik bilgisi gerektirir."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Lütfen geçerli bir abonelik türü seçiniz."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Bu kullanıcı hesabı hali hazırda bireysel abonedir."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Seçilen abonelik türü için üyelik bilgileri gerekir."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Kurum adı"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Kurum adı gerekli."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Gönderi adresi"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Alan"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "Buraya bir alan adı girilecekse, IP aralığı isteğe bağlıdır. <br />Geçerli alan isimleri (ör. kutuphane.dogus.edu.tr)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "The selected subscription type requires a domain and/or an IP range for subscription authentication."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Lütfen geçerli bir alan adı giriniz."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP aralığı"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr "If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Lütfen geçerli bir IP adresi giriniz."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Sil"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Ekle"
+
+msgid "search.browseAuthorIndex"
+msgstr "Yazar Dizini"
+
+msgid "search.searchFor"
+msgstr "Makalelerde Ara"
+
+msgid "search.withinJournal"
+msgstr "İçinde"
+
+msgid "search.allJournals"
+msgstr "Tüm Dergiler"
+
+msgid "search.authorIndex"
+msgstr "Yazar Dizini"
+
+msgid "search.authorDetails"
+msgstr "Yazar Detayları"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"<h4>Arama İpuçları: </h4><ul>\n"
+"<li>Arama terimlerinde küçük ve büyük harf farkı yoktur.</li>\n"
+"<li>Sık kullanılan kelimeler göz ardı edilmiştir.</li>\n"
+"<li>Arama sonucunda sadece sorgudaki tüm terimleri içeren makaleler listelenir.</li>\n"
+"<li>İki sözcüğü içeren makaleleri bulmak için kelimeleri <strong>veya</strong> ile birleştirin; ör., <em>eğitim veya araştırma</em></li>\n"
+"<li>Daha kompleks sorgular için parantez kullanın; ör., arşiv ((işletme VEYA yönetim) siyasi değil)</li>\n"
+"<li>Doğru deyimi araştırmak için tırnak işareti içinde kullanın; ör., <em>\"erişime açık yayın\"</em></li>\n"
+"<li>Bir kelimeyi hariç tutmak için önüne  <strong>-</strong> işaret koyun; ör. <em>bilgisayarla çalışan - politika</em></li>\n"
+"<li>Bir kelime içinde ardışık karakterleri ifade etmek için <strong>*</strong> sembolünü kullanın; ör., <em>Türk*</em> = \"Türkiye\", \"Türkler\", \"Türklerin\" vb. terimlerinin bulunmasını sağlar</li>\n"
+"</ul>"
+
+msgid "article.pdf.title"
+msgstr "Taşınabilir Döküman Biçimi (PDF)"
+
+msgid "article.nonpdf.title"
+msgstr "Makale İndir"
+
+msgid "article.nonpdf.note"
+msgstr "Seçmiş olduğunuz dosya otomatik olarak indirilmeye başlanacaktır. Eğer indirme otomatiok olarak başlamaz ise aşağıdaki bağlantıyı tıklayın. Bu dosyanın görülebilmesi için özel bir görüntüleyici veya bağlantıya gereksinim olabilir.<br /><br />Eğer makale otomatik olarak indirilmez ise  <a href=\"{$url}\">buraya tıklayın</a>."
+
+msgid "site.journalsHosted"
+msgstr "Bu sitedeki dergiler"
+
+msgid "site.journalView"
+msgstr "Dergiyi Görüntüle"
+
+msgid "site.journalRegister"
+msgstr "Kayıt"
+
+msgid "site.journalCurrent"
+msgstr "Son Sayı"
+
+msgid "current.current"
+msgstr "Son Sayı"
+
+msgid "current.noCurrentIssue"
+msgstr "Güncel Sayı Yok"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Bu dergi henüz hiçbir sayı yayınlamadı."
+
+msgid "archive.archives"
+msgstr "Arşiv"
+
+msgid "archive.browse"
+msgstr "Eski sayılara bak"
+
+msgid "archive.issueUnavailable"
+msgstr "Sayı Erişilebilir Değil"
+
+msgid "about.aboutContext"
+msgstr "İçerik Hakkında"
+
+msgid "about.statistics"
+msgstr "İstatistikler"
+
+msgid "about.history"
+msgstr "Dergi Geçmişi"
+
+msgid "about.editorialTeam"
+msgstr "Kişiler ve Kurullar"
+
+msgid "about.editorialTeam.biography"
+msgstr "Öz Geçmiş"
+
+msgid "about.editorialPolicies"
+msgstr "Yayın Politikası"
+
+msgid "about.focusAndScope"
+msgstr "Odak ve Kapsam"
+
+msgid "about.sectionPolicies"
+msgstr "Bölüm Politikaları"
+
+msgid "about.submissions"
+msgstr "Gönderiler"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Girişe Gidiniz"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Bir gönderi yapmak için {$login} veya {$register} yapın."
+
+msgid "about.authorGuidelines"
+msgstr "Yazar Rehberi"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Başvuru Kontrol Listesi"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "Başvuru sürecünde yazarlar başvurularının aşağıdaki listedeki tüm maddelere uyduğunu kontrol etmelidirler, bu rehbere uymayan başvurular yazarlara geri döndürülecektir."
+
+msgid "about.copyrightNotice"
+msgstr "Telif Hakkı Düzenlemesi"
+
+msgid "about.privacyStatement"
+msgstr "Gizlilik Beyanı"
+
+msgid "about.authorFees"
+msgstr "Yazar Ücreti"
+
+msgid "about.authorFeesMessage"
+msgstr "Bu dergi aşağıdaki yazar ücretini uygulamaktadır."
+
+msgid "about.peerReviewProcess"
+msgstr "Değerlendirme Süreci"
+
+msgid "about.publicationFrequency"
+msgstr "Yayın Sıklığı"
+
+msgid "about.openAccessPolicy"
+msgstr "Açık Erişim Politikası"
+
+msgid "about.delayedOpenAccess"
+msgstr "Gecikmeli Açık Erişim"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Bu derginin içeriği"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "ay sonra açık erişim biçiminde erişilebilir olacaktır."
+
+msgid "about.archiving"
+msgstr "Arşivleme"
+
+msgid "about.subscriptions"
+msgstr "Abonelik"
+
+msgid "about.subscriptions.individual"
+msgstr "Bireysel Abonelik"
+
+msgid "about.subscriptions.institutional"
+msgstr "Kurumsal Abonelik"
+
+msgid "about.subscriptionsContact"
+msgstr "Abonelik İletişimi"
+
+msgid "about.subscriptionTypes.name"
+msgstr "İsim"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Biçim"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Süre"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Tutar"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Abonelik Tipleri"
+
+msgid "about.memberships"
+msgstr "Üyelikler"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "ADS Hakkında"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "ADS Editöryal ve Yayımlama Süreci"
+
+msgid "about.aboutOJSJournal"
+msgstr "Bu dergi açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems) yazılım {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> tarafından geliştirilmiştir ve (GNU General Public License) lisansı ile ücretsiz dağıtılmaktadır."
+
+msgid "about.aboutOJSSite"
+msgstr "Bu site açık kaynak kodlu bir dergi hazırlama ve yayınlama yazılımı olan Açık Dergi Sistemleri (Open Journal Systems) yazılımı {$ojsVersion} sürümünü kullanmaktadır. ADS olarak kısaltılan bu yazılım <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> tarafından geliştirilmiştir ve (GNU General Public License) lisansı ile ücretsiz dağıtılmaktadır."
+
+msgid "help.ojsHelp"
+msgstr "Açık Dergi Sistemleri Yardımı"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "ADS Yardımı"
+
+msgid "help.searchReturnResults"
+msgstr "Arama Sonuçlarına Dön"
+
+msgid "donations.thankYou"
+msgstr "Teşekkürler"
+
+msgid "donations.thankYouMessage"
+msgstr "Yaptığınız katkı için çok teşekkür ederiz."
+
+msgid "payment.loginRequired"
+msgstr "Ödeme yapabilmek için oturum açmış olmanız gerekir."
+
+msgid "payment.loginRequired.forArticle"
+msgstr "Abone olmak veya makale satın  almak için giriş öğesi gereklidir. Aboneliği doğrulamak için, daha önceki satın alma veya makale alımındaki dergi oturumnu açın."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Bağış yapabilmek için oturum açmış olmanız gerekir."
+
+msgid "payment.paid"
+msgstr "Ödeme"
+
+msgid "payment.payNow"
+msgstr "Şimdi Öde"
+
+msgid "payment.waive"
+msgstr "Vazgeç"
+
+msgid "payment.alreadyPaid"
+msgstr "Ödenmiş"
+
+msgid "payment.paymentReceived"
+msgstr "Ödeme Alındı"
+
+msgid "payment.paymentSent"
+msgstr "Ödeme zaten gönderildi"
+
+msgid "payment.authorFees"
+msgstr "Yazar Ücretleri"
+
+msgid "payment.type.submission"
+msgstr "Gönderi Ücretleri"
+
+msgid "payment.type.publication"
+msgstr "Yayın Ücreti"
+
+msgid "payment.type.fastTrack"
+msgstr "Hızlandırılmış İnceleme Ücreti"
+
+msgid "payment.type.membership"
+msgstr "Bireysel Abonelik Ücreti"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Makale Ücreti"
+
+msgid "payment.type.subscription"
+msgstr "Abonelik Ücreti"
+
+msgid "payment.type.donation"
+msgstr "Bağışlar"
+
+msgid "payment.donation.makeDonation"
+msgstr "Bağış Yap"
+
+msgid "payment.submission.paySubmission"
+msgstr "Gönderi Ücreti Ödeme"
+
+msgid "payment.publication.payPublication"
+msgstr "Yayın için Ödeme"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Yayın Ücreti Ödendi"
+
+msgid "payment.membership.buyMembership"
+msgstr "Biresyel Abonelik Al"
+
+msgid "payment.membership.renewMembership"
+msgstr "Bireysel Abonelik Yenile"
+
+msgid "payment.membership.ends"
+msgstr "Bitiyor"
+
+msgid "payment.subscription.purchase"
+msgstr "Abonelik Al"
+
+msgid "payment.subscription.renew"
+msgstr "Abonelik Yenile"
+
+msgid "payment.subscription.expires"
+msgstr "Sona Eriyor"
+
+msgid "installer.appInstallation"
+msgstr "ADS Yüklenmesi"
+
+msgid "installer.ojsUpgrade"
+msgstr "ADS Güncellenmesi"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>ADS Sürümü {$version}</h4>\n"
+"\n"
+"<p>Kamu Bilgilendirme Projelerinden (PKP) <strong>Açık Dergi Sistemleri</strong>ni yüklediğiniz için teşekkür ederiz. İlerlemeden önce lütfen yazılımın içerdiği <a href=\"{$baseUrl}/docs/README\">BENİ OKU (README)</a> dosyasını okuyunuz. PKP ve onunla ilgili yazılım projeleri  hakkında daha ayrıntılı bilgi için lütfen <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP web sitesini</a>ziyaret edin. Açık Dergi Sistemleri hakkında virüs raporları veya teknik destek bilgisi isterseniz <a href=\"http://pkp.sfu.ca/support/forum\">destek forumuna</a> veya PKP <a href=\"http://pkp.sfu.ca/bugzilla/\" target=\"_blank\">virüs bildirim sistemine</a> bakabilirsiniz. Destek forumu tercih edilen yöntem olmakla birlikte yazılım ekibine e-posta da gönderebilirsiniz <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Güncelle</h4>\n"
+"\n"
+"<p>ADS 2.x'in var olan bir sürümünü güncellemek için, <a href=\"{$upgradeUrl}\">burayı tıklayın</a>.</p>\n"
+"\n"
+"<h4>Önerilen sistem özellikleri</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= {$phpRequiredVersion}. Şu halde PHP'nin {$phpVersion}{$wrongPhpText} sürümünü kullanıyorsunuz</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 (MySQL 4.x sürümleri de olur) veya  <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= 1.3.2x veya >= 2.0.4x veya Microsoft IIS 6</li>\n"
+"\t<li>İşletim sistemi: Yukarıdaki yazılımları destekleyen herhengi bir işletim sistemi <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>PKP, tüm yazılım sürümü ve platformlar için olası tüm kombinasyonlarını deneme olanaklarına sahip olmadığından doğru işleme veya destek garantisi verememektedir.</p>\n"
+"\n"
+"<p>Bu ayarlara ait değişiklikler ADS dizinindeki <tt>config.inc.php</tt> dosyanın düzenlenip yüklenmesi ile yapılabilir, veya site yönetim arayüzü kullanılarak da değiştirilebiir (Türkçe kullanımda, on off yerine kullanılan sözcükler sorun yaratabilir, lütfen ana ayarları İngilizce dil seçeneği ile düzenleyiniz .</p>\n"
+"\n"
+"<h4>Desteklenen veri tabanı sistemleri </h4>\n"
+"\n"
+"<p>ADS son olarak MySQL ve PostgreSQL üzerinde test edilmiştir. <a href=\"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> tarafından desteklenen diğer veri tabanı sistemleri ile de tam veya kısmen çalışabilir. Diğer veritabanları ile çalıştırırsanız uyumluluk durumunu ve/veya alternatif DBMS'ler yamalarınızı ADS ekibine gönderiniz.</p>\n"
+"\n"
+"<h4>Yükleme öncesi adımlar</h4>\n"
+"\n"
+"<p>1. Aşağıdaki dosya ve dizinler (ve onların içerikleri) yazılabilir olmalıdır:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> yazılabilir (isteğe bağlı): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> yazılabilir : {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> yazılabilir : {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> yazılabilir: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> yazılabilir : {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> yazılabilir : {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Dergiye yapılacak gönderileri/dosyaları saklamak için bir dizin oluşturulmalı ve yazılabilir kılınmalıdır. \"Dosya Ayarları\" için aşağıya bakınız.</p>\n"
+"\n"
+"<h4>Manuel yükleme</h4>\n"
+"\n"
+"<p><strong>Manuel yükleme</strong>de SQL kurallarının gösterilmesi, ADS veri tabanı şeması ve başlangıç verileri oluşturmak için gereklidir. Bunu veri tabanı yüklemesinin manuel olarak yapılmasını istiyorsanız seçin. Bu seçenek özellikle desteklenmeyen platformlar üzerinde yükleme sorunları olduğunda yararlıdır. Konfigürasyon dosyasını hali hazırda destekleyen veri tabanı ayarları ile yazılacak olmakla beraber bu yükleme yönteminin veri tabanı veya herhangi bir tablo oluşturma denemesine girmeyeceğine dikkat edin.</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>ADS Sürümü {$version}</h4>\n"
+"\n"
+"<p>Kamu Bilgilendirme Projelerinden (PKP) <strong>Açık Dergi Sistemleri</strong>ni yüklediğiniz için teşekkür ederiz. İlerlemeden önce lütfen bu yazılımın içindeki <a href=\"{$baseUrl}/docs/README\">BENİ OKU (README) </a> ve <a href=\"{$baseUrl}/docs/UPGRADE\">GÜNCELLE (UPGRADE) </a>  dosyalarını okuyun. Kamu Bilgilendirme Projesi ve onun içindeki yazılım projeleri için lütfen <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP internet sitesini</a> ziyaret edin. Açık Dergi Sistemleri hakkında virüs raporları veya teknik deste ile ilgili sorularınız varsa,  <a href=\"http://pkp.sfu.ca/support/forum\">destek forumuna</a> veya PKP <a href=\"http://pkp.sfu.ca/bugzilla/\" target=\"_blank\">virüs bildirim sistemine</a> bakınız. Destek forumu tercih edilen ilişki kurma yöntemi olmakla birlikte, yazılım ekibine e-posta ile de ulaşabilirsiniz : <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Devam etmeden önce veri tabanınızın, dosya dizini ve ADS yükleme dizini yedeklerini almanızı <strong>kuvvetle öneririz</strong>.</p>\n"
+"<p>Eğer <a href=\"http://www.php.net/features.safe-mode\" target=\"_blank\">PHP güvenli modda</a> çalışıyorsanız, lütfen \"php.ini\" konfigürasyon dosyanızda maksimum uygulama zamanı için en yüksek sınırı ayarlayınız. Bu veya diğer bir zaman sınırına (Apache'nin 'zaman aşımı' seçeneği gibi) ulaşıldığında güncelleme sürecine ara verilir ve tamamlamak için manuel girişim gerekir.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Tam evrensel kod (Unicode UTF-8) desteği için tüm karakter seti ayarlarını UTF-8 olarak seçin. Bu desteğin MySQL> = 4.1.1 veya PostgreSQL> = 7.1 veri tabanı sunucusu gerektirdiğini unutmayın. Bunun <a href=\"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> desteği ile derlenmiş PHP >= 4.3.0  tam Unicode desteği gerektirdiğini unutmayınız. (Kütüphane son PHP yüklemelerinin çoğunda hazır olarak yetkilendirilmiştir). Eğer sunucunuz bu özellikleri karşılamaz ise genişletilmiş öğe kümelerini kullanırken sorun yaşayabilirsiniz.\n"
+"\t<br /><br />\n"
+"Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "Bu sistemi kullanmak için birincil dil. Eğer burada belirtilmemiş diller konusunda destek istiyorsanız lütfen ADS dokümanlarına bakınız."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "Bu sistemi desteklemek için ekli herhangi bir dili seçebilirsiniz. Bu diller, bu sitede yer verilen dergiler tarafından kullanıma hazır olacaktır. Başka diller site yönetim arayüzünden herhangi bir zamanda yüklenebilir."
+
+msgid "installer.filesDirInstructions"
+msgstr "Yüklenen dosyaların tutulacağı bir dizinin tam erişim yolunu yazınız. Bu dizin doğrudan web ulaşımına açık olmayabilir. <strong>Lütfen yükleme öncesi bu dizinin var olduğundan ve yazılabilir olduğundan emin olun.</strong> İşletim sistemi Windows ise örnekteki gibi bir yol kullanın. Örneğin: \"C:/edergi/dosyalar\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "ADS verileri depolamak için bir SQL veri tabanı erişimi gerektirir. Desteklenen veri tabanlarının bir listesi için yukarıdaki sistem gereksinimlerine bakınız. Aşağıdaki alanlar veri tabanına bağlanmak için kullanılacak ayarları oluşturur."
+
+msgid "installer.installApplication"
+msgstr "Açık Dergi Sistemlerini Yükle"
+
+msgid "installer.upgradeApplication"
+msgstr "Açık Dergi Sistemleri Güncelle"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>Uyarı:</strong>Eğer yükleme, veri tabanının yüklenmesi yoluyla başarısız olmuşsa, yeniden yüklemeyi denemeden önce ADS veri tabanını veya veri tabanı tablolarını düşürmeniz (drop) gerekebilir."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ÖNEMLİ!</h4>\n"
+"<p>Yükleme komutu konfigürasyon dosyasını otomatik olarak yazamaz. Sistemi kullanmayı denemeden önce <tt>config.inc.php</tt> dosyasını  uygun bir metin editöründe açınız ve içeriklerini aşağıdaki metin alanının içeriklerine uygun olarak değiştirin.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>ADS yüklemesi başarıyla tamamlandı.</p>\n"
+"<p>Sistemi kullanmaya başlamak için bir önceki sayfada girilen kullanıcı adı ve şifre ile <a href=\"{$loginUrl}\">üye girişi </a> yapınız.</p>\n"
+"<p>Eğer güncellemeler ve yazılımla ilgili haberleri almak isterseniz: </p>\n"
+"<ol>\n"
+"\t<li>dergi, konferans, harmanlama ile güncelleme alma, yazılım güncelleme, güvenlik yamaları ve daha fazlası için <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">Kayıt</a> olunuz.</li>\n"
+"\t<li>OJS, OCS, Harvester, Lemon8-XML, OMP ve tüm yukarıdakilere için <a href=\"http://pkp.sfu.ca/informed\" target=\"_new\">tartışma listemize</a> katılabilirsiniz.</li>\n"
+"\t<li><a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blog</a> <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS desteğine</a> üye olabilirsiniz.</li>\n"
+"</ol>\n"
+"<p>Soru ve yorumlarınız için lütfen <a href=\"http://pkp.sfu.ca/support/forum\" target=\"_new\">destek forumunu</a> kullanınız.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>ADS'nin sürüm {$version}  güncellenmesi başarıyla tamamlandı.</p>\n"
+"<p> \"config.inc.php\" konfigürasyon dosyasındaki \"yüklendi (installed)\" ayarını <em>On</em> konumuna getirmeyi unutmayın.</p>\n"
+"<p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek için üye olmadıysanız,  <strong>lütfen <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href=\"http://pkp.sfu.ca/support/forum\" target=\"_new\">destek forumunu</a> kullanınız.</p>"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName} {$submissionId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} {$submissionId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu)."
+
+msgid "log.review.reviewInitiated"
+msgstr "{$submissionId} numaralı gönderinin {$round}.  değerlendirme turu {$reviewerName} tarafından başlatıldı."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName}, {$submissionId} numaralı gönderi için {$round}. tur değerlendirmesi ile puanlandı."
+
+msgid "log.review.reviewDueDateSet"
+msgstr "{$reviewerName} adlı hakeme {$submissionId} numaralı makalenin {$round}. turdaki değerlendirmesi için son tarih {$dueDate} olarak belirlendi."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "{$reviewerName} adlı hakeme {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesi için öneri gönderildi."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "Editör {$editorName}, {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesi için {$reviewerName} adlı hakemi önerdi."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} numaralı gönderi yeniden değerlendirmeye sunuldu."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi reddetti."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki değerlendirmesinde makaleyi kabul etti."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName} has declined the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName} {$submissionId} ile tanımlı başvurunun {$round} nolu değerlendirmesini {$reviewerName} adına kabul etti."
+
+msgid "log.review.reviewFileByProxy"
+msgstr "Editör, {$userName}, {$submissionId} ile tanımlı başvurunun {$round} nolu değerlendirmesi sonucunda {$reviewerName} adına bir değerlendirme dosyası yükledi."
+
+msgid "log.review.reviewerFile"
+msgstr "Bir hakem değerlendirme dosyası yüklenmiş."
+
+msgid "log.editor.decision"
+msgstr "An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "{$submissionId} ile tanımlı başvurunun sayfa düzeni {$copyeditorName} tarafından kabul edilmiştir."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Ön tanımlı sayfa düzeni dosyası seçilmiştir."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} {$submissionId} ile tanımlı başvurunun ilk sayfa düzenini tamamlamıştır."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} {$submissionId} ile tanımlı başvurunun son sayfa düzenini tamamlamıştır."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} {$submissionId} ile tanımlı başvurunun sayfa düzeni için atanmıştır."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Başvuru dosyasının sayfa düzeni sürümü sisteme gönderilmiştir."
+
+msgid "log.copyedit.authorFile"
+msgstr "Başvuru dosyasının yazar sayfa düzeni sürümü yazar tarafından sisteme gönderilmiştir."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} {$submissionId} ile tanımlı başvurunun mizanpajcısı olarak atanmıştır."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} {$submissionId} ile tanımlı başvurunun mizanpajcılığından alınmıştır."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} {$submissionId} ile tanımlı başvurunun mizanpajını tamamlamıştır."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} bu makalenin meta verilerini değiştirmiştir."
+
+msgid "log.editor.editorFile"
+msgstr "Başvuru dosyasının editör sürümü sisteme gönderilmiştir."
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} numaralı gönderi arşivlendi."
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} numaralı gönderi kuyruğa alınmıştır."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} {$submissionId} numaralı gönderi için editör olarak atanmıştır."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} {$submissionId} numaralı gönderi için düzeltmen olarak {$proofreaderName} öneriyor."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} {$submissionId} numaralı gönderiyi yayın için gönderdi."
+
+msgid "log.imported"
+msgstr "{$userName} {$submissionId} numaralı gönderiyi sisteme yükledi."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Değerlendirmeden Geçmiş Makale"
+
+msgid "notification.type.editing"
+msgstr "Düzenleme durumları"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "\"{$title}\" başlıklı makale için editör yorum yaptı."
+
+msgid "notification.type.galleyModified"
+msgstr "\"{$title}\" başlıklı makale güncellendi."
+
+msgid "notification.type.issuePublished"
+msgstr "Yeni bir sayı yayımlandı."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Yeni duyuru oluşturuldu."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "\"{$title}\" başlıklı makale için değerlendirme formu gönderildi."
+
+msgid "notification.type.reviewing"
+msgstr "Değerlendirme Durumları"
+
+msgid "notification.type.site"
+msgstr "Site Durumları"
+
+msgid "notification.type.submissionComment"
+msgstr "\"{$title}\" başlıklı makale için bir editör yorum yaptı."
+
+msgid "notification.type.submissions"
+msgstr "Gönderi Durumları"
+
+msgid "notification.type.userComment"
+msgstr "\"{$title}\" başlıklı makale için bir okuyucu yorum yaptı."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Erişim engellendi! Bu makaleye yayın editörü olarak atanmamışsınız."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Erişmeye çalıştığınız makale size ait bölümün parça değil."
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Hatalı sayfa düzenleyici gönderisi veya sayfa düzenleyici gönderi isteği yok."
+
+msgid "debug.notes.currencyListLoad"
+msgstr "\"{$filename}\" XML dosyasından para birimi listesi yüklendi"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"<ol>\n"
+"\t<![CDATA[<ol>\n"
+"\t<li>Aşağıda gösterilen işaretli öğeler bir editör tarafından eylem yapılması gerektiğini gösterir:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Sayfa düzenleme aşamasında bir eylem gereklidir.</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Mizanpaj aşamasında bir eylem gerekir.</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Düzeltme sırasında bir eylem gerekir.</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "installer.maxFileUploadSize"
+msgstr "Sunucunuz en fazla <strong>{$maxFileUploadSize}</strong> büyüklüğünde dosya yüklenmesini kabul ediyor."
+
+msgid "site.upgradeAvailable.admin"
+msgstr "ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Güncel sürümü indirmek  ve güncelleme talimatları bulmak için lütfen <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">bu sayfa</a/yı ziyaret ediniz."
+
+msgid "site.upgradeAvailable.manager"
+msgstr "ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Yeni sürümü bildirmek için Site Yöneticiniz ({$siteAdminName} <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) ile irtibate geçiniz. Daha fazla bilgi edinmek için <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">buraya</a> tıklayınız."
+
+msgid "issue.fullIssue"
+msgstr "Tüm sayı"
+
+msgid "issue.nonpdf.title"
+msgstr "Sayı İndir"
+
+msgid "issue.viewIssue"
+msgstr "Sayı Göster"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Bu üyeyi pasifleştir. Sisteme giriş yapan üyeyi engelleyecektir.\n"
+"\n"
+"İsteğe bağlı hesapları devre dışı bırakmak için bir sebep ile kullanıcıyı pasifleştirebilir."
+
+msgid "site.noJournals"
+msgstr "Kullanılabilir dergi yoktur."
+
+msgid "payment.type.purchaseIssue"
+msgstr "Yayın Ücreti"
+
+msgid "installer.allowFileUploads"
+msgstr "Sunucunuz güncel dosya yüklemesini kabul etti: <strong>{$allowFileUploads}</strong>"
+
+msgid "user.profile.profileImage"
+msgstr "Profil Resmi"
+
+msgid "journal.viewAllIssues"
+msgstr "Tüm Sayıları Göster"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Bu dergide rolleri olmayan kullanıcıları dahil et."
+
+msgid "user.reviewerPrompt"
+msgstr "Bu dergiye yapılan gönderileri incelemek ister misiniz?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Evet, {$userGroup} rolü iste."
+
+msgid "user.register.contextsPrompt"
+msgstr "Bu sitedeki hangi dergilere kayıt yaptırmak istersiniz?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Aşağıdaki rolleri iste."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "Herhangi bir dergide hakem olmak istediyseniz, lütfen ilgi alanlarınızı girin."
+
+msgid "user.role.subEditors"
+msgstr "Bölüm Editörleri"
+
+msgid "user.role.journalAssistant"
+msgstr "Dergi Asistanı"
+
+msgid "user.role.journalAssistants"
+msgstr "Dergi Asistanları"
+
+msgid "issue.return"
+msgstr "Sayı Detaylarına Dön"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Etkin bir aboneliğiniz yok."
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Makale gönderildi"
+
+msgid "reader.purchasePrice"
+msgstr "({$price} {$currency})"
+
+msgid "search.results.orderBy"
+msgstr "Sonuçları şuna göre sırala:"
+
+msgid "search.results.orderBy.article"
+msgstr "Makale Başlığı"
+
+msgid "search.results.orderBy.author"
+msgstr "Yazar"
+
+msgid "search.results.orderBy.date"
+msgstr "Yayın Tarihi"
+
+msgid "search.results.orderBy.issue"
+msgstr "Sayı"
+
+msgid "search.results.orderBy.journal"
+msgstr "Dergi Başlığı"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popülerlik (Tüm Zamanlar)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popülerlik (Geçen Ay)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "İlgi"
+
+msgid "search.results.orderDir.asc"
+msgstr "Azalan"
+
+msgid "search.results.orderDir.desc"
+msgstr "Azalan"
+
+msgid "search.results.similarDocuments"
+msgstr "benzer belgeler"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>OJS dışındaki bir varsayılan kimlik doğrulama kaynağının belirtilmesi aşağıdaki etkilere sahiptir:</p>\n"
+"<ul>\n"
+"\t<li>Bir kullanıcı, bu site ile kimlik doğrulama kaynağında bulunan (ancak OJS veri tabanında bulunmayan) bir kullanıcı adıyla yeni bir hesap oluşturmaya çalışırsa, kayıt girişimi yalnızca sağlanan şifre söz konusu kullanıcı hesabı için geçerliyse izin verilir.</li>\n"
+"</ul>"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Makale Dizgi Eklentisi"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "Makale Dizgi Eklentileri, makale kaideleri olarak farklı belge türlerini görüntülemek için destek sağlar."
+
+msgid "manager.setup.clockssDescription"
+msgstr "Açık Dergi Sistemleri ayrıca, dergi için güvenli ve kalıcı bir arşiv sağlamak için CLOCKSS (Kontrollü Çok Sayıdaki Kopyaları Güvenli Tutma) sistemini destekler. Derginiz CLOCKSS Arşivi ile bir sözleşme imzaladıysa, buradan etkinleştirin:"
+
+msgid "manager.setup.porticoDescription"
+msgstr "Portico, e-dergiler, e-kitaplar ve sayısallaştırılmış tarihsel koleksiyonlar dahil olmak üzere dijital yayınların korunmasına yönelik kar amacı gütmeyen bir hizmettir. Derginiz Portico ile bir sözleşme imzaladıysa, buradan etkinleştirin:"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Bu dizgi ayrı bir web sitesinde mevcut olacak."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Uzak erişim içeriğinin URL adresi"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Gözden geçirme önerisini inceleyin veya ayarlayın."
+
+msgid "article.pageTitle"
+msgstr "{$title} görünümü"
+
+msgid "article.download"
+msgstr "Bu PDF dosyası indir"
+
+msgid "article.pluginMissing"
+msgstr "<p>Web tarayıcınızda bir PDF okuyucu eklentisi yüklüyse (örneğin, <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>'ın son bir sürümü varsa) seçtiğiniz PDF dosyası yüklenir.</p>"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arşivler - Sayfa: {$pageNumber}"
+
+msgid "about.contact"
+msgstr "İletişim"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Kayıt"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} veya {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Yeni bir gönderi yap"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "bekleyen gönderilerinizi görüntüleyin"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle} bölümünü düzelt"
+
+msgid "payment.loginRequired.forIssue"
+msgstr "Öğeye erişmek için abonelik olmak veya sayı satın alma gereklidir. Aboneliği doğrulamak, önceki satın alma işlemine erişmek veya satın alma sayıya erişmek için dergiye giriş yapın."
+
+msgid "payment.alreadyPaidMessage"
+msgstr "Gönderi işlemini tamamlamak için ödemeyi dergiye göndermişseniz bu kutuyu seçin. Gönderi, ödeme gelene kadar incelenmeyecektir. Ödeme talimatlarını görmek için yukarıdaki ÖDEME'ye tıklayın."
+
+msgid "payment.type.publication.required"
+msgstr "Ödeme yayın ücreti içindir."
+
+msgid "payment.requestPublicationFee"
+msgstr "Yayınlama ücreti:  ({$feeAmount})"
+
+msgid "payment.notFound"
+msgstr "Bir ödeme talep edildi, ancak isteğin süresi doldu. Ayrıntılar için Dergi Yöneticisine başvurun."
+
+msgid "user.register.selectContext"
+msgstr "Kayıt olmak için bir dergi seçin:"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"<h4>Ön yükleme Adınmları</h4>\n"
+"\n"
+"\n"
+"<p>1. Aşağıdaki dosyalar ve dizinler (ve içerikleri) yazılabilir olmalıdır:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> yazılabilir (optional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> yazılabilir: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> yazılabilir: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> yazılabilir: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> yazılabilir: {$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> yazılabilir: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Yüklenen dosyaları depolamak için bir dizin oluşturulmalı ve yazılabilir yapılmalıdır (aşağıdaki \"Dosya Ayarları\" bölümüne bakın).</p>"
+
+msgid "log.editor.recommendation"
+msgstr "{$submissionId}  için bir editör önerisi ({$decision}), {$editorName} tarafından kaydedildi."
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Yeni bir makale, \"{$title},\" gönderildi."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Sayı üst verileri kaydedildi."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Editörün atanması yapılması gereken yeni bir makale gönderildi."
+
+msgid "notification.type.assignProductionUser"
+msgstr "Katılımcılar listesindeki Atama bağlantısını kullanarak bir kullanıcı oluşturmak için bir kullanıcı atayın."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Baskılar Bekliyor."
+
+msgid "user.authorization.noContext"
+msgstr "Bağlamda dergi yok!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Geçersiz sayı talep edildi!"
+
+msgid "grid.action.createContext"
+msgstr "Yeni Bir Dergi Oluştur"
+
+msgid "editor.navigation.issues"
+msgstr "Sayılar"
+
+msgid "notification.type.approveSubmission"
+msgstr "Bu gönderinin sayıda görüntülenebilmesi için onay gerekir."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Bekleyen onay."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Diğer dergilere kayıt ol"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Diğer dergileri sakla"
+
+msgid "article.view.interstitial"
+msgstr "Lütfen indirmek için bir makale dosyası seçin."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Onaylandı"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Onay Bekleniyor"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Dizgi Onayı"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Yayın için bu dizgiyi onaylayın</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Bu dizginin onayını kaldır.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\" indeksleniyor"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Bu arama uygulaması, dergi başına yeniden indekslenmesine izin vermez."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Verilen günlük yolu \"{$journalPath}\" bu dergi için çözülemedi."
+
+msgid "editor.issues.backIssues"
+msgstr "Eski Sayılar"
+
+msgid "editor.issues.futureIssues"
+msgstr "Gelecek Sayılar"
+
+msgid "navigation.subscriptions"
+msgstr "Abonelikler"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName}, {$submissionId} makalesi için düzenleme işlemini tamamladı."
+
+msgid "manager.setup.authorCopyrightNotice.sample"
+msgstr ""
+"<h3>Proposed Creative Commons Copyright Notices</h3>\n"
+"<h4>1. Proposed Policy for Journals That Offer Open Access</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>\n"
+"\t<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>\n"
+"\t<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Proposed Policy for Journals That Offer Delayed Open Access</h4>\n"
+"Authors who publish with this journal agree to the following terms:\n"
+"<ol type=\"a\">\n"
+"\t<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>\n"
+"\t <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>\n"
+"\t <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Evet, bu dergiye gönderilen başvurulara hakemlik için istek yapanlarla iletişime geçmek istiyorum."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "Evet, kaydettiğim tüm dergiler için yeni yayınlar ve duyurulardan haberdar olmak istiyorum."
+
+msgid "notification.type.public"
+msgstr "Genel Duyurular"

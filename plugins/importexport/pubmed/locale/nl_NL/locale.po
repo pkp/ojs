@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:45+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "PubMed XML Export Plugin"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "Exporteer artikel-metadata in PubMed XML formaat voor indexering in MEDLINE."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Exporteer data"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Problemen met de export"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Kies het te exporteren nummer."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Exporteer artikels"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Kies de te exporteren artikels."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Gebruik: \n"
+"{$scriptName} {$pluginName} [xmlBestandNaam] [tijdschrift_pad] artikels [artikelId1] [artikelId2] ...\n"
+"{$scriptName} {$pluginName} [xmlBestandsNaam] [tijdschrift_pad] nummer [nummerId]\n"
+""
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "FOUT:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Het opgegeven nummer-ID bestaat niet \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Het opgegeven artikel-ID bestaat niet \"{$articleId}\"."

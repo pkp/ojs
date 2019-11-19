@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:04+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:04+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.externalFeed.displayName"
+msgstr "Eksternt innhold"
+
+msgid "plugins.generic.externalFeed.block.displayName"
+msgstr "Blokk for eksternt innhold"
+
+msgid "plugins.generic.externalFeed.description"
+msgstr "Publiser innhold fra eksterne Atom/RSS-strømmer. For eksempel fra en ekstern WordPress, Drupal, eller OCSinstallasjon."
+
+msgid "plugins.generic.externalFeed.noneExist"
+msgstr "Ingen eksterne kilder"
+
+msgid "plugins.generic.externalFeed.title"
+msgstr "Tittel"
+
+msgid "plugins.generic.externalFeed.posted"
+msgstr "Publisert"
+
+msgid "plugins.generic.externalFeed.more"
+msgstr "Mer ..."
+
+msgid "plugins.generic.externalFeed.manager.feeds"
+msgstr "Eksternt innhold"
+
+msgid "plugins.generic.externalFeed.manager.settings"
+msgstr "Innstillinger"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockInstructions"
+msgstr "For å vise eksternt innhold i sidemenyblokkene, gå til <a href=\"{$setupStep56}\" target=\"_blank\">Oppsett steg 5.6</a>"
+
+msgid "plugins.generic.externalFeed.manager.title"
+msgstr "Tittel"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage"
+msgstr "Vis på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.manager.displayHomepage.altText"
+msgstr "Vis på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayHomepage.altText"
+msgstr "Ikke vis på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.manager.displayBlock"
+msgstr "Vis blokk"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll"
+msgstr "Alle sider"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockAll.altText"
+msgstr "Vis blokk på alle sider"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockAll.altText"
+msgstr "Ingen blokk på alle sider"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage"
+msgstr "Hjemmeside"
+
+msgid "plugins.generic.externalFeed.manager.displayBlockHomepage.altText"
+msgstr "Blokk bare på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText"
+msgstr "Ingen blokk bare på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.manager.noneCreated"
+msgstr "Intet eksternt innhold"
+
+msgid "plugins.generic.externalFeed.manager.create"
+msgstr "Lag nytt eksternt innhold"
+
+msgid "plugins.generic.externalFeed.manager.edit"
+msgstr "Rediger eksternt innhold"
+
+msgid "plugins.generic.externalFeed.manager.confirmDelete"
+msgstr "Er du sikker på at du ønsker å slette dette eksterne innholdet permanent?"
+
+msgid "plugins.generic.externalFeed.settings"
+msgstr "Innstillinger"
+
+msgid "plugins.generic.externalFeed.settings.description"
+msgstr "Tilpass visningen av eksternt innhold."
+
+msgid "plugins.generic.externalFeed.settings.styleSheet"
+msgstr "Vis"
+
+msgid "plugins.generic.externalFeed.settings.defaultStyleSheet"
+msgstr "Stilark for eksternt innhold"
+
+msgid "plugins.generic.externalFeed.settings.stylesheetDescription"
+msgstr "Et tilpasset stilark kan benyttes i stedet for denne programutvidelsens standard stilark. Standard stilark kan vises her."
+
+msgid "plugins.generic.externalFeed.settings.useStyleSheet"
+msgstr "Tilpasset stilark"
+
+msgid "plugins.generic.externalFeed.form.title"
+msgstr "Tittel"
+
+msgid "plugins.generic.externalFeed.form.titleDescription"
+msgstr "Tittel for hjemmeside- eller blokkvisning"
+
+msgid "plugins.generic.externalFeed.form.titleRequired"
+msgstr "Oppgi en tittel for dette eksterne innholdet"
+
+msgid "plugins.generic.externalFeed.form.feedUrl"
+msgstr "URL"
+
+msgid "plugins.generic.externalFeed.form.feedUrlValid"
+msgstr "Vennligst oppgi en gyldig URL (inkluder http://)"
+
+msgid "plugins.generic.externalFeed.form.feedUrlDescription"
+msgstr "URL-en til det eksterne Atom/RSS-innholdet  (f.eks. http://pkp.sfu.ca/blog/feed)"
+
+msgid "plugins.generic.externalFeed.form.display"
+msgstr "Vis"
+
+msgid "plugins.generic.externalFeed.form.displayHomepage"
+msgstr "Vis på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.form.displayBlockNone"
+msgstr "Ikke vis i blokken"
+
+msgid "plugins.generic.externalFeed.form.displayBlockHomepage"
+msgstr "Vis i blokken bare på hjemmesiden"
+
+msgid "plugins.generic.externalFeed.form.displayBlockAll"
+msgstr "Vis i blokken på alle sider"
+
+msgid "plugins.generic.externalFeed.form.recentItems1"
+msgstr "Begrens til"
+
+msgid "plugins.generic.externalFeed.form.recentItems2"
+msgstr "elementer"
+
+msgid "plugins.generic.externalFeed.form.saveAndCreateAnother"
+msgstr "Lagre og lag en ny"

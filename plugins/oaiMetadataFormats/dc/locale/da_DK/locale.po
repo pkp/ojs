@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:50+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:50+00:00\n"
+"Language: \n"
+
+msgid "plugins.oaiMetadata.dc.displayName"
+msgstr "DC Metadata Format"
+
+msgid "plugins.oaiMetadata.dc.description"
+msgstr "Strukturerer metadata i overensstemmelse med Dublin Core -formatet."

@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:47+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Módulo XML de usuarios/as"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importación y exportación de usuarios/as"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Uso: {$scriptName} {$pluginName} [command] ...\n"
+"Comandos:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importar usuarios/as"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Seleccione un fichero XML que contenga los datos de usuarias/os que quiere importar en la revista. Consulte la ayuda de la revista para saber los detalles del formato de este fichero.<br /><br />Tenga en cuenta que si el fichero importado contiene nombres de usuaria/o o direcciones de correo electrónico que ya existan en el sistema no se importarán los datos de esas/os usuarias/os y los nuevos roles a crear se asignarán a las/os usuarias/os existentes."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Fichero de datos de usuaria/o"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Enviar un correo electrónico de notificación a cada uno de los usuarios/as importados con su nombre de usuario/a y su contraseña."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Continuar importando el resto de usuarias/os si ocurre un error."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Los/as siguientes usuarios/as fueron importados/as en el sistema"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Han ocurrido errores durante la importación"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Confirme que son las/os usuarias/os que le gustaría importar en el sistema"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Se ha especificado una ruta incorrecta para la revista \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exportar usuarias/os"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exportar por rol"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exportar todo"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Ha ocurrido un error durante la exportación"
+
+msgid "plugins.importexport.users.export.couldNotWriteFile"
+msgstr "No ha sido posible escribir al fichero \"{$fileName}\"."
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Aviso"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "No es posible usar contraseñas codificadas con {$importHash}; OJS está configurado para utilizar {$ojsHash}. Si decide continuar, necesitará volver a crear las contraseñas de los usuarios/as importados."
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"Ejemplos:\n"
+"\tImportar usuarios/as a myJournal desde myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} importar myImportFile.xml myJournal\n"
+"\n"
+"\tExportar todos los usuarios/as desde myJournal:\n"
+"\t{$scriptName} {$pluginName} exportar myExportFile.xml myJournal\n"
+"\n"
+"\tExportar los usuarios/as especificados por su ID:\n"
+"\t{$scriptName} {$pluginName} exportar myExportFile.xml myJournal 1 2"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "La importación finalizó correctamente. Se han importado los usuarios/as con nombres de usuario/a y correos electrónicos que ya no están en uso, junto con los grupos de usuarios/as correspondientes."
+
+msgid "plugins.importexport.users.results"
+msgstr "Resultados"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Cargue un archivo en \"Importar\" para continuar."

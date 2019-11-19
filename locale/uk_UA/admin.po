@@ -1,0 +1,175 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:36+00:00\n"
+"Language: \n"
+
+msgid "admin.hostedContexts"
+msgstr "Журнали на платформі"
+
+msgid "admin.settings.redirect"
+msgstr "Перенаправлення до журналу"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "Запити до головного сайту будуть перенаправлятися до цього журналу. Це може бути корисним, наприклад, якщо на сайті представлений єдиний журнал."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"        Ваша інсталяція OJS налаштована на запис декількох метрик використання. Статистика використання буде відображатися у декількох контекстах.\n"
+"        Є випадки, коли повинна бути застосована тільки одна статистика використання, наприклад, щоб відобразити упорядкований список найбільш використовуваних статей або проранжувати результати пошуку. Будь ласка, оберіть одну з налаштованих метрик як метрики за замовчуванням.\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr "Ви впевнені, що хочете відключити цю мову? Це може вплинути на всі розміщені журнали, які зараз її використовують."
+
+msgid "admin.languages.downloadUnavailable"
+msgstr ""
+"<p>Завантаження мовних пакетів з веб-сервера Public Knowledge Project зараз недоступне, оскільки:</p>\n"
+"\t<ul>\n"
+"\t\t<li>На вашому сервері не встановлена утиліта GNU «tar» або не дозволено її виконання сервером.</li>\n"
+"\t\t<li>OJS не може змінити файл списку мов, зазвичай розташований в «registry/locales.xml».</li>\n"
+"\t</ul>\n"
+"<p>Мовні пакети можуть бути вручну завантажені з <a href=\"http://pkp.sfu.ca\">веб-сайта PKP</a>.</p>"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Це буде мова за замовчуванням для сайту та всіх журналів на ньому."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr "Оберіть всі локалізації, що будуть підтримуватись сайтом. Обрані локалізації будуть доступні для використання у всіх журналах на сайті, вони також з'являться у меню вибору мови на кожній сторінці сайту (для окремих сторінок функція може бути заборонена). Якщо не буде обрано принаймні декілька локалізацій, меню вибору мови не з'являться та розширені мовні функції не будуть доступні для журналів."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Підтримка відмічених мов може бути неповною."
+
+msgid "admin.languages.confirmUninstall"
+msgstr "Ви впевнені, що бажаєте видалити локалізацію? Ця зміна торкнеться всіх журнілів, які зараз її використовують."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr "Оберіть будь-які додаткові локалізації, на підтримку яких Ви хочете налаштувати систему. Локалізації мають бути встановлені перш ніж вони зможуть використовуватись журналами. Дивіться документацію OJS для інформації щодо додавання підтримки нових мов."
+
+msgid "admin.languages.downloadFailed"
+msgstr "Завантаження локалізації невдале. Причини невдачі деталізовані у списку нижче."
+
+msgid "admin.languages.localeInstalled"
+msgstr "\"{$locale}\" локалізація була встановлена."
+
+msgid "admin.languages.download"
+msgstr "Завантажити локалізацію"
+
+msgid "admin.languages.download.cannotOpen"
+msgstr "Не вдається відкрити мовний дескриптор з веб-сайту PKP."
+
+msgid "admin.languages.download.cannotModifyRegistry"
+msgstr "Не вдається додати нову локалізацію до реєстраційного файлу локалізацій, типово \"registry/locales.xml\"."
+
+msgid "admin.auth.ojs"
+msgstr "База даних користувачів OJS"
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr "Включити синхронізацію облікових записів користувачів (якщо підтримується модулем аутентифікації). Коли користувач буде заходити до системи, інформація його облікового запису автоматично оновлюватиметься з віддаленого джерела, а всі зміни (в тому числі, зміни паролю), зроблені в обліковому записі OJS, будуть автоматично оновлені також на віддаленому джерелі. Якщо ця опція відключена, інформація облікового запису OJS зберігатиметься окремо від зовнішнього джерела."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr "Дозволити модифікацію паролів користувачів (якщо підтримується цим модулем аутентифікації). Включення цієї опції дозволить користувачам змінювати в OJS власні паролі та використовувати функцію OJS \"загублений пароль\" для скидання втраченого паролю. Якщо опція відключена, вказана функціональність не буде доступна користувачам цього джерела аутентифікації."
+
+msgid "admin.auth.enableCreateUsers"
+msgstr "Дозволити створення нових користувачів (якщо підтримується цим модулем аутентифікації). Всі користувачі, створені в OJS з цим джерелом аутентифікації, будуть автоматично додані у базу даних віддаленого джерела, якщо вони ще не існують у цій базі. Крім того, якщо це джерело є основним джерелом аутентифікації, користувачі, які реєструватимуть облікові записи у OJS, будуть також додаватись у базу даних віддаленого джерела."
+
+msgid "admin.systemVersion"
+msgstr "Версія OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Конфігурація OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Налаштування конфігурації OJS з <tt>config.inc.php</tt>."
+
+msgid "admin.journals.journalSettings"
+msgstr "Налаштування журналу"
+
+msgid "admin.journals.noneCreated"
+msgstr "Журналів не було створено."
+
+msgid "admin.contexts.confirmDelete"
+msgstr "Ви впевнені, що бажаєте назавжди видалити цей журнал і весь його зміст?"
+
+msgid "admin.contexts.create"
+msgstr "Створити журнал"
+
+msgid "admin.journals.createInstructions"
+msgstr "Вам буде автоматично надана роль менеджера цього журналу. Після створення нового журналу, продовжуйте його створення як менеджер, зробіть необхідні налаштування та призначте ролі користувачам."
+
+msgid "admin.journals.urlWillBe"
+msgstr "Це повинно бути коротке слово або акронім, який ідентифікуватиме цей журнал. URL-адресою журналу буде {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Необхідна назва."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Необхідний шлях."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Обраний шлях вже використовується іншим журналом."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Дозволити відображення цьоого журналу на сайті"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Опис журналу"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Існуючий шлях журналу або шлях, що має бути створений (наприклад, \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Імпорт передплат"
+
+msgid "admin.journals.transcode"
+msgstr "Перекодувати метадані статті з ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Генерувати код для конвертації адрес URL з OJS 1 до OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Необхідно вказати шлях імпорту."
+
+msgid "admin.journals.importErrors"
+msgstr "Імпортування не було завершено успішно"
+
+msgid "admin.mergeUsers"
+msgstr "Об'єднання користувачів"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Об'єднати"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "Оберіть користувача, якому слід передати права попереднього користувача (авторство, редакційні призначення, тощо)."
+
+msgid "admin.mergeUsers.from.description"
+msgstr "Оберіть користувача, якого потрібно включити до облікового запису іншого користувача (наприклад, якщо одна особа має два облікові записи). Перший обраний обліковий запис буде видалений, а його подання, редакційні призначення, тощо будуть асоційовані з другим обраним обліковим записом."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Всі користувачі, які мають ролі"
+
+msgid "admin.mergeUsers.confirm"
+msgstr "Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача \"{$newUsername}\"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Немає користувачів, які мають ролі."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Нагадування про закінчення підписки"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Повідомлення про відкритий доступ"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Нагадування рецензенту"

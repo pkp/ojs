@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:21+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:21+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Altri articoli dello stesso autore"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Questo plugin inserisce una lista di articoli dello stesso autore nella pagina di abstract dell'articolo."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Puoi leggere altri articoli dello stesso autore/i"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr "Attenzione: Questo plugin richiede che almeno un plugin di report/statistiche sia abilitato. Se il tuo plugin di statistiche prevede più di una metrica, seleziona una matrica principale nelle configurazioni dell'admin o nella pagine di configurazione del journal manager."

@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "Модуль «URN»"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "Включает присвоение единообразных имен ресурсов (Uniform Resource Name, URN) для  выпусков, статей и гранок в OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Пожалуйста, настройте модуль «URN», чтобы иметь возможность использовать URN в OJS и управлять ими:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Контент журнала"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Пожалуйста выберите объекты, которым должны быть присвоены URN."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Пожалуйста выберите публикуемые объекты, которые будут иметь присвоенные единообразные имена ресурсов (Uniform Resource Names, URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Выпуски"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Статьи"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Гранки"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Префикс URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr "Префикс URN является постоянной, никогда не меняющейся частью URN (например, «urn:nbn:de:0000-»)."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "Шаблон префикса URN должен быть в форме \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "Суффикс URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "Суффикс URN может принимать любую форму, но должен быть уникальным среди всех публикуемых объектов, которым присвоен один и тот же префикс URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr "Использовать шаблон, введенный ниже, для генерации суффиксов URN. Используйте %j для аббревиатуры журнала, %v для номера тома, %i для номера выпуска, %Y для года, %a для ID статьи в OJS, %g для ID гранки в OJS, %f для ID файла в OJS, %p для номера страницы и %x для «индивидуального суффикса»."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Например, vol%viss%ipp%p cможет создать суффикс URN «vol3iss2pp230»."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "для выпусков"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "для статей"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "для гранок"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Пожалуйста, введите шаблон суффикса URN для выпусков."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Пожалуйста, введите шаблон суффикса URN для статей."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Пожалуйста, введите шаблон суффикса URN для гранок."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Использовать шаблоны по умолчанию."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr "%j.v%vi%i для выпусков<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr "Ввести индивидуальный суффикс URN для каждого опубликованного элемента. Вы увидите дополнительное поле ввода URN на странице метаданных для каждого элемента."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Контрольное число"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "Контрольное число будет автоматически рассчитано и добавлено в конец в качестве последней цифры в URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Пространство имен"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Выбрать"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "Постоянный идентификатор пространства имен обычно необходим для регистрации (например, в Национальной библиотеке Германии)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL-адрес преобразователя"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(например, http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Пожалуйста, введите URL-адрес преобразователя."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Переприсвоить URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "Если вы измените вашу конфигурацию URN, то она не затронет URN, которые уже были присвоены. После сохранения конфигурации URN используйте эту кнопку, чтобы удалить все существующие URN для того, чтобы новые настройки повлияли на существующие объекты."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Вы уверены, что хотите удалить все существующие URN?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "выпуску"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "статье"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "гранке"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN не может быть присвоен, так как отсутствует пользовательский суффикс."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN не может быть присвоен, так как он содержит не замененный шаблон."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "Вы видите как будет выглядеть URN. Поставьте галочку и сохраните форму для присвоения URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN присвоен {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "Заданный суффикс URN уже используется для другого опубликованного элемента. Пожалуйста, введите уникальный суффикс URN для каждого элемента."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Удалить"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Вы уверены, что хотите удалить существующий URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Удалить URN у объектов выпуска"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Вы уверены, что хотите удалить существующие URN у объектов выпуска?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "Используйте этот параметр, чтобы удалить URN всех объектов (статей и гранок), запланированных на текущий момент к публикации в этом номере."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Добавить контрольное число"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Присвоить URN {$pubId} {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN не может быть присвоен, так как отсутствует пользовательский суффикс."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} не может быть присвоен, так как он содержит не замененный шаблон."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} был присвоен."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Контрольное число отсутствует."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN должен начинаться с {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Назначить"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "Вы не можете сгенерировать URN, пока эта публикация не будет назначена в конкретный выпуск."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr "Вы не можете сгенерировать URN, так как для одной или нескольких частей шаблона URN не хватает данных. Вам может быть необходимо назначить публикацию в конкретный выпуск, задать ID издателя или ввести номера страниц."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN должен начинаться с {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN для этой публикации будет {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN не был присвоен этой публикации."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Гранка: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Элемент"

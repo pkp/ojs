@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:58+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:58+00:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Модуль «Ввод оплаты вручную»"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Позволяет менеджеру вручную ввести информацию о платеже пользователя (оплату, прошедшую вне этой системы)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Ввод оплаты вручную"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Инструкции по вводу оплаты вручную"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Отправить уведомление о платеже"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Уведомление о платеже"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Уведомление о платеже отправлено"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Название"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Сумма"

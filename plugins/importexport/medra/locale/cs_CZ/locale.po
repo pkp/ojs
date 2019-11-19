@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:41+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:41+00:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.medra.displayName"
+msgstr "Plugin pro export/registraci mEDRA"
+
+msgid "plugins.importexport.medra.description"
+msgstr "Exportovat metadata čísel, článků a sazebic ve formátu Onix for DOI (O4DOI) a registrujte čísla DOI u registrační agentury mEDRA."
+
+msgid "plugins.importexport.medra.intro"
+msgstr ""
+"Pokud chcete registrovat DOIs v rámci mEDRA, následujte, prosím, pokyny na\n"
+"\t\t<a href=\"http://www.medra.org/en/guide.htm\" target=\"_blank\">domácí stránce mEDRA</a>\n"
+"\t\tabyste obdrželi uživatelské jméno a login. Pokud nemáte vlastní uživatelské jméno a heslo, budete stále ještě mít možnost exportu do mEDRA XML formátu (Onix pro DOI), ale nebudete mít možnost registrovat DOI v rámci OJS.\n"
+"                Uvědomte si, prosím, že heslo bude uloženo jako prostý text, t.j. nekódovaně, s ohledem na požadavky služby mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.description"
+msgstr "Konfigurujte, prosím, exportní plugin mEDRA:"
+
+msgid "plugins.importexport.medra.settings.form.username"
+msgstr "Uživatelské jméno"
+
+msgid "plugins.importexport.medra.settings.form.usernameRequired"
+msgstr "Vložte, prosím, vaše mEDRA uživatelské jméno. Uživatelské jméno nesmí obsahovat dvojtečku.."
+
+msgid "plugins.importexport.medra.settings.form.registrantName"
+msgstr "Jméno organizace registrované u mEDRA"
+
+msgid "plugins.importexport.medra.settings.form.registrantNameRequired"
+msgstr "Vložte, prosím, instituci registrovanou u mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.fromFields"
+msgstr "Osoba pro kontakt se službou mEDRA v případě technických dotazů:"
+
+msgid "plugins.importexport.medra.settings.form.fromCompany"
+msgstr "Organizace"
+
+msgid "plugins.importexport.medra.settings.form.fromCompanyRequired"
+msgstr "Vložte, prosím, jméno organizace, která je technicky odpovědná za export DOI (např. organizace, která hostuje váš webový server)."
+
+msgid "plugins.importexport.medra.settings.form.fromName"
+msgstr "Kontaktní osoba"
+
+msgid "plugins.importexport.medra.settings.form.fromNameRequired"
+msgstr "Zadejte, prosím, osobu pro technický kontakt."
+
+msgid "plugins.importexport.medra.settings.form.fromEmail"
+msgstr "E-mail"
+
+msgid "plugins.importexport.medra.settings.form.fromEmailRequired"
+msgstr "Vložte, prosím, platný e-mail pro technický kontakt."
+
+msgid "plugins.importexport.medra.settings.form.publicationCountry"
+msgstr "Zvolte, prosím, stát, který má být udán jako země publikace ('publication country') pro službu mEDRA."
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs"
+msgstr "Zvolte, zda chcete exportovat čísla jako <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works' nebo 'manifestations'</a>."
+
+msgid "plugins.importexport.medra.settings.form.work"
+msgstr "work"
+
+msgid "plugins.importexport.medra.settings.form.manifestation"
+msgstr "manifestation"
+
+msgid "plugins.importexport.medra.settings.form.exportIssuesAs.label"
+msgstr "Exportovat čísla jako"
+
+msgid "plugins.importexport.medra.settings.form.automaticRegistration.description"
+msgstr "OJS bude registrovat přiřazené DOI automaticky do mEDRA. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny nezaregistrované DOI."
+
+msgid "plugins.importexport.medra.settings.form.testMode.description"
+msgstr "Pro registraci DOI použijte testovací rozhraní API (testovací prostředí) mEDRA. Nezapomeňte tuto možnost odstranit před výrobní fází."
+
+msgid "plugins.importexport.medra.workOrProduct"
+msgstr "NB: DOI přiřazené článkům budou exportovány službě mEDRA jako <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'works'</a>. DOIs přiřazené sazebnicím budou exportovány jako <a href=\"http://www.medra.org/en/metadata_td.htm\" target=\"_blank\">'manifestations'</a>."
+
+msgid "plugins.importexport.medra.senderTask.name"
+msgstr "Úloha automatické registrace mEDRA"
+
+msgid "plugins.importexport.medra.cliUsage"
+msgstr ""
+"Použití:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"
+""

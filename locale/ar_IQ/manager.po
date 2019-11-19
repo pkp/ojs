@@ -1,0 +1,1730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:16+00:00\n"
+"Language: \n"
+
+msgid "manager.distribution.access"
+msgstr "الوصول"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "إختر كيفية التعيين الافتراضي لتاريخ الحقوق الفكرية الخاص بالمؤلفات. هذا التعيين الافتراضي يمكن تجاوزه لاحقاً لكل مقالة. إذا استعملت طريقة النشر المباشر، لا تستعمل تاريخ نشر العدد."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "تبعاً لتاريخ نشر العدد"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "تبعاً لتاريخ نشر المقالة"
+
+msgid "manager.distribution.publication"
+msgstr "النشر"
+
+msgid "manager.distribution.publishingMode"
+msgstr "نمط النشر"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "لن يتم استعمال نظام المجلات المفتوحة لنشر محتوى المجلة على الإنترنت."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "المجلة تتيح الوصول المفتوح إلى محتوياتها."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "الوصول إلى بعض أو كل محتويات المجلة يتطلب الاشتراك فيها."
+
+msgid "manager.distribution.publishingMode.success"
+msgstr "تفاصيل النشر قد تم تعديلها."
+
+msgid "manager.website.archiving"
+msgstr "الحفظ"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "هل أنت متأكد من رغبتك في إعادة تعيين كل قوائم المراسلة في هذه المجلة؟ ستفقد أي تخصيصات سبق أن قمت بها."
+
+msgid "manager.files.note"
+msgstr "ملاحظة: مستعرض الملفات هو ميزة متقدمة تسمح بمعاينة الملفات وحوافظها المتعلقة بالمجلة فضلاً عن معالجتها مباشرة."
+
+msgid "manager.journalManagement"
+msgstr "إدارة المجلة"
+
+msgid "manager.language.ui"
+msgstr "واجهة المستخدم"
+
+msgid "manager.language.submissions"
+msgstr "طلبات النشر"
+
+msgid "manager.language.forms"
+msgstr "النماذج"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "هذا سيستبدل أي إعدادات خاصة باللغة سبق اختيارها"
+
+msgid "manager.languages.languageInstructions"
+msgstr "إن نظام المجلات المفتوحة يمكن إتاحته للمستخدمين بأي من اللغات المدعومة في الموقع، فضلاً عن إمكانية تشغيله كنظام متعدد اللغات، مما يمكن المستخدمين من التحويل بين اللغات عند أي صفحة، كما يسمح بإدخال بعض البيانات بلغات أخرى إضافية.<br /><br />فيما لو كانت إحدى اللغات التي يدعمها النظام غير مدرجة أدناه، لطفاً، أطلب من مدير الموقع إضافتها لك عبر واجهة إدارة الموقع. لمعرفة التعليمات المتعلقة بإضافة الدعم للغات أخرى، لطفاً، راجع أدبيات النظام."
+
+msgid "manager.languages.noneAvailable"
+msgstr "عذراً، ليست هناك لغات أخرى متاحة. إتصل بمدير الموقع لو كانت لديك الرغبة في استعمال لغات إضافية في هذه المجلة."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "هذه ستكون اللغة الإفتراضية لموقع المجلة."
+
+msgid "manager.managementPages"
+msgstr "صفحات الإدارة"
+
+msgid "manager.payment.action"
+msgstr "الإجراء"
+
+msgid "manager.payment.addPayment"
+msgstr "أضف عملية التسديد"
+
+msgid "manager.payment.amount"
+msgstr "المبلغ"
+
+msgid "manager.payment.authorFees"
+msgstr "رسوم المؤلف"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "أدخل مبالغ الرسوم أدناه من أجل تمكين معالجة رسوم النشر."
+
+msgid "manager.payment.currencymessage"
+msgstr "نظام المجلات المفتوحة لا يجري أي عملية للتحويل بين العملات. عند قبول تسديد رسوم الاشتراكات، عليك التأكد من أن مبلغ الاشتراك هو بعملة مطابقة للعملة المحددة هنا."
+
+msgid "manager.payment.description"
+msgstr "الوصف"
+
+msgid "manager.payment.details"
+msgstr "التفاصيل"
+
+msgid "manager.payment.editSubscription"
+msgstr "تعديل الاشتراك"
+
+msgid "manager.payment.enable"
+msgstr "تمكين"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "خيارات تسديد الرسوم"
+
+msgid "manager.payment.form.numeric"
+msgstr "كل التكاليف ينبغي أن تكون بقيم رقمية موجبة (الفوارز العشرية مسموح بها)"
+
+msgid "manager.payment.generalFees"
+msgstr "رسوم عامة"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "رابطة العضوية ستظهر ضمن (عن المجلة) تحت باب السياسات، ورابط الهبات سيظهر فوق آلية البحث في الإطار الأيمن."
+
+msgid "manager.payment.generalOptions"
+msgstr "خيارات عامة"
+
+msgid "manager.payment.noPayments"
+msgstr "لا تسديدات"
+
+msgid "manager.payment.notFound"
+msgstr "لم يُعثر عليه"
+
+msgid "manager.payment.options"
+msgstr "الخيارات"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "هذا الأمر سيُمكن تسديد الاشتراكات حيث ستكون: أنواعها ومبالغها ومددها واشتراكاتها مدارة من قبل المجلة عبر (مدير الاشتراكات)."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا الاشتراك؟"
+
+msgid "manager.payment.success"
+msgstr "إعدادات التسديد تغيرت بنجاح."
+
+msgid "manager.payment.options.enablePayments"
+msgstr "سيتم تمكين وحدة التسديد لهذه المجلة. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بتسديد المال."
+
+msgid "manager.payment.options.fee"
+msgstr "الرسم"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "وصف الرسم"
+
+msgid "manager.payment.options.feeName"
+msgstr "اسم الرسم"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "عضوية الرابطة"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "إجعل الوصول مقتصراً على نسخ PDF من المؤلفات والأعداد"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "رسوم نشر المؤلفات"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "شراء مؤلَّف"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "شراء عدد"
+
+msgid "manager.payment.options.text"
+msgstr "وصف طريقة التسديد"
+
+msgid "manager.payment.paymentId"
+msgstr "معرَّف التسديد"
+
+msgid "manager.payment.paymentMethod"
+msgstr "طريقة التسديد"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "بإمكانك ضبط إعدادات أي من إضافات طرق التسديد الآتية عبر هذه الصفحة."
+
+msgid "manager.payment.paymentMethods"
+msgstr "طرق تسديد الرسوم"
+
+msgid "manager.payment.paymentType"
+msgstr "نوع التسديد"
+
+msgid "manager.payment.readerFees"
+msgstr "رسوم القرّاء"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "الخيارات المحددة مع أوصافها ورسوماتها (والتي بالإمكان تعديلها أدناه)، ستظهر في (عن المجلة) تحت باب السياسات، فضلاً عن ظهورها في مواضع أخرى حيثما يتطلب الأمر التسديد المالي."
+
+msgid "manager.payment.records"
+msgstr "السجلات"
+
+msgid "manager.paymentTypes"
+msgstr "أنواع التسديدات"
+
+msgid "manager.payment.userName"
+msgstr "معرَّف التسديد"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "الأفراد ذوي الأدوار في هذه المجلة"
+
+msgid "manager.people.allJournals"
+msgstr "جميع المجلات"
+
+msgid "manager.people.allSiteUsers"
+msgstr "إمنح أحد مستخدمي الموقع دوراً في هذه المجلة"
+
+msgid "manager.people.showNoRole"
+msgstr "أظهر المستخدمين الذين هم بلا أي دور"
+
+msgid "manager.people.allUsers"
+msgstr "جميع المستخدمين ذوي الأدوار"
+
+msgid "manager.people.confirmRemove"
+msgstr "أتريد حذف هذا المستخدم من هذه المجلة؟ هذا الأمر سيجرد المستخدم من جميع أدواره ضمن هذه المجلة."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "إختر قالباً"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "إمنح دوراً لمستخدم موجود"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "مع المجلة"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "إختر مستخدماً (أو أكثر) لضمهم مع حساب مستخدم آخر (مثلاً: عندما يكون لأحدهم حسابين مختلفين في الموقع). الحساب/الحسابات التي يتم اختيارها أولاً سيتم حذفها، وكل متعلقاتها من طلبات نشر ومهام... ستُلحق للمستخدم المختار ثانياً."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "إختر مستخدماً ستمنحه ما سبق من الصلاحيات ومهام التحرير... إلخ."
+
+msgid "manager.people.roleEnrollment"
+msgstr "منح دور {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "مزامنة الأدوار ستقوم بمنح الأفراد الموكلين بأدوار معينة في مجلة ما نفس تلك الأدوار في هذه المجلة. هذه الوظيفة ستزامن مجموعة من المستخدمين (محكمين مثلاً) بين المجلات."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "لا تشترط وجود الملخصات"
+
+msgid "manager.section.noSectionEditors"
+msgstr "ليس هناك محررو أقسام بعد. أولاً، إمنح هذا الدور لمستخدم واحد على الأقل عبر الذهاب إلى: الإدارة / الإعدادات / المستخدمون والأدوار."
+
+msgid "manager.sections.assigned"
+msgstr "محررو هذا القسم"
+
+msgid "manager.sections.confirmDelete"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا القسم؟"
+
+msgid "manager.sections.alertDelete"
+msgstr "قبل حذف هذا القسم، عليك نقل المؤلَّفات المنشورة ضمنه إلى قسم آخر."
+
+msgid "manager.sections.create"
+msgstr "أنشئ قسماً"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "أضف محرر لهذا القسم لتتم إحالة طلبات النشر الخاصة بالقسم إليه تلقائياً. (بخلاف ذلك، يمكن تعيين محرري القسم يدوياً لدى قدوم طلب للنشر). عند إضافة هذا المحرر، فإنه سيُعيَّن تلقائياً للإشراف على عملية التحكيم و/أو التحرير (التدقيق، التصميم الطباعي، القراءة التصحيحية) لطلبات النشر الموجهة لهذا القسم. يتم إنشاء محرري الأقسام عبر النقر على (محررو القسم) تحت (الأدوار) في صفحة إدارة المجلة."
+
+msgid "manager.sections.editorRestriction"
+msgstr "يمكن تقديم المؤلفات حصرياً من قبل محرري المجلة أو محرري أقسامها."
+
+msgid "manager.sections.editors"
+msgstr "محررو القسم"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "العنوان المختصر مطلوب للقسم حتماً"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "لطفاً، تأكد من أن واحداً من خانات الاختيار على الأقل مؤشر لأيٍّ من مهام محرر القسم."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "لطفاً، تأكد من كونك قد اخترت نموذج تحكيم صحيح."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "لا بد من منح القسم عنواناً."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "أسقط أسماء المؤلفين من جدول محتويات العدد التابع لفقرات القسم."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "أسقط عنوان هذا القسم من جدول محتويات الأعداد الصادرة من المجلة."
+
+msgid "manager.sections.identifyType"
+msgstr "عرِّف الفقرات المنشورة ضمن هذا القسم على أنها"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(على سبيل المثال: \"مقالة محكمة\"، \"تقييم كتاب غير محكم\"، \"دعوة تعليق\"، ... إلخ.)"
+
+msgid "manager.sections.indexed"
+msgstr "مفهرس"
+
+msgid "manager.sections.noneCreated"
+msgstr "لم تُنشأ أقسام بعد."
+
+msgid "manager.sections.open"
+msgstr "إفتح طلبات التقديم"
+
+msgid "manager.sections.policy"
+msgstr "سياسة القسم"
+
+msgid "manager.sections.readingTools"
+msgstr "أدوات القراءة"
+
+msgid "manager.sections.reviewed"
+msgstr "محَكَّم"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "لن يتم تضمينها في فهرسة المجلة"
+
+msgid "manager.sections.submissionReview"
+msgstr "لن يتم تحكيمها"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "طلبات النشر المقدمة إلى هذا القسم من المجلة:"
+
+msgid "manager.sections.unassigned"
+msgstr "محررو القسم المتوفرون"
+
+msgid "manager.sections.wordCount"
+msgstr "عدد الكلمات"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "قيد عدد كلمات الملخص في هذا القسم (الصفر يعني بلا قيد):"
+
+msgid "manager.setup"
+msgstr "التهيئة"
+
+msgid "manager.setup.masthead"
+msgstr "طاقم المجلة"
+
+msgid "manager.setup.editorialTeam"
+msgstr "هيئة التحرير"
+
+msgid "manager.setup.homepageContent"
+msgstr "محتوى الصفحة الرئيسية للمجلة"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "الصفحة الرئيسية للمجلة تشتمل إفتراضياً على روابط التنقل. يمكن إلحاق محتويات إضافية في الصفحة الرئيسية باستعمال واحد أو أكثر من الخيارات الآتية والتي ستظهر حسب ترتيبها المعروض أدناه."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "أنماط المجلة"
+
+msgid "manager.setup.contextName"
+msgstr "اسم المجلة"
+
+msgid "manager.setup.pageHeader"
+msgstr "رأس صفحة المجلة"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "المحتوى"
+
+msgid "manager.setup.addAboutItem"
+msgstr "أضف فقرة (عن)"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "أضف فقرة (قائمة خيارات)"
+
+msgid "manager.setup.addItem"
+msgstr "أضف فقرة"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "أضف فقرة لتظهر في (عن المجلة)"
+
+msgid "manager.setup.addNavItem"
+msgstr "أضف فقرة"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "أضف رابط قاعدة بيانات جديد"
+
+msgid "manager.setup.addSponsor"
+msgstr "أضف منظمة راعية"
+
+msgid "manager.setup.alternateHeader"
+msgstr "رأس صفحة بديل"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "عوضاً عن ذلك، بدلاً من العنوان والشعار، يمكن إضافة نسخة من رأس الصفحة بصيغة HTML مخصصة بالطريقة التي تريدها في مربع النص أدناه. أترك مربع النص فارغاً إن لم تتطلب ذلك."
+
+msgid "manager.setup.announcements"
+msgstr "الإعلانات"
+
+msgid "manager.setup.announcements.success"
+msgstr "إعدادات الإعلانات تغيرت بنجاح."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "المقدمة"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "أدخل أي معلومات إضافية ينبغي عرضها للقراء على صفحة الإعلانات."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(لتظهر في \"عن المجلة\")"
+
+msgid "manager.setup.archiving.success"
+msgstr "تفاصيل أرشفة هذه المجلة تغيرت بنجاح."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "يتطلب تقديم المؤلفين لبيان المصالح المتضاربة (CI) مع طلبات النشر الخاصة بهم."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "يتطلب من المحكمين تقديم بيان المصالح المتضاربة (CI) مع كل تحكيم مناظر يقوموم به."
+
+msgid "manager.setup.history"
+msgstr "تأريخ المجلة"
+
+msgid "manager.setup.historyDescription"
+msgstr "هذا النص سيظهر ضمن (عن المجلة) ويمكن أن يستعمل لمنح فكرة عن التعديلات التي حصلت في مناصب طاقم المجلة ورئاسة تحريرها أو أي فقرات أخرى ذات علاقة بتأريخ النشر في المجلة."
+
+msgid "manager.setup.contact.success"
+msgstr "تفاصيل عنوان الاتصال بهذه المجلة تغيرت بنجاح."
+
+msgid "manager.setup.currentIssue"
+msgstr "الإصدار الحالي"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "الخطوة 5. تخصيص المظهر"
+
+msgid "manager.setup.details"
+msgstr "التفاصيل"
+
+msgid "manager.setup.details.description"
+msgstr "اسم المجلة، ISSN، عناوين الاتصال، الرعاة، ومحركات البحث."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "رئيس تحرير المجلة يسجل جميع المستخدمين، بينما المحررون ومحررو الأقسام يمكنهم تسجيل المحكمين فقط."
+
+msgid "manager.setup.discipline"
+msgstr "التخصصات الأكاديمية وتفرعاتها"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "مفيد عندما تتجاوز المجلة حدود التخصص المحدد لها و/أو يقدم المؤلفون أعمالاً ذات تخصصات متعددة."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(مثلاً: التأريخ، التعليم، علم الاجتماع، علم النفس، القانون)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "أدرج أمثلة على التخصصات العلمية ذات العلاقة بهذه المجلة"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "أدرج جدول المحتويات للإصدار الحالي (لو توفر)."
+
+msgid "manager.setup.editorDecision"
+msgstr "قرار المحرر"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "عنوان الرسائل المردودة"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى هذا العنوان البريدي"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "لتفعيل هذا الخيار، على مدير الموقع تفعيل <code>allow_envelope_sender</code> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة، كما هو مبين في أدبيات النظام."
+
+msgid "manager.setup.emails"
+msgstr "تحديد هوية البريد الالكتروني"
+
+msgid "manager.setup.emailSignature"
+msgstr "التوقيع"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (الإعدادات)."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "تمكين الإعلانات"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "يمكن نشر الإعلانات لإبلاغ قراء المجلة بأخبارها وأحداثها. الإعلانات المنشورة ستظهر على صفحة الإعلانات."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "العرض على الصفحة الرئيسية"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "عدد الإعلانات التي تظهر على الصفحة الرئيسية. أترك الحقل فارغاً لحجب الإعلانات."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "يمكن للمستخدمين تسجيل أنفسهم في موقع المجلة"
+
+msgid "manager.setup.focusAndScope"
+msgstr "التركيز ومجال التخصص"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "أعط وصفاً للمؤلفين، القراء وأمناء المكتبات عن مجالات النشر التي تُعنى بها هذه المجلة."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "للمؤلفين لغرض فهرسة أعمالهم"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "نظام المجلات المفتوحة يتمسك ببروتوكول <a href=\"http://www.openarchives.org/\" target=\"_blank\">مبادرة الأرشيف المفتوح</a> لحصاد البيانات الوصفية، والذي هو آلية التجميع القياسية لتوفير الوصول المفهرس جيداً للموارد البحثية الالكترونية على نطاق عالمي. المؤلفون سيستعملون قالباً مماثلاً لتوفير البيانات الوصفية لطلبات نشرهم. على رئيس هيئة تحرير المجلة إختيار فئات الفهرسة وتقديم أمثلة ذات صلة للمؤلفين لمساعدتهم على فهرسة أعمالهم، عبر فصل الفقرات بفارزة منقوطة (إنجليزية)، مثل: (فقرة1; فقرة2). المدخلات ينبغي أن تقدم كأمثلة عبر استعمال \"مثلاً\" أو \"على سبيل المثال\"."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "رقم ISSN المذكور غير صحيح."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "عنوان الاتصال الرئيسي مطلوب حتماً."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "اسم صاحب الاتصال الرئيسي مطلوب حتماً."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "الحروف الأولية للمجلة مطلوبة حتماً."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "اسم المجلة مطلوب حتماً."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "عدد المحكمين المعتمد لكل طلب نشر مطلوب حتماً."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "العنوان البريدي لجهة الدعم الفني مطلوب حتماً."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "اسم المعني بالدعم الفني مطلوب حتماً."
+
+msgid "manager.setup.generalInformation"
+msgstr "معلومات عامة"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "الخطوة 1. الدخول في التفاصيل"
+
+msgid "manager.setup.guidelines"
+msgstr "الإرشادات"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "الخطوة 3. إرشاد طلبات النشر"
+
+msgid "manager.setup.identity"
+msgstr "هوية المجلة"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "بالنسبة للمجلات التي تقدم الوصول المفتوح المباشر أو المؤجل، ضمّن رخصة الأعمال الإبداعية المشاعة مع كل الأعمال المنشورة في الوقت المناسب."
+
+msgid "manager.setup.information"
+msgstr "المعلومات"
+
+msgid "manager.setup.information.description"
+msgstr "وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء، متاح ضمن خانة  \"المعلومات\" من الشريط الجانبي."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "للمؤلفين"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "لأمناء المكتبات"
+
+msgid "manager.setup.information.forReaders"
+msgstr "للقراء"
+
+msgid "manager.setup.information.success"
+msgstr "معلومات هذه المجلة تغيرت بنجاح."
+
+msgid "manager.setup.initialIssue"
+msgstr "الإصدار الأول"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "حسب الصيغة المعتمدة في المجلة، حدد رقم العدد والمجلد و/أو السنة للإصدار الأول التي تريد الانطلاق به مع نظام المجلات المفتوحة:"
+
+msgid "manager.setup.institution"
+msgstr "المؤسسة"
+
+msgid "manager.setup.itemsDescription"
+msgstr "فقرات شريط التنقل بالإمكان إضافتها إلى المجموعة الحالية (الرئيسية، عن المجلة، صفحة المستخدم الرئيسية... إلخ.) والتي تظهر أعلى الصفحة."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "عدد فقرات الصفحة"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "تحديد عدد الفقرات (على سبيل المثال، طلبات النشر، المستخدمون، مهام التحرير) التي ستظهر ضمن قائمة واحدة، قبل متابعة باقي فقرات القائمة في صفحة أخرى."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "مختصر اسم المجلة"
+
+msgid "manager.setup.journalArchiving"
+msgstr "محفوظات المجلة"
+
+msgid "manager.setup.contextSummary"
+msgstr "ملخص المجلة"
+
+msgid "manager.setup.contextAbout"
+msgstr "عن المجلة"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "ضمّن أي معلومات عن مجلتك قد تكون ذات أهمية للقراء، والمؤلفين أو المحكمين. هذا قد يشمل سياسة الوصول المفتوح التي تتبعها، مجالات عمل المجلة، بيان الحقوق الفكرية، التصريح بالجهات الداعمة، تأريخ المجلة، بيان الخصوصية، وما إذا كانت المجلة منضمة إلى أي من أنظمة الحفظ الاحتياطي LOCKSS أو CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "محتوى الصفحة الرئيسية للمجلة"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "إفتراضياً، تتضمن الصفحة الرئيسية روابط للتنقل. يمكن إضافة محتوى إضافي لها عبر استعمال واحد أو أكثر من الخيارات الآتية، والتي ستظهر بالترتيب المعاين. لاحظ أن الإصدار الحالي يمكن الوصول إليه دوماً عبر رابط (الإصدار الحالي) في شريط التنقل."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "رأس الصفحة الرئيسية للمجلة"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "رأس الصفحة الرئيسية للمجلة"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "نسخة رسومية من عنوان المجلة وشعارها بالصيغ: (.gif، .jpg أو .png) يمكن رفعها لتظهر في الصفحة الرئيسية، وعندها ستستبدل النسخة النصية التي لو لا وجودها، لظهرت في الصفحة. بعبارة أخرى، دائماً استعمالك للصور يعتبره الموقع بديل عن النصوص."
+
+msgid "manager.setup.contextInitials"
+msgstr "الحروف الأولية للمجلة"
+
+msgid "manager.setup.journalLayout"
+msgstr "تصميم المجلة"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "إختر نمطاً لمظهر المجلة مع مكونات التصميم من هنا. بالإمكان أيضاً رفع ملف أنماط إلى الموقع، والذي يمكن عبره تخطي بيانات النمط القياسي وحسب ما يتناسب مع رغبة وأهداف الجهة المستفيدة من الموقع."
+
+msgid "manager.setup.journalLogo"
+msgstr "شعار المجلة"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "شعار المجلة"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "تذييل صفحات المجلة"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "هذا هو تذييل صفحات مجلتك. لتعديله أو تحديثه، إلصق ترميز HTML في مربع النص أدناه. أمثلة ذلك قد تكون شريط تنقل آخر، أو عداد معين، أو روابط خارجية... إلخ. هذا التذييل سيظهر في كل صفحات الموقع."
+
+msgid "manager.setup.journalPolicies"
+msgstr "الخطوة 2. سياسات المجلة"
+
+msgid "manager.setup.journalSetup"
+msgstr "تهيئة المجلة"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "إعدادات تهيئة مجلتك قد تم تحديثها."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "صيغة ملف الأنماط خاطئة. الصيغة المدعومة هي .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "نمط المجلة"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "مصغر المجلة"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "شعار صغير أو ما يمثل المجلة بالإمكان استعماله ضمن قائمة مجلات الموقع."
+
+msgid "manager.setup.contextTitle"
+msgstr "عنوان المجلة"
+
+msgid "manager.setup.keyInfo"
+msgstr "المعلومات الأساسية"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "أعط وصفاً موجزاً عن المجلة مع التعريف بطاقمها من محررين ومدراء وغيرهم من المساهمين في أعمال التحرير."
+
+msgid "manager.setup.labelName"
+msgstr "اسم الملصق"
+
+msgid "manager.setup.lists.success"
+msgstr "إعدادات القوائم لهذه المجلة تغيرت بنجاح."
+
+msgid "manager.setup.lists"
+msgstr "القوائم"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "تمكين الإضافة PKP PN"
+
+msgid "manager.setup.plnDescription"
+msgstr "إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "عاين <button>إعدادات الإضافة</button> للموافقة على شروط استعمال شبكة الحفظ لمشروع المعرفة العامة."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "شبكة الحفظ لمشروع المعرفة العامة (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية. إن الإضافة الخاصة بشبكة الحفظ والمخصصة للنسخة الثالثة من نظام المجلات المفتوحة هي قيد التطوير حالياً وستكون متاحة ضمن معرض الإضافات قريباً."
+
+msgid "manager.setup.otherLockss"
+msgstr "خيارات أرشفة LOCKSS و CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr "تمكين LOCKSS لتخزين وتوزيع محتوى المجلة لدى المكتبات المساهمة بواسطة صفحة LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">وثيقة الناشر الأساسية</a>. إن رخصة LOCKSS ستظهر ضمن (عن المجلة) تحت (الحفظ):"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "رخصة LOCKSS ستظهر في (عن المجلة) تحت باب الحفظ: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">رخصة LOCKSS</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "وصف رخصة LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr "حدد 6 - 10 مكتبات من تلك التي ستقوم بتسجيل وتخزين محتوى مجلتك. على سبيل المثال، حول عملك إلى المؤسسات التي يكون فيها المحررون أو أعضاء مجلس الإدارة مشتركين مسبقاً في LOCKSS. أنظر <a href=\"http://www.lockss.org/community/\" target=\"_blank\">مجتمع LOCKSS</a>. استعمل الدعوات المعدة لغرض (أ) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">المكتبات المشتركة في  LOCKSS</a> أو (ب) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">المكتبات غير المشتركة بعد في LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "تمكين CLOCKSS لتخزين وتوزيع محتوى المجلة لدى المكتبات المساهمة بواسطة صفحة <a href=\"{$clockssUrl}\" target=\"_blank\">وثيقة الناشر الأساسية</a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "رخصة CLOCKSS ستظهر في (عن المجلة) تحت باب الحفظ: <a href=\"http://clockss.org/\" target=\"_blank\">رخصة CLOCKSS</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "وصف رخصة CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr "سجل للحصول على خدمة CLOCKSS عبر زيارة <a href=\"http://clockss.org/\" target=\"_blank\">موقع CLOCKSS</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "المظهر"
+
+msgid "manager.setup.look.description"
+msgstr "رأس الصفحة الرئيسية، المحتوى، رأس المجلة، تذييلها، شريط التنقل، وملف الأنماط."
+
+msgid "manager.setup.management"
+msgstr "الإدارة"
+
+msgid "manager.setup.management.description"
+msgstr "الوصول والأمان، الجدولة، الإعلانات، تدقيق التحرير، التصميم الطباعي، والقراءة التصحيحية."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "إدارة خطوات التحرير الأساسية"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "تهيئة الإدارة والنشر"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "الخطوة 4. إدارة المجلة"
+
+msgid "manager.setup.masthead.success"
+msgstr "تفاصيل دفة القيادة لهذه المجلة تغيرت بنجاح."
+
+msgid "manager.setup.navigationBar"
+msgstr "شريط التنقل"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "إضف أو إحذف الفقرات الإضافية في شريط التنقل."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL هو عنوان مطلق (أي مثل: \"http://www.example.com\") وليس المسار النسبي ضمن الموقع (مثل: \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "إن محتوى التسمية هو سلسلة محرفية، مثل: \"تهيئة المجلة\" بدلاً من مفتاح رسالة موضعية، مثل: \"manager.setup\""
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "لم يُرفع ملف صورة إلى الموقع."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "لم يُرفع ملف أنماط إلى الموقع."
+
+msgid "manager.setup.note"
+msgstr "ملاحظة"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>ملاحظة:</strong> رسالة الإشعار المتعلقة بتقديم طلب النشر معطلة حالياً. لاستعمال هذه الميزة، قم بتمكين رسالة SUBMISSION_ACK في <a class=\"action\" href=\"{$preparedEmailsUrl}\">الرسائل المحضرة</a>."
+
+msgid "manager.setup.numPageLinks"
+msgstr "روابط الصفحة"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "تحديد عدد الروابط التي تظهر للصفحات القادمة من القوائم المجزأة على عدة صفحات."
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN في الإنترنت"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "خيار ترقيم الصفحة"
+
+msgid "manager.setup.policies"
+msgstr "السياسات"
+
+msgid "manager.setup.policies.description"
+msgstr "التركيز، التحكيم المناظر، الأقسام، الخصوصية، الأمان، وفقرات أخرى إضافية."
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN الطباعي"
+
+msgid "manager.setup.privacyStatement.success"
+msgstr "بيان الخصوصية تم تعديله بنجاح."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "إرشادات القراءة التصحيحية"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "إن إرشادات القراءة التصحيحية ستكون متاحة للقائمين بها والمؤلفين والمصممين الطباعيين ومحرري الأقسام خلال مرحلة تحرير طلب النشر. أدناه مجموعة إفتراضية من التعليمات بصيغة HTML، والتي بإمكان رئيس تحرير المجلة تعديلها أو استبدالها في أي وقت (بصيغة HTML أو بنص صريح)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "جدولة النشر"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "فقرات المجلة بالإمكان نشرها بشكل جماعي كجزء من عدد واحد له جدول محتوياته الخاص به. أو عوضاً عن ذلك، يمكن نشر الفقرات المنفردة بمجرد إكتمال تحضيرها، عبر إضافتها إلى جدول محتويات العدد \"الحالي\". زود القراء ضمن (عن المجلة) بعبارة تصف فيها النظام الذي ستتبعه هذه المجلة ومعدل النشر المتوقع لها."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "جدولة النشر"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "ترميز محتوى المجلة"
+
+msgid "manager.setup.publishing"
+msgstr "تفاصيل النشر"
+
+msgid "manager.setup.publisher"
+msgstr "الناشر"
+
+msgid "manager.setup.publishingDescription"
+msgstr "هذه التفاصيل قد يجري تضمينها في بيانات وصفية تذهب إلى أطراف ثالثة عند حفظ محتوى المجلة."
+
+msgid "manager.setup.referenceLinking"
+msgstr "ربط المراجع"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "على المستخدمين التسجيل في الموقع والدخول فيه لمعاينة المحتوى المتاح للوصول المفتوح."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "على المستخدمين التسجيل في الموقع والدخول فيه لمعاينة موقع المجلة."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "دليل التحكيم"
+
+msgid "manager.setup.reviewOptions"
+msgstr "خيارات التحكيم"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "رسائل التذكير الآلية (المتوافرة في الرسائل الإفتراضية لنظام المجلات المفتوحة) يمكن إرسالها إلى المحكمين في موضعين (فضلاً عن تمكن المحرر من مراسلة المحكم يدوياً متى شاء)"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "لتمكين رسائل التذكير المؤتمتة، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر إعدادات إضافية في الملقم لدعم هذه الوظيفة كما هو مبين في أدبيات النظام."
+
+msgid "manager.setup.reviewOptions.blindReview"
+msgstr "التحكيم السري"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "المهلة المتاحة اعتيادياً للمحكمين"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "سيقوم المحررون بتقييم المحكمين عبر سلم تقييم من خمس نقاط بعد كل عملية تحكيم."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "تقييد الوصول إلى الملف"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "سيكون ملف طلب النشر متاحاً للمحكمين فقط عند قبولهم لمهمة تحكيمه."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "صلاحية وصول المحكم"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "وصول المحكم بنقرة واحدة."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً مؤمناً يأخذهم مباشرة إلى صفحة التحكيم الخاصة بالطلب المعني دون الحاجة إلى تسجيل دخولهم. الوصول إلى صفحات الموقع الأخرى سيتطلب منهم تسجيل الدخول"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "تضمين رسائل التماس التحكيم لرابط الوصول المؤمن."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "تقييم المحكم"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "تذكيرات المحكم"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "سياسة التحكيم"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "فهرسة محركات البحث"
+
+msgid "manager.setup.searchEngineIndexing.success"
+msgstr "إعدادات فهرسة محركات البحث تغيرت بنجاح."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "لمساعدة محركات البحث مثل Google في العثور على هذه المجلة وعرض محتوياتها، نحثك على تقديم <a href=\"{$sitemapUrl}\" target=\"_blank\">خريطة الموقع</a> لمجلتك."
+
+msgid "manager.setup.searchDescription.description"
+msgstr "أعط وصفاً موجزاً (من 50 إلى 300 حرف) للمجلة بحيث يمكن لمحركات البحث عرضه عند إدراجها ضمن نتائج البحث."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "الأقسام ومحرروها"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(إذا لم يتم إضافة أي أقسام، تُقدم المؤلفات إلى قسم المقالات بشكل تلقائي)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "لإنشاء الأقسام أو تعديلها في هذه المجلة، مثل: المقالات، تنقيحات الكتب... إلخ. إذهب إلى إدارة القسم.<br /><br />سيقوم المؤلفون لدى تقديمهم لطلبات النشر في المجلة بتعيين..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "محرر المجلة الذي سيطلع عليها خلال عملية التحرير."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "قسم المجلة المتعلق بالفقرة المعنية."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "دائماً أظهر روابط لوح الطباعة وقيّد الوصول إلى المحتوى."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "الوصول إلى الموقع"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "معاينة محتويات المقالة"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "خمس خطوات للحصول على موقع للمجلة"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(مثل: التركيب الضوئي، الثقوب السوداء، مشكلة الخرائط رباعية الألوان، نظرية الكم)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "الكلمات المفتاحية"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "أدرج أمثلة من الكلمات المفتاحية أو موضوعاتها كدليل للمؤلفين"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "إرشادات طلب النشر"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "إجراءات تحضير طلب النشر"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "قبيل الشروع بتقديم طلب النشر إلى المجلة، يُطلب من المؤلفين أولاً التحقق من أن كل فقرة واردة في إجراءات تحضير طلب النشر مستوفاة لديهم. تظهر تلك الخطوات أيضاً في إرشادات المؤلفين، ضمن (عن المجلة). يمكن تعديل فقرات القائمة أدناه، غير أن جميع تلك الفقرات ستتطلب تأشير استيفائها قبل أن يتسنى للمؤلفين متابعة عملية التقديم."
+
+msgid "manager.setup.submissions"
+msgstr "طلبات النشر"
+
+msgid "manager.setup.submissions.description"
+msgstr "إرشادات المؤلفين، الحقوق الفكرية والفهرسة (بضمنها عملية التسجيل)."
+
+msgid "manager.setup.enableOai"
+msgstr "تمكين إضافة OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr "تقديم البيانات الوصفية لخدمات الفهرسة من أطراف ثالثة عبر <a href=\"https://www.openarchives.org/\">مبادرة المحفوظات المفتوحة</a>."
+
+msgid "manager.setup.typeExamples"
+msgstr "(مثل: الاستبيان التأريخي، البحث شبه التجريبي، التحليل الأدبي، المسح/المقابلة)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "النوع (الأسلوب/المنهج)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "أدرج أمثلة عن طرق بحث مماثلة، وأساليب ومناهج تتعلق بهذا الحقل العلمي"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "رمز التعريف الفريد"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "يمكن للمؤلفات والإصدارات أن تكون معلَّمة برمز تعريفي رقمي أو نصي أو توظيف نظام ترميز لذلك، مثل: نظام الترميز الرقمي للمكونات، Digital Object Identifier System ومختصره (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "هيئة التحرير/التحكيم المعتمدة لدى المجلة."
+
+msgid "manager.setup.userAccess.success"
+msgstr "تفاصيل وصول المستخدمين لهذه المجلة تغيرت بنجاح."
+
+msgid "manager.setup.useThumbnail"
+msgstr "الصورة المصغرة"
+
+msgid "manager.setup.useImageTitle"
+msgstr "صورة العنوان"
+
+msgid "manager.setup.userRegistration"
+msgstr "تسجيل المستخدم"
+
+msgid "manager.setup.useTextTitle"
+msgstr "نص العنوان"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tإن مجلتك مهيئة لتسجيل أكثر من مقياس تشغيل واحد. إحصائيات التشغيل ستم عرضها في عدة سياقات.\n"
+"\t\tهناك حالات لا بد فيها من استعمال معيار تشغيل إحصائي واحد، مثل: عرض قائمة مرتبة هجائياً لمؤلَّفات الأكثر استعمالاً\n"
+"\t\tأو عند تقييم نتائج البحث في الموقع. لطفاً، إختر أحد المقاييس الإحصائية ليكون بمثابة المعيار الإفتراضي.\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "إحصائيات المجلة"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "عدد مشاهدات المؤلَّف (للمؤلفين حصراً)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "قبول"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "رفض"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "إعادة تقديم"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "يوم/أيام للتحكيم"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "يوم/أيام للنشر"
+
+msgid "manager.statistics.statistics.description"
+msgstr "نظام المجلات المفتوحة يحتسب الإحصائيات الآتية لكل مجلة. يتم إحتساب \"يوم/أيام للتحكيم\" بدءً من يوم تقديم طلب النشر (أو تعيين نسخة التحكيم) وانتهاءً بقرار المحرر الأولي، بينما \"يوم/أيام للنشر\" تحتسب للمؤلَّفات المقبولة للنشر بدءً من تأريخ رفعها الأول وحتى نشرها."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "الفقرات المنشورة"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "تحقق من الفقرات التي ستتاح للقراء ضمن (عن المجلة)."
+
+msgid "manager.statistics.statistics.note"
+msgstr "ملاحظة: النسب المئوية لطلبات النشر المحكمة قد لا تصل إلى 100 %، لأن الفقرات المعاد تقديمها قد تحتسب أو ترفض أو تكون قيد المعالجة."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "الأعداد المنشورة"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "إجمالي طلبات النشر"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "محكمة"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "القراء المسجلون"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "المستخدمون المسجلون"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "عدد المعينين"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "المحكمون"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "نقاط المحرر"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "عدد التحكيمات"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "إختر الأقسام التي تريد حساب إحصائيات التحكيم لهذه المجلة فيها."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "الاشتراكات"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "تنزيلات ملفات المؤلَّفات"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "مشاهدات صفحة الملخصات"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "ملخصات المؤلَّفات، عدد المشاهدات والتنزيلات"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "مشاهدات صفحة المجلة الرئيسية"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "مشاهدات صفحة محتويات العدد"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "تضييق النتائج حسب السياق (الإصدار و/أو المؤلَّف)."
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "تضييق النتائج حسب نوع المكون (مجلة، إصدار، مؤلَّف، لوح طباعي بصيغة pdf، ألواح طباعية أخرى) و/أو حسب الرمز التعريفي لمكون واحد أو أكثر."
+
+msgid "manager.subscriptionPolicies"
+msgstr "سياسات الاشتراك"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "الوصول المفتوح المؤجل"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "لطفاً، استعمل خانة التأشير."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "انتهاء صلاحية الاشتراك"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "عند انتهاء صلاحية الاشتراك، قد يفقد القراء إمكانية الوصول لكل المحتوى المتعلق بالاشتراك، أو قد يبقى بإمكانهم الوصول إلى المحتوى المنشور قبل انتهاء صلاحيته فقط."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "إنتهاء صلاحية كامل"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "يتم تقييد وصول القراء إلى كل المحتوى المتعلق بالاشتراك عند انتهاء صلاحيته."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "إنتهاء صلاحية جزئي"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "يتم تقييد وصول القراء إلى المحتوى المنشور بعد انتهاء الصلاحية، لكن يبقى وصولهم إلى محتوى الاشتراك المنشور قبل ذلك متاحاً."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} شهر/شهور"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} أسبوع/أسابيع"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "إشعار المشتركين بريدياً بعد انتهاء مدة الاشتراك"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "إشعار المشتركين بريدياً بعد انتهاء مدة الاشتراك."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "إشعار المشتركين بريدياً قبل انتهاء مدة الاشتراك."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "إشعار المشتركين بريدياً قبل انتهاء مدة الاشتراك."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "تذكيرات انتهاء صلاحية الاشتراك"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "رسائل التذكير الآلية (متاحة للتعديل من قبل رئيس تحرير المجلة عبر باب المراسلات المحضرة) يمكن إرسالها إلى المشتركين سواءً قبل انتهاء صلاحية اشتراكاتهم أو بعدها."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "إختر واحداً مما يأتي...:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "يمكن استعمال HTML في خانة النص (لحجم الخط ولونه... إلخ.)، مع معاملة الضغط على زر \"return\" على أنه <tt>&lt;br&gt;</tt>؛ إن محرر HTML يعمل مع المتصفح Firefox."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "لطفاً، إختر قيمة صائبة لعدد الأشهر بعد انتهاء صلاحية الاشتراك."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "لطفاً، إختر قيمة صائبة لعدد الأشهر قبل انتهاء صلاحية الاشتراك."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "لطفاً، إختر قيمة صائبة لعدد الأسابيع بعد انتهاء صلاحية الاشتراك."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "لطفاً، إختر قيمة صائبة لعدد الأسابيع قبل انتهاء صلاحية الاشتراك."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "سيكون للقراء المسجلين خيار استلام جدول المحتويات عبر البريد الالكتروني عندما يكون الإصدار متاحاً للوصول المفتوح."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على مدير الموقع تمكين خيار <tt>scheduled_tasks</tt> في ملف إعدادات نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "إشعارات التسديد عبر الإنترنت"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "إشعارات البريد الالكتروني الآلية (متاحة للتعديل من قبل رئيس تحرير المجلة عبر باب المراسلات المحضرة) يمكن إرسالها إلى مدير الاشتراكات عند إكتمال تسديد رسوم الاشتراكات عبر الإنترنت."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "إشعار مدير الاشتراكات عبر البريد الالكتروني عند شراء اشتراك منفرد عبر الإنترنت."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "إشعار مدير الاشتراكات عبر البريد الالكتروني عند شراء اشتراك مؤسساتي عبر الإنترنت (مستحسن)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "إشعار مدير الاشتراكات عبر البريد الالكتروني عند تجديد اشتراك منفرد عبر الإنترنت."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "إشعار مدير الاشتراكات عبر البريد الالكتروني عند تجديد اشتراك مؤسساتي عبر الإنترنت."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>ملاحظة:</strong> الاشتراكات المؤسساتية المشتراة عبر الإنترنت تتطلب المصادقة على المجال المعين ومديات IP ومن ثم تفعيل الاشتراك من قبل مدير الاشتراكات."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>ملاحظة:</strong> لتمكين هذه الخيارات، على رئيس تحرير المجلة تمكين وحدة التسديد عبر الإنترنت، بضمنها التسديد عبر الإنترنت للاشتراكات، تحت بند (رسوم القراء)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "خيارات الوصول المفتوح لمجلات الاشتراكات"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "مجلات الاشتراكات يمكنها توفير \"الوصول المفتوح المؤجل\" لمحتواها المنشور، فضلاً عن إتاحة \"الأرشفة الذاتية للمؤلف\" (وكلاهما يعززان معدل القراءة والاقتباس للمحتوى)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "معلومات الاشتراك"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "سيتم وضع أنواع الاشتراكات وتركيبة رسومها تلقائياً ضمن بند الاشتراكات في صفحة (عن المجلة)، مع اسم مدير الاشتراكات وعنوانه. يمكن إضافة معلومات أخرى هنا، تتعلق بالاشتراكات، مثل طرق التسديد أو الدعم لمشتركي الدول النامية أو ما شابه."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "مدير الاشتراكات"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "عنوان الاتصال المدرج تحت بند الاشتراكات في (عن المجلة)."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "لطفاً، أدخل عنواناً بريدياً صحيحاً."
+
+msgid "manager.subscriptions"
+msgstr "الاشتراكات"
+
+msgid "manager.individualSubscriptions"
+msgstr "الاشتراكات المنفردة"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "الاشتراكات المؤسساتية"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "ل أنت متأكد من رغبتك في تجديد هذا الاشتراك؟"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "هل أنت متأكد من رغبتك في حذف هذا الاشتراك؟"
+
+msgid "manager.subscriptions.summary"
+msgstr "ملخص الاشتراكات"
+
+msgid "manager.subscriptions.create"
+msgstr "أنشئ اشتراكاً جديداً"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "إنشاء"
+
+msgid "manager.subscriptions.renew"
+msgstr "تجديد"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "إنتهاء"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "تأريخ الإنتهاء"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "بدء"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "تأريخ البدء"
+
+msgid "manager.subscriptions.domain"
+msgstr "المجال"
+
+msgid "manager.subscriptions.edit"
+msgstr "تعديل الاشتراك"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "التعديل"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "مع الحالة"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "الجميع"
+
+msgid "manager.subscriptions.form.status"
+msgstr "الحالة"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "حالة الاشتراك مطلوبة حتماً."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "لطفاً، إختر حالة صحيحة للاشتراك."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "نوعية الاشتراك"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "نوع الاشتراك مطلوب حتماً."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "لطفاً، إختر نوعية صحيحة للاشتراك."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "تأريخ البدء"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "تأريخ بدء الاشتراك مطلوب حتماً."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "لطفاً، إختر تأريخاً صحيحاً لبدءالاشتراك."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "تأريخ الإنتهاء"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "تأريخ انتهاء الاشتراك مطلوب حتماً."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "نوع الاشتراك هذا ذو صلاحية لا تنتهي؛ لطفاً لا تعين تاريخ بدايته."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "نوع الاشتراك هذا ذو صلاحية لا تنتهي؛ لطفاً لا تعين تاريخ نهايته."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "لطفاً، إختر تأريخاً صحيحاً لانتهاءالاشتراك."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "ملاحظة: كل التعديلات أدناه ستشمل جميع مستعملي النظام."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "المستخدم"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "عنوان الاتصال"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "المستخدم مطلوب حتماً."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "لطفاً، إختر مستخدماً صحيحاً."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "لطفاً، إختر بلداً صحيحاً."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "أرسل رسالة للمستخدم تتضمن اسم الدخول وتفاصيل الاشتراك."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "لطفاً، استعمل خانة التأشير المتاحة."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "العضوية"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "الرقم المرجعي"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "أدخل بيانات العضوية إن كان نوع الاشتراك يتطلب أن يكون المشتركون منتمين إلى رابطة أو منظمة."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "نوع الاشتراك المحدد يتطلب بيانات العضوية."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "الملاحظات"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "المجال"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "اسم المؤسسة"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "اسم المؤسسة التعليمية مطلوب حتماً."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "عنوان المراسلة"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "إن تم إدخال المجال هنا، تصير مديات IP إختيارية.<br />القيمة الصائبة هي تسمية المجال (مثل: lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "نوع الاشتراك المحدد يتطلب المجال و/أو مدى IP للمصادقة على الاشتراك."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "لطفاً، أدخل مجالاً صحيحاً."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "مديات IP"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "إن تم إدخال مديات IP هنا، يصير المجال إختيارياً.<br />القيمة الصائبة تتضمن عنوان IP (مثل: 142.58.103.1)، أو مدى IP (مثل: 142.58.103.1 - 142.58.103.4)، أو مدى IP مع رمز بديل '*' (مثل: 142.58.*.*)، أو مدى IP مع CIDR (مثل: 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "لطفاً، أدخل مدى IP صحيح."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "إحذف"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "أضف"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "إحفظ، وأنشئ واحداً آخر"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "لغرض إشعار المستخدم عبر البريد الالكتروني، لا بد من تحديد عنوان الاتصال للاشتراكات واسم مسؤوله خلال تهيئة المجلة."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "هذا المستخدم لديه اشتراك مسبق مع هذه المجلة."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "لا بد من إنشاء نوع الاشتراك قبل الشروع بإضافة الاشتراكات الجديدة."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "مدى IP"
+
+msgid "manager.subscriptions.membership"
+msgstr "العضوية"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "الرقم المرجعي"
+
+msgid "manager.subscriptions.notes"
+msgstr "الملاحظات"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "لا اشتراكات"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "إختر عنوان الاتصال للاشتراك"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "إختر المستخدم"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "صلاحيات الوصول إلى الاشتراك تُمنح تلقائياً لمدير الاشتراكات في المجلة، وإلى المحررين ومحرري الأقسام والمصممين الطباعيين والمدققين ومصححي القراءة."
+
+msgid "manager.subscriptions.select"
+msgstr "إختر"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "الاشتراك أُنشئ بنجاح."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "نوعية الاشتراك"
+
+msgid "manager.subscriptions.user"
+msgstr "المستخدم"
+
+msgid "manager.subscriptions.contact"
+msgstr "عنوان الاتصال"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "اسم المؤسسة"
+
+msgid "manager.subscriptionTypes"
+msgstr "أنواع الاشتراكات"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "تحذير! جميع الاشتراكات التي من هذا النوع سيتم حذفها أيضاً من الموقع. هل أنت متأكد من رغبتك في المتابعة وحذف نوعية الاشتراك هذه؟?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "الكلفة"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "الاشتراكات"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "منفرد"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "مؤسساتي"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "إنشاء نوع اشتراك جديد"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "إنشاء"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "المدة"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "تعديل نوعية الاشتراك"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "تعديل"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "الكلفة"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "أدقل قيمة رقمية، مثل: 40 أو 40.00 بدون رموز، مثل: $."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "الكلفة ينبغي أن تكون رقماً موجباً."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "الكلفة مطلوبة حتماً."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "العملة"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "العملة مطلوبة حتماً."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "لطفاً، إختر عملة صحيحة."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "الوصف"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "تنتهي صلاحيته بعد"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "شهر/أشهر، مثل: 12"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "نافذ دوماً"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "لطفاً، استعمل الخيارات المتاحة لك."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "المدة"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "عدد أشهر الاشتراك، مثل: 12."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "المدة ينبغي أن تكون رقماً موجباً."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "المدة مطلوبة حتماً."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "الصيغة"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "صيغة نوعية الاشتراك مطلوبة حتماً."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "لطفاً، إختر صيغة صحيحة لنوعية الاشتراك."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "الاشتراكات"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "منفرد (يتم التحقق من المستخدم عند دخوله إلى الموقع)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "مؤسساتي (يتم التحقق من المشتركين عبر مجالهم أو عنوان IP لهم)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "لطفاً، استعمل الخيارات المتاحة لك."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "الاشتراكات تتطلب بيانات العضوية (مثلاً: للرابطة أو المنظمة أو الجمعية... إلخ.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "لطفاً، استعمل خانة التأشير المتاحة لك."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "الخيارات"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "لا تجعل هذه النوعية من الاشتراكات متاحة أو مرئية للعامة (مثلاً: تحت بند الاشتراكات في صفحة \"عن المجلة\")."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "لطفاً، استعمل خانة التأشير المتاحة لك."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "إحفظ وأنشئ واحداً آخر"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "تسمية النوع"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "اشتراك آخر بهذه التسمية موجود سلفاً."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "تسمية نوعية الاشتراك مطلوبة حتماً."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "نوعية الاشتراك"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "لم يتم إنشاء أنواع الاشتراكات بعد."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "أُنشِئت نوعية الاشتراك بنجاح."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "رابط إلى الصفحة التي تصف الاشتراكات المتاحة في المجلة."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "رابط إلى الصفحة التي تصف الاشتراك الحالي والاشتراكات السابقة للمستخدم."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "هذا الرابط سيظهر فقط إذا قام المستخدم بتسجيل دخوله إلى الموقع."
+
+msgid "manager.setup.categories"
+msgstr "التصنيفات"
+
+msgid "manager.setup.categories.description"
+msgstr "إختر التصنيفات الأكثر مناسبة من المجموعة المدرجة أعلاه. سيكون القراء قادرين على التصفح حسب الصنف من المجموعة الكاملة للمجلة."
+
+msgid "grid.category.path"
+msgstr "المسار"
+
+msgid "grid.action.addSection"
+msgstr "أضف قسماً"
+
+msgid "manager.setup.section.description"
+msgstr "المؤلفات الموجودة في الأعداد المنشورة للمجلة منظمة في أقسام، عادة باستعمال الأنماط أو نوعية المحتوى (مثلاً،  مقالات محكمة، بحوث... إلخ.)."
+
+msgid "settings.roles.gridDescription"
+msgstr "الأدوار هي مجموعات من المستخدمين في المجلة الذين تم منحهم صلاحيات بمستويات مختلفة مع مسارات عمل تتناسب معها ضمن المجلة. هناك خمسة مستويات للصلاحيات: رؤساء التحرير الذين لديهم حق الوصول إلى أي شيء في المجلة (كل المحتويات والإعدادات)؛ محررو الأقسام لديهم حق الوصول إلى كل المحتوى المعين لهم؛ مساعدو المجلة لهم حق وصول محدود إلى كل طلبات النشر التي تم تخصيصها حصرياً لهم من قبل مدير التحرير؛ المحكمون يمكنهم معاينة ومتابعة الطلبات التي عُينوا لها؛ والمؤلفون الذين يمكنهم معاينة ومعاملة حجم محدود من المعلومات التي تتعلق بطلباتهم. فضلاً عن ذلك، هناك خمس مهام مرحلية مختلفة يمكن منح الأدوار للوصول إليها: تقديم طلب النشر، التحكيم الدخلي، التحكيم، التحرير، ومرحلة الإنتاج."
+
+msgid "manager.publication.library"
+msgstr "المكتبة الناشرة"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "إستند عند منح الحقوق الفكرية للمؤلَّف الجديد على سنة"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "المؤلَّف: السنة الافتراضية ستعتبر هي نفس سنة النشر، كما في \"النشر على الماشي\"."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "العدد: السنة الافتراضية ستعتبر هي نفس سنة العدد."
+
+msgid "manager.setup.resetPermissions"
+msgstr "إعادة تعيين صلاحيات المؤلَّف"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "هل أنت متأكد من رغبتك في إعادة تعيين الصلاحيات الخاصة بكل المؤلفات؟ إن هذا الإجراء لا يمكن التراجع عنه"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "إزالة بيان الحقوق الفكرية ومعلومات الترخيص من كل المقالات المنشورة ما يعني إعادتها إلى الإعدادات الافتراضية الحالية للمجلة. هذا من شأنه إزالة كل بيانات الحقوق الفكرية والتراخيص المرتبطة بالمؤلفات الموجودة مسبقاً وبشكل نهائي. في بعض الأحيان، قد لا يكون مسموحاً لك قانونياً تعديل تراخيص الأعمال التي سبق نشرها بتراخيص أخرى. لطفاً، كن على حذر عند استعمال هذه الأداة واستشر خبيراً قانونياً إذا كنت غير متأكد من مساحة الحقوق التي تمتلكها بالنسبة إلى المقالات المنشورة في مجلتك."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "تمت إعادة تعيين صلاحيات الوصول إلى المقالات بنجاح."
+
+msgid "grid.genres.title.short"
+msgstr "المكونات"
+
+msgid "grid.genres.title"
+msgstr "مكونات المؤلفات"
+
+msgid "grid.genres.description"
+msgstr "هذه المكونات مستعملة لأغراض تسمية الملفات وهي مقدمة بشكل قائمة منسدلة عند رفع الملفات. إن النمط المعلم بعلامتي ## يسمح للمستخدم بربط الملف إما مع طلب النشر بأكمله  99Z أو مع مكون محدد بالرقم (مثلاً: 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "إعدادات الإضافة DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "المؤلفات"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "الأعداد"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "الألواح الطباعية"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "متطلبات الإضافة غير ملباة"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "لغرض استعمال هذه الإضافة، لطفاً، إذهب إلى فئة إضافة \"المعرف العام\"، قم بتمكين وتعريف إضافة DOI وقم بتحديد بادئة DOI صحيحة هناك."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "هذه الإضافة غير مهيئة بالكامل."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "لم يتم اختيار أي مكونات نشر لتعيين DOI ضمن إضافة DOI المعرف الرقمي العام، لذلك لن يكون هناك إمكانية للإيداع أو التصدير في هذه الإضافة."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "كلمة المرور"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "لطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "أي عدد"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "أي حالة"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "غير مودع"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "مؤشر أنه مسجل"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "مسجل"
+
+msgid "plugins.importexport.common.action"
+msgstr "إجراء"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "تصدير"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "مؤشر أنه مسجل"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "تسجيل"
+
+msgid "plugins.importexport.common.validation"
+msgstr "تحقق من نصوص XML قبل التصدير والتسجيل."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "لم يتم إختيار أي مكون."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "تعذر تحويل المكونات المختارة."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "خطأ في XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "ملف الإخراج {$param} غير قابل للكتابة."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "ملف الإدخال {$param} غير قابل للكتابة."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "التسجيل لم ينجح! أبلغ ملقم تسجيل DOI عن خطأ: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "نجحت عملية التسجيل!"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "بادئة معرف DOI مفقودة للمجلة الموجودة في المسار {$path}."
+
+msgid "plugins.importexport.common.cliError"
+msgstr "خطأ:"
+
+msgid "plugins.importexport.common.error.unknownJournal"
+msgstr "المسار المخصص للمجلة، \"{$journalPath}\"، غير موجود."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "المكونات المحددة تعذر العثور عليها."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "أرسل نسخة إلى عنوان الاتصال الرئيسي، المعرَّف ضمن إعدادات المجلة."
+
+msgid "stats.publications.details"
+msgstr "تفاصيل المقالة"
+
+msgid "stats.publications.none"
+msgstr "تعذر العثور على مقالات ذات إحصائيات استعمال مطابقة لهذه المعايير."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "إجمالي معاينات الملخص حسب التاريخ"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "إجمالي معاينات الملف حسب التاريخ"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} من {$total} مقالة"
+
+msgid "stats.publications.abstracts"
+msgstr "الملخصات"
+
+msgid "stats.publications.galleys"
+msgstr "الملفات"

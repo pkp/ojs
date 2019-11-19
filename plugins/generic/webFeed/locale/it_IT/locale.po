@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:33+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:33+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Feed della rivista"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Questo plugin genera il feed RSS/Atom per il fascicolo corrente."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Impostazioni"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Mostra il link ai feed solo sulle pagine dell'articolo."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Mostra il link ai feed sulla home page e sulle pagine dei fascicoli."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Mostra il link ai feed su tutte le pagine della rivista."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Mostra gli articoli pubblicati nel fascicolo corrente"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Mostra un numero fisso degli articoli più recenti."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "articoli pubblicati più recenti."
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Per favore inserisci un intero positivo per gli articoli recenti pubblicati"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Lodo Atom"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Logo RSS2"
