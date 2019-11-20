@@ -31,7 +31,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
+			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
 	}
 
 
