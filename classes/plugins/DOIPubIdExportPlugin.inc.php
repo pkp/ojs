@@ -44,7 +44,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 					$doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());
 					$templateMgr->assign(array(
 						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enablePublicationDoi'),
-						'exportIssues' => $doiPlugin->getSetting($context->getId(), 'enableIssueDoi'),
 						'exportRepresentations' => $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi'),
 					));
 				}
@@ -73,9 +72,9 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Mark selected submissions or issues as registered.
+	 * Mark selected submissions as registered.
 	 * @param $context Context
-	 * @param $objects array Array of published submissions, issues or galleys
+	 * @param $objects array Array of published submissions or galleys
 	 */
 	function markRegistered($context, $objects) {
 		foreach ($objects as $object) {
@@ -92,7 +91,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	 * when several DOI registration plug-ins
 	 * are active at the same time.
 	 * @param $context Context
-	 * @param $object Issue|Submission|ArticleGalley
+	 * @param $object Submission|ArticleGalley
 	 * @param $testPrefix string
 	 */
 	function saveRegisteredDoi($context, $object, $testPrefix = '10.1234') {
@@ -141,31 +140,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Retrieve all unregistered issues.
-	 * @param $context Context
-	 * @return array
-	 */
-	function getUnregisteredIssues($context) {
-		// Retrieve all issues that have not yet been registered.
-		$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-		$issuesFactory = $issueDao->getExportable(
-			$context->getId(),
-			$this->getPubIdType(),
-			$this->getPluginSettingsPrefix(). '::' . DOI_EXPORT_REGISTERED_DOI,
-			null,
-			null
-		);
-		$issues = $issuesFactory->toArray();
-		// Cache issues.
-		$cache = $this->getCache();
-		foreach ($issues as $issue) {
-			$cache->add($issue, null);
-			unset($issue);
-		}
-		return $issues;
-	}
-
-	/**
 	 * Retrieve all unregistered galleys.
 	 * @param $context Context
 	 * @return array
@@ -199,22 +173,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		return array_filter($submissions, function($submission) {
 			return $submission->getData('status') === STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
 		});
-	}
-
-	/**
-	 * Get published issues with a DOI assigned from issue IDs.
-	 * @param $issueIds array
-	 * @param $context Context
-	 * @return array
-	 */
-	function getPublishedIssues($issueIds, $context) {
-		$publishedIssues = array();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		foreach ($issueIds as $issueId) {
-			$publishedIssue = $issueDao->getById($issueId, $context->getId());
-			if ($publishedIssue && $publishedIssue->getStoredPubId('doi')) $publishedIssues[] = $publishedIssue;
-		}
-		return $publishedIssues;
 	}
 
 	/**

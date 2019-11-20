@@ -44,7 +44,6 @@ msgstr "The abstract must be {$wordCount} words or less."
 msgid "submission.submit.noContext"
 msgstr "This submission's journal could not be found."
 
-
 msgid "submission.issueEntry"
 msgstr "Metadata"
 
@@ -56,8 +55,6 @@ msgstr "Galley appears in issue entry"
 
 msgid "grid.action.issueEntry"
 msgstr "View this submission's metadata"
-
-
 
 msgid "submission.issueEntry.modalTitle"
 msgstr "Submission and Publication Metadata"
@@ -71,8 +68,6 @@ msgstr "Publication"
 msgid "submission.issueEntry.confirm"
 msgstr "Create an issue entry for this preprint based on the metadata below."
 
-
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "The preprint galley "{$galleyFormatName}" is made available."
 
@@ -81,8 +76,6 @@ msgstr "The preprint galley "{$galleyFormatName}" is made unavailable."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "The submission's public identifiers updated."
-
-
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Format Approval"
@@ -95,8 +88,6 @@ msgstr "<p>This galley will <em>be made available</em> to readers.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Make this galley available"
-
-
 
 msgid "submission.galleyFiles"
 msgstr "Galley Files"
@@ -124,7 +115,6 @@ msgstr "Are you sure you wish to submit this preprint to the server?"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "The submission's issue metadata was updated."
-
 
 msgid "submission.upload.fileContents"
 msgstr "Preprint Component"
@@ -168,10 +158,8 @@ msgstr "Your abstract is too long. Please shorten it to below the word limit ind
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Please select the contributor's role."
 
-
 msgid "submission.citationFormat.notFound"
 msgstr "The requested citation format could not be retrieved."
-
 
 msgid "submission.metadataDescription"
 msgstr "These specifications are based on the Dublin Core metadata set, an international standard used to describe server content."
@@ -179,18 +167,14 @@ msgstr "These specifications are based on the Dublin Core metadata set, an inter
 msgid "section.any"
 msgstr "Any Series"
 
-
 msgid "submission.sectionOptions"
 msgstr "Series Options"
-
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Items"
 
 msgid "catalog.category.heading"
 msgstr "All Items"
-
-
 
 msgid "galley.editPublishedDisabled"
 msgstr "The galleys of this publication can not be edited because it has already been published."
@@ -231,4 +215,3 @@ msgstr "Published in <a href=\"{$issueUrl}\">{$issueName}</a>."
 msgid "publication.scheduledIn"
 msgstr "Scheduled for publication in <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-</locale>

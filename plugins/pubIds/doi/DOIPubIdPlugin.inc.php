@@ -30,13 +30,10 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			HookRegistry::register('Publication::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::validate', array($this, 'validatePublicationDoi'));
-			HookRegistry::register('Issue::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
-			HookRegistry::register('Issue::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Schema::get::galley', array($this, 'addToSchema'));
 			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Publication::getProperties::values', array($this, 'modifyObjectPropertyValues'));
-			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Form::config::before', array($this, 'addPublicationFormFields'));
 			HookRegistry::register('Form::config::before', array($this, 'addPublishFormNotice'));
@@ -174,23 +171,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			__('plugins.pubIds.doi.editor.clearObjectsDoi')
 		);
 
-		if (is_a($pubObject, 'Issue')) {
-			// Clear issue objects pub ids
-			$linkActions['clearIssueObjectsPubIdsLinkActionDoi'] = new LinkAction(
-				'clearObjectsPubIds',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm'),
-					__('common.delete'),
-					$request->url(null, null, 'clearIssueObjectsPubIds', null, $userVars),
-					'modal_delete'
-				),
-				__('plugins.pubIds.doi.editor.clearIssueObjectsDoi'),
-				'delete',
-				__('plugins.pubIds.doi.editor.clearIssueObjectsDoi')
-			);
-		}
-
 		return $linkActions;
 	}
 
@@ -199,7 +179,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 */
 	function getSuffixPatternsFieldNames() {
 		return  array(
-			'Issue' => 'doiIssueSuffixPattern',
 			'Publication' => 'doiPublicationSuffixPattern',
 			'Representation' => 'doiRepresentationSuffixPattern'
 		);
@@ -247,16 +226,10 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	public function getCitationData($hookname, $args) {
 		$citationData = $args[0];
 		$article = $args[2];
-		$issue = $args[3];
+		#$issue = $args[3];
 		$journal = $args[4];
 
-		if ($issue && $issue->getPublished()) {
-			$pubId = $article->getStoredPubId($this->getPubIdType());
-		} else {
-			$pubId = $this->getPubId($article);
-		}
-
-		if (!$pubId) {
+		if (!$this->getPubId($article)) {
 			return;
 		}
 
@@ -333,13 +306,13 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	}
 
 	/**
-	 * Add DOI to submission, issue or galley properties
+	 * Add DOI to submission or galley properties
 	 *
 	 * @param $hookName string <Object>::getProperties::summaryProperties or
 	 *  <Object>::getProperties::fullProperties
 	 * @param $args array [
 	 * 		@option $props array Existing properties
-	 * 		@option $object Submission|Issue|Galley
+	 * 		@option $object Submission|Galley
 	 * 		@option $args array Request args
 	 * ]
 	 *
@@ -352,12 +325,12 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	}
 
 	/**
-	 * Add DOI submission, issue or galley values
+	 * Add DOI submission or galley values
 	 *
 	 * @param $hookName string <Object>::getProperties::values
 	 * @param $args array [
 	 * 		@option $values array Key/value store of property values
-	 * 		@option $object Submission|Issue|Galley
+	 * 		@option $object Submission|Galley
 	 * 		@option $props array Requested properties
 	 * 		@option $args array Request args
 	 * ]
@@ -368,11 +341,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$values =& $args[0];
 		$object = $args[1];
 		$props = $args[2];
-
-		// DOIs are not supported for IssueGalleys
-		if (get_class($object) === 'IssueGalley') {
-			return;
-		}
 
 		// DOIs are already added to property values for Publications and Galleys
 		if (get_class($object) === 'Publication' || get_class($object) === 'ArticleGalley') {
@@ -406,7 +374,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		$suffixType = $this->getSetting($form->submissionContext->getId(), 'doiSuffix');
 		$pattern = '';
 		if ($suffixType === 'default') {
-			$pattern = '%j.v%vi%i.%a';
+			$pattern = '%j.%a';
 		} elseif ($suffixType === 'pattern') {
 			$pattern = $this->getSetting($form->submissionContext->getId(), 'doiPublicationSuffixPattern');
 		}
@@ -434,17 +402,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			];
 			if ($form->publication->getData('pub-id::publisher-id')) {
 				$fieldData['publisherId'] = $form->publication->getData('pub-id::publisher-id');
-			}
-			if ($form->publication->getData('pages')) {
-				$fieldData['pages'] = $form->publication->getData('pages');
-			}
-			if ($form->publication->getData('issueId')) {
-				$issue = Services::get('issue')->get($form->publication->getData('issueId'));
-				if ($issue) {
-					$fieldData['issueNumber'] = $issue->getNumber() ?? '';
-					$fieldData['issueVolume'] = $issue->getVolume() ?? '';
-					$fieldData['year'] = $issue->getYear() ?? '';
-				}
 			}
 			if ($suffixType === 'default') {
 				$fieldData['i18n']['missingParts'] = __('plugins.pubIds.doi.editor.missingIssue');

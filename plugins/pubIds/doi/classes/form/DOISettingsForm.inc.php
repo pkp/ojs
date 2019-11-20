@@ -59,14 +59,7 @@ class DOISettingsForm extends Form {
 		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		$form = $this;
-		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', function($enableIssueDoi) use ($form) {
-			return $form->getData('enableIssueDoi') || $form->getData('enablePublicationDoi') || $form->getData('enableRepresentationDoi');
-		}));
 		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));
-		$this->addCheck(new FormValidatorCustom($this, 'doiIssueSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired', function($doiIssueSuffixPattern) use ($form) {
-			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enableIssueDoi')) return $doiIssueSuffixPattern != '';
-			return true;
-		}));
 		$this->addCheck(new FormValidatorCustom($this, 'doiPublicationSuffixPattern', 'required', 'plugins.pubIds.doi.manager.settings.doiPublicationSuffixPatternRequired', function($doiPublicationSuffixPattern) use ($form) {
 			if ($form->getData('doiSuffix') == 'pattern' && $form->getData('enablePublicationDoi')) return $doiPublicationSuffixPattern != '';
 			return true;
@@ -147,12 +140,10 @@ class DOISettingsForm extends Form {
 	//
 	function _getFormFields() {
 		return array(
-			'enableIssueDoi' => 'bool',
 			'enablePublicationDoi' => 'bool',
 			'enableRepresentationDoi' => 'bool',
 			'doiPrefix' => 'string',
 			'doiSuffix' => 'string',
-			'doiIssueSuffixPattern' => 'string',
 			'doiPublicationSuffixPattern' => 'string',
 			'doiRepresentationSuffixPattern' => 'string',
 		);

@@ -5,7 +5,7 @@
  * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Edit custom DOI suffix for an object (issue, submission, galley)
+ * Edit custom DOI suffix for an object (submission, galley)
  *}
 
 {assign var=pubObjectType value=$pubIdPlugin->getPubObjectType($pubObject)}
@@ -49,21 +49,4 @@
 			{/if}
 		{/if}
 	{/fbvFormArea}
-{/if}
-{* issue pub object *}
-{if $pubObjectType == 'Issue'}
-	{assign var=enablePublicationDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enablePublicationDoi")}
-	{assign var=enableRepresentationDoi value=$pubIdPlugin->getSetting($currentContext->getId(), "enableRepresentationDoi")}
-	{if $enablePublicationDoi || $enableRepresentationDoi}
-		{if !$formArea}
-			{assign var="formAreaTitle" value="plugins.pubIds.doi.editor.doi"}
-		{else}
-			{assign var="formAreaTitle" value=""}
-		{/if}
-		{fbvFormArea id="pubIdDOIFormArea" class="border" title=$formAreaTitle}
-			{fbvFormSection list="true" description="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"}
-				{include file="linkAction/linkAction.tpl" action=$clearIssueObjectsPubIdsLinkActionDoi contextId="publicIdentifiersForm"}
-			{/fbvFormSection}
-		{/fbvFormArea}
-	{/if}
 {/if}
