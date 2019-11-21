@@ -793,10 +793,10 @@ msgstr "<p>Upgrade of PPS to version {$version} has completed successfully.</p>"
 "<p>If you have questions or comments, please visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
 
 msgid "site.upgradeAvailable.admin"
-msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please visit <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> to download the most recent version and find upgrade instructions."
+msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please visit <a href=\"http://pkp.sfu.ca/pps_download\" target=\"_new\">this page</a> to download the most recent version and find upgrade instructions."
 
 msgid "site.upgradeAvailable.manager"
-msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>."
+msgstr "There is a new version of PPS available! You are currently using PPS {$currentVersion}. The most recent version is PPS {$latestVersion}. Please contact your Site Administrator ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new release. More information can be found <a href=\"http://pkp.sfu.ca/pps_download\" target=\"_new\">here</a>."
 
 msgid "log.author.documentRevised"
 msgstr "{$authorName} has revised preprint {$submissionId}. The new file ID is {$fileId}."

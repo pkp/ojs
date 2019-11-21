@@ -42,7 +42,7 @@ msgstr ""
 "<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>"
 "\t<ul>"
 "\t\t<li>Your server does not have or allow execution of the GNU \"tar\" utility.</li>"
-"\t\t<li>OJS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>"
+"\t\t<li>PPS is unable to modify the locale registry file, typically \"registry/locales.xml\".</li>"
 "\t</ul>"
 "<p>Language packs can be manually downloaded from the <a href=\"http://pkp.sfu.ca\">PKP web site</a>.</p>"
 
@@ -77,7 +77,7 @@ msgid "admin.languages.download.cannotModifyRegistry"
 msgstr "Cannot add the new locale to the locale registry file, typically "registry/locales.xml"."
 
 msgid "admin.auth.ojs"
-msgstr "OJS User Database"
+msgstr "PPS User Database"
 
 msgid "admin.auth.enableSyncProfiles"
 msgstr "Enable user profile synchronization (if supported by this authentication plugin). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within PPS will be automatically updated on the remote source. If this option is not enabled PPS profile information will be kept separate from remote source profile information."
@@ -89,13 +89,13 @@ msgid "admin.auth.enableCreateUsers"
 msgstr "Enable user creation (if supported by this authentication plugin). Users created within PPS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, PPS accounts created through user registration will also be added to the remote authentication source."
 
 msgid "admin.systemVersion"
-msgstr "OJS Version"
+msgstr "PPS Version"
 
 msgid "admin.systemConfiguration"
-msgstr "OJS Configuration"
+msgstr "PPS Configuration"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "OJS configuration settings from <tt>config.inc.php</tt>."
+msgstr "PPS configuration settings from <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr "You will automatically be enrolled as the manager of this server. After creating a new server, you will be redirected to its settings wizard, to complete the initial server setup."
@@ -137,7 +137,7 @@ msgid "admin.contexts.contextDescription"
 msgstr "Server description"
 
 msgid "admin.journal.pathImportInstructions"
-msgstr "Existing server path or path to create (e.g., "ojs")."
+msgstr "Existing server path or path to create (e.g., "pps")."
 
 msgid "admin.journals.transcode"
 msgstr "Transcode preprint metadata from ISO8859-1"

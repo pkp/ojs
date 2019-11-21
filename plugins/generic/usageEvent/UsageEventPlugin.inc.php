@@ -27,7 +27,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	function getEventHooks() {
 		return array_merge(parent::getEventHooks(), array(
 			'PreprintHandler::download',
-			'IssueHandler::download',
 			'HtmlArticleGalleyPlugin::articleDownload',
 			'HtmlArticleGalleyPlugin::articleDownloadFinished'
 		));
@@ -57,7 +56,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					$op = $router->getRequestedOp($request);
 					$args = $router->getRequestedArgs($request);
 
-					$wantedPages = array('issue', 'preprint');
+					$wantedPages = array('preprint');
 					$wantedOps = array('index', 'view');
 
 					if (!in_array($page, $wantedPages) || !in_array($op, $wantedOps)) break;
@@ -69,23 +68,15 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					if ($op == 'view' && count($args) > 1) break;
 
 					$journal = $templateMgr->getTemplateVars('currentContext');
-					$issue = $templateMgr->getTemplateVars('issue');
 					$submission = $templateMgr->getTemplateVars('preprint');
 
 					// No published objects, no usage event.
-					if (!$journal && !$issue && !$submission) break;
+					if (!$journal && !$submission) break;
 
 					if ($journal) {
 						$pubObject = $journal;
 						$assocType = ASSOC_TYPE_JOURNAL;
 						$canonicalUrlOp = '';
-					}
-
-					if ($issue) {
-						$pubObject = $issue;
-						$assocType = ASSOC_TYPE_ISSUE;
-						$canonicalUrlParams = array($issue->getId());
-						$idParams = array('s' . $issue->getId());
 					}
 
 					if ($submission) {
@@ -97,18 +88,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					$downloadSuccess = true;
 					$canonicalUrlOp = $op;
-					break;
-
-					// Issue galley.
-				case 'IssueHandler::download':
-					$assocType = ASSOC_TYPE_ISSUE_GALLEY;
-					$issue = $hookArgs[0];
-					$galley = $hookArgs[1];
-					$canonicalUrlOp = 'download';
-					$canonicalUrlParams = array($issue->getId(), $galley->getId());
-					$idParams = array('i' . $issue->getId(), 'f' . $galley->getId());
-					$downloadSuccess = false;
-					$pubObject = $galley;
 					break;
 
 					// Preprint file.
@@ -142,7 +121,6 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	protected function getHtmlPageAssocTypes() {
 		return array(
 			ASSOC_TYPE_JOURNAL,
-			ASSOC_TYPE_ISSUE,
 			ASSOC_TYPE_SUBMISSION,
 		);
 	}
@@ -155,5 +133,4 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	}
 
 }
-
 

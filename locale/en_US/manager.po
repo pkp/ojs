@@ -27,7 +27,7 @@ msgid "manager.distribution.publishingMode"
 msgstr "Publishing Mode"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "OJS will not be used to publish the server's contents online."
+msgstr "PPS will not be used to publish the server's contents online."
 
 msgid "manager.distribution.publishingMode.openAccess"
 msgstr "The server will provide open access to its contents."
@@ -60,7 +60,7 @@ msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "This will replace any locale-specific server settings you had for this locale"
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS can be made available to users in any of several supported languages. As well, PPS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by PPS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the PPS documentation."
+msgstr "PPS can be made available to users in any of several supported languages. As well, PPS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by PPS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the PPS documentation."
 
 msgid "manager.languages.noneAvailable"
 msgstr "Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this server."
@@ -349,7 +349,7 @@ msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "For Authors to Index Their Work"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "OJS adheres to the <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Server Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work."
+msgstr "PPS adheres to the <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Server Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work."
 
 msgid "manager.setup.form.issnInvalid"
 msgstr "The specified ISSN is not valid."
@@ -718,7 +718,7 @@ msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Days to publication"
 
 msgid "manager.statistics.statistics.description"
-msgstr "OJS calculates the following statistics for each server. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication."
+msgstr "PPS calculates the following statistics for each server."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Items published"
