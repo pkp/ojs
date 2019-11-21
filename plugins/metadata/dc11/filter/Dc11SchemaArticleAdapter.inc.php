@@ -113,15 +113,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Type
 		$driverType = 'info:eu-repo/semantics/preprint';
 		$dc11Description->addStatement('dc:type', $driverType, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-		$types = $section->getIdentifyType(null);
-		$types = array_merge_recursive(
-			empty($types)?array(AppLocale::getLocale() => __('metadata.pkp.peerReviewed')):$types,
-			(array) $article->getType(null)
-		);
 		$this->_addLocalizedElements($dc11Description, 'dc:type', $types);
 		$driverVersion = 'info:eu-repo/semantics/publishedVersion';
 		$dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-
 
 		// Format
 		if (is_a($article, 'Submission')) {

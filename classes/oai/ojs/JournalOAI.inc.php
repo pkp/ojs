@@ -61,7 +61,7 @@ class JournalOAI extends OAI {
 	 * @return string
 	 */
 	function articleIdToIdentifier($articleId) {
-		return 'oai:' . $this->config->repositoryId . ':' . 'article/' . $articleId;
+		return 'oai:' . $this->config->repositoryId . ':' . 'preprint/' . $articleId;
 	}
 
 	/**
@@ -70,7 +70,7 @@ class JournalOAI extends OAI {
 	 * @return int
 	 */
 	function identifierToArticleId($identifier) {
-		$prefix = 'oai:' . $this->config->repositoryId . ':' . 'article/';
+		$prefix = 'oai:' . $this->config->repositoryId . ':' . 'preprint/';
 		if (strstr($identifier, $prefix)) {
 			return (int) str_replace($prefix, '', $identifier);
 		} else {
