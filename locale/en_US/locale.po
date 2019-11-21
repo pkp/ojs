@@ -484,6 +484,9 @@ msgstr ""
 msgid "submission.layout.publicGalleyId"
 msgstr "Public Galley Identifier"
 
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "This galley will be available at a separate website."
+
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Public galley identification already exists."
 

@@ -65,9 +65,6 @@ msgstr "Submission"
 msgid "submission.issueEntry.publicationMetadata"
 msgstr "Publication"
 
-msgid "submission.issueEntry.confirm"
-msgstr "Create an issue entry for this preprint based on the metadata below."
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "The preprint galley "{$galleyFormatName}" is made available."
 
@@ -114,7 +111,7 @@ msgid "submission.confirmSubmit"
 msgstr "Are you sure you wish to submit this preprint to the server?"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "The submission's issue metadata was updated."
+msgstr "The submission's metadata was updated."
 
 msgid "submission.upload.fileContents"
 msgstr "Preprint Component"
@@ -182,36 +179,15 @@ msgstr "The galleys of this publication can not be edited because it has already
 msgid "galley.publicationNotFound"
 msgstr "The publication for this galley could not be found."
 
-msgid "publication.datePublished.description"
-msgstr "The publication date will be set automatically when the issue is published. Do not enter a publication date unless the article was previously published elsewhere and you need to backdate it."
-
 msgid "publication.invalidSection"
 msgstr "The section for this publication could not be found."
 
-msgid "publication.invalidIssue"
-msgstr "The issue for this publication could not be found."
-
 msgid "publication.journalEntry"
-msgstr "Journal Entry"
+msgstr "Preprint Entry"
 
 msgid "publication.journalEntry.success"
 msgstr "The journal entry details have been updated."
 
 msgid "publication.publish.confirmation"
 msgstr "All publication requirements have been met. Are you sure you want to publish this?"
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr "All publication requirements have been met. This will be published when {$issue} is published. Are you sure you want to schedule this for publication?"
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr "All publication requirements have been met. This will be published immediately in {$issue}. Are you sure you want to publish this?"
-
-msgid "publication.required.issue"
-msgstr "The publication must be assigned to an issue before it can be published."
-
-msgid "publication.publishedIn"
-msgstr "Published in <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.scheduledIn"
-msgstr "Scheduled for publication in <a href=\"{$issueUrl}\">{$issueName}</a>."
 

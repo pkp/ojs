@@ -72,6 +72,34 @@ class SettingsHandler extends ManagementHandler {
 	 */
 	function distribution($args, $request) {
 		parent::distribution($args, $request);
-		TemplateManager::getManager($request)->display('management/distribution.tpl');
+		$templateMgr = TemplateManager::getManager($request);
+		$context = $request->getContext();
+		$router = $request->getRouter();
+		$dispatcher = $request->getDispatcher();
+
+		$apiUrl = $dispatcher->url($request, ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+
+		$supportedFormLocales = $context->getSupportedFormLocales();
+		$localeNames = AppLocale::getAllLocales();
+		$locales = array_map(function($localeKey) use ($localeNames) {
+			return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
+		}, $supportedFormLocales);
+
+		$accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
+
+		// Add forms to the existing settings data
+		$settingsData = $templateMgr->getTemplateVars('settingsData');
+		$settingsData['components'][$accessForm->id] = $accessForm->getConfig();
+		$templateMgr->assign('settingsData', $settingsData);
+
+		// Hook into the settings templates to add the appropriate tabs
+		HookRegistry::register('Template::Settings::distribution', function($hookName, $args) {
+			$templateMgr = $args[1];
+			$output = &$args[2];
+			$output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');
+			return false;
+		});
+		$templateMgr->display('management/distribution.tpl');
 	}
 }
+

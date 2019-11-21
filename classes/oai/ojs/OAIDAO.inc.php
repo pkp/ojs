@@ -15,7 +15,6 @@
  */
 
 import('lib.pkp.classes.oai.PKPOAIDAO');
-import('classes.issue.Issue');
 
 class OAIDAO extends PKPOAIDAO {
 
@@ -23,13 +22,11 @@ class OAIDAO extends PKPOAIDAO {
  	var $journalDao;
  	var $sectionDao;
 	var $articleGalleyDao;
-	var $issueDao;
  	var $authorDao;
  	var $journalSettingsDao;
 
  	var $journalCache;
 	var $sectionCache;
-	var $issueCache;
 
  	/**
 	 * Constructor.
@@ -39,7 +36,6 @@ class OAIDAO extends PKPOAIDAO {
 		$this->journalDao = DAORegistry::getDAO('JournalDAO');
 		$this->sectionDao = DAORegistry::getDAO('SectionDAO');
 		$this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->authorDao = DAORegistry::getDAO('AuthorDAO');
 		$this->journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
@@ -63,18 +59,6 @@ class OAIDAO extends PKPOAIDAO {
 			$this->journalCache[$journalId] = $this->journalDao->getById($journalId);
 		}
 		return $this->journalCache[$journalId];
-	}
-
-	/**
-	 * Cached function to get an issue
-	 * @param $issueId int
-	 * @return object
-	 */
-	function &getIssue($issueId) {
-		if (!isset($this->issueCache[$issueId])) {
-			$this->issueCache[$issueId] = $this->issueDao->getById($issueId);
-		}
-		return $this->issueCache[$issueId];
 	}
 
 	/**
@@ -182,13 +166,11 @@ class OAIDAO extends PKPOAIDAO {
 
 		if ($isRecord) {
 			$submission = Services::get('submission')->get($articleId);
-			$issue = $this->getIssue($row['issue_id']);
 			$galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
 
 			$record->setData('article', $submission);
 			$record->setData('journal', $journal);
 			$record->setData('section', $section);
-			$record->setData('issue', $issue);
 			$record->setData('galleys', $galleys);
 		}
 
@@ -222,34 +204,30 @@ class OAIDAO extends PKPOAIDAO {
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
-			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
+			'SELECT	a.last_modified AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
 				s.section_id AS section_id,
-				i.issue_id,
 				NULL AS tombstone_id,
 				NULL AS set_spec,
 				NULL AS oai_identifier
 			FROM
 				submissions a
 				JOIN publications p ON (a.current_publication_id = p.publication_id)
-				JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name=\'issueId\')
-				JOIN issues i ON (i.issue_id = psissue.setting_value)
 				JOIN sections s ON (s.section_id = p.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
 				JOIN journal_settings jsoai ON (jsoai.journal_id = j.journal_id AND jsoai.setting_name=? AND jsoai.setting_value=\'1\')
-			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ?
+			WHERE	j.enabled = 1 AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND p.section_id = ?':'') . '
-				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
-				' . ($until?' AND GREATEST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
+				' . ($from?' AND a.last_modified >= ' . $this->datetimeToDB($from):'') . '
+				' . ($until?' AND a.last_modified <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND a.submission_id = ?':'') . '
 			UNION
 			SELECT	dot.date_deleted AS last_modified,
 				dot.data_object_id AS submission_id,
 				' . (isset($journalId) ? 'tsoj.assoc_id' : 'NULL') . ' AS assoc_id,' . '
 				' . (isset($sectionId)? 'tsos.assoc_id' : 'NULL') . ' AS section_id,
-				NULL AS issue_id,
 				dot.tombstone_id,
 				dot.set_spec,
 				dot.oai_identifier
@@ -264,6 +242,8 @@ class OAIDAO extends PKPOAIDAO {
 			ORDER BY ' . $orderBy,
 			$params
 		);
+
+		error_log(print_r($result,true));
 		return $result;
 	}
 }

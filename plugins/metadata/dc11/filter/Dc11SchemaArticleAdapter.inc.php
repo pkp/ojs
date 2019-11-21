@@ -64,9 +64,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		$oaiDao = DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
 		$journal = $oaiDao->getJournal($article->getData('contextId'));
 		$section = $oaiDao->getSection($article->getSectionId());
-		if (is_a($article, 'Submission')) { /* @var $article Submission */
-			$issue = $oaiDao->getIssue($article->getCurrentPublication()->getData('issueId'));
-		} else $issue = null;
 
 		$dc11Description = $this->instantiateMetadataDescription();
 
@@ -111,12 +108,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 
 		// Date
 		if (is_a($article, 'Submission')) {
-			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
-			elseif (isset($issue) && $issue->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($issue->getDatePublished())));
-		}
+			if ($article->getDatePublished()) $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));		}
 
 		// Type
-		$driverType = 'info:eu-repo/semantics/article';
+		$driverType = 'info:eu-repo/semantics/preprint';
 		$dc11Description->addStatement('dc:type', $driverType, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 		$types = $section->getIdentifyType(null);
 		$types = array_merge_recursive(
@@ -139,30 +134,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 
 		// Identifier: URL
-		import('classes.issue.IssueAction');
-		$issueAction = new IssueAction();
 		$request = Application::get()->getRequest();
-		$includeUrls = $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
-		if (is_a($article, 'Submission') && $includeUrls) {
-			$dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', array($article->getBestId())));
-		}
-
-		// Source (journal title, issue id and pages)
-		$sources = $journal->getName(null);
-		$pages = $article->getPages();
-		if (!empty($pages)) $pages = '; ' . $pages;
-		foreach ($sources as $locale => $source) {
-			if (is_a($article, 'Submission')) {
-				$sources[$locale] .= '; ' . $issue->getIssueIdentification(array(), $locale);
-			}
-			$sources[$locale] .=  $pages;
-		}
-		$this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
-		if ($issn = $journal->getData('onlineIssn')) {
-			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-		}
-		if ($issn = $journal->getData('printIssn')) {
-			$dc11Description->addStatement('dc:source', $issn, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+		if (is_a($article, 'Submission')) {
+			$dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'preprint', 'view', array($article->getBestId())));
 		}
 
 		// Get galleys and supp files.
@@ -198,9 +172,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Public identifiers
 		$pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($issue && $pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
-				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-			}
 			if ($pubArticleId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:identifier', $pubArticleId);
 			}
@@ -222,7 +193,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 		if ($licenseUrl = $article->getLicenseURL()) $dc11Description->addStatement('dc:rights', $licenseUrl);
 
-		HookRegistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, $article, $journal, $issue, &$dc11Description));
+		HookRegistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', array($this, $article, $journal, &$dc11Description));
 
 		return $dc11Description;
 	}

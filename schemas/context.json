@@ -59,6 +59,13 @@
 				"nullable"
 			]
 		},
+		"enableOai": {
+			"type": "boolean",
+			"default": 1,
+			"validation": [
+				"nullable"
+			]
+		},
 		"sponsoringOrganization": {
 			"type": "string",
 			"validation": [
