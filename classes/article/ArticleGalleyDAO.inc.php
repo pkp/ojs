@@ -141,7 +141,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 			'SELECT	sf.*, g.*
 			FROM	publication_galleys g
 				INNER JOIN publications p ON (p.publication_id = g.publication_id)
-				LEFT JOIN submisssions s ON (s.submission_id = p.submission_id)
+				LEFT JOIN submissions s ON (s.submission_id = p.submission_id)
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
 				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision)
 			WHERE	s.context_id = ?
