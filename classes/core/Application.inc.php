@@ -58,7 +58,7 @@ class Application extends PKPApplication {
 	 * @return string
 	 */
 	public static function getName() {
-		return 'ojs2';
+		return 'pps';
 	}
 
 	/**
