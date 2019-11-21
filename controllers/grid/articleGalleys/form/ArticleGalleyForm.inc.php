@@ -112,7 +112,6 @@ class ArticleGalleyForm extends Form {
 	 * @return ArticleGalley The resulting article galley.
 	 */
 	function execute() {
-		#import('classes.file.IssueFileManager');
 
 		$articleGalley = $this->_articleGalley;
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');

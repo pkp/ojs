@@ -73,7 +73,7 @@ class JournalDAO extends ContextDAO {
 	 * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
 	 */
 	function deleteAllPubIds($journalId, $pubIdType) {
-		$pubObjectDaos = array('IssueDAO', 'SubmissionDAO', 'ArticleGalleyDAO');
+		$pubObjectDaos = array('PublicationDAO', 'ArticleGalleyDAO');
 		foreach($pubObjectDaos as $daoName) {
 			$dao = DAORegistry::getDAO($daoName);
 			$dao->deleteAllPubIds($journalId, $pubIdType);
@@ -81,7 +81,6 @@ class JournalDAO extends ContextDAO {
 		import('lib.pkp.classes.submission.SubmissionFileDAODelegate');
 		$submissionFileDaoDelegate = new SubmissionFileDAODelegate();
 		$submissionFileDaoDelegate->deleteAllPubIds($journalId, $pubIdType);
-
 	}
 
 	/**
@@ -102,10 +101,8 @@ class JournalDAO extends ContextDAO {
 			$assocType = ASSOC_TYPE_ANY, $assocId = 0, $forSameType = false) {
 
 		$pubObjectDaos = array(
-			ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
 			ASSOC_TYPE_SUBMISSION => Application::getSubmissionDAO(),
 			ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
-			ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
 			ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')
 		);
 		if ($forSameType) {
