@@ -1011,7 +1011,7 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="notification.type.public">Annonces publiques</message>
 	<message key="notification.savedIssueMetadata">Métadonnées du numéro sauvegardées.</message>
 	<message key="notification.type.editorAssignmentTask">Un nouvel article a été soumis. Un-e rédacteur-trice doit lui être assigné.</message>
-<message key="notification.type.assignProductionUser">Demander à un-e utilisateur-trice de créer les épreuves en utilisant le lien « Ajouter » dans la liste des participants.</message>
+<message key="notification.type.assignProductionUser">Assigner un-e utilisateur-trice à la création des épreuves en utilisant le lien « Assigner » dans la liste des participants.</message>
 	<message key="notification.type.awaitingRepresentations">Épreuves en attente.</message>
 	<message key="notification.type.publicationScheduled">La publication de cet article a été planifiée.</message>
 	<!--
