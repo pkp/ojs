@@ -1946,7 +1946,7 @@ msgid "notification.type.editorAssignmentTask"
 msgstr "Un nouvel article a été soumis. Un-e rédacteur-trice doit lui être assigné."
 
 msgid "notification.type.assignProductionUser"
-msgstr "Demander à un-e utilisateur-trice de créer les épreuves en utilisant le lien « Ajouter » dans la liste des participants."
+msgstr "Assigner un-e utilisateur-trice à la création des épreuves en utilisant le lien « Assigner » dans la liste des participants."
 
 msgid "notification.type.awaitingRepresentations"
 msgstr "Épreuves en attente."
