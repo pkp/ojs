@@ -112,14 +112,6 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$sectionDao = \DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteByJournalId($context->getId());
 
-		$subscriptionDao = \DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionDao->deleteByJournalId($context->getId());
-		$subscriptionDao = \DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$subscriptionDao->deleteByJournalId($context->getId());
-
-		$subscriptionTypeDao = \DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypeDao->deleteByJournal($context->getId());
-
 		$submissionDao = \DAORegistry::getDAO('SubmissionDAO');
 		$submissionDao->deleteByContextId($context->getId());
 
