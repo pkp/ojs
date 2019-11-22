@@ -25,7 +25,6 @@ class ContextService extends \PKP\Services\PKPContextService {
 		$this->installFileDirs = array(
 			\Config::getVar('files', 'files_dir') . '/%s/%d',
 			\Config::getVar('files', 'files_dir'). '/%s/%d/articles',
-			\Config::getVar('files', 'files_dir'). '/%s/%d/issues',
 			\Config::getVar('files', 'public_files_dir') . '/%s/%d',
 		);
 
@@ -112,9 +111,6 @@ class ContextService extends \PKP\Services\PKPContextService {
 
 		$sectionDao = \DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteByJournalId($context->getId());
-
-		$issueDao = \DAORegistry::getDAO('IssueDAO');
-		$issueDao->deleteByJournalId($context->getId());
 
 		$subscriptionDao = \DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$subscriptionDao->deleteByJournalId($context->getId());

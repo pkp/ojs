@@ -56,11 +56,6 @@
 										{translate key="site.journalView"}
 									</a>
 								</li>
-								<li class="current">
-									<a href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
-										{translate key="site.journalCurrent"}
-									</a>
-								</li>
 							</ul>
 						</div>
 					</li>

@@ -125,9 +125,6 @@ class PreprintHandler extends Handler {
 			}
 		}
 
-		if ($this->publication->getData('issueId')) {
-			$this->issue = DAORegistry::getDAO('IssueDAO')->getById($this->publication->getData('issueId'), $submission->getData('contextId'), true);
-		}
 	}
 
 	/**
@@ -241,7 +238,7 @@ class PreprintHandler extends Handler {
 				$templateMgr->addHeader('canonical', '<link rel="canonical" href="' . $url . '">');
 			}
 
-			if (!HookRegistry::call('PreprintHandler::view', array(&$request, &$issue, &$preprint, $publication))) {
+			if (!HookRegistry::call('PreprintHandler::view', array(&$request, &$preprint, $publication))) {
 				return $templateMgr->display('frontend/pages/preprint.tpl');
 			}
 		} else {
@@ -252,7 +249,7 @@ class PreprintHandler extends Handler {
 			}
 
 			// Galley: Prepare the galley file download.
-			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$issue, &$this->galley, &$preprint, $publication))) {
+			if (!HookRegistry::call('PreprintHandler::view::galley', array(&$request, &$this->galley, &$preprint, $publication))) {
 				$request->redirect(null, null, 'download', array($preprint->getId(), $this->galley->getId()));
 			}
 		}
