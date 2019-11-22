@@ -14,9 +14,6 @@ msgstr ""
 msgid "api.submissions.403.cantChangeContext"
 msgstr "You can not change the server of a submission."
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "You do not have permission to view unpublished issues."
-
 msgid "api.submissions.403.contextRequired"
 msgstr "To make or edit a submission you must make a request to the server's API endpoint."
 

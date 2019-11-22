@@ -48,10 +48,7 @@ msgid "submission.issueEntry"
 msgstr "Metadata"
 
 msgid "submission.submit.whatNext.description"
-msgstr "The server has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you."
-
-msgid "grid.action.galleyInIssueEntry"
-msgstr "Galley appears in issue entry"
+msgstr "The server has been notified of your submission, and you've been emailed a confirmation for your records. Once the editor has reviewed the submission, they will contact you."
 
 msgid "grid.action.issueEntry"
 msgstr "View this submission's metadata"
@@ -89,9 +86,6 @@ msgstr "Make this galley available"
 msgid "submission.galleyFiles"
 msgstr "Galley Files"
 
-msgid "submission.proofReadingDescription"
-msgstr "The layout editor uploads the production-ready files that have been prepared for publication here. Use <em>Assign Auditor</em> to designate authors and others to proofread the galleys, with corrected files uploaded for approval prior to publication."
-
 msgid "grid.action.approveProof"
 msgstr "Approve this proof for inclusion in the galley."
 
@@ -103,9 +97,6 @@ msgstr "Title and Abstract"
 
 msgid "submission.submit.upload.description"
 msgstr "Upload files associated with this submission, including the preprint , multimedia, data sets, artwork, etc."
-
-msgid "submission.pageProofs"
-msgstr "Proofreading"
 
 msgid "submission.confirmSubmit"
 msgstr "Are you sure you wish to submit this preprint to the server?"

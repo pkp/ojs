@@ -108,7 +108,7 @@ msgid "manager.people.roleEnrollment"
 msgstr "{$role} Enrollment"
 
 msgid "manager.people.syncUserDescription"
-msgstr "Enrollment synchronization will enroll all users enrolled in the specified role in the specified server into the same role in this server. This function allows a common set of users (e.g., Reviewers) to be synchronized between servers."
+msgstr "Enrollment synchronization will enroll all users enrolled in the specified role in the specified server into the same role in this server. This function allows a common set of users to be synchronized between servers."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Do not require abstracts"
@@ -129,7 +129,7 @@ msgid "manager.sections.create"
 msgstr "Create Series"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Add a Series Editor to this series to have submissions automatically assigned to the Series Editor. (Otherwise, Series Editors can be assigned manually, after a submission comes in.) If added, a Series Editor can be automatically assigned to oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this series. Series Editors are created by clicking Series Editors under Roles in Server Management."
+msgstr "Add a Series Editor to this series to have submissions automatically assigned to the Series Editor. Otherwise, Series Editors can be assigned manually, after a submission comes in."
 
 msgid "manager.sections.editorRestriction"
 msgstr "Items can only be submitted by Editors and Series Editors."
@@ -142,9 +142,6 @@ msgstr "An abbreviated title is required for the series"
 
 msgid "manager.sections.form.mustAllowPermission"
 msgstr "Please ensure that at least one checkbox is checked for each Series Editor assignment."
-
-msgid "manager.sections.form.reviewFormId"
-msgstr "Please ensure that you have chosen a valid review form."
 
 msgid "manager.sections.form.titleRequired"
 msgstr "A title is required for the series."
@@ -224,9 +221,6 @@ msgstr "Add Item to Appear in "About the Server""
 msgid "manager.setup.addNavItem"
 msgstr "Add Item"
 
-msgid "manager.setup.addReviewerDatabaseLink"
-msgstr "Add New Database Link"
-
 msgid "manager.setup.addSponsor"
 msgstr "Add Sponsoring Organization"
 
@@ -266,9 +260,6 @@ msgstr "Author has to have two publications in ORCID/Crossref database OR author
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr "Require submitting Authors to file a Competing Interest (CI) statement with their submission."
 
-msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Require Reviewers to file a CI statement with each peer review they submit."
-
 msgid "manager.setup.history"
 msgstr "Server History"
 
@@ -288,7 +279,7 @@ msgid "manager.setup.details.description"
 msgstr "Name of server, ISSN, contacts, sponsors, and search engines."
 
 msgid "manager.setup.disableUserRegistration"
-msgstr "The Server Manager will register all user accounts. Editors or Series Editors may register user accounts for reviewers."
+msgstr "The Server Manager will register all user accounts."
 
 
 msgid "manager.setup.discipline"
@@ -433,7 +424,7 @@ msgid "manager.setup.contextAbout"
 msgstr "About the Server"
 
 msgid "manager.setup.contextAbout.description"
-msgstr "Include any information about your server which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the server, copyright notice, sponsorship disclosure, history of the server, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system."
+msgstr "Include any information about your server which may be of interest to readers or authors. This could include your open access policy, the focus and scope of the server, copyright notice, sponsorship disclosure, history of the server and a privacy statement."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Server Homepage Content"
@@ -726,9 +717,6 @@ msgstr "Items published"
 msgid "manager.statistics.statistics.makePublic"
 msgstr "Check items to be made available to readers in About the Server."
 
-msgid "manager.statistics.statistics.note"
-msgstr "Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process."
-
 msgid "manager.statistics.statistics.numSubmissions"
 msgstr "Total submissions"
 
@@ -772,7 +760,7 @@ msgid "manager.setup.section.description"
 msgstr "Preprints of a server are organized in Series, typically by theme or content type."
 
 msgid "settings.roles.gridDescription"
-msgstr "Roles are groups of users in the server who are given access to different permission levels and associated workflows within the server. There are five different permission levels: Server Managers have access to everything in the server (all content and settings); Series Editors have complete access to all assigned content; Server Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; Reviewers can see and perform the submissions they have been assigned to review; and Authors can see and interact with a limited amount of information on their own submissions. Additionally, there are five different stage assignments that roles may be given access to: Submission, Internal Review, Review, Editorial, and Production."
+msgstr "Roles are groups of users in the server who are given access to different permission levels and associated workflows within the server. There are four different permission levels: Server Managers have access to everything in the server (all content and settings); Series Editors have complete access to all assigned content; Server Assistants have limited access to all submissions that have been explicitly assigned to them by an editor; and Authors can see and interact with a limited amount of information on their own submissions."
 
 msgid "manager.publication.library"
 msgstr "Publisher Library"

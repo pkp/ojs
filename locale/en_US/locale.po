@@ -254,15 +254,6 @@ msgstr "Editor Ruling"
 msgid "submission.eventLog"
 msgstr "Event Log"
 
-msgid "submissions.copyeditComplete"
-msgstr "Copyedited"
-
-msgid "submissions.layoutComplete"
-msgstr "Layout edited"
-
-msgid "submissions.proofreadingComplete"
-msgstr "Proofread"
-
 msgid "submission.search"
 msgstr "Preprint Search"
 
@@ -897,21 +888,6 @@ msgstr "Hide other servers"
 msgid "article.view.interstitial"
 msgstr "Please choose a preprint file to download."
 
-msgid "grid.catalogEntry.availableRepresentation.approved"
-msgstr "Approved"
-
-msgid "grid.catalogEntry.availableRepresentation.notApproved"
-msgstr "Awaiting Approval"
-
-msgid "grid.catalogEntry.approvedRepresentation.title"
-msgstr "Galley Approval"
-
-msgid "grid.catalogEntry.approvedRepresentation.message"
-msgstr "<p>Approve this galley for publication.</p>"
-
-msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
-msgstr "<p>Remove approval of this galley.</p>"
-
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexing "{$journalName}""
 
@@ -925,7 +901,7 @@ msgid "log.editor.submissionExpedited"
 msgstr "{$editorName} has taken the edit process for the preprint {$submissionId}."
 
 msgid "catalog.sortBy"
-msgstr "Order of preprint s"
+msgstr "Order of preprints"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Choose how to order preprint's in this category."
