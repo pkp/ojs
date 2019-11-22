@@ -18,8 +18,6 @@ use \PKP\components\forms\FieldSelect;
 use \PKP\components\forms\FieldOptions;
 
 define('FORM_ACCESS', 'access');
-define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');
-define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
 
 class AccessForm extends FormComponent {
 	/** @copydoc FormComponent::$id */
