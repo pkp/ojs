@@ -26,17 +26,8 @@ msgstr "Select preprint component"
 msgid "submission.title"
 msgstr "Preprint Title"
 
-msgid "submission.title.tip"
-msgstr "The submission type is usually one of 'image', 'text', or other multimedia types including 'software' or 'interactive'.  Please choose the one most relevant for your submission.  Examples may be found at <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
-
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Start a New Submission in"
-
 msgid "submission.submit.newSubmissionSingle"
 msgstr "New Submission"
-
-msgid "grid.action.workflow"
-msgstr "Submission Workflow"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "The abstract must be {$wordCount} words or less."
@@ -44,74 +35,20 @@ msgstr "The abstract must be {$wordCount} words or less."
 msgid "submission.submit.noContext"
 msgstr "This submission's journal could not be found."
 
-msgid "submission.issueEntry"
-msgstr "Metadata"
-
 msgid "submission.submit.whatNext.description"
 msgstr "The server has been notified of your submission, and you've been emailed a confirmation for your records. Once the editor has reviewed the submission, they will contact you."
-
-msgid "grid.action.issueEntry"
-msgstr "View this submission's metadata"
-
-msgid "submission.issueEntry.modalTitle"
-msgstr "Submission and Publication Metadata"
-
-msgid "submission.issueEntry.submissionMetadata"
-msgstr "Submission"
-
-msgid "submission.issueEntry.publicationMetadata"
-msgstr "Publication"
-
-msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "The preprint galley "{$galleyFormatName}" is made available."
-
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "The preprint galley "{$galleyFormatName}" is made unavailable."
-
-msgid "submission.event.publicIdentifiers"
-msgstr "The submission's public identifiers updated."
-
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Format Approval"
-
-msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>This galley will <em>no longer be made available</em> to readers.</p>"
-
-msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>This galley will <em>be made available</em> to readers.</p>"
-
-msgid "grid.action.availableArticleGalley"
-msgstr "Make this galley available"
 
 msgid "submission.galleyFiles"
 msgstr "Galley Files"
 
-msgid "grid.action.approveProof"
-msgstr "Approve this proof for inclusion in the galley."
-
-msgid "grid.action.pageProofApproved"
-msgstr "This proof has been approved for inclusion in the galley."
-
-msgid "submission.submit.titleAndSummary"
-msgstr "Title and Abstract"
-
-msgid "submission.submit.upload.description"
-msgstr "Upload files associated with this submission, including the preprint , multimedia, data sets, artwork, etc."
-
 msgid "submission.confirmSubmit"
 msgstr "Are you sure you wish to submit this preprint to the server?"
-
-msgid "submission.event.issueMetadataUpdated"
-msgstr "The submission's metadata was updated."
 
 msgid "submission.upload.fileContents"
 msgstr "Preprint Component"
 
 msgid "submission.complete"
 msgstr "Approved"
-
-msgid "submission.incomplete"
-msgstr "Awaiting Approval"
 
 msgid "submission.submit.form.localeRequired"
 msgstr "Please select a submission language."
@@ -122,17 +59,11 @@ msgstr "Submission Checklist"
 msgid "submission.submit.submissionChecklistDescription"
 msgstr "You must read and acknowledge that you've completed the requirements below before proceeding."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Privacy Statement"
-
 msgid "submission.submit.contributorRole"
 msgstr "Contributor's role"
 
 msgid "submission.submit.form.authorRequired"
 msgstr "At least one author is required."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "The first name, last name, and email address of each author is required."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Please enter the title of your preprint ."
@@ -146,14 +77,8 @@ msgstr "Your abstract is too long. Please shorten it to below the word limit ind
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Please select the contributor's role."
 
-msgid "submission.citationFormat.notFound"
-msgstr "The requested citation format could not be retrieved."
-
 msgid "submission.metadataDescription"
 msgstr "These specifications are based on the Dublin Core metadata set, an international standard used to describe server content."
-
-msgid "section.any"
-msgstr "Any Series"
 
 msgid "submission.sectionOptions"
 msgstr "Series Options"
