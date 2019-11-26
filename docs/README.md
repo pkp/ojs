@@ -3,7 +3,7 @@
 	=== The Public Knowledge Project
 	=== Version: 3.1.2
 	=== GIT tag: 3_1_2-2
-	=== Release date:  May 30, 2019
+	=== Release date:  Nov 26, 2019
 	====================================
 
 
